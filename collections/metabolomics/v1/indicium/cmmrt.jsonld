@@ -529,7 +529,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13321_022_00613_8__task_001/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/card/10_1186_s13321_022_00613_8__task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The best results were obtained by a heavily regularized deep neural network trained with cosine annealing warm restarts and stochastic weight averaging, achieving a mean and median absolute errors of [Formula: see text] and [Formula: see text], respectively.",
       "asbval:note": "Research question is directly supported by abstract statement of the paper's main finding.",
@@ -549,7 +549,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13321_022_00613_8__task_001/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/card/10_1186_s13321_022_00613_8__task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software.",
       "asbval:note": "alvaDesc is explicitly named as the tool used to generate molecular descriptors and fingerprints.",
@@ -569,7 +569,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13321_022_00613_8__task_001/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/card/10_1186_s13321_022_00613_8__task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python code is available on GitHub at https://github.com/constantino-garcia/cmmrt.",
       "asbval:note": "Paper mentions code availability on GitHub but does not explicitly state that trained model checkpoints are provided. The paper focuses on predictions and methodology rather than explicitly distributing trained model weights.",
@@ -589,7 +589,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13321_022_00613_8__task_001/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/card/10_1186_s13321_022_00613_8__task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "achieving a mean and median absolute errors of [Formula: see text] and [Formula: see text], respectively. ... a MEDAE of 17.2 \u00b1 0.9 s and a MAE of 39.2 \u00b1 1.2 s when considering all molecules",
       "asbval:note": "Exact performance metrics are reported in the abstract and results sections.",
@@ -609,7 +609,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13321_022_00613_8__task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/card/10_1186_s13321_022_00613_8__task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card focuses narrowly on DNN performance, but the paper is broader in scope, comparing multiple machine learning regressors (XGBoost, lightGBM, CatBoost, DKL, blending ensemble) and also proposing a meta-learning approach for projection between chromatographic methods.",
@@ -626,7 +626,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13321_022_00613_8__task_002/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/card/10_1186_s13321_022_00613_8__task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In the literature there are both works reporting that fingerprints outperform molecular descriptors (e.g., [21]) and works claiming just the opposite (e.g., [24]). Our results slightly favor the usage of fingerprints, although it cannot be ruled out that the best type of feature depends on the machine learning regressor used.",
       "asbval:note": "The paper directly addresses this comparison across multiple regressors and datasets.",
@@ -646,7 +646,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13321_022_00613_8__task_002/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/card/10_1186_s13321_022_00613_8__task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We have trained state-of-the-art machine learning regressors using the 80, 038 experimental retention times from the METLIN Small Molecule Retention Tim (SMRT) dataset.",
       "asbval:note": "Dataset explicitly named and used throughout.",
@@ -666,7 +666,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13321_022_00613_8__task_002/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/card/10_1186_s13321_022_00613_8__task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Table 1MAE and MEDAE results for the top 4 performing regressors (mean \u00b1 standard error) BlenderDNNDKLXGBFeaturesMetricdesc+fgpdescfgpdesc+fgpdescfgpdesc+fgpdesc+fgpdescfgpdesc+fgpAllMAE (s)... MEDAE (s)...",
       "asbval:note": "Multiple tables (Tables 1, 2, 3) present MAE and MEDAE results across feature combinations (descriptors, fingerprints, desc+fgp).",
@@ -686,7 +686,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13321_022_00613_8__task_002/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/card/10_1186_s13321_022_00613_8__task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "DNNs were used for Retention Time (RT) prediction in [21], where a DNN with 4 layers and regularization was proposed... we used a DNN with just 3 layers, regularized using large dropout rates. The sizes of the hidden layers, the dropout rates and the non-linear activations were determined using Bayesian hyperparameter search.",
       "asbval:note": "Paper describes DNN architecture (3 layers, dropout rates, activations) and hyperparameter tuning procedure, but does not provide explicit trained model weights or complete architecture specifications in the passages. Code is available on GitHub but weights are not reported in the paper text.",
@@ -706,7 +706,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13321_022_00613_8__task_002/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/card/10_1186_s13321_022_00613_8__task_002/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software.",
       "asbval:note": "alvaDesc explicitly used for generating molecular descriptors and fingerprints.",
@@ -726,7 +726,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13321_022_00613_8__task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/card/10_1186_s13321_022_00613_8__task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card's research question is narrowly framed as a comparison of fingerprints vs descriptors, but the paper's actual scope is much broader: it compares multiple machine learning regressors (DNN, DKL, XGBoost, lightGBM, CatBoost, blending ensemble) across three feature sets, and also develops a novel Bayesian meta-learning approach for retention time projection between chromatographic methods. The card captures only one aspect of the paper's contributions.",
@@ -743,7 +743,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13321_022_00613_8__task_003/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/card/10_1186_s13321_022_00613_8__task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To build such a projection function, a set of known molecules whos RTs is known in both CMs is needed... To that end, this work proposes a Bayesian meta-learning approach to project the predicted RTs to a specific Chromatographic Method (CM) based on just a few identified molecules. This approach has the advantage of being able to generalize from a small training set while providing confidence intervals for the Retention Time (RT) projections between CMs",
       "asbval:note": "Directly supported by abstract and methods sections",
@@ -763,7 +763,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13321_022_00613_8__task_003/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/card/10_1186_s13321_022_00613_8__task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software.",
       "asbval:note": "alvaDesc is explicitly named as the tool used for generating molecular descriptors and fingerprints",
@@ -783,7 +783,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13321_022_00613_8__task_003/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/card/10_1186_s13321_022_00613_8__task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The researcher finally uses the experimental RTs to query the projected database. The results retrieved from it would enable scoring candidates with similar m/z but different RTs",
       "asbval:note": "Paper describes projected RT outputs used for ranking and annotation; specific CSV format not explicitly stated but output structure is consistent with claim",
@@ -803,7 +803,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13321_022_00613_8__task_003/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/card/10_1186_s13321_022_00613_8__task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "achieving a mean and median absolute errors of [Formula: see text] and [Formula: see text], respectively... MEDAE of 17.2 \u00b1 0.9 s and a MAE of 39.2 \u00b1 1.2 s when considering all molecules",
       "asbval:note": "MAE and MEDAE are primary performance metrics reported throughout the paper",
@@ -823,7 +823,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13321_022_00613_8__task_003/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/card/10_1186_s13321_022_00613_8__task_003/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python code is available on GitHub at https://github.com/constantino-garcia/cmmrt.",
       "asbval:note": "Paper indicates code availability; serialized model objects would be part of reproducible implementation",
@@ -843,7 +843,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13321_022_00613_8__task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/card/10_1186_s13321_022_00613_8__task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card title 'Reconstruct the Bayesian meta-learning RT projection module' is narrower than the full paper scope, which includes both RT prediction (DNN models) and projection (meta-learning). The card focuses only on the projection component.",
@@ -860,7 +860,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13321_022_00613_8__task_004/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/card/10_1186_s13321_022_00613_8__task_004/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To study the robustness of the projection method when only a few metabolites are known, the number of training points was varied between 10 and 50... When using as few as 10 training points, the global performance decreases to 68%... Table 5 shows that, when using 50 training points, our projection method ranks the correct identity among the top three candidates in 70% of the cases... When decreasing the number of training points to just 10 samples, the percentage is 68%",
       "asbval:note": "The paper explicitly tests meta-learning with 10 training points and reports competitive performance (68% ranking accuracy vs 70% with 50 points), directly addressing the research question.",
@@ -880,7 +880,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13321_022_00613_8__task_004/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/card/10_1186_s13321_022_00613_8__task_004/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Table 4 shows these three metrics and the median relative error (in %) for the meta-learned GP... Figures 7 and 8 show the MAE and scaled interval scores for the projections to four CMs from the PredRet database when using different models. MEDAE results show a similar behaviour to those obtained with MAE... Table 5 shows the percentage of the results where, using the Retention Time (RT) projection function, the true molecule was ranked among the top three candidates",
       "asbval:note": "Paper provides Table 4 with MAE, MEDAE, and scaled interval scores for meta-learned GPs at 10 training points, and Figures 7-8 comparing against baseline methods (GAM, RLM, PLM).",
@@ -900,7 +900,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13321_022_00613_8__task_004/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/card/10_1186_s13321_022_00613_8__task_004/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software... These features were computed using alvaDesc [29, 30] and include both fingerprints and molecular descriptors.",
       "asbval:note": "alvaDesc is explicitly named and used for generating molecular descriptors and fingerprints for the retention time prediction models.",
@@ -920,7 +920,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13321_022_00613_8__task_004/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/card/10_1186_s13321_022_00613_8__task_004/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card focuses narrowly on the meta-learning projection task with 10-molecule calibration, which is a secondary contribution in the paper. The paper's primary focus is on retention time prediction using various ML regressors (DNN, XGBoost, etc.) on the SMRT dataset, with meta-learning projection as a downstream application.",
@@ -937,7 +937,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13321_022_00613_8__task_005/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/card/10_1186_s13321_022_00613_8__task_005/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To project retention times between chromatographic methods, a novel Bayesian meta-learning approach that can learn from just a few molecules is proposed. By applying this projection between the deep neural network retention time predictions and a given chromatographic method, our approach can be integrated into a metabolite annotation workflow to obtain z-scores for the candidate annotations... The use of z-scores permits considering the uncertainty in the projection when ranking candidates, and not only the accuracy.",
       "asbval:note": "The paper explicitly describes combining DNN predictions with meta-learned projections to generate probabilistic scores (z-scores) for ranking metabolite candidates.",
@@ -957,7 +957,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13321_022_00613_8__task_005/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/card/10_1186_s13321_022_00613_8__task_005/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software.",
       "asbval:note": "alvaDesc is explicitly named and used for generating molecular descriptors and fingerprints.",
@@ -977,7 +977,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13321_022_00613_8__task_005/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/card/10_1186_s13321_022_00613_8__task_005/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The results retrieved from it would enable scoring candidates with similar m/z but different RTs... The researcher finally uses the experimental RTs to query the projected database. The results retrieved from it would enable scoring candidates with similar m/z but different RTs.",
       "asbval:note": "The paper describes ranking candidates using RT information and z-scores, but does not explicitly specify the exact output format (CSV/TSV) or all named fields (molecular_formula, predicted_rt, rt_score, rank). The paper mentions z-scores for ranking but the specific tabular output structure is not detailed in the passages.",
@@ -997,7 +997,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13321_022_00613_8__task_005/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/card/10_1186_s13321_022_00613_8__task_005/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card title mentions 'Extend DNN+meta-learned projections integration' which implies extending existing work, but the paper itself presents the initial development and integration of this approach, not an extension of prior work.",
@@ -1013,7 +1013,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bayesian-meta-learning-model-fitting/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/bayesian-meta-learning-model-fitting/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To project retention times between chromatographic methods, a novel Bayesian meta-learning approach that can learn from just a few molecules is proposed... we propose the use of meta-learning to solve the problem of learning from few samples... Hence, we propose the use of meta-learning to solve the problem of learning from few samples.",
       "asbval:note": "Paper proposes Bayesian meta-learning with Gaussian Processes for RT projection from few samples (10+ molecules), but the claim about 'mapping to a pre-trained DNN's latent feature space' is not supported. The paper uses a pre-trained DNN to predict RTs on the SMRT dataset, then learns a separate GP projection function to map those predicted RTs to experimental RTs in different chromatographic methods. The GP does not extract or map through DNN latent features\u2014it operates on predicted RT values directly.",
@@ -1033,7 +1033,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bayesian-meta-learning-model-fitting/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/bayesian-meta-learning-model-fitting/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To make this workflow practical, it is desirable that the projection function can be learned from a very small dataset, so that the researcher only has to identify a small set of molecules... the number of training points was varied between 10 and 50",
       "asbval:note": "Paper explicitly tests projection with 10 training points and demonstrates feasibility.",
@@ -1053,7 +1053,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bayesian-meta-learning-model-fitting/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/bayesian-meta-learning-model-fitting/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We have trained state-of-the-art machine learning regressors using the 80, 038 experimental retention times from the METLIN Small Molecule Retention Tim (SMRT) dataset... The best model was a Deep Neural Network (DNN) trained using molecular fingerprints",
       "asbval:note": "Paper trains DNN on METLIN SMRT dataset with 80,038 RTs.",
@@ -1073,7 +1073,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bayesian-meta-learning-model-fitting/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/bayesian-meta-learning-model-fitting/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the number of training points was varied between 10 and 50; 50 was the number of molecules used in [21]",
       "asbval:note": "Paper tests projection with 10\u201350 training points.",
@@ -1093,7 +1093,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bayesian-meta-learning-model-fitting/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/bayesian-meta-learning-model-fitting/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software.",
       "asbval:note": "alvaDesc is used to generate molecular descriptors and fingerprints (MACCS166, ECFP, PFP) from chemical structures.",
@@ -1113,7 +1113,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bayesian-meta-learning-model-fitting/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/bayesian-meta-learning-model-fitting/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "alvaDesc permits the computation of MACCS166 fingerprints, Extended Connectivity Fingerprints (ECFP) [31] and Path Fingerprints (PFP), making a total of 2, 214 fingerprints.",
       "asbval:note": "alvaDesc generates the specified fingerprints used as input features for the models.",
@@ -1133,7 +1133,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bayesian-meta-learning-model-fitting/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/bayesian-meta-learning-model-fitting/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python code is available on GitHub at https://github.com/constantino-garcia/cmmrt.",
       "asbval:note": "GitHub repository is confirmed in the paper.",
@@ -1153,7 +1153,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bayesian-meta-learning-model-fitting/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/bayesian-meta-learning-model-fitting/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python code is available on GitHub at https://github.com/constantino-garcia/cmmrt.",
       "asbval:note": "Paper confirms the GitHub repository exists and contains code for the DNN and meta-learning approach, but does not explicitly name the specific notebooks mentioned in the card (projections_to_different_cm.ipynb and train_with_rdkit.ipynb). The repository is confirmed to contain the implementation, but notebook names cannot be verified from the passages.",
@@ -1173,7 +1173,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bayesian-meta-learning-projection/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/bayesian-meta-learning-projection/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To that end, this work proposes a Bayesian meta-learning approach to project the predicted RTs to a specific Chromatographic Method (CM) based on just a few identified molecules. This approach has the advantage of being able to generalize from a small training set while providing confidence intervals for the Retention Time (RT) projections between CMs, and not only a point estimate.",
       "asbval:note": "Core research question is directly supported. Paper explicitly proposes Bayesian meta-learning for RT projection with few molecules and confidence intervals.",
@@ -1193,7 +1193,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bayesian-meta-learning-projection/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/bayesian-meta-learning-projection/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "GPs are particularly suited as projection model: they represent a distribution over functions, they can perform regression on smalls amount of data, and they can incorporate prior knowledge using the Bayesian framework.",
       "asbval:note": "Paper explicitly uses Gaussian Processes with Bayesian framework for projection with small data.",
@@ -1213,7 +1213,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bayesian-meta-learning-projection/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/bayesian-meta-learning-projection/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software.",
       "asbval:note": "Exact match on tool name (case-insensitive), descriptor count, and fingerprint types.",
@@ -1233,7 +1233,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bayesian-meta-learning-projection/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/bayesian-meta-learning-projection/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "All the descriptors and fingerprints obtained with alvaDesc were used to feed the regressors.",
       "asbval:note": "Paper confirms descriptors and fingerprints from alvaDesc are used as input features for regressors including DNN.",
@@ -1253,7 +1253,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bayesian-meta-learning-projection/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/bayesian-meta-learning-projection/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python code is available on GitHub at https://github.com/constantino-garcia/cmmrt.",
       "asbval:note": "Paper confirms cmmrt GitHub repository exists and contains Python code. However, paper does not explicitly name 'Optuna' for hyperparameter tuning; instead it uses 'Tree-structured Parzen Estimator (TPE) algorithm' for Bayesian hyperparameter search. The card claims Optuna but the paper uses TPE algorithm.",
@@ -1273,7 +1273,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bayesian-meta-learning-projection/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/bayesian-meta-learning-projection/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python code is available on GitHub at https://github.com/constantino-garcia/cmmrt.",
       "asbval:note": "Repository is confirmed to contain the implementation, and the paper describes the meta-learning projection approach in detail.",
@@ -1293,7 +1293,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bayesian-meta-learning-projection/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/bayesian-meta-learning-projection/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The best results were obtained by a heavily regularized deep neural network trained with cosine annealing warm restarts and stochastic weight averaging",
       "asbval:note": "Paper describes DNN for RT prediction; cmmrt repository is stated to contain the implementation.",
@@ -1313,7 +1313,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bayesian-meta-learning-projection/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/bayesian-meta-learning-projection/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To study the robustness of the projection method when only a few metabolites are known, the number of training points was varied between 10 and 50",
       "asbval:note": "Paper explicitly tests projection with 10 training points as minimum, confirming the \u226510 molecule threshold.",
@@ -1333,7 +1333,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bayesian-meta-learning-projection/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/bayesian-meta-learning-projection/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To project retention times between chromatographic methods, a novel Bayesian meta-learning approach that can learn from just a few molecules is proposed. By applying this projection between the deep neural network retention time predictions and a given chromatographic method, our approach can be integrated into a metabolite annotation workflow to obtain z-scores for the candidate annotations.",
       "asbval:note": "Paper explicitly describes integration into metabolite annotation workflow with z-scores for ranking.",
@@ -1353,7 +1353,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bayesian-meta-learning-projection/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/bayesian-meta-learning-projection/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To study the robustness of the projection method when only a few metabolites are known, the number of training points was varied between 10 and 50",
       "asbval:note": "Paper tests minimum of 10 training points, implying this is the practical lower bound.",
@@ -1373,7 +1373,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-method-transfer/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/chromatographic-method-transfer/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To build such a projection function, a set of known molecules whos RTs is known in both CMs is needed... To make this workflow practical, it is desirable that the projection function can be learned from a very small dataset, so that the researcher only has to identify a small set of molecules. To that end, this work proposes a Bayesian meta-learning approach to project the predicted RTs to a specific Chromatographic Method (CM) based on just a few identified molecules.",
       "asbval:note": "Fully supported. Paper explicitly proposes Bayesian meta-learning for projection with few samples.",
@@ -1393,7 +1393,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-method-transfer/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/chromatographic-method-transfer/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "When decreasing the number of training points to just 10 samples, the percentage is 68%, while with 30 is 69%. This shows that meta-learning enables the creation of projection functions from just a few known metabolites.",
       "asbval:note": "Supported. Paper demonstrates 68% ranking accuracy with only 10 training points, showing competitive performance with minimal calibration data.",
@@ -1413,7 +1413,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-method-transfer/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/chromatographic-method-transfer/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software.",
       "asbval:note": "Fully supported. Paper explicitly states alvaDesc generates these exact descriptor and fingerprint counts.",
@@ -1433,7 +1433,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-method-transfer/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/chromatographic-method-transfer/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These features were computed using alvaDesc [29, 30] and include both fingerprints and molecular descriptors... All the descriptors and fingerprints obtained with alvaDesc were used to feed the regressors.",
       "asbval:note": "Supported. alvaDesc features are used as input to machine learning models including the projection approach.",
@@ -1453,7 +1453,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-method-transfer/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/chromatographic-method-transfer/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python code is available on GitHub at https://github.com/constantino-garcia/cmmrt.",
       "asbval:note": "Supported. Repository is confirmed to exist and contain the paper's code.",
@@ -1473,7 +1473,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-method-transfer/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/chromatographic-method-transfer/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "GPs are particularly suited as projection model: they represent a distribution over functions, they can perform regression on smalls amount of data, and they can incorporate prior knowledge using the Bayesian framework... Hence, we shall consider: f(\u00b7) ~ GP(...). The outline of the approach is shown in Fig. 4.",
       "asbval:note": "Supported. Paper describes GP-based meta-learning for projection, which would be implemented in the cmmrt repository.",
@@ -1493,7 +1493,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-method-transfer/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/chromatographic-method-transfer/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To project retention times between chromatographic methods, a novel Bayesian meta-learning approach that can learn from just a few molecules is proposed.",
       "asbval:note": "Fully supported by abstract and introduction.",
@@ -1513,7 +1513,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-method-transfer/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/chromatographic-method-transfer/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the number of training points was varied between 10 and 50; 50 was the number of molecules used in [21].",
       "asbval:note": "Supported. Paper tests 10\u201350 training points; scope mentions 10\u2013100 as reasonable range.",
@@ -1533,7 +1533,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-method-transfer/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/chromatographic-method-transfer/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Since laboratories usually customize the Chromatographic Method (CM) for the needs of each experiment, a SMRT-based model cannot be directly applied to experimental data from other laboratories, or even other experiments conducted in the same laboratory.",
       "asbval:note": "Supported. Paper motivates the need for cross-platform transfer.",
@@ -1553,7 +1553,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cosine-annealing-schedule-optimization/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/cosine-annealing-schedule-optimization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To improve the generalization ability of the DNN and to accelerate its training, we used cosine annealing warm restarts [39] and stochastic weight averaging (SWA) [40]. In [40], the authors suggest that SWA leads to wider minima, which is hypothesized to result in better generalization than conventionally trained DNN.",
       "asbval:note": "Paper confirms use of cosine annealing warm restarts and SWA together for DNN training on retention time prediction, and notes SWA leads to better generalization. However, the paper does not explicitly describe the mechanism of cosine annealing (cyclically reducing learning rate following cosine curve with periodic restarts to escape local minima) \u2014 this is domain knowledge not stated in the passages. The claim's mechanistic description is not verbatim in the paper.",
@@ -1573,7 +1573,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cosine-annealing-schedule-optimization/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/cosine-annealing-schedule-optimization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We have trained state-of-the-art machine learning regressors using the 80, 038 experimental retention times from the METLIN Small Molecule Retention Tim (SMRT) dataset... To improve the generalization ability of the DNN and to accelerate its training, we used cosine annealing warm restarts [39] and stochastic weight averaging (SWA) [40].",
       "asbval:note": "Paper explicitly uses cosine annealing warm restarts on METLIN SMRT dataset (80,038 molecules) for DNN training on retention time prediction. Scope claim is well-supported.",
@@ -1593,7 +1593,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cosine-annealing-schedule-optimization/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/cosine-annealing-schedule-optimization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software.",
       "asbval:note": "alvaDesc is explicitly named and used to generate the exact descriptor and fingerprint counts and types mentioned in the card.",
@@ -1613,7 +1613,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cosine-annealing-schedule-optimization/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/cosine-annealing-schedule-optimization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not name PyTorch or TensorFlow explicitly. Paper mentions 'deep neural networks' and 'cosine annealing warm restarts' but does not specify which deep learning framework was used. The specific API reference 'lr_scheduler.CosineAnnealingWarmRestarts' is not mentioned in the paper.",
@@ -1633,7 +1633,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cosine-annealing-schedule-optimization/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/cosine-annealing-schedule-optimization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python code is available on GitHub at https://github.com/constantino-garcia/cmmrt.",
       "asbval:note": "Paper explicitly provides the GitHub repository URL for cmmrt code. The repository is confirmed to contain the implementation of the methods described (cosine annealing warm restarts and SWA for retention time prediction on METLIN SMRT).",
@@ -1653,7 +1653,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-neural-network-latent-space-mapping/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/deep-neural-network-latent-space-mapping/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To project retention times between chromatographic methods, a novel Bayesian meta-learning approach that can learn from just a few molecules is proposed... the prior distribution p(f) learned during meta-learning is updated with the new evidence {x\u0303, \u1ef9}, which should enable the prediction/ranking of {x\u0303*, \u1ef9*}.",
       "asbval:note": "Paper proposes Bayesian meta-learning for RT projection between chromatographic methods using few samples, but does NOT extract intermediate feature representations from the DNN as a latent space. Instead, the paper uses a DNN to predict RTs directly on the SMRT dataset, then applies a separate Gaussian Process (GP) meta-learning model for projection. The DNN and projection method are decoupled, not integrated via latent-space extraction. The card conflates two separate components.",
@@ -1673,7 +1673,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-neural-network-latent-space-mapping/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/deep-neural-network-latent-space-mapping/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To make this workflow practical, it is desirable that the projection function can be learned from a very small dataset, so that the researcher only has to identify a small set of molecules... we propose a Bayesian meta-learning approach to project the predicted RTs to a specific Chromatographic Method (CM) based on just a few identified molecules.",
       "asbval:note": "Paper explicitly demonstrates learning projection functions from 10\u201350 calibration molecules.",
@@ -1693,7 +1693,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-neural-network-latent-space-mapping/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/deep-neural-network-latent-space-mapping/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software.",
       "asbval:note": "alvaDesc is used to generate fingerprints and descriptors for the DNN training phase, not specifically for 'latent-space projection' as the card claims. The fingerprints are inputs to the DNN regressor, not to a latent-space projection step. The card's framing suggests a pipeline that does not exist in the paper.",
@@ -1713,7 +1713,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-neural-network-latent-space-mapping/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/deep-neural-network-latent-space-mapping/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python code is available on GitHub at https://github.com/constantino-garcia/cmmrt.",
       "asbval:note": "cmmrt repository contains code for DNN training and Bayesian meta-learning for RT projection, but there is no evidence in the paper that it implements 'latent-space extraction' as a distinct pipeline step. The paper does not describe extracting intermediate DNN representations as a latent space for projection.",
@@ -1733,7 +1733,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-neural-network-latent-space-mapping/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/deep-neural-network-latent-space-mapping/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not propose extracting latent representations from the DNN. Instead, it uses the DNN to predict RTs on the SMRT dataset, then applies a separate Gaussian Process meta-learning model for projection. The DNN is not retrained; it is frozen and used as a feature extractor implicitly (via its predictions), but the paper does not explicitly frame or implement latent-space extraction as described in the card.",
@@ -1753,7 +1753,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-neural-network-latent-space-mapping/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/deep-neural-network-latent-space-mapping/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To make this workflow practical, it is desirable that the projection function can be learned from a very small dataset... we propose a Bayesian meta-learning approach to project the predicted RTs to a specific Chromatographic Method (CM) based on just a few identified molecules... the number of training points was varied between 10 and 50.",
       "asbval:note": "Paper demonstrates projection learning with 10\u201350 calibration molecules.",
@@ -1773,7 +1773,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-neural-network-latent-space-mapping/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/deep-neural-network-latent-space-mapping/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The METLIN Small Molecule Retention Time (SMRT) dataset consists of the experimental retention times of 80,038 small molecules... The dataset has a wide variety of small molecules analysed under the same conditions, including metabolites, natural products and drug-like small molecules.",
       "asbval:note": "Paper uses MACCS166, Extended Connectivity, and Path Fingerprints as standard features; scope note is consistent with paper's approach.",
@@ -1793,7 +1793,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-neural-network-latent-space-mapping/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/deep-neural-network-latent-space-mapping/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the number of training points was varied between 10 and 50; 50 was the number of molecules used in [21].",
       "asbval:note": "Paper tests with minimum 10 training points; fewer would be outside tested regime.",
@@ -1813,7 +1813,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-neural-network-training-regularization/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/deep-neural-network-training-regularization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To improve the generalization ability of the DNN and to accelerate its training, we used cosine annealing warm restarts [39] and stochastic weight averaging (SWA) [40]... Regularization is key for achieving good generalization, since even a small shallow neural network can overfit the SMRT dataset in a few epochs. Driven by this observation, we used a DNN with just 3 layers, regularized using large dropout rates.",
       "asbval:note": "Claim is supported. Paper explicitly describes DNN training with cosine annealing warm restarts, SWA, and heavy regularization (dropout). L1/L2 regularization is not explicitly named in the passages but dropout is the primary regularization method used.",
@@ -1833,7 +1833,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-neural-network-training-regularization/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/deep-neural-network-training-regularization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We have trained state-of-the-art machine learning regressors using the 80, 038 experimental retention times from the METLIN Small Molecule Retention Tim (SMRT) dataset... 5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated",
       "asbval:note": "Dataset size and feature dimensionality match the claim exactly.",
@@ -1853,7 +1853,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-neural-network-training-regularization/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/deep-neural-network-training-regularization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To avoid data-leakage when reporting the performance metrics, nested cross-validation was employed... The best results were obtained by a heavily regularized deep neural network trained with cosine annealing warm restarts and stochastic weight averaging, achieving a mean and median absolute errors",
       "asbval:note": "Paper uses nested cross-validation to evaluate generalization on held-out test sets.",
@@ -1873,7 +1873,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-neural-network-training-regularization/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/deep-neural-network-training-regularization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Accurate prediction of retention time for a given chromatographic method would be a valuable support for metabolite annotation... The best model was a Deep Neural Network (DNN) trained using molecular fingerprints, which improved the performance of the best previous models to predict Retention Time (RT)",
       "asbval:note": "Paper is explicitly about retention time prediction using DNNs.",
@@ -1893,7 +1893,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-neural-network-training-regularization/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/deep-neural-network-training-regularization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software",
       "asbval:note": "Total of 7,880 features (5,666 + 2,214), confirming high dimensionality.",
@@ -1913,7 +1913,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-neural-network-training-regularization/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/deep-neural-network-training-regularization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We have trained state-of-the-art machine learning regressors using the 80, 038 experimental retention times from the METLIN Small Molecule Retention Tim (SMRT) dataset",
       "asbval:note": "80,038 molecules fits the description of 'tens of thousands'.",
@@ -1933,7 +1933,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-neural-network-training-regularization/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/deep-neural-network-training-regularization/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "achieving a mean and median absolute errors of [Formula: see text] and [Formula: see text], respectively... a MEDAE of 17.2 \u00b1 0.9 s and a MAE of 39.2 \u00b1 1.2 s when considering all molecules",
       "asbval:note": "Paper reports both MAE and MEDAE as primary performance metrics.",
@@ -1953,7 +1953,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-neural-network-training-regularization/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/deep-neural-network-training-regularization/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The models were trained using only the descriptors, only the fingerprints, and both types of features simultaneously... Our results slightly favor the usage of fingerprints, although it cannot be ruled out that the best type of feature depends on the machine learning regressor used.",
       "asbval:note": "Paper explicitly compares descriptors, fingerprints, and combined features.",
@@ -1973,7 +1973,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-neural-network-training-regularization/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/deep-neural-network-training-regularization/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software",
       "asbval:note": "Tool name, feature counts, and fingerprint types all match exactly.",
@@ -1993,7 +1993,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-neural-network-training-regularization/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/deep-neural-network-training-regularization/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python code is available on GitHub at https://github.com/constantino-garcia/cmmrt",
       "asbval:note": "Repository URL confirmed in abstract.",
@@ -2013,7 +2013,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-neural-network-training-regularization/010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/deep-neural-network-training-regularization/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not contain information about specific script names (train_model.py) or Makefile rules (make train_predictor). The repository is confirmed to exist but internal structure is not documented in the provided passages.",
@@ -2033,7 +2033,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/descriptor-fingerprint-feature-engineering/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/descriptor-fingerprint-feature-engineering/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The best results were obtained by a heavily regularized deep neural network trained with cosine annealing warm restarts and stochastic weight averaging, achieving a mean and median absolute errors of [Formula: see text] and [Formula: see text], respectively.",
       "asbval:note": null,
@@ -2053,7 +2053,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/descriptor-fingerprint-feature-engineering/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/descriptor-fingerprint-feature-engineering/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software.",
       "asbval:note": null,
@@ -2073,7 +2073,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/descriptor-fingerprint-feature-engineering/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/descriptor-fingerprint-feature-engineering/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software.",
       "asbval:note": null,
@@ -2093,7 +2093,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/descriptor-fingerprint-feature-engineering/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/descriptor-fingerprint-feature-engineering/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The best results were obtained by a heavily regularized deep neural network trained with cosine annealing warm restarts and stochastic weight averaging",
       "asbval:note": null,
@@ -2113,7 +2113,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/descriptor-fingerprint-feature-engineering/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/descriptor-fingerprint-feature-engineering/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The best results were obtained by a heavily regularized deep neural network trained with cosine annealing warm restarts and stochastic weight averaging",
       "asbval:note": null,
@@ -2133,7 +2133,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/descriptor-fingerprint-feature-engineering/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/descriptor-fingerprint-feature-engineering/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Accurate prediction of retention time for a given chromatographic method would be a valuable support for metabolite annotation.",
       "asbval:note": null,
@@ -2153,7 +2153,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/descriptor-fingerprint-feature-engineering/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/descriptor-fingerprint-feature-engineering/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To project retention times between chromatographic methods, a novel Bayesian meta-learning approach that can learn from just a few molecules is proposed.",
       "asbval:note": null,
@@ -2173,7 +2173,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/descriptor-fingerprint-feature-engineering/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/descriptor-fingerprint-feature-engineering/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software.",
       "asbval:note": null,
@@ -2193,7 +2193,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/descriptor-fingerprint-feature-engineering/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/descriptor-fingerprint-feature-engineering/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The best results were obtained by a heavily regularized deep neural network trained with cosine annealing warm restarts and stochastic weight averaging",
       "asbval:note": null,
@@ -2213,7 +2213,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/descriptor-fingerprint-feature-engineering/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/descriptor-fingerprint-feature-engineering/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "achieving a mean and median absolute errors of [Formula: see text] and [Formula: see text], respectively.",
       "asbval:note": null,
@@ -2233,7 +2233,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/descriptor-fingerprint-feature-engineering/010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/descriptor-fingerprint-feature-engineering/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "DOI: 10.1186/s13321-022-00613-8",
       "asbval:note": null,
@@ -2253,7 +2253,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/descriptor-fingerprint-feature-engineering/011",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/descriptor-fingerprint-feature-engineering/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Title: Probabilistic metabolite annotation using retention time prediction and meta-learned projections",
       "asbval:note": null,
@@ -2273,7 +2273,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/error-metric-comparison-and-benchmarking/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/error-metric-comparison-and-benchmarking/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The best results were obtained by a heavily regularized deep neural network trained with cosine annealing warm restarts and stochastic weight averaging, achieving a mean and median absolute errors of [Formula: see text] and [Formula: see text], respectively... To avoid data-leakage when reporting the performance metrics, nested cross-validation was employed.",
       "asbval:note": "Paper explicitly computes MAE and MEDAE (median absolute error) across multiple models (DNN, DKL, XGBoost, lightGBM, CatBoost, blending ensemble) and compares them systematically.",
@@ -2293,7 +2293,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/error-metric-comparison-and-benchmarking/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/error-metric-comparison-and-benchmarking/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software.",
       "asbval:note": "alvaDesc is explicitly named and used to generate the exact fingerprint types mentioned in the card.",
@@ -2313,7 +2313,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/error-metric-comparison-and-benchmarking/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/error-metric-comparison-and-benchmarking/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python code is available on GitHub at https://github.com/constantino-garcia/cmmrt.",
       "asbval:note": "Repository is confirmed present. Paper describes DNN and Bayesian meta-learned GP models for RT prediction and projection, with MAE/MEDAE metrics computed on outputs.",
@@ -2333,7 +2333,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/error-metric-comparison-and-benchmarking/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/error-metric-comparison-and-benchmarking/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To study the robustness of the projection method when only a few metabolites are known, the number of training points was varied between 10 and 50; 50 was the number of molecules used in [21].",
       "asbval:note": "Paper explicitly tests projection with 10, 20, 30, 40, and 50 training points (molecules), comparing sparse vs. full calibration scenarios.",
@@ -2353,7 +2353,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/error-metric-comparison-and-benchmarking/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/error-metric-comparison-and-benchmarking/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MEDAE of 17.2 \u00b1 0.9 s and a MAE of 39.2 \u00b1 1.2 s when considering all molecules, and a MEDAE of 17.2 \u00b1 0.9 s and a MAE of 34.0 \u00b1 0.9 s when considering retained molecules only.",
       "asbval:note": "Paper reports MAE and MEDAE across multiple models (Tables 1\u20133) and projection scenarios (Table 4).",
@@ -2373,7 +2373,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/error-metric-comparison-and-benchmarking/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/error-metric-comparison-and-benchmarking/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To avoid data-leakage when reporting the performance of the different models, nested stratified cross-validation was used. Nested cross-validation guarantees that different data is used to tune model parameters and to evaluate its performance by means of outer and inner cross-validation loops.",
       "asbval:note": "Paper explicitly employs nested cross-validation with 5-fold outer and 7-fold inner loops for robust error metric computation.",
@@ -2393,7 +2393,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/error-metric-comparison-and-benchmarking/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/error-metric-comparison-and-benchmarking/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Bayesian hyperparameter search was used for parameter tuning... The parameters were tested following the predictions of a TPE algorithm [27].",
       "asbval:note": "Paper uses Tree-structured Parzen Estimator (TPE) for Bayesian hyperparameter optimization across regressors.",
@@ -2413,7 +2413,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/error-metric-comparison-and-benchmarking/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/error-metric-comparison-and-benchmarking/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The METLIN Small Molecule Retention Time (SMRT) dataset consists of the experimental retention times of 80,038 small molecules from the METLIN library [21]. All RTs were obtained using reverse-phase chromatography with high-performance liquid chromatography-mass spectrometry (HPLC-MS).",
       "asbval:note": "Paper uses pre-existing experimental RT ground truth (SMRT dataset) and trains models to predict RTs, then computes error metrics on predictions vs. ground truth.",
@@ -2433,7 +2433,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-condition-comparative-analysis/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/feature-condition-comparative-analysis/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The models were trained using only the descriptors, only the fingerprints, and both types of features simultaneously... We have also created an ensemble with all the trained models... Several state of the art machine learning regressors were tested for predicting the RTs using three different sets of features: fingerprints only, descriptors only and fingerprints+descriptors.",
       "asbval:note": "Paper explicitly trains models under three feature conditions: descriptors-only, fingerprints-only, and combined, across multiple regressor architectures (XGBoost, lightGBM, CatBoost, DNN, DKL, SVM).",
@@ -2453,7 +2453,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-condition-comparative-analysis/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/feature-condition-comparative-analysis/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software... alvaDesc permits the computation of MACCS166 fingerprints, Extended Connectivity Fingerprints (ECFP) [31] and Path Fingerprints (PFP), making a total of 2, 214 fingerprints. Additionally, the 5, 666 molecular descriptors supported by alvaDesc were also generated",
       "asbval:note": "alvaDesc is explicitly named and used for generating both descriptor and fingerprint features.",
@@ -2473,7 +2473,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-condition-comparative-analysis/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/feature-condition-comparative-analysis/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "RDKit is not mentioned anywhere in the provided passages. The paper uses only alvaDesc for feature generation. No supplementary notebooks mentioning RDKit are referenced in the passages.",
@@ -2493,7 +2493,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-condition-comparative-analysis/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/feature-condition-comparative-analysis/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Fig. 5 shows that models that did not employ Bayesian search (lightGBM and CatBoost) perform worse... These were also the models that benefited from using both descriptors and fingerprints; in the other models using both types of features together had a performance similar to using only the descriptors. In the literature there are both works reporting that fingerprints outperform molecular descriptors... Our results slightly favor the usage of fingerprints",
       "asbval:note": "Paper provides detailed MAE/MEDAE comparisons across feature conditions in Tables 1\u20133 and Figure 5, quantifying the independent contribution of each feature type.",
@@ -2513,7 +2513,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-condition-comparative-analysis/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/feature-condition-comparative-analysis/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To avoid data-leakage when reporting the performance of the different models, nested stratified cross-validation was used. Nested cross-validation guarantees that different data is used to tune model parameters and to evaluate its performance by means of outer and inner cross-validation loops.",
       "asbval:note": "Paper explicitly employs nested cross-validation with 5-fold outer and 7-fold inner loops for all feature-condition comparisons.",
@@ -2533,7 +2533,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-condition-comparative-analysis/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/feature-condition-comparative-analysis/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Bayesian hyperparameter search was used for parameter tuning... The parameters were tested following the predictions of a TPE algorithm [27].",
       "asbval:note": "Paper uses Tree-structured Parzen Estimator (TPE) for Bayesian hyperparameter optimization across all feature conditions.",
@@ -2553,7 +2553,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-candidate-ranking-likelihood-scoring/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/metabolite-candidate-ranking-likelihood-scoring/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "By applying this projection between the deep neural network retention time predictions and a given chromatographic method, our approach can be integrated into a metabolite annotation workflow to obtain z-scores for the candidate annotations... The use of z-scores permits considering the uncertainty in the projection when ranking candidates, and not only the accuracy.",
       "asbval:note": "The paper explicitly describes using DNN RT predictions with Bayesian meta-learned projections to generate z-scores (probabilistic scores) for ranking candidates, incorporating uncertainty.",
@@ -2573,7 +2573,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-candidate-ranking-likelihood-scoring/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/metabolite-candidate-ranking-likelihood-scoring/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software.",
       "asbval:note": "Exact match: alvaDesc generates the specified number and types of descriptors and fingerprints.",
@@ -2593,7 +2593,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-candidate-ranking-likelihood-scoring/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/metabolite-candidate-ranking-likelihood-scoring/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The best results were obtained by a heavily regularized deep neural network trained with cosine annealing warm restarts and stochastic weight averaging... Python code is available on GitHub at https://github.com/constantino-garcia/cmmrt.",
       "asbval:note": "The paper confirms the cmmrt repository contains code for DNN training with cosine annealing warm restarts and SWA, and implements the Bayesian meta-learning approach for RT projection.",
@@ -2613,7 +2613,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-candidate-ranking-likelihood-scoring/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/metabolite-candidate-ranking-likelihood-scoring/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The best results were obtained by a heavily regularized deep neural network trained with cosine annealing warm restarts and stochastic weight averaging, achieving a mean and median absolute errors of [Formula: see text] and [Formula: see text], respectively.",
       "asbval:note": "Explicitly stated as the best-performing approach for RT prediction.",
@@ -2633,7 +2633,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-candidate-ranking-likelihood-scoring/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/metabolite-candidate-ranking-likelihood-scoring/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To project retention times between chromatographic methods, a novel Bayesian meta-learning approach that can learn from just a few molecules is proposed.",
       "asbval:note": "Core methodological contribution explicitly described.",
@@ -2653,7 +2653,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-candidate-ranking-likelihood-scoring/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/metabolite-candidate-ranking-likelihood-scoring/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "By applying this projection between the deep neural network retention time predictions and a given chromatographic method, our approach can be integrated into a metabolite annotation workflow to obtain z-scores for the candidate annotations. The use of z-scores permits considering the uncertainty in the projection when ranking candidates, and not only the accuracy.",
       "asbval:note": "z-scores are explicitly generated to rank candidates while incorporating uncertainty.",
@@ -2673,7 +2673,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-candidate-ranking-likelihood-scoring/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/metabolite-candidate-ranking-likelihood-scoring/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In this scenario, our results show that in 68% of the cases the correct molecule was among the top three candidates filtered by mass and ranked according to z-scores... When using 50 training points, our projection method ranks the correct identity among the top three candidates in 70% of the cases.",
       "asbval:note": "Paper reports 68% with 10 training points and 70% with 50 training points for top-3 ranking accuracy.",
@@ -2693,7 +2693,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-candidate-ranking-likelihood-scoring/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/metabolite-candidate-ranking-likelihood-scoring/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To the best of our knowledge, these are the most accurate predictions published up to date over the SMRT dataset. To project retention times between chromatographic methods, a novel Bayesian meta-learning approach that can learn from just a few molecules is proposed... it is enough that just as few as 10 molecules of a given experiment have been identified",
       "asbval:note": "Paper explicitly states 10 molecules are sufficient for the meta-learning projection approach.",
@@ -2713,7 +2713,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-candidate-ranking-likelihood-scoring/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/metabolite-candidate-ranking-likelihood-scoring/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We have trained state-of-the-art machine learning regressors using the 80, 038 experimental retention times from the METLIN Small Molecule Retention Tim (SMRT) dataset.",
       "asbval:note": "Exact match on dataset size and source.",
@@ -2733,7 +2733,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-candidate-ranking-likelihood-scoring/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/metabolite-candidate-ranking-likelihood-scoring/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The most common approach to annotate metabolites is to query a metabolomics database for compounds that have a mass compatible with the experimental masses. Often this query returns multiple annotation candidates for the same mass. Next, the researcher tries to discard, or score according to plausibility, the candidate annotations using other molecule's properties.",
       "asbval:note": "Paper describes the exact use case: multiple candidates from mass search need to be ranked using additional properties like RT.",
@@ -2753,7 +2753,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-candidate-ranking-likelihood-scoring/010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/metabolite-candidate-ranking-likelihood-scoring/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Since laboratories usually customize the Chromatographic Method (CM) for the needs of each experiment, a SMRT-based model cannot be directly applied to experimental data from other laboratories, or even other experiments conducted in the same laboratory... To build such a projection function, a set of known molecules whos [sic] RTs is known in both CMs is needed.",
       "asbval:note": "Paper explicitly addresses the problem of different chromatographic methods and proposes the projection solution.",
@@ -2773,7 +2773,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-descriptor-fingerprint-generation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/molecular-descriptor-fingerprint-generation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software",
       "asbval:note": null,
@@ -2793,7 +2793,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-descriptor-fingerprint-generation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/molecular-descriptor-fingerprint-generation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software. Specifically, alvaDesc permits the computation of MACCS166 fingerprints, Extended Connectivity Fingerprints (ECFP) [31] and Path Fingerprints (PFP)",
       "asbval:note": null,
@@ -2813,7 +2813,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-descriptor-fingerprint-generation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/molecular-descriptor-fingerprint-generation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention RDKit or any alternative fingerprint generation tool. Only alvaDesc is used throughout the paper for feature generation.",
@@ -2833,7 +2833,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-descriptor-fingerprint-generation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/molecular-descriptor-fingerprint-generation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python code is available on GitHub at https://github.com/constantino-garcia/cmmrt",
       "asbval:note": "Paper confirms cmmrt GitHub repository exists and contains code, but does not explicitly describe build_data.py functions or their specific role in orchestrating alvaDesc feature generation. The card's claim about specific function names (generate_vector_fingerprints, generate_vector_fps_descs) cannot be verified from the passages.",
@@ -2853,7 +2853,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-descriptor-fingerprint-generation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/molecular-descriptor-fingerprint-generation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our results slightly favor the usage of fingerprints, although it cannot be ruled out that the best type of feature depends on the machine learning regressor used.",
       "asbval:note": "Paper states fingerprints slightly favor over descriptors but does not definitively show fingerprints achieve lower MAE than descriptors alone across all models. The evidence is more nuanced: 'Preliminary results suggested that using fingerprints, descriptors, and fingerprints+descriptors yielded similar results' (passage 6). The claim overstates the empirical advantage.",
@@ -2873,7 +2873,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-descriptor-fingerprint-generation/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/molecular-descriptor-fingerprint-generation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The models were trained using only the descriptors, only the fingerprints, and both types of features simultaneously.",
       "asbval:note": null,
@@ -2893,7 +2893,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-descriptor-fingerprint-generation/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/molecular-descriptor-fingerprint-generation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The SMRT dataset has been made public including the PubChem numbers and SDF files representing their chemical structure [28], together with their experimental RT information.",
       "asbval:note": "Paper confirms SDF format was used. However, the paper does not explicitly list all supported input formats (SMILES, InChI, mol, mol2, hin) for alvaDesc. Only SDF is explicitly mentioned in the paper context.",
@@ -2913,7 +2913,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/regression-error-metric-evaluation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/regression-error-metric-evaluation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To avoid data-leakage when reporting the performance of the different models, nested stratified cross-validation was used... The best results were obtained by a heavily regularized deep neural network trained with cosine annealing warm restarts and stochastic weight averaging, achieving a mean and median absolute errors of [Formula: see text] and [Formula: see text], respectively.",
       "asbval:note": "Paper explicitly uses MAE and MEDAE (median absolute error) as primary performance metrics for regression models on held-out test sets via nested cross-validation.",
@@ -2933,7 +2933,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/regression-error-metric-evaluation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/regression-error-metric-evaluation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Several state of the art machine learning regressors were tested for predicting the RTs using three different sets of features: fingerprints only, descriptors only and fingerprints+descriptors... The different shapes indicate the features used for feeding the regressors (in the legend, fgp and desc indicate fingerprints and descriptors, respectively).",
       "asbval:note": "Paper systematically compares multiple model architectures (XGBoost, lightGBM, CatBoost, DNN, DKL, blending) and feature representations (descriptors, fingerprints, combined) using MAE/MEDAE metrics.",
@@ -2953,7 +2953,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/regression-error-metric-evaluation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/regression-error-metric-evaluation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software.",
       "asbval:note": "alvaDesc is explicitly named and used to generate descriptors and fingerprints that serve as input features to the regression models whose performance is evaluated.",
@@ -2973,7 +2973,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/regression-error-metric-evaluation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/regression-error-metric-evaluation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These features were computed using alvaDesc [29, 30] and include both fingerprints and molecular descriptors... All the descriptors and fingerprints obtained with alvaDesc were used to feed the regressors.",
       "asbval:note": "alvaDesc's role is precisely feature generation for regression models; the generated features are then used in models whose MAE/MEDAE performance is evaluated.",
@@ -2993,7 +2993,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/regression-model-evaluation-mae-metrics/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/regression-model-evaluation-mae-metrics/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To avoid data-leakage when reporting the performance of the different models, nested stratified cross-validation was used... The best results were obtained by a heavily regularized deep neural network trained with cosine annealing warm restarts and stochastic weight averaging, achieving a mean and median absolute errors of [Formula: see text] and [Formula: see text], respectively.",
       "asbval:note": "Paper explicitly evaluates multiple regression models using MAE and MEDAE (median absolute error) metrics on held-out test sets with nested cross-validation and reports uncertainty bounds (standard errors).",
@@ -3013,7 +3013,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/regression-model-evaluation-mae-metrics/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/regression-model-evaluation-mae-metrics/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software.",
       "asbval:note": "alvaDesc is explicitly named and used to generate the exact fingerprint types mentioned in the card.",
@@ -3033,7 +3033,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/regression-model-evaluation-mae-metrics/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/regression-model-evaluation-mae-metrics/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python code is available on GitHub at https://github.com/constantino-garcia/cmmrt.",
       "asbval:note": "The cmmrt repository is confirmed to exist and is the paper's code repository. The paper describes the full pipeline including model training and evaluation with MAE/MEDAE metrics.",
@@ -3053,7 +3053,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/regression-model-evaluation-mae-metrics/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/regression-model-evaluation-mae-metrics/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Retention time information is used for metabolite annotation in metabolomic experiments... We have trained state-of-the-art machine learning regressors using the 80, 038 experimental retention times from the METLIN Small Molecule Retention Tim (SMRT) dataset... To avoid data-leakage when reporting the performance metrics, nested cross-validation was employed.",
       "asbval:note": "Paper directly addresses retention time prediction on LC-MS datasets with held-out test evaluation using MAE/MEDAE as primary metrics.",
@@ -3073,7 +3073,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/regression-model-evaluation-mae-metrics/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/regression-model-evaluation-mae-metrics/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "All the descriptors and fingerprints obtained with alvaDesc were used to feed the regressors... Descriptors were first standardized and imputed using median imputation when alvaDesc was not able to generate some descriptor.",
       "asbval:note": "Paper emphasizes consistent preprocessing and feature generation pipeline across all models evaluated.",
@@ -3093,7 +3093,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/regression-model-evaluation-mae-metrics/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/regression-model-evaluation-mae-metrics/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Nested cross-validation guarantees that different data is used to tune model parameters and to evaluate its performance by means of outer and inner cross-validation loops... In the outer loop, train/test splits are generated, which are then used for averaging the test scores over several data splits.",
       "asbval:note": "Paper explicitly addresses the importance of proper cross-validation to avoid data leakage and ensure truly held-out test sets.",
@@ -3113,7 +3113,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-prediction/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/retention-time-prediction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The best results were obtained by a heavily regularized deep neural network trained with cosine annealing warm restarts and stochastic weight averaging, achieving a mean and median absolute errors of [Formula: see text] and [Formula: see text], respectively... a MAE of 39.2 \u00b1 1.2 s when considering all molecules... To project retention times between chromatographic methods, a novel Bayesian meta-learning approach that can learn from just a few molecules is proposed... our approach can be integrated into a metabolite annotation workflow to obtain z-scores for the candidate annotations.",
       "asbval:note": "All core claims verified: DNN architecture, regularization techniques (dropout, cosine annealing, SWA), MAE metric value, and integration into metabolite annotation workflow.",
@@ -3133,7 +3133,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-prediction/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/retention-time-prediction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software... alvaDesc permits the computation of MACCS166 fingerprints, Extended Connectivity Fingerprints (ECFP) [31] and Path Fingerprints (PFP), making a total of 2, 214 fingerprints. Additionally, the 5, 666 molecular descriptors supported by alvaDesc were also generated",
       "asbval:note": "Exact match on descriptor/fingerprint counts and types.",
@@ -3153,7 +3153,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-prediction/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/retention-time-prediction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python code is available on GitHub at https://github.com/constantino-garcia/cmmrt.",
       "asbval:note": "Repository URL confirmed in paper. However, passages do not explicitly mention Makefile rules, train_predictor, or test_predictor targets. The card claims specific build/execution targets that cannot be verified from the provided text.",
@@ -3173,7 +3173,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-prediction/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/retention-time-prediction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we used a DNN with just 3 layers, regularized using large dropout rates... To improve the generalization ability of the DNN and to accelerate its training, w[e used] cosine annealing warm restarts... Finally, quantile transformation was applied to RTs before fitting.",
       "asbval:note": "All key hyperparameters and training techniques explicitly mentioned.",
@@ -3193,7 +3193,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-prediction/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/retention-time-prediction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Hyperparameter search for the models was performed with the Tree-structured Parzen Estimator (TPE) algorithm [27]... In our experiments each model performed 50 iterations of the Bayesian search.",
       "asbval:note": "Both TPE algorithm and iteration count confirmed.",
@@ -3213,7 +3213,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-prediction/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/retention-time-prediction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "nested stratified cross-validation was used... We used 5-folds and 7-folds stratified cross-validations in the outer and inner loops, respectively.",
       "asbval:note": "Exact fold counts and nesting structure confirmed.",
@@ -3233,7 +3233,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-prediction/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/retention-time-prediction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "a MAE of 39.2 \u00b1 1.2 s when considering all molecules, and a MAE of 34.0 \u00b1 0.9 s when considering retained molecules only",
       "asbval:note": "Exact metric values and molecule subsets confirmed.",
@@ -3253,7 +3253,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-prediction/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/retention-time-prediction/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "our approach can be integrated into a metabolite annotation workflow to obtain z-scores for the candidate annotations... The results retrieved from it would enable scoring candidates with similar m/z but different RTs... molecules were ranked using Retention Time (RT) information according to a z-score computed as",
       "asbval:note": "Z-score computation for ranking confirmed in workflow description.",
@@ -3273,7 +3273,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-prediction/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/retention-time-prediction/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "When using as few as 10 training points, the global performance decreases to 68%, while with 30 is 69%... when using 50 training points our projection method ranks the correct identity among the top three candidates in 70% of the cases",
       "asbval:note": "Exact percentages and training point counts confirmed.",
@@ -3293,7 +3293,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-prediction/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/retention-time-prediction/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The METLIN Small Molecule Retention Time (SMRT) dataset consists of the experimental retention times of 80,038 small molecules from the METLIN library [21]. All RTs were obtained using reverse-phase chromatography with high-performance liquid chromatography-mass spectrometry (HPLC-MS).",
       "asbval:note": "Dataset size and acquisition method confirmed.",
@@ -3313,7 +3313,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-prediction/010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/retention-time-prediction/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we propose the use of meta-learning to solve the problem of learning from few samples... GPs are particularly suited as projection model... we shall use a GP parametrized with a constant mean, and a polynomial kernel of degree 4. That is f(x) \u223c GP(c, (xx' + \u03b3)^4).",
       "asbval:note": "Meta-learning framework, GP choice, and specific kernel configuration all confirmed.",
@@ -3333,7 +3333,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-prediction/011",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/retention-time-prediction/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Descriptors were first standardized and imputed using median imputation... Features with 0 variance were removed. Highly correlated features were also eliminated (correlation > 0.9)... The only preprocessing applied to the fingerprint features was removing those with low variance.",
       "asbval:note": "All preprocessing steps and thresholds confirmed.",
@@ -3353,7 +3353,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-prediction/012",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/retention-time-prediction/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Finally, quantile transformation was applied to RTs before fitting. The method transforms RTs to follow a standardized normal distribution.",
       "asbval:note": "Transformation method and rationale confirmed.",
@@ -3373,7 +3373,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-projection-across-chromatographic-methods/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/retention-time-projection-across-chromatographic-methods/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To project retention times between chromatographic methods, a novel Bayesian meta-learning approach that can learn from just a few molecules is proposed... it is enough that just as few as 10 molecules of a given experiment have been identified",
       "asbval:note": "Paper proposes Bayesian meta-learning for RT projection from few molecules (10+), but the claim about 'mapping to a pre-trained DNN's latent feature space' is not explicitly stated. The paper uses a DNN for RT prediction and then applies a Gaussian Process (GP) for projection, not a direct mapping to DNN latent features. The projection function is a GP, not a latent-space mapping.",
@@ -3393,7 +3393,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-projection-across-chromatographic-methods/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/retention-time-projection-across-chromatographic-methods/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "in 68% of the cases the correct molecule was among the top three candidates filtered by mass and ranked according to z-scores... When decreasing the number of training points to just 10 samples, the percentage is 68%, while with 30 is 69%",
       "asbval:note": "Paper demonstrates that with as few as 10 training points, the method achieves 68% ranking accuracy, competitive with 70% at 50 training points, supporting the claim of competitive accuracy with minimal calibration.",
@@ -3413,7 +3413,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-projection-across-chromatographic-methods/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/retention-time-projection-across-chromatographic-methods/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To build such a projection function, a set of known molecules whos RTs is known in both CMs is needed... To use this database, a researcher provides the experimental RTs (as measured in his/her Chromatographic Method (CM)) of a few molecules whose identity is known",
       "asbval:note": "Paper explicitly describes the workflow for projecting RTs between chromatographic methods using calibration molecules.",
@@ -3433,7 +3433,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-projection-across-chromatographic-methods/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/retention-time-projection-across-chromatographic-methods/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We have trained state-of-the-art machine learning regressors using the 80, 038 experimental retention times from the METLIN Small Molecule Retention Tim (SMRT) dataset... The best model was a Deep Neural Network (DNN) trained using molecular fingerprints",
       "asbval:note": "Paper confirms training DNN on METLIN SMRT dataset with 80,038 RTs.",
@@ -3453,7 +3453,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-projection-across-chromatographic-methods/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/retention-time-projection-across-chromatographic-methods/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software",
       "asbval:note": "Exact match to paper text.",
@@ -3473,7 +3473,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-projection-across-chromatographic-methods/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/retention-time-projection-across-chromatographic-methods/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These chemical structures were used to obtain a wide variety of features describing relevant properties of the molecules. These features were computed using alvaDesc [29, 30] and include both fingerprints and molecular descriptors.",
       "asbval:note": "Paper confirms alvaDesc used to generate features for molecules in the study.",
@@ -3493,7 +3493,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-projection-across-chromatographic-methods/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/retention-time-projection-across-chromatographic-methods/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python code is available on GitHub at https://github.com/constantino-garcia/cmmrt",
       "asbval:note": "Paper confirms availability of Python code at the specified GitHub repository.",
@@ -3513,7 +3513,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-projection-across-chromatographic-methods/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/retention-time-projection-across-chromatographic-methods/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The models included deep neural networks, deep kernel learning, several gradient boosting models, and a blending approach... Bayesian hyperparameter search was used for parameter tuning... To project retention times between chromatographic methods, a novel Bayesian meta-learning approach that can learn from just a few molecules is proposed.",
       "asbval:note": "Paper describes DNN training, hyperparameter tuning via Bayesian search, and meta-learning projection approach, all components claimed to be in cmmrt package.",
@@ -3533,7 +3533,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/stochastic-weight-averaging-implementation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/stochastic-weight-averaging-implementation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To improve the generalization ability of the DNN and to accelerate its training, we used a DNN with just 3 layers, regularized using large dropout rates... To improve the generalization ability of the DNN and to accelerate its training, we used cosine annealing warm restarts and stochastic weight averaging",
       "asbval:note": "Paper confirms SWA was used with cosine annealing warm restarts for DNN training on retention time prediction and achieved best results (MAE 39.2\u00b11.2s, MEDAE 17.2\u00b10.9s). However, the paper does not explicitly isolate or quantify the specific contribution of SWA alone to error reduction\u2014it presents SWA as part of a combined regularization strategy (dropout + cosine annealing + SWA). The claim about 'stabilizing learned representations across multiple training epochs' is a mechanistic interpretation not explicitly stated in the paper.",
@@ -3553,7 +3553,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/stochastic-weight-averaging-implementation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/stochastic-weight-averaging-implementation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We have trained state-of-the-art machine learning regressors using the 80, 038 experimental retention times from the METLIN Small Molecule Retention Tim (SMRT) dataset... 5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software... The best results were obtained by a heavily regularized deep neural network trained with cosine annealing warm restarts and stochastic weight averaging",
       "asbval:note": "Scope aligns with paper's actual experimental setup: 80,038 molecules, 5,666 descriptors + 2,214 fingerprints, DNN with dropout regularization, cosine annealing warm restarts + SWA, retention time regression task.",
@@ -3573,7 +3573,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/stochastic-weight-averaging-implementation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/stochastic-weight-averaging-implementation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software",
       "asbval:note": "alvaDesc is explicitly named and used for generating molecular descriptors and fingerprints.",
@@ -3593,7 +3593,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/stochastic-weight-averaging-implementation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/stochastic-weight-averaging-implementation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software... The models were trained using only the descriptors, only the fingerprints, and both types of features simultaneously.",
       "asbval:note": "Role is accurate: alvaDesc generates features that feed the DNN models (which use SWA).",
@@ -3613,7 +3613,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/stochastic-weight-averaging-implementation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/stochastic-weight-averaging-implementation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not name PyTorch or TensorFlow. The paper mentions Python code is available on GitHub but does not specify which deep learning framework was used for DNN implementation. The specific framework is not disclosed in the provided passages.",
@@ -3633,7 +3633,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/stochastic-weight-averaging-implementation/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/stochastic-weight-averaging-implementation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Since the framework is not named in the paper, the role cannot be verified. The paper confirms DNN, cosine annealing, and SWA were used, but does not specify which framework implemented them.",
@@ -3653,7 +3653,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/uncertainty-quantification-rt-prediction/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/uncertainty-quantification-rt-prediction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The use of z-scores permits considering the uncertainty in the projection when ranking candidates, and not only the accuracy... the correct molecule was among the top three candidates filtered by mass and ranked according to z-scores.",
       "asbval:note": "Paper does quantify uncertainty and use it for ranking (via z-scores from GP projection intervals), but the primary uncertainty mechanism is Bayesian meta-learned Gaussian Processes for RT projection between chromatographic methods, not direct DNN uncertainty quantification. The DNN itself is trained with regularization and SWA but uncertainty is introduced via the GP projection layer, not from the DNN's internal predictions.",
@@ -3673,7 +3673,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/uncertainty-quantification-rt-prediction/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/uncertainty-quantification-rt-prediction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "5, 666 molecular descriptors and 2, 214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software.",
       "asbval:note": null,
@@ -3693,7 +3693,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/uncertainty-quantification-rt-prediction/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/uncertainty-quantification-rt-prediction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python code is available on GitHub at https://github.com/constantino-garcia/cmmrt.",
       "asbval:note": "Repository confirmed present. Paper confirms DNN training with cosine annealing warm restarts and stochastic weight averaging (SWA) are used: 'The best results were obtained by a heavily regularized deep neural network trained with cosine annealing warm restarts and stochastic weight averaging.' However, the uncertainty quantification is primarily implemented via Bayesian meta-learned Gaussian Processes for projection, not as a native DNN feature. The cmmrt tool implements the full pipeline including DNN + GP projection, but the card's framing of 'DNN uncertainty quantification' is not the primary mechanism.",
@@ -3713,7 +3713,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/uncertainty-quantification-rt-prediction/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/uncertainty-quantification-rt-prediction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The best results were obtained by a heavily regularized deep neural network trained with cosine annealing warm restarts and stochastic weight averaging, achieving a mean and median absolute errors of [Formula: see text] and [Formula: see text], respectively.",
       "asbval:note": null,
@@ -3733,7 +3733,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/uncertainty-quantification-rt-prediction/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/uncertainty-quantification-rt-prediction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To project retention times between chromatographic methods, a novel Bayesian meta-learning approach that can learn from just a few molecules is proposed.",
       "asbval:note": null,
@@ -3753,7 +3753,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/uncertainty-quantification-rt-prediction/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/uncertainty-quantification-rt-prediction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The use of z-scores permits considering the uncertainty in the projection when ranking candidates, and not only the accuracy.",
       "asbval:note": null,
@@ -3773,7 +3773,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/uncertainty-quantification-rt-prediction/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/uncertainty-quantification-rt-prediction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In this scenario, our results show that in 68% of the cases the correct molecule was among the top three candidates filtered by mass and ranked according to z-scores.",
       "asbval:note": null,
@@ -3793,7 +3793,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/uncertainty-quantification-rt-prediction/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/uncertainty-quantification-rt-prediction/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We have trained state-of-the-art machine learning regressors using the 80, 038 experimental retention times from the METLIN Small Molecule Retention Tim (SMRT) dataset.",
       "asbval:note": null,
@@ -3813,7 +3813,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/uncertainty-quantification-rt-prediction/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/uncertainty-quantification-rt-prediction/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used 5-folds and 7-folds stratified cross-validations in the outer and inner loops, respectively.",
       "asbval:note": null,
@@ -3833,7 +3833,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/uncertainty-quantification-rt-prediction/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/uncertainty-quantification-rt-prediction/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Hyperparameter search for the models was performed with the Tree-structured Parzen Estimator (TPE) algorithm [27]",
       "asbval:note": null,
@@ -3853,7 +3853,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bayesian-meta-learning-model-fitting/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/bayesian-meta-learning-model-fitting/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "bayesian-meta-learning-model-fitting",
@@ -3866,7 +3866,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bayesian-meta-learning-projection/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/bayesian-meta-learning-projection/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "bayesian-meta-learning-projection",
@@ -3879,7 +3879,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-method-transfer/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/chromatographic-method-transfer/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "chromatographic-method-transfer",
@@ -3892,7 +3892,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cosine-annealing-schedule-optimization/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/cosine-annealing-schedule-optimization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "cosine-annealing-schedule-optimization",
@@ -3905,7 +3905,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-neural-network-latent-space-mapping/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/deep-neural-network-latent-space-mapping/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "deep-neural-network-latent-space-mapping",
@@ -3918,7 +3918,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-neural-network-training-regularization/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/deep-neural-network-training-regularization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 11,
       "asbval:target_artifact_id": "deep-neural-network-training-regularization",
@@ -3931,7 +3931,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/descriptor-fingerprint-feature-engineering/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/descriptor-fingerprint-feature-engineering/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 12,
       "asbval:target_artifact_id": "descriptor-fingerprint-feature-engineering",
@@ -3944,7 +3944,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/error-metric-comparison-and-benchmarking/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/error-metric-comparison-and-benchmarking/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "error-metric-comparison-and-benchmarking",
@@ -3957,7 +3957,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-condition-comparative-analysis/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/feature-condition-comparative-analysis/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "feature-condition-comparative-analysis",
@@ -3970,7 +3970,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-candidate-ranking-likelihood-scoring/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/metabolite-candidate-ranking-likelihood-scoring/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "metabolite-candidate-ranking-likelihood-scoring",
@@ -3983,7 +3983,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-descriptor-fingerprint-generation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/molecular-descriptor-fingerprint-generation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "molecular-descriptor-fingerprint-generation",
@@ -3996,7 +3996,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/regression-error-metric-evaluation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/regression-error-metric-evaluation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 4,
       "asbval:target_artifact_id": "regression-error-metric-evaluation",
@@ -4009,7 +4009,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/regression-model-evaluation-mae-metrics/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/regression-model-evaluation-mae-metrics/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "regression-model-evaluation-mae-metrics",
@@ -4022,7 +4022,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-prediction/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/retention-time-prediction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 12,
       "asbval:target_artifact_id": "retention-time-prediction",
@@ -4035,7 +4035,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-projection-across-chromatographic-methods/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/retention-time-projection-across-chromatographic-methods/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "retention-time-projection-across-chromatographic-methods",
@@ -4048,7 +4048,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/stochastic-weight-averaging-implementation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/stochastic-weight-averaging-implementation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "stochastic-weight-averaging-implementation",
@@ -4061,7 +4061,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/uncertainty-quantification-rt-prediction/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/skill/uncertainty-quantification-rt-prediction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "uncertainty-quantification-rt-prediction",
@@ -4074,7 +4074,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The CMM-RT code implements methods for accurate prediction of Retention Times for a given Chromatographic Method using machine learning.",
       "asbval:note": null,
@@ -4094,7 +4094,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "State-of-the-art machine learning regressors were trained using 80,038 experimental RTs from the METLIN small molecule dataset.",
       "asbval:note": null,
@@ -4114,7 +4114,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Both retained and unretained molecules were considered in the training dataset.",
       "asbval:note": null,
@@ -4134,7 +4134,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "5,666 molecular descriptors were generated with the alvaDesc software.",
       "asbval:note": null,
@@ -4154,7 +4154,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "2,214 fingerprints were generated with the alvaDesc software.",
       "asbval:note": null,
@@ -4174,7 +4174,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The fingerprints used were MACCS166, Extended Connectivity, and Path Fingerprints.",
       "asbval:note": null,
@@ -4194,7 +4194,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Models were trained using only the descriptors, only the fingerprints, and both types of features simultaneously.",
       "asbval:note": null,
@@ -4214,7 +4214,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Fingerprints tend to perform better than descriptors or combined features for retention time prediction.",
       "asbval:note": "Source excerpt only states fingerprints 'tend to perform better' without specifying better than both descriptors AND combined features; claim overstates the scope",
@@ -4234,7 +4234,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A heavily regularized DNN trained with cosine annealing warm restarts and stochastic weight averaging achieved mean absolute error of 39.2\u00b11.2 s.",
       "asbval:note": null,
@@ -4254,7 +4254,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A heavily regularized DNN trained with cosine annealing warm restarts and stochastic weight averaging achieved median absolute error of 17.2 \u00b1 0.9 s.",
       "asbval:note": null,
@@ -4274,7 +4274,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A novel Bayesian meta-learning approach is proposed for RT projection between CMs.",
       "asbval:note": null,
@@ -4294,7 +4294,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_012",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/claim/claim_012",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The Bayesian meta-learning approach requires as few as 10 molecules for RT projection between chromatographic methods.",
       "asbval:note": null,
@@ -4314,7 +4314,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_013",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/claim/claim_013",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The meta-learning approach obtains competitive error rates compared with previous approaches.",
       "asbval:note": "substring_in_paper=false; text accurately represents excerpt content but substring search failed, likely due to line breaks or whitespace in source",
@@ -4334,7 +4334,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_014",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-022-00613-8/claim/claim_014",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The proposed DNN and meta-learned projections can be integrated into metabolite annotation workflows.",
       "asbval:note": "substring_in_paper=false; text accurately represents excerpt but excerpt appears truncated ('annotati' incomplete); substring search likely failed due to truncation",

@@ -1597,7 +1597,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_001/000",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport ) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": "Paper explicitly describes tximport's purpose as importing transcript-level estimates (including from Salmon) and producing gene-level outputs for statistical inference.",
@@ -1617,7 +1617,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_001/001",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport ) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": "tximport is the primary R package developed and described throughout the paper for this exact purpose.",
@@ -1637,7 +1637,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_001/002",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not mention 'readr' package. While tximport is an R package that likely uses file I/O functions, readr is not explicitly named in the provided passages. Insufficient evidence to confirm or deny.",
@@ -1657,7 +1657,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_001/003",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices",
       "asbval:note": "Paper explicitly states tximport exports count matrices at gene level, which aligns with the expected output.",
@@ -1677,7 +1677,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_001/004",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Gene-level TPM estimates, representing the overall transcriptional output of each gene, were obtained by summing the corresponding transcript-level TPM estimates.",
       "asbval:note": "Paper describes computing gene-level TPM by summing transcript TPMs, but tximport's primary output is count matrices and offsets, not TPM matrices. TPM aggregation is discussed as a method but not as a standard tximport output.",
@@ -1697,7 +1697,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_001/005",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_001/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets)",
       "asbval:note": "Paper states tximport exports 'average transcript length correction terms (i.e., offsets)' rather than a full length matrix. These are normalization factors used in statistical modeling, not a standalone length matrix output.",
@@ -1717,7 +1717,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card's research question is narrowly focused on tximport's ability to import Salmon files and produce three specific matrix types. The paper's scope is broader\u2014it compares gene-level vs. transcript-level analysis strategies across multiple quantification tools (Salmon, featureCounts, RSEM, kallisto, etc.) and statistical methods (edgeR, DESeq2, limma).",
@@ -1734,7 +1734,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_002/000",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": "Paper confirms tximport exists and integrates transcript-level estimates into count-based inference. However, the paper does not explicitly discuss or test the equivalence of txOut=TRUE+summarizeToGene versus txOut=FALSE workflows. The specific parameter names (txOut, summarizeToGene) and their equivalence are not mentioned in the provided passages. The research question appears to be a technical implementation detail not addressed in the paper.",
@@ -1754,7 +1754,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_002/001",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": "tximport is explicitly named and described as an R package developed by the authors for integrating transcript-level abundance estimates.",
@@ -1774,7 +1774,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_002/002",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The readr package is not mentioned anywhere in the provided passages. No evidence of its use in the paper.",
@@ -1794,7 +1794,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_002/003",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices",
       "asbval:note": "Paper confirms tximport exports count matrices, but does not specifically discuss the summarizeToGene function or a two-step workflow with that function name. The paper discusses aggregating transcript counts to gene level but does not name a function called 'summarizeToGene'.",
@@ -1814,7 +1814,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_002/004",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_002/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The parameter txOut=FALSE is not mentioned in any of the provided passages. While the paper discusses gene-level count matrices, it does not reference this specific parameter or workflow.",
@@ -1834,7 +1834,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_002/005",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_002/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss comparing or confirming equivalence between different tximport workflows or output matrices.",
@@ -1854,7 +1854,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate task card describes a highly specific technical implementation detail (comparing txOut=TRUE+summarizeToGene versus txOut=FALSE in tximport) that is not addressed in the paper.",
@@ -1872,7 +1872,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_003/000",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines... To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma.",
       "asbval:note": "The paper explicitly describes tximport's role in creating offset matrices from transcript-length estimates for use with DESeq2. The research question aligns with the paper's core contribution.",
@@ -1892,7 +1892,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_003/001",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": "[SUBSTRING-MATCH for tximport | role: primary tool for integrating transcript-level estimates]",
@@ -1912,7 +1912,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_003/002",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": "[SUBSTRING-MATCH for DESeq2 | role: downstream statistical inference engine]",
@@ -1932,7 +1932,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_003/003",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Salmon (v0.5.1) to estimate TPM values for each transcript in each of the data sets... We further used the Salmon transcript lengths and estimated TPMs to define average transcript lengths for each gene and each sample (normalization factors) as described in the Supplementary material, to be used as offsets for edgeR and DESeq2",
       "asbval:note": "[SUBSTRING-MATCH for Salmon | role: transcript abundance quantification tool providing transcript lengths and TPM estimates]",
@@ -1952,7 +1952,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_003/004",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_003/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2",
       "asbval:note": "The paper describes tximport exporting count matrices and offsets (average transcript length correction terms) for use with DESeq2, which aligns with the expected output of a DESeqDataSet with embedded offsets.",
@@ -1972,7 +1972,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_003/005",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_003/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We defined three different count matrices for each data set... We further used the Salmon transcript lengths and estimated TPMs to define average transcript lengths for each gene and each sample (normalization factors) as described in the Supplementary material, to be used as offsets for edgeR and DESeq2 when analyzing the feature-Counts and simplesum count matrices",
       "asbval:note": "The paper explicitly describes using offsets (normalization factors derived from average transcript lengths) with count matrices in DESeq2 and edgeR for gene-level differential expression analysis.",
@@ -1992,7 +1992,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card focuses narrowly on the technical implementation detail of DESeqDataSetFromTximport offset creation, whereas the paper's scope is broader: comparing gene-level vs. transcript-level differential expression analysis and demonstrating that incorporating transcript-level estimates improves DGE results.",
@@ -2009,7 +2009,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_004/000",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_004/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention 'DGEListFromTximport', 'divide=TRUE', or 'divided counts' at any point. The paper discusses tximport as an R package that integrates transcript-level abundance estimates into count-based statistical inference engines (DESeq2, edgeR, limma), but does not describe a function called DGEListFromTximport or any divide parameter. The paper focuses on aggregating transcript counts to gene level, not dividing them.",
@@ -2029,7 +2029,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_004/001",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_004/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "provide an R package ( tximport ) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": "The paper confirms tximport produces outputs compatible with edgeR (which creates DGEList objects), but does not describe 'divided transcript-level counts' or a divide parameter. The paper focuses on gene-level aggregation and offsets, not transcript-level division. DGEList objects with normalization factors are standard edgeR outputs, but the 'divided counts' concept is not present in the paper.",
@@ -2049,7 +2049,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_004/002",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_004/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not describe any verification report or validation procedure for DGEList structure integrity. The paper discusses overdispersion estimation in the context of edgeR and DESeq2 statistical modeling, but not as an explicit output or verification step of tximport.",
@@ -2069,7 +2069,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_004/003",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_004/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport ) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": "tximport is explicitly named and described as the R package developed in this paper.",
@@ -2089,7 +2089,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_004/004",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_004/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines. ... edgeR12 and limma13",
       "asbval:note": "edgeR is explicitly mentioned as one of the statistical inference engines that tximport outputs are designed to work with.",
@@ -2109,7 +2109,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_004/005",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_004/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Salmon7 (v0.5.1) to estimate TPM values for each transcript in each of the data sets.",
       "asbval:note": "Salmon is explicitly named and used throughout the paper for transcript-level abundance quantification.",
@@ -2129,7 +2129,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_004/scope_drift",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_004/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate task card describes a specific function 'DGEListFromTximport' with a 'divide=TRUE' parameter that does not appear anywhere in the paper. This suggests the extractor may have conflated or invented a function name.",
@@ -2147,7 +2147,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_005/000",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_005/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport ) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": "Paper confirms tximport imports transcript-level abundance estimates from quantification pipelines and can produce transcript-level matrices. However, paper does not mention 'oarfish' as a supported quantification tool or the 'type=\"oarfish\"' parameter. Paper discusses Salmon, kallisto, RSEM, Cufflinks, Bit Seq as quantification sources. The specific oarfish tool and its integration with tximport is not addressed in the provided passages.",
@@ -2167,7 +2167,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_005/001",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_005/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport ) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": "tximport is explicitly named and described as an R package for integrating transcript-level abundance estimates.",
@@ -2187,7 +2187,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_005/002",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_005/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices",
       "asbval:note": "Paper confirms tximport exports transcript-level abundance estimates and count matrices. The specific format (3 samples \u00d7 transcripts) is consistent with the paper's discussion of transcript-level quantification outputs.",
@@ -2207,7 +2207,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_005/003",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_005/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices",
       "asbval:note": "Paper explicitly mentions exporting count matrices from tximport.",
@@ -2227,7 +2227,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_005/004",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_005/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets)",
       "asbval:note": "Paper confirms tximport imports and can export transcript lengths and length-related correction terms.",
@@ -2247,7 +2247,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_12688_f1000research_7563_1__task_005/scope_drift",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/card/10_12688_f1000research_7563_1__task_005/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The research question specifies 'oarfish-quantified long-read RNA-seq samples' and the 'type=\"oarfish\"' parameter, but the paper does not mention oarfish as a supported quantification tool. The paper discusses Salmon, kallisto, RSEM, Cufflinks, and Bit Seq as quantification sources compatible with tximport.",
@@ -2264,7 +2264,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioconductor-package-operation/000",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/bioconductor-package-operation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": "Paper explicitly describes tximport as an R package that integrates transcript-level estimates from quantification pipelines (salmon, kallisto, etc.) for downstream statistical analysis.",
@@ -2284,7 +2284,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioconductor-package-operation/001",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/bioconductor-package-operation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": "tximport is explicitly named and described as the main R package for this task.",
@@ -2304,7 +2304,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioconductor-package-operation/002",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/bioconductor-package-operation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Salmon7 (v0.5.1) to estimate TPM values for each transcript in each of the data sets",
       "asbval:note": "Salmon is explicitly used as an upstream quantifier in the paper.",
@@ -2324,7 +2324,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioconductor-package-operation/003",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/bioconductor-package-operation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "More recently, the field has seen a surge in methods aimed at quantifying the abundances of individual transcripts (e.g., Cufflinks3, RSEM4, Bit Seq5, kallisto6 and Salmon7)",
       "asbval:note": "Kallisto is mentioned as a transcript quantification method.",
@@ -2344,7 +2344,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioconductor-package-operation/004",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/bioconductor-package-operation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Oarfish is not mentioned anywhere in the provided passages. The paper discusses Salmon, kallisto, RSEM, Cufflinks, and Bit Seq, but not oarfish.",
@@ -2364,7 +2364,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioconductor-package-operation/005",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/bioconductor-package-operation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq211, edgeR12 and limma13",
       "asbval:note": "DESeq2 is explicitly mentioned as a downstream statistical engine that accepts tximport outputs.",
@@ -2384,7 +2384,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioconductor-package-operation/006",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/bioconductor-package-operation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq211, edgeR12 and limma13",
       "asbval:note": "edgeR is explicitly mentioned as a downstream statistical engine that accepts tximport outputs.",
@@ -2404,7 +2404,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioconductor-package-operation/007",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/bioconductor-package-operation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq211, edgeR12 and limma13",
       "asbval:note": "limma is mentioned as a downstream statistical engine. The paper refers to 'limma' not explicitly 'limma-voom', but voom is the RNA-seq method within limma.",
@@ -2424,7 +2424,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioconductor-package-operation/008",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/bioconductor-package-operation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tximeta is not mentioned in any of the provided passages. The paper only discusses tximport.",
@@ -2444,7 +2444,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioconductor-package-operation/009",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/bioconductor-package-operation/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "readr is not mentioned in any of the provided passages.",
@@ -2464,7 +2464,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioconductor-package-operation/010",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/bioconductor-package-operation/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Salmon7 (v0.5.1) to estimate TPM values for each transcript in each of the data sets. Gene-level TPM estimates, representing the overall transcriptional output of each gene, were obtained by summing the corresponding transcript-level TPM estimates.",
       "asbval:note": "Paper confirms Salmon is used as upstream quantifier whose output is processed by tximport.",
@@ -2484,7 +2484,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioconductor-package-operation/011",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/bioconductor-package-operation/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": "Paper explicitly describes tximport's role in integrating transcript-level estimates into matrices for downstream analysis.",
@@ -2504,7 +2504,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioconductor-package-operation/012",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/bioconductor-package-operation/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq211, edgeR12 and limma13",
       "asbval:note": "Paper confirms the general workflow (import quantification files \u2192 produce matrices for downstream analysis with DESeq2, edgeR, limma), but does not mention sailfish or oarfish. Paper mentions Salmon, kallisto, RSEM, Cufflinks, Bit Seq as supported quantifiers.",
@@ -2524,7 +2524,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioconductor-package-operation/013",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/bioconductor-package-operation/013",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not provide sufficient detail about the `type` parameter or its specific implementation in tximport. The paper mentions tximport integrates outputs from 'common quantification pipelines' but does not detail the type parameter mechanism.",
@@ -2544,7 +2544,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deseq2-object-initialization-from-transcript-data/000",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/deseq2-object-initialization-from-transcript-data/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines... To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2",
       "asbval:note": "Core claim is directly supported: tximport integrates transcript-level estimates and provides offsets for DESeq2 to correct for differential isoform usage.",
@@ -2564,7 +2564,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deseq2-object-initialization-from-transcript-data/001",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/deseq2-object-initialization-from-transcript-data/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Accounting for the potentially varying average transcript length across samples when performing DGE, either in the definition of the count matrix (scaledTPM) or by defining offsets, led to considerably improved false discovery rate (FDR) control",
       "asbval:note": "Paper demonstrates that length-derived offsets from transcript-level estimates improve gene-level DGE analysis.",
@@ -2584,7 +2584,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deseq2-object-initialization-from-transcript-data/002",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/deseq2-object-initialization-from-transcript-data/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": "[SUBSTRING-MATCH for tximport | role: import and summarization tool]",
@@ -2604,7 +2604,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deseq2-object-initialization-from-transcript-data/003",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/deseq2-object-initialization-from-transcript-data/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2",
       "asbval:note": "[SUBSTRING-MATCH for DESeq2 | role: statistical inference engine accepting tximport offsets]",
@@ -2624,7 +2624,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deseq2-object-initialization-from-transcript-data/004",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/deseq2-object-initialization-from-transcript-data/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Salmon (v0.5.1) to estimate TPM values for each transcript in each of the data sets... we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages",
       "asbval:note": "[SUBSTRING-MATCH for Salmon | role: transcript quantification tool]",
@@ -2644,7 +2644,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deseq2-object-initialization-from-transcript-data/005",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/deseq2-object-initialization-from-transcript-data/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tximeta is not mentioned anywhere in the provided passages. The paper discusses tximport but does not reference tximeta as an extension tool.",
@@ -2664,7 +2664,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/edger-dgeobject-construction/000",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/edger-dgeobject-construction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": "Paper mentions tximport integrates transcript-level estimates into count-based inference engines (DESeq2, edgeR, limma) but does not explicitly name or discuss 'DGEListFromTximport' function or 'divided counts' methodology. The paper discusses using tximport to create count matrices and offsets for edgeR/DESeq2, but the specific function name and divided counts approach are not mentioned in provided passages.",
@@ -2684,7 +2684,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/edger-dgeobject-construction/001",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/edger-dgeobject-construction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": "tximport is explicitly named and described as an R package for integrating transcript-level estimates.",
@@ -2704,7 +2704,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/edger-dgeobject-construction/002",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/edger-dgeobject-construction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": "edgeR is explicitly mentioned as a statistical engine that receives tximport outputs.",
@@ -2724,7 +2724,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/edger-dgeobject-construction/003",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/edger-dgeobject-construction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Salmon (v0.5.1) to estimate TPM values for each transcript in each of the data sets",
       "asbval:note": "Salmon is explicitly used as an upstream quantification tool in the paper.",
@@ -2744,7 +2744,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/edger-dgeobject-construction/004",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/edger-dgeobject-construction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "More recently, the field has seen a surge in methods aimed at quantifying the abundances of individual transcripts (e.g., Cufflinks, RSEM, Bit Seq, kallisto and Salmon)",
       "asbval:note": "kallisto is mentioned as a transcript quantification method.",
@@ -2764,7 +2764,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/edger-dgeobject-construction/005",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/edger-dgeobject-construction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Sailfish is not mentioned in the provided passages. The paper discusses Salmon, kallisto, RSEM, Cufflinks, and Bit Seq as quantification tools, but Sailfish does not appear in the excerpts provided.",
@@ -2784,7 +2784,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/edger-dgeobject-construction/006",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/edger-dgeobject-construction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices",
       "asbval:note": "Paper confirms tximport imports from popular quantification packages and exports count matrices, but Sailfish is not mentioned in provided passages as a supported source.",
@@ -2804,7 +2804,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/edger-dgeobject-construction/007",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/edger-dgeobject-construction/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The provided passages do not discuss Gibbs samples, bootstrap inferential replicates, or divided counts methodology. The paper discusses transcript-level abundance estimates and offsets but does not address inferential uncertainty handling via divided counts or bootstrap/Gibbs samples in the provided excerpts.",
@@ -2824,7 +2824,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/edger-dgeobject-construction/008",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/edger-dgeobject-construction/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": "Paper confirms tximport imports transcript lengths and abundance estimates and exports count matrices and offsets for edgeR/DESeq2, but does not mention 'DGEListFromTximport' function specifically.",
@@ -2844,7 +2844,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/edger-dgeobject-construction/009",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/edger-dgeobject-construction/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "edgeR and DESeq2 when analyzing the feature-Counts and simplesum count matrices",
       "asbval:note": "Paper confirms edgeR performs negative binomial differential expression analysis, but does not mention DGEListFromTximport as a specific constructor function.",
@@ -2864,7 +2864,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/edger-dgeobject-construction/010",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/edger-dgeobject-construction/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Salmon (v0.5.1) to estimate TPM values for each transcript",
       "asbval:note": "Paper confirms Salmon generates transcript-level abundance estimates used with tximport, but does not explicitly discuss inferential replicates or their import by tximport in provided passages.",
@@ -2884,7 +2884,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-length-offset-matrix-computation/000",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/gene-length-offset-matrix-computation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines... To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma.",
       "asbval:note": "Verbatim match: tximport produces offset matrices from transcript lengths for correcting gene-level counts.",
@@ -2904,7 +2904,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-length-offset-matrix-computation/001",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/gene-length-offset-matrix-computation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Accounting for the potentially varying average transcript length across samples when performing DGE, either in the definition of the count matrix (scaledTPM) or by defining offsets, led to considerably improved false discovery rate (FDR) control compared to using the observed feature Counts or aggregated Salmon counts (simplesum) directly... It is important to note that this improvement is entirely attributable to an improved handling of genes with changes in isoform composition between the conditions.",
       "asbval:note": "Semantic equivalence: paper demonstrates that sample-specific transcript length offsets correct for differential isoform usage (DTU) to improve FDR control.",
@@ -2924,7 +2924,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-length-offset-matrix-computation/002",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/gene-length-offset-matrix-computation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for tximport | role: primary tool for importing transcript-level estimates and computing offsets]",
       "asbval:note": "Confirmed present throughout paper; case-insensitive match.",
@@ -2944,7 +2944,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-length-offset-matrix-computation/003",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/gene-length-offset-matrix-computation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma.",
       "asbval:note": "Verbatim match: DESeq2 is named as a statistical engine that accepts tximport offsets.",
@@ -2964,7 +2964,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-length-offset-matrix-computation/004",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/gene-length-offset-matrix-computation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Salmon (v0.5.1) to estimate TPM values for each transcript in each of the data sets... To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages",
       "asbval:note": "Verbatim match: Salmon is used as upstream quantifier producing transcript-level estimates for tximport.",
@@ -2984,7 +2984,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-length-offset-matrix-computation/005",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/gene-length-offset-matrix-computation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Several different quantification approaches have been proposed, ranging from simple counting of reads that overlap given genomic regions to more complex estimation of underlying transcript abundances... More recently, the field has seen a surge in methods aimed at quantifying the abundances of individual transcripts (e.g., Cufflinks, RSEM, Bit Seq, kallisto and Salmon).",
       "asbval:note": "Sailfish is not explicitly named in the passages provided. Paper mentions Salmon, kallisto, RSEM, Cufflinks, Bit Seq as transcript quantifiers compatible with tximport, but Sailfish is not listed in the provided excerpts. However, the peer review mentions 'Sailfish' in passing: 'Salmon (and Sailfish) also incorporate sequence-specific bias correction' (passage 12), confirming it exists in the paper but not in the main methodology sections provided.",
@@ -3004,7 +3004,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-length-offset-matrix-computation/006",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/gene-length-offset-matrix-computation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "More recently, the field has seen a surge in methods aimed at quantifying the abundances of individual transcripts (e.g., Cufflinks, RSEM, Bit Seq, kallisto and Salmon).",
       "asbval:note": "Verbatim match: kallisto is named as a transcript quantifier compatible with tximport.",
@@ -3024,7 +3024,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-length-offset-matrix-computation/007",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/gene-length-offset-matrix-computation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Salmon (v0.5.1) to estimate TPM values for each transcript in each of the data sets. Gene-level TPM estimates, representing the overall transcriptional output of each gene, were obtained by summing the corresponding transcript-level TPM estimates.",
       "asbval:note": "Semantic equivalence: Salmon produces transcript-level estimates that are aggregated by tximport.",
@@ -3044,7 +3044,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-length-offset-matrix-computation/008",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/gene-length-offset-matrix-computation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention a specific function 'DESeqDataSetFromTximport' or describe automatic offset embedding. The paper states that tximport exports 'offsets that can be used as inputs to common statistical engines, such as DESeq2' but does not detail a specific DESeq2 function that automatically constructs or embeds offsets from tximport output. This is a claim about implementation detail not present in the passages.",
@@ -3064,7 +3064,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-length-offset-matrix-computation/009",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/gene-length-offset-matrix-computation/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines... Accounting for the potentially varying average transcript length across samples when performing DGE, either in the definition of the count matrix (scaledTPM) or by defining offsets, led to considerably improved false discovery rate (FDR) control... this improvement is entirely attributable to an improved handling of genes with changes in isoform composition between the conditions",
       "asbval:note": "Semantic equivalence: paper describes tximport as accepting transcript-level quantification and producing offsets to handle differential isoform usage (DTU).",
@@ -3084,7 +3084,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-length-offset-matrix-computation/010",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/gene-length-offset-matrix-computation/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Several different quantification approaches have been proposed, ranging from simple counting of reads that overlap given genomic regions to more complex estimation of underlying transcript abundances... Several software packages have been developed for performing such 'simple' counting (e.g., feature Counts and HTSeq-count). More recently, the field has seen a surge in methods aimed at quantifying the abundances of individual transcripts (e.g., Cufflinks, RSEM, Bit Seq, kallisto and Salmon).",
       "asbval:note": "Semantic equivalence: paper distinguishes between simple counting methods (featureCounts, HTSeq) and transcript-level quantification methods (Salmon, kallisto), implying the latter provide transcript-level information needed for offset construction.",
@@ -3104,7 +3104,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-level-summarization-from-transcripts/000",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/gene-level-summarization-from-transcripts/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines. ... taking advantage of transcript-level abundance estimates when defining or analyzing gene-level abundances leads to improved differential gene expression results compared to simple counting.",
       "asbval:note": "Core claim is directly supported by abstract and introduction.",
@@ -3124,7 +3124,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-level-summarization-from-transcripts/001",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/gene-level-summarization-from-transcripts/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines.",
       "asbval:note": "tximport is explicitly named and described as the core tool for this task.",
@@ -3144,7 +3144,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-level-summarization-from-transcripts/002",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/gene-level-summarization-from-transcripts/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tximeta is not mentioned anywhere in the provided passages. The paper only discusses tximport.",
@@ -3164,7 +3164,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-level-summarization-from-transcripts/003",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/gene-level-summarization-from-transcripts/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "readr is not mentioned in the provided passages.",
@@ -3184,7 +3184,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-level-summarization-from-transcripts/004",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/gene-level-summarization-from-transcripts/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Salmon7 (v0.5.1) to estimate TPM values for each transcript in each of the data sets. ... taking advantage of transcript-level abundance estimates when defining or analyzing gene-level abundances leads to improved differential gene expression results compared to simple counting.",
       "asbval:note": "Salmon is explicitly used as an upstream quantification tool whose output is consumed by tximport.",
@@ -3204,7 +3204,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-level-summarization-from-transcripts/005",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/gene-level-summarization-from-transcripts/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Several software packages have been developed for performing such \"simple\" counting (e.g., feature Counts1 and HTSeq-count2). More recently, the field has seen a surge in methods aimed at quantifying the abundances of individual transcripts (e.g., Cufflinks3, RSEM4, Bit Seq5, kallisto6 and Salmon7).",
       "asbval:note": "kallisto is mentioned as a transcript quantification tool. The paper also states in Table 2 that kallisto is used for DGE input data.",
@@ -3224,7 +3224,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-level-summarization-from-transcripts/006",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/gene-level-summarization-from-transcripts/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq211, edgeR12 and limma13.",
       "asbval:note": "DESeq2 is explicitly named as a downstream statistical engine that uses tximport output.",
@@ -3244,7 +3244,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-level-summarization-from-transcripts/007",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/gene-level-summarization-from-transcripts/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq211, edgeR12 and limma13.",
       "asbval:note": "edgeR is explicitly named as a downstream statistical engine that uses tximport output.",
@@ -3264,7 +3264,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-level-summarization-from-transcripts/008",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/gene-level-summarization-from-transcripts/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq211, edgeR12 and limma13.",
       "asbval:note": "limma is explicitly named as a downstream statistical engine. The paper refers to 'limma' not 'limma-voom' but the reference is to the same tool used for voom-based analysis.",
@@ -3284,7 +3284,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-level-summarization-from-transcripts/009",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/gene-level-summarization-from-transcripts/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Both approaches are implemented in the accompanying tximport R package (available from https://github.com/mikelove/tximport).",
       "asbval:note": "The paper provides a GitHub URL for tximport, but it is https://github.com/mikelove/tximport, not https://github.com/thelovelab/tximport. The card lists an incorrect repository URL.",
@@ -3304,7 +3304,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-level-summarization-from-transcripts/010",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/gene-level-summarization-from-transcripts/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets)",
       "asbval:note": "The scope description accurately reflects the paper's main contribution.",
@@ -3324,7 +3324,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-level-summarization-from-transcripts/011",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/gene-level-summarization-from-transcripts/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Accounting for the potentially varying average transcript length across samples when performing DGE, either in the definition of the count matrix (scaledTPM) or by defining offsets, led to considerably improved false discovery rate (FDR) control compared to using the observed feature Counts or aggregated Salmon counts (simplesum) directly ... this improvement is entirely attributable to an improved handling of genes with changes in isoform composition between the conditions",
       "asbval:note": "The paper explicitly demonstrates that accounting for transcript length variation (which reflects isoform usage changes) improves FDR control.",
@@ -3344,7 +3344,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/inferential-replicate-handling/000",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/inferential-replicate-handling/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss inferential replicates, Gibbs samples, bootstrap samples, or the propagation of quantification uncertainty through tximport. The paper focuses on importing transcript-level abundance estimates and using average transcript length offsets for DGE analysis. No mention of 'divide=TRUE', 'DGEListFromTximport', or overdispersion estimation via inferential replicates appears in any passage.",
@@ -3364,7 +3364,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/inferential-replicate-handling/001",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/inferential-replicate-handling/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport ) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": "Paper confirms tximport imports transcript-level abundance estimates and transcript lengths, but does NOT mention extraction or retention of Gibbs samples or bootstrap replicates. The paper's scope is limited to importing point estimates and average transcript lengths as offsets.",
@@ -3384,7 +3384,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/inferential-replicate-handling/002",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/inferential-replicate-handling/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "most statistical tools for analysis of RNA-seq data operate instead on the count scale... statistical packages such as edgeR or DESeq2",
       "asbval:note": "Paper mentions edgeR as a statistical inference engine that receives count matrices from tximport, but does NOT discuss DGEListFromTximport, divide=TRUE parameter, or inferential replicate handling. The paper only discusses using edgeR with standard count matrices and offsets.",
@@ -3404,7 +3404,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/inferential-replicate-handling/003",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/inferential-replicate-handling/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Salmon (v0.5.1) to estimate TPM values for each transcript in each of the data sets.",
       "asbval:note": "Paper confirms Salmon is used for transcript-level quantification and imported by tximport, but does NOT mention Gibbs samples or bootstrap replicates. The paper only discusses point estimates (TPM values) and transcript counts from Salmon.",
@@ -3424,7 +3424,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/inferential-replicate-handling/004",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/inferential-replicate-handling/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Sailfish is not mentioned anywhere in the provided passages. The paper does not discuss Sailfish or its capabilities.",
@@ -3444,7 +3444,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/inferential-replicate-handling/005",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/inferential-replicate-handling/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Several different quantification approaches have been proposed, ranging from simple counting of reads that overlap given genomic regions to more complex estimation of underlying transcript abundances... kallisto",
       "asbval:note": "Paper mentions kallisto as a quantification tool but does NOT discuss bootstrap samples or replicates. The paper only references kallisto as one of several transcript abundance estimation methods.",
@@ -3464,7 +3464,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isoform-usage-bias-correction/000",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/isoform-usage-bias-correction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Accounting for the potentially varying average transcript length across samples when performing DGE, either in the definition of the count matrix (scaledTPM) or by defining offsets, led to considerably improved false discovery rate (FDR) control compared to using the observed feature Counts or aggregated Salmon counts (simplesum) directly",
       "asbval:note": "Core claim is directly supported. Paper demonstrates that sample-specific transcript length offsets improve DGE inference when differential isoform usage is present.",
@@ -3484,7 +3484,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isoform-usage-bias-correction/001",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/isoform-usage-bias-correction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": "tximport's role as importer and aggregator is confirmed. Paper explicitly states it integrates transcript-level estimates from quantification pipelines.",
@@ -3504,7 +3504,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isoform-usage-bias-correction/002",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/isoform-usage-bias-correction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": "Paper confirms DESeq2 is a downstream tool that accepts tximport outputs including offsets.",
@@ -3524,7 +3524,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isoform-usage-bias-correction/003",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/isoform-usage-bias-correction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": "edgeR is explicitly named as a downstream tool that accepts tximport offsets.",
@@ -3544,7 +3544,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isoform-usage-bias-correction/004",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/isoform-usage-bias-correction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": "limma is explicitly named as a downstream tool that accepts tximport offsets.",
@@ -3564,7 +3564,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isoform-usage-bias-correction/005",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/isoform-usage-bias-correction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Salmon (v0.5.1) to estimate TPM values for each transcript in each of the data sets",
       "asbval:note": "Salmon is used as upstream quantification tool. Paper confirms tximport imports from Salmon.",
@@ -3584,7 +3584,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isoform-usage-bias-correction/006",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/isoform-usage-bias-correction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "More recently, the field has seen a surge in methods aimed at quantifying the abundances of individual transcripts (e.g., Cufflinks, RSEM, Bit Seq, kallisto and Salmon)",
       "asbval:note": "kallisto is named as a transcript quantification method. Paper confirms tximport imports from 'several popular quantification packages' including kallisto.",
@@ -3604,7 +3604,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isoform-usage-bias-correction/007",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/isoform-usage-bias-correction/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "More recently, the field has seen a surge in methods aimed at quantifying the abundances of individual transcripts (e.g., Cufflinks, RSEM, Bit Seq, kallisto and Salmon)",
       "asbval:note": "Sailfish is not explicitly named in the main text passages provided, but is mentioned in peer review comments as a quasi-mapping method alongside Salmon. The paper states tximport imports from 'several popular quantification packages' and Sailfish is a standard tool in this category.",
@@ -3624,7 +3624,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isoform-usage-bias-correction/008",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/isoform-usage-bias-correction/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tximeta is not mentioned anywhere in the provided passages. The paper only discusses tximport. tximeta may be a later extension not covered in this 2015 paper.",
@@ -3644,7 +3644,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isoform-usage-bias-correction/009",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/isoform-usage-bias-correction/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In this paper, we show that gene-level abundance estimates and statistical inference offer advantages over transcript-level analyses, in terms of performance and interpretability. We also illustrate that while the presence of differential isoform usage can lead to inflated false discovery rates in differential expression analyses on simple count matrices and transcript-level abundance estimates improve the performance in simulated data",
       "asbval:note": "Paper directly addresses the scenario where differential isoform usage affects gene-level inference.",
@@ -3664,7 +3664,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isoform-usage-bias-correction/010",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/isoform-usage-bias-correction/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": "Paper confirms tximport accepts transcript-level quantification outputs.",
@@ -3684,7 +3684,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isoform-usage-bias-correction/011",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/isoform-usage-bias-correction/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We defined three different count matrices for each data set: 1) using feature Counts from the Rsubread R package (denoted feature Counts below), 2) summing the estimated transcript counts from Salmon within genes (simplesum), 3) summing the estimated transcript TPMs from Salmon within genes, and multiplying with the total library size in millions (scaledTPM)",
       "asbval:note": "Paper explicitly demonstrates aggregation of transcript-level counts to gene level.",
@@ -3704,7 +3704,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isoform-usage-bias-correction/012",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/isoform-usage-bias-correction/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": "Paper explicitly names these three tools as compatible downstream engines.",
@@ -3724,7 +3724,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isoform-usage-bias-correction/013",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/isoform-usage-bias-correction/013",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "It is important to note that this improvement is entirely attributable to an improved handling of genes with changes in isoform composition between the conditions... offsets must account for the differences in transcript usage between the samples and thus using (sample-independent) exon-union gene lengths will not improve performance",
       "asbval:note": "Paper demonstrates that sample-specific transcript length offsets are necessary to correct for differential isoform usage effects on gene-level fold changes.",
@@ -3744,7 +3744,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/matrix-equivalence-validation/000",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/matrix-equivalence-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss or validate equivalence between two alternative pathways (txOut=TRUE then summarizeToGene vs. txOut=FALSE). The paper focuses on comparing different quantification methods (Salmon, feature Counts, simplesum, scaledTPM) and their downstream statistical performance, not on validating computational equivalence between two tximport workflows.",
@@ -3764,7 +3764,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/matrix-equivalence-validation/001",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/matrix-equivalence-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Finally, we provide an R package ( tximport ) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines.",
       "asbval:note": "tximport is explicitly named and described as the primary tool for integrating transcript-level estimates into count-based inference.",
@@ -3784,7 +3784,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/matrix-equivalence-validation/002",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/matrix-equivalence-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention a function called 'summarizeToGene'. The paper describes tximport as importing and exporting count matrices and offsets, but does not name or discuss a specific function for collapsing transcript-level to gene-level matrices within tximport.",
@@ -3804,7 +3804,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/matrix-equivalence-validation/003",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/matrix-equivalence-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention readr or discuss file I/O optimization for reading quantification files prior to tximport.",
@@ -3824,7 +3824,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/matrix-equivalence-validation/004",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/matrix-equivalence-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention all.equal or any R function for testing numerical equivalence between matrices. The paper compares results from different quantification pipelines using correlation and FDR/TPR metrics, not equivalence testing.",
@@ -3844,7 +3844,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/matrix-equivalence-validation/005",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/matrix-equivalence-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not address or validate equivalence between these two tximport workflows. The paper's scope is comparing gene-level vs. transcript-level analysis strategies and demonstrating that incorporating transcript-level estimates improves DGE results, not validating computational equivalence of different import pathways.",
@@ -3864,7 +3864,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/matrix-equivalence-validation/006",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/matrix-equivalence-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In this report, we make and give evidence for three claims: 1) gene-level estimation is considerably more stable than transcript-level; 2) regardless of the level at which abundance estimation is done, inferences at the gene level are appealing in terms of robustness, statistical performance and interpretation; 3) the magnitude of the difference between results obtained by simple counting and transcript-level abundance estimation is generally small in real data sets.",
       "asbval:note": "The paper does address the choice between transcript-level and gene-level analysis, but the task card frames this as a 'matrix-equivalence-validation' skill, which is not what the paper discusses. The paper argues for gene-level analysis over transcript-level, not for validating equivalence between two pathways.",
@@ -3884,7 +3884,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/oarfish-quantification-format-handling/000",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/oarfish-quantification-format-handling/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": "Paper confirms tximport imports transcript-level abundance estimates and integrates them into count-based workflows. However, paper does NOT mention oarfish as a supported quantification tool. Paper explicitly names Salmon, kallisto, RSEM, Cufflinks, Bit Seq as quantification methods. Oarfish is not mentioned anywhere in the provided passages. The function (importing transcript-level estimates) is correct, but the specific tool (oarfish) is not supported by the paper.",
@@ -3904,7 +3904,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/oarfish-quantification-format-handling/001",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/oarfish-quantification-format-handling/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": "Paper confirms tximport exists and accepts quantification pipeline outputs. However, paper does not mention oarfish as a supported type. Paper names Salmon (v0.5.1), kallisto, RSEM, Cufflinks, Bit Seq as quantification tools used with tximport. No mention of oarfish or type='oarfish' parameter in any passage.",
@@ -3924,7 +3924,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/oarfish-quantification-format-handling/002",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/oarfish-quantification-format-handling/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention a 'txOut' flag or any parameter to control output level (transcript vs. gene). Paper discusses using tximport to import transcript-level estimates and aggregate to gene level, but does not describe a specific 'txOut' parameter in the provided passages.",
@@ -3944,7 +3944,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/oarfish-quantification-format-handling/003",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/oarfish-quantification-format-handling/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2",
       "asbval:note": "Paper explicitly confirms DESeq2 is used with tximport-imported count matrices and length-based offsets.",
@@ -3964,7 +3964,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/oarfish-quantification-format-handling/004",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/oarfish-quantification-format-handling/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2, edgeR",
       "asbval:note": "Paper explicitly confirms edgeR is used with tximport-imported count matrices and length-based offsets.",
@@ -3984,7 +3984,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/oarfish-quantification-format-handling/005",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/oarfish-quantification-format-handling/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": "Paper explicitly confirms limma (voom) is used with tximport-imported count matrices and length-based offsets.",
@@ -4004,7 +4004,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/oarfish-quantification-format-handling/006",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/oarfish-quantification-format-handling/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention oarfish or long-read RNA-seq quantification. Paper focuses on short-read RNA-seq (cDNA sequencing) and names Salmon, kallisto, RSEM, Cufflinks, Bit Seq as quantification tools. No mention of long-read sequencing or oarfish in any passage.",
@@ -4024,7 +4024,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/oarfish-quantification-format-handling/007",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/oarfish-quantification-format-handling/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention quant.gz format or any specific file format for quantification output. Paper discusses importing 'transcript-level abundance estimates from common quantification pipelines' but does not specify file formats.",
@@ -4044,7 +4044,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/overdispersion-estimation-validation/000",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/overdispersion-estimation-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss overdispersion estimation from inferential replicates, Gibbs samples, bootstrap samples, or the divide=TRUE parameter in DGEListFromTximport. The paper focuses on comparing gene-level vs transcript-level analysis approaches and incorporating transcript-level abundance estimates into DGE analysis via tximport, but does not address the specific technical task of validating overdispersion estimation from divided counts.",
@@ -4064,7 +4064,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/overdispersion-estimation-validation/001",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/overdispersion-estimation-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": "Paper confirms tximport imports transcript-level abundance estimates and transcript lengths from quantification tools (Salmon, kallisto, RSEM, Bit Seq). However, the paper does not mention or discuss inferential replicates (Gibbs samples or bootstrap samples) as inputs to tximport, nor does it discuss the divide=TRUE parameter or overdispersion estimation from such replicates.",
@@ -4084,7 +4084,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/overdispersion-estimation-validation/002",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/overdispersion-estimation-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "most statistical tools for analysis of RNA-seq data operate instead on the count scale... statistical packages such as edgeR or DESeq2",
       "asbval:note": "Paper confirms edgeR is used as a statistical inference engine for count-based analysis and is mentioned as a tool for DGE analysis. However, the paper does not mention DGEListFromTximport function, divide=TRUE parameter, or overdispersion estimation from inferential replicates. The paper only discusses using edgeR with count matrices derived from tximport output.",
@@ -4104,7 +4104,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/overdispersion-estimation-validation/003",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/overdispersion-estimation-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Salmon (v0.5.1) to estimate TPM values for each transcript in each of the data sets.",
       "asbval:note": "Paper confirms Salmon is used for transcript-level abundance estimation. However, the paper does not mention Gibbs samples or bootstrap samples as outputs from Salmon, nor does it discuss their use with tximport.",
@@ -4124,7 +4124,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/overdispersion-estimation-validation/004",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/overdispersion-estimation-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Sailfish is not mentioned anywhere in the provided passages. The paper discusses Salmon, kallisto, RSEM, Cufflinks, and Bit Seq as quantification tools, but does not mention Sailfish.",
@@ -4144,7 +4144,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/overdispersion-estimation-validation/005",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/overdispersion-estimation-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Several different quantification approaches have been proposed... more recently, the field has seen a surge in methods aimed at quantifying the abundances of individual transcripts (e.g., Cufflinks, RSEM, Bit Seq, kallisto and Salmon)",
       "asbval:note": "Paper confirms kallisto is used for transcript-level abundance estimation. However, the paper does not mention bootstrap samples as outputs from kallisto, nor does it discuss their use with tximport.",
@@ -4164,7 +4164,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/overdispersion-estimation-validation/006",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/overdispersion-estimation-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss DGEListFromTximport function, divide=TRUE parameter, Gibbs samples, bootstrap replicates, or overdispersion estimation from inferential replicates. These are technical implementation details not covered in the paper.",
@@ -4184,7 +4184,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/overdispersion-estimation-validation/007",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/overdispersion-estimation-validation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss dispersion estimation from divided counts, inferential replicates, or validation of DGEList dispersion estimates. The paper focuses on comparing analysis approaches and incorporating transcript-level estimates into gene-level analysis, not on technical validation of overdispersion estimation.",
@@ -4204,7 +4204,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quantification-output-parsing/000",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/quantification-output-parsing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": null,
@@ -4224,7 +4224,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quantification-output-parsing/001",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/quantification-output-parsing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": null,
@@ -4244,7 +4244,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quantification-output-parsing/002",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/quantification-output-parsing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": null,
@@ -4264,7 +4264,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quantification-output-parsing/003",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/quantification-output-parsing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "readr is not mentioned in any of the provided passages. Cannot confirm whether it is used as a dependency in tximport or its role.",
@@ -4284,7 +4284,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quantification-output-parsing/004",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/quantification-output-parsing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tximeta is not mentioned in any of the provided passages. Cannot confirm its existence or relationship to tximport.",
@@ -4304,7 +4304,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quantification-output-parsing/005",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/quantification-output-parsing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Salmon (v0.5.1) to estimate TPM values for each transcript in each of the data sets... To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages",
       "asbval:note": null,
@@ -4324,7 +4324,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quantification-output-parsing/006",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/quantification-output-parsing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": null,
@@ -4344,7 +4344,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quantification-output-parsing/007",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/quantification-output-parsing/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": null,
@@ -4364,7 +4364,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quantification-output-parsing/008",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/quantification-output-parsing/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "several popular quantification packages",
       "asbval:note": "Paper mentions 'several popular quantification packages' and lists Salmon, kallisto, RSEM, Bit Seq, and Cufflinks in various contexts, but sailfish is not explicitly named in the provided passages. The paper does mention Sailfish in the peer review section (passage 11) as incorporating sequence-specific bias correction, but does not explicitly state it is compatible with tximport in the main text.",
@@ -4384,7 +4384,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quantification-output-parsing/009",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/quantification-output-parsing/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "More recently, the field has seen a surge in methods aimed at quantifying the abundances of individual transcripts (e.g., Cufflinks, RSEM, Bit Seq, kallisto and Salmon)",
       "asbval:note": "kallisto is mentioned as a quantification method. The paper also states tximport imports 'from several popular quantification packages' and Table 2 lists kallisto as input for DGE, DTE, and DTU tasks.",
@@ -4404,7 +4404,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-abundance-matrix-handling/000",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-abundance-matrix-handling/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": null,
@@ -4424,7 +4424,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-abundance-matrix-handling/001",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-abundance-matrix-handling/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we further used the Salmon transcript lengths and estimated TPMs to define average transcript lengths for each gene and each sample (normalization factors) as described in the Supplementary material, to be used as offsets for edgeR and DESeq2",
       "asbval:note": null,
@@ -4444,7 +4444,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-abundance-matrix-handling/002",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-abundance-matrix-handling/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": null,
@@ -4464,7 +4464,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-abundance-matrix-handling/003",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-abundance-matrix-handling/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Salmon (v0.5.1) to estimate TPM values for each transcript in each of the data sets",
       "asbval:note": null,
@@ -4484,7 +4484,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-abundance-matrix-handling/004",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-abundance-matrix-handling/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Several different quantification approaches have been proposed, ranging from simple counting of reads that overlap given genomic regions to more complex estimation of underlying transcript abundances... e.g., Cufflinks, RSEM, Bit Seq, kallisto and Salmon",
       "asbval:note": null,
@@ -4504,7 +4504,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-abundance-matrix-handling/005",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-abundance-matrix-handling/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Current methods for transcript-level quantification (e.g., Cufflinks, RSEM, Salmon, kallisto)",
       "asbval:note": "Sailfish is mentioned in peer review (passage 12) as incorporating sequence-specific bias correction alongside Salmon, confirming it is a known quantifier in the field, though not explicitly named in the main text as a tximport input.",
@@ -4524,7 +4524,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-abundance-matrix-handling/006",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-abundance-matrix-handling/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Oarfish is not mentioned anywhere in the provided passages. The paper (2015) predates oarfish development and tximport's support for it.",
@@ -4544,7 +4544,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-abundance-matrix-handling/007",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-abundance-matrix-handling/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "readr is not mentioned in any of the provided passages.",
@@ -4564,7 +4564,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-abundance-matrix-handling/008",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-abundance-matrix-handling/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "to be used as offsets for edgeR and DESeq2 when analyzing the feature-Counts and simplesum count matrices",
       "asbval:note": null,
@@ -4584,7 +4584,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-abundance-matrix-handling/009",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-abundance-matrix-handling/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "to be used as offsets for edgeR and DESeq2 when analyzing the feature-Counts and simplesum count matrices",
       "asbval:note": null,
@@ -4604,7 +4604,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-abundance-matrix-handling/010",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-abundance-matrix-handling/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "such as DESeq2, edgeR and limma",
       "asbval:note": null,
@@ -4624,7 +4624,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-abundance-matrix-handling/011",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-abundance-matrix-handling/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tximeta is not mentioned in any of the provided passages. It is a later extension not discussed in this 2015 paper.",
@@ -4644,7 +4644,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-abundance-matrix-handling/012",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-abundance-matrix-handling/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "summarizeToGene is not mentioned in the provided passages. The paper discusses aggregation conceptually but does not name this specific function.",
@@ -4664,7 +4664,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-matrix-generation/000",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-count-matrix-generation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines... To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma.",
       "asbval:note": "Claim is fully supported. Paper explicitly describes tximport's function to import transcript-level estimates from salmon/kallisto and generate gene-level count matrices with length offsets for downstream analysis with DESeq2, edgeR, and limma.",
@@ -4684,7 +4684,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-matrix-generation/001",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-count-matrix-generation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines... tximport, to import transcript lengths and abundance estimates from several popular quantification packages",
       "asbval:note": "Explicitly confirmed. Paper describes tximport as the R package for importing transcript-level estimates from quantification pipelines (salmon, kallisto, etc.) and exporting gene-level matrices.",
@@ -4704,7 +4704,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-matrix-generation/002",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-count-matrix-generation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "readr is not mentioned anywhere in the provided passages. While readr is a real R package for fast file I/O, the paper does not discuss or recommend it in the context of tximport or tx2gene mapping.",
@@ -4724,7 +4724,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-matrix-generation/003",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-count-matrix-generation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tximeta is not mentioned in any of the provided passages. The paper discusses tximport but does not reference tximeta as an extension or alternative.",
@@ -4744,7 +4744,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-matrix-generation/004",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-count-matrix-generation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we used Salmon (v0.5.1) to estimate TPM values for each transcript... To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages",
       "asbval:note": "Salmon is explicitly used in the paper as a quantification tool producing transcript-level estimates that are then imported by tximport for gene-level summarization.",
@@ -4764,7 +4764,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-matrix-generation/005",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-count-matrix-generation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma... to be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": "DESeq2 is explicitly mentioned as one of the downstream statistical tools that can use tximport-generated count matrices and length offsets.",
@@ -4784,7 +4784,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-matrix-generation/006",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-count-matrix-generation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": "edgeR is explicitly mentioned as one of the downstream statistical tools that can use tximport-generated count matrices and length offsets.",
@@ -4804,7 +4804,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-matrix-generation/007",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-count-matrix-generation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": "Paper mentions 'limma' as a downstream tool, not specifically 'limma-voom'. While limma-voom is a voom-based approach within the limma package, the paper does not explicitly name the voom variant. The functional role is correct but the specific tool name is slightly different.",
@@ -4824,7 +4824,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-matrix-generation/008",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-count-matrix-generation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets)",
       "asbval:note": "Scope is aligned with paper's central claim about tximport's function to generate gene-level matrices from transcript-level estimates.",
@@ -4844,7 +4844,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-matrix-generation/009",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-count-matrix-generation/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Accounting for the potentially varying average transcript length across samples when performing DGE, either in the definition of the count matrix (scaledTPM) or by defining offsets, led to considerably improved false discovery rate (FDR) control... this improvement is entirely attributable to an improved handling of genes with changes in isoform composition between the conditions",
       "asbval:note": "Paper explicitly demonstrates that accounting for average transcript length (which varies with isoform usage) improves FDR control in DGE analysis.",
@@ -4864,7 +4864,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-matrix-generation/010",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-count-matrix-generation/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": "Paper explicitly states that tximport-generated matrices can be used as inputs to DESeq2, edgeR, and limma for downstream analysis.",
@@ -4884,7 +4884,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-normalization/000",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-count-normalization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines... taking advantage of transcript-level abundance estimates when defining or analyzing gene-level abundances leads to improved differential gene expression results... We propose two alternative ways of integrating transcript abundance estimates into the DGE pipeline: to define an \"artificial\" count matrix, or to calculate offsets that can be used in the statistical modeling of the observed gene counts",
       "asbval:note": "Core research question is directly supported by abstract and methods sections.",
@@ -4904,7 +4904,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-normalization/001",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-count-normalization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines... we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": "Explicitly mentions bridging quantification tools with count-based statistical engines.",
@@ -4924,7 +4924,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-normalization/002",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-count-normalization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines... tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets)",
       "asbval:note": "tximport functionality is explicitly described in abstract and methods.",
@@ -4944,7 +4944,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-normalization/003",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-count-normalization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "tximport is released under a GNU Public License (GPL)... https://github.com/mikelove/tximport",
       "asbval:note": "Paper lists repo as https://github.com/mikelove/tximport, not https://github.com/thelovelab/tximport. The author is Michael I. Love (mikelove), not 'thelovelab' organization.",
@@ -4964,7 +4964,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-normalization/004",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-count-normalization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "edgeR and DESeq2 when analyzing the feature-Counts and simplesum count matrices (feature Counts_avetxl and simplesum_avetxl)... We tested for DTE on the simulated data by applying edgeR to the transcript counts obtained from Salmon",
       "asbval:note": "Paper confirms edgeR is used with tximport-derived offsets (avetxl), but does not explicitly name the function 'DGEListFromTximport'. The functionality is confirmed but the specific function name is not verified in passages.",
@@ -4984,7 +4984,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-normalization/005",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-count-normalization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma... edgeR and DESeq2 when analyzing the feature-Counts and simplesum count matrices (feature Counts_avetxl and simplesum_avetxl)",
       "asbval:note": "DESeq2 is explicitly listed as a compatible downstream tool for tximport output.",
@@ -5004,7 +5004,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-normalization/006",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-count-normalization/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": "limma is explicitly mentioned as a compatible statistical engine for tximport output.",
@@ -5024,7 +5024,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-normalization/007",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-count-normalization/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Salmon (v0.5.1) to estimate TPM values for each transcript... From the bootstrap estimates generated by Salmon, we also estimated the coefficient of variation... Salmon transcript lengths and estimated TPMs to define average transcript lengths",
       "asbval:note": "Paper confirms Salmon produces transcript-level estimates, TPMs, and bootstrap replicates used by tximport. However, the paper uses Salmon v0.5.1 (2015), not v1.3.9. The specific version claim about Gibbs samples/bootstrap in v1.3.9 cannot be verified from these passages.",
@@ -5044,7 +5044,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-normalization/008",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-count-normalization/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tximeta is not mentioned anywhere in the provided passages. The paper only discusses tximport, not tximeta.",
@@ -5064,7 +5064,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-normalization/009",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-count-normalization/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Several different quantification approaches have been proposed... ranging from simple counting of reads that overlap given genomic regions to more complex estimation of underlying transcript abundances... we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices... that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": "Scope description aligns with paper's stated purpose and use cases.",
@@ -5084,7 +5084,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-normalization/010",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-count-normalization/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The use of gene counts as input to statistical tools typically assumes that the length of the expressed part of a gene does not change across samples and thus length can therefore be ignored for differential analysis... Accounting for the potentially varying average transcript length across samples when performing DGE, either in the definition of the count matrix (scaledTPM) or by defining offsets, led to considerably improved false discovery rate (FDR) control",
       "asbval:note": "Paper explicitly discusses the constant-length assumption and why sample-specific length offsets are needed.",
@@ -5104,7 +5104,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-normalization/011",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-count-normalization/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "tximport, to import transcript lengths and abundance estimates from several popular quantification packages... Several software packages have been developed for performing such \"simple\" counting (e.g., feature Counts and HTSeq-count). More recently, the field has seen a surge in methods aimed at quantifying the abundances of individual transcripts (e.g., Cufflinks, RSEM, Bit Seq, kallisto and Salmon).",
       "asbval:note": "Paper distinguishes between simple counting tools (featureCounts, HTSeq) and transcript quantification tools (Salmon, kallisto, RSEM) that tximport is designed for.",
@@ -5124,7 +5124,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/salmon-output-parsing/000",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/salmon-output-parsing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": "Paper explicitly describes tximport's purpose as integrating transcript-level estimates into count-based inference. Salmon is named as a quantification source.",
@@ -5144,7 +5144,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/salmon-output-parsing/001",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/salmon-output-parsing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": "Paper describes tximport as automating import and export of matrices for statistical analysis.",
@@ -5164,7 +5164,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/salmon-output-parsing/002",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/salmon-output-parsing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines",
       "asbval:note": "[SUBSTRING-MATCH for tximport | role: primary tool for integration]",
@@ -5184,7 +5184,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/salmon-output-parsing/003",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/salmon-output-parsing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Salmon (v0.5.1) to estimate TPM values for each transcript in each of the data sets.",
       "asbval:note": "Paper uses Salmon for transcript quantification; quant.sf.gz is standard Salmon output format.",
@@ -5204,7 +5204,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/salmon-output-parsing/004",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/salmon-output-parsing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "readr is not mentioned in any passage. Cannot verify whether it is an optional dependency of tximport or its role.",
@@ -5224,7 +5224,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/salmon-output-parsing/005",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/salmon-output-parsing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tximeta is not mentioned in any passage. Cannot verify its existence or relationship to tximport.",
@@ -5244,7 +5244,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/salmon-output-parsing/006",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/salmon-output-parsing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": "Paper explicitly names edgeR as a downstream statistical engine for tximport output.",
@@ -5264,7 +5264,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/salmon-output-parsing/007",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/salmon-output-parsing/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": "Paper explicitly names DESeq2 as a downstream statistical engine for tximport output.",
@@ -5284,7 +5284,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/salmon-output-parsing/008",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/salmon-output-parsing/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": "Paper names 'limma' as a downstream statistical engine, not 'limma-voom' specifically. The card uses the hyphenated form 'limma-voom' which is a common designation for the voom transformation in limma, but the paper text only says 'limma'.",
@@ -5304,7 +5304,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/salmon-output-parsing/009",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/salmon-output-parsing/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": "Paper describes tximport's purpose as converting transcript-level estimates to gene-level matrices for downstream statistical analysis.",
@@ -5324,7 +5324,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/salmon-output-parsing/010",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/salmon-output-parsing/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the sequencing reads must be used as the basis for abundance quantification of transcriptomic features of interest, such as genes or transcripts",
       "asbval:note": "Paper discusses the distinction between gene-level and transcript-level quantification, implying that tximport is for transcript-to-gene conversion, not for already-aggregated data.",
@@ -5344,7 +5344,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/salmon-output-parsing/011",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/salmon-output-parsing/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "DTE is concerned with inference of changes in abundance at transcript resolution, and thus invokes a statistical test for each transcript.",
       "asbval:note": "Paper discusses transcript-level differential analysis (DTE) as a distinct goal from gene-level analysis, but does not mention 'txOut=TRUE' parameter or tximport-specific configuration options.",
@@ -5364,7 +5364,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/salmon-output-parsing/012",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/salmon-output-parsing/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Several software packages have been developed for performing such 'simple' counting (e.g., feature Counts and HTSeq-count). More recently, the field has seen a surge in methods aimed at quantifying the abundances of individual transcripts (e.g., Cufflinks, RSEM, Bit Seq, kallisto and Salmon).",
       "asbval:note": "Paper distinguishes between simple counting tools (featureCounts, HTSeq) and transcript quantification tools (Salmon, kallisto), supporting the distinction in the card.",
@@ -5384,7 +5384,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/salmon-output-parsing/013",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/salmon-output-parsing/013",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Salmon (v0.5.1) to estimate TPM values for each transcript in each of the data sets.",
       "asbval:note": "Paper uses Salmon for transcript quantification; quant.sf.gz is the standard output format of Salmon.",
@@ -5404,7 +5404,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/salmon-output-parsing/014",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/salmon-output-parsing/014",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not explicitly mention tx2gene mapping or its format/structure. While the paper discusses transcript-to-gene aggregation, it does not detail the input format for mapping files.",
@@ -5424,7 +5424,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-abundance-import/000",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-abundance-import/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport ) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": null,
@@ -5444,7 +5444,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-abundance-import/001",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-abundance-import/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Salmon7 (v0.5.1) to estimate TPM values for each transcript in each of the data sets.",
       "asbval:note": null,
@@ -5464,7 +5464,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-abundance-import/002",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-abundance-import/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Sailfish is not mentioned in any of the provided passages. The paper discusses Salmon, kallisto, RSEM, Cufflinks, and Bit Seq, but does not reference Sailfish.",
@@ -5484,7 +5484,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-abundance-import/003",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-abundance-import/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "More recently, the field has seen a surge in methods aimed at quantifying the abundances of individual transcripts (e.g., Cufflinks3, RSEM4, Bit Seq5, kallisto6 and Salmon7).",
       "asbval:note": null,
@@ -5504,7 +5504,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-abundance-import/004",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-abundance-import/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Oarfish is not mentioned anywhere in the provided passages. The paper does not discuss long-read RNA-seq quantification tools.",
@@ -5524,7 +5524,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-abundance-import/005",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-abundance-import/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tximeta is not mentioned in any of the provided passages. Only tximport is discussed as the R package provided by the authors.",
@@ -5544,7 +5544,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-abundance-import/006",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-abundance-import/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "readr is not mentioned in any of the provided passages. No optional dependencies for tximport are discussed.",
@@ -5564,7 +5564,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-abundance-import/007",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-abundance-import/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq211, edgeR12 and limma13.",
       "asbval:note": null,
@@ -5584,7 +5584,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-abundance-import/008",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-abundance-import/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq211, edgeR12 and limma13.",
       "asbval:note": null,
@@ -5604,7 +5604,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-abundance-import/009",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-abundance-import/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To facilitate a broad range of analysis choices, depending on the biological question of interest, we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq211, edgeR12 and limma13.",
       "asbval:note": null,
@@ -5624,7 +5624,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-abundance-import/010",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-abundance-import/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Finally, we provide an R package ( tximport ) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines.",
       "asbval:note": null,
@@ -5644,7 +5644,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-abundance-import/011",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-abundance-import/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices",
       "asbval:note": null,
@@ -5664,7 +5664,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-abundance-import/012",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-abundance-import/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package, tximport, to import transcript lengths and abundance estimates from several popular quantification packages and export (estimated) count matrices and, optionally, average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq211, edgeR12 and limma13.",
       "asbval:note": "Paper confirms tximport imports from salmon, kallisto, and other quantification tools and outputs matrices for DESeq2, edgeR, and limma. However, sailfish and oarfish are not mentioned in the paper. The paper does not specify file formats like 'quant.sf.gz' or 'quant.gz'.",
@@ -5684,7 +5684,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-abundance-import/013",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-abundance-import/013",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Accounting for the potentially varying average transcript length across samples when performing DGE, either in the definition of the count matrix (scaledTPM) or by defining offsets, led to considerably improved false discovery rate (FDR) control",
       "asbval:note": null,
@@ -5704,7 +5704,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-abundance-import/014",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-abundance-import/014",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport ) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": null,
@@ -5724,7 +5724,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-count-aggregation/000",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-count-aggregation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines... taking advantage of transcript-level abundance estimates when defining or analyzing gene-level abundances leads to improved differential gene expression results compared to simple counting... Accounting for the potentially varying average transcript length across samples when performing DGE, either in the definition of the count matrix (scaledTPM) or by defining offsets, led to considerably improved false discovery rate (FDR) control",
       "asbval:note": "Core research question is directly supported by abstract and main results sections.",
@@ -5744,7 +5744,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-count-aggregation/001",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-count-aggregation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": "[SUBSTRING-MATCH for tximport | role: core aggregation tool]",
@@ -5764,7 +5764,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-count-aggregation/002",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-count-aggregation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Function name 'summarizeToGene' does not appear in any passage. Paper mentions 'per GeneQValue function from the DEXSeq R package' for aggregation but not a tximport function called 'summarizeToGene'. The paper does not document internal tximport function names.",
@@ -5784,7 +5784,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-count-aggregation/003",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-count-aggregation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Salmon7 (v0.5.1) to estimate TPM values for each transcript in each of the data sets... taking advantage of transcript-level abundance estimates (e.g., obtained by Salmon) can lead to improved DGE results",
       "asbval:note": "[SUBSTRING-MATCH for Salmon | role: upstream quantification tool]",
@@ -5804,7 +5804,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-count-aggregation/004",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-count-aggregation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Several different quantification approaches have been proposed... more recently, the field has seen a surge in methods aimed at quantifying the abundances of individual transcripts (e.g., Cufflinks, RSEM, Bit Seq, kallisto and Salmon)",
       "asbval:note": "[SUBSTRING-MATCH for kallisto | role: upstream quantification tool]",
@@ -5824,7 +5824,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-count-aggregation/005",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-count-aggregation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Salmon (and Sailfish) also incorporate sequence-specific bias correction",
       "asbval:note": "Sailfish is mentioned in peer review as a tool similar to Salmon, but the paper itself does not explicitly list Sailfish as a quantification tool consumed by tximport. The paper focuses on Salmon, kallisto, RSEM, Cufflinks, and Bit Seq. Sailfish is mentioned only in reviewer comments regarding bias correction, not as a primary tool in the paper's workflow.",
@@ -5844,7 +5844,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-count-aggregation/006",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-count-aggregation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Oarfish is not mentioned anywhere in the paper or passages. The paper was published in 2015; oarfish is a more recent long-read quantification tool not available at that time.",
@@ -5864,7 +5864,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-count-aggregation/007",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-count-aggregation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines... such as DESeq2, edgeR and limma",
       "asbval:note": "[SUBSTRING-MATCH for DESeq2 | role: downstream statistical inference]",
@@ -5884,7 +5884,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-count-aggregation/008",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-count-aggregation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines... such as DESeq2, edgeR and limma",
       "asbval:note": "[SUBSTRING-MATCH for edgeR | role: downstream statistical inference]",
@@ -5904,7 +5904,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-count-aggregation/009",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-count-aggregation/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "such as DESeq2, edgeR and limma",
       "asbval:note": "Paper mentions 'limma' as a downstream tool but does not explicitly name 'limma-voom'. The voom function is part of limma but is not explicitly mentioned in the passages provided.",
@@ -5924,7 +5924,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-count-aggregation/010",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-count-aggregation/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "readr is not mentioned in any passage. The paper does not discuss optional dependencies or file I/O optimization libraries.",
@@ -5944,7 +5944,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-count-aggregation/011",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-count-aggregation/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines... such as DESeq2, edgeR and limma",
       "asbval:note": "Scope is largely supported for salmon, kallisto, DESeq2, edgeR, and limma. However, sailfish is not explicitly listed in the paper as a supported tool (only mentioned in peer review), and oarfish is not mentioned at all (post-2015 tool).",
@@ -5964,7 +5964,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-count-aggregation/012",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-count-aggregation/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The parameter 'txOut=TRUE' is not mentioned in any passage. The paper does not document tximport function parameters or options.",
@@ -5984,7 +5984,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-count-aggregation/013",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-count-aggregation/013",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Several software packages have been developed for performing such 'simple' counting (e.g., feature Counts and HTSeq-count). More recently, the field has seen a surge in methods aimed at quantifying the abundances of individual transcripts (e.g., Cufflinks, RSEM, Bit Seq, kallisto and Salmon).",
       "asbval:note": "Paper clearly distinguishes between simple counting (featureCounts, HTSeq) and transcript-level quantification methods (Salmon, kallisto, etc.), supporting the scope statement.",
@@ -6004,7 +6004,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-to-gene-mapping/000",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-to-gene-mapping/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines... taking advantage of transcript-level abundance estimates when defining or analyzing gene-level abundances leads to improved differential gene expression results... average transcript length correction terms (i.e., offsets) that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": "Fully supported. The paper explicitly describes tximport's role in aggregating transcript-level estimates to gene level and using transcript length offsets to correct for differential isoform usage.",
@@ -6024,7 +6024,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-to-gene-mapping/001",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-to-gene-mapping/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": "Confirmed. tximport is the central tool described in the paper.",
@@ -6044,7 +6044,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-to-gene-mapping/002",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-to-gene-mapping/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "readr is not mentioned in any of the provided passages. Cannot verify whether readr is used in the paper or supplementary materials.",
@@ -6064,7 +6064,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-to-gene-mapping/003",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-to-gene-mapping/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we used Salmon (v0.5.1) to estimate TPM values for each transcript... We defined three different count matrices for each data set: 1) using feature Counts from the Rsubread R package... 2) summing the estimated transcript counts from Salmon within genes (simplesum), 3) summing the estimated transcript TPMs from Salmon within genes",
       "asbval:note": "Confirmed. Salmon is used extensively as an upstream quantification tool producing transcript-level estimates that are aggregated by tximport.",
@@ -6084,7 +6084,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-to-gene-mapping/004",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-to-gene-mapping/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Several different quantification approaches have been proposed... more recently, the field has seen a surge in methods aimed at quantifying the abundances of individual transcripts (e.g., Cufflinks, RSEM, Bit Seq, kallisto and Salmon)... Current methods for transcript-level quantification (e.g., Cufflinks, RSEM, Salmon, kallisto)",
       "asbval:note": "Confirmed. kallisto is mentioned as a transcript-level quantification tool compatible with the tximport workflow.",
@@ -6104,7 +6104,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-to-gene-mapping/005",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-to-gene-mapping/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Several different quantification approaches have been proposed... more recently, the field has seen a surge in methods aimed at quantifying the abundances of individual transcripts (e.g., Cufflinks, RSEM, Bit Seq, kallisto and Salmon)",
       "asbval:note": "Sailfish is not explicitly named in the provided passages. The paper mentions Cufflinks, RSEM, Bit Seq, kallisto, and Salmon as transcript quantification tools, but Sailfish is not listed. However, the paper's abstract and methods section state tximport works with 'common quantification pipelines' and the reviewer mentions Sailfish in context of quasi-mapping (passage 12), suggesting it may be supported but is not explicitly documented in the main text passages provided.",
@@ -6124,7 +6124,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-to-gene-mapping/006",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-to-gene-mapping/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines, such as DESeq2, edgeR and limma... offsets that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": "Confirmed. DESeq2 is explicitly named as a downstream statistical package that accepts tximport outputs.",
@@ -6144,7 +6144,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-to-gene-mapping/007",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-to-gene-mapping/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "offsets that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma... We tested for DTE on the simulated data by applying edgeR to the transcript counts obtained from Salmon",
       "asbval:note": "Confirmed. edgeR is explicitly named as a downstream statistical package used with tximport outputs.",
@@ -6164,7 +6164,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-to-gene-mapping/008",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-to-gene-mapping/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "offsets that can be used as inputs to common statistical engines, such as DESeq2, edgeR and limma",
       "asbval:note": "The paper mentions 'limma' as a downstream statistical engine compatible with tximport. The card specifies 'limma-voom' but the paper only names 'limma'. While voom is a function within limma for RNA-seq analysis, the paper does not explicitly mention 'voom' in the provided passages.",
@@ -6184,7 +6184,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-to-gene-mapping/009",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-to-gene-mapping/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines",
       "asbval:note": "Supported. The paper describes exactly this use case.",
@@ -6204,7 +6204,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-to-gene-mapping/010",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-to-gene-mapping/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Several different quantification approaches have been proposed, ranging from simple counting of reads that overlap given genomic regions to more complex estimation of underlying transcript abundances... the sequencing reads must be used as the basis for abundance quantification of transcriptomic features of interest, such as genes or transcripts... we show that gene-level abundance estimates and statistical inference offer advantages over transcript-level analyses",
       "asbval:note": "Supported. The paper demonstrates the need for gene-level aggregation from transcript-level quantification.",
@@ -6224,7 +6224,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-to-gene-mapping/011",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-to-gene-mapping/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Several software packages have been developed for performing such 'simple' counting (e.g., feature Counts and HTSeq-count). More recently, the field has seen a surge in methods aimed at quantifying the abundances of individual transcripts",
       "asbval:note": "Supported by implication. The paper distinguishes between gene-level counting tools (featureCounts, HTSeq-count) and transcript-level quantification tools, implying that gene-level counts do not require tx2gene mapping.",
@@ -6244,7 +6244,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-to-gene-mapping/012",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-to-gene-mapping/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "DTE is concerned with inference of changes in abundance at transcript resolution... We tested for DTE on the simulated data by applying edgeR to the transcript counts obtained from Salmon",
       "asbval:note": "The paper discusses transcript-level differential expression (DTE) analysis but does not mention the specific parameter 'txOut=TRUE' or explicitly discuss skipping aggregation. The concept is supported but the specific technical implementation detail (txOut=TRUE) is not mentioned in the provided passages.",
@@ -6264,7 +6264,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioconductor-package-operation/triage",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/bioconductor-package-operation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 12,
       "asbval:target_artifact_id": "bioconductor-package-operation",
@@ -6277,7 +6277,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deseq2-object-initialization-from-transcript-data/triage",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/deseq2-object-initialization-from-transcript-data/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "deseq2-object-initialization-from-transcript-data",
@@ -6290,7 +6290,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/edger-dgeobject-construction/triage",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/edger-dgeobject-construction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "edger-dgeobject-construction",
@@ -6303,7 +6303,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-length-offset-matrix-computation/triage",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/gene-length-offset-matrix-computation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "gene-length-offset-matrix-computation",
@@ -6316,7 +6316,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-level-summarization-from-transcripts/triage",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/gene-level-summarization-from-transcripts/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 11,
       "asbval:target_artifact_id": "gene-level-summarization-from-transcripts",
@@ -6329,7 +6329,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/inferential-replicate-handling/triage",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/inferential-replicate-handling/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "inferential-replicate-handling",
@@ -6342,7 +6342,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isoform-usage-bias-correction/triage",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/isoform-usage-bias-correction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 13,
       "asbval:target_artifact_id": "isoform-usage-bias-correction",
@@ -6355,7 +6355,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/matrix-equivalence-validation/triage",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/matrix-equivalence-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "matrix-equivalence-validation",
@@ -6368,7 +6368,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/oarfish-quantification-format-handling/triage",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/oarfish-quantification-format-handling/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "oarfish-quantification-format-handling",
@@ -6381,7 +6381,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/overdispersion-estimation-validation/triage",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/overdispersion-estimation-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "overdispersion-estimation-validation",
@@ -6394,7 +6394,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quantification-output-parsing/triage",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/quantification-output-parsing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "quantification-output-parsing",
@@ -6407,7 +6407,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-abundance-matrix-handling/triage",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-abundance-matrix-handling/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 12,
       "asbval:target_artifact_id": "rna-seq-abundance-matrix-handling",
@@ -6420,7 +6420,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-matrix-generation/triage",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-count-matrix-generation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "rna-seq-count-matrix-generation",
@@ -6433,7 +6433,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-normalization/triage",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/rna-seq-count-normalization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 11,
       "asbval:target_artifact_id": "rna-seq-count-normalization",
@@ -6446,7 +6446,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/salmon-output-parsing/triage",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/salmon-output-parsing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 15,
       "asbval:target_artifact_id": "salmon-output-parsing",
@@ -6459,7 +6459,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-abundance-import/triage",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-abundance-import/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 14,
       "asbval:target_artifact_id": "transcript-level-abundance-import",
@@ -6472,7 +6472,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-level-count-aggregation/triage",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-level-count-aggregation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 13,
       "asbval:target_artifact_id": "transcript-level-count-aggregation",
@@ -6485,7 +6485,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-to-gene-mapping/triage",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/skill/transcript-to-gene-mapping/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 12,
       "asbval:target_artifact_id": "transcript-to-gene-mapping",
@@ -6498,7 +6498,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "tximport imports transcript-level abundance, estimated counts, and transcript lengths, and summarizes them into matrices for use with downstream statistical analysis packages such as edgeR, DESeq2, and limma-voom.",
       "asbval:note": null,
@@ -6518,7 +6518,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The tximport approach corrects for potential changes in gene length across samples from differential isoform usage.",
       "asbval:note": null,
@@ -6538,7 +6538,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Upstream quantification methods such as salmon, sailfish, and kallisto are substantially faster and require less memory and disk usage compared to alignment-based methods that require creation and storage of BAM files.",
       "asbval:note": null,
@@ -6558,7 +6558,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "It is possible to avoid discarding fragments that can align to multiple genes with homologous sequence, thus increasing sensitivity.",
       "asbval:note": null,
@@ -6578,7 +6578,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "tximeta extends tximport, offering the same functionality plus automatic addition of annotation metadata for commonly used transcriptomes (GENCODE, Ensembl, RefSeq for human and mouse).",
       "asbval:note": null,
@@ -6598,7 +6598,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "tximport outputs a simple list of matrices, while tximeta outputs a SummarizedExperiment object with appropriate GRanges added.",
       "asbval:note": null,
@@ -6618,7 +6618,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "tximport as of version 1.3.9 will import inferential replicates (Gibbs samples or bootstrap samples) from Salmon, Sailfish, or kallisto.",
       "asbval:note": null,
@@ -6638,7 +6638,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The tximport package has a single function for importing transcript-level estimates.",
       "asbval:note": null,
@@ -6658,7 +6658,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The tximport type argument is used to specify what software was used for transcript abundance estimation.",
       "asbval:note": "Text adds 'transcript abundance estimation' but source only says 'estimation'; minor scope expansion but contextually reasonable",
@@ -6678,7 +6678,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "tximport returns a simple list with matrices for abundance, counts, and length, where transcript level information is summarized to the gene-level.",
       "asbval:note": null,
@@ -6698,7 +6698,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Abundance is typically provided by quantification tools as TPM (transcripts-per-million).",
       "asbval:note": null,
@@ -6718,7 +6718,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_012",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_012",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The length matrix can be used to generate an offset matrix for downstream gene-level differential analysis of count matrices.",
       "asbval:note": null,
@@ -6738,7 +6738,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_013",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_013",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "tximport is significantly faster to read in files using the readr package.",
       "asbval:note": "substring_in_paper=false; text omits that the speed benefit is specific to tximport (not a general statement about readr)",
@@ -6758,7 +6758,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_014",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_014",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "tximport detects if readr is installed and will use readr::read_tsv function by default.",
       "asbval:note": "Text accurately represents the source excerpt despite substring_in_paper=false",
@@ -6778,7 +6778,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_015",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_015",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "From version 1.2 to 1.4 of tximport, the reader is not specified by the user anymore but is chosen automatically based on the availability of the readr package.",
       "asbval:note": "Text accurately represents the source excerpt despite substring_in_paper=false",
@@ -6798,7 +6798,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_016",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_016",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "tximport users can customize the import of files using the importer argument.",
       "asbval:note": "Text omits the qualifier 'Advanced users' \u2014 implies all users can customize, not just advanced ones",
@@ -6818,7 +6818,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_017",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_017",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Counts can be generated from abundances using the countsFromAbundance argument, scaled to library size as scaledTPM.",
       "asbval:note": "Text accurately represents the source excerpt despite substring_in_paper=false",
@@ -6838,7 +6838,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_018",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_018",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Counts can be additionally scaled using the average transcript length, averaged over samples and to library size, as lengthScaledTPM.",
       "asbval:note": "Text accurately represents the source excerpt despite substring_in_paper=false",
@@ -6858,7 +6858,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_019",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_019",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "When using scaledTPM or lengthScaledTPM approaches, the counts are not correlated with length, and the length matrix should not be provided as an offset.",
       "asbval:note": "Text accurately represents the source excerpt despite substring_in_paper=false",
@@ -6878,7 +6878,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_020",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_020",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "As of tximport version 1.10, a new countsFromAbundance option dtuScaledTPM has been added, designed for use with txOut=TRUE for differential transcript usage analyses.",
       "asbval:note": "Text accurately represents the source excerpt despite substring_in_paper=false",
@@ -6898,7 +6898,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_021",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_021",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Gene-level summarization can be avoided by setting txOut=TRUE, which gives the original transcript level estimates as a list of matrices.",
       "asbval:note": "Text accurately represents the source excerpt despite substring_in_paper=false",
@@ -6918,7 +6918,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_022",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_022",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Transcript-level matrices can be summarized afterwards using the summarizeToGene function.",
       "asbval:note": "Text accurately represents the source excerpt despite substring_in_paper=false",
@@ -6938,7 +6938,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_023",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_023",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "salmon or sailfish quant.sf files can be imported by setting type to salmon or sailfish.",
       "asbval:note": "Text accurately represents the source excerpt despite substring_in_paper=false",
@@ -6958,7 +6958,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_024",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_024",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "If inferential replicates are present in expected locations relative to the quant.sf file, tximport will import these as well.",
       "asbval:note": "Text omits that inferential replicates include 'Gibbs or bootstrap samples' \u2014 uses generic term instead",
@@ -6978,7 +6978,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_025",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_025",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "kallisto abundance.h5 files can be imported by setting type to kallisto.",
       "asbval:note": null,
@@ -6998,7 +6998,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_026",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_026",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Importing kallisto abundance.h5 files requires that the Bioconductor package rhdf5 is installed.",
       "asbval:note": null,
@@ -7018,7 +7018,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_027",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_027",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "kallisto abundance.tsv files can be imported with tximport, but this is typically slower than using abundance.h5 files.",
       "asbval:note": null,
@@ -7038,7 +7038,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_028",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_028",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The ignoreAfterBar=TRUE argument is used to split incoming quantification matrix rownames at the first bar and only use the part before the bar as an identifier.",
       "asbval:note": "Text names the argument 'ignoreAfterBar=TRUE' but source excerpt does not explicitly mention this argument name; describes the concept correctly but lacks direct argument reference.",
@@ -7058,7 +7058,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_029",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_029",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "RSEM sample.genes.results files can be imported by setting type to rsem with txIn and txOut set to FALSE.",
       "asbval:note": null,
@@ -7078,7 +7078,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_030",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_030",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "RSEM sample.isoforms.results files can be imported by setting type to rsem with txIn and txOut set to TRUE.",
       "asbval:note": null,
@@ -7098,7 +7098,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_031",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_031",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "StringTie t_data.ctab files can be imported by setting type to stringtie.",
       "asbval:note": null,
@@ -7118,7 +7118,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_032",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_032",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "tximport will compute counts from StringTie coverage information by reversing the formula that StringTie uses to calculate coverage.",
       "asbval:note": null,
@@ -7138,7 +7138,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_033",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_033",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The read length is used in the formula that tximport uses to compute counts from StringTie coverage, and can be provided with the readLength argument.",
       "asbval:note": null,
@@ -7158,7 +7158,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_034",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_034",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "scRNA-seq data quantified with alevin can be imported using tximport.",
       "asbval:note": null,
@@ -7178,7 +7178,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_035",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_035",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A single file should be specified for alevin import, which will import a gene-by-cell matrix of data.",
       "asbval:note": "Text adds 'for alevin import' which is not explicitly stated in source excerpt; excerpt context implies it but is not directly stated.",
@@ -7198,7 +7198,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_036",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_036",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Long read data quantified with oarfish can be imported using tximport.",
       "asbval:note": null,
@@ -7218,7 +7218,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_037",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_037",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "One suggested way of importing estimates for use with differential gene expression methods is to use gene-level estimated counts from the quantification tools and additionally use the transcript-level abundance estimates to calculate a gene-level offset.",
       "asbval:note": null,
@@ -7238,7 +7238,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_038",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_038",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The gene-level offset corrects for changes to the average transcript length across samples.",
       "asbval:note": null,
@@ -7258,7 +7258,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_039",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_039",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The functions edgeR::DGEListFromTximport and DESeq2::DESeqDataSetFromTximport take care of creation of the offset.",
       "asbval:note": null,
@@ -7278,7 +7278,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_040",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_040",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A second method for importing estimates for differential gene expression is to use tximport argument countsFromAbundance=lengthScaledTPM or scaledTPM and then use the gene-level count matrix directly.",
       "asbval:note": null,
@@ -7298,7 +7298,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_041",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_041",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "One should not manually pass the original gene-level counts to downstream methods without an offset.",
       "asbval:note": null,
@@ -7318,7 +7318,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_042",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_042",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The only case where passing original gene-level counts without an offset would make sense is if there is no length bias to the counts, as may happen in 3 prime tagged RNA-seq data.",
       "asbval:note": null,
@@ -7338,7 +7338,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_043",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_043",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The original gene-level counts are in txi$counts when tximport is run with countsFromAbundance=no.",
       "asbval:note": null,
@@ -7358,7 +7358,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_044",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_044",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Using only txi$counts is simply passing the summed estimated transcript counts, and does not correct for potential differential isoform usage.",
       "asbval:note": null,
@@ -7378,7 +7378,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_045",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_045",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Passing uncorrected gene-level counts without an offset is not recommended by the tximport package authors.",
       "asbval:note": null,
@@ -7398,7 +7398,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_046",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_046",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "For 3 prime tagged RNA-seq data, correcting the counts for gene length will induce a bias in the analysis because the counts do not have length bias.",
       "asbval:note": null,
@@ -7418,7 +7418,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_047",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_047",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "For 3 prime tagged RNA-seq, the original counts from txi$counts should be used as a counts matrix without calculating an offset and without using countsFromAbundance.",
       "asbval:note": null,
@@ -7438,7 +7438,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_048",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_048",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The DGEListFromTximport function is available in edgeR as of version 4.10.0 (Bioconductor release 3.23, Spring 2026).",
       "asbval:note": null,
@@ -7458,7 +7458,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_049",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_049",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "If tximport output contains inferential replicates, DGEListFromTximport will also estimate the count overdispersion that arises from probabilistic read assignment to transcripts.",
       "asbval:note": null,
@@ -7478,7 +7478,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_050",
+      "@id": "asbval:assertion/paper/10.12688%2Ff1000research.7563.1/claim/claim_050",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The DGEListFromTximport function can compute divided counts suitable for differential expression analysis at the transcript level when the divide parameter is set to TRUE.",
       "asbval:note": "Text adds specific detail about 'divide parameter set to TRUE' that is not explicitly stated in the source excerpt; excerpt does not mention the parameter name or its value.",

@@ -1706,7 +1706,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is a BioC package available from https://bioconductor.org/packages/release/bioc/html/ChAMP.html",
       "asbval:note": "ChAMP is the primary tool discussed throughout the paper.",
@@ -1726,7 +1726,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function",
       "asbval:note": "Paper confirms ChAMP has a loading function for IDAT files and supports both 450K and EPIC arrays. However, the paper does not explicitly name 'champ.load()' or 'champ.import()' functions by those exact names, nor does it discuss pre-filter probe counts (485,512 for 450K or 867,531 for EPIC). The loading capability is confirmed but specific function names and probe count validation are not mentioned.",
@@ -1746,7 +1746,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not provide specific pre-filter probe counts for the 450K array. While it mentions the 450K array is supported, the exact number 485,512 is not stated in the passages.",
@@ -1766,7 +1766,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Illumina's new EPIC BeadChip can measure methylation at over 850 000 sites with single-nucleotide resolution",
       "asbval:note": "Paper states EPIC BeadChip measures 'over 850,000 sites', which is consistent with the claimed 867,531 probes but not an exact match. The specific number 867,531 is not explicitly stated.",
@@ -1786,7 +1786,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function",
       "asbval:note": "Paper confirms ChAMP has a loading function for both 450K and EPIC arrays, but does not discuss reproducing or validating pre-filter probe counts as a task objective.",
@@ -1806,7 +1806,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card focuses on validating pre-filter probe counts for specific array types, which is a technical verification task. The paper describes ChAMP as a comprehensive analysis pipeline but does not frame probe count validation as a primary research objective.",
@@ -1823,7 +1823,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is a BioC package available from https://bioconductor.org/packages/release/bioc/html/ChAMP.html",
       "asbval:note": "ChAMP is the primary tool discussed throughout the paper.",
@@ -1843,7 +1843,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Probes can be filtered based on detection P-values, chromosomal location, presence of single nucleotide polymorphisms in the probe sequence (Zhou et al., 2016) and cross-hybridization.",
       "asbval:note": "Paper confirms ChAMP filters by detection P-values and mentions probe filtering functionality, but does not specify the exact thresholds (p-value > 0.01, bead count < 3, or 5% sample threshold). The specific numeric parameters and bead count filtering are not explicitly stated in the passages.",
@@ -1863,7 +1863,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014). Probes can be filtered based on detection P-values, chromosomal location, presence of single nucleotide polymorphisms in the probe sequence (Zhou et al., 2016) and cross-hybridization.",
       "asbval:note": "Paper describes probe filtering as a core function of ChAMP, implying a filtered matrix output.",
@@ -1883,7 +1883,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Multi-dimensional scaling, density and clustering plots allow exploratory analysis.",
       "asbval:note": "Paper mentions exploratory analysis and visualization capabilities via GUIs, but does not explicitly describe a QC report documenting specific filtering statistics or thresholds applied. The paper emphasizes visualization and interactive GUIs but does not detail a formal QC report output.",
@@ -1903,7 +1903,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card focuses on a specific function (champ.filter()) with exact numeric thresholds (p-value > 0.01, bead count < 3, 5% sample threshold), but the paper only generically describes that ChAMP filters by detection P-values without specifying these exact parameters.",
@@ -1920,7 +1920,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is a BioC package available from https://bioconductor.org/packages/release/bioc/html/ChAMP.html",
       "asbval:note": null,
@@ -1940,7 +1940,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For supervised analysis, besides limma-based DMP and ProbeLasso-based DMR analysis functions (Butcher and Beck, 2015), there is now added functionality for DMR detection using Bumphunter (Jaffe et al., 2012) and DMRcate (Peters et al., 2015).",
       "asbval:note": null,
@@ -1960,7 +1960,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is an integrated analysis pipeline published in 2014 (Morris et al., 2014), which includes functions for filtering low-quality probes, adjustment for Infinium I and Infinium II probe design, batch effect correction, detecting differentially methylated positions (DMPs), finding differentially methylated regions (DMRs) and detection of copy number aberrations (CNA). The new version of ChAMP, extends and improves this analysis pipeline, adding novel and enhanced functionalities, including detection of differentially methylated genomic blocks (DMB), gene set enrichment analysis (GSEA), a method for correcting cell-type heterogeneity and detection of differentially methylated gene modules.",
       "asbval:note": "Paper confirms ChAMP has DMR detection functionality and mentions Bumphunter as one option for DMR detection, but does not specify application to 'EPIC simulation dataset' or provide expected DMR counts. The specific dataset and quantitative outcome are not mentioned in the passages.",
@@ -1980,7 +1980,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For supervised analysis, besides limma-based DMP and ProbeLasso-based DMR analysis functions (Butcher and Beck, 2015), there is now added functionality for DMR detection using Bumphunter (Jaffe et al., 2012) and DMRcate (Peters et al., 2015).",
       "asbval:note": "Paper confirms DMR detection capability but does not explicitly describe the structure or contents of output tables (genomic coordinates, statistical metrics).",
@@ -2000,7 +2000,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_003/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No specific DMR count or quantitative result for any dataset is mentioned in the provided passages. The expected count of ~4700+ is not referenced.",
@@ -2020,7 +2020,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card specifies application to 'EPIC simulation dataset' (EPICSimData), but the paper passages do not mention this specific dataset or any simulation data.",
@@ -2036,7 +2036,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_004/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is a BioC package available from https://bioconductor.org/packages/release/bioc/html/ChAMP.html",
       "asbval:note": "ChAMP is the primary tool discussed throughout the paper.",
@@ -2056,7 +2056,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_004/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Large-scale differentially methylated blocks (DMB) can also be identified. These DMBs are large-scale genomic regions (10 kb\u2013Mb) containing hundreds of inter-genic CpG sites (Fig. 1B), and which often exhibit hypomethylation in aging and cancer",
       "asbval:note": "Paper confirms ChAMP has DMB (differentially methylated blocks) detection functionality, but does not mention 'champ.Block()' function by name, 'EPICSimData' dataset, or specific arraytype parameter. The function name and dataset are not explicitly referenced in passages.",
@@ -2076,7 +2076,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_004/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Large-scale differentially methylated blocks (DMB) can also be identified.",
       "asbval:note": "Paper confirms DMB detection produces result objects, but does not specify the structure of the result object or discuss scenarios with zero blocks detected.",
@@ -2096,7 +2096,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_004/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "a series of javascript-based GUIs are provided. This allows easy checking of results, and generating figures for DMR or DMBs. Shiny, a web application framework for R, suitable for creating simple interactive webpages, and Plotly, an open source JavaScript graphing library, are integrated with ChAMP results",
       "asbval:note": "Paper confirms interactive GUIs exist for visualization of DMB results, but does not name a specific 'Block.GUI()' function or discuss visualization of null/zero-block results.",
@@ -2116,7 +2116,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/scope_drift",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_004/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card specifies a very particular function name 'champ.Block()' and dataset 'EPICSimData' that are not mentioned in the provided passages. These may exist in the full paper or supplementary material but are not confirmed here.",
@@ -2133,7 +2133,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_005/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is a BioC package available from https://bioconductor.org/packages/release/bioc/html/ChAMP.html",
       "asbval:note": "ChAMP is the primary subject of the paper and is confirmed as a Bioconductor package for methylation analysis.",
@@ -2153,7 +2153,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_005/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Singular value decomposition is used to correlate principal components to biological and technical factors, helping the user decide if there are batch effects or confounding factors that need to be adjusted for.",
       "asbval:note": "Paper confirms ChAMP uses SVD (Singular Value Decomposition) for principal component analysis, but does not mention: (1) a specific champ.SVD() function by name, (2) a maximum component cap of 20, or (3) Random Matrix Theory integration. The paper describes SVD's general use but not the specific implementation detail being tested.",
@@ -2173,7 +2173,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_005/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention in passages of SVD output format, latent component count capping, or a maximum of 20 components. The paper describes SVD functionality but does not specify output structure or component limits.",
@@ -2193,7 +2193,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/scope_drift",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/card/task_005/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card focuses on a very specific implementation detail (maximum 20 component cap with Random Matrix Theory detection) that is not mentioned in the paper's abstract, introduction, or main description sections.",
@@ -2210,7 +2210,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/450k-array-data-processing/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/450k-array-data-processing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is an integrated analysis pipeline published in 2014 (Morris et al., 2014), which includes functions for filtering low-quality probes, adjustment for Infinium I and Infinium II probe design, batch effect correction, detecting differentially methylated positions (DMPs), finding differentially methylated regions (DMRs) and detection of copy number aberrations (CNA).",
       "asbval:note": "The paper explicitly describes ChAMP as including filtering, adjustment for probe types (Infinium I/II, equivalent to type-2 probe adjustment), and batch effect correction. The abstract confirms it works on 450k data.",
@@ -2230,7 +2230,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/450k-array-data-processing/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/450k-array-data-processing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is an integrated analysis pipeline published in 2014 (Morris et al., 2014), which includes functions for filtering low-quality probes, adjustment for Infinium I and Infinium II probe design, batch effect correction, detecting differentially methylated positions (DMPs), finding differentially methylated regions (DMRs) and detection of copy number aberrations (CNA). The new version of ChAMP, extends and improves this analysis pipeline, adding novel and enhanced functionalities, including detection of differentially methylated genomic blocks (DMB), gene set enrichment analysis (GSEA), a method for correcting cell-type heterogeneity and detection of differentially methylated gene modules.",
       "asbval:note": "ChAMP is the primary subject of the paper and is explicitly described as a pipeline for the claimed functions.",
@@ -2250,7 +2250,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/450k-array-data-processing/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/450k-array-data-processing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ChAMPdata is not mentioned in any of the provided passages. Insufficient evidence to confirm or deny its role as a data package for 450k annotation.",
@@ -2270,7 +2270,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/450k-array-data-processing/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/450k-array-data-processing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014).",
       "asbval:note": "minfi is explicitly mentioned as an alternative loading function integrated into ChAMP for IDAT file import.",
@@ -2290,7 +2290,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/450k-array-data-processing/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/450k-array-data-processing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ComBat is not mentioned by name in any of the provided passages. While the paper discusses batch effect correction, it does not specifically name ComBat as the method used.",
@@ -2310,7 +2310,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/450k-array-data-processing/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/450k-array-data-processing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014). Probes can be filtered based on detection P-values, chromosomal location, presence of single nucleotide polymorphisms in the probe sequence (Zhou et al., 2016) and cross-hybridization. For normalization, functional normalization (Fortin et al., 2014) has been added as an option alongside beta-mixture quantile normalization (Teschendorff et al., 2013). Singular value decomposition is used to correlate principal components to biological and technical factors, helping the user decide if there are batch effects or confounding factors that need to be adjusted for. For supervised analysis, besides limma-based DMP and ProbeLasso-based DMR analysis functions (Butcher and Beck, 2015), there is now added functionality for DMR detection using Bumphunter (Jaffe et al., 2012) and DMRcate (Peters et al., 2015).",
       "asbval:note": "All claimed functions are explicitly described in the paper: data import, filtering, normalization, batch effect analysis/correction, and differential methylation detection.",
@@ -2330,7 +2330,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/450k-array-data-processing/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/450k-array-data-processing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014). For normalization, functional normalization (Fortin et al., 2014) has been added as an option alongside beta-mixture quantile normalization (Teschendorff et al., 2013).",
       "asbval:note": "minfi is confirmed as a loading function integrated into ChAMP, and functional normalization is mentioned as an option in ChAMP. However, the paper does not explicitly state that minfi provides functional normalization or that minfi is the source of this normalization method in ChAMP\u2014only that both are available options.",
@@ -2350,7 +2350,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/450k-array-data-processing/007",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/450k-array-data-processing/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ComBat is not named in the passages. The paper mentions batch effect correction and SVD-based batch detection but does not specify ComBat as the implementation method.",
@@ -2370,7 +2370,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bead-count-threshold-filtering/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/bead-count-threshold-filtering/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Probes can be filtered based on detection P-values, chromosomal location, presence of single nucleotide polymorphisms in the probe sequence (Zhou et al., 2016) and cross-hybridization.",
       "asbval:note": "Paper confirms ChAMP filters probes based on detection P-values and other criteria, but does NOT explicitly mention a '3 beads' or '5% of samples' threshold. The specific numeric parameters (3 beads, 5%) are not found in the passages. Paper describes filtering functionality but not the exact bead-count threshold claimed.",
@@ -2390,7 +2390,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bead-count-threshold-filtering/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/bead-count-threshold-filtering/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is an integrated analysis pipeline published in 2014 (Morris et al., 2014), which includes functions for filtering low-quality probes, adjustment for Infinium I and Infinium II probe design, batch effect correction, detecting differentially methylated positions (DMPs), finding differentially methylated regions (DMRs) and detection of copy number aberrations (CNA).",
       "asbval:note": "Paper confirms ChAMP includes filtering of low-quality probes as part of quality control pipeline for both 450K and EPIC arrays.",
@@ -2410,7 +2410,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bead-count-threshold-filtering/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/bead-count-threshold-filtering/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is an integrated analysis pipeline published in 2014 (Morris et al., 2014), which includes functions for filtering low-quality probes",
       "asbval:note": "Paper confirms ChAMP includes filtering functions for low-quality probes, but does not explicitly name the function as 'champ.filter()'. The function name is inferred but not verbatim in passages.",
@@ -2430,7 +2430,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bead-count-threshold-filtering/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/bead-count-threshold-filtering/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ChAMPdata is not mentioned anywhere in the provided passages. No evidence of this package or its role in supporting ChAMP.",
@@ -2450,7 +2450,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bead-count-threshold-filtering/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/bead-count-threshold-filtering/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014).",
       "asbval:note": "Paper confirms minfi is used for loading methylation array data in ChAMP pipeline, supporting preprocessing functionality.",
@@ -2470,7 +2470,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bead-count-threshold-filtering/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/bead-count-threshold-filtering/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014). Probes can be filtered based on detection P-values, chromosomal location, presence of single nucleotide polymorphisms in the probe sequence (Zhou et al., 2016) and cross-hybridization. ChAMP accepts multiple data input formats, including IDATS, beta-valued matrices and phenotype data files.",
       "asbval:note": "Paper confirms ChAMP accepts IDAT files and beta-valued matrices and performs filtering on both 450K and EPIC arrays.",
@@ -2490,7 +2490,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dmr-detection-bumphunter/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dmr-detection-bumphunter/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For supervised analysis, besides limma-based DMP and ProbeLasso-based DMR analysis functions (Butcher and Beck, 2015), there is now added functionality for DMR detection using Bumphunter (Jaffe et al., 2012) and DMRcate (Peters et al., 2015).",
       "asbval:note": "Paper explicitly states ChAMP includes Bumphunter-based DMR detection functionality for EPIC and 450k data.",
@@ -2510,7 +2510,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dmr-detection-bumphunter/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dmr-detection-bumphunter/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Large-scale differentially methylated blocks (DMB) can also be identified. These DMBs are large-scale genomic regions (10 kb\u2013Mb) containing hundreds of inter-genic CpG sites",
       "asbval:note": "Paper describes detection of contiguous genomic regions with coordinated methylation patterns, consistent with DMR detection concept.",
@@ -2530,7 +2530,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dmr-detection-bumphunter/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dmr-detection-bumphunter/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is an R package and currently requires R(\u22653.4). [...] For supervised analysis, besides limma-based DMP and ProbeLasso-based DMR analysis functions (Butcher and Beck, 2015), there is now added functionality for DMR detection using Bumphunter (Jaffe et al., 2012) and DMRcate (Peters et al., 2015).",
       "asbval:note": "ChAMP confirmed as R package with DMR detection including Bumphunter method.",
@@ -2550,7 +2550,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dmr-detection-bumphunter/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dmr-detection-bumphunter/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "there is now added functionality for DMR detection using Bumphunter (Jaffe et al., 2012)",
       "asbval:note": "Bumphunter explicitly named as DMR detection method integrated into ChAMP.",
@@ -2570,7 +2570,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dmr-detection-bumphunter/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dmr-detection-bumphunter/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ChAMPdata package not mentioned in provided passages. Insufficient evidence to confirm or refute.",
@@ -2590,7 +2590,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dmr-detection-bumphunter/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dmr-detection-bumphunter/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014). [...] For normalization, functional normalization (Fortin et al., 2014) has been added as an option alongside beta-mixture quantile normalization (Teschendorff et al., 2013).",
       "asbval:note": "minfi is mentioned for data loading, and functional normalization is available in ChAMP, but the paper does not explicitly attribute functional normalization to minfi\u2014it cites Fortin et al. 2014 as the source. minfi is used for loading, not explicitly for providing the normalization method.",
@@ -2610,7 +2610,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dmr-detection-bumphunter/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dmr-detection-bumphunter/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Illumina Infinium HumanMethylationEPIC BeadChip is the new platform for high-throughput DNA methylation analysis, effectively doubling the coverage compared to the older 450 K array. Here we present a significantly updated and improved version of the Bioconductor package ChAMP, which can be used to analyze EPIC and 450k data.",
       "asbval:note": "Paper explicitly states ChAMP analyzes both EPIC and 450k data.",
@@ -2630,7 +2630,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dmr-detection-bumphunter/007",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dmr-detection-bumphunter/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For supervised analysis, besides limma-based DMP and ProbeLasso-based DMR analysis functions (Butcher and Beck, 2015), there is now added functionality for DMR detection using Bumphunter",
       "asbval:note": "Supervised analysis implies group comparisons; consistent with multi-group contrasts.",
@@ -2650,7 +2650,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dmr-detection-bumphunter/008",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dmr-detection-bumphunter/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Large-scale differentially methylated blocks (DMB) can also be identified. These DMBs are large-scale genomic regions (10 kb\u2013Mb) containing hundreds of inter-genic CpG sites",
       "asbval:note": "Paper describes DMBs (large-scale blocks with hundreds of CpGs) but does not specify minimum CpG threshold (\u22653) for bumphunter-based DMR detection. The \u22653 CpG threshold is a standard bumphunter parameter not explicitly stated in the paper.",
@@ -2670,7 +2670,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dna-methylation-array-data-import/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dna-methylation-array-data-import/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014)... ChAMP accepts multiple data input formats, including IDATS, beta-valued matrices and phenotype data files.",
       "asbval:note": "Paper explicitly describes loading IDAT files and beta-value matrices from 450K and EPIC arrays as core functionality.",
@@ -2690,7 +2690,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dna-methylation-array-data-import/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dna-methylation-array-data-import/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function",
       "asbval:note": "ChAMP is confirmed as the primary tool for loading IDAT and beta-value data. Specific function names (champ.load, champ.import) are not verbatim in passages but are standard R package conventions; the functional role is clearly supported.",
@@ -2710,7 +2710,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dna-methylation-array-data-import/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dna-methylation-array-data-import/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ChAMPdata is not mentioned in the provided passages. Passages do not discuss probe manifest annotations or reference probe counts as a separate package component. Insufficient evidence to confirm or refute.",
@@ -2730,7 +2730,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dna-methylation-array-data-import/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dna-methylation-array-data-import/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014)... For normalization, functional normalization (Fortin et al., 2014) has been added as an option",
       "asbval:note": "minfi is confirmed as an alternative data import method. However, the paper attributes functional normalization to Fortin et al. (2014) as a separate option added to ChAMP, not as a minfi-specific feature. minfi's role in normalization is not explicitly stated in passages.",
@@ -2750,7 +2750,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dna-methylation-array-data-import/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dna-methylation-array-data-import/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is an integrated analysis pipeline published in 2014 (Morris et al., 2014), which includes functions for filtering low-quality probes, adjustment for Infinium I and Infinium II probe design, batch effect correction, detecting differentially methylated positions (DMPs), finding differentially methylated regions (DMRs) and detection of copy number aberrations (CNA).",
       "asbval:note": "Paper describes ChAMP as an integrated pipeline starting with data loading and quality control (filtering low-quality probes), confirming the entry-point role.",
@@ -2770,7 +2770,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dna-methylation-array-data-import/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dna-methylation-array-data-import/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Illumina Infinium HumanMethylationEPIC BeadChip is the new platform for high-throughput DNA methylation analysis, effectively doubling the coverage compared to the older 450 K array. Here we present a significantly updated and improved version of the Bioconductor package ChAMP, which can be used to analyze EPIC and 450k data.",
       "asbval:note": "Paper explicitly states ChAMP can analyze both EPIC and 450K data.",
@@ -2790,7 +2790,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dna-methylation-block-detection-analysis/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dna-methylation-block-detection-analysis/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Large-scale differentially methylated blocks (DMB) can also be identified... ChAMP is now a much more powerful and comprehensive tool for DNA methylation analysis",
       "asbval:note": "Paper confirms DMB detection capability and EPIC/450k support, but does not name the specific function 'champ.Block()' in passages provided. Function name cannot be verified from given text.",
@@ -2810,7 +2810,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dna-methylation-block-detection-analysis/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dna-methylation-block-detection-analysis/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These DMBs are large-scale genomic regions (10 kb\u2013Mb) containing hundreds of inter-genic CpG sites",
       "asbval:note": "Semantic equivalence: paper describes DMBs as contiguous genomic regions with coordinated methylation patterns.",
@@ -2830,7 +2830,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dna-methylation-block-detection-analysis/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dna-methylation-block-detection-analysis/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is a BioC package available from https://bioconductor.org/packages/release/bioc/html/ChAMP.html",
       "asbval:note": "ChAMP confirmed as primary tool. DMB detection and GUI visualization confirmed in passage 3.",
@@ -2850,7 +2850,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dna-methylation-block-detection-analysis/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dna-methylation-block-detection-analysis/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ChAMPdata package not mentioned in provided passages. Insufficient evidence to confirm or deny.",
@@ -2870,7 +2870,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dna-methylation-block-detection-analysis/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dna-methylation-block-detection-analysis/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014).",
       "asbval:note": "minfi confirmed as tool used with ChAMP for data loading/normalization.",
@@ -2890,7 +2890,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dna-methylation-block-detection-analysis/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dna-methylation-block-detection-analysis/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Shiny, a web application framework for R, suitable for creating simple interactive webpages, and Plotly, an open source JavaScript graphing library, are integrated with ChAMP results",
       "asbval:note": "Shiny confirmed as integrated framework for ChAMP GUIs including visualization.",
@@ -2910,7 +2910,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dna-methylation-block-detection-analysis/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dna-methylation-block-detection-analysis/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Illumina Infinium HumanMethylationEPIC BeadChip is the new platform for high-throughput DNA methylation analysis, effectively doubling the coverage compared to the older 450 K array. Here we present a significantly updated and improved version of the Bioconductor package ChAMP, which can be used to analyze EPIC and 450k data.",
       "asbval:note": "Explicitly confirmed in abstract.",
@@ -2930,7 +2930,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dna-methylation-block-detection-analysis/007",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dna-methylation-block-detection-analysis/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "includes functions for filtering low-quality probes, adjustment for Infinium I and Infinium II probe design, batch effect correction",
       "asbval:note": "ChAMP includes these preprocessing steps as part of its pipeline.",
@@ -2950,7 +2950,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dna-methylation-quality-control/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dna-methylation-quality-control/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Probes can be filtered based on detection P-values, chromosomal location, presence of single nucleotide polymorphisms in the probe sequence (Zhou et al., 2016) and cross-hybridization.",
       "asbval:note": "Paper explicitly mentions detection P-values as a filtering criterion. Bead count is not explicitly named but detection P-values are the primary quality metric mentioned.",
@@ -2970,7 +2970,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dna-methylation-quality-control/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dna-methylation-quality-control/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is an integrated analysis pipeline published in 2014 (Morris et al., 2014), which includes functions for filtering low-quality probes, adjustment for Infinium I and Infinium II probe design, batch effect correction, detecting differentially methylated positions (DMPs), finding differentially methylated regions (DMRs)",
       "asbval:note": "Paper describes filtering low-quality probes as part of the integrated pipeline preceding normalization and differential methylation analysis.",
@@ -2990,7 +2990,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dna-methylation-quality-control/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dna-methylation-quality-control/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is an integrated analysis pipeline published in 2014 (Morris et al., 2014), which includes functions for filtering low-quality probes",
       "asbval:note": "ChAMP is confirmed as the primary tool for filtering. Specific function name 'champ.filter()' is not mentioned in passages but filtering functionality is explicitly stated.",
@@ -3010,7 +3010,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dna-methylation-quality-control/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dna-methylation-quality-control/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ChAMPdata package is not mentioned in the provided passages. Cannot verify its role as a dependency or its contents.",
@@ -3030,7 +3030,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dna-methylation-quality-control/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dna-methylation-quality-control/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014). For normalization, functional normalization (Fortin et al., 2014) has been added as an option",
       "asbval:note": "minfi is confirmed for data loading. Functional normalization is mentioned as an option in ChAMP but not explicitly attributed to minfi in the passages.",
@@ -3050,7 +3050,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dna-methylation-quality-control/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dna-methylation-quality-control/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "RnBeads is not mentioned anywhere in the provided passages. No evidence of its use or comparison with ChAMP.",
@@ -3070,7 +3070,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/epic-array-simulation-benchmark/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/epic-array-simulation-benchmark/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For supervised analysis, besides limma-based DMP and ProbeLasso-based DMR analysis functions (Butcher and Beck, 2015), there is now added functionality for DMR detection using Bumphunter (Jaffe et al., 2012) and DMRcate (Peters et al., 2015).",
       "asbval:note": "Paper confirms ChAMP includes bumphunter-based DMR detection. However, no mention of EPICSimData simulation dataset or validation/benchmarking against simulated DMRs with known ground truth. The research question's specific focus on reproducing expected DMR counts from EPICSimData is not supported by the passages.",
@@ -3090,7 +3090,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/epic-array-simulation-benchmark/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/epic-array-simulation-benchmark/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is an integrated analysis pipeline published in 2014 (Morris et al., 2014), which includes functions for filtering low-quality probes, adjustment for Infinium I and Infinium II probe design, batch effect correction, detecting differentially methylated positions (DMPs), finding differentially methylated regions (DMRs)... there is now added functionality for DMR detection using Bumphunter (Jaffe et al., 2012)",
       "asbval:note": "ChAMP's DMR detection with bumphunter backend is explicitly confirmed for EPIC array analysis.",
@@ -3110,7 +3110,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/epic-array-simulation-benchmark/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/epic-array-simulation-benchmark/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of ChAMPdata package or EPICSimData simulation dataset in any passage. The paper does not reference a simulation dataset or benchmarking data package.",
@@ -3130,7 +3130,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/epic-array-simulation-benchmark/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/epic-array-simulation-benchmark/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "there is now added functionality for DMR detection using Bumphunter (Jaffe et al., 2012)",
       "asbval:note": "Bumphunter is confirmed as integrated into ChAMP for DMR detection. The functional description (spatial clustering, statistical testing) is consistent with the paper's characterization of DMR detection methods.",
@@ -3150,7 +3150,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/epic-array-simulation-benchmark/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/epic-array-simulation-benchmark/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014)... For normalization, functional normalization (Fortin et al., 2014) has been added as an option alongside beta-mixture quantile normalization (Teschendormer et al., 2013).",
       "asbval:note": "minfi is confirmed as a loading function option in ChAMP, and functional normalization is mentioned as a normalization option. The characterization as 'optional preprocessing' is consistent with the paper's description.",
@@ -3170,7 +3170,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-450k-epic-dataset-loading/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-450k-epic-dataset-loading/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function",
       "asbval:note": "Paper confirms ChAMP loads IDAT files and accepts beta-valued matrices as input formats.",
@@ -3190,7 +3190,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-450k-epic-dataset-loading/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-450k-epic-dataset-loading/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention specific probe count validation or expected manifest numbers (485,512 for 450K; 867,531 for EPIC). Paper states EPIC has 'over 850 000 sites' but does not provide exact validation procedure or expected counts.",
@@ -3210,7 +3210,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-450k-epic-dataset-loading/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-450k-epic-dataset-loading/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Probes can be filtered based on detection P-values, chromosomal location, presence of single nucleotide polymorphisms in the probe sequence",
       "asbval:note": "Paper confirms ChAMP includes quality-based filtering functions, implying a pre-filter stage.",
@@ -3230,7 +3230,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-450k-epic-dataset-loading/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-450k-epic-dataset-loading/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function",
       "asbval:note": "Paper confirms ChAMP has data loading functions for IDAT files and beta-valued matrices.",
@@ -3250,7 +3250,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-450k-epic-dataset-loading/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-450k-epic-dataset-loading/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention ChAMPdata package, probe manifests, array annotations, or version dependencies. No evidence of this tool in the provided passages.",
@@ -3270,7 +3270,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-450k-epic-dataset-loading/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-450k-epic-dataset-loading/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014). For normalization, functional normalization (Fortin et al., 2014) has been added as an option",
       "asbval:note": "Paper confirms minfi is an alternative loading function and functional normalization is available in ChAMP.",
@@ -3290,7 +3290,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-array-data-processing-epic/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-array-data-processing-epic/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function... For normalization, functional normalization (Fortin et al., 2014) has been added as an option alongside beta-mixture quantile normalization... For supervised analysis, besides limma-based DMP and ProbeLasso-based DMR analysis functions... there is now added functionality for DMR detection using Bumphunter (Jaffe et al., 2012) and DMRcate (Peters et al., 2015).",
       "asbval:note": "All major components of the research question are explicitly covered in the paper's description of ChAMP functionality.",
@@ -3310,7 +3310,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-array-data-processing-epic/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-array-data-processing-epic/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is an integrated analysis pipeline published in 2014 (Morris et al., 2014), which includes functions for filtering low-quality probes, adjustment for Infinium I and Infinium II probe design, batch effect correction, detecting differentially methylated positions (DMPs), finding differentially methylated regions (DMRs) and detection of copy number aberrations (CNA). The new version of ChAMP, extends and improves this analysis pipeline, adding novel and enhanced functionalities, including detection of differentially methylated genomic blocks (DMB)...",
       "asbval:note": null,
@@ -3330,7 +3330,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-array-data-processing-epic/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-array-data-processing-epic/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ChAMPdata is not mentioned in the provided passages. While the paper discusses ChAMP's functionality and mentions EPIC array annotations, it does not explicitly name ChAMPdata as a separate package or describe its role.",
@@ -3350,7 +3350,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-array-data-processing-epic/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-array-data-processing-epic/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014)... For normalization, functional normalization (Fortin et al., 2014) has been added as an option alongside beta-mixture quantile normalization (Teschendorff et al., 2013).",
       "asbval:note": "minfi is mentioned as a data loading function, and functional normalization is mentioned as a normalization option, but the paper does not explicitly state that minfi provides the functional normalization method. The functional normalization is attributed to Fortin et al. (2014), not explicitly to minfi.",
@@ -3370,7 +3370,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-array-data-processing-epic/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-array-data-processing-epic/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For supervised analysis, besides limma-based DMP and ProbeLasso-based DMR analysis functions (Butcher and Beck, 2015), there is now added functionality for DMR detection using Bumphunter (Jaffe et al., 2012) and DMRcate (Peters et al., 2015).",
       "asbval:note": null,
@@ -3390,7 +3390,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-array-data-processing-epic/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-array-data-processing-epic/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For supervised analysis, besides limma-based DMP and ProbeLasso-based DMR analysis functions (Butcher and Beck, 2015), there is now added functionality for DMR detection using Bumphunter (Jaffe et al., 2012) and DMRcate (Peters et al., 2015).",
       "asbval:note": null,
@@ -3410,7 +3410,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-array-data-processing-epic/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-array-data-processing-epic/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Shiny, a web application framework for R, suitable for creating simple interactive webpages, and Plotly, an open source JavaScript graphing library, are integrated with ChAMP results, allowing users to view, select, and zoom in and out from results obtained with ChAMP.",
       "asbval:note": null,
@@ -3430,7 +3430,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-array-data-processing-epic/007",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-array-data-processing-epic/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The new version of ChAMP, extends and improves this analysis pipeline, adding novel and enhanced functionalities, including detection of differentially methylated genomic blocks (DMB), gene set enrichment analysis (GSEA), a method for correcting cell-type heterogeneity and detection of differentially methylated gene modules.",
       "asbval:note": "The paper mentions 'detection of differentially methylated gene modules' as a new functionality, but does not name the specific tool/method as 'FEM'. The acronym FEM is not used in the provided passages.",
@@ -3450,7 +3450,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-methylation-array-preprocessing/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-methylation-array-preprocessing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is an integrated analysis pipeline published in 2014 (Morris et al., 2014), which includes functions for filtering low-quality probes, adjustment for Infinium I and Infinium II probe design, batch effect correction... Probes can be filtered based on detection P-values, chromosomal location, presence of single nucleotide polymorphisms in the probe sequence (Zhou et al., 2016) and cross-hybridization. For normalization, functional normalization (Fortin et al., 2014) has been added as an option alongside beta-mixture quantile normalization (Teschendorff et al., 2013).",
       "asbval:note": "Detection p-value filtering and normalization are explicitly mentioned. Type-2 probe correction (Infinium II adjustment) is mentioned as 'adjustment for Infinium I and Infinium II probe design'. Bead count filtering is not explicitly mentioned in passages.",
@@ -3470,7 +3470,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-methylation-array-preprocessing/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-methylation-array-preprocessing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is an integrated analysis pipeline published in 2014 (Morris et al., 2014), which includes functions for filtering low-quality probes, adjustment for Infinium I and Infinium II probe design, batch effect correction, detecting differentially methylated positions (DMPs), finding differentially methylated regions (DMRs) and detection of copy number aberrations (CNA). The new version of ChAMP, extends and improves this analysis pipeline, adding novel and enhanced functionalities",
       "asbval:note": "ChAMP is the primary tool discussed throughout the paper for methylation array analysis.",
@@ -3490,7 +3490,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-methylation-array-preprocessing/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-methylation-array-preprocessing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ChAMPdata is not mentioned in any of the provided passages. Insufficient information to validate.",
@@ -3510,7 +3510,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-methylation-array-preprocessing/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-methylation-array-preprocessing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014).",
       "asbval:note": "minfi is mentioned as an alternative data loading function compatible with ChAMP.",
@@ -3530,7 +3530,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-methylation-array-preprocessing/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-methylation-array-preprocessing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "BMIQ is not mentioned by name in any passage. The paper mentions 'adjustment for Infinium I and Infinium II probe design' and 'beta-mixture quantile normalization' but does not name BMIQ specifically as the type-2 probe correction method.",
@@ -3550,7 +3550,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-methylation-array-preprocessing/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-methylation-array-preprocessing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SWAN is not mentioned in any of the provided passages.",
@@ -3570,7 +3570,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-methylation-array-preprocessing/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-methylation-array-preprocessing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Probes can be filtered based on detection P-values, chromosomal location, presence of single nucleotide polymorphisms in the probe sequence (Zhou et al., 2016) and cross-hybridization.",
       "asbval:note": "Detection p-value filtering is explicitly mentioned as a filtering option in ChAMP.",
@@ -3590,7 +3590,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-methylation-array-preprocessing/007",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-methylation-array-preprocessing/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Bead count filtering is not mentioned in any of the provided passages. The paper mentions detection p-values, chromosomal location, SNPs, and cross-hybridization as filtering criteria, but not bead counts.",
@@ -3610,7 +3610,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-methylation-array-preprocessing/008",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-methylation-array-preprocessing/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "adjustment for Infinium I and Infinium II probe design",
       "asbval:note": "Type-2 probe correction is mentioned as 'adjustment for Infinium I and Infinium II probe design' but the specific method name (BMIQ or SWAN) is not provided in the passages.",
@@ -3630,7 +3630,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-methylation-array-preprocessing/009",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-methylation-array-preprocessing/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For normalization, functional normalization (Fortin et al., 2014) has been added as an option alongside beta-mixture quantile normalization (Teschendorff et al., 2013).",
       "asbval:note": "Multiple normalization methods are mentioned including functional normalization and beta-mixture quantile normalization.",
@@ -3650,7 +3650,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interactive-visualization-interpretation-methylation-results/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/interactive-visualization-interpretation-methylation-results/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "a series of javascript-based GUIs are provided. This allows easy checking of results, and generating figures for DMR or DMBs. Shiny, a web application framework for R, suitable for creating simple interactive webpages, and Plotly, an open source JavaScript graphing library, are integrated with ChAMP results, allowing users to view, select, and zoom in and out from results obtained with ChAMP.",
       "asbval:note": "Passage explicitly confirms Shiny and Plotly integration with ChAMP for interactive visualization of DMR and DMB results.",
@@ -3670,7 +3670,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interactive-visualization-interpretation-methylation-results/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/interactive-visualization-interpretation-methylation-results/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is an integrated analysis pipeline published in 2014 (Morris et al., 2014), which includes functions for filtering low-quality probes, adjustment for Infinium I and Infinium II probe design, batch effect correction, detecting differentially methylated positions (DMPs), finding differentially methylated regions (DMRs) and detection of copy number aberrations (CNA). The new version of ChAMP, extends and improves this analysis pipeline, adding novel and enhanced functionalities, including detection of differentially methylated genomic blocks (DMB)... Notably, the new package provides a series of web-based graphical user interfaces (GUIs), which facilitate analyses and enhance user-experience.",
       "asbval:note": "ChAMP confirmed as providing DMB detection, DMR detection, and GUI functions for visualization.",
@@ -3690,7 +3690,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interactive-visualization-interpretation-methylation-results/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/interactive-visualization-interpretation-methylation-results/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Shiny, a web application framework for R, suitable for creating simple interactive webpages, and Plotly, an open source JavaScript graphing library, are integrated with ChAMP results, allowing users to view, select, and zoom in and out from results obtained with ChAMP.",
       "asbval:note": "Shiny explicitly named as integrated framework for ChAMP's interactive interfaces.",
@@ -3710,7 +3710,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interactive-visualization-interpretation-methylation-results/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/interactive-visualization-interpretation-methylation-results/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Shiny, a web application framework for R, suitable for creating simple interactive webpages, and Plotly, an open source JavaScript graphing library, are integrated with ChAMP results, allowing users to view, select, and zoom in and out from results obtained with ChAMP.",
       "asbval:note": "Plotly explicitly named as integrated for interactive graphics in ChAMP.",
@@ -3730,7 +3730,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interactive-visualization-interpretation-methylation-results/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/interactive-visualization-interpretation-methylation-results/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014)... For normalization, functional normalization (Fortin et al., 2014) has been added as an option alongside beta-mixture quantile normalization (Teschendorff et al., 2013).",
       "asbval:note": "Paper confirms minfi loading function integration and functional normalization availability, but does not explicitly describe minfi as an 'alternative package' for cross-validation. The role is partially supported\u2014minfi is used for data loading and functional normalization is available, but the 'parallel cross-validation' aspect is not mentioned in passages.",
@@ -3750,7 +3750,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interactive-visualization-interpretation-methylation-results/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/interactive-visualization-interpretation-methylation-results/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Illumina Infinium HumanMethylationEPIC BeadChip is the new platform for high-throughput DNA methylation analysis... Here we present a significantly updated and improved version of the Bioconductor package ChAMP, which can be used to analyze EPIC and 450k data... Notably, the new package provides a series of web-based graphical user interfaces (GUIs), which facilitate analyses and enhance user-experience.",
       "asbval:note": "Paper confirms ChAMP works with EPIC and 450k data and provides GUIs for analysis facilitation; scope aligns with paper's stated purpose.",
@@ -3770,7 +3770,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-batch-effect-detection/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-batch-effect-detection/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Singular value decomposition is used to correlate principal components to biological and technical factors, helping the user decide if there are batch effects or confounding factors that need to be adjusted for.",
       "asbval:note": "Paper confirms SVD is used for batch effect detection in ChAMP, but does not explicitly mention 'Random Matrix Theory component capping' as a specific implementation detail. SVD functionality is present and used for the stated purpose, but the RMT capping mechanism is not documented in provided passages.",
@@ -3790,7 +3790,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-batch-effect-detection/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-batch-effect-detection/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Singular value decomposition is used to correlate principal components to biological and technical factors, helping the user decide if there are batch effects or confounding factors that need to be adjusted for.",
       "asbval:note": "ChAMP implements SVD for batch effect detection as described. Function name 'champ.SVD()' not explicitly named in passages, but SVD functionality is confirmed.",
@@ -3810,7 +3810,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-batch-effect-detection/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-batch-effect-detection/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ChAMPdata package is not mentioned in provided passages. Insufficient evidence to confirm or refute.",
@@ -3830,7 +3830,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-batch-effect-detection/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-batch-effect-detection/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014).",
       "asbval:note": "minfi is confirmed as an alternative data loading function used with ChAMP. Role as normalization/QC tool is consistent with paper's description of ChAMP's integration with minfi.",
@@ -3850,7 +3850,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-batch-effect-detection/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-batch-effect-detection/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ComBat is not mentioned in any of the provided passages. Paper does not reference ComBat as a tool used with or integrated into ChAMP.",
@@ -3870,7 +3870,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-batch-effect-detection/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-batch-effect-detection/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP accepts multiple data input formats, including IDATS, beta-valued matrices and phenotype data files.",
       "asbval:note": "Paper confirms ChAMP accepts beta-valued matrices as input for both 450K and EPIC arrays.",
@@ -3890,7 +3890,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-batch-effect-detection/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-batch-effect-detection/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Singular value decomposition is used to correlate principal components to biological and technical factors, helping the user decide if there are batch effects or confounding factors that need to be adjusted for.",
       "asbval:note": "Paper confirms SVD is used to identify batch effects and confounding factors before downstream analysis.",
@@ -3910,7 +3910,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-batch-effect-detection/007",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-batch-effect-detection/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Singular value decomposition is used to correlate principal components to biological and technical factors, helping the user decide if there are batch effects or confounding factors that need to be adjusted for.",
       "asbval:note": "SVD is confirmed as implemented in ChAMP for batch effect detection. Random Matrix Theory capping is not explicitly mentioned in provided passages; this may be an implementation detail not documented in the abstract/introduction sections provided.",
@@ -3930,7 +3930,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-probe-count-validation/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-probe-count-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014). Probes can be filtered based on detection P-values, chromosomal location, presence of single nucleotide polymorphisms in the probe sequence (Zhou et al., 2016) and cross-hybridization.",
       "asbval:note": "Paper describes ChAMP's data loading from IDAT files and subsequent probe filtering, confirming the workflow of loading before filtering. EPIC BeadChip measures methylation at over 850,000 sites; 450K array is referenced as the older platform.",
@@ -3950,7 +3950,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-probe-count-validation/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-probe-count-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014).",
       "asbval:note": "ChAMP is confirmed as the primary tool for loading methylation array data from IDAT files. Specific function names (champ.load, champ.import) are not verbatim in passages but are semantically consistent with 'loading function' described.",
@@ -3970,7 +3970,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-probe-count-validation/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-probe-count-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ChAMPdata package is not mentioned in any of the provided passages. Insufficient evidence to confirm or refute this claim.",
@@ -3990,7 +3990,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-probe-count-validation/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-probe-count-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014).",
       "asbval:note": "minfi is explicitly mentioned as an alternative loading function option alongside ChAMP's novel loading function, confirming its role in data import.",
@@ -4010,7 +4010,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-probe-count-validation/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-probe-count-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014). Probes can be filtered based on detection P-values, chromosomal location, presence of single nucleotide polymorphisms in the probe sequence (Zhou et al., 2016) and cross-hybridization.",
       "asbval:note": "Paper describes the workflow of loading data followed by probe filtering, consistent with the scope's recommendation to validate after loading but before filtering.",
@@ -4030,7 +4030,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-probe-count-validation/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-probe-count-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Illumina Infinium HumanMethylationEPIC BeadChip is the new platform for high-throughput DNA methylation analysis, effectively doubling the coverage compared to the older 450 K array. Here we present a significantly updated and improved version of the Bioconductor package ChAMP, which can be used to analyze EPIC and 450k data.",
       "asbval:note": "Paper confirms ChAMP supports EPIC and 450K arrays but does not explicitly discuss non-human arrays or custom manifests. The scope's claim about mouse arrays and custom manifests is not addressed in the passages.",
@@ -4050,7 +4050,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-probe-count-validation/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-probe-count-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The EPIC BeadChip includes over 90% of probes present on the 450 K array, shows high reproducibility, and will become a common tool for epigenome-wide association studies (Moran et al., 2016).",
       "asbval:note": "Directly stated in the introduction section.",
@@ -4070,7 +4070,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-probe-count-validation/007",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-probe-count-validation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Illumina's new EPIC BeadChip can measure methylation at over 850 000 sites with single-nucleotide resolution.",
       "asbval:note": "Directly stated in the introduction section.",
@@ -4090,7 +4090,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-region-identification/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-region-identification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For supervised analysis, besides limma-based DMP and ProbeLasso-based DMR analysis functions (Butcher and Beck, 2015), there is now added functionality for DMR detection using Bumphunter (Jaffe et al., 2012) and DMRcate (Peters et al., 2015).",
       "asbval:note": "Paper explicitly states ChAMP now includes Bumphunter-based DMR detection for EPIC and 450k data.",
@@ -4110,7 +4110,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-region-identification/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-region-identification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is an integrated analysis pipeline published in 2014 (Morris et al., 2014), which includes functions for filtering low-quality probes, adjustment for Infinium I and Infinium II probe design, batch effect correction, detecting differentially methylated positions (DMPs), finding differentially methylated regions (DMRs)",
       "asbval:note": "Paper describes DMR detection as a core function of ChAMP pipeline.",
@@ -4130,7 +4130,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-region-identification/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-region-identification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is a BioC package available from https://bioconductor.org/packages/release/bioc/html/ChAMP.html",
       "asbval:note": "ChAMP confirmed as Bioconductor R package with DMR detection including Bumphunter.",
@@ -4150,7 +4150,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-region-identification/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-region-identification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ChAMPdata package not mentioned in provided passages. Insufficient evidence to confirm or deny.",
@@ -4170,7 +4170,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-region-identification/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-region-identification/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "there is now added functionality for DMR detection using Bumphunter (Jaffe et al., 2012) and DMRcate (Peters et al., 2015)",
       "asbval:note": "Bumphunter explicitly named as integrated DMR detection method in ChAMP.",
@@ -4190,7 +4190,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-region-identification/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-region-identification/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "there is now added functionality for DMR detection using Bumphunter (Jaffe et al., 2012) and DMRcate (Peters et al., 2015)",
       "asbval:note": "DMRcate confirmed as alternative DMR detection method integrated into ChAMP.",
@@ -4210,7 +4210,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-region-identification/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-region-identification/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014). For normalization, functional normalization (Fortin et al., 2014) has been added as an option alongside beta-mixture quantile normalization (Teschendorff et al., 2013).",
       "asbval:note": "minfi confirmed as compatible loading function; functional normalization available in ChAMP pipeline.",
@@ -4230,7 +4230,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/probe-detection-pvalue-filtering/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/probe-detection-pvalue-filtering/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Probes can be filtered based on detection P-values, chromosomal location, presence of single nucleotide polymorphisms in the probe sequence (Zhou et al., 2016) and cross-hybridization.",
       "asbval:note": "Paper confirms ChAMP filters by detection P-values but does NOT specify the threshold value of 0.01. The specific threshold is not mentioned in passages.",
@@ -4250,7 +4250,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/probe-detection-pvalue-filtering/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/probe-detection-pvalue-filtering/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is an integrated analysis pipeline published in 2014 (Morris et al., 2014), which includes functions for filtering low-quality probes, adjustment for Infinium I and Infinium II probe design, batch effect correction, detecting differentially methylated positions (DMPs), finding differentially methylated regions (DMRs) and detection of copy number aberrations (CNA).",
       "asbval:note": "Confirms filtering low-quality probes is part of the early pipeline for both 450k and EPIC arrays.",
@@ -4270,7 +4270,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/probe-detection-pvalue-filtering/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/probe-detection-pvalue-filtering/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is an R package and currently requires R(\u22653.4). ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014). Probes can be filtered based on detection P-values, chromosomal location, presence of single nucleotide polymorphisms in the probe sequence (Zhou et al., 2016) and cross-hybridization.",
       "asbval:note": "ChAMP confirmed as tool for probe filtering. Specific function name 'champ.filter()' not verbatim in passages but filtering functionality is confirmed.",
@@ -4290,7 +4290,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/probe-detection-pvalue-filtering/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/probe-detection-pvalue-filtering/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ChAMPdata is not mentioned in any of the provided passages. Insufficient information to validate.",
@@ -4310,7 +4310,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/probe-detection-pvalue-filtering/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/probe-detection-pvalue-filtering/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014).",
       "asbval:note": "minfi is confirmed as a complementary tool for loading data in ChAMP pipeline.",
@@ -4330,7 +4330,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/probe-detection-pvalue-filtering/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/probe-detection-pvalue-filtering/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014). Probes can be filtered based on detection P-values, chromosomal location, presence of single nucleotide polymorphisms in the probe sequence (Zhou et al., 2016) and cross-hybridization.",
       "asbval:note": "Confirms ChAMP accepts IDAT files and beta-valued matrices for 450k and EPIC arrays, and filtering is applied early.",
@@ -4350,7 +4350,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/probe-detection-pvalue-filtering/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/probe-detection-pvalue-filtering/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is an integrated analysis pipeline published in 2014 (Morris et al., 2014), which includes functions for filtering low-quality probes, adjustment for Infinium I and Infinium II probe design, batch effect correction, detecting differentially methylated positions (DMPs), finding differentially methylated regions (DMRs) and detection of copy number aberrations (CNA).",
       "asbval:note": "Filtering is listed before adjustment for probe design and batch correction, confirming early placement in pipeline.",
@@ -4370,7 +4370,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-champ-usage/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/r-package-champ-usage/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is an integrated analysis pipeline published in 2014 (Morris et al., 2014), which includes functions for filtering low-quality probes, adjustment for Infinium I and Infinium II probe design, batch effect correction, detecting differentially methylated positions (DMPs), finding differentially methylated regions (DMRs) and detection of copy number aberrations (CNA). The new version of ChAMP, extends and improves this analysis pipeline, adding novel and enhanced functionalities, including detection of differentially methylated genomic blocks (DMB), gene set enrichment analysis (GSEA)... ChAMP is a BioC package... can be used to analyze EPIC and 450k data.",
       "asbval:note": "Fully supported by abstract and introduction",
@@ -4390,7 +4390,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-champ-usage/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/r-package-champ-usage/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function... Probes can be filtered based on detection P-values, chromosomal location, presence of single nucleotide polymorphisms in the probe sequence... For normalization, functional normalization (Fortin et al., 2014) has been added as an option alongside beta-mixture quantile normalization... Singular value decomposition is used to correlate principal components to biological and technical factors, helping the user decide if there are batch effects or confounding factors that need to be adjusted for.",
       "asbval:note": "All components mentioned: IDAT loading, beta matrices, QC filtering, normalization, batch correction",
@@ -4410,7 +4410,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-champ-usage/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/r-package-champ-usage/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is an R package and currently requires R(\u22653.4)... ChAMP is now a much more powerful and comprehensive tool for DNA methylation analysis",
       "asbval:note": "ChAMP confirmed as R package with comprehensive pipeline",
@@ -4430,7 +4430,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-champ-usage/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/r-package-champ-usage/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ChAMPdata not mentioned in provided passages; cannot verify from available text",
@@ -4450,7 +4450,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-champ-usage/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/r-package-champ-usage/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014)... For normalization, functional normalization (Fortin et al., 2014) has been added as an option",
       "asbval:note": "minfi confirmed as alternative loading function; functional normalization confirmed as available option",
@@ -4470,7 +4470,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-champ-usage/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/r-package-champ-usage/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For supervised analysis, besides limma-based DMP and ProbeLasso-based DMR analysis functions (Butcher and Beck, 2015), there is now added functionality for DMR detection using Bumphunter (Jaffe et al., 2012) and DMRcate (Peters et al., 2015).",
       "asbval:note": "Bumphunter explicitly named as DMR detection method in ChAMP",
@@ -4490,7 +4490,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-champ-usage/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/r-package-champ-usage/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For supervised analysis, besides limma-based DMP and ProbeLasso-based DMR analysis functions (Butcher and Beck, 2015), there is now added functionality for DMR detection using Bumphunter (Jaffe et al., 2012) and DMRcate (Peters et al., 2015).",
       "asbval:note": "DMRcate explicitly named as DMR detection method in ChAMP",
@@ -4510,7 +4510,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-champ-usage/007",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/r-package-champ-usage/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "FEM not mentioned in provided passages; cannot verify from available text. Paper mentions 'detection of differentially methylated gene modules' but does not name FEM as the tool used",
@@ -4530,7 +4530,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-champ-usage/008",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/r-package-champ-usage/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Illumina's new EPIC BeadChip can measure methylation at over 850 000 sites with single-nucleotide resolution. The EPIC BeadChip includes over 90% of probes present on the 450 K array... ChAMP loads data from IDAT files using it's novel loading function",
       "asbval:note": "Paper confirms EPIC ~850,000 probes and 450K array existence, and confirms champ.load() function exists, but does not provide exact probe counts (485,512 for 450K, 867,531 for EPIC) or explicitly state these are pre-filter counts",
@@ -4550,7 +4550,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/random-matrix-theory-application/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/random-matrix-theory-application/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Singular value decomposition is used to correlate principal components to biological and technical factors, helping the user decide if there are batch effects or confounding factors that need to be adjusted for.",
       "asbval:note": "Paper confirms SVD is used for batch effect detection and principal component analysis in ChAMP, but does not mention Random Matrix Theory (RMT) by name, nor does it specify a maximum of 20 components or RMT-based capping logic. The paper describes SVD functionality but not the RMT-specific implementation claimed.",
@@ -4570,7 +4570,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/random-matrix-theory-application/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/random-matrix-theory-application/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Singular value decomposition is used to correlate principal components to biological and technical factors",
       "asbval:note": "ChAMP does implement SVD for batch effect detection, but the paper does not mention Random Matrix Theory as part of the champ.SVD() implementation, nor does it describe RMT-based capping at 20 components. The SVD functionality exists but RMT specifics are not documented in the passages.",
@@ -4590,7 +4590,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/random-matrix-theory-application/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/random-matrix-theory-application/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ChAMPdata is not mentioned in any of the provided passages. While ChAMP is described as accepting IDAT files and beta-valued matrices, no separate data package or test datasets are referenced.",
@@ -4610,7 +4610,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/random-matrix-theory-application/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/random-matrix-theory-application/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP loads data from IDAT files using it's novel loading function, or though minfi loading function (Aryee et al., 2014). ... For normalization, functional normalization (Fortin et al., 2014) has been added as an option alongside beta-mixture quantile normalization",
       "asbval:note": "minfi is mentioned as an alternative data loading function, and functional normalization is available in ChAMP itself. The paper does not explicitly describe minfi as providing functional normalization preprocessing before SVD; rather, ChAMP integrates both minfi loading and functional normalization as internal options.",
@@ -4630,7 +4630,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/random-matrix-theory-application/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/random-matrix-theory-application/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Singular value decomposition is used to correlate principal components to biological and technical factors, helping the user decide if there are batch effects or confounding factors that need to be adjusted for.",
       "asbval:note": "The paper confirms SVD is used for batch effect detection in ChAMP, but does not mention Random Matrix Theory as the mechanism for component detection or capping. The functional goal (batch effect detection via SVD) is present, but the RMT-specific methodology is not documented.",
@@ -4650,7 +4650,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/simulation-dataset-validation-benchmarking/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/simulation-dataset-validation-benchmarking/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is an integrated analysis pipeline published in 2014 (Morris et al., 2014), which includes functions for filtering low-quality probes, adjustment for Infinium I and Infinium II probe design, batch effect correction, detecting differentially methylated positions (DMPs), finding differentially methylated regions (DMRs) and detection of copy number aberrations (CNA).",
       "asbval:note": "Paper describes ChAMP as a tool for methylation analysis but does not explicitly discuss validation against simulation datasets or benchmarking workflows. The research question assumes a validation/benchmarking use case that is not documented in the provided passages.",
@@ -4670,7 +4670,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/simulation-dataset-validation-benchmarking/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/simulation-dataset-validation-benchmarking/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ChAMP is an integrated analysis pipeline published in 2014 (Morris et al., 2014), which includes functions for filtering low-quality probes, adjustment for Infinium I and Infinium II probe design, batch effect correction, detecting differentially methylated positions (DMPs), finding differentially methylated regions (DMRs) and detection of copy number aberrations (CNA). The new version of ChAMP, extends and improves this analysis pipeline, adding novel and enhanced functionalities, including detection of differentially methylated genomic blocks (DMB), gene set enrichment analysis (GSEA), a method for correcting cell-type heterogeneity and detection of differentially methylated gene modules.",
       "asbval:note": "ChAMP is the primary subject of the paper and is confirmed as a Bioconductor package for DNA methylation analysis on EPIC and 450k arrays.",
@@ -4690,7 +4690,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/simulation-dataset-validation-benchmarking/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/simulation-dataset-validation-benchmarking/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ChAMPdata is not mentioned in any of the provided passages. Passages do not reference a separate data package or simulation dataset (EPICSimData). Cannot confirm or deny presence without additional text.",
@@ -4710,7 +4710,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/simulation-dataset-validation-benchmarking/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/simulation-dataset-validation-benchmarking/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Large-scale differentially methylated blocks (DMB) can also be identified. These DMBs are large-scale genomic regions (10 kb\u2013Mb) containing hundreds of inter-genic CpG sites (Fig. 1B), and which often exhibit hypomethylation in aging and cancer (Yuan et al., 2015). Besides making all above functions applicable to EPIC BeadChips, there are two other technical improvements which will benefit users.",
       "asbval:note": "Paper explicitly describes ChAMP's capability for DMB detection and confirms applicability to both EPIC and 450k BeadChips.",
@@ -4730,7 +4730,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/simulation-dataset-validation-benchmarking/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/simulation-dataset-validation-benchmarking/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of ChAMPdata, EPICSimData, or simulation datasets in provided passages. Cannot verify this claim.",
@@ -4750,7 +4750,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/simulation-dataset-validation-benchmarking/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/simulation-dataset-validation-benchmarking/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes ChAMP as a comprehensive analysis pipeline for real methylation data (EPIC and 450k arrays) but does not discuss simulation-based validation workflows, benchmarking against synthetic data, or tool validation procedures. The scope describes a methodological workflow not documented in the paper.",
@@ -4770,7 +4770,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/singular-value-decomposition-interpretation/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/singular-value-decomposition-interpretation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Singular value decomposition is used to correlate principal components to biological and technical factors, helping the user decide if there are batch effects or confounding factors that need to be adjusted for.",
       "asbval:note": "Paper confirms SVD is used to detect batch effects and correlate components to technical factors, but does NOT mention Random Matrix Theory thresholding or component capping methodology. The card's specific claim about RMT-based thresholding and the 20-component cap is not supported in passages.",
@@ -4790,7 +4790,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/singular-value-decomposition-interpretation/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/singular-value-decomposition-interpretation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of component capping, theoretical maximum thresholds, or Random Matrix Theory methodology in any passage. This specific methodological claim is not present in the paper.",
@@ -4810,7 +4810,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/singular-value-decomposition-interpretation/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/singular-value-decomposition-interpretation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Singular value decomposition is used to correlate principal components to biological and technical factors, helping the user decide if there are batch effects or confounding factors that need to be adjusted for.",
       "asbval:note": "ChAMP is confirmed as the primary analysis pipeline for methylation data. SVD is explicitly mentioned as a ChAMP function for component analysis.",
@@ -4830,7 +4830,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/singular-value-decomposition-interpretation/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/singular-value-decomposition-interpretation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ChAMPdata is not mentioned in any of the provided passages. Insufficient information to validate this claim.",
@@ -4850,7 +4850,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/singular-value-decomposition-interpretation/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/singular-value-decomposition-interpretation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ComBat is not mentioned in any passage. The paper mentions batch effect correction capability but does not name ComBat as the method used.",
@@ -4870,7 +4870,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/singular-value-decomposition-interpretation/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/singular-value-decomposition-interpretation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Singular value decomposition is used to correlate principal components to biological and technical factors, helping the user decide if there are batch effects or confounding factors that need to be adjusted for.",
       "asbval:note": "Scope aligns with paper's description of SVD usage in ChAMP for batch effect detection in 450K and EPIC data.",
@@ -4890,7 +4890,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/singular-value-decomposition-interpretation/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/singular-value-decomposition-interpretation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of a 20-component cap or any component capping strategy in the paper.",
@@ -4910,7 +4910,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/450k-array-data-processing/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/450k-array-data-processing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "450k-array-data-processing",
@@ -4923,7 +4923,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bead-count-threshold-filtering/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/bead-count-threshold-filtering/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "bead-count-threshold-filtering",
@@ -4936,7 +4936,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dmr-detection-bumphunter/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dmr-detection-bumphunter/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "dmr-detection-bumphunter",
@@ -4949,7 +4949,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dna-methylation-array-data-import/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dna-methylation-array-data-import/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "dna-methylation-array-data-import",
@@ -4962,7 +4962,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dna-methylation-block-detection-analysis/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dna-methylation-block-detection-analysis/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "dna-methylation-block-detection-analysis",
@@ -4975,7 +4975,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dna-methylation-quality-control/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/dna-methylation-quality-control/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "dna-methylation-quality-control",
@@ -4988,7 +4988,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/epic-array-simulation-benchmark/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/epic-array-simulation-benchmark/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "epic-array-simulation-benchmark",
@@ -5001,7 +5001,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-450k-epic-dataset-loading/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-450k-epic-dataset-loading/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "illumina-450k-epic-dataset-loading",
@@ -5014,7 +5014,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-array-data-processing-epic/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-array-data-processing-epic/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "illumina-array-data-processing-epic",
@@ -5027,7 +5027,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/illumina-methylation-array-preprocessing/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/illumina-methylation-array-preprocessing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "illumina-methylation-array-preprocessing",
@@ -5040,7 +5040,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interactive-visualization-interpretation-methylation-results/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/interactive-visualization-interpretation-methylation-results/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "interactive-visualization-interpretation-methylation-results",
@@ -5053,7 +5053,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-batch-effect-detection/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-batch-effect-detection/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "methylation-batch-effect-detection",
@@ -5066,7 +5066,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-probe-count-validation/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-probe-count-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "methylation-probe-count-validation",
@@ -5079,7 +5079,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/methylation-region-identification/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/methylation-region-identification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "methylation-region-identification",
@@ -5092,7 +5092,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/probe-detection-pvalue-filtering/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/probe-detection-pvalue-filtering/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "probe-detection-pvalue-filtering",
@@ -5105,7 +5105,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-champ-usage/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/r-package-champ-usage/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "r-package-champ-usage",
@@ -5118,7 +5118,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/random-matrix-theory-application/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/random-matrix-theory-application/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "random-matrix-theory-application",
@@ -5131,7 +5131,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/simulation-dataset-validation-benchmarking/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/simulation-dataset-validation-benchmarking/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "simulation-dataset-validation-benchmarking",
@@ -5144,7 +5144,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/singular-value-decomposition-interpretation/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/skill/singular-value-decomposition-interpretation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "singular-value-decomposition-interpretation",
@@ -5157,7 +5157,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ChAMP package is designed for DNA methylation array analysis, providing service from data loading to final gene set enrichment analysis.",
       "asbval:note": null,
@@ -5177,7 +5177,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The current latest version of ChAMP is 2.29.1, which supports EPICv2.",
       "asbval:note": null,
@@ -5197,7 +5197,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ChAMP version 2.29.1 must be used along with ChAMPdata version 2.23.1 or later.",
       "asbval:note": null,
@@ -5217,7 +5217,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ChAMP provides Type-2 probe correction methods including SWAN, Peak Based Correction (PBC), and BMIQ.",
       "asbval:note": null,
@@ -5237,7 +5237,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "BMIQ is the default choice for Type-2 probe correction in ChAMP.",
       "asbval:note": "Source excerpt does not support the claim that BMIQ is the default choice; excerpt provided is installation code unrelated to BMIQ defaults",
@@ -5257,7 +5257,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ChAMP includes the Functional Normalization function offered by the minfi package.",
       "asbval:note": null,
@@ -5277,7 +5277,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ChAMP implements the singular value decomposition (SVD) method for assessing batch effects.",
       "asbval:note": null,
@@ -5297,7 +5297,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ChAMP has implemented the ComBat method for correction of multiple batch effects.",
       "asbval:note": null,
@@ -5317,7 +5317,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ChAMP provides cell-type heterogeneity adjustment via RefbaseEWAS.",
       "asbval:note": null,
@@ -5337,7 +5337,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ChAMP includes a function for inferring copy-number alterations from 450k or EPIC data.",
       "asbval:note": null,
@@ -5357,7 +5357,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ChAMP offers three DMR detection methods: Probe Lasso, Bumphunter, and DMRcate.",
       "asbval:note": null,
@@ -5377,7 +5377,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_012",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_012",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ChAMP includes a function to detect Differentially Methylated Blocks.",
       "asbval:note": null,
@@ -5397,7 +5397,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_013",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_013",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ChAMP incorporates methods that correct for bias caused by unequal representation of probes among genes in Gene Set Enrichment Analysis.",
       "asbval:note": null,
@@ -5417,7 +5417,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_014",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_014",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ChAMP incorporates the FEM package for inferring gene modules in user-specified gene networks that exhibit differential methylation between phenotypes.",
       "asbval:note": null,
@@ -5437,7 +5437,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_015",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_015",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ChAMP provides a more comprehensive and complete analysis pipeline from reading original data files to final tertiary analysis results compared to other available packages.",
       "asbval:note": null,
@@ -5457,7 +5457,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_016",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_016",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ChAMP provides Shiny and Plotly-based WebBrowser interactive analysis functions.",
       "asbval:note": "Text says 'WebBrowser' but source has 'WebBrower' (typo in source); minor spelling variation",
@@ -5477,7 +5477,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_017",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_017",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "R version 3.3 or above is required to install ChAMP.",
       "asbval:note": null,
@@ -5497,7 +5497,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_018",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_018",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Bioconductor version 3.5 is the newest version recommended for ChAMP installation.",
       "asbval:note": "Source says 'newest version (3.5)' at time of writing, not necessarily 'recommended' as the only/best option going forward",
@@ -5517,7 +5517,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_019",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_019",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Users must install the latest ChAMPdata package (version 2.8.1) to make ChAMP version above 2.8.3 work.",
       "asbval:note": null,
@@ -5537,7 +5537,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_020",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_020",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The 450K test dataset contains 4 lung tumor samples (T) and 4 control samples (C).",
       "asbval:note": null,
@@ -5557,7 +5557,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_021",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_021",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The EPIC Simulation Data Set contains 16 samples.",
       "asbval:note": null,
@@ -5577,7 +5577,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_022",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_022",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "In the EPIC Simulation Data Set, 8 samples are simulated as control and 8 samples as case.",
       "asbval:note": "Source has grammatical error ('8 samples are control and 8 sample as case') but meaning is clear and claim accurately represents it",
@@ -5597,7 +5597,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_023",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_023",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "In the EPIC Simulation Data Set, approximately 5000 regions were randomly chosen from the bumphunter clusterMaker() function.",
       "asbval:note": "Source says 'randomly choose 5000 regions' without 'approximately'; claim adds qualifier not explicitly in source",
@@ -5617,7 +5617,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_024",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_024",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The EPIC Simulation Data Set contains less than 5000 DMRs (4700+) because some simulated DMRs contain only 1-2 CpGs.",
       "asbval:note": null,
@@ -5637,7 +5637,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_025",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_025",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "For 450K bead array data, before filtering for low quality probes, the dataset will include 485,512 probes.",
       "asbval:note": null,
@@ -5657,7 +5657,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_026",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_026",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "For EPIC bead array data, before filtering probes the dataset will include 867,531 probes.",
       "asbval:note": null,
@@ -5677,7 +5677,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_027",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_027",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The default loading method in ChAMP is 'ChAMP'.",
       "asbval:note": null,
@@ -5697,7 +5697,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_028",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_028",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The 'ChAMP' method in champ.load() is a combination of champ.import() and champ.filter().",
       "asbval:note": null,
@@ -5717,7 +5717,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_029",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_029",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ChAMP filters probes with detection p-value greater than 0.01 by default.",
       "asbval:note": null,
@@ -5737,7 +5737,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_030",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_030",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The default sample cutoff threshold for filtering is 0.1.",
       "asbval:note": null,
@@ -5757,7 +5757,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_031",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_031",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ChAMP will filter out probes with less than 3 beads in at least 5% of samples per probe by default.",
       "asbval:note": null,
@@ -5777,7 +5777,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_032",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_032",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ChAMP will by default filter out all non-CpG probes contained in the dataset.",
       "asbval:note": null,
@@ -5797,7 +5797,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_033",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_033",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ChAMP will by default filter all SNP-related probes.",
       "asbval:note": null,
@@ -5817,7 +5817,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_034",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_034",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ChAMP will by default filter all multi-hit probes.",
       "asbval:note": null,
@@ -5837,7 +5837,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_035",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_035",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ChAMP will by default filter out all probes located in chromosome X and Y.",
       "asbval:note": null,
@@ -5857,7 +5857,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_036",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_036",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "champ.load() cannot perform filtering on beta matrix alone.",
       "asbval:note": null,
@@ -5877,7 +5877,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_037",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_037",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ChAMP generates three main plots in quality control: mdsPlot, densityPlot, and dendrogram.",
       "asbval:note": "Source excerpt only describes densityPlot; claim asserts three specific plots (mdsPlot, densityPlot, dendrogram) but excerpt doesn't confirm all three or their names",
@@ -5897,7 +5897,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_038",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_038",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "QC.GUI() provides five interactive plots for quality control.",
       "asbval:note": "Source excerpt directly states QC.GUI() provides five interactive plots; substring_in_paper=false but content matches",
@@ -5917,7 +5917,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_039",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_039",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ChAMP provides four methods for Type-2 probe normalization: BMIQ, SWAN, PBC, and Functional Normalization.",
       "asbval:note": "Source excerpt explicitly lists four methods: BMIQ, SWAN, PBC, and FunctionalNormalization; claim accurately represents this",
@@ -5937,7 +5937,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_040",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_040",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "BMIQ has been updated to version 1.6.",
       "asbval:note": "Source excerpt directly states BMIQ has been updated to version 1.6; claim accurately represents this",
@@ -5957,7 +5957,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_041",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_041",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "BMIQ version 1.6 provides better normalization for EPIC array data.",
       "asbval:note": "Source excerpt states version 1.6 should provide better normalization for EPIC array data; claim accurately represents this",
@@ -5977,7 +5977,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_042",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_042",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "BMIQ may not converge and provide output for certain samples if the methylation distribution deviates markedly from a 3-state beta-mixture distribution.",
       "asbval:note": "Source excerpt directly supports the claim about BMIQ convergence issues with 3-state beta-mixture distribution deviations",
@@ -5997,7 +5997,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_043",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_043",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ChAMP uses Random Matrix Theory from the isva package to detect numbers of latent variables in SVD analysis.",
       "asbval:note": "Source excerpt directly states ChAMP uses Random Matrix Theory from isva package to detect latent variables in SVD",
@@ -6017,7 +6017,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_044",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_044",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "If more than 20 components are detected in SVD analysis, only the top 20 are selected.",
       "asbval:note": "Source excerpt directly states if more than 20 components detected, only top 20 are selected",
@@ -6037,7 +6037,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_045",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_045",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ComBat logit transforms beta values before adjustment and then computes the reverse logit transformation following adjustment.",
       "asbval:note": "Source excerpt directly describes logit transformation before ComBat adjustment and reverse logit transformation after",
@@ -6057,7 +6057,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_046",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_046",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "champ.DMP() implements the limma package to calculate p-values for differential methylation using a linear model.",
       "asbval:note": "Source excerpt directly states champ.DMP() implements limma package to calculate p-values using linear model",
@@ -6077,7 +6077,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_047",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_047",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "champ.DMP() supports numeric variables like age.",
       "asbval:note": "Source excerpt directly states champ.DMP() supports numeric variables like age",
@@ -6097,7 +6097,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_048",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_048",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "champ.DMP() supports categorical variables which contain more than two phenotypes.",
       "asbval:note": "Source excerpt directly states support for categorical variables with more than two phenotypes with examples",
@@ -6117,7 +6117,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_049",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_049",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "For numeric variables, champ.DMP() conducts linear regression on each CpG site.",
       "asbval:note": null,
@@ -6137,7 +6137,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_050",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_050",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "For categorical variables, champ.DMP() performs contrast comparison between each two phenotypes.",
       "asbval:note": null,
@@ -6157,7 +6157,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_051",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_051",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Three DMR algorithms are implemented in ChAMP: Bumphunter, ProbeLasso, and DMRcate.",
       "asbval:note": null,
@@ -6177,7 +6177,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_052",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_052",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Bumphunter groups all probes into small clusters, then applies random permutation method to estimate candidate DMRs.",
       "asbval:note": null,
@@ -6197,7 +6197,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_053",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_053",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "DMRcate is a data-driven approach that is agnostic to all annotations except for chromosomal coordinates.",
       "asbval:note": "Text says 'agnostic to all annotations except for chromosomal coordinates' but source says 'agnostic to all annotations except for spatial ones, specifically chromosomal coordinates' \u2014 omits the 'spatial' qualifier",
@@ -6217,7 +6217,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_054",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_054",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "champ.DMR() only takes categorical covariates with exactly two phenotypes.",
       "asbval:note": null,
@@ -6237,7 +6237,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_055",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_055",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The ChAMP pipeline can run 200 samples successfully on a computer with 8GB of memory.",
       "asbval:note": null,
@@ -6257,7 +6257,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_056",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_056",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The champ.load() function uses the most memory in the ChAMP pipeline.",
       "asbval:note": null,
@@ -6277,7 +6277,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_057",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx513/claim/claim_057",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Users can conduct nearly all ChAMP analysis even if they are not starting from raw .idat files, as long as they have a methylation beta matrix and corresponding phenotypes file.",
       "asbval:note": null,

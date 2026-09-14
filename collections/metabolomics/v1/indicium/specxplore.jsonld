@@ -402,7 +402,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Before data can be opened in the specXplore dashboard, it needs to be processed using the specXplore importing pipeline. The processing workflows and intermediate data structures used by specXplore are built upon a cohort of open-source software Python data science packages, namely, matchms, MS2Query, ms2deepscore, spec2vec, kmedoids, Cython, numpy, pandas, scikit-learn, and scipy. The input data for specXplore spectral data exploration are MS/MS spectral data. LC\u2013MS/MS data preprocessing (i.e., feature detection and MS/MS spectral exporting) is assumed to have been done elsewhere, e.g., using MZMine3, in order to reduce data set size and feature redundancy. The MS/MS feature data are assumed to be in .mgf (mascot generic format) format, where each entry should have a unique feature identifier, a precursor mass to charge ratio, and spectral data in the form of one or more mass to charge ratio and intensity value tuples. Spectral data are imported into Python using matchms, and basic specXplore data processing is performed. Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores: ms2deepscore, modified cosine scores, and spec2vec scores.",
       "asbval:note": "The research question is directly addressed in the paper's Materials and Methods section, which describes the importing pipeline architecture and input format (.mgf) for creating a specXplore session object.",
@@ -422,7 +422,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores: ms2deepscore, modified cosine scores, and spec2vec scores. For the machine learning scores, pretrained models provided with MS2Query are used. The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score.",
       "asbval:note": "The paper describes initialization of a specXplore object from spectral data. While the paper does not explicitly state 'serialized file saved to disk', it describes the creation of a specXplore session object that is subsequently loaded into the dashboard ('Upon opening the app and loading the data'), implying persistence/serialization.",
@@ -442,7 +442,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash. The processing workflows and intermediate data structures used by specXplore are built upon a cohort of open-source software Python data science packages, namely, matchms, MS2Query, ms2deepscore, spec2vec, kmedoids, Cython, numpy, pandas, scikit-learn, and scipy.",
       "asbval:note": "Python is explicitly stated as the language for the importing pipeline.",
@@ -462,7 +462,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/card/task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For the wheat data set, the pipeline preprocessing time was less than 15 min (on a MacBook Pro laptop with Apple M1 Pro processor 2021), most of which was spent on local library search via MS2Query. Using the same system, the processing time for the larger urine data set was less than 75 min, whereof approximately 62 min was taken up by MS2Query and 9 min for all pairwise spectral similarity computations. Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object (see illustrative example notebooks https://github.com/kevinmildau/specxplore-illustrative-examples).",
       "asbval:note": "Jupyter notebooks are explicitly mentioned as the tool used for preprocessing and loading spectral data into the specXplore session object.",
@@ -482,7 +482,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card focuses narrowly on the importing pipeline and session object creation, which is a legitimate subtask of the broader specXplore workflow described in the paper. The paper's primary focus is on the interactive dashboard and exploratory data analysis, but the importing pipeline is well-documented in the Materials and Methods section.",
@@ -498,7 +498,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/card/task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Before data can be opened in the specXplore dashboard, it needs to be processed using the specXplore importing pipeline... Spectral data are imported into Python using matchms, and basic specXplore data processing is performed... Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities",
       "asbval:note": "Paper describes initialization of specXplore objects from raw spectral data via the importing pipeline, not from saved session data objects loaded from disk. The paper does not explicitly address session persistence/loading from disk.",
@@ -518,7 +518,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/card/task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "specXplore, an interactive Python dashboard... The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash",
       "asbval:note": "Paper explicitly identifies specXplore as a Python-based tool with Python data importing pipeline.",
@@ -538,7 +538,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/card/task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Upon opening the app and loading the data, the user faces an interactive two-dimensional projection of all spectra created by the t-SNE... the user faces an interactive two-dimensional projection of all spectra created by the t-SNE",
       "asbval:note": "Paper describes the dashboard becoming accessible and displaying visualizations after data loading, but does not explicitly mention a 'status report' output confirming initialization success. The expected output is inferred from general dashboard behavior rather than explicitly documented.",
@@ -558,7 +558,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/card/task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores",
       "asbval:note": "Paper describes instantiation of specXplore objects from raw spectral data, not from saved session data objects. The paper does not document session serialization or deserialization from disk.",
@@ -578,7 +578,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/card/task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card's research question focuses on loading a saved session from disk, but the paper only documents the initial data importing and object initialization pipeline from raw .mgf spectral files, not session persistence or recovery.",
@@ -595,7 +595,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/card/task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score.",
       "asbval:note": "Directly confirmed in passage 4. The paper explicitly states that specXplore uses t-SNE embedding of ms2deepscore similarity matrix for the central overview.",
@@ -615,7 +615,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/card/task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "specXplore, an interactive Python dashboard",
       "asbval:note": "Confirmed in abstract and methods sections. SpecXplore is explicitly described as a Python dashboard.",
@@ -635,7 +635,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/card/task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SpecXplore makes use of state-of-the-art ms2deepscore pairwise spectral similarities as a quantitative backbone",
       "asbval:note": "Confirmed multiple times. ms2deepscore is the primary similarity metric used for the t-SNE embedding.",
@@ -655,7 +655,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/card/task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For the wheat data set, the pipeline preprocessing time was less than 15 min (on a MacBook Pro laptop with Apple M1 Pro processor 2021), most of which was spent on local library search via MS2Query. Using the same system, the processing time for the larger urine data set was less than 75 min, whereof approximately 62 min was taken up by MS2Query and 9 min for all pairwise spectral similarity computations. Upon opening the app and loading the data, the user faces an interactive two-dimensional projection of all spectra created by the t-SNE. Each spectral feature in the data set is represented as either as a circular node or highlighted as darkened diamonds for reference standards in this example. On its own, the t-SNE overview figure is difficult to read. Only a limited view of clustering trends can be observed through denser node regions and positioning of reference standards (Figure 1). This being the case, the t-SNE overview figure still provides an excellent basis for in-depth exploration of the data via interactivity. The most useful top-level exploration features are k-medoid clustering at low values of k (see Supporting Information, Figure S3A in Supporting Information, Section S3.1.4), chemical classification (see Supporting Information, Figure S3B in Supporting Information, Section S3.1.4), and node degree visualizations (see Supporting Information, Figure S2A in Supporting Information, Section S3.1.3). Node degree visualization provides an immediate and uncluttered view of the network topology at current threshold levels, providing insights into topological groupings in the data (see Supporting Information, Figure S2A in Supporting Information, Section S3.1.3). In addition, node degree visualizations provide the most straightforward assessment of the impact of threshold changes on local topology while avoiding the computational cost and visual clutter of potentially large numbers of edges (see Supporting Information, Figure S2A,B in Supporting Information Section, S3.1.3). Color-based highlighting of groupings based on k-medoid clustering or chemical ontology predictions can provide additional means of determining the local areas of interest in the t-SNE overview. Here, k-medoid clustering provides an edge-threshold-independent means of dividing the feature space into smaller groups while still making use of the pairwise similarity matrix. K-medoid clustering tends to show good agreement with both t-SNE projections and topological insights, while it provides a means of determining neighbor sets of nodes of interest (see Supporting Information, Figure S3A). At low k values, k-medoid clustering tends to produce larger data groupings (see Supporting Information, Figure S3A), higher values of k tend to subdivide the data into smaller, localized clusters often corresponding well to topological connectivity at higher thresholds (see Supporting Information, Figure S4 in Supporting Information, Section S3.1.4). Putative chemical classifications may serve a similar means of prioritizing areas of interest in the t-SNE embedding. In addition to the use of various color highlighting approaches to detect groupings of interest or achieve a bird's-eye view of topology, specXplore makes use of edge overlay visualizations granting insights into local node connectivity patterns at adjustable similarity threshold settings (see Supporting Information, Figure S2B in Supporting Information, Section S3.1.3). These views provide insights on what nodes are considered adjacent to one another given the current similarity thresholds. While network views provide simplified views of the similarity relationship between nodes, augmap views provide deeper insights into the similarity matrix and quantitative backbone of all of specXplore's visualizations (see Supporting Information, Figure S1 in Supporting Information, Section S3.1.2). These quantitative insights can be used to adjust the local threshold settings accordingly or be used as an alternative to network views for small node selections altogether. While specXplore's global overviews provide insight into the rough patterns of the data, its localized views provide more detailed insights into the possible relationships between the features in the wheat data. There are numerous ways to delve further into the data, given the areas of interest have been found. One sensible approach in specXplore is to explore connectivity around the known reference standards. For instance, exploring the densely connected feature area around the Procyanidin-A2 corresponding feature (Figure 2 A), we can see the characteristic fragment ion overlap as well as the much higher complexity of the experimental spectra (Figure 2 B,C). Such overlaps in fragmentation patterns and implied substructure overlaps alongside local topology and other metadata information may serve as vital starting points for MS/MS structural hypothesis generation and manual annotation efforts. Which features are considered of interest, and how stringent overlaps will need to be to be useful naturally depend on the analysis goals.",
       "asbval:note": "Jupyter notebooks are mentioned in the context of preprocessing: 'For the wheat data set, the pipeline preprocessing time was less than 15 min (on a MacBook Pro laptop with Apple M1 Pro processor 2021)' and 'Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object (see illustrative example notebooks https://github.com/kevinmildau/specxplore-illustrative-examples).' This confirms Jupyter notebooks are used in the workflow.",
@@ -675,7 +675,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/card/task_003/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score. Functionalities are provided for users to test a range of values for the perplexity tuning parameter (usually between 5 and 50) and select an appropriate value.",
       "asbval:note": "The paper confirms that specXplore generates a t-SNE embedding with (x, y) coordinates for spectral features. However, the paper does not explicitly describe the output format as a 'coordinate file' or specify the exact file format/structure. The paper states the t-SNE embedding is used as the central overview and that users interact with it, but does not detail the specific output file format or whether coordinates are explicitly exported as a separate file.",
@@ -695,7 +695,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/card/task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card frames the task as 'implementing' the t-SNE embedding component, but the paper describes specXplore as an already-developed tool. The research question is phrased as if asking how to build this component, whereas the paper presents specXplore as a completed system.",
@@ -712,7 +712,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dashboard-session-initialization-verification/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/dashboard-session-initialization-verification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash. The importing part provides data integration and preprocessing functionalities, while the dashboard provides the interactive user interface for data exploration.",
       "asbval:note": "Paper describes the specXplore workflow architecture (importing pipeline + dashboard) and mentions loading data into sessions, but does not explicitly discuss saving/loading session objects from disk or verification of session initialization integrity. The paper focuses on the importing pipeline creating a 'specXplore object' and opening the app, but does not detail session persistence or reconstruction workflows.",
@@ -732,7 +732,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dashboard-session-initialization-verification/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/dashboard-session-initialization-verification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "specXplore, an interactive Python dashboard providing interactive and complementary visualizations facilitating mass spectral similarity matrix exploration... The tool is available on github under MIT license as a python package that can be downloaded and installed for local use at https://github.com/kevinmildau/specXplore.",
       "asbval:note": "specXplore is confirmed as the primary tool; repo URL matches candidate card.",
@@ -752,7 +752,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dashboard-session-initialization-verification/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/dashboard-session-initialization-verification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For the wheat data set, the pipeline preprocessing time was less than 15 min (on a MacBook Pro laptop with Apple M1 Pro processor 2021)... Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object (see illustrative example notebooks https://github.com/kevinmildau/specxplore-illustrative-examples).",
       "asbval:note": "Paper explicitly mentions Jupyter notebooks as the environment for loading data and creating specXplore session objects.",
@@ -772,7 +772,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dashboard-session-initialization-verification/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/dashboard-session-initialization-verification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash. The processing workflows and intermediate data structures used by specXplore are built upon a cohort of open-source software Python data science packages, namely, matchms, MS2Query, ms2deepscore, spec2vec, kmedoids, Cython, numpy, pandas, scikit-learn, and scipy.",
       "asbval:note": "Paper confirms Python as the language for specXplore implementation and data processing.",
@@ -792,7 +792,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dashboard-session-initialization-verification/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/dashboard-session-initialization-verification/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object... Upon opening the app and loading the data, the user faces an interactive two-dimensional projection of all spectra created by the t-SNE.",
       "asbval:note": "Paper describes creating session objects in Jupyter and opening the app, but does not explicitly discuss saving/loading from disk (.pkl files) or validation procedures for session initialization integrity. The workflow described is: create session object \u2192 open app, not: load saved session \u2192 verify initialization.",
@@ -812,7 +812,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dashboard-session-initialization-verification/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/dashboard-session-initialization-verification/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Before data can be opened in the specXplore dashboard, it needs to be processed using the specXplore importing pipeline... Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object.",
       "asbval:note": "Paper confirms that spectral data must be processed via the importing pipeline before dashboard use.",
@@ -832,7 +832,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dashboard-session-initialization-verification/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/dashboard-session-initialization-verification/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper mentions Cython as a dependency but does not discuss Windows compatibility issues, Microsoft Visual C++ Redistributable requirements, or platform-specific failures. This claim is not addressed in the provided passages.",
@@ -852,7 +852,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dashboard-session-initialization-verification/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/dashboard-session-initialization-verification/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss session data corruption, file integrity validation, or version compatibility checks. This is a general best-practice claim not grounded in the paper's content.",
@@ -872,7 +872,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fixed-architecture-layer-validation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/fixed-architecture-layer-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash. The importing part provides data integration and preprocessing functionalities, while the dashboard provides the interactive user interface for data exploration.",
       "asbval:note": "Paper describes the two-stage workflow (importing pipeline + dashboard) and session object creation, but does not explicitly discuss validation/testing of dashboard initialization after loading saved session objects from disk. The paper focuses on the workflow design and functionality rather than validation procedures.",
@@ -892,7 +892,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fixed-architecture-layer-validation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/fixed-architecture-layer-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash. The importing part provides data integration and preprocessing functionalities, while the dashboard provides the interactive user interface for data exploration.",
       "asbval:note": "Paper describes the architecture (importing pipeline + dashboard) but does not explicitly address validation/testing procedures for session initialization or responsiveness checks. The claim about 'critical checkpoint' and validation procedures is not directly supported by the paper.",
@@ -912,7 +912,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fixed-architecture-layer-validation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/fixed-architecture-layer-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "specXplore, an interactive Python dashboard providing interactive and complementary visualizations facilitating mass spectral similarity matrix exploration... The tool is available on github under MIT license as a python package that can be downloaded and installed for local use at https://github.com/kevinmildau/specXplore.",
       "asbval:note": null,
@@ -932,7 +932,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fixed-architecture-layer-validation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/fixed-architecture-layer-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SpecXplore makes use of state-of-the-art ms2deepscore pairwise spectral similarities as a quantitative backbone... The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score.",
       "asbval:note": null,
@@ -952,7 +952,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fixed-architecture-layer-validation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/fixed-architecture-layer-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For the wheat data set, the pipeline preprocessing time was less than 15 min (on a MacBook Pro laptop with Apple M1 Pro processor 2021)... Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object (see illustrative example notebooks https://github.com/kevinmildau/specxplore-illustrative-examples).",
       "asbval:note": null,
@@ -972,7 +972,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interactive-application-accessibility-testing/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/interactive-application-accessibility-testing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash. The importing part provides data integration and preprocessing functionalities, while the dashboard provides the interactive user interface for data exploration.",
       "asbval:note": "Paper describes the two-layer architecture (importing pipeline + dashboard) and confirms dashboard initialization and interactivity are core functions.",
@@ -992,7 +992,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interactive-application-accessibility-testing/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/interactive-application-accessibility-testing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash... The importing part provides data integration and preprocessing functionalities, while the dashboard provides the interactive user interface for data exploration.",
       "asbval:note": "Paper explicitly describes the pipeline-to-dashboard workflow and interactive UI responsiveness.",
@@ -1012,7 +1012,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interactive-application-accessibility-testing/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/interactive-application-accessibility-testing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The input data for specXplore spectral data exploration are MS/MS spectral data. LC\u2013MS/MS data preprocessing (i.e., feature detection and MS/MS spectral exporting) is assumed to have been done elsewhere... The MS/MS feature data are assumed to be in .mgf (mascot generic format) format... Spectral data are imported into Python using matchms, and basic specXplore data processing is performed.",
       "asbval:note": "Paper describes the workflow of loading LC-MS/MS data and initializing the dashboard session.",
@@ -1032,7 +1032,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interactive-application-accessibility-testing/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/interactive-application-accessibility-testing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SpecXplore provides the user with a variety of views and interactive navigation options... the t-SNE overview figure still provides an excellent basis for in-depth exploration of the data via interactivity... specXplore allows for the selection of any node, or collection of nodes, for more in-depth analysis in complementary visualization approaches.",
       "asbval:note": "Paper confirms interactive node selection, overlay adjustment, and settings modification are core dashboard functionalities.",
@@ -1052,7 +1052,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interactive-application-accessibility-testing/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/interactive-application-accessibility-testing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The tool is available on github under MIT license as a python package that can be downloaded and installed for local use at https://github.com/kevinmildau/specXplore.",
       "asbval:note": "[SUBSTRING-MATCH for specXplore | role: primary tool]. Paper confirms specXplore is the dashboard visualization platform.",
@@ -1072,7 +1072,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interactive-application-accessibility-testing/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/interactive-application-accessibility-testing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object (see illustrative example notebooks https://github.com/kevinmildau/specxplore-illustrative-examples).",
       "asbval:note": "Paper confirms Jupyter notebooks are used for preprocessing and session object creation, but the specific repo URL in the card (demo.ipynb) is not verbatim in passages; paper references 'illustrative example notebooks' at a different URL. The functional role (Jupyter environment for dashboard testing) is supported, but the exact notebook path differs.",
@@ -1092,7 +1092,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interactive-application-accessibility-testing/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/interactive-application-accessibility-testing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Before data can be opened in the specXplore dashboard, it needs to be processed using the specXplore importing pipeline... Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object.",
       "asbval:note": "Paper confirms the importing pipeline must be run in Jupyter notebooks before dashboard instantiation.",
@@ -1112,7 +1112,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interactive-application-accessibility-testing/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/interactive-application-accessibility-testing/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash... The importing part provides data integration and preprocessing functionalities, while the dashboard provides the interactive user interface for data exploration.",
       "asbval:note": "Paper distinguishes between the importing pipeline and dashboard layers, supporting the distinction made in the card.",
@@ -1132,7 +1132,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interactive-application-accessibility-testing/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/interactive-application-accessibility-testing/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Claim is incomplete in the card (text truncated). Passages do not contain OS-specific restrictions for specXplore. Cannot judge without complete claim text.",
@@ -1152,7 +1152,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/jupyter-notebook-workflow-automation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/jupyter-notebook-workflow-automation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash. The importing part provides data integration and preprocessing functionalities... Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object",
       "asbval:note": "Directly supported: paper describes Jupyter notebook-based preprocessing pipeline that generates specXplore session objects.",
@@ -1172,7 +1172,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/jupyter-notebook-workflow-automation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/jupyter-notebook-workflow-automation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores: ms2deepscore, modified cosine scores, and spec2vec scores... For the machine learning scores, pretrained models provided with MS2Query are used.",
       "asbval:note": "Model inference (ms2deepscore, MS2Query) is integrated into the pipeline. Metadata validation is implicit in the data importing process.",
@@ -1192,7 +1192,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/jupyter-notebook-workflow-automation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/jupyter-notebook-workflow-automation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The tool is available on github under MIT license as a python package that can be downloaded and installed for local use at https://github.com/kevinmildau/specXplore... The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix",
       "asbval:note": "specXplore confirmed as Python package with importing pipeline and t-SNE/ms2deepscore integration.",
@@ -1212,7 +1212,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/jupyter-notebook-workflow-automation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/jupyter-notebook-workflow-automation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SpecXplore makes use of state-of-the-art ms2deepscore pairwise spectral similarities as a quantitative backbone... Rather than being based on modified cosine scores, specXplore is based on ms2deepscore pairwise similarities, which can more accurately represent the structural similarities between compounds based on their spectra via a deep-learning-based embedding representation.",
       "asbval:note": "ms2deepscore confirmed as neural-network-based similarity metric. t-SNE embedding is computed from ms2deepscore similarity matrix.",
@@ -1232,7 +1232,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/jupyter-notebook-workflow-automation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/jupyter-notebook-workflow-automation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object (see illustrative example notebooks https://github.com/kevinmildau/specxplore-illustrative-examples).",
       "asbval:note": "Jupyter notebooks explicitly mentioned as the environment for preprocessing pipeline execution.",
@@ -1252,7 +1252,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/jupyter-notebook-workflow-automation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/jupyter-notebook-workflow-automation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Spectral data are imported into Python using matchms, and basic specXplore data processing is performed",
       "asbval:note": "matchms confirmed as used for spectral data import and processing. Metadata handling is part of basic data processing.",
@@ -1272,7 +1272,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/jupyter-notebook-workflow-automation/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/jupyter-notebook-workflow-automation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LC\u2013MS/MS data preprocessing (i.e., feature detection and MS/MS spectral exporting) is assumed to have been done elsewhere, e.g., using MZMine3, in order to reduce data set size and feature redundancy.",
       "asbval:note": "MZmine3 mentioned as tool for LC-MS/MS preprocessing and .mgf export, though described as pre-processing step before specXplore pipeline.",
@@ -1292,7 +1292,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/jupyter-notebook-workflow-automation/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/jupyter-notebook-workflow-automation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MS/MS feature data are assumed to be in .mgf (mascot generic format) format, where each entry should have a unique feature identifier, a precursor mass to charge ratio, and spectral data in the form of one or more mass to charge ratio and intensity value tuples.",
       "asbval:note": "Paper explicitly specifies .mgf as input format and describes conversion to specXplore session objects.",
@@ -1312,7 +1312,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/jupyter-notebook-workflow-automation/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/jupyter-notebook-workflow-automation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores: ms2deepscore, modified cosine scores, and spec2vec scores.",
       "asbval:note": "ms2deepscore similarity computation is part of the automated pipeline.",
@@ -1332,7 +1332,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/jupyter-notebook-workflow-automation/009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/jupyter-notebook-workflow-automation/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Functionalities are provided for users to test a range of values for the perplexity tuning parameter (usually between 5 and 50) and select an appropriate value... Similarly, functionalities are provided to construct a range of k-medoid clustering-based data subdivisions",
       "asbval:note": "Paper describes parameter iteration capabilities for t-SNE perplexity and k-medoid clustering.",
@@ -1352,7 +1352,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/jupyter-notebook-workflow-automation/010",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/jupyter-notebook-workflow-automation/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LC\u2013MS/MS data preprocessing (i.e., feature detection and MS/MS spectral exporting) is assumed to have been done elsewhere, e.g., using MZMine3, in order to reduce data set size and feature redundancy.",
       "asbval:note": "Paper confirms that raw vendor file conversion must occur before specXplore pipeline, recommending MZmine3.",
@@ -1372,7 +1372,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-spectral-data-import/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/lc-ms-spectral-data-import/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Before data can be opened in the specXplore dashboard, it needs to be processed using the specXplore importing pipeline... Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object",
       "asbval:note": "Directly supported: paper describes .mgf input, Jupyter notebook processing, and session object creation.",
@@ -1392,7 +1392,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-spectral-data-import/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/lc-ms-spectral-data-import/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores: ms2deepscore, modified cosine scores, and spec2vec scores",
       "asbval:note": "Similarity computation is core to the pipeline.",
@@ -1412,7 +1412,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-spectral-data-import/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/lc-ms-spectral-data-import/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "processed into a specXplore session object",
       "asbval:note": "Session object creation is mentioned; persistence to disk is implied by the workflow but not explicitly detailed in passages.",
@@ -1432,7 +1432,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-spectral-data-import/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/lc-ms-spectral-data-import/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object",
       "asbval:note": "Jupyter notebooks explicitly mentioned for preprocessing.",
@@ -1452,7 +1452,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-spectral-data-import/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/lc-ms-spectral-data-import/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "specXplore, an interactive Python dashboard... The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard",
       "asbval:note": "[SUBSTRING-MATCH for specXplore | role: Python dashboard and importing pipeline]",
@@ -1472,7 +1472,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-spectral-data-import/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/lc-ms-spectral-data-import/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SpecXplore makes use of state-of-the-art ms2deepscore pairwise spectral similarities as a quantitative backbone... Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores: ms2deepscore, modified cosine scores, and spec2vec scores",
       "asbval:note": "[SUBSTRING-MATCH for ms2deepscore | role: similarity scoring]",
@@ -1492,7 +1492,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-spectral-data-import/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/lc-ms-spectral-data-import/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Spectral data are imported into Python using matchms, and basic specXplore data processing is performed",
       "asbval:note": "[SUBSTRING-MATCH for matchms | role: spectrum import and processing]",
@@ -1512,7 +1512,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-spectral-data-import/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/lc-ms-spectral-data-import/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LC\u2013MS/MS data preprocessing (i.e., feature detection and MS/MS spectral exporting) is assumed to have been done elsewhere, e.g., using MZMine3, in order to reduce data set size and feature redundancy",
       "asbval:note": "[SUBSTRING-MATCH for MZmine | role: preprocessing and .mgf export]",
@@ -1532,7 +1532,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-spectral-data-import/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/lc-ms-spectral-data-import/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For the machine learning scores, pretrained models provided with MS2Query are used... most of which was spent on local library search via MS2Query",
       "asbval:note": "[SUBSTRING-MATCH for MS2Query | role: pre-trained models and library search]",
@@ -1552,7 +1552,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-spectral-data-import/009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/lc-ms-spectral-data-import/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score",
       "asbval:note": "Both t-SNE and ms2deepscore are core to the overview creation.",
@@ -1572,7 +1572,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-spectral-data-import/010",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/lc-ms-spectral-data-import/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The input data for specXplore spectral data exploration are MS/MS spectral data... The MS/MS feature data are assumed to be in .mgf (mascot generic format) format",
       "asbval:note": "Paper confirms .mgf is the required input format; vendor formats must be pre-converted.",
@@ -1592,7 +1592,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectral-data-validation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/mass-spectral-data-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The input data for specXplore spectral data exploration are MS/MS spectral data. LC\u2013MS/MS data preprocessing (i.e., feature detection and MS/MS spectral exporting) is assumed to have been done elsewhere, e.g., using MZMine3, in order to reduce data set size and feature redundancy. The MS/MS feature data are assumed to be in .mgf (mascot generic format) format, where each entry should have a unique feature identifier, a precursor mass to charge ratio, and spectral data in the form of one or more mass to charge ratio and intensity value tuples.",
       "asbval:note": "Paper states that LC-MS/MS preprocessing and conversion to .mgf is 'assumed to have been done elsewhere' before specXplore import, but does not describe a validation step as a distinct task within specXplore's workflow. The paper describes requirements (.mgf format, unique feature identifier) but not validation as a separate skill/task.",
@@ -1612,7 +1612,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectral-data-validation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/mass-spectral-data-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LC\u2013MS/MS data preprocessing (i.e., feature detection and MS/MS spectral exporting) is assumed to have been done elsewhere, e.g., using MZMine3, in order to reduce data set size and feature redundancy.",
       "asbval:note": "Paper mentions MZMine3 as a tool for LC-MS/MS preprocessing and feature detection, but does not specify 'GNPS-FBMN export options' or detail the export workflow. The card's specific claim about GNPS-FBMN export is not explicitly supported.",
@@ -1632,7 +1632,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectral-data-validation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/mass-spectral-data-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Spectral data are imported into Python using matchms, and basic specXplore data processing is performed",
       "asbval:note": "Paper confirms matchms is used for importing spectral data into Python, but does not explicitly describe using matchms.Spectrum to add or rename metadata keys. The paper states matchms is used for import and basic processing, but the specific metadata-editing role claimed in the card is not detailed.",
@@ -1652,7 +1652,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectral-data-validation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/mass-spectral-data-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of using a text editor for bulk replacement of feature identifier key names in .mgf files appears in any passage. This is a manual workaround not described in the paper.",
@@ -1672,7 +1672,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectral-data-validation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/mass-spectral-data-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The input data for specXplore spectral data exploration are MS/MS spectral data. LC\u2013MS/MS data preprocessing (i.e., feature detection and MS/MS spectral exporting) is assumed to have been done elsewhere, e.g., using MZMine3, in order to reduce data set size and feature redundancy.",
       "asbval:note": "Paper indicates preprocessing is 'assumed to have been done elsewhere' before specXplore import, but does not frame this as a validation task within specXplore's documented workflow. The card presents validation as a specXplore skill, but the paper treats preprocessing/conversion as external to specXplore.",
@@ -1692,7 +1692,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectral-data-validation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/mass-spectral-data-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MS/MS feature data are assumed to be in .mgf (mascot generic format) format, where each entry should have a unique feature identifier, a precursor mass to charge ratio, and spectral data in the form of one or more mass to charge ratio and intensity value tuples.",
       "asbval:note": "Paper requires 'a unique feature identifier' but does not specify the exact key name 'feature_id' or discuss non-standard key names. The requirement for a unique identifier is stated, but the specific validation criteria (key name standardization) is not detailed.",
@@ -1712,7 +1712,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-coordinate-system-construction/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/mass-spectrometry-data-coordinate-system-construction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score.",
       "asbval:note": "Verbatim match: t-SNE embedding of ms2deepscore similarity matrix confirmed as core method.",
@@ -1732,7 +1732,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-coordinate-system-construction/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/mass-spectrometry-data-coordinate-system-construction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The dashboard makes use of a two-dimensional t-distributed stochastic neighbor embedding (t-SNE) overview network of the full pairwise similarity matrix as a jumping board for localized data exploration.",
       "asbval:note": "Semantic equivalence: t-SNE coordinates explicitly serve as foundation for dashboard and exploratory analysis.",
@@ -1752,7 +1752,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-coordinate-system-construction/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/mass-spectrometry-data-coordinate-system-construction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores: ms2deepscore, modified cosine scores, and spec2vec scores.",
       "asbval:note": "Verbatim presence (case-insensitive): ms2deepscore confirmed as tool for computing pairwise spectral similarities.",
@@ -1772,7 +1772,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-coordinate-system-construction/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/mass-spectrometry-data-coordinate-system-construction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The processing workflows and intermediate data structures used by specXplore are built upon a cohort of open-source software Python data science packages, namely, matchms, MS2Query, ms2deepscore, spec2vec, kmedoids, Cython, numpy, pandas, scikit-learn, and scipy.",
       "asbval:note": "Verbatim presence: scikit-learn listed as core dependency. t-SNE implementation from scikit-learn is standard and confirmed by context.",
@@ -1792,7 +1792,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-coordinate-system-construction/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/mass-spectrometry-data-coordinate-system-construction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In this paper, we introduce specXplore, an interactive Python dashboard aimed at facilitating spectral data exploration in a flexible and local network topology tailored fashion... The dashboard makes use of a two-dimensional t-distributed stochastic neighbor embedding (t-SNE) overview network of the full pairwise similarity matrix as a jumping board for localized data exploration.",
       "asbval:note": "Verbatim presence: specXplore confirmed as orchestrating tool for t-SNE coordinate generation and dashboard visualization.",
@@ -1812,7 +1812,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-coordinate-system-construction/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/mass-spectrometry-data-coordinate-system-construction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For the wheat data set, the pipeline preprocessing time was less than 15 min (on a MacBook Pro laptop with Apple M1 Pro processor 2021)... Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object (see illustrative example notebooks https://github.com/kevinmildau/specxplore-illustrative-examples).",
       "asbval:note": "Verbatim presence: Jupyter notebooks explicitly mentioned as environment for running specXplore preprocessing pipeline.",
@@ -1832,7 +1832,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-coordinate-system-construction/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/mass-spectrometry-data-coordinate-system-construction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The input data for specXplore spectral data exploration are MS/MS spectral data... The MS/MS feature data are assumed to be in .mgf (mascot generic format) format, where each entry should have a unique feature identifier, a precursor mass to charge ratio, and spectral data in the form of one or more mass to charge ratio and intensity value tuples.",
       "asbval:note": "Verbatim presence: .mgf format confirmed as input format for specXplore.",
@@ -1852,7 +1852,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-coordinate-system-construction/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/mass-spectrometry-data-coordinate-system-construction/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash. The importing part provides data integration and preprocessing functionalities, while the dashboard provides the interactive user interface for data exploration.",
       "asbval:note": "Semantic equivalence: workflow explicitly divided into importing pipeline (preprocessing) followed by dashboard instantiation.",
@@ -1872,7 +1872,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-coordinate-system-construction/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/mass-spectrometry-data-coordinate-system-construction/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LC\u2013MS/MS data preprocessing (i.e., feature detection and MS/MS spectral exporting) is assumed to have been done elsewhere, e.g., using MZMine3, in order to reduce data set size and feature redundancy.",
       "asbval:note": "Semantic equivalence: paper explicitly states preprocessing (feature detection, format conversion) must be done before specXplore input.",
@@ -1892,7 +1892,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-coordinate-system-construction/009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/mass-spectrometry-data-coordinate-system-construction/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores: ms2deepscore, modified cosine scores, and spec2vec scores... The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix.",
       "asbval:note": "Semantic equivalence: similarity matrix computation precedes t-SNE embedding in workflow.",
@@ -1912,7 +1912,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-coordinate-system-construction/010",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/mass-spectrometry-data-coordinate-system-construction/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The central overview of specXplore is based on a two-dimensional t-distributed stochastic neighbor embedding (t-SNE) overview network... Alternative approaches such as UMAP or PaCMAP may be more capable at preserving global or even global and local trends.",
       "asbval:note": "Semantic equivalence: paper acknowledges t-SNE's 2-D limitation and mentions alternative methods (UMAP, PaCMAP) for different use cases.",
@@ -1932,7 +1932,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-object-serialization-deserialization/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/python-object-serialization-deserialization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash. The importing part provides data integration and preprocessing functionalities, while the dashboard provides the interactive user interface for data exploration.",
       "asbval:note": "Paper describes the workflow as divided into importing pipeline and dashboard, but does not explicitly discuss serialization/deserialization of session objects or loading from disk. The paper focuses on the importing pipeline creating objects that feed into the dashboard, but does not detail persistence mechanisms or object reloading workflows.",
@@ -1952,7 +1952,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-object-serialization-deserialization/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/python-object-serialization-deserialization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash.",
       "asbval:note": "Paper describes the workflow pipeline and dashboard instantiation but does not explicitly document serialization/deserialization or disk-loading mechanisms. The claim assumes a persistence layer not explicitly described in the passages.",
@@ -1972,7 +1972,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-object-serialization-deserialization/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/python-object-serialization-deserialization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object (see illustrative example notebooks https://github.com/kevinmildau/specxplore-illustrative-examples).",
       "asbval:note": "Paper confirms Jupyter notebooks are used for preprocessing and session object creation, but does not explicitly describe saving to disk or reloading workflows. The illustrative examples repository may contain this information but is not quoted in the passages.",
@@ -1992,7 +1992,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-object-serialization-deserialization/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/python-object-serialization-deserialization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash.",
       "asbval:note": "Paper confirms Python is the host language for the entire specXplore workflow.",
@@ -2012,7 +2012,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-object-serialization-deserialization/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/python-object-serialization-deserialization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "specXplore, an interactive Python dashboard providing interactive and complementary visualizations facilitating mass spectral similarity matrix exploration.",
       "asbval:note": "Paper confirms specXplore is an interactive dashboard for visualization. The claim about accepting deserialized objects is implied by the workflow description but not explicitly stated.",
@@ -2032,7 +2032,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-object-serialization-deserialization/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/python-object-serialization-deserialization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object",
       "asbval:note": "Paper confirms Jupyter notebooks are used for preprocessing and session object creation, but does not explicitly mention saving to disk or persistence mechanisms.",
@@ -2052,7 +2052,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/session-object-serialization/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/session-object-serialization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Before data can be opened in the specXplore dashboard, it needs to be processed using the specXplore importing pipeline... Spectral data are imported into Python using matchms, and basic specXplore data processing is performed... Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores: ms2deepscore, modified cosine scores, and spec2vec scores.",
       "asbval:note": "Paper describes the importing pipeline that creates a specXplore session object with embeddings and similarity scores, and mentions loading data into the dashboard. However, the paper does not explicitly describe serialization/persistence mechanisms or file formats for saving the session object to disk. The paper states 'For the wheat data set, the pipeline preprocessing time was less than 15 min' and references 'illustrative example notebooks' but does not detail how the session object is serialized or what file format is used for persistence.",
@@ -2072,7 +2072,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/session-object-serialization/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/session-object-serialization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash. The importing part provides data integration and preprocessing functionalities, while the dashboard provides the interactive user interface for data exploration.",
       "asbval:note": "The paper explicitly describes the two-stage workflow: offline importing/preprocessing pipeline and online dashboard visualization.",
@@ -2092,7 +2092,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/session-object-serialization/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/session-object-serialization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "specXplore, an interactive Python dashboard... The specXplore workflow is divided into a Python data importing pipeline and a visual analysis dashboard using dash. The importing part provides data integration and preprocessing functionalities, while the dashboard provides the interactive user interface for data exploration. The tool is available on github under MIT license as a python package that can be downloaded and installed for local use at https://github.com/kevinmildau/specXplore.",
       "asbval:note": "Paper confirms specXplore provides the session object structure and importing pipeline, but does not explicitly describe a 'serialization interface' for persisting the object. The paper mentions loading data into the dashboard but does not detail the serialization mechanism.",
@@ -2112,7 +2112,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/session-object-serialization/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/session-object-serialization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object (see illustrative example notebooks https://github.com/kevinmildau/specxplore-illustrative-examples).",
       "asbval:note": "Paper confirms Jupyter notebooks are used for the importing pipeline and session object creation, but does not explicitly describe serialization to disk from the notebooks.",
@@ -2132,7 +2132,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/session-object-serialization/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/session-object-serialization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores: ms2deepscore, modified cosine scores, and spec2vec scores. The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score.",
       "asbval:note": "Paper confirms ms2deepscore is used to compute similarity scores during the importing pipeline that are part of the session object.",
@@ -2152,7 +2152,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-overview-representation-generation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/spectral-overview-representation-generation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The dashboard makes use of a two-dimensional t-distributed stochastic neighbor embedding (t-SNE) overview network of the full pairwise similarity matrix as a jumping board for localized data exploration. Rather than being based on modified cosine scores, specXplore is based on ms2deepscore pairwise similarities... The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score.",
       "asbval:note": "Verbatim match: t-SNE applied to ms2deepscore similarity matrix for 2-D overview.",
@@ -2172,7 +2172,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-overview-representation-generation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/spectral-overview-representation-generation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "specXplore, an interactive Python dashboard providing interactive and complementary visualizations facilitating mass spectral similarity matrix exploration... specXplore can become an integral part of mass spectral data exploration efforts and assist users in the generation of structural hypotheses for compounds of interest.",
       "asbval:note": "Semantic equivalence: interactive exploration and structural hypothesis generation confirmed.",
@@ -2192,7 +2192,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-overview-representation-generation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/spectral-overview-representation-generation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "specXplore is based on ms2deepscore pairwise similarities, which can more accurately represent the structural similarities between compounds based on their spectra via a deep-learning-based embedding representation... Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores: ms2deepscore, modified cosine scores, and spec2vec scores.",
       "asbval:note": "[SUBSTRING-MATCH for ms2deepscore | role: similarity computation]. Deep learning-based, used as backbone for t-SNE.",
@@ -2212,7 +2212,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-overview-representation-generation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/spectral-overview-representation-generation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "specXplore, an interactive Python dashboard... The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix... The tool is available on github under MIT license as a python package that can be downloaded and installed for local use at https://github.com/kevinmildau/specXplore.",
       "asbval:note": "[SUBSTRING-MATCH for specXplore | role: dashboard and t-SNE integration]. Confirmed as Python package managing t-SNE embedding and interactive visualization.",
@@ -2232,7 +2232,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-overview-representation-generation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/spectral-overview-representation-generation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The processing workflows and intermediate data structures used by specXplore are built upon a cohort of open-source software Python data science packages, namely, matchms, MS2Query, ms2deepscore, spec2vec, kmedoids, Cython, numpy, pandas, scikit-learn, and scipy.",
       "asbval:note": "scikit-learn explicitly listed as dependency. t-SNE is standard scikit-learn implementation; paper uses t-SNE for embedding but does not explicitly name scikit-learn as the source\u2014however, scikit-learn is the standard Python library for t-SNE and is listed as a core dependency.",
@@ -2252,7 +2252,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-overview-representation-generation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/spectral-overview-representation-generation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For the wheat data set, the pipeline preprocessing time was less than 15 min (on a MacBook Pro laptop with Apple M1 Pro processor 2021)... Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object (see illustrative example notebooks https://github.com/kevinmildau/specxplore-illustrative-examples).",
       "asbval:note": "[SUBSTRING-MATCH for jupyter notebooks | role: preprocessing and workflow execution]. Explicitly mentioned as environment for data loading and processing.",
@@ -2272,7 +2272,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-overview-representation-generation/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/spectral-overview-representation-generation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The input data for specXplore spectral data exploration are MS/MS spectral data. LC\u2013MS/MS data preprocessing (i.e., feature detection and MS/MS spectral exporting) is assumed to have been done elsewhere... The MS/MS feature data are assumed to be in .mgf (mascot generic format) format, where each entry should have a unique feature identifier, a precursor mass to charge ratio, and spectral data in the form of one or more mass to charge ratio and intensity value tuples.",
       "asbval:note": "Verbatim: .mgf format with feature identifiers confirmed as input specification.",
@@ -2292,7 +2292,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-overview-representation-generation/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/spectral-overview-representation-generation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The dashboard makes use of a two-dimensional t-distributed stochastic neighbor embedding (t-SNE) overview network of the full pairwise similarity matrix as a jumping board for localized data exploration... Embeddings produced by t-SNE are built to preserve local neighborhoods in the high-dimensional space in their projection to a two-dimensional space.",
       "asbval:note": "Semantic equivalence: t-SNE preserves local neighborhood structure; used for dashboard visualization and pattern discovery.",
@@ -2312,7 +2312,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-distance-metric-selection/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/spectral-similarity-distance-metric-selection/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score... Spectral data can then be used to initialize a template specXplore object that automatically computes pairwise spectral similarities using three similarity scores: ms2deepscore, modified cosine scores, and spec2vec scores.",
       "asbval:note": "The paper explicitly describes selecting similarity metrics (ms2deepscore, modified cosine, spec2vec) as foundational to t-SNE embedding and interactive visualization.",
@@ -2332,7 +2332,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-distance-metric-selection/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/spectral-similarity-distance-metric-selection/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Rather than being based on modified cosine scores, specXplore is based on ms2deepscore pairwise similarities, which can more accurately represent the structural similarities between compounds based on their spectra via a deep-learning-based embedding representation... However, ms2deepscore may also introduce a much denser topology.",
       "asbval:note": "The paper demonstrates that choice of similarity metric (ms2deepscore vs. modified cosine) directly impacts network topology and visualization geometry.",
@@ -2352,7 +2352,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-distance-metric-selection/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/spectral-similarity-distance-metric-selection/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The input data for specXplore spectral data exploration are MS/MS spectral data... The MS/MS feature data are assumed to be in .mgf (mascot generic format) format, where each entry should have a unique feature identifier, a precursor mass to charge ratio, and spectral data in the form of one or more mass to charge ratio and intensity value tuples.",
       "asbval:note": "Paper explicitly specifies .mgf format with feature identifiers as input requirement.",
@@ -2372,7 +2372,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-distance-metric-selection/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/spectral-similarity-distance-metric-selection/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix... Embeddings produced by t-SNE are built to preserve local neighborhoods in the high-dimensional space in their projection to a two-dimensional space.",
       "asbval:note": "Paper confirms t-SNE embedding uses similarity metric and that metric choice impacts 2-D representation.",
@@ -2392,7 +2392,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-distance-metric-selection/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/spectral-similarity-distance-metric-selection/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Rather than being based on modified cosine scores, specXplore is based on ms2deepscore pairwise similarities, which can more accurately represent the structural similarities between compounds based on their spectra via a deep-learning-based embedding representation.",
       "asbval:note": "ms2deepscore is explicitly described as deep-learning-based similarity computation from spectral data.",
@@ -2412,7 +2412,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-distance-metric-selection/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/spectral-similarity-distance-metric-selection/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score... SpecXplore provides complementary and interactive visualizations that allow users to explore connections between the spectral features using interactively adjustable network settings.",
       "asbval:note": "specXplore integrates similarity metrics into t-SNE and interactive dashboard as claimed.",
@@ -2432,7 +2432,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-distance-metric-selection/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/spectral-similarity-distance-metric-selection/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Spectral data are imported into Python using matchms, and basic specXplore data processing is performed... The processing workflows and intermediate data structures used by specXplore are built upon a cohort of open-source software Python data science packages, namely, matchms.",
       "asbval:note": "matchms is confirmed as used for spectral data import and processing; metadata handling is consistent with its documented role.",
@@ -2452,7 +2452,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-distance-metric-selection/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/spectral-similarity-distance-metric-selection/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For the wheat data set, the pipeline preprocessing time was less than 15 min (on a MacBook Pro laptop with Apple M1 Pro processor 2021)... Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object (see illustrative example notebooks https://github.com/kevinmildau/specxplore-illustrative-examples).",
       "asbval:note": "Paper explicitly mentions Jupyter notebooks for preprocessing and pipeline execution.",
@@ -2472,7 +2472,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tsne-embedding-dimensionality-reduction/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/tsne-embedding-dimensionality-reduction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The dashboard makes use of a two-dimensional t-distributed stochastic neighbor embedding (t-SNE) overview network of the full pairwise similarity matrix as a jumping board for localized data exploration. Rather than being based on modified cosine scores, specXplore is based on ms2deepscore pairwise similarities... The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score.",
       "asbval:note": "Claim is directly supported by passage describing t-SNE embedding of ms2deepscore similarity matrix for 2-D visualization.",
@@ -2492,7 +2492,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tsne-embedding-dimensionality-reduction/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/tsne-embedding-dimensionality-reduction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "specXplore is based on ms2deepscore pairwise similarities, which can more accurately represent the structural similarities between compounds based on their spectra via a deep-learning-based embedding representation.",
       "asbval:note": "ms2deepscore is explicitly named and described as the primary similarity metric for the t-SNE embedding.",
@@ -2512,7 +2512,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tsne-embedding-dimensionality-reduction/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/tsne-embedding-dimensionality-reduction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "scikit-learn,21 and scipy.22... The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score.21,22,24",
       "asbval:note": "Paper lists scikit-learn as a dependency and cites it for t-SNE (reference 21), but does not explicitly name 'scikit-learn' as the t-SNE implementation tool. The paper uses scikit-learn for t-SNE but the card's phrasing 'Python (scikit-learn or similar)' is somewhat generic; scikit-learn is confirmed as a dependency used for t-SNE via citations.",
@@ -2532,7 +2532,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tsne-embedding-dimensionality-reduction/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/tsne-embedding-dimensionality-reduction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we propose a fluid means of dealing with mass spectral data using specXplore, an interactive Python dashboard providing interactive and complementary visualizations facilitating mass spectral similarity matrix exploration.",
       "asbval:note": "specXplore is the primary tool integrating t-SNE embedding and interactive visualization.",
@@ -2552,7 +2552,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tsne-embedding-dimensionality-reduction/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/tsne-embedding-dimensionality-reduction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For the wheat data set, the pipeline preprocessing time was less than 15 min (on a MacBook Pro laptop with Apple M1 Pro processor 2021)... Spectral data from .mgf files was loaded into the preprocessing jupyter notebooks and processed into a specXplore session object (see illustrative example notebooks https://github.com/kevinmildau/specxplore-illustrative-examples).",
       "asbval:note": "Jupyter notebooks are explicitly mentioned as the interactive environment for preprocessing and launching specXplore.",
@@ -2572,7 +2572,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tsne-embedding-dimensionality-reduction/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/tsne-embedding-dimensionality-reduction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Embeddings produced by t-SNE are built to preserve local neighborhoods in the high-dimensional space in their projection to a two-dimensional space.24 This focus may lead to difficulties in interpretation of t-SNE results as neglect of global similarity preservation may render cluster proximity a poor indicator of cluster similarity.",
       "asbval:note": "Paper confirms t-SNE preserves local neighborhoods but explicitly notes that t-SNE does NOT preserve global similarity well. The card claims t-SNE preserves 'local and global spectral relationships,' but the paper states t-SNE has a 'local focus' and may neglect 'global similarity preservation.' This is a partial match\u2014the tool does preserve local relationships but not global ones as claimed.",
@@ -2592,7 +2592,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tsne-embedding-dimensionality-reduction/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/tsne-embedding-dimensionality-reduction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The central overview of specXplore is based on a t-SNE embedding of the ms2deepscore pairwise similarity matrix serving as the primary similarity score.",
       "asbval:note": "Scope is consistent with paper's use of t-SNE on high-dimensional similarity matrices; the 'when NOT to use' criterion is logically sound.",
@@ -2612,7 +2612,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tsne-embedding-dimensionality-reduction/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/tsne-embedding-dimensionality-reduction/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "However, ms2deepscore may also introduce a much denser topology. At many reasonable threshold levels, node-link diagram representations of dense matrices tend to become unreadable for the network as a whole.",
       "asbval:note": "Paper confirms that t-SNE is used with dense similarity matrices (ms2deepscore produces dense topology), supporting the 'when NOT to use' criterion for sparse matrices.",
@@ -2632,7 +2632,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tsne-embedding-dimensionality-reduction/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/tsne-embedding-dimensionality-reduction/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For the wheat data set, the pipeline preprocessing time was less than 15 min... the processing time for the larger urine data set was less than 75 min, whereof approximately 62 min was taken up by MS2Query and 9 min for all pairwise spectral similarity computations.",
       "asbval:note": "Paper demonstrates that t-SNE computation is part of a batch preprocessing pipeline with significant computational cost, supporting the 'when NOT to use' criterion for real-time/streaming scenarios.",
@@ -2652,7 +2652,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tsne-embedding-dimensionality-reduction/009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/tsne-embedding-dimensionality-reduction/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The t-SNE embedding overview panel of specXplore provides the user with an abstract and condensed representation of the pairwise similarity matrix lacking a clear node grouping structure.",
       "asbval:note": "Paper describes t-SNE as providing an 'abstract' representation, supporting the claim that t-SNE axes are not directly interpretable.",
@@ -2672,7 +2672,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dashboard-session-initialization-verification/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/dashboard-session-initialization-verification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "dashboard-session-initialization-verification",
@@ -2685,7 +2685,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fixed-architecture-layer-validation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/fixed-architecture-layer-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "fixed-architecture-layer-validation",
@@ -2698,7 +2698,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interactive-application-accessibility-testing/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/interactive-application-accessibility-testing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "interactive-application-accessibility-testing",
@@ -2711,7 +2711,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/jupyter-notebook-workflow-automation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/jupyter-notebook-workflow-automation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "jupyter-notebook-workflow-automation",
@@ -2724,7 +2724,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-spectral-data-import/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/lc-ms-spectral-data-import/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "lc-ms-spectral-data-import",
@@ -2737,7 +2737,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectral-data-validation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/mass-spectral-data-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "mass-spectral-data-validation",
@@ -2750,7 +2750,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-coordinate-system-construction/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/mass-spectrometry-data-coordinate-system-construction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "mass-spectrometry-data-coordinate-system-construction",
@@ -2763,7 +2763,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-object-serialization-deserialization/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/python-object-serialization-deserialization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "python-object-serialization-deserialization",
@@ -2776,7 +2776,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/session-object-serialization/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/session-object-serialization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "session-object-serialization",
@@ -2789,7 +2789,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-overview-representation-generation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/spectral-overview-representation-generation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "spectral-overview-representation-generation",
@@ -2802,7 +2802,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-distance-metric-selection/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/spectral-similarity-distance-metric-selection/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "spectral-similarity-distance-metric-selection",
@@ -2815,7 +2815,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tsne-embedding-dimensionality-reduction/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/skill/tsne-embedding-dimensionality-reduction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "tsne-embedding-dimensionality-reduction",
@@ -2828,7 +2828,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "SpecXplore is a python dashboard tool for adjustable LC-MS/MS spectral data exploration.",
       "asbval:note": null,
@@ -2848,7 +2848,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "SpecXplore uses a t-SNE embedding to serve as an overview representation of mass spectral similarities.",
       "asbval:note": null,
@@ -2868,7 +2868,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "SpecXplore's t-SNE embedding is based on ms2deepscore.",
       "asbval:note": null,
@@ -2888,7 +2888,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "SpecXplore includes network views, similarity heatmaps, and fragmentation overview maps.",
       "asbval:note": null,
@@ -2908,7 +2908,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The specXplore workflow is separated into two stages.",
       "asbval:note": null,
@@ -2928,7 +2928,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "In the first stage of the specXplore workflow, the user processes spectral data to create a specxplore session data object.",
       "asbval:note": null,
@@ -2948,7 +2948,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Spectral data processing for specXplore is done in interactive Jupyter notebooks using the specXplore importing pipeline.",
       "asbval:note": null,
@@ -2968,7 +2968,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The specXplore importing pipeline produces a specXplore session data object that is saved to the hard drive.",
       "asbval:note": null,
@@ -2988,7 +2988,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04444/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The specXplore session data object can be fed directly into a specxplore dashboard session instance for visual exploration.",
       "asbval:note": null,

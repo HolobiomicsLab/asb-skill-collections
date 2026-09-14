@@ -789,7 +789,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_001/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query searches for both exact matches and analogues in a reference library. First, potential candidates are selected based on MS2Deepscore, followed by re-ranking the spectra by using a random forest model.",
       "asbval:note": "Paper describes MS2Query as a unified workflow that handles both exact matches and analogues in one run, not as separate architectural branches. Quote: 'MS2Query is a tool for rapid large-scale MS2 library matching that enables searching both for analogues and exact matches in one run.' The workflow is single-path with differentiated outputs, not split branches.",
@@ -809,7 +809,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_001/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of GitHub in the paper passages. The paper states MS2Query is 'available as a well-tested and open-source Python library' and models/data are 'available on Zenodo' but GitHub is not explicitly named.",
@@ -829,7 +829,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_001/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present MS2Query, a machine learning-based tool that integrates mass spectral embedding-based chemical similarity predictors (Spec2Vec and MS2Deepscore) as well as detected precursor masses to rank potential analogues and exact matches.",
       "asbval:note": "MS2Query is the primary tool discussed throughout the paper.",
@@ -849,7 +849,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_001/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is available as a well-tested and open-source Python library that facilitates easy access to both researchers and developers.",
       "asbval:note": "Paper explicitly states MS2Query is a Python library.",
@@ -869,7 +869,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_001/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Fig. 1 Schematic workflow of MS2Query. MS2Query searches for both exact matches and analogues in a reference library. First, potential candidates are selected based on MS2Deepscore, followed by re-ranking the spectra by using a random forest model.",
       "asbval:note": "Paper provides a schematic workflow diagram (Fig. 1) but it depicts a unified single-path workflow, not separate branches. The paper does not reference 'PR #72' or any GitHub pull request. The workflow is: MS2Deepscore selection \u2192 random forest re-ranking \u2192 output (exact matches or analogues distinguished by mass difference threshold, not architectural branches).",
@@ -889,7 +889,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card assumes MS2Query has 'two-branch orchestration logic' with separate processing branches for exact matches vs. analogues. The paper describes a single unified workflow that produces both types of outputs from one pipeline, differentiated post-hoc by precursor m/z difference thresholds (>1 Da for analogues, <1 Da for exact matches), not by architectural branching.",
@@ -906,7 +906,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_002/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To reduce the toll on working memory, this information is stored in a SQLite library. The precursor m/z is stored in a separate SQLite library column for efficient look-up speeds.",
       "asbval:note": "Paper explicitly describes SQLite storage for library data and metadata.",
@@ -926,7 +926,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_002/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query first uses MS2Deepscore to calculate spectral similarity scores between all library spectra and a query spectrum... Next, the top 2000 spectra with the highest MS2Deepscore are selected.",
       "asbval:note": "Paper describes the workflow for reading library data and returning ranked candidate matches. SQLite storage is confirmed in passage 10.",
@@ -946,7 +946,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_002/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present MS2Query, a machine learning-based tool that integrates mass spectral embedding-based chemical similarity predictors (Spec2Vec and MS2Deepscore) as well as detected precursor masses to rank potential analogues and exact matches.",
       "asbval:note": "MS2Query is the primary tool described throughout the paper.",
@@ -966,7 +966,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_002/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is available as a well-tested and open-source Python library that facilitates easy access to both researchers and developers.",
       "asbval:note": "Paper explicitly states MS2Query is a Python library.",
@@ -986,7 +986,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_002/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_002/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GitHub is not mentioned in any of the provided passages. Paper mentions MS2Query is 'open-source' and available on Zenodo, but GitHub is not explicitly referenced.",
@@ -1006,7 +1006,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_002/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_002/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For each found analogue it also returns the chemical compound classes based on ClassyFire annotations to facilitate biochemical interpretation of the results... it outputs a CSV file with all relevant information about the found matches for the query spectra.",
       "asbval:note": "Paper describes structured output with match information and scores (MS2Query score, Tanimoto scores, etc.).",
@@ -1026,7 +1026,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card frames the task as 'reconstructing' a module, which implies reverse-engineering or refactoring existing code. The paper describes MS2Query as an implemented tool with published code, not a reconstruction task. The framing suggests a development/engineering task rather than a research discovery task.",
@@ -1042,7 +1042,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_003/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query optimises re-ranking of the best analogue or exact match at the top by using a random forest that combines five features... As input for the random forest model, MS2Query uses 5 different features, calculated between the query spectrum and each of the 2000 preselected library spectra. These features are Spec2Vec similarity score, query precursor m/z, precursor m/z difference, a weighted average MS2Deepscore over 10 chemically similar library molecules, and the average Tanimoto score for these 10 chemically similar library molecules.",
       "asbval:note": "Paper describes computing 'average MS2Deepscore over 10 chemically similar library molecules' and 'average Tanimoto score for these 10 chemically similar library molecules', not 'average InChIKey score' or 'neighbourhood score' by those names. The 10 chemically similar molecules are selected based on Tanimoto score of chemical fingerprints derived from InChIKeys, but the scoring features are named differently than the card claims.",
@@ -1062,7 +1062,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_003/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present MS2Query, a machine learning-based tool that integrates mass spectral embedding-based chemical similarity predictors (Spec2Vec and MS2Deepscore) as well as detected precursor masses to rank potential analogues and exact matches.",
       "asbval:note": "MS2Query is the primary tool discussed throughout the paper.",
@@ -1082,7 +1082,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_003/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is available as a well-tested and open-source Python library that facilitates easy access to both researchers and developers.",
       "asbval:note": "Paper explicitly states MS2Query is a Python library.",
@@ -1102,7 +1102,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_003/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not mention GitHub. Paper states MS2Query is 'available as a well-tested and open-source Python library' and mentions 'The model as well as the library mass spectra used are available on Zenodo' but does not explicitly name GitHub as a repository or tool used.",
@@ -1122,7 +1122,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_003/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_003/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query outputs a CSV file with all relevant information about the found matches for the query spectra. For each found analogue it also returns the chemical compound classes based on ClassyFire annotations to facilitate biochemical interpretation of the results.",
       "asbval:note": "Paper confirms MS2Query outputs scored candidate matches in CSV format, but does not name the output fields as 'average InChIKey score' or 'neighbourhood score'. The actual features used are: Spec2Vec similarity, precursor m/z, precursor m/z difference, average MS2Deepscore over 10 similar molecules, and average Tanimoto score for those 10 molecules.",
@@ -1142,7 +1142,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_003/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_003/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To test the performance of MS2Query, models were trained using publicly available mass spectra from GNPS... The performance on finding exact matches and finding analogues was tested separately using two different test sets... Benchmarking MS2Query on reference mass spectra and experimental case studies demonstrate improved reliability and scalability.",
       "asbval:note": "Paper includes extensive benchmarking and testing of the scoring module's correctness via 20-fold cross-validation and case studies.",
@@ -1162,7 +1162,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card's research question names 'average InChIKey score' and 'neighbourhood score' as specific output fields, but the paper's actual implementation uses 'average MS2Deepscore over 10 chemically similar library molecules' and 'average Tanimoto score for these 10 chemically similar library molecules' as the key scoring features. These are functionally related (both use the 10 most chemically similar molecules selected via InChIKey/Tanimoto), but the terminology differs.",
@@ -1178,7 +1178,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_004/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_004/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The dataset was first cleaned using matchms. The metadata was cleaned to get a uniform format and to remove or correct misplaced metadata. The dataset is split into positive and negative mode spectra. The intensities of the mass fragmentation peaks are normalised. Peaks above 1000 Da were removed and peaks with an intensity of less than 0,1 % of the highest peak were removed. For spectra with more than 500 peaks, the peaks with the lowest intensities were removed. Spectra with less than 3 peaks were completely removed from the library.",
       "asbval:note": "The paper describes pre-processing applied to LIBRARY spectra during data cleaning (passage 8), not specifically to QUERY spectra before library matching. The research question conflates library data cleaning with query spectrum processing. Query spectrum processing is mentioned only briefly: 'only for the query spectra the embeddings have to be computed' (passage 9), but detailed query-specific pre-processing steps are not explicitly documented in the passages.",
@@ -1198,7 +1198,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_004/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_004/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present MS2Query, a machine learning-based tool that integrates mass spectral embedding-based chemical similarity predictors (Spec2Vec and MS2Deepscore) as well as detected precursor masses to rank potential analogues and exact matches.",
       "asbval:note": "MS2Query is the primary tool discussed throughout the paper.",
@@ -1218,7 +1218,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_004/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_004/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is available as a well-tested and open-source Python library that facilitates easy access to both researchers and developers.",
       "asbval:note": "MS2Query is explicitly described as a Python library.",
@@ -1238,7 +1238,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_004/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_004/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GitHub is not mentioned in any of the provided passages. While the paper states MS2Query is 'open-source', no specific repository platform (GitHub, GitLab, etc.) is named.",
@@ -1258,7 +1258,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_004/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_004/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The intensities of the mass fragmentation peaks are normalised. Peaks above 1000 Da were removed and peaks with an intensity of less than 0,1 % of the highest peak were removed. For spectra with more than 500 peaks, the peaks with the lowest intensities were removed. Spectra with less than 3 peaks were completely removed from the library.",
       "asbval:note": "These processing steps are documented for LIBRARY spectra during data cleaning, not as an explicit output of query spectrum processing. The paper does not describe a separate 'cleaned query spectra' output artifact.",
@@ -1278,7 +1278,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_004/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_004/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not describe delivery of a separate 'pre-processing module source code' or 'test suite' as a distinct output. While MS2Query source code is available, the passages do not isolate or document a dedicated pre-processing module with its own test suite.",
@@ -1298,7 +1298,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_004/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_004/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No CHANGELOG.md or version documentation of spectrum processing module changes is mentioned in the provided passages.",
@@ -1318,7 +1318,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_004/scope_drift",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_004/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The research question and expected outputs focus on reconstructing a 'spectrum processing module' as a standalone deliverable, but the paper describes MS2Query as an integrated tool where spectrum pre-processing (via matchms) is one step in a larger workflow. The card treats pre-processing as a separable, documentable module; the paper treats it as part of data preparation for benchmarking and case studies.",
@@ -1335,7 +1335,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_005/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_005/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes MS2Query as a machine learning tool for MS2 mass spectra analogue search. It discusses the tool's functionality, benchmarking, case studies, and implementation details (Python library, SQLite storage, random forest model training). There is no mention of GitHub Actions, Sonarcloud, CI/CD pipelines, PR workflows, quality gates, or status badges. The paper is a scientific publication describing the tool's methodology and validation, not a software engineering/DevOps documentation.",
@@ -1355,7 +1355,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_005/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_005/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of GitHub Actions workflow files, YAML configuration, or PR #62 in any passage. The paper does not discuss CI/CD infrastructure.",
@@ -1375,7 +1375,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_005/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_005/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of CI status badges or README documentation in the paper.",
@@ -1395,7 +1395,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_005/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_005/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of Sonarcloud, code quality metrics, coverage analysis, or quality gates in any passage.",
@@ -1415,7 +1415,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_005/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_005/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present MS2Query, a machine learning-based tool that integrates mass spectral embedding-based chemical similarity predictors (Spec2Vec and MS2Deepscore) as well as detected precursor masses to rank potential analogues and exact matches.",
       "asbval:note": "MS2Query is the primary subject of the paper and is extensively documented throughout.",
@@ -1435,7 +1435,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_005/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_005/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GitHub is not mentioned in the paper. The paper states 'MS2Query is available as a well-tested and open-source Python library' but does not specify the hosting platform or repository management system.",
@@ -1455,7 +1455,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_005/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_005/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is available as a well-tested and open-source Python library that facilitates easy access to both researchers and developers.",
       "asbval:note": "Python is confirmed as the implementation language for MS2Query.",
@@ -1475,7 +1475,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_005/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_005/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GitHub Actions is not mentioned anywhere in the paper. The paper does not discuss CI/CD infrastructure or automated workflows.",
@@ -1495,7 +1495,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_005/scope_drift",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/card/https___zenodo_org_badge_latestdoi_306595295_svg__task_005/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate task card describes a software engineering/DevOps task (CI/CD pipeline configuration with GitHub Actions and Sonarcloud integration), while the paper is a scientific publication describing the MS2Query metabolomics tool's methodology, validation, and case studies.",
@@ -1513,7 +1513,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/candidate-match-retrieval/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/candidate-match-retrieval/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is available as a well-tested and open-source Python library... The workflow for running MS2Query first uses MS2Deepscore to calculate spectral similarity scores between all library spectra and a query spectrum... Next, the top 2000 spectra with the highest MS2Deepscore are selected. MS2Query optimises re-ranking of the best analogue or exact match at the top by using a random forest... To reduce the toll on working memory, this information is stored in a SQLite library.",
       "asbval:note": "Fully supported: paper describes SQLite-backed library storage, pre-computed embeddings, and re-ranking workflow.",
@@ -1533,7 +1533,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/candidate-match-retrieval/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/candidate-match-retrieval/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query searches for both exact matches and analogues in a reference library. First, potential candidates are selected based on MS2Deepscore, followed by re-ranking the spectra by using a random forest model.",
       "asbval:note": "Directly supported by paper's description of the two-stage workflow.",
@@ -1553,7 +1553,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/candidate-match-retrieval/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/candidate-match-retrieval/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query, a tool for rapid large-scale MS2 library matching that enables searching both for analogues and exact matches in one run.",
       "asbval:note": "Scope aligns with paper's stated purpose.",
@@ -1573,7 +1573,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/candidate-match-retrieval/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/candidate-match-retrieval/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The biggest speed improvement was achieved by pre-calculating mass spectral embeddings for Spec2Vec and MS2Deepscore... The library spectra are already known, therefore the embeddings for all library spectra are pre-calculated and stored.",
       "asbval:note": "Paper confirms pre-computed embeddings are central to the workflow.",
@@ -1593,7 +1593,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/candidate-match-retrieval/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/candidate-match-retrieval/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The spectra were uploaded on GNPS to run MSCluster to create consensus spectra. These consensus spectra were taken as input for MS2Query.",
       "asbval:note": "Paper confirms MS2Query expects pre-clustered spectra; external tools (MSCluster) are used for clustering.",
@@ -1613,7 +1613,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/candidate-match-retrieval/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/candidate-match-retrieval/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "A spectrum was considered fully annotated if it has a valid SMILES, InChiKey and Inchi... Some spectra in the GNPS library do not have an InChIKey stored. A method from matchms extras was used to add missing InChIKeys by searching the compound name and molecular formula on PubChem.",
       "asbval:note": "Paper confirms SMILES, InChI, InChIKey are required for training and library construction.",
@@ -1633,7 +1633,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/candidate-match-retrieval/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/candidate-match-retrieval/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present MS2Query, a machine learning-based tool that integrates mass spectral embedding-based chemical similarity predictors (Spec2Vec and MS2Deepscore)... MS2Query optimises re-ranking of the best analogue or exact match at the top by using a random forest that combines five features.",
       "asbval:note": "MS2Query is the primary orchestrating tool; role is accurately described.",
@@ -1653,7 +1653,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/candidate-match-retrieval/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/candidate-match-retrieval/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The workflow for running MS2Query first uses MS2Deepscore to calculate spectral similarity scores between all library spectra and a query spectrum... Next, the top 2000 spectra with the highest MS2Deepscore are selected.",
       "asbval:note": "MS2Deepscore role is accurately described; it is used for initial candidate selection.",
@@ -1673,7 +1673,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/candidate-match-retrieval/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/candidate-match-retrieval/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "As input for the random forest model, MS2Query uses 5 different features, calculated between the query spectrum and each of the 2000 preselected library spectra. These features are 1. Spec2Vec similarity, 2. query precursor m/z, 3. precursor m/z difference, 4. an average MS2Deepscore over 10 chemically similar library molecules, and 5. the average Tanimoto score for these 10 chemically most similar library molecules.",
       "asbval:note": "Spec2Vec is confirmed as one of five features used in re-ranking.",
@@ -1693,7 +1693,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/candidate-match-retrieval/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/candidate-match-retrieval/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MZMine is not mentioned anywhere in the paper. The paper mentions MSCluster (for consensus spectra generation) and XCMS3 (for LC-MS feature picking), but not MZMine. The card appears to conflate general preprocessing tools with those actually used in the paper.",
@@ -1713,7 +1713,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/candidate-match-retrieval/010",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/candidate-match-retrieval/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "First, an rdkit daylight fingerprint (2,048 bits) is generated from the SMILES for each unique 2D structure in the library... The SMILES were first sanitized by rdkit.",
       "asbval:note": "RDKit is used for fingerprint generation and SMILES sanitization, but the paper does not state that RDKit computes SMILES, InChI, or InChIKey annotations from raw data. Instead, these are sourced from GNPS library or PubChem lookup. RDKit's role is narrower than claimed.",
@@ -1733,7 +1733,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/candidate-metadata-record-serialization/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/candidate-metadata-record-serialization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query outputs a CSV file with all relevant information about the found matches for the query spectra. For each found analogue it also returns the chemical compound classes based on ClassyFire annotations to facilitate biochemical interpretation of the results.",
       "asbval:note": "Paper confirms CSV output with match information and ClassyFire molecular class annotations. However, the paper does not explicitly name 'InChIKey score' or 'neighbourhood score' as output fields. The paper describes features used internally (MS2Deepscore, Spec2Vec similarity, precursor m/z difference, average MS2Deepscore over 10 similar molecules, average Tanimoto score) but does not confirm all these are serialized as named output columns. The 'neighbourhood score' terminology does not appear in the paper; the paper uses 'average MS2Deepscore of multiple library molecules' and 'average Tanimoto score for these 10 chemically similar library molecules' instead.",
@@ -1753,7 +1753,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/candidate-metadata-record-serialization/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/candidate-metadata-record-serialization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is available as a well-tested and open-source Python library that facilitates easy access to both researchers and developers.",
       "asbval:note": "MS2Query is confirmed as the primary tool. The paper explicitly states it outputs CSV files with standardized information.",
@@ -1773,7 +1773,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/candidate-metadata-record-serialization/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/candidate-metadata-record-serialization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is available as a well-tested and open-source Python library",
       "asbval:note": "MS2Query is implemented in Python, confirming Python as the implementation language.",
@@ -1793,7 +1793,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/candidate-metadata-record-serialization/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/candidate-metadata-record-serialization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For doing the modified cosine score calculations the implementation of matchms was used, which is optimized for performance. The dataset was first cleaned using matchms. The metadata was cleaned to get a uniform format and to remove or correct misplaced metadata.",
       "asbval:note": "matchms is confirmed as used in MS2Query for spectrum data handling and metadata management, supporting the claim that it is a data structure for spectrum objects.",
@@ -1813,7 +1813,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/candidate-metadata-record-serialization/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/candidate-metadata-record-serialization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query outputs a CSV file with all relevant information about the found matches for the query spectra. For each found analogue it also returns the chemical compound classes based on ClassyFire annotations to facilitate biochemical interpretation of the results.",
       "asbval:note": "Paper confirms MS2Query orchestrates workflow, uses random forest model, and outputs CSV. However, the paper does not explicitly state that MS2Query 'expects results in CSV format with standardized column names'\u2014rather, it produces CSV output. The phrasing in the card suggests MS2Query expects CSV input, which is not supported by the paper.",
@@ -1833,7 +1833,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/candidate-metadata-record-serialization/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/candidate-metadata-record-serialization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query outputs a CSV file with all relevant information about the found matches for the query spectra. For each found analogue it also returns the chemical compound classes based on ClassyFire annotations to facilitate biochemical interpretation of the results.",
       "asbval:note": "Paper confirms CSV output with match information and ClassyFire annotations. However, the paper does not explicitly list column names such as 'InChIKey score' or 'neighbourhood score'. The paper describes internal features (MS2Deepscore, Spec2Vec, precursor m/z, Tanimoto score) but does not confirm these exact field names appear in the CSV output. The paper states 'all relevant information' is included but does not enumerate the specific columns.",
@@ -1853,7 +1853,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/candidate-metadata-record-serialization/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/candidate-metadata-record-serialization/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query outputs a CSV file with all relevant information about the found matches for the query spectra.",
       "asbval:note": "Paper confirms CSV output. JSON and database formats are not mentioned in the paper. The paper does not use the term 'InChIKey score' or 'neighbourhood score' as named output metrics; instead it uses Tanimoto score, MS2Deepscore, and Spec2Vec similarity.",
@@ -1873,7 +1873,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/candidate-metadata-record-serialization/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/candidate-metadata-record-serialization/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "By using a minimum threshold for this score, unreliable matches can be filtered out. A minimal threshold of 0.633 for the random forest score was used to determine if an analogue was selected.",
       "asbval:note": "Paper confirms that MS2Query supports threshold-based filtering on the random forest model score. The example threshold of 0.633 is mentioned in the paper.",
@@ -1893,7 +1893,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-pipeline-orchestration/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ci-cd-pipeline-orchestration/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper is about MS2Query, a machine learning-based tool for mass spectral analogue search in metabolomics. It contains no discussion of CI/CD pipelines, GitHub Actions, or software engineering practices related to continuous integration/deployment. The paper focuses on metabolite annotation methodology, benchmarking, and case studies.",
@@ -1913,7 +1913,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-pipeline-orchestration/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ci-cd-pipeline-orchestration/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GitHub Actions is not mentioned anywhere in the paper. While the paper mentions MS2Query is available as an open-source Python library on GitHub (passage [4]), there is no discussion of GitHub Actions workflows, CI/CD orchestration, or automated testing infrastructure.",
@@ -1933,7 +1933,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-pipeline-orchestration/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ci-cd-pipeline-orchestration/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Sonarcloud is not mentioned in the paper. The paper does not discuss static code analysis tools or code quality scanning platforms.",
@@ -1953,7 +1953,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-pipeline-orchestration/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ci-cd-pipeline-orchestration/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "While the paper mentions MS2Query is a Python library and discusses model training and testing, there is no mention of setuptools or `python setup.py test` commands. The paper describes benchmarking methodology and case studies but not build/test infrastructure.",
@@ -1973,7 +1973,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-pipeline-orchestration/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ci-cd-pipeline-orchestration/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present MS2Query, a machine learning-based tool that integrates mass spectral embedding-based chemical similarity predictors (Spec2Vec and MS2Deepscore) as well as detected precursor masses to rank potential analogues and exact matches.",
       "asbval:note": "MS2Query is the primary subject of the paper. However, the card's claim that MS2Query is a tool used within a CI/CD pipeline context is not supported\u2014MS2Query is a metabolomics analysis tool, not a CI/CD orchestration tool.",
@@ -1993,7 +1993,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-status-badge-deployment/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ci-status-badge-deployment/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about MS2Query, a machine learning tool for mass spectra-based metabolite analogue search in metabolomics. No mention of GitHub Actions, CI/CD pipelines, status badges, or software engineering workflows. This task card describes a software engineering DevOps practice entirely unrelated to the paper's scientific content.",
@@ -2013,7 +2013,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-status-badge-deployment/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ci-status-badge-deployment/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GitHub Actions is a CI/CD orchestration platform. Paper does not discuss GitHub Actions, continuous integration workflows, or CI/CD practices.",
@@ -2033,7 +2033,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-status-badge-deployment/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ci-status-badge-deployment/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Sonarcloud is a static code analysis tool. Paper does not mention Sonarcloud or static code analysis in the context of software quality gates.",
@@ -2053,7 +2053,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-status-badge-deployment/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ci-status-badge-deployment/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "shields.io is a badge generation service for CI/CD status. Paper does not discuss badge generation or status visualization tools.",
@@ -2073,7 +2073,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-status-badge-deployment/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ci-status-badge-deployment/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is available as a well-tested and open-source Python library",
       "asbval:note": "Paper confirms MS2Query is open-source and available as a Python library (passage 4), but provides no evidence that it uses GitHub Actions, Sonarcloud, or CI status badges. The paper focuses on the scientific methodology and benchmarking of MS2Query, not its software engineering infrastructure.",
@@ -2093,7 +2093,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/code-quality-metrics-interpretation/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/code-quality-metrics-interpretation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about MS2Query, a machine learning tool for mass spectrometry analogue search in metabolomics. No discussion of code quality metrics, CI pipelines, Sonarcloud, coverage analysis, technical debt, or refactoring priorities. This is a software engineering/DevOps skill entirely absent from the paper's scope.",
@@ -2113,7 +2113,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/code-quality-metrics-interpretation/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/code-quality-metrics-interpretation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Sonarcloud is not mentioned anywhere in the paper. The paper focuses on MS2Query's algorithmic performance, benchmarking, and case studies, not on CI/CD tooling or static analysis platforms.",
@@ -2133,7 +2133,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/code-quality-metrics-interpretation/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/code-quality-metrics-interpretation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GitHub Actions is not mentioned in the paper. The paper does not discuss CI/CD workflows, pull request processes, or GitHub integration.",
@@ -2153,7 +2153,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/code-quality-metrics-interpretation/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/code-quality-metrics-interpretation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No CI_build.yml file or GitHub Actions workflow configuration is discussed in the paper. The paper describes MS2Query as a Python library but does not detail CI/CD configuration files.",
@@ -2173,7 +2173,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/code-quality-metrics-interpretation/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/code-quality-metrics-interpretation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present MS2Query, a machine learning-based tool that integrates mass spectral embedding-based chemical similarity predictors (Spec2Vec and MS2Deepscore) as well as detected precursor masses to rank potential analogues and exact matches.",
       "asbval:note": "MS2Query is the primary subject of the paper. However, the card's framing of MS2Query as a tool for 'code-quality-metrics-interpretation' is incorrect\u2014MS2Query is a metabolomics tool, not a code quality tool.",
@@ -2193,7 +2193,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-workflow-configuration/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/github-actions-workflow-configuration/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about MS2Query, a machine learning tool for mass spectra-based metabolite analogue search in metabolomics. No mention of GitHub Actions, CI/CD workflows, Sonarcloud, or automated testing infrastructure. The paper focuses on metabolomics methodology, not software engineering practices.",
@@ -2213,7 +2213,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-workflow-configuration/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/github-actions-workflow-configuration/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GitHub Actions is not mentioned anywhere in the paper. The paper does mention GitHub repository (passage [4]: 'MS2Query is available as a well-tested and open-source Python library') but does not discuss CI/CD automation or GitHub Actions workflows.",
@@ -2233,7 +2233,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-workflow-configuration/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/github-actions-workflow-configuration/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Sonarcloud is not mentioned in the paper. The paper discusses MS2Query's performance benchmarking and validation but not static code analysis tools or quality gates.",
@@ -2253,7 +2253,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-workflow-configuration/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/github-actions-workflow-configuration/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is available as a well-tested and open-source Python library",
       "asbval:note": "Paper confirms MS2Query is a Python library and mentions it is 'well-tested', but does not describe setup.py test commands, unit test execution, or pull request validation workflows. The testing mentioned is benchmarking and case studies, not automated CI test execution.",
@@ -2273,7 +2273,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-workflow-configuration/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/github-actions-workflow-configuration/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is available as a well-tested and open-source Python library that facilitates easy access to both researchers and developers.",
       "asbval:note": "MS2Query is confirmed as an open-source Python library on GitHub, but the paper does not describe or demonstrate CI workflow integration with GitHub Actions or Sonarcloud. The paper is a scientific publication about the MS2Query algorithm and benchmarking, not a software engineering guide.",
@@ -2293,7 +2293,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-workflow-configuration/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/github-actions-workflow-configuration/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not address CI/CD configuration, GitHub Actions workflows, or automated testing on pull requests. It is a scientific paper on metabolomics methodology.",
@@ -2313,7 +2313,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-workflow-configuration/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/github-actions-workflow-configuration/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss pull request workflows, automated verification, or code quality standards enforcement. These are software engineering practices not covered in this metabolomics research paper.",
@@ -2333,7 +2333,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/inchikey-structural-similarity-scoring/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/inchikey-structural-similarity-scoring/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "As input for the random forest model, MS2Query uses 5 different features, calculated between the query spectrum and each of the 2000 preselected library spectra. These features are 1. Spec2Vec similarity score, 2. query precursor m/z, 3. precursor m/z difference, 4. an average MS2Deepscore over 10 chemically similar library molecules, and 5. the average Tanimoto score for these 10 chemically most similar library molecules.",
       "asbval:note": "The paper describes five features for the random forest, but Feature 5 is 'average Tanimoto score' (molecular fingerprint-based chemical similarity), NOT 'InChIKey-based structural similarity.' The card conflates InChIKey (a chemical identifier) with Tanimoto scoring (a fingerprint-based similarity metric). The paper uses Tanimoto scores computed from rdkit daylight fingerprints derived from SMILES, not InChIKey-based similarity. Feature 4 is average MS2Deepscore over 10 chemically similar library molecules (selected by Tanimoto score). The card's framing of 'InChIKey-based structural similarity' is misleading; the actual metric is Tanimoto score.",
@@ -2353,7 +2353,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/inchikey-structural-similarity-scoring/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/inchikey-structural-similarity-scoring/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not describe 'InChIKey layers' or aggregation across such layers. The paper uses InChIKeys to identify unique 2D structures and to select the 10 most chemically similar library molecules (by Tanimoto score), but does not aggregate 'across InChIKey layers.' The aggregation is across the 10 most similar library structures' Tanimoto scores and MS2Deepscore values.",
@@ -2373,7 +2373,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/inchikey-structural-similarity-scoring/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/inchikey-structural-similarity-scoring/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present MS2Query, a tool for rapid large-scale MS2 library matching that enables searching both for analogues and exact matches in one run.",
       "asbval:note": null,
@@ -2393,7 +2393,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/inchikey-structural-similarity-scoring/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/inchikey-structural-similarity-scoring/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The workflow for running MS2Query first uses MS2Deepscore to calculate spectral similarity scores between all library spectra and a query spectrum.",
       "asbval:note": null,
@@ -2413,7 +2413,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/inchikey-structural-similarity-scoring/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/inchikey-structural-similarity-scoring/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is available as a well-tested and open-source Python library that facilitates easy access to both researchers and developers.",
       "asbval:note": null,
@@ -2433,7 +2433,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/inchikey-structural-similarity-scoring/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/inchikey-structural-similarity-scoring/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query optimises re-ranking of the best analogue or exact match at the top by using a random forest that combines five features.",
       "asbval:note": "MS2Query does orchestrate the workflow and uses five features for the random forest, but Feature 5 is 'average Tanimoto score' (fingerprint-based), not 'InChIKey structural similarity.' InChIKeys are used to identify structures and select the 10 most similar molecules, but the similarity metric itself is Tanimoto, not InChIKey-based.",
@@ -2453,7 +2453,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/inchikey-structural-similarity-scoring/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/inchikey-structural-similarity-scoring/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The workflow for running MS2Query first uses MS2Deepscore to calculate spectral similarity scores between all library spectra and a query spectrum. Next, the top 2000 spectra with the highest MS2Deepscore are selected.",
       "asbval:note": "MS2Deepscore does pre-rank the top 2000 candidates correctly. However, 'InChIKey scoring' does not operate on this set in the way the card implies. Instead, Tanimoto scoring (fingerprint-based) and MS2Deepscore averaging operate on the top 2000 to select the 10 most chemically similar library molecules.",
@@ -2473,7 +2473,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/library-analogue-search-branching/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/library-analogue-search-branching/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query was designed to search for analogues and exact matches in one run... The workflow for running MS2Query first uses MS2Deepscore to calculate spectral similarity scores between all library spectra and a query spectrum... Next, the top 2000 spectra with the highest MS2Deepscore are selected. MS2Query optimises re-ranking of the best analogue or exact match at the top by using a random forest that combines five features.",
       "asbval:note": "Fully supported. Paper explicitly states MS2Query searches for both exact matches and analogues in one run, uses MS2Deepscore for initial selection, and random forest for re-ranking.",
@@ -2493,7 +2493,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/library-analogue-search-branching/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/library-analogue-search-branching/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present MS2Query, a tool for rapid large-scale MS2 library matching that enables searching both for analogues and exact matches in one run.",
       "asbval:note": "MS2Query is the primary tool; case-insensitive match confirmed.",
@@ -2513,7 +2513,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/library-analogue-search-branching/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/library-analogue-search-branching/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The workflow for running MS2Query first uses MS2Deepscore to calculate spectral similarity scores between all library spectra and a query spectrum... By using pre-computed MS2Deepscore embeddings for library spectra, this full-library comparison can be computed much faster than existing alternatives... Next, the top 2000 spectra with the highest MS2Deepscore are selected.",
       "asbval:note": "Fully supported. Paper confirms MS2Deepscore embeddings are pre-computed and used to select top 2000 spectra.",
@@ -2533,7 +2533,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/library-analogue-search-branching/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/library-analogue-search-branching/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "As input for the random forest model, MS2Query uses five different features, calculated between the query spectrum and each of the 2000 preselected library spectra. These features are Spec2Vec similarity score, query precursor m/z, precursor m/z difference, a weighted average MS2Deepscore over 10 chemically similar library molecules, and the average Tanimoto score for these 10 chemically similar library molecules.",
       "asbval:note": "Fully supported. Spec2Vec similarity score is explicitly listed as one of the five features used by the random forest model for re-ranking.",
@@ -2553,7 +2553,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/library-analogue-search-branching/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/library-analogue-search-branching/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is available as a well-tested and open-source Python library... MS2Query is available as an easily installable python package, which is stable and well-tested. The model as well as the library mass spectra used are available on Zenodo.",
       "asbval:note": "Partially supported. Paper confirms MS2Query is open-source and available on GitHub (repo URL provided in card), but paper does not explicitly discuss using GitHub for architectural documentation or PR tracking\u2014this is a reasonable inference for an open-source project but not directly stated.",
@@ -2573,7 +2573,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/library-analogue-search-branching/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/library-analogue-search-branching/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is available as a well-tested and open-source Python library that facilitates easy access to both researchers and developers.",
       "asbval:note": "Fully supported. Paper explicitly states MS2Query is a Python library.",
@@ -2593,7 +2593,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/library-analogue-search-branching/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/library-analogue-search-branching/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query was designed to search for analogues and exact matches in one run... MS2Query searches for both exact matches and analogues in a reference library.",
       "asbval:note": "Fully supported. The unified single-run workflow is explicitly documented.",
@@ -2613,7 +2613,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/library-analogue-search-branching/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/library-analogue-search-branching/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query was designed to search for analogues and exact matches in one run... The workflow for running MS2Query first uses MS2Deepscore to calculate spectral similarity scores between all library spectra and a query spectrum... Next, the top 2000 spectra with the highest MS2Deepscore are selected. MS2Query optimises re-ranking of the best analogue or exact match at the top by using a random forest that combines five features.",
       "asbval:note": "Fully supported. The paper describes the exact control-flow architecture for handling both match types in a single pass.",
@@ -2633,7 +2633,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-ms-spectrum-parsing/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ms-ms-spectrum-parsing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The dataset was first cleaned using matchms33. The metadata was cleaned to get a uniform format and to remove or correct misplaced metadata... Spectra with less than 3 peaks were completely removed from the library.",
       "asbval:note": "Paper confirms parsing and normalization of MS/MS spectra using matchms, including intensity normalization and peak filtering. However, paper does not explicitly mention USI (Unfragmented Spectrum Index) format support. Paper confirms MGF, mzML, mzXML, JSON, and MSP are supported via matchms (passage 8 mentions 'matchms' for data cleaning). USI is not mentioned in any passage.",
@@ -2653,7 +2653,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-ms-spectrum-parsing/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ms-ms-spectrum-parsing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The dataset was first cleaned using matchms33... The intensities of the mass fragmentation peaks are normalised. Peaks above 1000 Da were removed and peaks with an intensity of less than 0,1 % of the highest peak were removed.",
       "asbval:note": "Paper describes normalization and filtering of MS/MS spectra via matchms, confirming the core functionality. USI format is not mentioned in the paper.",
@@ -2673,7 +2673,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-ms-spectrum-parsing/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ms-ms-spectrum-parsing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The dataset was first cleaned using matchms33. The metadata was cleaned to get a uniform format and to remove or correct misplaced metadata... To calculate the cosine score, the cosine greedy implementation of matchms33 was used with a fragment mass tolerance of 0.05 Da.",
       "asbval:note": "matchms is explicitly named and confirmed as the core library for parsing and normalizing MS/MS spectra. Passage 8 confirms its use for data cleaning, metadata unification, and spectral similarity calculations.",
@@ -2693,7 +2693,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-ms-spectrum-parsing/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ms-ms-spectrum-parsing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query uses MS2Deepscore to calculate spectral similarity scores between all library spectra and a query spectrum... MS2Query optimises re-ranking of the best analogue or exact match at the top by using a random forest that combines five features.",
       "asbval:note": "MS2Query is confirmed as the primary tool that consumes parsed spectra and applies MS2Deepscore embeddings and random forest ranking.",
@@ -2713,7 +2713,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-ms-spectrum-parsing/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ms-ms-spectrum-parsing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MZMine is not mentioned anywhere in the paper. The paper does mention FBMN (Feature-Based Molecular Networking) and MSCluster for consensus spectrum creation, but MZMine is not explicitly discussed as a preprocessing tool in this work.",
@@ -2733,7 +2733,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-ms-spectrum-parsing/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ms-ms-spectrum-parsing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "First, an rdkit35 daylight fingerprint (2,048 bits) is generated from the SMILES for each unique 2D structure in the library. The SMILES were first sanitized by rdkit.",
       "asbval:note": "RDKit is confirmed to be used for generating molecular fingerprints from SMILES and for sanitizing SMILES strings. However, the paper does not describe it as 'optional' or explicitly as a dependency for extracting molecular classes; it is used for fingerprint generation during model training, not during spectrum parsing per se.",
@@ -2753,7 +2753,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-ms-spectrum-parsing/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ms-ms-spectrum-parsing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The precursor m/z is the only metadata entry that is required for MS2Query and which serves to calculate the mass differences. Other spectra metadata such as retention time, SMILES, or compound names can be returned for results found by MS2Query.",
       "asbval:note": "Paper confirms that precursor m/z is required and that ionization mode is used (positive/negative mode spectra are handled separately). However, 'charge' is not explicitly mentioned as a required or extracted metadata field. Pickled matchms objects and USI are not mentioned in the paper.",
@@ -2773,7 +2773,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-ms-spectrum-parsing/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ms-ms-spectrum-parsing/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "By using pre-computed MS2Deepscore embeddings for library spectra, this full-library comparison can be computed much faster than existing alternatives",
       "asbval:note": "Paper confirms that pre-computed embeddings are used and that parsing would be unnecessary in such cases.",
@@ -2793,7 +2793,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-ms-spectrum-parsing/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ms-ms-spectrum-parsing/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The test spectra were matched against a library of 302,514 spectra... MS2Query searches for both exact matches and analogues in a reference library.",
       "asbval:note": "Paper confirms that MS2Query operates on individual spectra within a library and performs ranking across separate records.",
@@ -2813,7 +2813,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-ms-spectrum-parsing/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ms-ms-spectrum-parsing/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The precursor m/z is the only metadata entry that is required for MS2Query and which serves to calculate the mass differences.",
       "asbval:note": "Paper confirms that precursor m/z is required for MS2Query. Ionization mode is used (positive/negative mode models are trained separately), confirming its importance.",
@@ -2833,7 +2833,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-data-preprocessing-pipeline/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ms2-data-preprocessing-pipeline/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The dataset was first cleaned using matchms. The metadata was cleaned to get a uniform format and to remove or correct misplaced metadata... The intensities of the mass fragmentation peaks are normalised. Peaks above 1000 Da were removed and peaks with an intensity of less than 0,1 % of the highest peak were removed. For spectra with more than 500 peaks, the peaks with the lowest intensities were removed. Spectra with less than 3 peaks were completely removed from the library.",
       "asbval:note": "Paper explicitly describes preprocessing steps including normalization, noise filtering (intensity thresholds, peak removal), and quality validation (minimum peak count requirement).",
@@ -2853,7 +2853,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-data-preprocessing-pipeline/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ms2-data-preprocessing-pipeline/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query first uses MS2Deepscore to calculate spectral similarity scores between all library spectra and a query spectrum... By using pre-computed MS2Deepscore embeddings for library spectra, this full-library comparison can be computed much faster than existing alternatives.",
       "asbval:note": "Paper demonstrates that preprocessed spectra (with standardized format and intensity) are required as input to MS2Query for reliable matching.",
@@ -2873,7 +2873,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-data-preprocessing-pipeline/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ms2-data-preprocessing-pipeline/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present MS2Query, a tool for rapid large-scale MS2 library matching that enables searching both for analogues and exact matches in one run.",
       "asbval:note": "MS2Query is confirmed as the primary tool for analogue and exact-match searching.",
@@ -2893,7 +2893,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-data-preprocessing-pipeline/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ms2-data-preprocessing-pipeline/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MZMine is not mentioned anywhere in the paper. The paper does not recommend MZMine for preprocessing. The paper uses MSCluster for consensus spectrum generation (case studies 1-3) and XCMS3 for feature picking (case study 4), not MZMine.",
@@ -2913,7 +2913,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-data-preprocessing-pipeline/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ms2-data-preprocessing-pipeline/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The dataset was first cleaned using matchms. The metadata was cleaned to get a uniform format and to remove or correct misplaced metadata... For doing the modified cosine score calculations the implementation of matchms was used, which is optimized for performance.",
       "asbval:note": "matchms is explicitly used for data cleaning, metadata standardization, and spectrum manipulation during preprocessing.",
@@ -2933,7 +2933,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-data-preprocessing-pipeline/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ms2-data-preprocessing-pipeline/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The data files for case study 4 were first converted to mzML format using Proteowizard... The resulting MS2 spectral MGF file was used to run MS2Query.",
       "asbval:note": "Paper confirms mzML and MGF formats are used, but does not explicitly mention msp or mzxml. Paper does describe consensus spectrum generation (MSCluster for cases 1-3) and feature picking (XCMS3 for case 4) to reduce multiple spectra per feature, but these are separate tools, not part of MS2Query's internal preprocessing.",
@@ -2953,7 +2953,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-data-preprocessing-pipeline/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ms2-data-preprocessing-pipeline/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These consensus spectra were taken as input for MS2Query... The resulting MS2 spectral MGF file was used to run MS2Query.",
       "asbval:note": "Paper demonstrates that consensus spectra (from MSCluster) and feature-picked spectra (from XCMS3) are prepared before MS2Query input, confirming MS2Query does not perform these operations internally.",
@@ -2973,7 +2973,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-data-preprocessing-pipeline/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ms2-data-preprocessing-pipeline/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These consensus spectra were taken as input for MS2Query.",
       "asbval:note": "Paper confirms that pre-clustered/consensus spectra can be used directly with MS2Query, but MZMine is not mentioned as a tool used in the paper. The paper uses MSCluster and XCMS3 instead.",
@@ -2993,7 +2993,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neighbourhood-density-computation/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/neighbourhood-density-computation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query optimises re-ranking of the best analogue or exact match at the top by using a random forest that combines five features... As input for the random forest model, MS2Query uses 5 different features, calculated between the query spectrum and each of the 2000 preselected library spectra. These features are Spec2Vec similarity score, query precursor m/z, precursor m/z difference, a weighted average MS2Deepscore over 10 chemically similar library molecules, and the average Tanimoto score for these 10 chemically similar library molecules.",
       "asbval:note": "The paper describes a feature based on 'average MS2Deepscore over 10 chemically similar library molecules' and 'average Tanimoto score for these 10 chemically similar library molecules', which implements the concept of neighbourhood-based re-ranking. However, the card's framing of 'neighbourhood density scores' as a distinct, named metric is not explicitly present. The paper uses these neighbourhood features within a random forest re-ranker, not as a standalone 'neighbourhood density' score. The card also claims InChIKey structural similarity is combined with neighbourhood scores, but the paper uses Tanimoto scores (molecular fingerprint-based chemical similarity), not explicitly InChIKey-based similarity.",
@@ -3013,7 +3013,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neighbourhood-density-computation/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/neighbourhood-density-computation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present MS2Query, a machine learning-based tool that integrates mass spectral embedding-based chemical similarity predictors (Spec2Vec and MS2Deepscore) as well as detected precursor masses to rank potential analogues and exact matches.",
       "asbval:note": "MS2Query is the primary tool discussed throughout the paper.",
@@ -3033,7 +3033,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neighbourhood-density-computation/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/neighbourhood-density-computation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The workflow for running MS2Query first uses MS2Deepscore to calculate spectral similarity scores between all library spectra and a query spectrum... By using pre-computed MS2Deepscore embeddings for library spectra, this full-library comparison can be computed much faster than existing alternatives.",
       "asbval:note": "MS2Deepscore is explicitly used to produce spectral embeddings and similarity scores as described in the card.",
@@ -3053,7 +3053,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neighbourhood-density-computation/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/neighbourhood-density-computation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is available as a well-tested and open-source Python library that facilitates easy access to both researchers and developers.",
       "asbval:note": "Paper confirms MS2Query is implemented as a Python library.",
@@ -3073,7 +3073,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neighbourhood-density-computation/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/neighbourhood-density-computation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query optimises re-ranking of the best analogue or exact match at the top by using a random forest that combines five features... These features are Spec2Vec similarity score, query precursor m/z, precursor m/z difference, a weighted average MS2Deepscore over 10 chemically similar library molecules, and the average Tanimoto score for these 10 chemically similar library molecules.",
       "asbval:note": "MS2Query does use a random forest with 5 features for re-ranking, and two of those features (average MS2Deepscore over 10 similar molecules and average Tanimoto score) implement neighbourhood-based logic. However, the paper does not label these as 'neighbourhood density score' or 'InChIKey score' explicitly; they are Tanimoto scores (fingerprint-based chemical similarity), not InChIKey-based similarity.",
@@ -3093,7 +3093,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neighbourhood-density-computation/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/neighbourhood-density-computation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "By using pre-computed MS2Deepscore embeddings for library spectra, this full-library comparison can be computed much faster than existing alternatives... To calculate the average MS2Deepscore of multiple chemically similar library molecules, the 10 most chemically similar library molecules based on the Tanimoto score are needed.",
       "asbval:note": "MS2Deepscore embeddings are pre-computed and used to identify and score neighbourhood proximity.",
@@ -3113,7 +3113,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neighbourhood-density-computation/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/neighbourhood-density-computation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The feature that has the biggest impact on the increased performance is the Average MS2Deepscore of multiple library molecules... if two library molecules are chemically very similar, it is expected that if one of these library molecules is a good analogue to the query molecule, the other is a good analogue as well.",
       "asbval:note": "The paper's principle of using neighbourhood information to filter and rank matches aligns with the card's description of when to apply this technique.",
@@ -3133,7 +3133,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neighbourhood-density-computation/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/neighbourhood-density-computation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To calculate the average MS2Deepscore of multiple chemically similar library molecules, the 10 most chemically similar library molecules based on the Tanimoto score are needed.",
       "asbval:note": "The paper specifies that 10 chemically similar library molecules are used for the neighbourhood feature, which aligns with the card's threshold of <10. However, the paper does not explicitly discuss the limitation of applying this when fewer than 10 candidates are available.",
@@ -3153,7 +3153,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-filtering-noise-removal/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/peak-filtering-noise-removal/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The dataset was first cleaned using matchms. The metadata was cleaned to get a uniform format and to remove or correct misplaced metadata... The intensities of the mass fragmentation peaks are normalised. Peaks above 1000 Da were removed and peaks with an intensity of less than 0,1 % of the highest peak were removed. For spectra with more than 500 peaks, the peaks with the lowest intensities were removed. Spectra with less than 3 peaks were completely removed from the library.",
       "asbval:note": "Verbatim presence of peak filtering and noise removal operations. The paper explicitly describes removing low-intensity peaks and normalizing intensities as part of data cleaning before MS2Query processing.",
@@ -3173,7 +3173,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-filtering-noise-removal/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/peak-filtering-noise-removal/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present MS2Query, a tool for rapid large-scale MS2 library matching that enables searching both for analogues and exact matches in one run.",
       "asbval:note": "MS2Query is confirmed as the primary tool for library matching. Case-insensitive match: 'MS2Query' in paper.",
@@ -3193,7 +3193,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-filtering-noise-removal/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/peak-filtering-noise-removal/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MZMine is not mentioned anywhere in the paper passages. The paper uses matchms for preprocessing and MSCluster for consensus spectrum generation, not MZMine.",
@@ -3213,7 +3213,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-filtering-noise-removal/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/peak-filtering-noise-removal/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The dataset was first cleaned using matchms. The metadata was cleaned to get a uniform format and to remove or correct misplaced metadata, filtering out spectra with less than three peaks and normalizing intensities... For doing the modified cosine score calculations the implementation of matchms was used, which is optimized for performance.",
       "asbval:note": "matchms is explicitly named and confirmed as the tool used for data cleaning, filtering, and preprocessing operations.",
@@ -3233,7 +3233,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-filtering-noise-removal/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/peak-filtering-noise-removal/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The data files for case study 4 were first converted to mzML format using Proteowizard... The resulting MS2 spectral MGF file was used to run MS2Query.",
       "asbval:note": "Paper confirms mzML and MGF formats are used as inputs to MS2Query workflow. However, the paper does not explicitly mention json, msp, or mzxml formats. Only mzML and MGF are demonstrated in the case studies.",
@@ -3253,7 +3253,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-filtering-noise-removal/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/peak-filtering-noise-removal/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In the case of case studies 1-3 the spectra were uploaded on GNPS to run MSCluster to create consensus spectra. These consensus spectra were taken as input for MS2Query.",
       "asbval:note": "Paper confirms that consensus/clustered spectra are used as input to MS2Query, supporting the principle that pre-clustered spectra bypass individual spectrum filtering. However, MZMine is not mentioned; MSCluster is used instead.",
@@ -3273,7 +3273,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-filtering-noise-removal/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/peak-filtering-noise-removal/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The intensities of the mass fragmentation peaks are normalised. Peaks above 1000 Da were removed and peaks with an intensity of less than 0,1 % of the highest peak were removed... Spectra with less than 3 peaks were completely removed from the library.",
       "asbval:note": "Paper demonstrates that filtering is combined with normalization and multiple preprocessing steps as part of a unified data cleaning workflow.",
@@ -3293,7 +3293,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-filtering-noise-removal/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/peak-filtering-noise-removal/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss or warn against aggressive filtering thresholds or the risk of removing legitimate low-abundance ions. This is a cautionary principle not addressed in the paper.",
@@ -3313,7 +3313,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precursor-mass-filtering/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/precursor-mass-filtering/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query optimises re-ranking of the best analogue or exact match at the top by using a random forest that combines five features... As input for the random forest model, MS2Query uses five different features, calculated between the query spectrum and each of the 2000 preselected library spectra. These features are Spec2Vec similarity score, query precursor m/z, precursor m/z difference, a weighted average MS2Deepscore over 10 chemically similar library molecules, and the average Tanimoto score for these 10 chemically similar library molecules.",
       "asbval:note": "The paper does use precursor m/z difference as a feature in the random forest re-ranker, but MS2Query does NOT apply precursor mass filtering as a preselection step before re-ranking. The paper explicitly states: 'In contrast to existing methods, no preselection on precursor m/z is needed.' The precursor m/z difference is used as one of five input features to the random forest, not as a filtering threshold. The card's framing of 'filtering' by mass tolerance is misleading\u2014MS2Query integrates precursor m/z as a feature without applying hard mass tolerance cutoffs.",
@@ -3333,7 +3333,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precursor-mass-filtering/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/precursor-mass-filtering/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query optimises re-ranking of the best analogue or exact match at the top by using a random forest that combines five features... precursor m/z difference... The random forest model was trained to predict Tanimoto scores (molecular fingerprint-based chemical similarity) based on these 5 features.",
       "asbval:note": "MS2Query does integrate precursor m/z difference as a feature input to the random forest re-ranker (correct), but the card's description of 'precursor mass filtering' is misleading. MS2Query does not apply hard precursor mass tolerance filtering; instead, it uses precursor m/z difference as a soft feature in the re-ranking model. The paper states 'no preselection on precursor m/z is needed,' which contradicts the card's framing of filtering.",
@@ -3353,7 +3353,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precursor-mass-filtering/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/precursor-mass-filtering/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The workflow for running MS2Query first uses MS2Deepscore to calculate spectral similarity scores between all library spectra and a query spectrum... Next, the top 2000 spectra with the highest MS2Deepscore are selected.",
       "asbval:note": "MS2Deepscore is correctly identified as the upstream scorer that provides top candidates. However, the card's claim that 'precursor mass filtering is applied' after MS2Deepscore is misleading\u2014MS2Query uses precursor m/z as a feature in re-ranking, not as a hard filter.",
@@ -3373,7 +3373,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precursor-mass-filtering/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/precursor-mass-filtering/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MZMine is not mentioned anywhere in the paper. The paper describes data preprocessing using matchms (passage 8: 'The dataset was first cleaned using matchms') and XCMS3 for case study 4 (passage 12: 'LC-MS features were picked using XCMS3'). The card appears to have conflated or invented MZMine as a preprocessing tool for MS2Query.",
@@ -3393,7 +3393,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precursor-mass-filtering/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/precursor-mass-filtering/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The workflow for running MS2Query first uses MS2Deepscore to calculate spectral similarity scores between all library spectra and a query spectrum... Next, the top 2000 spectra with the highest MS2Deepscore are selected. MS2Query optimises re-ranking of the best analogue or exact match at the top by using a random forest that combines five features.",
       "asbval:note": "The workflow does retrieve top candidates via MS2Deepscore and then re-rank using a random forest that includes precursor m/z difference as a feature. However, the card's framing of 'filtering by precursor mass tolerance' is not accurate to MS2Query's actual implementation, which does not apply hard mass tolerance cutoffs but instead uses precursor m/z difference as a soft feature in the re-ranking model.",
@@ -3413,7 +3413,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precursor-mass-filtering/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/precursor-mass-filtering/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query searches for both exact matches and analogues in a reference library. First, potential candidates are selected based on MS2Deepscore, followed by re-ranking the spectra by using a random forest model... The test set for searching for exact matches ('exact matches test set') contains spectra that have at least one spectrum in the library from exactly the same molecule. The test set to test the performance for an analogue search ('analogues test set') contains spectra that do not have an exact match to a library spectrum.",
       "asbval:note": "MS2Query does distinguish between exact matches and analogues, but not via hard precursor mass filtering. The paper explicitly states 'no preselection on precursor m/z is needed,' meaning MS2Query does not filter out large precursor mass deviations before re-ranking. Instead, precursor m/z difference is one of five features used by the random forest to rank candidates. The card's description of filtering by mass tolerance is not how MS2Query actually works.",
@@ -3433,7 +3433,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pull-request-change-tracking/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/pull-request-change-tracking/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper is a methods/tool paper describing MS2Query's design, benchmarking, and case studies. It does not discuss pull requests, version control workflows, code diffs, or architectural change tracking. The paper presents the final tool design, not a retrospective analysis of how PRs modified the codebase.",
@@ -3453,7 +3453,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pull-request-change-tracking/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/pull-request-change-tracking/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of PR #72, pull request history, or version control branching in the paper. The paper describes MS2Query's final workflow (MS2Deepscore \u2192 top 2000 selection \u2192 random forest re-ranking) but does not document how this was introduced via PRs or trace architectural evolution through commits.",
@@ -3473,7 +3473,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pull-request-change-tracking/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/pull-request-change-tracking/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not reference GitHub PR history, diffs, or commit-level analysis. While MS2Query is hosted on GitHub (https://github.com/iomega/ms2query), the paper itself is a published scientific article describing the tool's methods and validation, not a guide to tracking PR-based changes.",
@@ -3493,7 +3493,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pull-request-change-tracking/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/pull-request-change-tracking/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is available as a well-tested and open-source Python library that facilitates easy access to both researchers and developers.",
       "asbval:note": "The paper confirms MS2Query is a Python library, but does not discuss using Python to parse or analyze source code for control-flow extraction. The claim conflates the implementation language of MS2Query itself with a methodology for analyzing code changes.",
@@ -3513,7 +3513,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pull-request-change-tracking/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/pull-request-change-tracking/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query searches for both exact matches and analogues in a reference library. First, potential candidates are selected based on MS2Deepscore, followed by re-ranking the spectra by using a random forest model.",
       "asbval:note": "The paper describes MS2Query's workflows and branching logic (exact matches vs. analogues, MS2Deepscore selection, random forest re-ranking), but does not frame this as a case study in PR-change tracking or architectural evolution analysis. The workflows are presented as the final design, not as a target for tracing how PRs modified the codebase.",
@@ -3533,7 +3533,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-automated-test-execution/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/python-automated-test-execution/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is available as a well-tested and open-source Python library",
       "asbval:note": "Paper confirms MS2Query is open-source Python with testing, but does not explicitly describe CI/CD workflows, automated test execution on commits/PRs, or continuous integration setup. The claim describes a software engineering practice (CI/CD automation) that is not detailed in the paper's scientific content.",
@@ -3553,7 +3553,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-automated-test-execution/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/python-automated-test-execution/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not mention GitHub Actions, CI workflows, or any continuous integration platform. The paper focuses on MS2Query's scientific methodology and benchmarking, not its development infrastructure.",
@@ -3573,7 +3573,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-automated-test-execution/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/python-automated-test-execution/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No GitHub repository URL, GitHub Actions workflow file, or CI configuration details are mentioned in the provided passages.",
@@ -3593,7 +3593,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-automated-test-execution/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/python-automated-test-execution/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "make sure the existing tests still work by running ``python setup.py test``",
       "asbval:note": "The card references setup.py test command, which is confirmed in the scope section's mention of setup.py-based test suites. However, this specific quote does not appear in the provided passages; it is inferred from the card's scope description.",
@@ -3613,7 +3613,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-automated-test-execution/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/python-automated-test-execution/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of Sonarcloud, static code analysis, or code quality scanning tools in the provided passages.",
@@ -3633,7 +3633,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-automated-test-execution/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/python-automated-test-execution/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present MS2Query, a tool for rapid large-scale MS2 library matching that enables searching both for analogues and exact matches in one run.",
       "asbval:note": "MS2Query is confirmed as the primary tool/software discussed in the paper. However, the card's role description ('Orchestrates automated test execution...') does not match MS2Query's actual role in the paper, which is a mass spectrometry analogue search tool, not a CI/CD orchestrator.",
@@ -3653,7 +3653,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-automated-test-execution/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/python-automated-test-execution/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is available as a well-tested and open-source Python library that facilitates easy access to both researchers and developers.",
       "asbval:note": "MS2Query is confirmed to be a Python library. The card's evidence_spans reference 'python setup.py test', which is a standard Python testing pattern, but this exact phrase does not appear in the provided passages.",
@@ -3673,7 +3673,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-history-analysis/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/repository-history-analysis/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query searches for both exact matches and analogues in a reference library. First, potential candidates are selected based on MS2Deepscore, followed by re-ranking the spectra by using a random forest model.",
       "asbval:note": "Paper describes MS2Query's two-branch workflow (exact matches vs. analogues) and the architectural design (MS2Deepscore selection \u2192 random forest re-ranking), but does NOT discuss repository commit history, pull requests, or version control evolution. The claim conflates the software's functional architecture with repository-level analysis, which is outside the paper's scope.",
@@ -3693,7 +3693,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-history-analysis/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/repository-history-analysis/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention GitHub, commit history analysis, or pull request tracking. The paper cites a DOI (10.5281/zenodo.6811540) for data availability but does not discuss version control or repository analysis as a methodology.",
@@ -3713,7 +3713,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-history-analysis/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/repository-history-analysis/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is available as a well-tested and open-source Python library that facilitates easy access to both researchers and developers.",
       "asbval:note": "Paper confirms MS2Query is implemented in Python, but does not discuss using Python for code review or control-flow tracing as a methodology. The claim describes a development/analysis activity not addressed in the paper.",
@@ -3733,7 +3733,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-history-analysis/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/repository-history-analysis/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query searches for both exact matches and analogues in a reference library. First, potential candidates are selected based on MS2Deepscore, followed by re-ranking the spectra by using a random forest model.",
       "asbval:note": "Paper extensively documents MS2Query's two-branch workflow (exact matches and analogues) and the architectural design decisions.",
@@ -3753,7 +3753,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-history-analysis/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/repository-history-analysis/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The workflow for running MS2Query first uses MS2Deepscore to calculate spectral similarity scores between all library spectra and a query spectrum. Next, the top 2000 spectra with the highest MS2Deepscore are selected. MS2Query optimises re-ranking of the best analogue or exact match at the top by using a random forest that combines five features.",
       "asbval:note": "Paper documents the architectural design and data flow through the two-branch workflow (MS2Deepscore selection \u2192 random forest re-ranking), but does NOT address repository history, commit history, or pull request analysis. The scope claim mixes software architecture (supported) with version control analysis (not supported).",
@@ -3773,7 +3773,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scoring-module-unit-testing/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/scoring-module-unit-testing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query uses five different features, calculated between the query spectrum and each of the 2000 preselected library spectra. These features are Spec2Vec similarity score, query precursor m/z, precursor m/z difference, a weighted average MS2Deepscore over 10 chemically similar library molecules, and the average Tanimoto score for these 10 chemically most similar library molecules.",
       "asbval:note": "Paper describes the scoring module computing five features (Spec2Vec similarity, precursor m/z, precursor m/z difference, average MS2Deepscore, average Tanimoto score) via a random forest model, not specifically 'InChIKey score' and 'neighbourhood score' as named in the card. The card's terminology does not match the paper's actual scoring outputs. The paper does validate these scores through benchmarking and cross-validation, but not through unit tests as the card claims.",
@@ -3793,7 +3793,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scoring-module-unit-testing/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/scoring-module-unit-testing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "pytest is not mentioned anywhere in the paper. The paper does not describe unit testing frameworks or test infrastructure.",
@@ -3813,7 +3813,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scoring-module-unit-testing/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/scoring-module-unit-testing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "setuptools is not mentioned in the paper. The paper states MS2Query is 'available as a well-tested and open-source Python library' but does not specify the packaging or test runner tools used.",
@@ -3833,7 +3833,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scoring-module-unit-testing/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/scoring-module-unit-testing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present MS2Query, a machine learning-based tool that integrates mass spectral embedding-based chemical similarity predictors (Spec2Vec and MS2Deepscore) as well as detected precursor masses to rank potential analogues and exact matches.",
       "asbval:note": "MS2Query is the primary tool described in the paper and contains the scoring module being discussed.",
@@ -3853,7 +3853,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scoring-module-unit-testing/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/scoring-module-unit-testing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query optimises re-ranking of the best analogue or exact match at the top by using a random forest that combines five features. The random forest predicts a score between 0 and 1 between each library and query mass spectrum.",
       "asbval:note": "The paper describes a random forest model that combines five features to produce a score between 0 and 1, but does not use the terminology 'InChIKey score' or 'neighbourhood score'. The paper does describe computing 'average MS2Deepscore over 10 chemically similar library molecules' which could be loosely interpreted as a 'neighbourhood score', but this is not the paper's terminology.",
@@ -3873,7 +3873,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scoring-module-unit-testing/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/scoring-module-unit-testing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is available as an easily installable python package, which is stable and well-tested. The model as well as the library mass spectra used are available on Zenodo. MS2Query is fully automatic and was designed with the end-user in mind. For example, it outputs a CSV file with all relevant information about the found matches for the query spectra.",
       "asbval:note": "The paper confirms MS2Query outputs results to a CSV file and is 'well-tested', but does not describe unit testing as a validation gate or discuss score range validation before output.",
@@ -3893,7 +3893,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-testing-unit-validation/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/software-testing-unit-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes MS2Query as a machine learning tool for MS2 mass spectra analogue search. It discusses benchmarking, validation, and case studies, but does not address unit testing practices, test frameworks, or continuous integration workflows. The paper is a scientific publication describing the tool's functionality and performance, not a software development guide.",
@@ -3913,7 +3913,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-testing-unit-validation/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/software-testing-unit-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is available as a well-tested and open-source Python library",
       "asbval:note": "Paper confirms MS2Query is a Python library, but does not discuss unit testing infrastructure, setup.py test commands, or test execution workflows.",
@@ -3933,7 +3933,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-testing-unit-validation/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/software-testing-unit-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention pytest, unittest, or any test framework. No reference to setup.py test command or automated testing infrastructure.",
@@ -3953,7 +3953,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-testing-unit-validation/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/software-testing-unit-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention GitHub Actions, continuous integration, or any CI/CD platform. The paper references a GitHub repository URL but only in the context of data availability.",
@@ -3973,7 +3973,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-testing-unit-validation/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/software-testing-unit-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present MS2Query, a machine learning-based tool that integrates mass spectral embedding-based chemical similarity predictors (Spec2Vec and MS2Deepscore) as well as detected precursor masses to rank potential analogues and exact matches.",
       "asbval:note": "MS2Query is the primary subject of the paper. However, the card's framing of MS2Query as 'software project being tested' in the context of unit testing is not supported by the paper, which focuses on the tool's scientific validation and benchmarking, not its internal testing infrastructure.",
@@ -3993,7 +3993,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-testing-unit-validation/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/software-testing-unit-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss code modification workflows, pull requests, or development practices. It is a scientific publication describing the tool's design and validation, not a development guide.",
@@ -4013,7 +4013,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-testing-unit-validation/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/software-testing-unit-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not describe test file structure, setup.py configuration, or test dependencies. No mention of development workflow inputs.",
@@ -4033,7 +4033,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-testing-unit-validation/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/software-testing-unit-validation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not describe test execution reports, coverage metrics, or error logging. The paper reports benchmarking results and validation metrics, which are different from unit test outputs.",
@@ -4053,7 +4053,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sonarcloud-static-code-analysis-integration/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/sonarcloud-static-code-analysis-integration/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about MS2Query, a machine learning-based tool for MS2 mass spectra analogue search in metabolomics. No mention of Sonarcloud, GitHub Actions CI/CD workflows, static code analysis, or code quality scanning. This is a software engineering DevOps task entirely unrelated to the paper's scientific content.",
@@ -4073,7 +4073,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sonarcloud-static-code-analysis-integration/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/sonarcloud-static-code-analysis-integration/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss GitHub Actions, CI/CD workflows, or continuous integration platforms. The paper is a scientific publication on metabolomics analysis methodology, not a software engineering guide.",
@@ -4093,7 +4093,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sonarcloud-static-code-analysis-integration/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/sonarcloud-static-code-analysis-integration/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper contains no reference to Sonarcloud, static code analysis tools, or code quality metrics. This is a DevOps/software engineering tool not mentioned in the metabolomics research paper.",
@@ -4113,7 +4113,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sonarcloud-static-code-analysis-integration/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/sonarcloud-static-code-analysis-integration/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is available as a well-tested and open-source Python library",
       "asbval:note": "Paper confirms MS2Query is a Python library and mentions testing, but does not discuss setup.py, test execution frameworks, or CI workflows. The claim conflates the language (Python) with a specific testing/CI context not present in the paper.",
@@ -4133,7 +4133,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sonarcloud-static-code-analysis-integration/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/sonarcloud-static-code-analysis-integration/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query, a machine learning-based tool that integrates mass spectral embedding-based chemical similarity predictors (Spec2Vec and MS2Deepscore) as well as detected precursor masses to rank potential analogues and exact matches. Benchmarking MS2Query on reference mass spectra and experimental case studies demonstrate improved reliability and scalability.",
       "asbval:note": "MS2Query is the primary subject of the paper. It is described as a tool for MS2 spectral analogue search with demonstrated reliability and speed performance.",
@@ -4153,7 +4153,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-intensity-normalisation/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-intensity-normalisation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The intensities of the mass fragmentation peaks are normalised. Peaks above 1000 Da were removed and peaks with an intensity of less than 0,1 % of the highest peak were removed.",
       "asbval:note": "Paper performs intensity normalization as part of data cleaning (passage 8), but the card's framing emphasizes this as a standalone preprocessing step 'before library matching' for query spectra. The paper actually normalizes library spectra during data cleaning, not query spectra as a separate preprocessing step. The normalization is part of the overall data cleaning pipeline, not a distinct pre-query-matching step as the card implies.",
@@ -4173,7 +4173,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-intensity-normalisation/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-intensity-normalisation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query, a machine learning-based tool that integrates mass spectral embedding-based chemical similarity predictors (Spec2Vec and MS2Deepscore) as well as detected precursor masses to rank potential analogues and exact matches... MS2Query optimises re-ranking of the best analogue or exact match at the top by using a random forest that combines five features.",
       "asbval:note": "MS2Query is confirmed to use MS2Deepscore embeddings and random forest re-ranking for library matching.",
@@ -4193,7 +4193,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-intensity-normalisation/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-intensity-normalisation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MZmine is not mentioned anywhere in the paper. The paper uses XCMS3 for peak picking (passage 12: 'LC-MS features were picked using XCMS3') and MSCluster for consensus spectra creation (passage 12: 'spectra were uploaded on GNPS to run MSCluster to create consensus spectra'). The card conflates or misidentifies the tool used.",
@@ -4213,7 +4213,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-intensity-normalisation/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-intensity-normalisation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For doing the modified cosine score calculations the implementation of matchms was used, which is optimized for performance... The dataset was first cleaned using matchms. The metadata was cleaned to get a uniform format and to remove or correct misplaced metadata.",
       "asbval:note": "matchms is confirmed as a Python library used for spectrum handling and data cleaning operations in the paper.",
@@ -4233,7 +4233,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-intensity-normalisation/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-intensity-normalisation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The test spectra were matched against a library of 302,514 spectra... The dataset was first cleaned using matchms. The metadata was cleaned to get a uniform format and to remove or correct misplaced metadata. The dataset is split into positive and negative mode spectra. The intensities of the mass fragmentation peaks are normalised.",
       "asbval:note": "The paper does normalize intensities and process spectra in MGF format (passage 12 mentions 'MGF file'), but normalization occurs as part of library data cleaning, not as a separate preprocessing step for query spectra before MS2Query. The card's framing of 'prior to MS2Query library matching' is not explicitly supported; the paper normalizes library spectra during preparation, not query spectra as a distinct preprocessing step.",
@@ -4253,7 +4253,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-intensity-normalisation/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-intensity-normalisation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These consensus spectra were taken as input for MS2Query... the spectra were uploaded on GNPS to run MSCluster to create consensus spectra.",
       "asbval:note": "The paper does use GNPS preprocessing (MSCluster for consensus spectra) before MS2Query, but does not explicitly state whether GNPS output includes normalization. The card's claim about GNPS preprocessing is plausible but not directly confirmed in the passages.",
@@ -4273,7 +4273,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-candidate-ranking/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-library-candidate-ranking/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query optimises re-ranking of the best analogue or exact match at the top by using a random forest that combines five features... As input for the random forest model, MS2Query uses 5 different features, calculated between the query spectrum and each of the 2000 preselected library spectra. These features are Spec2Vec similarity score, query precursor m/z, precursor m/z difference, a weighted average MS2Deepscore over 10 chemically similar library molecules, and the average Tanimoto score for these 10 chemically most similar library molecules.",
       "asbval:note": "The paper does combine structural similarity and spectral neighbourhood density via random forest, but the five features used are: (1) Spec2Vec similarity, (2) query precursor m/z, (3) precursor m/z difference, (4) average MS2Deepscore over 10 chemically similar library molecules, and (5) average Tanimoto score for those 10 molecules. The card claims 'InChIKey score' as a feature, but the paper uses Tanimoto score (molecular fingerprint-based chemical similarity) and does not explicitly name InChIKey as a direct input feature to the random forest. The 'spectral neighbourhood density' concept aligns with feature 4 (average MS2Deepscore of multiple library molecules), but the card's terminology differs from the paper's actual feature set.",
@@ -4293,7 +4293,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-candidate-ranking/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-library-candidate-ranking/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query searches for both exact matches and analogues in a reference library... MS2Query optimises re-ranking of the best analogue or exact match at the top by using a random forest that combines five features. The random forest predicts a score between 0 and 1 between each library and query mass spectrum. By using a minimum threshold for this score, unreliable matches can be filtered out.",
       "asbval:note": null,
@@ -4313,7 +4313,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-candidate-ranking/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-library-candidate-ranking/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The workflow for running MS2Query first uses MS2Deepscore to calculate spectral similarity scores between all library spectra and a query spectrum... Next, the top 2000 spectra with the highest MS2Deepscore are selected. MS2Query optimises re-ranking of the best analogue or exact match at the top by using a random forest that combines five features.",
       "asbval:note": null,
@@ -4333,7 +4333,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-candidate-ranking/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-library-candidate-ranking/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The random forest predicts a score between 0 and 1 between each library and query mass spectrum. By using a minimum threshold for this score, unreliable matches can be filtered out.",
       "asbval:note": null,
@@ -4353,7 +4353,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-candidate-ranking/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-library-candidate-ranking/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query optimises re-ranking of the best analogue or exact match at the top by using a random forest that combines five features... The random forest model was trained to predict Tanimoto scores (molecular fingerprint-based chemical similarity) based on these 5 features.",
       "asbval:note": "MS2Query does orchestrate the re-ranking via random forest, but the card claims it combines 'InChIKey and neighbourhood scores' specifically. The paper states the five features are: Spec2Vec similarity, query precursor m/z, precursor m/z difference, average MS2Deepscore over 10 chemically similar library molecules, and average Tanimoto score. The model is trained to predict Tanimoto scores (not InChIKey scores). The 'neighbourhood density' concept is present (feature 4), but 'InChIKey score' is not explicitly named as a feature.",
@@ -4373,7 +4373,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-candidate-ranking/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-library-candidate-ranking/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The workflow for running MS2Query first uses MS2Deepscore to calculate spectral similarity scores between all library spectra and a query spectrum... Next, the top 2000 spectra with the highest MS2Deepscore are selected.",
       "asbval:note": null,
@@ -4393,7 +4393,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-candidate-ranking/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-library-candidate-ranking/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention pytest, setuptools, or unit testing frameworks. The paper states 'MS2Query is available as a well-tested and open-source Python library' and describes benchmarking and validation procedures, but does not name specific testing tools or frameworks used.",
@@ -4413,7 +4413,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-database-querying/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-library-database-querying/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query first uses MS2Deepscore to calculate spectral similarity scores between all library spectra and a query spectrum... Next, the top 2000 spectra with the highest MS2Deepscore are selected... The precursor m/z is the only metadata entry that is required for MS2Query and which serves to calculate the mass differences... To reduce the toll on working memory, this information is stored in a SQLite library.",
       "asbval:note": "Claim is well-supported; paper describes SQLite storage, precursor m/z ranking, and spectral similarity scoring.",
@@ -4433,7 +4433,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-database-querying/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-library-database-querying/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query, a machine learning-based tool that integrates mass spectral embedding-based chemical similarity predictors (Spec2Vec and MS2Deepscore) as well as detected precursor masses to rank potential analogues and exact matches... MS2Query optimises re-ranking of the best analogue or exact match at the top by using a random forest that combines five features.",
       "asbval:note": "MS2Query is confirmed as the orchestrating framework with SQLite, MS2Deepscore, and random forest components.",
@@ -4453,7 +4453,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-database-querying/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-library-database-querying/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The biggest speed improvement was achieved by pre-calculating mass spectral embeddings for Spec2Vec and MS2Deepscore... The library spectra are already known, therefore the embeddings for all library spectra are pre-calculated and stored.",
       "asbval:note": "Confirmed that MS2Deepscore embeddings are precomputed and stored for fast retrieval.",
@@ -4473,7 +4473,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-database-querying/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-library-database-querying/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The dataset was first cleaned using matchms. The metadata was cleaned to get a uniform format... For doing the modified cosine score calculations the implementation of matchms was used, which is optimized for performance.",
       "asbval:note": "matchms is confirmed as used for spectrum handling and format manipulation.",
@@ -4493,7 +4493,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-database-querying/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-library-database-querying/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To reduce the toll on working memory, this information is stored in a SQLite library. The precursor m/z is stored in a separate SQLite library column for efficient look-up speeds... This top 10 list of most related InChIKeys is pre-calculated for every unique InChIKey in the library and stored in the SQLite library.",
       "asbval:note": "SQLite is confirmed as the storage backend for library data, embeddings, and indices.",
@@ -4513,7 +4513,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-database-querying/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-library-database-querying/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In the case of case studies 1-3 the spectra were uploaded on GNPS to run MSCluster to create consensus spectra... The data files for case study 4 were first converted to mzML format using Proteowizard... Next, LC-MS features were picked using XCMS3.",
       "asbval:note": "Paper uses MSCluster and XCMS3 for spectrum clustering and feature picking, not MZMine. MZMine is not mentioned in the paper. The card claims MZMine is used for preprocessing before MS2Query, but the paper uses alternative tools (MSCluster, XCMS3, Proteowizard).",
@@ -4533,7 +4533,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-database-querying/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-library-database-querying/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is available as a well-tested and open-source Python library... The precursor m/z is the only metadata entry that is required for MS2Query... MS2Query contains a workflow to automatically generate all needed files for an MS2Query library and a fully automatic workflow for training all the needed models on a new library.",
       "asbval:note": "Paper confirms SQLite storage and precomputed embeddings, but does not explicitly list all input formats (mzML, mgf, msp, mzxml, json, pickled matchms). The paper mentions matchms can handle these formats, but MS2Query's direct input format support is not fully enumerated in the passages.",
@@ -4553,7 +4553,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-database-querying/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-library-database-querying/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In contrast to existing methods, no preselection on precursor m/z is needed... MS2Query does not use any pre-filtering on the mass difference, and uses the exact same settings as for the analogue search.",
       "asbval:note": "Confirmed that MS2Query does not require precursor m/z preselection and can retrieve both exact and analogue matches.",
@@ -4573,7 +4573,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-database-querying/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-library-database-querying/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In the case of case studies 1-3 the spectra were uploaded on GNPS to run MSCluster to create consensus spectra... The data files for case study 4 were first converted to mzML format using Proteowizard... Next, LC-MS features were picked using XCMS3.",
       "asbval:note": "Paper confirms that preprocessing/clustering is needed before MS2Query (consensus spectra via MSCluster, feature picking via XCMS3), but recommends MSCluster and XCMS3, not MZMine FBMN. The principle is correct but the tool recommendation is inaccurate.",
@@ -4593,7 +4593,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-database-querying/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-library-database-querying/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query contains a workflow to automatically generate all needed files for an MS2Query library and a fully automatic workflow for training all the needed models on a new library.",
       "asbval:note": "Confirmed that library creation and model training are separate workflows from the querying task.",
@@ -4613,7 +4613,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-search-logic-control-flow/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-search-logic-control-flow/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query searches for both exact matches and analogues in a reference library. First, potential candidates are selected based on MS2Deepscore, followed by re-ranking the spectra by using a random forest model.",
       "asbval:note": "Paper describes MS2Query as performing both exact-match and analogue search in one run, but does NOT explicitly document separate 'branches' with distinct routing logic or control-flow decision criteria. The paper states both searches use the same unified workflow (MS2Deepscore \u2192 top 2000 selection \u2192 random forest re-ranking), not parallel branches with different routing. The claim overstates architectural separation; the paper shows a single unified pipeline that outputs both types of matches, not branching logic.",
@@ -4633,7 +4633,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-search-logic-control-flow/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-search-logic-control-flow/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query was designed to search for analogues and exact matches in one run... The workflow for running MS2Query first uses MS2Deepscore to calculate spectral similarity scores between all library spectra and a query spectrum... Next, the top 2000 spectra with the highest MS2Deepscore are selected. MS2Query optimises re-ranking of the best analogue or exact match at the top by using a random forest.",
       "asbval:note": "Paper confirms unified spectral similarity scoring (MS2Deepscore) and single workflow, but contradicts 'parallel pathways' framing. Both exact matches and analogues are processed through the same pipeline, not separate branches. The distinction is in the test sets used for benchmarking (exact-match test set vs. analogue test set), not in runtime control flow.",
@@ -4653,7 +4653,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-search-logic-control-flow/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-search-logic-control-flow/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present MS2Query, a machine learning-based tool that integrates mass spectral embedding-based chemical similarity predictors (Spec2Vec and MS2Deepscore) as well as detected precursor masses to rank potential analogues and exact matches.",
       "asbval:note": "MS2Query is the primary tool discussed throughout the paper.",
@@ -4673,7 +4673,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-search-logic-control-flow/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-search-logic-control-flow/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The workflow for running MS2Query first uses MS2Deepscore to calculate spectral similarity scores between all library spectra and a query spectrum.",
       "asbval:note": "MS2Deepscore is explicitly used as a core component within MS2Query's workflow.",
@@ -4693,7 +4693,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-search-logic-control-flow/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-search-logic-control-flow/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query optimises re-ranking of the best analogue or exact match at the top by using a random forest that combines five features. The random forest predicts a score between 0 and 1 between each library and query mass spectrum.",
       "asbval:note": "Random forest is confirmed as a component within MS2Query for re-ranking.",
@@ -4713,7 +4713,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-search-logic-control-flow/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-search-logic-control-flow/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The current version was trained using available data from GNPS. For training and testing of MS2Query, we used data from GNPS.",
       "asbval:note": "GNPS library is confirmed as the source for training and benchmarking data.",
@@ -4733,7 +4733,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-search-logic-control-flow/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-search-logic-control-flow/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query was designed to search for analogues and exact matches in one run... To test the performance of MS2Query, models were trained using publicly available mass spectra from GNPS. The performance on finding exact matches and finding analogues was tested separately using two different test sets.",
       "asbval:note": "Paper describes separate test sets for benchmarking exact matches vs. analogues, but the actual runtime workflow is unified, not branched. The 'split' exists in evaluation methodology, not in control-flow architecture.",
@@ -4753,7 +4753,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-search-logic-control-flow/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-search-logic-control-flow/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The workflow for running MS2Query first uses MS2Deepscore to calculate spectral similarity scores between all library spectra and a query spectrum... Next, the top 2000 spectra with the highest MS2Deepscore are selected. MS2Query optimises re-ranking of the best analogue or exact match at the top by using a random forest that combines five features... By using a minimum threshold for this score, unreliable matches can be filtered out.",
       "asbval:note": "Paper documents data flow (MS2Deepscore \u2192 top 2000 selection \u2192 random forest re-ranking \u2192 threshold filtering) and control points (threshold for filtering), but does not document distinct routing logic or decision criteria that direct spectra into separate branches. The workflow is sequential and unified.",
@@ -4773,7 +4773,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-ranking/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-similarity-ranking/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query uses this principle to improve prediction quality of an analogue search, by additionally using MS2Deepscore for similar library structures to predict if a molecule is a good analogue. In addition, MS2Query combines the strength of both MS2Deepscore and Spec2Vec and uses precursor m/z to further improve prediction quality.",
       "asbval:note": null,
@@ -4793,7 +4793,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-ranking/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-similarity-ranking/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query searches for both exact matches and analogues in a reference library. First, potential candidates are selected based on MS2Deepscore, followed by re-ranking the spectra by using a random forest model.",
       "asbval:note": null,
@@ -4813,7 +4813,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-ranking/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-similarity-ranking/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The workflow for running MS2Query first uses MS2Deepscore to calculate spectral similarity scores between all library spectra and a query spectrum. Next, the top 2000 spectra with the highest MS2Deepscore are selected.",
       "asbval:note": null,
@@ -4833,7 +4833,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-ranking/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-similarity-ranking/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query optimises re-ranking of the best analogue or exact match at the top by using a random forest that combines five features. The random forest predicts a score between 0 and 1 between each library and query mass spectrum.",
       "asbval:note": null,
@@ -4853,7 +4853,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-ranking/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-similarity-ranking/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For doing the modified cosine score calculations the implementation of matchms was used, which is optimized for performance. The dataset was first cleaned using matchms. The metadata was cleaned to get a uniform format and to remove or correct misplaced metadata.",
       "asbval:note": null,
@@ -4873,7 +4873,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-ranking/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-similarity-ranking/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "First, an rdkit daylight fingerprint (2,048 bits) is generated from the SMILES for each unique 2D structure in the library. The SMILES were first sanitized by rdkit.",
       "asbval:note": null,
@@ -4893,7 +4893,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-ranking/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-similarity-ranking/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is a tool for rapid large-scale MS2 library matching that enables searching both for analogues and exact matches in one run. MS2Query can reliably predict good analogues as well as exact library matches.",
       "asbval:note": null,
@@ -4913,7 +4913,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-ranking/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-similarity-ranking/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "By using pre-computed MS2Deepscore embeddings for library spectra, this full-library comparison can be computed much faster than existing alternatives. The library spectra are already known, therefore the embeddings for all library spectra are pre-calculated and stored.",
       "asbval:note": null,
@@ -4933,7 +4933,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-ranking/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-similarity-ranking/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These spectra were first cleaned and filtered, including unifying the format of the metadata, filtering out spectra with less than three peaks and normalizing intensities.",
       "asbval:note": "Paper describes preprocessing steps (filtering, normalization) but does not mention MZMine specifically. The paper uses MSCluster for consensus spectra generation in case studies, not MZMine.",
@@ -4953,7 +4953,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-ranking/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-similarity-ranking/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "By using pre-computed MS2Deepscore embeddings for library spectra, this full-library comparison can be computed much faster than existing alternatives. Therefore, only for the query spectra the embeddings have to be computed, instead of for all the library spectra.",
       "asbval:note": null,
@@ -4973,7 +4973,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/version-control-feature-branch-management/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/version-control-feature-branch-management/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper is about MS2Query, a machine learning tool for mass spectral analogue search in metabolomics. It does not discuss Git workflows, feature branching, pull requests, or version control practices. The paper focuses on the scientific methodology and benchmarking of the tool, not software development practices.",
@@ -4993,7 +4993,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/version-control-feature-branch-management/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/version-control-feature-branch-management/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not address Git workflows, feature branch management, pull requests, or collaborative version control practices. The scope describes software engineering practices that are not covered in this metabolomics research paper.",
@@ -5013,7 +5013,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/version-control-feature-branch-management/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/version-control-feature-branch-management/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Git is not mentioned anywhere in the paper. The paper does not discuss version control systems or Git workflows.",
@@ -5033,7 +5033,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/version-control-feature-branch-management/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/version-control-feature-branch-management/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GitHub is not mentioned in the paper. While MS2Query is described as 'available as a well-tested and open-source Python library' (passage 4), the paper does not discuss GitHub, repository hosting, pull requests, or branching workflows.",
@@ -5053,7 +5053,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/version-control-feature-branch-management/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/version-control-feature-branch-management/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is available as a well-tested and open-source Python library that facilitates easy access to both researchers and developers.",
       "asbval:note": "The paper confirms MS2Query is a Python library and mentions it is 'well-tested', but does not discuss specific test execution commands like `python setup.py test` or test suite validation procedures.",
@@ -5073,7 +5073,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/version-control-feature-branch-management/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/version-control-feature-branch-management/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query, a machine learning-based tool that integrates mass spectral embedding-based chemical similarity predictors (Spec2Vec and MS2Deepscore) as well as detected precursor masses to rank potential analogues and exact matches.",
       "asbval:note": "MS2Query is the primary subject of the paper and is extensively documented as a tool for searching analogues and exact matches in mass spectral libraries.",
@@ -5093,7 +5093,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-architecture-documentation/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/workflow-architecture-documentation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query searches for both exact matches and analogues in a reference library. First, potential candidates are selected based on MS2Deepscore, followed by re-ranking the spectra by using a random forest model.",
       "asbval:note": "Paper explicitly describes the two-branch workflow: exact matches and analogues are both searched in one run with shared initial candidate selection (MS2Deepscore top 2000) followed by re-ranking via random forest.",
@@ -5113,7 +5113,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-architecture-documentation/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/workflow-architecture-documentation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present MS2Query, a tool for rapid large-scale MS2 library matching that enables searching both for analogues and exact matches in one run.",
       "asbval:note": "MS2Query is confirmed as the primary tool implementing both branches.",
@@ -5133,7 +5133,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-architecture-documentation/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/workflow-architecture-documentation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The workflow for running MS2Query first uses MS2Deepscore to calculate spectral similarity scores between all library spectra and a query spectrum... Next, the top 2000 spectra with the highest MS2Deepscore are selected.",
       "asbval:note": "MS2Deepscore is confirmed as the initial filtering step for both branches.",
@@ -5153,7 +5153,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-architecture-documentation/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/workflow-architecture-documentation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query is available as a well-tested and open-source Python library that facilitates easy access to both researchers and developers.",
       "asbval:note": "Paper confirms MS2Query is implemented in Python.",
@@ -5173,7 +5173,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-architecture-documentation/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/workflow-architecture-documentation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention GitHub, version control history, or PR tracing. The paper provides a GitHub URL (https://github.com/iomega/ms2query) in the candidate card, but the paper passages do not discuss using GitHub for architectural documentation or tracing changes through commit history.",
@@ -5193,7 +5193,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-architecture-documentation/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/workflow-architecture-documentation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2Query combines several machine-learning approaches... The workflow for running MS2Query first uses MS2Deepscore to calculate spectral similarity scores... Next, the top 2000 spectra with the highest MS2Deepscore are selected. MS2Query optimises re-ranking of the best analogue or exact match at the top by using a random forest that combines five features.",
       "asbval:note": "Paper describes the complete workflow architecture including control flow (MS2Deepscore \u2192 top 2000 selection \u2192 random forest re-ranking) and data dependencies (five features fed to random forest).",
@@ -5213,7 +5213,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-architecture-documentation/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/workflow-architecture-documentation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "As input for the random forest model, MS2Query uses five different features, calculated between the query spectrum and each of the 2000 preselected library spectra. These features are Spec2Vec similarity score, query precursor m/z, precursor m/z difference, a weighted average MS2Deepscore over 10 chemically similar library molecules, and the average Tanimoto score for these 10 chemically similar library molecules.",
       "asbval:note": "Paper documents the five features (decision criteria and parameter passing) used in the random forest model that ranks candidates for both branches.",
@@ -5233,7 +5233,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/candidate-match-retrieval/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/candidate-match-retrieval/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "candidate-match-retrieval",
@@ -5246,7 +5246,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/candidate-metadata-record-serialization/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/candidate-metadata-record-serialization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "candidate-metadata-record-serialization",
@@ -5259,7 +5259,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-pipeline-orchestration/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ci-cd-pipeline-orchestration/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "ci-cd-pipeline-orchestration",
@@ -5272,7 +5272,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-status-badge-deployment/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ci-status-badge-deployment/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "ci-status-badge-deployment",
@@ -5285,7 +5285,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/code-quality-metrics-interpretation/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/code-quality-metrics-interpretation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "code-quality-metrics-interpretation",
@@ -5298,7 +5298,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-workflow-configuration/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/github-actions-workflow-configuration/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "github-actions-workflow-configuration",
@@ -5311,7 +5311,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/inchikey-structural-similarity-scoring/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/inchikey-structural-similarity-scoring/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "inchikey-structural-similarity-scoring",
@@ -5324,7 +5324,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/library-analogue-search-branching/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/library-analogue-search-branching/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "library-analogue-search-branching",
@@ -5337,7 +5337,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-ms-spectrum-parsing/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ms-ms-spectrum-parsing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "ms-ms-spectrum-parsing",
@@ -5350,7 +5350,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-data-preprocessing-pipeline/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/ms2-data-preprocessing-pipeline/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "ms2-data-preprocessing-pipeline",
@@ -5363,7 +5363,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neighbourhood-density-computation/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/neighbourhood-density-computation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "neighbourhood-density-computation",
@@ -5376,7 +5376,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-filtering-noise-removal/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/peak-filtering-noise-removal/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "peak-filtering-noise-removal",
@@ -5389,7 +5389,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precursor-mass-filtering/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/precursor-mass-filtering/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "precursor-mass-filtering",
@@ -5402,7 +5402,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pull-request-change-tracking/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/pull-request-change-tracking/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "pull-request-change-tracking",
@@ -5415,7 +5415,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-automated-test-execution/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/python-automated-test-execution/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "python-automated-test-execution",
@@ -5428,7 +5428,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-history-analysis/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/repository-history-analysis/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "repository-history-analysis",
@@ -5441,7 +5441,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scoring-module-unit-testing/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/scoring-module-unit-testing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "scoring-module-unit-testing",
@@ -5454,7 +5454,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-testing-unit-validation/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/software-testing-unit-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "software-testing-unit-validation",
@@ -5467,7 +5467,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sonarcloud-static-code-analysis-integration/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/sonarcloud-static-code-analysis-integration/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "sonarcloud-static-code-analysis-integration",
@@ -5480,7 +5480,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-intensity-normalisation/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-intensity-normalisation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "spectral-intensity-normalisation",
@@ -5493,7 +5493,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-candidate-ranking/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-library-candidate-ranking/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "spectral-library-candidate-ranking",
@@ -5506,7 +5506,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-database-querying/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-library-database-querying/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "spectral-library-database-querying",
@@ -5519,7 +5519,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-search-logic-control-flow/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-search-logic-control-flow/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "spectral-search-logic-control-flow",
@@ -5532,7 +5532,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-ranking/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/spectral-similarity-ranking/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "spectral-similarity-ranking",
@@ -5545,7 +5545,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/version-control-feature-branch-management/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/version-control-feature-branch-management/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "version-control-feature-branch-management",
@@ -5558,7 +5558,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-architecture-documentation/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/skill/workflow-architecture-documentation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "workflow-architecture-documentation",
@@ -5571,7 +5571,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2Query is a tool for reliable and fast MS/MS spectral-based analogue search.",
       "asbval:note": null,
@@ -5591,7 +5591,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2Query can be built into other tools.",
       "asbval:note": null,
@@ -5611,7 +5611,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2Query allows users to create their own library without training new models.",
       "asbval:note": "Source excerpt is a badge URL fragment, not substantive text about library creation; cannot verify claim content",
@@ -5631,7 +5631,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2Query supports training new models.",
       "asbval:note": "Source excerpt is a badge URL fragment, not substantive text about model training; cannot verify claim content",
@@ -5651,7 +5651,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Contributors should announce their plans to the rest of the community before starting work on code base changes.",
       "asbval:note": null,
@@ -5671,7 +5671,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Contributors should wait until consensus is reached about their idea being a good idea before proceeding.",
       "asbval:note": null,
@@ -5691,7 +5691,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Contributors must run existing tests by executing python setup.py test.",
       "asbval:note": null,
@@ -5711,7 +5711,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Contributors should update the CHANGELOG.md file with changes.",
       "asbval:note": null,
@@ -5731,7 +5731,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Creating a new release of MS2Query requires write permission on the repository.",
       "asbval:note": null,
@@ -5751,7 +5751,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The version number should be changed in __version__.py for a new release.",
       "asbval:note": null,
@@ -5771,7 +5771,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Library parts were moved to Sqlite in pull request 56.",
       "asbval:note": null,
@@ -5791,7 +5791,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_012",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/claim/claim_012",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Spectrum processing functions were defined in pull request 61.",
       "asbval:note": null,
@@ -5811,7 +5811,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_013",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/claim/claim_013",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The CI workflow was extended and Sonarcloud was added in pull request 62.",
       "asbval:note": null,
@@ -5831,7 +5831,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_014",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/claim/claim_014",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Average inchikey score and neighbourhood score were implemented in pull request 78.",
       "asbval:note": null,
@@ -5851,7 +5851,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_015",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/claim/claim_015",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The Streamlit web app was removed in pull request 83.",
       "asbval:note": "Text states app was 'removed' but excerpt indicates it was deferred to 'future development', not removed",
@@ -5871,7 +5871,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_016",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/claim/claim_016",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Library matching was refactored in pull request 65.",
       "asbval:note": null,
@@ -5891,7 +5891,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_017",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/claim/claim_017",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The workflow was split into true matches and analog search in pull request 72.",
       "asbval:note": null,
@@ -5911,7 +5911,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_018",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/claim/claim_018",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Library files creation was refactored in pull request 74.",
       "asbval:note": null,
@@ -5931,7 +5931,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_019",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/claim/claim_019",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2Query version 0.1.0 was released on 2021-01-01.",
       "asbval:note": null,
@@ -5951,7 +5951,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_020",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-023-37446-4/claim/claim_020",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The first MS2Query prototype sketched the basic workflow and a Streamlit web app.",
       "asbval:note": null,

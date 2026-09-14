@@ -1692,7 +1692,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_001/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments. The framework allows users to generate chemical objects (produced synthetically or extracted from existing mzML files) and simulate a tandem mass spectrometry process",
       "asbval:note": "Paper confirms ViMMS can simulate MS acquisition and generate chemical objects, but does not specifically mention HMDB database as a source for chemicals. Paper states chemicals can be generated 'synthetically' or 'extracted from existing mzML files' but does not name HMDB as a supported source. The capability to produce mzML output is not explicitly stated in passages.",
@@ -1712,7 +1712,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_001/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals can be generated in different ways: either in a purely synthetic manner (e.g. sampling their properties from databases or fixed statistical distributions) or by construction from existing data (mzML files) via the extraction of RoI traces.",
       "asbval:note": "Paper discusses input from mzML files and simulation of MS acquisition, but does not explicitly confirm that ViMMS outputs mzML files. The framework simulates tandem mass spectrometry but output format is not specified in provided passages.",
@@ -1732,7 +1732,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_001/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors. This allows users to benchmark different controller implementations comparatively.",
       "asbval:note": "Paper mentions evaluation metrics and benchmarking capabilities but does not specifically name 'EvaluationData' object or confirm pickle file output format. The concept of storing evaluation data is implied but the specific data structure and serialization format are not mentioned.",
@@ -1752,7 +1752,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_001/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0: A framework to develop, test and optimise fragmentation strategies in LC-MS metabolomics",
       "asbval:note": "ViMMS is the primary subject of the paper and is confirmed as the main tool.",
@@ -1772,7 +1772,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_001/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework.",
       "asbval:note": "Paper explicitly states ViMMS 2.0 is a Python package requiring Python 3.0 or higher.",
@@ -1792,7 +1792,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_001/005",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_001/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Poetry (Python dependency management tool) is not mentioned anywhere in the provided passages. Paper mentions pip for installation but not Poetry.",
@@ -1812,7 +1812,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The research question specifies HMDB database as a source for chemical compounds, but the paper only mentions synthetic generation or extraction from existing mzML files\u2014HMDB is not explicitly named as a supported source.",
@@ -1829,7 +1829,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_002/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments. The framework allows users to generate chemical objects (produced synthetically or extracted from existing mzML files) and simulate a tandem mass spectrometry process, where different fragmentation strategies can be rapidly implemented, tested and evaluated.",
       "asbval:note": "Paper confirms ViMMS can extract chemicals from mzML files and simulate Top-N strategies with coverage metrics. However, no specific mention of 'beer samples' or validation against 'original experimental data' \u2014 the paper discusses the framework capability in general terms, not a specific beer dataset comparison task.",
@@ -1849,7 +1849,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_002/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0: A framework to develop, test and optimise fragmentation strategies in LC-MS metabolomics",
       "asbval:note": "ViMMS is the primary subject of the paper.",
@@ -1869,7 +1869,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_002/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework.",
       "asbval:note": "Paper explicitly states ViMMS 2.0 is a Python package.",
@@ -1889,7 +1889,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_002/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "OpenMS is mentioned only as a related simulator (OpenMS-Simulator by Wang et al. 2015) in the related works section, not as a tool used by ViMMS 2.0 itself. The paper does not indicate OpenMS is a dependency or component of ViMMS 2.0.",
@@ -1909,7 +1909,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_002/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_002/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals are input objects to the simulation process in ViMMS 2.0, and can be generated in different ways: either in a purely synthetic manner (e.g. sampling their properties from databases or fixed statistical distributions) or by construction from existing data (mzML files) via the extraction of RoI traces.",
       "asbval:note": "Paper confirms ViMMS can extract chemicals from mzML files and execute Top-N controllers to generate simulated data. However, no explicit mention of output format as 'mzML file' or specific 'Beer1pos' dataset in the passages provided.",
@@ -1929,7 +1929,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_002/005",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_002/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors. This allows users to benchmark different controller implementations comparatively.",
       "asbval:note": "Paper confirms ViMMS provides evaluation metrics for coverage and intensities, and allows comparative benchmarking. However, no specific mention of comparing real vs. simulated data or a 'Beer1pos' dataset in the provided passages.",
@@ -1949,7 +1949,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card proposes a specific experimental task (beer sample comparison) that is not explicitly described in the paper passages. The paper presents ViMMS 2.0 as a general framework for fragmentation strategy development and validation, not a specific beer dataset case study.",
@@ -1966,7 +1966,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_003/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The simulator framework consists of two core functionalities: the generation of chemicals from multiple sources, and the execution of fragmentation strategies, implemented as controller classes... Controllers are executed in the context of an environment bringing together input chemicals, mass spectrometer and controllers as a single context (Figure 1D).",
       "asbval:note": "The paper explicitly describes the orchestration of chemicals, mass spectrometer (MS), and controllers within an environment context.",
@@ -1986,7 +1986,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_003/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Controllers are executed in the context of an environment bringing together input chemicals, mass spectrometer and controllers as a single context (Figure 1D). Note that the modularity of the mass spectrometry and environment classes means it is possible to swap purely simulated MS and environment implementation with alternatives that control an actual MS instrument while other aspects remain unchanged.",
       "asbval:note": "The paper describes the Environment class orchestrating chemicals, mass spectrometer, and controllers. The term 'IndependentMassSpectrometer' is not explicitly named, but the paper refers to 'mass spectrometer' and 'environment classes' that coordinate these components.",
@@ -2006,7 +2006,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_003/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments.",
       "asbval:note": "ViMMS 2.0 is the primary tool discussed throughout the paper.",
@@ -2026,7 +2026,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_003/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is modular, extensible and can be used in Python to simulate fragmentation strategies for untargeted metabolomics studies.",
       "asbval:note": "Paper explicitly states ViMMS 2.0 is used in Python.",
@@ -2046,7 +2046,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_003/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_003/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors. This allows users to benchmark different controller implementations comparatively.",
       "asbval:note": "The paper describes that evaluation metrics are computed and controllers can be benchmarked, but does not explicitly mention a 'scans' attribute or list accessible via 'env.scans'. The paper discusses MS1 and MS2 scans being generated and processed but does not provide the specific API detail about retrieving them via env.scans.",
@@ -2066,7 +2066,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card's research question is highly specific about 'IndependentMassSpectrometer' as a named component, but the paper refers to it generically as 'mass spectrometer' or 'MS' without that specific class name.",
@@ -2082,7 +2082,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_004/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_004/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss HMDB (Human Metabolome Database), formula filtering, or database size verification. The paper focuses on ViMMS 2.0 framework for simulating fragmentation strategies in LC-MS metabolomics, not on HMDB data analysis or formula sampling.",
@@ -2102,7 +2102,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_004/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_004/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention HMDB, DatabaseFormulaSampler, formula counts, m/z filtering ranges, or any database verification task. The paper is about fragmentation strategy development and simulation, not HMDB data validation.",
@@ -2122,7 +2122,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_004/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_004/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments.",
       "asbval:note": "ViMMS (Virtual Metabolomics Mass Spectrometer) 2.0 is the primary subject of the paper. Case-insensitive match: VIMMS = ViMMS.",
@@ -2142,7 +2142,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_004/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_004/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework.",
       "asbval:note": "Paper explicitly states ViMMS 2.0 is a Python package requiring Python 3.0 or higher.",
@@ -2162,7 +2162,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_004/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_004/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss formula counts, HMDB filtering, or any output of 73,822 unique formulas. The paper's outputs relate to fragmentation strategy simulation and evaluation metrics (coverage, intensities of fragmented precursors).",
@@ -2182,7 +2182,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_004/005",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_004/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not describe formula-filtering steps or related logging/reporting. ViMMS 2.0 provides evaluation metrics for fragmentation strategies (coverage, intensities), not formula database filtering reports.",
@@ -2202,7 +2202,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_004/scope_drift",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_004/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate task card describes a database validation task (HMDB formula filtering and counting) that is entirely absent from the paper.",
@@ -2220,7 +2220,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_005/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_005/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Two enhanced DDA controllers (named SmartROI and WeightedDEW, outlined by Davies et al. (2021)) are also provided that demonstrate how novel fragmentation strategies could be rapidly implemented and validated in ViMMS 2.0... Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors. This allows users to benchmark different controller implementations comparatively.",
       "asbval:note": "Paper confirms WeightedDEW controller exists and that ViMMS 2.0 supports benchmarking different controllers with evaluation metrics. However, the paper does not explicitly state that a comparison between WeightedDEWController and TopNController was performed or is the focus of a task. The research question assumes a specific comparative study that is not documented in the passages.",
@@ -2240,7 +2240,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_005/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_005/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals can be generated in single-sample or multi-sample settings... Fragmentation strategies are implemented as controllers that extend from the base Controller class.",
       "asbval:note": "Paper confirms ViMMS 2.0 can generate simulated MS1/MS2 scans and execute fragmentation strategies via controllers. However, no explicit mention of mzML file output format is present in the passages. The paper discusses input from mzML files but does not explicitly confirm mzML as an output format.",
@@ -2260,7 +2260,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_005/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_005/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'EvaluationData' class, pickling, or serialization of evaluation objects in the provided passages. The paper mentions 'evaluation metrics' and 'evaluation methods' but does not describe a specific 'EvaluationData' object or pickling mechanism.",
@@ -2280,7 +2280,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_005/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_005/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors.",
       "asbval:note": "Paper confirms that ViMMS 2.0 provides evaluation metrics including coverage and intensities. However, the specific metric names 'times_fragmented_summary' and 'cumulative coverage' are not mentioned verbatim. The claim of a 'dictionary' format is not explicitly stated.",
@@ -2300,7 +2300,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_005/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_005/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments.",
       "asbval:note": "ViMMS (case-insensitive match) is the primary tool discussed throughout the paper.",
@@ -2320,7 +2320,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_005/005",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_005/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework.",
       "asbval:note": "Paper explicitly states ViMMS 2.0 is a Python package requiring Python 3.0 or higher.",
@@ -2340,7 +2340,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_005/006",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_005/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Poetry (Python dependency management tool) is not mentioned anywhere in the provided passages. The paper mentions pip for installation but not Poetry.",
@@ -2360,7 +2360,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c03895__task_005/scope_drift",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/card/10_1021_acs_analchem_0c03895__task_005/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The research question frames a specific comparative study (WeightedDEWController vs TopNController) that is not explicitly documented as a task or study objective in the paper. The paper mentions both controllers exist and can be benchmarked, but does not describe a specific comparative analysis task.",
@@ -2377,7 +2377,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatogram-and-ionization-intensity-modeling/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/chromatogram-and-ionization-intensity-modeling/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The framework allows users to plug in modular classes that specify parameters of chemicals, such as the distribution of their m/z values, RT, intensities, chromatographic shapes and associated MS2 spectra",
       "asbval:note": "Passage directly describes ViMMS 2.0's capability to model RT, intensities, and chromatographic shapes for synthetic chemical generation.",
@@ -2397,7 +2397,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatogram-and-ionization-intensity-modeling/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/chromatogram-and-ionization-intensity-modeling/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments. The framework allows users to generate chemical objects (produced synthetically or extracted from existing mzML files) and simulate a tandem mass spectrometry process, where different fragmentation strategies can be rapidly implemented, tested and evaluated.",
       "asbval:note": "Paper explicitly describes in-silico fragmentation strategy development and testing before physical instrument use.",
@@ -2417,7 +2417,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatogram-and-ionization-intensity-modeling/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/chromatogram-and-ionization-intensity-modeling/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments. The framework allows users to generate chemical objects (produced synthetically or extracted from existing mzML files) and simulate a tandem mass spectrometry process... The framework allows users to plug in modular classes that specify parameters of chemicals, such as the distribution of their m/z values, RT, intensities, chromatographic shapes and associated MS2 spectra",
       "asbval:note": "Paper confirms ViMMS 2.0 framework and its capability to model chromatograms and intensities. However, specific class names (ChemicalMixtureCreator, KnownChemical, IndependentMassSpectrometer) are not mentioned in provided passages; only generic 'modular classes' and 'chemical objects' are referenced. The functional role is confirmed but specific implementation class names cannot be verified.",
@@ -2437,7 +2437,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatogram-and-ionization-intensity-modeling/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/chromatogram-and-ionization-intensity-modeling/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "HMDB is not mentioned in any of the provided passages. While the paper discusses sampling chemical properties from 'databases or fixed statistical distributions', no specific database (HMDB or otherwise) is named.",
@@ -2457,7 +2457,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatogram-and-ionization-intensity-modeling/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/chromatogram-and-ionization-intensity-modeling/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework.",
       "asbval:note": "Paper explicitly states ViMMS 2.0 is a Python package.",
@@ -2477,7 +2477,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatogram-and-ionization-intensity-modeling/005",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/chromatogram-and-ionization-intensity-modeling/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Poetry is not mentioned in any of the provided passages. The paper states ViMMS 2.0 'depends on common packages such as numpy, scipy and pandas' and is 'distributed as a Python package that can be easily installed using pip', but does not mention Poetry as a dependency manager.",
@@ -2497,7 +2497,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatogram-and-ionization-intensity-modeling/006",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/chromatogram-and-ionization-intensity-modeling/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "OpenMS is mentioned in the paper as a related simulator (OpenMS-Simulator by Wang et al., 2015) in the 'Related works' section, but is not described as being used by ViMMS 2.0 for post-processing or coverage computation. The paper states 'Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors' but does not name OpenMS as the tool performing this function.",
@@ -2517,7 +2517,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/data-dependent-acquisition-controller-implementation/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/data-dependent-acquisition-controller-implementation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments. The framework allows users to generate chemical objects (produced synthetically or extracted from existing mzML files) and simulate a tandem mass spectrometry process, where different fragmentation strategies can be rapidly implemented, tested and evaluated.",
       "asbval:note": "Core claim directly supported by abstract and statement of need.",
@@ -2537,7 +2537,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/data-dependent-acquisition-controller-implementation/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/data-dependent-acquisition-controller-implementation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Two enhanced DDA controllers (named SmartROI and WeightedDEW, outlined by Davies et al. (2021)) are also provided that demonstrate how novel fragmentation strategies could be rapidly implemented and validated in ViMMS 2.0.",
       "asbval:note": "Both TopN and WeightedDEW explicitly mentioned as example controllers.",
@@ -2557,7 +2557,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/data-dependent-acquisition-controller-implementation/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/data-dependent-acquisition-controller-implementation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors. This allows users to benchmark different controller implementations comparatively.",
       "asbval:note": "Evaluation metrics and comparative benchmarking explicitly supported; mzML output mentioned in context of chemical generation from existing mzML files.",
@@ -2577,7 +2577,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/data-dependent-acquisition-controller-implementation/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/data-dependent-acquisition-controller-implementation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The simulator framework consists of two core functionalities: the generation of chemicals from multiple sources, and the execution of fragmentation strategies, implemented as controller classes... Controllers are executed in the context of an environment bringing together input chemicals, mass spectrometer and controllers as a single context (Figure 1D).",
       "asbval:note": "Environment and controller classes confirmed; TopN and WeightedDEW controllers explicitly named.",
@@ -2597,7 +2597,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/data-dependent-acquisition-controller-implementation/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/data-dependent-acquisition-controller-implementation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Poetry is not mentioned in any of the provided passages. The paper mentions 'pip' for installation and Python 3.0+ requirement, but does not reference Poetry.",
@@ -2617,7 +2617,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/data-dependent-acquisition-controller-implementation/005",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/data-dependent-acquisition-controller-implementation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework. It depends on common packages such as numpy, scipy and pandas.",
       "asbval:note": "Python confirmed as the implementation language; code example provided in passage 5.",
@@ -2637,7 +2637,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/data-dependent-acquisition-controller-implementation/006",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/data-dependent-acquisition-controller-implementation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "OpenMS is mentioned in the paper only as a related simulator (OpenMS-Simulator by Wang et al. 2015), not as a tool used within ViMMS for post-simulation analysis. The paper states that ViMMS itself provides evaluation metrics (coverage, intensities) without naming OpenMS as the tool for this purpose.",
@@ -2657,7 +2657,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dda-fragmentation-strategy-parameterization/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/dda-fragmentation-strategy-parameterization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments. The framework allows users to generate chemical objects (produced synthetically or extracted from existing mzML files) and simulate a tandem mass spectrometry process, where different fragmentation strategies can be rapidly implemented, tested and evaluated.",
       "asbval:note": "Paper confirms DDA strategy development and execution in virtual environment, and mentions controllers that implement fragmentation strategies. However, the specific parameters listed (isolation window, m/z tolerance, retention-time tolerance, intensity thresholds, fragment count constraints) are not explicitly enumerated in the passages. The paper discusses TopN controllers and dynamic exclusion but does not detail all these specific configurable parameters.",
@@ -2677,7 +2677,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dda-fragmentation-strategy-parameterization/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/dda-fragmentation-strategy-parameterization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments. The framework allows users to generate chemical objects (produced synthetically or extracted from existing mzML files) and simulate a tandem mass spectrometry process, where different fragmentation strategies can be rapidly implemented, tested and evaluated. Controllers are executed in the context of an environment bringing together input chemicals, mass spectrometer and controllers as a single context.",
       "asbval:note": "ViMMS confirmed as core framework with Environment and controller execution. mzML output is mentioned in scope but not explicitly in passages provided.",
@@ -2697,7 +2697,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dda-fragmentation-strategy-parameterization/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/dda-fragmentation-strategy-parameterization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "OpenMS is not mentioned in any of the provided passages. The paper mentions evaluation metrics are computed within ViMMS itself: 'Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors.' No reference to OpenMS for post-simulation evaluation.",
@@ -2717,7 +2717,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dda-fragmentation-strategy-parameterization/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/dda-fragmentation-strategy-parameterization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In other work, we demonstrated the practicality of this idea by building alternative implementations of these classes that use the Thermo Fisher IAPI (Thermo Fisher Scientific, n.d.) for bridging, making it possible for fragmentation strategies to be executed in simulation as well as unchanged on Thermo Tribrid Fusion instruments (Davies et al., 2021).",
       "asbval:note": "IAPI confirmed for hardware integration with Thermo Tribrid Fusion instruments (note: paper says 'Tribrid Fusion', not 'Tribrid/Exactive' as in card, but this is a minor specification difference).",
@@ -2737,7 +2737,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dda-fragmentation-strategy-parameterization/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/dda-fragmentation-strategy-parameterization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework.",
       "asbval:note": "Python 3.0+ requirement explicitly stated.",
@@ -2757,7 +2757,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dynamic-exclusion-weighting-strategy-evaluation/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/dynamic-exclusion-weighting-strategy-evaluation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Two enhanced DDA controllers (named SmartROI and WeightedDEW, outlined by Davies et al. (2021)) are also provided that demonstrate how novel fragmentation strategies could be rapidly implemented and validated in ViMMS 2.0... We have included a more complete Top-N strategy as the baseline controller in ViMMS 2.0 against which other strategies can be benchmarked... Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors. This allows users to benchmark different controller implementations comparatively.",
       "asbval:note": "The paper explicitly describes WeightedDEW and TopN controllers, their comparative benchmarking capability, and evaluation metrics (coverage and intensities).",
@@ -2777,7 +2777,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dynamic-exclusion-weighting-strategy-evaluation/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/dynamic-exclusion-weighting-strategy-evaluation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments. The framework allows users to generate chemical objects (produced synthetically or extracted from existing mzML files) and simulate a tandem mass spectrometry process... Controllers are executed in the context of an environment bringing together input chemicals, mass spectrometer and controllers as a single context (Figure 1D).",
       "asbval:note": "Paper confirms ViMMS framework, Environment class, controller execution, and mzML file handling. WeightedDEW controller explicitly mentioned in passage 4.",
@@ -2797,7 +2797,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dynamic-exclusion-weighting-strategy-evaluation/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/dynamic-exclusion-weighting-strategy-evaluation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework. It depends on common packages such as numpy, scipy and pandas.",
       "asbval:note": "Paper confirms ViMMS is a Python package and framework.",
@@ -2817,7 +2817,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dynamic-exclusion-weighting-strategy-evaluation/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/dynamic-exclusion-weighting-strategy-evaluation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Poetry is not mentioned anywhere in the provided passages. The paper mentions pip for installation but does not reference Poetry.",
@@ -2837,7 +2837,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dynamic-exclusion-weighting-strategy-evaluation/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/dynamic-exclusion-weighting-strategy-evaluation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "OpenMS is not mentioned in the passages. The paper states that ViMMS itself provides code to compute evaluation metrics (coverage and intensities), not that external tools like OpenMS are required for post-processing.",
@@ -2857,7 +2857,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dynamic-exclusion-weighting-strategy-evaluation/005",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/dynamic-exclusion-weighting-strategy-evaluation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals can be generated in single-sample or multi-sample settings... The framework allows users to plug in modular classes that specify parameters of chemicals... Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors.",
       "asbval:note": "Paper confirms mzML file generation and evaluation metrics (coverage, intensities). However, 'EvaluationData' as a specific named output format is not explicitly mentioned in the passages; the paper refers to 'evaluation metrics' and 'evaluation methods' but does not name a specific 'EvaluationData' object or pickle format.",
@@ -2877,7 +2877,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dynamic-exclusion-weighting-strategy-evaluation/006",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/dynamic-exclusion-weighting-strategy-evaluation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This allows users to benchmark different controller implementations comparatively... the modularity of the mass spectrometry and environment classes means it is possible to swap purely simulated MS and environment implementation with alternatives that control an actual MS instrument while other aspects remain unchanged.",
       "asbval:note": "Paper confirms comparative benchmarking of multiple controllers and the ability to run different strategies in parallel within the framework.",
@@ -2897,7 +2897,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dynamic-exclusion-weighting-strategy-evaluation/007",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/dynamic-exclusion-weighting-strategy-evaluation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors.",
       "asbval:note": "Paper explicitly mentions coverage and intensities as evaluation metrics provided by ViMMS.",
@@ -2917,7 +2917,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evaluation-data-collection-for-simulation-assessment/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/evaluation-data-collection-for-simulation-assessment/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors. This allows users to benchmark different controller implementations comparatively.",
       "asbval:note": "Paper explicitly describes evaluation metrics collection for benchmarking fragmentation strategies in simulation.",
@@ -2937,7 +2937,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evaluation-data-collection-for-simulation-assessment/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/evaluation-data-collection-for-simulation-assessment/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors.",
       "asbval:note": "Paper describes coverage and intensity metrics computed from simulation data.",
@@ -2957,7 +2957,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evaluation-data-collection-for-simulation-assessment/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/evaluation-data-collection-for-simulation-assessment/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is modular, extensible and can be used in Python to simulate fragmentation strategies for untargeted metabolomics studies.",
       "asbval:note": "Paper confirms ViMMS 2.0 is used to develop and test fragmentation strategies.",
@@ -2977,7 +2977,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evaluation-data-collection-for-simulation-assessment/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/evaluation-data-collection-for-simulation-assessment/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Controllers are executed in the context of an environment bringing together input chemicals, mass spectrometer and controllers as a single context (Figure 1D).",
       "asbval:note": "Paper describes Environment class combining mass spectrometer and controllers.",
@@ -2997,7 +2997,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evaluation-data-collection-for-simulation-assessment/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/evaluation-data-collection-for-simulation-assessment/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Controllers are executed in the context of an environment bringing together input chemicals, mass spectrometer and controllers as a single context (Figure 1D).",
       "asbval:note": "Paper confirms Environment class and evaluation metrics collection, but does not explicitly name 'save_eval flag' or 'write_mzML method' in provided passages. The functionality is described but specific method/parameter names are not verified.",
@@ -3017,7 +3017,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evaluation-data-collection-for-simulation-assessment/005",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/evaluation-data-collection-for-simulation-assessment/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "OpenMS is not mentioned in any of the provided passages. Paper does not describe post-processing with OpenMS.",
@@ -3037,7 +3037,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evaluation-data-collection-for-simulation-assessment/006",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/evaluation-data-collection-for-simulation-assessment/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MZMine is not mentioned in any of the provided passages. Paper does not describe MZMine integration or PeakPicking.py.",
@@ -3057,7 +3057,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evaluation-data-collection-for-simulation-assessment/007",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/evaluation-data-collection-for-simulation-assessment/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Poetry is not mentioned in any of the provided passages. Paper mentions pip for installation but not Poetry.",
@@ -3077,7 +3077,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evaluation-data-collection-for-simulation-assessment/008",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/evaluation-data-collection-for-simulation-assessment/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework.",
       "asbval:note": "Paper explicitly states Python 3.0+ requirement.",
@@ -3097,7 +3097,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evaluation-data-collection-for-simulation-assessment/009",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/evaluation-data-collection-for-simulation-assessment/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals are input objects to the simulation process in ViMMS 2.0, and can be generated in different ways: either in a purely synthetic manner (e.g. sampling their properties from databases or fixed statistical distributions)",
       "asbval:note": "Paper describes chemical generation from databases, consistent with HMDB-based generation.",
@@ -3117,7 +3117,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/formula-sampler-configuration/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/formula-sampler-configuration/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The framework allows users to plug in modular classes that specify parameters of chemicals, such as the distribution of their m/z values, RT, intensities, chromatographic shapes and associated MS2 spectra (Figure 1A). Chemicals can be generated in single-sample or multi-sample settings.",
       "asbval:note": "Paper confirms ViMMS 2.0 has modular classes for generating chemical m/z distributions and supports m/z-based filtering, but does NOT name 'DatabaseFormulaSampler' or 'UniformMZFormulaSampler' specifically. Paper describes 'modular classes that specify parameters of chemicals' including 'm/z values' but does not provide the exact class names claimed in the card. The functional capability (generating chemicals with m/z bounds) is present; the specific class names are not verified in the passages.",
@@ -3137,7 +3137,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/formula-sampler-configuration/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/formula-sampler-configuration/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments. The framework allows users to generate chemical objects (produced synthetically or extracted from existing mzML files) and simulate a tandem mass spectrometry process... The framework allows users to plug in modular classes that specify parameters of chemicals, such as the distribution of their m/z values, RT, intensities, chromatographic shapes and associated MS2 spectra (Figure 1A).",
       "asbval:note": "ViMMS 2.0 is confirmed as the core framework for generating chemical objects and m/z distributions. However, the specific class names 'DatabaseFormulaSampler', 'UniformMZFormulaSampler', and 'ChemicalMixtureCreator' are not mentioned in the provided passages. The paper describes 'modular classes' for chemical generation but does not name these specific classes.",
@@ -3157,7 +3157,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/formula-sampler-configuration/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/formula-sampler-configuration/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "HMDB is not mentioned anywhere in the provided passages. The paper does not reference HMDB as a data source or discuss downloading metabolite databases in pickle or zipped format.",
@@ -3177,7 +3177,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/formula-sampler-configuration/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/formula-sampler-configuration/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework.",
       "asbval:note": "Paper explicitly confirms ViMMS 2.0 is a Python package requiring Python 3.0+, supporting the use of Python as the programming environment.",
@@ -3197,7 +3197,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/formula-sampler-configuration/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/formula-sampler-configuration/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals are input objects to the simulation process in ViMMS 2.0, and can be generated in different ways: either in a purely synthetic manner (e.g. sampling their properties from databases or fixed statistical distributions) or by construction from existing data (mzML files) via the extraction of RoI traces. The framework allows users to plug in modular classes that specify parameters of chemicals, such as the distribution of their m/z values, RT, intensities, chromatographic shapes and associated MS2 spectra (Figure 1A).",
       "asbval:note": "Paper confirms ViMMS 2.0 supports generating chemicals from databases or statistical distributions with m/z filtering capability. However, HMDB is not mentioned as a specific reference database in the passages, and no specific m/z range examples (100\u20131000 Da) are provided. The functional scope is supported but the specific database reference (HMDB) is not.",
@@ -3217,7 +3217,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-strategy-comparison-across-datasets/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/fragmentation-strategy-comparison-across-datasets/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments... the utility of ViMMS 2.0 has been validated through additional bridging code that allows simulated controllers to run unchanged on both the simulator and actual mass spectrometers.",
       "asbval:note": "Paper explicitly describes validation of simulated strategies against real instruments and mentions evaluation metrics for comparing controller performance.",
@@ -3237,7 +3237,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-strategy-comparison-across-datasets/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/fragmentation-strategy-comparison-across-datasets/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors. This allows users to benchmark different controller implementations comparatively.",
       "asbval:note": "Paper explicitly mentions coverage and intensity metrics for benchmarking controllers.",
@@ -3257,7 +3257,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-strategy-comparison-across-datasets/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/fragmentation-strategy-comparison-across-datasets/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments... Fragmentation strategies are implemented as controllers that extend from the base Controller class. Controllers are executed in the context of an environment bringing together input chemicals, mass spectrometer and controllers as a single context.",
       "asbval:note": "ViMMS, Environment class, and TopNController are all explicitly described in the paper.",
@@ -3277,7 +3277,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-strategy-comparison-across-datasets/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/fragmentation-strategy-comparison-across-datasets/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "OpenMS is not mentioned anywhere in the provided passages. The paper mentions that ViMMS can generate mzML files and provides code to compute evaluation metrics (coverage, intensities), but does not name OpenMS as the tool for this purpose.",
@@ -3297,7 +3297,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-strategy-comparison-across-datasets/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/fragmentation-strategy-comparison-across-datasets/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals are input objects to the simulation process in ViMMS 2.0, and can be generated in different ways: either in a purely synthetic manner (e.g. sampling their properties from databases or fixed statistical distributions) or by construction from existing data (mzML files) via the extraction of RoI traces.",
       "asbval:note": "Paper describes extraction of chemicals from mzML files via 'RoI traces' (regions-of-interest), but does not name a specific class or tool called 'ChemicalMixtureFromMZML'. The function is present but the specific tool name is not confirmed.",
@@ -3317,7 +3317,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-strategy-comparison-across-datasets/005",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/fragmentation-strategy-comparison-across-datasets/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework.",
       "asbval:note": "Paper explicitly states ViMMS is a Python package and framework.",
@@ -3337,7 +3337,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-strategy-comparison-across-datasets/006",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/fragmentation-strategy-comparison-across-datasets/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals are input objects to the simulation process in ViMMS 2.0, and can be generated in different ways... or by construction from existing data (mzML files) via the extraction of RoI traces... Fragmentation strategies are implemented as controllers that extend from the base Controller class.",
       "asbval:note": "Paper confirms extraction from mzML and use of controllers (TopNController is explicitly mentioned), but does not mention 'Beer1pos' as a specific example dataset.",
@@ -3357,7 +3357,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-strategy-comparison-across-datasets/007",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/fragmentation-strategy-comparison-across-datasets/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors. This allows users to benchmark different controller implementations comparatively.",
       "asbval:note": "Paper explicitly describes computing coverage and intensity metrics for benchmarking.",
@@ -3377,7 +3377,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hmdb-metabolite-extraction/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/hmdb-metabolite-extraction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals are input objects to the simulation process in ViMMS 2.0, and can be generated in different ways: either in a purely synthetic manner (e.g. sampling their properties from databases or fixed statistical distributions) or by construction from existing data (mzML files) via the extraction of RoI traces. The framework allows users to plug in modular classes that specify parameters of chemicals, such as the distribution of their m/z values, RT, intensities, chromatographic shapes and associated MS2 spectra",
       "asbval:note": "Paper confirms ViMMS 2.0 supports chemical generation from databases and allows m/z and intensity specification, but does NOT explicitly mention HMDB, DatabaseFormulaSampler, or HMDB-specific filtering utilities. The paper discusses synthetic generation and mzML extraction, not HMDB extraction specifically.",
@@ -3397,7 +3397,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hmdb-metabolite-extraction/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/hmdb-metabolite-extraction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments. The framework allows users to generate chemical objects (produced synthetically or extracted from existing mzML files) and simulate a tandem mass spectrometry process",
       "asbval:note": "Paper confirms ViMMS 2.0 provides chemical generation and MS/MS simulation environment. However, the paper does NOT mention DatabaseFormulaSampler, HMDB data-loading utilities, or ChemicalMixtureCreator by name. The paper discusses modular classes for chemical generation but does not name these specific classes.",
@@ -3417,7 +3417,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hmdb-metabolite-extraction/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/hmdb-metabolite-extraction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of vimms-data repository, HMDB downloads, or pickle files in any passage. The paper does not reference external data repositories or HMDB-specific data files.",
@@ -3437,7 +3437,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hmdb-metabolite-extraction/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/hmdb-metabolite-extraction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework.",
       "asbval:note": "Paper confirms ViMMS 2.0 is a Python package requiring Python 3.0+, but does not specifically mention HMDB loading or DatabaseFormulaSampler instantiation.",
@@ -3457,7 +3457,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hmdb-metabolite-extraction/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/hmdb-metabolite-extraction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention HMDB, database filtering, or metabolite extraction from external databases. The paper focuses on chemical generation from synthetic sources or mzML files, not HMDB.",
@@ -3477,7 +3477,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hmdb-metabolite-extraction/005",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/hmdb-metabolite-extraction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of specific compound counts, m/z ranges (100\u20131000), or HMDB validation metrics in the paper.",
@@ -3497,7 +3497,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-scan-acquisition-orchestration/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/lc-ms-scan-acquisition-orchestration/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Controllers are executed in the context of an environment bringing together input chemicals, mass spectrometer and controllers as a single context (Figure 1D).",
       "asbval:note": "Directly supported by passage describing Environment orchestration of chemicals, mass spectrometer, and controllers.",
@@ -3517,7 +3517,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-scan-acquisition-orchestration/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/lc-ms-scan-acquisition-orchestration/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments... the modularity of the mass spectrometry and environment classes means it is possible to swap purely simulated MS and environment implementation with alternatives that control an actual MS instrument",
       "asbval:note": "Paper explicitly states in-silico development capability and ability to transition to real instruments.",
@@ -3537,7 +3537,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-scan-acquisition-orchestration/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/lc-ms-scan-acquisition-orchestration/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework... The framework allows users to generate chemical objects... and simulate a tandem mass spectrometry process, where different fragmentation strategies can be rapidly implemented, tested and evaluated.",
       "asbval:note": "ViMMS confirmed as core framework with Environment and Controller classes explicitly mentioned.",
@@ -3557,7 +3557,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-scan-acquisition-orchestration/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/lc-ms-scan-acquisition-orchestration/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages insufficient to judge. Paper mentions 'classes that generate various aspects of chemicals (e.g. measured m/z, RT, intensity)' but does not name UniformMZFormulaSampler specifically.",
@@ -3577,7 +3577,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-scan-acquisition-orchestration/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/lc-ms-scan-acquisition-orchestration/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages insufficient to judge. Paper mentions chemical generation from 'databases or fixed statistical distributions' but does not name DatabaseFormulaSampler or explicitly reference HMDB.",
@@ -3597,7 +3597,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-scan-acquisition-orchestration/005",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/lc-ms-scan-acquisition-orchestration/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages insufficient to judge. Paper discusses chemical generation but does not name ChemicalMixtureCreator.",
@@ -3617,7 +3617,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-scan-acquisition-orchestration/006",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/lc-ms-scan-acquisition-orchestration/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To illustrate how new strategies could be built on top of ViMMS 2.0, an example is given here of a Top-N controller that selects the N most intense precursor ions for fragmentation. This strategy is common in real-world data-dependent acquisition (DDA) experiments... We have included a more complete Top-N strategy as the baseline controller in ViMMS 2.0 against which other strategies can be benchmarked.",
       "asbval:note": "TopNController explicitly mentioned and described as selecting N most intense precursors for DDA.",
@@ -3637,7 +3637,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-scan-acquisition-orchestration/007",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/lc-ms-scan-acquisition-orchestration/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Controllers are executed in the context of an environment bringing together input chemicals, mass spectrometer and controllers as a single context (Figure 1D).",
       "asbval:note": "Environment confirmed as orchestrator coordinating mass spectrometer and controller. However, passages do not explicitly mention env.run() method or mzML export functionality from Environment class specifically.",
@@ -3657,7 +3657,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-scan-acquisition-orchestration/008",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/lc-ms-scan-acquisition-orchestration/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "OpenMS is mentioned in passages as OpenMS-Simulator (a related work/competitor simulator), not as a post-processing tool used with ViMMS. Paper states 'Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors' but does not name OpenMS as the tool for this.",
@@ -3677,7 +3677,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-scan-acquisition-orchestration/009",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/lc-ms-scan-acquisition-orchestration/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework.",
       "asbval:note": "Explicitly stated in software requirements section.",
@@ -3697,7 +3697,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-scan-acquisition-orchestration/010",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/lc-ms-scan-acquisition-orchestration/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals can be generated in different ways: either in a purely synthetic manner (e.g. sampling their properties from databases or fixed statistical distributions) or by construction from existing data (mzML files)... Fragmentation strategies are implemented as controllers... Two enhanced DDA controllers (named SmartROI and WeightedDEW... SmartROI accomplishes this by tracking regions-of-interest in real-time and targeting those for fragmentation, while WeightedDEW implements a weighted dynamic exclusion scheme",
       "asbval:note": "Scope aligns with paper's description of chemical generation (real or synthetic) and fragmentation strategy implementation including exclusion schemes.",
@@ -3717,7 +3717,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-scan-acquisition-orchestration/011",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/lc-ms-scan-acquisition-orchestration/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The framework allows users to generate chemical objects (produced synthetically or extracted from existing mzML files) and simulate a tandem mass spectrometry process... Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors.",
       "asbval:note": "Paper confirms synthetic chemical generation and coverage metric computation, but does not explicitly state mzML export as output format in provided passages.",
@@ -3737,7 +3737,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-range-constraint-application/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mass-range-constraint-application/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The framework allows users to plug in modular classes that specify parameters of chemicals, such as the distribution of their m/z values, RT, intensities, chromatographic shapes and associated MS2 spectra",
       "asbval:note": "Paper discusses m/z as a parameter of chemical objects and modular classes for chemical generation, but does not explicitly mention m/z range constraints or filtering by m/z windows. The paper describes m/z as a sampled property, not as a filtering mechanism applied to databases.",
@@ -3757,7 +3757,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-range-constraint-application/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mass-range-constraint-application/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention DatabaseFormulaSampler or UniformMZFormulaSampler by name. Paper describes modular classes for chemical generation (Figure 1A: 'Formula (m/z) Sampler', 'RT & Intensity Sampler', 'Chromatogram Sampler', 'Scan Time Sampler', 'MS2 Spectra Sampler') but does not name specific sampler implementations or confirm they accept m/z range constraints as parameters.",
@@ -3777,7 +3777,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-range-constraint-application/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mass-range-constraint-application/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention HMDB (Human Metabolome Database) at all. Paper states chemicals can be generated 'in a purely synthetic manner (e.g. sampling their properties from databases or fixed statistical distributions) or by construction from existing data (mzML files)' but does not name HMDB or describe m/z filtering of database sources.",
@@ -3797,7 +3797,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-range-constraint-application/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mass-range-constraint-application/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework.",
       "asbval:note": "Paper confirms ViMMS 2.0 is a Python package and framework, and the example controller code is written in Python. However, the paper does not specifically demonstrate m/z constraint parameters being specified in Python.",
@@ -3817,7 +3817,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-range-constraint-application/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mass-range-constraint-application/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals are input objects to the simulation process in ViMMS 2.0, and can be generated in different ways: either in a purely synthetic manner (e.g. sampling their properties from databases or fixed statistical distributions) or by construction from existing data (mzML files) via the extraction of RoI traces.",
       "asbval:note": "Paper describes chemical generation and m/z as a sampled property, but does not explicitly discuss m/z range constraints or filtering to match instrument acquisition ranges. The functional capability may exist but is not documented in the provided passages.",
@@ -3837,7 +3837,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometer-simulator-configuration/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mass-spectrometer-simulator-configuration/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments. The framework allows users to generate chemical objects (produced synthetically or extracted from existing mzML files) and simulate a tandem mass spectrometry process, where different fragmentation strategies can be rapidly implemented, tested and evaluated.",
       "asbval:note": "Paper confirms ViMMS simulates tandem MS/MS acquisition and chemical mixture handling. However, passages do not explicitly mention 'polarity' or 'ionization mode' as configurable parameters in the simulator. The paper focuses on fragmentation strategy development rather than detailed MS instrument parameter configuration (polarity, ionization mode, detector parameters). This is a narrower scope than the card claims.",
@@ -3857,7 +3857,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometer-simulator-configuration/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mass-spectrometer-simulator-configuration/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The improved modularity in ViMMS 2.0 allows many aspects of the framework to be swapped out with alternative implementations, including classes that generate various aspects of chemicals (e.g. measured m/z, RT, intensity) for simulation (Figure 1A), mass spectrometry simulation (Figure 1B), controllers that implement different fragmentation strategies (Figure 1C), as well as the environmental context to run them all (Figure 1D).",
       "asbval:note": "Paper describes modular MS simulation but does not explicitly detail polarity, ionization mode, or detector parameter configuration. The framework is designed for fragmentation strategy development, not comprehensive instrument parameter specification.",
@@ -3877,7 +3877,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometer-simulator-configuration/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mass-spectrometer-simulator-configuration/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments. The framework allows users to generate chemical objects (produced synthetically or extracted from existing mzML files) and simulate a tandem mass spectrometry process",
       "asbval:note": "Paper confirms ViMMS provides mass spectrometry simulation. However, the specific class name 'IndependentMassSpectrometer' is not mentioned in the provided passages. The paper describes the simulator framework and modular architecture but does not name this specific class in the excerpts provided.",
@@ -3897,7 +3897,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometer-simulator-configuration/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mass-spectrometer-simulator-configuration/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework. It depends on common packages such as numpy, scipy and pandas.",
       "asbval:note": "Confirmed: ViMMS is a Python package requiring Python 3.0+.",
@@ -3917,7 +3917,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometer-simulator-configuration/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mass-spectrometer-simulator-configuration/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "OpenMS is not mentioned in any of the provided passages. The paper mentions other simulators (Mspire-Simulator, JAMSS, OpenMS-Simulator, MSAcquisition Simulator, SMITER) in a related-works section but does not describe OpenMS as a post-simulation tool used with ViMMS output.",
@@ -3937,7 +3937,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometer-simulator-configuration/005",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mass-spectrometer-simulator-configuration/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Once chemical objects have been prepared (whether for single- or multi-sample settings), different fragmentation strategies can be run. Fragmentation strategies are implemented as controllers that extend from the base Controller class. Controllers are executed in the context of an environment bringing together input chemicals, mass spectrometer and controllers as a single context (Figure 1D).",
       "asbval:note": "Confirmed: the workflow is chemicals \u2192 mass spectrometer simulation \u2192 controllers (fragmentation strategies).",
@@ -3957,7 +3957,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometer-simulator-configuration/006",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mass-spectrometer-simulator-configuration/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals are input objects to the simulation process in ViMMS 2.0, and can be generated in different ways: either in a purely synthetic manner (e.g. sampling their properties from databases or fixed statistical distributions) or by construction from existing data (mzML files) via the extraction of RoI traces.",
       "asbval:note": "Paper confirms mzML extraction capability, but the specific class name 'ChemicalMixtureFromMZML' is not mentioned. The paper describes the functionality (extraction from mzML files) but not the exact class name.",
@@ -3977,7 +3977,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometer-simulator-configuration/007",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mass-spectrometer-simulator-configuration/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Note that the modularity of the mass spectrometry and environment classes means it is possible to swap purely simulated MS and environment implementation with alternatives that control an actual MS instrument while other aspects remain unchanged. In other work, we demonstrated the practicality of this idea by building alternative implementations of these classes that use the Thermo Fisher IAPI (Thermo Fisher Scientific, n.d.) for bridging, making it possible for fragmentation strategies to be executed in simulation as well as unchanged on Thermo Tribrid Fusion instruments (Davies et al., 2021).",
       "asbval:note": "Paper confirms ViMMS can use idealized simulation or swap to real instrument control (Thermo Tribrid Fusion via IAPI), but does not explicitly state that ViMMS provides 'idealized independent mass detection' or discuss limitations regarding instrument-specific hardware behavior like Orbitrap resolution or Q-TOF drift.",
@@ -3997,7 +3997,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-detection-and-acquisition-performance-benchmarking/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/metabolite-detection-and-acquisition-performance-benchmarking/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors. This allows users to benchmark different controller implementations comparatively. Two enhanced DDA controllers (named SmartROI and WeightedDEW, outlined by Davies et al. (2021)) are also provided that demonstrate how novel fragmentation strategies could be rapidly implemented and validated in ViMMS 2.0.",
       "asbval:note": "Paper explicitly supports comparative benchmarking of fragmentation strategies (WeightedDEW and TopN mentioned), coverage metrics, and intensity evaluation.",
@@ -4017,7 +4017,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-detection-and-acquisition-performance-benchmarking/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/metabolite-detection-and-acquisition-performance-benchmarking/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments. The framework allows users to generate chemical objects (produced synthetically or extracted from existing mzML files) and simulate a tandem mass spectrometry process, where different fragmentation strategies can be rapidly implemented, tested and evaluated.",
       "asbval:note": "Paper confirms ViMMS 2.0 (case-insensitive match to VIMMS) as the core framework for simulating fragmentation strategies with chemical objects and mzML input/output.",
@@ -4037,7 +4037,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-detection-and-acquisition-performance-benchmarking/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/metabolite-detection-and-acquisition-performance-benchmarking/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "OpenMS is not mentioned in any passage. The paper does not describe post-processing of mzML output with OpenMS or MZMine. Paper mentions evaluation metrics are computed internally within ViMMS 2.0 framework itself.",
@@ -4057,7 +4057,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-detection-and-acquisition-performance-benchmarking/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/metabolite-detection-and-acquisition-performance-benchmarking/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework. It depends on common packages such as numpy, scipy and pandas.",
       "asbval:note": "Paper confirms ViMMS 2.0 is a Python package and mentions evaluation metrics computation, but does not explicitly name 'EvaluationData pickles' or 'evaluate_simulated_env()' function. The functional claim (Python for metric computation) is supported, but specific API names are not verified in passages.",
@@ -4077,7 +4077,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-detection-and-acquisition-performance-benchmarking/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/metabolite-detection-and-acquisition-performance-benchmarking/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Poetry is not mentioned in any passage. Paper states ViMMS 2.0 is distributed via pip, but does not mention Poetry as a dependency manager.",
@@ -4097,7 +4097,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-detection-and-acquisition-performance-benchmarking/005",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/metabolite-detection-and-acquisition-performance-benchmarking/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Two enhanced DDA controllers (named SmartROI and WeightedDEW, outlined by Davies et al. (2021)) are also provided that demonstrate how novel fragmentation strategies could be rapidly implemented and validated in ViMMS 2.0... Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors. This allows users to benchmark different controller implementations comparatively.",
       "asbval:note": "Paper explicitly supports benchmarking of WeightedDEW and TopN-like controllers with coverage and intensity metrics.",
@@ -4117,7 +4117,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-detection-and-acquisition-performance-benchmarking/006",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/metabolite-detection-and-acquisition-performance-benchmarking/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals are input objects to the simulation process in ViMMS 2.0, and can be generated in different ways: either in a purely synthetic manner (e.g. sampling their properties from databases or fixed statistical distributions) or by construction from existing data (mzML files) via the extraction of RoI traces.",
       "asbval:note": "Paper confirms ViMMS 2.0 accepts both synthetic chemical generation and real mzML file input.",
@@ -4137,7 +4137,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-chemical-mixture-generation-from-hmdb/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/metabolomics-chemical-mixture-generation-from-hmdb/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals are input objects to the simulation process in ViMMS 2.0, and can be generated in different ways: either in a purely synthetic manner (e.g. sampling their properties from databases or fixed statistical distributions) or by construction from existing data (mzML files) via the extraction of RoI traces. The framework allows users to plug in modular classes that specify parameters of chemicals, such as the distribution of their m/z values, RT, intensities, chromatographic shapes and associated MS2 spectra",
       "asbval:note": "Paper confirms ViMMS 2.0 supports synthetic chemical generation with m/z, RT, intensity, and chromatographic profiles. However, no explicit mention of HMDB database sampling or 'KnownChemical' class by name. Paper states chemicals can be sampled 'from databases or fixed statistical distributions' but does not name HMDB specifically as a source in the provided passages.",
@@ -4157,7 +4157,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-chemical-mixture-generation-from-hmdb/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/metabolomics-chemical-mixture-generation-from-hmdb/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments... The framework allows users to generate chemical objects (produced synthetically or extracted from existing mzML files) and simulate a tandem mass spectrometry process, where different fragmentation strategies can be rapidly implemented, tested and evaluated.",
       "asbval:note": "Directly supported: in-silico prototyping of fragmentation strategies is a core stated purpose of ViMMS 2.0.",
@@ -4177,7 +4177,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-chemical-mixture-generation-from-hmdb/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/metabolomics-chemical-mixture-generation-from-hmdb/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The framework allows users to plug in modular classes that specify parameters of chemicals, such as the distribution of their m/z values, RT, intensities, chromatographic shapes and associated MS2 spectra (Figure 1A)... Fragmentation strategies are implemented as controllers that extend from the base Controller class.",
       "asbval:note": "Paper confirms ViMMS 2.0 provides modular classes for chemical generation and MS simulation. However, the specific class names 'ChemicalMixtureCreator', 'DatabaseFormulaSampler', and 'IndependentMassSpectrometer' are not mentioned in the provided passages. The paper references 'Controller' classes and modular chemical generation classes but does not name these specific classes.",
@@ -4197,7 +4197,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-chemical-mixture-generation-from-hmdb/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/metabolomics-chemical-mixture-generation-from-hmdb/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "HMDB is not mentioned anywhere in the provided passages. The paper states chemicals can be sampled 'from databases or fixed statistical distributions' but does not name HMDB or any specific database by name.",
@@ -4217,7 +4217,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-chemical-mixture-generation-from-hmdb/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/metabolomics-chemical-mixture-generation-from-hmdb/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework.",
       "asbval:note": "Confirmed: ViMMS 2.0 is a Python package requiring Python 3.0 or higher.",
@@ -4237,7 +4237,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-chemical-mixture-generation-from-hmdb/005",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/metabolomics-chemical-mixture-generation-from-hmdb/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Poetry is not mentioned in any of the provided passages. The paper mentions pip for installation but does not reference Poetry.",
@@ -4257,7 +4257,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-formula-database-filtering/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/molecular-formula-database-filtering/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals are input objects to the simulation process in ViMMS 2.0, and can be generated in different ways: either in a purely synthetic manner (e.g. sampling their properties from databases or fixed statistical distributions) or by construction from existing data (mzML files) via the extraction of RoI traces. The framework allows users to plug in modular classes that specify parameters of chemicals, such as the distribution of their m/z values, RT, intensities, chromatographic shapes and associated MS2 spectra",
       "asbval:note": "Paper describes ViMMS 2.0 as supporting chemical generation from databases and m/z-related parameters, but does not explicitly mention HMDB filtering by m/z range constraints as a primary use case. The paper focuses on fragmentation strategy development and simulation, not database filtering workflows. No mention of 'DatabaseFormulaSampler' class or HMDB-specific filtering utilities found in passages.",
@@ -4277,7 +4277,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-formula-database-filtering/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/molecular-formula-database-filtering/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments. The framework allows users to generate chemical objects (produced synthetically or extracted from existing mzML files) and simulate a tandem mass spectrometry process",
       "asbval:note": "ViMMS 2.0 is confirmed as a Python framework for chemical object generation and simulation. However, the paper does not mention a 'DatabaseFormulaSampler' class by name, nor does it explicitly describe HMDB data-loading utilities or m/z-range filtering as a core feature. The paper emphasizes fragmentation strategy development, not database filtering.",
@@ -4297,7 +4297,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-formula-database-filtering/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/molecular-formula-database-filtering/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "HMDB is not mentioned anywhere in the provided passages. The paper discusses chemical generation from 'databases or fixed statistical distributions' and 'existing data (mzML files)' but does not name HMDB as a data source or integration point.",
@@ -4317,7 +4317,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-formula-database-filtering/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/molecular-formula-database-filtering/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework.",
       "asbval:note": "Confirmed: ViMMS 2.0 is a Python package.",
@@ -4337,7 +4337,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-formula-database-filtering/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/molecular-formula-database-filtering/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments. The framework allows users to generate chemical objects (produced synthetically or extracted from existing mzML files) and simulate a tandem mass spectrometry process, where different fragmentation strategies can be rapidly implemented, tested and evaluated.",
       "asbval:note": "Paper confirms ViMMS 2.0 supports chemical object generation and LC-MS/MS simulation, but does not explicitly describe m/z-range filtering as a documented workflow or use case. The paper's focus is on fragmentation strategy development, not on database filtering as a standalone task.",
@@ -4357,7 +4357,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms1-full-scan-acquisition-simulation/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/ms1-full-scan-acquisition-simulation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments. The framework allows users to generate chemical objects (produced synthetically or extracted from existing mzML files) and simulate a tandem mass spectrometry process, where different fragmentation strategies can be rapidly implemented, tested and evaluated.",
       "asbval:note": "Paper describes ViMMS as enabling in-silico simulation of MS acquisition with chemical generation and strategy execution. MS1-only acquisition is a valid use case within the framework's capabilities.",
@@ -4377,7 +4377,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms1-full-scan-acquisition-simulation/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/ms1-full-scan-acquisition-simulation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "A notable feature of the ViMMS framework is the ability to design strategies that can respond, in real time, to the data being produced... the modularity of the mass spectrometry and environment classes means it is possible to swap purely simulated MS and environment implementation with alternatives that control an actual MS instrument while other aspects remain unchanged.",
       "asbval:note": "Paper explicitly describes ViMMS as enabling strategy development in simulation before deployment on real instruments.",
@@ -4397,7 +4397,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms1-full-scan-acquisition-simulation/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/ms1-full-scan-acquisition-simulation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Fragmentation strategies are implemented as controllers that extend from the base Controller class. Controllers are executed in the context of an environment bringing together input chemicals, mass spectrometer and controllers as a single context (Figure 1D).",
       "asbval:note": "Paper confirms ViMMS provides controllers, Environment, and mass spectrometer classes. However, the paper does not explicitly name 'SimpleMs1Controller', 'FullScanController', 'IndependentMassSpectrometer', or 'write_mzML' functions. The paper mentions 'Top-N controller', 'SmartROI', and 'WeightedDEW' as example controllers, and references mzML file handling but does not detail specific MS1-only controller classes by those names.",
@@ -4417,7 +4417,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms1-full-scan-acquisition-simulation/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/ms1-full-scan-acquisition-simulation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework.",
       "asbval:note": "Paper explicitly states ViMMS is a Python package and provides Python code examples for implementing controllers.",
@@ -4437,7 +4437,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms1-full-scan-acquisition-simulation/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/ms1-full-scan-acquisition-simulation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Poetry is not mentioned anywhere in the provided passages. The paper mentions pip for installation but does not reference Poetry.",
@@ -4457,7 +4457,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms1-full-scan-acquisition-simulation/005",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/ms1-full-scan-acquisition-simulation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "OpenMS is not mentioned in the provided passages. The paper references OpenMS-Simulator as a related work (a different tool for theoretical spectrum prediction), but does not describe using OpenMS for post-simulation analysis of ViMMS output.",
@@ -4477,7 +4477,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-file-parsing-and-loading/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mzml-file-parsing-and-loading/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals are input objects to the simulation process in ViMMS 2.0, and can be generated in different ways: either in a purely synthetic manner (e.g. sampling their properties from databases or fixed statistical distributions) or by construction from existing data (mzML files) via the extraction of RoI traces.",
       "asbval:note": "Paper explicitly describes extracting chemicals from mzML files for simulation input.",
@@ -4497,7 +4497,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-file-parsing-and-loading/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mzml-file-parsing-and-loading/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals are input objects to the simulation process in ViMMS 2.0, and can be generated in different ways: either in a purely synthetic manner (e.g. sampling their properties from databases or fixed statistical distributions) or by construction from existing data (mzML files) via the extraction of RoI traces.",
       "asbval:note": "Paper confirms ViMMS 2.0 extracts chemicals from mzML files via 'RoI traces' but does not name the specific class 'ChemicalMixtureFromMZML' in the provided passages. The functional capability is present but the class name is not verified.",
@@ -4517,7 +4517,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-file-parsing-and-loading/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mzml-file-parsing-and-loading/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "OpenMS is mentioned in the paper only as a related simulator (OpenMS-Simulator by Wang et al. 2015) for comparison purposes, not as a tool used within ViMMS 2.0 for peak picking or feature detection. No evidence that ViMMS 2.0 uses OpenMS for this function.",
@@ -4537,7 +4537,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-file-parsing-and-loading/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mzml-file-parsing-and-loading/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework.",
       "asbval:note": "Paper confirms ViMMS 2.0 is a Python package and requires Python 3.0+.",
@@ -4557,7 +4557,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-file-parsing-and-loading/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mzml-file-parsing-and-loading/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals can be generated in single-sample or multi-sample settings... The framework allows users to plug in modular classes that specify parameters of chemicals, such as the distribution of their m/z values, RT, intensities, chromatographic shapes and associated MS2 spectra.",
       "asbval:note": "Paper describes extraction of m/z, RT, intensities, and MS2 spectra from input chemicals (which can come from mzML files) for simulation.",
@@ -4577,7 +4577,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-file-parsing-and-loading/005",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mzml-file-parsing-and-loading/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors. This allows users to benchmark different controller implementations comparatively.",
       "asbval:note": "Paper describes evaluation metrics including coverage for benchmarking fragmentation strategies.",
@@ -4597,7 +4597,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-format-export-from-simulator/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mzml-format-export-from-simulator/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals can be generated in single-sample or multi-sample settings... Chemicals are input objects to the simulation process in ViMMS 2.0, and can be generated in different ways: either in a purely synthetic manner (e.g. sampling their properties from databases or fixed statistical distributions) or by construction from existing data (mzML files) via the extraction of RoI traces.",
       "asbval:note": "Paper discusses reading FROM mzML files as input (extraction of RoI traces), but does not explicitly mention writing/exporting TO mzML format. The card claims mzML export capability (write_mzML() method) which is not documented in the provided passages. The paper focuses on simulation and strategy development, not on mzML output generation.",
@@ -4617,7 +4617,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-format-export-from-simulator/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mzml-format-export-from-simulator/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of write_mzML() method or mzML export functionality in any passage. Paper discusses ViMMS 2.0 architecture, controllers, chemical generation, and simulation execution, but does not document mzML export capability.",
@@ -4637,7 +4637,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-format-export-from-simulator/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mzml-format-export-from-simulator/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "OpenMS is mentioned in the Related Works section as an existing simulator (OpenMS-Simulator by Wang et al., 2015), not as a downstream processing tool for ViMMS output. No evidence that ViMMS outputs are processed by OpenMS.",
@@ -4657,7 +4657,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-format-export-from-simulator/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mzml-format-export-from-simulator/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MZmine is not mentioned anywhere in the provided passages. While it is a real metabolomics tool, there is no evidence in this paper that ViMMS integrates with or outputs to MZmine.",
@@ -4677,7 +4677,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-format-export-from-simulator/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mzml-format-export-from-simulator/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework.",
       "asbval:note": null,
@@ -4697,7 +4697,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-format-export-from-simulator/005",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mzml-format-export-from-simulator/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Poetry is not mentioned in any of the provided passages. The paper mentions pip for installation and Git Hub for code repository, but does not reference Poetry.",
@@ -4717,7 +4717,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-format-export-from-simulator/006",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mzml-format-export-from-simulator/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is modular, extensible and can be used in Python to simulate fragmentation strategies for untargeted metabolomics studies. In other work (Davies et al., 2021), the utility of ViMMS 2.0 has been validated through additional bridging code that allows simulated controllers to run unchanged on both the simulator and actual mass spectrometers.",
       "asbval:note": "Paper confirms ViMMS can simulate fragmentation strategies and mentions bridging code for running on actual instruments, but does not explicitly document mzML export functionality. The scope claim assumes write_mzML() exists, which is not evidenced in passages.",
@@ -4737,7 +4737,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-format-output-generation-and-validation/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mzml-format-output-generation-and-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals can be generated in single-sample or multi-sample settings... Chemicals are input objects to the simulation process in ViMMS 2.0, and can be generated in different ways: either in a purely synthetic manner (e.g. sampling their properties from databases or fixed statistical distributions) or by construction from existing data (mzML files) via the extraction of RoI traces.",
       "asbval:note": "Paper discusses INPUT from mzML files (extraction of RoI traces) but does not explicitly describe OUTPUT/EXPORT to mzML format. The paper focuses on simulation and fragmentation strategy development, not on mzML export functionality. The claim about 'write_mzML()' method in tools section is not mentioned in provided passages.",
@@ -4757,7 +4757,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-format-output-generation-and-validation/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mzml-format-output-generation-and-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Two enhanced DDA controllers (named SmartROI and WeightedDEW, outlined by Davies et al. (2021)) are also provided that demonstrate how novel fragmentation strategies could be rapidly implemented and validated in ViMMS 2.0.",
       "asbval:note": "Paper confirms WeightedDEW and SmartROI controllers exist, but does not describe mzML serialization/export functionality. The scope describes a workflow that is not explicitly documented in the provided passages.",
@@ -4777,7 +4777,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-format-output-generation-and-validation/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mzml-format-output-generation-and-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments. The framework allows users to generate chemical objects (produced synthetically or extracted from existing mzML files) and simulate a tandem mass spectrometry process",
       "asbval:note": "Paper confirms ViMMS 2.0 framework and Environment class exist, but does not mention a 'write_mzML()' method. The paper describes reading FROM mzML files, not writing TO mzML format.",
@@ -4797,7 +4797,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-format-output-generation-and-validation/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mzml-format-output-generation-and-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "OpenMS is not mentioned in any of the provided passages. The paper mentions other simulators (Mspire-Simulator, JAMSS, OpenMS-Simulator, MSAcquisition Simulator, SMITER) but does not describe using OpenMS to process ViMMS output.",
@@ -4817,7 +4817,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-format-output-generation-and-validation/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mzml-format-output-generation-and-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework.",
       "asbval:note": "Paper confirms ViMMS 2.0 is a Python package, though the specific 'write_mzML()' method is not mentioned.",
@@ -4837,7 +4837,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-format-output-generation-and-validation/005",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mzml-format-output-generation-and-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Poetry is not mentioned in any of the provided passages. The paper states 'ViMMS 2.0 is distributed as a Python package that can be easily installed using pip' but does not mention Poetry as a dependency manager.",
@@ -4857,7 +4857,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-detection-and-alignment-in-metabolomics/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/peak-detection-and-alignment-in-metabolomics/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals are input objects to the simulation process in ViMMS 2.0, and can be generated in different ways: either in a purely synthetic manner (e.g. sampling their properties from databases or fixed statistical distributions) or by construction from existing data (mzML files) via the extraction of RoI traces.",
       "asbval:note": "Paper discusses extraction from mzML files and comparison of simulated vs. real data, but does not explicitly describe 'peak detection and alignment' as a workflow. The paper focuses on fragmentation strategy simulation and controller development, not on peak detection/alignment methodology itself. The research question overstates the paper's scope by framing peak detection as a primary task; the paper uses mzML input but does not detail peak detection algorithms.",
@@ -4877,7 +4877,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-detection-and-alignment-in-metabolomics/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/peak-detection-and-alignment-in-metabolomics/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the utility of ViMMS 2.0 has been validated through additional bridging code that allows simulated controllers to run unchanged on both the simulator and actual mass spectrometers.",
       "asbval:note": "Paper confirms validation of simulated strategies against real instruments, supporting the claim that comparison is essential.",
@@ -4897,7 +4897,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-detection-and-alignment-in-metabolomics/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/peak-detection-and-alignment-in-metabolomics/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals can be generated in single-sample or multi-sample settings... or by construction from existing data (mzML files) via the extraction of RoI traces.",
       "asbval:note": "Paper confirms ViMMS can generate simulated output and accept real mzML input for comparison.",
@@ -4917,7 +4917,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-detection-and-alignment-in-metabolomics/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/peak-detection-and-alignment-in-metabolomics/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "OpenMS is not mentioned anywhere in the provided passages. The paper does not reference OpenMS for peak picking or spectral matching. While the paper discusses mzML processing and evaluation metrics, it does not name OpenMS as a tool used.",
@@ -4937,7 +4937,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-detection-and-alignment-in-metabolomics/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/peak-detection-and-alignment-in-metabolomics/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments. The framework allows users to generate chemical objects (produced synthetically or extracted from existing mzML files) and simulate a tandem mass spectrometry process.",
       "asbval:note": "Paper confirms ViMMS generates simulated data and accepts mzML input. Case-insensitive match: 'ViMMS' in paper, 'VIMMS' in card.",
@@ -4957,7 +4957,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-detection-and-alignment-in-metabolomics/005",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/peak-detection-and-alignment-in-metabolomics/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework. It depends on common packages such as numpy, scipy and pandas.",
       "asbval:note": "Paper confirms ViMMS is a Python package and mentions evaluation metrics (coverage, intensities), but does not explicitly describe Python as a scripting language for 'peak extraction, matching, and coverage calculation workflows' as a separate orchestration layer. Python is the implementation language of ViMMS itself, not a separate orchestration tool.",
@@ -4977,7 +4977,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/simulation-control-loop-architecture/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/simulation-control-loop-architecture/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The simulator framework consists of two core functionalities: the generation of chemicals from multiple sources, and the execution of fragmentation strategies, implemented as controller classes... Controllers are executed in the context of an environment bringing together input chemicals, mass spectrometer and controllers as a single context",
       "asbval:note": "Core claim directly supported by passage describing ViMMS 2.0 architecture with chemical generation, MS simulation, and controller orchestration within an Environment context.",
@@ -4997,7 +4997,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/simulation-control-loop-architecture/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/simulation-control-loop-architecture/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments... A common challenge faced by computational researchers with an interest in improving fragmentation strategies in tandem-mass-spectrometry-based metabolomics is the lack of access to and the high cost of running MS instruments.",
       "asbval:note": "Paper explicitly states ViMMS enables development of fragmentation strategies in-silico to address cost and access barriers to real instrument time.",
@@ -5017,7 +5017,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/simulation-control-loop-architecture/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/simulation-control-loop-architecture/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework... The framework allows users to generate chemical objects... and simulate a tandem mass spectrometry process, where different fragmentation strategies can be rapidly implemented, tested and evaluated... Controllers are executed in the context of an environment bringing together input chemicals, mass spectrometer and controllers as a single context",
       "asbval:note": "ViMMS 2.0 confirmed as core framework with Environment, mass spectrometer simulation, and controller classes including TopNController.",
@@ -5037,7 +5037,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/simulation-control-loop-architecture/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/simulation-control-loop-architecture/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages insufficient to judge. Paper mentions 'classes that generate various aspects of chemicals (e.g. measured m/z, RT, intensity)' and 'sampling their properties from databases or fixed statistical distributions' but does not name specific sampler classes like UniformMZFormulaSampler or DatabaseFormulaSampler.",
@@ -5057,7 +5057,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/simulation-control-loop-architecture/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/simulation-control-loop-architecture/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages insufficient to judge. Paper describes chemical object generation but does not name a class called ChemicalMixtureCreator.",
@@ -5077,7 +5077,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/simulation-control-loop-architecture/005",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/simulation-control-loop-architecture/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To illustrate how new strategies could be built on top of ViMMS 2.0, an example is given here of a Top-N controller that selects the N most intense precursor ions for fragmentation... This implementation overrides the _process_scan method, which determines how precursor ions in an incoming MS1 scan are prioritised for fragmentation... Scan parameters control, for example, whether a controller flexibly targets a single precursor ion for fragmentation",
       "asbval:note": "TopNController explicitly described with functionality matching the claim: selects top-N precursor ions, processes MS1 scans, and controls scan parameters.",
@@ -5097,7 +5097,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/simulation-control-loop-architecture/006",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/simulation-control-loop-architecture/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "OpenMS is mentioned in the paper only as a related simulator (OpenMS-Simulator by Wang et al. 2015) in the 'Related works' section, not as a tool used within ViMMS 2.0 for post-simulation evaluation. Paper states 'Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors' but does not name OpenMS as the tool for this.",
@@ -5117,7 +5117,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/simulation-control-loop-architecture/007",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/simulation-control-loop-architecture/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework.",
       "asbval:note": "Python 3+ explicitly stated as requirement for running ViMMS 2.0.",
@@ -5137,7 +5137,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-coverage-and-intensity-metric-computation/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/spectral-coverage-and-intensity-metric-computation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors. This allows users to benchmark different controller implementations comparatively.",
       "asbval:note": "Directly supported: paper explicitly states evaluation metrics for coverage and intensities are provided to benchmark controllers.",
@@ -5157,7 +5157,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-coverage-and-intensity-metric-computation/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/spectral-coverage-and-intensity-metric-computation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments. The framework allows users to generate chemical objects (produced synthetically or extracted from existing mzML files) and simulate a tandem mass spectrometry process... Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors.",
       "asbval:note": "Paper confirms ViMMS provides evaluation metrics for coverage and intensities, but does not explicitly name the function 'evaluate_simulated_env()' in passages provided. Environment.run() is not explicitly named either, though the framework's execution model is described.",
@@ -5177,7 +5177,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-coverage-and-intensity-metric-computation/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/spectral-coverage-and-intensity-metric-computation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "OpenMS is mentioned in the paper only as a related simulator (OpenMS-Simulator by Wang et al. 2015) in the 'Related works' section, not as a tool used within ViMMS 2.0 for processing mzML or computing metrics.",
@@ -5197,7 +5197,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-coverage-and-intensity-metric-computation/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/spectral-coverage-and-intensity-metric-computation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MZMine is not mentioned anywhere in the provided passages. No reference to a PeakPicking.py module or integration of MZMine into ViMMS is present.",
@@ -5217,7 +5217,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-coverage-and-intensity-metric-computation/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/spectral-coverage-and-intensity-metric-computation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework.",
       "asbval:note": "Paper confirms ViMMS 2.0 is a Python package and framework, supporting the claim that Python is the language environment.",
@@ -5237,7 +5237,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-coverage-and-intensity-metric-computation/005",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/spectral-coverage-and-intensity-metric-computation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Poetry is mentioned in the evidence_spans field of the card itself but does not appear in any of the provided paper passages. The paper states ViMMS 2.0 depends on 'common packages such as numpy, scipy and pandas' and is installed via pip, but does not mention Poetry as a dependency manager.",
@@ -5257,7 +5257,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-coverage-and-intensity-metric-computation/006",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/spectral-coverage-and-intensity-metric-computation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Two enhanced DDA controllers (named SmartROI and WeightedDEW, outlined by Davies et al. (2021)) are also provided that demonstrate how novel fragmentation strategies could be rapidly implemented and validated in ViMMS 2.0... Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors. This allows users to benchmark different controller implementations comparatively.",
       "asbval:note": "Paper explicitly mentions WeightedDEW controller and TopNController (Simple TopNController in code example), and confirms that evaluation metrics allow benchmarking of different controllers.",
@@ -5277,7 +5277,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-coverage-and-intensity-metric-computation/007",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/spectral-coverage-and-intensity-metric-computation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of a PeakPicking.py module or peak picking preprocessing step in the provided passages. The paper discusses mzML file input but does not reference a separate peak picking module.",
@@ -5297,7 +5297,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-coverage-and-intensity-metric-computation/008",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/spectral-coverage-and-intensity-metric-computation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages insufficient to judge. Paper mentions evaluation metrics and code for computing them, but does not detail the Environment class instantiation parameters or EvaluationData saving mechanisms.",
@@ -5317,7 +5317,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tandem-mass-spectrometry-fragmentation-simulation/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/tandem-mass-spectrometry-fragmentation-simulation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments. The framework allows users to generate chemical objects (produced synthetically or extracted from existing mzML files) and simulate a tandem mass spectrometry process, where different fragmentation strategies can be rapidly implemented, tested and evaluated.",
       "asbval:note": null,
@@ -5337,7 +5337,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tandem-mass-spectrometry-fragmentation-simulation/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/tandem-mass-spectrometry-fragmentation-simulation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 we significantly improved the simulator framework architecture with the goal of supporting fragmentation strategy development and validation... Fragmentation strategies are implemented as controllers that extend from the base Controller class.",
       "asbval:note": null,
@@ -5357,7 +5357,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tandem-mass-spectrometry-fragmentation-simulation/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/tandem-mass-spectrometry-fragmentation-simulation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors. This allows users to benchmark different controller implementations comparatively.",
       "asbval:note": null,
@@ -5377,7 +5377,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tandem-mass-spectrometry-fragmentation-simulation/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/tandem-mass-spectrometry-fragmentation-simulation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Virtual Metabolomics Mass Spectrometer (ViMMS) 2.0, a programmable and modular framework that simulates the chemical generation process and the execution of fragmentation strategies in LC-MS/MS-based metabolomics.",
       "asbval:note": null,
@@ -5397,7 +5397,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tandem-mass-spectrometry-fragmentation-simulation/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/tandem-mass-spectrometry-fragmentation-simulation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Controllers are executed in the context of an environment bringing together input chemicals, mass spectrometer and controllers as a single context... The framework allows users to plug in modular classes that specify parameters of chemicals... Chemicals can be generated in single-sample or multi-sample settings.",
       "asbval:note": null,
@@ -5417,7 +5417,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tandem-mass-spectrometry-fragmentation-simulation/005",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/tandem-mass-spectrometry-fragmentation-simulation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework. It depends on common packages such as numpy, scipy and pandas.",
       "asbval:note": null,
@@ -5437,7 +5437,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tandem-mass-spectrometry-fragmentation-simulation/006",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/tandem-mass-spectrometry-fragmentation-simulation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Poetry is not mentioned anywhere in the provided passages. The paper mentions pip for installation and Git Hub for code repository, but does not reference Poetry as a dependency management tool.",
@@ -5457,7 +5457,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tandem-mass-spectrometry-fragmentation-simulation/007",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/tandem-mass-spectrometry-fragmentation-simulation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "OpenMS is mentioned in the paper only as a related simulator (OpenMS-Simulator by Wang et al., 2015) in the Related Works section, not as a tool used within ViMMS 2.0 for post-processing. The paper states that ViMMS 2.0 itself provides code to compute evaluation metrics (coverage and intensities), not that OpenMS is used for this purpose.",
@@ -5477,7 +5477,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/unknown-chemical-extraction-from-spectra/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/unknown-chemical-extraction-from-spectra/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals are input objects to the simulation process in ViMMS 2.0, and can be generated in different ways: either in a purely synthetic manner (e.g. sampling their properties from databases or fixed statistical distributions) or by construction from existing data (mzML files) via the extraction of RoI traces.",
       "asbval:note": "Paper explicitly describes extracting chemicals from mzML files via RoI (region-of-interest) traces, which aligns with the research question of extracting unknown compounds with RT and m/z values from real data.",
@@ -5497,7 +5497,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/unknown-chemical-extraction-from-spectra/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/unknown-chemical-extraction-from-spectra/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals are input objects to the simulation process in ViMMS 2.0, and can be generated in different ways: either in a purely synthetic manner (e.g. sampling their properties from databases or fixed statistical distributions) or by construction from existing data (mzML files) via the extraction of RoI traces.",
       "asbval:note": "Paper confirms ViMMS 2.0 extracts chemicals from mzML files via RoI traces, but does not name the specific class 'ChemicalMixtureFromMZML' or 'IndependentMassSpectrometer' in the provided passages. The functional capability is present but class names are not verified.",
@@ -5517,7 +5517,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/unknown-chemical-extraction-from-spectra/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/unknown-chemical-extraction-from-spectra/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "OpenMS is not mentioned in any of the provided passages. While ViMMS 2.0 processes mzML files, the paper does not identify OpenMS as the underlying library for this functionality.",
@@ -5537,7 +5537,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/unknown-chemical-extraction-from-spectra/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/unknown-chemical-extraction-from-spectra/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The vimms-data repository is not mentioned in the provided passages. While the paper discusses extracting chemicals from mzML files, it does not reference a separate vimms-data repository or specific example files like Beer1pos or Beer2pos.",
@@ -5557,7 +5557,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/unknown-chemical-extraction-from-spectra/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/unknown-chemical-extraction-from-spectra/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework.",
       "asbval:note": "Paper explicitly states Python 3.0 or higher is required, confirming the claim about Python 3+ compatibility.",
@@ -5577,7 +5577,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vimms-controller-configuration-and-execution/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/vimms-controller-configuration-and-execution/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments. The framework allows users to generate chemical objects (produced synthetically or extracted from existing mzML files) and simulate a tandem mass spectrometry process, where different fragmentation strategies can be rapidly implemented, tested and evaluated.",
       "asbval:note": "Paper explicitly describes simulating fragmentation strategies and extracting from/working with mzML files. Controllers are implemented and executed in the framework.",
@@ -5597,7 +5597,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vimms-controller-configuration-and-execution/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/vimms-controller-configuration-and-execution/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "A common challenge faced by computational researchers with an interest in improving fragmentation strategies in tandem-mass-spectrometry-based metabolomics is the lack of access to and the high cost of running MS instruments... To lower this barrier, we present Virtual Metabolomics Mass Spectrometer (ViMMS) 2.0, a programmable and modular framework that simulates the chemical generation process and the execution of fragmentation strategies in LC-MS/MS-based metabolomics.",
       "asbval:note": "Paper explicitly states ViMMS addresses the barrier of MS hardware access and enables rapid development of fragmentation strategies.",
@@ -5617,7 +5617,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vimms-controller-configuration-and-execution/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/vimms-controller-configuration-and-execution/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals are input objects to the simulation process in ViMMS 2.0, and can be generated in different ways: either in a purely synthetic manner (e.g. sampling their properties from databases or fixed statistical distributions) or by construction from existing data (mzML files) via the extraction of RoI traces. The framework allows users to plug in modular classes that specify parameters of chemicals, such as the distribution of their m/z values, RT, intensities, chromatographic shapes and associated MS2 spectra.",
       "asbval:note": "Paper describes chemical input with m/z, RT, and intensities, but does not specifically name 'IndependentMassSpectrometer' class. Paper mentions 'mass spectrometer' and 'environment' classes but the specific class name is not confirmed in passages.",
@@ -5637,7 +5637,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vimms-controller-configuration-and-execution/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/vimms-controller-configuration-and-execution/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Scan parameters control, for example, whether a controller flexibly targets a single precursor ion for fragmentation, in what is commonly known as data-dependent acquisition (DDA), or whether it instead covers a range of m/z values, potentially fragmenting many precursor ions (data-independent acquisition; DIA).",
       "asbval:note": "Paper explicitly describes DDA and DIA strategies. Full-scan MS1 is implied in the context of survey scans mentioned in the abstract.",
@@ -5657,7 +5657,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vimms-controller-configuration-and-execution/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/vimms-controller-configuration-and-execution/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors. This allows users to benchmark different controller implementations comparatively.",
       "asbval:note": "Paper describes evaluation metrics and benchmarking capabilities for generated scan data.",
@@ -5677,7 +5677,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vimms-controller-configuration-and-execution/005",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/vimms-controller-configuration-and-execution/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework... The simulator framework consists of two core functionalities: the generation of chemicals from multiple sources, and the execution of fragmentation strategies, implemented as controller classes... Controllers are executed in the context of an environment bringing together input chemicals, mass spectrometer and controllers as a single context.",
       "asbval:note": "Paper confirms Environment, Controller, and mass spectrometer classes. mzML export is implied through extraction from mzML files and the framework's design.",
@@ -5697,7 +5697,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vimms-controller-configuration-and-execution/006",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/vimms-controller-configuration-and-execution/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "OpenMS is not mentioned in any of the provided passages. The paper states that ViMMS itself provides code to compute evaluation metrics (coverage, intensities), not that OpenMS is used for this purpose.",
@@ -5717,7 +5717,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vimms-controller-configuration-and-execution/007",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/vimms-controller-configuration-and-execution/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework.",
       "asbval:note": "Paper explicitly states ViMMS is a Python package and provides code examples in Python.",
@@ -5737,7 +5737,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vimms-controller-configuration-and-execution/008",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/vimms-controller-configuration-and-execution/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Poetry is not mentioned in any of the provided passages. The paper mentions pip for installation but does not reference Poetry.",
@@ -5757,7 +5757,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/virtual-chemical-mixture-generation/000",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/virtual-chemical-mixture-generation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals are input objects to the simulation process in ViMMS 2.0, and can be generated in different ways: either in a purely synthetic manner (e.g. sampling their properties from databases or fixed statistical distributions) or by construction from existing data (mzML files) via the extraction of RoI traces. The framework allows users to plug in modular classes that specify parameters of chemicals, such as the distribution of their m/z values, RT, intensities, chromatographic shapes and associated MS2 spectra",
       "asbval:note": "Paper confirms ViMMS 2.0 generates synthetic chemicals with m/z sampling and modular classes, but does not explicitly name 'UniformMZFormulaSampler', 'DatabaseFormulaSampler', or 'ChemicalMixtureCreator' classes. The paper describes the capability (sampling m/z, RT, intensity) but not the specific sampler class names claimed in the card.",
@@ -5777,7 +5777,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/virtual-chemical-mixture-generation/001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/virtual-chemical-mixture-generation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is a software framework that can be used to develop new fragmentation strategies in metabolomics completely in-silico as well as on mass spectrometry instruments... A common challenge faced by computational researchers with an interest in improving fragmentation strategies in tandem-mass-spectrometry-based metabolomics is the lack of access to and the high cost of running MS instruments.",
       "asbval:note": "Directly supported: paper states ViMMS 2.0 enables in-silico development of fragmentation strategies to address the high cost and access barriers of real MS instruments.",
@@ -5797,7 +5797,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/virtual-chemical-mixture-generation/002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/virtual-chemical-mixture-generation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The framework allows users to plug in modular classes that specify parameters of chemicals, such as the distribution of their m/z values, RT, intensities, chromatographic shapes and associated MS2 spectra (Figure 1A).",
       "asbval:note": "Paper confirms ViMMS 2.0 provides modular classes for sampling chemical properties (m/z, RT, intensity) but does not name the specific sampler classes 'UniformMZFormulaSampler', 'DatabaseFormulaSampler', or 'ChemicalMixtureCreator'. The functional capability is present; the specific class names are not verified in the passages.",
@@ -5817,7 +5817,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/virtual-chemical-mixture-generation/003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/virtual-chemical-mixture-generation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "HMDB is not mentioned anywhere in the provided passages. While the paper discusses sampling from databases and statistical distributions, it does not name HMDB or any specific metabolite database as a source.",
@@ -5837,7 +5837,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/virtual-chemical-mixture-generation/004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/virtual-chemical-mixture-generation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ViMMS 2.0 is distributed as a Python package that can be easily installed using pip. We require Python 3.0 or higher to run the framework.",
       "asbval:note": "Paper explicitly states ViMMS 2.0 is a Python package requiring Python 3.0+, confirming Python as the execution environment.",
@@ -5857,7 +5857,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/virtual-chemical-mixture-generation/005",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/virtual-chemical-mixture-generation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Fragmentation strategies are implemented as controllers that extend from the base Controller class... Scan parameters control, for example, whether a controller flexibly targets a single precursor ion for fragmentation, in what is commonly known as data-dependent acquisition (DDA), or whether it instead covers a range of m/z values, potentially fragmenting many precursor ions (data-independent acquisition; DIA).",
       "asbval:note": "Paper confirms ViMMS 2.0 supports DDA strategy testing in simulation; synthetic chemical generation is described as a core input capability.",
@@ -5877,7 +5877,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/virtual-chemical-mixture-generation/006",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/virtual-chemical-mixture-generation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Code is provided to compute various evaluation metrics, such as coverage and intensities of fragmented precursors. This allows users to benchmark different controller implementations comparatively.",
       "asbval:note": "Paper confirms ViMMS 2.0 supports comparative benchmarking of multiple controllers with evaluation metrics, consistent with the use case of reproducible chemical sets for controller comparison.",
@@ -5897,7 +5897,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/virtual-chemical-mixture-generation/007",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/virtual-chemical-mixture-generation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemicals are input objects to the simulation process in ViMMS 2.0, and can be generated in different ways: either in a purely synthetic manner (e.g. sampling their properties from databases or fixed statistical distributions) or by construction from existing data (mzML files) via the extraction of RoI traces.",
       "asbval:note": "Paper confirms mzML extraction capability exists, but does not name the class 'ChemicalMixtureFromMZML'. The functional alternative is present but the specific class name is not verified.",
@@ -5917,7 +5917,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatogram-and-ionization-intensity-modeling/triage",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/chromatogram-and-ionization-intensity-modeling/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "chromatogram-and-ionization-intensity-modeling",
@@ -5930,7 +5930,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/data-dependent-acquisition-controller-implementation/triage",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/data-dependent-acquisition-controller-implementation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "data-dependent-acquisition-controller-implementation",
@@ -5943,7 +5943,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dda-fragmentation-strategy-parameterization/triage",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/dda-fragmentation-strategy-parameterization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "dda-fragmentation-strategy-parameterization",
@@ -5956,7 +5956,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dynamic-exclusion-weighting-strategy-evaluation/triage",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/dynamic-exclusion-weighting-strategy-evaluation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "dynamic-exclusion-weighting-strategy-evaluation",
@@ -5969,7 +5969,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evaluation-data-collection-for-simulation-assessment/triage",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/evaluation-data-collection-for-simulation-assessment/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "evaluation-data-collection-for-simulation-assessment",
@@ -5982,7 +5982,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/formula-sampler-configuration/triage",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/formula-sampler-configuration/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "formula-sampler-configuration",
@@ -5995,7 +5995,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-strategy-comparison-across-datasets/triage",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/fragmentation-strategy-comparison-across-datasets/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "fragmentation-strategy-comparison-across-datasets",
@@ -6008,7 +6008,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hmdb-metabolite-extraction/triage",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/hmdb-metabolite-extraction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "hmdb-metabolite-extraction",
@@ -6021,7 +6021,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-scan-acquisition-orchestration/triage",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/lc-ms-scan-acquisition-orchestration/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 11,
       "asbval:target_artifact_id": "lc-ms-scan-acquisition-orchestration",
@@ -6034,7 +6034,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-range-constraint-application/triage",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mass-range-constraint-application/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "mass-range-constraint-application",
@@ -6047,7 +6047,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometer-simulator-configuration/triage",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mass-spectrometer-simulator-configuration/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "mass-spectrometer-simulator-configuration",
@@ -6060,7 +6060,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-detection-and-acquisition-performance-benchmarking/triage",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/metabolite-detection-and-acquisition-performance-benchmarking/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "metabolite-detection-and-acquisition-performance-benchmarking",
@@ -6073,7 +6073,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-chemical-mixture-generation-from-hmdb/triage",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/metabolomics-chemical-mixture-generation-from-hmdb/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "metabolomics-chemical-mixture-generation-from-hmdb",
@@ -6086,7 +6086,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-formula-database-filtering/triage",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/molecular-formula-database-filtering/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "molecular-formula-database-filtering",
@@ -6099,7 +6099,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms1-full-scan-acquisition-simulation/triage",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/ms1-full-scan-acquisition-simulation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "ms1-full-scan-acquisition-simulation",
@@ -6112,7 +6112,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-file-parsing-and-loading/triage",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mzml-file-parsing-and-loading/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "mzml-file-parsing-and-loading",
@@ -6125,7 +6125,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-format-export-from-simulator/triage",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mzml-format-export-from-simulator/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "mzml-format-export-from-simulator",
@@ -6138,7 +6138,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-format-output-generation-and-validation/triage",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/mzml-format-output-generation-and-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "mzml-format-output-generation-and-validation",
@@ -6151,7 +6151,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-detection-and-alignment-in-metabolomics/triage",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/peak-detection-and-alignment-in-metabolomics/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "peak-detection-and-alignment-in-metabolomics",
@@ -6164,7 +6164,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/simulation-control-loop-architecture/triage",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/simulation-control-loop-architecture/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "simulation-control-loop-architecture",
@@ -6177,7 +6177,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-coverage-and-intensity-metric-computation/triage",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/spectral-coverage-and-intensity-metric-computation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "spectral-coverage-and-intensity-metric-computation",
@@ -6190,7 +6190,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tandem-mass-spectrometry-fragmentation-simulation/triage",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/tandem-mass-spectrometry-fragmentation-simulation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "tandem-mass-spectrometry-fragmentation-simulation",
@@ -6203,7 +6203,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/unknown-chemical-extraction-from-spectra/triage",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/unknown-chemical-extraction-from-spectra/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "unknown-chemical-extraction-from-spectra",
@@ -6216,7 +6216,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vimms-controller-configuration-and-execution/triage",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/vimms-controller-configuration-and-execution/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "vimms-controller-configuration-and-execution",
@@ -6229,7 +6229,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/virtual-chemical-mixture-generation/triage",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/skill/virtual-chemical-mixture-generation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "virtual-chemical-mixture-generation",
@@ -6242,7 +6242,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ViMMS is a flexible and modular framework designed to simulate fragmentation strategies in tandem mass spectrometry-based metabolomics.",
       "asbval:note": null,
@@ -6262,7 +6262,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Devising new MS/MS fragmentation methods is challenging due to the absence of a structured environment where researchers can prototype, compare, and optimize strategies before testing on real equipment.",
       "asbval:note": null,
@@ -6282,7 +6282,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ViMMS allows you to simulate fragmentation strategies, generate virtual chemicals through various methods, and evaluate the performance of different strategies or controllers in either single or multi-sample settings.",
       "asbval:note": null,
@@ -6302,7 +6302,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ViMMS is compatible with Python 3+.",
       "asbval:note": null,
@@ -6322,7 +6322,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ViMMS can be installed using pip.",
       "asbval:note": null,
@@ -6342,7 +6342,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ViMMS dependencies are managed with Poetry.",
       "asbval:note": null,
@@ -6362,7 +6362,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ViMMS uses MkDocs to build its documentation, which is hosted at vimms.readthedocs.io.",
       "asbval:note": null,
@@ -6382,7 +6382,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ViMMS uses pyTest as the testing framework.",
       "asbval:note": null,
@@ -6402,7 +6402,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ViMMS follows PEP8 coding style with linewidth set to 99 characters.",
       "asbval:note": null,
@@ -6422,7 +6422,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "flake8 and autopep8 tools have been installed as part of the virtual environment to ensure PEP8 compliance.",
       "asbval:note": null,
@@ -6442,7 +6442,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Contributors to ViMMS must submit code under the MIT License.",
       "asbval:note": null,
@@ -6462,7 +6462,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_012",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_012",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ViMMS is designed to serve as a unified platform for the development, testing, and optimization of fragmentation strategies in LC-MS metabolomics.",
       "asbval:note": null,
@@ -6482,7 +6482,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_013",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_013",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ViMMS offers an extension that allows controllers to operate directly on the Thermo Orbitrap Fusion Tribrid instrument.",
       "asbval:note": null,
@@ -6502,7 +6502,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_014",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_014",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A license for IAPI is required to use ViMMS on the Thermo Orbitrap Fusion Tribrid instrument.",
       "asbval:note": "Source says 'you'll need a license for IAPI to use this feature' but doesn't explicitly state it's required for the Thermo Orbitrap Fusion Tribrid specifically; context implies it but claim overstates certainty",
@@ -6522,7 +6522,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_015",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_015",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Known chemicals in ViMMS are represented by their chemical formulae and can be sampled from databases such as HMDB.",
       "asbval:note": null,
@@ -6542,7 +6542,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_016",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_016",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "DatabaseFormulaSampler samples formulas from a provided database.",
       "asbval:note": null,
@@ -6562,7 +6562,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_017",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_017",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "UniformMZFormulaSampler samples formulas uniformly in a defined m/z range.",
       "asbval:note": null,
@@ -6582,7 +6582,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_018",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_018",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "PickEverythingFormulaSampler samples all formulas from a database.",
       "asbval:note": null,
@@ -6602,7 +6602,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_019",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_019",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "EvenMZFormulaSampler creates evenly spaced m/z values, primarily for test cases.",
       "asbval:note": null,
@@ -6622,7 +6622,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_020",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_020",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MZMLFormulaSampler samples m/z values from a histogram of m/z derived from a user-supplied mzML file.",
       "asbval:note": null,
@@ -6642,7 +6642,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_021",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_021",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ChemicalMixtureCreator class is used to produce chemical datasets for simulation.",
       "asbval:note": null,
@@ -6662,7 +6662,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_022",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_022",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Unknown chemicals in ViMMS are typically extracted from existing mzML files.",
       "asbval:note": null,
@@ -6682,7 +6682,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_023",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_023",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Each peak picked from mzML files is presumed to correspond to a chemical in ViMMS simulation.",
       "asbval:note": null,
@@ -6702,7 +6702,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_024",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_024",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "CleanColumn applies reproducible offsets to all chemicals, keeping their elution order fixed.",
       "asbval:note": null,
@@ -6722,7 +6722,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_025",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_025",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "LinearColumn extends CleanColumn with a retention time drift function, allowing systematic shifts across injections.",
       "asbval:note": null,
@@ -6742,7 +6742,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_026",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_026",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "TopNController is a standard fragmentation strategy in ViMMS where the top N most intense ions in the survey scan are fragmented.",
       "asbval:note": null,
@@ -6762,7 +6762,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_027",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_027",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ViMMS implements data-independent acquisition (DIA) strategies including All-ion-fragmentation (AIF) and SWATH-MS.",
       "asbval:note": null,
@@ -6782,7 +6782,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_028",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_028",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Environment class orchestrates interaction between the mass spectrometer and the controller in ViMMS.",
       "asbval:note": null,
@@ -6802,7 +6802,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_029",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_029",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "GaussianPeakNoise adds normally distributed variation to peak intensities in ViMMS.",
       "asbval:note": null,
@@ -6822,7 +6822,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_030",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_030",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "AdditiveBaselineNoise injects a constant baseline across the m/z range in ViMMS.",
       "asbval:note": null,
@@ -6842,7 +6842,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_031",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_031",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "RetentionTimeDeviation introduces random jitter in retention times in ViMMS.",
       "asbval:note": null,
@@ -6862,7 +6862,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_032",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_032",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The vimms_fusion extension allows ViMMS controllers to be deployed directly on the Thermo Orbitrap Fusion Tribrid instrument.",
       "asbval:note": "Text claims deployment on 'Thermo Orbitrap Fusion Tribrid' but excerpt only states 'the instrument' without specifying which instrument; overstates specificity",
@@ -6882,7 +6882,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_033",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_033",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "GitHub Actions automatically publishes the vimms package to PyPI whenever a GitHub release is published.",
       "asbval:note": null,
@@ -6902,7 +6902,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_034",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_034",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The version number in pyproject.toml must be updated before creating a release.",
       "asbval:note": null,
@@ -6922,7 +6922,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_035",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_035",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A simulation in ViMMS involves Chemicals, Mass Spectrometer, Controller, and Environment components.",
       "asbval:note": "Text lists 'Chemicals' as a component but excerpt does not mention Chemicals; excerpt only covers Mass Spectrometer, Controller, and Environment",
@@ -6942,7 +6942,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_036",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_036",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Running the environment in ViMMS produces a list of scans that can be written to mzML.",
       "asbval:note": null,
@@ -6962,7 +6962,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_037",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_037",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "EvaluationData object stores the chemicals, generated scans and fragmentation events.",
       "asbval:note": null,
@@ -6982,7 +6982,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_038",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_038",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "vimms.Evaluation provides several evaluator classes that compute coverage and intensity statistics across multiple runs.",
       "asbval:note": null,
@@ -7002,7 +7002,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_039",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_039",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The evaluation helpers in ViMMS rely on peak picking using MZMine parameters defined in PeakPicking.py.",
       "asbval:note": null,
@@ -7022,7 +7022,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_040",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_040",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "WeightedDEWController is a Top-N variant with dynamic exclusion weighting in ViMMS.",
       "asbval:note": null,
@@ -7042,7 +7042,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_041",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_041",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "SmartROIController implements ROI guided fragmentation using adaptive scoring in ViMMS.",
       "asbval:note": null,
@@ -7062,7 +7062,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_042",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_042",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "FullScanController in ViMMS is useful for creating full scan datasets through MS1 only acquisition.",
       "asbval:note": null,
@@ -7082,7 +7082,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_043",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_043",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "All controllers in ViMMS share a common interface and can be extended to implement new fragmentation logic.",
       "asbval:note": null,
@@ -7102,7 +7102,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_044",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_044",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Environment class provides write_mzML to export the generated scans.",
       "asbval:note": null,
@@ -7122,7 +7122,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_045",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_045",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MultipleMixtureCreator can introduce group specific intensity changes and missing values for multi-sample experiments.",
       "asbval:note": null,
@@ -7142,7 +7142,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_046",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_046",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ChemicalMixtureFromMZML converts existing mzML files into chemical lists using ROI extraction.",
       "asbval:note": null,
@@ -7162,7 +7162,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_047",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_047",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "openms_optimise.py runs grid searches over controller parameters and evaluates each run with OpenMS.",
       "asbval:note": null,
@@ -7182,7 +7182,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_048",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_048",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "openms_evaluate.py processes mzML output from a simulation to compute fragmentation coverage using OpenMS feature detection.",
       "asbval:note": "Text omits that the mzML can be from simulation OR real acquisition; claim states only simulation context",
@@ -7202,7 +7202,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_049",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_049",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "data_generation.py generates example chemical mixtures and mzML files useful for testing pipelines or benchmarking fragmenters.",
       "asbval:note": null,
@@ -7222,7 +7222,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_050",
+      "@id": "asbval:assertion/paper/10.21105%2Fjoss.03990/claim/claim_050",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Noise objects in ViMMS live in vimms.Noise and can be passed directly to a mass spectrometer instance.",
       "asbval:note": null,

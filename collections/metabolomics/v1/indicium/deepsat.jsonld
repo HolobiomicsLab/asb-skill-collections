@@ -231,7 +231,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper discusses DeepSAT (not SMART 3). No mention of TensorFlow Serving infrastructure, model metadata retrieval queries, or input name extraction procedures. Paper uses TensorFlow 2.3.0 for training but does not describe deployment via TensorFlow Serving or metadata retrieval workflows.",
@@ -251,7 +251,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper mentions 'TensorFlow 2.3.0 deep learning framework' (passage 4) for training the CNN, but does not mention TensorFlow Serving. No evidence of deployment infrastructure, serving instances, or model metadata retrieval systems.",
@@ -271,7 +271,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not describe model metadata retrieval, JSON parsing of model inputs, or response validation workflows. The paper focuses on training, evaluation, and application of DeepSAT, not deployment or serving infrastructure.",
@@ -291,7 +291,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/card/task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper describes DeepSAT (not SMART 3). SMART 2.0 is mentioned as a predecessor tool (passage 3), but no SMART 3 system is discussed. No metadata retrieval steps or TensorFlow Serving deployment are described.",
@@ -311,7 +311,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card describes a deployment/serving infrastructure task (TensorFlow Serving metadata retrieval), but the paper is about training and evaluating a deep learning model (DeepSAT) for NMR-based molecular structure identification.",
@@ -329,7 +329,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/card/task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper describes DeepSAT (not SMART 3). The tool is accessed via https://deepsat.ucsd.edu web platform. No API endpoint named '/api/smart3/search' is mentioned in any passage. SMART 2.0 is mentioned as a predecessor tool for comparison, but no SMART 3 or its API is described.",
@@ -349,7 +349,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/card/task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Using only the 1 H- 13 C HSQC spectrum, DeepSAT identifies related known compounds and thus efficiently assists in the identification of molecular structures... the multi-task learning architecture of DeepSAT. In the feature extraction step, the convolutional neural network extracts the features from HSQC spectra.",
       "asbval:note": "Paper describes DeepSAT (not SMART 3). The research question conflates two different tools. DeepSAT accepts 1H-13C HSQC spectra as input (confirmed in passages 2, 4, 5). Supplementary figures S7-S9 describe NMR table formats and peak list submission, but no API endpoint details are provided in the passages. The tool is web-based (https://deepsat.ucsd.edu), not described as an API with '/api/smart3/search' endpoint.",
@@ -369,7 +369,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/card/task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python programming was used in this project, and the TensorFlow 2.3.0 deep learning framework was used.",
       "asbval:note": "Paper uses TensorFlow 2.3.0 for training the CNN model, but does not mention 'TensorFlow Serving' specifically. TensorFlow Serving is a separate deployment framework not explicitly named in the passages. The paper describes the training infrastructure but not the production serving architecture.",
@@ -389,7 +389,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/card/task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "By using the predicted properties, structure annotation is accelerated... the multi-task learning architecture of DeepSAT... predict Morgan fingerprints, molecular weights, and chemical classes.",
       "asbval:note": "DeepSAT outputs predictions for Morgan fingerprints, molecular weights, and structure classes (confirmed in passages 4, 5). Supplementary figures S1-S2 reference input/output windows from DeepSAT web interface, but the passages do not explicitly describe JSON response format or API response structure. Output format is inferred from the web platform description, not explicitly documented as JSON API responses.",
@@ -409,7 +409,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/card/task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "Card conflates DeepSAT with 'SMART 3' \u2014 the paper describes DeepSAT as a successor to SMART 2.0, not as 'SMART 3'. No tool named 'SMART 3' appears in the paper.",
@@ -427,7 +427,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/api-contract-validation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/api-contract-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about DeepSAT, a neural network tool for molecular structure identification from NMR spectra. No discussion of API contract validation, schema verification, or API endpoint response validation appears in any passage. The paper focuses on CNN architecture, NMR spectral analysis, and structure annotation\u2014not API testing or validation.",
@@ -447,7 +447,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/api-contract-validation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/api-contract-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Scope describes API contract validation and schema verification. Paper contains no discussion of API validation, schema contracts, or response structure verification. The paper describes DeepSAT's web-based platform (https://deepsat.ucsd.edu) but does not discuss API contract testing or validation methodologies.",
@@ -467,7 +467,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/api-contract-validation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/api-contract-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention TensorFlow Serving. While the paper states 'TensorFlow 2.3.0 deep learning framework was used' for training DeepSAT (passage 4), there is no mention of TensorFlow Serving, /model/metadata endpoints, or model serving infrastructure. The paper describes a web-based platform at https://deepsat.ucsd.edu but does not specify the serving technology or API contract details.",
@@ -487,7 +487,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/api-contract-validation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/api-contract-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "This phrase does not appear in any passage. The paper mentions the DeepSAT web platform URL (https://deepsat.ucsd.edu) but contains no statement about 'passing through tensorflow serving' or any infrastructure details about how the model is served.",
@@ -507,7 +507,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/api-response-parsing-and-validation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/api-response-parsing-and-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper describes DeepSAT (not 'SMART 3'), a CNN-based structure annotation system. No mention of a '/api/smart3/search' endpoint, JSON API responses, or confidence score extraction workflows. The paper focuses on the neural network architecture, training methodology, and evaluation metrics\u2014not API design or response parsing.",
@@ -527,7 +527,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/api-response-parsing-and-validation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/api-response-parsing-and-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss API schema validation, response conformance checking, or logging workflows. The paper is a machine learning research paper, not a software engineering or API documentation paper.",
@@ -547,7 +547,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/api-response-parsing-and-validation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/api-response-parsing-and-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not describe any '/api/smart3/search' endpoint or POST request workflows. The paper mentions a web-based platform (https://deepsat.ucsd.edu) but does not document API endpoints or request/response formats.",
@@ -567,7 +567,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/api-response-parsing-and-validation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/api-response-parsing-and-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not describe a '/model/metadata' endpoint or schema documentation. No API metadata retrieval workflows are discussed.",
@@ -587,7 +587,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/api-response-parsing-and-validation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/api-response-parsing-and-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python programming was used in this project, and the TensorFlow 2.3.0 deep learning framework was used.",
       "asbval:note": "Paper confirms use of TensorFlow 2.3.0 for training the CNN model, but does not mention TensorFlow Serving, model metadata endpoints, or any API infrastructure. The paper uses TensorFlow for model development, not for serving or API response validation.",
@@ -607,7 +607,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/api-response-parsing-and-validation/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/api-response-parsing-and-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No evidence in the paper of TensorFlow Serving being used for model serving or any mention of passing requests through a TensorFlow Serving endpoint.",
@@ -627,7 +627,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/http-post-request-assembly/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/http-post-request-assembly/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes DeepSAT as a web-based platform (https://deepsat.ucsd.edu) and mentions a web interface for analysis, but does not discuss HTTP POST requests, JSON payloads, or programmatic API submission of peak data. The paper focuses on the CNN architecture, training methodology, and evaluation results, not on API implementation details or client-side request construction.",
@@ -647,7 +647,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/http-post-request-assembly/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/http-post-request-assembly/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper mentions TensorFlow 2.3.0 as the deep learning framework used for training DeepSAT (passage 4), but does not mention TensorFlow Serving, /model/metadata endpoints, or any serving infrastructure. The paper also does not reference 'SMART 3' \u2014 it discusses SMART 2.0 as a predecessor tool and introduces DeepSAT as the new system.",
@@ -667,7 +667,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/http-post-request-assembly/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/http-post-request-assembly/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we introduce DeepSAT (https://deepsat.ucsd.edu), an NMR-based structure searching tool",
       "asbval:note": "The paper confirms DeepSAT exists and has a web platform at https://deepsat.ucsd.edu (passage 4), but does not describe it as containing a 'SMART 3 classification API' or discuss endpoint implementation. The paper refers to DeepSAT as a successor to SMART 2.0, not as SMART 3. The card conflates DeepSAT with a SMART 3 API that is not mentioned in the paper.",
@@ -687,7 +687,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/http-post-request-assembly/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/http-post-request-assembly/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Using only the 1 H- 13 C HSQC spectrum, DeepSAT identifies related known compounds",
       "asbval:note": "The paper confirms DeepSAT accepts 1H and 13C NMR data (HSQC spectra) as input (passages 2, 4), but does not describe submission via HTTP POST requests or JSON payloads. The paper describes a web-based platform but does not detail programmatic API access or endpoint schemas. The reference to 'SMART 3' is not supported by the paper.",
@@ -707,7 +707,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/http-post-request-assembly/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/http-post-request-assembly/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "TensorFlow is mentioned as the framework used for training (TensorFlow 2.3.0, passage 4), but TensorFlow Serving as a deployment/serving infrastructure is not mentioned. No /model/metadata endpoint or serving architecture is described in the paper.",
@@ -727,7 +727,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-payload-construction-for-nmr-spectra/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/json-payload-construction-for-nmr-spectra/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "DeepSAT (https://deepsat.ucsd.edu), an NMR-based structure searching tool that uses NMR spectra as the user input... DeepSAT was trained using a convolutional neural network (CNN)-based multi-task supervised learning architecture with 143,467 1H-13C HSQC spectra",
       "asbval:note": "Paper describes DeepSAT as an NMR-based structure searching tool that accepts NMR spectra as input, but does not mention 'SMART 3' API, JSON payload construction, or a '/api/smart3/search endpoint'. The paper references SMART 2.0 as a predecessor tool but does not describe SMART 3. The card conflates DeepSAT with a hypothetical 'SMART 3' API that is not mentioned in the paper.",
@@ -747,7 +747,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-payload-construction-for-nmr-spectra/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/json-payload-construction-for-nmr-spectra/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not describe a '/api/smart3/search endpoint' or any API endpoint structure. The paper describes DeepSAT as a web-based platform (https://deepsat.ucsd.edu) but does not document API endpoints or JSON payload schemas for programmatic access.",
@@ -767,7 +767,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-payload-construction-for-nmr-spectra/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/json-payload-construction-for-nmr-spectra/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper mentions 'TensorFlow 2.3.0 deep learning framework' was used for training DeepSAT, but does not mention TensorFlow Serving or any metadata endpoint infrastructure.",
@@ -787,7 +787,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-payload-construction-for-nmr-spectra/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/json-payload-construction-for-nmr-spectra/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "DeepSAT (https://deepsat.ucsd.edu), an NMR-based structure searching tool that uses NMR spectra as the user input",
       "asbval:note": "Paper confirms DeepSAT exists and accepts NMR spectra as input via a web platform, but does not document a '/api/smart3/search endpoint' or JSON payload schema. The endpoint structure and API design are not described in the paper.",
@@ -807,7 +807,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-payload-construction-for-nmr-spectra/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/json-payload-construction-for-nmr-spectra/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The quoted evidence span 'We pass through tensorflow serving at this url' does not appear in any of the provided paper passages. TensorFlow Serving is not mentioned in the paper.",
@@ -827,7 +827,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-payload-construction-for-nmr-spectra/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/json-payload-construction-for-nmr-spectra/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Using only the 1 H- 13 C HSQC spectrum, DeepSAT identifies related known compounds",
       "asbval:note": "Paper confirms DeepSAT accepts 1H and 13C NMR data as input, but does not describe a '/model/metadata endpoint' or specify JSON schema requirements for programmatic input.",
@@ -847,7 +847,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-payload-construction-for-nmr-spectra/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/json-payload-construction-for-nmr-spectra/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not describe JSON payload output format or any programmatic API response structure. The paper focuses on the web interface and evaluation metrics, not API response schemas.",
@@ -867,7 +867,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-response-parsing/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/json-response-parsing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes DeepSAT, a neural network tool for NMR-based molecular structure identification. It does not discuss REST API endpoints, JSON response parsing, TensorFlow Serving metadata endpoints, or HTTP integration patterns. The paper focuses on CNN architecture, training procedures, and evaluation metrics for spectroscopic analysis.",
@@ -887,7 +887,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-response-parsing/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/json-response-parsing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper mentions TensorFlow 2.3.0 as the deep learning framework used for training DeepSAT (passage 4: 'the TensorFlow 2.3.0 deep learning framework was used'), but does not mention TensorFlow Serving, REST API endpoints, /model/metadata paths, or any HTTP-based model serving infrastructure. The paper describes a web-based platform (https://deepsat.ucsd.edu) but does not detail its backend serving architecture or API contract specifications.",
@@ -907,7 +907,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-response-parsing/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/json-response-parsing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper's scope is molecular structure identification from NMR spectra using deep learning. It does not address REST API design, JSON parsing, model metadata extraction via HTTP endpoints, or API contract validation. The paper is entirely focused on spectroscopic analysis and neural network training/evaluation.",
@@ -927,7 +927,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-response-parsing/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/json-response-parsing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "This evidence span does not appear in any of the provided paper passages. The paper does not mention passing through TensorFlow Serving or any URL-based serving infrastructure.",
@@ -947,7 +947,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/model-metadata-extraction/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/model-metadata-extraction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper describes DeepSAT, a CNN-based NMR structure annotation tool. No mention of TensorFlow Serving, /model/metadata endpoints, or API contract validation. DeepSAT is described as a web-based platform (https://deepsat.ucsd.edu) but implementation details of serving infrastructure are not discussed in provided passages.",
@@ -967,7 +967,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/model-metadata-extraction/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/model-metadata-extraction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss TensorFlow Serving deployment, metadata endpoints, or API contract validation. The paper focuses on DeepSAT's architecture, training, and evaluation, not on serving infrastructure or API integration patterns.",
@@ -987,7 +987,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/model-metadata-extraction/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/model-metadata-extraction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python programming was used in this project, and the TensorFlow 2.3.0 deep learning framework was used.",
       "asbval:note": "Paper confirms use of TensorFlow 2.3.0 framework for training DeepSAT, but does not mention TensorFlow Serving, HTTP endpoints, or metadata query infrastructure. The tool claim conflates the deep learning framework (TensorFlow) with a serving infrastructure (TensorFlow Serving) that is not discussed in the paper.",
@@ -1007,7 +1007,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/model-metadata-extraction/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/model-metadata-extraction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No such statement appears in the paper. The paper mentions a web-based platform URL (https://deepsat.ucsd.edu) but does not describe the serving infrastructure or mention TensorFlow Serving.",
@@ -1027,7 +1027,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/model-metadata-schema-verification/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/model-metadata-schema-verification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper describes DeepSAT as a web-based platform (https://deepsat.ucsd.edu) for NMR-based structure annotation using a CNN, but contains no discussion of querying metadata endpoints, TensorFlow Serving infrastructure, schema verification workflows, or API contract validation. The paper focuses on model architecture, training, and evaluation\u2014not deployment infrastructure or API client patterns.",
@@ -1047,7 +1047,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/model-metadata-schema-verification/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/model-metadata-schema-verification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not address deployment patterns, metadata endpoints, or API schema verification. The scope describes a DevOps/MLOps workflow for API clients; the paper is a machine learning research paper describing model development and evaluation.",
@@ -1067,7 +1067,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/model-metadata-schema-verification/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/model-metadata-schema-verification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper uses TensorFlow 2.3.0 as the deep learning framework for training DeepSAT (passage [4]: 'TensorFlow 2.3.0 deep learning framework was used'), but does not mention TensorFlow Serving, metadata endpoints, or any deployment infrastructure. TensorFlow Serving is a separate serving system not discussed in the paper.",
@@ -1087,7 +1087,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/model-metadata-schema-verification/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/model-metadata-schema-verification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No such statement appears in the paper. The paper mentions the web platform URL (https://deepsat.ucsd.edu) but does not describe TensorFlow Serving infrastructure or any metadata endpoint querying.",
@@ -1107,7 +1107,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rest-api-endpoint-querying/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/rest-api-endpoint-querying/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes DeepSAT as a web-based platform (https://deepsat.ucsd.edu) but does not discuss REST API endpoint querying, HTTP request construction, JSON response parsing, or schema validation. The paper focuses on CNN architecture, training methodology, and evaluation metrics. No mention of TensorFlow Serving or API-based access patterns.",
@@ -1127,7 +1127,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rest-api-endpoint-querying/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/rest-api-endpoint-querying/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention TensorFlow Serving. The paper states 'TensorFlow 2.3.0 deep learning framework was used' (passage 4) for training, but does not describe deployment via TensorFlow Serving or any REST API infrastructure. DeepSAT is described as a web-based platform but implementation details of the API are not provided.",
@@ -1147,7 +1147,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rest-api-endpoint-querying/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/rest-api-endpoint-querying/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "This quoted phrase does not appear in any passage. The paper provides the URL https://deepsat.ucsd.edu but makes no statement about 'passing through tensorflow serving' or any infrastructure details.",
@@ -1167,7 +1167,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rest-api-endpoint-querying/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/rest-api-endpoint-querying/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes DeepSAT as a tool for structure identification and annotation from NMR spectra using a CNN, but does not discuss API querying patterns, endpoint design, or programmatic access via HTTP. The scope describes a software engineering / API integration task that is outside the paper's focus on machine learning model development and evaluation.",
@@ -1187,7 +1187,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/restful-api-endpoint-invocation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/restful-api-endpoint-invocation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "DeepSAT (https://deepsat.ucsd.edu), an NMR-based structure searching tool that uses NMR spectra as the user input... DeepSAT was trained using a convolutional neural network (CNN)-based multi-task supervised learning architecture with 143,467 1H-13C HSQC spectra",
       "asbval:note": "Paper describes DeepSAT as a web-based platform (https://deepsat.ucsd.edu) that accepts NMR spectra as input and returns structure predictions. However, the paper does not explicitly describe a REST API endpoint for programmatic peak submission or mention TensorFlow Serving. The paper focuses on the web interface and batch processing, not RESTful API invocation with JSON peak data.",
@@ -1207,7 +1207,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/restful-api-endpoint-invocation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/restful-api-endpoint-invocation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "DeepSAT (https://deepsat.ucsd.edu), an NMR-based structure searching tool that uses NMR spectra as the user input... Using only the 1H-13C HSQC spectrum, DeepSAT identifies related known compounds",
       "asbval:note": "Paper confirms DeepSAT accepts 1H-13C NMR data and returns structure predictions with confidence/similarity scores (cosine scores). However, no explicit mention of REST API endpoint architecture, JSON payload submission, or programmatic API access patterns.",
@@ -1227,7 +1227,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/restful-api-endpoint-invocation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/restful-api-endpoint-invocation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper states 'the TensorFlow 2.3.0 deep learning framework was used' for training DeepSAT but does not mention TensorFlow Serving, /model/metadata endpoints, or any serving infrastructure. No evidence of TensorFlow Serving deployment.",
@@ -1247,7 +1247,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/restful-api-endpoint-invocation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/restful-api-endpoint-invocation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "DeepSAT (https://deepsat.ucsd.edu), an NMR-based structure searching tool that uses NMR spectra as the user input",
       "asbval:note": "Paper confirms DeepSAT exists as a web-based tool at https://deepsat.ucsd.edu that accepts NMR spectra and returns predictions. However, no mention of REST API endpoints, /api/smart3/search path, or programmatic JSON-based peak submission. The paper describes web interface usage, not API endpoint architecture.",
@@ -1267,7 +1267,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/restful-api-endpoint-invocation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/restful-api-endpoint-invocation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention TensorFlow Serving, REST API endpoints, JSON payload construction, or any programmatic API interface. The evidence_spans field in the card ('We pass through tensorflow serving at this url') is not found in any passage.",
@@ -1287,7 +1287,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/restful-api-endpoint-invocation/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/restful-api-endpoint-invocation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Using only the 1H-13C HSQC spectrum, DeepSAT identifies related known compounds... the convolutional neural network extracts the features from HSQC spectra",
       "asbval:note": "Paper confirms DeepSAT accepts 1H-13C NMR data (HSQC spectra). However, no explicit mention of JSON format, dictionary structure, or programmatic peak submission. Paper describes HSQC spectrum images as input, not structured peak lists.",
@@ -1307,7 +1307,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/restful-api-endpoint-invocation/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/restful-api-endpoint-invocation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the convolutional neural network extracts the features from HSQC spectra. Based on the extracted features, fully connected layers predict Morgan fingerprints, molecular weights, and chemical classes... The structure similarities were calculated using the chemical fingerprint method with cosine scoring.",
       "asbval:note": "Paper confirms DeepSAT returns predictions (fingerprints, molecular weights, structure classes) with confidence metrics (cosine similarity scores). However, no mention of JSON response format, structured logging, or request parameter tracking in API responses.",
@@ -1327,7 +1327,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/api-contract-validation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/api-contract-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 4,
       "asbval:target_artifact_id": "api-contract-validation",
@@ -1340,7 +1340,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/api-response-parsing-and-validation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/api-response-parsing-and-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "api-response-parsing-and-validation",
@@ -1353,7 +1353,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/http-post-request-assembly/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/http-post-request-assembly/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "http-post-request-assembly",
@@ -1366,7 +1366,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-payload-construction-for-nmr-spectra/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/json-payload-construction-for-nmr-spectra/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "json-payload-construction-for-nmr-spectra",
@@ -1379,7 +1379,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-response-parsing/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/json-response-parsing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 4,
       "asbval:target_artifact_id": "json-response-parsing",
@@ -1392,7 +1392,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/model-metadata-extraction/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/model-metadata-extraction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 4,
       "asbval:target_artifact_id": "model-metadata-extraction",
@@ -1405,7 +1405,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/model-metadata-schema-verification/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/model-metadata-schema-verification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 4,
       "asbval:target_artifact_id": "model-metadata-schema-verification",
@@ -1418,7 +1418,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rest-api-endpoint-querying/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/rest-api-endpoint-querying/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 4,
       "asbval:target_artifact_id": "rest-api-endpoint-querying",
@@ -1431,7 +1431,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/restful-api-endpoint-invocation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/skill/restful-api-endpoint-invocation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "restful-api-endpoint-invocation",
@@ -1444,7 +1444,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Model metadata can be checked by passing through tensorflow serving at the /model/metadata URL.",
       "asbval:note": null,
@@ -1464,7 +1464,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "If the model input names change, the code must be updated accordingly.",
       "asbval:note": null,
@@ -1484,7 +1484,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "SMART 3 provides an API at /api/smart3/search for programmatic classification.",
       "asbval:note": null,
@@ -1504,7 +1504,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Peak data can be input to the SMART 3 API as a JSON list of dictionaries with 1H and 13C as headers.",
       "asbval:note": null,
@@ -1524,7 +1524,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-023-00738-4/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "DeepSAT source code is available on github under the user mwang87.",
       "asbval:note": null,

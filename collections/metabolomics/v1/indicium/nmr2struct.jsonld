@@ -291,7 +291,7 @@
       "workflow_coupling": "tight"
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we introduce a multitask machine learning framework that predicts the molecular structure (formula and connectivity) of an unknown compound solely based on its 1D 1 H and/or 13 C NMR spectra... we show that our approach predicts the exact molecule 69.6% of the time within the first 15 predictions... we demonstrate the effectiveness of this framework on molecules with up to 19 heavy (non-hydrogen) atoms",
       "asbval:note": "Paper does not name the model 'NMR2Struct'; it is referred to as a 'multitask machine learning framework' or 'spectrum-to-structure model'. The research question is otherwise accurate regarding accuracy metrics and molecule size.",
@@ -311,7 +311,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we show that our approach predicts the exact molecule 69.6% of the time within the first 15 predictions... Structure elucidation accuracy was tested in the same way as for the substructure-to-structure task, where a target was considered correctly predicted if its canonical SMILES string appeared within the set of 15 predictions upon canonicalization.",
       "asbval:note": "Paper reports top-15 accuracy (69.6%) and top-10 accuracy (from prior work cited), but does not explicitly report top-1 or top-5 accuracy metrics. The paper focuses on top-15 predictions as the primary evaluation metric.",
@@ -331,7 +331,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we introduce a multitask machine learning framework that predicts the molecular structure (formula and connectivity) of an unknown compound solely based on its 1D 1 H and/or 13 C NMR spectra... The top section of Figure 4 shows some of the molecules that were correctly predicted, emphasizing that the multitask model can elucidate the structures of molecules solely from their 1H and 13C NMR spectra",
       "asbval:note": "Paper explicitly outputs predicted molecular structures with formula and connectivity as SMILES strings.",
@@ -351,7 +351,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/card/task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "During training, we passed the processed 1H NMR spectra through a one-dimensional convolutional neural network (CNN) to downsample the signal into a lower-dimensional space.",
       "asbval:note": "CNN is explicitly used as part of the multitask model architecture.",
@@ -371,7 +371,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/card/task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we introduce a multitask machine learning framework... First, we show how a transformer architecture can be constructed to efficiently solve the task... Integrating this capability with a convolutional neural network, we build an end-to-end model for predicting structure from spectra that is fast and accurate.",
       "asbval:note": "Transformer architecture is central to the framework, used for both substructure-to-structure and spectrum-to-structure tasks.",
@@ -391,7 +391,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card refers to 'NMR2Struct model' but the paper does not use this specific name; it calls the approach a 'multitask machine learning framework' or 'spectrum-to-structure model'.",
@@ -407,7 +407,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/card/task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We treat the substructure-to-structure problem as a language translation problem, where we translate a sequence of substructures into a sequence of tokens that can be combined to form a molecule's SMILES string, recovering the molecular connectivity. Our approach is outlined in the bottom row of Figure 1, where we use a transformer model architecture for this task.",
       "asbval:note": "The paper explicitly describes using a transformer to assemble substructures (molecular fragments) into molecular structures via SMILES generation.",
@@ -427,7 +427,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/card/task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we adapt a full encoder-decoder transformer architecture for the substructure-to-structure task.",
       "asbval:note": "The paper explicitly uses a transformer architecture (encoder-decoder) for the fragment-to-structure assembly task.",
@@ -447,7 +447,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/card/task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To enable such adaptations and future developments, we have released the code on GitHub and provided the training, validation, and test data on Zenodo.",
       "asbval:note": "The paper indicates that trained model weights and code are released, though the specific mention of 'weights and configuration' is implicit in the code release.",
@@ -467,7 +467,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/card/task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "On the test set, the model achieved an accuracy of 93.2%. Examples of molecules correctly predicted by the transformer model are shown at the top section of Figure 3... Overall, 89.6% of the best incorrect predictions have a similarity to the correct molecule that is greater than or equal to 0.50, with an average similarity of 0.68.",
       "asbval:note": "The paper reports exact match accuracy (93.2%) and Tanimoto similarity scores (partial correctness metric) for the substructure-to-structure transformer.",
@@ -487,7 +487,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/card/task_002/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The test set accuracy as a function of the number of heavy atoms is shown as blue data in the left panel of Figure 2 for up to 19 heavy atoms... To better understand the failure modes of the substructure-to-structure model, we examine the distribution of Tanimoto similarities computed between the model's best incorrect prediction and the correct molecule in cases where the correct molecule was not predicted.",
       "asbval:note": "The paper provides comprehensive test set evaluation including accuracy curves, failure mode analysis, and similarity distributions.",
@@ -507,7 +507,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/card/task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card title mentions 'combinatorial fragment-to-structure assembly' which is accurate to the paper's substructure-to-structure task.",
@@ -523,7 +523,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/card/task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To investigate the relative importance of 1H and 13C NMR as inputs, we trained two versions of the model using either 1H or 13C NMR as the sole input. The accuracy of the model is significantly better with only 1H NMR (59.6%) than with only 13C NMR (22.0%)... However, the best accuracy is obtained only when combining both spectra, showing that they are complementary to each other in terms of the information they each provide.",
       "asbval:note": "Directly supported: paper explicitly compares 1H-only, 13C-only, and combined inputs and quantifies their relative contributions.",
@@ -543,7 +543,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/card/task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Table 1 Test Set Structure Elucidation Accuracy and Substructure Elucidation F1 Score of the Multitask Model As a Function of the Type of Data Used and Weight Initialization for the Transformer Component... Data Used: 13C NMR Only, 1H NMR Only, 1H + 13C NMR with corresponding Structure Accuracy (%) and Substructure F1 Score values.",
       "asbval:note": "Table 1 provides exactly this comparison across three modality conditions.",
@@ -563,7 +563,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/card/task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The highest accuracy of 69.6% (Table 1, third row) is obtained when using both the 1H and 13C NMR spectra with a pretrained transformer for structure elucidation... The accuracy of the model is significantly better with only 1H NMR (59.6%) than with only 13C NMR (22.0%)... However, the best accuracy is obtained only when combining both spectra, showing that they are complementary to each other.",
       "asbval:note": "Paper provides absolute accuracies per modality (59.6%, 22.0%, 69.6%) and discusses complementarity/synergy.",
@@ -583,7 +583,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/card/task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we use a transformer model architecture for this task... Here, we adapt a full encoder-decoder transformer architecture for the substructure-to-structure task... These features were then passed through a full encoder-decoder transformer for structure elucidation, which outputs SMILES strings, and a transformer encoder for substructure elucidation",
       "asbval:note": "Transformer architecture is central to the multitask framework and explicitly used for both substructure-to-structure and spectrum-to-structure tasks.",
@@ -603,7 +603,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/card/task_003/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "During training, we passed the processed 1H NMR spectra through a one-dimensional convolutional neural network (CNN) to downsample the signal into a lower-dimensional space.",
       "asbval:note": "CNN is explicitly used as part of the multitask model to process 1H NMR spectra.",
@@ -623,7 +623,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/card/task_004/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This suggests that our approach to the inverse problem of spectrum-to-structure is scalable to larger chemical systems.",
       "asbval:note": "Paper discusses scalability and mentions future work on 'even larger molecules' but does NOT present empirical results on molecules >19 heavy atoms. The paper's training scope is explicitly up to 19 heavy atoms. The research question assumes out-of-scope testing that the paper does not report.",
@@ -643,7 +643,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/card/task_004/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we introduce a multitask machine learning framework that predicts the molecular structure (formula and connectivity) of an unknown compound solely based on its 1D 1 H and/or 13 C NMR spectra. First, we show how a transformer architecture can be constructed to efficiently solve the task",
       "asbval:note": "Transformer architecture is central to the paper's approach for both substructure-to-structure and spectrum-to-structure tasks.",
@@ -663,7 +663,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/card/task_004/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "During training, we passed the processed 1H NMR spectra through a one-dimensional convolutional neural network (CNN) to downsample the signal into a lower-dimensional space.",
       "asbval:note": "CNN is used as part of the multitask model to process 1H NMR spectra.",
@@ -683,7 +683,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/card/task_004/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not report accuracy metrics for molecules >19 heavy atoms. The paper's test set includes molecules up to 19 heavy atoms only. No out-of-scope testing results are presented.",
@@ -703,7 +703,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/card/task_004/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not provide comparative tables for out-of-scope molecules. The only degradation analysis shown is within the 10-19 heavy atom range (in-scope).",
@@ -723,7 +723,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/card/task_004/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The test set accuracy as a function of the number of heavy atoms is shown as blue data in the left panel of Figure 2 for up to 19 heavy atoms... However, the accuracy drops below 80% for the molecules with 18 or 19 heavy atoms.",
       "asbval:note": "Paper documents failure modes and performance degradation within the 10-19 heavy atom range (e.g., Tanimoto similarity analysis, accuracy drop at 18-19 atoms), but does NOT extend this analysis beyond 19 heavy atoms as the card's expected output implies.",
@@ -743,7 +743,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/card/task_004/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card proposes testing the model on molecules >19 heavy atoms, but the paper explicitly states its training and testing scope is 'up to 19 heavy atoms.' The paper does not conduct out-of-scope testing.",
@@ -761,7 +761,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/accuracy-metric-computation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/accuracy-metric-computation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Structure elucidation accuracy was tested in the same way as for the substructure-to-structure task, where a target was considered correctly predicted if its canonical SMILES string appeared within the set of 15 predictions upon canonicalization... The highest accuracy of 69.6% (Table 1, third row) is obtained when using both the 1H and 13C NMR spectra with a pretrained transformer for structure elucidation.",
       "asbval:note": "Paper computes exact-match accuracy (canonical SMILES matching) and F1 score for substructure prediction, but does NOT explicitly compute graph edit distance. Tanimoto similarity is used instead to measure structural similarity of incorrect predictions. The claim overstates the metrics actually computed.",
@@ -781,7 +781,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/accuracy-metric-computation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/accuracy-metric-computation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To investigate the relative importance of 1H and 13C NMR as inputs, we trained two versions of the model using either 1H or 13C NMR as the sole input. The accuracy of the model is significantly better with only 1H NMR (59.6%) than with only 13C NMR (22.0%)... However, the best accuracy is obtained only when combining both spectra, showing that they are complementary to each other",
       "asbval:note": "Paper explicitly compares performance across modalities (1H NMR only, 13C NMR only, combined) and identifies gaps.",
@@ -801,7 +801,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/accuracy-metric-computation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/accuracy-metric-computation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce a multitask machine learning framework that predicts the molecular structure (formula and connectivity) of an unknown compound solely based on its 1D 1H and/or 13C NMR spectra. First, we show how a transformer architecture can be constructed to efficiently solve the task... Integrating this capability with a convolutional neural network, we build an end-to-end model for predicting structure from spectra that is fast and accurate.",
       "asbval:note": "Transformer architecture is central to the paper's approach for structure prediction.",
@@ -821,7 +821,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/accuracy-metric-computation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/accuracy-metric-computation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "During training, we passed the processed 1H NMR spectra through a one-dimensional convolutional neural network (CNN) to downsample the signal into a lower-dimensional space.",
       "asbval:note": "CNN is used to encode 1H NMR spectra into feature representations as claimed.",
@@ -841,7 +841,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/accuracy-metric-computation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/accuracy-metric-computation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These features were then passed through a full encoder-decoder transformer for structure elucidation, which outputs SMILES strings, and a transformer encoder for substructure elucidation, which outputs substructure probability arrays",
       "asbval:note": "Transformer outputs SMILES strings (molecular structure representations) that are then evaluated against ground truth.",
@@ -861,7 +861,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/accuracy-metric-computation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/accuracy-metric-computation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "During training, we passed the processed 1H NMR spectra through a one-dimensional convolutional neural network (CNN) to downsample the signal into a lower-dimensional space. For the processed 13C NMR spectra, since it is a binary vector, we embedded it into a dense vector representation. If both spectra were being used as input to the spectrum-to-structure model, then their features were concatenated.",
       "asbval:note": "CNN encodes 1H NMR spectra; these encoded features feed into the transformer for structure prediction, which is then evaluated.",
@@ -881,7 +881,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chemical-graph-connectivity-validation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/chemical-graph-connectivity-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Structure elucidation accuracy was tested in the same way as for the substructure-to-structure task, where a target was considered correctly predicted if its canonical SMILES string appeared within the set of 15 predictions upon canonicalization.",
       "asbval:note": "Paper validates predictions by comparing canonical SMILES strings (connectivity representation) against ground-truth molecules. However, the paper does not use the term 'NMR2Struct' \u2014 the model is described as a 'multitask machine learning framework' or 'transformer-based ML framework'. The validation approach (SMILES canonicalization) is semantically equivalent to connectivity graph comparison, but the tool name in the card does not match the paper's nomenclature.",
@@ -901,7 +901,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chemical-graph-connectivity-validation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/chemical-graph-connectivity-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we present a transformer-based ML framework for solving the most challenging version of the structure elucidation problem, applying minimal preprocessing to the input 1H and 13C NMR spectra and using no other prior information such as molecular formula or molecular fragments.",
       "asbval:note": "Paper describes a transformer-based framework for structure elucidation from 1D NMR spectra. The model name 'NMR2Struct' does not appear in the paper; the paper refers to it as a 'multitask machine learning framework' or 'spectrum-to-structure model'. The functional role (structure recovery from NMR) matches.",
@@ -921,7 +921,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chemical-graph-connectivity-validation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/chemical-graph-connectivity-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we introduce a multitask machine learning framework that predicts the molecular structure (formula and connectivity) of an unknown compound solely based on its 1D 1 H and/or 13 C NMR spectra.",
       "asbval:note": "Direct match: paper predicts both formula and connectivity from 1D NMR.",
@@ -941,7 +941,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chemical-graph-connectivity-validation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/chemical-graph-connectivity-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The left panel of Figure 2 shows in red the structure elucidation accuracy of the spectrum-to-structure multitask model as a function of the number of heavy atoms. In comparison to the substructure-to-structure model, there is a more systematic decrease in accuracy with the size of the molecule, decreasing from 77.5% at 10 heavy atoms to 52.0% at 19 heavy atoms.",
       "asbval:note": "Paper explicitly measures accuracy degradation as molecule size increases, including at the 19 heavy atom boundary. Failure modes are analyzed via Tanimoto similarity distributions.",
@@ -961,7 +961,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chemical-graph-connectivity-validation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/chemical-graph-connectivity-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we introduce a multitask machine learning framework that predicts the molecular structure (formula and connectivity) of an unknown compound solely based on its 1D 1 H and/or 13 C NMR spectra.",
       "asbval:note": "Paper explicitly states framework uses 1D \u00b9H and \u00b9\u00b3C NMR only; 2D spectra are not mentioned as supported.",
@@ -981,7 +981,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chemical-graph-connectivity-validation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/chemical-graph-connectivity-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To train the transformer on this task, we started with a set of \u223c143 thousand molecules from the SpectraBase30 database containing only C, N, and O as the non-hydrogen atoms and combined it with a set of \u223c3 million molecules randomly sampled from the GDB-17 data set14 to create a final data set of \u223c3.1 million molecules. After canonicalizing all the SMILES strings using RDKit,31 the substructure vector for each molecule was computed using RDKit's substructure match functionality against the set of 957 substructures used in our previous work20 represented as SMART strings.",
       "asbval:note": "Paper uses canonicalized SMILES from curated databases (SpectraBase, GDB-17) as ground truth, confirming that unambiguous reference structures are required.",
@@ -1001,7 +1001,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chemical-graph-connectivity-validation/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/chemical-graph-connectivity-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Integrating this capability with a convolutional neural network, we build an end-to-end model for predicting structure from spectra that is fast and accurate.",
       "asbval:note": "Paper describes a transformer + CNN architecture for structure prediction from NMR. However, the model is not named 'NMR2Struct' in the paper; it is referred to as a 'multitask machine learning framework' or 'spectrum-to-structure model'. The architecture (transformer + CNN) matches the card's description.",
@@ -1021,7 +1021,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chemical-graph-connectivity-validation/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/chemical-graph-connectivity-validation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we introduce a multitask machine learning framework that predicts the molecular structure (formula and connectivity) of an unknown compound solely based on its 1D 1 H and/or 13 C NMR spectra.",
       "asbval:note": "Exact functional match: end-to-end model predicts formula and connectivity from 1D NMR.",
@@ -1041,7 +1041,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chemical-graph-connectivity-validation/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/chemical-graph-connectivity-validation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To train the transformer on this task, we started with a set of \u223c143 thousand molecules from the SpectraBase30 database containing only C, N, and O as the non-hydrogen atoms and combined it with a set of \u223c3 million molecules randomly sampled from the GDB-17 data set14",
       "asbval:note": "Paper uses SpectraBase and GDB-17 databases for training/testing, not PubChem. These serve the same functional role (source of molecules with ground-truth structures), but the specific database names differ.",
@@ -1061,7 +1061,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chemical-graph-connectivity-validation/009",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/chemical-graph-connectivity-validation/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Although this sudden decrease could be explained in part by the problem size entering the trillions for molecules of that size, a more likely explanation might be that GDB-17 only contains molecules with up to 17 heavy atoms, while the SpectraBase data set, which does contain molecules with 18 and 19 heavy atoms, is much smaller.",
       "asbval:note": "Paper uses SpectraBase for molecules with 18\u201319 heavy atoms (at the boundary of training scope), but does not explicitly test on molecules >19 heavy atoms. The card claims the tool should be used for molecules 'beyond training scope (>19 heavy atoms)', but the paper's training set includes up to 19 heavy atoms and does not report results on larger molecules.",
@@ -1081,7 +1081,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chemical-graph-connectivity-validation/010",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/chemical-graph-connectivity-validation/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For training and testing the spectrum-to-structure model, we used 1H and/or 13C NMR spectra for the \u223c143 thousand set of molecules from SpectraBase predicted using MestreNova,38",
       "asbval:note": "Paper uses MestreNova for NMR spectrum prediction/simulation, not a generic 'NMR spectrum simulation or database retrieval tool'. MestreNova is a specific commercial software tool.",
@@ -1101,7 +1101,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chemical-graph-connectivity-validation/011",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/chemical-graph-connectivity-validation/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For training and testing the spectrum-to-structure model, we used 1H and/or 13C NMR spectra for the \u223c143 thousand set of molecules from SpectraBase predicted using MestreNova,38",
       "asbval:note": "Functional match: paper generates/retrieves 1D \u00b9H and \u00b9\u00b3C NMR spectra for test molecules.",
@@ -1121,7 +1121,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragment-assembly-transformer-architecture/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/fragment-assembly-transformer-architecture/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we treat the substructure-to-structure problem as a language translation problem, where we translate a sequence of substructures into a sequence of tokens that can be combined to form a molecule's SMILES string, recovering the molecular connectivity. Our approach is outlined in the bottom row of Figure 1, where we use a transformer model architecture for this task. Autoregressive transformer models have been shown to excel at translation tasks owing to the strong inductive bias provided by the multihead attention mechanism, which captures global correlations and uses that information to generate the target sequence in a conditioned manner.",
       "asbval:note": "Claim directly supported: transformer assembles substructures (fragments) into molecular structures using attention mechanisms; automates chemist task of structure elucidation; learns connectivity from training pairs.",
@@ -1141,7 +1141,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragment-assembly-transformer-architecture/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/fragment-assembly-transformer-architecture/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we introduce a multitask machine learning framework that predicts the molecular structure (formula and connectivity) of an unknown compound solely based on its 1D 1 H and/or 13 C NMR spectra... We demonstrate the effectiveness of this framework on molecules with up to 19 heavy (non-hydrogen) atoms",
       "asbval:note": "Scope claim fully supported: 1D NMR input (1H and/or 13C), up to 19 heavy atoms, predicts formula and connectivity.",
@@ -1161,7 +1161,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragment-assembly-transformer-architecture/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/fragment-assembly-transformer-architecture/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the number of possible molecules suffers from a combinatorial explosion as the number of constituent atoms increases... To train the transformer on this task, we started with a set of \u223c143 thousand molecules from the SpectraBase30 database containing only C, N, and O as the non-hydrogen atoms and combined it with a set of \u223c3 million molecules randomly sampled from the GDB-17 data set",
       "asbval:note": "Scope claim supported: paper addresses combinatorial explosion problem; uses training data from SpectraBase and GDB-17 deposited datasets.",
@@ -1181,7 +1181,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragment-assembly-transformer-architecture/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/fragment-assembly-transformer-architecture/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss 2D NMR spectra (HSQC, HMBC, COSY) or recommend against using them. This is a scope limitation claim not addressed in the paper.",
@@ -1201,7 +1201,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragment-assembly-transformer-architecture/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/fragment-assembly-transformer-architecture/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We demonstrate the effectiveness of this framework on molecules with up to 19 heavy (non-hydrogen) atoms, a size for which there are trillions of possible structures.",
       "asbval:note": "Scope limitation claim supported: model demonstrated only up to 19 heavy atoms.",
@@ -1221,7 +1221,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragment-assembly-transformer-architecture/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/fragment-assembly-transformer-architecture/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Claim text is incomplete ('fragment-structure pair' is cut off). Cannot evaluate incomplete claim.",
@@ -1241,7 +1241,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragment-assembly-transformer-architecture/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/fragment-assembly-transformer-architecture/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we adapt a full encoder-decoder transformer architecture for the substructure-to-structure task... Autoregressive transformer models have been shown to excel at translation tasks owing to the strong inductive bias provided by the multihead attention mechanism, which captures global correlations and uses that information to generate the target sequence in a conditioned manner.",
       "asbval:note": "Tool and role fully supported: transformer used as encoder-decoder for fragment-to-structure assembly via attention mechanisms.",
@@ -1261,7 +1261,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragment-assembly-transformer-architecture/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/fragment-assembly-transformer-architecture/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "During training, we passed the processed 1H NMR spectra through a one-dimensional convolutional neural network (CNN) to downsample the signal into a lower-dimensional space... These features were then passed through a full encoder-decoder transformer for structure elucidation",
       "asbval:note": "Tool and role supported: CNN used for feature extraction from raw NMR spectra before transformer processing in the multitask end-to-end model.",
@@ -1281,7 +1281,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragment-canonicalization-and-matching/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/fragment-canonicalization-and-matching/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "After canonicalizing all the SMILES strings using RDKit, the substructure vector for each molecule was computed using RDKit's substructure match functionality against the set of 957 substructures",
       "asbval:note": "Paper does canonicalize SMILES and match substructures, but the primary workflow is spectrum-to-structure (NMR spectra \u2192 structure), not fragment-to-structure assembly. Canonicalization and matching are preprocessing steps for the substructure-to-structure task, not the main research focus. The card frames this as a standalone 'skill' for fragment assembly, but the paper uses it as part of a larger multitask ML framework for NMR-based structure elucidation.",
@@ -1301,7 +1301,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragment-canonicalization-and-matching/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/fragment-canonicalization-and-matching/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we adapt a full encoder-decoder transformer architecture for the substructure-to-structure task. The inputs to the substructure-to-structure transformer are a binary vector with each entry corresponding to the presence or absence of a specific substructure and a start token.",
       "asbval:note": "The transformer does accept substructure information (binary vectors representing presence/absence of 957 substructures) and uses attention to assemble them into SMILES. However, the input is not 'canonicalized and matched fragment sets' in the sense the card implies\u2014it is a binary vector encoding, not raw fragments. The transformer's role is substructure-to-structure assembly, not general fragment matching.",
@@ -1321,7 +1321,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragment-canonicalization-and-matching/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/fragment-canonicalization-and-matching/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "During training, we passed the processed 1H NMR spectra through a one-dimensional convolutional neural network (CNN) to downsample the signal into a lower-dimensional space... These features were then passed through a full encoder-decoder transformer for structure elucidation",
       "asbval:note": "The CNN is used to encode spectroscopic data (1H NMR), not to depend on fragment canonicalization. Fragment canonicalization is a preprocessing step applied to training data (via RDKit), not a runtime dependency of the CNN. The CNN processes spectra independently; it does not 'indirectly depend' on fragment matching in the way the card suggests.",
@@ -1341,7 +1341,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/graph-neural-network-design-for-chemistry/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/graph-neural-network-design-for-chemistry/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we introduce a multitask machine learning framework that predicts the molecular structure (formula and connectivity) of an unknown compound solely based on its 1D 1H and/or 13C NMR spectra",
       "asbval:note": "Paper does predict molecular structure from NMR spectra, but uses transformer and CNN architectures, NOT graph neural networks. The paper explicitly states 'Rather than predicting fragments as an intermediate step, recent work has sought to directly predict molecular structure from spectra in an end-to-end fashion, using deep learning architectures such as graph convolutional neural networks and transformers.' The paper implements transformers and CNNs, not GNNs. This is a tool-name conflation.",
@@ -1361,7 +1361,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/graph-neural-network-design-for-chemistry/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/graph-neural-network-design-for-chemistry/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we introduce a multitask machine learning framework that predicts the molecular structure (formula and connectivity) of an unknown compound solely based on its 1D 1H and/or 13C NMR spectra... We demonstrate the effectiveness of this framework on molecules with up to 19 heavy (non-hydrogen) atoms",
       "asbval:note": null,
@@ -1381,7 +1381,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/graph-neural-network-design-for-chemistry/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/graph-neural-network-design-for-chemistry/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We first consider the problem of deducing a molecular structure from knowledge of the presence or absence of a set of substructures... we use a transformer model architecture for this task... where we translate a sequence of substructures into a sequence of tokens that can be combined to form a molecule's SMILES string, recovering the molecular connectivity.",
       "asbval:note": null,
@@ -1401,7 +1401,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/graph-neural-network-design-for-chemistry/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/graph-neural-network-design-for-chemistry/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we adapt a full encoder-decoder transformer architecture for the substructure-to-structure task... Autoregressive transformer models have been shown to excel at translation tasks owing to the strong inductive bias provided by the multihead attention mechanism... we integrate this pretrained transformer into a multitask model that predicts both substructure and molecular structure",
       "asbval:note": null,
@@ -1421,7 +1421,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/graph-neural-network-design-for-chemistry/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/graph-neural-network-design-for-chemistry/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "During training, we passed the processed 1H NMR spectra through a one-dimensional convolutional neural network (CNN) to downsample the signal into a lower-dimensional space... These features were then passed through a full encoder-decoder transformer for structure elucidation",
       "asbval:note": null,
@@ -1441,7 +1441,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/modality-contribution-quantification/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/modality-contribution-quantification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To investigate the relative importance of 1H and 13C NMR as inputs, we trained two versions of the model using either 1H or 13C NMR as the sole input. The accuracy of the model is significantly better with only 1H NMR (59.6%) than with only 13C NMR (22.0%)... However, the best accuracy is obtained only when combining both spectra, showing that they are complementary to each other in terms of the information they each provide.",
       "asbval:note": "Paper explicitly compares single-modality (1H only, 13C only) and joint-modality (1H + 13C) inference, quantifying independent and synergistic contributions.",
@@ -1461,7 +1461,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/modality-contribution-quantification/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/modality-contribution-quantification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accuracy of the model is significantly better with only 1H NMR (59.6%) than with only 13C NMR (22.0%)... However, the best accuracy is obtained only when combining both spectra, showing that they are complementary to each other in terms of the information they each provide.",
       "asbval:note": "Paper demonstrates that 1H NMR is the dominant driver (59.6% vs 22.0%) and that combined modalities show synergy (69.6% > 59.6%).",
@@ -1481,7 +1481,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/modality-contribution-quantification/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/modality-contribution-quantification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "During training, we passed the processed 1H NMR spectra through a one-dimensional convolutional neural network (CNN) to downsample the signal into a lower-dimensional space.",
       "asbval:note": "Paper explicitly uses CNN for 1H NMR spectrum processing.",
@@ -1501,7 +1501,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/modality-contribution-quantification/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/modality-contribution-quantification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "During training, we passed the processed 1H NMR spectra through a one-dimensional convolutional neural network (CNN) to downsample the signal into a lower-dimensional space... These features were then passed through a full encoder-decoder transformer for structure elucidation",
       "asbval:note": "CNN encodes 1H NMR into lower-dimensional features; 13C NMR is embedded separately; both are then passed to transformer.",
@@ -1521,7 +1521,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/modality-contribution-quantification/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/modality-contribution-quantification/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These features were then passed through a full encoder-decoder transformer for structure elucidation, which outputs SMILES strings, and a transformer encoder for substructure elucidation, which outputs substructure probability arrays",
       "asbval:note": "Paper uses transformer for structure and substructure prediction from encoded modality features.",
@@ -1541,7 +1541,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/modality-contribution-quantification/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/modality-contribution-quantification/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We treat the substructure-to-structure problem as a language translation problem, where we translate a sequence of substructures into a sequence of tokens that can be combined to form a molecule's SMILES string, recovering the molecular connectivity... the transformer generates a SMILES string token by token",
       "asbval:note": "Transformer assembles substructure information (from modality encoders) into SMILES strings representing molecular structure (formula and connectivity).",
@@ -1561,7 +1561,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/model-generalization-assessment-across-molecular-size-regimes/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/model-generalization-assessment-across-molecular-size-regimes/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The left panel of Figure 2 shows in red the structure elucidation accuracy of the spectrum-to-structure multitask model as a function of the number of heavy atoms. In comparison to the substructure-to-structure model, there is a more systematic decrease in accuracy with the size of the molecule, decreasing from 77.5% at 10 heavy atoms to 52.0% at 19 heavy atoms.",
       "asbval:note": "Paper does evaluate accuracy across molecular size regimes (10\u201319 heavy atoms), but does NOT explicitly test generalization to molecules OUTSIDE the training scope (i.e., >19 heavy atoms). The paper acknowledges this limitation: 'GDB-17 only contains molecules with up to 17 heavy atoms' and notes that accuracy drops for 18\u201319 heavy atoms due to underrepresentation in training data. The card's framing of 'out-of-scope' (beyond 19 atoms) is not directly validated in the paper.",
@@ -1581,7 +1581,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/model-generalization-assessment-across-molecular-size-regimes/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/model-generalization-assessment-across-molecular-size-regimes/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we demonstrate the effectiveness of this framework on molecules with up to 19 heavy (non-hydrogen) atoms, a size for which there are trillions of possible structures.",
       "asbval:note": "Paper trains and evaluates on molecules up to 19 heavy atoms, but does NOT test on molecules larger than 19 atoms. The scope description implies testing on 'larger or smaller molecules' but the paper only addresses the 10\u201319 atom range. Testing on molecules >19 atoms is mentioned as future work, not demonstrated.",
@@ -1601,7 +1601,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/model-generalization-assessment-across-molecular-size-regimes/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/model-generalization-assessment-across-molecular-size-regimes/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we introduce a multitask machine learning framework that predicts the molecular structure (formula and connectivity) of an unknown compound solely based on its 1D 1 H and/or 13 C NMR spectra. First, we show how a transformer architecture can be constructed to efficiently solve the task... Integrating this capability with a convolutional neural network, we build an end-to-end model for predicting structure from spectra that is fast and accurate.",
       "asbval:note": "Paper does not name the model 'NMR2Struct'. The model is described as a 'multitask machine learning framework' combining a transformer and CNN. The card has assigned a tool name not present in the paper. The functional description (transformer + CNN for structure prediction from NMR) is correct.",
@@ -1621,7 +1621,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/model-generalization-assessment-across-molecular-size-regimes/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/model-generalization-assessment-across-molecular-size-regimes/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not use PubChem or mention it. Training data comes from SpectraBase (~143k molecules) and GDB-17 (~3 million molecules). No external database is cited for ground-truth structures in the test set.",
@@ -1641,7 +1641,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/model-generalization-assessment-across-molecular-size-regimes/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/model-generalization-assessment-across-molecular-size-regimes/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For training and testing the spectrum-to-structure model, we used 1H and/or 13C NMR spectra for the \u223c143 thousand set of molecules from SpectraBase predicted using MestreNova.",
       "asbval:note": "Paper uses MestreNova to generate simulated NMR spectra, not an 'out-of-scope test set' as the card implies. The spectra are simulated for molecules within the training scope (SpectraBase, up to 19 heavy atoms), not for testing generalization beyond that scope.",
@@ -1661,7 +1661,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/model-generalization-assessment-across-molecular-size-regimes/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/model-generalization-assessment-across-molecular-size-regimes/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The left panel of Figure 2 shows in red the structure elucidation accuracy of the spectrum-to-structure multitask model as a function of the number of heavy atoms... However, this decrease in accuracy is dwarfed by the increase in the problem size that grows combinatorially and thus increases over 5 orders of magnitude over that range of molecule sizes.",
       "asbval:note": "Paper does quantify performance degradation across the 10\u201319 heavy atom range and analyzes failure modes (Tanimoto similarity analysis in Figure 2 right panel). However, it does NOT establish boundaries for molecules truly outside the training scope (>19 atoms). The paper acknowledges this as future work.",
@@ -1681,7 +1681,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fragment-assembly-from-transformer-predictions/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-fragment-assembly-from-transformer-predictions/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we treat the substructure-to-structure problem as a language translation problem, where we translate a sequence of substructures into a sequence of tokens that can be combined to form a molecule's SMILES string, recovering the molecular connectivity... Autoregressive transformer models have been shown to excel at translation tasks owing to the strong inductive bias provided by the multihead attention mechanism... Here, we adapt a full encoder-decoder transformer architecture for the substructure-to-structure task.",
       "asbval:note": "The paper does use a transformer for assembling fragments (substructures) into molecular structures. However, the claim frames this as 'decoding stage' converting 'fragment embeddings into valid molecular graphs,' which is imprecise. The paper's transformer takes a BINARY VECTOR of substructure presence/absence (not embeddings) and generates SMILES strings token-by-token. The multitask model integrates CNN (for spectral encoding) + transformer (for structure generation), but the transformer's input in the full pipeline is not 'fragment embeddings' but rather spectral features processed through CNN + substructure predictions. The transformer generates SMILES (a sequence representation), not a 'molecular graph' directly.",
@@ -1701,7 +1701,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fragment-assembly-from-transformer-predictions/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-fragment-assembly-from-transformer-predictions/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For training and testing the spectrum-to-structure model, we used 1H and/or 13C NMR spectra for the \u223c143 thousand set of molecules from SpectraBase predicted using MestreNova... During training, we passed the processed 1H NMR spectra through a one-dimensional convolutional neural network (CNN) to downsample the signal into a lower-dimensional space... These features were then passed through a full encoder-decoder transformer for structure elucidation, which outputs SMILES strings, and a transformer encoder for substructure elucidation, which outputs substructure probability arrays.",
       "asbval:note": "The scope correctly identifies the \u226419 heavy atom limit and the use of CNN + transformer on 1D NMR spectra. However, the phrasing 'a set of candidate molecular fragments predicted for a molecule' is misleading. The paper does not pre-compute a fixed set of candidate fragments; instead, the multitask model jointly predicts substructure probabilities AND structure in an end-to-end fashion. The transformer does not receive 'candidate fragments' as discrete input; it receives spectral features and generates SMILES directly. The substructure predictions are outputs, not inputs to the transformer decoding stage.",
@@ -1721,7 +1721,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fragment-assembly-from-transformer-predictions/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-fragment-assembly-from-transformer-predictions/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we adapt a full encoder-decoder transformer architecture for the substructure-to-structure task... These features were then passed through a full encoder-decoder transformer for structure elucidation, which outputs SMILES strings",
       "asbval:note": "Transformer architecture is explicitly used and named throughout the paper.",
@@ -1741,7 +1741,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fragment-assembly-from-transformer-predictions/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-fragment-assembly-from-transformer-predictions/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Autoregressive transformer models have been shown to excel at translation tasks owing to the strong inductive bias provided by the multihead attention mechanism, which captures global correlations and uses that information to generate the target sequence in a conditioned manner... The inputs to the substructure-to-structure transformer are a binary vector with each entry corresponding to the presence or absence of a specific substructure and a start token. Using only this information, the transformer generates a SMILES string token by token",
       "asbval:note": "The transformer does use attention-based mechanisms and generates molecular connectivity (via SMILES). However, the role description conflates two different transformer uses: (1) substructure-to-structure transformer (takes binary substructure vector, outputs SMILES) and (2) the transformer within the multitask model (takes CNN-encoded spectral features, outputs SMILES). The claim says 'decoding stage for assembling molecular fragments' and 'bond predictions and fragment ordering,' but the paper's transformer generates SMILES tokens sequentially, not explicit bond predictions or fragment ordering. The transformer does not explicitly predict bonds or order fragments; it generates a SMILES string representation.",
@@ -1761,7 +1761,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fragment-assembly-from-transformer-predictions/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-fragment-assembly-from-transformer-predictions/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "During training, we passed the processed 1H NMR spectra through a one-dimensional convolutional neural network (CNN) to downsample the signal into a lower-dimensional space.",
       "asbval:note": "CNN is explicitly used for spectral feature extraction.",
@@ -1781,7 +1781,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fragment-assembly-from-transformer-predictions/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-fragment-assembly-from-transformer-predictions/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "During training, we passed the processed 1H NMR spectra through a one-dimensional convolutional neural network (CNN) to downsample the signal into a lower-dimensional space. For the processed 13C NMR spectra, since it is a binary vector, we embedded it into a dense vector representation. If both spectra were being used as input to the spectrum-to-structure model, then their features were concatenated... These features were then passed through a full encoder-decoder transformer for structure elucidation",
       "asbval:note": "CNN role as encoder for spectral feature extraction is accurately described.",
@@ -1801,7 +1801,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fragment-assembly-from-transformer-predictions/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-fragment-assembly-from-transformer-predictions/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We demonstrate the effectiveness of this framework on molecules with up to 19 heavy (non-hydrogen) atoms, a size for which there are trillions of possible structures.",
       "asbval:note": "The 19 heavy atom limit is explicitly stated as the demonstrated scope.",
@@ -1821,7 +1821,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fragment-assembly-from-transformer-predictions/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-fragment-assembly-from-transformer-predictions/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "1D 1H and 13C NMR spectroscopy are workhorse methods in structure elucidation... we present a transformer-based ML framework for solving the most challenging version of the structure elucidation problem, applying minimal preprocessing to the input 1H and 13C NMR spectra",
       "asbval:note": "The paper explicitly focuses on 1D NMR spectra only.",
@@ -1841,7 +1841,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-ground-truth-matching-and-accuracy-evaluation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-structure-ground-truth-matching-and-accuracy-evaluation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Structure elucidation accuracy was tested in the same way as for the substructure-to-structure task, where a target was considered correctly predicted if its canonical SMILES string appeared within the set of 15 predictions upon canonicalization. The highest accuracy of 69.6% (Table 1, third row) is obtained when using both the 1H and 13C NMR spectra with a pretrained transformer for structure elucidation... we have shown that our end-to-end model is able to predict the structure correctly 69.6% of the time within the first 15 predictions using only the 1H and 13C NMR as input for systems of up to 19 heavy atoms.",
       "asbval:note": "The paper explicitly validates predicted structures against ground-truth canonical SMILES on test sets, computing exact recovery rates (top-k accuracy) for molecules up to 19 heavy atoms using an end-to-end CNN+transformer model.",
@@ -1861,7 +1861,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-ground-truth-matching-and-accuracy-evaluation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-structure-ground-truth-matching-and-accuracy-evaluation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "During training, we passed the processed 1H NMR spectra through a one-dimensional convolutional neural network (CNN) to downsample the signal into a lower-dimensional space.",
       "asbval:note": "Paper explicitly uses a 1D CNN to process 1H NMR spectra into feature representations that feed into the transformer for structure prediction.",
@@ -1881,7 +1881,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-ground-truth-matching-and-accuracy-evaluation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-structure-ground-truth-matching-and-accuracy-evaluation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These features were then passed through a full encoder-decoder transformer for structure elucidation, which outputs SMILES strings, and a transformer encoder for substructure elucidation, which outputs substructure probability arrays... we introduce a multitask machine learning framework that predicts the molecular structure (formula and connectivity) of an unknown compound solely based on its 1D 1H and/or 13C NMR spectra.",
       "asbval:note": "The paper uses an encoder-decoder transformer to predict SMILES strings (molecular connectivity) from spectral features, which are then validated against ground-truth structures.",
@@ -1901,7 +1901,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-ground-truth-matching-and-accuracy-evaluation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-structure-ground-truth-matching-and-accuracy-evaluation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For training and testing the spectrum-to-structure model, we used 1H and/or 13C NMR spectra for the \u223c143 thousand set of molecules from SpectraBase predicted using MestreNova,38 using the same train-validation-test split of the molecules as on the substructure-to-structure task.",
       "asbval:note": "The paper uses simulated spectra from MestreNova, not experimentally determined ground-truth structures. The card claims 'experimentally known ground-truth structures' but the paper explicitly states: 'the accuracy of the framework drops from 69.6% to 33.0% when used to predict the structures from 106 experimental 1H and 13C NMR spectra' (passage 9), indicating the training/test data are simulated, not experimental.",
@@ -1921,7 +1921,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-prediction-evaluation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-structure-prediction-evaluation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Structure elucidation accuracy was tested in the same way as for the substructure-to-structure task, where a target was considered correctly predicted if its canonical SMILES string appeared within the set of 15 predictions upon canonicalization... Table 1 shows the structure elucidation accuracy on the test set as a function of both the spectral data used (1H and/or 13C NMR)... The left panel of Figure 2 shows in red the structure elucidation accuracy of the spectrum-to-structure multitask model as a function of the number of heavy atoms.",
       "asbval:note": "Paper explicitly evaluates accuracy across spectroscopic modalities (1H only, 13C only, combined) and complexity ranges (10-19 heavy atoms). Graph-based metric (Tanimoto similarity) also computed.",
@@ -1941,7 +1941,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-prediction-evaluation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-structure-prediction-evaluation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our goal is to design a model capable of predicting a molecule's structure and the substructures it contains using only the spectral data as inputs, operating in an end-to-end fashion i.e. taking the spectrum and directly predicting the structure it corresponds to and the substructures within that molecule with no intermediate steps... The highest accuracy of 69.6% (Table 1, third row) is obtained when using both the 1H and 13C NMR spectra with a pretrained transformer for structure elucidation.",
       "asbval:note": "Paper explicitly tests 1H only (59.6%), 13C only (22.0%), and combined (69.6%) inputs for structure prediction.",
@@ -1961,7 +1961,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-prediction-evaluation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-structure-prediction-evaluation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "During training, the data set was split into a training, validation, and test set using a random split, with 80% of the data used for training, 10% used for validation, and 10% used for testing... To test the trained transformer model for the substructure-to-structure task, top-k random sampling was used to generate SMILES from a given substructure array with k = 5, and 15 predictions were generated for each input.",
       "asbval:note": "Paper uses held-out test sets and evaluates on them.",
@@ -1981,7 +1981,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-prediction-evaluation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-structure-prediction-evaluation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To investigate the relative importance of 1H and 13C NMR as inputs, we trained two versions of the model using either 1H or 13C NMR as the sole input. The accuracy of the model is significantly better with only 1H NMR (59.6%) than with only 13C NMR (22.0%)... However, the best accuracy is obtained only when combining both spectra, showing that they are complementary to each other in terms of the information they each provide.",
       "asbval:note": "Paper explicitly isolates contributions of individual spectroscopic modalities.",
@@ -2001,7 +2001,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-prediction-evaluation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-structure-prediction-evaluation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The left panel of Figure 2 shows in red the structure elucidation accuracy of the spectrum-to-structure multitask model as a function of the number of heavy atoms. In comparison to the substructure-to-structure model, there is a more systematic decrease in accuracy with the size of the molecule, decreasing from 77.5% at 10 heavy atoms to 52.0% at 19 heavy atoms.",
       "asbval:note": "Paper explicitly evaluates accuracy as function of molecular size up to 19 heavy atoms.",
@@ -2021,7 +2021,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-prediction-evaluation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-structure-prediction-evaluation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "During training, we passed the processed 1H NMR spectra through a one-dimensional convolutional neural network (CNN) to downsample the signal into a lower-dimensional space.",
       "asbval:note": "Paper explicitly uses 1D CNN to process 1H NMR spectra into lower-dimensional features.",
@@ -2041,7 +2041,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-prediction-evaluation/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-structure-prediction-evaluation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These features were then passed through a full encoder-decoder transformer for structure elucidation, which outputs SMILES strings, and a transformer encoder for substructure elucidation, which outputs substructure probability arrays... Autoregressive transformer models have been shown to excel at translation tasks owing to the strong inductive bias provided by the multihead attention mechanism, which captures global correlations and uses that information to generate the target sequence in a conditioned manner.",
       "asbval:note": "Paper uses encoder-decoder transformer to generate SMILES strings (molecular structures) from spectral features.",
@@ -2061,7 +2061,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-prediction-evaluation/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-structure-prediction-evaluation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our framework uses an end-to-end approach... The top row of Figure 1 illustrates our full end-to-end multitask structure elucidation model, which takes in the 1H and/or 13C NMR spectra and predicts both the substructures in the molecule and the molecule's structure.",
       "asbval:note": "Paper describes the framework as a 'multitask structure elucidation model' or 'spectrum-to-structure multitask model', not explicitly named 'NMR2Struct'. The framework does combine CNN and transformer as claimed, but the specific tool name 'NMR2Struct' is not used in the paper.",
@@ -2081,7 +2081,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-prediction-out-of-distribution/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-structure-prediction-out-of-distribution/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we demonstrate the effectiveness of this framework on molecules with up to 19 heavy atoms, a size for which there are trillions of possible structures",
       "asbval:note": "Paper trains and evaluates the model on molecules UP TO 19 heavy atoms (not exceeding). The paper does NOT perform out-of-distribution evaluation on molecules >19 heavy atoms. The paper mentions that accuracy drops below 80% for 18-19 heavy atoms and notes this is likely due to training data imbalance (only 1% of training data from 18-19 atom molecules), but does not systematically extend evaluation beyond 19 atoms. The card claims an extension task that the paper does not perform.",
@@ -2101,7 +2101,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-prediction-out-of-distribution/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-structure-prediction-out-of-distribution/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the accuracy drops below 80% for the molecules with 18 or 19 heavy atoms. Although this sudden decrease could be explained in part by the problem size entering the trillions for molecules of that size, a more likely explanation might be that GDB-17 only contains molecules with up to 17 heavy atoms",
       "asbval:note": "Paper observes accuracy degradation at the boundary (18-19 atoms) and discusses failure modes (Tanimoto similarity analysis), but does not systematically characterize degradation BEYOND 19 atoms. The characterization is limited to the training boundary, not out-of-distribution extension.",
@@ -2121,7 +2121,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-prediction-out-of-distribution/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-structure-prediction-out-of-distribution/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we demonstrate the effectiveness of this framework on molecules with up to 19 heavy atoms",
       "asbval:note": "Confirmed: paper's training and evaluation scope is \u226419 heavy atoms.",
@@ -2141,7 +2141,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-prediction-out-of-distribution/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-structure-prediction-out-of-distribution/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we introduce a multitask machine learning framework that predicts the molecular structure (formula and connectivity) of an unknown compound solely based on its 1D 1 H and/or 13 C NMR spectra. First, we show how a transformer architecture can be constructed to efficiently solve the task... Integrating this capability with a convolutional neural network, we build an end-to-end model",
       "asbval:note": "Paper uses a transformer + CNN architecture, but the model is not named 'NMR2Struct' in the paper. The paper refers to it as a 'multitask machine learning framework' or 'spectrum-to-structure model'. The card assigns a tool name not used in the paper.",
@@ -2161,7 +2161,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-prediction-out-of-distribution/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-structure-prediction-out-of-distribution/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "predicts the molecular structure (formula and connectivity) of an unknown compound solely based on its 1D 1 H and/or 13 C NMR spectra",
       "asbval:note": "Confirmed: the model takes 1D NMR spectra as input and outputs molecular formula and connectivity.",
@@ -2181,7 +2181,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-prediction-out-of-distribution/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-structure-prediction-out-of-distribution/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention PubChem as a data source. Training data comes from SpectraBase (~143k molecules) and GDB-17 (~3 million molecules). No mention of PubChem or use of it for test data retrieval.",
@@ -2201,7 +2201,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-prediction-out-of-distribution/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-structure-prediction-out-of-distribution/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not retrieve or test on molecules >19 heavy atoms. The card describes a tool role for out-of-distribution testing that the paper does not perform.",
@@ -2221,7 +2221,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multitask-model-inference/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/multitask-model-inference/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we introduce a multitask machine learning framework that predicts the molecular structure (formula and connectivity) of an unknown compound solely based on its 1D 1H and/or 13C NMR spectra",
       "asbval:note": "Paper explicitly describes multitask framework predicting formula and connectivity from single or combined NMR modalities.",
@@ -2241,7 +2241,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multitask-model-inference/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/multitask-model-inference/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Integrating this capability with a convolutional neural network, we build an end-to-end model for predicting structure from spectra that is fast and accurate... During training, we passed the processed 1H NMR spectra through a one-dimensional convolutional neural network (CNN) to downsample the signal into a lower-dimensional space... These features were then passed through a full encoder-decoder transformer for structure elucidation",
       "asbval:note": "Paper describes CNN-transformer pipeline architecture and demonstrates comparative analysis across modalities (1H only, 13C only, 1H+13C).",
@@ -2261,7 +2261,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multitask-model-inference/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/multitask-model-inference/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Table 1 shows the structure elucidation accuracy on the test set as a function of both the spectral data used (1H and/or 13C NMR)... we trained two versions of the model using either 1H or 13C NMR as the sole input... the best accuracy is obtained only when combining both spectra",
       "asbval:note": "Paper explicitly evaluates model performance across all three input modalities: 1H only, 13C only, and combined 1H+13C.",
@@ -2281,7 +2281,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multitask-model-inference/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/multitask-model-inference/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we demonstrate the effectiveness of this framework on molecules with up to 19 heavy (non-hydrogen) atoms... the accuracy drops below 80% for the molecules with 18 or 19 heavy atoms",
       "asbval:note": "Paper explicitly states 19 heavy atoms as the upper limit of demonstrated scope.",
@@ -2301,7 +2301,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multitask-model-inference/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/multitask-model-inference/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The trained model, which is provided in our GitHub repository, can make a full prediction of the structure and substructures of an input 1H and 13C NMR spectra for a system of 19 heavy atoms in under 3 s even on standard CPU hardware",
       "asbval:note": "Paper describes inference capability on a fixed trained model checkpoint.",
@@ -2321,7 +2321,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multitask-model-inference/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/multitask-model-inference/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "During training, we passed the processed 1H NMR spectra through a one-dimensional convolutional neural network (CNN) to downsample the signal into a lower-dimensional space",
       "asbval:note": "Paper explicitly describes 1D CNN used to process 1H NMR spectra and extract features.",
@@ -2341,7 +2341,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multitask-model-inference/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/multitask-model-inference/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These features were then passed through a full encoder-decoder transformer for structure elucidation, which outputs SMILES strings, and a transformer encoder for substructure elucidation",
       "asbval:note": "Paper describes transformer receiving CNN-encoded features and outputting molecular structure (SMILES) and substructures.",
@@ -2361,7 +2361,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multitask-model-inference/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/multitask-model-inference/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "predicts the molecular structure (formula and connectivity) of an unknown compound... the model achieved an accuracy of 93.2%... the correct molecular structure 69.6% of the time within the first 15 predictions",
       "asbval:note": "Paper demonstrates prediction of both formula and connectivity (structure) as outputs.",
@@ -2381,7 +2381,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multitask-model-inference/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/multitask-model-inference/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Table 1 shows the structure elucidation accuracy on the test set as a function of both the spectral data used (1H and/or 13C NMR)... The accuracy of the model is significantly better with only 1H NMR (59.6%) than with only 13C NMR (22.0%)... the best accuracy is obtained only when combining both spectra, showing that they are complementary",
       "asbval:note": "Paper explicitly compares single modality vs. combined modality performance and reports test set accuracy metrics.",
@@ -2401,7 +2401,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-modality-ablation-analysis/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-modality-ablation-analysis/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To investigate the relative importance of 1H and 13C NMR as inputs, we trained two versions of the model using either 1H or 13C NMR as the sole input. The accuracy of the model is significantly better with only 1H NMR (59.6%) than with only 13C NMR (22.0%)... However, the best accuracy is obtained only when combining both spectra, showing that they are complementary to each other in terms of the information they each provide.",
       "asbval:note": "Paper explicitly performs modality ablation with three conditions: 1H only (59.6%), 13C only (22.0%), and combined (69.6%), directly matching the card's research question.",
@@ -2421,7 +2421,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-modality-ablation-analysis/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-modality-ablation-analysis/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accuracy of the model is significantly better with only 1H NMR (59.6%) than with only 13C NMR (22.0%), reflecting the fact that 1H NMR contains far more information about the molecule's connectivity relative to 13C NMR, thus playing a more critical role in structure elucidation. However, the best accuracy is obtained only when combining both spectra, showing that they are complementary to each other in terms of the information they each provide.",
       "asbval:note": "Paper explicitly identifies which modality drives performance (1H > 13C) and demonstrates complementarity/synergy (combined > either alone).",
@@ -2441,7 +2441,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-modality-ablation-analysis/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-modality-ablation-analysis/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For training and testing the spectrum-to-structure model, we used 1H and/or 13C NMR spectra for the \u223c143 thousand set of molecules from SpectraBase predicted using MestreNova, using the same train-validation-test split of the molecules as on the substructure-to-structure task.",
       "asbval:note": "Paper uses paired spectra and evaluates marginal contributions across modality conditions on test set.",
@@ -2461,7 +2461,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-modality-ablation-analysis/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-modality-ablation-analysis/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "During training, we passed the processed 1H NMR spectra through a one-dimensional convolutional neural network (CNN) to downsample the signal into a lower-dimensional space. For the processed 13C NMR spectra, since it is a binary vector, we embedded it into a dense vector representation.",
       "asbval:note": "Paper explicitly uses 1D CNN to encode 1H NMR spectra into feature representations.",
@@ -2481,7 +2481,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-modality-ablation-analysis/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-modality-ablation-analysis/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These features were then passed through a full encoder-decoder transformer for structure elucidation, which outputs SMILES strings, and a transformer encoder for substructure elucidation, which outputs substructure probability arrays",
       "asbval:note": "Paper uses encoder-decoder transformer to decode CNN features into SMILES strings (structure representation).",
@@ -2501,7 +2501,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-modality-ablation-analysis/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-modality-ablation-analysis/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we introduce a multitask machine learning framework that predicts the molecular structure (formula and connectivity) of an unknown compound solely based on its 1D 1H and/or 13C NMR spectra... Integrating this capability with a convolutional neural network, we build an end-to-end model for predicting structure from spectra that is fast and accurate.",
       "asbval:note": "Paper describes the framework as a 'multitask machine learning framework' or 'multitask spectrum-to-structure model', not as 'NMR2Struct'. The tool name 'NMR2Struct' does not appear in the paper; the paper refers to it as the 'multitask model' or 'spectrum-to-structure model'. The function is correct but the tool name is not found in the paper.",
@@ -2521,7 +2521,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-spectra-preprocessing-and-feature-extraction/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-spectra-preprocessing-and-feature-extraction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "During training, we passed the processed 1H NMR spectra through a one-dimensional convolutional neural network (CNN) to downsample the signal into a lower-dimensional space. For the processed 13C NMR spectra, since it is a binary vector, we embedded it into a dense vector representation. If both spectra were being used as input to the spectrum-to-structure model, then their features were concatenated.",
       "asbval:note": "Exact match: CNN encoder processes 1H and 13C NMR spectra to extract features for downstream structure prediction.",
@@ -2541,7 +2541,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-spectra-preprocessing-and-feature-extraction/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-spectra-preprocessing-and-feature-extraction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These features were then passed through a full encoder-decoder transformer for structure elucidation, which outputs SMILES strings, and a transformer encoder for substructure elucidation, which outputs substructure probability arrays",
       "asbval:note": "CNN features feed directly into transformer for structure prediction.",
@@ -2561,7 +2561,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-spectra-preprocessing-and-feature-extraction/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-spectra-preprocessing-and-feature-extraction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we have shown that our end-to-end model is able to predict the structure correctly 69.6% of the time within the first 15 predictions using only the 1H and 13C NMR as input for systems of up to 19 heavy atoms",
       "asbval:note": "Explicit scope statement in conclusion.",
@@ -2581,7 +2581,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-spectra-preprocessing-and-feature-extraction/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-spectra-preprocessing-and-feature-extraction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we took a minimal preprocessing approach to the spectra to retain as much information as possible. Specifically, since the 1H NMR contains detailed splittings and rapidly varying features, we processed the spectrum by mildly reducing the dimensionality of the data by linearly interpolating the spectrum of 32768 values down to a grid of 28000 values",
       "asbval:note": "Paper explicitly uses minimal preprocessing and raw spectral data, not hand-curated peak lists.",
@@ -2601,7 +2601,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-spectra-preprocessing-and-feature-extraction/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-spectra-preprocessing-and-feature-extraction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "During training, we passed the processed 1H NMR spectra through a one-dimensional convolutional neural network (CNN) to downsample the signal into a lower-dimensional space.",
       "asbval:note": "CNN explicitly used as encoder for spectral feature extraction.",
@@ -2621,7 +2621,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-spectra-preprocessing-and-feature-extraction/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-spectra-preprocessing-and-feature-extraction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These features were then passed through a full encoder-decoder transformer for structure elucidation, which outputs SMILES strings, and a transformer encoder for substructure elucidation, which outputs substructure probability arrays",
       "asbval:note": "Transformer consumes CNN features for structure and substructure prediction.",
@@ -2641,7 +2641,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-spectrum-to-structure-inference/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-spectrum-to-structure-inference/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we introduce a multitask machine learning framework that predicts the molecular structure (formula and connectivity) of an unknown compound solely based on its 1D 1 H and/or 13 C NMR spectra. First, we show how a transformer architecture can be constructed to efficiently solve the task... Integrating this capability with a convolutional neural network, we build an end-to-end model for predicting structure from spectra that is fast and accurate.",
       "asbval:note": "Exact match to paper's core contribution.",
@@ -2661,7 +2661,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-spectrum-to-structure-inference/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-spectrum-to-structure-inference/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We demonstrate the effectiveness of this framework on molecules with up to 19 heavy (non-hydrogen) atoms",
       "asbval:note": "Directly stated in abstract.",
@@ -2681,7 +2681,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-spectrum-to-structure-inference/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-spectrum-to-structure-inference/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "a transformer architecture can be constructed to efficiently solve the task, traditionally performed by chemists, of assembling large numbers of molecular fragments into molecular structures",
       "asbval:note": "Exact paraphrase of paper's framing.",
@@ -2701,7 +2701,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-spectrum-to-structure-inference/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-spectrum-to-structure-inference/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "molecules with up to 19 heavy (non-hydrogen) atoms",
       "asbval:note": "Scope constraint is accurate.",
@@ -2721,7 +2721,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-spectrum-to-structure-inference/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-spectrum-to-structure-inference/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "predicts the molecular structure (formula and connectivity) of an unknown compound solely based on its 1D 1 H and/or 13 C NMR spectra... without relying on any prior chemical knowledge such as the molecular formula",
       "asbval:note": "Paper emphasizes end-to-end prediction without intermediate manual steps.",
@@ -2741,7 +2741,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-spectrum-to-structure-inference/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-spectrum-to-structure-inference/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the accuracy drops below 80% for the molecules with 18 or 19 heavy atoms... the model retains reasonable accuracy for these larger molecules suggests that the approach is generalizable",
       "asbval:note": "Paper acknowledges accuracy degradation at upper boundary and notes generalization is uncharacterized beyond 19 atoms.",
@@ -2761,7 +2761,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-spectrum-to-structure-inference/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-spectrum-to-structure-inference/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "1D 1H and 13C NMR spectroscopy are workhorse methods... we introduce a multitask machine learning framework that predicts the molecular structure... solely based on its 1D 1 H and/or 13 C NMR spectra",
       "asbval:note": "Paper explicitly focuses on 1D spectra; no mention of 2D NMR training.",
@@ -2781,7 +2781,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-spectrum-to-structure-inference/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-spectrum-to-structure-inference/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we took a minimal preprocessing approach to the spectra to retain as much information as possible... all intensities were normalized to between 0 and 1 by dividing each spectrum by the intensity of its highest peak",
       "asbval:note": "Paper describes preprocessing (normalization, interpolation, binning) but does not explicitly address noise robustness or provide guidance on cleaning severely degraded spectra. The claim about 'severely noisy' spectra is reasonable inference but not explicitly validated in passages.",
@@ -2801,7 +2801,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-spectrum-to-structure-inference/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-spectrum-to-structure-inference/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "a transformer architecture can be constructed to efficiently solve the task... Integrating this capability with a convolutional neural network, we build an end-to-end model",
       "asbval:note": "Transformer is core component of the multitask model.",
@@ -2821,7 +2821,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-spectrum-to-structure-inference/009",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-spectrum-to-structure-inference/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Autoregressive transformer models have been shown to excel at translation tasks owing to the strong inductive bias provided by the multihead attention mechanism, which captures global correlations and uses that information to generate the target sequence in a conditioned manner... the overall connectivity of a molecule arises from considering all molecular fragments collectively",
       "asbval:note": "Paper confirms transformer uses multi-head attention and assembles fragments into structures. However, the specific role description 'encodes spectral features' is more accurately performed by the CNN component (see passage 6: 'we passed the processed 1H NMR spectra through a one-dimensional convolutional neural network (CNN) to downsample the signal'). The transformer receives CNN-encoded features, not raw spectra. Role description is partially accurate but conflates CNN and transformer responsibilities.",
@@ -2841,7 +2841,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-spectrum-to-structure-inference/010",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-spectrum-to-structure-inference/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Integrating this capability with a convolutional neural network, we build an end-to-end model for predicting structure from spectra",
       "asbval:note": "CNN is explicitly named as component of multitask model.",
@@ -2861,7 +2861,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-spectrum-to-structure-inference/011",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-spectrum-to-structure-inference/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we passed the processed 1H NMR spectra through a one-dimensional convolutional neural network (CNN) to downsample the signal into a lower-dimensional space... These features were then passed through a full encoder-decoder transformer for structure elucidation",
       "asbval:note": "Accurate description of CNN's role in the pipeline.",
@@ -2881,7 +2881,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/performance-degradation-quantification-and-analysis/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/performance-degradation-quantification-and-analysis/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accuracy of the framework drops from 69.6% to 33.0% when used to predict the structures from 106 experimental 1H and 13C NMR spectra of molecules employed in our previous work",
       "asbval:note": "Paper does measure accuracy degradation on out-of-scope data (experimental vs. simulated spectra), but the out-of-scope boundary is not about molecule size (>19 heavy atoms) but rather data type (experimental vs. simulated). The paper does NOT systematically test performance on molecules >19 heavy atoms; it only notes that accuracy 'drops below 80%' for 18-19 atom molecules in the test set, attributed to training data imbalance rather than a deliberate out-of-scope evaluation. The card's framing of 'beyond original training scope' conflates two different boundaries: the molecule size limit (19 heavy atoms, which is within scope) and the data modality (experimental vs. simulated, which is genuinely out-of-scope).",
@@ -2901,7 +2901,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/performance-degradation-quantification-and-analysis/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/performance-degradation-quantification-and-analysis/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we demonstrate the effectiveness of this framework on molecules with up to 19 heavy (non-hydrogen) atoms, a size for which there are trillions of possible structures",
       "asbval:note": "Paper does establish 19 heavy atoms as a tested boundary, but does not systematically evaluate performance on molecules >19 heavy atoms. The paper acknowledges accuracy drops for 18-19 atoms but attributes this to training data imbalance (GDB-17 only contains up to 17 atoms), not to a deliberate out-of-scope test. The card's guidance assumes systematic out-of-scope testing; the paper only incidentally touches this boundary.",
@@ -2921,7 +2921,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/performance-degradation-quantification-and-analysis/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/performance-degradation-quantification-and-analysis/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we demonstrate the effectiveness of this framework on molecules with up to 19 heavy (non-hydrogen) atoms",
       "asbval:note": "Paper clearly establishes 19 heavy atoms as the training/testing scope boundary.",
@@ -2941,7 +2941,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/performance-degradation-quantification-and-analysis/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/performance-degradation-quantification-and-analysis/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the accuracy of the framework drops from 69.6% to 33.0% when used to predict the structures from 106 experimental 1H and 13C NMR spectra",
       "asbval:note": "Paper demonstrates that ground-truth labels are required to measure degradation; the experimental spectra test required known structures to compute accuracy.",
@@ -2961,7 +2961,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/performance-degradation-quantification-and-analysis/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/performance-degradation-quantification-and-analysis/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we build an end-to-end model for predicting structure from spectra that is fast and accurate... Integrating this capability with a convolutional neural network... we have introduced a multitask machine learning approach for direct structure and substructure elucidation from 1H and 13C NMR spectra that leverages pretraining an encoder-decoder transformer",
       "asbval:note": "Paper uses a transformer + CNN architecture for structure prediction from NMR spectra, but the model is not named 'NMR2Struct' in the paper. The paper does not use this tool name; it refers to the model generically as 'multitask machine learning framework' or 'spectrum-to-structure model'. The card has assigned a tool name not present in the paper.",
@@ -2981,7 +2981,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/performance-degradation-quantification-and-analysis/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/performance-degradation-quantification-and-analysis/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not use PubChem or any external chemical database for out-of-scope testing. Training data comes from SpectraBase and GDB-17; test data is drawn from the same sources. No systematic retrieval of >19 heavy atom molecules from PubChem or similar is described. The paper only incidentally tests on 18-19 atom molecules (which are within scope) from the existing training/test split.",
@@ -3001,7 +3001,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-to-structure-mapping-prediction/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/spectral-to-structure-mapping-prediction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we introduce a multitask machine learning framework that predicts the molecular structure (formula and connectivity) of an unknown compound solely based on its 1D 1 H and/or 13 C NMR spectra. First, we show how a transformer architecture can be constructed to efficiently solve the task... Integrating this capability with a convolutional neural network, we build an end-to-end model for predicting structure from spectra that is fast and accurate.",
       "asbval:note": "Exact match to paper's core contribution.",
@@ -3021,7 +3021,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-to-structure-mapping-prediction/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/spectral-to-structure-mapping-prediction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We demonstrate the effectiveness of this framework on molecules with up to 19 heavy (non-hydrogen) atoms... we show that our approach predicts the exact molecule 69.6% of the time within the first 15 predictions",
       "asbval:note": "Paper explicitly demonstrates 19 heavy atom capability and does not require 2D NMR or manual interpretation.",
@@ -3041,7 +3041,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-to-structure-mapping-prediction/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/spectral-to-structure-mapping-prediction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we demonstrate the effectiveness of this framework on molecules with up to 19 heavy (non-hydrogen) atoms",
       "asbval:note": "Scope constraint directly supported.",
@@ -3061,7 +3061,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-to-structure-mapping-prediction/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/spectral-to-structure-mapping-prediction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the accuracy drops below 80% for the molecules with 18 or 19 heavy atoms... a more likely explanation might be that GDB-17 only contains molecules with up to 17 heavy atoms, while the SpectraBase data set, which does contain molecules with 18 and 19 heavy atoms, is much smaller.",
       "asbval:note": "Paper confirms performance degradation at 18-19 heavy atoms and notes training data limitations beyond 17 atoms.",
@@ -3081,7 +3081,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-to-structure-mapping-prediction/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/spectral-to-structure-mapping-prediction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "During training, we passed the processed 1H NMR spectra through a one-dimensional convolutional neural network (CNN) to downsample the signal into a lower-dimensional space.",
       "asbval:note": "CNN role explicitly confirmed for 1H NMR feature extraction and downsampling.",
@@ -3101,7 +3101,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-to-structure-mapping-prediction/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/spectral-to-structure-mapping-prediction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These features were then passed through a full encoder-decoder transformer for structure elucidation, which outputs SMILES strings, and a transformer encoder for substructure elucidation, which outputs substructure probability arrays... The highest accuracy of 69.6% (Table 1, third row) is obtained when using both the 1H and 13C NMR spectra with a pretrained transformer for structure elucidation.",
       "asbval:note": "Transformer confirmed for structure and substructure prediction in multitask framework.",
@@ -3121,7 +3121,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-to-structure-mapping-prediction/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/spectral-to-structure-mapping-prediction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the transformer generates a SMILES string token by token... 15 predictions were generated for each input... the prediction was considered correct if one of these molecules, upon canonicalization, matched the exact canonical SMILES of the actual molecule.",
       "asbval:note": "Paper outputs SMILES strings with multiple ranked predictions (top-15).",
@@ -3141,7 +3141,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-to-structure-mapping-prediction/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/spectral-to-structure-mapping-prediction/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The multitask model also outputs a prediction for the target molecule's substructure profile, which can be interpreted as the probability of a given molecular fragment being present in the molecule based on its NMR spectra. These profiles, which provide additional information as to which of the 957 substructures are present in the system",
       "asbval:note": "Substructure probability outputs confirmed for 957 fragments.",
@@ -3161,7 +3161,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-to-structure-mapping-prediction/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/spectral-to-structure-mapping-prediction/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Weights from a transformer pretrained on the substructure-to-structure task are used to initialize the multitask model... Without using the pretrained transformer, the structure elucidation accuracy drops significantly from 69.6% to 53.3%, demonstrating the importance of the pretraining step",
       "asbval:note": "Pretraining strategy explicitly confirmed and shown to improve accuracy by 16.3 percentage points.",
@@ -3181,7 +3181,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-to-structure-mapping-prediction/009",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/spectral-to-structure-mapping-prediction/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we processed the spectrum by mildly reducing the dimensionality of the data by linearly interpolating the spectrum of 32768 values down to a grid of 28000 values corresponding to a shift range of \u22122 to 12 ppm with a resolution of 0.0005 ppm... For the 13C NMR spectra... we processed the spectra by extracting the chemical shifts and binning them into 80 bins spanning the shift range of 3.42 to 231.3 ppm.",
       "asbval:note": "Preprocessing parameters match exactly.",
@@ -3201,7 +3201,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-to-structure-mapping-prediction/010",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/spectral-to-structure-mapping-prediction/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we started with a set of \u223c143 thousand molecules from the SpectraBase30 database containing only C, N, and O as the non-hydrogen atoms and combined it with a set of \u223c3 million molecules randomly sampled from the GDB-17 data set14 to create a final data set of \u223c3.1 million molecules.",
       "asbval:note": "Training dataset composition confirmed.",
@@ -3221,7 +3221,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-to-structure-mapping-prediction/011",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/spectral-to-structure-mapping-prediction/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the substructure vector for each molecule was computed using RDKit's substructure match functionality against the set of 957 substructures used in our previous work20 represented as SMART strings.",
       "asbval:note": "Substructure count and RDKit implementation confirmed.",
@@ -3241,7 +3241,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-to-structure-mapping-prediction/012",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/spectral-to-structure-mapping-prediction/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "15 predictions were generated for each input... we can again use Tanimoto similarities to assess how close the predicted molecule was... the distribution of Tanimoto similarities of the best incorrect predictions for the spectrum-to-structure task",
       "asbval:note": "Top-15 predictions and Tanimoto similarity analysis confirmed.",
@@ -3261,7 +3261,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/top-k-accuracy-ranking-and-evaluation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/top-k-accuracy-ranking-and-evaluation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "top-k random sampling36 was used to generate SMILES from a given substructure array with k = 5, and 15 predictions were generated for each input. Using these 15 generated SMILES, the prediction was considered correct if one of these molecules, upon canonicalization, matched the exact canonical SMILES of the actual molecule.",
       "asbval:note": "Paper uses top-15 accuracy (k=15), not top-1, top-3, top-5 as claimed. The paper states '15 predictions were generated' and evaluates 'top-10 accuracy' in related work (passage 3), but the primary evaluation metric reported is top-15 accuracy (69.6% for spectrum-to-structure). The card claims top-1, top-3, top-5 but paper emphasizes top-15 and top-10 in prior work.",
@@ -3281,7 +3281,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/top-k-accuracy-ranking-and-evaluation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/top-k-accuracy-ranking-and-evaluation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The left panel of Figure 2 shows in red the structure elucidation accuracy of the spectrum-to-structure multitask model as a function of the number of heavy atoms. In comparison to the substructure-to-structure model, there is a more systematic decrease in accuracy with the size of the molecule, decreasing from 77.5% at 10 heavy atoms to 52.0% at 19 heavy atoms.",
       "asbval:note": "Paper explicitly evaluates accuracy across different molecular sizes (10 to 19 heavy atoms), demonstrating the importance of assessing performance across size regimes.",
@@ -3301,7 +3301,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/top-k-accuracy-ranking-and-evaluation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/top-k-accuracy-ranking-and-evaluation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "top-k random sampling36 was used to generate SMILES from a given substructure array with k = 5, and 15 predictions were generated for each input.",
       "asbval:note": "Paper generates multiple predictions (15 per input) but does not explicitly mention 'confidence scores' for ranking. The predictions appear to be generated via top-k random sampling, which may not produce explicit confidence scores for ranking. The ranking mechanism is not clearly described.",
@@ -3321,7 +3321,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/top-k-accuracy-ranking-and-evaluation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/top-k-accuracy-ranking-and-evaluation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Although this sudden decrease could be explained in part by the problem size entering the trillions for molecules of that size, a more likely explanation might be that GDB-17 only contains molecules with up to 17 heavy atoms, while the SpectraBase data set, which does contain molecules with 18 and 19 heavy atoms, is much smaller. Hence, whereas 59% in our training data come from molecules with 17 heavy atoms, only 1% come from molecules with 18 or 19 heavy atoms, meaning that the model has had fewer opportunities to learn how to predict systems of that size.",
       "asbval:note": "Paper does evaluate molecules at the edge of training domain (18-19 heavy atoms) and notes accuracy degradation, but the primary focus is on in-distribution evaluation. The paper also mentions experimental spectra evaluation (passage 9): 'the accuracy of the framework drops from 69.6% to 33.0% when used to predict the structures from 106 experimental 1H and 13C NMR spectra', which is a true out-of-distribution test.",
@@ -3341,7 +3341,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/top-k-accuracy-ranking-and-evaluation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/top-k-accuracy-ranking-and-evaluation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not name the model 'NMR2Struct'. The model is described as a 'multitask machine learning framework' using 'a one-dimensional convolutional neural network (CNN)' and 'a full encoder-decoder transformer' (passage 6), but no specific tool name 'NMR2Struct' appears in any passage. The paper released code on GitHub but does not provide a specific tool name in the passages provided.",
@@ -3361,7 +3361,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/top-k-accuracy-ranking-and-evaluation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/top-k-accuracy-ranking-and-evaluation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our framework uses an end-to-end approach... which takes in the 1H and/or 13C NMR spectra and predicts both the substructures in the molecule and the molecule's structure... top-k random sampling36 was used to generate SMILES from a given substructure array with k = 5, and 15 predictions were generated for each input.",
       "asbval:note": "Paper confirms the model generates multiple predictions from NMR spectra and predicts molecular structure (formula and connectivity), but the mechanism for generating 'confidence scores' is not explicitly described. The paper uses 'top-k random sampling' which may not produce explicit confidence scores for ranking.",
@@ -3381,7 +3381,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/accuracy-metric-computation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/accuracy-metric-computation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "accuracy-metric-computation",
@@ -3394,7 +3394,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chemical-graph-connectivity-validation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/chemical-graph-connectivity-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 11,
       "asbval:target_artifact_id": "chemical-graph-connectivity-validation",
@@ -3407,7 +3407,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragment-assembly-transformer-architecture/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/fragment-assembly-transformer-architecture/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "fragment-assembly-transformer-architecture",
@@ -3420,7 +3420,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragment-canonicalization-and-matching/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/fragment-canonicalization-and-matching/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 3,
       "asbval:target_artifact_id": "fragment-canonicalization-and-matching",
@@ -3433,7 +3433,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/graph-neural-network-design-for-chemistry/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/graph-neural-network-design-for-chemistry/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "graph-neural-network-design-for-chemistry",
@@ -3446,7 +3446,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/modality-contribution-quantification/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/modality-contribution-quantification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "modality-contribution-quantification",
@@ -3459,7 +3459,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/model-generalization-assessment-across-molecular-size-regimes/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/model-generalization-assessment-across-molecular-size-regimes/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "model-generalization-assessment-across-molecular-size-regimes",
@@ -3472,7 +3472,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fragment-assembly-from-transformer-predictions/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-fragment-assembly-from-transformer-predictions/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "molecular-fragment-assembly-from-transformer-predictions",
@@ -3485,7 +3485,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-ground-truth-matching-and-accuracy-evaluation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-structure-ground-truth-matching-and-accuracy-evaluation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 4,
       "asbval:target_artifact_id": "molecular-structure-ground-truth-matching-and-accuracy-evaluation",
@@ -3498,7 +3498,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-prediction-evaluation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-structure-prediction-evaluation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "molecular-structure-prediction-evaluation",
@@ -3511,7 +3511,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-prediction-out-of-distribution/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/molecular-structure-prediction-out-of-distribution/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "molecular-structure-prediction-out-of-distribution",
@@ -3524,7 +3524,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multitask-model-inference/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/multitask-model-inference/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "multitask-model-inference",
@@ -3537,7 +3537,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-modality-ablation-analysis/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-modality-ablation-analysis/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "nmr-modality-ablation-analysis",
@@ -3550,7 +3550,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-spectra-preprocessing-and-feature-extraction/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-spectra-preprocessing-and-feature-extraction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "nmr-spectra-preprocessing-and-feature-extraction",
@@ -3563,7 +3563,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nmr-spectrum-to-structure-inference/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/nmr-spectrum-to-structure-inference/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 12,
       "asbval:target_artifact_id": "nmr-spectrum-to-structure-inference",
@@ -3576,7 +3576,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/performance-degradation-quantification-and-analysis/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/performance-degradation-quantification-and-analysis/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "performance-degradation-quantification-and-analysis",
@@ -3589,7 +3589,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-to-structure-mapping-prediction/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/spectral-to-structure-mapping-prediction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 13,
       "asbval:target_artifact_id": "spectral-to-structure-mapping-prediction",
@@ -3602,7 +3602,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/top-k-accuracy-ranking-and-evaluation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/skill/top-k-accuracy-ranking-and-evaluation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "top-k-accuracy-ranking-and-evaluation",
@@ -3615,7 +3615,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Rapid determination of molecular structures can greatly accelerate workflows across many chemical disciplines.",
       "asbval:note": "Text matches source_excerpt exactly; substring_in_paper=false likely due to minor formatting differences",
@@ -3635,7 +3635,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Elucidating structure using only one-dimensional NMR spectra remains an extremely challenging problem because of the combinatorial explosion of the number of possible molecules as the number of constituent atoms is increased.",
       "asbval:note": "Text accurately represents source_excerpt; omits qualifier 'most readily accessible data' but this is minor and doesn't affect core claim",
@@ -3655,7 +3655,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A multitask machine learning framework can predict molecular structure (formula and connectivity) from 1D \u00b9H and/or \u00b9\u00b3C NMR spectra.",
       "asbval:note": "Text accurately represents source_excerpt; 'solely based on' is implicit in 'from' and HTML formatting of isotope notation doesn't affect meaning",
@@ -3675,7 +3675,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A transformer architecture can be constructed to efficiently solve the task of assembling large numbers of molecular fragments into molecular structures.",
       "asbval:note": "Text accurately represents source_excerpt; omits 'traditionally performed by chemists' but core claim about transformer architecture is preserved",
@@ -3695,7 +3695,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The framework demonstrates effectiveness on molecules with up to 19 heavy (non-hydrogen) atoms.",
       "asbval:note": "Text matches source_excerpt exactly",
@@ -3715,7 +3715,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.4c01132/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "For molecules with up to 19 heavy atoms, there are trillions of possible structures.",
       "asbval:note": "Source_excerpt is truncated and does not support the claim about 'trillions of possible structures'; excerpt only confirms testing on molecules up to 19 heavy atoms",

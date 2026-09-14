@@ -1538,7 +1538,7 @@
       "workflow_coupling": "tight"
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_001/000",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the package provides four summary functions to allow users to evaluate the effects of filtering",
       "asbval:note": "Paper confirms filter_summary() exists and is used to evaluate filtering effects, but does not specify the structure/content of outputs for the 'mispicked' filter specifically, nor detail what data tables are returned.",
@@ -1558,7 +1558,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_001/001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "reconcile mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise",
       "asbval:note": "Paper describes mispicked peak reconciliation as a function of MPACT/mpactR, but does not explicitly detail the structure or content of output tables distinguishing failed vs. passed ions.",
@@ -1578,7 +1578,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_001/002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "reconcile mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise",
       "asbval:note": "Paper describes mispicked peak reconciliation as a function of MPACT/mpactR, but does not explicitly detail the structure or content of output tables distinguishing failed vs. passed ions.",
@@ -1598,7 +1598,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_001/003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR as an open source R package",
       "asbval:note": null,
@@ -1618,7 +1618,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_001/004",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR automates pre-processing of liquid chromatography-tandem mass spectrometry (LC-MS/MS) data",
       "asbval:note": null,
@@ -1638,7 +1638,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_001/005",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_001/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format",
       "asbval:note": null,
@@ -1658,7 +1658,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card focuses on a specific function (filter_summary()) and a specific filter type ('mispicked'), which are mentioned in the paper but not detailed in the passages provided.",
@@ -1674,7 +1674,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_002/000",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR automates pre-processing of liquid chromatography-tandem mass spectrometry (LC-MS/MS) data from microbiological samples to correct mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise to yield high-quality mass spectrometry features.",
       "asbval:note": "Tool is central to the paper; case-insensitive match (mpactR vs mpactr)",
@@ -1694,7 +1694,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_002/001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR as an open source R package that provides users the useful functionality of MPACT while integrating the processed data in a manner that satisfies their research needs using the R ecosystem.",
       "asbval:note": "Paper explicitly describes mpactR as an R package",
@@ -1714,7 +1714,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_002/002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions",
       "asbval:note": "data.table is explicitly mentioned as the output format for processed data",
@@ -1734,7 +1734,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_002/003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The package provides four summary functions to allow users to evaluate the effects of filtering.",
       "asbval:note": "Paper mentions 'four summary functions' but does not specifically name 'qc_summary()' or detail its output structure in the provided passages. The function exists as part of the summary functions, but specific output columns (compound ID, status) are not documented in these passages.",
@@ -1754,7 +1754,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_002/004",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_002/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The package provides four summary functions to allow users to evaluate the effects of filtering. The accessor returns the processed data in the data.table package format",
       "asbval:note": "Paper confirms summary functions exist and data.table format is used, but specific column names and structure of qc_summary() output are not detailed in provided passages. Cannot verify the exact columns (compound ID, status) claimed.",
@@ -1774,7 +1774,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card focuses on a specific function (qc_summary()) and its exact output structure, which is narrower than the paper's overall scope of LC-MS/MS preprocessing automation.",
@@ -1790,7 +1790,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_003/000",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The package provides four summary functions to allow users to evaluate the effects of filtering.",
       "asbval:note": "Paper confirms qc_summary() exists and filtering occurs, but does not mention treemap visualization specifically. Treemap visualization is not discussed in passages; only generic summary functions and visualization via ggplot2 are mentioned.",
@@ -1810,7 +1810,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_003/001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR automates pre-processing of liquid chromatography-tandem mass spectrometry (LC-MS/MS) data from microbiological samples to correct mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise",
       "asbval:note": "Paper confirms the filter categories (mispicked peaks, inter-sample variation/replicability, in-source ion fragmentation) exist, but does not mention treemap PNG output specifically. Output format and treemap visualization are not documented in passages.",
@@ -1830,7 +1830,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_003/002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we developed mpactR as an open source R package",
       "asbval:note": null,
@@ -1850,7 +1850,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_003/003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "using the R ecosystem. mpactR's website provides detailed installation instructions to install the package (https://www.mums2.org/mpactr/) from the Comprehensive R Archive Network (CRAN) or GitHub. The website provides tutorials on how to use the mpactR package as well as tutorials for using R with the output of mpactR to generate the types of figures that were originally produced in MPACT. For consistency, these tutorials use an example data set characterizing the metabolome of the tunicate-associated bacterium Streptomyces sp. PTY087I2 used in the original MPACT publication (5). mpactR is designed using the R6 object-oriented programming system with reference semantics, allowing for minimal memory footprint while executing at least as fast as MPACT. mpactR was designed to be straightforward to use and easy to integrate in automated reproducible analysis pipelines. mpactR requires two comma-separated values files, including a peak table and a metadata file containing relevant sample information that can be read in using the import_data function. Peak tables from multiple upstream analysis tools are accepted, including but not limited to Progenesis and Metabocape. Instructions on how to generate these files are provided at the mpactR website. Filtering is performed using any of four functions, and the package provides four summary functions to allow users to evaluate the effects of filtering. The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions, used with functions from R packages in the tidyverse, including ggplot2, or written to a file for uploading to the GNPS website",
       "asbval:note": null,
@@ -1870,7 +1870,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_003/004",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_003/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we developed mpactR as an open source R package that provides users the useful functionality of MPACT",
       "asbval:note": null,
@@ -1890,7 +1890,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_003/005",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_003/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions",
       "asbval:note": null,
@@ -1910,7 +1910,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_003/006",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_003/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The treemapify R package is not mentioned anywhere in the provided passages. While ggplot2 is confirmed, treemapify is not discussed.",
@@ -1930,7 +1930,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card specifies a treemap visualization task, but the paper does not document treemap outputs or the treemapify package. The paper confirms mpactR provides summary functions and integrates with ggplot2 for visualization, but does not detail treemap-specific functionality.",
@@ -1946,7 +1946,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_004/000",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_004/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we developed mpactR as an open source R package",
       "asbval:note": "Paper explicitly names mpactR (case-insensitive match to mpactr in card)",
@@ -1966,7 +1966,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_004/001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_004/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR as an open source R package",
       "asbval:note": "R is the primary language/environment for mpactR",
@@ -1986,7 +1986,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_004/002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_004/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions",
       "asbval:note": "data.table is explicitly mentioned as output format",
@@ -2006,7 +2006,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_004/003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_004/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of filter_mispicked_ions() function or copy_object parameter in passages. Paper mentions filtering is performed using 'any of four functions' but does not name them or describe their parameters.",
@@ -2026,7 +2026,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_004/004",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_004/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR is designed using the R6 object-oriented programming system with reference semantics, allowing for minimal memory footprint",
       "asbval:note": "Reference semantics behavior is confirmed as a design feature",
@@ -2046,7 +2046,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_004/005",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_004/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR is designed using the R6 object-oriented programming system with reference semantics",
       "asbval:note": "Paper confirms mpactR uses R6 with reference semantics (supporting the in-place modification concept), but does not name the specific function filter_mispicked_ions() or its copy_object parameter. The general capability is supported; the specific function signature is not.",
@@ -2066,7 +2066,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_004/006",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_004/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Filtering is performed using any of four functions, and the package provides four summary functions to allow users to evaluate the effects of filtering.",
       "asbval:note": "Paper mentions filtering and summary functions to evaluate filtering effects, but does not specify row-count verification or the exact output format described in the card. The concept of evaluating filter effects is present; the specific numeric verification methodology is not detailed.",
@@ -2086,7 +2086,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_004/scope_drift",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_004/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "Card focuses on a very specific technical test case (reference semantics behavior of a particular function with a particular parameter), while paper provides high-level overview of mpactR capabilities without detailing individual function signatures or parameters.",
@@ -2103,7 +2103,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_005/000",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_005/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No passages mention a filter_mispicked_ions() function, a copy_object parameter, or any discussion of in-place modification vs. object copying semantics. Passage [3] mentions 'reconcile mispicked peaks' as a capability but does not name or describe this specific function or its parameters.",
@@ -2123,7 +2123,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_005/001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_005/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR as an open source R package",
       "asbval:note": "Confirmed: mpactR is an R package.",
@@ -2143,7 +2143,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_005/002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_005/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR automates pre-processing of liquid chromatography-tandem mass spectrometry (LC-MS/MS) data",
       "asbval:note": "Confirmed: mpactR (case-insensitive match to 'mpactr') is the primary tool discussed.",
@@ -2163,7 +2163,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_005/003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_005/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions",
       "asbval:note": "Confirmed: data.table is explicitly mentioned as a package used by mpactR.",
@@ -2183,7 +2183,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_005/004",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_005/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No passages describe or reference a comparison table with these specific columns or structure. The expected output is highly specific to a parameter (copy_object) and function (filter_mispicked_ions) that are not mentioned in the paper.",
@@ -2203,7 +2203,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_2c04632__task_005/scope_drift",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/card/10_1021_acs_analchem_2c04632__task_005/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card describes a very specific technical investigation into R6 object-oriented semantics and reference vs. copy behavior of a particular function parameter. While passage [3] mentions that 'mpactR is designed using the R6 object-oriented programming system with reference semantics', the paper does not document or discuss a filter_mispicked_ions() function or a copy_object parameter.",
@@ -2220,7 +2220,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/blank-contamination-filtering/000",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/blank-contamination-filtering/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MPACT is an open source Python package allowing researchers to reconcile mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise using data collected from solvent and/or media blanks.",
       "asbval:note": "The paper explicitly states that MPACT (and by extension mpactR) removes background noise using solvent and/or media blanks, which directly aligns with the research question about blank-contamination filtering.",
@@ -2240,7 +2240,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/blank-contamination-filtering/001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/blank-contamination-filtering/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we developed mpactR as an open source R package that provides users the useful functionality of MPACT while integrating the processed data in a manner that satisfies their research needs using the R ecosystem.",
       "asbval:note": "mpactR (case-insensitive match to mpactr) is the primary tool described in the paper. The paper confirms it is an R package available on CRAN and GitHub.",
@@ -2260,7 +2260,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/blank-contamination-filtering/002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/blank-contamination-filtering/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions",
       "asbval:note": "data.table is explicitly mentioned as the format for returned processed data from mpactR.",
@@ -2280,7 +2280,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/blank-contamination-filtering/003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/blank-contamination-filtering/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR as an open source R package",
       "asbval:note": "R is confirmed as the language/runtime for mpactR package execution.",
@@ -2300,7 +2300,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/blank-contamination-filtering/004",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/blank-contamination-filtering/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR is designed using the R6 object-oriented programming system with reference semantics, allowing for minimal memory footprint while executing at least as fast as MPACT. Filtering is performed using any of four functions, and the package provides four summary functions to allow users to evaluate the effects of filtering.",
       "asbval:note": "The paper confirms mpactR uses R6 with reference semantics and provides filtering functions, but does not name the specific function 'filter_group()' in the passages provided. The paper states 'Filtering is performed using any of four functions' but does not enumerate them by name. The functional role (blank-group-based feature removal) is supported, but the specific method name cannot be verified from these passages.",
@@ -2320,7 +2320,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/blank-contamination-filtering/005",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/blank-contamination-filtering/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "remove background noise using data collected from solvent and/or media blanks",
       "asbval:note": "The paper confirms that mpactR/MPACT uses solvent and/or media blanks to remove background noise, which aligns with the scope description of blank-contamination filtering.",
@@ -2340,7 +2340,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/blank-contamination-filtering/006",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/blank-contamination-filtering/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR requires two comma-separated values files, including a peak table and a metadata file containing relevant sample information that can be read in using the import_data function. Filtering is performed using any of four functions",
       "asbval:note": "The workflow described (import_data \u2192 filtering) aligns with the scope's recommendation to apply filtering after importing peak tables.",
@@ -2360,7 +2360,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/categorical-ion-status-aggregation/000",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/categorical-ion-status-aggregation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR automates pre-processing of liquid chromatography-tandem mass spectrometry (LC-MS/MS) data from microbiological samples to correct mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise to yield high-quality mass spectrometry features.",
       "asbval:note": "Paper confirms mpactR performs filtering and provides summary functions ('the package provides four summary functions to allow users to evaluate the effects of filtering'), but does not explicitly name or describe a 'qc_summary()' method or the specific aggregation workflow claimed. The research question describes a specific analytical task (categorical aggregation by filter status) that is plausible within mpactR's scope but is not explicitly documented in the provided passages.",
@@ -2380,7 +2380,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/categorical-ion-status-aggregation/001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/categorical-ion-status-aggregation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR automates pre-processing of liquid chromatography-tandem mass spectrometry (LC-MS/MS) data from microbiological samples to correct mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise to yield high-quality mass spectrometry features. The package is available through CRAN and GitHub. ... the package provides four summary functions to allow users to evaluate the effects of filtering.",
       "asbval:note": "mpactR is confirmed as the tool providing filtering and summary functions, but the specific 'qc_summary()' method name is not mentioned in passages. Paper confirms 'four summary functions' exist but does not name them individually.",
@@ -2400,7 +2400,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/categorical-ion-status-aggregation/002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/categorical-ion-status-aggregation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions",
       "asbval:note": "data.table is explicitly mentioned as the format for processed data output from mpactR, supporting its role in aggregation and analysis.",
@@ -2420,7 +2420,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/categorical-ion-status-aggregation/003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/categorical-ion-status-aggregation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions, used with functions from R packages in the tidyverse, including ggplot2",
       "asbval:note": "ggplot2 is explicitly mentioned as part of the tidyverse ecosystem for visualization of mpactR output.",
@@ -2440,7 +2440,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/categorical-ion-status-aggregation/004",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/categorical-ion-status-aggregation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR is an open source R package that provides users the useful functionality of MPACT while integrating the processed data in a manner that satisfies their research needs using the R ecosystem.",
       "asbval:note": "R is confirmed as the environment for mpactR and downstream analyses.",
@@ -2460,7 +2460,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/categorical-ion-status-aggregation/005",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/categorical-ion-status-aggregation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The card lists both 'ggplot2' and 'ggplot' as separate tools. The paper only mentions 'ggplot2'. 'ggplot' is not a distinct package; it is part of ggplot2. This appears to be a duplication or conflation error in the card.",
@@ -2480,7 +2480,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/color-palette-application-greens/000",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/color-palette-application-greens/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of RColorBrewer, Greens palette, treemap visualization, or color palette application in any passage. The paper discusses mpactR's filtering and data processing capabilities but does not describe visualization techniques using RColorBrewer or treemapify.",
@@ -2500,7 +2500,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/color-palette-application-greens/001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/color-palette-application-greens/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions, used with functions from R packages in the tidyverse, including ggplot2",
       "asbval:note": "ggplot2 is mentioned as part of the tidyverse ecosystem used with mpactR output, but there is no mention of treemap geometries, geom_treemap, geom_treemap_text, or scale_fill_brewer in the paper. The paper confirms ggplot2 is used for visualization but not the specific treemap application claimed.",
@@ -2520,7 +2520,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/color-palette-application-greens/002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/color-palette-application-greens/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "treemapify is not mentioned anywhere in the paper. No treemap visualization is discussed in the passages provided.",
@@ -2540,7 +2540,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/color-palette-application-greens/003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/color-palette-application-greens/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "RColorBrewer is not mentioned in any passage. No color palette selection or application is discussed in the paper.",
@@ -2560,7 +2560,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/color-palette-application-greens/004",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/color-palette-application-greens/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MPACT is an open source Python package allowing researchers to reconcile mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise",
       "asbval:note": "mpactR is confirmed as the R adaptation of MPACT and processes filtering data. The paper mentions it returns data in data.table format, but does not explicitly mention a qc_summary() method or its use for treemap visualization input.",
@@ -2580,7 +2580,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/color-palette-application-greens/005",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/color-palette-application-greens/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions",
       "asbval:note": "data.table is confirmed as the output format from mpactR, but the paper does not describe specific aggregation operations, by= syntax, or percentage calculations using data.table.",
@@ -2600,7 +2600,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/color-palette-application-greens/006",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/color-palette-application-greens/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This table can be used for a variety of analyses that can be conducted in R",
       "asbval:note": "R is confirmed as the environment for mpactR analysis, but the specific skills listed (treemap-visualization-construction, color-palette-application-greens) are not demonstrated or discussed in the paper.",
@@ -2620,7 +2620,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/color-palette-application-greens/007",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/color-palette-application-greens/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The evidence_spans field references 'creating an interactive plot of input features and the filters they failed, if any, using `ggplot` and `plotly`' but this text does not appear in any of the provided passages. This appears to be sourced from a different paper (source_paper_doi: 10.1021/acs.analchem.2c04632), not the mpactR paper being validated.",
@@ -2640,7 +2640,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/filter-output-interpretation/000",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/filter-output-interpretation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MPACT is an open source Python package allowing researchers to reconcile mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise",
       "asbval:note": "Paper confirms mpactR performs filtering for mispicked peaks, inter-sample variation (group), in-source fragmentation, and background noise removal. However, passages do not explicitly name or describe the filter_summary() function, its return structure (named list), or the 'cv' filter. The functional filters (mispicked, group, insource) are confirmed; filter_summary() function signature and cv filter are not explicitly mentioned in provided passages.",
@@ -2660,7 +2660,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/filter-output-interpretation/001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/filter-output-interpretation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR automates pre-processing of liquid chromatography-tandem mass spectrometry (LC-MS/MS) data from microbiological samples to correct mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise",
       "asbval:note": "Paper confirms mpactR performs filtering for mispicked peaks, inter-sample variation, and in-source fragmentation. Specific function names (filter_mispicked_ions, filter_group, filter_cv, filter_insource_ions) are not mentioned in passages. The cv filter is not explicitly referenced in provided passages.",
@@ -2680,7 +2680,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/filter-output-interpretation/002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/filter-output-interpretation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR is designed using the R6 object-oriented programming system with reference semantics, allowing for minimal memory footprint while executing at least as fast as MPACT. mpactR was designed to be straightforward to use and easy to integrate in automated reproducible analysis pipelines.",
       "asbval:note": "Paper confirms mpactR (case-insensitive match to mpactr in card) uses R6 object-oriented programming with reference semantics for in-place operations. filter_summary() function not explicitly named in passages but consistent with described functionality.",
@@ -2700,7 +2700,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/filter-output-interpretation/003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/filter-output-interpretation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions",
       "asbval:note": "Paper explicitly confirms data.table is used for data output and analysis. Export to CSV not explicitly mentioned but data.table format enables such operations.",
@@ -2720,7 +2720,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/filter-output-interpretation/004",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/filter-output-interpretation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR is an open source R package that provides users the useful functionality of MPACT while integrating the processed data in a manner that satisfies their research needs using the R ecosystem.",
       "asbval:note": "Paper confirms mpactR is an R package designed for use within the R ecosystem.",
@@ -2740,7 +2740,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/filter-status-data-structure-interpretation/000",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/filter-status-data-structure-interpretation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The package provides four summary functions to allow users to evaluate the effects of filtering. The accessor returns the processed data in the data.table package format",
       "asbval:note": "Paper confirms qc_summary() exists and returns data.table, and that filtering functions exist (filter_mispicked_ions, filter_group, filter_cv, filter_insource_ions implied by 'reconcile mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation'). However, the paper does not explicitly state that qc_summary() returns per-ion pass/fail status or which specific filter caused rejection. The card's claim about 'traceability of filtering decisions across mispicked, group, CV, and in-source filters' is inferred functionality not explicitly documented in passages.",
@@ -2760,7 +2760,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/filter-status-data-structure-interpretation/001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/filter-status-data-structure-interpretation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR automates pre-processing of liquid chromatography-tandem mass spectrometry (LC-MS/MS) data... The package is available through CRAN and GitHub.",
       "asbval:note": "Tool name confirmed (case-insensitive: mpactR in paper, mpactr in card). Provides filtering and summary functions as claimed.",
@@ -2780,7 +2780,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/filter-status-data-structure-interpretation/002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/filter-status-data-structure-interpretation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions",
       "asbval:note": "Confirmed as the underlying data structure returned by mpactR's accessor/summary functions.",
@@ -2800,7 +2800,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/filter-status-data-structure-interpretation/003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/filter-status-data-structure-interpretation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR as an open source R package... mpactR is designed using the R6 object-oriented programming system",
       "asbval:note": "Confirmed as the environment; mpactR is an R package.",
@@ -2820,7 +2820,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/filter-status-data-structure-interpretation/004",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/filter-status-data-structure-interpretation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions, used with functions from R packages in the tidyverse, including ggplot2",
       "asbval:note": "Paper mentions ggplot2 (case-insensitive match to ggplot) as a downstream visualization tool used with data.table output. Plotly is not mentioned in passages; only ggplot2 is explicitly confirmed.",
@@ -2840,7 +2840,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/filter-status-data-structure-interpretation/005",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/filter-status-data-structure-interpretation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MPACT... reconcile mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise",
       "asbval:note": "Paper confirms mispicked and in-source filters by function. 'Resolve inter-sample variation' and 'remove background noise' are mentioned but the specific filter function names 'filter_group' and 'filter_cv' are not explicitly stated in passages. The card infers these names from the functional descriptions.",
@@ -2860,7 +2860,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/filter-status-data-structure-interpretation/006",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/filter-status-data-structure-interpretation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Peak tables from multiple upstream analysis tools are accepted, including but not limited to Progenesis and Metabocape.",
       "asbval:note": "Paper mentions Progenesis and Metabocape as accepted formats, not MS-DIAL. Card claims MS-DIAL is accepted but passages only confirm Progenesis and Metabocape.",
@@ -2880,7 +2880,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/filter-status-data-structure-interpretation/007",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/filter-status-data-structure-interpretation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR requires two comma-separated values files, including a peak table and a metadata file containing relevant sample information that can be read in using the import_data function. Peak tables from multiple upstream analysis tools are accepted, including but not limited to Progenesis and Metabocape.",
       "asbval:note": "Confirmed that import_data() is the function for reading peak tables and that it accepts specific formats.",
@@ -2900,7 +2900,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ggplot2-geom-treemap-rendering/000",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/ggplot2-geom-treemap-rendering/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions, used with functions from R packages in the tidyverse, including ggplot2, or written to a file for uploading to the GNPS website",
       "asbval:note": "Paper confirms mpactR generates qc_summary() data and mentions ggplot2 for visualization, but does not specifically mention treemap visualization, geom_treemap(), geom_treemap_text(), or treemapify package. The paper discusses filtering and visualization capabilities but does not detail treemap-specific rendering.",
@@ -2920,7 +2920,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ggplot2-geom-treemap-rendering/001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/ggplot2-geom-treemap-rendering/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "used with functions from R packages in the tidyverse, including ggplot2",
       "asbval:note": "ggplot2 is confirmed as a visualization tool used with mpactR output.",
@@ -2940,7 +2940,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ggplot2-geom-treemap-rendering/002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/ggplot2-geom-treemap-rendering/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "treemapify package is not mentioned anywhere in the provided passages. The paper does not reference treemap-specific visualization packages.",
@@ -2960,7 +2960,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ggplot2-geom-treemap-rendering/003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/ggplot2-geom-treemap-rendering/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR automates pre-processing of liquid chromatography-tandem mass spectrometry (LC-MS/MS) data from microbiological samples to correct mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise to yield high-quality mass spectrometry features.",
       "asbval:note": "mpactR is confirmed as the tool that processes and filters ion data. The paper mentions it provides processed data output, consistent with generating qc_summary() data.",
@@ -2980,7 +2980,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ggplot2-geom-treemap-rendering/004",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/ggplot2-geom-treemap-rendering/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions",
       "asbval:note": "data.table is explicitly mentioned as the output format for mpactR processed data.",
@@ -3000,7 +3000,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ggplot2-geom-treemap-rendering/005",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/ggplot2-geom-treemap-rendering/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "scale_fill_brewer() is not mentioned in the passages. While ggplot2 is mentioned for visualization, no specific color palette functions are discussed.",
@@ -3020,7 +3020,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ggplot2-geom-treemap-rendering/006",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/ggplot2-geom-treemap-rendering/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR is designed using the R6 object-oriented programming system with reference semantics, allowing for minimal memory footprint while executing at least as fast as MPACT. mpactR was designed to be straightforward to use and easy to integrate in automated reproducible analysis pipelines.",
       "asbval:note": "R is confirmed as the environment for mpactR and data analysis.",
@@ -3040,7 +3040,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ggplot2-geom-treemap-rendering/007",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/ggplot2-geom-treemap-rendering/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "used with functions from R packages in the tidyverse, including ggplot2",
       "asbval:note": "The paper mentions ggplot2 (not 'ggplot'), and does not specifically mention plotly or interactive plots. The tool name in the card appears to be a shortened/alternate reference to ggplot2.",
@@ -3060,7 +3060,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-count-percentage-calculation/000",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/ion-count-percentage-calculation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions",
       "asbval:note": "Paper confirms data.table is used for processed data output and that qc_summary() is a summary function, but does not explicitly describe ion-count-percentage aggregation workflows. The paper states mpactR 'provides four summary functions to allow users to evaluate the effects of filtering' but does not detail the specific calculation workflow claimed in the research question.",
@@ -3080,7 +3080,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-count-percentage-calculation/001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/ion-count-percentage-calculation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR...provides four summary functions to allow users to evaluate the effects of filtering. The accessor returns the processed data in the data.table package format",
       "asbval:note": "mpactR (case-insensitive match) is confirmed as the primary tool providing summary functions and filter status data.",
@@ -3100,7 +3100,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-count-percentage-calculation/002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/ion-count-percentage-calculation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions",
       "asbval:note": "data.table is explicitly named as the format for processed data output, supporting aggregation and analysis operations.",
@@ -3120,7 +3120,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-count-percentage-calculation/003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/ion-count-percentage-calculation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "used with functions from R packages in the tidyverse, including ggplot2",
       "asbval:note": "ggplot2 is confirmed as available for visualization of processed data in the mpactR ecosystem.",
@@ -3140,7 +3140,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-count-percentage-calculation/004",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/ion-count-percentage-calculation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "used with functions from R packages in the tidyverse, including ggplot2",
       "asbval:note": "Paper mentions ggplot2 (not 'ggplot' alone) as part of tidyverse. The card lists 'ggplot' as a separate tool from 'ggplot2', but the paper only references ggplot2. This appears to be a tool-name conflation or duplication; ggplot2 is the actual package used.",
@@ -3160,7 +3160,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-count-percentage-calculation/005",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/ion-count-percentage-calculation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR as an open source R package...integrating the processed data in a manner that satisfies their research needs using the R ecosystem",
       "asbval:note": "R is confirmed as the environment for mpactR and downstream analysis.",
@@ -3180,7 +3180,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-count-percentage-calculation/006",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/ion-count-percentage-calculation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MPACT is an open source Python package allowing researchers to reconcile mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise...mpactR...provides users the useful functionality of MPACT...Filtering is performed using any of four functions, and the package provides four summary functions to allow users to evaluate the effects of filtering.",
       "asbval:note": "Paper confirms the four filter types (mispicked, group/inter-sample variation, insource, background noise) and that summary functions evaluate filtering effects.",
@@ -3200,7 +3200,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isotopic-pattern-mispicking-detection/000",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/isotopic-pattern-mispicking-detection/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MPACT is an open source Python package allowing researchers to reconcile mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise",
       "asbval:note": "The paper explicitly describes MPACT's capability to 'reconcile mispicked peaks' which directly aligns with the research question of detecting and correcting isotopic patterns split into separate peaks.",
@@ -3220,7 +3220,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isotopic-pattern-mispicking-detection/001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/isotopic-pattern-mispicking-detection/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR automates pre-processing of liquid chromatography-tandem mass spectrometry (LC-MS/MS) data from microbiological samples to correct mispicked peaks... Filtering is performed using any of four functions, and the package provides four summary functions to allow users to evaluate the effects of filtering.",
       "asbval:note": "Paper confirms mpactR corrects mispicked peaks and provides filtering and summary functions, but does not name the specific function 'filter_mispicked_ions()' or 'filter_summary()' by those exact names in the passages provided.",
@@ -3240,7 +3240,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isotopic-pattern-mispicking-detection/002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/isotopic-pattern-mispicking-detection/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MPACT is an open source Python package allowing researchers to reconcile mispicked peaks... MPACT can only be used as a GUI and has limited options for visualizing and analyzing the processed data",
       "asbval:note": "Paper confirms MPACT is a GUI-based tool that reconciles mispicked peaks and provides visualization capabilities.",
@@ -3260,7 +3260,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isotopic-pattern-mispicking-detection/003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/isotopic-pattern-mispicking-detection/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions",
       "asbval:note": "Paper confirms data.table is used for storing processed data, but does not explicitly mention 'failed_ions' and 'passed_ions' outputs or CSV export in the provided passages.",
@@ -3280,7 +3280,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isotopic-pattern-mispicking-detection/004",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/isotopic-pattern-mispicking-detection/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions, used with functions from R packages in the tidyverse, including ggplot2",
       "asbval:note": "Paper mentions ggplot2 for visualization of processed data but does not specifically mention visualization of filter pass/fail status or plotly.",
@@ -3300,7 +3300,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isotopic-pattern-mispicking-detection/005",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/isotopic-pattern-mispicking-detection/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR as an open source R package that provides users the useful functionality of MPACT while integrating the processed data in a manner that satisfies their research needs using the R ecosystem",
       "asbval:note": "Paper confirms mpactR is an R package designed to work within the R ecosystem for metabolomics analysis.",
@@ -3320,7 +3320,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-feature-table-filtering/000",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/metabolomics-feature-table-filtering/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR automates pre-processing of liquid chromatography-tandem mass spectrometry (LC-MS/MS) data from microbiological samples to correct mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise to yield high-quality mass spectrometry features.",
       "asbval:note": "Core functionality directly stated in abstract.",
@@ -3340,7 +3340,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-feature-table-filtering/001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/metabolomics-feature-table-filtering/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR is designed using the R6 object-oriented programming system with reference semantics, allowing for minimal memory footprint while executing at least as fast as MPACT.",
       "asbval:note": "R6 reference semantics and memory efficiency explicitly confirmed.",
@@ -3360,7 +3360,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-feature-table-filtering/002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/metabolomics-feature-table-filtering/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR requires two comma-separated values files, including a peak table and a metadata file containing relevant sample information that can be read in using the import_data function. Filtering is performed using any of four functions, and the package provides four summary functions to allow users to evaluate the effects of filtering.",
       "asbval:note": "Paper confirms import_data() and four filtering functions plus four summary functions exist, but does not name the specific function names (filter_mispicked_ions, filter_group, filter_cv, filter_insource_ions) in the passages provided. Function names are inferred but not verbatim-confirmed.",
@@ -3380,7 +3380,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-feature-table-filtering/003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/metabolomics-feature-table-filtering/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR is designed using the R6 object-oriented programming system with reference semantics, allowing for minimal memory footprint while executing at least as fast as MPACT.",
       "asbval:note": "R6 reference semantics explicitly confirmed.",
@@ -3400,7 +3400,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-feature-table-filtering/004",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/metabolomics-feature-table-filtering/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions, used with functions from R packages in the tidyverse, including ggplot2, or written to a file for uploading to the GNPS website.",
       "asbval:note": "data.table use for output export confirmed; CSV export implied by 'written to a file' context.",
@@ -3420,7 +3420,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-feature-table-filtering/005",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/metabolomics-feature-table-filtering/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR as an open source R package that provides users the useful functionality of MPACT while integrating the processed data in a manner that satisfies their research needs using the R ecosystem.",
       "asbval:note": "R as the runtime environment is implicit throughout and explicitly stated as 'R package' and 'R ecosystem'.",
@@ -3440,7 +3440,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-feature-table-filtering/006",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/metabolomics-feature-table-filtering/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MPACT is an open source Python package allowing researchers to reconcile mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise using data collected from solvent and/or media blanks. MPACT can only be used as a GUI and has limited options for visualizing and analyzing the processed data.",
       "asbval:note": "Paper confirms MPACT is Python-based, GUI-only, and performs the same filtering operations. However, passages do not explicitly list vendor format support (Bruker Metaboscape, MS-DIAL, GNPS). The card mentions 'Progenesis and Metabocape' as accepted peak table sources for mpactR, not MPACT directly in these passages.",
@@ -3460,7 +3460,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-peak-table-loading/000",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/metabolomics-peak-table-loading/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR requires two comma-separated values files, including a peak table and a metadata file containing relevant sample information that can be read in using the import_data function. Peak tables from multiple upstream analysis tools are accepted, including but not limited to Progenesis and Metabocape.",
       "asbval:note": "Passage explicitly confirms loading peak tables and metadata files via import_data function, with Progenesis cited as a supported vendor format.",
@@ -3480,7 +3480,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-peak-table-loading/001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/metabolomics-peak-table-loading/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR automates pre-processing of liquid chromatography-tandem mass spectrometry (LC-MS/MS) data from microbiological samples to correct mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise to yield high-quality mass spectrometry features.",
       "asbval:note": "Abstract confirms mpactR performs quality-control operations (mispicked peak correction, noise removal) on LC-MS/MS data, consistent with post-loading filtering workflow.",
@@ -3500,7 +3500,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-peak-table-loading/002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/metabolomics-peak-table-loading/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR requires two comma-separated values files, including a peak table and a metadata file containing relevant sample information that can be read in using the import_data function. Peak tables from multiple upstream analysis tools are accepted, including but not limited to Progenesis and Metabocape. [...] mpactR is designed using the R6 object-oriented programming system with reference semantics, allowing for minimal memory footprint while executing at least as fast as MPACT.",
       "asbval:note": "Passage confirms import_data function, vendor format support, and R6 object-oriented design with reference semantics.",
@@ -3520,7 +3520,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-peak-table-loading/003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/metabolomics-peak-table-loading/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions, used with functions from R packages in the tidyverse, including ggplot2, or written to a file for uploading to the GNPS website.",
       "asbval:note": "Passage confirms data.table is used for storage and manipulation of processed data.",
@@ -3540,7 +3540,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-peak-table-loading/004",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/metabolomics-peak-table-loading/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR is an open source R package that provides users the useful functionality of MPACT while integrating the processed data in a manner that satisfies their research needs using the R ecosystem.",
       "asbval:note": "Passage confirms mpactR is an R package designed for use within the R ecosystem.",
@@ -3560,7 +3560,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mispicked-ion-detection-and-merging/000",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/mispicked-ion-detection-and-merging/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MPACT is an open source Python package allowing researchers to reconcile mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise",
       "asbval:note": "Paper explicitly states mpactR provides 'the useful functionality of MPACT' which includes reconciling mispicked peaks. Abstract confirms mpactR 'correct[s] mispicked peaks'.",
@@ -3580,7 +3580,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mispicked-ion-detection-and-merging/001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/mispicked-ion-detection-and-merging/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "existing peak-picking algorithms are error-prone, reducing our ability to identify high-quality ions",
       "asbval:note": "Paper identifies peak-picking errors as a core problem motivating the tool development and reproducibility concerns.",
@@ -3600,7 +3600,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mispicked-ion-detection-and-merging/002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/mispicked-ion-detection-and-merging/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Peak tables from multiple upstream analysis tools are accepted, including but not limited to Progenesis and Metabocape.",
       "asbval:note": "Paper confirms Progenesis is an accepted input format.",
@@ -3620,7 +3620,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mispicked-ion-detection-and-merging/003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/mispicked-ion-detection-and-merging/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR requires two comma-separated values files, including a peak table and a metadata file containing relevant sample information that can be read in using the import_data function. Filtering is performed using any of four functions",
       "asbval:note": "Paper describes import followed by filtering operations, consistent with the workflow ordering claimed.",
@@ -3640,7 +3640,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mispicked-ion-detection-and-merging/004",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/mispicked-ion-detection-and-merging/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR is designed using the R6 object-oriented programming system with reference semantics, allowing for minimal memory footprint while executing at least as fast as MPACT. Filtering is performed using any of four functions",
       "asbval:note": "Paper confirms R6 design with reference semantics and that filtering functions exist, but does NOT name a specific function called 'filter_mispicked_ions()'. Paper states 'Filtering is performed using any of four functions' without naming them. The specific function name appears to be an extractor inference not verified in the paper.",
@@ -3660,7 +3660,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mispicked-ion-detection-and-merging/005",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/mispicked-ion-detection-and-merging/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions",
       "asbval:note": "Paper confirms data.table is used as output format for processed data, but does not explicitly state it is the underlying structure for 'peak intensity summation and feature merging operations' during processing. The role is inferred rather than explicitly stated.",
@@ -3680,7 +3680,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mispicked-ion-detection-and-merging/006",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/mispicked-ion-detection-and-merging/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we developed mpactR as an open source R package",
       "asbval:note": "R is confirmed as the execution environment for mpactR.",
@@ -3700,7 +3700,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mpactr-filter-application/000",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/mpactr-filter-application/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MPACT is an open source Python package allowing researchers to reconcile mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise using data collected from solvent and/or media blanks. ... we developed mpactR as an open source R package that provides users the useful functionality of MPACT",
       "asbval:note": "Core functionality confirmed: mispicked peaks, inter-sample variation (group-specific), in-source fragmentation, and background noise removal all explicitly stated as mpactR capabilities.",
@@ -3720,7 +3720,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mpactr-filter-application/001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/mpactr-filter-application/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR automates pre-processing of liquid chromatography-tandem mass spectrometry (LC-MS/MS) data from microbiological samples to correct mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise to yield high-quality mass spectrometry features.",
       "asbval:note": "Semantic equivalence: 'correct mispicked peaks' and 'remove background noise to yield high-quality mass spectrometry features' directly supports selective removal of low-quality features.",
@@ -3740,7 +3740,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mpactr-filter-application/002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/mpactr-filter-application/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Filtering is performed using any of four functions, and the package provides four summary functions to allow users to evaluate the effects of filtering.",
       "asbval:note": "Paper confirms mpactR has four filter functions but does not name them explicitly as 'filter_mispicked_ions', 'filter_group', 'filter_cv', 'filter_insource_ions'. The functional roles (mispicked peaks, inter-sample variation, in-source fragmentation, background noise) are confirmed, but specific function names are not verbatim in passages.",
@@ -3760,7 +3760,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mpactr-filter-application/003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/mpactr-filter-application/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MPACT is an open source Python package... MPACT can only be used as a GUI and has limited options for visualizing and analyzing the processed data; therefore, we developed mpactR as an open source R package that provides users the useful functionality of MPACT",
       "asbval:note": "MPACT is confirmed as a GUI-based tool with visualization capabilities, but it is described as a Python package, not as 'wrapping mpactr'. The relationship is reversed: mpactR was developed to provide MPACT's functionality in R. MPACT is the predecessor, not a wrapper around mpactR.",
@@ -3780,7 +3780,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mpactr-filter-application/004",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/mpactr-filter-application/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions",
       "asbval:note": "data.table is confirmed as used by mpactR for memory-efficient data handling. Semantic equivalence: 'rapid and memory-efficient' matches the claim's 'fast, memory-efficient'.",
@@ -3800,7 +3800,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mpactr-filter-application/005",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/mpactr-filter-application/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we developed mpactR as an open source R package that provides users the useful functionality of MPACT while integrating the processed data in a manner that satisfies their research needs using the R ecosystem.",
       "asbval:note": "R is confirmed as the runtime environment for mpactR.",
@@ -3820,7 +3820,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mpactr-filter-application/006",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/mpactr-filter-application/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Peak tables from multiple upstream analysis tools are accepted, including but not limited to Progenesis and Metabocape.",
       "asbval:note": "Progenesis explicitly mentioned as accepted input format.",
@@ -3840,7 +3840,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mpactr-filter-application/007",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/mpactr-filter-application/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "resolve inter-sample variation in abundance across technical replicates",
       "asbval:note": "Paper confirms that mpactR handles technical replicates and inter-sample variation, but does not explicitly name 'filter_cv()' function or state that it requires technical replicates. Function name not verbatim in passages.",
@@ -3860,7 +3860,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/object-state-mutation-detection/000",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/object-state-mutation-detection/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR is designed using the R6 object-oriented programming system with reference semantics, allowing for minimal memory footprint while executing at least as fast as MPACT.",
       "asbval:note": "Paper confirms mpactR uses R6 with reference semantics, but does not discuss or document any technique for detecting in-place mutation vs. deep copy behavior. The paper does not mention a copy_object parameter or mutation-detection methodology. The research question describes a technique that is not present in the paper's scope.",
@@ -3880,7 +3880,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/object-state-mutation-detection/001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/object-state-mutation-detection/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR is designed using the R6 object-oriented programming system with reference semantics... Filtering is performed using any of four functions, and the package provides four summary functions to allow users to evaluate the effects of filtering.",
       "asbval:note": "Paper confirms mpactR is R6-based and provides four filtering functions, but does not name the specific filter function names (filter_mispicked_ions, filter_group, filter_cv, filter_insource_ions) nor does it mention a copy_object parameter. The paper states filtering functions exist but does not document their signatures or parameter control over copy semantics.",
@@ -3900,7 +3900,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/object-state-mutation-detection/002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/object-state-mutation-detection/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR is an open source R package... mpactR requires two comma-separated values files, including a peak table and a metadata file containing relevant sample information that can be read in using the import_data function.",
       "asbval:note": "Paper confirms mpactR is an R package designed for use within the R ecosystem, supporting the role of R as runtime environment.",
@@ -3920,7 +3920,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/object-state-mutation-detection/003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/object-state-mutation-detection/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions",
       "asbval:note": "Paper confirms data.table is used for output format and efficient analysis, but does not discuss using data.table for row count comparison or mutation detection result tables. The role described in the card (mutation detection) is not documented in the paper.",
@@ -3940,7 +3940,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-table-row-count-validation/000",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/peak-table-row-count-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR automates pre-processing of liquid chromatography-tandem mass spectrometry (LC-MS/MS) data from microbiological samples to correct mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise to yield high-quality mass spectrometry features.",
       "asbval:note": "Paper confirms mpactR performs filtering operations on LC-MS/MS peak tables. The research question's focus on row-count validation as a method to detect in-place modifications is a reasonable inference from the paper's emphasis on R6 reference semantics and memory efficiency, though not explicitly stated.",
@@ -3960,7 +3960,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-table-row-count-validation/001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/peak-table-row-count-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR is an open source R package allowing researchers to reconcile mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise",
       "asbval:note": "Paper uses 'mpactR' (capitalized); card uses 'mpactr' (lowercase). Case-insensitive match confirmed. Tool is central to the paper.",
@@ -3980,7 +3980,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-table-row-count-validation/002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/peak-table-row-count-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Filtering is performed using any of four functions, and the package provides four summary functions to allow users to evaluate the effects of filtering.",
       "asbval:note": "Paper confirms mpactR has four filtering functions but does not name them explicitly. Specific function names (filter_mispicked_ions, filter_group, filter_cv) are not present in passages. Paper confirms R6 design: 'mpactR is designed using the R6 object-oriented programming system with reference semantics'.",
@@ -4000,7 +4000,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-table-row-count-validation/003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/peak-table-row-count-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of a 'get_peak_table()' method in passages. Paper mentions 'The accessor returns the processed data in the data.table package format' but does not name this accessor or confirm it is called 'get_peak_table()'.",
@@ -4020,7 +4020,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-table-row-count-validation/004",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/peak-table-row-count-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR is an open source R package",
       "asbval:note": "Paper confirms mpactR is an R package, making R the execution environment.",
@@ -4040,7 +4040,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-table-row-count-validation/005",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/peak-table-row-count-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions",
       "asbval:note": "Paper confirms data.table is used as the underlying data structure for processed peak tables.",
@@ -4060,7 +4060,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-table-row-count-validation/006",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/peak-table-row-count-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR is designed using the R6 object-oriented programming system with reference semantics, allowing for minimal memory footprint while executing at least as fast as MPACT.",
       "asbval:note": "Paper confirms R6 reference semantics design. However, no mention of a 'copy_object' parameter in passages. The claim about copy_object parameter controlling deep vs. shallow copy is not explicitly supported.",
@@ -4080,7 +4080,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/qc-summary-table-extraction/000",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/qc-summary-table-extraction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions",
       "asbval:note": "Paper confirms mpactr returns data.table format and mentions 'four summary functions to allow users to evaluate the effects of filtering', but does not explicitly name or describe a 'qc_summary()' function or its specific pass/fail reporting capability. The functional claim (extracting filter status via data.table) is supported, but the specific method name 'qc_summary()' is not verbatim in the passages.",
@@ -4100,7 +4100,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/qc-summary-table-extraction/001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/qc-summary-table-extraction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR automates pre-processing of liquid chromatography-tandem mass spectrometry (LC-MS/MS) data from microbiological samples to correct mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise",
       "asbval:note": "Paper confirms mpactr (note: paper spells it 'mpactR') is an R package with filter functions (filter_mispicked_ions, filter_group, filter_cv, filter_insource_ions mentioned in scope section), but the specific 'qc_summary()' method is not named in the provided passages. The package and filter functions are confirmed; the specific method name is not.",
@@ -4120,7 +4120,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/qc-summary-table-extraction/002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/qc-summary-table-extraction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions, used with functions from R packages in the tidyverse, including ggplot2",
       "asbval:note": "Paper explicitly confirms data.table is used for output and supports rapid, memory-efficient analyses.",
@@ -4140,7 +4140,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/qc-summary-table-extraction/003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/qc-summary-table-extraction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "used with functions from R packages in the tidyverse, including ggplot2",
       "asbval:note": "Paper confirms ggplot2 is used for visualization of processed data.",
@@ -4160,7 +4160,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/qc-summary-table-extraction/004",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/qc-summary-table-extraction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR is an open source R package that provides users the useful functionality of MPACT while integrating the processed data in a manner that satisfies their research needs using the R ecosystem",
       "asbval:note": "Paper confirms mpactR is an R package designed for use within the R ecosystem.",
@@ -4180,7 +4180,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/qc-summary-table-extraction/005",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/qc-summary-table-extraction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The card lists both 'ggplot2' and 'ggplot' as separate tools. The paper only mentions 'ggplot2'. 'ggplot' is not a standard R package name; this appears to be a duplicate or conflation with ggplot2.",
@@ -4200,7 +4200,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/qc-summary-table-extraction/006",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/qc-summary-table-extraction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MPACT is an open source Python package allowing researchers to reconcile mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise",
       "asbval:note": "Paper confirms the filter functions exist and their purposes (mispicked peaks, inter-sample variation, in-source fragmentation, background noise), but does not explicitly name or describe a 'qc_summary()' method in the provided passages. The functional workflow is consistent with the paper's description of mpactR's filtering and summary capabilities.",
@@ -4220,7 +4220,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r6-object-method-invocation/000",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/r6-object-method-invocation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR is designed using the R6 object-oriented programming system with reference semantics, allowing for minimal memory footprint while executing at least as fast as MPACT. Filtering is performed using any of four functions, and the package provides four summary functions to allow users to evaluate the effects of filtering.",
       "asbval:note": "Paper explicitly states R6 design with reference semantics for memory efficiency and describes filter and summary functions.",
@@ -4240,7 +4240,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r6-object-method-invocation/001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/r6-object-method-invocation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MPACT is an open source Python package allowing researchers to reconcile mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise... mpactR as an open source R package that provides users the useful functionality of MPACT... Filtering is performed using any of four functions, and the package provides four summary functions",
       "asbval:note": "Paper confirms mpactR provides filtering and summary functions for mispicked peaks, inter-sample variation, and in-source fragmentation. However, the paper does not name the specific method signatures (filter_mispicked_ions, filter_group, filter_cv, filter_insource_ions, filter_summary). The paper states 'four functions' for filtering and 'four summary functions' but does not enumerate their exact names.",
@@ -4260,7 +4260,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r6-object-method-invocation/002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/r6-object-method-invocation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions",
       "asbval:note": "Paper confirms data.table is used for output format and downstream analysis.",
@@ -4280,7 +4280,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r6-object-method-invocation/003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/r6-object-method-invocation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR automates pre-processing of liquid chromatography-tandem mass spectrometry (LC-MS/MS) data... The package is available through CRAN and GitHub... mpactR as an open source R package",
       "asbval:note": "Paper confirms mpactR is an R package, implying R as the runtime environment.",
@@ -4300,7 +4300,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r6-object-method-invocation/004",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/r6-object-method-invocation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR automates pre-processing of liquid chromatography-tandem mass spectrometry (LC-MS/MS) data from microbiological samples to correct mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise... mpactR is designed using the R6 object-oriented programming system with reference semantics, allowing for minimal memory footprint",
       "asbval:note": "Paper confirms mispicked peaks, inter-sample variation, and in-source fragmentation handling with R6 reference semantics for memory efficiency. However, the paper does not explicitly mention 'coefficient of variation' (CV) filtering as a named filter function, though it may be implied in the 'four functions' for filtering.",
@@ -4320,7 +4320,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r6-reference-semantics-comparison/000",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/r6-reference-semantics-comparison/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR is designed using the R6 object-oriented programming system with reference semantics, allowing for minimal memory footprint while executing at least as fast as MPACT.",
       "asbval:note": "Paper confirms mpactR uses R6 with reference semantics and mentions 'minimal memory footprint', but does NOT mention the copy_object parameter or its TRUE/FALSE behavior. The paper does not discuss copy_object parameter or deep copy functionality at all.",
@@ -4340,7 +4340,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r6-reference-semantics-comparison/001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/r6-reference-semantics-comparison/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses",
       "asbval:note": "Paper mentions data.table format and memory efficiency but does not discuss row count comparison or object identity tracking as a validation method.",
@@ -4360,7 +4360,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r6-reference-semantics-comparison/002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/r6-reference-semantics-comparison/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MPACT is an open source Python package allowing researchers to reconcile mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise",
       "asbval:note": "Paper confirms mpactR provides filtering for mispicked peaks but does not explicitly name filter_mispicked_ions() function or mention copy_object parameter. Paper states 'Filtering is performed using any of four functions' but does not name them.",
@@ -4380,7 +4380,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r6-reference-semantics-comparison/003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/r6-reference-semantics-comparison/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The specific dataset 'cultures peak table' with '1407 ions initially' is not mentioned in any passage. Paper mentions example data from 'tunicate-associated bacterium Streptomyces sp. PTY087I2' but no ion count is provided.",
@@ -4400,7 +4400,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r6-reference-semantics-comparison/004",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/r6-reference-semantics-comparison/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR is designed using the R6 object-oriented programming system with reference semantics",
       "asbval:note": "Paper confirms mpactR uses R6 and provides filtering functionality, but does not name filter_mispicked_ions() function, copy_object parameter, or get_peak_table() method specifically.",
@@ -4420,7 +4420,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r6-reference-semantics-comparison/005",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/r6-reference-semantics-comparison/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR requires two comma-separated values files, including a peak table and a metadata file containing relevant sample information that can be read in using the import_data function.",
       "asbval:note": "Paper confirms import_data() function exists and R is the runtime, but does not mention filter_mispicked_ions() or get_peak_table() by name.",
@@ -4440,7 +4440,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r6-reference-semantics-comparison/006",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/r6-reference-semantics-comparison/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions",
       "asbval:note": null,
@@ -4460,7 +4460,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tandem-ms-feature-table-import-and-parsing/000",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/tandem-ms-feature-table-import-and-parsing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Peak tables from multiple upstream analysis tools are accepted, including but not limited to Progenesis and Metabocape.",
       "asbval:note": "Paper confirms Progenesis and Metaboscape (Bruker) support, but does NOT mention MS-DIAL as a supported input format. Paper states 'including but not limited to Progenesis and Metabocape' \u2014 MS-DIAL is not listed.",
@@ -4480,7 +4480,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tandem-ms-feature-table-import-and-parsing/001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/tandem-ms-feature-table-import-and-parsing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Peak tables from multiple upstream analysis tools are accepted, including but not limited to Progenesis and Metabocape. Instructions on how to generate these files are provided at the mpactR website.",
       "asbval:note": "Paper confirms mpactr accepts Progenesis and Metaboscape (Bruker), and mentions import_data function. However, MS-DIAL is NOT explicitly mentioned as a supported format in the passages provided. GNPS is mentioned as an output destination ('written to a file for uploading to the GNPS website'), not as an input format.",
@@ -4500,7 +4500,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tandem-ms-feature-table-import-and-parsing/002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/tandem-ms-feature-table-import-and-parsing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR is an open source R package... mpactR is designed using the R6 object-oriented programming system with reference semantics... The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions, used with functions from R packages in the tidyverse, including ggplot2",
       "asbval:note": null,
@@ -4520,7 +4520,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tandem-ms-feature-table-import-and-parsing/003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/tandem-ms-feature-table-import-and-parsing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions",
       "asbval:note": null,
@@ -4540,7 +4540,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tandem-ms-feature-table-import-and-parsing/004",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/tandem-ms-feature-table-import-and-parsing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MPACT is an open source Python package allowing researchers to reconcile mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise... MPACT can only be used as a GUI",
       "asbval:note": "Paper confirms MPACT is Python-based and GUI-only, but does not explicitly list MS-DIAL as a supported input format for MPACT. Only the general statement about mpactR accepting 'Progenesis and Metabocape' is provided; MPACT's specific input format support is not detailed in passages.",
@@ -4560,7 +4560,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tandem-ms-feature-table-import-and-parsing/005",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/tandem-ms-feature-table-import-and-parsing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR automates pre-processing of liquid chromatography-tandem mass spectrometry (LC-MS/MS) data from microbiological samples to correct mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise to yield high-quality mass spectrometry features.",
       "asbval:note": null,
@@ -4580,7 +4580,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/technical-replicate-reproducibility-assessment/000",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/technical-replicate-reproducibility-assessment/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MPACT is an open source Python package allowing researchers to reconcile mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise",
       "asbval:note": "Paper confirms mpactR resolves inter-sample variation across technical replicates and removes background noise, but does not explicitly name 'coefficient of variation (CV)' or 'CV thresholds' as the filtering mechanism in provided passages. The functional goal (reproducibility assessment via filtering) is present, but the specific CV-threshold method is not verbatim-confirmed in the passages provided.",
@@ -4600,7 +4600,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/technical-replicate-reproducibility-assessment/001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/technical-replicate-reproducibility-assessment/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR is an open source R package that provides users the useful functionality of MPACT while integrating the processed data in a manner that satisfies their research needs using the R ecosystem. Filtering is performed using any of four functions, and the package provides four summary functions to allow users to evaluate the effects of filtering.",
       "asbval:note": "Paper confirms mpactR is an R package with filtering functions and summary functions, but does not name the specific function 'filter_cv()' in the provided passages. The filtering capability is confirmed; the specific function name is not.",
@@ -4620,7 +4620,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/technical-replicate-reproducibility-assessment/002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/technical-replicate-reproducibility-assessment/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions",
       "asbval:note": "Paper confirms data.table is used to return processed data, but does not explicitly name a function called 'qc_summary()' in the provided passages. The role of data.table in output structuring is confirmed; the specific function name is not.",
@@ -4640,7 +4640,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/technical-replicate-reproducibility-assessment/003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/technical-replicate-reproducibility-assessment/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR as an open source R package that provides users the useful functionality of MPACT while integrating the processed data in a manner that satisfies their research needs using the R ecosystem.",
       "asbval:note": "Confirmed: mpactR is an R package designed for use within the R ecosystem.",
@@ -4660,7 +4660,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/treemap-visualization-construction/000",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/treemap-visualization-construction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses with other data.table functions, used with functions from R packages in the tidyverse, including ggplot2",
       "asbval:note": "Paper confirms mpactR provides qc_summary() output and integration with ggplot2 for visualization, but does not specifically mention treemap visualizations or treemapify. The paper discusses filtering and data visualization capabilities but does not demonstrate treemap-specific functionality.",
@@ -4680,7 +4680,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/treemap-visualization-construction/001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/treemap-visualization-construction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "used with functions from R packages in the tidyverse, including ggplot2",
       "asbval:note": "ggplot2 is confirmed as part of the mpactR ecosystem for visualization.",
@@ -4700,7 +4700,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/treemap-visualization-construction/002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/treemap-visualization-construction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "treemapify is not mentioned anywhere in the provided passages. While ggplot2 is confirmed, the specific treemapify package is not referenced.",
@@ -4720,7 +4720,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/treemap-visualization-construction/003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/treemap-visualization-construction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The accessor returns the processed data in the data.table package format facilitating rapid and memory-efficient analyses",
       "asbval:note": "data.table is explicitly mentioned as the output format for processed data from mpactR.",
@@ -4740,7 +4740,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/treemap-visualization-construction/004",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/treemap-visualization-construction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR automates pre-processing of liquid chromatography-tandem mass spectrometry (LC-MS/MS) data from microbiological samples to correct mispicked peaks, resolve inter-sample variation in abundance across technical replicates, account for in-source ion fragmentation, and remove background noise",
       "asbval:note": "mpactR is the subject of the paper and provides filtering functionality. The paper confirms filtering operations but does not explicitly name a qc_summary() method in the passages provided.",
@@ -4760,7 +4760,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/treemap-visualization-construction/005",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/treemap-visualization-construction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mpactR is an open source R package",
       "asbval:note": "R is confirmed as the environment for mpactR.",
@@ -4780,7 +4780,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/treemap-visualization-construction/006",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/treemap-visualization-construction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "used with functions from R packages in the tidyverse, including ggplot2",
       "asbval:note": "The card lists both 'ggplot2' and 'ggplot' as separate tools. ggplot2 is confirmed in the paper; 'ggplot' appears to be a duplicate or conflation. The evidence_spans reference in the card cites a different source paper (10.1021/acs.analchem.2c04632), not the current paper (10.1128/mra.00997-24).",
@@ -4800,7 +4800,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/blank-contamination-filtering/triage",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/blank-contamination-filtering/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "blank-contamination-filtering",
@@ -4813,7 +4813,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/categorical-ion-status-aggregation/triage",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/categorical-ion-status-aggregation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "categorical-ion-status-aggregation",
@@ -4826,7 +4826,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/color-palette-application-greens/triage",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/color-palette-application-greens/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "color-palette-application-greens",
@@ -4839,7 +4839,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/filter-output-interpretation/triage",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/filter-output-interpretation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "filter-output-interpretation",
@@ -4852,7 +4852,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/filter-status-data-structure-interpretation/triage",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/filter-status-data-structure-interpretation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "filter-status-data-structure-interpretation",
@@ -4865,7 +4865,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ggplot2-geom-treemap-rendering/triage",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/ggplot2-geom-treemap-rendering/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "ggplot2-geom-treemap-rendering",
@@ -4878,7 +4878,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-count-percentage-calculation/triage",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/ion-count-percentage-calculation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "ion-count-percentage-calculation",
@@ -4891,7 +4891,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isotopic-pattern-mispicking-detection/triage",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/isotopic-pattern-mispicking-detection/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "isotopic-pattern-mispicking-detection",
@@ -4904,7 +4904,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-feature-table-filtering/triage",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/metabolomics-feature-table-filtering/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "metabolomics-feature-table-filtering",
@@ -4917,7 +4917,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-peak-table-loading/triage",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/metabolomics-peak-table-loading/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "metabolomics-peak-table-loading",
@@ -4930,7 +4930,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mispicked-ion-detection-and-merging/triage",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/mispicked-ion-detection-and-merging/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "mispicked-ion-detection-and-merging",
@@ -4943,7 +4943,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mpactr-filter-application/triage",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/mpactr-filter-application/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "mpactr-filter-application",
@@ -4956,7 +4956,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/object-state-mutation-detection/triage",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/object-state-mutation-detection/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 4,
       "asbval:target_artifact_id": "object-state-mutation-detection",
@@ -4969,7 +4969,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-table-row-count-validation/triage",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/peak-table-row-count-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "peak-table-row-count-validation",
@@ -4982,7 +4982,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/qc-summary-table-extraction/triage",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/qc-summary-table-extraction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "qc-summary-table-extraction",
@@ -4995,7 +4995,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r6-object-method-invocation/triage",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/r6-object-method-invocation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "r6-object-method-invocation",
@@ -5008,7 +5008,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r6-reference-semantics-comparison/triage",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/r6-reference-semantics-comparison/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "r6-reference-semantics-comparison",
@@ -5021,7 +5021,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tandem-ms-feature-table-import-and-parsing/triage",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/tandem-ms-feature-table-import-and-parsing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "tandem-ms-feature-table-import-and-parsing",
@@ -5034,7 +5034,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/technical-replicate-reproducibility-assessment/triage",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/technical-replicate-reproducibility-assessment/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 4,
       "asbval:target_artifact_id": "technical-replicate-reproducibility-assessment",
@@ -5047,7 +5047,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/treemap-visualization-construction/triage",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/skill/treemap-visualization-construction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "treemap-visualization-construction",
@@ -5060,7 +5060,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mpactr is designed to correct for errors that occur during the pre-processing of raw tandem MS/MS data.",
       "asbval:note": null,
@@ -5080,7 +5080,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mpactr provides filters to identify and remove mispicked ions, which are isotopic patterns that are incorrectly split during preprocessing.",
       "asbval:note": null,
@@ -5100,7 +5100,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mpactr provides filters to identify and remove ions that are above a relative abundance threshold in solvent blanks.",
       "asbval:note": "Text says 'above a relative abundance threshold in solvent blanks' but excerpt describes removal of features present in solvent blanks due to carryover\u2014different mechanism than threshold-based filtering",
@@ -5120,7 +5120,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mpactr provides filters to identify and remove non-reproducible ions that are inconsistent between technical replicates.",
       "asbval:note": null,
@@ -5140,7 +5140,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mpactr provides filters to identify and remove insource ions, which are fragment ions created during ionization before fragmentation in the tandem MS/MS workflow.",
       "asbval:note": null,
@@ -5160,7 +5160,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The filter_mispicked_ions function checks for similar ions based on retention time and mass using the parameters ringwin, isowin, trwin and max_iso_shift.",
       "asbval:note": "Text says function 'checks for similar ions based on retention time and mass' but excerpt only states it 'checks for similar ions'\u2014added specificity not in source",
@@ -5180,7 +5180,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The filter_group function identifies ions above a relative abundance threshold in a specific biological group.",
       "asbval:note": null,
@@ -5200,7 +5200,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The filter_cv function identifies non-reproducible ions by coefficient of variation between technical replicates.",
       "asbval:note": null,
@@ -5220,7 +5220,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The filter_insource_ions function conducts ion deconvolution via retention time correlation matrices within MS1 scans.",
       "asbval:note": null,
@@ -5240,7 +5240,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mpactr is built on an R6 class-system, meaning it operates on reference semantics in which data is updated in-place.",
       "asbval:note": null,
@@ -5260,7 +5260,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Reference semantics in R6 classes differ from shallow copy, where only data pointers are copied, and from deep copy, where the entire data object is copied in memory.",
       "asbval:note": "Text presents shallow/deep copy as contrasts to reference semantics, but excerpt frames them as comparisons showing how reference semantics differs\u2014subtle scope difference in framing",
@@ -5280,7 +5280,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_012",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_012",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The default setting for the copy_object parameter in mpactr filters is FALSE, which operates on reference semantics.",
       "asbval:note": null,
@@ -5300,7 +5300,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_013",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_013",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Using the default copy_object = FALSE makes for an extremely fast and memory-efficient way to chain mpactr filters together.",
       "asbval:note": null,
@@ -5320,7 +5320,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_014",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_014",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The filter_summary function allows users to view passing and failing ions for a single filter.",
       "asbval:note": null,
@@ -5340,7 +5340,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_015",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_015",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The qc_summary function returns a data.table reporting the compound id and filtering status for each input ion.",
       "asbval:note": null,
@@ -5360,7 +5360,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_016",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_016",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mpactr requires at minimum a feature table in Progenesis format and a metadata file with columns for Injection, Sample_Code, and Biological_Group.",
       "asbval:note": "Claim adds 'Progenesis format' requirement not explicitly stated in excerpt; excerpt only lists required metadata columns",
@@ -5380,7 +5380,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_017",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_017",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The Injection column in the mpactr metadata file is expected to match sample column names in the peak table.",
       "asbval:note": null,
@@ -5400,7 +5400,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_018",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_018",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The Sample_Code column in the mpactr metadata file is the id for technical replicate groups.",
       "asbval:note": null,
@@ -5420,7 +5420,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_019",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_019",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The Biological_Group column in the mpactr metadata file is the id for biological replicate groups.",
       "asbval:note": null,
@@ -5440,7 +5440,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_020",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_020",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The get_raw_data function extracts the unfiltered peak table used as input to mpactr.",
       "asbval:note": null,
@@ -5460,7 +5460,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_021",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_021",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The get_peak_table function extracts the filtered peak table with filters that have been applied.",
       "asbval:note": null,
@@ -5480,7 +5480,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_022",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_022",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The get_metadata function extracts metadata from an mpactr object.",
       "asbval:note": null,
@@ -5500,7 +5500,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_023",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_023",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The raw peak table in mpactr does not change as filters are applied to the data.",
       "asbval:note": null,
@@ -5520,7 +5520,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_024",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_024",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mpactr uses R6 environments to enable reference semantics and fast filter execution.",
       "asbval:note": "Excerpt mentions R6 and environment system but does not explicitly state 'reference semantics' or 'fast filter execution' as the reasons",
@@ -5540,7 +5540,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_025",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_025",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Functions in R rely on call-by-value semantics where parameterized values are treated as local variables.",
       "asbval:note": null,
@@ -5560,7 +5560,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_026",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_026",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "R6 classes allow sending variables by reference to functions using environment semantics.",
       "asbval:note": null,
@@ -5580,7 +5580,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_027",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_027",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Memory usage is improved when using R6 classes compared to traditional copy-by-value workflows.",
       "asbval:note": "Source excerpt is incomplete (ends with 'copy by'); claim content is consistent but cannot fully verify against truncated excerpt",
@@ -5600,7 +5600,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_028",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_028",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The downstream analyses in mpactr include creating interactive plots of input features and their filtering fate using ggplot and plotly.",
       "asbval:note": "Text says 'filtering fate' but source says 'filters they failed'; minor semantic drift in phrasing",
@@ -5620,7 +5620,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_029",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_029",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The downstream analyses in mpactr include correlating sample profiles at multiple levels using Hmisc and corrplot.",
       "asbval:note": null,
@@ -5640,7 +5640,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_030",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_030",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The downstream analyses in mpactr include visualizing sample clustering as a dendrogram with ggdendro.",
       "asbval:note": null,
@@ -5660,7 +5660,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_031",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_031",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The downstream analyses in mpactr include calculating fold change between two biological groups.",
       "asbval:note": null,
@@ -5680,7 +5680,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_032",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_032",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The downstream analyses in mpactr include visualizing fold change, m/z, and retention time as a 3D scatter plot.",
       "asbval:note": null,
@@ -5700,7 +5700,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_033",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_033",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The downstream analyses in mpactr include conducting t-tests for fold change differences and calculating p-values and q-values.",
       "asbval:note": null,
@@ -5720,7 +5720,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_034",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_034",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The downstream analyses in mpactr include visualizing significant fold change differences in a volcano plot.",
       "asbval:note": null,
@@ -5740,7 +5740,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_035",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_035",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Tandem MS/MS datasets can be filled with many zeros due to compounds not being detected in certain groups.",
       "asbval:note": "Text adds qualifier 'due to compounds not being detected in certain groups' not explicitly stated in source excerpt",
@@ -5760,7 +5760,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_036",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_036",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "When a compound is found in the experimental group but not in the control group, fold change calculation yields an infinite number.",
       "asbval:note": null,
@@ -5780,7 +5780,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_037",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_037",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "When a compound is not found in either the experimental or control group, fold change calculation yields NaN.",
       "asbval:note": null,
@@ -5800,7 +5800,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_038",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_038",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Adding pseudo-counts to all counts prior to calculating fold change alleviates division by zero.",
       "asbval:note": null,
@@ -5820,7 +5820,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_039",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_039",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A Spearman correlation test is used by Hmisc::rcorr to measure correlation between samples.",
       "asbval:note": null,
@@ -5840,7 +5840,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_040",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_040",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Euclidean distance is used to calculate the distance between samples for dendrogram clustering.",
       "asbval:note": null,
@@ -5860,7 +5860,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_041",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_041",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Complete linkage is used as the clustering method for hierarchical clustering of samples.",
       "asbval:note": null,
@@ -5880,7 +5880,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_042",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_042",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The PTY087I2 dataset contains 38 samples for biological groups of solvent blanks, media blanks, and Streptomyces sp. PTY08712 grown with and without cerium.",
       "asbval:note": null,
@@ -5900,7 +5900,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_043",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_043",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The get_group_averages function is used to extract group means from filtered compounds in mpactr.",
       "asbval:note": null,
@@ -5920,7 +5920,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_044",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_044",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Log2 transformation is applied to fold change values for visualization and analysis.",
       "asbval:note": null,
@@ -5940,7 +5940,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_045",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_045",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A fold change threshold of 1.5 is used in the volcano plot example to define significant metabolite abundance differences.",
       "asbval:note": null,
@@ -5960,7 +5960,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_046",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_046",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A p-value threshold of 0.05 is used in the volcano plot example to define significant metabolite abundance differences.",
       "asbval:note": null,
@@ -5980,7 +5980,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_047",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_047",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Volcano plots display log2 fold change values on the x-axis and negative log10 p-values on the y-axis.",
       "asbval:note": null,
@@ -6000,7 +6000,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_048",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_048",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The filter_cv function cannot be applied to data that does not contain technical replicates.",
       "asbval:note": null,
@@ -6020,7 +6020,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_049",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_049",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Highly correlated ion groups in filter_insource_ions are determined by the cluster_threshold parameter.",
       "asbval:note": null,
@@ -6040,7 +6040,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_050",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_050",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "In filter_insource_ions, the highest mass feature in a correlated ion group is identified as the likely precursor ion and retained.",
       "asbval:note": "Text adds 'in filter_insource_ions' context not explicitly stated in excerpt; excerpt is more general about feature identification",
@@ -6060,7 +6060,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_051",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_051",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Filters can be chained in a customizable workflow in mpactr.",
       "asbval:note": null,
@@ -6080,7 +6080,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_052",
+      "@id": "asbval:assertion/paper/10.1128%2Fmra.00997-24/claim/claim_052",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The recommended filter order is to filter mispicked ions, then solvent blanks, prior to filtering non-reproducible or insource ions.",
       "asbval:note": null,

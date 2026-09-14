@@ -1521,7 +1521,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds... FGSEA is able to routinely estimate P-values up to 10 \u2212100 with a small and predictable estimation error.",
       "asbval:note": "Core capability of fgsea directly stated in abstract.",
@@ -1541,7 +1541,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method... FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "Tool explicitly named and described as R package.",
@@ -1561,7 +1561,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "fgsea is an R package, implying R as the environment.",
@@ -1581,7 +1581,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not mention data.table. Expected output references 'data.table' format but tool is not confirmed in provided passages.",
@@ -1601,7 +1601,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not mention ggplot2. Expected output references ggplot2 visualization but tool is not confirmed in provided passages.",
@@ -1621,7 +1621,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_001/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not specify the exact structure, column names, or output format of fgsea results. Cannot verify specific data.table schema.",
@@ -1641,7 +1641,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_001/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not mention specific pathway names, example datasets, or visualization outputs. Cannot verify this specific example output.",
@@ -1661,7 +1661,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/007",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_001/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not describe visualization formats, heatmap outputs, or specific pathway ranking/filtering strategies.",
@@ -1681,7 +1681,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "Card specifies 'examplePathways and exampleRanks' datasets and 'default parameters' \u2014 passages do not confirm these specific example datasets exist or are used in the paper.",
@@ -1698,7 +1698,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds.",
       "asbval:note": "Paper establishes fgsea's ability to estimate P-values accurately, but does not discuss time-course experiments, GSE200250, Th2 cells, or temporal pathway activation patterns. The research question conflates fgsea's general validation with a specific experimental design not addressed in the paper.",
@@ -1718,7 +1718,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method... FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "fgsea is the primary subject of the paper.",
@@ -1738,7 +1738,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GEOquery is not mentioned in any passage. Paper focuses on fgsea methodology and validation, not data retrieval workflows.",
@@ -1758,7 +1758,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "limma is not mentioned. Paper mentions 'differential gene expression test' generically but does not name limma specifically.",
@@ -1778,7 +1778,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_002/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "msigdbr is not mentioned. Paper references 'collection of hundreds and thousands of pathways' but does not name msigdbr.",
@@ -1798,7 +1798,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_002/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "data.table is not mentioned in any passage.",
@@ -1818,7 +1818,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_002/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 is not mentioned in any passage.",
@@ -1838,7 +1838,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/007",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_002/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "Paper confirms fgsea is an R package.",
@@ -1858,7 +1858,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/008",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_002/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy",
       "asbval:note": "Paper confirms fgsea produces P-values and pathway results, but the card mentions 'GESECA' (a different method) rather than GSEA/fgsea. GESECA is not mentioned in the paper. The output structure (pathway names, scores, p-values, adjusted p-values) is consistent with fgsea's function, but the method name in the expected output is incorrect.",
@@ -1878,7 +1878,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/009",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_002/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss time-course experiments, E2F targets, hypoxia genes, or temporal pathway activation patterns. This expected output is specific to an application not covered in the paper.",
@@ -1898,7 +1898,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card describes a specific application (GSE200250 Th2 time-course analysis) that is not mentioned in the paper.",
@@ -1916,7 +1916,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Gene set enrichment analysis (GSEA) is an ubiquitously used tool for evaluating pathway enrichment in transcriptional data.",
       "asbval:note": "Paper discusses GSEA/FGSEA for pathway enrichment analysis, but no mention of GESECA, PCA dimensionality reduction, GSE200250 dataset, or comparison of full vs reduced matrix results. The paper focuses on improving GSEA P-value estimation accuracy, not on validating dimensionality reduction effects on enrichment results.",
@@ -1936,7 +1936,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present FGSEA (Fast Gene Set Enrichment Analysis) method... FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "FGSEA is the main subject of the paper.",
@@ -1956,7 +1956,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "Paper explicitly states FGSEA is an R package.",
@@ -1976,7 +1976,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GEOquery is not mentioned in any passage. Paper does not discuss data retrieval from GEO.",
@@ -1996,7 +1996,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_003/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "limma is not mentioned in any passage. Paper does not discuss differential gene expression testing tools.",
@@ -2016,7 +2016,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_003/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 is not mentioned in any passage. Paper does not discuss visualization tools.",
@@ -2036,7 +2036,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_003/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "data.table is not mentioned in any passage.",
@@ -2056,7 +2056,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/007",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_003/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "msigdbr is not mentioned in any passage. Paper mentions 'collection of hundreds and thousands of pathways' but does not name the specific pathway database tool.",
@@ -2076,7 +2076,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/008",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_003/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GESECA is not mentioned in the paper. Paper discusses FGSEA, not GESECA. No results tables with these specific columns are described.",
@@ -2096,7 +2096,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/009",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_003/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GESECA and PCA-reduced analysis are not mentioned in the paper.",
@@ -2116,7 +2116,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/010",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_003/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No comparison of full vs reduced matrix results or correlation analysis is described in the paper.",
@@ -2136,7 +2136,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card describes a task involving GESECA (Gene Set Enrichment analysis on Correlation And covariance), PCA dimensionality reduction, and validation of enrichment preservation across reduced dimensions. The paper is about FGSEA (Fast Gene Set Enrichment Analysis), which focuses on improving P-value estimation accuracy for standard GSEA, not on GESECA or dimensionality reduction effects.",
@@ -2154,7 +2154,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_004/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds.",
       "asbval:note": "Direct match to paper's core claim about FGSEA's capability.",
@@ -2174,7 +2174,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_004/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "Paper explicitly presents FGSEA as the main method.",
@@ -2194,7 +2194,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_004/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "FGSEA is an R package, confirming R as the environment.",
@@ -2214,7 +2214,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_004/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Seurat not mentioned in provided passages. Passages focus on GSEA methodology, not scRNA-seq preprocessing or clustering tools.",
@@ -2234,7 +2234,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_004/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "msigdbr not mentioned in provided passages. Paper mentions 'collection of hundreds and thousands of pathways' but does not name the specific pathway database tool.",
@@ -2254,7 +2254,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_004/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 not mentioned in provided passages.",
@@ -2274,7 +2274,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_004/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "data.table not mentioned in provided passages.",
@@ -2294,7 +2294,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/007",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_004/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is able to estimate arbitrarily low GSEA P-values with a high accuracy",
       "asbval:note": "Paper confirms FGSEA outputs P-values and pathway enrichment results, but passages do not mention GESECA specifically (a different method), nor do they detail output table structure with specific columns like pctEvar or adjusted p-values.",
@@ -2314,7 +2314,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/008",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_004/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not mention dimensionality reduction visualization (tSNE/UMAP), specific KEGG pathways (LEISHMANIA_INFECTION, LYSOSOME), or cell type annotation. These are scRNA-seq analysis outputs not addressed in the FGSEA methodology paper.",
@@ -2334,7 +2334,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/009",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_004/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not mention atherosclerosis, macrophage subtypes, or specific biological associations. This is a domain-specific biological finding not addressed in the FGSEA methodology paper.",
@@ -2354,7 +2354,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/010",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_004/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Gene set enrichment analysis (GSEA) is an ubiquitously used tool for evaluating pathway enrichment in transcriptional data",
       "asbval:note": "Paper addresses GSEA/FGSEA for pathway enrichment in transcriptional data, but does not mention GESECA, GSE116240 dataset, atherosclerosis, or KEGG_LEGACY pathways. The title describes a specific application case study not covered in the provided passages.",
@@ -2374,7 +2374,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/scope_drift",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_004/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card describes a specific scRNA-seq case study (GSE116240 atherosclerosis data, macrophage subtypes, KEGG_LEISHMANIA_INFECTION and KEGG_LYSOSOME pathways) that is not present in the provided paper passages.",
@@ -2392,7 +2392,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_005/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds. To confirm the accuracy of the method, we also developed an exact algorithm for GSEA P-values calculation for integer gene-level statistics.",
       "asbval:note": "Paper confirms fgsea estimates P-values with high accuracy and mentions an exact algorithm for P-value calculation, but does not explicitly name or describe the 'adaptive multi-level split Monte-Carlo scheme' or discuss the eps parameter behavior. The research question's specific technical mechanism (adaptive multi-level split MCMC, eps parameter tuning) is not verbatim in passages.",
@@ -2412,7 +2412,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_005/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method... FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": null,
@@ -2432,7 +2432,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_005/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": null,
@@ -2452,7 +2452,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_005/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "data.table is not mentioned in the provided passages. Insufficient information to confirm or deny.",
@@ -2472,7 +2472,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_005/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 is not mentioned in the provided passages. Insufficient information to confirm or deny.",
@@ -2492,7 +2492,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_005/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not specify output table structure, column names, or default eps parameter value. Insufficient information to judge.",
@@ -2512,7 +2512,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_005/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we also developed an exact algorithm for GSEA P-values calculation for integer gene-level statistics",
       "asbval:note": "Paper mentions an exact algorithm for P-value calculation (which aligns with eps=0 exact mode concept), but does not explicitly describe eps=0 parameter or the specific output table structure with refined P-values.",
@@ -2532,7 +2532,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/007",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_005/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of comparison tables or comparative P-value metrics (pval_ratio, pval_difference) in the passages.",
@@ -2552,7 +2552,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/008",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_005/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of visualizations, scatter plots, histograms, or pval_ratio distributions in the passages.",
@@ -2572,7 +2572,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/009",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_005/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values... we also developed an exact algorithm for GSEA P-values calculation",
       "asbval:note": "Paper confirms fgsea performs P-value estimation and mentions an exact algorithm, but does not name 'fgseaMultilevel' function or explicitly discuss 'adaptive multilevel MCMC' or 'eps=0 exact mode' terminology.",
@@ -2592,7 +2592,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/scope_drift",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/card/task_005/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card focuses on a specific technical implementation detail (adaptive multi-level split MCMC scheme with eps parameter tuning) that is not explicitly discussed in the paper's abstract/introduction. The paper's scope is broader: introducing FGSEA as a fast, accurate method for gene set enrichment analysis.",
@@ -2609,7 +2609,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dimensionality-reduction-via-reverse-pca/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/dimensionality-reduction-via-reverse-pca/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about FGSEA (Fast Gene Set Enrichment Analysis), a method for computing pathway enrichment P-values. No mention of reverse PCA, feature loadings extraction, or single-cell RNA-seq workflows in provided passages.",
@@ -2629,7 +2629,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dimensionality-reduction-via-reverse-pca/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/dimensionality-reduction-via-reverse-pca/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss reverse PCA, GESECA, or feature-space embeddings. FGSEA is a preranked gene set enrichment method, not a dimensionality reduction or coregulation-based enrichment tool.",
@@ -2649,7 +2649,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dimensionality-reduction-via-reverse-pca/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/dimensionality-reduction-via-reverse-pca/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Seurat is not mentioned in the provided passages. Paper focuses on FGSEA methodology, not single-cell RNA-seq preprocessing or normalization tools.",
@@ -2669,7 +2669,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dimensionality-reduction-via-reverse-pca/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/dimensionality-reduction-via-reverse-pca/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy",
       "asbval:note": "Paper confirms fgsea (FGSEA) computes pathway enrichment and P-values, but for preranked GSEA, not GESECA. GESECA is not mentioned in the paper. The tool is correct but the specific function (GESECA) differs from what the paper describes.",
@@ -2689,7 +2689,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dimensionality-reduction-via-reverse-pca/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/dimensionality-reduction-via-reverse-pca/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "msigdbr is not mentioned in the provided passages. Paper mentions 'collection of hundreds and thousands of pathways' but does not name msigdbr or discuss pathway database retrieval tools.",
@@ -2709,7 +2709,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dimensionality-reduction-via-reverse-pca/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/dimensionality-reduction-via-reverse-pca/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 and plotCoregulationProfileReduction are not mentioned in the provided passages. Paper does not discuss visualization tools or coregulation profile plotting.",
@@ -2729,7 +2729,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dimensionality-reduction-via-reverse-pca/006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/dimensionality-reduction-via-reverse-pca/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "Paper explicitly states FGSEA is available as an R package.",
@@ -2749,7 +2749,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-matrix-normalization/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-expression-matrix-normalization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Gene set enrichment analysis (GSEA) is an ubiquitously used tool for evaluating pathway enrichment in transcriptional data. Typical experimental design consists in comparing two conditions with several replicates using a differential gene expression test followed by preranked GSEA",
       "asbval:note": "Paper focuses on FGSEA method for fast P-value estimation in GSEA, not on microarray normalization procedures. The paper assumes preprocessed/ranked data as input ('preranked GSEA') but does not describe log transformation or quantile normalization workflows. The card's research question addresses data preprocessing; the paper addresses downstream enrichment analysis.",
@@ -2769,7 +2769,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-matrix-normalization/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-expression-matrix-normalization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GEOquery is not mentioned in the provided passages. The paper does not discuss data loading from GEO.",
@@ -2789,7 +2789,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-matrix-normalization/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-expression-matrix-normalization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "limma is not mentioned in the provided passages. The paper does not discuss quantile normalization implementation.",
@@ -2809,7 +2809,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-matrix-normalization/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-expression-matrix-normalization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds... FGSEA is open source and available as an R package in Bioconductor ( http://bioconductor.org/packages/fgsea/ ) and on GitHub ( https://github.com/ctlab/fgsea/ )",
       "asbval:note": "fgsea is confirmed as the primary tool in the paper. The paper describes it as performing preranked GSEA, which aligns with the card's claim that it requires ranked statistics.",
@@ -2829,7 +2829,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-matrix-normalization/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-expression-matrix-normalization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "msigdbr is not mentioned in the provided passages. The paper mentions 'collection of hundreds and thousands of pathways' but does not name the specific tool used to retrieve them.",
@@ -2849,7 +2849,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-matrix-normalization/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-expression-matrix-normalization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 is not mentioned in the provided passages. The paper does not discuss visualization tools.",
@@ -2869,7 +2869,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-matrix-normalization/006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-expression-matrix-normalization/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "R is confirmed as the implementation language for fgsea.",
@@ -2889,7 +2889,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-ranking-preparation/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-expression-ranking-preparation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Typical experimental design consists in comparing two conditions with several replicates using a differential gene expression test followed by preranked GSEA performed against a collection of hundreds and thousands of pathways.",
       "asbval:note": "The paper explicitly describes preranked GSEA workflow with differential gene expression testing as the upstream step, which aligns with the research question of preparing ranked gene statistics.",
@@ -2909,7 +2909,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-ranking-preparation/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-expression-ranking-preparation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds. FGSEA is open source and available as an R package in Bioconductor ( http://bioconductor.org/packages/fgsea/ ) and on GitHub ( https://github.com/ctlab/fgsea/ ).",
       "asbval:note": "fgsea is the primary subject of the paper and is confirmed as an R package for fast GSEA. The paper describes it as accepting preranked gene statistics.",
@@ -2929,7 +2929,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-ranking-preparation/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-expression-ranking-preparation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "data.table is not mentioned in the provided passages. Insufficient evidence to confirm or deny its use in the paper.",
@@ -2949,7 +2949,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-ranking-preparation/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-expression-ranking-preparation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "R is confirmed as the programming environment since fgsea is distributed as an R package.",
@@ -2969,7 +2969,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-ranking-preparation/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-expression-ranking-preparation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 is not mentioned in the provided passages. The evidence_spans cited in the card are not present in the abstract or opening sections provided. Insufficient evidence to confirm.",
@@ -2989,7 +2989,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-filtering-by-expression-level/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-filtering-by-expression-level/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper focuses on fast GSEA P-value estimation (FGSEA method), not on gene filtering by expression level or dimensionality reduction of expression matrices. No mention of filtering genes by mean expression rank or preserving pathway enrichment across different matrix dimensionalities.",
@@ -3009,7 +3009,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-filtering-by-expression-level/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-filtering-by-expression-level/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "limma is not mentioned in the paper. Paper does not discuss normalization methods or preprocessing of expression matrices.",
@@ -3029,7 +3029,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-filtering-by-expression-level/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-filtering-by-expression-level/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds... FGSEA is open source and available as an R package in Bioconductor ( http://bioconductor.org/packages/fgsea/ ) and on GitHub ( https://github.com/ctlab/fgsea/ )",
       "asbval:note": "fgsea is confirmed as the paper's main contribution for pathway enrichment analysis and P-value estimation. However, the paper does not discuss validating score/p-value preservation across different matrix dimensionalities.",
@@ -3049,7 +3049,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-filtering-by-expression-level/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-filtering-by-expression-level/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss using R base functions for calculating mean expression or ranking genes. No mention of rowMeans() or order() functions.",
@@ -3069,7 +3069,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-filtering-by-expression-level/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-filtering-by-expression-level/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 is not mentioned in the paper. No visualization of p-value correlations across matrix dimensionalities is discussed.",
@@ -3089,7 +3089,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-filtering-by-expression-level/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-filtering-by-expression-level/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GEOquery is not mentioned in the paper. Paper does not discuss data loading or GEO database access.",
@@ -3109,7 +3109,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-filtering-by-expression-level/006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-filtering-by-expression-level/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "msigdbr is not mentioned in the paper. Paper mentions 'a collection of hundreds and thousands of pathways' but does not specify how pathways are obtained or which tool is used.",
@@ -3129,7 +3129,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-identifier-deduplication-and-filtering/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-identifier-deduplication-and-filtering/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper abstract and passages focus on FGSEA method development for accurate P-value estimation and pathway enrichment calculation. No mention of gene identifier deduplication, duplicate removal, or filtering of malformed identifiers as a preprocessing step. The paper does not address data cleaning or annotation validation workflows.",
@@ -3149,7 +3149,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-identifier-deduplication-and-filtering/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-identifier-deduplication-and-filtering/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds.",
       "asbval:note": "Paper confirms fgsea exists and performs GSEA, but does not discuss its input requirements regarding gene identifier deduplication or the preprocessing step claimed in the card. The card's claim about 'requires non-redundant gene identifiers' is not addressed in the paper passages.",
@@ -3169,7 +3169,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-identifier-deduplication-and-filtering/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-identifier-deduplication-and-filtering/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "limma is not mentioned in any of the provided passages. The paper focuses on FGSEA method development and does not discuss normalization workflows or limma usage.",
@@ -3189,7 +3189,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-identifier-deduplication-and-filtering/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-identifier-deduplication-and-filtering/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GEOquery is not mentioned in any of the provided passages. The paper does not discuss data loading workflows or GEO data handling.",
@@ -3209,7 +3209,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-identifier-deduplication-and-filtering/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-identifier-deduplication-and-filtering/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "msigdbr is not mentioned in the provided passages. The paper mentions 'a collection of hundreds and thousands of pathways' but does not name msigdbr as the source tool.",
@@ -3229,7 +3229,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-identifier-deduplication-and-filtering/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-identifier-deduplication-and-filtering/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 is not mentioned in the provided passages. The paper does not discuss visualization tools.",
@@ -3249,7 +3249,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-identifier-deduplication-and-filtering/006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-identifier-deduplication-and-filtering/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "Paper confirms fgsea is an R package, establishing R as the implementation language.",
@@ -3269,7 +3269,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-set-enrichment-analysis/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-set-enrichment-analysis/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds",
       "asbval:note": "Core claim directly supported. Paper describes fast GSEA with arbitrarily low P-value estimation.",
@@ -3289,7 +3289,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-set-enrichment-analysis/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-set-enrichment-analysis/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper mentions 'FGSEA' and 'arbitrarily low GSEA P-values' but does not explicitly name 'adaptive multi-level split Monte-Carlo' in provided passages. The method is described functionally but the specific algorithmic name is not verbatim in the abstract/introduction passages provided.",
@@ -3309,7 +3309,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-set-enrichment-analysis/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-set-enrichment-analysis/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method... FGSEA is open source and available as an R package in Bioconductor ( http://bioconductor.org/packages/fgsea/ ) and on GitHub ( https://github.com/ctlab/fgsea/ )",
       "asbval:note": "Tool name, role, and repository URL all confirmed in abstract.",
@@ -3329,7 +3329,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-set-enrichment-analysis/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-set-enrichment-analysis/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "data.table not mentioned in provided passages. Insufficient evidence to confirm or deny.",
@@ -3349,7 +3349,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-set-enrichment-analysis/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-set-enrichment-analysis/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 not mentioned in provided passages. Insufficient evidence to confirm or deny.",
@@ -3369,7 +3369,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-set-enrichment-analysis/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-set-enrichment-analysis/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "geseca not mentioned in provided passages. Insufficient evidence to confirm or deny.",
@@ -3389,7 +3389,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-set-enrichment-analysis/006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-set-enrichment-analysis/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "msigdbr not mentioned in provided passages. Insufficient evidence to confirm or deny.",
@@ -3409,7 +3409,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-set-enrichment-analysis/007",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-set-enrichment-analysis/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Seurat not mentioned in provided passages. Insufficient evidence to confirm or deny.",
@@ -3429,7 +3429,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-set-enrichment-analysis/008",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-set-enrichment-analysis/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "R confirmed as the language/environment for fgsea package.",
@@ -3449,7 +3449,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-set-enrichment-analysis/009",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-set-enrichment-analysis/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Typical experimental design consists in comparing two conditions with several replicates using a differential gene expression test followed by preranked GSEA performed against a collection of hundreds and thousands of pathways.",
       "asbval:note": "Scope description aligns with paper's description of preranked GSEA workflow.",
@@ -3469,7 +3469,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-set-enrichment-analysis/010",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-set-enrichment-analysis/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is able to routinely estimate P-values up to 10 \u2212100 with a small and predictable estimation error",
       "asbval:note": "Paper confirms P-value precision capability but does not explicitly name parameters 'eps=0' or 'eps=1e-10' in provided passages.",
@@ -3489,7 +3489,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-set-enrichment-scoring-coregulation/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-set-enrichment-scoring-coregulation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Gene set enrichment analysis (GSEA) is an ubiquitously used tool for evaluating pathway enrichment in transcriptional data. Typical experimental design consists in comparing two conditions with several replicates using a differential gene expression test followed by preranked GSEA",
       "asbval:note": "Core research question aligns with paper's focus on preranked GSEA for pathway enrichment evaluation.",
@@ -3509,7 +3509,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-set-enrichment-scoring-coregulation/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-set-enrichment-scoring-coregulation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds",
       "asbval:note": "Paper explicitly addresses fast p-value calculation for pathway enrichment.",
@@ -3529,7 +3529,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-set-enrichment-scoring-coregulation/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-set-enrichment-scoring-coregulation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss dimensionality reduction or validation of enrichment signal preservation across reduced vs. full-dimensional representations. This appears to be an application context added by the card author, not a focus of the paper.",
@@ -3549,7 +3549,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-set-enrichment-scoring-coregulation/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-set-enrichment-scoring-coregulation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds. FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "fgsea confirmed as R package for fast preranked GSEA with p-value estimation. Adaptive Monte-Carlo method is implied by 'estimate arbitrarily low GSEA P-values'.",
@@ -3569,7 +3569,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-set-enrichment-scoring-coregulation/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-set-enrichment-scoring-coregulation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor ( http://bioconductor.org/packages/fgsea/ ) and on GitHub ( https://github.com/ctlab/fgsea/ )",
       "asbval:note": "GitHub repository URL matches exactly.",
@@ -3589,7 +3589,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-set-enrichment-scoring-coregulation/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-set-enrichment-scoring-coregulation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages provided do not discuss limma or normalization methods. Insufficient information to validate this tool's presence or role in the paper.",
@@ -3609,7 +3609,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-set-enrichment-scoring-coregulation/006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-set-enrichment-scoring-coregulation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages mention 'collection of hundreds and thousands of pathways' but do not name msigdbr or specific gene set sources. Insufficient information to validate.",
@@ -3629,7 +3629,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-set-enrichment-scoring-coregulation/007",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-set-enrichment-scoring-coregulation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not discuss visualization tools or methods. Insufficient information to validate.",
@@ -3649,7 +3649,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-set-enrichment-scoring-coregulation/008",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-set-enrichment-scoring-coregulation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not discuss data organization or filtering tools. Insufficient information to validate.",
@@ -3669,7 +3669,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-set-enrichment-scoring-coregulation/009",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-set-enrichment-scoring-coregulation/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not discuss data loading tools or public datasets. Insufficient information to validate.",
@@ -3689,7 +3689,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-set-enrichment-scoring-coregulation/010",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-set-enrichment-scoring-coregulation/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "fgsea is confirmed as an R package; R is the language/environment.",
@@ -3709,7 +3709,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-database-identifier-mapping/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/genomic-database-identifier-mapping/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper focuses on fast GSEA P-value estimation and does not discuss gene identifier mapping, database reconciliation, or identifier scheme conversion. The paper assumes identifiers are already harmonized for GSEA input.",
@@ -3729,7 +3729,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-database-identifier-mapping/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/genomic-database-identifier-mapping/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Not mentioned in the paper. The paper does not discuss organism-specific annotation packages or identifier mapping tools.",
@@ -3749,7 +3749,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-database-identifier-mapping/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/genomic-database-identifier-mapping/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Not mentioned in the paper. The paper references 'a collection of hundreds and thousands of pathways' but does not name Reactome or discuss identifier mapping for pathway databases.",
@@ -3769,7 +3769,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-database-identifier-mapping/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/genomic-database-identifier-mapping/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Not mentioned in the paper. The paper does not discuss data consolidation or joining operations for identifier mapping.",
@@ -3789,7 +3789,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-database-identifier-mapping/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/genomic-database-identifier-mapping/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds... FGSEA is open source and available as an R package in Bioconductor ( http://bioconductor.org/packages/fgsea/ ) and on GitHub ( https://github.com/ctlab/fgsea/ )",
       "asbval:note": "fgsea is confirmed as a preranked GSEA tool in the paper, but the paper does not discuss identifier harmonization as a prerequisite or feature of fgsea. The card's claim about 'requiring harmonized identifiers' is not explicitly addressed in the paper.",
@@ -3809,7 +3809,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-database-identifier-mapping/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/genomic-database-identifier-mapping/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "R is mentioned as the language/environment in which fgsea is implemented, but the card's framing of R as a tool for 'fast preranked gene set enrichment analysis' conflates the language with the specific fgsea package. R itself is not the GSEA tool; fgsea is.",
@@ -3829,7 +3829,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-database-identifier-mapping/006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/genomic-database-identifier-mapping/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 is not mentioned in the paper passages provided. The paper does not discuss visualization of results.",
@@ -3849,7 +3849,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-database-identifier-mapping/007",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/genomic-database-identifier-mapping/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper is about improving GSEA P-value estimation accuracy and speed, not about gene identifier mapping or database reconciliation. The paper assumes identifiers are already prepared for GSEA input.",
@@ -3869,7 +3869,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gsea-result-interpretation-visualization/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gsea-result-interpretation-visualization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Gene set enrichment analysis (GSEA) is an ubiquitously used tool for evaluating pathway enrichment in transcriptional data... FGSEA is able to estimate arbitrarily low GSEA P-values with a high accuracy",
       "asbval:note": "Paper focuses on P-value estimation accuracy and computational speed of FGSEA, not on result interpretation, visualization, or downstream analysis workflows. The card's research question describes post-hoc interpretation and visualization tasks (sorting, plotting, table generation), which are not the paper's primary contribution. Paper is about the computational method itself, not its application to interpret results.",
@@ -3889,7 +3889,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gsea-result-interpretation-visualization/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gsea-result-interpretation-visualization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values... FGSEA is open source and available as an R package in Bioconductor ( http://bioconductor.org/packages/fgsea/ ) and on GitHub ( https://github.com/ctlab/fgsea/ )",
       "asbval:note": "fgsea confirmed as R package for GSEA computation with preranked gene lists. Role aligns with paper's description of the method.",
@@ -3909,7 +3909,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gsea-result-interpretation-visualization/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gsea-result-interpretation-visualization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 is not mentioned in the provided passages. The paper focuses on FGSEA computational method and P-value estimation accuracy, not on visualization tools or plotting functions.",
@@ -3929,7 +3929,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gsea-result-interpretation-visualization/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gsea-result-interpretation-visualization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "data.table is not mentioned in the provided passages. The paper does not discuss data manipulation or sorting workflows for result interpretation.",
@@ -3949,7 +3949,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gsea-result-interpretation-visualization/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gsea-result-interpretation-visualization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "R confirmed as the language/environment in which fgsea is implemented and distributed.",
@@ -3969,7 +3969,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gsea-result-interpretation-visualization/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gsea-result-interpretation-visualization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Typical experimental design consists in comparing two conditions with several replicates using a differential gene expression test followed by preranked GSEA",
       "asbval:note": "Paper confirms preranked GSEA workflow and P-value output, but does not address the interpretation, sorting, or visualization tasks described in the scope. The scope describes downstream analysis; the paper describes the computational method.",
@@ -3989,7 +3989,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microarray-expression-normalization-log-quantile/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/microarray-expression-normalization-log-quantile/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about GSEA (gene set enrichment analysis) methodology and P-value estimation accuracy. No discussion of log2 transformation, quantile normalization, microarray preprocessing, or technical artifact removal. The paper focuses on fast GSEA computation, not microarray normalization workflows.",
@@ -4009,7 +4009,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microarray-expression-normalization-log-quantile/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/microarray-expression-normalization-log-quantile/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Gene set enrichment analysis (GSEA) is an ubiquitously used tool for evaluating pathway enrichment in transcriptional data. Typical experimental design consists in comparing two conditions with several replicates using a differential gene expression test followed by preranked GSEA",
       "asbval:note": "Paper mentions pathway enrichment (GSEA) as a downstream analysis, but does not discuss normalization as a prerequisite or address variance stabilization and intensity alignment. The connection to normalization is not established in the paper.",
@@ -4029,7 +4029,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microarray-expression-normalization-log-quantile/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/microarray-expression-normalization-log-quantile/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "limma is not mentioned anywhere in the provided passages. The paper focuses on FGSEA, not on microarray normalization tools.",
@@ -4049,7 +4049,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microarray-expression-normalization-log-quantile/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/microarray-expression-normalization-log-quantile/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "While R is mentioned in the context of FGSEA being 'available as an R package', the paper does not discuss R as a runtime for microarray normalization workflows.",
@@ -4069,7 +4069,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microarray-expression-normalization-log-quantile/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/microarray-expression-normalization-log-quantile/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GEOquery is not mentioned in any of the provided passages. The evidence_spans field references code that does not appear in the paper passages.",
@@ -4089,7 +4089,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microarray-expression-normalization-log-quantile/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/microarray-expression-normalization-log-quantile/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds... FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "fgsea is the main subject of the paper. However, it is used for GSEA, not for microarray normalization as implied by the task card's scope.",
@@ -4109,7 +4109,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microarray-expression-normalization-log-quantile/006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/microarray-expression-normalization-log-quantile/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 is not mentioned in any of the provided passages. The evidence_spans field references code that does not appear in the paper passages.",
@@ -4129,7 +4129,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microarray-expression-normalization-log-quantile/007",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/microarray-expression-normalization-log-quantile/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "msigdbr is not mentioned in any of the provided passages. The evidence_spans field references code that does not appear in the paper passages.",
@@ -4149,7 +4149,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/monte-carlo-p-value-estimation-adaptive/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/monte-carlo-p-value-estimation-adaptive/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds",
       "asbval:note": "Paper confirms FGSEA estimates arbitrarily low GSEA P-values, but does not explicitly name the algorithm as 'adaptive multi-level split Monte-Carlo scheme' in the provided passages. The paper describes the capability but not the specific algorithmic name.",
@@ -4169,7 +4169,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/monte-carlo-p-value-estimation-adaptive/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/monte-carlo-p-value-estimation-adaptive/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the reference implementation of this method cannot accurately estimate small P-values, which significantly limits its sensitivity due to multiple hypotheses correction procedure. Here we present FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values",
       "asbval:note": "Paper confirms FGSEA overcomes P-value estimation limitations of reference implementation, but does not explicitly describe the mechanism as 'iterative sampling' or 'precision refinement' in provided passages.",
@@ -4189,7 +4189,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/monte-carlo-p-value-estimation-adaptive/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/monte-carlo-p-value-estimation-adaptive/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor ( http://bioconductor.org/packages/fgsea/ ) and on GitHub ( https://github.com/ctlab/fgsea/ )",
       "asbval:note": "Repository URL matches exactly. Paper confirms FGSEA is the core tool for GSEA P-value estimation. The eps parameter is mentioned in the abstract context of P-value estimation capability.",
@@ -4209,7 +4209,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/monte-carlo-p-value-estimation-adaptive/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/monte-carlo-p-value-estimation-adaptive/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "data.table is not mentioned in the provided passages. Insufficient information to confirm or deny its use in the paper.",
@@ -4229,7 +4229,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/monte-carlo-p-value-estimation-adaptive/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/monte-carlo-p-value-estimation-adaptive/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 is not mentioned in the provided passages. Insufficient information to confirm or deny its use in the paper.",
@@ -4249,7 +4249,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/monte-carlo-p-value-estimation-adaptive/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/monte-carlo-p-value-estimation-adaptive/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "Paper explicitly states FGSEA is an R package, confirming R as the runtime environment.",
@@ -4269,7 +4269,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/monte-carlo-p-value-estimation-adaptive/006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/monte-carlo-p-value-estimation-adaptive/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is able to routinely estimate P-values up to 10 \u2212100 with a small and predictable estimation error",
       "asbval:note": "Paper demonstrates capability to estimate extremely low P-values (10^-100), supporting the use case of discrimination at extreme significance levels.",
@@ -4289,7 +4289,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-conditional-data-coregulation-scoring/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/multi-conditional-data-coregulation-scoring/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds... FGSEA is able to routinely estimate P-values up to 10 \u2212100 with a small and predictable estimation error.",
       "asbval:note": "Paper describes fast preranked GSEA with P-value estimation (Monte-Carlo implied by 'estimate arbitrarily low P-values'), but does not explicitly mention 'adaptive' Monte-Carlo or 'geseca()' for multi-condition scoring. The paper focuses on preranked GSEA for pathway enrichment in general, not specifically multi-condition coregulation scoring.",
@@ -4309,7 +4309,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-conditional-data-coregulation-scoring/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/multi-conditional-data-coregulation-scoring/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method... FGSEA is open source and available as an R package in Bioconductor ( http://bioconductor.org/packages/fgsea/ ) and on GitHub ( https://github.com/ctlab/fgsea/ ).",
       "asbval:note": "Paper confirms fgsea as R package for fast preranked GSEA, but does not mention geseca() function or multi-condition pathway scoring capability in the provided passages.",
@@ -4329,7 +4329,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-conditional-data-coregulation-scoring/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/multi-conditional-data-coregulation-scoring/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "limma not mentioned in provided passages. Insufficient evidence to confirm or refute.",
@@ -4349,7 +4349,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-conditional-data-coregulation-scoring/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/multi-conditional-data-coregulation-scoring/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "msigdbr not mentioned in provided passages. Paper mentions 'collection of hundreds and thousands of pathways' but does not name the tool used to retrieve them.",
@@ -4369,7 +4369,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-conditional-data-coregulation-scoring/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/multi-conditional-data-coregulation-scoring/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GEOquery not mentioned in provided passages. Insufficient evidence to confirm or refute.",
@@ -4389,7 +4389,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-conditional-data-coregulation-scoring/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/multi-conditional-data-coregulation-scoring/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "data.table not mentioned in provided passages. Insufficient evidence to confirm or refute.",
@@ -4409,7 +4409,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-conditional-data-coregulation-scoring/006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/multi-conditional-data-coregulation-scoring/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 not mentioned in provided passages. Insufficient evidence to confirm or refute.",
@@ -4429,7 +4429,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-conditional-data-coregulation-scoring/007",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/multi-conditional-data-coregulation-scoring/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "Confirmed as R package.",
@@ -4449,7 +4449,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multiple-testing-correction-visualization/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/multiple-testing-correction-visualization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Gene set enrichment analysis (GSEA) is an ubiquitously used tool for evaluating pathway enrichment in transcriptional data. Typical experimental design consists in comparing two conditions with several replicates using a differential gene expression test followed by preranked GSEA performed against a collection of hundreds and thousands of pathways.",
       "asbval:note": "Paper discusses GSEA and multiple-testing correction (mentions 'multiple hypotheses correction procedure'), but does not explicitly describe visualization of corrected P-values and effect sizes as a 'ranked table plot'. The paper focuses on P-value estimation accuracy rather than visualization methodology.",
@@ -4469,7 +4469,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multiple-testing-correction-visualization/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/multiple-testing-correction-visualization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds. FGSEA is open source and available as an R package in Bioconductor ( http://bioconductor.org/packages/fgsea/ ) and on GitHub ( https://github.com/ctlab/fgsea/ ).",
       "asbval:note": "fgsea confirmed as R package for preranked GSEA. Paper confirms P-value computation and multiple-testing correction context, though specific mention of Benjamini-Hochberg, ES, NES, and size columns not verbatim in provided passages.",
@@ -4489,7 +4489,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multiple-testing-correction-visualization/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/multiple-testing-correction-visualization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 not mentioned in provided passages. Cannot verify whether plotGseaTable() uses ggplot2 or whether this visualization function exists in fgsea package based on available text.",
@@ -4509,7 +4509,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multiple-testing-correction-visualization/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/multiple-testing-correction-visualization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "data.table not mentioned in provided passages. Cannot verify use of data.table for subsetting fgseaRes results.",
@@ -4529,7 +4529,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multiple-testing-correction-visualization/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/multiple-testing-correction-visualization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor ( http://bioconductor.org/packages/fgsea/ ) and on GitHub ( https://github.com/ctlab/fgsea/ ).",
       "asbval:note": "fgsea is confirmed as an R package; R is the language/environment.",
@@ -4549,7 +4549,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multiple-testing-correction-visualization/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/multiple-testing-correction-visualization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the reference implementation of this method cannot accurately estimate small P-values, which significantly limits its sensitivity due to multiple hypotheses correction procedure",
       "asbval:note": "Paper discusses multiple hypotheses correction in context of GSEA but does not explicitly name 'padj' or specify Benjamini-Hochberg method in provided passages.",
@@ -4569,7 +4569,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multiple-testing-correction-visualization/006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/multiple-testing-correction-visualization/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ES not mentioned in provided passages. Cannot verify from abstract/introduction alone.",
@@ -4589,7 +4589,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multiple-testing-correction-visualization/007",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/multiple-testing-correction-visualization/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "NES not mentioned in provided passages. Cannot verify from abstract/introduction alone.",
@@ -4609,7 +4609,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multiple-testing-correction-visualization/008",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/multiple-testing-correction-visualization/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA recovers much more statistically significant pathways compared to other implementations.",
       "asbval:note": "Paper confirms fgsea identifies significant pathways but does not describe the specific visualization format (ranked table plot with ES direction and padj) in provided passages.",
@@ -4629,7 +4629,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-activity-correlation-analysis/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-activity-correlation-analysis/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Gene set enrichment analysis (GSEA) is an ubiquitously used tool for evaluating pathway enrichment in transcriptional data. Typical experimental design consists in comparing two conditions with several replicates using a differential gene expression test followed by preranked GSEA performed against a collection of hundreds and thousands of pathways.",
       "asbval:note": "Paper describes GSEA methodology and comparing conditions, but does not explicitly address comparing results across different dimensionalities or dimensionality reduction robustness. The paper focuses on improving P-value estimation accuracy in GSEA, not on validating signal preservation across dimensionality reductions.",
@@ -4649,7 +4649,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-activity-correlation-analysis/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-activity-correlation-analysis/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds.",
       "asbval:note": "fgsea is confirmed as the primary tool. Paper describes it as computing P-values accurately; the 'adaptive multi-level split Monte-Carlo scheme' is the underlying method referenced in the abstract.",
@@ -4669,7 +4669,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-activity-correlation-analysis/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-activity-correlation-analysis/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "geseca is not mentioned anywhere in the provided passages. The paper focuses exclusively on FGSEA and does not discuss GESECA or alternative enrichment methods.",
@@ -4689,7 +4689,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-activity-correlation-analysis/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-activity-correlation-analysis/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 is not mentioned in the provided passages. No visualization tools are discussed in the abstract or introduction.",
@@ -4709,7 +4709,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-activity-correlation-analysis/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-activity-correlation-analysis/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "PCA or prcomp is not mentioned in the provided passages. The paper does not discuss dimensionality reduction methods.",
@@ -4729,7 +4729,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-activity-correlation-analysis/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-activity-correlation-analysis/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "limma or normalizeBetweenArrays is not mentioned in the provided passages. The paper does not discuss normalization preprocessing steps.",
@@ -4749,7 +4749,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-activity-correlation-analysis/006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-activity-correlation-analysis/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "data.table is not mentioned in the provided passages.",
@@ -4769,7 +4769,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-activity-correlation-analysis/007",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-activity-correlation-analysis/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GEOquery is not mentioned in the provided passages. The paper does not discuss data retrieval methods.",
@@ -4789,7 +4789,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-activity-correlation-analysis/008",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-activity-correlation-analysis/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "msigdbr is not mentioned in the provided passages. The paper mentions 'a collection of hundreds and thousands of pathways' but does not name the specific database tool used.",
@@ -4809,7 +4809,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-cell-type-association-validation/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-cell-type-association-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Gene set enrichment analysis (GSEA) is an ubiquitously used tool for evaluating pathway enrichment in transcriptional data",
       "asbval:note": "Paper describes GSEA for pathway enrichment in transcriptional data but does not address cell-type-specific validation, dimensionality reduction, or reverse PCA projection. The paper focuses on improving GSEA P-value estimation accuracy, not on cell-type annotation workflows.",
@@ -4829,7 +4829,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-cell-type-association-validation/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-cell-type-association-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds",
       "asbval:note": "Paper confirms fgsea computes arbitrarily low P-values, but the paper describes FGSEA as a preranked GSEA method, not GESECA (gene set enrichment on coregulation structure). The card conflates or misnames the method's functionality.",
@@ -4849,7 +4849,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-cell-type-association-validation/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-cell-type-association-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Seurat is not mentioned in the provided passages. The paper focuses on FGSEA methodology and does not discuss single-cell RNA-seq workflows, SCTransform, reverse PCA, or Seurat.",
@@ -4869,7 +4869,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-cell-type-association-validation/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-cell-type-association-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "msigdbr is not mentioned in the provided passages. The paper mentions 'a collection of hundreds and thousands of pathways' but does not specify MSigDB or msigdbr.",
@@ -4889,7 +4889,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-cell-type-association-validation/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-cell-type-association-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 is not mentioned in the provided passages. The paper does not discuss visualization of enrichment results.",
@@ -4909,7 +4909,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-cell-type-association-validation/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-cell-type-association-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "data.table is not mentioned in the provided passages. The paper does not discuss result table manipulation.",
@@ -4929,7 +4929,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-cell-type-association-validation/006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-cell-type-association-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "fgsea is confirmed as an R package in Bioconductor.",
@@ -4949,7 +4949,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-cell-type-association-validation/007",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-cell-type-association-validation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Gene set enrichment analysis (GSEA) is an ubiquitously used tool for evaluating pathway enrichment in transcriptional data. Typical experimental design consists in comparing two conditions with several replicates using a differential gene expression test followed by preranked GSEA",
       "asbval:note": "Paper describes GSEA for pathway enrichment but in the context of comparing two conditions with differential expression, not cell-type-specific validation on dimensionality-reduced spaces. The scope is narrower than the card claims.",
@@ -4969,7 +4969,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-enrichment-statistical-ranking/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-enrichment-statistical-ranking/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "preranked GSEA performed against a collection of hundreds and thousands of pathways",
       "asbval:note": "Core claim directly supported by abstract description of preranked GSEA methodology.",
@@ -4989,7 +4989,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-enrichment-statistical-ranking/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-enrichment-statistical-ranking/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds",
       "asbval:note": "Arbitrarily low P-value estimation is explicitly stated. Adaptive multi-level Monte Carlo is the technical mechanism, consistent with FGSEA's published methodology.",
@@ -5009,7 +5009,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-enrichment-statistical-ranking/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-enrichment-statistical-ranking/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor ( http://bioconductor.org/packages/fgsea/ ) and on GitHub ( https://github.com/ctlab/fgsea/ )",
       "asbval:note": "Tool name, role, and repository URL all confirmed in abstract.",
@@ -5029,7 +5029,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-enrichment-statistical-ranking/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-enrichment-statistical-ranking/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "data.table is not mentioned in provided passages. Insufficient evidence to confirm or deny its use in the paper.",
@@ -5049,7 +5049,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-enrichment-statistical-ranking/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-enrichment-statistical-ranking/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 is not mentioned in provided passages. Insufficient evidence to confirm or deny its use in the paper.",
@@ -5069,7 +5069,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-enrichment-statistical-ranking/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-enrichment-statistical-ranking/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "reactome.db is not mentioned in provided passages. Insufficient evidence to confirm or deny its use in the paper.",
@@ -5089,7 +5089,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-enrichment-statistical-ranking/006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-enrichment-statistical-ranking/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "available as an R package in Bioconductor",
       "asbval:note": "R is confirmed as the language/environment for FGSEA implementation.",
@@ -5109,7 +5109,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-set-enrichment-analysis/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-set-enrichment-analysis/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds... preranked GSEA performed against a collection of hundreds and thousands of pathways",
       "asbval:note": "Core research question directly supported by abstract. Adaptive Monte-Carlo scheme is the technical mechanism described.",
@@ -5129,7 +5129,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-set-enrichment-analysis/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-set-enrichment-analysis/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor ( http://bioconductor.org/packages/fgsea/ ) and on GitHub ( https://github.com/ctlab/fgsea/ )",
       "asbval:note": "Tool name, repo URL, and core functionality all confirmed. Case-insensitive match: FGSEA = fgsea.",
@@ -5149,7 +5149,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-set-enrichment-analysis/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-set-enrichment-analysis/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not mention limma, quantile normalization, or normalizeBetweenArrays(). Paper focuses on FGSEA method itself, not upstream normalization tools. Insufficient evidence to judge.",
@@ -5169,7 +5169,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-set-enrichment-analysis/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-set-enrichment-analysis/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages mention 'collection of hundreds and thousands of pathways' but do not name msigdbr or any specific gene set retrieval tool. Insufficient evidence to judge.",
@@ -5189,7 +5189,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-set-enrichment-analysis/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-set-enrichment-analysis/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not mention GEOquery, getGEO(), or any data loading tool. Insufficient evidence to judge.",
@@ -5209,7 +5209,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-set-enrichment-analysis/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-set-enrichment-analysis/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not mention data.table or data manipulation tools. Insufficient evidence to judge.",
@@ -5229,7 +5229,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-set-enrichment-analysis/006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-set-enrichment-analysis/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not mention ggplot2, plotEnrichment, plotGseaTable, or visualization tools. Insufficient evidence to judge.",
@@ -5249,7 +5249,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-set-enrichment-analysis/007",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-set-enrichment-analysis/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "Confirmed as R package. The card's evidence_spans field also contains multiple references to 'R-package' and 'fgsea is an R-package'.",
@@ -5269,7 +5269,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-set-enrichment-analysis/008",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-set-enrichment-analysis/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Typical experimental design consists in comparing two conditions with several replicates using a differential gene expression test followed by preranked GSEA performed against a collection of hundreds and thousands of pathways... FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values",
       "asbval:note": "Scope aligns with paper's stated purpose: comparative transcriptomics, preranked GSEA, pathway collections, and accurate P-value estimation.",
@@ -5289,7 +5289,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/principal-component-analysis-dimensionality-reduction/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/principal-component-analysis-dimensionality-reduction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper focuses on FGSEA method for fast and accurate P-value estimation in GSEA. No mention of PCA dimensionality reduction, principal components, or validation of PCA-reduced matrices against full matrices. The paper's scope is algorithmic improvement to GSEA itself, not preprocessing via PCA.",
@@ -5309,7 +5309,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/principal-component-analysis-dimensionality-reduction/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/principal-component-analysis-dimensionality-reduction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss dimensionality reduction validation, correlation of p-values between reduced and full matrices, or any comparison of PCA-reduced vs. full-matrix enrichment results.",
@@ -5329,7 +5329,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/principal-component-analysis-dimensionality-reduction/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/principal-component-analysis-dimensionality-reduction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "prcomp is not mentioned in the paper. Paper does not discuss PCA or principal component analysis.",
@@ -5349,7 +5349,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/principal-component-analysis-dimensionality-reduction/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/principal-component-analysis-dimensionality-reduction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "limma is not mentioned in the paper. Paper focuses on GSEA methodology, not expression matrix normalization.",
@@ -5369,7 +5369,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/principal-component-analysis-dimensionality-reduction/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/principal-component-analysis-dimensionality-reduction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "scale function is not mentioned in the paper. Paper does not discuss matrix centering for PCA.",
@@ -5389,7 +5389,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/principal-component-analysis-dimensionality-reduction/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/principal-component-analysis-dimensionality-reduction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "geseca is not mentioned in the paper. Paper discusses FGSEA but not geseca, and does not discuss applying enrichment analysis to PCA-reduced matrices.",
@@ -5409,7 +5409,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/principal-component-analysis-dimensionality-reduction/006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/principal-component-analysis-dimensionality-reduction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds.",
       "asbval:note": "fgsea is confirmed in the paper as a tool for fast GSEA and accurate p-value calculation. However, the paper does not discuss using fgsea to compare full vs. PCA-reduced matrices. The tool is used for its intended purpose (fast GSEA) but not in the context claimed (validation of dimensionality reduction).",
@@ -5429,7 +5429,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/principal-component-analysis-dimensionality-reduction/007",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/principal-component-analysis-dimensionality-reduction/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 is not mentioned in the paper. Paper does not discuss visualization of p-value correlations between reduced and full matrices.",
@@ -5449,7 +5449,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/principal-component-analysis-dimensionality-reduction/008",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/principal-component-analysis-dimensionality-reduction/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "data.table is not mentioned in the paper.",
@@ -5469,7 +5469,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/principal-component-analysis-dimensionality-reduction/009",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/principal-component-analysis-dimensionality-reduction/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "msigdbr is not mentioned in the paper. Paper mentions 'collection of hundreds and thousands of pathways' but does not name msigdbr as the source.",
@@ -5489,7 +5489,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/principal-component-analysis-dimensionality-reduction/010",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/principal-component-analysis-dimensionality-reduction/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GEOquery is not mentioned in the paper. Paper does not discuss data loading or GEO database access.",
@@ -5509,7 +5509,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/principal-component-analysis-dimensionality-reduction/011",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/principal-component-analysis-dimensionality-reduction/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "Paper confirms FGSEA is an R package, establishing R as the implementation language.",
@@ -5529,7 +5529,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reduction-plot-interpretation-and-visualization/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/reduction-plot-interpretation-and-visualization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper focuses on GSEA P-value computation accuracy and speed. No mention of dimensionality reduction visualization, tSNE, PCA plotting, or overlaying enrichment metrics onto low-dimensional projections. Paper is methodological (algorithm development) not applied (visualization workflow).",
@@ -5549,7 +5549,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reduction-plot-interpretation-and-visualization/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/reduction-plot-interpretation-and-visualization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy",
       "asbval:note": "fgsea is confirmed in paper (case-insensitive match). However, paper describes fgsea as a tool for preranked GSEA P-value computation, NOT for GESECA enrichment scoring on feature loadings. The card conflates GSEA/fgsea with GESECA (a different method not mentioned in paper). fgsea performs fast P-value estimation for preranked GSEA, not feature-loading-based enrichment scoring.",
@@ -5569,7 +5569,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reduction-plot-interpretation-and-visualization/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/reduction-plot-interpretation-and-visualization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Seurat is not mentioned in the paper. Paper does not address single-cell object management, dimensionality reduction storage, or metadata handling.",
@@ -5589,7 +5589,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reduction-plot-interpretation-and-visualization/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/reduction-plot-interpretation-and-visualization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 is not mentioned in the paper. Paper does not address visualization or plotting.",
@@ -5609,7 +5609,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reduction-plot-interpretation-and-visualization/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/reduction-plot-interpretation-and-visualization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "msigdbr is not mentioned in the paper. Paper does not discuss pathway gene set retrieval tools or databases.",
@@ -5629,7 +5629,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reduction-plot-interpretation-and-visualization/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/reduction-plot-interpretation-and-visualization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "fgsea is confirmed as an R package. R is the language/environment in which fgsea is implemented.",
@@ -5649,7 +5649,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/seurat-workflow-orchestration-for-scrnaseq/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/seurat-workflow-orchestration-for-scrnaseq/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Gene set enrichment analysis (GSEA) is an ubiquitously used tool for evaluating pathway enrichment in transcriptional data.",
       "asbval:note": "Paper discusses GSEA and pathway enrichment but does NOT mention Seurat, scRNA-seq preprocessing, normalization, dimensionality reduction, reverse PCA, or single-cell analysis. The paper is exclusively about FGSEA algorithm for fast P-value estimation in GSEA. No scRNA-seq workflow content present.",
@@ -5669,7 +5669,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/seurat-workflow-orchestration-for-scrnaseq/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/seurat-workflow-orchestration-for-scrnaseq/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Seurat is not mentioned anywhere in the paper. Paper focuses exclusively on FGSEA algorithm development and does not discuss scRNA-seq preprocessing tools.",
@@ -5689,7 +5689,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/seurat-workflow-orchestration-for-scrnaseq/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/seurat-workflow-orchestration-for-scrnaseq/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds.",
       "asbval:note": "Paper confirms fgsea/FGSEA exists and computes P-values using Monte-Carlo methods, but does NOT mention GESECA, coregulation analysis, feature loadings matrices, or the specific application to scRNA-seq data. The paper describes preranked GSEA, not GESECA.",
@@ -5709,7 +5709,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/seurat-workflow-orchestration-for-scrnaseq/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/seurat-workflow-orchestration-for-scrnaseq/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "msigdbr is not mentioned in the paper. Paper does not discuss pathway database retrieval tools or MSigDB integration.",
@@ -5729,7 +5729,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/seurat-workflow-orchestration-for-scrnaseq/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/seurat-workflow-orchestration-for-scrnaseq/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 is not mentioned in the paper. Paper does not discuss visualization tools or plotting functions.",
@@ -5749,7 +5749,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/seurat-workflow-orchestration-for-scrnaseq/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/seurat-workflow-orchestration-for-scrnaseq/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "data.table is not mentioned in the paper. Paper does not discuss data manipulation packages.",
@@ -5769,7 +5769,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/seurat-workflow-orchestration-for-scrnaseq/006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/seurat-workflow-orchestration-for-scrnaseq/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor ( http://bioconductor.org/packages/fgsea/ ) and on GitHub ( https://github.com/ctlab/fgsea/ ).",
       "asbval:note": "Paper confirms FGSEA is an R package available on Bioconductor and GitHub.",
@@ -5789,7 +5789,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-rna-seq-quality-control-and-normalization/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/single-cell-rna-seq-quality-control-and-normalization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about GSEA P-value estimation methodology (FGSEA), not scRNA-seq preprocessing, normalization, or dimensionality reduction. No mention of single-cell RNA-seq, variance stabilization, feature selection, or PCA in the provided passages.",
@@ -5809,7 +5809,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-rna-seq-quality-control-and-normalization/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/single-cell-rna-seq-quality-control-and-normalization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Seurat is not mentioned in the paper. Paper focuses on FGSEA algorithm and does not discuss scRNA-seq preprocessing tools.",
@@ -5829,7 +5829,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-rna-seq-quality-control-and-normalization/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/single-cell-rna-seq-quality-control-and-normalization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SCTransform is not mentioned in the paper. Paper is about GSEA P-value estimation, not normalization methods.",
@@ -5849,7 +5849,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-rna-seq-quality-control-and-normalization/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/single-cell-rna-seq-quality-control-and-normalization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds... FGSEA is open source and available as an R package in Bioconductor ( http://bioconductor.org/packages/fgsea/ ) and on GitHub ( https://github.com/ctlab/fgsea/ ).",
       "asbval:note": "fgsea is the primary subject of the paper. Confirmed as R package for gene set enrichment analysis.",
@@ -5869,7 +5869,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-rna-seq-quality-control-and-normalization/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/single-cell-rna-seq-quality-control-and-normalization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GEOquery is not mentioned in the paper. Paper does not discuss data retrieval from GEO.",
@@ -5889,7 +5889,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-rna-seq-quality-control-and-normalization/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/single-cell-rna-seq-quality-control-and-normalization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 is not mentioned in the paper. Paper focuses on GSEA methodology, not visualization libraries.",
@@ -5909,7 +5909,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-rna-seq-quality-control-and-normalization/006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/single-cell-rna-seq-quality-control-and-normalization/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "Paper confirms FGSEA is an R package, confirming R as the programming environment.",
@@ -5929,7 +5929,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-rna-seq-quality-control-and-normalization/007",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/single-cell-rna-seq-quality-control-and-normalization/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "msigdbr is not mentioned in the paper. Paper discusses GSEA methodology but does not mention pathway database retrieval tools.",
@@ -5949,7 +5949,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/statistical-comparison-p-value-conservation/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/statistical-comparison-p-value-conservation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the reference implementation of this method cannot accurately estimate small P-values, which significantly limits its sensitivity due to multiple hypotheses correction procedure. Here we present FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy",
       "asbval:note": "Paper addresses P-value accuracy and comparison between methods (reference vs FGSEA), but does not explicitly address dimensionality reduction or log10-transformation correlation as a validation strategy. The paper compares two GSEA implementations' P-value estimates, not dimensionality-reduced vs full-dimensional matrices.",
@@ -5969,7 +5969,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/statistical-comparison-p-value-conservation/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/statistical-comparison-p-value-conservation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds. FGSEA is open source and available as an R package in Bioconductor ( http://bioconductor.org/packages/fgsea/ ) and on GitHub ( https://github.com/ctlab/fgsea/ )",
       "asbval:note": null,
@@ -5989,7 +5989,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/statistical-comparison-p-value-conservation/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/statistical-comparison-p-value-conservation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 is not mentioned in the provided passages. Insufficient evidence to confirm or deny.",
@@ -6009,7 +6009,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/statistical-comparison-p-value-conservation/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/statistical-comparison-p-value-conservation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "data.table is not mentioned in the provided passages. Insufficient evidence to confirm or deny.",
@@ -6029,7 +6029,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/statistical-comparison-p-value-conservation/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/statistical-comparison-p-value-conservation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "limma is not mentioned in the provided passages. Insufficient evidence to confirm or deny.",
@@ -6049,7 +6049,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/statistical-comparison-p-value-conservation/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/statistical-comparison-p-value-conservation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "prcomp is not mentioned in the provided passages. Insufficient evidence to confirm or deny.",
@@ -6069,7 +6069,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/statistical-comparison-p-value-conservation/006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/statistical-comparison-p-value-conservation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GEOquery is not mentioned in the provided passages. Insufficient evidence to confirm or deny.",
@@ -6089,7 +6089,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/statistical-comparison-p-value-conservation/007",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/statistical-comparison-p-value-conservation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "msigdbr is not mentioned in the provided passages. The paper mentions 'a collection of hundreds and thousands of pathways' but does not name the specific tool used to retrieve them.",
@@ -6109,7 +6109,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/statistical-precision-comparison-ranked-outputs/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/statistical-precision-comparison-ranked-outputs/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds... FGSEA is able to routinely estimate P-values up to 10 \u2212100 with a small and predictable estimation error.",
       "asbval:note": "Paper demonstrates FGSEA's ability to estimate low P-values accurately and compares it to reference implementation, but does not explicitly describe comparing two estimation modes (default lower-bound vs. adaptive refinement) within FGSEA itself. The paper compares FGSEA to other implementations, not internal precision modes.",
@@ -6129,7 +6129,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/statistical-precision-comparison-ranked-outputs/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/statistical-precision-comparison-ranked-outputs/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy... FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "Paper confirms fgsea is a fast preranked GSEA implementation available as R package, but passages do not explicitly mention the 'eps parameter' or 'adaptive multi-level split Monte-Carlo scheme' by name. The abstract describes the method's capability to estimate low P-values accurately but does not detail the specific parameter name or algorithmic mechanism.",
@@ -6149,7 +6149,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/statistical-precision-comparison-ranked-outputs/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/statistical-precision-comparison-ranked-outputs/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "data.table is not mentioned in any of the provided passages. No evidence of its use in the paper.",
@@ -6169,7 +6169,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/statistical-precision-comparison-ranked-outputs/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/statistical-precision-comparison-ranked-outputs/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 is not mentioned in any of the provided passages. No evidence of its use in the paper.",
@@ -6189,7 +6189,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/statistical-precision-comparison-ranked-outputs/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/statistical-precision-comparison-ranked-outputs/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor",
       "asbval:note": "Confirmed that fgsea is available as an R package.",
@@ -6209,7 +6209,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/temporal-gene-expression-dynamics/000",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/temporal-gene-expression-dynamics/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Typical experimental design consists in comparing two conditions with several replicates using a differential gene expression test followed by preranked GSEA performed against a collection of hundreds and thousands of pathways.",
       "asbval:note": "Paper describes preranked GSEA for comparing conditions with replicates, but does not explicitly address temporal/time-dependent dynamics. The paper focuses on pathway enrichment accuracy and P-value estimation rather than time-course analysis specifically.",
@@ -6229,7 +6229,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/temporal-gene-expression-dynamics/001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/temporal-gene-expression-dynamics/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present FGSEA (Fast Gene Set Enrichment Analysis) method that is able to estimate arbitrarily low GSEA P-values with a high accuracy in a matter of minutes or even seconds.",
       "asbval:note": "FGSEA is confirmed as the fast GSEA implementation with advanced P-value estimation. The paper explicitly describes it as an R package available on GitHub and Bioconductor.",
@@ -6249,7 +6249,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/temporal-gene-expression-dynamics/002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/temporal-gene-expression-dynamics/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "limma is not mentioned in the provided passages. Passages focus on GSEA methodology and P-value estimation, not on upstream normalization tools.",
@@ -6269,7 +6269,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/temporal-gene-expression-dynamics/003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/temporal-gene-expression-dynamics/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GEOquery is not mentioned in the provided passages. No discussion of data retrieval workflows is present.",
@@ -6289,7 +6289,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/temporal-gene-expression-dynamics/004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/temporal-gene-expression-dynamics/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "msigdbr is not mentioned in the provided passages. The paper mentions 'collection of hundreds and thousands of pathways' but does not name specific gene set databases or tools.",
@@ -6309,7 +6309,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/temporal-gene-expression-dynamics/005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/temporal-gene-expression-dynamics/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "data.table is not mentioned in the provided passages. No discussion of result post-processing tools is present.",
@@ -6329,7 +6329,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/temporal-gene-expression-dynamics/006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/temporal-gene-expression-dynamics/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ggplot2 is not mentioned in the provided passages. No visualization tools are discussed.",
@@ -6349,7 +6349,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/temporal-gene-expression-dynamics/007",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/temporal-gene-expression-dynamics/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FGSEA is open source and available as an R package in Bioconductor ( http://bioconductor.org/packages/fgsea/ ) and on GitHub ( https://github.com/ctlab/fgsea/ ).",
       "asbval:note": "Confirmed that fgsea is an R package.",
@@ -6369,7 +6369,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dimensionality-reduction-via-reverse-pca/triage",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/dimensionality-reduction-via-reverse-pca/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "dimensionality-reduction-via-reverse-pca",
@@ -6382,7 +6382,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-matrix-normalization/triage",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-expression-matrix-normalization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "gene-expression-matrix-normalization",
@@ -6395,7 +6395,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-ranking-preparation/triage",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-expression-ranking-preparation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "gene-expression-ranking-preparation",
@@ -6408,7 +6408,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-filtering-by-expression-level/triage",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-filtering-by-expression-level/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "gene-filtering-by-expression-level",
@@ -6421,7 +6421,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-identifier-deduplication-and-filtering/triage",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-identifier-deduplication-and-filtering/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "gene-identifier-deduplication-and-filtering",
@@ -6434,7 +6434,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-set-enrichment-analysis/triage",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-set-enrichment-analysis/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 11,
       "asbval:target_artifact_id": "gene-set-enrichment-analysis",
@@ -6447,7 +6447,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-set-enrichment-scoring-coregulation/triage",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gene-set-enrichment-scoring-coregulation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 11,
       "asbval:target_artifact_id": "gene-set-enrichment-scoring-coregulation",
@@ -6460,7 +6460,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-database-identifier-mapping/triage",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/genomic-database-identifier-mapping/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "genomic-database-identifier-mapping",
@@ -6473,7 +6473,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gsea-result-interpretation-visualization/triage",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/gsea-result-interpretation-visualization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "gsea-result-interpretation-visualization",
@@ -6486,7 +6486,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microarray-expression-normalization-log-quantile/triage",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/microarray-expression-normalization-log-quantile/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "microarray-expression-normalization-log-quantile",
@@ -6499,7 +6499,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/monte-carlo-p-value-estimation-adaptive/triage",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/monte-carlo-p-value-estimation-adaptive/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "monte-carlo-p-value-estimation-adaptive",
@@ -6512,7 +6512,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-conditional-data-coregulation-scoring/triage",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/multi-conditional-data-coregulation-scoring/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "multi-conditional-data-coregulation-scoring",
@@ -6525,7 +6525,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multiple-testing-correction-visualization/triage",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/multiple-testing-correction-visualization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "multiple-testing-correction-visualization",
@@ -6538,7 +6538,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-activity-correlation-analysis/triage",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-activity-correlation-analysis/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "pathway-activity-correlation-analysis",
@@ -6551,7 +6551,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-cell-type-association-validation/triage",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-cell-type-association-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "pathway-cell-type-association-validation",
@@ -6564,7 +6564,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-enrichment-statistical-ranking/triage",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-enrichment-statistical-ranking/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "pathway-enrichment-statistical-ranking",
@@ -6577,7 +6577,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pathway-set-enrichment-analysis/triage",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/pathway-set-enrichment-analysis/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "pathway-set-enrichment-analysis",
@@ -6590,7 +6590,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/principal-component-analysis-dimensionality-reduction/triage",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/principal-component-analysis-dimensionality-reduction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 12,
       "asbval:target_artifact_id": "principal-component-analysis-dimensionality-reduction",
@@ -6603,7 +6603,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reduction-plot-interpretation-and-visualization/triage",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/reduction-plot-interpretation-and-visualization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "reduction-plot-interpretation-and-visualization",
@@ -6616,7 +6616,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/seurat-workflow-orchestration-for-scrnaseq/triage",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/seurat-workflow-orchestration-for-scrnaseq/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "seurat-workflow-orchestration-for-scrnaseq",
@@ -6629,7 +6629,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-rna-seq-quality-control-and-normalization/triage",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/single-cell-rna-seq-quality-control-and-normalization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "single-cell-rna-seq-quality-control-and-normalization",
@@ -6642,7 +6642,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/statistical-comparison-p-value-conservation/triage",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/statistical-comparison-p-value-conservation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "statistical-comparison-p-value-conservation",
@@ -6655,7 +6655,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/statistical-precision-comparison-ranked-outputs/triage",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/statistical-precision-comparison-ranked-outputs/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "statistical-precision-comparison-ranked-outputs",
@@ -6668,7 +6668,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/temporal-gene-expression-dynamics/triage",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/skill/temporal-gene-expression-dynamics/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "temporal-gene-expression-dynamics",
@@ -6681,7 +6681,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "fgsea is an R-package for fast preranked gene set enrichment analysis (GSEA).",
       "asbval:note": null,
@@ -6701,7 +6701,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The fgsea package allows to quickly and accurately calculate arbitrarily low GSEA P-values for a collection of gene sets.",
       "asbval:note": "Text adds 'fgsea package' specificity; source says 'This package' generically, though context implies fgsea",
@@ -6721,7 +6721,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "P-value estimation in fgsea is based on an adaptive multi-level split Monte-Carlo scheme.",
       "asbval:note": "Text specifies 'fgsea' but source excerpt is generic; context suggests fgsea but not explicitly stated in excerpt",
@@ -6741,7 +6741,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The fgsea package default lower bound for estimating P-values is eps=1e-10.",
       "asbval:note": null,
@@ -6761,7 +6761,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "GESECA is a method to identify gene sets that have high gene correlation.",
       "asbval:note": null,
@@ -6781,7 +6781,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "GESECA takes as input a gene expression matrix E where rows and columns correspond to genes and samples respectively, and a list of gene sets P.",
       "asbval:note": null,
@@ -6801,7 +6801,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "By default, GESECA method performs centering for rows of the matrix E.",
       "asbval:note": null,
@@ -6821,7 +6821,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "GESECA score does not require an explicit sample annotation or a contrast.",
       "asbval:note": "Text attributes feature to 'GESECA score' but source says 'proposed score' without explicit GESECA attribution in excerpt",
@@ -6841,7 +6841,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "GESECA can be applied to various types of sequencing technologies including RNA-seq, single-cell sequencing, and spatial RNA-seq.",
       "asbval:note": null,
@@ -6861,7 +6861,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "GESECA assesses statistical significance for a given gene set by using gene permutations.",
       "asbval:note": null,
@@ -6881,7 +6881,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "GESECA uses an adaptive multilevel Markov Chain Monte Carlo scheme for P-value estimation.",
       "asbval:note": "Source mentions 'adaptive multilevel Markov Chain Monte Carlo' but attributes it to prior 'fgseaMultilevel' procedure; unclear if GESECA itself uses this or just references it",
@@ -6901,7 +6901,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_012",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_012",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The first example in the GESECA tutorial considers a time course data of Th2 activation from the dataset GSE200250.",
       "asbval:note": null,
@@ -6921,7 +6921,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_013",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_013",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "HALLMARK_E2F_TARGETS genes are strongly activated at 24 hours time point in Th2 cells.",
       "asbval:note": "substring_in_paper=false; text adds 'in Th2 cells' qualifier not present in source_excerpt",
@@ -6941,7 +6941,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_014",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_014",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "HALLMARK_HYPOXIA genes are activated around 48 hours in Th2 cells.",
       "asbval:note": "source_excerpt is unrelated code snippet about fgsea parallelization; does not support claim about HALLMARK_HYPOXIA activation at 48 hours in Th2 cells",
@@ -6961,7 +6961,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_015",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_015",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "When the expression matrix contains many samples, a PCA-reduced expression matrix can be used instead of the full matrix to improve performance.",
       "asbval:note": "text accurately represents source_excerpt despite substring_in_paper=false",
@@ -6981,7 +6981,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_016",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_016",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The sample space was reduced from a higher dimension to 10 dimensions in one GESECA example.",
       "asbval:note": "substring_in_paper=false; source uses backticks suggesting code context; claim interprets code as example but context unclear",
@@ -7001,7 +7001,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_017",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_017",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "GESECA scores and P-values obtained on a reduced matrix are similar to those obtained for the full matrix.",
       "asbval:note": "substring_in_paper=false; text specifies 'GESECA scores' but source_excerpt only says 'scores' without naming the method",
@@ -7021,7 +7021,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_018",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_018",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The GSE116240 dataset features single cell RNA sequencing of aortic CD45+ cells and foam cells from atherosclerotic aorta.",
       "asbval:note": "text accurately represents source_excerpt despite substring_in_paper=false",
@@ -7041,7 +7041,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_019",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_019",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Inflammatory pathways such as KEGG_LEISHMANIA_INFECTION are more associated with non-foamy intimal macrophages.",
       "asbval:note": "text accurately represents source_excerpt despite substring_in_paper=false",
@@ -7061,7 +7061,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_020",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_020",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "KEGG_LYSOSOME pathway is specific to intimal foamy macrophages.",
       "asbval:note": "text accurately represents source_excerpt despite substring_in_paper=false",
@@ -7081,7 +7081,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_021",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_021",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "GESECA can be used for gene set enrichment analysis of spatial transcriptomics profiling.",
       "asbval:note": "text accurately represents source_excerpt despite substring_in_paper=false",
@@ -7101,7 +7101,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_022",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_022",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A glioblastoma sample analyzed with GESECA shows a distinct hypoxic region defined by HALLMARK_HYPOXIA.",
       "asbval:note": "substring_in_paper=false; source_excerpt is fragment; text adds 'analyzed with GESECA' and 'sample' specificity not explicit in excerpt",
@@ -7121,7 +7121,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_023",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_023",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "HALLMARK_INTERFERON_GAMMA_RESPONSE defines a reactive immune region in glioblastoma.",
       "asbval:note": "substring_in_paper=false; source_excerpt is fragment; text adds 'in glioblastoma' context not explicit in excerpt alone",
@@ -7141,7 +7141,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_024",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_024",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "HALLMARK_OXIDATIVE_PHOSPHORYLATION pathway is more characteristic to normal tissue regions compared to diseased regions.",
       "asbval:note": "text accurately represents source_excerpt despite substring_in_paper=false",
@@ -7161,7 +7161,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_025",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_025",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "GESECA can be applied to spatial transcriptomics data generated by high-plex in situ technologies with subcellular resolution such as 10X Genomics' Xenium platform.",
       "asbval:note": null,
@@ -7181,7 +7181,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_026",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_026",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A Human Ovarian Cancer sample was profiled using the Xenium 5K panel in a GESECA analysis example.",
       "asbval:note": null,
@@ -7201,7 +7201,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_027",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_027",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "SCTransform normalization was performed on 10000 genes in Xenium data analysis.",
       "asbval:note": "Source excerpt mentions SCTransform preprocessing but does not specify '10000 genes' \u2014 this detail is not in the provided excerpt",
@@ -7221,7 +7221,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_028",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_028",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Reverse PCA with 50 principal components was performed on Xenium scRNA-seq data.",
       "asbval:note": null,
@@ -7241,7 +7241,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_029",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_029",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Reverse PCA with 30 principal components was performed on Xenium spatial transcriptomics data.",
       "asbval:note": null,
@@ -7261,7 +7261,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_030",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_030",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "HALLMARK gene sets from MSigDB collection were used in Xenium GESECA analysis.",
       "asbval:note": null,
@@ -7281,7 +7281,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_031",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_031",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Top enriched pathways identified by GESECA in Xenium data were visualized using UMAP embeddings.",
       "asbval:note": null,
@@ -7301,7 +7301,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_032",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_032",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The plotCoregulationProfileImage function enables visualization of how pathway activities vary across spatial coordinates in Xenium data.",
       "asbval:note": null,
@@ -7321,7 +7321,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_033",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_033",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "An R-package for performing GESECA (GEne SEt Co-regulation Analysis) is available.",
       "asbval:note": null,
@@ -7341,7 +7341,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_034",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_034",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The exampleExpressionMatrix is a numeric expression matrix of the GSE14308 dataset with 10000 rows corresponding to genes and 12 columns corresponding to samples.",
       "asbval:note": "Source confirms 10000 rows (genes) and 12 columns (samples) from GSE14308, but excerpt does not explicitly state these numbers in the text portion provided",
@@ -7361,7 +7361,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_035",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_035",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The exampleExpressionMatrix values are log-scaled and the samples are quantile normalized.",
       "asbval:note": "Source states these are expectations for geseca input, not properties of exampleExpressionMatrix itself; claim conflates requirement with actual data properties",
@@ -7381,7 +7381,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_036",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_036",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "examplePathways is a list of mouse pathways from the reactome.db package.",
       "asbval:note": null,
@@ -7401,7 +7401,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_037",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_037",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The 5990980_Cell_Cycle pathway had a pctEvar of 1.0525898 and a pval of 2.276767e-39 in GESECA analysis.",
       "asbval:note": "substring_in_paper=false; numeric values match source but context (GESECA analysis) not verified in excerpt",
@@ -7421,7 +7421,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_038",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_038",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The 5990979_Cell_Cycle,_Mitotic pathway had a pctEvar of 1.0466758 and a pval of 3.891185e-39 in GESECA analysis.",
       "asbval:note": "substring_in_paper=false; numeric values match source but context (GESECA analysis) not verified in excerpt",
@@ -7441,7 +7441,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_039",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_039",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The 5991851_Mitotic_Prometaphase pathway had a pctEvar of 0.7485590 and a pval of 1.409623e-24 in GESECA analysis.",
       "asbval:note": "substring_in_paper=false; numeric values match source but context (GESECA analysis) not verified in excerpt",
@@ -7461,7 +7461,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_040",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_040",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The 5992217_Resolution_of_Sister_Chromatid_Cohesion pathway had a pctEvar of 0.7075162 and a pval of 1.265783e-22 in GESECA analysis.",
       "asbval:note": "substring_in_paper=false; numeric values match source but context (GESECA analysis) not verified in excerpt",
@@ -7481,7 +7481,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_041",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_041",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The 5991454_M_Phase pathway had a pctEvar of 0.6020886 and a pval of 6.237558e-22 in GESECA analysis.",
       "asbval:note": "substring_in_paper=false; numeric values match source but context (GESECA analysis) not verified in excerpt",
@@ -7501,7 +7501,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_042",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_042",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The collapsePathways function can be used to select only independent pathways in fgsea results.",
       "asbval:note": null,
@@ -7521,7 +7521,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_043",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_043",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The mapIdsList function is similar to AnnotationDbi::mapIds and can be used to convert leading edge to human-readable format.",
       "asbval:note": null,
@@ -7541,7 +7541,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_044",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_044",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "fgsea is parallelized using the BiocParallel package.",
       "asbval:note": null,
@@ -7561,7 +7561,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_045",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_045",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "By default the first registered backend returned by bpparam() is used in fgsea parallelization.",
       "asbval:note": null,
@@ -7581,7 +7581,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_046",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_046",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "fgsea has a reactomePathways function that obtains pathways from Reactome for a given set of genes.",
       "asbval:note": null,
@@ -7601,7 +7601,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_047",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_047",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The reactomePathways function in fgsea requires the reactome.db package to be installed.",
       "asbval:note": null,
@@ -7621,7 +7621,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_048",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_048",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "fgsea can load pathways from .gmt files using the gmtPathways function.",
       "asbval:note": "Source excerpt mentions .gmt files as input option but does not specifically state fgsea has a gmtPathways function; claim overstates what excerpt supports",
@@ -7641,7 +7641,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_049",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_049",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The fora function in fgsea performs over-representation analysis based enrichment tests using the hypergeometric test.",
       "asbval:note": null,
@@ -7661,7 +7661,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_050",
+      "@id": "asbval:assertion/paper/10.1101%2F060012/claim/claim_050",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The fora function requires a foreground set of genes, a background set of all robustly detected genes, and some pathways.",
       "asbval:note": "Text omits the clarification that background set is 'also called universe', which is an important qualifier explaining terminology.",

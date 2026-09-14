@@ -242,7 +242,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
       "asbval:note": "Paper explicitly describes QuantyFey as a tool for external calibration-based quantification and demonstrates conversion of intensity to concentration values.",
@@ -262,7 +262,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Concentrations of all compounds were calculated using different drift correction strategies",
       "asbval:note": "Paper demonstrates calculation of concentrations for compounds in the dataset.",
@@ -282,7 +282,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "manual tuning of calibration functions, and remaining intensity drift was assessed",
       "asbval:note": "Paper references calibration functions and their tuning, implying calibration curve parameters are part of the workflow.",
@@ -302,7 +302,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/card/task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Shiny (R web framework) is not mentioned in any of the provided passages. The paper describes QuantyFey as an open-source tool but does not specify its implementation framework or UI technology in the available excerpts.",
@@ -322,7 +322,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card focuses narrowly on the external calibration module implementation, while the paper's primary contribution emphasizes drift correction strategies (IS correction, QC-based drift correction, bracketing methods) as equally or more central to QuantyFey's significance.",
@@ -338,7 +338,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/card/task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
       "asbval:note": "Paper explicitly discusses QuantyFey's multiple drift correction strategies (IS correction, QC-based drift correction, custom bracketing, weighted bracketing)",
@@ -358,7 +358,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/card/task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Shiny (R web framework) is not mentioned in any of the provided passages. Paper describes QuantyFey as an open-source tool but does not specify its implementation framework or UI technology in the available text.",
@@ -378,7 +378,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/card/task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Concentrations of all compounds were calculated using different drift correction strategies and manual tuning of calibration functions, and remaining intensity drift was assessed.",
       "asbval:note": "Paper demonstrates output of corrected quantification results (concentrations) after applying drift correction strategies",
@@ -398,7 +398,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/card/task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
       "asbval:note": "Paper describes QuantyFey as an already-developed tool with integrated drift correction strategies, not as a task to implement the module. The card frames this as an implementation task, but the paper presents QuantyFey as a completed tool.",
@@ -418,7 +418,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/card/task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "Card title frames drift correction as an implementation task ('Implement the Intensity Drift Correction module'), but paper presents QuantyFey as an already-developed, published tool with integrated drift correction capabilities.",
@@ -435,7 +435,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/card/task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification",
       "asbval:note": "Paper confirms QuantyFey exists and is open-source. However, no mention of Shiny interface, Linux/macOS deployment limitations, or any cross-platform extension work. The paper focuses on drift correction strategies in LC-MS quantification, not platform deployment.",
@@ -455,7 +455,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/card/task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No discussion of platform-specific dependencies, Linux/macOS compatibility issues, or deployment barriers in the paper. The paper's focus is on drift correction methodology and quantification accuracy.",
@@ -475,7 +475,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/card/task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Shiny (R web framework) is not mentioned anywhere in the provided passages. The paper describes QuantyFey as a tool for LC-MS quantification but does not specify its user interface technology.",
@@ -495,7 +495,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/card/task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of Shiny configuration files, platform-agnostic code modifications, or any software engineering deliverables related to interface development.",
@@ -515,7 +515,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/card/task_003/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No discussion of platform dependency analysis or compatibility reporting in the paper.",
@@ -535,7 +535,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/005",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/card/task_003/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of testing procedures for cross-platform deployment or application launch validation.",
@@ -555,7 +555,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/card/task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate task card describes a software engineering / DevOps task (cross-platform deployment of a Shiny web interface), but the paper is a scientific methods paper focused on LC-MS quantification and drift correction strategies.",
@@ -572,7 +572,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/calibration-curve-fitting-ms-data/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/calibration-curve-fitting-ms-data/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
       "asbval:note": "The abstract explicitly describes external calibration-based quantification and drift correction as core functionality. The results section confirms application to targeted LC-MS/MS data with calibration standards and drift correction.",
@@ -592,7 +592,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/calibration-curve-fitting-ms-data/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/calibration-curve-fitting-ms-data/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
       "asbval:note": "QuantyFey is confirmed as the primary tool for external calibration-based quantification and drift correction. The abstract and results confirm its use for quantification and drift correction. The Shiny application nature and specific features (visualization, model optimization, automatic selection) are consistent with the paper's description of its flexible design for compound-specific evaluation.",
@@ -612,7 +612,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/calibration-curve-fitting-ms-data/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/calibration-curve-fitting-ms-data/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "external calibration-based quantification, with support for multiple drift correction strategies... Concentrations of all compounds were calculated using different drift correction strategies and manual tuning of calibration functions",
       "asbval:note": "The scope directly aligns with the paper's central contribution: external calibration-based quantification with drift correction strategies applied to convert intensities to concentrations.",
@@ -632,7 +632,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/corrected-intensity-table-validation/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/corrected-intensity-table-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We applied QuantyFey to a targeted LC-MS/MS dataset... The dataset was affected by substantial signal drift across the run... Concentrations of all compounds were calculated using different drift correction strategies... and remaining intensity drift was assessed.",
       "asbval:note": "Paper explicitly addresses drift correction strategies and assessment of remaining drift in corrected data.",
@@ -652,7 +652,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/corrected-intensity-table-validation/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/corrected-intensity-table-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
       "asbval:note": "QuantyFey is confirmed as the primary tool for drift correction. Paper describes it as supporting multiple drift correction strategies.",
@@ -672,7 +672,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/corrected-intensity-table-validation/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/corrected-intensity-table-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "different drift correction strategies were compared: IS correction, QC-based drift correction, custom bracketing and weighted bracketing",
       "asbval:note": "All four strategies mentioned in the card are explicitly named and evaluated in the paper.",
@@ -692,7 +692,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/corrected-intensity-table-validation/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/corrected-intensity-table-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "QuantyFey offers a transparent and accessible framework for quantitative LC-MS(MS) analysis, especially in situations where drift correction is critical",
       "asbval:note": "Paper confirms QuantyFey is used for drift correction prior to quantification; validation of corrected tables is implicit in the workflow.",
@@ -712,7 +712,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/corrected-intensity-table-validation/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/corrected-intensity-table-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
       "asbval:note": "Logically consistent with paper's positioning of QuantyFey as a drift correction tool that precedes validation.",
@@ -732,7 +732,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-path-abstraction-and-normalization/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/file-path-abstraction-and-normalization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about LC-MS quantification tool (QuantyFey) for metabolite analysis. No mention of cross-platform file path abstraction, Windows/Unix path conventions, or OS-specific code portability.",
@@ -752,7 +752,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-path-abstraction-and-normalization/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/file-path-abstraction-and-normalization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Shiny. QuantyFey is described as an open-source tool for LC-MS quantification; no web application framework is discussed.",
@@ -772,7 +772,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-path-abstraction-and-normalization/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/file-path-abstraction-and-normalization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss R base functions, file path handling, or OS detection mechanisms. QuantyFey is described as a tool for targeted LC-MS quantification with drift correction.",
@@ -792,7 +792,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-path-abstraction-and-normalization/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/file-path-abstraction-and-normalization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention RTools or Windows-specific build toolchains. No discussion of conditional OS-specific dependencies.",
@@ -812,7 +812,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/intensity-drift-artifact-detection/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/intensity-drift-artifact-detection/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Signal intensity drift is a well-recognized issue in quantitative LC-MS(MS) analysis, especially during long analytical sequences or when internal standards (IS) are unavailable... we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies.",
       "asbval:note": "The abstract directly addresses intensity drift detection and correction using calibration-based strategies in targeted LC-MS analysis.",
@@ -832,7 +832,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/intensity-drift-artifact-detection/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/intensity-drift-artifact-detection/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies.",
       "asbval:note": "QuantyFey is explicitly named and described as the primary tool developed in this paper.",
@@ -852,7 +852,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/intensity-drift-artifact-detection/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/intensity-drift-artifact-detection/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies... Concentrations of all compounds were calculated using different drift correction strategies and manual tuning of calibration functions",
       "asbval:note": "The paper confirms QuantyFey supports drift correction strategies and calibration function tuning, but does not explicitly state it is a 'Shiny application' or detail the specific UI framework. The functional capabilities (loading data, applying strategies, optimizing models, exporting results) are implied but not explicitly confirmed in the provided passages.",
@@ -872,7 +872,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/intensity-drift-artifact-detection/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/intensity-drift-artifact-detection/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Signal intensity drift is a well-recognized issue in quantitative LC-MS(MS) analysis, especially during long analytical sequences... The dataset was affected by substantial signal drift across the run.",
       "asbval:note": "The paper explicitly addresses drift in long analytical sequences and demonstrates application to a dataset with substantial signal drift across the run.",
@@ -892,7 +892,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/intensity-drift-artifact-detection/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/intensity-drift-artifact-detection/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "tool for external calibration-based quantification, with support for multiple drift correction strategies... A calibration standard was used as a proxy for a QC sample and different drift correction strategies were compared",
       "asbval:note": "The paper emphasizes external calibration-based quantification and demonstrates use of calibration standards distributed across the run for drift correction.",
@@ -912,7 +912,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/intensity-to-concentration-conversion/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/intensity-to-concentration-conversion/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
       "asbval:note": "Core functionality explicitly stated in abstract.",
@@ -932,7 +932,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/intensity-to-concentration-conversion/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/intensity-to-concentration-conversion/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Signal intensity drift is a well-recognized issue in quantitative LC-MS(MS) analysis... We applied QuantyFey to a targeted LC-MS/MS dataset... The dataset was affected by substantial signal drift across the run... Concentrations of all compounds were calculated using different drift correction strategies",
       "asbval:note": "Paper demonstrates drift correction applied to targeted LC-MS/MS data and concentration calculation.",
@@ -952,7 +952,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/intensity-to-concentration-conversion/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/intensity-to-concentration-conversion/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
       "asbval:note": "Tool name and role confirmed in abstract.",
@@ -972,7 +972,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/intensity-to-concentration-conversion/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/intensity-to-concentration-conversion/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
       "asbval:note": "Paper confirms external calibration, drift correction, and quantification functionality. However, passages do not explicitly state that QuantyFey is a Shiny application\u2014this implementation detail is not verified in provided text.",
@@ -992,7 +992,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/intensity-to-concentration-conversion/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/intensity-to-concentration-conversion/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Concentrations of all compounds were calculated using different drift correction strategies and manual tuning of calibration functions",
       "asbval:note": "Paper mentions 'manual tuning of calibration functions' but does not explicitly confirm automatic regression model optimization capability.",
@@ -1012,7 +1012,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/intensity-to-concentration-conversion/005",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/intensity-to-concentration-conversion/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "different drift correction strategies were compared: IS correction, QC-based drift correction, custom bracketing and weighted bracketing",
       "asbval:note": "All three drift correction strategies explicitly named and tested in the paper.",
@@ -1032,7 +1032,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/intensity-to-concentration-conversion/006",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/intensity-to-concentration-conversion/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Concentrations of all compounds were calculated using different drift correction strategies",
       "asbval:note": "Paper demonstrates concentration calculation output, consistent with concentration table generation.",
@@ -1052,7 +1052,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/intensity-to-concentration-conversion/007",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/intensity-to-concentration-conversion/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Repository URL not present in provided passages; cannot verify.",
@@ -1072,7 +1072,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-quantitative-analysis-standards/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/ms-quantitative-analysis-standards/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
       "asbval:note": "The abstract explicitly describes external calibration-based quantification and drift correction as core functionality.",
@@ -1092,7 +1092,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-quantitative-analysis-standards/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/ms-quantitative-analysis-standards/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies... different drift correction strategies were compared: IS correction, QC-based drift correction, custom bracketing and weighted bracketing. Concentrations of all compounds were calculated using different drift correction strategies and manual tuning of calibration functions",
       "asbval:note": "Paper confirms QuantyFey performs external calibration-based quantification and supports IS correction, QC-based drift correction, custom bracketing, and weighted bracketing. However, the paper does not explicitly state that QuantyFey is a 'Shiny application' or describe 'interactive and automatic regression model optimization (linear/quadratic)' \u2014 these implementation details are not verified in the provided passages. The drift correction strategies and calibration function tuning are confirmed, but the specific UI framework and regression optimization claims cannot be verified from the abstract alone.",
@@ -1112,7 +1112,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-quantitative-analysis-standards/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/ms-quantitative-analysis-standards/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Signal intensity drift is a well-recognized issue in quantitative LC-MS(MS) analysis... we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
       "asbval:note": "The scope aligns with the paper's stated purpose and the abstract's emphasis on drift correction in external calibration workflows.",
@@ -1132,7 +1132,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-signal-correction-strategy-selection/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/ms-signal-correction-strategy-selection/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
       "asbval:note": "Core research question directly supported by abstract statement of tool purpose and capability.",
@@ -1152,7 +1152,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-signal-correction-strategy-selection/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/ms-signal-correction-strategy-selection/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Signal intensity drift is a well-recognized issue in quantitative LC-MS(MS) analysis, especially during long analytical sequences... different drift correction strategies were compared: IS correction, QC-based drift correction, custom bracketing and weighted bracketing",
       "asbval:note": "Paper explicitly identifies signal drift in long sequences and demonstrates comparison of multiple correction strategies.",
@@ -1172,7 +1172,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-signal-correction-strategy-selection/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/ms-signal-correction-strategy-selection/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies... We applied QuantyFey to a targeted LC-MS/MS dataset",
       "asbval:note": "Paper describes QuantyFey as tool for applying drift correction to MS datasets.",
@@ -1192,7 +1192,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-signal-correction-strategy-selection/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/ms-signal-correction-strategy-selection/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Signal intensity drift is a well-recognized issue in quantitative LC-MS(MS) analysis, especially during long analytical sequences or when internal standards (IS) are unavailable",
       "asbval:note": "Paper identifies drift in long sequences and discusses internal standards role.",
@@ -1212,7 +1212,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-signal-correction-strategy-selection/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/ms-signal-correction-strategy-selection/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
       "asbval:note": "Paper describes QuantyFey as external calibration-based quantification tool with drift correction.",
@@ -1232,7 +1232,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-signal-correction-strategy-selection/005",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/ms-signal-correction-strategy-selection/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss or address this exclusion criterion explicitly.",
@@ -1252,7 +1252,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-signal-correction-strategy-selection/006",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/ms-signal-correction-strategy-selection/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not explicitly discuss this exclusion criterion.",
@@ -1272,7 +1272,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-signal-correction-strategy-selection/007",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/ms-signal-correction-strategy-selection/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Signal intensity drift is a well-recognized issue in quantitative LC-MS(MS) analysis, especially during long analytical sequences or when internal standards (IS) are unavailable... This limits the ability of analysts to maintain data quality in more complex or resource-limited experimental setups",
       "asbval:note": "Paper identifies scenarios where internal standards are unavailable as a key motivation for QuantyFey.",
@@ -1292,7 +1292,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-signal-correction-strategy-selection/008",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/ms-signal-correction-strategy-selection/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
       "asbval:note": "Paper confirms QuantyFey as tool for drift correction strategy selection and application. Paper does not explicitly state it is a 'Shiny application' \u2014 this implementation detail is not verified in provided passages.",
@@ -1312,7 +1312,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-signal-correction-strategy-selection/009",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/ms-signal-correction-strategy-selection/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Repository URL not present in provided passages; insufficient data to verify.",
@@ -1332,7 +1332,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/platform-specific-code-refactoring/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/platform-specific-code-refactoring/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about QuantyFey, an LC-MS quantification tool with drift correction. No mention of Shiny applications, Windows-only dependencies, cross-platform refactoring, or software engineering tasks. This is a completely different domain (analytical chemistry/mass spectrometry vs. software engineering).",
@@ -1352,7 +1352,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/platform-specific-code-refactoring/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/platform-specific-code-refactoring/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper contains no discussion of Shiny applications, platform-specific code refactoring, Windows dependencies, or cross-platform compatibility engineering. The paper focuses on LC-MS quantification methodology and drift correction strategies.",
@@ -1372,7 +1372,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/platform-specific-code-refactoring/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/platform-specific-code-refactoring/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Shiny is not mentioned anywhere in the paper. The paper describes QuantyFey as an open-source tool for LC-MS quantification, not a Shiny web application.",
@@ -1392,7 +1392,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/platform-specific-code-refactoring/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/platform-specific-code-refactoring/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "While R is likely used to develop QuantyFey (given it is described as an open-source tool), the paper does not discuss R as a tool for platform-specific code refactoring, conditional branches, or cross-platform abstractions. The paper focuses on the analytical chemistry application, not software engineering practices.",
@@ -1412,7 +1412,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quantitative-ms-data-preprocessing/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/quantitative-ms-data-preprocessing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies... different drift correction strategies were compared: IS correction, QC-based drift correction, custom bracketing and weighted bracketing.",
       "asbval:note": null,
@@ -1432,7 +1432,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quantitative-ms-data-preprocessing/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/quantitative-ms-data-preprocessing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Concentrations of all compounds were calculated using different drift correction strategies and manual tuning of calibration functions, and remaining intensity drift was assessed.",
       "asbval:note": null,
@@ -1452,7 +1452,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quantitative-ms-data-preprocessing/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/quantitative-ms-data-preprocessing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Signal intensity drift is a well-recognized issue in quantitative LC-MS(MS) analysis, especially during long analytical sequences",
       "asbval:note": null,
@@ -1472,7 +1472,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quantitative-ms-data-preprocessing/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/quantitative-ms-data-preprocessing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The dataset was affected by substantial signal drift across the run.",
       "asbval:note": null,
@@ -1492,7 +1492,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quantitative-ms-data-preprocessing/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/quantitative-ms-data-preprocessing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "A calibration standard was used as a proxy for a QC sample",
       "asbval:note": null,
@@ -1512,7 +1512,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quantitative-ms-data-preprocessing/005",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/quantitative-ms-data-preprocessing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies.",
       "asbval:note": null,
@@ -1532,7 +1532,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quantitative-ms-data-preprocessing/006",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/quantitative-ms-data-preprocessing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "QuantyFey offers a transparent and accessible framework for quantitative LC-MS(MS) analysis... Its flexible design allows for compound-specific evaluation and quantification",
       "asbval:note": "Paper confirms QuantyFey supports drift correction strategy selection and quantification export, but does not explicitly mention 'Shiny application', 'visualization', or 'regression model optimization' in the provided passages. The tool's implementation technology and specific UI features are not detailed in the abstract/introduction.",
@@ -1552,7 +1552,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-dependency-package-compatibility-auditing/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/r-dependency-package-compatibility-auditing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about QuantyFey, an LC-MS quantification tool with drift correction. No mention of R, Shiny, package dependencies, cross-platform auditing, or conditional code branches. The paper addresses signal drift in mass spectrometry data, not software compatibility.",
@@ -1572,7 +1572,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-dependency-package-compatibility-auditing/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/r-dependency-package-compatibility-auditing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper scope is quantitative LC-MS analysis with drift correction strategies. No overlap with R package auditing, Shiny application deployment, or cross-platform compatibility assessment.",
@@ -1592,7 +1592,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-dependency-package-compatibility-auditing/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/r-dependency-package-compatibility-auditing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Shiny is not mentioned in the paper. QuantyFey is described as an open-source tool for LC-MS quantification, not a Shiny application.",
@@ -1612,7 +1612,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-dependency-package-compatibility-auditing/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/r-dependency-package-compatibility-auditing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "R is not mentioned in the paper. QuantyFey is presented as a vendor-independent tool for LC-MS quantification without specification of its implementation language or R dependency.",
@@ -1632,7 +1632,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-dependency-package-compatibility-auditing/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/r-dependency-package-compatibility-auditing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "RTools is not mentioned. No discussion of Windows-specific prerequisites or platform constraints in the paper.",
@@ -1652,7 +1652,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-dependency-package-compatibility-auditing/005",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/r-dependency-package-compatibility-auditing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Apptainer is not mentioned. No discussion of containerization, Linux deployment, or alternative execution mechanisms.",
@@ -1672,7 +1672,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/regression-model-validation-quantification/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/regression-model-validation-quantification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies",
       "asbval:note": "Paper explicitly describes external calibration-based quantification and drift correction strategies; regression model validation is core to the tool's purpose.",
@@ -1692,7 +1692,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/regression-model-validation-quantification/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/regression-model-validation-quantification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Concentrations of all compounds were calculated using different drift correction strategies and manual tuning of calibration functions, and remaining intensity drift was assessed.",
       "asbval:note": "Paper demonstrates evaluation of drift correction strategies and calibration function tuning to assess model adequacy.",
@@ -1712,7 +1712,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/regression-model-validation-quantification/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/regression-model-validation-quantification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we developed QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification",
       "asbval:note": "Tool name confirmed in abstract.",
@@ -1732,7 +1732,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/regression-model-validation-quantification/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/regression-model-validation-quantification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "QuantyFey, an open-source, vendor-independent tool for external calibration-based quantification, with support for multiple drift correction strategies. We applied QuantyFey to a targeted LC-MS/MS dataset... different drift correction strategies were compared: IS correction, QC-based drift correction, custom bracketing and weighted bracketing.",
       "asbval:note": "Paper confirms QuantyFey supports external calibration, multiple drift correction strategies, and linear/quadratic models (implied by 'manual tuning of calibration functions'). However, passages do not explicitly confirm it is a 'Shiny application' or name specific modules ('Interactive Regression Model Optimization', 'Automatic Optimization Module'). These implementation details cannot be verified from provided passages.",
@@ -1752,7 +1752,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/regression-model-validation-quantification/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/regression-model-validation-quantification/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "tool for external calibration-based quantification... Concentrations of all compounds were calculated using different drift correction strategies and manual tuning of calibration functions, and remaining intensity drift was assessed.",
       "asbval:note": "Scope aligns with paper's description of external calibration workflow and model evaluation.",
@@ -1772,7 +1772,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/regression-model-validation-quantification/005",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/regression-model-validation-quantification/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "different drift correction strategies were compared: IS correction, QC-based drift correction, custom bracketing and weighted bracketing",
       "asbval:note": "Paper explicitly compares these four drift correction strategies.",
@@ -1792,7 +1792,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/regression-model-validation-quantification/006",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/regression-model-validation-quantification/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "manual tuning of calibration functions",
       "asbval:note": "Paper does not explicitly state model order limits. Claim of 'linear and quadratic only' cannot be verified from passages; passages only confirm calibration function tuning occurs.",
@@ -1812,7 +1812,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/shiny-application-cross-platform-adaptation/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/shiny-application-cross-platform-adaptation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about QuantyFey, an open-source LC-MS quantification tool with drift correction. No mention of Shiny applications, Windows-only refactoring, cross-platform adaptation of web frameworks, or R interactive applications. The paper focuses on analytical chemistry software, not web application development.",
@@ -1832,7 +1832,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/shiny-application-cross-platform-adaptation/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/shiny-application-cross-platform-adaptation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Shiny is not mentioned anywhere in the paper. The paper describes QuantyFey as a tool for LC-MS quantification, not a Shiny web application.",
@@ -1852,7 +1852,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/shiny-application-cross-platform-adaptation/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/shiny-application-cross-platform-adaptation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "While R may be used in the development of QuantyFey, the paper does not discuss R as a tool or mention platform abstraction functions. The paper focuses on the QuantyFey tool itself and its drift correction capabilities.",
@@ -1872,7 +1872,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/shiny-application-cross-platform-adaptation/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/shiny-application-cross-platform-adaptation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "RStudio or any R IDE is not mentioned in the paper. The paper does not discuss development environments for Shiny applications.",
@@ -1892,7 +1892,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/shiny-application-cross-platform-adaptation/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/shiny-application-cross-platform-adaptation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper's scope is entirely about LC-MS quantification with drift correction strategies (IS correction, QC-based drift correction, bracketing methods). There is no discussion of Shiny applications, cross-platform refactoring, or web application development.",
@@ -1912,7 +1912,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-library-dependency-mapping/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/system-library-dependency-mapping/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about LC-MS quantification drift correction (QuantyFey tool), not about cross-platform application dependency mapping or system library auditing. No mention of platform-specific constraints, file path conventions, or conditional code branches for cross-platform compatibility.",
@@ -1932,7 +1932,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-library-dependency-mapping/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/system-library-dependency-mapping/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper describes QuantyFey as 'vendor-independent' and 'open-source' but does not address cross-platform dependency mapping, system library constraints, or deployment compatibility testing. The paper focuses on drift correction strategies in LC-MS analysis, not software engineering or platform compatibility.",
@@ -1952,7 +1952,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-library-dependency-mapping/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/system-library-dependency-mapping/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of Shiny in the paper. QuantyFey is described as an 'open-source tool for targeted LC-MS quantification' but no web framework or UI technology is specified in the provided passages.",
@@ -1972,7 +1972,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-library-dependency-mapping/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/system-library-dependency-mapping/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss R language, packages, or conditional compilation. QuantyFey is described as a quantification tool but implementation language and dependency management are not addressed in the passages.",
@@ -1992,7 +1992,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-library-dependency-mapping/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/system-library-dependency-mapping/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of RTools or any Windows-specific development tools. Paper does not discuss R package compilation or platform-specific toolchains.",
@@ -2012,7 +2012,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/calibration-curve-fitting-ms-data/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/calibration-curve-fitting-ms-data/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 3,
       "asbval:target_artifact_id": "calibration-curve-fitting-ms-data",
@@ -2025,7 +2025,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/corrected-intensity-table-validation/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/corrected-intensity-table-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "corrected-intensity-table-validation",
@@ -2038,7 +2038,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-path-abstraction-and-normalization/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/file-path-abstraction-and-normalization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 4,
       "asbval:target_artifact_id": "file-path-abstraction-and-normalization",
@@ -2051,7 +2051,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/intensity-drift-artifact-detection/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/intensity-drift-artifact-detection/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "intensity-drift-artifact-detection",
@@ -2064,7 +2064,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/intensity-to-concentration-conversion/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/intensity-to-concentration-conversion/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "intensity-to-concentration-conversion",
@@ -2077,7 +2077,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-quantitative-analysis-standards/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/ms-quantitative-analysis-standards/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 3,
       "asbval:target_artifact_id": "ms-quantitative-analysis-standards",
@@ -2090,7 +2090,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-signal-correction-strategy-selection/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/ms-signal-correction-strategy-selection/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "ms-signal-correction-strategy-selection",
@@ -2103,7 +2103,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/platform-specific-code-refactoring/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/platform-specific-code-refactoring/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 4,
       "asbval:target_artifact_id": "platform-specific-code-refactoring",
@@ -2116,7 +2116,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quantitative-ms-data-preprocessing/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/quantitative-ms-data-preprocessing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "quantitative-ms-data-preprocessing",
@@ -2129,7 +2129,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-dependency-package-compatibility-auditing/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/r-dependency-package-compatibility-auditing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "r-dependency-package-compatibility-auditing",
@@ -2142,7 +2142,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/regression-model-validation-quantification/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/regression-model-validation-quantification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "regression-model-validation-quantification",
@@ -2155,7 +2155,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/shiny-application-cross-platform-adaptation/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/shiny-application-cross-platform-adaptation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "shiny-application-cross-platform-adaptation",
@@ -2168,7 +2168,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-library-dependency-mapping/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/skill/system-library-dependency-mapping/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "system-library-dependency-mapping",
@@ -2181,7 +2181,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "QuantyFey is a Shiny application for the visualization, analysis, and quantification of mass spectrometry data using external calibration.",
       "asbval:note": "Text accurately represents source_excerpt; substring_in_paper=false but content is directly supported by the excerpt",
@@ -2201,7 +2201,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "QuantyFey is specifically designed to address intensity drifts in datasets.",
       "asbval:note": "Text accurately represents source_excerpt; substring_in_paper=false but content is directly supported by the excerpt",
@@ -2221,7 +2221,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "QuantyFey offers multiple correction strategies to ensure accurate quantification.",
       "asbval:note": "Text accurately represents source_excerpt; substring_in_paper=false but content is directly supported by the excerpt",
@@ -2241,7 +2241,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.aca.2025.344571/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "QuantyFey is compatible with Windows operating systems only.",
       "asbval:note": "Source_excerpt states 'compatible with Windows' but does not say 'only'; claim adds unsupported exclusivity qualifier",

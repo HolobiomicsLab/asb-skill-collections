@@ -498,7 +498,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_001/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper discusses mzPeak design vision and roadmap but does not mention a Rust command-line converter tool, a mzpeak_prototyping repository, or specific input format conversion mechanisms. The paper states mzPeak will be 'released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)' \u2014 not Rust. No mention of a CLI converter tool exists in the passages.",
@@ -518,7 +518,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_001/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "strategic partnerships will be established not only with major MS vendors but also with developers of existing \"keystone\" software, e.g., OpenMS, ProteoWizard, METASPACE",
       "asbval:note": "OpenMS is mentioned as a keystone software partner for adoption strategy, not as a tool used in the mzPeak implementation itself. The paper indicates OpenMS will be integrated with mzPeak (via converters/backends/wrappers) but does not describe OpenMS as part of the core mzPeak development or conversion mechanism.",
@@ -538,7 +538,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_001/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper explicitly states reference implementation will be in 'a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)' (passage 5). Rust is not mentioned anywhere in the paper as a development language for mzPeak.",
@@ -558,7 +558,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_001/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak is designed to overcome the limitations of the aforementioned formats by adopting a hybrid model that combines efficient binary storage for numerical data and human-readable metadata storage... The data storage model will be natively binary, allowing for random access to spectra, chromatograms, ion images, and mobilograms",
       "asbval:note": "The paper describes mzPeak as a binary format with comprehensive metadata support, consistent with the expected output claim.",
@@ -578,7 +578,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_001/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the reference implementation will be designed to integrate with existing tools, minimizing disruptions to established workflows by providing converters, backends, or wrappers",
       "asbval:note": "Paper mentions that mzPeak will include converters for existing formats, but does not describe a specific CLI converter tool, does not name it as a Rust tool, and does not reference a mzpeak_prototyping repository. The paper discusses converters as part of the adoption strategy but not as a standalone reconstructible tool with documented input formats.",
@@ -598,7 +598,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card describes a specific implementation task (reconstructing a Rust CLI converter in a mzpeak_prototyping repository) that is not present in the paper. The paper is a design and vision document for mzPeak format development, not a technical implementation guide or software repository documentation.",
@@ -615,7 +615,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_002/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)",
       "asbval:note": "Paper confirms Python bindings will be provided for mzPeak, and Parquet (which pyarrow reads) is the serialization format. However, the paper does not discuss or demonstrate actual Python/pyarrow implementation details or workflows for reading mzPeak files. The research question assumes a specific implementation approach that is planned but not yet realized or documented in the paper.",
@@ -635,7 +635,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_002/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "OpenMS is mentioned once in passage 7 as a 'keystone' software for adoption strategy partnerships, but is not described as a tool used in mzPeak development, implementation, or file reading. No functional role for OpenMS in mzPeak workflows is described.",
@@ -655,7 +655,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_002/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)",
       "asbval:note": "Paper explicitly states Python bindings will be provided for the mzPeak reference implementation.",
@@ -675,7 +675,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_002/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval",
       "asbval:note": "Paper specifies Parquet as the serialization format for mzPeak, and pyarrow is the standard Python library for reading Parquet files. However, the paper does not explicitly name pyarrow; it only names Parquet. The use of pyarrow is a reasonable inference but not explicitly stated.",
@@ -695,7 +695,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_002/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_002/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The data storage model will be natively binary, allowing for random access to spectra, chromatograms, ion images, and mobilograms, ensuring efficiency in handling large and complex data sets. Vendors will also be able to store essential technical metadata, including but not limited to MS and LC settings and run-specific parameters.",
       "asbval:note": "Paper confirms mzPeak will store spectrum data (m/z, intensities) and metadata in Parquet format. However, the paper does not describe or demonstrate actual output artifacts from reading mzPeak files, nor does it discuss CSV export or the specific columnar structure of parsed data. The expected output is inferred from the format design but not explicitly demonstrated.",
@@ -715,7 +715,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card frames a task around implementing or demonstrating Python/pyarrow reading of mzPeak files. The paper is a design/vision document for mzPeak format specification, not a tutorial, implementation guide, or case study of actual file reading workflows.",
@@ -732,7 +732,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_003/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper discusses mzPeak format design and vision but contains no discussion of R implementations, arrow package usage, or any code-level file reading procedures. The paper is a format specification/design paper, not an implementation tutorial.",
@@ -752,7 +752,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_003/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval, including compression and encoding schemes to ensure scalability without sacrificing flexibility. Parquet access is available for many programming languages.",
       "asbval:note": "Paper specifies Apache Parquet as the serialization format for mzPeak, not the arrow package. Arrow is a library that can read Parquet files, but the paper does not name arrow specifically. The paper states Parquet will be used and that access is available for many programming languages, but does not discuss R or arrow bindings.",
@@ -772,7 +772,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_003/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention R as a programming language or implementation target. It mentions 'bindings for multiple programming languages (e.g., Python)' but R is not explicitly named.",
@@ -792,7 +792,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_003/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "strategic partnerships will be established not only with major MS vendors but also with developers of existing \"keystone\" software, e.g., OpenMS, ProteoWizard, METASPACE, public data repositories, prominent academic institutions",
       "asbval:note": "OpenMS is mentioned as a keystone software partner for adoption strategy, not as a tool used in the mzPeak implementation itself. The paper discusses OpenMS as a potential adopter/integrator of mzPeak, not as part of the format's technical implementation.",
@@ -812,7 +812,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_003/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_003/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss R data frames, tabular representations of spectrum data in R, or any R-specific output formats. The paper is a format design specification, not an implementation guide.",
@@ -832,7 +832,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card describes a task of implementing and demonstrating R code to read mzPeak files using the arrow package. The paper is a format design and vision document for mzPeak itself, not an implementation tutorial or code example.",
@@ -849,7 +849,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_004/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_004/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper discusses mzPeak format design and vision but contains no discussion of cross-implementation testing, field-level agreement validation, or comparative analysis of Rust/Python/R reader implementations. The paper is a format specification/design paper, not an implementation validation study.",
@@ -869,7 +869,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_004/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_004/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "strategic partnerships will be established not only with major MS vendors but also with developers of existing \"keystone\" software, e.g., OpenMS, ProteoWizard, METASPACE",
       "asbval:note": "OpenMS is mentioned as a potential partner/adopter for mzPeak, not as a tool used in the paper's own work. The paper proposes mzPeak but does not describe using OpenMS for implementation or testing.",
@@ -889,7 +889,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_004/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_004/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper mentions C++ as the language for reference implementation ('reference implementation in a low level programming language (e.g., C++)'), not Rust. No Rust implementation is discussed.",
@@ -909,7 +909,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_004/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_004/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)",
       "asbval:note": "Python is mentioned as a target language for bindings to the C++ reference implementation, not as an independent implementation being tested or compared.",
@@ -929,7 +929,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_004/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_004/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention pyarrow. It specifies Apache Parquet as the serialization format but does not name pyarrow as an implementation tool.",
@@ -949,7 +949,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_004/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_004/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention R as a target language or implementation. Python bindings are mentioned, but R is not discussed.",
@@ -969,7 +969,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_004/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_004/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Apache Arrow or the arrow package. It specifies Apache Parquet for serialization, not Arrow.",
@@ -989,7 +989,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_004/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_004/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No Rust implementation is discussed in the paper. The paper proposes C++ with Python bindings, not Rust.",
@@ -1009,7 +1009,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_004/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_004/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not describe generating spectrum tables in CSV format or testing pyarrow implementations. The paper is a format design proposal, not an implementation validation study.",
@@ -1029,7 +1029,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_004/009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_004/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention R, arrow, or CSV output generation. No such implementation or output is discussed.",
@@ -1049,7 +1049,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_004/010",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_004/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not describe cross-implementation testing or consistency validation. The paper proposes the mzPeak format design but does not conduct implementation comparison studies.",
@@ -1069,7 +1069,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_004/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_004/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card describes a cross-implementation validation study (testing Rust, Python, R readers for field-level agreement), but the paper is a format design and specification paper for mzPeak.",
@@ -1088,7 +1088,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_005/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_005/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper discusses mzPeak design principles, vision, and roadmap but does not describe any Rust implementation or specification compliance testing. Paper states mzPeak 'will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)' [passage 5], not Rust. No mention of Rust implementation exists in passages.",
@@ -1108,7 +1108,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_005/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_005/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper explicitly states reference implementation will be in C++ with Python bindings (passage 5), not Rust. No Rust implementation is mentioned anywhere in the paper.",
@@ -1128,7 +1128,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_005/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_005/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "strategic partnerships will be established not only with major MS vendors but also with developers of existing \"keystone\" software, e.g., OpenMS, ProteoWizard, METASPACE",
       "asbval:note": "OpenMS is mentioned as a 'keystone' software partner for adoption strategy, not as a tool used in the mzPeak implementation or specification compliance testing itself. The paper discusses OpenMS in the context of future adoption partnerships, not as part of the technical implementation or validation work described in the candidate card.",
@@ -1148,7 +1148,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_005/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_005/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper discusses plans for a validator ('The implementation will include a validator to ensure compatibility with the mzPeak standard' [passage 5]) but does not describe any compliance report generation or testing against a published specification. The paper is a design/vision document, not a report of completed compliance testing.",
@@ -1168,7 +1168,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_005/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_005/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is a design proposal for mzPeak, not a report of prototype implementation or compliance reproduction. Paper states 'mzPeak will be prototyped in Apache Parquet' (future tense, passage 4) and discusses planned validator development, but does not describe completed prototype implementations or compliance testing against a published specification.",
@@ -1188,7 +1188,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_jproteome_5c00435__task_005/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/card/10_1021_acs_jproteome_5c00435__task_005/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card describes a validation/testing task for a Rust implementation of mzPeak against a published specification. The paper is a design and vision document introducing mzPeak as a proposed next-generation MS data format. The paper does not report on any prototype implementations, Rust code, or compliance testing.",
@@ -1205,7 +1205,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrow-table-serialization/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/arrow-table-serialization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak is designed to overcome the limitations of the aforementioned formats by adopting a hybrid model that combines efficient binary storage for numerical data and human-readable metadata storage... For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval... Designed with a native binary format, mzPeak will enable random access to spectra, chromatograms, ion images, and mobilograms, ensuring fast and efficient data retrieval.",
       "asbval:note": "The paper explicitly describes mzPeak's use of Parquet for serializing MS data including spectra and chromatograms. The research question aligns with the paper's core design goal.",
@@ -1225,7 +1225,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrow-table-serialization/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/arrow-table-serialization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval, including compression and encoding schemes to ensure scalability without sacrificing flexibility. Parquet access is available for many programming languages.",
       "asbval:note": "Paper confirms Parquet's multi-language support and compatibility with diverse programming ecosystems, which aligns with PyData stack interoperability.",
@@ -1245,7 +1245,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrow-table-serialization/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/arrow-table-serialization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval... Parquet access is available for many programming languages.",
       "asbval:note": "Paper specifies Parquet as the serialization format but does not explicitly name PyArrow as the implementation library. PyArrow is the standard Python Arrow implementation, but the paper does not name it directly. The function (Arrow Table serialization to Parquet) is supported; the specific tool name is inferred.",
@@ -1265,7 +1265,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrow-table-serialization/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/arrow-table-serialization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python), to ensure broad accessibility for both researchers and vendors.",
       "asbval:note": "Paper confirms Python bindings will be provided for the reference implementation, but does not explicitly state that the Python reader returns PyArrow Table structures. The function (Python reader for mzPeak) is confirmed; the specific return type (Arrow Tables) is not explicitly stated in passages.",
@@ -1285,7 +1285,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrow-table-serialization/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/arrow-table-serialization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not contain information about the internal file structure of mzPeak archives (whether ZIP-based, how Parquet files are bundled, or the role of mzpeak_index.json). Insufficient evidence to judge.",
@@ -1305,7 +1305,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrow-table-serialization/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/arrow-table-serialization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The format will use the HUPO-PSI Mass Spectrometry controlled vocabulary (PSI-MS), which ensures that mzPeak will align with widely accepted terms and definitions... mzPeak will address this limitation by enabling detailed annotation of both sample characteristics and mass spectrometer configurations, while integrating the community-supported metadata standard SDRF-Proteomics",
       "asbval:note": "Paper confirms use of controlled vocabularies and metadata standards (PSI-MS, SDRF-Proteomics) but does not explicitly mention JSON Schemas or specific table names (spectra_metadata, spectra_data, chromatograms). The function (schema validation) is implied; specific schema format and table names are not confirmed.",
@@ -1325,7 +1325,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrow-table-serialization/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/arrow-table-serialization/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "OpenMS is mentioned in passage [7] as a 'keystone' software for adoption strategy ('strategic partnerships will be established... with developers of existing \"keystone\" software, e.g., OpenMS, ProteoWizard, METASPACE'), but is not described as a tool for arrow-table-serialization or as part of the mzPeak implementation itself. OpenMS is mentioned in a different context (adoption partnerships), not as a tool for this specific task.",
@@ -1345,7 +1345,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrow-table-serialization/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/arrow-table-serialization/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python), to ensure broad accessibility for both researchers and vendors.",
       "asbval:note": "Paper explicitly confirms Python bindings for the mzPeak reference implementation, supporting Python as a tool for mzPeak-related tasks including serialization.",
@@ -1365,7 +1365,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrow-tabular-data-reading/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/arrow-tabular-data-reading/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval, including compression and encoding schemes to ensure scalability without sacrificing flexibility. Parquet access is available for many programming languages.",
       "asbval:note": "Paper explicitly describes Parquet as the serialization format for mzPeak and mentions multi-language access. The columnar, efficient loading concept aligns with Parquet's design and the paper's emphasis on efficient data access.",
@@ -1385,7 +1385,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrow-tabular-data-reading/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/arrow-tabular-data-reading/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be prototyped in Apache Parquet (https://parquet.apache.org/), a top-level project of the Apache Software Foundation launched in 2013, which is widely adopted across diverse industries and offers strong guarantees of continued maintenance and interoperability.",
       "asbval:note": "Paper confirms Parquet as the serialization technology for mzPeak and emphasizes efficient data access and handling of large datasets. The scope's mention of R and Python aligns with the paper's statement that 'Parquet access is available for many programming languages.'",
@@ -1405,7 +1405,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrow-tabular-data-reading/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/arrow-tabular-data-reading/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)",
       "asbval:note": "Paper mentions language bindings for multiple programming languages including Python but does not explicitly name the 'arrow' R package. The paper discusses Parquet and efficient data access but does not specifically reference Arrow's R implementation. The function (Parquet reading in R) is implied but the specific tool name is not confirmed in the passages.",
@@ -1425,7 +1425,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrow-tabular-data-reading/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/arrow-tabular-data-reading/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)",
       "asbval:note": "Paper mentions Python bindings for the reference implementation but does not explicitly name 'pyarrow'. The function (Parquet reading in Python) is consistent with the paper's design, but the specific tool name is not confirmed in the passages.",
@@ -1445,7 +1445,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrow-tabular-data-reading/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/arrow-tabular-data-reading/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'mobiusklein/mzpeak_prototyping' repository or any specific GitHub repository in the provided passages. The paper discusses reference implementations but does not name this specific repository.",
@@ -1465,7 +1465,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrow-tabular-data-reading/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/arrow-tabular-data-reading/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "strategic partnerships will be established not only with major MS vendors but also with developers of existing \"keystone\" software, e.g., OpenMS, ProteoWizard, METASPACE",
       "asbval:note": "OpenMS is mentioned as a keystone software that will be involved in mzPeak adoption strategy, but the paper does not describe OpenMS as performing arrow-based Parquet reading or as a reference implementation for mzPeak file parsing. The connection between OpenMS and arrow-tabular-data-reading is not established in the passages.",
@@ -1485,7 +1485,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrow-tabular-data-reading/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/arrow-tabular-data-reading/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The quoted evidence span 'complete re-implementation using the [`arrow`] for _reading_ only' does not appear in any of the provided passages. This appears to be sourced from external documentation or a GitHub repository, not from the paper itself.",
@@ -1505,7 +1505,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrow-tabular-data-reading/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/arrow-tabular-data-reading/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The quoted evidence span 'There is also an R implementation in `R/`' does not appear in any of the provided passages. This appears to be sourced from external documentation or a GitHub repository, not from the paper itself.",
@@ -1525,7 +1525,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/command-line-tool-invocation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/command-line-tool-invocation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)... Additionally, the reference implementation will be designed to integrate with existing tools, minimizing disruptions to established workflows by providing converters, backends, or wrappers.",
       "asbval:note": "Paper states mzPeak will provide converters and reference implementations, but does not explicitly name or describe a specific compiled command-line tool executable. The paper discusses the *plan* to develop converters and reference implementations, not an existing tool. No specific tool invocation syntax or executable name is documented in the passages.",
@@ -1545,7 +1545,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/command-line-tool-invocation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/command-line-tool-invocation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper states reference implementation will be in 'a low level programming language (e.g., C++)' with Python bindings. No mention of Rust or cargo as the build system for mzPeak. The paper explicitly names C++ as the planned language, not Rust.",
@@ -1565,7 +1565,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/command-line-tool-invocation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/command-line-tool-invocation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of a 'mzpeak_prototyping' repository in the passages. Paper references 'mzPeak Committee' and HUPO-PSI governance but does not name or describe a specific GitHub repository with that name. Additionally, the paper specifies C++ (not Rust) as the planned implementation language.",
@@ -1585,7 +1585,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/command-line-tool-invocation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/command-line-tool-invocation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "strategic partnerships will be established not only with major MS vendors but also with developers of existing \"keystone\" software, e.g., OpenMS, ProteoWizard, METASPACE",
       "asbval:note": "OpenMS is mentioned as a 'keystone' software partner for mzPeak adoption strategy, not as a holder of the mzPeak trademark. The paper does not state OpenMS holds the mzPeak trademark; it is listed as a strategic partner for adoption.",
@@ -1605,7 +1605,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/command-line-tool-invocation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/command-line-tool-invocation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval... mzPeak will be prototyped in Apache Parquet",
       "asbval:note": "Paper confirms Apache Parquet is the serialization format for mzPeak, but does not explicitly name the specific file structure 'spectra_metadata.parquet' and 'spectra_data.parquet'. The claim about specific filenames is not verbatim in the passages.",
@@ -1625,7 +1625,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/command-line-tool-invocation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/command-line-tool-invocation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will allow for lossless interconversion with vendor-based formats, preserving data integrity while ensuring compatibility across platforms... Additionally, the reference implementation will be designed to integrate with existing tools, minimizing disruptions to established workflows by providing converters, backends, or wrappers.",
       "asbval:note": "Paper discusses the goal of format conversion and interoperability, though the specific mzML\u2192mzPeak conversion is implied rather than explicitly demonstrated as a working tool.",
@@ -1645,7 +1645,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-language-implementation-compatibility/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/cross-language-implementation-compatibility/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python), to ensure broad accessibility for both researchers and vendors.",
       "asbval:note": "Paper discusses planned reference implementation in C++ with Python bindings, not Rust. Paper does not mention R/arrow implementation or field-level agreement validation testing. The paper describes the intent to support multiple language bindings but does not describe the specific cross-language validation task claimed in the card.",
@@ -1665,7 +1665,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-language-implementation-compatibility/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/cross-language-implementation-compatibility/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper states reference implementation will be in C++ (not Rust): 'mzPeak will be released with a reference implementation in a low level programming language (e.g., C++)' (passage 6). No mention of Rust implementation in any passage.",
@@ -1685,7 +1685,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-language-implementation-compatibility/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/cross-language-implementation-compatibility/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)",
       "asbval:note": "Paper mentions Python bindings to C++ reference implementation, not an independent Python/pyarrow implementation. The card claims an independent implementation using pyarrow, but the paper describes Python as a binding/wrapper to the C++ reference, not a separate reader.",
@@ -1705,7 +1705,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-language-implementation-compatibility/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/cross-language-implementation-compatibility/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of R or R/arrow implementation in any passage. Paper discusses Python bindings but does not mention R language support.",
@@ -1725,7 +1725,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-language-implementation-compatibility/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/cross-language-implementation-compatibility/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval... Parquet access is available for many programming languages.",
       "asbval:note": "Paper specifies Apache Parquet (Apache project) as the serialization format, which is built on Arrow columnar format. This is semantically equivalent to the claim about Arrow as underlying format.",
@@ -1745,7 +1745,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-language-implementation-compatibility/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/cross-language-implementation-compatibility/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "strategic partnerships will be established not only with major MS vendors but also with developers of existing 'keystone' software, e.g., OpenMS, ProteoWizard, METASPACE",
       "asbval:note": "OpenMS is mentioned as a keystone software for adoption strategy, confirming its relevance to the MS ecosystem.",
@@ -1765,7 +1765,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-language-implementation-compatibility/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/cross-language-implementation-compatibility/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To prevent issues like those seen with earlier formats, the development process will explicitly include a roadmap for a well-advertised, fully functional reference implementation from the outset. This implementation will include a validator to ensure compatibility with the mzPeak standard",
       "asbval:note": "Paper discusses validators for format compatibility but does not describe cross-language implementation agreement testing as a specific validation task. The paper focuses on a single reference implementation with language bindings, not multiple independent implementations being tested for field-level agreement.",
@@ -1785,7 +1785,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-language-implementation-compatibility/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/cross-language-implementation-compatibility/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak is designed to overcome the limitations of the aforementioned formats by adopting a hybrid model that combines efficient binary storage for numerical data and human-readable metadata storage.",
       "asbval:note": "mzPeak is the subject of the entire paper and is the format being designed.",
@@ -1805,7 +1805,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-language-implementation-compatibility/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/cross-language-implementation-compatibility/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python), to ensure broad accessibility",
       "asbval:note": "Paper describes one reference implementation with multiple language bindings, not multiple independent implementations. Bindings to a single reference are not the same as independent implementations.",
@@ -1825,7 +1825,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/data-serialization-format-interoperability/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/data-serialization-format-interoperability/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python), to ensure broad accessibility for both researchers and vendors.",
       "asbval:note": "Paper describes planned multi-language bindings (C++ with Python bindings) but does NOT mention Rust implementation, R/arrow implementation, or field-level interoperability validation testing. The paper is a design/vision document for mzPeak format, not a report of completed cross-implementation validation. The research question describes a validation task that the paper proposes as future work, not something the paper itself performs.",
@@ -1845,7 +1845,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/data-serialization-format-interoperability/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/data-serialization-format-interoperability/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Rust implementation. Paper states reference implementation will be in 'a low level programming language (e.g., C++)' with bindings for 'multiple programming languages (e.g., Python)'. No Rust library is named or referenced.",
@@ -1865,7 +1865,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/data-serialization-format-interoperability/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/data-serialization-format-interoperability/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval, including compression and encoding schemes to ensure scalability without sacrificing flexibility. Parquet access is available for many programming languages.",
       "asbval:note": "Paper confirms mzPeak will use Parquet format and that Parquet access is available for many languages including Python. However, paper does not explicitly name 'pyarrow' as the tool. The paper mentions Python bindings for the reference implementation but does not specify pyarrow as the mechanism.",
@@ -1885,7 +1885,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/data-serialization-format-interoperability/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/data-serialization-format-interoperability/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention R implementation or R/arrow. Paper states reference implementation will be in C++ with Python bindings. No R implementation is described in the paper.",
@@ -1905,7 +1905,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/data-serialization-format-interoperability/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/data-serialization-format-interoperability/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "strategic partnerships will be established not only with major MS vendors but also with developers of existing \"keystone\" software, e.g., OpenMS, ProteoWizard, METASPACE, public data repositories, prominent academic institutions, and influential users who can advocate for the format's adoption.",
       "asbval:note": "Paper mentions OpenMS as a 'keystone' software partner for adoption strategy, but does not describe OpenMS as a reference implementation or as having a stewardship role in format development. OpenMS is listed as a strategic partner for adoption, not as a reference implementation provider.",
@@ -1925,7 +1925,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/data-serialization-format-interoperability/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/data-serialization-format-interoperability/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The evidence_span 'There is a separate Python implementation in `python/`' does not appear in any of the provided paper passages. This appears to be an extraction artifact or reference to supplementary material not included in the passages provided.",
@@ -1945,7 +1945,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/data-serialization-format-interoperability/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/data-serialization-format-interoperability/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The evidence_span 'There is also an R implementation in `R/`' does not appear in any of the provided paper passages. This appears to be an extraction artifact or reference to supplementary material not included in the passages provided.",
@@ -1965,7 +1965,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/data-serialization-format-interoperability/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/data-serialization-format-interoperability/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper is a design and vision document for mzPeak format. It describes planned development, reference implementation strategy, and adoption roadmap, but does not describe or report on actual cross-implementation validation testing or field-level agreement checks. The paper is prospective, not retrospective.",
@@ -1985,7 +1985,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-format-compliance-validation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/file-format-compliance-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python), to ensure broad accessibility for both researchers and vendors. To prevent issues like those seen with earlier formats, the development process will explicitly include a roadmap for a well-advertised, fully functional reference implementation from the outset. This implementation will include a validator to ensure compatibility with the mzPeak standard",
       "asbval:note": "Paper confirms that a validator will be developed to ensure mzPeak standard compliance, but the specification itself is not yet formally published (described as 'HUPO-PSI working draft' in scope section of card). The paper discusses future development and prototyping, not validation of existing prototype implementations.",
@@ -2005,7 +2005,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-format-compliance-validation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/file-format-compliance-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)",
       "asbval:note": "Paper mentions C++ reference implementation with Python bindings, but does not mention Rust implementation. Paper does not describe a published specification\u2014it is a proposal/vision document for a format still in development.",
@@ -2025,7 +2025,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-format-compliance-validation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/file-format-compliance-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention a Rust implementation. It specifies 'a low level programming language (e.g., C++)' for the reference implementation, not Rust.",
@@ -2045,7 +2045,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-format-compliance-validation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/file-format-compliance-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval, including compression and encoding schemes to ensure scalability without sacrificing flexibility. Parquet access is available for many programming languages.",
       "asbval:note": "Paper confirms mzPeak will use Parquet format and that Parquet access is available for many programming languages (including Python via pyarrow), but does not explicitly name pyarrow as a tool for validation.",
@@ -2065,7 +2065,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-format-compliance-validation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/file-format-compliance-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval, including compression and encoding schemes to ensure scalability without sacrificing flexibility. Parquet access is available for many programming languages.",
       "asbval:note": "Paper confirms Parquet format and availability across programming languages, but does not explicitly name the R arrow package as a validation tool.",
@@ -2085,7 +2085,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-format-compliance-validation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/file-format-compliance-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "strategic partnerships will be established not only with major MS vendors but also with developers of existing 'keystone' software, e.g., OpenMS, ProteoWizard, METASPACE, public data repositories, prominent academic institutions",
       "asbval:note": "Paper mentions OpenMS as a keystone software partner for adoption strategy, but does not describe it as a reference implementation or validation tool for mzPeak compliance checking. Its role is adoption/integration, not format validation.",
@@ -2105,7 +2105,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interoperability-testing/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/interoperability-testing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python), to ensure broad accessibility for both researchers and vendors... The development process will explicitly include a roadmap for a well-advertised, fully functional reference implementation from the outset. This implementation will include a validator to ensure compatibility with the mzPeak standard",
       "asbval:note": "Paper explicitly discusses multi-language implementations and validation for compliance; the research question aligns with mzPeak's stated development approach.",
@@ -2125,7 +2125,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interoperability-testing/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/interoperability-testing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper mentions C++ as primary language for reference implementation, not Rust. Passages do not name a Rust implementation. Cannot confirm existence of this tool in the paper.",
@@ -2145,7 +2145,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interoperability-testing/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/interoperability-testing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)",
       "asbval:note": "Paper confirms Python bindings will exist but does not specifically name 'pyarrow' as the implementation. Paper states Parquet (Apache Parquet) is the serialization format, which pyarrow could access, but the specific tool name is not confirmed.",
@@ -2165,7 +2165,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interoperability-testing/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/interoperability-testing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)",
       "asbval:note": "Paper mentions multiple programming language bindings but does not specifically name R or 'arrow' implementation. R is not explicitly mentioned in passages.",
@@ -2185,7 +2185,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interoperability-testing/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/interoperability-testing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To ensure long-term viability, mzPeak will adopt clear versioning practices and maintain openly accessible documentation for each format release... archiving format specifications publicly",
       "asbval:note": "Paper confirms that mzPeak specifications will be maintained as living documents with open documentation and versioning.",
@@ -2205,7 +2205,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interoperability-testing/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/interoperability-testing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention .NET or C# implementation. Only C++ and Python bindings are explicitly named.",
@@ -2225,7 +2225,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interoperability-testing/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/interoperability-testing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention JavaScript or TypeScript implementation. Only C++ and Python bindings are explicitly named.",
@@ -2245,7 +2245,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interoperability-testing/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/interoperability-testing/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "strategic partnerships will be established not only with major MS vendors but also with developers of existing 'keystone' software, e.g., OpenMS, ProteoWizard, METASPACE",
       "asbval:note": "OpenMS is mentioned as a keystone software partner for adoption strategy, not as a tool for implementing or validating mzPeak format itself. The card lists OpenMS with related_skills suggesting it is a tool for interoperability testing, but the paper only identifies it as a strategic partner for adoption, not as an implementation or validation tool.",
@@ -2265,7 +2265,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mandatory-field-verification/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mandatory-field-verification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak is designed to overcome the limitations of the aforementioned formats by adopting a hybrid model that combines efficient binary storage for numerical data and human-readable metadata storage... Designed with a native binary format, mzPeak will enable random access to spectra, chromatograms, ion images, and mobilograms, ensuring fast and efficient data retrieval.",
       "asbval:note": "Paper describes mzPeak design and structure but does not explicitly discuss validation workflows, schema conformance checking, or mandatory field verification procedures. The task card describes a validation/QA workflow that is not addressed in the paper.",
@@ -2285,7 +2285,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mandatory-field-verification/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mandatory-field-verification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention a Rust mzPeak library or any GitHub repository. Paper states reference implementation will be in 'a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)' but does not confirm Rust as the chosen language or provide repository URLs.",
@@ -2305,7 +2305,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mandatory-field-verification/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mandatory-field-verification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "strategic partnerships will be established not only with major MS vendors but also with developers of existing \"keystone\" software, e.g., OpenMS, ProteoWizard, METASPACE",
       "asbval:note": "Paper mentions OpenMS as a keystone software partner for adoption strategy but does not explicitly state that OpenMS will serve as a reference implementation or validation tool for mzPeak. The role claimed in the card is not confirmed in the paper.",
@@ -2325,7 +2325,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mandatory-field-verification/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mandatory-field-verification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval... Parquet access is available for many programming languages.",
       "asbval:note": "Paper confirms mzPeak uses Parquet format and that Parquet has access libraries for many programming languages, but does not explicitly name pyarrow or recommend it as a tool for validation workflows.",
@@ -2345,7 +2345,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mandatory-field-verification/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mandatory-field-verification/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval... Parquet access is available for many programming languages.",
       "asbval:note": "Paper confirms Parquet is the serialization format and that multiple programming language bindings exist, but does not explicitly name Apache Arrow for R or recommend it for validation.",
@@ -2365,7 +2365,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mandatory-field-verification/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mandatory-field-verification/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The format will use the HUPO-PSI Mass Spectrometry controlled vocabulary (PSI-MS), which ensures that mzPeak will align with widely accepted terms and definitions... The controlled vocabularies maintained by the Proteomics Standards Initiative (HUPO-PSI), established in 2002, and the PSI-MS ontology, maintained since 2013, provide a mature, community-governed foundation for metadata standardization.",
       "asbval:note": "Paper confirms HUPO-PSI maintains the controlled vocabulary and metadata standards for mzPeak. While the specific GitHub repository URL is not mentioned, the role and authority of HUPO-PSI as the standards body is clearly established.",
@@ -2385,7 +2385,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mandatory-field-verification/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mandatory-field-verification/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python), to ensure broad accessibility... The reference implementation will be designed to integrate with existing tools, minimizing disruptions to established workflows by providing converters, backends, or wrappers.",
       "asbval:note": "Paper confirms multiple programming language bindings and format conversion tools will be available, but specifies C++ (not Rust) as the primary language and does not explicitly discuss validation workflows before repository submission.",
@@ -2405,7 +2405,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mandatory-field-verification/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mandatory-field-verification/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "By developing a versioned, openly documented format with structured metadata and encryption support for sensitive information, mzPeak has potential with regulatory frameworks... The use of an open, community-driven data format will facilitate reproducible analyses and reliable data interpretation without a dependence on proprietary software.",
       "asbval:note": "Paper discusses regulatory compliance and interoperability as design goals but does not explicitly describe validation procedures or conformance testing workflows as a required step before submission or use.",
@@ -2425,7 +2425,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-format-parsing/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mass-spectrometry-data-format-parsing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak is designed to overcome the limitations of the aforementioned formats by adopting a hybrid model that combines efficient binary storage for numerical data and human-readable metadata storage... For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval... mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python), to ensure broad accessibility",
       "asbval:note": "Paper discusses mzPeak design and future reference implementation with language bindings, but does not explicitly describe parsing/reading workflows or conversion into tabular representations (DataFrames, Arrow Tables). The paper is a design/vision paper, not an implementation guide. The claim assumes working implementations exist; the paper states these are planned ('will be released').",
@@ -2445,7 +2445,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-format-parsing/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mass-spectrometry-data-format-parsing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention a Rust implementation, CLI converter, or any existing mzPeak library. The paper is a design proposal stating 'mzPeak will be released with a reference implementation in a low level programming language (e.g., C++)' \u2014 C++, not Rust. No GitHub repository or working tool is referenced in the paper.",
@@ -2465,7 +2465,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-format-parsing/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mass-spectrometry-data-format-parsing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention a Python pyarrow implementation or any Python-specific parser. The paper states future bindings will be provided ('bindings for multiple programming languages (e.g., Python)') but does not describe an existing implementation or its capabilities.",
@@ -2485,7 +2485,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-format-parsing/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mass-spectrometry-data-format-parsing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention an R implementation. The paper discusses future language bindings but does not specify R or describe any R-specific parser.",
@@ -2505,7 +2505,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-format-parsing/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mass-spectrometry-data-format-parsing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To ensure broad acceptance, strategic partnerships will be established not only with major MS vendors but also with developers of existing \"keystone\" software, e.g., OpenMS, ProteoWizard, METASPACE",
       "asbval:note": "OpenMS is mentioned as a 'keystone software' partner for adoption strategy, but the paper does not state that OpenMS 'holds the mzPeak trademark' or describe OpenMS as a 'reference proteomics toolkit' in the context of mzPeak. The claim about trademark ownership is not supported.",
@@ -2525,7 +2525,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-format-parsing/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mass-spectrometry-data-format-parsing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval... For serialization, mzPeak will be prototyped in Apache Parquet (https://parquet.apache.org/), a top-level project of the Apache Software Foundation",
       "asbval:note": "Paper explicitly states mzPeak will use Apache Parquet for serialization and storage. Arrow is the underlying columnar format for Parquet.",
@@ -2545,7 +2545,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-format-parsing/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mass-spectrometry-data-format-parsing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will use the HUPO-PSI Mass Spectrometry controlled vocabulary (PSI-MS), which ensures that mzPeak will align with widely accepted terms and definitions... integrating the community-supported metadata standard SDRF-Proteomics",
       "asbval:note": "Paper discusses mzPeak schema design and metadata standards (PSI-MS, SDRF-Proteomics) but does not explicitly reference a GitHub repository or specification document. The claim about a canonical schema is semantically supported but the specific repository link is not verified in the paper.",
@@ -2565,7 +2565,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-format-parsing/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mass-spectrometry-data-format-parsing/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The evidence_span quoted ('There is a separate Python implementation in `python/`') does not appear in any passage. This appears to be an extraction artifact or reference to a document not included in the provided passages. The paper does not describe existing Python implementations.",
@@ -2585,7 +2585,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-format-parsing/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mass-spectrometry-data-format-parsing/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The evidence_span quoted does not appear in any provided passage. This appears to be an extraction artifact. The paper does not describe a pyarrow-based mzPeak reader implementation.",
@@ -2605,7 +2605,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-format-parsing/009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mass-spectrometry-data-format-parsing/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The evidence_span quoted does not appear in any provided passage. This appears to be an extraction artifact. The paper does not describe existing R implementations.",
@@ -2625,7 +2625,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-structure-interpretation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mass-spectrometry-data-structure-interpretation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak is designed to overcome the limitations of the aforementioned formats by adopting a hybrid model that combines efficient binary storage for numerical data and human-readable metadata storage... For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval",
       "asbval:note": "Paper confirms Parquet-based storage model for mzPeak with structured metadata and numerical data separation.",
@@ -2645,7 +2645,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-structure-interpretation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mass-spectrometry-data-structure-interpretation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention zero-run stripping, null-marked gaps, or specific compression techniques for sparse m/z arrays. These are technical implementation details not discussed in the provided passages.",
@@ -2665,7 +2665,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-structure-interpretation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mass-spectrometry-data-structure-interpretation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval",
       "asbval:note": "Paper confirms Parquet format but does not explicitly state that mzPeak archives are ZIP files containing Parquet tables. The paper discusses Parquet as the serialization technology but does not detail the container format.",
@@ -2685,7 +2685,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-structure-interpretation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mass-spectrometry-data-structure-interpretation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss null marking, learned m/z spacing models, or these specific compression/encoding schemes.",
@@ -2705,7 +2705,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-structure-interpretation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mass-spectrometry-data-structure-interpretation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Parquet access is available for many programming languages.",
       "asbval:note": "Paper confirms Parquet access across multiple programming languages but does not specifically name 'arrow' R package. The tool performs the correct function (Parquet reading) but is not explicitly mentioned in the paper.",
@@ -2725,7 +2725,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-structure-interpretation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mass-spectrometry-data-structure-interpretation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Parquet access is available for many programming languages.",
       "asbval:note": "Paper confirms Parquet access across multiple programming languages but does not specifically name 'pyarrow'. The tool performs the correct function but is not explicitly mentioned.",
@@ -2745,7 +2745,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-structure-interpretation/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mass-spectrometry-data-structure-interpretation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)",
       "asbval:note": "Paper specifies C++ (not Rust) as the reference implementation language. The function (reference implementation) is correct but the language differs from the card's claim.",
@@ -2765,7 +2765,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-structure-interpretation/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mass-spectrometry-data-structure-interpretation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention OpenMS holding the mzPeak trademark or any special relationship with OpenMS. OpenMS is mentioned only as a potential adoption partner: 'strategic partnerships will be established not only with major MS vendors but also with developers of existing \"keystone\" software, e.g., OpenMS, ProteoWizard, METASPACE'.",
@@ -2785,7 +2785,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-structure-interpretation/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mass-spectrometry-data-structure-interpretation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The evidence_spans quote does not appear in any of the provided passages. No mention of an R implementation directory or R-specific implementation is found in the paper.",
@@ -2805,7 +2805,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-to-mzpeak-binary-serialization/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzml-to-mzpeak-binary-serialization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak is designed to overcome the limitations of the aforementioned formats by adopting a hybrid model that combines efficient binary storage for numerical data and human-readable metadata storage... For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval",
       "asbval:note": "Paper confirms mzPeak uses Parquet for binary storage and discusses conversion from mzML, but does NOT mention a Rust command-line converter tool. Paper states mzPeak 'will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)' \u2014 not Rust. No Rust tool is named in the paper.",
@@ -2825,7 +2825,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-to-mzpeak-binary-serialization/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzml-to-mzpeak-binary-serialization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Rust, cargo, or mzpeak_prototyping. Paper explicitly states reference implementation will be in 'a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)' (passage 5). No Rust tool is mentioned anywhere in the provided passages.",
@@ -2845,7 +2845,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-to-mzpeak-binary-serialization/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzml-to-mzpeak-binary-serialization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper mentions OpenMS only once in passage 7 as a 'keystone software' partner for adoption strategy ('strategic partnerships will be established not only with major MS vendors but also with developers of existing \"keystone\" software, e.g., OpenMS, ProteoWizard, METASPACE'). OpenMS is NOT described as trademark holder or reference implementation ecosystem for mzPeak. The paper does not attribute mzPeak development or standardization to OpenMS.",
@@ -2865,7 +2865,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-to-mzpeak-binary-serialization/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzml-to-mzpeak-binary-serialization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python), to ensure broad accessibility for both researchers and vendors.",
       "asbval:note": "Paper confirms Python bindings will be available for mzPeak, but does NOT specifically name pyarrow. Paper states bindings for Python will exist but does not specify which Python library (pyarrow, pandas, etc.) will be used. The functional claim (Python read support) is supported, but the specific tool name is not confirmed.",
@@ -2885,7 +2885,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-to-mzpeak-binary-serialization/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzml-to-mzpeak-binary-serialization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)",
       "asbval:note": "Paper mentions bindings for 'multiple programming languages (e.g., Python)' but does NOT explicitly mention R bindings. Only Python is named as an example. No R implementation is mentioned in the provided passages.",
@@ -2905,7 +2905,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-to-mzpeak-binary-serialization/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzml-to-mzpeak-binary-serialization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval, including compression and encoding schemes",
       "asbval:note": "Paper confirms mzPeak uses Parquet format with compression, but does NOT describe mzPeak as a 'ZIP archive'. Parquet is a columnar storage format, not a ZIP archive. The output format description in the card appears to conflate Parquet with ZIP compression.",
@@ -2925,7 +2925,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-to-mzpeak-binary-serialization/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzml-to-mzpeak-binary-serialization/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Designed with a native binary format, mzPeak will enable random access to spectra, chromatograms, ion images, and mobilograms, ensuring fast and efficient data retrieval... For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval, including compression and encoding schemes to ensure scalability",
       "asbval:note": "Paper explicitly confirms mzPeak is columnar (Parquet), supports random access, compression, and scalability.",
@@ -2945,7 +2945,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-to-mzpeak-binary-serialization/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzml-to-mzpeak-binary-serialization/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzML, , is the widely adopted community-driven standard defined by the Proteomics Standards Initiative of the Human Proteome Organization (HUPO-PSI)... Its text-based XML structure results in large file sizes and slow data access",
       "asbval:note": "Paper confirms mzML is XML-based and vendor-neutral (open standard), and mzPeak is designed to convert from it.",
@@ -2965,7 +2965,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzpeak-file-io-operations/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzpeak-file-io-operations/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak is designed to overcome the limitations of the aforementioned formats by adopting a hybrid model that combines efficient binary storage for numerical data and human-readable metadata storage... For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval... Designed with a native binary format, mzPeak will enable random access to spectra, chromatograms, ion images, and mobilograms",
       "asbval:note": "Core claim about mzPeak being Parquet-based and storing spectrum/chromatogram metadata is directly supported.",
@@ -2985,7 +2985,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzpeak-file-io-operations/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzpeak-file-io-operations/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "it will allow for lossless interconversion with vendor-based formats, preserving data integrity while ensuring compatibility across platforms",
       "asbval:note": "Paper explicitly mentions lossless interconversion with vendor formats.",
@@ -3005,7 +3005,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzpeak-file-io-operations/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzpeak-file-io-operations/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python), to ensure broad accessibility",
       "asbval:note": "Paper confirms Python bindings will be provided; PyData ecosystem integration is implied by Parquet choice and Python bindings.",
@@ -3025,7 +3025,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzpeak-file-io-operations/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzpeak-file-io-operations/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention a Rust implementation or specific GitHub repository URLs. Paper states reference implementation will be in 'a low level programming language (e.g., C++)' but does not confirm Rust or provide repository links.",
@@ -3045,7 +3045,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzpeak-file-io-operations/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzpeak-file-io-operations/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)",
       "asbval:note": "Paper confirms Python bindings will exist but does not specify pyarrow, repository URL, or subdirectory structure. The card claims 'Python pyarrow implementation' but paper only guarantees 'Python bindings' without naming pyarrow specifically.",
@@ -3065,7 +3065,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzpeak-file-io-operations/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzpeak-file-io-operations/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention R implementation, arrow package, or R-specific bindings. Only 'multiple programming languages (e.g., Python)' are mentioned as examples.",
@@ -3085,7 +3085,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzpeak-file-io-operations/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzpeak-file-io-operations/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention .NET or C# implementations or repository URLs.",
@@ -3105,7 +3105,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzpeak-file-io-operations/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzpeak-file-io-operations/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention TypeScript, JavaScript, or browser-based implementations.",
@@ -3125,7 +3125,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzpeak-file-io-operations/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzpeak-file-io-operations/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "strategic partnerships will be established not only with major MS vendors but also with developers of existing 'keystone' software, e.g., OpenMS, ProteoWizard, METASPACE",
       "asbval:note": "Paper mentions OpenMS as a keystone software partner for adoption strategy, but does not state that 'mzPeak format specification [is] held in trust by OpenMS Inc.' This claim about trust/stewardship is not supported by the passages.",
@@ -3145,7 +3145,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzpeak-file-io-operations/009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzpeak-file-io-operations/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)",
       "asbval:note": "Paper confirms Python bindings but does not explicitly mention a separate 'python/' subdirectory or implementation structure. The evidence_span claim is more specific than what the paper states.",
@@ -3165,7 +3165,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzpeak-file-io-operations/010",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzpeak-file-io-operations/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention pyarrow by name or describe a 'complete re-implementation for reading mzPeak files using pyarrow'. The evidence_span is not found in the provided passages.",
@@ -3185,7 +3185,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzpeak-format-file-parsing/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzpeak-format-file-parsing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval... Designed with a native binary format, mzPeak will enable random access to spectra, chromatograms, ion images, and mobilograms, ensuring fast and efficient data retrieval.",
       "asbval:note": "Paper confirms mzPeak uses Parquet for storage and will support spectra, chromatograms, and metadata. However, the paper is a design/vision document (2025, DOI indicates preprint/early publication) describing mzPeak as 'being developed' and 'will use' Parquet. The specific multi-file archive structure (spectra_metadata.parquet, spectra_data.parquet, chromatograms_metadata.parquet) is not explicitly detailed in passages. The claim assumes a finalized implementation structure that may not yet exist.",
@@ -3205,7 +3205,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzpeak-format-file-parsing/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzpeak-format-file-parsing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)",
       "asbval:note": "Paper confirms multi-language bindings are planned but does not name 'arrow' specifically. The card claims arrow is used for R Parquet reading; paper does not specify which R library will be used for Parquet access. Arrow is a reasonable choice but not explicitly confirmed in passages.",
@@ -3225,7 +3225,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzpeak-format-file-parsing/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzpeak-format-file-parsing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)",
       "asbval:note": "Paper confirms Python bindings are planned but does not name 'pyarrow' specifically. PyArrow is a reasonable choice for Python Parquet access but not explicitly confirmed in passages.",
@@ -3245,7 +3245,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzpeak-format-file-parsing/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzpeak-format-file-parsing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)... The data storage model will be natively binary, allowing for random access to spectra, chromatograms, ion images, and mobilograms",
       "asbval:note": "Paper specifies reference implementation in 'C++' (not Rust), with bindings for Python and other languages. Card claims Rust implementation; paper does not mention Rust. The GitHub URL (https://github.com/HUPO-PSI/mzPeak) is not verified in passages. This is a tool-name/language substitution: paper plans C++ primary implementation, not Rust.",
@@ -3265,7 +3265,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzpeak-format-file-parsing/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzpeak-format-file-parsing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not state that OpenMS holds the mzPeak trademark. Paper mentions OpenMS as a 'keystone' software for adoption strategy (passage 7: 'strategic partnerships will be established... with developers of existing \"keystone\" software, e.g., OpenMS, ProteoWizard, METASPACE'). OpenMS is mentioned as a partner/stakeholder, not as trademark holder or primary implementer.",
@@ -3285,7 +3285,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzpeak-format-file-parsing/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzpeak-format-file-parsing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "There is also an R implementation in `R/`",
       "asbval:note": "The evidence_span text 'There is also an R implementation in `R/`' does not appear in any of the provided passages. This may refer to a GitHub repository structure or supplementary material not included in the passage set. Cannot verify from provided text.",
@@ -3305,7 +3305,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzpeak-format-file-parsing/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzpeak-format-file-parsing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak is designed to address the challenges of today's high-throughput data environments while preparing the field for future advancements... We invite researchers, developers, instrument vendors, and other members of the mass spectrometry community to contribute their expertise and perspectives as we finalize the initial specifications and begin prototyping reference implementations",
       "asbval:note": "Paper confirms mzPeak is in development ('being developed', 'will use', 'finalize initial specifications', 'begin prototyping'). However, the scope text is truncated in the card and incomplete. Paper does emphasize long-term stability and archival durability as design goals, not as reasons to avoid use.",
@@ -3325,7 +3325,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rust-build-system-execution/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/rust-build-system-execution/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)",
       "asbval:note": "Paper discusses reference implementation in C++ with Python bindings, not Rust/Cargo. The paper does not mention Rust as the implementation language for mzPeak. The functional goal (building format converters) is present, but the specific technology stack (Rust + Cargo) is not supported by the paper.",
@@ -3345,7 +3345,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rust-build-system-execution/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/rust-build-system-execution/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper explicitly states mzPeak reference implementation will be in C++, not Rust. No mention of Rust anywhere in the passages.",
@@ -3365,7 +3365,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rust-build-system-execution/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/rust-build-system-execution/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Cargo is the Rust build system. Since the paper specifies C++ implementation, Cargo is not used. No mention of Cargo in passages.",
@@ -3385,7 +3385,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rust-build-system-execution/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/rust-build-system-execution/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of a 'mzpeak_prototyping' repository in the paper. The paper discusses mzPeak as a format specification under development but does not reference this specific GitHub repository or confirm it is a Rust project.",
@@ -3405,7 +3405,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rust-build-system-execution/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/rust-build-system-execution/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "strategic partnerships will be established not only with major MS vendors but also with developers of existing \"keystone\" software, e.g., OpenMS, ProteoWizard, METASPACE",
       "asbval:note": "OpenMS is mentioned as a keystone software partner for mzPeak adoption strategy, but the paper does not describe OpenMS as a tool for building/compiling mzPeak converters. OpenMS is mentioned in the context of adoption partnerships, not as part of the Rust build system or mzPeak implementation.",
@@ -3425,7 +3425,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-data-format-validation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectral-data-format-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak is designed to overcome the limitations of the aforementioned formats by adopting a hybrid model that combines efficient binary storage for numerical data and human-readable metadata storage... For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval... The format will use the HUPO-PSI Mass Spectrometry controlled vocabulary (PSI-MS)... mzPeak will be released with a reference implementation... This implementation will include a validator to ensure compatibility with the mzPeak standard",
       "asbval:note": "Paper explicitly describes mzPeak as using Parquet for binary storage, HUPO-PSI vocabulary for metadata, and mentions a validator for format compliance.",
@@ -3445,7 +3445,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-data-format-validation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectral-data-format-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval... Parquet access is available for many programming languages.",
       "asbval:note": "Paper confirms Parquet is the serialization format and that multiple programming languages can access it, but does not specifically name pyarrow. PyArrow is the standard Python library for Parquet access, so this is a reasonable inference but not explicitly stated.",
@@ -3465,7 +3465,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-data-format-validation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectral-data-format-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Parquet access is available for many programming languages.",
       "asbval:note": "Paper confirms Parquet access across multiple programming languages but does not specifically name the R arrow package.",
@@ -3485,7 +3485,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-data-format-validation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectral-data-format-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python), to ensure broad accessibility",
       "asbval:note": "Paper mentions reference implementation in C++ with bindings for multiple languages, but does not specifically mention Rust. The GitHub URL provided (https://github.com/HUPO-PSI/mzPeak) is not verified in the passages.",
@@ -3505,7 +3505,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-data-format-validation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectral-data-format-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To ensure long-term viability, mzPeak will adopt clear versioning practices and maintain openly accessible documentation for each format release.",
       "asbval:note": "Paper confirms commitment to open documentation but does not specifically mention MkDocs Material or the specific URL (https://hupo-psi.github.io/mzPeak-specification/).",
@@ -3525,7 +3525,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-data-format-validation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectral-data-format-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "strategic partnerships will be established not only with major MS vendors but also with developers of existing 'keystone' software, e.g., OpenMS, ProteoWizard, METASPACE",
       "asbval:note": "OpenMS is mentioned as a keystone software partner for mzPeak adoption, but the paper does not describe OpenMS as a tool for validating mzPeak files. The card lists OpenMS in tools with no canonical_url, install, or role defined, and includes extensive related_skills. This appears to be a placeholder or incomplete entry.",
@@ -3545,7 +3545,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-data-format-validation/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectral-data-format-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will allow for lossless interconversion with vendor-based formats, preserving data integrity while ensuring compatibility across platforms... Additionally, the reference implementation will be designed to integrate with existing tools, minimizing disruptions to established workflows by providing converters, backends, or wrappers.",
       "asbval:note": "Paper explicitly discusses conversion from vendor formats and mzML to mzPeak, and mentions converters as part of the reference implementation.",
@@ -3565,7 +3565,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-data-format-validation/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectral-data-format-validation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This implementation will include a validator to ensure compatibility with the mzPeak standard... Each run will be stored as a single, self-contained file, providing a comprehensive archive of all of the data and metadata.",
       "asbval:note": "Paper mentions a validator for mzPeak compatibility and self-contained file storage, but does not explicitly describe ZIP archive structure or specific validation checks for schema mismatches and corrupted archives.",
@@ -3585,7 +3585,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-data-table-conversion/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectral-data-table-conversion/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak is designed to overcome the limitations of the aforementioned formats by adopting a hybrid model that combines efficient binary storage for numerical data and human-readable metadata storage... For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval",
       "asbval:note": "Paper describes mzPeak as using Parquet for storage and mentions 'random access to spectra, chromatograms, ion images, and mobilograms' but does not explicitly discuss conversion to pandas DataFrames or PyData workflows. The paper focuses on mzPeak as a storage format, not on downstream conversion tools for analysis.",
@@ -3605,7 +3605,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-data-table-conversion/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectral-data-table-conversion/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval, including compression and encoding schemes to ensure scalability without sacrificing flexibility. Parquet access is available for many programming languages.",
       "asbval:note": "Paper confirms mzPeak uses Parquet format and that Parquet has access libraries for many languages, but does not explicitly name pyarrow or discuss pandas/Arrow table conversion workflows.",
@@ -3625,7 +3625,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-data-table-conversion/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectral-data-table-conversion/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention pandas, DataFrames, or in-memory conversion workflows. The paper focuses on mzPeak format design and storage, not on downstream analysis tools.",
@@ -3645,7 +3645,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-data-table-conversion/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectral-data-table-conversion/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper mentions 'mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)' but provides no details about Python reader module functionality, zero-run stripping, or null-marking reconstruction. Insufficient detail in passages to confirm or deny.",
@@ -3665,7 +3665,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-data-table-conversion/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectral-data-table-conversion/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)... Additionally, the reference implementation will be designed to integrate with existing tools, minimizing disruptions to established workflows by providing converters, backends, or wrappers.",
       "asbval:note": "Paper mentions reference implementation in C++ (not explicitly Rust) and converters for vendor formats, but does not specify Rust as the implementation language or detail CLI tool functionality.",
@@ -3685,7 +3685,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-data-table-conversion/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectral-data-table-conversion/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "strategic partnerships will be established not only with major MS vendors but also with developers of existing 'keystone' software, e.g., OpenMS, ProteoWizard, METASPACE",
       "asbval:note": "Paper mentions OpenMS as a keystone software partner for mzPeak adoption strategy, but does not describe OpenMS as a tool for the spectral-data-table-conversion task or detail its role in mzPeak workflows.",
@@ -3705,7 +3705,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-data-table-conversion/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectral-data-table-conversion/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will enable random access to spectra, chromatograms, ion images, and mobilograms, ensuring fast and efficient data retrieval... Vendors will also be able to store essential technical metadata, including but not limited to MS and LC settings and run-specific parameters.",
       "asbval:note": "Paper confirms mzPeak stores spectrum metadata and supports random access, but does not discuss conversion to tabular/columnar/vectorized computing environments or PyData workflows.",
@@ -3725,7 +3725,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-data-table-conversion/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectral-data-table-conversion/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Additionally, the reference implementation will be designed to integrate with existing tools, minimizing disruptions to established workflows by providing converters, backends, or wrappers.",
       "asbval:note": "Paper mentions converters for vendor formats but does not explicitly state that raw vendor data should be converted to mzPeak before using this skill.",
@@ -3745,7 +3745,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-data-table-conversion/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectral-data-table-conversion/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss read-only vs. write capabilities of Python or Rust implementations, nor does it specify language-specific access modes.",
@@ -3765,7 +3765,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-metadata-extraction/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectrum-metadata-extraction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak is designed to overcome the limitations of the aforementioned formats by adopting a hybrid model that combines efficient binary storage for numerical data and human-readable metadata storage... For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval... Designed with a native binary format, mzPeak will enable random access to spectra, chromatograms, ion images, and mobilograms, ensuring fast and efficient data retrieval.",
       "asbval:note": "Paper explicitly describes mzPeak using Parquet for MS data storage and metadata extraction. Spectrum-level metadata (scan information, precursor m/z, ion selection) is core to the design.",
@@ -3785,7 +3785,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-metadata-extraction/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectrum-metadata-extraction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python), to ensure broad accessibility for both researchers and vendors.",
       "asbval:note": "Paper specifies reference implementation in C++ (not Rust) with bindings for Python and other languages. The card claims Rust as primary implementation, but the paper proposes C++ as the low-level language.",
@@ -3805,7 +3805,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-metadata-extraction/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectrum-metadata-extraction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval, including compression and encoding schemes to ensure scalability without sacrificing flexibility. Parquet access is available for many programming languages.",
       "asbval:note": "Paper confirms Parquet as serialization format with multi-language support. pyarrow is the standard Python interface for Parquet, consistent with the paper's design.",
@@ -3825,7 +3825,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-metadata-extraction/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectrum-metadata-extraction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Parquet access is available for many programming languages.",
       "asbval:note": "Paper confirms multi-language Parquet support. Arrow R package is the standard R interface for Parquet, consistent with the design.",
@@ -3845,7 +3845,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-metadata-extraction/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectrum-metadata-extraction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "strategic partnerships will be established not only with major MS vendors but also with developers of existing \"keystone\" software, e.g., OpenMS, ProteoWizard, METASPACE, public data repositories, prominent academic institutions",
       "asbval:note": "Paper mentions OpenMS as a keystone software partner for adoption strategy, but does not describe it as a tool for spectrum metadata extraction or validation within mzPeak workflows. The role is strategic partnership, not technical implementation.",
@@ -3865,7 +3865,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-metadata-extraction/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectrum-metadata-extraction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Card references 'There is also an R implementation in `R/`' but this appears to be a code repository reference. The paper does not explicitly describe an R implementation of mzPeak itself, only mentions Parquet access in multiple languages and strategic partnerships with software developers.",
@@ -3885,7 +3885,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-metadata-extraction/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectrum-metadata-extraction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will facilitate seamless data sharing between software platforms, breaking down barriers to compatibility and enabling more flexible data analysis... A universal open format such as mzPeak would therefore be essential to support seamless data exchange and reproducibility across diverse mass spectrometers, addressing these limitations effectively.",
       "asbval:note": "Paper explicitly addresses vendor interoperability and standardization across diverse MS platforms as a core design goal.",
@@ -3905,7 +3905,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-metadata-extraction/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectrum-metadata-extraction/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not specify language-specific read/write capabilities. It states reference implementation will be in C++ with bindings for multiple languages, but does not differentiate read-only vs. read-write by language.",
@@ -3925,7 +3925,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-record-consistency-validation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectrum-record-consistency-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python), to ensure broad accessibility for both researchers and vendors.",
       "asbval:note": "Paper describes planned multi-language bindings (C++ with Python bindings) but does not explicitly mention Rust implementation, R implementation, or cross-implementation validation via CSV comparison. The paper discusses reference implementation strategy but not the specific validation methodology claimed in the card.",
@@ -3945,7 +3945,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-record-consistency-validation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectrum-record-consistency-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper states reference implementation will be in 'a low level programming language (e.g., C++)' with bindings for 'multiple programming languages (e.g., Python)'. No mention of Rust implementation in any passage.",
@@ -3965,7 +3965,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-record-consistency-validation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectrum-record-consistency-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval, including compression and encoding schemes to ensure scalability without sacrificing flexibility. Parquet access is available for many programming languages.",
       "asbval:note": "Paper confirms Parquet as serialization format and mentions Python bindings; pyarrow is the standard Python Parquet library, semantically equivalent to the paper's intent.",
@@ -3985,7 +3985,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-record-consistency-validation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectrum-record-consistency-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval, including compression and encoding schemes to ensure scalability without sacrificing flexibility. Parquet access is available for many programming languages.",
       "asbval:note": "Paper confirms Parquet format and multi-language support but does not explicitly name R or the arrow package. The card's claim of 'R arrow' is inferred from the general statement about Parquet availability across languages, not explicitly stated.",
@@ -4005,7 +4005,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-record-consistency-validation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectrum-record-consistency-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "strategic partnerships will be established not only with major MS vendors but also with developers of existing \"keystone\" software, e.g., OpenMS, ProteoWizard, METASPACE, public data repositories, prominent academic institutions, and influential users who can advocate for the format's adoption.",
       "asbval:note": "OpenMS is mentioned as a keystone software partner for adoption strategy, not explicitly as a holder of format specification. The paper does not identify OpenMS as the authoritative specification holder; HUPO-PSI is identified as the governance body.",
@@ -4025,7 +4025,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-record-consistency-validation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectrum-record-consistency-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper discusses the need for reference implementations and multi-language support but does not describe a validation methodology comparing field-level agreement across independent implementations via CSV export and comparison.",
@@ -4045,7 +4045,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-record-consistency-validation/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectrum-record-consistency-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python), to ensure broad accessibility for both researchers and vendors.",
       "asbval:note": "Paper confirms multi-language implementation strategy (C++ with Python bindings) but specifies C++ not Rust, and does not mention R. The paper does not describe a validation process to ensure consistency across implementations.",
@@ -4065,7 +4065,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-element-checking/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/structured-data-element-checking/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python), to ensure broad accessibility for both researchers and vendors. To prevent issues like those seen with earlier formats, the development process will explicitly include a roadmap for a well-advertised, fully functional reference implementation from the outset. This implementation will include a validator to ensure compatibility with the mzPeak standard",
       "asbval:note": "Paper explicitly mentions a validator to ensure compatibility with mzPeak standard, directly supporting the validation task described.",
@@ -4085,7 +4085,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-element-checking/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/structured-data-element-checking/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python)",
       "asbval:note": "Paper states reference implementation will be in C++ with Python bindings, not Rust. The mzPeak library exists and serves the parsing/validation role, but the language is C++, not Rust.",
@@ -4105,7 +4105,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-element-checking/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/structured-data-element-checking/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval, including compression and encoding schemes to ensure scalability without sacrificing flexibility. Parquet access is available for many programming languages.",
       "asbval:note": "Paper confirms Parquet is the serialization format with access available in multiple programming languages including Python, supporting use of pyarrow for schema inspection.",
@@ -4125,7 +4125,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-element-checking/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/structured-data-element-checking/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval, including compression and encoding schemes to ensure scalability without sacrificing flexibility. Parquet access is available for many programming languages.",
       "asbval:note": "Paper confirms Parquet format with multi-language support, consistent with R arrow package availability.",
@@ -4145,7 +4145,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-element-checking/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/structured-data-element-checking/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To ensure long-term viability, mzPeak will adopt clear versioning practices and maintain openly accessible documentation for each format release. Particular attention will be given to preserving the stability of core data structures, such as indexing schemes and metadata organization, across future versions.",
       "asbval:note": "Paper commits to maintaining openly accessible documentation and versioning practices for the format specification.",
@@ -4165,7 +4165,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-element-checking/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/structured-data-element-checking/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "strategic partnerships will be established not only with major MS vendors but also with developers of existing 'keystone' software, e.g., OpenMS, ProteoWizard, METASPACE, public data repositories",
       "asbval:note": "OpenMS is mentioned as a keystone software partner for mzPeak adoption and integration, but the paper does not specifically describe OpenMS as a validation/compliance-checking tool for mzPeak files. The role described in the card (file-format-compliance-validation, mandatory-field-verification) is not explicitly attributed to OpenMS in the passages.",
@@ -4185,7 +4185,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tabular-data-field-comparison/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/tabular-data-field-comparison/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python), to ensure broad accessibility for both researchers and vendors.",
       "asbval:note": "Paper discusses mzPeak format design and multi-language bindings (C++, Python) but does NOT describe a task of comparing tabular outputs from independent implementations to detect discrepancies. The paper focuses on format design, metadata support, and adoption strategy. The research question describes a validation/testing workflow that is not explicitly mentioned in the paper. The paper does mention 'lossless interconversion with vendor-based formats' but not field-level comparison of CSV/Parquet exports from independent readers.",
@@ -4205,7 +4205,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tabular-data-field-comparison/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/tabular-data-field-comparison/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention a Rust implementation of mzPeak. Paper states reference implementation will be in 'a low level programming language (e.g., C++)' with bindings for multiple languages. No Rust library is named or discussed.",
@@ -4225,7 +4225,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tabular-data-field-comparison/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/tabular-data-field-comparison/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval, including compression and encoding schemes to ensure scalability without sacrificing flexibility. Parquet access is available for many programming languages.",
       "asbval:note": "Paper confirms mzPeak will use Parquet format and that Parquet access is available for many programming languages (including Python via pyarrow), but does not explicitly name pyarrow as a tool used in the paper's own workflow. The paper describes mzPeak's design choice to use Parquet, not a specific task using pyarrow for comparison.",
@@ -4245,7 +4245,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tabular-data-field-comparison/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/tabular-data-field-comparison/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For initial implementation studies, we will use Parquet (https://parquet.apache.org/), an open source, data file format designed for efficient storage and retrieval, including compression and encoding schemes to ensure scalability without sacrificing flexibility. Parquet access is available for many programming languages.",
       "asbval:note": "Paper confirms mzPeak will use Parquet and that access is available for many programming languages (including R via arrow), but does not explicitly name R arrow as a tool used in the paper's workflow. The paper describes design choice, not a specific task using R arrow.",
@@ -4265,7 +4265,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tabular-data-field-comparison/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/tabular-data-field-comparison/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "strategic partnerships will be established not only with major MS vendors but also with developers of existing \"keystone\" software, e.g., OpenMS, ProteoWizard, METASPACE, public data repositories, prominent academic institutions, and influential users who can advocate for the format's adoption.",
       "asbval:note": "Paper mentions OpenMS as a keystone software partner for mzPeak adoption strategy, but does NOT state that 'mzPeak name is held in trust by OpenMS Inc.' This claim about trademark/naming governance is not supported by the paper. OpenMS is mentioned as a strategic partner, not as a tool used in the task described.",
@@ -4285,7 +4285,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tabular-data-field-comparison/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/tabular-data-field-comparison/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper states that reference implementation will have 'bindings for multiple programming languages (e.g., Python)' but does NOT mention a separate Python implementation directory or repository structure. The evidence_spans field in the card claims 'There is a separate Python implementation in `python/`' but this is not found in the provided passages. Insufficient information to confirm or deny the existence of a separate Python implementation directory.",
@@ -4305,7 +4305,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tabular-data-field-comparison/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/tabular-data-field-comparison/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper states reference implementation will have 'bindings for multiple programming languages (e.g., Python)' but does NOT explicitly mention R bindings or a separate R implementation directory. The evidence_spans field claims 'There is also an R implementation in `R/`' but this is not found in the provided passages. Insufficient information to confirm or deny the existence of a separate R implementation directory.",
@@ -4325,7 +4325,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tabular-data-field-comparison/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/tabular-data-field-comparison/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzPeak will be released with a reference implementation in a low level programming language (e.g., C++) with bindings for multiple programming languages (e.g., Python), to ensure broad accessibility for both researchers and vendors.",
       "asbval:note": "Paper confirms multi-language bindings (C++, Python mentioned; R not explicitly mentioned) but does NOT describe a task of comparing outputs from independent implementations. The paper discusses design and adoption, not a validation workflow comparing tabular outputs across language variants.",
@@ -4345,7 +4345,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrow-table-serialization/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/arrow-table-serialization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "arrow-table-serialization",
@@ -4358,7 +4358,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrow-tabular-data-reading/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/arrow-tabular-data-reading/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "arrow-tabular-data-reading",
@@ -4371,7 +4371,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/command-line-tool-invocation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/command-line-tool-invocation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "command-line-tool-invocation",
@@ -4384,7 +4384,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-language-implementation-compatibility/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/cross-language-implementation-compatibility/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "cross-language-implementation-compatibility",
@@ -4397,7 +4397,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/data-serialization-format-interoperability/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/data-serialization-format-interoperability/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "data-serialization-format-interoperability",
@@ -4410,7 +4410,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-format-compliance-validation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/file-format-compliance-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "file-format-compliance-validation",
@@ -4423,7 +4423,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/interoperability-testing/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/interoperability-testing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "interoperability-testing",
@@ -4436,7 +4436,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mandatory-field-verification/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mandatory-field-verification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "mandatory-field-verification",
@@ -4449,7 +4449,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-format-parsing/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mass-spectrometry-data-format-parsing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "mass-spectrometry-data-format-parsing",
@@ -4462,7 +4462,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-structure-interpretation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mass-spectrometry-data-structure-interpretation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "mass-spectrometry-data-structure-interpretation",
@@ -4475,7 +4475,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-to-mzpeak-binary-serialization/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzml-to-mzpeak-binary-serialization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "mzml-to-mzpeak-binary-serialization",
@@ -4488,7 +4488,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzpeak-file-io-operations/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzpeak-file-io-operations/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "mzpeak-file-io-operations",
@@ -4501,7 +4501,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzpeak-format-file-parsing/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/mzpeak-format-file-parsing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "mzpeak-format-file-parsing",
@@ -4514,7 +4514,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rust-build-system-execution/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/rust-build-system-execution/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "rust-build-system-execution",
@@ -4527,7 +4527,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-data-format-validation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectral-data-format-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "spectral-data-format-validation",
@@ -4540,7 +4540,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-data-table-conversion/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectral-data-table-conversion/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "spectral-data-table-conversion",
@@ -4553,7 +4553,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-metadata-extraction/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectrum-metadata-extraction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "spectrum-metadata-extraction",
@@ -4566,7 +4566,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-record-consistency-validation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/spectrum-record-consistency-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "spectrum-record-consistency-validation",
@@ -4579,7 +4579,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-element-checking/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/structured-data-element-checking/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "structured-data-element-checking",
@@ -4592,7 +4592,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tabular-data-field-comparison/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/skill/tabular-data-field-comparison/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "tabular-data-field-comparison",
@@ -4605,7 +4605,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The mzPeak file format was initially described in a peer-reviewed publication.",
       "asbval:note": null,
@@ -4625,7 +4625,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The mzPeak format was presented at the HUPO conference in Toronto, Canada on November 11, 2025.",
       "asbval:note": null,
@@ -4645,7 +4645,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The mzPeak name is currently held in trust by the OpenMS Inc.",
       "asbval:note": null,
@@ -4665,7 +4665,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "This project is a work in progress with no stability guaranteed.",
       "asbval:note": null,
@@ -4685,7 +4685,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The primary mzPeak implementation is written in Rust and includes a library for reading and writing mzPeak files.",
       "asbval:note": null,
@@ -4705,7 +4705,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The Rust implementation includes command line tools for converting existing formats into mzPeak.",
       "asbval:note": null,
@@ -4725,7 +4725,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A separate Python implementation exists in the `python/` directory.",
       "asbval:note": "Text omits qualifier that Python implementation is 'for _reading_ only', not a complete re-implementation for both reading and writing",
@@ -4745,7 +4745,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The Python implementation uses `pyarrow` and the PyData stack for reading mzPeak files.",
       "asbval:note": null,
@@ -4765,7 +4765,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The Python implementation does not currently support writing mzPeak files.",
       "asbval:note": null,
@@ -4785,7 +4785,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "An R implementation exists in the `R/` directory for reading mzPeak files.",
       "asbval:note": null,
@@ -4805,7 +4805,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jproteome.5c00435/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A draft specification document for the mzPeak format is available online.",
       "asbval:note": null,

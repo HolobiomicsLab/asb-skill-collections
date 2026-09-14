@@ -318,7 +318,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Arrival times from traveling wave ion mobility (TWIM) devices must undergo a calibration process to obtain CCS values... Here we describe the development of a multiomic CCS calibration tool, MOCCal, to automate the assignment of unknown features to the power law calibration that provides the most accurate CCS value.",
       "asbval:note": "The research question directly matches the paper's core objective of converting TWIM arrival times to CCS values via MOCCal.",
@@ -338,7 +338,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These processes are encompassed within the Python program MOCCal.",
       "asbval:note": "MOCCal is explicitly described as a Python program.",
@@ -358,7 +358,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Experimental data can be imported as a spreadsheet containing feature identifiers along with their corresponding m/z, charge state, retention time, and arrival time values... MOCCal will calculate up to three calibrated TWCCSN2 values... The calibrated TWCCSN2 value providing the smallest \u0394CCS relative to its respective trendline is retained for the MOCCal output.",
       "asbval:note": "The paper describes MOCCal outputting calibrated CCS values (TWCCSN2) for features identified by their m/z and other identifiers, matching the expected output description.",
@@ -378,7 +378,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card does not mention the critical biomolecular class assignment functionality (lipid, small molecule, peptide classification) that is central to MOCCal's operation.",
@@ -396,7 +396,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/card/task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity... MOCCal then uses the biomolecular DTCCSN2 vs m/z trendlines to identify the calibration curve that provided the most accurate calibrated TWCCSN2.",
       "asbval:note": "The paper explicitly describes the identity-agnostic class assignment process using \u0394CCS minimization against trendlines.",
@@ -416,7 +416,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/card/task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These processes are encompassed within the Python program MOCCal.",
       "asbval:note": "MOCCal is explicitly described as a Python program.",
@@ -436,7 +436,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/card/task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Experimental data can be imported as a spreadsheet containing feature identifiers along with their corresponding m/z, charge state, retention time, and arrival time values... MOCCal will calculate up to three calibrated TWCCSN2 values using each set of class-specific calibration parameters... The calibrated TWCCSN2 value providing the smallest \u0394CCS relative to its respective trendline is retained for the MOCCal output.",
       "asbval:note": "The paper describes MOCCal outputting class assignments for features with their identifiers and assigned biomolecular class (lipid, small molecule, or peptide).",
@@ -456,7 +456,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/card/task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we propose a novel method that can be used to assign multiomic features to their corresponding biomolecular class for TWCCSN2 value determination without prior identification.",
       "asbval:note": "The paper describes MOCCal as implementing exactly this functionality\u2014class assignment without prior identification.",
@@ -476,7 +476,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/card/task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity. Every singly charged feature is calibrated with as many as three different calibration equations, provided that data for small molecule, lipid, and peptide (z = 1) CCS calibration mixtures are provided.",
       "asbval:note": "The research question directly aligns with MOCCal's core function of computing class-specific CCS values using power law calibration equations.",
@@ -496,7 +496,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/card/task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These processes are encompassed within the Python program MOCCal.",
       "asbval:note": "MOCCal is explicitly described as a Python program.",
@@ -516,7 +516,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/card/task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Experimental data can be imported as a spreadsheet containing feature identifiers along with their corresponding m/z, charge state, retention time, and arrival time values... MOCCal then uses the biomolecular DTCCSN2 vs m/z trendlines to identify the calibration curve that provided the most accurate calibrated TWCCSN2... The calibrated TWCCSN2 value providing the smallest \u0394CCS relative to its respective trendline is retained for the MOCCal output.",
       "asbval:note": "The paper describes MOCCal outputting calibrated CCS values with class assignments and feature identifiers, consistent with the expected output claim.",
@@ -536,7 +536,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/card/task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card title mentions 'Implement Class-Specific CCS Calculation module' which suggests a development/implementation task, but the paper describes MOCCal as an already-developed tool. The research question and expected outputs are consistent with MOCCal's documented functionality, not a new implementation task."
@@ -551,7 +551,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/card/task_004/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity... MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
       "asbval:note": "The paper demonstrates MOCCal's complete workflow on external multiomic datasets (NIST SRM 1950 and simulated mixtures), confirming the research question's feasibility.",
@@ -571,7 +571,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/card/task_004/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These processes are encompassed within the Python program MOCCal.",
       "asbval:note": "MOCCal is explicitly described as a Python program.",
@@ -591,7 +591,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/card/task_004/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
       "asbval:note": "The tool is confirmed as available at the HinesLab GitHub repository.",
@@ -611,7 +611,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/card/task_004/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For each feature in the spreadsheet with a charge state of 1, MOCCal will calculate up to three calibrated TWCCSN2 values using each set of class-specific calibration parameters... The calibrated TWCCSN2 value providing the smallest \u0394CCS relative to its respective trendline is retained for the MOCCal output.",
       "asbval:note": "The paper confirms MOCCal produces calibrated class-specific CCS values as output.",
@@ -631,7 +631,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/card/task_004/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not explicitly describe execution logs or error confirmation outputs. The paper discusses MOCCal metrics and scoring but does not detail logging functionality.",
@@ -651,7 +651,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/card/task_004/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card frames the task as applying MOCCal to 'a new multi-omic TWIM-MS dataset external to its bundled examples,' which is consistent with the paper's demonstration on NIST SRM 1950 and simulated multiomic samples\u2014these are presented as validation datasets, not bundled examples.",
@@ -667,7 +667,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/arrival-time-to-ccs-conversion/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Arrival times from traveling wave ion mobility (TWIM) devices must undergo a calibration process to obtain CCS values... Here we describe the development of a multiomic CCS calibration tool, MOCCal, to automate the assignment of unknown features to the power law calibration that provides the most accurate CCS value.",
       "asbval:note": "Core research question is directly supported by abstract and introduction.",
@@ -687,7 +687,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/arrival-time-to-ccs-conversion/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "CCS values, unlike drift times, are comparable across different laboratories and instrumentation. Comparison of CCS values between laboratories using CCS databases can be helpful in the assignment of an identification to an unknown feature.",
       "asbval:note": "Semantic equivalence: paper establishes that CCS values enable cross-laboratory comparability.",
@@ -707,7 +707,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/arrival-time-to-ccs-conversion/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application... MOCCal calibrates every experimental arrival time with up to three class-specific calibration curves and uses the difference (in \u00c5 2 ) between the calibrated TW CCS N2 value and DT CCS N2 vs m / z regression lines to determine the best calibration curve.",
       "asbval:note": "Verbatim presence of MOCCal as Python application with CCS calibration functionality.",
@@ -727,7 +727,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/arrival-time-to-ccs-conversion/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
       "asbval:note": "Verbatim presence of repository URL (case-insensitive match).",
@@ -747,7 +747,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/arrival-time-to-ccs-conversion/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "When raw data are loaded, arrival time data for the calibrants are extracted using the open-source software DEIMoS... For the raw calibration data itself to be used, DEIMoS is a prerequisite download required for the functionality of MOCCal.",
       "asbval:note": "DEIMoS confirmed as optional dependency for raw data processing.",
@@ -767,7 +767,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/arrival-time-to-ccs-conversion/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No specific version number (1.3.2) or 'RawDT workflow' terminology found in passages. Paper mentions DEIMoS as prerequisite but does not specify version constraints.",
@@ -787,7 +787,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/arrival-time-to-ccs-conversion/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not provide DEIMoS repository URL. Only mentions it as 'open-source software' without link.",
@@ -807,7 +807,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/arrival-time-to-ccs-conversion/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application",
       "asbval:note": "Python confirmed as the language/platform for MOCCal implementation.",
@@ -827,7 +827,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/arrival-time-to-ccs-conversion/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
       "asbval:note": "HinesLab/MOCCal is the same entity as MOCCal (the Python application). The card lists it redundantly as a separate tool; this is a duplication, not a distinct tool.",
@@ -847,7 +847,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/arrival-time-to-ccs-conversion/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity... MOCCal then uses the biomolecular DTCCSN2 vs m/z trendlines to identify the calibration curve that provided the most accurate calibrated TWCCSN2.",
       "asbval:note": "Scope aligns with paper's description of MOCCal's purpose: arrival-time-to-CCS conversion for class assignment.",
@@ -867,7 +867,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/010",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/arrival-time-to-ccs-conversion/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The CCS calibration process begins by selecting calibration standards for the biomolecular classes that are expected to be within the data... For calibration input into MOCCal, a spreadsheet containing the calibrant names, m/z values, drift tube CCS (\u00c52) values, biomolecular class, and charge state is required.",
       "asbval:note": "Paper explicitly requires calibration standards with known CCS values as input.",
@@ -887,7 +887,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/011",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/arrival-time-to-ccs-conversion/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity.",
       "asbval:note": "Paper explicitly states MOCCal works on 'unknown identity' features, supporting feature-independent operation.",
@@ -907,7 +907,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/012",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/arrival-time-to-ccs-conversion/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Arrival times from TWIM experiments are calibrated to experimental CCS values from DTIM platforms (DTCCSN2) using a set of standards.",
       "asbval:note": "Semantic equivalence: MOCCal is designed to convert arrival times to CCS, so pre-calibrated data would not require this step.",
@@ -927,7 +927,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/013",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/arrival-time-to-ccs-conversion/013",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For calibration input into MOCCal, a spreadsheet containing the calibrant names, m/z values, drift tube CCS (\u00c52) values, biomolecular class, and charge state is required.",
       "asbval:note": "Paper explicitly requires calibration standards; absence of these makes MOCCal inapplicable.",
@@ -947,7 +947,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/014",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/arrival-time-to-ccs-conversion/014",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For DTIMS experiments, the amount of time it takes an ion to traverse the drift region of the spectrometer, referred to as the drift time, can be converted to a collision cross section (CCS, in \u00c52) value... However, CCS values cannot be obtained directly from the TWIM platforms. Instead, arrival times from TWIM experiments are calibrated to experimental CCS values from DTIM platforms.",
       "asbval:note": "Paper distinguishes DTIM (drift-time) from TWIM (arrival-time); MOCCal is specific to TWIM.",
@@ -967,7 +967,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/biomolecular-class-ccs-mapping/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/biomolecular-class-ccs-mapping/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity. Every singly charged feature is calibrated with as many as three different calibration equations, provided that data for small molecule, lipid, and peptide (z = 1) CCS calibration mixtures are provided.",
       "asbval:note": null,
@@ -987,7 +987,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/biomolecular-class-ccs-mapping/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/biomolecular-class-ccs-mapping/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values",
       "asbval:note": "Paper specifies power law (non-linear) regression models, not linear or non-linear generically. The card's claim of 'linear or non-linear' is broader than what the paper implements; MOCCal uses power law specifically.",
@@ -1007,7 +1007,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/biomolecular-class-ccs-mapping/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/biomolecular-class-ccs-mapping/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Based on provided charge states, features with two or more charges will be calibrated with only the peptide z = 2 or z = 3 calibration curves. For each feature in the spreadsheet with a charge state of 1, MOCCal will calculate up to three calibrated TWCCSN2 values using each set of class-specific calibration parameters",
       "asbval:note": null,
@@ -1027,7 +1027,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/biomolecular-class-ccs-mapping/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/biomolecular-class-ccs-mapping/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "It is highly documented that calibrants that are structurally similar to the analyte provide the most accurately calibrated TWCCSN2 values... MOCCal is currently set up to perform CCS calibrations for lipids, small molecules, and peptides (z = 1 to z = 3) in positive ionization mode.",
       "asbval:note": "Paper supports lipids, small molecules, and peptides; carbohydrates are not mentioned as a supported class in MOCCal.",
@@ -1047,7 +1047,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/biomolecular-class-ccs-mapping/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/biomolecular-class-ccs-mapping/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal is designed for the assignment of features to a calibrant set/CCS calibration curve without any a priori knowledge of the feature's classification or identity... MOCCal then uses the biomolecular DTCCSN2 vs m/z trendlines to identify the calibration curve that provided the most accurate calibrated TWCCSN2.",
       "asbval:note": "The paper actually describes MOCCal as performing class assignment WITHOUT prior knowledge of feature identity, which contradicts the scope statement that class labels must be pre-assigned. MOCCal performs identity-agnostic class assignment as part of its workflow.",
@@ -1067,7 +1067,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/biomolecular-class-ccs-mapping/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/biomolecular-class-ccs-mapping/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
       "asbval:note": null,
@@ -1087,7 +1087,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/biomolecular-class-ccs-mapping/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/biomolecular-class-ccs-mapping/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal calibrates every experimental arrival time with up to three class-specific calibration curves and uses the difference (in \u00c52) between the calibrated TW CCS N2 value and DT CCS N2 vs m/z regression lines to determine the best calibration curve.",
       "asbval:note": null,
@@ -1107,7 +1107,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/biomolecular-class-ccs-mapping/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/biomolecular-class-ccs-mapping/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The proposed workflow involves the combination of CCS calibration parameter determination, biomolecular class assignment of unknown features, and the application of structurally matched CCS calibrations. These processes are encompassed within the Python program MOCCal.",
       "asbval:note": null,
@@ -1127,7 +1127,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/biomolecular-class-label-assignment/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/biomolecular-class-label-assignment/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal, to automate the assignment of unknown features to the power law calibration that provides the most accurate CCS value... MOCCal calibrates every experimental arrival time with up to three class-specific calibration curves... we propose a novel method that can be used to assign multiomic features to their corresponding biomolecular class for TWCCSN2 value determination without prior identification.",
       "asbval:note": "Paper demonstrates class assignment for lipids, small molecules, and peptides (z=1-3), but does NOT include carbohydrates. The research question lists 'carbohydrate' as an example class, but the paper only validates lipid, small molecule, and peptide assignments. This is a partial match: the function is correct but the scope of biomolecular classes is narrower than claimed.",
@@ -1147,7 +1147,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/biomolecular-class-label-assignment/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/biomolecular-class-label-assignment/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal is currently set up to perform CCS calibrations for lipids, small molecules, and peptides (z = 1 to z = 3) in positive ionization mode.",
       "asbval:note": "Paper explicitly states MOCCal supports lipids, small molecules, and peptides only. Carbohydrates are not mentioned as a supported class. The scope claim overstates the biomolecular classes covered.",
@@ -1167,7 +1167,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/biomolecular-class-label-assignment/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/biomolecular-class-label-assignment/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal, a multiomic CCS calibration tool, to automate the assignment of unknown features... The proposed workflow involves the combination of CCS calibration parameter determination, biomolecular class assignment of unknown features, and the application of structurally matched CCS calibrations. These processes are encompassed within the Python program MOCCal.",
       "asbval:note": "MOCCal is confirmed as a Python application performing biomolecular class assignment via CCS calibration.",
@@ -1187,7 +1187,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/biomolecular-class-label-assignment/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/biomolecular-class-label-assignment/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "When raw data are loaded, arrival time data for the calibrants are extracted using the open-source software DEIMoS... For the raw calibration data itself to be used, DEIMoS is a prerequisite download required for the functionality of MOCCal.",
       "asbval:note": "Paper confirms DEIMoS is required for raw data processing and arrival time extraction, but does NOT specify version 1.3.2. The version number cannot be verified from the passages. The role description 'RawDT workflow' is not explicitly mentioned in the paper; the paper describes it as extracting arrival times from raw TWIM data.",
@@ -1207,7 +1207,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/biomolecular-class-label-assignment/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/biomolecular-class-label-assignment/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The proposed workflow involves the combination of CCS calibration parameter determination, biomolecular class assignment of unknown features, and the application of structurally matched CCS calibrations. These processes are encompassed within the Python program MOCCal.",
       "asbval:note": "Python is confirmed as the language in which MOCCal is implemented.",
@@ -1227,7 +1227,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/biomolecular-class-label-assignment/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/biomolecular-class-label-assignment/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
       "asbval:note": "This is a duplicate of the MOCCal tool already listed. The card contains two separate tool entries for MOCCal (one named 'MOCCal' and one named 'HinesLab/MOCCal'), which is redundant. The GitHub repository is confirmed.",
@@ -1247,7 +1247,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/biomolecular-class-label-assignment/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/biomolecular-class-label-assignment/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal then uses the biomolecular DTCCSN2 vs m/z trendlines to identify the calibration curve that provided the most accurate calibrated TWCCSN2. A correctly calibrated feature should fall within a few \u00c52 of the DTCCSN2 vs m/z trendline for its true biochemical class... the \u0394CCS between the trendline DTCCSN2 value and the calibrated TWCCSN2 value is determined... The calibrated TWCCSN2 value with the smallest \u0394CCS to the corresponding trendline is selected as the correct match.",
       "asbval:note": "The core method of class assignment via \u0394CCS minimization is clearly described and validated in the paper.",
@@ -1267,7 +1267,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/biomolecular-class-label-assignment/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/biomolecular-class-label-assignment/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The calibrated TWCCSN2 value providing the smallest \u0394CCS relative to its respective trendline is retained for the MOCCal output... MOCCal assigned 88.6% of the 44 lipid features to the lipid CCS calibrants, whereas 93.3% of the 15 small molecule features were assigned to the small molecule CCS calibrants.",
       "asbval:note": "MOCCal outputs class assignments and calibrated TWCCSN2 values, as demonstrated in the results.",
@@ -1287,7 +1287,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/biomolecular-class-label-assignment/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/biomolecular-class-label-assignment/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values... Parameters are optimized for class-specific power law regressions using the calibrant's arrival time and reference drift tube CCS value.",
       "asbval:note": "Power law calibration is the core mathematical approach used by MOCCal.",
@@ -1307,7 +1307,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/biomolecular-class-label-assignment/009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/biomolecular-class-label-assignment/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Users must also supply the EDC delay coefficient, which is unique to each instrument.",
       "asbval:note": "EDC delay coefficient is confirmed as a required parameter.",
@@ -1327,7 +1327,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/biomolecular-class-label-assignment/010",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/biomolecular-class-label-assignment/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the m/z of the feature is used to calculate a predicted DTCCSN2 value based on DTCCSN2 vs m/z regression lines developed from DTCCSN2 values in the Unified CCS Compendium",
       "asbval:note": "The Unified CCS Compendium is used as the reference database for trendline generation.",
@@ -1347,7 +1347,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/class-specific-ccs-calculation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/class-specific-ccs-calculation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal, to automate the assignment of unknown features to the power law calibration that provides the most accurate CCS value... MOCCal calibrates every experimental arrival time with up to three class-specific calibration curves... we propose a novel method that can be used to assign multiomic features to their corresponding biomolecular class for TWCCSN2 value determination without prior identification.",
       "asbval:note": null,
@@ -1367,7 +1367,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/class-specific-ccs-calculation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/class-specific-ccs-calculation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we have developed an automated tool, MOCCal, for the assignment of features to a calibrant set/CCS calibration curve without any a priori knowledge of the feature's classification or identity... The proposed workflow involves the combination of CCS calibration parameter determination, biomolecular class assignment of unknown features, and the application of structurally matched CCS calibrations. These processes are encompassed within the Python program MOCCal.",
       "asbval:note": null,
@@ -1387,7 +1387,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/class-specific-ccs-calculation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/class-specific-ccs-calculation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
       "asbval:note": null,
@@ -1407,7 +1407,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/class-specific-ccs-calculation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/class-specific-ccs-calculation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "When raw data are loaded, arrival time data for the calibrants are extracted using the open-source software DEIMoS... For the raw calibration data itself to be used, DEIMoS is a prerequisite download required for the functionality of MOCCal.",
       "asbval:note": null,
@@ -1427,7 +1427,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/class-specific-ccs-calculation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/class-specific-ccs-calculation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not provide DEIMoS repository URL; only mentions it as 'open-source software DEIMoS' without specifying the GitHub repository location.",
@@ -1447,7 +1447,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/class-specific-ccs-calculation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/class-specific-ccs-calculation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These processes are encompassed within the Python program MOCCal.",
       "asbval:note": null,
@@ -1467,7 +1467,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/class-specific-ccs-calculation/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/class-specific-ccs-calculation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity... MOCCal is currently set up to perform CCS calibrations for lipids, small molecules, and peptides (z = 1 to z = 3) in positive ionization mode.",
       "asbval:note": "Paper demonstrates MOCCal works on lipids, small molecules, and peptides, but does NOT mention carbohydrates as a supported biomolecular class. The scope claim lists 'carbohydrate' as an example, but the paper only supports lipids, small molecules, and peptides.",
@@ -1487,7 +1487,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/class-specific-ccs-calculation/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/class-specific-ccs-calculation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal, to automate the assignment of unknown features to the power law calibration... we propose a novel method that can be used to assign multiomic features to their corresponding biomolecular class for TWCCSN2 value determination without prior identification.",
       "asbval:note": "The paper explicitly states MOCCal performs class assignment without prior identification, so the 'when NOT to use' clause is accurate.",
@@ -1507,7 +1507,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/class-specific-ccs-calculation/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/class-specific-ccs-calculation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The CCS calibration process begins by selecting calibration standards for the biomolecular classes that are expected to be within the data... Parameters are optimized for class-specific power law regressions using the calibrant's arrival time and reference drift tube CCS value.",
       "asbval:note": "Paper confirms that calibration standards and parameters must be established before CCS conversion.",
@@ -1527,7 +1527,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/class-stratified-calibration-model-application/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/class-stratified-calibration-model-application/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity. Every singly charged feature is calibrated with as many as three different calibration equations, provided that data for small molecule, lipid, and peptide (z = 1) CCS calibration mixtures are provided.",
       "asbval:note": null,
@@ -1547,7 +1547,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/class-stratified-calibration-model-application/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/class-stratified-calibration-model-application/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The proposed workflow involves the combination of CCS calibration parameter determination, biomolecular class assignment of unknown features, and the application of structurally matched CCS calibrations.",
       "asbval:note": null,
@@ -1567,7 +1567,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/class-stratified-calibration-model-application/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/class-stratified-calibration-model-application/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal is a Python program... Experimental data can be imported as a spreadsheet containing feature identifiers along with their corresponding m/z, charge state, retention time, and arrival time values.",
       "asbval:note": null,
@@ -1587,7 +1587,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/class-stratified-calibration-model-application/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/class-stratified-calibration-model-application/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
       "asbval:note": null,
@@ -1607,7 +1607,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/class-stratified-calibration-model-application/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/class-stratified-calibration-model-application/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "When raw data are loaded, arrival time data for the calibrants are extracted using the open-source software DEIMoS and fit to a Gaussian distribution... For the raw calibration data itself to be used, DEIMoS is a prerequisite download required for the functionality of MOCCal.",
       "asbval:note": null,
@@ -1627,7 +1627,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/class-stratified-calibration-model-application/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/class-stratified-calibration-model-application/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Repository URL for DEIMoS not provided in passages; only mentioned as 'open-source software DEIMoS' without explicit GitHub link. Cannot verify the specific URL claimed.",
@@ -1647,7 +1647,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/class-stratified-calibration-model-application/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/class-stratified-calibration-model-application/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application",
       "asbval:note": null,
@@ -1667,7 +1667,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/class-stratified-calibration-model-application/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/class-stratified-calibration-model-application/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Experimental data can be imported as a spreadsheet containing feature identifiers along with their corresponding m/z, charge state, retention time, and arrival time values. Based on provided charge states, features with two or more charges will be calibrated with only the peptide z = 2 or z = 3 calibration curves.",
       "asbval:note": null,
@@ -1687,7 +1687,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/class-stratified-calibration-model-application/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/class-stratified-calibration-model-application/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The CCS calibration process begins by selecting calibration standards for the biomolecular classes that are expected to be within the data... For calibration input into MOCCal, a spreadsheet containing the calibrant names, m/z values, drift tube CCS (\u00c52) values, biomolecular class, and charge state is required.",
       "asbval:note": null,
@@ -1707,7 +1707,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/class-stratified-calibration-model-application/009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/class-stratified-calibration-model-application/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations... Every singly charged feature is calibrated with as many as three different calibration equations, provided that data for small molecule, lipid, and peptide (z = 1) CCS calibration mixtures are provided.",
       "asbval:note": "The paper demonstrates that class assignment is a prerequisite step; MOCCal requires class labels to apply the correct calibration curve.",
@@ -1727,7 +1727,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/class-stratified-calibration-model-application/010",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/class-stratified-calibration-model-application/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The CCS calibration process begins by selecting calibration standards for the biomolecular classes that are expected to be within the data... Parameters are optimized for class-specific power law regressions using the calibrant's arrival time and reference drift tube CCS value.",
       "asbval:note": null,
@@ -1747,7 +1747,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/collision-cross-section-calculation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/collision-cross-section-calculation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we describe the development of a multiomic CCS calibration tool, MOCCal, to automate the assignment of unknown features to the power law calibration that provides the most accurate CCS value... MOCCal calibrates every experimental arrival time with up to three class-specific calibration curves... we demonstrate that MOCCal provides accurately calibrated TW CCS N2 values for small molecules, lipids, and peptides.",
       "asbval:note": "Core research question is directly supported by abstract and introduction. The paper explicitly addresses converting arrival times to CCS values using calibration curves for multiomic samples without prior identification.",
@@ -1767,7 +1767,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/collision-cross-section-calculation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/collision-cross-section-calculation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Arrival times from traveling wave ion mobility (TWIM) devices must undergo a calibration process to obtain CCS values... Here we describe the development of a multiomic CCS calibration tool, MOCCal, to automate the assignment of unknown features to the power law calibration that provides the most accurate CCS value.",
       "asbval:note": "Scope is directly aligned with paper's central contribution.",
@@ -1787,7 +1787,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/collision-cross-section-calculation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/collision-cross-section-calculation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity... These calibrated CCS values are then compared against the corresponding DTCCSN2 vs m/z biomolecular trendlines.",
       "asbval:note": "Paper demonstrates that CCS calibration precedes class assignment via trendline comparison.",
@@ -1807,7 +1807,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/collision-cross-section-calculation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/collision-cross-section-calculation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application... These processes are encompassed within the Python program MOCCal.",
       "asbval:note": "Tool name and role confirmed. [SUBSTRING-MATCH for MOCCal | role: CCS calibration tool]",
@@ -1827,7 +1827,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/collision-cross-section-calculation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/collision-cross-section-calculation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
       "asbval:note": "Repository URL confirmed in conclusion.",
@@ -1847,7 +1847,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/collision-cross-section-calculation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/collision-cross-section-calculation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "When raw data are loaded, arrival time data for the calibrants are extracted using the open-source software DEIMoS... For the raw calibration data itself to be used, DEIMoS is a prerequisite download required for the functionality of MOCCal.",
       "asbval:note": "DEIMoS role and conditional requirement confirmed. [SUBSTRING-MATCH for DEIMoS | role: arrival time extraction from raw data]",
@@ -1867,7 +1867,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/collision-cross-section-calculation/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/collision-cross-section-calculation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application",
       "asbval:note": "Python confirmed as implementation language.",
@@ -1887,7 +1887,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/collision-cross-section-calculation/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/collision-cross-section-calculation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The card lists both 'MOCCal' and 'HinesLab/MOCCal' as separate tools. These refer to the same software (MOCCal is the tool, HinesLab is the GitHub organization). This is a redundant entry; only one tool entry is needed.",
@@ -1907,7 +1907,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-arrival-time-conversion/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-arrival-time-conversion/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity. Every singly charged feature is calibrated with as many as three different calibration equations, provided that data for small molecule, lipid, and peptide (z = 1) CCS calibration mixtures are provided.",
       "asbval:note": null,
@@ -1927,7 +1927,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-arrival-time-conversion/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-arrival-time-conversion/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The use of multiple omics analysis, such as proteomics, metabolomics, and lipidomics, in combination has grown in popularity given the wealth of information that can be obtained about an organism, disease state, or condition when a systems-level view is taken. However, with this added sample complexity, challenges with data collection, data analysis, and feature identification also increase. The rapid gas-phase and structural separation of ion mobility mass spectrometry (IM-MS) is a promising approach for complex multiomic sample analysis",
       "asbval:note": null,
@@ -1947,7 +1947,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-arrival-time-conversion/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-arrival-time-conversion/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Experimental data can be imported as a spreadsheet containing feature identifiers along with their corresponding m/z, charge state, retention time, and arrival time values. Based on provided charge states, features with two or more charges will be calibrated with only the peptide z = 2 or z = 3 calibration curves.",
       "asbval:note": null,
@@ -1967,7 +1967,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-arrival-time-conversion/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-arrival-time-conversion/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal will calculate up to three calibrated TWCCSN2 values using each set of class-specific calibration parameters for small molecules, lipids, and peptides (z = 1). MOCCal then uses the biomolecular DTCCSN2 vs m/z trendlines to identify the calibration curve that provided the most accurate calibrated TWCCSN2.",
       "asbval:note": "The paper describes MOCCal as performing class assignment as part of its workflow, so the card's claim that class assignment should be done first is consistent with the tool's design.",
@@ -1987,7 +1987,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-arrival-time-conversion/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-arrival-time-conversion/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application that automates the assignment of unknown features to the power law calibration that provides the most accurate CCS value. MOCCal calibrates every experimental arrival time with up to three class-specific calibration curves",
       "asbval:note": null,
@@ -2007,7 +2007,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-arrival-time-conversion/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-arrival-time-conversion/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
       "asbval:note": null,
@@ -2027,7 +2027,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-arrival-time-conversion/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-arrival-time-conversion/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "When raw data are loaded, arrival time data for the calibrants are extracted using the open-source software DEIMoS and fit to a Gaussian distribution. For the raw calibration data itself to be used, DEIMoS is a prerequisite download required for the functionality of MOCCal.",
       "asbval:note": null,
@@ -2047,7 +2047,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-arrival-time-conversion/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-arrival-time-conversion/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "DEIMoS is confirmed as a tool used by MOCCal, but the specific GitHub repository URL is not mentioned in the passages. Cannot verify the exact URL provided.",
@@ -2067,7 +2067,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-arrival-time-conversion/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-arrival-time-conversion/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application",
       "asbval:note": null,
@@ -2087,7 +2087,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-arrival-time-conversion/009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-arrival-time-conversion/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss or enumerate related skills. This appears to be metadata added by the extractor that is not grounded in the paper content. The related_skills list is not validated by the paper passages.",
@@ -2107,7 +2107,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-feature-classification/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-feature-classification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity... MOCCal is currently set up to perform CCS calibrations for lipids, small molecules, and peptides (z = 1 to z = 3) in positive ionization mode.",
       "asbval:note": "Paper demonstrates class assignment for lipids, small molecules, and peptides (z=1-3), NOT carbohydrates or proteins as general classes. Carbohydrates are not mentioned; proteins are only addressed via peptide digests (tryptic peptides), not intact proteins. The claim overstates the scope of biomolecular classes supported.",
@@ -2127,7 +2127,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-feature-classification/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-feature-classification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal calibrates every experimental arrival time with up to three class-specific calibration curves and uses the difference (in \u00c52) between the calibrated TW CCS N2 value and DT CCS N2 vs m/z regression lines to determine the best calibration curve.",
       "asbval:note": null,
@@ -2147,7 +2147,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-feature-classification/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-feature-classification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal... User-friendly GUIs have been implemented in MOCCal to allow for easy accessibility by users at any level of programming competency.",
       "asbval:note": "Paper confirms MOCCal is a Python application with GUIs, but does not explicitly state it is available as a 'standalone executable' separate from the Python script. The paper mentions 'stand-alone MOCCal application' but in context this refers to using pre-processed data without raw data input, not a compiled binary distinct from Python.",
@@ -2167,7 +2167,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-feature-classification/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-feature-classification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "When raw data are loaded, arrival time data for the calibrants are extracted using the open-source software DEIMoS and fit to a Gaussian distribution... For the raw calibration data itself to be used, DEIMoS is a prerequisite download required for the functionality of MOCCal.",
       "asbval:note": "Paper confirms DEIMoS extracts arrival times from raw data and is required for MOCCal's raw data workflow. However, the paper does not explicitly state DEIMoS converts data to 'm/z format'\u2014m/z values are assumed to be provided separately or extracted by other means. The claim about 'm/z format conversion' is not explicitly supported.",
@@ -2187,7 +2187,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-feature-classification/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-feature-classification/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application",
       "asbval:note": null,
@@ -2207,7 +2207,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-reference-matching/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Arrival times from traveling wave ion mobility (TWIM) devices must undergo a calibration process to obtain CCS values... Here we describe the development of a multiomic CCS calibration tool, MOCCal, to automate the assignment of unknown features to the power law calibration that provides the most accurate CCS value.",
       "asbval:note": null,
@@ -2227,7 +2227,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-reference-matching/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "CCS values, unlike drift times, are comparable across different laboratories and instrumentation... MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity.",
       "asbval:note": null,
@@ -2247,7 +2247,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-reference-matching/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application... MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
       "asbval:note": null,
@@ -2267,7 +2267,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-reference-matching/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
       "asbval:note": null,
@@ -2287,7 +2287,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-reference-matching/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "When raw data are loaded, arrival time data for the calibrants are extracted using the open-source software DEIMoS... For the raw calibration data itself to be used, DEIMoS is a prerequisite download required for the functionality of MOCCal.",
       "asbval:note": null,
@@ -2307,7 +2307,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-reference-matching/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not provide DEIMoS repository URL; only confirms it is open-source software used by MOCCal. URL cannot be verified from passages.",
@@ -2327,7 +2327,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-reference-matching/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application",
       "asbval:note": null,
@@ -2347,7 +2347,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-reference-matching/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For multiomic mixtures, several different types of calibrants must be used to obtain the most accurate CCS values from TWIM platforms. Here we describe the development of a multiomic CCS calibration tool, MOCCal... Using real and simulated multiomic samples, we demonstrate that MOCCal provides accurately calibrated TW CCS N2 values for small molecules, lipids, and peptides.",
       "asbval:note": null,
@@ -2367,7 +2367,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-reference-matching/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For calibration input into MOCCal, a spreadsheet containing the calibrant names, m/z values, drift tube CCS (\u00c52) values, biomolecular class, and charge state is required... It is highly recommended that standards be chosen to span the desired mass range and calibration data be collected via flow injection or direct infusion.",
       "asbval:note": null,
@@ -2387,7 +2387,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-reference-matching/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Obtaining class assignments and accurately calibrated TWCCSN2 values at the beginning of the data analysis process will aid the feature identification process... Comparison of CCS values between laboratories using CCS databases can be helpful in the assignment of an identification to an unknown feature.",
       "asbval:note": null,
@@ -2407,7 +2407,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/010",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-reference-matching/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "If the calibration data are processed before using MOCCal, a spreadsheet containing the calibrant names, m/z values, drift tube CCS (\u00c52) values, biomolecular class, and charge state is required.",
       "asbval:note": "Paper indicates MOCCal can accept pre-processed data, implying it is not needed if data are already calibrated.",
@@ -2427,7 +2427,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/011",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-reference-matching/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For DTIMS experiments, the amount of time it takes an ion to traverse the drift region of the spectrometer, referred to as the drift time, can be converted to a collision cross section (CCS, in \u00c52) value... However, CCS values cannot be obtained directly from the TWIM platforms. Instead, arrival times from TWIM experiments are calibrated to experimental CCS values from DTIM platforms.",
       "asbval:note": "Paper distinguishes DTIM (which can be converted directly) from TWIM (which requires calibration via MOCCal).",
@@ -2447,7 +2447,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-table-formatting/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/mass-spectrometry-data-table-formatting/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Experimental data can be imported as a spreadsheet containing feature identifiers along with their corresponding m/z, charge state, retention time, and arrival time values.",
       "asbval:note": null,
@@ -2467,7 +2467,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-table-formatting/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/mass-spectrometry-data-table-formatting/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Experimental data can be imported as a spreadsheet containing feature identifiers along with their corresponding m/z, charge state, retention time, and arrival time values... Raw data files for the calibration mixtures were loaded into MOCCal as .mzML files.",
       "asbval:note": "Paper confirms MOCCal accepts spreadsheet input and .mzML raw data files. The card claims 'UserDT and RawDT input formats' but the paper does not use this terminology; instead it describes 'spreadsheet' and '.mzML file' inputs. The functional claim (accepts both processed and raw data) is supported, but the specific format names 'UserDT' and 'RawDT' are not found in the paper.",
@@ -2487,7 +2487,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-table-formatting/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/mass-spectrometry-data-table-formatting/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "When raw data are loaded, arrival time data for the calibrants are extracted using the open-source software DEIMoS and fit to a Gaussian distribution... For the raw calibration data itself to be used, DEIMoS is a prerequisite download required for the functionality of MOCCal.",
       "asbval:note": "Paper confirms DEIMoS extracts arrival times from raw TWIM-MS data for use with MOCCal. However, the paper does not use the term 'RawDT pipeline' or 'RawDT format'; it describes DEIMoS as extracting arrival times from raw data files (.mzML) for MOCCal processing.",
@@ -2507,7 +2507,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-table-formatting/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/mass-spectrometry-data-table-formatting/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application",
       "asbval:note": null,
@@ -2527,7 +2527,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-table-formatting/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/mass-spectrometry-data-table-formatting/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Experimental data can be imported as a spreadsheet containing feature identifiers along with their corresponding m/z, charge state, retention time, and arrival time values... MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity.",
       "asbval:note": null,
@@ -2547,7 +2547,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-table-formatting/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/mass-spectrometry-data-table-formatting/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Raw data files for the calibration mixtures were loaded into MOCCal as .mzML files... Experimental data can be imported as a spreadsheet containing feature identifiers along with their corresponding m/z, charge state, retention time, and arrival time values.",
       "asbval:note": "Paper describes input as '.mzML files' (raw) and 'spreadsheet' (processed), not 'RawDT' or 'UserDT' formats. The functional intent is correct but the format terminology differs.",
@@ -2567,7 +2567,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-table-formatting/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/mass-spectrometry-data-table-formatting/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal is currently set up to perform CCS calibrations for lipids, small molecules, and peptides (z = 1 to z = 3) in positive ionization mode... TWIM separations were performed in nitrogen with a gas flow of 90 mL/min, a wave velocity of 600 m/s (unless otherwise stated), and a wave height of 40 V.",
       "asbval:note": "Paper confirms MOCCal is designed specifically for TWIM platforms, implying it is not suitable for non-TWIM MS data.",
@@ -2587,7 +2587,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-table-formatting/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/mass-spectrometry-data-table-formatting/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity.",
       "asbval:note": "Paper explicitly states MOCCal is designed for 'unknown identity' features, supporting the claim that pre-identified features are outside the scope.",
@@ -2607,7 +2607,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/twim-ms-calibration-mapping/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/twim-ms-calibration-mapping/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal, to automate the assignment of unknown features to the power law calibration that provides the most accurate CCS value... MOCCal calibrates every experimental arrival time with up to three class-specific calibration curves... we propose a novel method that can be used to assign multiomic features to their corresponding biomolecular class for TWCCSN2 value determination without prior identification.",
       "asbval:note": null,
@@ -2627,7 +2627,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/twim-ms-calibration-mapping/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/twim-ms-calibration-mapping/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application... If the calibration data are processed before using MOCCal, a spreadsheet containing the calibrant names, m/z values, drift tube CCS (\u00c52) values, biomolecular class, and charge state is required... However, if the calibration data are not already processed, raw data for each calibration solution should be loaded as a .mzML file.",
       "asbval:note": "Paper confirms MOCCal is a Python application supporting both processed spreadsheet input and raw .mzML file input. However, the paper does not use the terminology 'UserDT' and 'RawDT' workflows\u2014these appear to be extractor-introduced labels. The functional distinction (processed vs. raw) is correct but the specific workflow names are not verbatim from the paper.",
@@ -2647,7 +2647,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/twim-ms-calibration-mapping/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/twim-ms-calibration-mapping/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "When raw data are loaded, arrival time data for the calibrants are extracted using the open-source software DEIMoS... For the raw calibration data itself to be used, DEIMoS is a prerequisite download required for the functionality of MOCCal.",
       "asbval:note": null,
@@ -2667,7 +2667,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/twim-ms-calibration-mapping/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/twim-ms-calibration-mapping/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal, or Multi-Omic CCS Calibrator, is a Python application",
       "asbval:note": "Python is confirmed as the implementation language for MOCCal. However, the extensive list of 'related_skills' appears to be extractor-generated and is not grounded in the paper's explicit skill taxonomy. The paper does not enumerate these specific skill names or relationships.",
@@ -2687,7 +2687,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/twim-ms-calibration-mapping/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/twim-ms-calibration-mapping/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
       "asbval:note": null,
@@ -2707,7 +2707,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/twim-ms-calibration-mapping/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/twim-ms-calibration-mapping/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper mentions DEIMoS as open-source software but does not provide a repository URL. The candidate URL cannot be verified from the provided passages.",
@@ -2727,7 +2727,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/twim-ms-data-processing/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/twim-ms-data-processing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal, to automate the assignment of unknown features to the power law calibration that provides the most accurate CCS value... MOCCal calibrates every experimental arrival time with up to three class-specific calibration curves... we have developed an automated tool, MOCCal, for the assignment of features to a calibrant set/CCS calibration curve without any a priori knowledge of the feature's classification or identity.",
       "asbval:note": null,
@@ -2747,7 +2747,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/twim-ms-data-processing/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/twim-ms-data-processing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal utilizes biomolecule-specific TWIM CCS calibration equations based on the power law to generate calibrated CCS values for a molecular feature of unknown identity... we demonstrate that MOCCal provides accurately calibrated TW CCS N2 values for small molecules, lipids, and peptides.",
       "asbval:note": null,
@@ -2767,7 +2767,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/twim-ms-data-processing/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/twim-ms-data-processing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "When raw data are loaded, arrival time data for the calibrants are extracted using the open-source software DEIMoS... For the raw calibration data itself to be used, DEIMoS is a prerequisite download required for the functionality of MOCCal.",
       "asbval:note": null,
@@ -2787,7 +2787,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/twim-ms-data-processing/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/twim-ms-data-processing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal, a multiomic CCS calibration tool... The proposed workflow involves the combination of CCS calibration parameter determination, biomolecular class assignment of unknown features, and the application of structurally matched CCS calibrations. These processes are encompassed within the Python program MOCCal.",
       "asbval:note": null,
@@ -2807,7 +2807,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/twim-ms-data-processing/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/twim-ms-data-processing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These processes are encompassed within the Python program MOCCal.",
       "asbval:note": null,
@@ -2827,7 +2827,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/twim-ms-data-processing/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/twim-ms-data-processing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal is open-source and freely available online at github.com/HinesLab/MOCCal.",
       "asbval:note": null,
@@ -2847,7 +2847,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/twim-ms-data-processing/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/twim-ms-data-processing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The CCS calibration process begins by selecting calibration standards for the biomolecular classes that are expected to be within the data... Parameters are optimized for class-specific power law regressions using the calibrant's arrival time and reference drift tube CCS value.",
       "asbval:note": null,
@@ -2867,7 +2867,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/twim-ms-data-processing/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/twim-ms-data-processing/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MOCCal will calculate up to three calibrated TWCCSN2 values using each set of class-specific calibration parameters... MOCCal then uses the biomolecular DTCCSN2 vs m/z trendlines to identify the calibration curve that provided the most accurate calibrated TWCCSN2... The assignment process is demonstrated in Figure 2 for a small molecule, a lipid, and a singly charged peptide.",
       "asbval:note": null,
@@ -2887,7 +2887,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/twim-ms-data-processing/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/twim-ms-data-processing/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The calibrated TWCCSN2 value with the smallest \u0394CCS to the corresponding trendline is selected as the correct match, and that calibrated TWCCSN2 value is retained... Comparison of CCS values between laboratories using CCS databases can be helpful in the assignment of an identification to an unknown feature.",
       "asbval:note": null,
@@ -2907,7 +2907,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/twim-ms-data-processing/009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/twim-ms-data-processing/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we have developed an automated tool, MOCCal, for the assignment of features to a calibrant set/CCS calibration curve without any a priori knowledge of the feature's classification or identity.",
       "asbval:note": null,
@@ -2927,7 +2927,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/arrival-time-to-ccs-conversion/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/arrival-time-to-ccs-conversion/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 14,
       "asbval:target_artifact_id": "arrival-time-to-ccs-conversion",
@@ -2940,7 +2940,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/biomolecular-class-ccs-mapping/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/biomolecular-class-ccs-mapping/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "biomolecular-class-ccs-mapping",
@@ -2953,7 +2953,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/biomolecular-class-label-assignment/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/biomolecular-class-label-assignment/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "biomolecular-class-label-assignment",
@@ -2966,7 +2966,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/class-specific-ccs-calculation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/class-specific-ccs-calculation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "class-specific-ccs-calculation",
@@ -2979,7 +2979,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/class-stratified-calibration-model-application/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/class-stratified-calibration-model-application/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 11,
       "asbval:target_artifact_id": "class-stratified-calibration-model-application",
@@ -2992,7 +2992,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/collision-cross-section-calculation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/collision-cross-section-calculation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "collision-cross-section-calculation",
@@ -3005,7 +3005,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-arrival-time-conversion/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-arrival-time-conversion/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "ion-mobility-arrival-time-conversion",
@@ -3018,7 +3018,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-feature-classification/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-feature-classification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "ion-mobility-feature-classification",
@@ -3031,7 +3031,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ion-mobility-reference-matching/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/ion-mobility-reference-matching/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 11,
       "asbval:target_artifact_id": "ion-mobility-reference-matching",
@@ -3044,7 +3044,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-table-formatting/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/mass-spectrometry-data-table-formatting/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "mass-spectrometry-data-table-formatting",
@@ -3057,7 +3057,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/twim-ms-calibration-mapping/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/twim-ms-calibration-mapping/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "twim-ms-calibration-mapping",
@@ -3070,7 +3070,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/twim-ms-data-processing/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/skill/twim-ms-data-processing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "twim-ms-data-processing",
@@ -3083,7 +3083,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MOCCal is a Python application for high-dimensional, multi-omic traveling-wave ion mobility mass spectrometry (TWIM-MS) data analysis.",
       "asbval:note": null,
@@ -3103,7 +3103,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MOCCal provides functionality for collision cross section (CCS) calibration.",
       "asbval:note": null,
@@ -3123,7 +3123,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MOCCal provides functionality for experimental data biomolecular class assignment.",
       "asbval:note": null,
@@ -3143,7 +3143,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MOCCal provides functionality for experimental class-specific CCS calculations.",
       "asbval:note": null,
@@ -3163,7 +3163,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MOCCal offers class assignment and CCS calculations without needing to identify features first.",
       "asbval:note": null,
@@ -3183,7 +3183,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The terms arrival time and drift time are used interchangeably within MOCCal software for convenience.",
       "asbval:note": "Text adds 'within MOCCal software' qualifier not present in source; source says 'within the software' generically",
@@ -3203,7 +3203,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.3c04290/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "TWIM platforms record the time at which the ion reaches the detector (arrival time) rather than the time an ion spends within the TWIM cell (drift time).",
       "asbval:note": null,

@@ -1826,7 +1826,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format",
       "asbval:note": "Paper discusses MsBackend implementations (MsBackendMgf, MsBackendMsp, MsBackendMassbank) but does not describe creating a new in-memory test backend or document the virtual class API requirements. The paper focuses on existing backends for file format support, not on implementing a test backend or documenting the MsBackend virtual class interface.",
@@ -1846,7 +1846,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The basic infrastructure for spectra similarity calculations is provided by the Spectra package with the compareSpectra() function.",
       "asbval:note": "Spectra is a core package in the ecosystem and is extensively discussed throughout the paper.",
@@ -1866,7 +1866,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors is not mentioned in any of the provided passages. While S4 object-oriented programming is likely used in the Spectra/MsBackend infrastructure (given the virtual class design pattern), S4Vectors is not explicitly named or discussed.",
@@ -1886,7 +1886,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We present an ecosystem of R packages, centered around the MetaboCoreUtils, MetaboAnnotation and CompoundDb packages",
       "asbval:note": "The entire ecosystem is built in R and the paper is about R packages.",
@@ -1906,7 +1906,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not describe creating a test backend implementation or provide guidance on implementing a complete MsBackendTest class. The paper discusses existing MsBackend implementations (MsBackendMgf, MsBackendMsp, MsBackendMassbank) for reading specific file formats, but does not document the virtual class API or provide examples of implementing a new backend from scratch.",
@@ -1926,7 +1926,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card asks for implementation of a virtual class API (MsBackend) and creation of a test backend, but the paper focuses on describing an ecosystem of R packages for metabolomics annotation, not on documenting the internal architecture or virtual class interfaces of the Spectra package.",
@@ -1943,7 +1943,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format",
       "asbval:note": "Paper discusses Spectra package and MsBackend classes (MsBackendMgf, MsBackendMsp, MsBackendMassbank) but does not mention a 'MsBackendTest' class or the specific behavior of fillCoreSpectraVariables() or spectraData() method returning NA for missing core variables. The research question appears to be about internal testing/development of the Spectra package infrastructure, which is not explicitly documented in the provided passages.",
@@ -1963,7 +1963,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of MsBackendTest class in any passage. The paper discusses MsBackendMgf, MsBackendMsp, and MsBackendMassbank as concrete backend implementations, but does not describe a test backend class or its implementation details.",
@@ -1983,7 +1983,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages insufficient to judge. While the paper mentions the Spectra package and spectraData() function in context of MS data handling, the specific behavior of returning DataFrames with NA-filled core variables is not documented in the provided excerpts.",
@@ -2003,7 +2003,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The basic infrastructure for spectra similarity calculations is provided by the Spectra package with the compareSpectra() function.",
       "asbval:note": "Spectra package is confirmed as a core component of the ecosystem.",
@@ -2023,7 +2023,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_002/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors is not mentioned in any of the provided passages. While it is a standard Bioconductor dependency for many packages, it is not explicitly referenced in this paper.",
@@ -2043,7 +2043,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/005",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_002/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We present an ecosystem of R packages, centered around the MetaboCoreUtils, MetaboAnnotation and CompoundDb packages",
       "asbval:note": "The entire ecosystem is built in R, confirmed throughout the paper.",
@@ -2063,7 +2063,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate task card describes a very specific internal testing/development task (MsBackendTest class, fillCoreSpectraVariables() behavior) that appears to be about unit testing infrastructure for the Spectra package, not a primary research contribution of the paper.",
@@ -2080,7 +2080,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss MsBackendTest, mz<- replacement methods, or implementation details of is.unsorted() vs vapply. The paper focuses on high-level annotation workflows and package architecture, not internal method implementations or efficiency comparisons of specific validation functions.",
@@ -2100,7 +2100,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The basic infrastructure for spectra similarity calculations is provided by the Spectra package with the compareSpectra() function.",
       "asbval:note": "Spectra is a core package in the ecosystem discussed throughout the paper.",
@@ -2120,7 +2120,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We present an ecosystem of R packages, centered around the MetaboCoreUtils, MetaboAnnotation and CompoundDb packages",
       "asbval:note": "The entire paper is about R packages and R-based workflows.",
@@ -2140,7 +2140,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors is not mentioned in the provided passages. While NumericList (referenced in the research question) is part of S4Vectors, the paper does not explicitly name or discuss S4Vectors. Insufficient evidence to confirm or deny.",
@@ -2160,7 +2160,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_003/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not describe validation reports for mz<- methods, is.unsorted() implementations, or testing of sorted m/z value assignment. The paper discusses unit tests broadly but not this specific validation scenario.",
@@ -2180,7 +2180,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate task card focuses on internal implementation details and method validation (mz<- replacement method, is.unsorted() efficiency) that are not addressed in this paper.",
@@ -2198,7 +2198,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_004/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper discusses the Spectra package and spectraData() function for MS2 annotation and data handling, but contains no discussion of memory tradeoffs between pre-populating @spectraVars versus on-the-fly column addition. The paper does not address this specific technical optimization question.",
@@ -2218,7 +2218,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_004/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The basic infrastructure for spectra similarity calculations is provided by the Spectra package with the compareSpectra() function.",
       "asbval:note": "Spectra is a core package in the ecosystem and is extensively discussed throughout the paper.",
@@ -2238,7 +2238,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_004/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We present an ecosystem of R packages, centered around the MetaboCoreUtils, MetaboAnnotation and CompoundDb packages",
       "asbval:note": "The entire paper is about R packages and R-based infrastructure.",
@@ -2258,7 +2258,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_004/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors is not mentioned in any of the provided passages. While S4Vectors is a standard Bioconductor dependency for many packages including Spectra, it is not explicitly named or discussed in the paper excerpts provided. Insufficient evidence to confirm or deny.",
@@ -2278,7 +2278,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_004/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not describe any benchmark or performance comparison table with these specific columns. No memory profiling or execution time measurements for spectraData() are discussed in the provided passages.",
@@ -2298,7 +2298,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/scope_drift",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_004/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate task card describes a highly specific technical optimization question about internal Spectra package data structure memory management (@spectraVars pre-population vs on-the-fly column addition). This is a micro-level implementation detail.",
@@ -2316,7 +2316,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_005/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'backendParallelFactor()' method, 'MsBackendMzR' package, or chunk-wise splitting strategies in any passage. The paper discusses Spectra package and various MsBackend packages (MsBackendMassbank, MsBackendMgf, MsBackendMsp) but does not mention MsBackendMzR or the specific method named. Parallelization is mentioned only briefly: 'Native parallelization is supported and can be configured with the BiocParallel package' (passage 6) in the context of matchSpectra(), but no details on backendParallelFactor() or memory chunking strategies.",
@@ -2336,7 +2336,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_005/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The basic infrastructure for spectra similarity calculations is provided by the Spectra package with the compareSpectra() function.",
       "asbval:note": "Spectra package is extensively discussed throughout the paper as a core component of the ecosystem.",
@@ -2356,7 +2356,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_005/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MsBackendMzR is not mentioned in any passage. The paper discusses MsBackendMassbank, MsBackendMgf, and MsBackendMsp, but not MsBackendMzR.",
@@ -2376,7 +2376,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_005/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We present an ecosystem of R packages, centered around the MetaboCoreUtils, MetaboAnnotation and CompoundDb packages",
       "asbval:note": "The entire paper is about R packages and R-based infrastructure.",
@@ -2396,7 +2396,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_005/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors is not mentioned in any of the provided passages. Insufficient information to determine if it is used in the paper.",
@@ -2416,7 +2416,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/005",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_005/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of backendParallelFactor() method or implementation of such a method in the paper. The paper does not describe development of this specific method.",
@@ -2436,7 +2436,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/006",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_005/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No memory benchmarking or comparison of chunk-wise versus whole-load approaches is described in the paper.",
@@ -2456,7 +2456,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/007",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_005/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No performance visualizations or memory usage comparisons across dataset sizes are described in the paper.",
@@ -2476,7 +2476,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/scope_drift",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/card/task_005/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate task card describes a very specific technical implementation task (backendParallelFactor() method for MsBackendMzR with memory benchmarking) that is not present in the paper.",
@@ -2494,7 +2494,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/backend-performance-tradeoff-analysis/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/backend-performance-tradeoff-analysis/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes MsBackend implementations and spectraData() API but does not discuss or benchmark memory consumption tradeoffs between eager vs. lazy initialization strategies. The paper focuses on functionality and modularity, not performance profiling of initialization strategies.",
@@ -2514,7 +2514,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/backend-performance-tradeoff-analysis/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/backend-performance-tradeoff-analysis/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No empirical benchmarking or cost\u2013benefit analysis of initialization strategies is presented in the paper. The paper does not compare eager vs. lazy population performance.",
@@ -2534,7 +2534,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/backend-performance-tradeoff-analysis/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/backend-performance-tradeoff-analysis/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The basic infrastructure for spectra similarity calculations is provided by the Spectra package with the compareSpectra() function... The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format",
       "asbval:note": "Spectra package is confirmed as central to the ecosystem. spectraData() and spectraVariables() are mentioned in context of MS2 annotation and data handling.",
@@ -2554,7 +2554,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/backend-performance-tradeoff-analysis/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/backend-performance-tradeoff-analysis/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors is not mentioned in the provided passages. The paper discusses DataFrame results from matchMz() and matchSpectra() but does not explicitly name S4Vectors as the source package.",
@@ -2574,7 +2574,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/backend-performance-tradeoff-analysis/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/backend-performance-tradeoff-analysis/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss or use object.size() or system.time() for profiling. No performance benchmarking methodology is presented.",
@@ -2594,7 +2594,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/backend-performance-tradeoff-analysis/005",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/backend-performance-tradeoff-analysis/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss @spectraVars slot design decisions, eager vs. lazy initialization strategies, or the specific tradeoff analysis described in the scope. The paper describes what the packages do, not how to optimize backend initialization.",
@@ -2614,7 +2614,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chunk-wise-data-processing-optimization/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/chunk-wise-data-processing-optimization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format",
       "asbval:note": "Paper describes Spectra package for importing MS data from multiple file formats and supports lazy loading via backends, but does not explicitly mention 'backendParallelFactor()' method or chunk-wise processing strategy. The paper focuses on modular annotation workflows rather than memory-efficient chunking strategies.",
@@ -2634,7 +2634,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chunk-wise-data-processing-optimization/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/chunk-wise-data-processing-optimization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The basic infrastructure for spectra similarity calculations is provided by the Spectra package with the compareSpectra() function... The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank",
       "asbval:note": "Spectra is confirmed as a core package in the ecosystem with backend support for multiple file formats.",
@@ -2654,7 +2654,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chunk-wise-data-processing-optimization/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/chunk-wise-data-processing-optimization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MsBackendMzR is not mentioned anywhere in the provided passages. The paper mentions MsBackendMgf, MsBackendMsp, and MsBackendMassbank as add-on packages to Spectra, but not MsBackendMzR. The backendParallelFactor() method is also not mentioned in any passage.",
@@ -2674,7 +2674,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chunk-wise-data-processing-optimization/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/chunk-wise-data-processing-optimization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors is not mentioned in the provided passages. While the paper discusses data structures and backends, it does not explicitly reference S4Vectors or its role in the ecosystem.",
@@ -2694,7 +2694,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chunk-wise-data-processing-optimization/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/chunk-wise-data-processing-optimization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "mzR is not mentioned in the provided passages. While the paper discusses reading mzML, mzXML, and netCDF files, it does not name mzR as the underlying package responsible for this functionality.",
@@ -2714,7 +2714,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chunk-wise-data-processing-optimization/005",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/chunk-wise-data-processing-optimization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Native parallelization is supported and can be configured with the BiocParallel package... The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files",
       "asbval:note": "Paper describes parallelization support via BiocParallel and multi-file import capability, but does not explicitly address chunk-wise processing strategy or memory-footprint reduction as a primary design goal. The focus is on modular annotation workflows rather than memory optimization.",
@@ -2734,7 +2734,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dataframe-and-numericlist-manipulation/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/dataframe-and-numericlist-manipulation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format. It is thus possible to use for example results from MS-DIAL or MZmine as input for matchSpectra by importing them with qry <- Spectra('mzmine_result.mgf', source = MsBackendMgf()).",
       "asbval:note": "Paper describes MsBackend implementations (MsBackendMgf, MsBackendMsp, MsBackendMassbank) and their integration with Spectra, but does not provide detailed documentation on constructing custom MsBackend classes using parallel data structures (DataFrame + NumericList). The paper focuses on using existing backends rather than implementing new ones from scratch.",
@@ -2754,7 +2754,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dataframe-and-numericlist-manipulation/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/dataframe-and-numericlist-manipulation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The infrastructure provides both high-level functions specifically designed for users less experienced with bioinformatic tools as well as low-level core functionality that can be easily integrated and re-used also in other R software packages. This ecosystem comprises the R packages MetaboAnnotation, Spectra, MsBackendMassbank, CompoundDb, MetaboCoreUtils and MsCoreUtils that are maintained under the umbrella of the RforMassSpectrometry initiative.",
       "asbval:note": "Spectra is confirmed as a core package in the ecosystem. The paper describes MsBackend implementations and their integration with Spectra, confirming the framework role.",
@@ -2774,7 +2774,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dataframe-and-numericlist-manipulation/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/dataframe-and-numericlist-manipulation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors is not mentioned in the provided passages. While the paper discusses data structures and the Spectra package infrastructure, it does not explicitly reference S4Vectors or its role in providing DataFrame and NumericList classes.",
@@ -2794,7 +2794,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dataframe-and-numericlist-manipulation/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/dataframe-and-numericlist-manipulation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "IRanges is not mentioned in the provided passages. The paper does not discuss NumericList or IRanges explicitly.",
@@ -2814,7 +2814,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dataframe-and-numericlist-manipulation/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/dataframe-and-numericlist-manipulation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We implemented a set of R packages that together provide a customizable infrastructure for the annotation and identification of features from untargeted metabolomics or small-compound MS experiments.",
       "asbval:note": "R is confirmed as the programming language for the ecosystem. The paper is about R packages for metabolomics data annotation.",
@@ -2834,7 +2834,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dataframe-construction-from-backend-sources/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/dataframe-construction-from-backend-sources/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format. It is thus possible to use for example results from MS-DIAL or MZmine as input for matchSpectra by importing them with qry <- Spectra('mzmine_result.mgf', source = MsBackendMgf()). Alternatively, query MS2 spectra can also be directly extracted from a xcms result objects with qry <- featureSpectra(xdata, return.type = 'Spectra').",
       "asbval:note": "Paper discusses Spectra package and MsBackend infrastructure for handling spectra data and multiple backend implementations (MsBackendMgf, MsBackendMsp, MsBackendMassbank), but does not explicitly describe the spectraData() method, fillCoreSpectraVariables() function, or the specific pattern of filling missing core variables with NA. The paper confirms the existence of MsBackend framework and multiple backend implementations but does not detail the DataFrame construction mechanism claimed in the research question.",
@@ -2854,7 +2854,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dataframe-construction-from-backend-sources/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/dataframe-construction-from-backend-sources/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The basic infrastructure for spectra similarity calculations is provided by the Spectra package with the compareSpectra() function. Spectra similarity calculations are performed as a two-step approach: first, peaks from the query and target spectrum are mapped to each other based on their m/z values and a given error (absolute or in ppm), and then a similarity score is calculated based on these matched peaks.",
       "asbval:note": "Paper confirms Spectra package exists and provides infrastructure for MS data handling and multiple backend implementations (MsBackendMgf, MsBackendMsp, MsBackendMassbank are explicitly mentioned). However, the paper does not explicitly mention the fillCoreSpectraVariables() utility function or detail the spectraData() method implementation pattern described in the card.",
@@ -2874,7 +2874,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dataframe-construction-from-backend-sources/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/dataframe-construction-from-backend-sources/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors package is not mentioned in any of the provided passages. While the paper discusses DataFrame-like result objects (Matched, MatchedSpectra) and data handling, it does not explicitly name S4Vectors as the source of the DataFrame class.",
@@ -2894,7 +2894,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dataframe-construction-from-backend-sources/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/dataframe-construction-from-backend-sources/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In the programming and statistical environment R, many software packages for metabolomics data annotation and identification already exist. Among more recently developed R tools are MetaboAnalystR 2.0, patRoon and metID.",
       "asbval:note": "Paper extensively discusses R packages and R-based implementation throughout. The ecosystem is built in R and uses S4 classes (implied by Bioconductor context and explicit mention of 'object-oriented approach').",
@@ -2914,7 +2914,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dataframe-lazy-loading-comparison/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/dataframe-lazy-loading-comparison/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format. The basic infrastructure for spectra similarity calculations is provided by the Spectra package with the compareSpectra() function.",
       "asbval:note": "Paper discusses Spectra package and MsBackend implementations but does not explicitly address or benchmark the eager vs. lazy population tradeoff for @spectraVars DataFrame. The paper describes the Spectra package architecture and backend functionality but does not present a benchmarking study comparing initialization strategies or memory/performance tradeoffs.",
@@ -2934,7 +2934,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dataframe-lazy-loading-comparison/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/dataframe-lazy-loading-comparison/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The infrastructure provides both high-level functions specifically designed for users less experienced with bioinformatic tools as well as low-level core functionality that can be easily integrated and re-used also in other R software packages.",
       "asbval:note": "Paper describes Spectra package backend implementations and their design but does not specifically address initialization timing choices or their effects on object footprint and accessor latency. The paper focuses on modular architecture and functionality rather than performance tradeoffs.",
@@ -2954,7 +2954,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dataframe-lazy-loading-comparison/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/dataframe-lazy-loading-comparison/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The infrastructure comprises the R packages MetaboAnnotation, Spectra, MsBackendMassbank, CompoundDb, MetaboCoreUtils and MsCoreUtils that are maintained under the umbrella of the RforMassSpectrometry initiative. The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format.",
       "asbval:note": "Paper confirms Spectra package exists and provides MsBackend functionality, but does not mention fillCoreSpectraVariables() method or explicitly discuss lazy-population mechanisms. The spectraData() method is not explicitly named in the passages provided.",
@@ -2974,7 +2974,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dataframe-lazy-loading-comparison/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/dataframe-lazy-loading-comparison/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors package is not mentioned in any of the provided passages. While the paper discusses DataFrame usage and data structures, it does not explicitly reference S4Vectors or discuss object.size() measurements.",
@@ -2994,7 +2994,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dataframe-lazy-loading-comparison/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/dataframe-lazy-loading-comparison/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The object.size() function is not mentioned in any of the provided passages. While the paper discusses R packages and infrastructure, it does not discuss memory profiling or benchmarking using object.size().",
@@ -3014,7 +3014,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/error-handling-confirmation/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/error-handling-confirmation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format",
       "asbval:note": "Paper describes MsBackend infrastructure and Spectra package for MS data handling, but does not explicitly discuss error-handling validation for replacement methods or m/z sorting constraints. The paper focuses on annotation workflows and data import/export rather than backend data integrity enforcement mechanisms.",
@@ -3034,7 +3034,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/error-handling-confirmation/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/error-handling-confirmation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The basic infrastructure for spectra similarity calculations is provided by the Spectra package with the compareSpectra() function... The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank",
       "asbval:note": "Paper confirms Spectra package exists and provides infrastructure for MS data handling and MsBackend packages, but does not explicitly discuss NumericList class or replacement method validation mechanisms.",
@@ -3054,7 +3054,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/error-handling-confirmation/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/error-handling-confirmation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors package is not mentioned anywhere in the paper passages. While the paper discusses m/z and intensity values extensively, there is no reference to S4Vectors or NumericList class.",
@@ -3074,7 +3074,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/error-handling-confirmation/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/error-handling-confirmation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss is.unsorted(), any(), or stop() functions. While R is the programming language used throughout, the paper does not describe these specific constraint-checking functions in the context of backend data validation.",
@@ -3094,7 +3094,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/error-handling-confirmation/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/error-handling-confirmation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss replacement methods like `mz<-` or `intensity<-`, nor does it describe MsBackend subclass implementation or data assignment validation. The focus is on annotation workflows and data import/export, not backend data integrity enforcement.",
@@ -3114,7 +3114,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-representation/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/mass-spectrometry-data-representation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsBackendMgf, MsBackendMsp, MsBackendMassbank and CompoundDb packages provide access to annotation resources and reference libraries for MS1 and MS2 annotation... The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format",
       "asbval:note": "Paper describes existing MsBackend implementations (MsBackendMgf, MsBackendMsp, MsBackendMassbank) for specific formats and sources, but does not discuss designing or implementing custom MsBackend subclasses as a general skill. The paper presents these as pre-built tools, not as a tutorial on how to create new backends.",
@@ -3134,7 +3134,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-representation/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/mass-spectrometry-data-representation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The basic infrastructure for spectra similarity calculations is provided by the Spectra package with the compareSpectra() function... The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank",
       "asbval:note": "Spectra is confirmed as the core package for MS spectra handling and comparison.",
@@ -3154,7 +3154,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-representation/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/mass-spectrometry-data-representation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors is not mentioned in any of the provided passages. Cannot verify whether it is used for DataFrame/NumericList in this ecosystem.",
@@ -3174,7 +3174,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-representation/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/mass-spectrometry-data-representation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MsBackendMemory is not explicitly mentioned in the provided passages. The paper discusses MsBackendMgf, MsBackendMsp, MsBackendMassbank but not MsBackendMemory.",
@@ -3194,7 +3194,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-representation/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/mass-spectrometry-data-representation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MsBackendMzR is not mentioned in the provided passages.",
@@ -3214,7 +3214,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-representation/005",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/mass-spectrometry-data-representation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MsBackendDataFrame is not mentioned in the provided passages.",
@@ -3234,7 +3234,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-representation/006",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/mass-spectrometry-data-representation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format",
       "asbval:note": "MsBackendMgf is confirmed to exist and handle MGF format, but the paper does not describe it as extending MsBackendDataFrame or provide implementation details about its architecture.",
@@ -3254,7 +3254,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-representation/007",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/mass-spectrometry-data-representation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Through the MsBackendMassbank package, it is also possible to directly interact with a MassBank SQL database hence not requiring import or export of thousands of individual records.",
       "asbval:note": "Paper mentions SQL database interaction via MsBackendMassbank, but does not explicitly name or describe MsBackendSql as a separate tool for general SQL database access.",
@@ -3274,7 +3274,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-representation/008",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/mass-spectrometry-data-representation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We implemented a set of R packages... In the programming and statistical environment R, many software packages for metabolomics data annotation and identification already exist",
       "asbval:note": "R is confirmed as the programming environment for all packages in the ecosystem.",
@@ -3294,7 +3294,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/memory-profiling-and-benchmarking/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/memory-profiling-and-benchmarking/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss memory profiling, benchmarking, or comparison of memory consumption across computational strategies. The paper focuses on annotation workflows, modular infrastructure, and data handling for metabolomics, not on memory optimization or profiling techniques for MS backends.",
@@ -3314,7 +3314,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/memory-profiling-and-benchmarking/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/memory-profiling-and-benchmarking/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format",
       "asbval:note": "The paper confirms Spectra exists and provides MS data handling, but does not discuss memory profiling or benchmarking functionality. The paper does not describe wrapping Spectra objects to measure memory during data access.",
@@ -3334,7 +3334,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/memory-profiling-and-benchmarking/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/memory-profiling-and-benchmarking/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MsBackendMzR is not mentioned in the paper. The paper discusses MsBackendMgf, MsBackendMsp, and MsBackendMassbank, but not MsBackendMzR. No discussion of on-disk vs. in-memory backend comparison or memory optimization.",
@@ -3354,7 +3354,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/memory-profiling-and-benchmarking/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/memory-profiling-and-benchmarking/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MsBackendMemory is not mentioned in the paper. The paper does not discuss in-memory backends or baseline memory measurement comparisons.",
@@ -3374,7 +3374,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/memory-profiling-and-benchmarking/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/memory-profiling-and-benchmarking/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors is not mentioned in the paper. While the paper discusses data structures and backends, it does not reference S4Vectors or discuss memory layout and allocation patterns.",
@@ -3394,7 +3394,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/memory-profiling-and-benchmarking/005",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/memory-profiling-and-benchmarking/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We implemented a set of R packages that together provide a customizable infrastructure for the annotation and identification of features from untargeted metabolomics or small-compound MS experiments.",
       "asbval:note": "The paper is about R packages for metabolomics annotation, confirming R is the implementation language.",
@@ -3414,7 +3414,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/missing-value-imputation-with-na/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/missing-value-imputation-with-na/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format",
       "asbval:note": "Paper discusses Spectra package and MsBackend implementations (MsBackendMgf, MsBackendMsp, MsBackendMassbank) but does not explicitly describe the fillCoreSpectraVariables() function or NA-filling strategy for missing core variables. The paper focuses on annotation workflows and data import/export rather than backend implementation details.",
@@ -3434,7 +3434,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/missing-value-imputation-with-na/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/missing-value-imputation-with-na/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank",
       "asbval:note": "Paper confirms Spectra package exists and discusses MsBackend implementations, but does not mention fillCoreSpectraVariables() function explicitly. The paper focuses on user-facing annotation functions (matchSpectra, compareSpectra) rather than backend implementation utilities.",
@@ -3454,7 +3454,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/missing-value-imputation-with-na/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/missing-value-imputation-with-na/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors package is not mentioned in the provided passages. While the paper discusses DataFrame objects and spectraData() methods, it does not explicitly reference S4Vectors or discuss DataFrame implementation details.",
@@ -3474,7 +3474,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/missing-value-imputation-with-na/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/missing-value-imputation-with-na/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MsBackendMemory is not mentioned in the paper. The paper discusses MsBackendMgf, MsBackendMsp, and MsBackendMassbank as backend implementations, but does not reference MsBackendMemory.",
@@ -3494,7 +3494,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/missing-value-imputation-with-na/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/missing-value-imputation-with-na/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "library(Spectra)\nlibrary(IRanges)",
       "asbval:note": "Paper demonstrates R usage with Spectra package and related libraries. The extensive list of related_skills in the card is not directly validated by the paper passages, but R is confirmed as the programming language used.",
@@ -3514,7 +3514,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-backend-api-implementation/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/ms-backend-api-implementation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format",
       "asbval:note": "Paper demonstrates the MsBackend architecture and multiple backend implementations (MsBackendMgf, MsBackendMsp, MsBackendMassbank) that extend the Spectra framework to support diverse data sources.",
@@ -3534,7 +3534,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-backend-api-implementation/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/ms-backend-api-implementation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The infrastructure provides both high-level functions specifically designed for users less experienced with bioinformatic tools as well as low-level core functionality that can be easily integrated and re-used also in other R software packages",
       "asbval:note": "Paper describes the modular ecosystem supporting diverse data sources and access patterns through the Spectra and backend packages.",
@@ -3554,7 +3554,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-backend-api-implementation/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/ms-backend-api-implementation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The infrastructure comprises the R packages MetaboAnnotation, Spectra, MsBackendMassbank, CompoundDb, MetaboCoreUtils and MsCoreUtils that are maintained under the umbrella of the RforMassSpectrometry initiative",
       "asbval:note": "Spectra is confirmed as a core package in the ecosystem.",
@@ -3574,7 +3574,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-backend-api-implementation/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/ms-backend-api-implementation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors is not mentioned in the provided passages. While the paper discusses data structures and containers, it does not explicitly name S4Vectors as a dependency or describe its role in providing DataFrame or NumericList classes.",
@@ -3594,7 +3594,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-backend-api-implementation/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/ms-backend-api-implementation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MsBackendMemory is not mentioned in the passages. The paper references MsBackendMgf, MsBackendMsp, and MsBackendMassbank as backend implementations, but does not discuss MsBackendMemory.",
@@ -3614,7 +3614,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-backend-api-implementation/005",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/ms-backend-api-implementation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MsBackendMzR is not mentioned in the passages. The paper discusses on-disk access patterns but does not name MsBackendMzR specifically.",
@@ -3634,7 +3634,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-backend-api-implementation/006",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/ms-backend-api-implementation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MsBackendSql is not mentioned in the passages. The paper discusses SQL databases in the context of CompoundDb and MassBank access but does not reference MsBackendSql.",
@@ -3654,7 +3654,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-backend-api-implementation/007",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/ms-backend-api-implementation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format",
       "asbval:note": "These three backend packages are explicitly mentioned as part of the Spectra ecosystem for supporting diverse file formats.",
@@ -3674,7 +3674,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-backend-api-implementation/008",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/ms-backend-api-implementation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The ecosystem is expandable because external or user-defined functions can be used as alternatives to package-internal ones in the various annotation functions",
       "asbval:note": "Paper confirms the expandable nature of the ecosystem and the ability to integrate custom implementations.",
@@ -3694,7 +3694,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-backend-api-implementation/009",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/ms-backend-api-implementation/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The infrastructure comprises the R packages MetaboAnnotation, Spectra, MsBackendMassbank, CompoundDb, MetaboCoreUtils and MsCoreUtils that are maintained under the umbrella of the RforMassSpectrometry initiative",
       "asbval:note": "Paper describes a modular architecture with standardized interfaces, though it does not explicitly use the term 'virtual MsBackend API'.",
@@ -3714,7 +3714,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-data-constraint-enforcement/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/ms-data-constraint-enforcement/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format",
       "asbval:note": "Paper discusses MsBackend classes and Spectra package infrastructure for MS data handling, but does not explicitly discuss constraint enforcement, validation of m/z sort order, or NumericList-based vectorised validation methods. The paper focuses on annotation workflows and data import/export rather than backend data integrity constraints.",
@@ -3734,7 +3734,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-data-constraint-enforcement/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/ms-data-constraint-enforcement/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The basic infrastructure for spectra similarity calculations is provided by the Spectra package with the compareSpectra() function... The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank",
       "asbval:note": "Paper confirms Spectra package exists and provides infrastructure for MS data handling and backend classes (MsBackendMgf, MsBackendMsp, MsBackendMassbank), but does not discuss NumericList-based peak data infrastructure or constraint enforcement methods.",
@@ -3754,7 +3754,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-data-constraint-enforcement/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/ms-data-constraint-enforcement/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors package is not mentioned anywhere in the paper passages. No discussion of NumericList class or is.unsorted() validation methods appears in the provided text.",
@@ -3774,7 +3774,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-data-constraint-enforcement/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/ms-data-constraint-enforcement/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MsBackendTest is not mentioned in the paper. The paper discusses MsBackendMgf, MsBackendMsp, and MsBackendMassbank but not MsBackendTest. No discussion of mz<- replacement methods or constraint enforcement in backend classes appears.",
@@ -3794,7 +3794,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-data-constraint-enforcement/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/ms-data-constraint-enforcement/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "library(Spectra)",
       "asbval:note": "Paper mentions Spectra package usage but does not show IRanges library usage. The card claims both libraries are used together for constraint enforcement, but paper does not demonstrate this combination or the constraint enforcement use case.",
@@ -3814,7 +3814,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-data-constraint-enforcement/005",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/ms-data-constraint-enforcement/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss implementing MsBackend classes, replacement methods (mz<-, intensity<-), validation of unsorted peak data, or API specifications requiring m/z sort order. The paper focuses on using existing backends for annotation workflows, not implementing or validating backend constraints.",
@@ -3834,7 +3834,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/parallel-factor-generation-from-metadata/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/parallel-factor-generation-from-metadata/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format",
       "asbval:note": "Paper describes Spectra package and MsBackend infrastructure for MS data handling and import from multiple file formats, but does not explicitly discuss or demonstrate chunk-wise parallel processing, memory-efficient batch processing, or generation of grouping factors from dataStorage metadata for this purpose. The paper focuses on annotation workflows rather than memory-optimized data processing strategies.",
@@ -3854,7 +3854,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/parallel-factor-generation-from-metadata/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/parallel-factor-generation-from-metadata/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The infrastructure provides both high-level functions specifically designed for users less experienced with bioinformatic tools as well as low-level core functionality that can be easily integrated and re-used also in other R software packages. 2.1.1. Overview and ArchitectureThis ecosystem comprises the R packages MetaboAnnotation, Spectra, MsBackendMassbank, CompoundDb, MetaboCoreUtils and MsCoreUtils",
       "asbval:note": "Spectra is confirmed as a core package in the ecosystem. The paper describes it as part of the infrastructure but does not explicitly detail the @backend slot or virtual class architecture in the provided passages.",
@@ -3874,7 +3874,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/parallel-factor-generation-from-metadata/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/parallel-factor-generation-from-metadata/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MsBackendMzR is not mentioned in any of the provided passages. The paper mentions MsBackendMgf, MsBackendMsp, and MsBackendMassbank as backend packages, and discusses support for mzML, mzXML, and netCDF formats, but does not name or describe MsBackendMzR specifically.",
@@ -3894,7 +3894,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/parallel-factor-generation-from-metadata/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/parallel-factor-generation-from-metadata/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors is not mentioned in any of the provided passages. While the paper discusses data structures and spectra variables, it does not explicitly reference S4Vectors or its DataFrame and NumericList classes.",
@@ -3914,7 +3914,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/parallel-factor-generation-from-metadata/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/parallel-factor-generation-from-metadata/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "mzR is not mentioned in any of the provided passages. While the paper discusses parsing and importing MS data from various formats, it does not name mzR as the underlying parser.",
@@ -3934,7 +3934,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/parallel-factor-generation-from-metadata/005",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/parallel-factor-generation-from-metadata/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "All core functionality, which supports base R data types, is exported, also facilitating its re-use in other R packages.",
       "asbval:note": "The paper confirms R as the programming environment and discusses base R data types and package ecosystem. However, the specific skills listed (parallel-factor-generation-from-metadata, memory-profiling-and-benchmarking, chunk-wise-data-processing-optimization) are not explicitly discussed in the provided passages. The paper focuses on annotation workflows, not memory optimization or parallel processing strategies.",
@@ -3954,7 +3954,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/parallel-factor-generation-from-metadata/006",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/parallel-factor-generation-from-metadata/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format",
       "asbval:note": "Paper confirms Spectra supports on-disk MS data sources from mzML, mzXML, and netCDF (CDF) formats, but does not discuss parallel or serial chunk-wise processing. The scope description assumes MsBackendMzR exists and is used for this purpose, but MsBackendMzR is not mentioned in the paper.",
@@ -3974,7 +3974,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/parallel-factor-generation-from-metadata/007",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/parallel-factor-generation-from-metadata/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss on-the-fly peak data retrieval, dataStorage metadata, or memory profiling considerations for large-scale spectra processing. These are implementation details not covered in the provided passages.",
@@ -3994,7 +3994,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-data-extraction-and-formatting/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/peak-data-extraction-and-formatting/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format. It is thus possible to use for example results from MS-DIAL or MZmine as input for matchSpectra by importing them with qry <- Spectra('mzmine_result.mgf', source = MsBackendMgf()). Alternatively, query MS2 spectra can also be directly extracted from a xcms result objects with qry <- featureSpectra(xdata, return.type = 'Spectra').",
       "asbval:note": "Paper discusses Spectra package and MsBackend classes but does not explicitly detail peak data extraction methods (peaksData(), intensity(), mz()) or NumericList/matrix formatting. The paper focuses on high-level annotation workflows rather than backend implementation details. The card's claim about 'implementing standardized accessor methods' and 'NumericList or matrix structures' is not directly addressed in the passages.",
@@ -4014,7 +4014,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-data-extraction-and-formatting/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/peak-data-extraction-and-formatting/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The infrastructure provides both high-level functions specifically designed for users less experienced with bioinformatic tools as well as low-level core functionality that can be easily integrated and re-used also in other R software packages. 2.1.1. Overview and ArchitectureThis ecosystem comprises the R packages MetaboAnnotation, Spectra, MsBackendMassbank, CompoundDb, MetaboCoreUtils and MsCoreUtils that are maintained under the umbrella of the RforMassSpectrometry initiative",
       "asbval:note": "Spectra is confirmed as a core package in the ecosystem. The paper discusses Spectra's role in providing infrastructure for MS data handling and annotation.",
@@ -4034,7 +4034,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-data-extraction-and-formatting/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/peak-data-extraction-and-formatting/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors is not mentioned in any of the provided passages. Cannot verify whether it is used in the paper or what role it plays.",
@@ -4054,7 +4054,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-data-extraction-and-formatting/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/peak-data-extraction-and-formatting/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "IRanges is not mentioned in any of the provided passages. Cannot verify whether it is imported by Spectra or used for peak data operations in this paper.",
@@ -4074,7 +4074,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-data-extraction-and-formatting/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/peak-data-extraction-and-formatting/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MsBackendMemory is not mentioned in any of the provided passages. The paper mentions MsBackendMgf, MsBackendMsp, and MsBackendMassbank but not MsBackendMemory. The specific methods peaksData(), intensity(), and mz() are also not discussed in the passages.",
@@ -4094,7 +4094,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-data-extraction-and-formatting/005",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/peak-data-extraction-and-formatting/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MsBackendMzR is not mentioned in any of the provided passages. The paper discusses MsBackendMgf, MsBackendMsp, and MsBackendMassbank but not MsBackendMzR. The lazy loading pattern and peaksData() method are not discussed.",
@@ -4114,7 +4114,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-data-extraction-and-formatting/006",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/peak-data-extraction-and-formatting/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "All packages are part of the Bioconductor project guaranteeing reliability, availability, and longtime support.",
       "asbval:note": "R is confirmed as the programming environment (paper is about R packages), and Spectra is confirmed as a package. However, IRanges is not mentioned in the passages, so the evidence_spans claim about 'library(Spectra)' and 'library(IRanges)' cannot be fully verified from the provided text.",
@@ -4134,7 +4134,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-object-size-measurement-and-benchmarking/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/r-object-size-measurement-and-benchmarking/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss object.size() profiling, timing measurements, or memory\u2013speed tradeoffs in data structure design. The paper focuses on annotation workflows, not performance benchmarking or memory profiling of R objects. No mention of eager vs. lazy initialization strategies.",
@@ -4154,7 +4154,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-object-size-measurement-and-benchmarking/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/r-object-size-measurement-and-benchmarking/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss fillCoreSpectraVariables(), eager vs. lazy population strategies, or memory/latency benchmarking of spectraData() calls. The paper describes the spectraData() method as part of MS2 annotation workflows but does not address performance optimization or memory tradeoffs.",
@@ -4174,7 +4174,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-object-size-measurement-and-benchmarking/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/r-object-size-measurement-and-benchmarking/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format [17]. It is thus possible to use for example results from MS-DIAL or MZmine as input for matchSpectra by importing them with qry <- Spectra('mzmine_result.mgf', source = MsBackendMgf()). Alternatively, query MS2 spectra can also be directly extracted from a xcms result objects with qry <- featureSpectra(xdata, return.type = 'Spectra'). As target parameter (variable db in the example above), either a CompDb database or a Spectra object with data imported from MSP or MGF files can be used.",
       "asbval:note": "The paper confirms Spectra package exists and provides spectraData() method and backend framework (MsBackendMgf, MsBackendMsp, MsBackendMassbank), but does NOT discuss MsBackendTest or memory/latency tradeoffs. The card's claim about using these tools for benchmarking memory\u2013speed tradeoffs is not supported by the paper.",
@@ -4194,7 +4194,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-object-size-measurement-and-benchmarking/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/r-object-size-measurement-and-benchmarking/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages insufficient to judge. The paper does not mention S4Vectors or DataFrame class in the provided excerpts. While spectraData() is mentioned, the return type and its relationship to S4Vectors is not discussed.",
@@ -4214,7 +4214,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-object-size-measurement-and-benchmarking/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/r-object-size-measurement-and-benchmarking/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention object.size(), system.time(), or any memory/timing profiling utilities. These are base R functions but are not discussed in the context of this paper's work.",
@@ -4234,7 +4234,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-definition-and-inheritance/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-definition-and-inheritance/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We implemented a set of R packages that together provide a customizable infrastructure for the annotation and identification of features from untargeted LC-MS and LC-MS/MS experiments using established methods... The infrastructure provides both high-level functions specifically designed for users less experienced with bioinformatic tools as well as low-level core functionality that can be easily integrated and re-used also in other R software packages.",
       "asbval:note": "The paper describes building an extensible infrastructure with modular R packages, but does not explicitly discuss S4 class definition, virtual parent classes, or slot/method implementation. The paper focuses on the ecosystem's modularity and API contracts at a functional level rather than S4 OOP mechanics. The claim about S4 class extension is not directly supported by the passages.",
@@ -4254,7 +4254,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-definition-and-inheritance/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-definition-and-inheritance/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The infrastructure comprises the R packages MetaboAnnotation, Spectra, MsBackendMassbank, CompoundDb, MetaboCoreUtils and MsCoreUtils that are maintained under the umbrella of the RforMassSpectrometry initiative... The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format.",
       "asbval:note": "Spectra is confirmed as a core package in the ecosystem. The paper mentions MsBackend implementations (MsBackendMgf, MsBackendMsp, MsBackendMassbank) as add-on packages, implying a backend architecture, though the paper does not explicitly name 'MsBackend' as a virtual parent class.",
@@ -4274,7 +4274,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-definition-and-inheritance/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-definition-and-inheritance/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors is not mentioned in any of the provided passages. The paper discusses data structures and accessor methods but does not name S4Vectors explicitly or discuss DataFrame and NumericList in the context of return types.",
@@ -4294,7 +4294,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-definition-and-inheritance/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-definition-and-inheritance/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "IRanges is not mentioned in any of the provided passages. The paper does not discuss IRanges or its role in S4 class integration.",
@@ -4314,7 +4314,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-definition-and-inheritance/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-definition-and-inheritance/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "All packages are part of the Bioconductor project guaranteeing reliability, availability, and longtime support... All core functionality, which supports base R data types, is exported, also facilitating its re-use in other R packages.",
       "asbval:note": "The paper confirms R as the programming language and mentions Bioconductor packages, but the specific library() calls cited in evidence_spans are not present in the provided passages. The paper discusses R packages and base R data types but does not show the exact code snippets claimed.",
@@ -4334,7 +4334,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-definition-and-inheritance/005",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-definition-and-inheritance/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsBackendMgf, MsBackendMsp, MsBackendMassbank and CompoundDb packages provide access to annotation resources and reference libraries for MS1 and MS2 annotation... The functionality from all these packages is well integrated with other Bioconductor R packages such as xcms, from which pre-processing results can be directly used as the starting point for the annotation workflow.",
       "asbval:note": "The paper describes multiple backend implementations (MsBackendMgf, MsBackendMsp, MsBackendMassbank) that integrate with Spectra, supporting the concept of backend design. However, the paper does not explicitly discuss virtual parent classes, API contracts, or the mechanics of extending them via S4 class definition.",
@@ -4354,7 +4354,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-definition-and-inheritance/006",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-definition-and-inheritance/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format.",
       "asbval:note": "The paper confirms that existing backends exist for various file formats (mzML, mzXML, netCDF, MGF, MSP, MassBank). However, MsBackendMzR and MsBackendSql are not explicitly named in the passages; the paper mentions MsBackendMassbank for MassBank SQL databases but does not name 'MsBackendSql' specifically.",
@@ -4374,7 +4374,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-definition-and-slot-management/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-definition-and-slot-management/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The infrastructure provides both high-level functions specifically designed for users less experienced with bioinformatic tools as well as low-level core functionality that can be easily integrated and re-used also in other R software packages.",
       "asbval:note": "Paper describes modular R packages for MS data annotation but does not explicitly discuss S4 class design, typed slots, or backend implementation details. The paper focuses on high-level annotation workflows and package architecture rather than low-level S4 OOP patterns. The claim about S4 class design for MsBackend subclassing is not directly addressed in the passages.",
@@ -4394,7 +4394,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-definition-and-slot-management/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-definition-and-slot-management/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The infrastructure comprises the R packages MetaboAnnotation, Spectra, MsBackendMassbank, CompoundDb, MetaboCoreUtils and MsCoreUtils that are maintained under the umbrella of the RforMassSpectrometry initiative",
       "asbval:note": "Spectra is confirmed as a core package in the ecosystem. The paper mentions MsBackend backends (MsBackendMgf, MsBackendMsp, MsBackendMassbank) but does not explicitly detail the MsBackend virtual class or its S4 structure.",
@@ -4414,7 +4414,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-definition-and-slot-management/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-definition-and-slot-management/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors is not mentioned anywhere in the provided passages. While the paper discusses data structures and MS data handling, it does not reference S4Vectors or discuss NumericList classes.",
@@ -4434,7 +4434,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-definition-and-slot-management/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-definition-and-slot-management/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss S4 OOP system, setClass(), setMethod(), or setValidity() functions. These are base R functions but their use in the context of this paper's packages is not documented in the passages.",
@@ -4454,7 +4454,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-definition-and-slot-management/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-definition-and-slot-management/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsBackendMgf, MsBackendMsp, MsBackendMassbank and CompoundDb packages provide access to annotation resources and reference libraries for MS1 and MS2 annotation.",
       "asbval:note": "Paper confirms existence of MsBackend implementations (MsBackendMgf, MsBackendMsp, MsBackendMassbank) but does not discuss the process of extending MsBackend or the S4 class design patterns involved.",
@@ -4474,7 +4474,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-definition-and-slot-management/005",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-definition-and-slot-management/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This type of analysis yields features, defined as mass-to-charge-ratios (m/z)-retention time (RT) pairs, their corresponding intensity or peak area in the respective samples and potentially one or more associated fragmentation spectra.",
       "asbval:note": "Paper discusses m/z, intensity, and retention time data but does not explicitly address S4 slot validation, type safety, or the specific data structure design patterns claimed in the card.",
@@ -4494,7 +4494,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-extension-for-backend-implementation/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-extension-for-backend-implementation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsBackendMgf, MsBackendMsp, MsBackendMassbank and CompoundDb packages provide access to annotation resources and reference libraries for MS1 and MS2 annotation.",
       "asbval:note": "Paper describes existing backend implementations (MsBackendMgf, MsBackendMsp, MsBackendMassbank) but does not explicitly discuss designing or implementing custom S4 classes extending MsBackend. The paper focuses on using these backends rather than creating new ones.",
@@ -4514,7 +4514,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-extension-for-backend-implementation/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-extension-for-backend-implementation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsBackendMgf, MsBackendMsp, MsBackendMassbank and CompoundDb packages provide access to annotation resources and reference libraries for MS1 and MS2 annotation. The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format.",
       "asbval:note": "Paper demonstrates multiple storage/access strategies (on-disk via mzML/mzXML/netCDF, database via MassBank SQL, file formats via MGF/MSP) integrated into Spectra ecosystem.",
@@ -4534,7 +4534,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-extension-for-backend-implementation/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-extension-for-backend-implementation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The infrastructure provides both high-level functions specifically designed for users less experienced with bioinformatic tools as well as low-level core functionality that can be easily integrated and re-used also in other R software packages. This ecosystem comprises the R packages MetaboAnnotation, Spectra, MsBackendMassbank, CompoundDb, MetaboCoreUtils and MsCoreUtils",
       "asbval:note": "Spectra is confirmed as core package providing integration framework. MsBackend virtual class is referenced implicitly through backend implementations.",
@@ -4554,7 +4554,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-extension-for-backend-implementation/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-extension-for-backend-implementation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MsBackendMzR is not mentioned in the paper. The paper mentions MsBackendMgf, MsBackendMsp, and MsBackendMassbank but not MsBackendMzR. Paper does mention mzML, mzXML, and netCDF support but does not name the specific backend package.",
@@ -4574,7 +4574,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-extension-for-backend-implementation/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-extension-for-backend-implementation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors is not mentioned in the paper. While the paper discusses data structures and backend implementations, it does not explicitly reference S4Vectors or NumericList.",
@@ -4594,7 +4594,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-extension-for-backend-implementation/005",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-extension-for-backend-implementation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "IRanges is not mentioned in the paper. No discussion of range-based data manipulation in backend context.",
@@ -4614,7 +4614,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-extension-for-backend-implementation/006",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-extension-for-backend-implementation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "All packages are part of the Bioconductor project guaranteeing reliability, availability, and longtime support.",
       "asbval:note": "Paper confirms Spectra is a Bioconductor R package but does not provide code examples showing library() calls or IRanges usage. IRanges is not mentioned in the paper.",
@@ -4634,7 +4634,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-method-inspection/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-method-inspection/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsBackendMgf, MsBackendMsp, MsBackendMassbank and CompoundDb packages provide access to annotation resources and reference libraries for MS1 and MS2 annotation... The infrastructure provides both high-level functions specifically designed for users less experienced with bioinformatic tools as well as low-level core functionality that can be easily integrated and re-used also in other R software packages.",
       "asbval:note": "Paper discusses MsBackend implementations and backend packages but does not explicitly discuss S4 replacement methods, validation logic, or vectorized efficiency checks on complex data structures like NumericList. The paper focuses on annotation workflows and data handling, not on S4 method inspection or validation auditing techniques.",
@@ -4654,7 +4654,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-method-inspection/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-method-inspection/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The basic infrastructure for spectra similarity calculations is provided by the Spectra package with the compareSpectra() function... The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format.",
       "asbval:note": "Paper confirms Spectra package exists and mentions MsBackend-related packages (MsBackendMgf, MsBackendMsp, MsBackendMassbank), but does not discuss S4 replacement methods, validation logic implementation, or the specific technical details claimed in the card.",
@@ -4674,7 +4674,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-method-inspection/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-method-inspection/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors package is not mentioned anywhere in the paper passages. The paper does not discuss NumericList containers or is.unsorted() methods.",
@@ -4694,7 +4694,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-method-inspection/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-method-inspection/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We implemented a set of R packages... In the programming and statistical environment R, many software packages for metabolomics data annotation and identification already exist.",
       "asbval:note": "Paper confirms R is the language/runtime environment used for the package ecosystem.",
@@ -4714,7 +4714,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-method-inspection/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-method-inspection/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss S4 replacement methods, mz<- methods, NumericList validation, or vectorized constraint checking. The paper focuses on annotation workflows and data handling, not on S4 method implementation details or validation auditing.",
@@ -4734,7 +4734,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-object-memory-profiling/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-object-memory-profiling/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss S4 object memory profiling, object.size() measurements, or tradeoffs between eager vs. lazy initialization strategies. The paper focuses on the design and functionality of R packages for metabolomics annotation (MetaboAnnotation, Spectra, CompoundDb, etc.), not on memory optimization or profiling techniques for S4 backends.",
@@ -4754,7 +4754,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-object-memory-profiling/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-object-memory-profiling/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In the programming and statistical environment R, many software packages for metabolomics data annotation and identification already exist",
       "asbval:note": "Paper confirms R is the environment used, but does not discuss object.size() profiling or timing comparisons. R is used for package development and annotation workflows, not for memory profiling as the card claims.",
@@ -4774,7 +4774,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-object-memory-profiling/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-object-memory-profiling/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not mention S4Vectors package explicitly. While the paper discusses Spectra objects and spectraData() function, there is insufficient information to confirm S4Vectors' role in providing DataFrame class for spectraData() output.",
@@ -4794,7 +4794,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-object-memory-profiling/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-object-memory-profiling/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The infrastructure provides both high-level functions specifically designed for users less experienced with bioinformatic tools as well as low-level core functionality that can be easily integrated and re-used also in other R software packages. 2.1.1. Overview and ArchitectureThis ecosystem comprises the R packages MetaboAnnotation, Spectra, MsBackendMassbank, CompoundDb, MetaboCoreUtils and MsCoreUtils that are maintained under the umbrella of the RforMassSpectrometry initiative",
       "asbval:note": "Paper confirms Spectra package exists and mentions MsBackend classes (MsBackendMassbank, MsBackendMgf, MsBackendMsp are explicitly named), but does not discuss memory profiling, object.size() measurements, or optimization of these backends. The card's claim about profiling these backends for memory tradeoffs is not supported by the paper.",
@@ -4814,7 +4814,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectra-data-extraction-and-subsetting/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectra-data-extraction-and-subsetting/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format",
       "asbval:note": "Paper discusses Spectra package and MsBackend infrastructure but does not explicitly name or demonstrate the accessor methods peaksData(), intensity(), mz(), or extractByIndex(). The paper focuses on high-level annotation functions (matchMz, matchSpectra) rather than low-level peak data extraction APIs. Functions mentioned are compareSpectra(), featureSpectra(), and matchSpectra() for spectra handling, not the specific accessor methods claimed.",
@@ -4834,7 +4834,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectra-data-extraction-and-subsetting/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectra-data-extraction-and-subsetting/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The infrastructure provides both high-level functions specifically designed for users less experienced with bioinformatic tools as well as low-level core functionality that can be easily integrated and re-used also in other R software packages.",
       "asbval:note": "Paper mentions modular infrastructure and low-level functionality but does not explicitly discuss chunk-wise loading or memory footprint reduction strategies. The concept of on-disk backends and lazy loading is implied but not explicitly demonstrated with the specific methods claimed.",
@@ -4854,7 +4854,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectra-data-extraction-and-subsetting/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectra-data-extraction-and-subsetting/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The infrastructure comprises the R packages MetaboAnnotation, Spectra, MsBackendMassbank, CompoundDb, MetaboCoreUtils and MsCoreUtils that are maintained under the umbrella of the RforMassSpectrometry initiative",
       "asbval:note": "Spectra package is confirmed as part of the ecosystem. The paper describes it as providing infrastructure for MS data handling and spectra comparison, consistent with the S4 class wrapper role.",
@@ -4874,7 +4874,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectra-data-extraction-and-subsetting/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectra-data-extraction-and-subsetting/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format",
       "asbval:note": "Paper confirms support for mzML, mzXML, and netCDF file formats through Spectra and backend packages, but does not explicitly name MsBackendMzR. The paper mentions MsBackendMgf, MsBackendMsp, and MsBackendMassbank as add-on packages but not MsBackendMzR. The backendParallelFactor() method is not mentioned in the passages.",
@@ -4894,7 +4894,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectra-data-extraction-and-subsetting/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectra-data-extraction-and-subsetting/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors package is not mentioned in any of the provided passages. Cannot verify whether it is used for NumericList and DataFrame classes in this context.",
@@ -4914,7 +4914,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectra-data-extraction-and-subsetting/005",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectra-data-extraction-and-subsetting/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "mzR is not mentioned in the provided passages. While the paper discusses reading mzML/mzXML/CDF files, it does not explicitly name mzR as the underlying library.",
@@ -4934,7 +4934,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectra-data-extraction-and-subsetting/006",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectra-data-extraction-and-subsetting/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We implemented a set of R packages that together provide a customizable infrastructure for the annotation and identification of features from untargeted metabolomics or small-compound MS experiments.",
       "asbval:note": "R is confirmed as the programming language for the entire ecosystem. The paper extensively discusses R packages and R-based workflows.",
@@ -4954,7 +4954,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectra-variable-core-population/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectra-variable-core-population/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper discusses spectraData() method and MS2 annotation workflows but does not address the specific task of populating missing core spectra variables with NA values in backend implementations. The paper focuses on annotation infrastructure, not backend variable population strategies.",
@@ -4974,7 +4974,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectra-variable-core-population/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectra-variable-core-population/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format",
       "asbval:note": "Paper confirms Spectra package exists and provides MsBackend infrastructure (MsBackendMgf, MsBackendMsp, MsBackendMassbank are mentioned as add-on packages). However, the paper does not mention fillCoreSpectraVariables() helper function or discuss the specific pattern of populating missing core variables with NA values.",
@@ -4994,7 +4994,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectra-variable-core-population/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectra-variable-core-population/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages insufficient to judge. Paper mentions DataFrame results and data structures but does not explicitly name S4Vectors as the provider or discuss DataFrame schema design for core spectra variables.",
@@ -5014,7 +5014,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectra-variable-core-population/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectra-variable-core-population/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention MsBackendMemory. The paper discusses MsBackendMgf, MsBackendMsp, and MsBackendMassbank as add-on packages but does not reference MsBackendMemory or provide examples of fillCoreSpectraVariables() usage patterns.",
@@ -5034,7 +5034,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectra-variable-core-population/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectra-variable-core-population/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format",
       "asbval:note": "Paper confirms MsBackend implementations exist (MsBackendMgf, MsBackendMsp, MsBackendMassbank) and discusses spectraData() method, but does not address the specific use case of populating missing core variables with NA values or the design pattern described in the card.",
@@ -5054,7 +5054,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectra-variable-initialization-strategies/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectra-variable-initialization-strategies/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format",
       "asbval:note": "Paper describes MsBackend classes and Spectra package infrastructure but does not discuss or evaluate eager vs. lazy initialization strategies for @spectraVars slot, nor does it address memory\u2013speed tradeoffs in variable population. The paper focuses on annotation workflows and data import/export, not backend optimization design choices.",
@@ -5074,7 +5074,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectra-variable-initialization-strategies/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectra-variable-initialization-strategies/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The basic infrastructure for spectra similarity calculations is provided by the Spectra package with the compareSpectra() function.",
       "asbval:note": "Paper confirms Spectra package exists and provides core infrastructure, but does not explicitly mention MsBackend virtual class, spectraData() method, or fillCoreSpectraVariables() method. The paper discusses Spectra in context of similarity calculations and data import, not backend method implementation.",
@@ -5094,7 +5094,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectra-variable-initialization-strategies/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectra-variable-initialization-strategies/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors package is not mentioned anywhere in the provided passages. While the paper discusses data structures and DataFrame-like objects, it does not reference S4Vectors or discuss the DataFrame class implementation.",
@@ -5114,7 +5114,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectra-variable-initialization-strategies/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectra-variable-initialization-strategies/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss memory profiling, object.size(), system.time(), or performance benchmarking of backend implementations. These are standard R functions but are not mentioned in the context of this paper's work.",
@@ -5134,7 +5134,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectra-variable-initialization-strategies/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectra-variable-initialization-strategies/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss MsBackend subclass design decisions, initialization strategies, or the @spectraVars slot. It mentions MsBackendMgf, MsBackendMsp, and MsBackendMassbank as packages for data import but does not address their internal design or optimization tradeoffs.",
@@ -5154,7 +5154,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-subsetting-and-merging/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectrum-subsetting-and-merging/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format. It is thus possible to use for example results from MS-DIAL or MZmine as input for matchSpectra by importing them with qry <- Spectra('mzmine_result.mgf', source = MsBackendMgf()). Alternatively, query MS2 spectra can also be directly extracted from a xcms result objects with qry <- featureSpectra(xdata, return.type = 'Spectra').",
       "asbval:note": "Paper discusses Spectra package and MsBackend classes but does not explicitly mention subsetting by index range ([ method) or backendMerge() function. The paper focuses on annotation workflows and data import/export rather than backend subsetting and merging operations. The research question describes backend-level operations that are not demonstrated in the provided passages.",
@@ -5174,7 +5174,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-subsetting-and-merging/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectrum-subsetting-and-merging/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The infrastructure comprises the R packages MetaboAnnotation, Spectra, MsBackendMassbank, CompoundDb, MetaboCoreUtils and MsCoreUtils that are maintained under the umbrella of the RforMassSpectrometry initiative. The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format.",
       "asbval:note": "Paper confirms Spectra package exists and provides MsBackend infrastructure, but does not explicitly mention MsBackendMemory, [ subsetting method, or backendMerge() function. The paper focuses on annotation use cases rather than backend subsetting/merging operations.",
@@ -5194,7 +5194,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-subsetting-and-merging/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectrum-subsetting-and-merging/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors is not mentioned in any of the provided passages. While the paper discusses MsBackend and Spectra, it does not detail the internal data structures (DataFrame, NumericList) or their role in subsetting/merging operations.",
@@ -5214,7 +5214,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-subsetting-and-merging/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectrum-subsetting-and-merging/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "IRanges is not mentioned in any of the provided passages. The paper does not discuss indexing or subsetting operations at the backend level.",
@@ -5234,7 +5234,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-subsetting-and-merging/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectrum-subsetting-and-merging/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We implemented a set of R packages that together provide a customizable infrastructure for the annotation and identification of features from untargeted metabolomics or small-compound MS experiments.",
       "asbval:note": "Paper confirms R is the programming language used for the Spectra ecosystem and related packages.",
@@ -5254,7 +5254,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vectorized-operation-verification/000",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/vectorized-operation-verification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra package natively supports import of MS data from mzML, mzXML and netCDF files and through its add-on packages MsBackendMgf, MsBackendMsp and MsBackendMassbank from files in MGF, MSP or MassBank format. It is thus possible to use for example results from MS-DIAL or MZmine as input for matchSpectra by importing them with qry <- Spectra('mzmine_result.mgf', source = MsBackendMgf()). Alternatively, query MS2 spectra can also be directly extracted from a xcms result objects with qry <- featureSpectra(xdata, return.type = 'Spectra').",
       "asbval:note": "Paper describes Spectra package and MsBackend infrastructure for peak data storage and MS2 annotation, but does not explicitly discuss replacement methods (mz<-, intensity<-), vectorized constraint checking with is.unsorted(), or comparison of vectorized vs. row-wise approaches (vapply). The paper focuses on high-level annotation workflows rather than low-level S4 method implementation details.",
@@ -5274,7 +5274,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vectorized-operation-verification/001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/vectorized-operation-verification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The basic infrastructure for spectra similarity calculations is provided by the Spectra package with the compareSpectra() function. Spectra similarity calculations are performed as a two-step approach: first, peaks from the query and target spectrum are mapped to each other based on their m/z values and a given error (absolute or in ppm), and then a similarity score is calculated based on these matched peaks.",
       "asbval:note": "Paper confirms Spectra package exists and provides infrastructure for MS data handling and peak operations, but does not explicitly mention NumericList-based storage or MsBackend virtual class architecture. The paper focuses on user-facing functions (compareSpectra, matchSpectra) rather than internal S4 class design.",
@@ -5294,7 +5294,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vectorized-operation-verification/002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/vectorized-operation-verification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "S4Vectors package is not mentioned anywhere in the provided passages. The paper does not discuss NumericList or S4Vectors dependency.",
@@ -5314,7 +5314,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vectorized-operation-verification/003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/vectorized-operation-verification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "While the paper is about R packages, it does not discuss is.unsorted() or base R vectorized functions for constraint validation. The paper does not address the specific implementation detail of using is.unsorted() for m/z sorting validation.",
@@ -5334,7 +5334,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vectorized-operation-verification/004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/vectorized-operation-verification/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss S4 replacement methods, NumericList storage format, vectorized constraint checking, or pre-assignment validation. The paper is focused on high-level metabolomics annotation workflows and data import/export, not low-level S4 method implementation.",
@@ -5354,7 +5354,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vectorized-operation-verification/005",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/vectorized-operation-verification/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss read-only vs. writable backends or the presence/absence of replacement methods.",
@@ -5374,7 +5374,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vectorized-operation-verification/006",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/vectorized-operation-verification/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not specify internal data structures (NumericList, vectors, matrices) used for peak storage.",
@@ -5394,7 +5394,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vectorized-operation-verification/007",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/vectorized-operation-verification/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss timing of constraint validation (pre- vs. post-assignment).",
@@ -5414,7 +5414,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/backend-performance-tradeoff-analysis/triage",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/backend-performance-tradeoff-analysis/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "backend-performance-tradeoff-analysis",
@@ -5427,7 +5427,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chunk-wise-data-processing-optimization/triage",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/chunk-wise-data-processing-optimization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "chunk-wise-data-processing-optimization",
@@ -5440,7 +5440,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dataframe-and-numericlist-manipulation/triage",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/dataframe-and-numericlist-manipulation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "dataframe-and-numericlist-manipulation",
@@ -5453,7 +5453,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dataframe-construction-from-backend-sources/triage",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/dataframe-construction-from-backend-sources/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 4,
       "asbval:target_artifact_id": "dataframe-construction-from-backend-sources",
@@ -5466,7 +5466,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dataframe-lazy-loading-comparison/triage",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/dataframe-lazy-loading-comparison/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "dataframe-lazy-loading-comparison",
@@ -5479,7 +5479,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/error-handling-confirmation/triage",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/error-handling-confirmation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "error-handling-confirmation",
@@ -5492,7 +5492,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-representation/triage",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/mass-spectrometry-data-representation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "mass-spectrometry-data-representation",
@@ -5505,7 +5505,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/memory-profiling-and-benchmarking/triage",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/memory-profiling-and-benchmarking/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "memory-profiling-and-benchmarking",
@@ -5518,7 +5518,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/missing-value-imputation-with-na/triage",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/missing-value-imputation-with-na/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "missing-value-imputation-with-na",
@@ -5531,7 +5531,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-backend-api-implementation/triage",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/ms-backend-api-implementation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "ms-backend-api-implementation",
@@ -5544,7 +5544,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-data-constraint-enforcement/triage",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/ms-data-constraint-enforcement/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "ms-data-constraint-enforcement",
@@ -5557,7 +5557,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/parallel-factor-generation-from-metadata/triage",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/parallel-factor-generation-from-metadata/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "parallel-factor-generation-from-metadata",
@@ -5570,7 +5570,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-data-extraction-and-formatting/triage",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/peak-data-extraction-and-formatting/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "peak-data-extraction-and-formatting",
@@ -5583,7 +5583,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-object-size-measurement-and-benchmarking/triage",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/r-object-size-measurement-and-benchmarking/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "r-object-size-measurement-and-benchmarking",
@@ -5596,7 +5596,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-definition-and-inheritance/triage",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-definition-and-inheritance/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "s4-class-definition-and-inheritance",
@@ -5609,7 +5609,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-definition-and-slot-management/triage",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-definition-and-slot-management/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "s4-class-definition-and-slot-management",
@@ -5622,7 +5622,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-extension-for-backend-implementation/triage",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-extension-for-backend-implementation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "s4-class-extension-for-backend-implementation",
@@ -5635,7 +5635,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-method-inspection/triage",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-method-inspection/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "s4-class-method-inspection",
@@ -5648,7 +5648,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/s4-class-object-memory-profiling/triage",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/s4-class-object-memory-profiling/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 4,
       "asbval:target_artifact_id": "s4-class-object-memory-profiling",
@@ -5661,7 +5661,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectra-data-extraction-and-subsetting/triage",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectra-data-extraction-and-subsetting/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "spectra-data-extraction-and-subsetting",
@@ -5674,7 +5674,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectra-variable-core-population/triage",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectra-variable-core-population/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "spectra-variable-core-population",
@@ -5687,7 +5687,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectra-variable-initialization-strategies/triage",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectra-variable-initialization-strategies/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "spectra-variable-initialization-strategies",
@@ -5700,7 +5700,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-subsetting-and-merging/triage",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/spectrum-subsetting-and-merging/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "spectrum-subsetting-and-merging",
@@ -5713,7 +5713,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vectorized-operation-verification/triage",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/skill/vectorized-operation-verification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "vectorized-operation-verification",
@@ -5726,7 +5726,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The Spectra package defines an efficient infrastructure for storing and handling mass spectrometry spectra and functionality to subset, process, visualize and compare spectra.",
       "asbval:note": null,
@@ -5746,7 +5746,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The Spectra package separates the code for the analysis of MS data from the code needed to import, represent and provide the data.",
       "asbval:note": null,
@@ -5766,7 +5766,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Each Spectra object contains an implementation of a MsBackend within its @backend slot which provides the MS data to the Spectra object.",
       "asbval:note": null,
@@ -5786,7 +5786,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The MsBackend virtual class defines the API that new backend classes need to implement in order to be used with the Spectra object.",
       "asbval:note": null,
@@ -5806,7 +5806,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "This separation allows to define new, alternative, data representations and integrate them seamlessly into a Spectra-based data analysis workflow.",
       "asbval:note": null,
@@ -5826,7 +5826,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "One Spectra object is supposed to contain MS spectral data of multiple MS spectra.",
       "asbval:note": null,
@@ -5846,7 +5846,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "m/z values within each spectrum are expected to be sorted increasingly.",
       "asbval:note": null,
@@ -5866,7 +5866,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Missing values (NA) for m/z values are not supported.",
       "asbval:note": null,
@@ -5886,7 +5886,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Properties of a spectrum are called spectra variables.",
       "asbval:note": null,
@@ -5906,7 +5906,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Each backend must provide a minimum required set of core spectra variables listed by the coreSpectraVariables() function.",
       "asbval:note": "Claim omits that core spectra variables must be provided 'even if their values are empty' and that they are listed by the function 'along with their expected data type'",
@@ -5926,7 +5926,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "dataStorage and dataOrigin are special spectra variables that define where the data is stored and from where the data derived.",
       "asbval:note": "Claim simplifies the definition; source clarifies these variables define 'for each spectrum' where data is stored and from where it derived/was loaded",
@@ -5946,7 +5946,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_012",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_012",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Both dataStorage and dataOrigin must be of type character and need to be defined by the backend.",
       "asbval:note": null,
@@ -5966,7 +5966,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_013",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_013",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MsBackend implementations can represent purely read-only data resources where only data accessor methods need to be implemented but not data replacement methods.",
       "asbval:note": null,
@@ -5986,7 +5986,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_014",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_014",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Whether a backend is read-only can be set with the @readonly slot of the virtual MsBackend class.",
       "asbval:note": null,
@@ -6006,7 +6006,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_015",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_015",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The default value for @readonly is FALSE, requiring all data replacement methods to be implemented.",
       "asbval:note": null,
@@ -6026,7 +6026,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_016",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_016",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "For read-only backends (@readonly = TRUE) only the methods in the Required methods section need to be implemented.",
       "asbval:note": null,
@@ -6046,7 +6046,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_017",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_017",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The MsBackendMzR backend allows changing spectra variables but not the peaks data (m/z and intensity values).",
       "asbval:note": null,
@@ -6066,7 +6066,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_018",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_018",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Backends for purely read-only resources could extend the MsBackendCached from the Spectra package to enable support for modifying or adding spectra variables.",
       "asbval:note": null,
@@ -6086,7 +6086,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_019",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_019",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The Spectra package splits the backend based on a defined factor and processes each in parallel for parallel processing.",
       "asbval:note": "Text omits the qualifier that serial processing is also possible with SerialParam",
@@ -6106,7 +6106,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_020",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_020",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The default implementation for backendParallelFactor() returns an empty factor, not suggesting any preferred splitting.",
       "asbval:note": null,
@@ -6126,7 +6126,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_021",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_021",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The backendParallelFactor() for MsBackendMzR returns a factor based on the data files the data is stored in.",
       "asbval:note": null,
@@ -6146,7 +6146,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_022",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_022",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Chunk-wise processing can reduce the memory demand for operations because only the peak data of the current chunk needs to be realized in memory.",
       "asbval:note": null,
@@ -6166,7 +6166,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_023",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_023",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The spectraData() method should return the full spectra data within a backend as a DataFrame object.",
       "asbval:note": null,
@@ -6186,7 +6186,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_024",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_024",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Each row in the DataFrame returned by spectraData() should represent one spectrum and each column a spectra variable.",
       "asbval:note": null,
@@ -6206,7 +6206,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_025",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_025",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Columns mz and intensity (if requested) must contain each a NumericList with the m/z and intensity values of the spectra.",
       "asbval:note": null,
@@ -6226,7 +6226,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_026",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_026",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The DataFrame returned by spectraData() must provide values for all requested spectra variables of the backend including the core spectra variables.",
       "asbval:note": null,
@@ -6246,7 +6246,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_027",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_027",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The spectraVariables() method should return a character vector with the names of all available spectra variables of the backend.",
       "asbval:note": null,
@@ -6266,7 +6266,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_028",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_028",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Each MsBackend class must provide the core spectra variables in the correct data type.",
       "asbval:note": null,
@@ -6286,7 +6286,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_029",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_029",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Core spectra variables can be NA with the exception of the spectra variable dataStorage.",
       "asbval:note": null,
@@ -6306,7 +6306,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_030",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_030",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The backendInitialize() method is expected to be called after creating an instance of the backend class and should prepare the backend.",
       "asbval:note": null,
@@ -6326,7 +6326,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_031",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_031",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "During backendInitialize() the special spectra variables dataStorage and dataOrigin are usually set.",
       "asbval:note": null,
@@ -6346,7 +6346,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_032",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_032",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The peaksData() method extracts the MS peaks data from a backend, including the m/z and intensity values of each MS peak of a spectrum.",
       "asbval:note": null,
@@ -6366,7 +6366,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_033",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_033",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "peaksData() is expected to return a List of numerical matrices with columns being the requested peaks variables of one spectrum.",
       "asbval:note": null,
@@ -6386,7 +6386,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_034",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_034",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Backends must provide at least mz and intensity as peaks variables.",
       "asbval:note": "Source excerpt refers to 'these two peaks variables' (mz and intensity) but doesn't explicitly state 'at least' or 'must provide' in the excerpt shown; claim adds interpretive language",
@@ -6406,7 +6406,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_035",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_035",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The extractByIndex() and [ methods allow to subset MsBackend objects.",
       "asbval:note": null,
@@ -6426,7 +6426,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_036",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_036",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Subsetting with extractByIndex() and [ must support duplication and extraction in any arbitrary order.",
       "asbval:note": null,
@@ -6446,7 +6446,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_037",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_037",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "extractByIndex() only supports to subset with an integer index while [ should support to subset by indices or logical vectors.",
       "asbval:note": null,
@@ -6466,7 +6466,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_038",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_038",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "An error should be thrown if indices are out of bounds but the method should support returning an empty backend with [integer()].",
       "asbval:note": null,
@@ -6486,7 +6486,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_039",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_039",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The backendMerge() method merges MsBackend objects of the same type into a single instance.",
       "asbval:note": null,
@@ -6506,7 +6506,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_040",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_040",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The intensity() method extracts the intensity values for each spectrum in the backend as a NumericList.",
       "asbval:note": null,
@@ -6526,7 +6526,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_041",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_041",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The mz() method extracts the m/z values for each spectrum in the backend as a NumericList.",
       "asbval:note": null,
@@ -6546,7 +6546,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_042",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_042",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The m/z values are expected to be ordered increasingly for each element (spectrum).",
       "asbval:note": null,
@@ -6566,7 +6566,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_043",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_043",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The spectraNames() method can be used to extract optional names or IDs for individual spectra of a backend, or NULL if not set.",
       "asbval:note": null,
@@ -6586,7 +6586,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_044",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_044",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The $<- method should allow to replace values for spectra variables or to add additional spectra variables to the backend.",
       "asbval:note": null,
@@ -6606,7 +6606,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_045",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_045",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "With the $<- method, the length() of value must match the number of spectra represented by the backend.",
       "asbval:note": null,
@@ -6626,7 +6626,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_046",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_046",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The spectraData<- method should allow to replace the data within a backend by taking a DataFrame with the full data as input value.",
       "asbval:note": null,
@@ -6646,7 +6646,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_047",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_047",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The spectraData<- method is expected to replace the full data within the backend including all spectra variables and peak data.",
       "asbval:note": null,
@@ -6666,7 +6666,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_048",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_048",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The number of spectra before and after calling spectraData<- method on an object has to be the same.",
       "asbval:note": null,
@@ -6686,7 +6686,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_049",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_049",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The intensity<- method should allow to replace only the values of the intensities but must not change the number of intensities per spectrum.",
       "asbval:note": null,
@@ -6706,7 +6706,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_050",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_050",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The mz<- method should allow to replace the m/z values of all spectra in a backend.",
       "asbval:note": null,
@@ -6726,7 +6726,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_051",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_051",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "m/z values within each spectrum need to be increasingly ordered when using the mz<- method.",
       "asbval:note": "Source excerpt lacks context about when/why ordering is required; claim asserts it as a requirement of the mz<- method specifically, but excerpt doesn't explicitly tie ordering requirement to the method",
@@ -6746,7 +6746,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_052",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_052",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The peaksData<- method should allow to replace the peaks data (m/z and intensity values) of all spectra in a backend.",
       "asbval:note": null,
@@ -6766,7 +6766,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_053",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_053",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The peaksData<- method should support changing the number of peaks per spectrum such as due to filtering.",
       "asbval:note": null,
@@ -6786,7 +6786,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_054",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_054",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The selectSpectraVariables() function should allow to reduce the information within the backend to the selected spectra variables.",
       "asbval:note": null,
@@ -6806,7 +6806,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_055",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_055",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The selectSpectraVariables() is equivalent to a subset by columns or variables.",
       "asbval:note": "Source says 'equivalent to a subset by columns/variables' but claim omits that this equivalence is specifically about the selectSpectraVariables() function's operation",
@@ -6826,7 +6826,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_056",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_056",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The $ method is expected to extract a single spectra variable from a backend.",
       "asbval:note": null,
@@ -6846,7 +6846,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_057",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_057",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Each MsBackend must support extracting the core spectra variables with the $ method even if no data might be available for that variable.",
       "asbval:note": null,
@@ -6866,7 +6866,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_058",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_058",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The $ method should check if the requested spectra variable is available and should throw an error otherwise.",
       "asbval:note": null,
@@ -6886,7 +6886,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_059",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_059",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The peaksVariables() is expected to return a character vector with the names of the peaks variables available in the backend.",
       "asbval:note": "Claim simplifies source; source specifies 'peaks variables' means 'information and properties of individual mass peaks' but claim omits this clarification",
@@ -6906,7 +6906,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_060",
+      "@id": "asbval:assertion/paper/10.3390%2Fmetabo12020173/claim/claim_060",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The default implementation for peaksVariables() returns c(\"mz\", \"intensity\") for MsBackend.",
       "asbval:note": null,

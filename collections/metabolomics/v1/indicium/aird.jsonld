@@ -1517,7 +1517,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper describes AirdPro as a GUI client written in C# for vendor file conversion, but contains no discussion of Docker, containerization, multi-stage builds, Ubuntu 22.04, Wine environments, or CLI variants. The research question describes a DevOps/infrastructure task entirely absent from the paper's scope.",
@@ -1537,7 +1537,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper makes no mention of Docker images, image registries, or image size metrics. AirdPro is described as a GUI client available for download from GitHub, not as a containerized CLI tool.",
@@ -1557,7 +1557,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper contains no discussion of Docker build processes, build logs, or multi-stage builds.",
@@ -1577,7 +1577,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is a GUI client for data conversion from vendor file to Aird file.",
       "asbval:note": "Paper confirms AirdPro exists and is written in C#, but does not specify version 'V5'. The paper references AirdPro without version numbering. The card claims a specific version not mentioned in the paper.",
@@ -1597,7 +1597,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper contains no mention of Docker, Docker Desktop, or any containerization technology.",
@@ -1617,7 +1617,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_001/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper contains no mention of Wine or any Windows compatibility layer.",
@@ -1637,7 +1637,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_001/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper states AirdPro is 'written in C#' but does not specify .NET Framework version or any version of .NET. No version information is provided.",
@@ -1657,7 +1657,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_001/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper contains no mention of Docker Compose or any orchestration tools.",
@@ -1677,7 +1677,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate task card describes a DevOps/infrastructure engineering task (Docker multi-stage build pipeline construction) that is entirely outside the scope of the paper.",
@@ -1695,7 +1695,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is a GUI client for vendor file converting written in C#. They are freely available at https://github.com/CSi-Studio/Aird-SDK and https://github.com/CSi-Studio/AirdPro . ... AirdPro uses the integrated SDK provided by ProteoWizard [9] to read vendor file data for the first step of conversion.",
       "asbval:note": "Paper confirms AirdPro converts vendor files to Aird format using ProteoWizard, but paper describes AirdPro as a 'GUI client', not a CLI tool. No mention of Docker, Wine, .NET Framework, or CLI execution in the paper. The functional claim (vendor file \u2192 Aird conversion) is supported, but the execution environment (Docker/Wine/CLI) is not discussed in the paper.",
@@ -1715,7 +1715,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is a GUI client for vendor file converting written in C#. ... AirdPro starts to compress the m/z and intensity arrays according to the compression parameters and the user's targeted precision.",
       "asbval:note": "Paper explicitly describes AirdPro producing Aird format output files from vendor input.",
@@ -1735,7 +1735,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of Wine, startup time logs, or initialization duration in any passage. This appears to be a containerization/deployment detail not addressed in the paper.",
@@ -1755,7 +1755,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of Docker containers, CLI execution logs, or container-based deployment in the paper. Paper describes AirdPro as a GUI client, not a containerized CLI tool.",
@@ -1775,7 +1775,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_002/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Docker is not mentioned anywhere in the paper.",
@@ -1795,7 +1795,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_002/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Wine is not mentioned anywhere in the paper.",
@@ -1815,7 +1815,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_002/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Aird-SDK is written in Java, and AirdPro is a GUI client for vendor file converting written in C#.",
       "asbval:note": "Paper confirms AirdPro is written in C#, which requires .NET Framework, but does not specify version 4.8. The functional dependency is implied but the specific version is not stated.",
@@ -1835,7 +1835,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_002/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not specify AirdPro version numbers. Only generic references to 'AirdPro' are present.",
@@ -1855,7 +1855,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_002/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not specify AirdPro version numbers. Only generic references to 'AirdPro' are present.",
@@ -1875,7 +1875,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_002/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro uses the integrated SDK provided by ProteoWizard [9] to read vendor file data for the first step of conversion.",
       "asbval:note": "Paper explicitly confirms ProteoWizard is used by AirdPro for reading vendor files.",
@@ -1895,7 +1895,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card describes a containerized CLI execution scenario (Docker, Wine, CLI) that is entirely absent from the paper. The paper presents AirdPro as a GUI client application, not a command-line tool.",
@@ -1913,7 +1913,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper discusses AirdPro as a GUI client for vendor file conversion written in C#, but contains no mention of Docker, containerization, image variants (cli, dev, linux, windows), or Docker image size documentation. The paper focuses on file format compression and conversion workflows, not containerized deployment.",
@@ -1933,7 +1933,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is a GUI client for vendor file converting written in C#. They are freely available at https://github.com/CSi-Studio/AirdPro",
       "asbval:note": "Paper mentions AirdPro as a tool but does not specify version 'V5'. The paper references AirdPro without version numbering. Version claim cannot be verified from passages.",
@@ -1953,7 +1953,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper contains no mention of Docker, containerization, or any Docker-related commands. AirdPro is described as a C# GUI application available on GitHub, with no reference to Docker deployment.",
@@ -1973,7 +1973,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper contains no mention of Dockerfile, multi-stage builds, or Docker build targets. The paper describes AirdPro's conversion workflow and compression algorithms, not containerization infrastructure.",
@@ -1993,7 +1993,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_003/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not describe any Docker image audit task, verification reports for image variants, or image size documentation. The paper's outputs relate to file format compression comparisons (mzML, mgf, mz5, Aird), not Docker image metrics.",
@@ -2013,7 +2013,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/card/task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate task card describes a Docker containerization and image audit workflow that is entirely absent from the paper.",
@@ -2031,7 +2031,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/aird-format-conversion-and-validation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/aird-format-conversion-and-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is a GUI client for vendor file converting written in C#... Aird is designed to become a computing-oriented data format with high scalability, compression rate, and fast decoding speed... Aird merely takes 33% decoding time compared with Zlib... m/z data size is about 55% lower in Aird average.",
       "asbval:note": "Core research question is well-supported. Paper describes AirdPro as GUI client for conversion, Aird as computation-oriented format with superior compression and decoding speed.",
@@ -2051,7 +2051,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/aird-format-conversion-and-validation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/aird-format-conversion-and-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is a GUI client for vendor file converting written in C#... They are freely available at https://github.com/CSi-Studio/AirdPro",
       "asbval:note": "Paper confirms AirdPro as GUI client written in C#. CLI capability is mentioned in scope but not explicitly in passages; however, conversion workflow is described.",
@@ -2071,7 +2071,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/aird-format-conversion-and-validation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/aird-format-conversion-and-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro uses the integrated SDK provided by ProteoWizard [9] to read vendor file data for the first step of conversion... The vendor file reader API is from MSConvert [9].",
       "asbval:note": "Paper explicitly states AirdPro uses ProteoWizard SDK and MSConvert for vendor file reading.",
@@ -2091,7 +2091,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/aird-format-conversion-and-validation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/aird-format-conversion-and-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Aird-SDK is written in Java... AirdSDK is written in Java and is an open-source project for download at https://github.com/CSi-Studio/Aird-SDK.",
       "asbval:note": "Paper confirms AirdSDK is written in Java and available on GitHub. No mention of C# or Python versions in passages; only Java version is documented.",
@@ -2111,7 +2111,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/aird-format-conversion-and-validation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/aird-format-conversion-and-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Wine is not mentioned in any passage. While AirdPro is written in C# (.NET), the paper does not discuss Docker, Wine, or containerization strategies.",
@@ -2131,7 +2131,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/aird-format-conversion-and-validation/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/aird-format-conversion-and-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is a GUI client for vendor file converting written in C#.",
       "asbval:note": "Paper confirms AirdPro is written in C#, which implies .NET dependency, but does not specify .NET Framework version 4.8.",
@@ -2151,7 +2151,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/aird-format-conversion-and-validation/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/aird-format-conversion-and-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Docker is not mentioned in any passage. Paper does not discuss containerization or Docker deployment.",
@@ -2171,7 +2171,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/aird-format-conversion-and-validation/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/aird-format-conversion-and-validation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Redis is not mentioned in any passage. Paper does not discuss distributed task queues or batch conversion orchestration.",
@@ -2191,7 +2191,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/aird-format-conversion-and-validation/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/aird-format-conversion-and-validation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention AirdPro V5 or version 2023.7. Paper is from 2022 and does not discuss future versions.",
@@ -2211,7 +2211,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/aird-format-conversion-and-validation/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/aird-format-conversion-and-validation/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention AirdPro V6 or version 2024.4. Paper is from 2022 and does not discuss future versions.",
@@ -2231,7 +2231,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/aird-format-conversion-and-validation/010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/aird-format-conversion-and-validation/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "At present, Aird's supporting formats are DDA, DIA/SWATH, PRM. ScanningSWATH and Ion Mobility are the formats under development.",
       "asbval:note": "Paper confirms DDA, DIA/SWATH, and PRM support. MRM is not mentioned; only DDA, DIA/SWATH, and PRM are listed as currently supported.",
@@ -2251,7 +2251,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/aird-format-conversion-and-validation/011",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/aird-format-conversion-and-validation/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "They are from different SCIEX, Thermo, and Agilent instruments... We randomly select files from three manufacturers for comparison",
       "asbval:note": "Paper explicitly tests and validates Aird conversion with SCIEX, Thermo, and Agilent instruments.",
@@ -2271,7 +2271,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/aird-format-conversion-and-validation/012",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/aird-format-conversion-and-validation/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Converting vendor files to other formats before data analysis is necessary... AirdPro uses the integrated SDK provided by ProteoWizard [9] to read vendor file data",
       "asbval:note": "Paper confirms vendor file conversion via ProteoWizard. Specific file extensions (.raw, .d, .wiff2) are not listed in passages but are standard vendor formats.",
@@ -2291,7 +2291,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/artifact-size-measurement-and-range-verification/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/artifact-size-measurement-and-range-verification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about MS data file format compression (Aird), not Docker image artifact sizing. No Docker, containerization, or image build verification content present.",
@@ -2311,7 +2311,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/artifact-size-measurement-and-range-verification/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/artifact-size-measurement-and-range-verification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Docker is not mentioned anywhere in the paper. Paper discusses MS data formats and compression algorithms, not container orchestration.",
@@ -2331,7 +2331,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/artifact-size-measurement-and-range-verification/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/artifact-size-measurement-and-range-verification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Dockerfile is not mentioned. Paper does not discuss containerization or build configuration files.",
@@ -2351,7 +2351,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/artifact-size-measurement-and-range-verification/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/artifact-size-measurement-and-range-verification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is a GUI client for vendor file converting written in C#. They are freely available at https://github.com/CSi-Studio/Aird-SDK and https://github.com/CSi-Studio/AirdPro",
       "asbval:note": "Paper mentions AirdPro as a tool for MS file format conversion, not as a reference system for Docker image size audits. The tool exists and is documented, but its role in the card (reference system for Docker image audit) is not supported by the paper. Paper uses AirdPro for converting vendor MS files to Aird format, not for Docker image verification.",
@@ -2371,7 +2371,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/artifact-size-measurement-and-range-verification/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/artifact-size-measurement-and-range-verification/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No Docker image variants or size ranges mentioned. Paper discusses MS data file compression ratios (e.g., Aird 54% of RAW files, 55% of Zlib), not Docker image sizing.",
@@ -2391,7 +2391,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cli-application-invocation-with-file-io-management/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/cli-application-invocation-with-file-io-management/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is a GUI client for vendor file converting written in C#. They are freely available at https://github.com/CSi-Studio/Aird-SDK and https://github.com/CSi-Studio/AirdPro",
       "asbval:note": "Paper describes AirdPro as a GUI client, not a CLI application. Paper does not mention containerization, Docker, Wine, or CLI invocation. The paper does describe vendor file conversion and ProteoWizard integration, but does not address containerized execution or initialization overhead monitoring.",
@@ -2411,7 +2411,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cli-application-invocation-with-file-io-management/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/cli-application-invocation-with-file-io-management/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Docker is not mentioned anywhere in the paper. The paper focuses on the Aird format and AirdPro tool itself, not containerization infrastructure.",
@@ -2431,7 +2431,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cli-application-invocation-with-file-io-management/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/cli-application-invocation-with-file-io-management/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Wine is not mentioned in the paper. The paper does not discuss Windows emulation or cross-platform runtime environments.",
@@ -2451,7 +2451,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cli-application-invocation-with-file-io-management/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/cli-application-invocation-with-file-io-management/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper states 'AirdPro is a GUI client for vendor file converting written in C#' but does not specify .NET Framework version requirements or discuss framework installation.",
@@ -2471,7 +2471,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cli-application-invocation-with-file-io-management/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/cli-application-invocation-with-file-io-management/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is a GUI client for vendor file converting written in C#. They are freely available at https://github.com/CSi-Studio/Aird-SDK and https://github.com/CSi-Studio/AirdPro",
       "asbval:note": "AirdPro is confirmed as a tool for vendor file conversion. However, the paper does not mention versions V5 or V6 specifically, nor does it describe CLI functionality (only GUI).",
@@ -2491,7 +2491,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cli-application-invocation-with-file-io-management/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/cli-application-invocation-with-file-io-management/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro uses the integrated SDK provided by ProteoWizard [9] to read vendor file data for the first step of conversion.",
       "asbval:note": "ProteoWizard is confirmed as the underlying library providing vendor file format parsers for AirdPro.",
@@ -2511,7 +2511,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cli-application-invocation-with-file-io-management/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/cli-application-invocation-with-file-io-management/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper (published 2022) does not mention AirdPro V5 or version 2023.7. This version information is not present in the provided passages.",
@@ -2531,7 +2531,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cli-application-invocation-with-file-io-management/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/cli-application-invocation-with-file-io-management/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper (published 2022) does not mention AirdPro V6 or version 2024.4. This version information is not present in the provided passages.",
@@ -2551,7 +2551,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cli-application-invocation-with-file-io-management/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/cli-application-invocation-with-file-io-management/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro uses the integrated SDK provided by ProteoWizard [9] to read vendor file data for the first step of conversion. AirdPro starts to compress the m/z and intensity arrays according to the compression parameters and the user's targeted precision.",
       "asbval:note": "Paper confirms vendor file conversion to Aird format is the core function of AirdPro.",
@@ -2571,7 +2571,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cli-application-invocation-with-file-io-management/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/cli-application-invocation-with-file-io-management/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper describes AirdPro as a C# application but does not discuss containerization, Docker, or cross-platform execution via emulation.",
@@ -2591,7 +2591,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cli-application-invocation-with-file-io-management/010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/cli-application-invocation-with-file-io-management/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Wine and initialization overhead are not mentioned in the paper.",
@@ -2611,7 +2611,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/container-image-size-verification/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/container-image-size-verification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about Aird MS data format and compression algorithms. No mention of Docker, containerization, multi-stage Dockerfiles, Wine emulation, or container image size verification. The research_question describes a DevOps/infrastructure task entirely unrelated to the paper's content on mass spectrometry data formats.",
@@ -2631,7 +2631,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/container-image-size-verification/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/container-image-size-verification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper contains no mention of Docker, Docker Desktop, or any containerization technology.",
@@ -2651,7 +2651,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/container-image-size-verification/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/container-image-size-verification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper contains no mention of Wine or Windows emulation layers.",
@@ -2671,7 +2671,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/container-image-size-verification/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/container-image-size-verification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper mentions C# as the language for AirdPro GUI client (passage [4]: 'AirdPro is a GUI client for vendor file converting written in C#'), but does not specify .NET Framework 4.8 or any particular .NET version.",
@@ -2691,7 +2691,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/container-image-size-verification/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/container-image-size-verification/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention any build-docker.sh script or Docker-related build automation. GitHub repository is mentioned for SDK and AirdPro downloads, but no Docker build script is referenced.",
@@ -2711,7 +2711,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/container-image-size-verification/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/container-image-size-verification/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro V5 is now available at 2023.7",
       "asbval:note": "The evidence_spans field in the card contains the text 'AirdPro V5 is now available at 2023.7', but this text does not appear in any of the provided paper passages. The paper (2022, DOI 10.1186/s12859-021-04490-0) discusses AirdPro as a GUI client written in C# but does not mention version 5 or a 2023.7 release date. The card's evidence_spans appears to be sourced from outside the paper or from a future version not covered by these passages.",
@@ -2731,7 +2731,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/container-volume-mounting-and-file-persistence/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/container-volume-mounting-and-file-persistence/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss Docker, container volume mounting, or containerization workflows. The paper focuses on the Aird file format design, compression algorithms (ZDPD), and file conversion using AirdPro as a GUI client or command-line tool, but does not address container orchestration or persistence strategies.",
@@ -2751,7 +2751,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/container-volume-mounting-and-file-persistence/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/container-volume-mounting-and-file-persistence/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Docker is not mentioned anywhere in the paper. The paper describes AirdPro as a GUI client and conversion tool but does not discuss containerization or Docker deployment.",
@@ -2771,7 +2771,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/container-volume-mounting-and-file-persistence/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/container-volume-mounting-and-file-persistence/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Wine is not mentioned in the paper. The paper states that AirdPro is 'written in C#' but does not discuss Wine emulation or container-based execution environments.",
@@ -2791,7 +2791,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/container-volume-mounting-and-file-persistence/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/container-volume-mounting-and-file-persistence/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": ".NET Framework is not mentioned in the paper. While AirdPro is written in C# (which requires .NET), the paper does not discuss .NET Framework versions, installation, or container-based deployment.",
@@ -2811,7 +2811,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/container-volume-mounting-and-file-persistence/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/container-volume-mounting-and-file-persistence/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is a GUI client for data conversion from vendor file to Aird file. The vendor file reader API is from MSConvert [9].",
       "asbval:note": "Paper describes AirdPro as a 'GUI client' for conversion, not a CLI tool. The paper does confirm it produces .aird and .json output (metadata stored as JSON), but does not discuss command-line invocation or volume mounting.",
@@ -2831,7 +2831,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/container-volume-mounting-and-file-persistence/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/container-volume-mounting-and-file-persistence/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of run-cli.sh, container entry scripts, or shell-based orchestration in the paper.",
@@ -2851,7 +2851,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/container-volume-mounting-and-file-persistence/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/container-volume-mounting-and-file-persistence/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper (published 2022, DOI 10.1186/s12859-021-04490-0) does not mention AirdPro V5 or version 2023.7. The evidence_spans claim 'AirdPro V5 is now available at 2023.7' is not found in any passage.",
@@ -2871,7 +2871,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/container-volume-mounting-and-file-persistence/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/container-volume-mounting-and-file-persistence/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper (published 2022) does not mention AirdPro V6 or version 2024.4. The evidence_spans claim 'AirdPro V6 is now available at 2024.4' is not found in any passage.",
@@ -2891,7 +2891,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/container-volume-mounting-and-file-persistence/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/container-volume-mounting-and-file-persistence/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The vendor file reader API is from MSConvert [9]... AirdPro uses the integrated SDK provided by ProteoWizard [9] to read vendor file data for the first step of conversion.",
       "asbval:note": "Paper confirms ProteoWizard is used via MSConvert SDK for vendor file reading, but does not mention 'pwiz_bindings_cli.dll' specifically or CLI-based invocation. The tool is used as an integrated SDK, not as a standalone CLI component.",
@@ -2911,7 +2911,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/containerized-application-deployment-validation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/containerized-application-deployment-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about Aird MS data format compression and file conversion, not Docker containerization. No mention of Docker, container images, build targets, or multi-stage builds.",
@@ -2931,7 +2931,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/containerized-application-deployment-validation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/containerized-application-deployment-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Docker is not mentioned anywhere in the paper. Paper focuses on MS data format tools (Aird, AirdPro, MSConvert, ProteoWizard).",
@@ -2951,7 +2951,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/containerized-application-deployment-validation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/containerized-application-deployment-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Dockerfile and containerization concepts are not discussed in the paper.",
@@ -2971,7 +2971,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/containerized-application-deployment-validation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/containerized-application-deployment-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is a GUI client for vendor file converting written in C#. They are freely available at https://github.com/CSi-Studio/AirdPro",
       "asbval:note": "Paper confirms AirdPro exists and is available at the GitHub repo cited, but makes no mention of containerization, Docker variants, or version V5/V6. AirdPro is described as a GUI client for file conversion, not as a containerized application with multiple build targets.",
@@ -2991,7 +2991,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/containerized-application-deployment-validation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/containerized-application-deployment-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention AirdPro V5, V6, or any version number like '2023.7'. The paper (published 2022) describes AirdPro as a tool for converting vendor files to Aird format but provides no version information.",
@@ -3011,7 +3011,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-container-runtime-execution-and-monitoring/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-container-runtime-execution-and-monitoring/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is a GUI client for vendor file converting written in C#. They are freely available at https://github.com/CSi-Studio/Aird-SDK and https://github.com/CSi-Studio/AirdPro",
       "asbval:note": "Paper confirms AirdPro exists and is written in C#, but does not discuss Docker containerization, Wine emulation, or CLI execution. The paper describes AirdPro as a 'GUI client' for conversion, not a CLI tool. Docker/Wine/containerization are not mentioned in the paper.",
@@ -3031,7 +3031,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-container-runtime-execution-and-monitoring/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-container-runtime-execution-and-monitoring/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss Wine emulation, macOS/Linux deployment, or initialization overhead. These are deployment/DevOps concerns not addressed in the paper.",
@@ -3051,7 +3051,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-container-runtime-execution-and-monitoring/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-container-runtime-execution-and-monitoring/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Docker is not mentioned anywhere in the paper. The paper focuses on the Aird format and AirdPro tool itself, not containerization infrastructure.",
@@ -3071,7 +3071,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-container-runtime-execution-and-monitoring/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-container-runtime-execution-and-monitoring/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Wine is not mentioned in the paper. The paper does not discuss emulation or cross-platform runtime environments.",
@@ -3091,7 +3091,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-container-runtime-execution-and-monitoring/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-container-runtime-execution-and-monitoring/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Aird-SDK is written in Java, and AirdPro is a GUI client for vendor file converting written in C#.",
       "asbval:note": "Paper confirms AirdPro is written in C#, which implies .NET runtime dependency, but does not specify .NET Framework version (4.8 or any other version). No mention of .NET Framework initialization or caching.",
@@ -3111,7 +3111,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-container-runtime-execution-and-monitoring/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-container-runtime-execution-and-monitoring/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is a GUI client for vendor file converting written in C#. They are freely available at https://github.com/CSi-Studio/Aird-SDK and https://github.com/CSi-Studio/AirdPro",
       "asbval:note": "Paper confirms AirdPro exists and converts vendor files to Aird format, but describes it as a 'GUI client', not a CLI application. No mention of V5 or V6 versions, or CLI mode. The card's claim that it is a 'CLI application' contradicts the paper's description of it as a GUI client.",
@@ -3131,7 +3131,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-container-runtime-execution-and-monitoring/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-container-runtime-execution-and-monitoring/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro uses the integrated SDK provided by ProteoWizard [9] to read vendor file data for the first step of conversion.",
       "asbval:note": "Paper confirms ProteoWizard is used by AirdPro for vendor file reading, but does not name the specific library file (pwiz_bindings_cli.dll) or discuss it as a separate tool. The paper cites ProteoWizard as the underlying SDK, not as a standalone tool.",
@@ -3151,7 +3151,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-container-runtime-execution-and-monitoring/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-container-runtime-execution-and-monitoring/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "XQuartz is not mentioned in the paper. This is a deployment/infrastructure concern not addressed in the scientific paper.",
@@ -3171,7 +3171,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-container-runtime-execution-and-monitoring/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-container-runtime-execution-and-monitoring/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention AirdPro V5, version 2023.7, or any version numbers. The paper only refers to 'AirdPro' without version specification.",
@@ -3191,7 +3191,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-container-runtime-execution-and-monitoring/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-container-runtime-execution-and-monitoring/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention AirdPro V6, version 2024.4, or any version numbers. The paper was published in 2022 and does not discuss future versions.",
@@ -3211,7 +3211,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-image-registry-inspection/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-image-registry-inspection/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about Aird, a mass spectrometry data format for compression and fast decoding. It contains no discussion of Docker, container images, image variants, layer composition, or deployment validation. The research question is entirely unrelated to the paper's scope.",
@@ -3231,7 +3231,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-image-registry-inspection/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-image-registry-inspection/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper discusses MS data format compression (Aird), not Docker containerization. No mention of Docker, multi-stage builds, image variants, or deployment pipelines.",
@@ -3251,7 +3251,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-image-registry-inspection/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-image-registry-inspection/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Docker or any Docker CLI tools. The paper focuses on MS data compression algorithms and file format conversion tools (MSConvert, AirdPro, Aird-SDK).",
@@ -3271,7 +3271,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-image-registry-inspection/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-image-registry-inspection/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss Dockerfile or containerization. No multi-stage build configuration is present.",
@@ -3291,7 +3291,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-image-registry-inspection/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-image-registry-inspection/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Docker Desktop or any macOS-specific Docker tools.",
@@ -3311,7 +3311,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-image-registry-inspection/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-image-registry-inspection/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is a GUI client for vendor file converting written in C#. They are freely available at https://github.com/CSi-Studio/Aird-SDK and https://github.com/CSi-Studio/AirdPro",
       "asbval:note": "Paper mentions AirdPro as a tool for converting vendor MS files to Aird format, written in C#. However, the paper does not specify version 2023.7 or 'V5'. The evidence_spans claim 'AirdPro V5 is now available at 2023.7' does not appear verbatim in the paper passages provided. The tool exists and is relevant to MS data processing, but the specific version claim cannot be verified from the passages.",
@@ -3331,7 +3331,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-image-registry-inspection/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-image-registry-inspection/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Docker Compose or any container orchestration configuration. The evidence_spans claim 'Docker Compose configuration' does not appear in the paper.",
@@ -3351,7 +3351,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-image-registry-inspection/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-image-registry-inspection/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss Docker or Docker CLI commands. This is a duplicate claim of an earlier Docker-related tool entry.",
@@ -3371,7 +3371,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-multistage-build-execution/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-multistage-build-execution/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper describes AirdPro as a GUI client written in C# for vendor file conversion, but contains no discussion of Docker, containerization, multi-stage builds, Wine, Linux deployment, or any container-related infrastructure. The paper focuses on the Aird data format and compression algorithms, not deployment pipelines.",
@@ -3391,7 +3391,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-multistage-build-execution/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-multistage-build-execution/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Docker is not mentioned anywhere in the paper. Paper discusses AirdPro as a standalone GUI application, not containerized deployment.",
@@ -3411,7 +3411,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-multistage-build-execution/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-multistage-build-execution/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Wine is not mentioned in the paper. No discussion of Windows compatibility layers or Linux deployment of Windows applications.",
@@ -3431,7 +3431,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-multistage-build-execution/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-multistage-build-execution/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper states AirdPro is 'written in C#' but does not specify .NET Framework version or any framework details. No mention of .NET Framework 4.8 or containerized runtime dependencies.",
@@ -3451,7 +3451,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-multistage-build-execution/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-multistage-build-execution/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Docker Compose is not mentioned in the paper. No orchestration or multi-container deployment is discussed.",
@@ -3471,7 +3471,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-multistage-build-execution/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-multistage-build-execution/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro uses the integrated SDK provided by ProteoWizard [9] to read vendor file data for the first step of conversion.",
       "asbval:note": "Paper confirms ProteoWizard is used by AirdPro, but the card claims it is a 'source library (pwiz_bindings_cli.dll) linked into AirdPro C# application.' The paper states AirdPro uses 'the integrated SDK provided by ProteoWizard' for reading vendor files, not specifically that pwiz_bindings_cli.dll is linked. The functional role (vendor file format support) is correct, but the specific library name and linking mechanism are not explicitly confirmed.",
@@ -3491,7 +3491,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-multistage-build-execution/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-multistage-build-execution/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is a GUI client for vendor file converting written in C#. They are freely available at https://github.com/CSi-Studio/AirdPro",
       "asbval:note": "Paper mentions AirdPro as a GUI client but does not specify version 'V5' or version number '2023.7'. The evidence_spans field in the card cites 'AirdPro V5 is now available at 2023.7' but this text does not appear in any of the provided passages.",
@@ -3511,7 +3511,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-multistage-build-execution/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-multistage-build-execution/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper describes AirdPro as a GUI client for file conversion, not a CLI tool. No mention of containerization, Linux deployment, Wine, or CLI-specific functionality. The entire scope of the card (Docker multi-stage builds, containerization, Linux deployment) is absent from the paper.",
@@ -3531,7 +3531,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dotnet-framework-installation-in-containers/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/dotnet-framework-installation-in-containers/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is a GUI client for vendor file converting written in C#. They are freely available at https://github.com/CSi-Studio/AirdPro",
       "asbval:note": "Paper confirms AirdPro is written in C# and available on GitHub, but does NOT discuss .NET Framework 4.8, Wine, Linux containers, or Docker deployment. The research question describes a deployment/containerization task that is entirely absent from the paper. The paper only states AirdPro is a C# GUI tool; it does not address how to run it in containerized environments or with Wine/Linux.",
@@ -3551,7 +3551,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dotnet-framework-installation-in-containers/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/dotnet-framework-installation-in-containers/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Docker is not mentioned anywhere in the paper. The paper focuses on the Aird data format and AirdPro as a conversion tool, not on containerization or deployment infrastructure.",
@@ -3571,7 +3571,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dotnet-framework-installation-in-containers/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/dotnet-framework-installation-in-containers/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Wine is not mentioned in the paper. The paper does not discuss cross-platform execution or Linux deployment of AirdPro.",
@@ -3591,7 +3591,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dotnet-framework-installation-in-containers/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/dotnet-framework-installation-in-containers/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": ".NET Framework 4.8 is not mentioned in the paper. The paper only states AirdPro is written in C# but does not specify which .NET version or runtime is required.",
@@ -3611,7 +3611,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dotnet-framework-installation-in-containers/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/dotnet-framework-installation-in-containers/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is a GUI client for vendor file converting written in C#. They are freely available at https://github.com/CSi-Studio/AirdPro",
       "asbval:note": "Paper confirms AirdPro exists and is written in C#, but does NOT discuss containerization, deployment, or specific versions (V5/V6). The paper only mentions AirdPro as a tool for file conversion, not as a containerized application.",
@@ -3631,7 +3631,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dotnet-framework-installation-in-containers/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/dotnet-framework-installation-in-containers/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro uses the integrated SDK provided by ProteoWizard [9] to read vendor file data for the first step of conversion.",
       "asbval:note": "Paper confirms AirdPro uses ProteoWizard SDK, but does NOT mention pwiz_bindings_cli.dll, .NET Framework containers, or containerized execution. The dependency is real but the containerization context is entirely absent from the paper.",
@@ -3651,7 +3651,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dotnet-framework-installation-in-containers/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/dotnet-framework-installation-in-containers/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention AirdPro version numbers, release dates, or version 2023.7. The paper only references AirdPro as a tool without version specifics.",
@@ -3671,7 +3671,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-stage-dockerfile-interpretation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/multi-stage-dockerfile-interpretation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about Aird, a mass spectrometry data format with compression algorithms (ZDPD, Zlib, FastPfor). No mention of Docker, containerization, Dockerfile, or multi-stage builds. The paper does discuss file compression ratios and size measurement, but in the context of MS data formats, not container images.",
@@ -3691,7 +3691,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-stage-dockerfile-interpretation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/multi-stage-dockerfile-interpretation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper contains no discussion of Docker, Dockerfile, containerization, or deployment variants. The scope is entirely about MS data format compression and file size optimization.",
@@ -3711,7 +3711,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-stage-dockerfile-interpretation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/multi-stage-dockerfile-interpretation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Docker is not mentioned anywhere in the paper. The paper uses MSConvert, ProteoWizard, and other MS-specific tools, not Docker.",
@@ -3731,7 +3731,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-stage-dockerfile-interpretation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/multi-stage-dockerfile-interpretation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "While the paper does mention AirdPro and its GitHub repository (https://github.com/CSi-Studio/AirdPro), there is no discussion of Dockerfile or multi-stage Docker builds. The paper describes AirdPro as 'a GUI client for vendor file converting written in C#', not as a containerized application with multi-stage builds.",
@@ -3751,7 +3751,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-stage-dockerfile-interpretation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/multi-stage-dockerfile-interpretation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is a GUI client for data conversion from vendor file to Aird file... AirdPro is written in C# and is an opensource project for download at https://github.com/CSi-Studio/AirdPro/releases/.",
       "asbval:note": "AirdPro is mentioned in the paper as a real tool from the cited repository, but the paper does not describe it as being containerized or deployed across multiple Docker variants (cli, dev, linux, windows). The paper only describes it as a C# GUI client for file conversion.",
@@ -3771,7 +3771,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-stage-dockerfile-interpretation/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/multi-stage-dockerfile-interpretation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No Dockerfile or Docker-related content in the paper. The paper discusses optimized compression algorithms (ZDPD) and file conversion strategies for MS data, not Docker build strategies.",
@@ -3791,7 +3791,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vendor-mass-spectrometry-file-format-handling/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/vendor-mass-spectrometry-file-format-handling/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is a GUI client for vendor file converting written in C#... The vendor file reader API is from MSConvert [9]... AirdPro uses the integrated SDK provided by ProteoWizard [9] to read vendor file data",
       "asbval:note": "Fully supported: AirdPro is confirmed as C# tool, vendor file conversion is core function, ProteoWizard integration confirmed.",
@@ -3811,7 +3811,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vendor-mass-spectrometry-file-format-handling/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/vendor-mass-spectrometry-file-format-handling/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Aird is designed to become a computing-oriented data format with high scalability, compression rate, and fast decoding speed... ZDPD can reduce the sizes by 49% than that by Zlib on average, and more importantly, ZDPD can decode the data 3 times faster than Zlib.",
       "asbval:note": "Fully supported: computation-oriented design, compression, and decoding speed are core claims of the paper.",
@@ -3831,7 +3831,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vendor-mass-spectrometry-file-format-handling/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/vendor-mass-spectrometry-file-format-handling/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is a GUI client for vendor file converting written in C#",
       "asbval:note": "Paper confirms AirdPro as C# GUI client for conversion, but does not mention V5/V6 versions or CLI capability. Card claims specific versions (V5 2023.7, V6 2024.4) and CLI mode not found in paper passages.",
@@ -3851,7 +3851,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vendor-mass-spectrometry-file-format-handling/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/vendor-mass-spectrometry-file-format-handling/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The vendor file reader API is from MSConvert [9]... AirdPro uses the integrated SDK provided by ProteoWizard [9] to read vendor file data",
       "asbval:note": "Fully supported: ProteoWizard/MSConvert confirmed as underlying vendor file reader for AirdPro.",
@@ -3871,7 +3871,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vendor-mass-spectrometry-file-format-handling/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/vendor-mass-spectrometry-file-format-handling/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Wine is not mentioned anywhere in the paper passages. Paper does not discuss containerization, Docker, or Linux runtime environments.",
@@ -3891,7 +3891,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vendor-mass-spectrometry-file-format-handling/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/vendor-mass-spectrometry-file-format-handling/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": ".NET Framework is not mentioned in the paper. Paper only states AirdPro is written in C# but does not specify .NET version or runtime dependencies.",
@@ -3911,7 +3911,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vendor-mass-spectrometry-file-format-handling/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/vendor-mass-spectrometry-file-format-handling/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Docker, containerization, and orchestration are not discussed in the paper passages.",
@@ -3931,7 +3931,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vendor-mass-spectrometry-file-format-handling/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/vendor-mass-spectrometry-file-format-handling/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Redis and distributed batch conversion architecture are not mentioned in the paper.",
@@ -3951,7 +3951,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vendor-mass-spectrometry-file-format-handling/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/vendor-mass-spectrometry-file-format-handling/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Aird-SDK is written in Java... Aird SDK is written in Java and is an open-source project for download at https://github.com/CSi-Studio/Aird-SDK",
       "asbval:note": "Paper confirms AirdSDK exists and is written in Java, but does not mention C# or Python versions. Card claims multi-language availability not supported by passages.",
@@ -3971,7 +3971,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vendor-mass-spectrometry-file-format-handling/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/vendor-mass-spectrometry-file-format-handling/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention AirdPro V5 or version 2023.7. Paper was published in 2022 and does not discuss future versions.",
@@ -3991,7 +3991,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vendor-mass-spectrometry-file-format-handling/010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/vendor-mass-spectrometry-file-format-handling/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention AirdPro V6 or version 2024.4. Paper was published in 2022 and does not discuss future versions.",
@@ -4011,7 +4011,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vendor-mass-spectrometry-file-format-handling/011",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/vendor-mass-spectrometry-file-format-handling/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "They are from different SCIEX, Thermo, and Agilent instruments. Then we convert the raw data into mzML, mgf, and mz5 file formats by MSConvert and compare them with Aird format.",
       "asbval:note": "Fully supported: paper confirms conversion of vendor files from SCIEX, Thermo, and Agilent to Aird format.",
@@ -4031,7 +4031,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vendor-mass-spectrometry-file-format-handling/012",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/vendor-mass-spectrometry-file-format-handling/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In the omics calculation process for a multi-sample queue, part of the MS data will be read into memory frequently.",
       "asbval:note": "Paper discusses multi-sample processing but does not mention Docker, CLI automation, or distributed workflows. Large-scale conversion is implied but not explicitly detailed.",
@@ -4051,7 +4051,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/wine-environment-initialization-validation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/wine-environment-initialization-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is a GUI client for data conversion from vendor file to Aird file... AirdPro is written in C#",
       "asbval:note": "Paper confirms AirdPro is written in C# and is a tool for file conversion, but does not discuss Wine environment initialization, .NET Framework 4.8 deployment, Docker containerization, or Linux execution. The research question describes a deployment/DevOps task that is not addressed in the paper.",
@@ -4071,7 +4071,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/wine-environment-initialization-validation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/wine-environment-initialization-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is written in C#",
       "asbval:note": "Paper confirms AirdPro is C#-based, but contains no discussion of Wine, .NET Framework, Docker, Linux deployment, or containerization strategies. The scope describes infrastructure/deployment concerns outside the paper's focus.",
@@ -4091,7 +4091,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/wine-environment-initialization-validation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/wine-environment-initialization-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Wine is not mentioned anywhere in the paper. The paper does not discuss containerization, Linux deployment, or Wine runtime.",
@@ -4111,7 +4111,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/wine-environment-initialization-validation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/wine-environment-initialization-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": ".NET Framework is not mentioned in the paper. While AirdPro is written in C#, the paper does not discuss its runtime dependencies or framework requirements.",
@@ -4131,7 +4131,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/wine-environment-initialization-validation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/wine-environment-initialization-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Docker is not mentioned in the paper. The paper does not discuss containerization or deployment infrastructure.",
@@ -4151,7 +4151,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/wine-environment-initialization-validation/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/wine-environment-initialization-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is a GUI client for data conversion from vendor file to Aird file... AirdPro is written in C#",
       "asbval:note": "Paper confirms AirdPro exists and is written in C#, but describes it as a 'GUI client', not a CLI application. The paper does not discuss CLI mode, Wine execution, or .NET Framework initialization. The role claimed (validating Wine/.NET initialization) is not supported by the paper.",
@@ -4171,7 +4171,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/wine-environment-initialization-validation/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/wine-environment-initialization-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper (published 2022, DOI 10.1186/s12859-021-04490-0) does not mention AirdPro V5 or version 2023.7. The paper only references AirdPro as a tool available at GitHub without version specification.",
@@ -4191,7 +4191,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/wine-windows-runtime-initialization-diagnostics/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/wine-windows-runtime-initialization-diagnostics/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is a GUI client for vendor file converting written in C#. They are freely available at https://github.com/CSi-Studio/AirdPro",
       "asbval:note": "Paper confirms AirdPro is C# software and provides GitHub repo, but contains no discussion of Wine, .NET Framework, containerization, Linux deployment, or initialization diagnostics. The research question describes a DevOps/deployment task entirely absent from the paper's scope, which focuses on the Aird data format and compression algorithms.",
@@ -4211,7 +4211,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/wine-windows-runtime-initialization-diagnostics/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/wine-windows-runtime-initialization-diagnostics/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Docker, containerization, or any container runtime. This is a deployment infrastructure tool not discussed in the paper.",
@@ -4231,7 +4231,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/wine-windows-runtime-initialization-diagnostics/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/wine-windows-runtime-initialization-diagnostics/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Wine or Windows API emulation. Wine is a deployment/runtime tool not discussed in the paper.",
@@ -4251,7 +4251,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/wine-windows-runtime-initialization-diagnostics/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/wine-windows-runtime-initialization-diagnostics/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention .NET Framework versions or runtime dependencies. It only states AirdPro is 'written in C#' but does not discuss framework versions or deployment requirements.",
@@ -4271,7 +4271,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/wine-windows-runtime-initialization-diagnostics/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/wine-windows-runtime-initialization-diagnostics/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro is a GUI client for vendor file converting written in C#. They are freely available at https://github.com/CSi-Studio/Aird-SDK and https://github.com/CSi-Studio/AirdPro",
       "asbval:note": "Paper confirms AirdPro exists and is available on GitHub. However, the paper does not mention versions V5 or V6 or version numbers 2023.7 or 2024.4. Version information in the card is not supported by the paper.",
@@ -4291,7 +4291,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/wine-windows-runtime-initialization-diagnostics/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/wine-windows-runtime-initialization-diagnostics/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro uses the integrated SDK provided by ProteoWizard [9] to read vendor file data for the first step of conversion.",
       "asbval:note": "Paper confirms ProteoWizard is used by AirdPro for vendor file reading. The card's claim that ProteoWizard provides 'pwiz_bindings_cli.dll' is not explicitly stated in the paper, but the functional role (vendor file format support) is confirmed.",
@@ -4311,7 +4311,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/wine-windows-runtime-initialization-diagnostics/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/wine-windows-runtime-initialization-diagnostics/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper's scope is the Aird data format design, compression algorithms (ZDPD), metadata storage, and performance benchmarking on existing datasets. It does not address deployment, containerization, Wine emulation, or Linux runtime initialization. This is a fundamental scope drift.",
@@ -4331,7 +4331,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/wine-windows-runtime-initialization-diagnostics/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/wine-windows-runtime-initialization-diagnostics/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper contains no discussion of Wine initialization time, overhead, or any deployment timing metrics. The paper reports decoding/encoding times for compression algorithms, not runtime initialization.",
@@ -4351,7 +4351,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/wine-windows-runtime-initialization-diagnostics/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/wine-windows-runtime-initialization-diagnostics/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "AirdPro starts to compress the m/z and intensity arrays according to the compression parameters and the user's targeted precision.",
       "asbval:note": "Paper confirms AirdPro performs mass spectrometry data conversion, but the card's focus on Wine/containerization readiness validation is not addressed. The paper discusses conversion functionality, not deployment validation.",
@@ -4371,7 +4371,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/aird-format-conversion-and-validation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/aird-format-conversion-and-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 13,
       "asbval:target_artifact_id": "aird-format-conversion-and-validation",
@@ -4384,7 +4384,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/artifact-size-measurement-and-range-verification/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/artifact-size-measurement-and-range-verification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "artifact-size-measurement-and-range-verification",
@@ -4397,7 +4397,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cli-application-invocation-with-file-io-management/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/cli-application-invocation-with-file-io-management/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 11,
       "asbval:target_artifact_id": "cli-application-invocation-with-file-io-management",
@@ -4410,7 +4410,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/container-image-size-verification/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/container-image-size-verification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "container-image-size-verification",
@@ -4423,7 +4423,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/container-volume-mounting-and-file-persistence/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/container-volume-mounting-and-file-persistence/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "container-volume-mounting-and-file-persistence",
@@ -4436,7 +4436,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/containerized-application-deployment-validation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/containerized-application-deployment-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "containerized-application-deployment-validation",
@@ -4449,7 +4449,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-container-runtime-execution-and-monitoring/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-container-runtime-execution-and-monitoring/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "docker-container-runtime-execution-and-monitoring",
@@ -4462,7 +4462,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-image-registry-inspection/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-image-registry-inspection/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "docker-image-registry-inspection",
@@ -4475,7 +4475,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-multistage-build-execution/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/docker-multistage-build-execution/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "docker-multistage-build-execution",
@@ -4488,7 +4488,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dotnet-framework-installation-in-containers/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/dotnet-framework-installation-in-containers/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "dotnet-framework-installation-in-containers",
@@ -4501,7 +4501,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-stage-dockerfile-interpretation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/multi-stage-dockerfile-interpretation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "multi-stage-dockerfile-interpretation",
@@ -4514,7 +4514,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vendor-mass-spectrometry-file-format-handling/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/vendor-mass-spectrometry-file-format-handling/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 12,
       "asbval:target_artifact_id": "vendor-mass-spectrometry-file-format-handling",
@@ -4527,7 +4527,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/wine-environment-initialization-validation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/wine-environment-initialization-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "wine-environment-initialization-validation",
@@ -4540,7 +4540,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/wine-windows-runtime-initialization-diagnostics/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/skill/wine-windows-runtime-initialization-diagnostics/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "wine-windows-runtime-initialization-diagnostics",
@@ -4553,7 +4553,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "AirdPro V5 is available at version 2023.7.",
       "asbval:note": null,
@@ -4573,7 +4573,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "AirdPro V6 is available at version 2024.4.",
       "asbval:note": null,
@@ -4593,7 +4593,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "AirdPro is a GUI client for conversion from vendor files to Aird files.",
       "asbval:note": null,
@@ -4613,7 +4613,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "AirdPro is written in C#.",
       "asbval:note": null,
@@ -4633,7 +4633,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "AirdPro is based on pwiz_bindings_cli.dll from the ProteoWizard project.",
       "asbval:note": null,
@@ -4653,7 +4653,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "AirdPro is opensource under the MulanPSL2 license.",
       "asbval:note": null,
@@ -4673,7 +4673,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "AirdPro is a Windows desktop application based on .NET Framework 4.8.",
       "asbval:note": null,
@@ -4693,7 +4693,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "macOS does not natively support .NET Framework.",
       "asbval:note": null,
@@ -4713,7 +4713,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "AirdPro can run on macOS through Docker + Wine technology.",
       "asbval:note": null,
@@ -4733,7 +4733,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The Wine + Docker solution for AirdPro uses Wine to run Windows applications in Linux containers.",
       "asbval:note": null,
@@ -4753,7 +4753,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Performance may not match native Windows environments when running AirdPro through Wine and Docker.",
       "asbval:note": null,
@@ -4773,7 +4773,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_012",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_012",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The first run of AirdPro requires longer initialization time.",
       "asbval:note": null,
@@ -4793,7 +4793,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_013",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_013",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "macOS 10.15+ (Catalina or later) is required for AirdPro deployment.",
       "asbval:note": "substring_in_paper=false; excerpt fragment present but claim adds 'required for AirdPro deployment' which isn't in excerpt",
@@ -4813,7 +4813,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_014",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_014",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Docker Desktop for Mac version 20.10+ is required for AirdPro deployment.",
       "asbval:note": "substring_in_paper=false; excerpt fragment present but claim adds 'required for AirdPro deployment' which isn't in excerpt",
@@ -4833,7 +4833,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_015",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_015",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A minimum of 8GB available RAM is required for AirdPro deployment on macOS.",
       "asbval:note": "substring_in_paper=false; claim omits '16GB recommended' qualifier from source excerpt",
@@ -4853,7 +4853,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_016",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_016",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A minimum of 20GB available disk space is required for AirdPro deployment.",
       "asbval:note": "substring_in_paper=false; excerpt fragment present but claim adds 'required for AirdPro deployment' which isn't in excerpt",
@@ -4873,7 +4873,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_017",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_017",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "XQuartz is required for GUI display support in AirdPro on macOS.",
       "asbval:note": "substring_in_paper=false; excerpt fragment present but claim adds 'required for AirdPro deployment' which isn't in excerpt",
@@ -4893,7 +4893,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_018",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_018",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The AirdPro Docker build process downloads an Ubuntu base image.",
       "asbval:note": "substring_in_paper=false; excerpt is minimal fragment; insufficient context to verify full claim",
@@ -4913,7 +4913,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_019",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_019",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The AirdPro Docker build process installs .NET Framework 4.8.",
       "asbval:note": "substring_in_paper=false; excerpt is minimal fragment; insufficient context to verify full claim",
@@ -4933,7 +4933,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_020",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_020",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Wine initialization and .NET Framework downloads can take more than 30 minutes on first run.",
       "asbval:note": "substring_in_paper=false; excerpt fragment vague; claim specifies 'Wine initialization and .NET Framework downloads' but excerpt doesn't detail these components",
@@ -4953,7 +4953,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_021",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_021",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "20-30% performance degradation occurs when running AirdPro through Wine.",
       "asbval:note": "substring_in_paper=false; excerpt fragment present but lacks full context about conditions/measurement methodology",
@@ -4973,7 +4973,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_022",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_022",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Wine needs to initialize and download .NET Framework components.",
       "asbval:note": "substring_in_paper=false; excerpt matches claim text but substring search failed, suggesting possible formatting or context issues",
@@ -4993,7 +4993,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_023",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_023",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "AirdPro is a mass spectrometry data analysis tool.",
       "asbval:note": "substring_in_paper=false; excerpt matches claim text but substring search failed, suggesting possible formatting or context issues",
@@ -5013,7 +5013,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_024",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_024",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "AirdPro supports Windows, Linux, and macOS through containerized deployment.",
       "asbval:note": "substring_in_paper=false; excerpt fragment present but claim adds 'through containerized deployment' which isn't fully in excerpt",
@@ -5033,7 +5033,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_025",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_025",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Docker version 20.10 or later is required for AirdPro deployment.",
       "asbval:note": null,
@@ -5053,7 +5053,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_026",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_026",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Docker Compose version 2.0 or later is optional for AirdPro deployment.",
       "asbval:note": null,
@@ -5073,7 +5073,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_027",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_027",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Minimum 8GB RAM is required for AirdPro deployment.",
       "asbval:note": null,
@@ -5093,7 +5093,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_028",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_028",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "At least 20GB free disk space is required for AirdPro deployment.",
       "asbval:note": null,
@@ -5113,7 +5113,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_029",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_029",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Multi-core processor with 4+ cores is recommended for AirdPro deployment.",
       "asbval:note": null,
@@ -5133,7 +5133,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_030",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_030",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Windows 10/11, macOS 10.15+, or Linux distributions are supported platforms for AirdPro.",
       "asbval:note": null,
@@ -5153,7 +5153,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_031",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_031",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Docker Desktop for Windows is required for Windows-based AirdPro deployment.",
       "asbval:note": null,
@@ -5173,7 +5173,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_032",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_032",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Docker Desktop for Mac is required for macOS-based AirdPro deployment.",
       "asbval:note": null,
@@ -5193,7 +5193,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_033",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_033",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Docker Engine or Docker Desktop is required for Linux-based AirdPro deployment.",
       "asbval:note": null,
@@ -5213,7 +5213,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_034",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_034",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Dockerfile uses a multi-stage build strategy with build and runtime stages.",
       "asbval:note": "Text specifies 'multi-stage build with build and runtime stages' but excerpt only says 'optimized build strategy' without confirming the specific multi-stage structure",
@@ -5233,7 +5233,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_035",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_035",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The macOS runtime for AirdPro is based on Ubuntu 22.04.",
       "asbval:note": "Text claims macOS runtime is based on Ubuntu 22.04, but excerpt only states 'Based on Ubuntu 22.04' without clarifying which platform/variant this applies to",
@@ -5253,7 +5253,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_036",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_036",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Windows Native image variant is approximately 4-5GB in size.",
       "asbval:note": "Text specifies 'Windows Native image variant' but excerpt only provides size '~4-5GB' without explicitly confirming this refers to Windows Native variant",
@@ -5273,7 +5273,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_037",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_037",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Linux/macOS Wine image variant is approximately 8-10GB in size.",
       "asbval:note": "substring_in_paper=false; excerpt fragment incomplete ('includes Wine dependencies' context unclear), but size range 8-10GB is consistent with claim",
@@ -5293,7 +5293,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_038",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_038",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "CLI version of AirdPro is approximately 6-7GB in size.",
       "asbval:note": "substring_in_paper=false; excerpt is minimal fragment, but size range 6-7GB matches claim text",
@@ -5313,7 +5313,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_039",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_039",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Development version of AirdPro is approximately 9-11GB in size.",
       "asbval:note": "substring_in_paper=false; excerpt is minimal fragment, but size range 9-11GB matches claim text",
@@ -5333,7 +5333,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_040",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_040",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Docker Desktop version 20.10 or later is required for Linux deployment.",
       "asbval:note": "substring_in_paper=false; excerpt fragment lacks context about Linux-specific requirement; claim adds scope not explicit in excerpt",
@@ -5353,7 +5353,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_041",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_041",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Ubuntu 18.04 LTS is a supported Linux distribution for AirdPro deployment.",
       "asbval:note": "substring_in_paper=false; excerpt fragment incomplete ('and above' qualifier present but context unclear); claim adds 'AirdPro deployment' scope",
@@ -5373,7 +5373,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_042",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_042",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Debian 10 (Buster) is a supported Linux distribution for AirdPro deployment.",
       "asbval:note": "substring_in_paper=false; excerpt is minimal fragment ('Debian' prefix missing); claim adds 'AirdPro deployment' scope not in excerpt",
@@ -5393,7 +5393,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_043",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_043",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "CentOS 7 is a supported Linux distribution for AirdPro deployment.",
       "asbval:note": "substring_in_paper=false; excerpt fragment lacks 'CentOS' prefix; claim adds 'AirdPro deployment' scope",
@@ -5413,7 +5413,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_044",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_044",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "RHEL 7 is a supported Linux distribution for AirdPro deployment.",
       "asbval:note": "substring_in_paper=false; excerpt fragment lacks 'RHEL' prefix; claim adds 'AirdPro deployment' scope",
@@ -5433,7 +5433,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_045",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_045",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Fedora 30 is a supported Linux distribution for AirdPro deployment.",
       "asbval:note": "substring_in_paper=false; excerpt fragment lacks 'Fedora' prefix; claim adds 'AirdPro deployment' scope",
@@ -5453,7 +5453,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_046",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_046",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "x86_64 (AMD64) architecture is required for Linux-based AirdPro deployment.",
       "asbval:note": "substring_in_paper=false; excerpt is minimal fragment; claim adds 'required for Linux-based AirdPro deployment' scope not explicit in excerpt",
@@ -5473,7 +5473,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_047",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_047",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Minimum 8GB RAM is required for Linux-based AirdPro deployment.",
       "asbval:note": "substring_in_paper=false; excerpt fragment 'at least 8GB' lacks context; claim specifies 'RAM' and 'Linux-based AirdPro deployment' scope",
@@ -5493,7 +5493,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_048",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_048",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "At least 20GB disk space is required for Linux-based AirdPro deployment.",
       "asbval:note": "substring_in_paper=false; excerpt fragment lacks context; claim adds 'Linux-based AirdPro deployment' scope not explicit in excerpt",
@@ -5513,7 +5513,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_049",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_049",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Wine + Docker solution uses Docker containers to provide isolated Linux runtime environment.",
       "asbval:note": null,
@@ -5533,7 +5533,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_050",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_050",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Wine serves as a Windows application compatibility layer in the Docker solution.",
       "asbval:note": null,
@@ -5553,7 +5553,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_051",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_051",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "XQuartz is an X11 server for macOS used for GUI display.",
       "asbval:note": null,
@@ -5573,7 +5573,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_052",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_052",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": ".NET Framework 4.8 is installed and run through Wine in the Docker solution.",
       "asbval:note": null,
@@ -5593,7 +5593,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_053",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-021-04490-0/claim/claim_053",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Current version of AirdPro is 1.0.0 as of December 2024.",
       "asbval:note": null,

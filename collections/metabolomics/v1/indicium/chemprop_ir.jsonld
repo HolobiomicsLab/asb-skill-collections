@@ -233,7 +233,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our method builds upon the Chemprop architecture developed by Yang et al. Chemprop consists of a directed MPNN and a feedforward neural network (FFNN) readout. The directed MPNN constructs a learned vector representation, or molecular fingerprint, from a given molecular graph by message passing. Atom and bond features are combined through the message passing steps to generate the learned molecular fingerprint. In the application of directed message passing, the messages and hidden states of the network are associated with directed edges (bonds) instead of nodes (atoms). Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra, in the form of 1801 output elements.",
       "asbval:note": "The paper explicitly describes Chemprop-IR as an extension of Chemprop that specializes in IR spectral prediction with 1801 output elements representing absorbances at fixed wavenumber positions.",
@@ -253,7 +253,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In this paper, we investigate the application of Chemprop, a state-of-the-art MPNN, toward the prediction of IR spectra.",
       "asbval:note": "Chemprop is explicitly named as the base MPNN architecture used in this work.",
@@ -273,7 +273,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemprop-IR has been developed as a software package for the prediction of IR spectra through the use of machine learning. This work serves the dual purpose of providing a trained general-purpose model for the prediction of IR spectra with ease and providing the Chemprop-IR software framework for the training of new models.",
       "asbval:note": "Chemprop-IR is the main software package developed in this paper.",
@@ -293,7 +293,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/card/task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Chemprop-IR software is available through a public repository with Git Hub. An archived version of the software and the trained models associated with this publication are shared through Zenodo. In this repository, the trained models for the computed spectra and for experimental spectra are provided, allowing predictions of new spectra in any of the supported phases. The software provides tools for calculating ensemble uncertainty for predicted spectra and for calculating SIS between predictions and reference spectra. The software enables the training of new models from input spectra, using such features as the SID loss function and spectrum normalization by specified absorbance ranges.",
       "asbval:note": "The paper provides trained models and software for training new models, but does not explicitly describe a 'spectral features module' as a distinct compilable component. The architecture includes spectral loss functions (SID) and normalization techniques, but the card's phrasing of 'spectral features module' is not explicitly named in the paper.",
@@ -313,7 +313,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/card/task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph. Each bond and heavy atom in the molecule is used to generate a vector of atom or bond features. The bond and atom features are used to generate hidden states of size 2200 at each of the directed edges. In each message passing step, the hidden states are updated according to the directed message passing procedure described by Yang et al. Following the message passing steps, atom vectors are generated from the associated directed edge hidden states. The atom vectors are averaged to form a molecular fingerprint vector of size 2200. The phase of the molecule is introduced to the molecular fingerprint vector following message passing. The molecular vector following this concatenation is size 2205 for experimental spectra models and 2200 for computed spectra models. After phase feature concatenation, the resulting vector is fed to a FFNN for readout of the model results. For each intermediate layer in the FFNN, the produced vector size is 2200. The final layer of the FFNN provides an output size of 1801.",
       "asbval:note": "The paper describes the forward pass in detail: SMILES input \u2192 2D graph \u2192 message passing \u2192 molecular fingerprint (2200 or 2205 elements) \u2192 FFNN \u2192 output tensor of 1801 elements (absorbances at wavenumber positions).",
@@ -333,7 +333,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card frames the task as 'reconstructing' the architecture, which implies implementation/coding. The paper is a published research article describing the architecture and providing trained models, not a tutorial or implementation guide. The card's expected outputs suggest a coding/engineering task, but the paper is primarily a scientific publication.",
@@ -349,7 +349,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/card/task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In Chemprop-IR, molecules are encoded using a directed message passing neural network, allowing for molecule latent representations to be learned and optimized for the task of spectral predictions... The phase of the molecule is introduced to the molecular fi ngerprint vector following message passing.",
       "asbval:note": "Paper describes phase features (one-hot vector of size 5 for experimental spectra) concatenated to molecular fingerprint, but does not detail a separate 'spectral feature extraction step' as a distinct pipeline module. The paper focuses on how phase information is incorporated into the MPNN fingerprint, not on extracting spectral features from spectra themselves. The card's framing suggests feature extraction from spectral data, but the paper describes feature engineering for molecular input and phase metadata.",
@@ -369,7 +369,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/card/task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In this paper, we investigate the application of Chemprop, a state-of-the-art MPNN, toward the prediction of IR spectra... Our method builds upon the Chemprop architecture developed by Yang et al.",
       "asbval:note": "Chemprop is explicitly named as the base architecture upon which Chemprop-IR is built.",
@@ -389,7 +389,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/card/task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemprop-IR has been developed as a software package for the prediction of IR spectra through the use of machine learning... The Chemprop-IR software is available through a public repository with Git Hub.",
       "asbval:note": "Chemprop-IR is the main software package developed and discussed throughout the paper.",
@@ -409,7 +409,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/card/task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not describe extraction of spectral features as a tensor/matrix from test molecules. Instead, it describes: (1) input molecules as SMILES strings converted to 2D graphs, (2) output as predicted absorbance vectors (1801 normalized absorbances), and (3) phase features as one-hot vectors. No intermediate 'spectral features tensor' is extracted from test molecules.",
@@ -429,7 +429,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/card/task_002/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Chemprop-IR software is available through a public repository with Git Hub... The software provides tools for calculating ensemble uncertainty for predicted spectra and for calculating SIS between predictions and reference spectra. The software enables the training of new models from input spectra, using such features as the SID loss function and spectrum normalization by specified absorbance ranges.",
       "asbval:note": "Code is available via GitHub and Zenodo, but the paper does not describe a standalone 'feature extraction module' as a separate, reusable component. The software is presented as an end-to-end prediction framework, not as modular feature extraction code.",
@@ -449,7 +449,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/card/task_002/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not describe generation of a verification report for feature extraction. It reports model performance metrics (SIS scores, distributions) and validation set performance, but not a feature-level verification report.",
@@ -469,7 +469,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/card/task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card frames the task as 'implement the spectral feature extraction step' as if it were a distinct pipeline module, but the paper describes Chemprop-IR as an end-to-end architecture where molecular encoding (via MPNN) and phase metadata concatenation are integrated, not separated into a standalone feature extraction step.",
@@ -486,7 +486,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-learning-module-instantiation-and-validation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/deep-learning-module-instantiation-and-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemprop-IR has been developed as a software package for the prediction of IR spectra through the use of machine learning... In Chemprop-IR, molecules are encoded using a directed message passing neural network, allowing for molecule latent representations to be learned and optimized for the task of spectral predictions.",
       "asbval:note": "Paper describes Chemprop-IR as a software framework for IR spectral prediction using message passing neural networks, but does NOT explicitly discuss instantiation validation procedures, tensor dimensionality checks, or architectural constraint verification as a standalone task. The paper focuses on model training and performance evaluation, not on module instantiation validation as a discrete workflow step.",
@@ -506,7 +506,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-learning-module-instantiation-and-validation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/deep-learning-module-instantiation-and-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our method builds upon the Chemprop architecture developed by Yang et al. Chemprop consists of a directed MPNN and a feedforward neural network (FFNN) readout.",
       "asbval:note": "Chemprop is confirmed as the base MPNN architecture used in Chemprop-IR.",
@@ -526,7 +526,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-learning-module-instantiation-and-validation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/deep-learning-module-instantiation-and-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemprop-IR has been developed as a software package for the prediction of IR spectra through the use of machine learning... Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra, in the form of 1801 output elements.",
       "asbval:note": "Chemprop-IR is confirmed as an extension of Chemprop specialized for IR spectral prediction.",
@@ -546,7 +546,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-learning-module-instantiation-and-validation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/deep-learning-module-instantiation-and-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Chemprop-IR software is available through a public repository with Git Hub.",
       "asbval:note": "Paper confirms Chemprop-IR is available on GitHub but provides a different repository URL: https://github.com/gfm-collab/chemprop-IR (from reference 64). The card lists the base chemprop repo, not the Chemprop-IR-specific repo.",
@@ -566,7 +566,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-learning-module-instantiation-and-validation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/deep-learning-module-instantiation-and-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not describe a standalone instantiation-and-validation workflow as a discrete task. The paper focuses on model training (with pretraining strategy, loss functions, ensemble methods) and performance evaluation (SIS scores, test/validation splits), not on module instantiation validation as a separate procedural step. The paper does not discuss tensor dimensionality verification, data type checking, or architectural constraint validation as explicit validation tasks.",
@@ -586,7 +586,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-learning-module-instantiation-and-validation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/deep-learning-module-instantiation-and-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph. Each bond and heavy atom in the molecule is used to generate a vector of atom or bond features.",
       "asbval:note": "Paper confirms SMILES strings are used as molecular inputs and converted to 2D molecular graphs.",
@@ -606,7 +606,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/message-passing-neural-network-implementation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/message-passing-neural-network-implementation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In this paper, we investigate the application of Chemprop, a state-of-the-art MPNN, toward the prediction of IR spectra... Chemprop-IR has been developed as a software package for the prediction of IR spectra through the use of machine learning... In Chemprop-IR, molecules are encoded using a directed message passing neural network",
       "asbval:note": "Paper explicitly describes Chemprop as an MPNN and Chemprop-IR as an extension for IR spectral prediction.",
@@ -626,7 +626,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/message-passing-neural-network-implementation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/message-passing-neural-network-implementation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The directed MPNN constructs a learned vector representation, or molecular fingerprint, from a given molecular graph by message passing... The molecular vector following this concatenation is fed to a FFNN for readout of the model results... The final layer of the FFNN provides an output size of 1801",
       "asbval:note": "Paper describes MPNN encoding followed by domain-specific spectral output (1801 absorbance values for IR spectra).",
@@ -646,7 +646,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/message-passing-neural-network-implementation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/message-passing-neural-network-implementation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph. Each bond and heavy atom in the molecule is used to generate a vector of atom or bond features... Following the message passing steps, atom vectors are generated from the associated directed edge hidden states",
       "asbval:note": "Paper describes forward pass from SMILES/molecular graph through message passing to output.",
@@ -666,7 +666,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/message-passing-neural-network-implementation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/message-passing-neural-network-implementation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In this paper, we investigate the application of Chemprop, a state-of-the-art MPNN, toward the prediction of IR spectra... Our method builds upon the Chemprop architecture developed by Yang et al.",
       "asbval:note": "Chemprop is explicitly identified as the base MPNN framework.",
@@ -686,7 +686,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/message-passing-neural-network-implementation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/message-passing-neural-network-implementation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemprop-IR has been developed as a software package for the prediction of IR spectra through the use of machine learning... Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra, in the form of 1801 output elements",
       "asbval:note": "Chemprop-IR is explicitly described as an extension of Chemprop for IR spectral prediction.",
@@ -706,7 +706,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/message-passing-neural-network-implementation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/message-passing-neural-network-implementation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not provide the GitHub repository URL for chemprop. Paper cites Yang et al. 2019 as the source but does not give a direct repo link.",
@@ -726,7 +726,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/message-passing-neural-network-implementation/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/message-passing-neural-network-implementation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Chemprop-IR software is available through a public repository with Git Hub. An archived version of the software and the trained models associated with this publication are shared through Zenodo.",
       "asbval:note": "Paper confirms Chemprop-IR is available on GitHub but provides the actual URL as https://github.com/gfm-collab/chemprop-IR (from reference 64), not https://github.com/chemprop/chemprop. The card's repo URL is incorrect.",
@@ -746,7 +746,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/message-passing-neural-network-implementation/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/message-passing-neural-network-implementation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph... Typical MPNN architectures represent molecular inputs as 2D graphs consisting of node and edge features",
       "asbval:note": "Paper confirms SMILES and graph representations as inputs for MPNN-based property prediction.",
@@ -766,7 +766,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/message-passing-neural-network-implementation/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/message-passing-neural-network-implementation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra... The phase of the molecule is introduced to the molecular fingerprint vector following message passing",
       "asbval:note": "Paper describes extending Chemprop with phase features and spectral-specific output modules.",
@@ -786,7 +786,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-graph-representation-parsing/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/molecular-graph-representation-parsing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph. Each bond and heavy atom in the molecule is used to generate a vector of atom or bond features.",
       "asbval:note": "Paper explicitly describes SMILES-to-graph conversion as core to Chemprop-IR architecture.",
@@ -806,7 +806,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-graph-representation-parsing/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/molecular-graph-representation-parsing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our method builds upon the Chemprop architecture developed by Yang et al. Chemprop consists of a directed MPNN and a feedforward neural network (FFNN) readout.",
       "asbval:note": "Paper confirms Chemprop as foundational architecture for MPNN-based molecular representation.",
@@ -826,7 +826,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-graph-representation-parsing/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/molecular-graph-representation-parsing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra, in the form of 1801 output elements.",
       "asbval:note": "Paper confirms Chemprop-IR extends Chemprop architecture; graph parsing is inherited from base Chemprop.",
@@ -846,7 +846,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-graph-representation-parsing/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/molecular-graph-representation-parsing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph. Each bond and heavy atom in the molecule is used to generate a vector of atom or bond features.",
       "asbval:note": "Paper describes SMILES input and graph conversion as standard workflow for Chemprop-IR.",
@@ -866,7 +866,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-graph-representation-parsing/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/molecular-graph-representation-parsing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These learned fi ngerprints have been shown to outperform engineered representations such as Morgan fi ngerprints.",
       "asbval:note": "Paper contrasts learned MPNN fingerprints with pre-engineered representations (Morgan fingerprints), supporting the distinction that graph parsing is unnecessary for pre-computed descriptors.",
@@ -886,7 +886,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-graph-representation-parsing/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/molecular-graph-representation-parsing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "DNN architectures, such as message passing neural networks (MPNNs), have shown promise in surpassing traditional techniques from quantum chemistry in both chemical accuracy and computational expense. Typical MPNN architectures represent molecular inputs as 2D graphs consisting of node and edge features.",
       "asbval:note": "Paper confirms MPNN-specific requirement for graph-based molecular inputs.",
@@ -906,7 +906,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-graph-representation-parsing/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/molecular-graph-representation-parsing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Spectra from any source that could not be linked to valid SMILES strings were not included. Included species were limited to those that existed as a single molecule (e.g., excluding mixtures and salts). Species were also limited to contain only the following atoms: C, H, O, N, Si, P, S, F, Cl, Br, and I.",
       "asbval:note": "Paper describes data validation and filtering for valid SMILES and supported atom types, supporting the constraint on malformed or unsupported structures.",
@@ -926,7 +926,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-property-prediction-feature-construction/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/molecular-property-prediction-feature-construction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In Chemprop-IR, molecules are encoded using a directed message passing neural network, allowing for molecule latent representations to be learned and optimized for the task of spectral predictions.",
       "asbval:note": "The paper describes Chemprop-IR as using MPNN to encode molecules and learn representations for IR spectral prediction. The card's framing of 'domain-specific molecular features' aligns with the paper's approach of learning spectral-optimized representations.",
@@ -946,7 +946,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-property-prediction-feature-construction/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/molecular-property-prediction-feature-construction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph. Each bond and heavy atom in the molecule is used to generate a vector of atom or bond features.",
       "asbval:note": "Paper explicitly describes SMILES-to-graph conversion and feature generation for molecular representation learning.",
@@ -966,7 +966,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-property-prediction-feature-construction/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/molecular-property-prediction-feature-construction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our method builds upon the Chemprop architecture developed by Yang et al. Chemprop consists of a directed MPNN and a feedforward neural network (FFNN) readout.",
       "asbval:note": "Paper confirms Chemprop as the base MPNN architecture that Chemprop-IR extends.",
@@ -986,7 +986,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-property-prediction-feature-construction/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/molecular-property-prediction-feature-construction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemprop-IR has been developed as a software package for the prediction of IR spectra through the use of machine learning... Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra.",
       "asbval:note": "Paper explicitly describes Chemprop-IR as an extension of Chemprop specialized for IR spectral prediction.",
@@ -1006,7 +1006,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-property-prediction-feature-construction/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/molecular-property-prediction-feature-construction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not provide the chemprop repository URL. The paper cites Yang et al. 2019 as the source of Chemprop but does not link to a GitHub repository for chemprop itself.",
@@ -1026,7 +1026,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-property-prediction-feature-construction/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/molecular-property-prediction-feature-construction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Chemprop-IR software is available through a public repository with Git Hub.",
       "asbval:note": "Paper confirms Chemprop-IR is available on GitHub but provides a different URL: https://github.com/gfm-collab/chemprop-IR (from reference 64). The card lists the URL as https://github.com/chemprop/chemprop, which appears to be incorrect for Chemprop-IR.",
@@ -1046,7 +1046,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-property-prediction-feature-construction/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/molecular-property-prediction-feature-construction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph... for the task of spectral predictions.",
       "asbval:note": "Paper confirms SMILES input and IR spectral prediction as the core use case.",
@@ -1066,7 +1066,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-property-prediction-feature-construction/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/molecular-property-prediction-feature-construction/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The bond and atom features are used to generate hidden states of size 2200 at each of the directed edges... The phase of the molecule is introduced to the molecular fi ngerprint vector following message passing.",
       "asbval:note": "Paper describes domain-specific feature engineering (e.g., phase information concatenation) beyond standard atom/bond features, supporting the card's guidance.",
@@ -1086,7 +1086,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neural-network-architecture-extension/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/neural-network-architecture-extension/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In Chemprop-IR, molecules are encoded using a directed message passing neural network, allowing for molecule latent representations to be learned and optimized for the task of spectral predictions... The phase of the molecule is introduced to the molecular fi ngerprint vector following message passing.",
       "asbval:note": "Paper demonstrates integration of phase features (a domain-specific feature module) into the MPNN output, but the research question frames this as a general skill/methodology for extending MPNNs. The paper shows the specific implementation for IR spectra but does not present this as a generalizable extension pattern or methodology tutorial. The claim overstates the scope as a reusable skill framework when the paper focuses on a specific application.",
@@ -1106,7 +1106,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neural-network-architecture-extension/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/neural-network-architecture-extension/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our method builds upon the Chemprop architecture developed by Yang et al. Chemprop consists of a directed MPNN and a feedforward neural network (FFNN) readout... Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra, in the form of 1801 output elements.",
       "asbval:note": "Paper clearly demonstrates that extending a general-purpose MPNN (Chemprop) with specialized output layers and feature integration is necessary for IR spectral prediction tasks.",
@@ -1126,7 +1126,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neural-network-architecture-extension/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/neural-network-architecture-extension/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The phase of the molecule is introduced to the molecular fi ngerprint vector following message passing. This process is carried out for experimental spectra models, where each entry is speci fi ed as one of the fi ve supported phases. The phase features are represented as a one-hot vector of size fi ve. This vector is concatenated to the end of the molecular fi ngerprint vector.",
       "asbval:note": "Paper demonstrates exactly this pattern: taking the base Chemprop MPNN output (molecular fingerprint) and concatenating domain-specific features (phase information) before feeding to the FFNN readout.",
@@ -1146,7 +1146,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neural-network-architecture-extension/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/neural-network-architecture-extension/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemprop-IR software is available through a public repository with Git Hub... An archived version of the software and the trained models associated with this publication are shared through Zenodo.",
       "asbval:note": "Paper confirms condition (1) and (3) are met (public repo, clear interface between MPNN fingerprint and phase feature concatenation). However, the paper does not explicitly articulate condition (2) as a prerequisite or methodology step; it is implicit in the work rather than stated as a trigger condition.",
@@ -1166,7 +1166,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neural-network-architecture-extension/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/neural-network-architecture-extension/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our method builds upon the Chemprop architecture developed by Yang et al. Chemprop consists of a directed MPNN and a feedforward neural network (FFNN) readout... The directed MPNN constructs a learned vector representation, or molecular fi ngerprint, from a given molecular graph by message passing.",
       "asbval:note": "Chemprop (case-insensitive match) is confirmed as the base MPNN architecture used for molecular graph encoding.",
@@ -1186,7 +1186,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neural-network-architecture-extension/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/neural-network-architecture-extension/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemprop-IR has been developed as a software package for the prediction of IR spectra through the use of machine learning... Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra, in the form of 1801 output elements.",
       "asbval:note": "Chemprop-IR (case-insensitive) is confirmed as the extended implementation demonstrating the integration of spectral features into the base Chemprop architecture.",
@@ -1206,7 +1206,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neural-network-architecture-extension/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/neural-network-architecture-extension/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not cite or reference the chemprop GitHub repository URL. Paper cites Yang et al. 2019 as the source of Chemprop but does not provide the repository link.",
@@ -1226,7 +1226,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neural-network-architecture-extension/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/neural-network-architecture-extension/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The molecular vector following this concatenation is size 2205 for experimental spectra models and 2200 for computed spectra models. After phase feature concatenation, the resulting vector is fed to a FFNN for readout of the model results. For each intermediate layer in the FFNN, the produced vector size is 2200. The fi nal layer of the FFNN provides an output size of 1801.",
       "asbval:note": "Paper explicitly validates parameter flow and output shapes at each stage of the extended architecture, demonstrating the expected output behavior.",
@@ -1246,7 +1246,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neural-network-architecture-extension/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/neural-network-architecture-extension/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The phase of the molecule is introduced to the molecular fi ngerprint vector following message passing... This vector is concatenated to the end of the molecular fi ngerprint vector.",
       "asbval:note": "Paper demonstrates the integration method: domain-specific features (phase information) are concatenated to the MPNN-generated molecular fingerprint before passing to the FFNN readout layer.",
@@ -1266,7 +1266,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pytorch-model-instantiation-and-forward-pass/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/pytorch-model-instantiation-and-forward-pass/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In Chemprop-IR, molecules are encoded using a directed message passing neural network, allowing for molecule latent representations to be learned and optimized for the task of spectral predictions... The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph.",
       "asbval:note": "Paper describes instantiation and forward pass of Chemprop-IR with SMILES inputs and message passing architecture. However, the paper does NOT describe 'integrated spectral feature modules' as a separate architectural extension being added to a base model. Instead, Chemprop-IR is presented as a complete, unified architecture. The card frames this as validating 'architectural extensions to base models,' but the paper shows Chemprop-IR as an integrated whole, not as a base model with added modules.",
@@ -1286,7 +1286,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pytorch-model-instantiation-and-forward-pass/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/pytorch-model-instantiation-and-forward-pass/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our method builds upon the Chemprop architecture developed by Yang et al. Chemprop consists of a directed MPNN and a feedforward neural network (FFNN) readout... Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra",
       "asbval:note": "Paper confirms Chemprop is the base architecture and Chemprop-IR extends it. However, the 'spectral features' are not described as a separate module added to Chemprop; rather, Chemprop-IR is an extension that specializes the entire architecture for spectral prediction (1801 output elements for absorbance values, phase feature concatenation, SID loss function). The extension is architectural, not modular.",
@@ -1306,7 +1306,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pytorch-model-instantiation-and-forward-pass/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/pytorch-model-instantiation-and-forward-pass/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemprop-IR has been developed as a software package for the prediction of IR spectra through the use of machine learning... Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra, in the form of 1801 output elements.",
       "asbval:note": "Chemprop-IR is confirmed as an extended variant of Chemprop for IR spectral prediction. The paper explicitly describes it as a software package and extension.",
@@ -1326,7 +1326,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pytorch-model-instantiation-and-forward-pass/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/pytorch-model-instantiation-and-forward-pass/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention PyTorch by name. While the paper describes neural network implementation and forward passes, it does not specify PyTorch as the framework. The paper references Hyperopt for hyperparameter optimization and mentions Adam optimizer, but does not explicitly state the deep learning framework used.",
@@ -1346,7 +1346,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pytorch-model-instantiation-and-forward-pass/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/pytorch-model-instantiation-and-forward-pass/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra... The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph.",
       "asbval:note": "The paper describes Chemprop-IR as an extension of Chemprop for spectral prediction and validates forward passes with SMILES inputs. However, the paper does not describe a workflow of 'implementing a new module' and then 'verifying instantiation'\u2014it presents Chemprop-IR as a complete, published software package. The validation described in the paper is post-hoc performance evaluation on test sets, not pre-training validation of newly added modules.",
@@ -1366,7 +1366,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pytorch-model-instantiation-and-forward-pass/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/pytorch-model-instantiation-and-forward-pass/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph... The final layer of the FFNN provides an output size of 1801.",
       "asbval:note": "Paper confirms SMILES input format and output dimensionality (1801 absorbance values). However, the paper does not describe a pre-training validation workflow. Instead, it describes the complete training pipeline with pretraining on computed spectra and refinement on experimental spectra. The paper does not present a use case of 'verifying compilation before training'\u2014it assumes the model is already built and proceeds directly to training.",
@@ -1386,7 +1386,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-feature-engineering/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/spectral-feature-engineering/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In Chemprop-IR, molecules are encoded using a directed message passing neural network, allowing for molecule latent representations to be learned and optimized for the task of spectral predictions.",
       "asbval:note": "Core claim directly supported by abstract and methods sections.",
@@ -1406,7 +1406,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-feature-engineering/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/spectral-feature-engineering/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra, in the form of 1801 output elements. Each element corresponds to the absorbance at a fixed wavenumber position in the spectrum.",
       "asbval:note": "Paper explicitly describes chemprop-IR as a specialized extension for IR spectral prediction.",
@@ -1426,7 +1426,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-feature-engineering/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/spectral-feature-engineering/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our method builds upon the Chemprop architecture developed by Yang et al. Chemprop consists of a directed MPNN and a feedforward neural network (FFNN) readout.",
       "asbval:note": "Chemprop is confirmed as the base MPNN architecture used in the paper.",
@@ -1446,7 +1446,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-feature-engineering/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/spectral-feature-engineering/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemprop-IR has been developed as a software package for the prediction of IR spectra through the use of machine learning... Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra.",
       "asbval:note": "Chemprop-IR is explicitly described as the specialized extension for IR spectral prediction.",
@@ -1466,7 +1466,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-feature-engineering/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/spectral-feature-engineering/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not provide the chemprop repository URL. Paper cites Yang et al. 2019 as the source of Chemprop but does not link to a GitHub repository for the base chemprop tool.",
@@ -1486,7 +1486,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-feature-engineering/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/spectral-feature-engineering/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Chemprop-IR software is available through a public repository with Git Hub. An archived version of the software and the trained models associated with this publication are shared through Zenodo.",
       "asbval:note": "Paper confirms chemprop-IR is available on GitHub but provides the actual URL as https://github.com/gfm-collab/chemprop-IR (reference 64), not https://github.com/chemprop/chemprop. The card's URL appears to be incorrect or conflated with the base chemprop repository.",
@@ -1506,7 +1506,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-feature-engineering/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/spectral-feature-engineering/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph.",
       "asbval:note": "Paper confirms SMILES strings are the primary input format for molecular structures in chemprop-IR.",
@@ -1526,7 +1526,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-feature-engineering/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/spectral-feature-engineering/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra... The phase of the molecule is introduced to the molecular fingerprint vector following message passing.",
       "asbval:note": "Paper describes chemprop-IR as a specialized architecture with domain-specific features (e.g., phase information) for IR prediction.",
@@ -1546,7 +1546,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-features-module-integration/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/spectral-features-module-integration/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In Chemprop-IR, molecules are encoded using a directed message passing neural network, allowing for molecule latent representations to be learned and optimized for the task of spectral predictions... The structure of Chemprop-IR first encodes molecules with a MPNN before further processing the output in a FFNN.",
       "asbval:note": "The paper describes exactly this architecture: chemprop (MPNN base) extended with additional layers (FFNN readout) for spectral prediction.",
@@ -1566,7 +1566,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-features-module-integration/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/spectral-features-module-integration/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The directed MPNN constructs a learned vector representation, or molecular fingerprint, from a given molecular graph by message passing... The molecular vector following this concatenation is fed to a FFNN for readout of the model results... The final layer of the FFNN provides an output size of 1801.",
       "asbval:note": "The paper demonstrates composition of MPNN (molecular graph encoder) with FFNN (spectral feature transformer) to produce 1801-element spectral output vectors.",
@@ -1586,7 +1586,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-features-module-integration/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/spectral-features-module-integration/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our method builds upon the Chemprop architecture developed by Yang et al. Chemprop consists of a directed MPNN and a feedforward neural network (FFNN) readout.",
       "asbval:note": "Chemprop is confirmed as the base MPNN architecture. The paper cites Yang et al. 2019 as the original Chemprop work.",
@@ -1606,7 +1606,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-features-module-integration/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/spectral-features-module-integration/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Chemprop-IR has been developed as a software package for the prediction of IR spectra through the use of machine learning... Chemprop-IR uses an extension of the Chemprop network structure that specializes in the prediction of IR spectra, in the form of 1801 output elements.",
       "asbval:note": "Chemprop-IR is explicitly described as an extension of Chemprop for IR spectral prediction.",
@@ -1626,7 +1626,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-features-module-integration/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/spectral-features-module-integration/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Model training incorporates spectra metrics and normalization techniques that offer better performance with spectral predictions than standard practice in regression models... The model makes use of pretraining using quantum chemistry calculations and ensembling of multiple submodels to improve generalizability and performance.",
       "asbval:note": "The paper demonstrates extending chemprop to predict spectral properties (1801-element vectors) rather than scalar properties, with specialized training techniques.",
@@ -1646,7 +1646,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-features-module-integration/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/spectral-features-module-integration/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The initial input to the model is a SMILES string, which is interpreted as a 2D molecular graph... The prediction model is an ensemble of 10 individually trained submodels. Spectra are represented as vectors with 1801 normalized absorbances (one every 2 cm\u22121 from 400 to 4000 cm\u22121).",
       "asbval:note": "Paper confirms SMILES input and spectral vector targets (1801 absorbance values).",
@@ -1666,7 +1666,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-features-module-integration/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/spectral-features-module-integration/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MPNN weights from the initial model were carried over to the final model training and frozen, holding constant the encoding model learned in the initial model... Each of the 10 final submodels were initialized with different FFNN weights.",
       "asbval:note": "Paper demonstrates transfer learning where MPNN weights (molecular representation encoder) are frozen and reused, while FFNN weights (spectral feature extractor) are trained separately.",
@@ -1686,7 +1686,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/deep-learning-module-instantiation-and-validation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/deep-learning-module-instantiation-and-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "deep-learning-module-instantiation-and-validation",
@@ -1699,7 +1699,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/message-passing-neural-network-implementation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/message-passing-neural-network-implementation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "message-passing-neural-network-implementation",
@@ -1712,7 +1712,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-graph-representation-parsing/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/molecular-graph-representation-parsing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "molecular-graph-representation-parsing",
@@ -1725,7 +1725,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-property-prediction-feature-construction/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/molecular-property-prediction-feature-construction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "molecular-property-prediction-feature-construction",
@@ -1738,7 +1738,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neural-network-architecture-extension/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/neural-network-architecture-extension/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "neural-network-architecture-extension",
@@ -1751,7 +1751,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pytorch-model-instantiation-and-forward-pass/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/pytorch-model-instantiation-and-forward-pass/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "pytorch-model-instantiation-and-forward-pass",
@@ -1764,7 +1764,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-feature-engineering/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/spectral-feature-engineering/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "spectral-feature-engineering",
@@ -1777,7 +1777,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-features-module-integration/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/skill/spectral-features-module-integration/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "spectral-features-module-integration",
@@ -1790,7 +1790,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The chemprop-IR architecture is an extension of chemprop with new spectral features.",
       "asbval:note": null,
@@ -1810,7 +1810,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Message passing neural networks are used for spectral predictions in this repository.",
       "asbval:note": null,
@@ -1830,7 +1830,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The repository is available at github:gfm-collab__chemprop-IR.",
       "asbval:note": null,
@@ -1850,7 +1850,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The document was synthesized on 2026-06-15T10:08:50+00:00.",
       "asbval:note": null,
@@ -1870,7 +1870,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.jcim.1c00055/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Detailed information on base chemprop functionality is available in README_chemprop.",
       "asbval:note": null,

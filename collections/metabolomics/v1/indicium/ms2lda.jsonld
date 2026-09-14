@@ -1787,7 +1787,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_001/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features are extracted from mzML fragmentation files using the pymzML library and stored in a relational database (PostgreSQL) alongside inferred Mass2Motifs and associated metadata... fragment and neutral loss features are extracted from the uploaded fragmentation file [mzML (alongside an optional peaklist file to filter the extracted precursors, see Supplementary Section S1), MSP, or MGF formats]",
       "asbval:note": "Paper confirms MS2LDA accepts .mgf, .msp, .mzML formats and extracts fragment/neutral loss features, but does not explicitly describe the conversion to 'bag-of-fragments' representation or LDA training pipeline. The paper focuses on MS2LDA as a topic-modelling method (analogous to LDA) but does not detail the intermediate preprocessing steps or corpus format generation.",
@@ -1807,7 +1807,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_001/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not describe the output format of preprocessing or corpus generation. It mentions features are 'stored in a relational database (PostgreSQL)' but does not specify document-term matrix, serialized Python objects, or LDA-compatible formats.",
@@ -1827,7 +1827,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_001/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "fragment and neutral loss features are extracted from the uploaded fragmentation file... MS2LDA is performed on the loaded spectra, and the results are stored in the database",
       "asbval:note": "Paper confirms extraction of 'fragment and neutral loss features' but does not explicitly describe a 'token inventory' or 'mass-to-token mappings' as a discrete output artifact.",
@@ -1847,7 +1847,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_001/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Various filtering options are provided to allow for filtering of the loaded spectra, and the user can also specify algorithm properties (number of Mass2Motifs and number of algorithm iterations).",
       "asbval:note": "Paper mentions filtering options are available but does not describe a 'quality control report' as an explicit output or document filtering statistics and retained fragment counts.",
@@ -1867,7 +1867,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_001/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We recently published MS2LDA, a method for the decomposition of sets of molecular fragment data derived from large metabolomics experiments... Ms2lda.org allows users to decompose and annotate MS/MS data with MS2LDA",
       "asbval:note": "MS2LDA is the core method discussed throughout the paper.",
@@ -1887,7 +1887,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_001/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_001/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention any module or function named 'MS2LDA.Preprocessing.load_and_clean'. The paper describes filtering and feature extraction but does not reference this specific API.",
@@ -1907,7 +1907,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_001/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_001/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention any module or function named 'MS2LDA.Preprocessing.generate_corpus'. The paper describes corpus creation implicitly (features stored in database) but does not reference this specific API.",
@@ -1927,7 +1927,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_001/007",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_001/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The system is implemented in Python with a minimal set of dependencies.",
       "asbval:note": "Paper explicitly states the system is implemented in Python.",
@@ -1947,7 +1947,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_001/008",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_001/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Conda or any package manager. It mentions 'minimal set of dependencies' and names specific libraries (Django, Celery, Numpy/SciPy, JavaScript, D3.js, pymzML, PostgreSQL) but does not reference Conda.",
@@ -1967,7 +1967,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card focuses on preprocessing and corpus generation as a discrete task, but the paper presents MS2LDA as an integrated web application (ms2lda.org) where preprocessing is one step within a larger analysis pipeline. The card's framing as a standalone 'preprocessing step' may overstate the modularity described in the paper.",
@@ -1984,7 +1984,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_002/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA (van der Hooft et al., 2016), a method inspired by text modelling, to decompose fragmentation spectra into sets of conserved fragment and neutral loss features (called Mass2Motifs). As text documents can be decomposed into sets of co-occurring words (topics) MS2LDA decomposes each molecule into sets of Mass2Motifs",
       "asbval:note": "The paper explicitly describes MS2LDA as topic-modelling-inspired decomposition of fragmentation spectra into Mass2Motifs, which aligns with the LDA-based bag-of-fragments approach in the research question.",
@@ -2004,7 +2004,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_002/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org allows users to decompose and annotate MS/MS data with MS2LDA",
       "asbval:note": "MS2LDA is the primary tool discussed throughout the paper.",
@@ -2024,7 +2024,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_002/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "a method inspired by text modelling, to decompose fragmentation spectra into sets of conserved fragment and neutral loss features (called Mass2Motifs). As text documents can be decomposed into sets of co-occurring words (topics)",
       "asbval:note": "The paper describes MS2LDA as 'inspired by text modelling' and uses topic-modelling language, but does not explicitly name 'Latent Dirichlet Allocation' or 'LDA' in the passages provided. The functional equivalence (topic decomposition) is present, but the specific algorithm name is not verbatim.",
@@ -2044,7 +2044,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_002/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The system is implemented in Python with a minimal set of dependencies.",
       "asbval:note": "Python is explicitly mentioned as the implementation language.",
@@ -2064,7 +2064,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_002/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_002/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of a binary artifact file named 'ms2lda.bin' or any binary model serialization format in the passages. The paper discusses storing results in a relational database (PostgreSQL) and JSON/visualization outputs, but not a .bin file.",
@@ -2084,7 +2084,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_002/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_002/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the results are stored in the database for visualization. Various filtering options are provided to allow for filtering of the loaded spectra, and the user can also specify algorithm properties (number of Mass2Motifs and number of algorithm iterations).",
       "asbval:note": "The paper confirms that Mass2Motifs are discovered and stored (in a database), and that results are available for visualization and analysis. However, there is no explicit mention of JSON format output or a file named 'motifset.json'. The output format is not specified in the passages.",
@@ -2104,7 +2104,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_002/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_002/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of convergence curve visualization or any .png file output in the passages. The paper describes interactive visualizations (network graphs, spectral plots, feature statistics) but does not mention convergence diagnostics.",
@@ -2124,7 +2124,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card frames the task as 'reconstructing the LDA model training step' and focuses on model artifacts and convergence visualization. The paper is primarily a software/web application paper describing ms2lda.org, a user-facing platform for MS2LDA analysis. The paper does not detail the internal training algorithm, convergence criteria, or model serialization formats.",
@@ -2141,7 +2141,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_003/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Spec2Vec is not mentioned anywhere in the provided passages. The paper describes MS2LDA-based motif annotation via manual inspection, comparison with other experiments, and matching against a database of pre-annotated Mass2Motifs from MassBank and GNPS, but does not describe any Spec2Vec-based annotation process.",
@@ -2161,7 +2161,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_003/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Spec2Vec is not mentioned in any of the provided passages. The paper does not reference this tool.",
@@ -2181,7 +2181,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_003/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MAG is not mentioned in any of the provided passages. The paper describes ms2lda.org and MS2LDA but does not reference a tool or method called MAG.",
@@ -2201,7 +2201,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_003/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The system is implemented in Python with a minimal set of dependencies.",
       "asbval:note": "Explicitly stated in the Methods and implementation section.",
@@ -2221,7 +2221,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_003/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_003/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We recently published MS2LDA, a method for the decomposition of sets of molecular fragment data derived from large metabolomics experiments. To make the method more widely available to the community, here we present ms2lda.org, a web application that allows users to upload their data, run MS2LDA analyses and explore the results through interactive visualizations.",
       "asbval:note": "MS2LDA is the core method described throughout the paper.",
@@ -2241,7 +2241,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_003/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_003/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org also includes a growing library of pre-annotated Mass2Motifs from the Massbank and GNPS data sets (van der Hooft et al., 2016) for matching and decomposition. As a new feature, we offer matching functionality which allows users to compare the Mass2Motifs found in their data with those in our growing database of (often annotated) Mass2Motifs.",
       "asbval:note": "The paper describes annotation records and matching functionality for Mass2Motifs, but does not specify JSON format, Spec2Vec similarity scores, or confidence metrics. The annotation mechanism is matching against pre-annotated Mass2Motifs from MassBank and GNPS, not Spec2Vec-based scoring.",
@@ -2261,7 +2261,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card describes a Spec2Vec-based automated annotation process (MAG), which is not present in the paper. The paper's actual annotation approach relies on manual inspection, database matching against MassBank/GNPS, and user-driven annotation transfer.",
@@ -2278,7 +2278,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_004/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_004/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org also includes a growing library of pre-annotated Mass2Motifs from the Massbank and GNPS data sets (van der Hooft et al., 2016) for matching and decomposition. As a new feature, we offer matching functionality which allows users to compare the Mass2Motifs found in their data with those in our growing database of (often annotated) Mass2Motifs.",
       "asbval:note": "Paper describes motif matching functionality and a database of Mass2Motifs, but does NOT mention MassQL as the query mechanism. Paper states matching is done against 'our growing database' but does not specify MassQL as the search technology. The matching/ranking mechanism is not detailed in provided passages.",
@@ -2298,7 +2298,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_004/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_004/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MassQL is not mentioned anywhere in the provided passages. The paper describes a motif matching feature but does not name MassQL as the query language or search mechanism.",
@@ -2318,7 +2318,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_004/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_004/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org also includes a growing library of pre-annotated Mass2Motifs from the Massbank and GNPS data sets (van der Hooft et al., 2016) for matching and decomposition.",
       "asbval:note": "Paper references a database of Mass2Motifs but calls it a 'growing library' sourced from Massbank and GNPS, not explicitly 'MotifDB'. The matching functionality exists but the database name in the paper differs from the card's claim.",
@@ -2338,7 +2338,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_004/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_004/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org allows users to decompose and annotate MS/MS data with MS2LDA (van der Hooft et al., 2016). In addition to the original MS2LDA functionality, we provide a new visualization screen, the ability to store annotations, decomposition, motif matching and MS1 analysis.",
       "asbval:note": "MS2LDA is the core method used throughout the paper for decomposing MS/MS data and discovering Mass2Motifs.",
@@ -2358,7 +2358,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_004/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_004/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper mentions matching functionality and that 'Users can view candidate matches' but provides no details about output format (JSON), ranking mechanism, or specific fields returned (entry ID, fragment composition, match score, etc.). The level of technical detail in the card is not present in the passages.",
@@ -2378,7 +2378,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_004/scope_drift",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_004/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card frames the task as reconstructing a specific 'MotifDB motif-matching step' using 'MassQL queries', but the paper describes a more general 'matching functionality' without naming these specific technologies.",
@@ -2395,7 +2395,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_005/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_005/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The starting point for visualization is the network graph (A), nodes represent Mass2Motifs (circle) and molecules (squares)... Edges represent connections between molecules and Mass2Motifs (above a certain threshold).",
       "asbval:note": "Paper describes MS2LDA network visualization with Mass2Motif and molecule nodes and edges representing connections, but does not explicitly discuss 'spectral similarity relationships' as the basis for edge construction. The paper focuses on Mass2Motif-molecule connections rather than spectral similarity weighting. No mention of export mechanisms for the network graph itself.",
@@ -2415,7 +2415,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_005/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_005/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper describes interactive network visualization within ms2lda.org web interface but does not mention GraphML export format, network.graphml file output, or similarity-weighted edges. The paper mentions 'a method for exporting Mass2Motifs into a MassBank-compatible format' as future work, but no GraphML export is documented.",
@@ -2435,7 +2435,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_005/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_005/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org allows users to decompose and annotate MS/MS data with MS2LDA",
       "asbval:note": "MS2LDA is the core method used throughout the paper for decomposing fragmentation spectra into Mass2Motifs.",
@@ -2455,7 +2455,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_005/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_005/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The system is implemented in Python with a minimal set of dependencies.",
       "asbval:note": "Python is explicitly stated as the implementation language for ms2lda.org.",
@@ -2475,7 +2475,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_15858124__task_005/scope_drift",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/card/10_5281_zenodo_15858124__task_005/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card frames the task as reconstructing a 'molecular network export step' that produces a GraphML artifact, but the paper describes ms2lda.org as a web application with interactive visualization. The paper does not document any GraphML export functionality or network file export mechanism.",
@@ -2492,7 +2492,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bag-of-words-document-representation-generation/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/bag-of-words-document-representation-generation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA decomposes fragmentation spectra into sets of conserved fragment and neutral loss features (called Mass2Motifs). As text documents can be decomposed into sets of co-occurring words (topics) MS2LDA decomposes each molecule into sets of Mass2Motifs",
       "asbval:note": "The paper describes MS2LDA as decomposing spectra into fragment and neutral loss features using topic modeling methodology, which aligns with the bag-of-fragments corpus concept.",
@@ -2512,7 +2512,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bag-of-words-document-representation-generation/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/bag-of-words-document-representation-generation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "fragment and neutral loss features are extracted from the uploaded fragmentation file [mzML (alongside an optional peaklist file to filter the extracted precursors, see Supplementary Section S1), MSP, or MGF formats]",
       "asbval:note": "Paper explicitly supports all three file formats mentioned in the claim.",
@@ -2532,7 +2532,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bag-of-words-document-representation-generation/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/bag-of-words-document-representation-generation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention a specific module or function named 'MS2LDA.Preprocessing.load_and_clean'. While the paper describes loading and cleaning spectra from multiple formats, it does not name this specific preprocessing function.",
@@ -2552,7 +2552,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bag-of-words-document-representation-generation/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/bag-of-words-document-representation-generation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention a specific module or function named 'MS2LDA.Preprocessing.generate_corpus'. The paper describes corpus generation conceptually but does not name this specific function.",
@@ -2572,7 +2572,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bag-of-words-document-representation-generation/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/bag-of-words-document-representation-generation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA, a method for the decomposition of sets of molecular fragment data derived from large metabolomics experiments",
       "asbval:note": "MS2LDA is the core method used for topic modeling on MS/MS data.",
@@ -2592,7 +2592,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bag-of-words-document-representation-generation/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/bag-of-words-document-representation-generation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The system is implemented in Python with a minimal set of dependencies.",
       "asbval:note": "Paper confirms Python is used for implementation.",
@@ -2612,7 +2612,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bag-of-words-document-representation-generation/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/bag-of-words-document-representation-generation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Conda or any specific environment management tool. Dependencies are mentioned but no package manager is named.",
@@ -2632,7 +2632,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bag-of-words-document-representation-generation/007",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/bag-of-words-document-representation-generation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the source code is available at https://github.com/sdrogers/ms2ldaviz under the MIT license",
       "asbval:note": "Paper provides a GitHub repository URL but it is https://github.com/sdrogers/ms2ldaviz (for ms2lda.org web application), not https://github.com/vdhooftcompmet/MS2LDA. The card's repository URL does not match the paper's stated repository.",
@@ -2652,7 +2652,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragment-ion-peak-detection-and-normalization/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/fragment-ion-peak-detection-and-normalization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features are extracted from mzML fragmentation files using the pymzML library and stored in a relational database (PostgreSQL) alongside inferred Mass2Motifs and associated metadata.",
       "asbval:note": "Paper describes feature extraction from MS/MS data and loading spectra in multiple formats (mzML, MSP, MGF), but does not explicitly describe intensity normalization to a common scale as a preprocessing step. The paper focuses on MS2LDA decomposition (topic modeling) rather than detailed preprocessing workflows. Intensity normalization is implied as part of the MS2LDA method but not explicitly documented in these passages.",
@@ -2672,7 +2672,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragment-ion-peak-detection-and-normalization/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/fragment-ion-peak-detection-and-normalization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No specific module or function named 'MS2LDA.Preprocessing.load_and_clean' is mentioned in the paper. The paper mentions loading spectra in multiple formats and feature extraction via pymzML, but does not name a specific preprocessing module with this name.",
@@ -2692,7 +2692,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragment-ion-peak-detection-and-normalization/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/fragment-ion-peak-detection-and-normalization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We recently published MS2LDA, a method for the decomposition of sets of molecular fragment data derived from large metabolomics experiments. To make the method more widely available to the community, here we present ms2lda.org, a web application that allows users to upload their data, run MS2LDA analyses and explore the results through interactive visualizations.",
       "asbval:note": "MS2LDA is the central method discussed throughout the paper. The paper describes it as a framework for decomposing MS/MS data, though the specific role claimed (preprocessing and peak normalization) is not explicitly detailed in these passages.",
@@ -2712,7 +2712,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragment-ion-peak-detection-and-normalization/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/fragment-ion-peak-detection-and-normalization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The system is implemented in Python with a minimal set of dependencies.",
       "asbval:note": "Paper confirms Python is used for implementation, though the specific role of 'implementing peak detection and intensity normalization logic' is not explicitly stated.",
@@ -2732,7 +2732,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragment-ion-peak-detection-and-normalization/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/fragment-ion-peak-detection-and-normalization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Conda is not mentioned anywhere in the provided passages. The paper mentions dependencies and implementation details but does not reference Conda as an environment manager.",
@@ -2752,7 +2752,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragment-ion-peak-detection-and-normalization/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/fragment-ion-peak-detection-and-normalization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features are extracted from mzML fragmentation files using the pymzML library and stored in a relational database (PostgreSQL) alongside inferred Mass2Motifs and associated metadata. Two analysis workflows are implemented in our system\u2014the original MS2LDA and a new feature, MS2LDA decomposition.",
       "asbval:note": "The paper describes loading and extracting features from MS/MS spectra as part of the MS2LDA workflow, but does not explicitly frame this as a separate 'fragment-ion-peak-detection-and-normalization' preprocessing step. The paper focuses on the overall MS2LDA decomposition method rather than detailed preprocessing documentation.",
@@ -2772,7 +2772,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-motif-learning/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/fragmentation-motif-learning/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA, a method inspired by text modelling, to decompose fragmentation spectra into sets of conserved fragment and neutral loss features (called Mass2Motifs). As text documents can be decomposed into sets of co-occurring words (topics) MS2LDA decomposes each molecule into sets of Mass2Motifs, potentially indicative of structural families.",
       "asbval:note": "Core research question is directly supported. Paper describes MS2LDA as LDA-inspired method for discovering Mass2Motifs from fragmentation data without requiring prior identification.",
@@ -2792,7 +2792,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-motif-learning/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/fragmentation-motif-learning/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org allows users to decompose and annotate MS/MS data with MS2LDA... we provide a new visualization screen, the ability to store annotations, decomposition, motif matching and MS1 analysis.",
       "asbval:note": "Paper confirms trained models and motif distributions are produced. However, no explicit mention of 'convergence diagnostics' output in the passages provided; this may be implicit in the algorithm but is not explicitly stated.",
@@ -2812,7 +2812,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-motif-learning/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/fragmentation-motif-learning/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We recently published MS2LDA, a method for the decomposition of sets of molecular fragment data derived from large metabolomics experiments... the source code is available at https://github.com/sdrogers/ms2ldaviz under the MIT license.",
       "asbval:note": "MS2LDA is confirmed as the primary tool. Note: the paper references https://github.com/sdrogers/ms2ldaviz (the web visualization repo), not the exact repo URL in the card (https://github.com/vdhooftcompmet/MS2LDA), but both refer to the same MS2LDA project.",
@@ -2832,7 +2832,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-motif-learning/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/fragmentation-motif-learning/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA, a method inspired by text modelling, to decompose fragmentation spectra into sets of conserved fragment and neutral loss features (called Mass2Motifs). As text documents can be decomposed into sets of co-occurring words (topics) MS2LDA decomposes each molecule into sets of Mass2Motifs",
       "asbval:note": "LDA methodology is confirmed as the underlying approach for MS2LDA.",
@@ -2852,7 +2852,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-motif-learning/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/fragmentation-motif-learning/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The system is implemented in Python with a minimal set of dependencies... variational inference to discover Mass2Motifs is implemented in Numpy/SciPy",
       "asbval:note": "Python is confirmed as the implementation language and Numpy/SciPy are used for variational inference. However, no explicit mention of pickle serialization or convergence curve generation in the passages.",
@@ -2872,7 +2872,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-motif-learning/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/fragmentation-motif-learning/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Conda is not mentioned in any of the provided passages. The paper mentions 'minimal set of dependencies' and specific libraries (Django, Celery, Numpy/SciPy, JavaScript/D3.js, pymzML, PostgreSQL) but does not reference Conda for environment management.",
@@ -2892,7 +2892,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/graph-serialization-graphml/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/graph-serialization-graphml/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper describes ms2lda.org as a web application for MS2LDA analysis with interactive visualizations (network view, spectral plots, feature statistics). No mention of GraphML serialization, NetworkX library, or export to GraphML format. Paper focuses on in-browser visualization and annotation, not file-based graph export.",
@@ -2912,7 +2912,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/graph-serialization-graphml/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/graph-serialization-graphml/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not describe GraphML export or XML-based serialization. The network visualization is described as interactive (D3.js-based) within the web interface, not as a serialization workflow.",
@@ -2932,7 +2932,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/graph-serialization-graphml/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/graph-serialization-graphml/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The starting point for visualization is the network graph (A), nodes represent Mass2Motifs (circle) and molecules (squares)... Edges represent connections between molecules and Mass2Motifs (above a certain threshold).",
       "asbval:note": "Paper confirms network construction with Mass2Motif nodes and edges, and mentions visualization. However, no evidence of export to Cytoscape, Gephi, or any external graph software. The paper describes in-browser interactive visualization only, not export workflows.",
@@ -2952,7 +2952,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/graph-serialization-graphml/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/graph-serialization-graphml/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "NetworkX is not mentioned anywhere in the paper. The paper states 'interactive visualizations are performed in JavaScript (D3.js)' and uses Python with Django, Celery, Numpy/SciPy, and pymzML, but does not name NetworkX.",
@@ -2972,7 +2972,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/graph-serialization-graphml/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/graph-serialization-graphml/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA decomposes each molecule into sets of Mass2Motifs, potentially indicative of structural families... ms2lda.org: a Web application for MS2LDA analysis in which users can upload MS/MS data, use MS2LDA to extract Mass2Motifs",
       "asbval:note": "MS2LDA is confirmed as the core framework. However, the card's claim about 'spectral similarity outputs' serving as inputs to graph serialization is not supported\u2014the paper does not describe spectral similarity computation or graph serialization workflows.",
@@ -2992,7 +2992,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/graph-serialization-graphml/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/graph-serialization-graphml/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Neither Cytoscape nor Gephi are mentioned in the paper. The paper describes ms2lda.org's own interactive visualization (D3.js-based network view), not export to external tools.",
@@ -3012,7 +3012,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/graph-serialization-graphml/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/graph-serialization-graphml/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The system is implemented in Python with a minimal set of dependencies.",
       "asbval:note": "Paper confirms Python is used for implementation, but does not describe environment configuration (PYTHONPATH, conda) as part of the GraphML serialization workflow. The evidence is about general system implementation, not the specific task.",
@@ -3032,7 +3032,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-data-serialization-and-parsing/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/json-data-serialization-and-parsing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org takes tandem mass spectrometry data in many standard formats and allows the user to infer the sets of fragment and neutral loss features that co-occur together (Mass2Motifs). As an alternative workflow, the user can also decompose a data set onto predefined Mass2Motifs.",
       "asbval:note": "Paper describes MS2LDA decomposition and Mass2Motif discovery, but does not explicitly mention JSON serialization/deserialization of motifsets or annotations. The paper discusses data upload in 'many standard formats' (mzML, MSP, MGF) and visualization, but JSON I/O for motifsets is not documented in provided passages.",
@@ -3052,7 +3052,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-data-serialization-and-parsing/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/json-data-serialization-and-parsing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention the Python json module explicitly. While the system is implemented in Python, no reference to json module usage for motifset/annotation serialization appears in the passages.",
@@ -3072,7 +3072,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-data-serialization-and-parsing/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/json-data-serialization-and-parsing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The website can be found at http://ms2lda.org, while the source code is available at https://github.com/sdrogers/ms2ldaviz under the MIT license.",
       "asbval:note": "The paper references 'ms2ldaviz' (lowercase) as the GitHub repository for the web application. The card claims 'MS2LDAViz' as a separate downstream visualization tool, but the paper indicates ms2lda.org itself is the visualization platform. The repo URL in the card (https://github.com/vdhooftcompmet/MS2LDA) differs from the paper's URL (https://github.com/sdrogers/ms2ldaviz).",
@@ -3092,7 +3092,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-data-serialization-and-parsing/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/json-data-serialization-and-parsing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Spec2Vec is not mentioned in any of the provided passages. The paper focuses on MS2LDA topic modeling and does not reference Spec2Vec for similarity scoring.",
@@ -3112,7 +3112,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-data-serialization-and-parsing/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/json-data-serialization-and-parsing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MAG is not mentioned in the provided passages. The paper discusses annotation storage and matching functionality but does not name a tool called 'MAG' or 'Mass2Motif Annotation Guidance'.",
@@ -3132,7 +3132,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-data-serialization-and-parsing/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/json-data-serialization-and-parsing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The system is implemented in Python with a minimal set of dependencies.",
       "asbval:note": "Paper explicitly states the system is implemented in Python.",
@@ -3152,7 +3152,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-data-serialization-and-parsing/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/json-data-serialization-and-parsing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We recently published MS2LDA, a method for the decomposition of sets of molecular fragment data derived from large metabolomics experiments.",
       "asbval:note": "MS2LDA is the core method described throughout the paper.",
@@ -3172,7 +3172,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-data-serialization-and-parsing/007",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/json-data-serialization-and-parsing/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not describe JSON loading of motifsets. It mentions uploading data in mzML, MSP, or MGF formats, but not JSON motifset files.",
@@ -3192,7 +3192,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-data-serialization-and-parsing/008",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/json-data-serialization-and-parsing/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes annotation storage and visualization within ms2lda.org itself, but does not mention exporting annotations as JSON for downstream tools.",
@@ -3212,7 +3212,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-parsing-motifset-extraction/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/json-parsing-motifset-extraction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA is performed on the loaded spectra, and the results are stored in the database for visualization... Features are extracted from mzML fragmentation files using the pymzML library and stored in a relational database (PostgreSQL) alongside inferred Mass2Motifs",
       "asbval:note": "Paper describes MS2LDA producing Mass2Motifs with fragment and neutral loss features, and storing results in a database. However, the paper does not explicitly mention JSON output files (motifset.json or motifset_optimized.json) or JSON parsing workflows. The paper focuses on the web interface and database storage, not programmatic JSON extraction. The functional claim (extracting fragment/neutral-loss compositions from MS2LDA outputs) is supported, but the specific file format and parsing methodology are not documented in the provided passages.",
@@ -3232,7 +3232,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-parsing-motifset-extraction/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/json-parsing-motifset-extraction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We recently published MS2LDA, a method for the decomposition of sets of molecular fragment data... MS2LDA decomposes each molecule into sets of Mass2Motifs... variational inference to discover Mass2Motifs is implemented in Numpy/SciPy",
       "asbval:note": "MS2LDA is confirmed as the tool that produces Mass2Motif definitions. However, the paper does not explicitly mention JSON output files (motifset.json or motifset_optimized.json) as the output format. The paper describes results being 'stored in the database' via the web application (ms2lda.org), not as standalone JSON files. The GitHub repository URL provided in the card (https://github.com/vdhooftcompmet/MS2LDA) is not mentioned in the passages; the paper only references the ms2lda.org website and https://github.com/sdrogers/ms2ldaviz.",
@@ -3252,7 +3252,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-parsing-motifset-extraction/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/json-parsing-motifset-extraction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The system is implemented in Python with a minimal set of dependencies.",
       "asbval:note": "Paper explicitly states MS2LDA system is implemented in Python, supporting the use of Python for executing analyses and data processing.",
@@ -3272,7 +3272,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-parsing-motifset-extraction/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/json-parsing-motifset-extraction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA is performed on the loaded spectra, and the results are stored in the database for visualization.",
       "asbval:note": "Paper confirms MS2LDA produces inferred Mass2Motifs, but does not document motifset.json or motifset_optimized.json as output file formats. The paper describes results being stored in a PostgreSQL database via the web application, not as standalone JSON files for programmatic access.",
@@ -3292,7 +3292,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-parsing-motifset-extraction/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/json-parsing-motifset-extraction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org allows users to decompose and annotate MS/MS data with MS2LDA... we provide a new visualization screen... interactive visualization feature including a network view... spectral plots (with Mass2Motif contributions highlighted)",
       "asbval:note": "Paper describes network visualization and spectral analysis of Mass2Motifs, supporting the use case of building motif networks and analyzing fragment compositions.",
@@ -3312,7 +3312,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-serialization-and-data-structure-design/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/json-serialization-and-data-structure-design/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org allows users to decompose and annotate MS/MS data with MS2LDA... we provide a new visualization screen, the ability to store annotations, decomposition, motif matching and MS1 analysis",
       "asbval:note": "Paper describes MS2LDA producing Mass2Motifs and matching functionality with database records, but does not explicitly discuss JSON serialization as a core skill or methodology. The paper mentions data storage and visualization but does not detail JSON structure design or serialization as a primary research contribution.",
@@ -3332,7 +3332,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-serialization-and-data-structure-design/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/json-serialization-and-data-structure-design/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA, a method for the decomposition of sets of molecular fragment data derived from large metabolomics experiments... Ms2lda.org allows users to decompose and annotate MS/MS data with MS2LDA",
       "asbval:note": "MS2LDA is central to the paper and produces Mass2Motifs as described.",
@@ -3352,7 +3352,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-serialization-and-data-structure-design/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/json-serialization-and-data-structure-design/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MassQL is not mentioned anywhere in the provided passages. The paper does not reference this tool.",
@@ -3372,7 +3372,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-serialization-and-data-structure-design/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/json-serialization-and-data-structure-design/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MotifDB is not explicitly named in the passages. The paper mentions 'a growing database of Mass2Motifs' and 'pre-annotated Mass2Motifs from the Massbank and GNPS data sets' but does not use the term 'MotifDB'.",
@@ -3392,7 +3392,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-serialization-and-data-structure-design/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/json-serialization-and-data-structure-design/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper states 'The system is implemented in Python' and mentions storage in 'a relational database (PostgreSQL)' but does not explicitly mention the Python json module or JSON serialization as a tool/method.",
@@ -3412,7 +3412,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-serialization-and-data-structure-design/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/json-serialization-and-data-structure-design/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA decomposes each molecule into sets of Mass2Motifs... fragment and neutral loss features are extracted from the uploaded fragmentation file... and stored in the database",
       "asbval:note": "Paper confirms MS2LDA produces Mass2Motifs with mass composition and neutral-loss patterns, but states results are 'stored in the database' (PostgreSQL), not explicitly serialized to JSON format.",
@@ -3432,7 +3432,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-serialization-and-data-structure-design/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/json-serialization-and-data-structure-design/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MassQL is not mentioned in the paper. The paper describes motif matching functionality but does not name MassQL as the tool performing this operation.",
@@ -3452,7 +3452,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-serialization-and-data-structure-design/007",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/json-serialization-and-data-structure-design/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org also includes a growing library of pre-annotated Mass2Motifs from the Massbank and GNPS data sets... Users can view candidate matches and link Mass2Motifs where they agree with the match",
       "asbval:note": "Paper describes matching against a database of Mass2Motifs (from Massbank and GNPS), but does not name it 'MotifDB' and does not explicitly describe JSON serialization of ranked results.",
@@ -3472,7 +3472,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lda-model-training-convergence/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/lda-model-training-convergence/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA, a method for the decomposition of sets of molecular fragment data derived from large metabolomics experiments... infer the sets of fragment and neutral loss features that co-occur together (Mass2Motifs)... variational inference to discover Mass2Motifs is implemented in Numpy/SciPy",
       "asbval:note": "Paper describes MS2LDA as a method inspired by text modelling that decomposes fragmentation spectra into Mass2Motifs using variational inference (LDA-like approach). Convergence metrics not explicitly mentioned in passages but are implicit in variational inference implementation.",
@@ -3492,7 +3492,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lda-model-training-convergence/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/lda-model-training-convergence/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA, a method for the decomposition of sets of molecular fragment data... the source code is available at https://github.com/sdrogers/ms2ldaviz under the MIT license",
       "asbval:note": "MS2LDA is confirmed as the core framework. Repository URL in paper differs slightly (sdrogers/ms2ldaviz vs. vdhooftcompmet/MS2LDA in card), but both are legitimate MS2LDA repositories. The card's repo may reference the original algorithm repo while paper references the web application repo.",
@@ -3512,7 +3512,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lda-model-training-convergence/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/lda-model-training-convergence/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA, a method inspired by text modelling, to decompose fragmentation spectra into sets of conserved fragment and neutral loss features (called Mass2Motifs). As text documents can be decomposed into sets of co-occurring words (topics) MS2LDA decomposes each molecule into sets of Mass2Motifs",
       "asbval:note": "LDA is the underlying algorithm; MS2LDA is explicitly described as text-modelling-inspired (LDA-based) method for decomposing spectra into motifs.",
@@ -3532,7 +3532,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lda-model-training-convergence/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/lda-model-training-convergence/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The system is implemented in Python with a minimal set of dependencies.",
       "asbval:note": "Python confirmed as implementation language. Pickle serialization not explicitly mentioned in passages but is standard Python practice and consistent with the system design.",
@@ -3552,7 +3552,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lda-model-training-convergence/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/lda-model-training-convergence/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "variational inference to discover Mass2Motifs is implemented in Numpy/SciPy... MS2LDA is performed on the loaded spectra, and the results are stored in the database",
       "asbval:note": "Paper confirms MS2LDA performs LDA training on loaded spectra using Numpy/SciPy for variational inference. However, no specific module named 'MS2LDA.modeling' is mentioned in passages. The paper describes the overall workflow but does not expose a named module API with that specific designation.",
@@ -3572,7 +3572,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lda-model-training-convergence/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/lda-model-training-convergence/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "users can upload MS/MS data, use MS2LDA to extract Mass2Motifs, annotate and store annotations for the extracted Mass2Motifs... the ability to store and edit Mass2Motif annotations",
       "asbval:note": "Paper confirms MS2LDA sits between data upload/preprocessing and annotation/visualization stages. Convergence curve visualization not explicitly mentioned but model artifact storage is confirmed.",
@@ -3592,7 +3592,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-binning-and-tokenization-for-topic-modeling/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass-binning-and-tokenization-for-topic-modeling/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA decomposes fragmentation spectra into sets of conserved fragment and neutral loss features (called Mass2Motifs). As text documents can be decomposed into sets of co-occurring words (topics) MS2LDA decomposes each molecule into sets of Mass2Motifs",
       "asbval:note": "The paper describes MS2LDA as decomposing fragment and neutral loss features using LDA-inspired topic modeling, which aligns with the research question of converting masses into tokens for LDA.",
@@ -3612,7 +3612,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-binning-and-tokenization-for-topic-modeling/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass-binning-and-tokenization-for-topic-modeling/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention specific preprocessing module names like 'MS2LDA.Preprocessing.generate_corpus' or 'MS2LDA.Preprocessing.load_and_clean'. The paper describes MS2LDA functionality at a high level but does not expose internal Python module/function names.",
@@ -3632,7 +3632,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-binning-and-tokenization-for-topic-modeling/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass-binning-and-tokenization-for-topic-modeling/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention this specific preprocessing module. While the paper discusses loading and processing MS/MS data, it does not name internal preprocessing functions.",
@@ -3652,7 +3652,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-binning-and-tokenization-for-topic-modeling/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass-binning-and-tokenization-for-topic-modeling/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA, a method inspired by text modelling, to decompose fragmentation spectra into sets of conserved fragment and neutral loss features (called Mass2Motifs). As text documents can be decomposed into sets of co-occurring words (topics) MS2LDA decomposes each molecule into sets of Mass2Motifs",
       "asbval:note": "The paper explicitly describes MS2LDA as using LDA-inspired topic modeling for decomposing fragmentation spectra.",
@@ -3672,7 +3672,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-binning-and-tokenization-for-topic-modeling/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass-binning-and-tokenization-for-topic-modeling/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We recently published MS2LDA, a method for the decomposition of sets of molecular fragment data derived from large metabolomics experiments. To make the method more widely available to the community, here we present ms2lda.org, a web application",
       "asbval:note": "MS2LDA is the central tool discussed throughout the paper. The paper presents ms2lda.org as a web interface to MS2LDA.",
@@ -3692,7 +3692,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-binning-and-tokenization-for-topic-modeling/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass-binning-and-tokenization-for-topic-modeling/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The system is implemented in Python with a minimal set of dependencies. Django is used as the Web application framework, whereas a job queue (Celery) is used to execute analyses asynchronously.",
       "asbval:note": "The paper explicitly states the system is implemented in Python.",
@@ -3712,7 +3712,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-binning-and-tokenization-for-topic-modeling/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass-binning-and-tokenization-for-topic-modeling/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention Conda. The evidence_spans in the card reference Conda but this text does not appear in the provided passages.",
@@ -3732,7 +3732,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-fragment-pattern-querying/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass-fragment-pattern-querying/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org also includes a growing library of pre-annotated Mass2Motifs from the Massbank and GNPS data sets (van der Hooft et al., 2016) for matching and decomposition. As a new feature, we offer matching functionality which allows users to compare the Mass2Motifs found in their data with those in our growing database of (often annotated) Mass2Motifs.",
       "asbval:note": "Paper describes matching Mass2Motifs against a database of pre-annotated Mass2Motifs (from MassBank and GNPS), but does NOT mention MassQL as the query language or MotifDB as the specific database name. The matching functionality exists but uses different named tools/databases than claimed.",
@@ -3752,7 +3752,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-fragment-pattern-querying/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass-fragment-pattern-querying/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MassQL is not mentioned anywhere in the provided passages. The paper describes a 'matching functionality' but does not name MassQL as the query language used.",
@@ -3772,7 +3772,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-fragment-pattern-querying/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass-fragment-pattern-querying/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MotifDB is not mentioned in the passages. The paper references 'a growing database of (often annotated) Mass2Motifs' and mentions MassBank and GNPS datasets, but does not name MotifDB.",
@@ -3792,7 +3792,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-fragment-pattern-querying/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass-fragment-pattern-querying/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA decomposes each molecule into sets of Mass2Motifs, potentially indicative of structural families. Here, we present ms2lda.org: a Web application for MS2LDA analysis in which users can upload MS/MS data, use MS2LDA to extract Mass2Motifs",
       "asbval:note": "MS2LDA is confirmed as the tool that extracts Mass2Motifs from MS/MS data.",
@@ -3812,7 +3812,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-fragment-pattern-querying/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass-fragment-pattern-querying/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MAG is not mentioned in any of the provided passages. The paper describes manual annotation and matching functionality but does not name an automated annotation module called MAG.",
@@ -3832,7 +3832,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-fragment-pattern-querying/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass-fragment-pattern-querying/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Spec2Vec is not mentioned in the provided passages.",
@@ -3852,7 +3852,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-fragment-pattern-querying/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass-fragment-pattern-querying/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "As a new feature, we offer matching functionality which allows users to compare the Mass2Motifs found in their data with those in our growing database of (often annotated) Mass2Motifs. Users can view candidate matches and link Mass2Motifs where they agree with the match. When linked, annotations are transferred between matched pairs.",
       "asbval:note": "The paper describes matching Mass2Motifs against a database and retrieving annotated matches, but the specific tools (MassQL, MotifDB) named in the card are not mentioned. The functional concept (matching motifs to a reference database for annotation) is present, but the implementation details differ.",
@@ -3872,7 +3872,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-file-format-parsing/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass-spectrometry-file-format-parsing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "takes tandem mass spectrometry data in many standard formats and allows the user to infer the sets of fragment and neutral loss features that co-occur together (Mass2Motifs)... fragment and neutral loss features are extracted from the uploaded fragmentation file [mzML (alongside an optional peaklist file to filter the extracted precursors, see Supplementary Section S1), MSP, or MGF formats]",
       "asbval:note": "Paper confirms support for .mgf, .msp, .mzML formats and extraction of fragment and neutral loss features. However, the paper does not explicitly detail intensity normalization as a preprocessing step in the passages provided. The paper describes MS2LDA as decomposing spectra into fragment/neutral loss features but does not explicitly name or describe an 'intensity normalization' step in the preprocessing workflow shown.",
@@ -3892,7 +3892,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-file-format-parsing/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass-spectrometry-file-format-parsing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention or reference a module named 'MS2LDA.Preprocessing.load_and_clean'. The paper describes MS2LDA as a method and ms2lda.org as a web application, but does not document specific Python module names or internal preprocessing function names in the provided passages.",
@@ -3912,7 +3912,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-file-format-parsing/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass-spectrometry-file-format-parsing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention or reference a module named 'MS2LDA.Preprocessing.generate_corpus'. While the paper describes corpus generation conceptually ('decompose fragmentation spectra into sets of conserved fragment and neutral loss features'), it does not name this specific function or module.",
@@ -3932,7 +3932,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-file-format-parsing/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass-spectrometry-file-format-parsing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The system is implemented in Python with a minimal set of dependencies.",
       "asbval:note": "Paper explicitly states the system is implemented in Python.",
@@ -3952,7 +3952,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-file-format-parsing/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass-spectrometry-file-format-parsing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention Conda or any environment manager. It mentions dependencies and implementation details but does not specify Conda as the environment management tool.",
@@ -3972,7 +3972,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-file-format-parsing/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass-spectrometry-file-format-parsing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We recently published MS2LDA, a method for the decomposition of sets of molecular fragment data derived from large metabolomics experiments... MS2LDA decomposes each molecule into sets of Mass2Motifs, potentially indicative of structural families.",
       "asbval:note": "MS2LDA is confirmed as the primary method used for decomposing MS/MS spectra.",
@@ -3992,7 +3992,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-file-format-parsing/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass-spectrometry-file-format-parsing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA decomposes fragmentation spectra into sets of conserved fragment and neutral loss features (called Mass2Motifs)... As text documents can be decomposed into sets of co-occurring words (topics) MS2LDA decomposes each molecule into sets of Mass2Motifs",
       "asbval:note": "The paper describes MS2LDA as decomposing spectra into motifs using topic modeling (LDA-inspired), confirming the preprocessing-to-motif-discovery pipeline.",
@@ -4012,7 +4012,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-file-format-parsing/007",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass-spectrometry-file-format-parsing/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "fragment and neutral loss features are extracted from the uploaded fragmentation file... MS2LDA is performed on the loaded spectra, and the results are stored in the database for visualization. Various filtering options are provided to allow for filtering of the loaded spectra",
       "asbval:note": "Paper confirms extraction precedes MS2LDA analysis and mentions filtering options, but does not explicitly detail the ordering of 'noise filtering, corpus generation, or LDA training' as sequential steps in the documented workflow.",
@@ -4032,7 +4032,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass2motif-annotation-mapping/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass2motif-annotation-mapping/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org also includes a growing library of pre-annotated Mass2Motifs from the Massbank and GNPS data sets (van der Hooft et al., 2016) for matching and decomposition. As a new feature, we offer matching functionality which allows users to compare the Mass2Motifs found in their data with those in our growing database of (often annotated) Mass2Motifs.",
       "asbval:note": "Paper describes Mass2Motif matching and annotation via database comparison, but does NOT mention Spec2Vec as the similarity metric. Paper uses 'matching functionality' against a database of annotated Mass2Motifs, not Spec2Vec similarity scoring. The functional goal (annotation mapping) is present, but the specific tool (Spec2Vec) is not named or evidenced in the passages.",
@@ -4052,7 +4052,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass2motif-annotation-mapping/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass2motif-annotation-mapping/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Spec2Vec is not mentioned anywhere in the provided passages. The paper describes Mass2Motif matching and annotation but does not name Spec2Vec as the similarity metric used.",
@@ -4072,7 +4072,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass2motif-annotation-mapping/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass2motif-annotation-mapping/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MAG is not mentioned in any of the provided passages. The paper does not reference an 'orchestration framework' by this name.",
@@ -4092,7 +4092,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass2motif-annotation-mapping/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass2motif-annotation-mapping/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA, a method for the decomposition of sets of molecular fragment data derived from large metabolomics experiments. To make the method more widely available to the community, here we present ms2lda.org, a web application that allows users to upload their data, run MS2LDA analyses and explore the results through interactive visualizations.",
       "asbval:note": "MS2LDA is the core method for motif discovery described throughout the paper.",
@@ -4112,7 +4112,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass2motif-annotation-mapping/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass2motif-annotation-mapping/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The website can be found at http://ms2lda.org, while the source code is available at https://github.com/sdrogers/ms2ldaviz under the MIT license.",
       "asbval:note": "The paper references 'ms2ldaviz' (lowercase) as the GitHub repository name, which aligns with MS2LDAViz. However, the paper calls the tool 'ms2lda.org' (the web application), not 'MS2LDAViz' explicitly. The visualization component exists but is presented as part of the ms2lda.org web interface, not as a separate named tool.",
@@ -4132,7 +4132,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass2motif-annotation-mapping/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass2motif-annotation-mapping/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org also includes a growing library of pre-annotated Mass2Motifs from the Massbank and GNPS data sets (van der Hooft et al., 2016) for matching and decomposition.",
       "asbval:note": "The paper describes a 'growing library of pre-annotated Mass2Motifs from the Massbank and GNPS data sets' used for matching, but does not name this resource 'MotifDB'. The functional role (searchable motif database) is present, but the specific name is not used in the paper.",
@@ -4152,7 +4152,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass2motif-annotation-mapping/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass2motif-annotation-mapping/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The system is implemented in Python with a minimal set of dependencies.",
       "asbval:note": "Python is explicitly named as the implementation language.",
@@ -4172,7 +4172,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass2motif-annotation-mapping/007",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass2motif-annotation-mapping/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org allows users to decompose and annotate MS/MS data with MS2LDA. In addition to the original MS2LDA functionality, we provide a new visualization screen, the ability to store annotations, decomposition, motif matching and MS1 analysis.",
       "asbval:note": "The paper describes motif matching and annotation functionality, but does not mention Spec2Vec similarity scoring or confidence metrics. The matching is described as comparison against a database of annotated Mass2Motifs, not via Spec2Vec.",
@@ -4192,7 +4192,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass2motif-network-construction/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass2motif-network-construction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The starting point for visualization is the network graph (A), nodes represent Mass2Motifs (circle) and molecules (squares). Mass2Motif nodes are sized according to the number of connected molecules. Edges represent connections between molecules and Mass2Motifs (above a certain threshold).",
       "asbval:note": "Paper describes network visualization with nodes representing Mass2Motifs and edges representing connections, but edges connect molecules to Mass2Motifs (not motif-to-motif similarity as claimed). The card claims edges encode 'spectral similarity relationships' between motifs, but the paper shows edges represent molecule-motif associations, not inter-motif similarity.",
@@ -4212,7 +4212,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass2motif-network-construction/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass2motif-network-construction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org allows users to decompose and annotate MS/MS data with MS2LDA... we provide a new visualization screen, the ability to store annotations, decomposition, motif matching and MS1 analysis.",
       "asbval:note": "Paper confirms visualization and annotation capabilities, but does not explicitly mention export of motif structure in GraphML or other formats for downstream analysis. Future work mentions 'exporting Mass2Motifs into a MassBank-compatible format' but this is listed as future work, not current functionality.",
@@ -4232,7 +4232,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass2motif-network-construction/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass2motif-network-construction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA is performed on the loaded spectra, and the results are stored in the database for visualization... Ms2lda.org allows users to decompose and annotate MS/MS data with MS2LDA",
       "asbval:note": "MS2LDA is confirmed as the core method for inferring motifs. The paper references the original MS2LDA publication but does not provide the specific GitHub repo URL in the passages.",
@@ -4252,7 +4252,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass2motif-network-construction/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass2motif-network-construction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The system is implemented in Python with a minimal set of dependencies. Django is used as the Web application framework, whereas a job queue (Celery) is used to execute analyses asynchronously. As in the original publication, variational inference to discover Mass2Motifs is implemented in Numpy/SciPy, and interactive visualizations are performed in JavaScript (D3.js).",
       "asbval:note": "Paper confirms Python is used for the system implementation and variational inference (Numpy/SciPy), but visualizations are performed in JavaScript (D3.js), not Python. GraphML serialization is not mentioned in the passages.",
@@ -4272,7 +4272,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass2motif-network-construction/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass2motif-network-construction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA, a method inspired by text modelling, to decompose fragmentation spectra into sets of conserved fragment and neutral loss features (called Mass2Motifs). As text documents can be decomposed into sets of co-occurring words (topics) MS2LDA decomposes each molecule into sets of Mass2Motifs",
       "asbval:note": "LDA is confirmed as the underlying statistical model for MS2LDA, which decomposes spectra into Mass2Motifs analogous to topic modeling.",
@@ -4292,7 +4292,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass2motif-network-construction/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass2motif-network-construction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention motifset.json, motifset_optimized.json, or GraphML format. These appear to be implementation details not documented in the provided passages.",
@@ -4312,7 +4312,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass2motif-network-construction/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass2motif-network-construction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA is performed on the loaded spectra, and the results are stored in the database for visualization.",
       "asbval:note": "Logically consistent with the paper's workflow: MS2LDA must be run first to produce motifs that are then visualized.",
@@ -4332,7 +4332,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass2motif-parameter-optimization/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass2motif-parameter-optimization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the user can also specify algorithm properties (number of Mass2Motifs and number of algorithm iterations)",
       "asbval:note": "Paper confirms that MS2LDA accepts 'number of Mass2Motifs' and 'number of algorithm iterations' as user-specifiable parameters. However, the paper does not explicitly mention alpha and beta hyperparameters or discuss hyperparameter optimization as a primary task. The paper describes MS2LDA as a method for decomposing fragmentation spectra into Mass2Motifs but does not frame hyperparameter tuning as a central research question or optimization workflow.",
@@ -4352,7 +4352,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass2motif-parameter-optimization/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass2motif-parameter-optimization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA (van der Hooft et al., 2016), a method inspired by text modelling, to decompose fragmentation spectra into sets of conserved fragment and neutral loss features (called Mass2Motifs)",
       "asbval:note": "MS2LDA is confirmed as the primary tool used in the paper. However, the paper's source code repository is listed as https://github.com/sdrogers/ms2ldaviz (for ms2lda.org web application), not https://github.com/vdhooftcompmet/MS2LDA. The card's repository URL may refer to the original MS2LDA implementation, but the paper does not provide that specific URL.",
@@ -4372,7 +4372,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass2motif-parameter-optimization/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass2motif-parameter-optimization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA, a method inspired by text modelling, to decompose fragmentation spectra into sets of conserved fragment and neutral loss features (called Mass2Motifs). As text documents can be decomposed into sets of co-occurring words (topics) MS2LDA decomposes each molecule into sets of Mass2Motifs",
       "asbval:note": "The paper explicitly describes MS2LDA as inspired by text modelling and topic decomposition, which is semantically equivalent to Latent Dirichlet Allocation (LDA). The analogy to topic modeling confirms LDA as the underlying algorithm.",
@@ -4392,7 +4392,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass2motif-parameter-optimization/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass2motif-parameter-optimization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The system is implemented in Python with a minimal set of dependencies. Django is used as the Web application framework, whereas a job queue (Celery) is used to execute analyses asynchronously. As in the original publication, variational inference to discover Mass2Motifs is implemented in Numpy/SciPy",
       "asbval:note": "Paper confirms Python is used for MS2LDA implementation and that variational inference (the algorithm for LDA) is implemented in Numpy/SciPy. However, the paper does not explicitly mention logging convergence metrics or plotting convergence curves as part of the MS2LDA workflow described.",
@@ -4412,7 +4412,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass2motif-parameter-optimization/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass2motif-parameter-optimization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "fragment and neutral loss features are extracted from the uploaded fragmentation file [mzML (alongside an optional peaklist file to filter the extracted precursors, see Supplementary Section S1), MSP, or MGF formats] and stored inside the database. MS2LDA is performed on the loaded spectra",
       "asbval:note": "The paper describes the workflow of loading fragmentation data and performing MS2LDA to discover Mass2Motifs, which aligns with the scope statement.",
@@ -4432,7 +4432,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-database-lookup-and-retrieval/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/motif-database-lookup-and-retrieval/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org also includes a growing library of pre-annotated Mass2Motifs from the Massbank and GNPS data sets (van der Hooft et al., 2016) for matching and decomposition. ... we offer matching functionality which allows users to compare the Mass2Motifs found in their data with those in our growing database of (often annotated) Mass2Motifs.",
       "asbval:note": "Paper describes motif-matching functionality against a database of pre-annotated Mass2Motifs (from Massbank and GNPS), but does NOT mention MassQL or MotifDB by name. The paper performs motif matching/comparison but uses different named resources (Massbank, GNPS) rather than the claimed MotifDB and MassQL tools.",
@@ -4452,7 +4452,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-database-lookup-and-retrieval/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/motif-database-lookup-and-retrieval/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MassQL is not mentioned anywhere in the provided passages. No evidence of this query language being used in the paper.",
@@ -4472,7 +4472,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-database-lookup-and-retrieval/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/motif-database-lookup-and-retrieval/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MotifDB is not mentioned in the provided passages. The paper references Massbank and GNPS databases instead for pre-annotated Mass2Motifs.",
@@ -4492,7 +4492,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-database-lookup-and-retrieval/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/motif-database-lookup-and-retrieval/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA, a method for the decomposition of sets of molecular fragment data derived from large metabolomics experiments. ... Ms2lda.org allows users to decompose and annotate MS/MS data with MS2LDA",
       "asbval:note": "MS2LDA is confirmed as the topic modeling framework that infers Mass2Motifs. The paper confirms MS2LDA is used to decompose MS/MS data and infer Mass2Motifs.",
@@ -4512,7 +4512,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-database-lookup-and-retrieval/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/motif-database-lookup-and-retrieval/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we offer matching functionality which allows users to compare the Mass2Motifs found in their data with those in our growing database of (often annotated) Mass2Motifs. Users can view candidate matches and link Mass2Motifs where they agree with the match. When linked, annotations are transferred between matched pairs. Ms2lda.org also includes a growing library of pre-annotated Mass2Motifs from the Massbank and GNPS data sets",
       "asbval:note": "The paper describes motif matching and annotation workflow, but the reference database is Massbank and GNPS, not MotifDB. The functional workflow (MS2LDA \u2192 motif matching \u2192 annotation) is correct, but the named database resource differs.",
@@ -4532,7 +4532,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-metadata-annotation/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/motif-metadata-annotation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the ability to store and edit Mass2Motif annotations, which appear in all visualizations... we offer matching functionality which allows users to compare the Mass2Motifs found in their data with those in our growing database of (often annotated) Mass2Motifs",
       "asbval:note": "Paper explicitly describes annotation storage, matching with annotated Mass2Motifs, and visualization of annotations in network graphs.",
@@ -4552,7 +4552,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-metadata-annotation/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/motif-metadata-annotation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA, a method for the decomposition of sets of molecular fragment data... ms2lda.org allows users to decompose and annotate MS/MS data with MS2LDA",
       "asbval:note": "MS2LDA is the core method and platform described throughout the paper.",
@@ -4572,7 +4572,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-metadata-annotation/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/motif-metadata-annotation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MAG is not mentioned anywhere in the provided passages. The paper describes manual annotation and matching functionality but does not name or reference an automated annotation tool called MAG.",
@@ -4592,7 +4592,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-metadata-annotation/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/motif-metadata-annotation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Spec2Vec is not mentioned in the provided passages. The paper does not reference this spectral embedding model.",
@@ -4612,7 +4612,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-metadata-annotation/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/motif-metadata-annotation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org also includes a growing library of pre-annotated Mass2Motifs from the Massbank and GNPS data sets... we offer matching functionality which allows users to compare the Mass2Motifs found in their data with those in our growing database of (often annotated) Mass2Motifs",
       "asbval:note": "Paper describes a 'growing database of Mass2Motifs' and matching against pre-annotated motifs from MassBank and GNPS, but does not name this resource 'MotifDB'. The functional role (reference database for comparison) is present but the specific tool name is not confirmed.",
@@ -4632,7 +4632,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-metadata-annotation/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/motif-metadata-annotation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The system is implemented in Python with a minimal set of dependencies.",
       "asbval:note": "Paper explicitly states the system is implemented in Python.",
@@ -4652,7 +4652,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-metadata-annotation/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/motif-metadata-annotation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA is performed on the loaded spectra, and the results are stored in the database for visualization... the user can also specify algorithm properties (number of Mass2Motifs and number of algorithm iterations)",
       "asbval:note": "Paper confirms LDA inference produces motif results stored in database, but does not explicitly mention 'motifset.json' or 'motifset_optimized.json' file formats. The functional concept (trained motif distributions) is present but specific file naming is not confirmed in passages.",
@@ -4672,7 +4672,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-metadata-annotation/007",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/motif-metadata-annotation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the ability to store and edit Mass2Motif annotations... we offer matching functionality which allows users to compare the Mass2Motifs found in their data with those in our growing database... interactive visualization feature including a network view",
       "asbval:note": "Paper supports annotation assignment and network visualization, and matching with a reference database. However, 'MotifDB' is not explicitly named in the passages (see MotifDB tool claim above).",
@@ -4692,7 +4692,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-similarity-ranking-interpretation/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/motif-similarity-ranking-interpretation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org also includes a growing library of pre-annotated Mass2Motifs from the Massbank and GNPS data sets (van der Hooft et al., 2016) for matching and decomposition. As a new feature, we offer matching functionality which allows users to compare the Mass2Motifs found in their data with those in our growing database of (often annotated) Mass2Motifs. Users can view candidate matches and link Mass2Motifs where they agree with the match.",
       "asbval:note": "Paper describes Mass2Motif matching and annotation functionality, but does NOT mention MassQL or MotifDB by name. The paper describes a matching feature that compares discovered Mass2Motifs against a database of pre-annotated Mass2Motifs, which is functionally similar but uses different named tools/databases than claimed.",
@@ -4712,7 +4712,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-similarity-ranking-interpretation/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/motif-similarity-ranking-interpretation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MassQL is not mentioned anywhere in the provided passages. The paper describes MS2LDA matching functionality but does not name or reference MassQL as a query engine.",
@@ -4732,7 +4732,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-similarity-ranking-interpretation/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/motif-similarity-ranking-interpretation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MotifDB is not mentioned in the provided passages. The paper references 'a growing database of (often annotated) Mass2Motifs' and mentions Massbank and GNPS datasets, but does not name MotifDB specifically.",
@@ -4752,7 +4752,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-similarity-ranking-interpretation/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/motif-similarity-ranking-interpretation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA decomposes each molecule into sets of Mass2Motifs, potentially indicative of structural families... Ms2lda.org allows users to decompose and annotate MS/MS data with MS2LDA",
       "asbval:note": "MS2LDA is confirmed as the method that generates Mass2Motifs through LDA decomposition of fragmentation spectra.",
@@ -4772,7 +4772,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-similarity-ranking-interpretation/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/motif-similarity-ranking-interpretation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Spec2Vec is not mentioned in any of the provided passages. The paper does not reference Spec2Vec or any automated annotation guidance (MAG) method.",
@@ -4792,7 +4792,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-similarity-ranking-interpretation/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/motif-similarity-ranking-interpretation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we offer matching functionality which allows users to compare the Mass2Motifs found in their data with those in our growing database of (often annotated) Mass2Motifs. Users can view candidate matches and link Mass2Motifs where they agree with the match. When linked, annotations are transferred between matched pairs.",
       "asbval:note": "Paper describes matching Mass2Motifs against a database and viewing candidate matches, but does not explicitly discuss 'ranked similarity scores' or detailed interpretation of ranking structure. The matching feature exists but is less detailed than the card's scope suggests.",
@@ -4812,7 +4812,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neutral-loss-calculation-from-precursor-fragment-pairs/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/neutral-loss-calculation-from-precursor-fragment-pairs/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA decomposes each molecule into sets of Mass2Motifs... a method inspired by text modelling, to decompose fragmentation spectra into sets of conserved fragment and neutral loss features (called Mass2Motifs)",
       "asbval:note": "The paper explicitly describes MS2LDA as decomposing spectra into fragment and neutral loss features, which is the core operation described in the research question.",
@@ -4832,7 +4832,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neutral-loss-calculation-from-precursor-fragment-pairs/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/neutral-loss-calculation-from-precursor-fragment-pairs/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features are extracted from mzML fragmentation files using the pymzML library and stored in a relational database (PostgreSQL)",
       "asbval:note": "The paper describes loading and extracting features from MS/MS files, but uses pymzML library specifically for feature extraction, not a named 'MS2LDA.Preprocessing.load_and_clean' module. The function is performed but the specific tool name is not confirmed.",
@@ -4852,7 +4852,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neutral-loss-calculation-from-precursor-fragment-pairs/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/neutral-loss-calculation-from-precursor-fragment-pairs/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "variational inference to discover Mass2Motifs is implemented in Numpy/SciPy",
       "asbval:note": "The paper describes corpus generation and decomposition into Mass2Motifs using Numpy/SciPy, but does not name a specific 'MS2LDA.Preprocessing.generate_corpus' module. The functional operation exists but the specific module name is not confirmed in the paper.",
@@ -4872,7 +4872,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neutral-loss-calculation-from-precursor-fragment-pairs/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/neutral-loss-calculation-from-precursor-fragment-pairs/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA, a method for the decomposition of sets of molecular fragment data derived from large metabolomics experiments... MS2LDA is performed on the loaded spectra",
       "asbval:note": "MS2LDA is explicitly named and described as the core method for decomposing spectra into fragment and neutral loss features.",
@@ -4892,7 +4892,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neutral-loss-calculation-from-precursor-fragment-pairs/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/neutral-loss-calculation-from-precursor-fragment-pairs/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The system is implemented in Python with a minimal set of dependencies.",
       "asbval:note": "Python is explicitly stated as the implementation language for the system.",
@@ -4912,7 +4912,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neutral-loss-calculation-from-precursor-fragment-pairs/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/neutral-loss-calculation-from-precursor-fragment-pairs/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Conda is not mentioned anywhere in the provided passages. The evidence_spans field in the card references 'These steps assume you have Conda installed' but this text does not appear in any of the provided paper passages.",
@@ -4932,7 +4932,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neutral-loss-composition-matching/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/neutral-loss-composition-matching/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org also includes a growing library of pre-annotated Mass2Motifs from the Massbank and GNPS data sets (van der Hooft et al., 2016) for matching and decomposition. As a new feature, we offer matching functionality which allows users to compare the Mass2Motifs found in their data with those in our growing database of (often annotated) Mass2Motifs.",
       "asbval:note": "Paper describes matching Mass2Motifs against a database of pre-annotated motifs from Massbank and GNPS, but does NOT mention MassQL or MotifDB by name. The matching functionality exists but uses Massbank/GNPS, not the specific 'MotifDB' or 'MassQL' tools named in the card. The paper does not describe constructing MassQL queries or ranking by similarity score explicitly.",
@@ -4952,7 +4952,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neutral-loss-composition-matching/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/neutral-loss-composition-matching/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MassQL is not mentioned anywhere in the provided passages. The paper describes matching functionality but does not name MassQL as the query language used.",
@@ -4972,7 +4972,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neutral-loss-composition-matching/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/neutral-loss-composition-matching/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MotifDB is not mentioned in the provided passages. The paper references Massbank and GNPS datasets as the source of pre-annotated Mass2Motifs for matching, not a tool/database called 'MotifDB'.",
@@ -4992,7 +4992,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neutral-loss-composition-matching/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/neutral-loss-composition-matching/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA is performed on the loaded spectra, and the results are stored in the database for visualization. Ms2lda.org allows users to decompose and annotate MS/MS data with MS2LDA (van der Hooft et al., 2016).",
       "asbval:note": "MS2LDA is the core method used to infer Mass2Motifs from MS/MS data, consistent with the card's description of its role.",
@@ -5012,7 +5012,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neutral-loss-composition-matching/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/neutral-loss-composition-matching/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA, a method inspired by text modelling, to decompose fragmentation spectra into sets of conserved fragment and neutral loss features (called Mass2Motifs). As text documents can be decomposed into sets of co-occurring words (topics) MS2LDA decomposes each molecule into sets of Mass2Motifs",
       "asbval:note": "MS2LDA is explicitly described as topic-modelling inspired (LDA-based) method for inferring Mass2Motifs from spectra.",
@@ -5032,7 +5032,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neutral-loss-composition-matching/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/neutral-loss-composition-matching/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org allows users to decompose and annotate MS/MS data with MS2LDA. In addition to the original MS2LDA functionality, we provide a new visualization screen, the ability to store annotations, decomposition, motif matching and MS1 analysis.",
       "asbval:note": "Paper describes motif matching and annotation functionality, but the reference database is Massbank/GNPS, not 'MotifDB'. The workflow of inferring motifs then matching them is present, but the specific database name in the card does not match the paper.",
@@ -5052,7 +5052,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/probabilistic-topic-modeling-mass-spectrometry/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/probabilistic-topic-modeling-mass-spectrometry/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA, a method inspired by text modelling, to decompose fragmentation spectra into sets of conserved fragment and neutral loss features (called Mass2Motifs). As text documents can be decomposed into sets of co-occurring words (topics) MS2LDA decomposes each molecule into sets of Mass2Motifs, potentially indicative of structural families.",
       "asbval:note": "The paper explicitly describes MS2LDA as inspired by text modelling (LDA) applied to fragment data to discover Mass2Motifs representing structural families without prior identification.",
@@ -5072,7 +5072,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/probabilistic-topic-modeling-mass-spectrometry/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/probabilistic-topic-modeling-mass-spectrometry/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA, a method inspired by text modelling, to decompose fragmentation spectra into sets of conserved fragment and neutral loss features (called Mass2Motifs)... variational inference to discover Mass2Motifs is implemented in Numpy/SciPy",
       "asbval:note": "MS2LDA is confirmed as the core method for Mass2Motif extraction from MS/MS data. The paper describes it as the primary framework.",
@@ -5092,7 +5092,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/probabilistic-topic-modeling-mass-spectrometry/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/probabilistic-topic-modeling-mass-spectrometry/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA, a method inspired by text modelling, to decompose fragmentation spectra into sets of conserved fragment and neutral loss features (called Mass2Motifs). As text documents can be decomposed into sets of co-occurring words (topics) MS2LDA decomposes each molecule into sets of Mass2Motifs",
       "asbval:note": "The paper explicitly states MS2LDA is inspired by text modelling (LDA paradigm) and uses the topic-fragment analogy.",
@@ -5112,7 +5112,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/probabilistic-topic-modeling-mass-spectrometry/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/probabilistic-topic-modeling-mass-spectrometry/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The system is implemented in Python with a minimal set of dependencies. Django is used as the Web application framework, whereas a job queue (Celery) is used to execute analyses asynchronously. As in the original publication, variational inference to discover Mass2Motifs is implemented in Numpy/SciPy",
       "asbval:note": "Paper confirms Python is the implementation language for MS2LDA and related analyses.",
@@ -5132,7 +5132,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/probabilistic-topic-modeling-mass-spectrometry/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/probabilistic-topic-modeling-mass-spectrometry/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Spec2Vec is not mentioned anywhere in the provided passages. The paper describes MS2LDA's own annotation features (manual inspection, comparison with other experiments, matching functionality with pre-annotated Mass2Motifs from MassBank and GNPS) but does not reference Spec2Vec.",
@@ -5152,7 +5152,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/probabilistic-topic-modeling-mass-spectrometry/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/probabilistic-topic-modeling-mass-spectrometry/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the source code is available at https://github.com/sdrogers/ms2ldaviz under the MIT license",
       "asbval:note": "The paper provides a GitHub URL for ms2lda.org (ms2ldaviz), not the original MS2LDA repository. The card's URL (vdhooftcompmet/MS2LDA) is not verified in the passages; the paper references the original MS2LDA publication (van der Hooft et al., 2016) but does not provide its repository URL.",
@@ -5172,7 +5172,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/similarity-threshold-interpretation/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/similarity-threshold-interpretation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org also includes a growing library of pre-annotated Mass2Motifs from the Massbank and GNPS data sets (van der Hooft et al., 2016) for matching and decomposition.",
       "asbval:note": "Paper discusses Mass2Motif matching and annotation workflows, but does not mention Spec2Vec, cosine similarity thresholds, or threshold-based filtering. The paper describes matching Mass2Motifs with a database and transferring annotations, but the specific mechanism of Spec2Vec similarity scoring and threshold interpretation is not present in the passages.",
@@ -5192,7 +5192,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/similarity-threshold-interpretation/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/similarity-threshold-interpretation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Spec2Vec is not mentioned anywhere in the provided passages. The paper discusses MS2LDA, Mass2Motifs, and matching functionality, but does not reference Spec2Vec or its similarity scoring.",
@@ -5212,7 +5212,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/similarity-threshold-interpretation/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/similarity-threshold-interpretation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MAG is not mentioned in the provided passages. The paper describes annotation workflows but does not name a tool called 'MAG' or 'Mass2Motif Annotation Guidance'.",
@@ -5232,7 +5232,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/similarity-threshold-interpretation/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/similarity-threshold-interpretation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "interactive visualizations are performed in JavaScript (D3.js)",
       "asbval:note": "The paper describes ms2lda.org (the web application) which provides interactive visualizations, but does not explicitly name a separate tool called 'MS2LDAViz'. The visualization functionality is integrated into ms2lda.org itself, not a standalone tool.",
@@ -5252,7 +5252,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/similarity-threshold-interpretation/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/similarity-threshold-interpretation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org also includes a growing library of pre-annotated Mass2Motifs from the Massbank and GNPS data sets",
       "asbval:note": "The paper describes a database of Mass2Motifs (from Massbank and GNPS), but does not use the term 'MotifDB'. The functional equivalent is the growing library of pre-annotated Mass2Motifs maintained by ms2lda.org.",
@@ -5272,7 +5272,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/similarity-threshold-interpretation/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/similarity-threshold-interpretation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The system is implemented in Python with a minimal set of dependencies.",
       "asbval:note": "Python is explicitly mentioned as the implementation language for ms2lda.org.",
@@ -5292,7 +5292,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/similarity-threshold-interpretation/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/similarity-threshold-interpretation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We recently published MS2LDA, a method for the decomposition of sets of molecular fragment data derived from large metabolomics experiments.",
       "asbval:note": "MS2LDA is the core method discussed throughout the paper and is the foundation of ms2lda.org.",
@@ -5312,7 +5312,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/similarity-threshold-interpretation/007",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/similarity-threshold-interpretation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Users can view candidate matches and link Mass2Motifs where they agree with the match. When linked, annotations are transferred between matched pairs.",
       "asbval:note": "The paper describes matching Mass2Motifs with a database and filtering/linking matches, but does not mention Spec2Vec or cosine similarity thresholds. The functional concept of filtering matches and deciding which to include is present, but the specific mechanism (Spec2Vec + threshold) is not.",
@@ -5332,7 +5332,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spec2vec-similarity-scoring/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spec2vec-similarity-scoring/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention Spec2Vec at all. The paper describes MS2LDA for discovering Mass2Motifs and provides matching functionality against a database of Mass2Motifs, but does not describe Spec2Vec-based similarity scoring or spectral embedding approaches. The matching described in passage [4] is 'matching functionality which allows users to compare the Mass2Motifs found in their data with those in our growing database' but does not specify the method as Spec2Vec.",
@@ -5352,7 +5352,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spec2vec-similarity-scoring/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spec2vec-similarity-scoring/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Spec2Vec is not mentioned anywhere in the provided passages. The paper focuses on MS2LDA for motif discovery and matching, not on Spec2Vec embeddings or similarity scoring.",
@@ -5372,7 +5372,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spec2vec-similarity-scoring/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spec2vec-similarity-scoring/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MAG is not mentioned in the paper. The paper describes MS2LDA and ms2lda.org but does not reference a tool called MAG or Mass2Motif Annotation Guidance.",
@@ -5392,7 +5392,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spec2vec-similarity-scoring/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spec2vec-similarity-scoring/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We recently published MS2LDA, a method for the decomposition of sets of molecular fragment data derived from large metabolomics experiments... Ms2lda.org takes tandem mass spectrometry data in many standard formats and allows the user to infer the sets of fragment and neutral loss features that co-occur together (Mass2Motifs).",
       "asbval:note": "MS2LDA is the core method described in the paper for discovering Mass2Motifs from MS/MS data.",
@@ -5412,7 +5412,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spec2vec-similarity-scoring/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spec2vec-similarity-scoring/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The website can be found at http://ms2lda.org... interactive visualizations are performed in JavaScript (D3.js)... we provide a new visualization screen, the ability to store annotations, decomposition, motif matching and MS1 analysis.",
       "asbval:note": "The paper describes ms2lda.org (the web application) which provides visualization and annotation capabilities, but does not use the specific name 'MS2LDAViz'. The visualization and annotation functionality described matches the claimed role, but the tool name in the paper is 'ms2lda.org' not 'MS2LDAViz'.",
@@ -5432,7 +5432,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spec2vec-similarity-scoring/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spec2vec-similarity-scoring/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The system is implemented in Python with a minimal set of dependencies. Django is used as the Web application framework, whereas a job queue (Celery) is used to execute analyses asynchronously.",
       "asbval:note": "Python is explicitly mentioned as the implementation language for ms2lda.org.",
@@ -5452,7 +5452,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-corpus-representation/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-corpus-representation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA decomposes fragmentation spectra into sets of conserved fragment and neutral loss features (called Mass2Motifs). As text documents can be decomposed into sets of co-occurring words (topics) MS2LDA decomposes each molecule into sets of Mass2Motifs",
       "asbval:note": "The paper describes MS2LDA as inspired by text modelling, decomposing spectra into fragment/loss features analogous to topic modeling.",
@@ -5472,7 +5472,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-corpus-representation/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-corpus-representation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "fragment and neutral loss features are extracted from the uploaded fragmentation file [mzML (alongside an optional peaklist file to filter the extracted precursors, see Supplementary Section S1), MSP, or MGF formats] and stored inside the database",
       "asbval:note": "Paper explicitly describes extraction of fragment and neutral loss features from spectral files.",
@@ -5492,7 +5492,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-corpus-representation/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-corpus-representation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA, a method inspired by text modelling, to decompose fragmentation spectra into sets of conserved fragment and neutral loss features (called Mass2Motifs)",
       "asbval:note": "Paper describes MS2LDA as using LDA-inspired methodology to discover conserved fragmentation patterns (Mass2Motifs).",
@@ -5512,7 +5512,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-corpus-representation/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-corpus-representation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "fragment and neutral loss features are extracted from the uploaded fragmentation file [mzML (alongside an optional peaklist file to filter the extracted precursors, see Supplementary Section S1), MSP, or MGF formats]",
       "asbval:note": "Paper describes MS2LDA performing fragment and neutral loss extraction, but does not name a specific 'MS2LDA.Preprocessing' module or functions like 'load_and_clean'. The paper references the original MS2LDA publication (van der Hooft et al., 2016) for implementation details. The card claims a specific module structure not explicitly named in this paper.",
@@ -5532,7 +5532,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-corpus-representation/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-corpus-representation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The system is implemented in Python with a minimal set of dependencies",
       "asbval:note": "Paper confirms Python is the implementation language, though specific PYTHONPATH configuration is not mentioned.",
@@ -5552,7 +5552,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-corpus-representation/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-corpus-representation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Conda is not mentioned anywhere in the provided passages. The paper mentions Python dependencies but does not specify Conda as the environment manager.",
@@ -5572,7 +5572,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-corpus-representation/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-corpus-representation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA, a method inspired by text modelling, to decompose fragmentation spectra into sets of conserved fragment and neutral loss features (called Mass2Motifs)",
       "asbval:note": "MS2LDA is the core method described throughout the paper.",
@@ -5592,7 +5592,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-corpus-representation/007",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-corpus-representation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA, a method inspired by text modelling, to decompose fragmentation spectra into sets of conserved fragment and neutral loss features",
       "asbval:note": "LDA is the underlying probabilistic model used by MS2LDA, though the paper does not explicitly state 'Apply LDA to the processed spectra' as a separate step in this paper (that phrase appears in the card's evidence_spans but is not found in the passages provided).",
@@ -5612,7 +5612,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-matching-and-ranking/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-library-matching-and-ranking/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Spec2Vec is not mentioned anywhere in the provided passages. The paper describes MS2LDA for decomposing MS/MS data into Mass2Motifs and a matching functionality that compares Mass2Motifs with a database, but does not describe Spec2Vec embeddings or cosine similarity ranking as part of the workflow. The matching functionality mentioned in passage [4] is described generically without naming the underlying algorithm.",
@@ -5632,7 +5632,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-matching-and-ranking/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-library-matching-and-ranking/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Spec2Vec is not mentioned in any passage. The paper does not describe this tool or method.",
@@ -5652,7 +5652,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-matching-and-ranking/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-library-matching-and-ranking/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MAG is not mentioned in any passage. The paper does not reference this tool by name.",
@@ -5672,7 +5672,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-matching-and-ranking/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-library-matching-and-ranking/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org allows users to decompose and annotate MS/MS data with MS2LDA",
       "asbval:note": "MS2LDA is the core method described throughout the paper and is used to generate Mass2Motifs.",
@@ -5692,7 +5692,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-matching-and-ranking/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-library-matching-and-ranking/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org also includes a growing library of pre-annotated Mass2Motifs from the Massbank and GNPS data sets",
       "asbval:note": "The paper describes a database of Mass2Motifs from MassBank and GNPS, but does not name it 'MotifDB'. The functional role (searchable database of reference motifs) is present but the specific tool name is not used in the paper.",
@@ -5712,7 +5712,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-matching-and-ranking/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-library-matching-and-ranking/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The system is implemented in Python with a minimal set of dependencies.",
       "asbval:note": "Python is explicitly mentioned as the implementation language for ms2lda.org.",
@@ -5732,7 +5732,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-matching-and-ranking/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-library-matching-and-ranking/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "As a new feature, we offer matching functionality which allows users to compare the Mass2Motifs found in their data with those in our growing database of (often annotated) Mass2Motifs.",
       "asbval:note": "The paper describes matching Mass2Motifs against a database and transferring annotations, but does not describe the use of Spec2Vec embeddings or cosine similarity scoring. The matching mechanism is not detailed algorithmically in the provided passages.",
@@ -5752,7 +5752,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-noise-filtering-and-quality-control/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-noise-filtering-and-quality-control/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Various filtering options are provided to allow for filtering of the loaded spectra, and the user can also specify algorithm properties (number of Mass2Motifs and number of algorithm iterations).",
       "asbval:note": "Paper mentions filtering options are available but does not explicitly detail low-intensity fragment removal, statistical significance thresholds, or ion mode selection. The paper states filtering is provided but lacks specifics on the exact mechanisms claimed in the research question.",
@@ -5772,7 +5772,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-noise-filtering-and-quality-control/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-noise-filtering-and-quality-control/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention a module named 'MS2LDA.Preprocessing.load_and_clean'. The paper references MS2LDA as a method and ms2lda.org as a web application, but does not document specific Python module names or preprocessing submodules with this naming convention.",
@@ -5792,7 +5792,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-noise-filtering-and-quality-control/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-noise-filtering-and-quality-control/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention a module named 'MS2LDA.Preprocessing.generate_corpus'. While the paper discusses corpus generation conceptually ('bag-of-fragments'), it does not name this specific module.",
@@ -5812,7 +5812,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-noise-filtering-and-quality-control/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-noise-filtering-and-quality-control/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA is performed on the loaded spectra, and the results are stored in the database for visualization.",
       "asbval:note": "MS2LDA is confirmed as the primary method used for decomposing spectra into Mass2Motifs.",
@@ -5832,7 +5832,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-noise-filtering-and-quality-control/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-noise-filtering-and-quality-control/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The system is implemented in Python with a minimal set of dependencies.",
       "asbval:note": "Python is confirmed as the implementation language for the system.",
@@ -5852,7 +5852,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-noise-filtering-and-quality-control/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-noise-filtering-and-quality-control/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Conda is not mentioned in any of the provided passages. The paper mentions Python, Django, Celery, Numpy/SciPy, JavaScript, D3.js, pymzML, and PostgreSQL, but does not reference Conda.",
@@ -5872,7 +5872,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-noise-filtering-and-quality-control/006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-noise-filtering-and-quality-control/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "fragment and neutral loss features are extracted from the uploaded fragmentation file [mzML (alongside an optional peaklist file to filter the extracted precursors, see Supplementary Section S1), MSP, or MGF formats]",
       "asbval:note": "Paper confirms filtering of spectra and extraction of fragment/neutral loss features, but does not explicitly detail low-intensity thresholds, statistical significance filtering, or ion mode selection as described in the scope.",
@@ -5892,7 +5892,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-computation/000",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-similarity-computation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org allows users to decompose and annotate MS/MS data with MS2LDA... we provide a new visualization screen, the ability to store annotations, decomposition, motif matching and MS1 analysis... The starting point for visualization is the network graph (A), nodes represent Mass2Motifs (circle) and molecules (squares)... Edges represent connections between molecules and Mass2Motifs (above a certain threshold).",
       "asbval:note": "Paper describes network visualization with edges representing connections between molecules and Mass2Motifs, but does not explicitly mention computing pairwise spectral similarity or cosine similarity between Mass2Motif pseudo-spectra. The network construction mechanism is not detailed in provided passages. Matching functionality is mentioned but not described as similarity-based computation.",
@@ -5912,7 +5912,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-computation/001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-similarity-computation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA, a method for the decomposition of sets of molecular fragment data derived from large metabolomics experiments... Ms2lda.org allows users to decompose and annotate MS/MS data with MS2LDA",
       "asbval:note": "MS2LDA is confirmed as the core method. Repository URL not verified in passages but tool name and role are clearly established.",
@@ -5932,7 +5932,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-computation/002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-similarity-computation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS2LDA, a method inspired by text modelling, to decompose fragmentation spectra into sets of conserved fragment and neutral loss features (called Mass2Motifs). As text documents can be decomposed into sets of co-occurring words (topics) MS2LDA decomposes each molecule into sets of Mass2Motifs",
       "asbval:note": "LDA is the underlying methodology for MS2LDA. The paper confirms that MS2LDA uses topic modeling (LDA-inspired) to generate Mass2Motifs with fragment and neutral loss features.",
@@ -5952,7 +5952,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-computation/003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-similarity-computation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Spec2Vec is not mentioned anywhere in the provided passages. The paper does not reference this tool for spectral similarity computation or embedding.",
@@ -5972,7 +5972,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-computation/004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-similarity-computation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The system is implemented in Python with a minimal set of dependencies. Django is used as the Web application framework, whereas a job queue (Celery) is used to execute analyses asynchronously. As in the original publication, variational inference to discover Mass2Motifs is implemented in Numpy/SciPy, and interactive visualizations are performed in JavaScript (D3.js).",
       "asbval:note": "Python is confirmed as the implementation language for ms2lda.org system, including MS2LDA analysis and network visualization.",
@@ -5992,7 +5992,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-computation/005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-similarity-computation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Ms2lda.org allows users to decompose and annotate MS/MS data with MS2LDA... we provide a new visualization screen... The starting point for visualization is the network graph (A), nodes represent Mass2Motifs (circle) and molecules (squares). Mass2Motif nodes are sized according to the number of connected molecules. Edges represent connections between molecules and Mass2Motifs (above a certain threshold).",
       "asbval:note": "Paper confirms network visualization of Mass2Motifs after LDA decomposition, but the mechanism for computing edge weights or determining connections is not explicitly described in provided passages. The phrase 'above a certain threshold' suggests filtering but not similarity computation methodology.",
@@ -6012,7 +6012,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bag-of-words-document-representation-generation/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/bag-of-words-document-representation-generation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "bag-of-words-document-representation-generation",
@@ -6025,7 +6025,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragment-ion-peak-detection-and-normalization/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/fragment-ion-peak-detection-and-normalization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "fragment-ion-peak-detection-and-normalization",
@@ -6038,7 +6038,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-motif-learning/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/fragmentation-motif-learning/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "fragmentation-motif-learning",
@@ -6051,7 +6051,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/graph-serialization-graphml/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/graph-serialization-graphml/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "graph-serialization-graphml",
@@ -6064,7 +6064,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-data-serialization-and-parsing/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/json-data-serialization-and-parsing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "json-data-serialization-and-parsing",
@@ -6077,7 +6077,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-parsing-motifset-extraction/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/json-parsing-motifset-extraction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "json-parsing-motifset-extraction",
@@ -6090,7 +6090,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-serialization-and-data-structure-design/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/json-serialization-and-data-structure-design/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "json-serialization-and-data-structure-design",
@@ -6103,7 +6103,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lda-model-training-convergence/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/lda-model-training-convergence/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "lda-model-training-convergence",
@@ -6116,7 +6116,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-binning-and-tokenization-for-topic-modeling/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass-binning-and-tokenization-for-topic-modeling/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "mass-binning-and-tokenization-for-topic-modeling",
@@ -6129,7 +6129,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-fragment-pattern-querying/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass-fragment-pattern-querying/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "mass-fragment-pattern-querying",
@@ -6142,7 +6142,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-file-format-parsing/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass-spectrometry-file-format-parsing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "mass-spectrometry-file-format-parsing",
@@ -6155,7 +6155,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass2motif-annotation-mapping/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass2motif-annotation-mapping/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "mass2motif-annotation-mapping",
@@ -6168,7 +6168,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass2motif-network-construction/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass2motif-network-construction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "mass2motif-network-construction",
@@ -6181,7 +6181,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass2motif-parameter-optimization/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/mass2motif-parameter-optimization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "mass2motif-parameter-optimization",
@@ -6194,7 +6194,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-database-lookup-and-retrieval/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/motif-database-lookup-and-retrieval/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "motif-database-lookup-and-retrieval",
@@ -6207,7 +6207,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-metadata-annotation/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/motif-metadata-annotation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "motif-metadata-annotation",
@@ -6220,7 +6220,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-similarity-ranking-interpretation/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/motif-similarity-ranking-interpretation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "motif-similarity-ranking-interpretation",
@@ -6233,7 +6233,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neutral-loss-calculation-from-precursor-fragment-pairs/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/neutral-loss-calculation-from-precursor-fragment-pairs/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "neutral-loss-calculation-from-precursor-fragment-pairs",
@@ -6246,7 +6246,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/neutral-loss-composition-matching/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/neutral-loss-composition-matching/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "neutral-loss-composition-matching",
@@ -6259,7 +6259,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/probabilistic-topic-modeling-mass-spectrometry/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/probabilistic-topic-modeling-mass-spectrometry/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "probabilistic-topic-modeling-mass-spectrometry",
@@ -6272,7 +6272,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/similarity-threshold-interpretation/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/similarity-threshold-interpretation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "similarity-threshold-interpretation",
@@ -6285,7 +6285,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spec2vec-similarity-scoring/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spec2vec-similarity-scoring/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "spec2vec-similarity-scoring",
@@ -6298,7 +6298,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-corpus-representation/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-corpus-representation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "spectral-corpus-representation",
@@ -6311,7 +6311,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-matching-and-ranking/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-library-matching-and-ranking/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "spectral-library-matching-and-ranking",
@@ -6324,7 +6324,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-noise-filtering-and-quality-control/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-noise-filtering-and-quality-control/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "spectral-noise-filtering-and-quality-control",
@@ -6337,7 +6337,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-computation/triage",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/skill/spectral-similarity-computation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "spectral-similarity-computation",
@@ -6350,7 +6350,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA is an advanced tool designed for unsupervised substructure discovery in mass spectrometry data.",
       "asbval:note": null,
@@ -6370,7 +6370,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA significantly enhances the capabilities described in the original MS2LDA paper from 2016.",
       "asbval:note": null,
@@ -6390,7 +6390,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Mass spectrometry fragmentation patterns hold abundant structural information vital for analytical chemistry, natural product research, and food safety assessments.",
       "asbval:note": null,
@@ -6410,7 +6410,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA identifies recurring substructures (motifs) across spectral datasets without relying on prior compound identification.",
       "asbval:note": null,
@@ -6430,7 +6430,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Mass2Motifs can be added to the online MotifDB by raising an issue following the Mass2Motifs template.",
       "asbval:note": null,
@@ -6450,7 +6450,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA expects preprocessed MS/MS data typically in .mgf, .mzML, or .msp formats.",
       "asbval:note": null,
@@ -6470,7 +6470,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA provides Mass2Motifs, spectra-motif loadings, and optional annotations via MotifDB or MAG as output.",
       "asbval:note": null,
@@ -6490,7 +6490,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Downloading the required models and storing a few runs typically requires 15\u201320 GB of free space.",
       "asbval:note": null,
@@ -6510,7 +6510,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA applies probabilistic topic modeling to tandem mass spectrometry data for unsupervised discovery of fragmentation patterns.",
       "asbval:note": null,
@@ -6530,7 +6530,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA identifies recurring patterns of mass fragments and neutral losses called Mass2Motifs across MS/MS datasets.",
       "asbval:note": null,
@@ -6550,7 +6550,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely to explain the observed fragmentation patterns.",
       "asbval:note": null,
@@ -6570,7 +6570,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_012",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_012",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA preprocessing includes converting MS/MS spectra into a bag-of-fragments format.",
       "asbval:note": "substring_in_paper=false and source_excerpt is truncated/incomplete, making full validation impossible; claim content is plausible but cannot be fully verified",
@@ -6590,7 +6590,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_013",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_013",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA preprocessing includes extracting neutral losses.",
       "asbval:note": "substring_in_paper=false; excerpt fragment 'ction.\n\n# Mass2Motif M' is too minimal to verify claim about neutral loss extraction",
@@ -6610,7 +6610,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_014",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_014",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA preprocessing includes filtering out noise.",
       "asbval:note": "substring_in_paper=false; excerpt fragment '::: MS2LDA.Mass' is insufficient to verify noise filtering claim",
@@ -6630,7 +6630,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_015",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_015",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA model training applies LDA to processed spectra to learn Mass2Motifs that describe recurring fragmentation patterns.",
       "asbval:note": "Text accurately represents the source excerpt describing LDA application and Mass2Motif learning",
@@ -6650,7 +6650,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_016",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_016",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA postprocessing includes visualizing motif loadings across spectra and comparing motifs to known entries in MotifDB.",
       "asbval:note": "Text accurately represents source excerpt on motif visualization, MotifDB comparison, and automated annotation",
@@ -6670,7 +6670,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_017",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_017",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA has been successfully applied to discover novel natural products in fungal extracts, plant metabolomics, and marine organisms.",
       "asbval:note": "Text accurately represents source excerpt listing fungal extracts, plant metabolomics, and marine organisms",
@@ -6690,7 +6690,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_018",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_018",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA has applications in environmental monitoring including pesticide detection, water quality assessment, and soil contamination analysis.",
       "asbval:note": "substring_in_paper=false and source_excerpt is unrelated preprocessing module documentation, not environmental monitoring applications",
@@ -6710,7 +6710,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_019",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_019",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA can be used for clinical metabolomics applications including biomarker discovery, drug metabolism studies, and disease profiling.",
       "asbval:note": "Text accurately represents source excerpt on clinical metabolomics applications",
@@ -6730,7 +6730,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_020",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_020",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA has applications in food science including food authenticity testing, quality control, and flavor profiling.",
       "asbval:note": "substring_in_paper=false and source_excerpt is unrelated preprocessing documentation, not food science applications",
@@ -6750,7 +6750,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_021",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_021",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDAViz lets users run analyses and explore results in a browser with live controls and rich visualizations.",
       "asbval:note": "Text accurately represents source excerpt about MS2LDAViz browser interface with live controls and visualizations",
@@ -6770,7 +6770,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_022",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_022",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Before running MS2LDA, users must download the Spec2Vec model, embeddings, and library DB from the Zenodo repository.",
       "asbval:note": "Text accurately represents source excerpt on downloading Spec2Vec model, embeddings, and library DB from Zenodo",
@@ -6790,7 +6790,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_023",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_023",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDAViz includes a Motif Rankings tab that allows users to browse all Mass2Motifs ranked based on different thresholds.",
       "asbval:note": "Text accurately represents source excerpt on Motif Rankings tab with ranking and MassQL search functionality",
@@ -6810,7 +6810,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_024",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_024",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDAViz includes a Motif Details tab for inspecting selected motifs in depth with suggested structures and annotations.",
       "asbval:note": "substring_in_paper=false; source_excerpt is unrelated visualization documentation, insufficient evidence for Motif Details tab claim",
@@ -6830,7 +6830,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_025",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_025",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDAViz includes a Spectra Search tab for finding individual spectra by parent mass or fragment/loss values.",
       "asbval:note": "substring_in_paper=false and source_excerpt is unrelated (tutorials heading); claim content cannot be verified from provided excerpt",
@@ -6850,7 +6850,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_026",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_026",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDAViz includes a View Network tab for exploring an interactive network of optimized motifs.",
       "asbval:note": "substring_in_paper=false but source_excerpt directly supports the claim about View Network tab; excerpt is genuine but not found via substring search",
@@ -6870,7 +6870,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_027",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_027",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDAViz includes a Motif Search tab for performing motif-motif searches against reference motifs in MotifDB.",
       "asbval:note": "substring_in_paper=false and source_excerpt is unrelated (YouTube playlist reference); claim content cannot be verified",
@@ -6890,7 +6890,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_028",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_028",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The `run_analysis.sh` script is provided for Linux/macOS users to simplify MS2LDA execution.",
       "asbval:note": "substring_in_paper=false and source_excerpt is unrelated (tutorial reference); claim about run_analysis.sh script cannot be verified",
@@ -6910,7 +6910,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_029",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_029",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The `run_analysis.bat` script is provided for Windows users to simplify MS2LDA execution.",
       "asbval:note": "substring_in_paper=false and source_excerpt is unrelated (command-line analysis tutorial); claim about run_analysis.bat script cannot be verified",
@@ -6930,7 +6930,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_030",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_030",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA command-line interface accepts --input flag for specifying the path to input spectra file.",
       "asbval:note": "substring_in_paper=false and source_excerpt is unrelated (notebooks directory reference); claim about --input flag cannot be verified",
@@ -6950,7 +6950,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_031",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_031",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA command-line interface accepts --output flag for specifying the directory to store results.",
       "asbval:note": "substring_in_paper=false and source_excerpt is unrelated (GitHub issue reference); claim about --output flag cannot be verified",
@@ -6970,7 +6970,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_032",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_032",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA command-line interface accepts --n_topics flag for specifying the number of Mass2Motifs to infer.",
       "asbval:note": "source_excerpt directly confirms --n_topics INTEGER flag for specifying number of Mass2Motifs",
@@ -6990,7 +6990,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_033",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_033",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA command-line interface accepts --n_iterations flag for specifying the number of LDA training iterations.",
       "asbval:note": "substring_in_paper=false and source_excerpt is unrelated (natural products discovery); claim about --n_iterations flag cannot be verified",
@@ -7010,7 +7010,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_034",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_034",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA command-line interface accepts --alpha flag for specifying the LDA alpha hyperparameter.",
       "asbval:note": "substring_in_paper=false and source_excerpt is unrelated (fungal extracts use case); claim about --alpha flag cannot be verified",
@@ -7030,7 +7030,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_035",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_035",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA command-line interface accepts --beta flag for specifying the LDA beta hyperparameter.",
       "asbval:note": "substring_in_paper=false and source_excerpt is unrelated (marine organisms use case); claim about --beta flag cannot be verified",
@@ -7050,7 +7050,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_036",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_036",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "After a successful MS2LDA run, results include a motif_figures folder with individual motif visualizations as PNG files.",
       "asbval:note": "substring_in_paper=false and source_excerpt is unrelated (soil contamination analysis); claim about motif_figures folder cannot be verified",
@@ -7070,7 +7070,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_037",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_037",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "After a successful MS2LDA run, results include a motifs folder with each inferred Mass2Motif.",
       "asbval:note": null,
@@ -7090,7 +7090,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_038",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_038",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "After a successful MS2LDA run, results include a motifset.json file with discovered Mass2Motifs in JSON format.",
       "asbval:note": null,
@@ -7110,7 +7110,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_039",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_039",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "After a successful MS2LDA run, results include a convergence_curve.png file showing the training convergence plot.",
       "asbval:note": "substring_in_paper=false and source_excerpt is unrelated (publications link); cannot verify convergence_curve.png claim from provided excerpt",
@@ -7130,7 +7130,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_040",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_040",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "After a successful MS2LDA run, results include a network.graphml file for molecular network export.",
       "asbval:note": "substring_in_paper=false and source_excerpt is unrelated (publications link); cannot verify network.graphml claim from provided excerpt",
@@ -7150,7 +7150,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_041",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_041",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "After a successful MS2LDA run, results include a ms2lda.bin file which is a binary dump of the trained LDA model.",
       "asbval:note": null,
@@ -7170,7 +7170,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_042",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_042",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "After a successful MS2LDA run, results include a ms2lda_viz.json.gz file containing compressed results for the MS2LDAViz web app.",
       "asbval:note": null,
@@ -7190,7 +7190,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_043",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_043",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA's functionality is organized into modular steps: Preprocessing, Modeling, Annotation, and Visualization.",
       "asbval:note": "substring_in_paper=false; text names four specific steps but excerpt only confirms 'modular steps' concept without listing all four",
@@ -7210,7 +7210,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_044",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_044",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA Preprocessing module filters and cleans spectra in positive/negative ion mode.",
       "asbval:note": "substring_in_paper=false and source_excerpt is unrelated (Getting Started link); cannot verify preprocessing details from provided excerpt",
@@ -7230,7 +7230,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_045",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_045",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA Modeling module infers Mass2Motifs via LDA.",
       "asbval:note": null,
@@ -7250,7 +7250,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_046",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_046",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA Annotation module assigns substructure meaning.",
       "asbval:note": "substring_in_paper=false and source_excerpt is unrelated (script names); cannot verify annotation module claim from provided excerpt",
@@ -7270,7 +7270,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_047",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_047",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA Visualization module explores and exports results.",
       "asbval:note": "substring_in_paper=false and source_excerpt is unrelated (script names); cannot verify visualization module claim from provided excerpt",
@@ -7290,7 +7290,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_048",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_048",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA can be installed using pip, Conda, or Poetry.",
       "asbval:note": null,
@@ -7310,7 +7310,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_049",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_049",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA is developed by a team led by Rosina Torres Ortega, Jonas Dietrich, and Joe Wandy, under supervision of Justin J.J. van der Hooft at Wageningen University & Research.",
       "asbval:note": "Text accurately represents source_excerpt content; substring_in_paper=false is likely due to formatting/whitespace differences, but semantic content matches exactly.",
@@ -7330,7 +7330,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_050",
+      "@id": "asbval:assertion/paper/10.1093%2Fbioinformatics%2Fbtx582/claim/claim_050",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2LDA builds on the original work published by van der Hooft et al. in PNAS 2016.",
       "asbval:note": "Text accurately captures that MS2LDA builds on van der Hooft et al. PNAS 2016; substring_in_paper=false likely due to formatting, but factual content is correct.",

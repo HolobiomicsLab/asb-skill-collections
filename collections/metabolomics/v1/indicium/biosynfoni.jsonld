@@ -432,7 +432,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_001/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/card/10_5281_zenodo_14822624__task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing.",
       "asbval:note": "Paper describes creation and testing of Biosynfoni but does not explicitly document a pytest test suite or package installation procedures. The paper is a research article describing the fingerprint method, not a software engineering document with reproducibility instructions.",
@@ -452,7 +452,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_001/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/card/10_5281_zenodo_14822624__task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention pytest, package installation procedures, or test suite execution. The paper focuses on the scientific validation of the Biosynfoni fingerprint method (biosynthetic similarity, classification performance, etc.) rather than software testing infrastructure.",
@@ -472,7 +472,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_001/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/card/10_5281_zenodo_14822624__task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "pip is not mentioned in the paper. Paper mentions Python and RDKit but not package management tools.",
@@ -492,7 +492,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_001/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/card/10_5281_zenodo_14822624__task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "pytest is not mentioned anywhere in the paper. No testing framework is explicitly named.",
@@ -512,7 +512,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_001/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/card/10_5281_zenodo_14822624__task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds",
       "asbval:note": "Biosynfoni is the primary subject of the paper and is discussed extensively throughout.",
@@ -532,7 +532,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_001/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/card/10_5281_zenodo_14822624__task_001/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not describe pytest test execution or test reports. No mention of automated testing infrastructure.",
@@ -552,7 +552,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_001/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/card/10_5281_zenodo_14822624__task_001/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not describe package installation procedures, development mode setup, or dependency management. The paper is a scientific publication, not a software deployment guide.",
@@ -572,7 +572,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/card/10_5281_zenodo_14822624__task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate task card describes a software engineering / reproducibility task (package installation and pytest execution), but the paper is a scientific research article describing the Biosynfoni fingerprint method and its validation.",
@@ -590,7 +590,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_002/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/card/10_5281_zenodo_14822624__task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds, moving beyond purely structural characteristics... Biosynfoni is a compact substructure-based molecular fingerprint providing increased interpretability for various natural product cheminformatic applications.",
       "asbval:note": "The research question directly aligns with the paper's core contribution: developing a biosynthesis-informed fingerprint for natural products.",
@@ -610,7 +610,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_002/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/card/10_5281_zenodo_14822624__task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt)... Biosynfoni is a compact substructure-based molecular fingerprint",
       "asbval:note": "Biosynfoni is the primary tool/fingerprint developed and evaluated in the paper.",
@@ -630,7 +630,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_002/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/card/10_5281_zenodo_14822624__task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of pip package manager in the provided passages. The paper discusses tools used (Python, RDKit, Prot\u00e9g\u00e9, etc.) but does not mention pip for installation.",
@@ -650,7 +650,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_002/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/card/10_5281_zenodo_14822624__task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of pytest testing framework in the provided passages. The paper does not discuss testing infrastructure or pytest.",
@@ -670,7 +670,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_002/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/card/10_5281_zenodo_14822624__task_002/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Biosynfoni's fingerprint contains the number of substructure matches returned for each of the 39 substructure keys... Biosynfoni can also be used like other fingerprints to visualise chemical space.",
       "asbval:note": "The paper confirms that Biosynfoni generates fingerprints with substructure counts (not strictly bit-vectors, but counted representations) for molecules. However, the paper does not explicitly specify CSV or NumPy format as output formats. The fingerprint is described as a counted array of 39 substructure keys, which is semantically similar but the specific output format (CSV/NumPy) is not documented in the passages.",
@@ -690,7 +690,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/card/10_5281_zenodo_14822624__task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card frames the task as 'reconstructing' the fingerprint computation, which is appropriate given the paper's methodological focus.",
@@ -707,7 +707,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_003/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/card/10_5281_zenodo_14822624__task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Biosynfoni's fingerprint contains the number of substructure matches returned for each of the 39 substructure keys. We investigated Biosynfoni's applicability domain and its performance in biosynthetic similarity representation, chemical space visualisation, and natural product classification.",
       "asbval:note": "Paper analyzes fingerprint properties (substructure occurrence, co-occurrence, similarity patterns via Tanimoto) but does NOT analyze a 'deposited dataset' on Zenodo. The paper uses COCONUT, ChEBI, MetaCyc, and ZINC databases. No mention of a Zenodo deposit or dataset deposition in passages. The statistical analyses performed (occurrence heatmaps, pointwise mutual information, Tanimoto similarity) are present, but the scope is the paper's own analysis, not a separate deposited dataset.",
@@ -727,7 +727,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_003/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/card/10_5281_zenodo_14822624__task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The average atom coverage of 97% indicates Biosynfoni captures almost all of the atoms in the natural products' structures at least once with its 39 substructure keys (Online Figures A1 and A2). The average counts and count variation differ between substructure keys, with acetate pathway substructure keys showing the highest average counts and count variations (Fig. 1a, top)... We calculated Tanimoto similarity scores for compounds from biosynthetic reaction chains, for pairs with increasing numbers of metabolic reaction steps between them (Fig. 2b).",
       "asbval:note": "Paper reports substructure occurrence statistics (average counts, count variation) and Tanimoto similarity metrics, but these are presented as figures and online figures, not as a formal summary statistics table. Sparsity is not explicitly quantified as a metric in the passages.",
@@ -747,7 +747,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_003/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/card/10_5281_zenodo_14822624__task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Fig. 1a, top... Occurrences are shown as bottomless box plots due to the logarithmic scale of the y-axis... We visualised the similarity scores per n through kernel density estimate plots of the similarities (Fig. 2c).",
       "asbval:note": "Paper presents box plots of substructure occurrence (bit-frequency analogue) and kernel density estimate plots of Tanimoto similarity. However, sparsity is not explicitly visualized as a distribution plot in the passages.",
@@ -767,7 +767,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_003/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/card/10_5281_zenodo_14822624__task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds... We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing.",
       "asbval:note": "Biosynfoni is the primary fingerprint method developed and analyzed in the paper.",
@@ -787,7 +787,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_003/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/card/10_5281_zenodo_14822624__task_003/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "pip (Python package installer) is not mentioned in any passage. While Python is used, pip is not explicitly named as a tool in the paper.",
@@ -807,7 +807,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_14822624__task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/card/10_5281_zenodo_14822624__task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card assumes analysis of a 'deposited dataset' on Zenodo, but the paper does not mention depositing a dataset to Zenodo in the provided passages. The paper analyzes fingerprints using COCONUT, ChEBI, MetaCyc, and ZINC databases.",
@@ -824,7 +824,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bit-vector-substructure-encoding/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/bit-vector-substructure-encoding/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Biosynfoni's fingerprint contains the number of substructure matches returned for each of the 39 substructure keys.",
       "asbval:note": "Paper describes Biosynfoni as a counted (integer-valued) substructure fingerprint, not a bit-vector. Passage [3] states 'Biosynfoni's fingerprint contains the number of substructure matches' (counts), and passage [5] confirms 'the fact that the fingerprint is counted'. The card incorrectly characterizes it as 'bit-vector'; it is actually a count-based fingerprint with 39 integer features.",
@@ -844,7 +844,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bit-vector-substructure-encoding/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/bit-vector-substructure-encoding/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds... We show that in comparison to other widely-used fingerprints, Biosynfoni better reflects biosynthetic distance... and performs on par in natural product-specific applications",
       "asbval:note": null,
@@ -864,7 +864,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bit-vector-substructure-encoding/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/bit-vector-substructure-encoding/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds",
       "asbval:note": "Biosynfoni is confirmed as the fingerprint method, but it computes a counted (integer) fingerprint, not a bit-vector. The tool role description incorrectly specifies 'bit-vector' when the paper explicitly uses count-based representation.",
@@ -884,7 +884,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bit-vector-substructure-encoding/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/bit-vector-substructure-encoding/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing.",
       "asbval:note": null,
@@ -904,7 +904,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bit-vector-substructure-encoding/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/bit-vector-substructure-encoding/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not mention pip or package installation procedures. Cannot confirm or deny from provided text.",
@@ -924,7 +924,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bit-vector-substructure-encoding/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/bit-vector-substructure-encoding/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Black is not mentioned anywhere in the paper or methods. No evidence of its use in Biosynfoni development.",
@@ -944,7 +944,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bit-vector-substructure-encoding/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/bit-vector-substructure-encoding/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To assess natural product class prediction, we trained Random Forest multilabel classifiers on the ChEBI-annotated labels and assessed performance using 5-fold cross-validation.",
       "asbval:note": "Paper confirms use for natural product class prediction via machine learning, but the fingerprint is count-based (fixed-length integer array), not bit-vector.",
@@ -964,7 +964,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bit-vector-substructure-encoding/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/bit-vector-substructure-encoding/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To visualise the differences in Biosynfoni fingerprints between natural products and synthetic compounds, we used the non-biogenic ZINC database subset (3,019,372 compounds)",
       "asbval:note": "Paper demonstrates that Biosynfoni is optimized for natural products and compares against synthetic compounds, supporting the scope guidance.",
@@ -984,7 +984,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/development-environment-setup/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/development-environment-setup/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing. Table A2 and A3 contain a detailed list of other tools and materials used, and their respective versions.",
       "asbval:note": "Paper mentions Python and RDKit tools used in creation and testing, but does not describe a development environment setup workflow with pip editable install (-e flag) or pytest test suite execution. The paper is a research article describing Biosynfoni's design and validation, not a development guide.",
@@ -1004,7 +1004,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/development-environment-setup/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/development-environment-setup/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "pip is not mentioned anywhere in the paper. The paper does not discuss package installation procedures or dependency management.",
@@ -1024,7 +1024,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/development-environment-setup/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/development-environment-setup/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "pytest is not mentioned in the paper. While the paper describes testing and validation of Biosynfoni, it does not name pytest as the test runner used.",
@@ -1044,7 +1044,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/development-environment-setup/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/development-environment-setup/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds",
       "asbval:note": "Biosynfoni is the subject of the paper and is described as a molecular fingerprint tool. However, the paper does not describe it as a package to be installed in development mode.",
@@ -1064,7 +1064,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/development-environment-setup/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/development-environment-setup/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "black code formatter is not mentioned in the paper. The paper does not discuss code style tools or linting.",
@@ -1084,7 +1084,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/development-environment-setup/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/development-environment-setup/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper is a scientific research article describing Biosynfoni's design, validation, and applications. It does not provide guidance on cloning repositories, setting up development environments, or contributing to package development.",
@@ -1104,7 +1104,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/development-environment-setup/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/development-environment-setup/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss setup.py, pyproject.toml, dev dependencies, or test directory structure.",
@@ -1124,7 +1124,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/development-environment-setup/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/development-environment-setup/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss cloning repositories or local source code management.",
@@ -1144,7 +1144,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/development-environment-setup/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/development-environment-setup/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention setup.py, pyproject.toml, or dev extras configuration.",
@@ -1164,7 +1164,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/development-environment-setup/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/development-environment-setup/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not describe a tests/ directory or pytest test suite structure.",
@@ -1184,7 +1184,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/distribution-statistics-summarization/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/distribution-statistics-summarization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We investigated Biosynfoni's applicability domain and its performance in biosynthetic similarity representation, chemical space visualisation, and natural product classification... The average atom coverage of 97% indicates Biosynfoni captures almost all of the atoms in the natural products' structures at least once with its 39 substructure keys... We calculated Tanimoto similarity scores for compounds from biosynthetic reaction chains... we computed Tanimoto similarity between the two compounds for each fingerprint type.",
       "asbval:note": "Paper does compute pairwise similarity coefficients (Tanimoto) and analyzes distributional properties (atom coverage, substructure occurrence, co-occurrence patterns shown in Fig. 1a). However, the paper does not explicitly compute or report 'bit-frequency distributions' or 'sparsity metrics' in the traditional sense\u2014instead it reports substructure occurrence counts and atom coverage. The research question conflates fingerprint statistics with fingerprint application/validation tasks.",
@@ -1204,7 +1204,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/distribution-statistics-summarization/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/distribution-statistics-summarization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt)... We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing.",
       "asbval:note": "Biosynfoni is the primary fingerprint method developed and tested in the paper.",
@@ -1224,7 +1224,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/distribution-statistics-summarization/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/distribution-statistics-summarization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of pip or package installation procedures in the provided passages. The paper describes the tools used (Python, RDKit) but does not discuss installation via pip or development mode installation.",
@@ -1244,7 +1244,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/distribution-statistics-summarization/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/distribution-statistics-summarization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing... To implement the fingerprint, we used RDKit's Chem.Mol.GetSubstructMatches function for substructure key detection.",
       "asbval:note": "RDKit is explicitly used for molecular structure parsing and substructure matching, consistent with the card's claim about parsing molecular structures.",
@@ -1264,7 +1264,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/distribution-statistics-summarization/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/distribution-statistics-summarization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Biosynfoni's fingerprint contains the number of substructure matches returned for each of the 39 substructure keys... We investigated Biosynfoni's applicability domain and its performance in biosynthetic similarity representation, chemical space visualisation, and natural product classification.",
       "asbval:note": "Biosynfoni does convert structures to fingerprint vectors and the paper analyzes their statistical properties (occurrence counts, co-occurrence, similarity). However, the primary use case in the paper is not 'statistical analysis' per se but rather biosynthetic similarity estimation, chemical space visualization, and natural product classification. Statistical characterization is a secondary analytical step, not the primary role.",
@@ -1284,7 +1284,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/distribution-statistics-summarization/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/distribution-statistics-summarization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No installation instructions or development mode setup mentioned in the paper. The paper does not discuss pip or package installation procedures.",
@@ -1304,7 +1304,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/distribution-statistics-summarization/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/distribution-statistics-summarization/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used the second version (September 2024) of the COCONUT database [15, 33] as our primary natural product structure source. Any compounds from the .sdf+ file that could not be read by RDKit were left out... We matched the three-star database compounds to the extracted classifications using their compound IDs... Natural products were identified through InChI comparison to COCONUT compounds... Substructure keys are defined in SMILES ARbitrary Target Specification (SMARTS)...",
       "asbval:note": "RDKit is used to parse SDF files and InChI identifiers; SMILES/SMARTS are used for substructure definition. This aligns with the card's claim about parsing molecular structures.",
@@ -1324,7 +1324,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fingerprint-vector-loading-and-parsing/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/fingerprint-vector-loading-and-parsing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing.",
       "asbval:note": "Paper describes Biosynfoni fingerprint generation and testing on COCONUT and ChEBI datasets, but does not explicitly discuss loading pre-computed fingerprint vectors from Zenodo deposits or archived datasets. The paper focuses on fingerprint creation and application, not on parsing archived fingerprint data. No mention of Zenodo deposit workflows.",
@@ -1344,7 +1344,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fingerprint-vector-loading-and-parsing/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/fingerprint-vector-loading-and-parsing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds... We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing.",
       "asbval:note": "Paper confirms Biosynfoni fingerprint generation and testing, but does not describe an API for loading or parsing pre-computed fingerprint vectors from archived datasets. The paper focuses on fingerprint creation from molecular structures, not on ingesting archived fingerprint data.",
@@ -1364,7 +1364,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fingerprint-vector-loading-and-parsing/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/fingerprint-vector-loading-and-parsing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of pip, package installation, or development mode workflows in the paper. The paper does not discuss installation or deployment procedures.",
@@ -1384,7 +1384,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fingerprint-vector-loading-and-parsing/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/fingerprint-vector-loading-and-parsing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing... To implement the fingerprint, we used RDKit's Chem.Mol.GetSubstructMatches function for substructure key detection.",
       "asbval:note": "RDKit is confirmed as a core dependency for Biosynfoni, used for molecular parsing and substructure detection. However, the paper does not specifically discuss RDKit's role in 'fingerprint loading pipelines' from archived data.",
@@ -1404,7 +1404,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fingerprint-vector-loading-and-parsing/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/fingerprint-vector-loading-and-parsing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not describe workflows for loading pre-computed fingerprint vectors from Zenodo or other archives. The paper focuses on fingerprint generation from molecular structures (COCONUT, ChEBI, MetaCyc datasets) and their application to classification and similarity tasks, not on ingesting archived fingerprint data.",
@@ -1424,7 +1424,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fingerprint-vector-loading-and-parsing/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/fingerprint-vector-loading-and-parsing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Biosynfoni's fingerprint contains the number of substructure matches returned for each of the 39 substructure keys... The average atom coverage of 97% indicates Biosynfoni captures almost all of the atoms in the natural products' structures at least once with its 39 substructure keys.",
       "asbval:note": "Paper describes fingerprint feature extraction and characterization (substructure counts, atom coverage, co-occurrence patterns), but in the context of generating fingerprints from molecular structures, not loading pre-computed vectors from archives.",
@@ -1444,7 +1444,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-bit-frequency-analysis/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-fingerprint-bit-frequency-analysis/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Biosynfoni's fingerprint contains the number of substructure matches returned for each of the 39 substructure keys. We investigated Biosynfoni's applicability domain and its performance in biosynthetic similarity representation, chemical space visualisation, and natural product classification.",
       "asbval:note": "Paper characterizes Biosynfoni fingerprint distributions (occurrences, co-occurrences, counts) but does not explicitly frame this as 'bit-frequency analysis' or 'statistical distribution characterization' as a standalone methodological task. The paper analyzes fingerprint properties but as part of validation of the fingerprint itself, not as a general analytical skill for deposited fingerprint datasets.",
@@ -1464,7 +1464,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-bit-frequency-analysis/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-fingerprint-bit-frequency-analysis/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The average atom coverage of 97% indicates Biosynfoni captures almost all of the atoms in the natural products' structures at least once with its 39 substructure keys... The average counts and count variation differ between substructure keys... we calculated Tanimoto similarity scores for compounds from biosynthetic reaction chains",
       "asbval:note": "Paper explicitly measures coverage (sparsity proxy), substructure count distributions (activation patterns), and Tanimoto similarity (pairwise similarity).",
@@ -1484,7 +1484,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-bit-frequency-analysis/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-fingerprint-bit-frequency-analysis/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used the second version (September 2024) of the COCONUT database [15, 33] as our primary natural product structure source.",
       "asbval:note": "Paper uses COCONUT database and ChEBI dataset, not explicitly Zenodo-deposited biosynfoni fingerprints. The paper generates fingerprints from source databases rather than loading pre-computed deposited fingerprints.",
@@ -1504,7 +1504,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-bit-frequency-analysis/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-fingerprint-bit-frequency-analysis/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Fig. 1a Occurrences (top) and co-occurrences (pointwise mutual information, bottom) of Biosynfoni substructure keys... we calculated Tanimoto similarity scores for compounds from biosynthetic reaction chains, for pairs with increasing numbers of metabolic reaction steps between them",
       "asbval:note": "Paper explicitly characterizes bit (substructure key) occurrences, co-occurrences, and Tanimoto similarity patterns.",
@@ -1524,7 +1524,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-bit-frequency-analysis/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-fingerprint-bit-frequency-analysis/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds... Biosynfoni's fingerprint contains the number of substructure matches returned for each of the 39 substructure keys.",
       "asbval:note": "Biosynfoni is the primary fingerprint tool developed and used throughout the paper; it generates count-based fingerprints.",
@@ -1544,7 +1544,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-bit-frequency-analysis/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-fingerprint-bit-frequency-analysis/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss pip, package installation, or development workflows. Insufficient information to judge whether pip is used in the paper's methodology.",
@@ -1564,7 +1564,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-bit-frequency-analysis/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-fingerprint-bit-frequency-analysis/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Black is not mentioned anywhere in the paper. Paper does not discuss code formatting tools.",
@@ -1584,7 +1584,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-bit-frequency-analysis/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-fingerprint-bit-frequency-analysis/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Pytest is not mentioned in the paper. Paper does not discuss unit testing frameworks.",
@@ -1604,7 +1604,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-computation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-fingerprint-computation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds... Biosynfoni can be used like other fingerprints to visualise chemical space... Biosynfoni can also be used to visualise molecular datasets... To assess natural product class prediction, we trained Random Forest multilabel classifiers on the ChEBI-annotated labels",
       "asbval:note": "Paper confirms biosynfoni fingerprints are designed for natural products, support biosynthetic class prediction, and can be computed from molecular structures. Input formats (SMILES, InChI, SDF) are confirmed in methods section.",
@@ -1624,7 +1624,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-computation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-fingerprint-computation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt)... Biosynfoni's fingerprint contains the number of substructure matches returned for each of the 39 substructure keys.",
       "asbval:note": "Biosynfoni is the core subject of the paper and is used throughout for fingerprint computation.",
@@ -1644,7 +1644,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-computation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-fingerprint-computation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing... To implement the fingerprint, we used RDKit's Chem.Mol.GetSubstructMatches function for substructure key detection.",
       "asbval:note": "RDKit is explicitly stated as a main tool for Biosynfoni's creation and is used for molecular structure parsing and substructure matching.",
@@ -1664,7 +1664,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-computation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-fingerprint-computation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not mention pip or package installation procedures. Cannot confirm or deny presence of pip in the paper's workflow.",
@@ -1684,7 +1684,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-computation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-fingerprint-computation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Black (code formatter) is not mentioned anywhere in the provided passages. No evidence of its use in the paper's development workflow.",
@@ -1704,7 +1704,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-computation/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-fingerprint-computation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Pytest is not mentioned in the provided passages. No evidence of its use for testing in the paper.",
@@ -1724,7 +1724,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-computation/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-fingerprint-computation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds... In total, this added up to 39 substructure keys (Online Figure A26).",
       "asbval:note": "The paper explicitly states Biosynfoni uses 39 substructure keys throughout.",
@@ -1744,7 +1744,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-computation/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-fingerprint-computation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Biosynfoni's fingerprint contains the number of substructure matches returned for each of the 39 substructure keys... we implemented a counted Tanimoto similarity, also known as the multiset Tanimoto coefficient",
       "asbval:note": "Paper confirms count fingerprints (substructure match counts). Bit-vector format is not explicitly mentioned; the fingerprint is described as 'counted' rather than binary/bit-vector.",
@@ -1764,7 +1764,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-computation/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-fingerprint-computation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Substructure keys are defined in SMILES ARbitrary Target Specification (SMARTS) to allow for regular expression-like detection.",
       "asbval:note": "SMILES/SMARTS are mentioned as the format for substructure key definition. Input handling of SMILES is confirmed in methods.",
@@ -1784,7 +1784,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-computation/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-fingerprint-computation/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Natural products were identified through InChI comparison to COCONUT compounds, where InChI parts 1\u20133 are identical",
       "asbval:note": "InChI is used in the paper's workflow for compound matching and identification.",
@@ -1804,7 +1804,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-computation/010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-fingerprint-computation/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used the second version (September 2024) of the COCONUT database [15, 33] as our primary natural product structure source. Any compounds from the .sdf+ file that could not be read by RDKit were left out",
       "asbval:note": "SDF file format is explicitly mentioned as a source for molecular structures in the paper.",
@@ -1824,7 +1824,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-input-format-handling/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-structure-input-format-handling/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used the second version (September 2024) of the COCONUT database [15, 33] as our primary natural product structure source. Any compounds from the .sdf+ file that could not be read by RDKit were left out, leaving us with 695,129 compounds... We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing.",
       "asbval:note": "Paper confirms RDKit is used to parse SDF files and convert to internal representation. However, the paper does not explicitly describe a task/skill for 'accepting multiple input formats and converting them' as a standalone operation. The paper uses RDKit to read SDF files from COCONUT, but does not document SMILES or InChI parsing as part of the Biosynfoni workflow in the passages provided. The research_question describes a general data-handling skill, but the paper's focus is on fingerprint design and evaluation, not on input format conversion as a primary research contribution.",
@@ -1844,7 +1844,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-input-format-handling/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-structure-input-format-handling/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not describe biosynfoni as a command-line tool for parsing multiple input formats. Biosynfoni is presented as a molecular fingerprint (a data structure with 39 substructure keys), not as a parser or input-format converter. The paper states 'we used RDKit's Chem.Mol.GetSubstructMatches function for substructure key detection' but does not position biosynfoni itself as a CLI for format conversion.",
@@ -1864,7 +1864,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-input-format-handling/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-structure-input-format-handling/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing... We used RDKit's Chem.Mol.GetSubstructMatches function for substructure key detection. Substructure keys are defined in SMILES ARbitrary Target Specification (SMARTS)... Any compounds from the .sdf+ file that could not be read by RDKit were left out",
       "asbval:note": "Paper confirms RDKit is used and that it parses SDF files. SMARTS (SMILES Arbitrary Target Specification) is mentioned, confirming SMILES-related functionality. However, the paper does not explicitly document InChI parsing by RDKit in the provided passages, though InChI is mentioned in the context of compound matching: 'Natural products were identified through InChI comparison to COCONUT compounds, where InChI parts 1\u20133 are identical'. The role described in the card (parsing multiple formats into Mol objects) is partially supported but not comprehensively documented in the passages.",
@@ -1884,7 +1884,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-input-format-handling/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-structure-input-format-handling/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The evidence_span 'pip install -e .[dev]' does not appear in any of the provided passages. The paper does not discuss pip or package installation instructions. This appears to be an extraction artifact or reference to supplementary material not included in the passages.",
@@ -1904,7 +1904,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/natural-product-chemical-representation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/natural-product-chemical-representation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds, moving beyond purely structural characteristics... Biosynfoni is a compact substructure-based molecular fingerprint providing increased interpretability for various natural product cheminformatic applications.",
       "asbval:note": null,
@@ -1924,7 +1924,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/natural-product-chemical-representation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/natural-product-chemical-representation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Biosynfoni can be used for chemical space visualisation and interpretable natural product class prediction... To assess natural product class prediction, we trained Random Forest multilabel classifiers on the ChEBI-annotated labels... Biosynfoni can also be used like other fingerprints to visualise chemical space.",
       "asbval:note": null,
@@ -1944,7 +1944,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/natural-product-chemical-representation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/natural-product-chemical-representation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt)... Biosynfoni is a compact substructure-based molecular fingerprint providing increased interpretability for various natural product cheminformatic applications.",
       "asbval:note": null,
@@ -1964,7 +1964,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/natural-product-chemical-representation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/natural-product-chemical-representation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing... To implement the fingerprint, we used RDKit's Chem.Mol.GetSubstructMatches function for substructure key detection.",
       "asbval:note": null,
@@ -1984,7 +1984,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/natural-product-chemical-representation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/natural-product-chemical-representation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "pip is not mentioned in the provided passages. While it is a standard Python package manager, its use for biosynfoni installation is not explicitly documented in the paper.",
@@ -2004,7 +2004,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/natural-product-chemical-representation/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/natural-product-chemical-representation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "black is not mentioned in the provided passages. While it may be used in the biosynfoni repository, its use is not documented in the paper.",
@@ -2024,7 +2024,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/natural-product-chemical-representation/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/natural-product-chemical-representation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "pytest is not mentioned in the provided passages. While it may be used in the biosynfoni repository, its use is not documented in the paper.",
@@ -2044,7 +2044,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/package-dependency-management/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/package-dependency-management/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper is a scientific research article describing the Biosynfoni fingerprint method and its applications. It does not discuss package dependency management, development mode installation, or CI/CD workflows. The Methods section mentions tools used (Python, RDKit, etc.) but does not address installation procedures or dependency management as a research task or skill.",
@@ -2064,7 +2064,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/package-dependency-management/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/package-dependency-management/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention pip, editable mode installation, or [dev] dependencies. While Python is used, no package installation instructions or dependency management workflows are discussed.",
@@ -2084,7 +2084,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/package-dependency-management/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/package-dependency-management/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention pytest or any test runner. While the paper describes validation of Biosynfoni's performance (e.g., cross-validation for classification), this is scientific validation of the method itself, not automated testing infrastructure.",
@@ -2104,7 +2104,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/package-dependency-management/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/package-dependency-management/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention black, code formatting, or development dependencies. No discussion of code style enforcement or contribution workflows.",
@@ -2124,7 +2124,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/package-dependency-management/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/package-dependency-management/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds",
       "asbval:note": "Biosynfoni is the subject of the paper and is described as a molecular fingerprint tool. However, the card's framing of it as 'the package being installed and tested' in a development workflow context is not supported by the paper\u2014the paper describes the scientific method and results, not installation or testing procedures.",
@@ -2144,7 +2144,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pytest-test-suite-execution/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/pytest-test-suite-execution/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss pytest, test suite execution, or testing workflows. The paper is about Biosynfoni, a molecular fingerprint tool, and describes its development, validation, and applications in natural product research. No mention of pytest, test frameworks, or test execution procedures appears in any passage.",
@@ -2164,7 +2164,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pytest-test-suite-execution/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/pytest-test-suite-execution/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "pytest is not mentioned anywhere in the paper. The paper uses Python and RDKit for development but does not discuss testing frameworks or pytest.",
@@ -2184,7 +2184,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pytest-test-suite-execution/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/pytest-test-suite-execution/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "pip is not mentioned in the paper. The paper does not discuss package installation procedures or dependency management.",
@@ -2204,7 +2204,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pytest-test-suite-execution/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/pytest-test-suite-execution/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds",
       "asbval:note": "Biosynfoni is indeed the subject of the paper and is a real Python package. However, the paper does not describe executing its test suite with pytest or any testing procedures. The paper validates Biosynfoni's functionality through empirical experiments (biosynthetic similarity assessment, chemical space visualization, classification tasks) rather than through test suite execution.",
@@ -2224,7 +2224,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pytest-test-suite-execution/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/pytest-test-suite-execution/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss development mode installation, pip commands, or test suite execution workflows. It focuses on the scientific validation of Biosynfoni through computational experiments.",
@@ -2244,7 +2244,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pytest-test-suite-execution/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/pytest-test-suite-execution/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss pull requests, code contribution workflows, or regression testing.",
@@ -2264,7 +2264,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-package-installation-from-source/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/python-package-installation-from-source/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper is about Biosynfoni, a molecular fingerprint for natural products. It does not discuss Python package installation workflows, development mode setup, or pip/pytest usage. The paper focuses on the fingerprint's design, performance, and applications in cheminformatics.",
@@ -2284,7 +2284,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-package-installation-from-source/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/python-package-installation-from-source/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not address package installation workflows, development environments, or CI/CD testing procedures. It is a scientific paper describing a cheminformatics tool, not a software engineering or DevOps tutorial.",
@@ -2304,7 +2304,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-package-installation-from-source/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/python-package-installation-from-source/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention pip or package installation commands. While Python is used (passage [5] states 'We used Python [32] (v3.13.1)'), there is no discussion of pip or editable mode installation.",
@@ -2324,7 +2324,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-package-installation-from-source/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/python-package-installation-from-source/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention pytest or any test execution framework. No testing methodology is described in the passages provided.",
@@ -2344,7 +2344,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-package-installation-from-source/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/python-package-installation-from-source/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention black or any code formatting tools.",
@@ -2364,7 +2364,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-package-installation-from-source/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/python-package-installation-from-source/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Python [32] (v3.13.1) and the cheminformatic RDKit [21] package (v2024.09.4) as our main tools in Biosynfoni's creation and testing.",
       "asbval:note": "Biosynfoni is indeed a Python package described in the paper (passage [5] confirms it was created using Python and RDKit). However, the paper does not discuss its CI workflow, dev dependency structure, or use it as an example for teaching package installation from source. The paper is the scientific publication of the tool, not a tutorial on how to install it from source.",
@@ -2384,7 +2384,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sparsity-metric-computation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/sparsity-metric-computation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss computing sparsity metrics or zero-bit proportions. Paper focuses on Biosynfoni fingerprint design, biosynthetic similarity capture, and classification performance. No mention of sparsity analysis or zero-bit proportion computation.",
@@ -2404,7 +2404,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sparsity-metric-computation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/sparsity-metric-computation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss sparsity as a metric for understanding information density. Paper discusses interpretability, biosynthetic relevance, and classification performance instead.",
@@ -2424,7 +2424,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sparsity-metric-computation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/sparsity-metric-computation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used the second version (September 2024) of the COCONUT database [15, 33] as our primary natural product structure source.",
       "asbval:note": "Paper uses COCONUT database for fingerprints, not a Zenodo deposit. Paper does not discuss computing sparsity metrics on fingerprint collections.",
@@ -2444,7 +2444,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sparsity-metric-computation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/sparsity-metric-computation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds",
       "asbval:note": "Biosynfoni is confirmed as a fingerprint tool in the paper. However, the paper does not use it for sparsity analysis\u2014it uses Biosynfoni for biosynthetic similarity estimation, chemical space visualization, and natural product classification. The functional role claimed (sparsity analysis) is not supported by the paper.",
@@ -2464,7 +2464,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sparsity-metric-computation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/sparsity-metric-computation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention pip or package installation procedures. Paper mentions using Python and RDKit but does not discuss installation via pip or development mode setup.",
@@ -2484,7 +2484,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/statistical-distribution-visualization/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/statistical-distribution-visualization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We visualised the similarity scores per n through kernel density estimate plots of the similarities (Fig. 2c). To additionally visualise individual values per fingerprint, we plotted similarities for each molecule pair in scatter plots (Online Figures A21, A22 and A23).",
       "asbval:note": "Paper does perform distribution visualization of similarity scores using kernel density estimate plots and scatter plots, but the primary focus is on biosynthetic similarity visualization rather than general exploratory analysis of fingerprint bit-frequency or sparsity distributions. The paper does not explicitly discuss histograms or density curves for bit-frequency distributions or sparsity metrics as a general exploratory skill.",
@@ -2504,7 +2504,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/statistical-distribution-visualization/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/statistical-distribution-visualization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce the Biosynfoni fingerprint (from BIOSYNFOrmatic fiNgerprInt), which uses 39 structural features aligned with the biosynthetic nature of compounds... Biosynfoni's fingerprint contains the number of substructure matches returned for each of the 39 substructure keys.",
       "asbval:note": "Biosynfoni is the primary fingerprint tool developed in the paper and generates substructure-based vectors with counts (bit-frequencies).",
@@ -2524,7 +2524,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/statistical-distribution-visualization/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/statistical-distribution-visualization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "matplotlib is not mentioned anywhere in the provided passages. The paper mentions t-SNE and UMAP for dimensionality reduction visualization and kernel density estimate plots, but does not explicitly name matplotlib as the plotting library used.",
@@ -2544,7 +2544,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/statistical-distribution-visualization/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/statistical-distribution-visualization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "seaborn is not mentioned in the provided passages.",
@@ -2564,7 +2564,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/statistical-distribution-visualization/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/statistical-distribution-visualization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "numpy is not mentioned in the provided passages. The paper mentions Python and RDKit as main tools but does not explicitly list numpy.",
@@ -2584,7 +2584,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/statistical-distribution-visualization/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/statistical-distribution-visualization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The evidence_spans field references 'pip install -e .[dev]' but this text does not appear in any of the provided passages. While pip is a standard Python package manager, it is not explicitly mentioned in the paper passages provided.",
@@ -2604,7 +2604,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tanimoto-similarity-pairwise-calculation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/tanimoto-similarity-pairwise-calculation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we computed Tanimoto similarity between the two compounds for each fingerprint type... To calculate similarity we used the metric of choice in cheminformatics, the Tanimoto coefficient",
       "asbval:note": "Paper explicitly computes Tanimoto similarity for fingerprint pairs; methodology directly matches claim.",
@@ -2624,7 +2624,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tanimoto-similarity-pairwise-calculation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/tanimoto-similarity-pairwise-calculation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Fingerprint similarity as a proxy for biosynthetic similarity per fingerprint... Biosynthetically related compounds also show higher similarity compared to non-related compounds",
       "asbval:note": "Paper uses Tanimoto similarity to characterize structural/biosynthetic relationships and diversity patterns in fingerprint datasets.",
@@ -2644,7 +2644,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tanimoto-similarity-pairwise-calculation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/tanimoto-similarity-pairwise-calculation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we generated Morgan, RDKit, MACCS, and Biosynfoni fingerprints for all molecules included in the MetaCyc reaction chain pairs dataset. For each molecule pair... we computed Tanimoto similarity",
       "asbval:note": "Paper explicitly applies Tanimoto similarity calculation to Biosynfoni count fingerprints across molecular collections.",
@@ -2664,7 +2664,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tanimoto-similarity-pairwise-calculation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/tanimoto-similarity-pairwise-calculation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Biosynfoni's fingerprint contains the number of substructure matches returned for each of the 39 substructure keys... we generated Morgan, RDKit, MACCS, and Biosynfoni fingerprints for all molecules",
       "asbval:note": "Paper confirms Biosynfoni generates count-based fingerprints used as input to Tanimoto similarity calculations.",
@@ -2684,7 +2684,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tanimoto-similarity-pairwise-calculation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/tanimoto-similarity-pairwise-calculation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used Python (v3.13.1) and the cheminformatic RDKit package (v2024.09.4) as our main tools in Biosynfoni's creation and testing... we used RDKit's Chem.Mol.GetSubstructMatches function for substructure key detection",
       "asbval:note": "Paper confirms RDKit is used for fingerprint generation and substructure matching; Tanimoto similarity is standard RDKit functionality.",
@@ -2704,7 +2704,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tanimoto-similarity-pairwise-calculation/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/tanimoto-similarity-pairwise-calculation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not mention pip or package installation procedures. Cannot confirm or deny from provided text.",
@@ -2724,7 +2724,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tanimoto-similarity-pairwise-calculation/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/tanimoto-similarity-pairwise-calculation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Repository URL not mentioned in passages. Cannot verify from provided text.",
@@ -2744,7 +2744,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tanimoto-similarity-pairwise-calculation/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/tanimoto-similarity-pairwise-calculation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Because most Tanimoto similarity implementations treat arrays as binary rather than counted (Eq. 1), we implemented a counted Tanimoto similarity, also known as the multiset Tanimoto coefficient calculation as defined in Eq. 2.",
       "asbval:note": "Paper explicitly implements and uses multiset Tanimoto coefficient for counted fingerprints like Biosynfoni.",
@@ -2764,7 +2764,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bit-vector-substructure-encoding/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/bit-vector-substructure-encoding/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "bit-vector-substructure-encoding",
@@ -2777,7 +2777,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/development-environment-setup/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/development-environment-setup/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "development-environment-setup",
@@ -2790,7 +2790,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/distribution-statistics-summarization/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/distribution-statistics-summarization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "distribution-statistics-summarization",
@@ -2803,7 +2803,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fingerprint-vector-loading-and-parsing/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/fingerprint-vector-loading-and-parsing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "fingerprint-vector-loading-and-parsing",
@@ -2816,7 +2816,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-bit-frequency-analysis/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-fingerprint-bit-frequency-analysis/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "molecular-fingerprint-bit-frequency-analysis",
@@ -2829,7 +2829,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-computation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-fingerprint-computation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 11,
       "asbval:target_artifact_id": "molecular-fingerprint-computation",
@@ -2842,7 +2842,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-structure-input-format-handling/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/molecular-structure-input-format-handling/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 4,
       "asbval:target_artifact_id": "molecular-structure-input-format-handling",
@@ -2855,7 +2855,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/natural-product-chemical-representation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/natural-product-chemical-representation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "natural-product-chemical-representation",
@@ -2868,7 +2868,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/package-dependency-management/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/package-dependency-management/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "package-dependency-management",
@@ -2881,7 +2881,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pytest-test-suite-execution/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/pytest-test-suite-execution/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "pytest-test-suite-execution",
@@ -2894,7 +2894,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-package-installation-from-source/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/python-package-installation-from-source/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "python-package-installation-from-source",
@@ -2907,7 +2907,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sparsity-metric-computation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/sparsity-metric-computation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "sparsity-metric-computation",
@@ -2920,7 +2920,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/statistical-distribution-visualization/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/statistical-distribution-visualization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "statistical-distribution-visualization",
@@ -2933,7 +2933,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tanimoto-similarity-pairwise-calculation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/skill/tanimoto-similarity-pairwise-calculation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "tanimoto-similarity-pairwise-calculation",
@@ -2946,7 +2946,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Biosynfoni is a biosynformatic molecular fingerprint tailored to natural product chemistry and bioinformatic research.",
       "asbval:note": null,
@@ -2966,7 +2966,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The project is available on PyPI.",
       "asbval:note": "substring_in_paper=false; URL presence suggests availability on PyPI but doesn't explicitly state it",
@@ -2986,7 +2986,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Biosynfoni supports multiple Python versions.",
       "asbval:note": "substring_in_paper=false; metadata field reference doesn't confirm actual support for multiple versions",
@@ -3006,7 +3006,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The project is licensed under an MIT license.",
       "asbval:note": "substring_in_paper=false; metadata field reference doesn't confirm MIT license specifically",
@@ -3026,7 +3026,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The code follows the black code style standard.",
       "asbval:note": "substring_in_paper=false; partial excerpt 'ode style: black' is incomplete and doesn't fully support the claim",
@@ -3046,7 +3046,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Development installation can be performed by running pip install -e .[dev] from the project root.",
       "asbval:note": "substring_in_paper=false; excerpt confirms development installation guidance exists but doesn't include the specific command",
@@ -3066,7 +3066,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Tests can be run locally using the pytest tests/ command.",
       "asbval:note": "substring_in_paper=false; excerpt confirms local test running is possible but doesn't specify the exact pytest command",
@@ -3086,7 +3086,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Code should be formatted with black before submitting a pull request.",
       "asbval:note": null,
@@ -3106,7 +3106,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Tests are run automatically when a pull request is pushed.",
       "asbval:note": null,
@@ -3126,7 +3126,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The project source is hosted on GitHub at lucinamay/biosynfoni.",
       "asbval:note": "substring_in_paper=false; source reference uses double underscore notation rather than forward slash, unclear if this represents the same repository path",
@@ -3146,7 +3146,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01081-6/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Contributions to biosynfoni development are welcomed through issues or pull requests.",
       "asbval:note": null,

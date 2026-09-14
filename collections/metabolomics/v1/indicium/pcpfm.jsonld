@@ -1503,7 +1503,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_001/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data... The inputs to our pipeline minimally consist of .mzML or .raw files and a metadata CSV file... The final output consists of a feature table detailing the observed m/z and retention time values for observed features mapped to unique identifiers, an annotation table mapping these identifiers to annotations and metadata for those annotations, and a third table summarizing the acquisition and experiment-level metadata.",
       "asbval:note": "Paper explicitly describes sequential processing from raw data to normalized feature tables. Figure 2A shows five major sections: assembly, data processing, quality control, annotation and reporting.",
@@ -1523,7 +1523,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_001/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data.",
       "asbval:note": "Explicitly stated as implementation language.",
@@ -1543,7 +1543,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_001/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "Explicitly named tool for raw file conversion.",
@@ -1563,7 +1563,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_001/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our pipeline, named the Python-centric pipeline for metabolomics (pcpfm), enables start-to-finish metabolomics data processing based on Asari... preprocessing with Asari which yields a 'preferred' and 'full' feature table.",
       "asbval:note": "Asari is the core preprocessing tool used by pcpfm.",
@@ -1583,7 +1583,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_001/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu [44]... The isotopes and adducts from pre-annotation are modeled as a grid structure, made computable by the khipu package [34], which is also incorporated in the pcpfm pipeline.",
       "asbval:note": "Khipu is explicitly used for empirical compound construction and pre-annotation.",
@@ -1603,7 +1603,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_001/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_001/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The final output consists of a feature table detailing the observed m/z and retention time values for observed features mapped to unique identifiers... Operations to correct common data quality issues are provided including normalization, blank masking, batch correction, removal of uncommon features, and missing value imputation.",
       "asbval:note": "Paper describes feature table output with normalization, imputation, and filtering operations.",
@@ -1623,7 +1623,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_001/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_001/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu [44]... Multiple annotations of different sources are chained in the empirical compound data structure (Fig 1B), which is amendable to future enhancements... JSON is used extensively for intermediary data.",
       "asbval:note": "Paper explicitly describes empirical compounds as JSON structures grouping isotopes and adducts with annotations.",
@@ -1643,7 +1643,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_001/007",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_001/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This experiment object records the location of intermediates on disk for reuse in later steps... JSON is used extensively for intermediary data... a timeline of all commands used in the analysis.",
       "asbval:note": "Paper describes an experiment object that tracks intermediates and processing steps, and JSON is used for intermediary data, but does not explicitly name a file 'experiment.json' or confirm it tracks all metadata in a single JSON file. The paper mentions 'experiment object' in code context but does not specify the exact output filename or format.",
@@ -1663,7 +1663,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card's research question is well-aligned with the paper's scope: the paper describes the sequential processing pipeline from raw LC-MS data to annotated feature tables.",
@@ -1680,7 +1680,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_002/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Blank masking, missing value imputation, and feature removal is implemented using custom routines in Pandas and numpy",
       "asbval:note": "Paper confirms blank masking is implemented in pcpfm but does not explicitly describe the intensity ratio mechanism. The paper states blank masking is available as an operation but does not detail the specific algorithm or intensity ratio threshold used.",
@@ -1700,7 +1700,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_002/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The final output consists of a feature table detailing the observed m/z and retention time values for observed features mapped to unique identifiers, an annotation table mapping these identifiers to annotations and metadata for those annotations, and a third table summarizing the acquisition and experiment-level metadata.",
       "asbval:note": "Paper describes feature table outputs but does not explicitly confirm TSV format or that blank masking produces a separate output table. The paper mentions blank masking as an operation but does not detail its specific output format.",
@@ -1720,7 +1720,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_002/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "ThermoRawFileParser is confirmed as a tool used in the pcpfm pipeline for converting Thermo raw files to mzML format.",
@@ -1740,7 +1740,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_002/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data.",
       "asbval:note": "Python is confirmed as the primary programming language for pcpfm implementation.",
@@ -1760,7 +1760,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The research question focuses narrowly on the blank_masking command's intensity ratio mechanism, but the paper does not provide algorithmic details about how intensity ratios are calculated or what thresholds are used.",
@@ -1777,7 +1777,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_003/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Missing value imputation is implemented using a scalar multiple of the minimum observed intensity for that feature in the dataframe.",
       "asbval:note": "The paper explicitly describes the imputation strategy as scalar multiple of minimum observed intensity per feature.",
@@ -1797,7 +1797,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_003/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Missing value imputation is implemented using a scalar multiple of the minimum observed intensity for that feature in the dataframe.",
       "asbval:note": "The scalar multiple concept aligns with 'interpolation_ratio times per-feature minimum' described in the title.",
@@ -1817,7 +1817,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_003/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The final output consists of a feature table detailing the observed m/z and retention time values for observed features mapped to unique identifiers, an annotation table mapping these identifiers to annotations and metadata for those annotations, and a third table summarizing the acquisition and experiment-level metadata.",
       "asbval:note": "Paper describes feature table outputs but does not explicitly mention 'new_moniker' naming convention or specific directory structure 'experiment feature_tables directory'. The output format is confirmed but the specific naming and directory structure are not detailed in passages.",
@@ -1837,7 +1837,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_003/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "ThermoRawFileParser is explicitly mentioned as a tool used in the pipeline for converting raw files.",
@@ -1857,7 +1857,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_003/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_003/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data.",
       "asbval:note": "The pipeline is explicitly implemented in Python 3.",
@@ -1877,7 +1877,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The task card focuses narrowly on the 'impute command' as a discrete implementation task, while the paper describes imputation as one step within a larger quality control workflow. The card's framing as an implementation task ('Implement the imputation filter step') is narrower than the paper's scope, which presents pcpfm as a complete end-to-end pipeline.",
@@ -1893,7 +1893,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_004/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_004/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu [44]",
       "asbval:note": "The paper confirms empirical compounds are constructed from feature tables using khipu. The paper also mentions configurable tolerances in annotation contexts (e.g., 'an m/z tolerance of 10 ppm and a retention time tolerance of 30 seconds' in passage 7), supporting the configurable tolerance aspect.",
@@ -1913,7 +1913,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_004/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_004/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36]",
       "asbval:note": "ThermoRawFileParser is explicitly named and used in the pipeline for converting raw files to mzML format.",
@@ -1933,7 +1933,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_004/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_004/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu [44] and most methods for empirical compounds concern annotation.",
       "asbval:note": "khipu is explicitly named and used for constructing empirical compounds from feature tables.",
@@ -1953,7 +1953,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_004/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_004/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data.",
       "asbval:note": "The pipeline is implemented in Python 3, confirming Python as a tool/language used.",
@@ -1973,7 +1973,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_004/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_004/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The inputs to our pipeline minimally consist of .mzML or .raw files and a metadata CSV file... The final output consists of a feature table detailing the observed m/z and retention time values for observed features mapped to unique identifiers, an annotation table mapping these identifiers to annotations and metadata for those annotations, and a third table summarizing the acquisition and experiment-level metadata.",
       "asbval:note": "The paper confirms JSON output format and empirical compound data structures with m/z, retention time, adduct, and isotopologue information (passage 5: 'The isotopes and adducts from pre-annotation are modeled as a grid structure, made computable by the khipu package'). However, the paper does not explicitly name the output file 'empCpd.json' \u2014 it refers to 'three-table format' outputs and JSON outputs for advanced users. The specific filename and exact field names are not verified in the passages.",
@@ -1993,7 +1993,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_004/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_004/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages confirm JSON output and experiment object structures, but do not explicitly describe an 'experiment.json' file or the specific 'empCpd moniker' field. The paper mentions 'experiment object' in code context (passage 5: 'every analysis starts with assembling an experiment object from the metadata and acquisition data') but does not detail the JSON serialization or the specific field name 'empCpd moniker'. Insufficient detail to confirm or refute.",
@@ -2013,7 +2013,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_004/scope_drift",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_004/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card focuses narrowly on the build_empCpds command and empCpd.json output structure. The paper discusses empirical compound construction as part of a broader pipeline with multiple steps (assembly, processing, QC, annotation, reporting). The card's framing is consistent with the paper's scope but represents a micro-level task within the larger pipeline.",
@@ -2029,7 +2029,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_005/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_005/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "batch correction using a wrapper around pycombat [43]",
       "asbval:note": "Paper confirms pycombat is used for batch correction in pcpfm, but the research question frames a validation study that goes beyond what the paper describes. The paper demonstrates batch correction application (Fig 4C-D) but does not explicitly validate preservation of sample/feature count or quantify inter-batch variance reduction metrics as a primary research objective.",
@@ -2049,7 +2049,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_005/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_005/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36]",
       "asbval:note": "Tool is explicitly named and used in the pipeline for raw file conversion.",
@@ -2069,7 +2069,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_005/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_005/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "batch correction using a wrapper around pycombat [43]",
       "asbval:note": "Tool is explicitly named and used for batch correction in pcpfm.",
@@ -2089,7 +2089,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_005/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_005/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3",
       "asbval:note": "Pipeline is implemented in Python 3.",
@@ -2109,7 +2109,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_005/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_005/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "batch correction via pycombat, both the log TICs and PCA show more consistency and no sub-clustering, suggesting the batch effect was largely mitigated",
       "asbval:note": "Paper demonstrates batch correction produces corrected data and shows visual evidence of batch effect mitigation (Fig 4C-D), but does not explicitly describe output as a .tsv file with guaranteed identical dimensions or provide quantitative intensity adjustment metrics.",
@@ -2129,7 +2129,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_005/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_005/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not describe generation of a quantitative validation report with the specific metrics claimed (sample count, feature count, pre/post inter-batch variance estimates for representative features). The paper shows qualitative visualizations (PCA, log TICs, correlation clustermaps) but not the structured quantitative report described in the card.",
@@ -2149,7 +2149,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1371_journal_pcbi_1011912__task_005/scope_drift",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/card/10_1371_journal_pcbi_1011912__task_005/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card frames a validation study ('Extend PCPFM batch correction step to validate pycombat output...') that goes beyond the paper's scope. The paper demonstrates batch correction as part of the pcpfm pipeline workflow but does not present it as a standalone validation study with explicit preservation-of-integrity and variance-reduction metrics.",
@@ -2166,7 +2166,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/background-ion-contaminant-removal/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/background-ion-contaminant-removal/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Operations to correct common data quality issues are provided including normalization, blank masking, batch correction, removal of uncommon features, and missing value imputation.",
       "asbval:note": "Blank masking is explicitly mentioned as a QC operation in the pipeline.",
@@ -2186,7 +2186,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/background-ion-contaminant-removal/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/background-ion-contaminant-removal/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our pipeline, named the Python-centric pipeline for metabolomics (pcpfm), enables start-to-finish metabolomics data processing based on Asari... the pipeline performs various processing steps, including normalization, feature interpolation, removal of rare features, quality assurance, quality control evaluations",
       "asbval:note": "PCPFM is confirmed as the main pipeline implementing blank masking and QC steps.",
@@ -2206,7 +2206,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/background-ion-contaminant-removal/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/background-ion-contaminant-removal/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data.",
       "asbval:note": "Python 3 is confirmed as the implementation language.",
@@ -2226,7 +2226,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/background-ion-contaminant-removal/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/background-ion-contaminant-removal/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "preprocessing with Asari which yields a 'preferred' and 'full' feature table... Blank masking, missing value imputation, and feature removal is implemented using custom routines in Pandas and numpy",
       "asbval:note": "Asari generates feature tables that are then processed by blank masking in the pipeline.",
@@ -2246,7 +2246,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/background-ion-contaminant-removal/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/background-ion-contaminant-removal/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "ThermoRawFileParser is confirmed as the tool for converting Thermo raw files to mzML format.",
@@ -2266,7 +2266,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/background-ion-contaminant-removal/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/background-ion-contaminant-removal/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss ThermoRawFileParser in relation to blank masking, feature filtering, or any of the 30+ listed related skills. ThermoRawFileParser is only mentioned as a file format converter. The extensive related_skills list appears to be an over-generalization or conflation of pipeline-wide capabilities with a single format-conversion tool.",
@@ -2286,7 +2286,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-correction-quality-assessment/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/batch-correction-quality-assessment/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "batch correction using a wrapper around pycombat [43]... after normalization and batch correction via pycombat, both the log TICs and PCA show more consistency and no sub-clustering, suggesting the batch effect was largely mitigated.",
       "asbval:note": "Paper explicitly uses pycombat for batch correction and demonstrates variance reduction via PCA and TIC plots.",
@@ -2306,7 +2306,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-correction-quality-assessment/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/batch-correction-quality-assessment/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "batch correction using a wrapper around pycombat [43]",
       "asbval:note": "pycombat is explicitly named as the batch correction tool used in pcpfm.",
@@ -2326,7 +2326,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-correction-quality-assessment/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/batch-correction-quality-assessment/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Each step in an analysis corresponds to one command in the CLI and one function in the main pipeline process (S1 Table).",
       "asbval:note": "Paper confirms pcpfm has CLI commands for batch correction and references S1 Table for command details, but the specific command name 'batch_correct' and parameter '--by_batch' are not explicitly stated in the provided passages. The paper states batch correction is available but does not name the exact command syntax.",
@@ -2346,7 +2346,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-correction-quality-assessment/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/batch-correction-quality-assessment/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data.",
       "asbval:note": "Paper confirms pcpfm is written in Python 3 and uses Python for data processing and analysis.",
@@ -2366,7 +2366,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-correction-quality-assessment/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/batch-correction-quality-assessment/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36]",
       "asbval:note": "ThermoRawFileParser is explicitly mentioned for converting Thermo .raw files to mzML format. However, this tool is not directly relevant to the batch-correction-quality-assessment task; it is a preprocessing step that occurs before batch correction.",
@@ -2386,7 +2386,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-correction-quality-assessment/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/batch-correction-quality-assessment/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Quality control is necessary in every project but depends on the experimental design... The correlation clustermap of all study samples and pooled samples from the HZV029 Plasma RP- dataset (preferred feature table) illustrating the batch effect induced by instrument calibration... after normalization and batch correction via pycombat, both the log TICs and PCA show more consistency and no sub-clustering, suggesting the batch effect was largely mitigated.",
       "asbval:note": "Paper demonstrates batch correction validation using PCA and correlation clustermaps to verify batch effect reduction.",
@@ -2406,7 +2406,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-correction-quality-assessment/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/batch-correction-quality-assessment/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the default workflow consisting of blank masking, outlier sample removal, normalization, outlier feature removal, imputation and filtering before annotation is recommended in that order to remove bias in each subsequent step.",
       "asbval:note": "Paper specifies that imputation must occur before batch correction in the recommended workflow order.",
@@ -2426,7 +2426,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-correction-quality-assessment/007",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/batch-correction-quality-assessment/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The inputs to our pipeline minimally consist of .mzML or .raw files and a metadata CSV file, that minimally maps sample names to acquisition file paths.",
       "asbval:note": "Paper confirms metadata CSV is required; batch labels would be part of this metadata structure.",
@@ -2446,7 +2446,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-correction-quality-assessment/008",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/batch-correction-quality-assessment/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This analysis was performed using a batch-correction variation of our default workflow... First, the QC metrics generated by Asari are summarized... Next, hierarchical clustering of the inter-sample pearson correlation across all features was performed revealing two clusters of samples, representing a clear batch effect that was traced back to a recalibration of the instrument after batch 8",
       "asbval:note": "Paper demonstrates batch correction on multi-batch data (17 batches, 1685 samples), implying single-batch data would not benefit from this approach.",
@@ -2466,7 +2466,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-correction-quality-assessment/009",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/batch-correction-quality-assessment/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Missing value imputation is implemented using a scalar multiple of the minimum observed intensity for that feature in the dataframe.",
       "asbval:note": "Paper confirms imputation step produces feature tables suitable for downstream processing including batch correction.",
@@ -2486,7 +2486,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-correction-quality-assessment/010",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/batch-correction-quality-assessment/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "batch correction using a wrapper around pycombat [43]",
       "asbval:note": "Paper confirms pycombat is used for batch correction within pcpfm, but does not explicitly name the command 'batch_correct' in provided passages.",
@@ -2506,7 +2506,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-correction-quality-assessment/011",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/batch-correction-quality-assessment/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The inputs to our pipeline minimally consist of .mzML or .raw files and a metadata CSV file, that minimally maps sample names to acquisition file paths.",
       "asbval:note": "Paper confirms metadata CSV is a required input; batch labels would be part of this structure.",
@@ -2526,7 +2526,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-effect-variance-quantification/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/batch-effect-variance-quantification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "batch correction using a wrapper around pycombat [43]... The log TICs of a random subset of samples and PCA plots were generated to further investigate these batches and identify abnormal samples... after normalization and batch correction via pycombat, both the log TICs and PCA show more consistency and no sub-clustering, suggesting the batch effect was largely mitigated.",
       "asbval:note": "Paper demonstrates batch correction validation through QC metrics (PCA, log TICs) before/after pycombat, consistent with the research question's intent to validate batch correction efficacy.",
@@ -2546,7 +2546,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-effect-variance-quantification/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/batch-effect-variance-quantification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "batch correction using a wrapper around pycombat [43]",
       "asbval:note": "Paper confirms pycombat is used for batch correction in pcpfm, but does not mention a specific '--by_batch flag' in the passages provided. The tool is used correctly for its stated purpose (batch correction), but the specific flag syntax cannot be verified from the passages.",
@@ -2566,7 +2566,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-effect-variance-quantification/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/batch-effect-variance-quantification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Each step in an analysis corresponds to one command in the CLI and one function in the main pipeline process (S1 Table)... batch correction using a wrapper around pycombat [43]",
       "asbval:note": "Paper confirms pcpfm provides CLI commands for batch correction via pycombat wrapper with metadata-driven specification.",
@@ -2586,7 +2586,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-effect-variance-quantification/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/batch-effect-variance-quantification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data... Z-scores and TICs are calculated using custom routines implemented using a mixture of pandas [41] and numpy [40]",
       "asbval:note": "Paper confirms Python 3 is the computing environment with pandas and numpy for data manipulation and metric calculation.",
@@ -2606,7 +2606,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-effect-variance-quantification/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/batch-effect-variance-quantification/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "ThermoRawFileParser is confirmed in the paper for .raw to mzML conversion, but this tool is not directly relevant to the batch-effect-variance-quantification task card's stated purpose. Its inclusion in the tools list appears to be an extraction error or scope drift.",
@@ -2626,7 +2626,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/blank-intensity-ratio-filtering/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/blank-intensity-ratio-filtering/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Operations to correct common data quality issues are provided including normalization, blank masking, batch correction, removal of uncommon features, and missing value imputation. Blank masking, missing value imputation, and feature removal is implemented using custom routines in Pandas and numpy",
       "asbval:note": "Paper mentions 'blank masking' as a QC operation but does not explicitly describe it as an intensity-ratio comparison or provide details on the threshold mechanism. The paper confirms blank masking exists and is chainable, but the specific implementation details (ratio threshold, comparison logic) are not elaborated in the provided passages.",
@@ -2646,7 +2646,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/blank-intensity-ratio-filtering/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/blank-intensity-ratio-filtering/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our pipeline, named the Python-centric pipeline for metabolomics (pcpfm), enables start-to-finish metabolomics data processing based on Asari.",
       "asbval:note": "PCPFM (Python-centric pipeline for metabolomics) is confirmed as the pipeline name.",
@@ -2666,7 +2666,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/blank-intensity-ratio-filtering/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/blank-intensity-ratio-filtering/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Operations to correct common data quality issues are provided including normalization, blank masking, batch correction, removal of uncommon features, and missing value imputation. Blank masking, missing value imputation, and feature removal is implemented using custom routines in Pandas and numpy",
       "asbval:note": "Blank masking is confirmed as part of pcpfm's QC operations and is chainable, supporting the claim that it is a filter step during curation.",
@@ -2686,7 +2686,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/blank-intensity-ratio-filtering/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/blank-intensity-ratio-filtering/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our pipeline, named the Python-centric pipeline for metabolomics (pcpfm), enables start-to-finish metabolomics data processing based on Asari. With the recent release of Asari [23], a preprocessing tool implemented in Python, Python has become a viable option for data processing in computational metabolomics.",
       "asbval:note": "Asari is confirmed as the upstream preprocessing tool.",
@@ -2706,7 +2706,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/blank-intensity-ratio-filtering/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/blank-intensity-ratio-filtering/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Data processing encapsulates everything from the start of a processing job to the creation of a feature table using Asari. Quality control consists of multiple chainable commands that allows for a raw feature table to be curated into a table suitable for downstream analysis.",
       "asbval:note": "Asari produces the feature table that is then processed by QC steps including blank masking.",
@@ -2726,7 +2726,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/blank-intensity-ratio-filtering/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/blank-intensity-ratio-filtering/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data.",
       "asbval:note": "Python 3 is confirmed as the implementation language.",
@@ -2746,7 +2746,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/blank-intensity-ratio-filtering/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/blank-intensity-ratio-filtering/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Blank masking, missing value imputation, and feature removal is implemented using custom routines in Pandas and numpy",
       "asbval:note": "Paper confirms Python (via Pandas and numpy) is used for blank masking implementation, but does not explicitly detail intensity ratio calculation logic. The claim is partially supported\u2014Python is used for blank masking, but the specific 'intensity ratio calculation' mechanism is not described in the passages.",
@@ -2766,7 +2766,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/blank-intensity-ratio-filtering/007",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/blank-intensity-ratio-filtering/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "ThermoRawFileParser is confirmed as a tool used in the pipeline.",
@@ -2786,7 +2786,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/blank-intensity-ratio-filtering/008",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/blank-intensity-ratio-filtering/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "Role is correctly described.",
@@ -2806,7 +2806,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/blank-intensity-ratio-filtering/009",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/blank-intensity-ratio-filtering/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Quality control consists of multiple chainable commands that allows for a raw feature table to be curated into a table suitable for downstream analysis.",
       "asbval:note": "The workflow order is consistent with the paper's description of QC steps applied to feature tables before downstream analysis.",
@@ -2826,7 +2826,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/blank-intensity-ratio-filtering/010",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/blank-intensity-ratio-filtering/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Operations to correct common data quality issues are provided including normalization, blank masking, batch correction, removal of uncommon features, and missing value imputation.",
       "asbval:note": "Paper confirms blank masking is a QC operation but does not explicitly discuss its role in reducing feature count inflation or noise from blank contamination in untargeted datasets. The functional motivation is not detailed in the passages.",
@@ -2846,7 +2846,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-coelution-detection/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/chromatographic-coelution-detection/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu [44] and most methods for empirical compounds concern annotation... The isotopes and adducts from pre-annotation are modeled as a grid structure, made computable by the khipu package [34]",
       "asbval:note": "Core functionality of khipu confirmed: grouping isotopes and adducts into empirical compounds.",
@@ -2866,7 +2866,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-coelution-detection/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/chromatographic-coelution-detection/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu [44]... The isotopes and adducts from pre-annotation are modeled as a grid structure, made computable by the khipu package [34], which is also incorporated in the pcpfm pipeline.",
       "asbval:note": "khipu explicitly named and confirmed as tool for empirical compound construction.",
@@ -2886,7 +2886,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-coelution-detection/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/chromatographic-coelution-detection/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from Asari feature tables using khipu, which groups degenerate features such as isotopologues and adducts. The inferred neutral mass of an empirical compound is compared to known metabolites",
       "asbval:note": "Role confirmed: khipu groups isotopologues and adducts from feature tables.",
@@ -2906,7 +2906,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-coelution-detection/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/chromatographic-coelution-detection/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our pipeline, named the Python-centric pipeline for metabolomics (pcpfm), enables start-to-finish metabolomics data processing based on Asari.",
       "asbval:note": "Asari confirmed as preprocessing tool producing feature tables.",
@@ -2926,7 +2926,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-coelution-detection/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/chromatographic-coelution-detection/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "preprocessing with Asari which yields a 'preferred' and 'full' feature table... Empirical compounds are constructed from Asari feature tables using khipu",
       "asbval:note": "Asari produces feature tables that are input to khipu for empirical compound construction.",
@@ -2946,7 +2946,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-coelution-detection/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/chromatographic-coelution-detection/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data.",
       "asbval:note": "Python confirmed as execution environment for the pipeline.",
@@ -2966,7 +2966,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-coelution-detection/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/chromatographic-coelution-detection/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "ThermoRawFileParser confirmed as tool for converting Thermo .raw files to mzML format.",
@@ -2986,7 +2986,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-coelution-detection/007",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/chromatographic-coelution-detection/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36]",
       "asbval:note": "Role confirmed: ThermoRawFileParser converts .raw to mzML format.",
@@ -3006,7 +3006,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-coelution-detection/008",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/chromatographic-coelution-detection/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu... which groups degenerate features such as isotopologues and adducts... a group of associated features, typically isotopes and adducts, that belong to the same tentative compound and co-elute if there is chromatography.",
       "asbval:note": "Scope aligns with paper's description of empirical compound construction workflow.",
@@ -3026,7 +3026,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/empirical-compound-construction-from-feature-clustering/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/empirical-compound-construction-from-feature-clustering/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu [44] and most methods for empirical compounds concern annotation... The inferred neutral mass of an empirical compound is compared to known metabolites to generate level 4 annotations (via JMS, https://github.com/shuzhao-li-lab/JMS)... Multiple annotations of different sources are chained in the empirical compound data structure (Fig 1B), which is amendable to future enhancements, e.g., context specific databases.",
       "asbval:note": "Fully supported. Paper describes empirical compound construction from feature tables using Khipu, with JSON serialization and downstream MS1/MS2 annotation.",
@@ -3046,7 +3046,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/empirical-compound-construction-from-feature-clustering/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/empirical-compound-construction-from-feature-clustering/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu [44]... The isotopes and adducts from pre-annotation are modeled as a grid structure, made computable by the khipu package [34], which is also incorporated in the pcpfm pipeline.",
       "asbval:note": "Khipu is confirmed as the tool for empirical compound construction with isotope and adduct annotation. Specific command name 'build_empCpds' not found in passages, but functional role is clearly supported.",
@@ -3066,7 +3066,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/empirical-compound-construction-from-feature-clustering/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/empirical-compound-construction-from-feature-clustering/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our pipeline, named the Python-centric pipeline for metabolomics (pcpfm), enables start-to-finish metabolomics data processing based on Asari... Data processing encapsulates everything from the start of a processing job to the creation of a feature table using Asari.",
       "asbval:note": "Asari is confirmed as the upstream preprocessing tool that produces feature tables used as input to empirical compound construction.",
@@ -3086,7 +3086,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/empirical-compound-construction-from-feature-clustering/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/empirical-compound-construction-from-feature-clustering/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data.",
       "asbval:note": "Python 3 is confirmed as the implementation language for the pipeline including khipu integration and JSON handling.",
@@ -3106,7 +3106,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/empirical-compound-construction-from-feature-clustering/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/empirical-compound-construction-from-feature-clustering/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "ThermoRawFileParser is confirmed in the paper. However, this tool is NOT directly part of empirical compound construction\u2014it is an upstream preprocessing step for format conversion. The card's inclusion of ThermoRawFileParser in the tools list for this task is scope drift; it belongs to an earlier preprocessing stage, not to empirical compound construction itself.",
@@ -3126,7 +3126,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/empirical-compound-grouping-by-adducts-and-isotopes/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/empirical-compound-grouping-by-adducts-and-isotopes/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu [44] and most methods for empirical compounds concern annotation... Empirical compounds are constructed from Asari feature tables using khipu, which groups degenerate features such as isotopologues and adducts.",
       "asbval:note": "Core research question is directly supported by paper's description of empirical compound construction via khipu.",
@@ -3146,7 +3146,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/empirical-compound-grouping-by-adducts-and-isotopes/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/empirical-compound-grouping-by-adducts-and-isotopes/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu [44]... Empirical compounds are constructed from Asari feature tables using khipu, which groups degenerate features such as isotopologues and adducts.",
       "asbval:note": "khipu explicitly named and described as the tool for empirical compound construction from feature tables.",
@@ -3166,7 +3166,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/empirical-compound-grouping-by-adducts-and-isotopes/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/empirical-compound-grouping-by-adducts-and-isotopes/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data... Empirical compounds are constructed from a feature table using Khipu [44]... which is also incorporated in the pcpfm pipeline.",
       "asbval:note": "Paper confirms pcpfm incorporates khipu and uses JSON for data structures; orchestration role is semantically supported.",
@@ -3186,7 +3186,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/empirical-compound-grouping-by-adducts-and-isotopes/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/empirical-compound-grouping-by-adducts-and-isotopes/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "mass2chem is not mentioned anywhere in the provided passages. The paper does not reference this tool in relation to adduct or isotope calculations.",
@@ -3206,7 +3206,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/empirical-compound-grouping-by-adducts-and-isotopes/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/empirical-compound-grouping-by-adducts-and-isotopes/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data.",
       "asbval:note": "Python 3 explicitly stated as implementation language for pcpfm.",
@@ -3226,7 +3226,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/empirical-compound-grouping-by-adducts-and-isotopes/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/empirical-compound-grouping-by-adducts-and-isotopes/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "ThermoRawFileParser explicitly named for .raw to mzML conversion; however, this tool is upstream of empirical compound grouping and not directly part of the empirical compound grouping task itself.",
@@ -3246,7 +3246,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/empirical-compound-grouping-by-adducts-and-isotopes/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/empirical-compound-grouping-by-adducts-and-isotopes/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "preprocessing with Asari which yields a 'preferred' and 'full' feature table... Empirical compounds are constructed from Asari feature tables using khipu",
       "asbval:note": "Asari is the upstream preprocessing tool that generates feature tables; empirical compound grouping operates on Asari output.",
@@ -3266,7 +3266,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/experiment-metadata-organization-and-tracking/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/experiment-metadata-organization-and-tracking/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our pipeline, named the Python-centric pipeline for metabolomics (pcpfm), enables start-to-finish metabolomics data processing based on Asari. The pipeline ingests centroided mzML data or Thermo raw files and returns a human-readable set of tables summarizing the detected features and their annotations and sample metadata... The inputs to our pipeline minimally consist of .mzML or .raw files and a metadata CSV file, that minimally maps sample names to acquisition file paths.",
       "asbval:note": "Research question is well-supported. The paper explicitly describes assembly of experiments from raw files and metadata CSV, with JSON intermediaries for state tracking.",
@@ -3286,7 +3286,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/experiment-metadata-organization-and-tracking/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/experiment-metadata-organization-and-tracking/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In brief, every analysis starts with assembling an experiment object from the metadata and acquisition data. This experiment object records the location of intermediates on disk for reuse in later steps.",
       "asbval:note": "The 'assemble' command is confirmed as the first step that creates an experiment object from metadata and acquisition data. The paper describes this as part of the CLI workflow.",
@@ -3306,7 +3306,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/experiment-metadata-organization-and-tracking/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/experiment-metadata-organization-and-tracking/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No explicit mention of a 'preprocess' command in the provided passages. The paper describes 'assembly' as the first step but does not detail a separate preprocessing utility for normalizing field names or resolving paths prior to assembly. Insufficient evidence to confirm or deny.",
@@ -3326,7 +3326,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/experiment-metadata-organization-and-tracking/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/experiment-metadata-organization-and-tracking/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "ThermoRawFileParser is confirmed as used in the pipeline. However, the passage describes it as a conversion tool (raw \u2192 mzML), not explicitly as metadata extraction during assembly. The functional role (extracting metadata from .raw headers) is plausible but not explicitly stated in the passages.",
@@ -3346,7 +3346,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/experiment-metadata-organization-and-tracking/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/experiment-metadata-organization-and-tracking/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data.",
       "asbval:note": "Python 3 is explicitly confirmed as the implementation language for pcpfm.",
@@ -3366,7 +3366,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/experiment-metadata-organization-and-tracking/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/experiment-metadata-organization-and-tracking/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our pipeline, named the Python-centric pipeline for metabolomics (pcpfm), enables start-to-finish metabolomics data processing based on Asari... preprocessing with Asari which yields a 'preferred' and 'full' feature table.",
       "asbval:note": "Asari is confirmed as the preprocessing tool that converts mzML data to feature tables. This is a core component of pcpfm.",
@@ -3386,7 +3386,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/experiment-metadata-organization-and-tracking/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/experiment-metadata-organization-and-tracking/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu [44] and most methods for empirical compounds concern annotation.",
       "asbval:note": "khipu is confirmed as the tool for constructing empirical compounds from feature tables, which groups degenerate features (isotopes and adducts).",
@@ -3406,7 +3406,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-intensity-normalization-and-batch-correction/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/feature-intensity-normalization-and-batch-correction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "normalization is implemented using numpy and can be performed in a one-pass or two-pass approach. In the two-pass approach, normalization is done within a batch of samples and then the batches are scaled to one another using their median TIC values based on the conserved features.",
       "asbval:note": "Exact match: TIC-based normalization with two-pass approach using median TIC values on conserved (common) features, followed by batch correction.",
@@ -3426,7 +3426,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-intensity-normalization-and-batch-correction/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/feature-intensity-normalization-and-batch-correction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "batch correction using a wrapper around pycombat... after normalization and batch correction via pycombat, both the log TICs and PCA show more consistency and no sub-clustering, suggesting the batch effect was largely mitigated.",
       "asbval:note": "Demonstrated in Fig 4C-D: batch correction removes batch-driven clustering while preserving biological signal (sunitinib treatment effect remains detectable).",
@@ -3446,7 +3446,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-intensity-normalization-and-batch-correction/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/feature-intensity-normalization-and-batch-correction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "preprocessing with Asari which yields a 'preferred' and 'full' feature table",
       "asbval:note": "Asari output (feature tables) is the direct input to normalization steps in pcpfm.",
@@ -3466,7 +3466,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-intensity-normalization-and-batch-correction/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/feature-intensity-normalization-and-batch-correction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "batch correction using a wrapper around pycombat",
       "asbval:note": "pycombat is explicitly named as the batch correction tool used in pcpfm after normalization.",
@@ -3486,7 +3486,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-intensity-normalization-and-batch-correction/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/feature-intensity-normalization-and-batch-correction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Nearly all parameters are user-configurable, but reasonable defaults are provided and documented... Most operations in the pipeline are chainable meaning they can be performed in a user-specified order",
       "asbval:note": "Paper confirms pcpfm orchestrates normalization with configurable parameters and chainable operations, but does not explicitly name a 'normalize' command. Paper states 'Each step in an analysis corresponds to one command in the CLI' (S1 Table) but the specific command name is not provided in passages.",
@@ -3506,7 +3506,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-intensity-normalization-and-batch-correction/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/feature-intensity-normalization-and-batch-correction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3",
       "asbval:note": "Python 3 is the implementation language for pcpfm.",
@@ -3526,7 +3526,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-intensity-normalization-and-batch-correction/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/feature-intensity-normalization-and-batch-correction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser",
       "asbval:note": "ThermoRawFileParser is used for format conversion, though it is upstream of normalization (not directly part of the normalization task).",
@@ -3546,7 +3546,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-intensity-normalization-and-batch-correction/007",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/feature-intensity-normalization-and-batch-correction/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu",
       "asbval:note": "khipu is used for empirical compound construction, which is a post-normalization step, not part of the normalization task itself.",
@@ -3566,7 +3566,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-table-moniker-management/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/feature-table-moniker-management/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This experiment object records the location of intermediates on disk for reuse in later steps... Most operations in the pipeline are chainable meaning they can be performed in a user-specified order with outputs from previous iterations being used as inputs.",
       "asbval:note": "Paper describes experiment objects that track intermediates and chainable operations, but does not explicitly mention 'monikers' or 'symbolic names' for feature tables. The concept of tracking intermediate tables is present, but the specific moniker-based naming system is not explicitly documented in the passages.",
@@ -3586,7 +3586,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-table-moniker-management/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/feature-table-moniker-management/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data.",
       "asbval:note": "Python is explicitly stated as the implementation language for pcpfm.",
@@ -3606,7 +3606,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-table-moniker-management/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/feature-table-moniker-management/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our pipeline, named the Python-centric pipeline for metabolomics (pcpfm), enables start-to-finish metabolomics data processing based on Asari.",
       "asbval:note": "PCPFM is the main pipeline discussed throughout the paper.",
@@ -3626,7 +3626,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-table-moniker-management/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/feature-table-moniker-management/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We designed a set of core data models, which are described in the MetDataModel package and summarized in Table 1... The abstract concepts in Table 1 and Fig 1 are intrinsically agnostic to programming languages. We demonstrate their implementation in Python 3 and JSON in MetDataModel.",
       "asbval:note": "metDataModel is explicitly described as the data model library defining core concepts and schemas.",
@@ -3646,7 +3646,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-table-moniker-management/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/feature-table-moniker-management/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "ThermoRawFileParser is explicitly mentioned as a tool used in the pipeline for converting Thermo .raw files to mzML format.",
@@ -3666,7 +3666,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-table-moniker-management/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/feature-table-moniker-management/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The role description for ThermoRawFileParser is incorrect. ThermoRawFileParser is a file format converter tool, not a language. The paper states it converts Thermo .raw files to centroided .mzML format. The role should be 'File format converter for Thermo raw mass spectrometry data to mzML format'.",
@@ -3686,7 +3686,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-table-moniker-management/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/feature-table-moniker-management/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This experiment object records the location of intermediates on disk for reuse in later steps... Most operations in the pipeline are chainable meaning they can be performed in a user-specified order with outputs from previous iterations being used as inputs.",
       "asbval:note": "The paper describes experiment objects that track intermediates and chainable operations allowing reuse, but does not explicitly discuss a 'moniker' or 'symbolic naming' system. The concept of tracking intermediate tables exists, but the specific implementation mechanism described in the card is not explicitly detailed in the passages.",
@@ -3706,7 +3706,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/inter-sample-variance-calculation/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/inter-sample-variance-calculation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "hierarchical clustering of the inter-sample pearson correlation across all features was performed revealing two clusters of samples, representing a clear batch effect that was traced back to a recalibration of the instrument after batch 8 (Fig 4B). The log TICs of a random subset of samples and PCA plots were generated to further investigate these batches and identify abnormal samples (Fig 4C and 4D). The standard two-pass normalization does not adaquetly correct the batch effect; however, after normalization and batch correction via pycombat, both the log TICs and PCA show more consistency and no sub-clustering, suggesting the batch effect was largely mitigated.",
       "asbval:note": "Paper demonstrates batch effect detection and correction validation using PCA, t-SNE, correlation clustermaps, and log TICs, but does not explicitly calculate 'median inter-batch variance' as a specific metric. The paper validates batch correction through visual inspection (PCA, clustermaps) and qualitative assessment ('more consistency'), not through the specific quantitative metric of median inter-batch variance for high-intensity features.",
@@ -3726,7 +3726,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/inter-sample-variance-calculation/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/inter-sample-variance-calculation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "batch correction using a wrapper around pycombat [43]",
       "asbval:note": "pycombat is explicitly named as the tool used for batch correction in the pipeline.",
@@ -3746,7 +3746,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/inter-sample-variance-calculation/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/inter-sample-variance-calculation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data.",
       "asbval:note": "Python 3 is the implementation language for the pipeline.",
@@ -3766,7 +3766,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/inter-sample-variance-calculation/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/inter-sample-variance-calculation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our pipeline, named the Python-centric pipeline for metabolomics (pcpfm), enables start-to-finish metabolomics data processing based on Asari.",
       "asbval:note": "PCPFM is the main pipeline described in the paper and includes batch correction and quality control steps.",
@@ -3786,7 +3786,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/inter-sample-variance-calculation/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/inter-sample-variance-calculation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "ThermoRawFileParser is explicitly used in the pipeline for converting Thermo .raw files to mzML format.",
@@ -3806,7 +3806,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/inter-sample-variance-calculation/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/inter-sample-variance-calculation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "The role description matches the paper's description of ThermoRawFileParser's function.",
@@ -3826,7 +3826,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/inter-sample-variance-calculation/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/inter-sample-variance-calculation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "after normalization and batch correction via pycombat, both the log TICs and PCA show more consistency and no sub-clustering, suggesting the batch effect was largely mitigated.",
       "asbval:note": "The paper does apply batch correction via pycombat and validates it, but uses PCA, log TICs, and visual inspection rather than explicit inter-batch variance calculation. The validation approach differs from the card's proposed method.",
@@ -3846,7 +3846,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ionization-mode-inference-from-acquisition-metadata/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/ionization-mode-inference-from-acquisition-metadata/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The inputs to our pipeline minimally consist of .mzML or .raw files and a metadata CSV file, that minimally maps sample names to acquisition file paths.",
       "asbval:note": "Paper confirms pipeline ingests mzML and raw files, but does not explicitly describe ionization polarity inference as a documented task. The paper does not mention extracting or inferring ionization mode from file headers as a distinct preprocessing step.",
@@ -3866,7 +3866,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ionization-mode-inference-from-acquisition-metadata/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/ionization-mode-inference-from-acquisition-metadata/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu [44] and most methods for empirical compounds concern annotation... MS1-based annotations are generated using our JSON metabolite services library and appropriately formatted inputs or m/z and retention time similarity to authentic standards.",
       "asbval:note": "Paper confirms khipu uses adduct definitions and annotation rules, but does not explicitly state that ionization mode is inferred from metadata to select these definitions. The paper does not document ionization polarity as a configurable input to khipu.",
@@ -3886,7 +3886,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ionization-mode-inference-from-acquisition-metadata/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/ionization-mode-inference-from-acquisition-metadata/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss ionization mode inference as a prerequisite for empirical compound grouping or MS annotation. The paper describes empirical compounds and annotation workflows but does not mention ionization polarity as a required input or decision point.",
@@ -3906,7 +3906,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ionization-mode-inference-from-acquisition-metadata/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/ionization-mode-inference-from-acquisition-metadata/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "Paper confirms ThermoRawFileParser is used for .raw to mzML conversion, but does not state that it extracts or is used to extract ionization mode metadata. The tool is mentioned only for format conversion, not for metadata extraction.",
@@ -3926,7 +3926,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ionization-mode-inference-from-acquisition-metadata/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/ionization-mode-inference-from-acquisition-metadata/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "preprocessing with Asari which yields a 'preferred' and 'full' feature table... Quality control is necessary in every project but depends on the experimental design.",
       "asbval:note": "Paper confirms Asari performs feature detection and QC, but does not document that it receives or uses ionization mode as an input parameter. No evidence that ionization polarity is passed to Asari or used to configure its mass calibration or ion handling.",
@@ -3946,7 +3946,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ionization-mode-inference-from-acquisition-metadata/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/ionization-mode-inference-from-acquisition-metadata/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu [44]... The isotopes and adducts from pre-annotation are modeled as a grid structure, made computable by the khipu package [34]",
       "asbval:note": "Paper confirms khipu constructs empirical compounds and handles adducts, but does not document that ionization mode is passed as an input to khipu or used to select adduct definitions. The paper does not mention ionization polarity as a configurable parameter for khipu.",
@@ -3966,7 +3966,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ionization-mode-inference-from-acquisition-metadata/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/ionization-mode-inference-from-acquisition-metadata/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper states the pipeline is written in Python 3 and uses JSON for intermediary data, but does not describe a Python routine or module for parsing ionization mode from mzML headers or raw metadata. No evidence of polarity value assignment as a documented step.",
@@ -3986,7 +3986,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isotope-pattern-and-adduct-assignment/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/isotope-pattern-and-adduct-assignment/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu [44] and most methods for empirical compounds concern annotation... Empirical compounds are constructed from Asari feature tables using khipu, which groups degenerate features such as isotopologues and adducts.",
       "asbval:note": "Core functionality of khipu confirmed; empirical compounds explicitly defined as grouping isotopes and adducts.",
@@ -4006,7 +4006,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isotope-pattern-and-adduct-assignment/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/isotope-pattern-and-adduct-assignment/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from Asari feature tables using khipu, which groups degenerate features such as isotopologues and adducts. The isotopes and adducts from pre-annotation are modeled as a grid structure, made computable by the khipu package [34]",
       "asbval:note": "khipu explicitly named and confirmed for isotope/adduct grouping; configurable tolerances implied by 'grid structure' and usage context.",
@@ -4026,7 +4026,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isotope-pattern-and-adduct-assignment/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/isotope-pattern-and-adduct-assignment/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pipeline ingests centroided mzML data or Thermo raw files and returns a human-readable set of tables summarizing the detected features... preprocessing with Asari which yields a 'preferred' and 'full' feature table.",
       "asbval:note": "Asari confirmed as feature detection tool producing feature tables used as input to downstream steps including empirical compound construction.",
@@ -4046,7 +4046,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isotope-pattern-and-adduct-assignment/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/isotope-pattern-and-adduct-assignment/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "mass2chem is not mentioned anywhere in the provided passages. The paper discusses khipu for empirical compound construction and MatchMS for MS2 annotation, but does not reference mass2chem.",
@@ -4066,7 +4066,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isotope-pattern-and-adduct-assignment/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/isotope-pattern-and-adduct-assignment/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "ThermoRawFileParser explicitly named for .raw to mzML conversion; however, this tool is upstream of feature detection and not directly part of isotope/adduct assignment workflow.",
@@ -4086,7 +4086,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isotope-pattern-and-adduct-assignment/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/isotope-pattern-and-adduct-assignment/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data.",
       "asbval:note": "Python 3 confirmed as implementation language; however, Python is a general-purpose language, not a tool specific to isotope/adduct assignment.",
@@ -4106,7 +4106,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isotope-pattern-and-adduct-assignment/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/isotope-pattern-and-adduct-assignment/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu [44]... MS1-based annotations are generated using our JSON metabolite services library... Multiple annotations of different sources are chained in the empirical compound data structure",
       "asbval:note": "Workflow order confirmed: feature detection \u2192 empirical compound construction (khipu) \u2192 annotation.",
@@ -4126,7 +4126,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isotope-pattern-and-adduct-assignment/007",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/isotope-pattern-and-adduct-assignment/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from Asari feature tables using khipu, which groups degenerate features such as isotopologues and adducts... a group of associated features, typically isotopes and adducts, that belong to the same tentative compound and co-elute if there is chromatography.",
       "asbval:note": "Isotope and adduct grouping confirmed; specific adduct examples not provided in passages but concept is well-established.",
@@ -4146,7 +4146,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-structure-validation-for-metabolomics-data/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/json-structure-validation-for-metabolomics-data/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu [44] and most methods for empirical compounds concern annotation... Multiple annotations of different sources are chained in the empirical compound data structure (Fig 1B), which is amendable to future enhancements",
       "asbval:note": "Paper confirms khipu constructs empirical compounds and serializes to JSON (passage 5: 'The abstract concepts in Table 1 and Fig 1 are intrinsically agnostic to programming languages. We demonstrate their implementation in Python 3 and JSON in MetDataModel'). However, the paper does not explicitly describe a 'build_empCpds' command or detail the specific required fields (list_of_features, median m/z, median rt, pre-annotation) or validation workflows. The research question assumes a specific command name and validation schema not explicitly documented in the passages.",
@@ -4166,7 +4166,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-structure-validation-for-metabolomics-data/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/json-structure-validation-for-metabolomics-data/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu [44]... The isotopes and adducts from pre-annotation are modeled as a grid structure, made computable by the khipu package [34], which is also incorporated in the pcpfm pipeline.",
       "asbval:note": "khipu is explicitly named and confirmed as the tool for constructing empirical compounds and serializing to JSON format.",
@@ -4186,7 +4186,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-structure-validation-for-metabolomics-data/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/json-structure-validation-for-metabolomics-data/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We designed a set of core data models, which are described in the MetDataModel package... The abstract concepts in Table 1 and Fig 1 are intrinsically agnostic to programming languages. We demonstrate their implementation in Python 3 and JSON in MetDataModel.",
       "asbval:note": "metDataModel is explicitly named as the package defining standardized data model schemas for metabolomics JSON structures.",
@@ -4206,7 +4206,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-structure-validation-for-metabolomics-data/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/json-structure-validation-for-metabolomics-data/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data.",
       "asbval:note": "Python 3 is confirmed as the implementation language for the pipeline and data structures.",
@@ -4226,7 +4226,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-structure-validation-for-metabolomics-data/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/json-structure-validation-for-metabolomics-data/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "ThermoRawFileParser is mentioned in the paper but is used for converting Thermo .raw files to mzML format, NOT for JSON structure validation of empirical compounds. This tool is unrelated to the research question about validating empirical compound JSON files. Its inclusion in the task card appears to be an error or conflation with a different task.",
@@ -4246,7 +4246,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-structure-validation-for-metabolomics-data/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/json-structure-validation-for-metabolomics-data/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu [44]... The abstract concepts in Table 1 and Fig 1 are intrinsically agnostic to programming languages. We demonstrate their implementation in Python 3 and JSON in MetDataModel.",
       "asbval:note": "Paper confirms khipu constructs empirical compounds and JSON serialization occurs, but does not explicitly describe validation workflows or the specific 'build_empCpds' command name.",
@@ -4266,7 +4266,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-structure-validation-for-metabolomics-data/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/json-structure-validation-for-metabolomics-data/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Using MatchMS [45,46], MS2 based annotations can be generated... MS1-based annotations are generated using our JSON metabolite services library and appropriately formatted inputs or m/z and retention time similarity to authentic standards. These annotations can be mapped back to any feature table to generate the previously mentioned tabular output.",
       "asbval:note": "Paper confirms empirical compounds are used as input to downstream annotation workflows (MS1 and MS2 annotation), supporting the scope claim.",
@@ -4286,7 +4286,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-feature-extraction-and-alignment/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/lc-ms-feature-extraction-and-alignment/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pipeline ingests centroided mzML data or Thermo raw files and returns a human-readable set of tables summarizing the detected features... Asari which yields a 'preferred' and 'full' feature table.",
       "asbval:note": "Claim is fully supported. Paper explicitly describes Asari processing centroid mzML files and producing preferred and full feature tables.",
@@ -4306,7 +4306,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-feature-extraction-and-alignment/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/lc-ms-feature-extraction-and-alignment/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm is designed to prepare data for downstream data analysis, which can be performed by bioinformaticians or data scientists without a background in mass spectrometry.",
       "asbval:note": "Semantic equivalence: paper describes pipeline preparing data for downstream analysis, consistent with claim of converting to matrix suitable for statistical analysis.",
@@ -4326,7 +4326,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-feature-extraction-and-alignment/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/lc-ms-feature-extraction-and-alignment/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "With the recent release of Asari [23], a preprocessing tool implemented in Python, Python has become a viable option for data processing in computational metabolomics... preprocessing with Asari which yields a 'preferred' and 'full' feature table.",
       "asbval:note": "Asari confirmed as preprocessing tool for feature detection and alignment. Paper describes it as core to the pipeline.",
@@ -4346,7 +4346,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-feature-extraction-and-alignment/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/lc-ms-feature-extraction-and-alignment/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "ThermoRawFileParser explicitly mentioned for converting .raw to centroid mzML before Asari processing.",
@@ -4366,7 +4366,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-feature-extraction-and-alignment/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/lc-ms-feature-extraction-and-alignment/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our pipeline, named the Python-centric pipeline for metabolomics (pcpfm), enables start-to-finish metabolomics data processing based on Asari... Each step in an analysis corresponds to one command in the CLI and one function in the main pipeline process",
       "asbval:note": "PCPFM confirmed as orchestration pipeline that wraps Asari. CLI commands mentioned for sequential workflow execution.",
@@ -4386,7 +4386,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-feature-extraction-and-alignment/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/lc-ms-feature-extraction-and-alignment/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data.",
       "asbval:note": "Python 3 explicitly stated as implementation language for pcpfm.",
@@ -4406,7 +4406,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-feature-extraction-and-alignment/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/lc-ms-feature-extraction-and-alignment/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu [44]... The isotopes and adducts from pre-annotation are modeled as a grid structure, made computable by the khipu package [34], which is also incorporated in the pcpfm pipeline.",
       "asbval:note": "khipu is confirmed in the paper but its role is post-feature-extraction (empirical compound construction from Asari feature tables), not directly in the feature extraction and alignment step itself. The card lists khipu as a tool for this task, but khipu operates downstream of Asari's feature detection. This is a scope misalignment: khipu is part of the broader pipeline but not part of the 'lc-ms-feature-extraction-and-alignment' task specifically.",
@@ -4426,7 +4426,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-tolerance-calibration/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/mass-spectrometry-tolerance-calibration/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu [44] and most methods for empirical compounds concern annotation.",
       "asbval:note": "Paper confirms khipu constructs empirical compounds from feature tables and groups isotopologues and adducts, but does not explicitly name the 'build_empCpds' command or discuss configurable m/z and retention time tolerances in khipu. The paper states 'The isotopes and adducts from pre-annotation are modeled as a grid structure, made computable by the khipu package' but does not detail tolerance configuration parameters.",
@@ -4446,7 +4446,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-tolerance-calibration/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/mass-spectrometry-tolerance-calibration/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "By building empirical compounds first, i.e. pre-annotation via the khipu package, MS1 annotation is improved because the search of databases does not query many degenerate features",
       "asbval:note": "Paper demonstrates that empirical compound construction (via khipu) improves annotation specificity by reducing degenerate feature queries, supporting the claim that tolerance-based clustering affects downstream annotation.",
@@ -4466,7 +4466,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-tolerance-calibration/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/mass-spectrometry-tolerance-calibration/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu [44]... Using MatchMS [45,46], MS2 based annotations can be generated... MS1-based annotations are generated using our JSON metabolite services library",
       "asbval:note": "Paper confirms the workflow: Asari generates feature table \u2192 Khipu constructs empirical compounds \u2192 MS1/MS2 annotation follows.",
@@ -4486,7 +4486,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-tolerance-calibration/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/mass-spectrometry-tolerance-calibration/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu [44]... The isotopes and adducts from pre-annotation are modeled as a grid structure, made computable by the khipu package [34]",
       "asbval:note": "Paper confirms khipu groups features into empirical compounds and handles isotopes/adducts, but does not explicitly mention 'build_empCpds' command name or configurable m/z and retention time tolerance parameters in khipu itself.",
@@ -4506,7 +4506,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-tolerance-calibration/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/mass-spectrometry-tolerance-calibration/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our pipeline, named the Python-centric pipeline for metabolomics (pcpfm), enables start-to-finish metabolomics data processing based on Asari. The pipeline ingests centroided mzML data or Thermo raw files and returns a human-readable set of tables summarizing the detected features... preprocessing with Asari which yields a 'preferred' and 'full' feature table.",
       "asbval:note": "Paper confirms Asari generates feature tables from mzML data that serve as input to downstream steps including empirical compound construction.",
@@ -4526,7 +4526,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-tolerance-calibration/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/mass-spectrometry-tolerance-calibration/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "mass2chem is not mentioned anywhere in the provided passages. The paper does not reference this tool in relation to khipu's isotope/adduct pattern definitions.",
@@ -4546,7 +4546,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-tolerance-calibration/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/mass-spectrometry-tolerance-calibration/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "Paper explicitly confirms ThermoRawFileParser converts Thermo .raw files to mzML format.",
@@ -4566,7 +4566,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-tolerance-calibration/007",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/mass-spectrometry-tolerance-calibration/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data.",
       "asbval:note": "Paper confirms Python 3 is the implementation language for the pipeline.",
@@ -4586,7 +4586,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-quality-control-filtering/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/metabolite-quality-control-filtering/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Operations to correct common data quality issues are provided including normalization, blank masking, batch correction, removal of uncommon features, and missing value imputation. Blank masking, missing value imputation, and feature removal is implemented using custom routines in Pandas and numpy",
       "asbval:note": "Claim directly supported by passage describing blank masking, feature removal, and missing value imputation as QC operations.",
@@ -4606,7 +4606,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-quality-control-filtering/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/metabolite-quality-control-filtering/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm is designed to prepare data for downstream data analysis, which can be performed by bioinformaticians or data scientists without a background in mass spectrometry.",
       "asbval:note": "Semantic equivalence: pipeline prepares data for downstream analysis, consistent with ensuring high-confidence features.",
@@ -4626,7 +4626,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-quality-control-filtering/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/metabolite-quality-control-filtering/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Data processing encapsulates everything from the start of a processing job to the creation of a feature table using Asari. Quality control consists of multiple chainable commands that allows for a raw feature table to be curated into a table suitable for downstream analysis.",
       "asbval:note": "Passage confirms QC (which includes blank masking and feature removal) occurs after Asari preprocessing and before annotation.",
@@ -4646,7 +4646,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-quality-control-filtering/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/metabolite-quality-control-filtering/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Blank masking, missing value imputation, and feature removal is implemented using custom routines in Pandas and numpy... Outlier samples can be removed using any of the Z-scores or other 1-D metrics described above via a user-provided filter; however, by default, samples that have an absolute value for their number of features Z-score greater than 2.5 are dropped.",
       "asbval:note": "Passage describes blank masking and sample removal (outlier samples) as implemented QC operations.",
@@ -4666,7 +4666,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-quality-control-filtering/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/metabolite-quality-control-filtering/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Data processing encapsulates everything from the start of a processing job to the creation of a feature table using Asari. Quality control consists of multiple chainable commands that allows for a raw feature table to be curated",
       "asbval:note": "Asari confirmed as preprocessing tool producing feature table that is then subjected to QC filtering.",
@@ -4686,7 +4686,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-quality-control-filtering/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/metabolite-quality-control-filtering/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our pipeline, named the Python-centric pipeline for metabolomics (pcpfm)... Additionally, the pipeline performs various processing steps, including normalization, feature interpolation, removal of rare features, quality assurance, quality control evaluations... Blank masking, missing value imputation, and feature removal is implemented using custom routines in Pandas and numpy",
       "asbval:note": "PCPFM confirmed as orchestrating blank masking, feature removal (rare features), and missing value operations.",
@@ -4706,7 +4706,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-quality-control-filtering/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/metabolite-quality-control-filtering/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data.",
       "asbval:note": "Python 3 confirmed as implementation language for pcpfm.",
@@ -4726,7 +4726,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-quality-control-filtering/007",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/metabolite-quality-control-filtering/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "ThermoRawFileParser confirmed for .raw to mzML conversion.",
@@ -4746,7 +4746,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-quality-control-filtering/008",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/metabolite-quality-control-filtering/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu [44]",
       "asbval:note": "Khipu confirmed for constructing empirical compounds from feature tables.",
@@ -4766,7 +4766,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomic-feature-table-imputation/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/metabolomic-feature-table-imputation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Missing value imputation is implemented using a scalar multiple of the minimum observed intensity for that feature in the dataframe.",
       "asbval:note": "Exact match: paper describes imputation as 'scalar multiple of the minimum observed intensity for that feature', which is semantically equivalent to 'interpolation_ratio parameter multiplied by that feature's minimum non-zero intensity'.",
@@ -4786,7 +4786,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomic-feature-table-imputation/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/metabolomic-feature-table-imputation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data.",
       "asbval:note": "Paper explicitly states pipeline is written in Python 3; imputation is part of the pipeline.",
@@ -4806,7 +4806,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomic-feature-table-imputation/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/metabolomic-feature-table-imputation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "Tool is used in the pipeline for upstream raw-file conversion as claimed.",
@@ -4826,7 +4826,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomic-feature-table-imputation/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/metabolomic-feature-table-imputation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our pipeline, named the Python-centric pipeline for metabolomics (pcpfm), enables start-to-finish metabolomics data processing based on Asari.",
       "asbval:note": "Asari is confirmed as the upstream feature detection tool that produces the feature table input to imputation.",
@@ -4846,7 +4846,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomic-feature-table-imputation/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/metabolomic-feature-table-imputation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our pipeline, named the Python-centric pipeline for metabolomics (pcpfm), enables start-to-finish metabolomics data processing based on Asari... Operations to correct common data quality issues are provided including normalization, blank masking, batch correction, removal of uncommon features, and missing value imputation.",
       "asbval:note": "PCPFM is confirmed as the pipeline that orchestrates imputation as a standard preprocessing step.",
@@ -4866,7 +4866,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomic-feature-table-imputation/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/metabolomic-feature-table-imputation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "batch correction using a wrapper around pycombat [43]",
       "asbval:note": "pycombat is mentioned in the paper but is used for batch correction, not for missing value imputation. The card incorrectly lists pycombat as a tool for the imputation task. Pycombat is a batch-correction tool, not an imputation tool. The imputation is performed using custom routines in Pandas and numpy.",
@@ -4886,7 +4886,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-feature-table-curation/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/metabolomics-feature-table-curation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Operations to correct common data quality issues are provided including normalization, blank masking, batch correction, removal of uncommon features, and missing value imputation.",
       "asbval:note": "All four operations (blank masking, normalization, batch correction, QC) are explicitly named in the paper as core curation steps in pcpfm.",
@@ -4906,7 +4906,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-feature-table-curation/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/metabolomics-feature-table-curation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Data processing encapsulates everything from the start of a processing job to the creation of a feature table using Asari.",
       "asbval:note": "Asari is confirmed as the preprocessing tool that generates feature tables from mzML input.",
@@ -4926,7 +4926,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-feature-table-curation/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/metabolomics-feature-table-curation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data.",
       "asbval:note": "Python 3 is confirmed as the implementation language for pcpfm, which orchestrates all curation operations.",
@@ -4946,7 +4946,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-feature-table-curation/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/metabolomics-feature-table-curation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our pipeline, named the Python-centric pipeline for metabolomics (pcpfm), enables start-to-finish metabolomics data processing based on Asari... the pipeline performs various processing steps, including normalization, feature interpolation, removal of rare features, quality assurance, quality control evaluations, and generates PDF reports to summarize results.",
       "asbval:note": "pcpfm is explicitly described as orchestrating the full workflow including all named curation operations.",
@@ -4966,7 +4966,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-feature-table-curation/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/metabolomics-feature-table-curation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We designed a set of core data models, which are described in the MetDataModel package... Many pipeline data structures inherit from, and expand upon, objects provided by the MetDataModel library.",
       "asbval:note": "metDataModel is confirmed as providing standardized data structures used by pcpfm.",
@@ -4986,7 +4986,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-feature-table-curation/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/metabolomics-feature-table-curation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "ThermoRawFileParser is explicitly named for converting Thermo .raw files to mzML format.",
@@ -5006,7 +5006,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-feature-table-curation/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/metabolomics-feature-table-curation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Operations to correct common data quality issues are provided including normalization, blank masking, batch correction, removal of uncommon features, and missing value imputation.",
       "asbval:note": "The paper confirms that blank masking, batch correction, and missing value imputation are implemented in pcpfm, but ThermoRawFileParser is a file format converter, not a curation tool. The related_skills list appears to conflate ThermoRawFileParser (a format converter) with the broader curation pipeline. ThermoRawFileParser's actual role is limited to format conversion; the listed skills belong to pcpfm/Asari/metDataModel ecosystem, not to ThermoRawFileParser itself.",
@@ -5026,7 +5026,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/missing-value-imputation-in-metabolomics/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/missing-value-imputation-in-metabolomics/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Missing value imputation is implemented using a scalar multiple of the minimum observed intensity for that feature in the dataframe.",
       "asbval:note": "Exact method and purpose confirmed in passage 5.",
@@ -5046,7 +5046,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/missing-value-imputation-in-metabolomics/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/missing-value-imputation-in-metabolomics/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Each step in an analysis corresponds to one command in the CLI and one function in the main pipeline process (S1 Table).",
       "asbval:note": "Paper confirms PCPFM has CLI commands and missing value imputation is part of the pipeline, but does not explicitly name the subcommand as 'pcpfm impute' or describe a configurable 'interpolation ratio parameter' in the provided passages. The method is confirmed but the specific CLI interface details are not verbatim.",
@@ -5066,7 +5066,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/missing-value-imputation-in-metabolomics/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/missing-value-imputation-in-metabolomics/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data.",
       "asbval:note": "Python is confirmed as the implementation language for PCPFM.",
@@ -5086,7 +5086,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/missing-value-imputation-in-metabolomics/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/missing-value-imputation-in-metabolomics/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "ThermoRawFileParser is confirmed as a tool used in the pipeline, though it is not directly involved in missing-value imputation; it is a preprocessing step.",
@@ -5106,7 +5106,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/missing-value-imputation-in-metabolomics/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/missing-value-imputation-in-metabolomics/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "preprocessing with Asari which yields a 'preferred' and 'full' feature table.",
       "asbval:note": "Asari is confirmed as the preprocessing tool that generates feature tables from mzML data.",
@@ -5126,7 +5126,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/missing-value-imputation-in-metabolomics/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/missing-value-imputation-in-metabolomics/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Empirical compounds are constructed from a feature table using Khipu [44]",
       "asbval:note": "khipu is confirmed for empirical compound construction, though this occurs after missing-value imputation in the workflow.",
@@ -5146,7 +5146,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/missing-value-replacement-by-feature-minimum/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/missing-value-replacement-by-feature-minimum/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Missing value imputation is implemented using a scalar multiple of the minimum observed intensity for that feature in the dataframe.",
       "asbval:note": "Paper confirms the core strategy (scalar multiple of minimum observed intensity per feature) but does NOT name the parameter as 'interpolation_ratio' or specify a default value of 0.5. The paper describes the method functionally but without the specific parameter name or default claimed.",
@@ -5166,7 +5166,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/missing-value-replacement-by-feature-minimum/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/missing-value-replacement-by-feature-minimum/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Operations to correct common data quality issues are provided including normalization, blank masking, batch correction, removal of uncommon features, and missing value imputation. ... the default workflow consisting of blank masking, outlier sample removal, normalization, outlier feature removal, imputation and filtering before annotation is recommended in that order",
       "asbval:note": "Scope aligns with paper's description of imputation placement in the workflow pipeline.",
@@ -5186,7 +5186,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/missing-value-replacement-by-feature-minimum/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/missing-value-replacement-by-feature-minimum/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data.",
       "asbval:note": "Paper confirms Python is the implementation language.",
@@ -5206,7 +5206,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/missing-value-replacement-by-feature-minimum/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/missing-value-replacement-by-feature-minimum/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Missing value imputation is implemented using a scalar multiple of the minimum observed intensity for that feature in the dataframe. ... implemented using custom routines in Pandas and numpy",
       "asbval:note": "Paper confirms Python (via pandas and numpy) is used for imputation implementation.",
@@ -5226,7 +5226,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/missing-value-replacement-by-feature-minimum/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/missing-value-replacement-by-feature-minimum/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our pipeline, named the Python-centric pipeline for metabolomics (pcpfm), enables start-to-finish metabolomics data processing",
       "asbval:note": "Paper confirms PCPFM as the pipeline name (case-insensitive match).",
@@ -5246,7 +5246,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/missing-value-replacement-by-feature-minimum/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/missing-value-replacement-by-feature-minimum/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the default workflow consisting of blank masking, outlier sample removal, normalization, outlier feature removal, imputation and filtering before annotation is recommended in that order",
       "asbval:note": "Paper confirms imputation is orchestrated as a preprocessing step in the workflow.",
@@ -5266,7 +5266,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/missing-value-replacement-by-feature-minimum/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/missing-value-replacement-by-feature-minimum/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "Paper confirms ThermoRawFileParser is used in the pipeline.",
@@ -5286,7 +5286,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/missing-value-replacement-by-feature-minimum/007",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/missing-value-replacement-by-feature-minimum/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser",
       "asbval:note": "Paper confirms this is the role of ThermoRawFileParser in the pipeline.",
@@ -5306,7 +5306,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/missing-value-replacement-by-feature-minimum/008",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/missing-value-replacement-by-feature-minimum/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "Evidence span is directly supported by the paper text.",
@@ -5326,7 +5326,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-batch-experimental-design-understanding/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/multi-batch-experimental-design-understanding/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Quality control is necessary in every project but depends on the experimental design... hierarchical clustering of the inter-sample pearson correlation across all features was performed revealing two clusters of samples, representing a clear batch effect that was traced back to a recalibration of the instrument after batch 8... The standard two-pass normalization does not adequately correct the batch effect; however, after normalization and batch correction via pycombat, both the log TICs and PCA show more consistency and no sub-clustering, suggesting the batch effect was largely mitigated.",
       "asbval:note": "Paper demonstrates batch effect detection and correction in a 17-batch, 1685-sample dataset, showing the importance of batch metadata and correction.",
@@ -5346,7 +5346,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-batch-experimental-design-understanding/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/multi-batch-experimental-design-understanding/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "batch correction using a wrapper around pycombat [43]... after normalization and batch correction via pycombat, both the log TICs and PCA show more consistency and no sub-clustering, suggesting the batch effect was largely mitigated.",
       "asbval:note": "pycombat is explicitly named and used for batch correction in the pipeline.",
@@ -5366,7 +5366,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-batch-experimental-design-understanding/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/multi-batch-experimental-design-understanding/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our pipeline, named the Python-centric pipeline for metabolomics (pcpfm), enables start-to-finish metabolomics data processing... The inputs to our pipeline minimally consist of .mzML or .raw files and a metadata CSV file, that minimally maps sample names to acquisition file paths.",
       "asbval:note": "PCPFM is confirmed as the orchestrating pipeline. Batch correction is part of the workflow, though the specific command name 'batch_correct' is not explicitly mentioned in passages.",
@@ -5386,7 +5386,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-batch-experimental-design-understanding/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/multi-batch-experimental-design-understanding/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "preprocessing with Asari which yields a 'preferred' and 'full' feature table... Operations to correct common data quality issues are provided including normalization, blank masking, batch correction, removal of uncommon features, and missing value imputation.",
       "asbval:note": "Asari is confirmed as the preprocessing tool that generates feature tables, which are then subject to batch correction.",
@@ -5406,7 +5406,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-batch-experimental-design-understanding/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/multi-batch-experimental-design-understanding/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data... Z-scores and TICs are calculated using custom routines implemented using a mixture of pandas [41] and numpy [40]... cluster maps use a combination of seaborn [38] for hierarchical clustering and either scipy [39] or numpy [40] for the calculation of the input correlation matrix.",
       "asbval:note": "Python is confirmed as the implementation language with pandas, numpy, scipy used for statistical calculations including batch effect assessment.",
@@ -5426,7 +5426,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-batch-experimental-design-understanding/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/multi-batch-experimental-design-understanding/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "ThermoRawFileParser is explicitly named and used for .raw to mzML conversion.",
@@ -5446,7 +5446,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quality-control-threshold-application/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/quality-control-threshold-application/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Operations to correct common data quality issues are provided including normalization, blank masking, batch correction, removal of uncommon features, and missing value imputation.",
       "asbval:note": "Blank masking is explicitly mentioned as a QC operation in the pipeline.",
@@ -5466,7 +5466,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quality-control-threshold-application/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/quality-control-threshold-application/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Blank masking, missing value imputation, and feature removal is implemented using custom routines in Pandas and numpy, batch correction using a wrapper around pycombat [43], while normalization is implemented using numpy and can be performed in a one-pass or two-pass approach.",
       "asbval:note": "PCPFM implements blank masking as part of its QC workflow; the default workflow includes blank masking before normalization.",
@@ -5486,7 +5486,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quality-control-threshold-application/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/quality-control-threshold-application/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Data processing encapsulates everything from the start of a processing job to the creation of a feature table using Asari. Quality control consists of multiple chainable commands that allows for a raw feature table to be curated into a table suitable for downstream analysis.",
       "asbval:note": "Asari generates the feature table that is input to QC operations including blank masking.",
@@ -5506,7 +5506,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quality-control-threshold-application/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/quality-control-threshold-application/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data.",
       "asbval:note": "PCPFM is implemented in Python 3.",
@@ -5526,7 +5526,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quality-control-threshold-application/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/quality-control-threshold-application/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "ThermoRawFileParser is used in the pipeline for format conversion, though it is upstream of blank masking and not directly part of the blank_masking filter itself.",
@@ -5546,7 +5546,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sample-type-stratified-feature-masking/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/sample-type-stratified-feature-masking/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Operations to correct common data quality issues are provided including normalization, blank masking, batch correction, removal of uncommon features, and missing value imputation.",
       "asbval:note": "Blank masking is explicitly named as a QC operation in the pipeline.",
@@ -5566,7 +5566,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sample-type-stratified-feature-masking/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/sample-type-stratified-feature-masking/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Blank masking, missing value imputation, and feature removal is implemented using custom routines in Pandas and numpy",
       "asbval:note": "Blank masking is presented as a QC operation; the functional purpose (removing contaminants) is consistent with standard metabolomics practice and the pipeline's QC focus.",
@@ -5586,7 +5586,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sample-type-stratified-feature-masking/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/sample-type-stratified-feature-masking/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Operations to correct common data quality issues are provided including normalization, blank masking, batch correction, removal of uncommon features, and missing value imputation. Blank masking, missing value imputation, and feature removal is implemented using custom routines in Pandas and numpy",
       "asbval:note": "PCPFM explicitly includes blank masking as a configurable QC operation.",
@@ -5606,7 +5606,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sample-type-stratified-feature-masking/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/sample-type-stratified-feature-masking/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data. Blank masking, missing value imputation, and feature removal is implemented using custom routines in Pandas and numpy",
       "asbval:note": "Blank masking is implemented in Python using Pandas and numpy.",
@@ -5626,7 +5626,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sample-type-stratified-feature-masking/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/sample-type-stratified-feature-masking/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Data processing encapsulates everything from the start of a processing job to the creation of a feature table using Asari. Quality control consists of multiple chainable commands that allows for a raw feature table to be curated into a table suitable for downstream analysis.",
       "asbval:note": "Asari produces the feature table; blank masking is part of the QC step that follows.",
@@ -5646,7 +5646,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sample-type-stratified-feature-masking/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/sample-type-stratified-feature-masking/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "ThermoRawFileParser is explicitly named for .raw to mzML conversion.",
@@ -5666,7 +5666,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sample-type-stratified-feature-masking/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/sample-type-stratified-feature-masking/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "ThermoRawFileParser converts .raw to mzML format, but Asari (not ThermoRawFileParser) produces the feature table. The card's role description for ThermoRawFileParser incorrectly attributes feature table production to it; ThermoRawFileParser is a format converter only.",
@@ -5686,7 +5686,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/zero-value-handling-in-mass-spectrometry-data/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/zero-value-handling-in-mass-spectrometry-data/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Missing value imputation is implemented using a scalar multiple of the minimum observed intensity for that feature in the dataframe.",
       "asbval:note": "Exact method described in passage 5; matches card's description of minimum-value-based imputation.",
@@ -5706,7 +5706,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/zero-value-handling-in-mass-spectrometry-data/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/zero-value-handling-in-mass-spectrometry-data/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The pcpfm package is written in Python 3 and JSON is used extensively for intermediary data.",
       "asbval:note": "Paper explicitly states pipeline is Python 3-based.",
@@ -5726,7 +5726,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/zero-value-handling-in-mass-spectrometry-data/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/zero-value-handling-in-mass-spectrometry-data/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our pipeline, named the Python-centric pipeline for metabolomics (pcpfm), enables start-to-finish metabolomics data processing based on Asari.",
       "asbval:note": "Asari is the upstream preprocessing tool that produces feature tables requiring imputation.",
@@ -5746,7 +5746,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/zero-value-handling-in-mass-spectrometry-data/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/zero-value-handling-in-mass-spectrometry-data/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We designed a set of core data models, which are described in the MetDataModel package... Many pipeline data structures inherit from, and expand upon, objects provided by the MetDataModel library.",
       "asbval:note": "metDataModel is used for standardized data structure representation in the pipeline.",
@@ -5766,7 +5766,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/zero-value-handling-in-mass-spectrometry-data/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/zero-value-handling-in-mass-spectrometry-data/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "ThermoRawFileParser is used in the pipeline for .raw file conversion, though it is not directly involved in the missing value imputation task itself.",
@@ -5786,7 +5786,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/zero-value-handling-in-mass-spectrometry-data/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/zero-value-handling-in-mass-spectrometry-data/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Optionally, any.raw files are converted to centroided .mzML files using the ThermoRawFileParser [36] before preprocessing with Asari",
       "asbval:note": "Role is correctly described; however, this tool is upstream of the imputation task and not directly involved in zero/missing value handling.",
@@ -5806,7 +5806,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/zero-value-handling-in-mass-spectrometry-data/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/zero-value-handling-in-mass-spectrometry-data/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Quality control is necessary in every project... Operations to correct common data quality issues are provided including normalization, blank masking, batch correction, removal of uncommon features, and missing value imputation... the default workflow consisting of blank masking, outlier sample removal, normalization, outlier feature removal, imputation and filtering before annotation is recommended in that order",
       "asbval:note": "Imputation is positioned in the workflow after feature detection and before annotation, consistent with the card's scope.",
@@ -5826,7 +5826,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/background-ion-contaminant-removal/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/background-ion-contaminant-removal/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "background-ion-contaminant-removal",
@@ -5839,7 +5839,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-correction-quality-assessment/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/batch-correction-quality-assessment/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 12,
       "asbval:target_artifact_id": "batch-correction-quality-assessment",
@@ -5852,7 +5852,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-effect-variance-quantification/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/batch-effect-variance-quantification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "batch-effect-variance-quantification",
@@ -5865,7 +5865,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/blank-intensity-ratio-filtering/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/blank-intensity-ratio-filtering/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "blank-intensity-ratio-filtering",
@@ -5878,7 +5878,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-coelution-detection/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/chromatographic-coelution-detection/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "chromatographic-coelution-detection",
@@ -5891,7 +5891,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/empirical-compound-construction-from-feature-clustering/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/empirical-compound-construction-from-feature-clustering/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "empirical-compound-construction-from-feature-clustering",
@@ -5904,7 +5904,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/empirical-compound-grouping-by-adducts-and-isotopes/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/empirical-compound-grouping-by-adducts-and-isotopes/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "empirical-compound-grouping-by-adducts-and-isotopes",
@@ -5917,7 +5917,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/experiment-metadata-organization-and-tracking/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/experiment-metadata-organization-and-tracking/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "experiment-metadata-organization-and-tracking",
@@ -5930,7 +5930,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-intensity-normalization-and-batch-correction/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/feature-intensity-normalization-and-batch-correction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "feature-intensity-normalization-and-batch-correction",
@@ -5943,7 +5943,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-table-moniker-management/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/feature-table-moniker-management/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "feature-table-moniker-management",
@@ -5956,7 +5956,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/inter-sample-variance-calculation/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/inter-sample-variance-calculation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "inter-sample-variance-calculation",
@@ -5969,7 +5969,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ionization-mode-inference-from-acquisition-metadata/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/ionization-mode-inference-from-acquisition-metadata/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "ionization-mode-inference-from-acquisition-metadata",
@@ -5982,7 +5982,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isotope-pattern-and-adduct-assignment/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/isotope-pattern-and-adduct-assignment/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "isotope-pattern-and-adduct-assignment",
@@ -5995,7 +5995,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/json-structure-validation-for-metabolomics-data/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/json-structure-validation-for-metabolomics-data/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "json-structure-validation-for-metabolomics-data",
@@ -6008,7 +6008,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-feature-extraction-and-alignment/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/lc-ms-feature-extraction-and-alignment/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "lc-ms-feature-extraction-and-alignment",
@@ -6021,7 +6021,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-tolerance-calibration/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/mass-spectrometry-tolerance-calibration/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "mass-spectrometry-tolerance-calibration",
@@ -6034,7 +6034,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-quality-control-filtering/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/metabolite-quality-control-filtering/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "metabolite-quality-control-filtering",
@@ -6047,7 +6047,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomic-feature-table-imputation/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/metabolomic-feature-table-imputation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "metabolomic-feature-table-imputation",
@@ -6060,7 +6060,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-feature-table-curation/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/metabolomics-feature-table-curation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "metabolomics-feature-table-curation",
@@ -6073,7 +6073,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/missing-value-imputation-in-metabolomics/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/missing-value-imputation-in-metabolomics/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "missing-value-imputation-in-metabolomics",
@@ -6086,7 +6086,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/missing-value-replacement-by-feature-minimum/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/missing-value-replacement-by-feature-minimum/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "missing-value-replacement-by-feature-minimum",
@@ -6099,7 +6099,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-batch-experimental-design-understanding/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/multi-batch-experimental-design-understanding/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "multi-batch-experimental-design-understanding",
@@ -6112,7 +6112,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quality-control-threshold-application/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/quality-control-threshold-application/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "quality-control-threshold-application",
@@ -6125,7 +6125,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sample-type-stratified-feature-masking/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/sample-type-stratified-feature-masking/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "sample-type-stratified-feature-masking",
@@ -6138,7 +6138,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/zero-value-handling-in-mass-spectrometry-data/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/skill/zero-value-handling-in-mass-spectrometry-data/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "zero-value-handling-in-mass-spectrometry-data",
@@ -6151,7 +6151,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The Python-Centric Pipeline for Metabolomics is designed to take raw LC-MS metabolomics data and ready them for downstream statistical analysis.",
       "asbval:note": null,
@@ -6171,7 +6171,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The pipeline can convert Thermo .raw files to mzML format using ThermoRawFileParser.",
       "asbval:note": "Source excerpt is abbreviated; claim expands 'ThermoRawFileParser' from parenthetical, but content is consistent",
@@ -6191,7 +6191,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The pipeline can process mzML data to feature tables using Asari.",
       "asbval:note": "Source excerpt is abbreviated; claim expands 'Asari' from parenthetical, but content is consistent",
@@ -6211,7 +6211,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The pipeline performs pre-annotation to group features to empirical compounds using khipu.",
       "asbval:note": "Source excerpt contains typo 'featues'; claim corrects to 'features' and expands 'khipu' from parenthetical, content is consistent",
@@ -6231,7 +6231,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The pipeline can perform MS2 annotation using matchms with a custom database defaulting to MoNA.",
       "asbval:note": "Source excerpt is abbreviated; claim expands tool names and 'MoNA' from parenthetical, but content is consistent",
@@ -6251,7 +6251,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Asari supports a visual dashboard to explore and inspect individual features.",
       "asbval:note": null,
@@ -6271,7 +6271,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The pipeline developers are working to add support for GC and other data types.",
       "asbval:note": "Claim uses 'developers' while source says 'We'; minor voice difference but meaning preserved",
@@ -6291,7 +6291,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "To replicate the presented results, users need to run the download extras command.",
       "asbval:note": "Source includes 'Note that' qualifier; claim omits this framing but content is accurate",
@@ -6311,7 +6311,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Mitchell et al. 2024 published a paper on common data models to streamline metabolomics processing and annotation in a Python pipeline.",
       "asbval:note": null,
@@ -6331,7 +6331,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Li et al. 2023 published a paper on trackable and scalable LC-MS metabolomics data processing using asari in Nature Communications.",
       "asbval:note": null,
@@ -6351,7 +6351,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "There was an issue regarding sample names that do not match their mzML file names, which was fixed as of 2/28/24.",
       "asbval:note": null,
@@ -6371,7 +6371,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_012",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_012",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The pipeline inputs should include raw files in .raw or .mzML format and a CSV file for metadata.",
       "asbval:note": "Claim simplifies metadata requirement; source specifies 'minimal sample names and file path' which is more precise",
@@ -6391,7 +6391,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_013",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_013",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The pipeline outputs are intended to be immediately usable for downstream analysis tools like MetaboAnalyst or common tools in R and Python.",
       "asbval:note": null,
@@ -6411,7 +6411,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_014",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_014",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The preferred installation mechanism for PCPFM is pip.",
       "asbval:note": null,
@@ -6431,7 +6431,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_015",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_015",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The HMDB is not to be used for commercial purposes.",
       "asbval:note": null,
@@ -6451,7 +6451,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_016",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_016",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Annotation sources including the HMDB are free for public non-commercial use.",
       "asbval:note": null,
@@ -6471,7 +6471,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_017",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_017",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The download extras command can download LC-MS/MS databases from MoNA, a JMS-compliant version of the HMDB, and LMSD.",
       "asbval:note": null,
@@ -6491,7 +6491,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_018",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_018",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The preprocessing command can create a new CSV file using rules specified in a JSON preprocessing configuration file.",
       "asbval:note": null,
@@ -6511,7 +6511,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_019",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_019",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The preprocessing configuration supports searching for substrings in specified fields to populate metadata values.",
       "asbval:note": null,
@@ -6531,7 +6531,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_020",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_020",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "If multiple preprocessing rules match, the specified values are concatenated using an underscore.",
       "asbval:note": null,
@@ -6551,7 +6551,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_021",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_021",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The assemble command creates an experiment directory to store the project.",
       "asbval:note": null,
@@ -6571,7 +6571,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_022",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_022",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The experiment object is used throughout processing and stores intermediates.",
       "asbval:note": null,
@@ -6591,7 +6591,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_023",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_023",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Filters can be applied to include or exclude acquisitions based on metadata field values.",
       "asbval:note": null,
@@ -6611,7 +6611,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_024",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_024",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The convert command converts .raw files to centroid .mzML files.",
       "asbval:note": null,
@@ -6631,7 +6631,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_025",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_025",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The ThermoRawFileParser can be used on Mac with mono installed.",
       "asbval:note": null,
@@ -6651,7 +6651,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_026",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_026",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The asari command processes .mzML files into metabolomic feature tables.",
       "asbval:note": null,
@@ -6671,7 +6671,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_027",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_027",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The asari command automatically infers the correct ionization mode for the experiment.",
       "asbval:note": null,
@@ -6691,7 +6691,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_028",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_028",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "After asari is run, two feature table monikers are generated: 'full' and 'preferred' for the full and preferred feature tables respectively.",
       "asbval:note": null,
@@ -6711,7 +6711,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_029",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_029",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The QAQC command can generate PCA plots limited to two components.",
       "asbval:note": null,
@@ -6731,7 +6731,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_030",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_030",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The QAQC command can generate t-SNE plots limited to two components.",
       "asbval:note": null,
@@ -6751,7 +6751,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_031",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_031",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Blank masking removes features that are likely due to background ions and contaminants.",
       "asbval:note": null,
@@ -6771,7 +6771,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_032",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_032",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Blank masking is achieved by comparing the intensity of a feature in study samples to those in blanks.",
       "asbval:note": null,
@@ -6791,7 +6791,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_033",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_033",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The default blank_intensity_ratio is 3.",
       "asbval:note": null,
@@ -6811,7 +6811,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_034",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_034",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Metadata values for drop sample commands are case sensitive.",
       "asbval:note": null,
@@ -6831,7 +6831,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_035",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_035",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The default TIC normalization percentile is 0.90 (90%).",
       "asbval:note": "Excerpt describes a specific example command (90% of samples) but does not explicitly state this is the default percentile value",
@@ -6851,7 +6851,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_036",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_036",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The default feature retention percentile is 50% (0.50).",
       "asbval:note": null,
@@ -6871,7 +6871,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_037",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_037",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The default imputation ratio is 0.5.",
       "asbval:note": null,
@@ -6891,7 +6891,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_038",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_038",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Batch correction is performed using pycombat.",
       "asbval:note": null,
@@ -6911,7 +6911,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_039",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_039",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Log transformation is performed using log2 by default.",
       "asbval:note": null,
@@ -6931,7 +6931,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_040",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_040",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "EmpCpds are groups of associated features, typically isotopes and adducts, that belong to the same tentative compound.",
       "asbval:note": "Text omits important qualifier 'and co-elute if there is chromatography' from source excerpt",
@@ -6951,7 +6951,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_041",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_041",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "By default, charges up to z=3 are used for EmpCpd construction.",
       "asbval:note": null,
@@ -6971,7 +6971,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_042",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_042",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "By default, m+13C3 isotopologues are considered for EmpCpd construction.",
       "asbval:note": "Text asserts m+13C3 isotopologues are considered 'by default' but source excerpt does not explicitly state this is the default setting",
@@ -6991,7 +6991,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_043",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_043",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "For orbitrap LC data, a default 5 ppm tolerance and 2 second retention time tolerance is sufficient for EmpCpd construction.",
       "asbval:note": null,
@@ -7011,7 +7011,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_044",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_044",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Level 4 annotations are not currently generated for singletons because their adducts cannot be inferred.",
       "asbval:note": null,
@@ -7031,7 +7031,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_045",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_045",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS1 Level 1b annotation compares feature retention time and m/z values to those of authentic standards libraries.",
       "asbval:note": "Text specifies 'MS1 Level 1b annotation' but source excerpt refers more generally to 'empirical compounds' without explicit level designation",
@@ -7051,7 +7051,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_046",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_046",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MS2 mapping is performed by comparing precursor retention time and m/z to retention times and m/z values of features.",
       "asbval:note": null,
@@ -7071,7 +7071,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_047",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_047",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The default m/z tolerance for MS2 to feature mapping is 5 ppm.",
       "asbval:note": null,
@@ -7091,7 +7091,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_048",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_048",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The default retention time tolerance for MS2 mapping is 30 seconds.",
       "asbval:note": null,
@@ -7111,7 +7111,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_049",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_049",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The MoNA database is used as the default for MS2 annotation if no custom database is provided.",
       "asbval:note": "Text accurately captures that MoNA database is used as default when no custom database is provided, consistent with source excerpt meaning.",
@@ -7131,7 +7131,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_050",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_050",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The generate_output command creates three output tables in the results subdirectory.",
       "asbval:note": "Text correctly states generate_output creates three output tables; source excerpt confirms 'three table output' creation.",
@@ -7151,7 +7151,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_051",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_051",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The report command generates a PDF report in the output directory.",
       "asbval:note": "Text accurately represents source excerpt; both state report command generates PDF in output directory.",
@@ -7171,7 +7171,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_052",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1011912/claim/claim_052",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The reset command destroys all user generated tables and EmpCpds but keeps the outputs from Asari intact.",
       "asbval:note": "Text matches source excerpt verbatim (minor capitalization difference in 'empCpds' vs 'EmpCpds' is inconsequential).",

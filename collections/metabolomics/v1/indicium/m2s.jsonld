@@ -148,7 +148,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The method can be applied using M2S (Match 2 Sets), a free, open-source MATLAB toolbox, available at https://github.com/rjdossan/M2S.",
       "asbval:note": "Research question directly addresses the core purpose of the paper: developing and demonstrating M2S for matching untargeted LC-MS metabolomic features across datasets.",
@@ -168,7 +168,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "An accompanying toolbox with examples is available, in the widely used, highly interactive, graphically capable MATLAB environment",
       "asbval:note": "Paper explicitly states M2S is implemented in MATLAB.",
@@ -188,7 +188,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The method returns two datasets with feature correspondence increasing statistical power or facilitating discovery/validation studies.",
       "asbval:note": "Paper confirms matched feature correspondence is returned, and penalization scores are calculated for each match (Step 2d: 'The joint penalization score for each candidate match m is simply defined as the square root of the weighted sum of squares of the normalized residuals'). However, the paper does not explicitly describe the output format as a 'matched feature table' \u2014 it describes the method returning 'two datasets with feature correspondence' and discusses penalization scores as internal algorithmic outputs used for selection, not necessarily as final output metrics.",
@@ -208,7 +208,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card's research question and tools are well-aligned with the paper's scope. The paper is explicitly about M2S (a MATLAB toolbox) for matching LC-MS metabolomic features across datasets.",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/matlab-package-execution/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/matlab-package-execution/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The method, as applied with this package, does not have high computer memory requirements and the execution is rapid, taking less than a minute using default settings on a regular desktop computer to match datasets with around 6000 features. The toolbox is flexible to accommodate disparate dataset matching, with detailed visualizations that help guide the analyst through the process and lend confidence to the final matching results.",
       "asbval:note": "Core research question is directly supported by the paper's description of M2S as a MATLAB toolbox for matching LC-MS datasets using RT and m/z.",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/matlab-package-execution/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/matlab-package-execution/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The method can be applied using M2S (Match 2 Sets), a free, open-source MATLAB toolbox, available at https://github.com/rjdossan/M2S.",
       "asbval:note": "M2S is explicitly named and described as a MATLAB toolbox for feature matching.",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/matlab-package-execution/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/matlab-package-execution/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The method can be applied using M2S (Match 2 Sets), a free, open-source MATLAB toolbox, available at https://github.com/rjdossan/M2S.",
       "asbval:note": "Repository URL is explicitly provided in the paper.",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/matlab-package-execution/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/matlab-package-execution/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "An accompanying toolbox with examples is available, in the widely used, highly interactive, graphically capable MATLAB environment, which can be deployed for its practical application.",
       "asbval:note": "MATLAB is explicitly identified as the environment for the M2S toolbox.",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/matlab-package-execution/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/matlab-package-execution/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we describe a method to address the problem of finding correspondence between datasets. As it only requires the features' retention time, m/z, and (optionally) feature intensity values (RT, MZ, FI) averaged across samples, it is simple to use and potentially applicable in the widest range of situations.",
       "asbval:note": "The paper explicitly describes the method as requiring RT and m/z for feature matching across datasets.",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/matlab-package-execution/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/matlab-package-execution/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We believe the method and associated software will aid the integration of untargeted LC\u2013MS metabolomics data in a wide variety of applications such as batch combination, discovery validation, and multicohort integration.",
       "asbval:note": "The paper explicitly states the method is for untargeted LC-MS metabolomics.",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/matlab-package-execution/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/matlab-package-execution/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The method requires only two independent feature sets (RT, MZ, FI) as inputs and follows a three-step process.",
       "asbval:note": "The paper explicitly specifies that RT and MZ are required inputs.",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/matlab-package-execution/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/matlab-package-execution/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "One challenge is to combine or compare datasets generated from different analytical methods, instruments, software, as well as from different batches, populations, and sample types. These factors impact a variety of variables including retention times, m/z ratios, ionization efficiency, adduct formation, detector sensitivity, number of peaks detected, etc., complicating matching of spectral features from one run to another.",
       "asbval:note": "The paper describes the problem M2S solves as matching datasets that have not been previously aligned, supporting the 'when NOT to use' guidance.",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/matlab-package-execution/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/matlab-package-execution/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "As it only requires the features' retention time, m/z, and (optionally) feature intensity values (RT, MZ, FI) averaged across samples, it is simple to use and potentially applicable in the widest range of situations.",
       "asbval:note": "The paper explicitly states RT and MZ are required, supporting this constraint.",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/matlab-package-execution/009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/matlab-package-execution/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This is especially challenging in the setting of untargeted metabolomic profiling where there are thousands of spectral features, even within a single run, whose chemical identity is not known.",
       "asbval:note": "The paper explicitly focuses on untargeted metabolomics, implying it is not designed for targeted approaches.",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/metabolite-feature-matching-across-datasets/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The method, as applied with this package, does not have high computer memory requirements and the execution is rapid, taking less than a minute using default settings on a regular desktop computer to match datasets with around 6000 features. The toolbox is flexible to accommodate disparate dataset matching, with detailed visualizations that help guide the analyst through the process and lend confidence to the final matching results. We believe the method and associated software will aid the integration of untargeted LC\u2013MS metabolomics data in a wide variety of applications such as batch combination, discovery validation, and multicohort integration.",
       "asbval:note": "Core research question is directly supported by the paper's abstract and methods description.",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/metabolite-feature-matching-across-datasets/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The penalization score is built using (normalized) residuals in each dimension and increases with the distance between the match and the expected inter-dataset shift... The best matches, with inter-dataset distance close to the expected inter-dataset shift (small residuals), have lower penalization scores.",
       "asbval:note": "Paper explicitly describes penalization scores as the matching metric used to rank and select feature correspondences.",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/metabolite-feature-matching-across-datasets/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The method can be applied using M2S (Match 2 Sets), a free, open-source MATLAB toolbox, available at https://github.com/rjdossan/M2S.",
       "asbval:note": "M2S is explicitly named and described as the MATLAB toolbox implementing the method.",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/metabolite-feature-matching-across-datasets/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The method can be applied using M2S (Match 2 Sets), a free, open-source MATLAB toolbox, available at https://github.com/rjdossan/M2S.",
       "asbval:note": "Repository URL is verbatim from the paper.",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/metabolite-feature-matching-across-datasets/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we describe a method to address the problem of finding correspondence between datasets. As it only requires the features' retention time, m/z, and (optionally) feature intensity values (RT, MZ, FI) averaged across samples, it is simple to use and potentially applicable in the widest range of situations.",
       "asbval:note": "The role description accurately reflects the paper's description of M2S functionality.",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/metabolite-feature-matching-across-datasets/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "An accompanying toolbox with examples is available, in the widely used, highly interactive, graphically capable MATLAB environment, which can be deployed for its practical application.",
       "asbval:note": "MATLAB is explicitly identified as the runtime environment for M2S.",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/metabolite-feature-matching-across-datasets/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "An accompanying toolbox with examples is available, in the widely used, highly interactive, graphically capable MATLAB environment, which can be deployed for its practical application.",
       "asbval:note": "Role description is consistent with paper's description of MATLAB as the environment for M2S execution.",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/metabolite-feature-matching-across-datasets/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we describe a method to address the problem of finding correspondence between datasets.",
       "asbval:note": "Core scope is directly supported.",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/metabolite-feature-matching-across-datasets/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "As it only requires the features' retention time, m/z, and (optionally) feature intensity values (RT, MZ, FI) averaged across samples",
       "asbval:note": "RT and m/z are the primary matching dimensions; FI is optional.",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/metabolite-feature-matching-across-datasets/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We believe the method and associated software will aid the integration of untargeted LC\u2013MS metabolomics data in a wide variety of applications such as batch combination, discovery validation, and multicohort integration.",
       "asbval:note": "Paper explicitly mentions multicohort integration and discovery validation as applications.",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/010",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/metabolite-feature-matching-across-datasets/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "One challenge is to combine or compare datasets generated from different analytical methods, instruments, software, as well as from different batches, populations, and sample types... Many packages in the public domain can be used to align features across samples, but not many do that across datasets.",
       "asbval:note": "Paper explicitly distinguishes M2S as a cross-dataset matching tool, not within-dataset alignment.",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/011",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/metabolite-feature-matching-across-datasets/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "As it only requires the features' retention time, m/z, and (optionally) feature intensity values (RT, MZ, FI) averaged across samples, it is simple to use",
       "asbval:note": "Paper confirms RT and m/z are required inputs for M2S.",
@@ -664,7 +664,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-mass-alignment/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/retention-time-mass-alignment/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we describe a method to address the problem of finding correspondence between datasets. As it only requires the features' retention time, m/z, and (optionally) feature intensity values (RT, MZ, FI) averaged across samples, it is simple to use and potentially applicable in the widest range of situations.",
       "asbval:note": "Core research objective directly stated in paper introduction.",
@@ -684,7 +684,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-mass-alignment/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/retention-time-mass-alignment/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The method returns two datasets with feature correspondence increasing statistical power or facilitating discovery/validation studies.",
       "asbval:note": "Paper explicitly describes output as feature correspondence enabling comparative studies.",
@@ -704,7 +704,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-mass-alignment/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/retention-time-mass-alignment/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The method requires only two independent feature sets (RT, MZ, FI) as inputs and follows a three-step process.",
       "asbval:note": "Paper explicitly requires two independent feature sets with RT and MZ.",
@@ -724,7 +724,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-mass-alignment/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/retention-time-mass-alignment/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We believe the method and associated software will aid the integration of untargeted LC\u2013MS metabolomics data in a wide variety of applications such as batch combination, discovery validation, and multicohort integration.",
       "asbval:note": "Paper lists batch combination, discovery validation, and multicohort integration as applications.",
@@ -744,7 +744,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-mass-alignment/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/retention-time-mass-alignment/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "As it only requires the features' retention time, m/z, and (optionally) feature intensity values (RT, MZ, FI) averaged across samples",
       "asbval:note": "Paper explicitly states RT and MZ are required inputs; absence would preclude use.",
@@ -764,7 +764,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-mass-alignment/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/retention-time-mass-alignment/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The method requires only two independent feature sets (RT, MZ, FI) as inputs",
       "asbval:note": "Paper explicitly requires two independent datasets; single-dataset matching is not the method's purpose.",
@@ -784,7 +784,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-mass-alignment/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/retention-time-mass-alignment/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The method requires only two independent feature sets (RT, MZ, FI) as inputs",
       "asbval:note": "Paper specifies RT and MZ as required input components.",
@@ -804,7 +804,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-mass-alignment/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/retention-time-mass-alignment/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The method requires only two independent feature sets (RT, MZ, FI) as inputs and follows a three-step process. The feature sets are referred to as reference and target",
       "asbval:note": "Paper explicitly requires two feature sets (reference and target) with RT and MZ.",
@@ -824,7 +824,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-mass-alignment/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/retention-time-mass-alignment/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The method returns two datasets with feature correspondence increasing statistical power or facilitating discovery/validation studies.",
       "asbval:note": "Paper describes output as matched datasets with feature correspondence. Alignment scores are implicit in penalization scores used for matching quality.",
@@ -844,7 +844,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-mass-alignment/009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/retention-time-mass-alignment/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The method can be applied using M2S (Match 2 Sets), a free, open-source MATLAB toolbox, available at https://github.com/rjdossan/M2S.",
       "asbval:note": "[SUBSTRING-MATCH for M2S | role: primary software tool]",
@@ -864,7 +864,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-mass-alignment/010",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/retention-time-mass-alignment/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "available at https://github.com/rjdossan/M2S",
       "asbval:note": "Repository URL matches exactly.",
@@ -884,7 +884,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-mass-alignment/011",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/retention-time-mass-alignment/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The method can be applied using M2S (Match 2 Sets), a free, open-source MATLAB toolbox... An accompanying toolbox with examples is available, in the widely used, highly interactive, graphically capable MATLAB environment",
       "asbval:note": "Paper confirms M2S is a MATLAB toolbox implementing the RT and m/z matching method.",
@@ -904,7 +904,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/untargeted-metabolomics-data-processing/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/untargeted-metabolomics-data-processing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we describe a method to address the problem of finding correspondence between datasets. As it only requires the features' retention time, m/z, and (optionally) feature intensity values (RT, MZ, FI) averaged across samples, it is simple to use and potentially applicable in the widest range of situations.",
       "asbval:note": "Core research question is directly supported by the paper's stated objective.",
@@ -924,7 +924,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/untargeted-metabolomics-data-processing/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/untargeted-metabolomics-data-processing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We believe the method and associated software will aid the integration of untargeted LC\u2013MS metabolomics data in a wide variety of applications such as batch combination, discovery validation, and multicohort integration.",
       "asbval:note": "The paper explicitly describes the method as enabling integration and comparative analysis across datasets.",
@@ -944,7 +944,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/untargeted-metabolomics-data-processing/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/untargeted-metabolomics-data-processing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "One challenge is to combine or compare datasets generated from different analytical methods, instruments, software, as well as from different batches, populations, and sample types.",
       "asbval:note": "Paper explicitly addresses matching across different cohorts, instruments, and processing pipelines.",
@@ -964,7 +964,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/untargeted-metabolomics-data-processing/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/untargeted-metabolomics-data-processing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The method can be applied using M2S (Match 2 Sets), a free, open-source MATLAB toolbox, available at https://github.com/rjdossan/M2S.",
       "asbval:note": "M2S is explicitly named and described as the software implementation of the method.",
@@ -984,7 +984,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/untargeted-metabolomics-data-processing/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/untargeted-metabolomics-data-processing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The method can be applied using M2S (Match 2 Sets), a free, open-source MATLAB toolbox, available at https://github.com/rjdossan/M2S.",
       "asbval:note": "Repository URL is explicitly provided in the paper.",
@@ -1004,7 +1004,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/untargeted-metabolomics-data-processing/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/untargeted-metabolomics-data-processing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "An accompanying toolbox with examples is available, in the widely used, highly interactive, graphically capable MATLAB environment, which can be deployed for its practical application. The method requires only two independent feature sets (RT, MZ, FI) as inputs and follows a three-step process.",
       "asbval:note": "M2S is confirmed as a MATLAB toolbox that uses RT and m/z for feature matching.",
@@ -1024,7 +1024,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/matlab-package-execution/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/matlab-package-execution/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "matlab-package-execution",
@@ -1037,7 +1037,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-feature-matching-across-datasets/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/metabolite-feature-matching-across-datasets/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 11,
       "asbval:target_artifact_id": "metabolite-feature-matching-across-datasets",
@@ -1050,7 +1050,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-mass-alignment/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/retention-time-mass-alignment/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 12,
       "asbval:target_artifact_id": "retention-time-mass-alignment",
@@ -1063,7 +1063,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/untargeted-metabolomics-data-processing/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/skill/untargeted-metabolomics-data-processing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "untargeted-metabolomics-data-processing",
@@ -1076,7 +1076,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "M2S is a Matlab package designed to match untargeted metabolomic features of two LC-MS datasets.",
       "asbval:note": null,
@@ -1096,7 +1096,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "M2S was developed by Rui Climaco Pinto in 2021 at Imperial College London.",
       "asbval:note": "substring_in_paper=false; excerpt confirms author name, year, and institution but doesn't explicitly state 'developed by' relationship or confirm these are all connected to M2S development",
@@ -1116,7 +1116,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.1c03592/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The M2S source code is available on GitHub as rjdossan__M2S.",
       "asbval:note": "substring_in_paper=false; excerpt shows GitHub handle but doesn't explicitly confirm this is the source code repository or that it's publicly available",

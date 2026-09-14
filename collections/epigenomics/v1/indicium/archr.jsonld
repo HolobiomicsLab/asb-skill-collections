@@ -600,7 +600,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR also provides functionality to integrate scATAC-seq and scRNA-seq data using Seurat's infrastructure, matching the heterogeneous chromatin accessibility profiles and RNA expression. Single-cell epigenome-to-transcriptome integration is essential for understanding dynamic gene regulatory processes... ArchR performs this cross-data alignment in parallel using slices of the scATAC-seq data.",
       "asbval:note": "The paper explicitly describes ArchR's capability to integrate paired scATAC-seq and scRNA-seq data using Seurat's infrastructure for cross-platform alignment.",
@@ -620,7 +620,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present a software suite for single-cell analysis of regulatory chromatin in R (ArchR; https://www.archrproject.com/) that enables fast and comprehensive analysis of single-cell chromatin accessibility data.",
       "asbval:note": "ArchR is the primary tool described throughout the paper for scATAC-seq analysis and integration.",
@@ -640,7 +640,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This package for single-cell Analysis of Regulatory Chromatin in R (ArchR; https://www.archrproject.com/)",
       "asbval:note": "ArchR is explicitly described as an R package.",
@@ -660,7 +660,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/card/task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR performs this cross-data alignment in parallel using slices of the scATAC-seq data (Fig. 4a). When performed on the hematopoiesis dataset, this integration enabled scRNA-seq alignment for >220,000 cells in less than 1 h (Fig. 4b)... The alignment showed high concordance between linked gene expression and inferred gene scores for common hematopoietic marker genes (Fig. 4c and Extended Data Fig. 9a).",
       "asbval:note": "The paper describes integration of scATAC-seq and scRNA-seq data and alignment, but does not explicitly state that a 'joint LSI reduction' or 'combined dimensional embedding' is produced as a single unified object. The integration uses Seurat's infrastructure for alignment and produces linked gene expression and gene scores, but the exact nature of the output object (whether it contains a joint LSI or separate embeddings) is not fully specified in the passages provided.",
@@ -680,7 +680,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The research question is appropriately scoped to the paper's focus on ArchR's integration capabilities for paired scATAC-seq and scRNA-seq data.",
@@ -696,7 +696,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/card/task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition to implementing both Slingshot and Monocle 3 (refs. 41\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Paper explicitly states ArchR implements both Slingshot and Monocle 3 as trajectory algorithms alongside its own supervised method, confirming the conditional invocation capability.",
@@ -716,7 +716,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/card/task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present a software suite for single-cell analysis of regulatory chromatin in R (ArchR; https://www.archrproject.com/)",
       "asbval:note": "ArchR is the primary software tool described throughout the paper.",
@@ -736,7 +736,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/card/task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition to implementing both Slingshot and Monocle 3 (refs. 41\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Monocle 3 is explicitly named as one of the trajectory algorithms implemented in ArchR.",
@@ -756,7 +756,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/card/task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition to implementing both Slingshot and Monocle 3 (refs. 41\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Slingshot is explicitly named as one of the trajectory algorithms implemented in ArchR.",
@@ -776,7 +776,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/card/task_002/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present a software suite for single-cell analysis of regulatory chromatin in R (ArchR; https://www.archrproject.com/)",
       "asbval:note": "ArchR is an R-based software package.",
@@ -796,7 +796,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/card/task_002/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To demonstrate trajectory analysis in ArchR on the full hematopoiesis dataset, we again focused on the B cell lineage as an example (Fig. 4d). ArchR traces cells along the B cell differentiation trajectory and identifies 11,999 peak-to-gene links that have correlated regulatory dynamics (r > 0.5) across the B cell differentiation trajectory (Fig. 4e).",
       "asbval:note": "Paper demonstrates trajectory results embedded in ArchR analysis (Fig. 4d shows UMAP with trajectory position), but does not explicitly describe the output as an 'ArchR project object with embedded trajectory result.' The paper shows trajectory analysis produces trajectory positions and linked results, but the specific object structure/format is not detailed in the passages provided.",
@@ -816,7 +816,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/card/task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The research question focuses on the conditional invocation mechanism (how ArchR dispatches between Monocle3 and Slingshot), which is a technical implementation detail. The paper confirms both methods are implemented but does not provide detailed pseudocode or algorithmic description of the conditional dispatch logic itself.",
@@ -832,7 +832,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/card/task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention STREAM or any function named 'exportPeakMatrixForSTREAM'. Paper discusses trajectory analysis using Slingshot and Monocle 3 (passage [12]), not STREAM. No export function for STREAM compatibility is documented in the passages.",
@@ -852,7 +852,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/card/task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present a software suite for single-cell analysis of regulatory chromatin in R (ArchR; https://www.archrproject.com/) that enables fast and comprehensive analysis of single-cell chromatin accessibility data.",
       "asbval:note": "ArchR is the primary software tool described throughout the paper.",
@@ -872,7 +872,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/card/task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "a software suite for single-cell analysis of regulatory chromatin in R (ArchR",
       "asbval:note": "ArchR is implemented in R; confirmed in abstract and methods.",
@@ -892,7 +892,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/card/task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "STREAM is not mentioned anywhere in the paper. The paper implements trajectory analysis using Slingshot and Monocle 3 (passage [12]), not STREAM.",
@@ -912,7 +912,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/card/task_003/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR operates efficiently on a genome-wide tile matrix of 500-bp bins, allowing for the sensitivity to capture cell-type-specific biology at regulatory elements across the genome... ArchR stores both per-tile accessibility information and all ATAC-seq fragments in an Arrow file",
       "asbval:note": "Paper describes peak-by-cell matrices and gene matrices (passage [5], [6]), but does not document export to STREAM format. ArchR does export gene activity matrices and peak accessibility data, but no STREAM-specific export function is mentioned. The paper focuses on Arrow file format and HDF5 storage, not STREAM compatibility.",
@@ -932,7 +932,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/card/task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card claims a function 'exportPeakMatrixForSTREAM' which does not appear in the paper.",
@@ -950,7 +950,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/archr-project-manipulation/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/archr-project-manipulation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR takes as input aligned BAM or fragment files, which are first parsed in small chunks per chromosome... These HDF5 files form the constituent pieces of an ArchR analysis that we call 'Arrow' files. Arrow files are grouped into an 'ArchR Project'... ArchR provides an intuitive, user-focused interface for complex single-cell analyses, including doublet removal, single-cell clustering and cell type identification, unified peak set generation, cellular trajectory identification, DNA element-to-gene linkage, transcription factor footprinting, mRNA expression level prediction from chromatin accessibility and multi-omic integration with single-cell RNA sequencing (scRNA-seq).",
       "asbval:note": "The paper describes ArchR's core functionality for project manipulation, dimensionality reduction (iterative LSI), and integration. Functions like addIterativeLSI are explicitly mentioned in Extended Data Fig. 5a schematic.",
@@ -970,7 +970,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/archr-project-manipulation/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/archr-project-manipulation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present a software suite for single-cell analysis of regulatory chromatin in R (ArchR; https://www.archrproject.com/) that enables fast and comprehensive analysis of single-cell chromatin accessibility data.",
       "asbval:note": "ArchR is confirmed as the primary R package for scATAC-seq analysis with project manipulation capabilities.",
@@ -990,7 +990,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/archr-project-manipulation/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/archr-project-manipulation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition to implementing both Slingshot and Monocle 3 (refs. 41\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Monocle 3 is explicitly mentioned as an integrated trajectory algorithm in ArchR. The paper confirms ArchR implements Monocle 3 for trajectory analysis.",
@@ -1010,7 +1010,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/archr-project-manipulation/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/archr-project-manipulation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition to implementing both Slingshot and Monocle 3 (refs. 40\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Slingshot is explicitly mentioned as an integrated trajectory algorithm in ArchR alongside Monocle 3.",
@@ -1030,7 +1030,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/archr-project-manipulation/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/archr-project-manipulation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "STREAM is not mentioned anywhere in the provided passages. The paper discusses trajectory analysis via Slingshot, Monocle 3, and ArchR's own supervised trajectory method, but does not reference STREAM or any export function for it.",
@@ -1050,7 +1050,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/archr-project-manipulation/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/archr-project-manipulation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present a software suite for single-cell analysis of regulatory chromatin in R (ArchR; https://www.archrproject.com/)",
       "asbval:note": "ArchR is explicitly described as an R package, confirming R as the runtime environment.",
@@ -1070,7 +1070,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/archr-project-manipulation/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/archr-project-manipulation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR implements a new estimated LSI dimensionality reduction by first creating an iterative LSI reduction from a subset of the total cells and then linearly projecting the remaining cells into this subspace using LSI projection",
       "asbval:note": "Iterative LSI is a core ArchR function explicitly described in the paper for dimensionality reduction.",
@@ -1090,7 +1090,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/archr-project-manipulation/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/archr-project-manipulation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR also provides functionality to integrate scATAC-seq and scRNA-seq data using Seurat's infrastructure, matching the heterogeneous chromatin accessibility profiles and RNA expression. Single-cell epigenome-to-transcriptome integration is essential for understanding dynamic gene regulatory processes",
       "asbval:note": "The paper explicitly describes ArchR's multimodal integration capabilities for combining ATAC and RNA data.",
@@ -1110,7 +1110,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/archr-project-manipulation/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/archr-project-manipulation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition to implementing both Slingshot and Monocle 3 (refs. 40\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "The paper confirms ArchR integrates Monocle 3 and Slingshot, but does not mention STREAM or any export function for STREAM. The claim conflates internal integration with external export capability.",
@@ -1130,7 +1130,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/archr-project-manipulation/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/archr-project-manipulation/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR also provides functionality to integrate scATAC-seq and scRNA-seq data using Seurat's infrastructure, matching the heterogeneous chromatin accessibility profiles and RNA expression",
       "asbval:note": "The paper explicitly describes ArchR's ability to integrate paired scRNA-seq data with scATAC-seq projects.",
@@ -1150,7 +1150,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-feature-matrix-construction/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/atac-seq-feature-matrix-construction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR provides functionality to integrate scATAC-seq and scRNA-seq data using Seurat's infrastructure, matching the heterogeneous chromatin accessibility profiles and RNA expression. Single-cell epigenome-to-transcriptome integration is essential for understanding dynamic gene regulatory processes... ArchR performs this cross-data alignment in parallel using slices of the scATAC-seq data.",
       "asbval:note": "Paper explicitly describes ArchR's capability to ingest scATAC-seq data and integrate with scRNA-seq for multiome analysis with integrated embeddings.",
@@ -1170,7 +1170,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-feature-matrix-construction/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/atac-seq-feature-matrix-construction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR takes as input aligned BAM or fragment files, which are first parsed in small chunks per chromosome... These HDF5 files form the constituent pieces of an ArchR analysis that we call 'Arrow' files. Arrow files are grouped into an 'ArchR Project'",
       "asbval:note": "Paper confirms ArchR ingests scATAC-seq data and manages project objects, but does not specifically name or describe an 'importFeatureMatrix' function. The paper describes input via BAM/fragment files converted to Arrow files within an ArchR Project, not explicit peak matrix import via a named function.",
@@ -1190,7 +1190,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-feature-matrix-construction/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/atac-seq-feature-matrix-construction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "R is a programming language/environment, not a package. The card conflates R (the language) with ArchR (the R package). The paper does not describe R as providing importFeatureMatrix; ArchR is the tool that provides scATAC-seq analysis functionality in R.",
@@ -1210,7 +1210,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-feature-matrix-construction/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/atac-seq-feature-matrix-construction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR provides functionality to integrate scATAC-seq and scRNA-seq data using Seurat's infrastructure, matching the heterogeneous chromatin accessibility profiles and RNA expression. Single-cell epigenome-to-transcriptome integration is essential for understanding dynamic gene regulatory processes.",
       "asbval:note": "Paper confirms ArchR accepts processed scATAC-seq data and integrates with scRNA-seq for multiome analysis.",
@@ -1230,7 +1230,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-feature-matrix-construction/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/atac-seq-feature-matrix-construction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not contain sufficient detail about the specific function names (addGeneExpressionMatrix) or workflow branching logic to confirm or refute this claim.",
@@ -1250,7 +1250,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-feature-matrix-construction/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/atac-seq-feature-matrix-construction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Before downstream analysis, we removed cells generating low-quality data. To assess per-cell data quality, ArchR computes transcription start site (TSS) enrichment scores... To avoid both of these pitfalls, ArchR operates efficiently on a genome-wide tile matrix of 500-bp bins, allowing for the sensitivity to capture cell-type-specific biology at regulatory elements across the genome.",
       "asbval:note": "Paper confirms quality filtering and peak calling are upstream steps before ArchR analysis.",
@@ -1270,7 +1270,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-modality-embedding-integration/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/cross-modality-embedding-integration/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR also provides functionality to integrate scATAC-seq and scRNA-seq data using Seurat's infrastructure, matching the heterogeneous chromatin accessibility profiles and RNA expression. Single-cell epigenome-to-transcriptome integration is essential for understanding dynamic gene regulatory processes... ArchR performs this cross-data alignment in parallel using slices of the scATAC-seq data",
       "asbval:note": "Paper explicitly describes scATAC-seq and scRNA-seq integration via ArchR using Seurat infrastructure for cross-platform alignment.",
@@ -1290,7 +1290,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-modality-embedding-integration/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/cross-modality-embedding-integration/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR performs this cross-data alignment in parallel using slices of the scATAC-seq data (Fig. 4a). When performed on the hematopoiesis dataset, this integration enabled scRNA-seq alignment for >220,000 cells in less than 1 h (Fig. 4b).",
       "asbval:note": "Paper describes the workflow as sequential: data ingestion, alignment (via Seurat), and dimensionality reduction (LSI).",
@@ -1310,7 +1310,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-modality-embedding-integration/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/cross-modality-embedding-integration/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR also provides functionality to integrate scATAC-seq and scRNA-seq data using Seurat's infrastructure",
       "asbval:note": "Paper confirms ArchR performs multiome integration but does not explicitly name the specific R functions (importFeatureMatrix, addGeneExpressionMatrix, addIterativeLSI, addCombinedDims). The paper describes the workflow conceptually but function names are not mentioned in the provided passages. These are likely correct based on ArchR documentation, but cannot be verified from the paper text alone.",
@@ -1330,7 +1330,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-modality-embedding-integration/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/cross-modality-embedding-integration/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition to implementing both Slingshot and Monocle 3 (refs. 41\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Paper confirms Monocle 3 is implemented in ArchR for trajectory analysis. The context is trajectory analysis on reduced-dimension embeddings.",
@@ -1350,7 +1350,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-modality-embedding-integration/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/cross-modality-embedding-integration/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition to implementing both Slingshot and Monocle 3 (refs. 41\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Paper confirms Slingshot is implemented in ArchR for trajectory analysis.",
@@ -1370,7 +1370,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-modality-embedding-integration/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/cross-modality-embedding-integration/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present a software suite for single-cell analysis of regulatory chromatin in R (ArchR; https://www.archrproject.com/)",
       "asbval:note": "ArchR is explicitly described as an R package.",
@@ -1390,7 +1390,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-modality-embedding-integration/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/cross-modality-embedding-integration/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR also provides functionality to integrate scATAC-seq and scRNA-seq data using Seurat's infrastructure, matching the heterogeneous chromatin accessibility profiles and RNA expression. Single-cell epigenome-to-transcriptome integration is essential for understanding dynamic gene regulatory processes, and we anticipate this sort of analysis will become even more prevalent with the advent of platforms for simultaneous scATAC-seq and scRNA-seq.",
       "asbval:note": "Paper describes integration of paired scATAC-seq and scRNA-seq data from the same cells.",
@@ -1410,7 +1410,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-modality-embedding-integration/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/cross-modality-embedding-integration/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The alignment showed high concordance between linked gene expression and inferred gene scores for common hematopoietic marker genes (Fig. 4c and Extended Data Fig. 9a). Using this cross-platform alignment, ArchR also provides methods to identify putative cis-regulatory elements based on correlated peak accessibility and gene expression",
       "asbval:note": "Paper demonstrates joint analysis of both modalities in unified embedding space with correlation analysis.",
@@ -1430,7 +1430,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/iterative-lsi-dimensionality-reduction/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/iterative-lsi-dimensionality-reduction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR implements a new estimated LSI dimensionality reduction by first creating an iterative LSI reduction from a subset of the total cells and then linearly projecting the remaining cells into this subspace using LSI projection",
       "asbval:note": "Paper describes iterative LSI for scATAC-seq dimensionality reduction (passage 8), but the claim asserts it 'jointly compresses' both scATAC-seq AND scRNA-seq into a unified embedding. The paper does integrate scATAC-seq and scRNA-seq data (passage 12), but uses Seurat's infrastructure for cross-platform alignment, not iterative LSI for joint compression. Iterative LSI in ArchR is applied to scATAC-seq data alone; scRNA-seq integration is a separate step using Seurat.",
@@ -1450,7 +1450,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/iterative-lsi-dimensionality-reduction/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/iterative-lsi-dimensionality-reduction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR also provides functionality to integrate scATAC-seq and scRNA-seq data using Seurat's infrastructure, matching the heterogeneous chromatin accessibility profiles and RNA expression. Single-cell epigenome-to-transcriptome integration is essential for understanding dynamic gene regulatory processes",
       "asbval:note": "Paper confirms ArchR enables integration of paired scATAC-seq and scRNA-seq for visualization, clustering, and downstream analysis (trajectory analysis, peak-to-gene linkage identification).",
@@ -1470,7 +1470,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/iterative-lsi-dimensionality-reduction/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/iterative-lsi-dimensionality-reduction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR performs this cross-data alignment in parallel using slices of the scATAC-seq data. When performed on the hematopoiesis dataset, this integration enabled scRNA-seq alignment for >220,000 cells in less than 1 h",
       "asbval:note": "Paper confirms ArchR integrates paired scATAC-seq and scRNA-seq for clustering and trajectory analysis. However, the integration uses Seurat's infrastructure (passage 12), not iterative LSI for joint compression. Iterative LSI is applied to scATAC-seq alone; scRNA-seq alignment is a separate cross-platform step.",
@@ -1490,7 +1490,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/iterative-lsi-dimensionality-reduction/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/iterative-lsi-dimensionality-reduction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss when NOT to use iterative LSI or recommend alternatives for unimodal data. This is guidance not present in the paper.",
@@ -1510,7 +1510,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/iterative-lsi-dimensionality-reduction/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/iterative-lsi-dimensionality-reduction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss this constraint or the addIterativeLSI function's requirements for cell alignment. The function name 'addIterativeLSI' is not mentioned in the passages.",
@@ -1530,7 +1530,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/iterative-lsi-dimensionality-reduction/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/iterative-lsi-dimensionality-reduction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR provides an intuitive, user-focused interface for complex single-cell analyses, including doublet removal, single-cell clustering and cell type identification, unified peak set generation, cellular trajectory identification, DNA element-to-gene linkage, transcription factor footprinting, mRNA expression level prediction from chromatin accessibility and multi-omic integration with single-cell RNA sequencing (scRNA-seq).",
       "asbval:note": "Paper confirms ArchR provides multi-omic integration and dimensionality reduction (iterative LSI mentioned in passage 8). However, the specific function names (importFeatureMatrix, addGeneExpressionMatrix, addIterativeLSI, addCombinedDims) are not mentioned in the passages. The paper does not list these specific function names.",
@@ -1550,7 +1550,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/iterative-lsi-dimensionality-reduction/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/iterative-lsi-dimensionality-reduction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present a software suite for single-cell analysis of regulatory chromatin in R (ArchR; https://www.archrproject.com/)",
       "asbval:note": "Paper confirms ArchR is an R package. The related skills listed are inferred from the paper's description of ArchR's capabilities (dimensionality reduction, multi-omic integration, trajectory analysis, etc.), which are supported by the paper.",
@@ -1570,7 +1570,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/monocle3-trajectory-embedding/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/monocle3-trajectory-embedding/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR also provides its own supervised trajectory analysis. In addition to implementing both Slingshot and Monocle 3, two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Paper explicitly states ArchR implements Monocle 3 for trajectory analysis on scATAC-seq data.",
@@ -1590,7 +1590,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/monocle3-trajectory-embedding/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/monocle3-trajectory-embedding/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR facilitates cellular trajectory analysis to identify the predicted path of gene regulatory changes from one set of cells to another, a unique type of insight enabled by single-cell data.",
       "asbval:note": "Paper describes trajectory analysis as identifying paths of gene regulatory changes, matching the claim.",
@@ -1610,7 +1610,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/monocle3-trajectory-embedding/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/monocle3-trajectory-embedding/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition to implementing both Slingshot and Monocle 3 (refs. 40\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Paper confirms ArchR implements Monocle 3 for trajectory analysis, but does not explicitly name the functions 'getMonocleTrajectories' or 'addMonocleTrajectory'. The paper demonstrates trajectory analysis functionality but does not provide specific function names in the passages provided.",
@@ -1630,7 +1630,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/monocle3-trajectory-embedding/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/monocle3-trajectory-embedding/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition to implementing both Slingshot and Monocle 3 (refs. 40\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis. To demonstrate trajectory analysis in ArchR on the full hematopoiesis dataset, we again focused on the B cell lineage as an example (Fig. 4d). ArchR traces cells along the B cell differentiation trajectory and identifies 11,999 peak-to-gene links that have correlated regulatory dynamics (r > 0.5) across the B cell differentiation trajectory.",
       "asbval:note": "Paper confirms Monocle 3 is implemented in ArchR for trajectory analysis with pseudotime computation.",
@@ -1650,7 +1650,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/monocle3-trajectory-embedding/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/monocle3-trajectory-embedding/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present a software suite for single-cell analysis of regulatory chromatin in R (ArchR; https://www.archrproject.com/)",
       "asbval:note": "ArchR is explicitly described as an R package.",
@@ -1670,7 +1670,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/monocle3-trajectory-embedding/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/monocle3-trajectory-embedding/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR implements a new estimated LSI dimensionality reduction by first creating an iterative LSI reduction from a subset of the total cells and then linearly projecting the remaining cells into this subspace using LSI projection. ArchR also provides functionality to integrate scATAC-seq and scRNA-seq data using Seurat's infrastructure, matching the heterogeneous chromatin accessibility profiles and RNA expression.",
       "asbval:note": "Paper describes LSI dimensionality reduction and scATAC-seq/scRNA-seq integration as core ArchR functionalities that precede trajectory analysis.",
@@ -1690,7 +1690,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/monocle3-trajectory-embedding/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/monocle3-trajectory-embedding/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR facilitates cellular trajectory analysis to identify the predicted path of gene regulatory changes from one set of cells to another, a unique type of insight enabled by single-cell data. To demonstrate trajectory analysis in ArchR on the full hematopoiesis dataset, we again focused on the B cell lineage as an example (Fig. 4d). ArchR traces cells along the B cell differentiation trajectory",
       "asbval:note": "Paper demonstrates trajectory analysis for cell differentiation (B cell lineage), supporting the developmental/differentiation use case.",
@@ -1710,7 +1710,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/monocle3-trajectory-embedding/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/monocle3-trajectory-embedding/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition to implementing both Slingshot and Monocle 3 (refs. 40\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Paper confirms Slingshot is implemented in ArchR, but does not provide the specific function name 'addSlingShotTrajectories'. The function name is inferred but not explicitly stated in passages.",
@@ -1730,7 +1730,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/monocle3-trajectory-embedding/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/monocle3-trajectory-embedding/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To demonstrate trajectory analysis in ArchR on the full hematopoiesis dataset, we again focused on the B cell lineage as an example (Fig. 4d). ArchR traces cells along the B cell differentiation trajectory and identifies 11,999 peak-to-gene links that have correlated regulatory dynamics (r > 0.5) across the B cell differentiation trajectory (Fig. 4e).",
       "asbval:note": "Paper demonstrates trajectory analysis following dimensionality reduction and integration steps, supporting the prerequisite claim, though specific function names are not explicitly mentioned.",
@@ -1750,7 +1750,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multiome-data-ingestion-paired-modalities/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/multiome-data-ingestion-paired-modalities/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR also provides functionality to integrate scATAC-seq and scRNA-seq data using Seurat's infrastructure, matching the heterogeneous chromatin accessibility profiles and RNA expression. Single-cell epigenome-to-transcriptome integration is essential for understanding dynamic gene regulatory processes",
       "asbval:note": "Paper explicitly describes ArchR's capability to integrate scATAC-seq and scRNA-seq data from the same cells.",
@@ -1770,7 +1770,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multiome-data-ingestion-paired-modalities/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/multiome-data-ingestion-paired-modalities/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR performs this cross-data alignment in parallel using slices of the scATAC-seq data. When performed on the hematopoiesis dataset, this integration enabled scRNA-seq alignment for >220,000 cells in less than 1 h",
       "asbval:note": "Paper demonstrates multiome integration workflow with scATAC-seq and scRNA-seq alignment in ArchR.",
@@ -1790,7 +1790,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multiome-data-ingestion-paired-modalities/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/multiome-data-ingestion-paired-modalities/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR also provides functionality to integrate scATAC-seq and scRNA-seq data using Seurat's infrastructure",
       "asbval:note": "Paper confirms ArchR integrates scATAC-seq and scRNA-seq data but does not explicitly name the specific functions (importFeatureMatrix, addGeneExpressionMatrix, addIterativeLSI, addCombinedDims). The paper states integration uses 'Seurat's infrastructure' rather than detailing ArchR-specific function names. The abstract and methods mention 'multi-omic integration with single-cell RNA sequencing (scRNA-seq)' but specific function names are not provided in the passages.",
@@ -1810,7 +1810,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multiome-data-ingestion-paired-modalities/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/multiome-data-ingestion-paired-modalities/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition to implementing both Slingshot and Monocle 3, two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Paper confirms ArchR implements Monocle 3 for trajectory analysis, which can be applied to integrated multiome data.",
@@ -1830,7 +1830,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multiome-data-ingestion-paired-modalities/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/multiome-data-ingestion-paired-modalities/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition to implementing both Slingshot and Monocle 3, two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Paper confirms ArchR implements Slingshot for trajectory analysis on integrated data.",
@@ -1850,7 +1850,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multiome-data-ingestion-paired-modalities/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/multiome-data-ingestion-paired-modalities/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present a software suite for single-cell analysis of regulatory chromatin in R (ArchR; https://www.archrproject.com/)",
       "asbval:note": "ArchR is explicitly described as an R package.",
@@ -1870,7 +1870,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-expression-alignment-across-cells/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/rna-seq-expression-alignment-across-cells/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR also provides functionality to integrate scATAC-seq and scRNA-seq data using Seurat's infrastructure, matching the heterogeneous chromatin accessibility profiles and RNA expression. Single-cell epigenome-to-transcriptome integration is essential for understanding dynamic gene regulatory processes... ArchR performs this cross-data alignment in parallel using slices of the scATAC-seq data.",
       "asbval:note": "Paper explicitly describes scATAC-seq and scRNA-seq integration in ArchR with cross-platform alignment and unified analysis.",
@@ -1890,7 +1890,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-expression-alignment-across-cells/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/rna-seq-expression-alignment-across-cells/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "When performed on the hematopoiesis dataset, this integration enabled scRNA-seq alignment for >220,000 cells in less than 1 h... The alignment showed high concordance between linked gene expression and inferred gene scores for common hematopoietic marker genes.",
       "asbval:note": "Paper demonstrates integration of paired scATAC-seq and scRNA-seq data from the same cells (multiome).",
@@ -1910,7 +1910,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-expression-alignment-across-cells/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/rna-seq-expression-alignment-across-cells/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We note that this dataset represents a diverse collection of experiments from different laboratories and technological platforms that is not ideal for high-resolution integration because the large intersample heterogeneity obscures the accuracy of the cross-platform alignment.",
       "asbval:note": "Paper discusses multiome integration scenarios and paired data requirements.",
@@ -1930,7 +1930,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-expression-alignment-across-cells/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/rna-seq-expression-alignment-across-cells/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR also provides functionality to integrate scATAC-seq and scRNA-seq data using Seurat's infrastructure, matching the heterogeneous chromatin accessibility profiles and RNA expression.",
       "asbval:note": "ArchR is confirmed as the primary tool for integration, though it uses Seurat's infrastructure for the alignment.",
@@ -1950,7 +1950,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-expression-alignment-across-cells/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/rna-seq-expression-alignment-across-cells/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Specific function names (importFeatureMatrix, addGeneExpressionMatrix, addIterativeLSI, addCombinedDims) are not mentioned in the provided passages. The paper describes the integration workflow conceptually but does not name these specific R functions. Passages indicate integration occurs but do not provide API-level function documentation.",
@@ -1970,7 +1970,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-expression-alignment-across-cells/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/rna-seq-expression-alignment-across-cells/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present a software suite for single-cell analysis of regulatory chromatin in R (ArchR; https://www.archrproject.com/)",
       "asbval:note": "ArchR is explicitly described as an R package.",
@@ -1990,7 +1990,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-expression-alignment-across-cells/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/rna-seq-expression-alignment-across-cells/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The software is open-source, and all code can be found on Git Hub at https://github.com/Greenleaf Lab/ArchR.",
       "asbval:note": "Repository URL confirmed (note: paper uses 'Greenleaf Lab' with space; card uses 'GreenleafLab' without space\u2014both refer to same repository, case-insensitive match).",
@@ -2010,7 +2010,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scatac-seq-peak-matrix-export/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/scatac-seq-peak-matrix-export/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR provides an intuitive, user-focused interface for complex single-cell analyses, including doublet removal, single-cell clustering and cell type identification, unified peak set generation, cellular trajectory identification, DNA element-to-gene linkage, transcription factor footprinting, mRNA expression level prediction from chromatin accessibility and multi-omic integration with single-cell RNA sequencing (scRNA-seq).",
       "asbval:note": "Paper confirms ArchR performs peak calling and trajectory analysis, but does NOT mention STREAM or any export function called 'exportPeakMatrixForSTREAM'. Paper explicitly states ArchR implements Slingshot and Monocle 3 for trajectory analysis (passage 12), not STREAM. No evidence of STREAM integration or peak matrix export to STREAM format.",
@@ -2030,7 +2030,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scatac-seq-peak-matrix-export/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/scatac-seq-peak-matrix-export/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'exportPeakMatrixForSTREAM' function or STREAM compatibility anywhere in the paper. Paper describes ArchR's trajectory analysis as: 'In addition to implementing both Slingshot and Monocle 3 (refs. 40\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis' (passage 12). No STREAM integration is documented.",
@@ -2050,7 +2050,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scatac-seq-peak-matrix-export/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/scatac-seq-peak-matrix-export/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "STREAM is not mentioned anywhere in the paper. ArchR's documented trajectory tools are Slingshot, Monocle 3, and ArchR's own supervised trajectory method. No evidence of STREAM integration or compatibility.",
@@ -2070,7 +2070,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scatac-seq-peak-matrix-export/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/scatac-seq-peak-matrix-export/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition to implementing both Slingshot and Monocle 3 (refs. 40\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Confirmed: ArchR directly implements Monocle 3 for trajectory analysis.",
@@ -2090,7 +2090,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scatac-seq-peak-matrix-export/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/scatac-seq-peak-matrix-export/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition to implementing both Slingshot and Monocle 3 (refs. 40\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Confirmed: ArchR directly implements Slingshot for trajectory analysis.",
@@ -2110,7 +2110,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scatac-seq-peak-matrix-export/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/scatac-seq-peak-matrix-export/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present a software suite for single-cell analysis of regulatory chromatin in R (ArchR; https://www.archrproject.com/) that enables fast and comprehensive analysis of single-cell chromatin accessibility data.",
       "asbval:note": "Confirmed: ArchR is an R package for scATAC-seq analysis.",
@@ -2130,7 +2130,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scatac-seq-peak-matrix-export/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/scatac-seq-peak-matrix-export/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper provides no evidence that STREAM is a supported or recommended alternative to ArchR's native trajectory tools. The paper only documents Slingshot, Monocle 3, and ArchR's own supervised trajectory method.",
@@ -2150,7 +2150,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scatac-seq-peak-matrix-export/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/scatac-seq-peak-matrix-export/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition to implementing both Slingshot and Monocle 3 (refs. 40\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Paper confirms ArchR implements both tools but does not name the specific functions 'addMonocleTrajectory' or 'addSlingShotTrajectories'. Function names are not verified in the paper.",
@@ -2170,7 +2170,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-atac-seq-dimensionality-reduction/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/single-cell-atac-seq-dimensionality-reduction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR implements a new estimated LSI dimensionality reduction by first creating an iterative LSI reduction from a subset of the total cells and then linearly projecting the remaining cells into this subspace using LSI projection",
       "asbval:note": "Iterative LSI is explicitly described as a core ArchR feature for dimensionality reduction enabling clustering and trajectory analysis.",
@@ -2190,7 +2190,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-atac-seq-dimensionality-reduction/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/single-cell-atac-seq-dimensionality-reduction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "One of the fundamental aspects of ATAC-seq analysis is the identification of a peak set for downstream analysis... ArchR operates efficiently on a genome-wide tile matrix of 500-bp bins, allowing for the sensitivity to capture cell-type-specific biology at regulatory elements across the genome.",
       "asbval:note": "Paper discusses handling of high-dimensional peak matrices and the need for dimensionality reduction in scATAC-seq analysis.",
@@ -2210,7 +2210,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-atac-seq-dimensionality-reduction/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/single-cell-atac-seq-dimensionality-reduction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR provides a user-focused interface for complex scATAC-seq analysis, such as marker feature identification, transcription factor (TF) footprinting, interactive sequencing track visualization, scRNA-seq integration and cellular trajectory identification",
       "asbval:note": "ArchR is confirmed as the primary tool. While specific function names (addIterativeLSI, addCombinedDims) are not mentioned in passages, iterative LSI and multiome integration are explicitly described as ArchR capabilities.",
@@ -2230,7 +2230,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-atac-seq-dimensionality-reduction/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/single-cell-atac-seq-dimensionality-reduction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition to implementing both Slingshot and Monocle 3, two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Monocle 3 is confirmed as a trajectory analysis tool integrated with ArchR. The paper indicates it accepts dimensionality-reduced embeddings.",
@@ -2250,7 +2250,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-atac-seq-dimensionality-reduction/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/single-cell-atac-seq-dimensionality-reduction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition to implementing both Slingshot and Monocle 3 (refs. 40\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Slingshot is confirmed as an alternative trajectory analysis tool integrated with ArchR.",
@@ -2270,7 +2270,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-atac-seq-dimensionality-reduction/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/single-cell-atac-seq-dimensionality-reduction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present a software suite for single-cell analysis of regulatory chromatin in R (ArchR; https://www.archrproject.com/)",
       "asbval:note": "ArchR is explicitly described as an R package, confirming R as the environment for executing ArchR functions.",
@@ -2290,7 +2290,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-atac-seq-dimensionality-reduction/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/single-cell-atac-seq-dimensionality-reduction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR takes as input aligned BAM or fragment files, which are first parsed in small chunks per chromosome... These HDF5 files form the constituent pieces of an ArchR analysis that we call 'Arrow' files. Arrow files are grouped into an 'ArchR Project'",
       "asbval:note": "Paper describes ArchR project creation and downstream clustering/visualization as core workflow steps.",
@@ -2310,7 +2310,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-atac-seq-dimensionality-reduction/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/single-cell-atac-seq-dimensionality-reduction/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR facilitates cellular trajectory analysis to identify the predicted path of gene regulatory changes from one set of cells to another... In addition to implementing both Slingshot and Monocle 3, two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Paper confirms trajectory analysis and gene expression integration as downstream applications of dimensionality reduction.",
@@ -2330,7 +2330,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-atac-seq-dimensionality-reduction/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/single-cell-atac-seq-dimensionality-reduction/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Before downstream analysis, we removed cells generating low-quality data. To assess per-cell data quality, ArchR computes transcription start site (TSS) enrichment scores",
       "asbval:note": "Paper describes quality filtering as a preprocessing step before dimensionality reduction, supporting the claim that LSI should be applied to preprocessed but not previously dimensionality-reduced data.",
@@ -2350,7 +2350,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-atac-seq-dimensionality-reduction/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/single-cell-atac-seq-dimensionality-reduction/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR identifies putative doublets in scATAC-seq data... To mitigate this issue, we designed a doublet detection-and-removal algorithm as part of ArchR... Before downstream analysis, we removed cells generating low-quality data.",
       "asbval:note": "Paper emphasizes quality control and doublet removal as prerequisites for downstream analysis including dimensionality reduction.",
@@ -2370,7 +2370,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-chromatin-data-handling/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/single-cell-chromatin-data-handling/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR facilitates cellular trajectory analysis to identify the predicted path of gene regulatory changes from one set of cells to another... In addition to implementing both Slingshot and Monocle 3, two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Paper demonstrates ArchR's trajectory analysis capabilities using Slingshot and Monocle 3, but does not mention STREAM or exportPeakMatrixForSTREAM function. ArchR performs trajectory analysis natively; no evidence of exporting matrices to external trajectory tools like STREAM.",
@@ -2390,7 +2390,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-chromatin-data-handling/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/single-cell-chromatin-data-handling/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR provides an intuitive, user-focused interface for complex single-cell analyses, including doublet removal, single-cell clustering and cell type identification, unified peak set generation, cellular trajectory identification, DNA element-to-gene linkage, transcription factor footprinting, mRNA expression level prediction from chromatin accessibility and multi-omic integration with single-cell RNA sequencing (scRNA-seq).",
       "asbval:note": "ArchR performs scATAC-seq processing and peak calling (confirmed), but no mention of exportPeakMatrixForSTREAM function or matrix export to external tools. ArchR implements trajectory analysis natively rather than exporting matrices.",
@@ -2410,7 +2410,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-chromatin-data-handling/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/single-cell-chromatin-data-handling/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "STREAM is not mentioned anywhere in the paper. Paper documents ArchR's integration with Slingshot and Monocle 3 for trajectory analysis, not STREAM.",
@@ -2430,7 +2430,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-chromatin-data-handling/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/single-cell-chromatin-data-handling/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present a software suite for single-cell analysis of regulatory chromatin in R (ArchR; https://www.archrproject.com/)",
       "asbval:note": "ArchR is explicitly described as an R package for single-cell analysis.",
@@ -2450,7 +2450,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-chromatin-data-handling/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/single-cell-chromatin-data-handling/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR facilitates cellular trajectory analysis to identify the predicted path of gene regulatory changes from one set of cells to another, a unique type of insight enabled by single-cell data. In addition to implementing both Slingshot and Monocle 3 (refs. 40\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "ArchR does support trajectory analysis after peak calling and cell annotation, but integrates Slingshot and Monocle 3 natively rather than exporting matrices to external tools. No evidence of STREAM integration or matrix export functionality.",
@@ -2470,7 +2470,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-chromatin-data-handling/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/single-cell-chromatin-data-handling/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition to implementing both Slingshot and Monocle 3 (refs. 40\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Confirmed that ArchR has native support for Slingshot and Monocle 3.",
@@ -2490,7 +2490,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/slingshot-trajectory-embedding/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/slingshot-trajectory-embedding/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR also provides methods to identify putative cis-regulatory elements based on correlated peak accessibility and gene expression, identifying 70,239 significant peak-to-gene linkages across the hematopoietic hierarchy. Finally, ArchR facilitates cellular trajectory analysis to identify the predicted path of gene regulatory changes from one set of cells to another, a unique type of insight enabled by single-cell data. In addition to implementing both Slingshot and Monocle 3, two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Paper explicitly states ArchR implements Slingshot for trajectory analysis. Pseudotime and lineage inference are core functions of Slingshot trajectory analysis.",
@@ -2510,7 +2510,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/slingshot-trajectory-embedding/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/slingshot-trajectory-embedding/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present a software suite for single-cell analysis of regulatory chromatin in R (ArchR; https://www.archrproject.com/) that enables fast and comprehensive analysis of single-cell chromatin accessibility data.",
       "asbval:note": "ArchR is confirmed as the primary software framework for scATAC-seq analysis.",
@@ -2530,7 +2530,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/slingshot-trajectory-embedding/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/slingshot-trajectory-embedding/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition to implementing both Slingshot and Monocle 3 (refs. 41\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis. To do this analysis, ArchR initially creates a cellular trajectory based on the average positions (within a lower n-dimensional subspace) of a sequence of user-supplied clusters or groups. ArchR then aligns individual cells to this trajectory by computing the nearest cell-to-trajectory distance.",
       "asbval:note": "Paper confirms Slingshot is implemented in ArchR for trajectory analysis. The description of spline fitting through cluster centers is consistent with Slingshot's methodology.",
@@ -2550,7 +2550,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/slingshot-trajectory-embedding/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/slingshot-trajectory-embedding/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present a software suite for single-cell analysis of regulatory chromatin in R (ArchR; https://www.archrproject.com/)",
       "asbval:note": "ArchR is explicitly an R package, confirming R as the underlying environment.",
@@ -2570,7 +2570,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/slingshot-trajectory-embedding/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/slingshot-trajectory-embedding/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR facilitates cellular trajectory analysis to identify the predicted path of gene regulatory changes from one set of cells to another, a unique type of insight enabled by single-cell data. In addition to implementing both Slingshot and Monocle 3 (refs. 41\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Paper confirms ArchR implements Slingshot for trajectory analysis on scATAC-seq data.",
@@ -2590,7 +2590,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/slingshot-trajectory-embedding/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/slingshot-trajectory-embedding/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To demonstrate trajectory analysis in ArchR on the full hematopoiesis dataset, we again focused on the B cell lineage as an example (Fig. 4d). ArchR traces cells along the B cell differentiation trajectory and identifies 11,999 peak-to-gene links that have correlated regulatory dynamics (r > 0.5) across the B cell differentiation trajectory.",
       "asbval:note": "Paper demonstrates trajectory analysis inferring developmental progressions (B cell differentiation) from clustered cells.",
@@ -2610,7 +2610,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/slingshot-trajectory-embedding/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/slingshot-trajectory-embedding/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "One major application of single-cell analysis is the identification of cellular subsets through dimensionality reduction and clustering. To benchmark the performance of dimensionality reduction and clustering in ArchR, we compared ArchR to the two best-performing methods identified in previous assessments of scATAC-seq analysis tools, latent semantic indexing (LSI), implemented by Signac, and landmark diffusion maps (LDM), implemented by SnapATAC. For dimensionality reduction, ArchR uses an optimized iterative LSI method.",
       "asbval:note": "Paper confirms iterative LSI and clustering are prerequisite steps before trajectory analysis.",
@@ -2630,7 +2630,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/slingshot-trajectory-embedding/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/slingshot-trajectory-embedding/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR also provides functionality to integrate scATAC-seq and scRNA-seq data using Seurat's infrastructure, matching the heterogeneous chromatin accessibility profiles and RNA expression. Single-cell epigenome-to-transcriptome integration is essential for understanding dynamic gene regulatory processes.",
       "asbval:note": "Paper confirms ArchR supports both scATAC-seq and scRNA-seq integration, supporting the claim that RNA-based analysis is possible with paired data.",
@@ -2650,7 +2650,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/stream-trajectory-data-formatting/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/stream-trajectory-data-formatting/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention STREAM or any export function called 'exportPeakMatrixForSTREAM'. Paper discusses trajectory analysis using Slingshot and Monocle 3 (passage [12]: 'ArchR also provides methods to identify putative cis-regulatory elements... ArchR facilitates cellular trajectory analysis to identify the predicted path... In addition to implementing both Slingshot and Monocle 3'), but no STREAM integration is mentioned.",
@@ -2670,7 +2670,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/stream-trajectory-data-formatting/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/stream-trajectory-data-formatting/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of exportPeakMatrixForSTREAM function in any passage. Paper describes ArchR's trajectory analysis capabilities via Slingshot and Monocle 3 integration, but no STREAM export function is documented.",
@@ -2690,7 +2690,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/stream-trajectory-data-formatting/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/stream-trajectory-data-formatting/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "STREAM is not mentioned anywhere in the paper. Paper explicitly names Slingshot and Monocle 3 as trajectory analysis tools integrated with ArchR (passage [12]): 'In addition to implementing both Slingshot and Monocle 3 (refs. 40\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.'",
@@ -2710,7 +2710,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/stream-trajectory-data-formatting/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/stream-trajectory-data-formatting/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition to implementing both Slingshot and Monocle 3 (refs. 40\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Paper confirms ArchR supports Slingshot and Monocle 3 trajectory methods. Function names getMonocleTrajectories and addSlingShotTrajectories are not explicitly stated in passages but are consistent with ArchR's documented trajectory capabilities.",
@@ -2730,7 +2730,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/stream-trajectory-data-formatting/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/stream-trajectory-data-formatting/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR provides an intuitive, user-focused interface for complex single-cell analyses, including doublet removal, single-cell clustering and cell type identification, unified peak set generation, cellular trajectory identification, DNA element-to-gene linkage, transcription factor footprinting, mRNA expression level prediction from chromatin accessibility and multi-omic integration with single-cell RNA sequencing (scRNA-seq).",
       "asbval:note": "Paper confirms ArchR supports peak generation and cell clustering/identification.",
@@ -2750,7 +2750,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/trajectory-inference-method-selection/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/trajectory-inference-method-selection/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR facilitates cellular trajectory analysis to identify the predicted path of gene regulatory changes from one set of cells to another, a unique type of insight enabled by single-cell data. In addition to implementing both Slingshot and Monocle 3 (refs. 41\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Paper explicitly states ArchR implements both Slingshot and Monocle 3 for trajectory analysis on scATAC-seq data.",
@@ -2770,7 +2770,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/trajectory-inference-method-selection/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/trajectory-inference-method-selection/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The implementation of all three trajectory algorithms allows end users to select the implementation that best suits their analysis, as each trajectory method has distinct advantages.",
       "asbval:note": "Paper confirms user choice of trajectory method based on preference and distinct advantages of each approach.",
@@ -2790,7 +2790,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/trajectory-inference-method-selection/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/trajectory-inference-method-selection/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR facilitates cellular trajectory analysis to identify the predicted path of gene regulatory changes from one set of cells to another, a unique type of insight enabled by single-cell data. In addition to implementing both Slingshot and Monocle 3 (refs. 41\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Paper confirms ArchR implements Slingshot and Monocle 3 trajectory methods, but does not explicitly name the wrapper functions 'addMonocleTrajectory' and 'addSlingShotTrajectories' in the provided passages. The function names are inferred but not verbatim-confirmed in the text.",
@@ -2810,7 +2810,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/trajectory-inference-method-selection/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/trajectory-inference-method-selection/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition to implementing both Slingshot and Monocle 3 (refs. 41\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis. To do this analysis, ArchR initially creates a cellular trajectory based on the average positions (within a lower n-dimensional subspace) of a sequence of user-supplied clusters or groups.",
       "asbval:note": "Paper confirms Monocle 3 is implemented in ArchR and references reverse graph embedding (ref. 42: 'Reversed graph embedding resolves complex single-cell trajectories'), but the specific wrapper function name 'addMonocleTrajectory' is not explicitly stated in passages. The mechanism described (average positions, lower-dimensional subspace) describes ArchR's own supervised trajectory, not Monocle 3's specific algorithm.",
@@ -2830,7 +2830,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/trajectory-inference-method-selection/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/trajectory-inference-method-selection/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition to implementing both Slingshot and Monocle 3 (refs. 41\u201343), two scRNA-seq trajectory algorithms, ArchR also provides its own supervised trajectory analysis.",
       "asbval:note": "Paper confirms Slingshot is implemented in ArchR, but the specific wrapper function name 'addSlingShotTrajectories' is not explicitly stated in the provided passages. The cluster-based lineage inference is consistent with Slingshot's known approach but not explicitly described in these passages.",
@@ -2850,7 +2850,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/trajectory-inference-method-selection/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/trajectory-inference-method-selection/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present a software suite for single-cell analysis of regulatory chromatin in R (ArchR; https://www.archrproject.com/) that enables fast and comprehensive analysis of single-cell chromatin accessibility data.",
       "asbval:note": "ArchR is explicitly described as an R package, confirming R as the execution environment.",
@@ -2870,7 +2870,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/trajectory-inference-method-selection/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/trajectory-inference-method-selection/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ArchR facilitates cellular trajectory analysis to identify the predicted path of gene regulatory changes from one set of cells to another, a unique type of insight enabled by single-cell data.",
       "asbval:note": "Paper confirms trajectory analysis is applied to scATAC-seq data in ArchR projects for discovering developmental/differentiation paths.",
@@ -2890,7 +2890,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/trajectory-inference-method-selection/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/trajectory-inference-method-selection/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We benchmarked the performance of trajectory analysis in ArchR compared to those in Slingshot and Monocle 3 using a miniaturized version of the hematopoiesis dataset (n = 10,251) (Extended Data Fig. 10c). We compared the learned trajectories from stem and progenitor cells through differentiated B cells or monocytes and found that the inferred trajectories were highly similar (r2 > 0.96) (Extended Data Fig. 10d,e). The implementation of all three trajectory algorithms allows end users to select the implementation that best suits their analysis, as each trajectory method has distinct advantages.",
       "asbval:note": "Paper confirms user choice between methods and that each has distinct advantages, but does not explicitly characterize Monocle 3 as 'RNA velocity\u2013inspired' or Slingshot as 'clustering-based' in the provided passages. The characterization is conceptually consistent with known algorithm properties but not verbatim-confirmed.",
@@ -2910,7 +2910,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/archr-project-manipulation/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/archr-project-manipulation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "archr-project-manipulation",
@@ -2923,7 +2923,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-feature-matrix-construction/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/atac-seq-feature-matrix-construction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "atac-seq-feature-matrix-construction",
@@ -2936,7 +2936,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-modality-embedding-integration/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/cross-modality-embedding-integration/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "cross-modality-embedding-integration",
@@ -2949,7 +2949,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/iterative-lsi-dimensionality-reduction/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/iterative-lsi-dimensionality-reduction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "iterative-lsi-dimensionality-reduction",
@@ -2962,7 +2962,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/monocle3-trajectory-embedding/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/monocle3-trajectory-embedding/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "monocle3-trajectory-embedding",
@@ -2975,7 +2975,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multiome-data-ingestion-paired-modalities/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/multiome-data-ingestion-paired-modalities/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "multiome-data-ingestion-paired-modalities",
@@ -2988,7 +2988,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-expression-alignment-across-cells/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/rna-seq-expression-alignment-across-cells/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "rna-seq-expression-alignment-across-cells",
@@ -3001,7 +3001,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scatac-seq-peak-matrix-export/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/scatac-seq-peak-matrix-export/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "scatac-seq-peak-matrix-export",
@@ -3014,7 +3014,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-atac-seq-dimensionality-reduction/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/single-cell-atac-seq-dimensionality-reduction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "single-cell-atac-seq-dimensionality-reduction",
@@ -3027,7 +3027,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/single-cell-chromatin-data-handling/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/single-cell-chromatin-data-handling/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "single-cell-chromatin-data-handling",
@@ -3040,7 +3040,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/slingshot-trajectory-embedding/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/slingshot-trajectory-embedding/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "slingshot-trajectory-embedding",
@@ -3053,7 +3053,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/stream-trajectory-data-formatting/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/stream-trajectory-data-formatting/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "stream-trajectory-data-formatting",
@@ -3066,7 +3066,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/trajectory-inference-method-selection/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/skill/trajectory-inference-method-selection/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "trajectory-inference-method-selection",
@@ -3079,7 +3079,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ArchR now supports paired scATAC-seq and scRNA-seq analysis.",
       "asbval:note": null,
@@ -3099,7 +3099,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ArchR provides the function importFeatureMatrix for paired analysis.",
       "asbval:note": "Source lists importFeatureMatrix among paired analysis functions but doesn't explicitly state it's 'for paired analysis'; substring_in_paper=false",
@@ -3119,7 +3119,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ArchR provides the function addGeneExpressionMatrix for paired analysis.",
       "asbval:note": "Source lists addGeneExpressionMatrix among paired analysis functions but doesn't explicitly state it's 'for paired analysis'; substring_in_paper=false",
@@ -3139,7 +3139,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ArchR provides the function addIterativeLSI for paired analysis.",
       "asbval:note": "Source lists addIterativeLSI among paired analysis functions but doesn't explicitly state it's 'for paired analysis'; substring_in_paper=false",
@@ -3159,7 +3159,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ArchR provides the function addCombinedDims for paired analysis.",
       "asbval:note": "Source lists addCombinedDims among paired analysis functions but doesn't explicitly state it's 'for paired analysis'; substring_in_paper=false",
@@ -3179,7 +3179,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ArchR now directly supports monocle3-based trajectory analysis.",
       "asbval:note": null,
@@ -3199,7 +3199,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ArchR now directly supports Slingshot-based trajectory analysis.",
       "asbval:note": null,
@@ -3219,7 +3219,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ArchR provides the function getMonocleTrajectories for trajectory analysis.",
       "asbval:note": "Source lists getMonocleTrajectories but doesn't explicitly state it's 'for trajectory analysis'; substring_in_paper=false",
@@ -3239,7 +3239,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ArchR provides the function addMonocleTrajectory for trajectory analysis.",
       "asbval:note": "Source lists addMonocleTrajectory but doesn't explicitly state it's 'for trajectory analysis'; substring_in_paper=false",
@@ -3259,7 +3259,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ArchR provides the function addSlingShotTrajectories for trajectory analysis.",
       "asbval:note": "Source lists addSlingShotTrajectories but doesn't explicitly state it's 'for trajectory analysis'; substring_in_paper=false",
@@ -3279,7 +3279,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ArchR enables export of a peak matrix that is compatible with STREAM.",
       "asbval:note": null,
@@ -3299,7 +3299,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_012",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/claim/claim_012",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ArchR provides the function exportPeakMatrixForSTREAM.",
       "asbval:note": "Source mentions exportPeakMatrixForSTREAM but provides no context about its purpose; substring_in_paper=false",
@@ -3319,7 +3319,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_013",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/claim/claim_013",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ArchR is currently in Beta.",
       "asbval:note": "Text accurately captures the core statement from source_excerpt; substring_in_paper=false is likely due to minor formatting differences, but content is faithful",
@@ -3339,7 +3339,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_014",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41588-021-00790-6/claim/claim_014",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ArchR is a full-featured R package for processing and analyzing single-cell ATAC-seq data.",
       "asbval:note": "Text is verbatim match to source_excerpt; substring_in_paper=false likely due to whitespace or encoding, but content is exact",

@@ -324,7 +324,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "This title does not appear in any passage and is not semantically aligned with the paper's scope. The paper is about SIRIUS 4 and CSI:FingerID for metabolite structure identification, not about reconstructing or evaluating tasks.",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "This is not a research question; it appears to be GitHub repository metadata (license badges, version info, CI/CD workflow badges). The paper's actual research question concerns molecular structure identification from tandem mass spectra.",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We report SIRIUS 4 ( https://bio.informatik.uni-jena.de/sirius/ ), which provides a fast computational approach for molecular structure identification.",
       "asbval:note": "SIRIUS 4 is the primary tool described in the paper.",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/card/task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 integrates CSI:FingerID for searching in molecular structure databases.",
       "asbval:note": "CSI:FingerID is integrated into SIRIUS 4 and is a core component of the workflow.",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/card/task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "CANOPUS is not mentioned anywhere in the provided passages. The paper focuses on SIRIUS 4 and CSI:FingerID.",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/card/task_001/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MSNovelist is not mentioned in any of the provided passages.",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/card/task_001/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "a source copy is hosted on Git Hub (https://github.com/boecker-lab/sirius)",
       "asbval:note": "GitHub is mentioned as a repository hosting platform for SIRIUS source code.",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/card/task_001/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "These are icon/figure filenames that do not appear in the paper. They appear to be UI assets from a software repository, not outputs of the scientific work described in the paper.",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/card/task_001/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "This statement does not appear verbatim in the provided passages. While the paper discusses citations and acknowledgments, this specific phrasing is not present.",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card appears to conflate a GitHub repository README or documentation page with the scientific paper itself. The 'research_question' field contains GitHub CI/CD badges and version metadata, not a research question.",
@@ -522,7 +522,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evidence-linking/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/evidence-linking/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 integrates CSI:FingerID for searching in molecular structure databases... SIRIUS 4 integrates high-resolution isotope pattern analysis and fragmentation trees with structural elucidation to provide a combined and coherent assessment of molecular structures from MS/MS data",
       "asbval:note": "Paper confirms SIRIUS integrates isotope pattern analysis, fragmentation trees, and CSI:FingerID. However, CANOPUS and MSNovelist are NOT mentioned in the provided passages. The paper is about SIRIUS 4 (2019); CANOPUS and MSNovelist are later tools not covered in this publication.",
@@ -542,7 +542,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evidence-linking/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/evidence-linking/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 is written in Java... SIRIUS 4 integrates high-resolution isotope pattern analysis and fragmentation trees with structural elucidation... CSI:FingerID is seamlessly integrated into SIRIUS 4 via a RESTful (representational state transfer) web service",
       "asbval:note": null,
@@ -562,7 +562,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evidence-linking/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/evidence-linking/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "CSI:FingerID is based on the prediction of a molecular fingerprint of a query compound from its fragmentation tree and spectrum... CSI:FingerID web service then searches molecular structure databases to identify metabolite structures",
       "asbval:note": "Paper confirms CSI:FingerID predicts fingerprints and searches structure databases. However, COSMIC is not mentioned in the provided passages; this may be a later addition or feature not covered in this 2019 publication.",
@@ -582,7 +582,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evidence-linking/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/evidence-linking/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "CANOPUS is not mentioned anywhere in the provided passages. This tool was developed after SIRIUS 4 (2019) and is not part of this paper.",
@@ -602,7 +602,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evidence-linking/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/evidence-linking/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MSNovelist is not mentioned in the provided passages. This tool was developed after SIRIUS 4 (2019) and is not part of this paper.",
@@ -622,7 +622,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evidence-linking/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/evidence-linking/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ZODIAC is not mentioned in the provided passages. While the paper discusses Bayesian network scoring (ref. 15), ZODIAC as a named tool/module is not described in these passages.",
@@ -642,7 +642,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evidence-linking/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/evidence-linking/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "a source copy is hosted on Git Hub (https://github.com/boecker-lab/sirius)",
       "asbval:note": null,
@@ -662,7 +662,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/expert-review-preparation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 integrates CSI:FingerID for searching in molecular structure databases... SIRIUS 4 integrates high-resolution isotope pattern analysis and fragmentation trees with structural elucidation to provide a combined and coherent assessment of molecular structures from MS/MS data for large datasets.",
       "asbval:note": "Paper confirms SIRIUS, fragmentation trees, molecular formula ranking, and CSI:FingerID integration. CANOPUS and MSNovelist are not mentioned in the provided passages. Paper focuses on SIRIUS 4 and CSI:FingerID; CANOPUS and MSNovelist are absent from all passages.",
@@ -682,7 +682,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/expert-review-preparation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 integrates high-resolution isotope pattern analysis and fragmentation trees with structural elucidation to provide a combined and coherent assessment of molecular structures from MS/MS data for large datasets.",
       "asbval:note": "Fully supported. Paper extensively describes SIRIUS 4's role in fragmentation tree computation, molecular formula determination, and isotope pattern analysis.",
@@ -702,7 +702,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/expert-review-preparation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 integrates CSI:FingerID for searching in molecular structure databases... CSI:FingerID is seamlessly integrated into SIRIUS 4 via a RESTful (representational state transfer) web service (Fig. 1a), which allows users to process full LC-MS datasets instead of individual compounds.",
       "asbval:note": "Fully supported. Paper confirms CSI:FingerID is a web service integrated into SIRIUS for structure database searching and fingerprint-based scoring.",
@@ -722,7 +722,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/expert-review-preparation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "CANOPUS is not mentioned anywhere in the provided passages. The paper focuses on SIRIUS 4 and CSI:FingerID only.",
@@ -742,7 +742,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/expert-review-preparation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MSNovelist is not mentioned in any of the provided passages.",
@@ -762,7 +762,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/expert-review-preparation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "COSMIC is not mentioned in the provided passages.",
@@ -782,7 +782,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/expert-review-preparation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ZODIAC is not mentioned in the provided passages.",
@@ -802,7 +802,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/expert-review-preparation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Users can now analyze full liquid chromatography\u2013mass spectrometry (LC-MS) datasets, rather than just one spectrum at a time; mass-spectrometry-driven annotations can be obtained for all detected features... SIRIUS 4 provides an intuitive graphical user interface with six views (Supplementary Fig. 1), including views for CSI:FingerID results and predicted fingerprints.",
       "asbval:note": "Supported. Paper describes SIRIUS 4's capability to process LC-MS datasets and provide results in a user interface suitable for expert review.",
@@ -822,7 +822,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/expert-review-preparation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 integrates a model for scoring isotope patterns that combines absolute and relative noise for peak intensities... SIRIUS 4 can identify the molecular formula of a query compound with very high accuracy.",
       "asbval:note": "Supported by implication. Paper emphasizes high-resolution isotope pattern analysis and accurate molecular formula determination, consistent with the claim that low-resolution data is unsuitable.",
@@ -842,7 +842,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/figure-table-interpretation/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/figure-table-interpretation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 integrates CSI:FingerID for searching in molecular structure databases... The identification of molecules remains a central question in analytical chemistry... Automated interpretation of tandem mass spectrometry (MS/MS) data is often limited to searching in spectral libraries... Here we describe SIRIUS 4, which is a specialized tool that addresses two fundamental questions: What is the molecular formula of the query compound among all molecular formulas, both previously observed and unobserved? And, given a database of molecular structures, what is the structure that best explains the experimental data?",
       "asbval:note": "The paper directly addresses molecular structure identification and interpretation from MS/MS data, which aligns with the research question.",
@@ -862,7 +862,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/figure-table-interpretation/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/figure-table-interpretation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 is written in Java; is open source under the GNU General Public License (version 3)... SIRIUS 4 integrates high-resolution isotope pattern analysis and fragmentation trees with structural elucidation to provide a combined and coherent assessment of molecular structures from MS/MS data for large datasets.",
       "asbval:note": "Paper confirms SIRIUS is Java-based and performs fragmentation tree computation, molecular formula deduction, and integration of downstream tools.",
@@ -882,7 +882,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/figure-table-interpretation/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/figure-table-interpretation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 integrates CSI:FingerID for searching in molecular structure databases... CSI:FingerID is seamlessly integrated into SIRIUS 4 via a RESTful (representational state transfer) web service... The CSI:FingerID web service uses 17 kernels... and predicts more than 1,000 additional molecular properties, mostly from combinatorially generated fingerprints.",
       "asbval:note": "Paper confirms CSI:FingerID is a web service integrated into SIRIUS that searches structure databases using fingerprint matching.",
@@ -902,7 +902,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/figure-table-interpretation/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/figure-table-interpretation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "CANOPUS is not mentioned in any of the provided passages. The paper focuses on SIRIUS 4 and CSI:FingerID but does not discuss CANOPUS or ClassyFire taxonomy predictions.",
@@ -922,7 +922,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/figure-table-interpretation/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/figure-table-interpretation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MSNovelist is not mentioned in any of the provided passages. The paper does not discuss de novo structure generation tools.",
@@ -942,7 +942,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/figure-table-interpretation/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/figure-table-interpretation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ZODIAC is not mentioned in any of the provided passages. The paper does not discuss this tool.",
@@ -962,7 +962,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/figure-table-interpretation/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/figure-table-interpretation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 is written in Java; is open source under the GNU General Public License (version 3)... a source copy is hosted on Git Hub (https://github.com/boecker-lab/sirius).",
       "asbval:note": "GitHub is mentioned as a repository for SIRIUS source code, but the paper does not discuss GitHub as a tool for the specific skills listed (evidence-linking, expert-review-preparation, etc.). GitHub is a platform, not a tool for these analytical tasks.",
@@ -982,7 +982,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/figure-table-interpretation/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/figure-table-interpretation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 provides an intuitive graphical user interface with six views... including views for CSI:FingerID results and predicted fingerprints... Results can be filtered on the basis of XlogP values... SIRIUS 4 also displays all databases where each structure candidate can be found... The user interface offers additional filtering options, but also full text search for every output list.",
       "asbval:note": "Paper confirms SIRIUS and CSI:FingerID produce candidate structures and fragmentation trees with visualization and filtering capabilities. However, CANOPUS and MSNovelist are not mentioned in the paper, so the scope claim is only partially supported for the tools actually discussed.",
@@ -1002,7 +1002,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/figure-table-interpretation/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/figure-table-interpretation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Mass deviations and mass difference deviations are still modeled by normal distributions... For intensities, previous models consider only either relative errors or absolute errors, and cannot deal with both types simultaneously.",
       "asbval:note": "Paper discusses mass accuracy and intensity error modeling but does not explicitly state the 10 ppm threshold or 3:1 SNR threshold as criteria for reliability. The paper addresses mass accuracy considerations but not the specific thresholds mentioned in the scope.",
@@ -1022,7 +1022,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/output-grounding/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/output-grounding/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 integrates high-resolution isotope pattern analysis and fragmentation trees with structural elucidation to provide a combined and coherent assessment of molecular structures from MS/MS data for large datasets... The predicted fingerprint is prominently featured in the user interface... Results are seamlessly integrated into the SIRIUS 4 user interface, which allows users to examine CSI:FingerID's 'reasoning' by a graphical display of predicted molecular properties",
       "asbval:note": "The paper explicitly describes SIRIUS 4's capability to trace structure predictions back to fragmentation trees, isotope patterns, and confidence scores through its user interface and integrated visualization.",
@@ -1042,7 +1042,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/output-grounding/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/output-grounding/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 integrates CSI:FingerID for searching in molecular structure databases... CSI:FingerID is seamlessly integrated into SIRIUS 4 via a RESTful (representational state transfer) web service",
       "asbval:note": "Paper confirms SIRIUS 4 integrates CSI:FingerID and performs fragmentation tree computation and molecular formula inference. However, CANOPUS and MSNovelist are not mentioned in the provided passages; only CSI:FingerID integration is documented.",
@@ -1062,7 +1062,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/output-grounding/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/output-grounding/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "CSI:FingerID web service then searches molecular structure databases to identify metabolite structures... To score structure candidates, SIRIUS 4 implements the Bayesian network scoring from ref. 15... The predicted fingerprint is prominently featured in the user interface",
       "asbval:note": "Paper explicitly describes CSI:FingerID's role in structure database searching and probabilistic scoring of candidates.",
@@ -1082,7 +1082,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/output-grounding/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/output-grounding/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "CANOPUS is not mentioned anywhere in the provided passages. The paper focuses on SIRIUS 4 and CSI:FingerID only.",
@@ -1102,7 +1102,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/output-grounding/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/output-grounding/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MSNovelist is not mentioned in any of the provided passages.",
@@ -1122,7 +1122,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/output-grounding/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/output-grounding/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ZODIAC is not mentioned in the provided passages. The paper describes SIRIUS 4's molecular formula determination but does not reference ZODIAC.",
@@ -1142,7 +1142,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/output-grounding/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/output-grounding/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 is written in Java; is open source under the GNU General Public License (version 3)... a source copy is hosted on Git Hub (https://github.com/boecker-lab/sirius)",
       "asbval:note": "GitHub is mentioned as a repository host for SIRIUS source code, but GitHub itself is not a tool used in the workflow\u2014it is a code repository platform. The card lists GitHub as a 'tool' which is a category error.",
@@ -1162,7 +1162,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/output-grounding/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/output-grounding/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Users can now analyze full liquid chromatography\u2013mass spectrometry (LC-MS) datasets, rather than just one spectrum at a time... SIRIUS 4 integrates CSI:FingerID for searching in molecular structure databases",
       "asbval:note": "Paper confirms SIRIUS and CSI:FingerID work with LC-MS/MS data and produce structure candidates and molecular formulas. CANOPUS and MSNovelist are not mentioned in the paper.",
@@ -1182,7 +1182,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/output-grounding/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/output-grounding/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS/MS data from 11,728 compounds have been added to the training data... CSI:FingerID 1.1 is trained on 16,083 structures, with 19,118 independent MS/MS measurements (compounds) in positive mode and 10,823 measurements in negative mode",
       "asbval:note": "Paper confirms CSI:FingerID is trained on known compounds. CANOPUS and MSNovelist training characteristics are not discussed in the provided passages.",
@@ -1202,7 +1202,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/reproducibility-gap-detection/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 is written in Java; is open source under the GNU General Public License (version 3); and works on Windows, macOS X, and Linux... a source copy is hosted on Git Hub (https://github.com/boecker-lab/sirius).",
       "asbval:note": "Paper describes SIRIUS 4 as open-source and available on GitHub, and extensively documents methods (fragmentation trees, isotope pattern analysis, molecular formula determination). However, the paper does NOT explicitly frame its contribution as a 'reproducibility gap detection' task or methodology. The card's research question appears to be a meta-analytical framework for assessing gaps, whereas the paper is a tool paper describing SIRIUS 4 implementation itself. The paper does document implementation details but not as a gap-detection exercise.",
@@ -1222,7 +1222,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/reproducibility-gap-detection/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We report SIRIUS 4 (https://bio.informatik.uni-jena.de/sirius/), which provides a fast computational approach for molecular structure identification.",
       "asbval:note": "SIRIUS 4 is the primary subject of the paper.",
@@ -1242,7 +1242,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/reproducibility-gap-detection/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "a source copy is hosted on Git Hub (https://github.com/boecker-lab/sirius)",
       "asbval:note": "Paper provides GitHub URL as https://github.com/boecker-lab/sirius, not https://github.com/sirius-ms/sirius. The card's URL differs from the paper's stated repository URL.",
@@ -1262,7 +1262,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/reproducibility-gap-detection/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 is written in Java... SIRIUS 4 integrates high-resolution isotope pattern analysis and fragmentation trees with structural elucidation... Users can now analyze full liquid chromatography\u2013mass spectrometry (LC-MS) datasets",
       "asbval:note": "All components of the role description are present in the paper.",
@@ -1282,7 +1282,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/reproducibility-gap-detection/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 integrates CSI:FingerID for searching in molecular structure databases.",
       "asbval:note": "CSI:FingerID is explicitly mentioned as integrated into SIRIUS 4.",
@@ -1302,7 +1302,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/reproducibility-gap-detection/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "CSI:FingerID is seamlessly integrated into SIRIUS 4 via a RESTful (representational state transfer) web service... The integration of CSI:FingerID into SIRIUS is realized by means of a RESTful web service via HTTPS",
       "asbval:note": "Paper confirms CSI:FingerID is a web service integrated into SIRIUS and describes fingerprint-based structure identification. However, the paper does NOT explicitly state that it 'requires online account' or document this as a 'reproducibility gap.' The paper describes the web service architecture but does not frame account requirements as a gap or limitation.",
@@ -1322,7 +1322,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/reproducibility-gap-detection/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "CANOPUS is not mentioned anywhere in the provided passages. The paper focuses on SIRIUS 4, CSI:FingerID, and fragmentation tree/isotope pattern analysis, but does not discuss CANOPUS.",
@@ -1342,7 +1342,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/reproducibility-gap-detection/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "CANOPUS is not mentioned in the paper. No evidence of metabolite classification via fragmentation patterns as a separate SIRIUS component, nor any mention of account-restricted access for this tool.",
@@ -1362,7 +1362,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/reproducibility-gap-detection/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MSNovelist is not mentioned in the provided passages. The paper does not discuss de novo structure generation as a SIRIUS component.",
@@ -1382,7 +1382,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/reproducibility-gap-detection/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MSNovelist is not mentioned in the paper. No evidence of de novo structure generation as a SIRIUS component or web service.",
@@ -1402,7 +1402,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/010",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/reproducibility-gap-detection/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "a source copy is hosted on Git Hub (https://github.com/boecker-lab/sirius)",
       "asbval:note": "GitHub is mentioned as the repository host for SIRIUS source code.",
@@ -1422,7 +1422,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/011",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/reproducibility-gap-detection/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "These are meta-analytical skills/competencies, not claims about the paper's content. Cannot be validated against paper passages; they describe the nature of the task card itself rather than paper claims.",
@@ -1442,7 +1442,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scientific-task-formulation/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/scientific-task-formulation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 integrates high-resolution isotope pattern analysis and fragmentation trees with structural elucidation to provide a combined and coherent assessment of molecular structures from MS/MS data for large datasets. Users can now analyze full liquid chromatography\u2013mass spectrometry (LC-MS) datasets, rather than just one spectrum at a time",
       "asbval:note": "The paper explicitly describes the workflow of taking LC-MS/MS data (fragmentation trees, isotope patterns) and converting them into structured computational tasks for molecular identification.",
@@ -1462,7 +1462,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scientific-task-formulation/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/scientific-task-formulation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 is written in Java; is open source under the GNU General Public License (version 3); and works on Windows, macOS X, and Linux... SIRIUS 4 integrates high-resolution isotope pattern analysis and fragmentation trees with structural elucidation",
       "asbval:note": "Confirmed: SIRIUS is Java-based, performs isotope pattern analysis, fragmentation tree computation, and molecular formula identification.",
@@ -1482,7 +1482,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scientific-task-formulation/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/scientific-task-formulation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 integrates CSI:FingerID for searching in molecular structure databases... CSI:FingerID is seamlessly integrated into SIRIUS 4 via a RESTful (representational state transfer) web service",
       "asbval:note": "Confirmed: CSI:FingerID is a web service integrated into SIRIUS for structure database searching and fingerprint prediction.",
@@ -1502,7 +1502,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scientific-task-formulation/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/scientific-task-formulation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "CANOPUS is not mentioned anywhere in the provided passages. The paper focuses on SIRIUS 4 and CSI:FingerID. Cannot verify this claim from the given text.",
@@ -1522,7 +1522,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scientific-task-formulation/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/scientific-task-formulation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MSNovelist is not mentioned anywhere in the provided passages. The paper does not discuss de novo structure generation tools. Cannot verify this claim from the given text.",
@@ -1542,7 +1542,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scientific-task-formulation/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/scientific-task-formulation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ZODIAC is not mentioned anywhere in the provided passages. The paper does not discuss this tool. Cannot verify this claim from the given text.",
@@ -1562,7 +1562,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scientific-task-formulation/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/scientific-task-formulation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "a source copy is hosted on Git Hub (https://github.com/boecker-lab/sirius)",
       "asbval:note": "GitHub is mentioned as a hosting platform for SIRIUS source code, but it is not a computational tool used in the SIRIUS workflow itself. It is a repository platform, not an analytical tool. The card lists it as a 'tool' which is a mischaracterization of its role.",
@@ -1582,7 +1582,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scientific-task-formulation/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/scientific-task-formulation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Mass spectrometry is a predominant experimental technique in metabolomics and related fields, but metabolite structural elucidation remains highly challenging. We report SIRIUS 4, which provides a fast computational approach for molecular structure identification.",
       "asbval:note": "The paper explicitly addresses the challenge of translating raw MS data into metabolite identification workflows.",
@@ -1602,7 +1602,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scientific-task-formulation/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/scientific-task-formulation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 integrates CSI:FingerID for searching in molecular structure databases... Users can now analyze full liquid chromatography\u2013mass spectrometry (LC-MS) datasets",
       "asbval:note": "The paper discusses SIRIUS and CSI:FingerID workflow integration, but does not mention CANOPUS or MSNovelist. The scope claim overstates the tools available in this paper.",
@@ -1622,7 +1622,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-reconstruction/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/workflow-reconstruction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 integrates high-resolution isotope pattern analysis and fragmentation trees with structural elucidation to provide a combined and coherent assessment of molecular structures from MS/MS data for large datasets... SIRIUS 4 provides an intuitive graphical user interface... Extensive algorithm engineering and parallelization through a job-scheduling system... have reduced SIRIUS 4 running times by more than two orders of magnitude",
       "asbval:note": "Paper describes detailed computational workflow with tool integration, parameters, and decision logic for MS/MS analysis.",
@@ -1642,7 +1642,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-reconstruction/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/workflow-reconstruction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 integrates CSI:FingerID for searching in molecular structure databases... SIRIUS 4 integrates high-resolution isotope pattern analysis and fragmentation trees with structural elucidation",
       "asbval:note": "Paper confirms SIRIUS 4 integrates CSI:FingerID and performs fragmentation tree computation and isotope pattern analysis. However, CANOPUS and MSNovelist are not mentioned in the provided passages. Only CSI:FingerID integration is explicitly documented in these excerpts.",
@@ -1662,7 +1662,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-reconstruction/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/workflow-reconstruction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 integrates CSI:FingerID for searching in molecular structure databases... CSI:FingerID is seamlessly integrated into SIRIUS 4 via a RESTful (representational state transfer) web service... which allows users to process full LC-MS datasets instead of individual compounds",
       "asbval:note": "CSI:FingerID integration and role clearly documented.",
@@ -1682,7 +1682,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-reconstruction/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/workflow-reconstruction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "CANOPUS is not mentioned in any of the provided passages from the SIRIUS 4 paper. The paper focuses on SIRIUS 4 and CSI:FingerID integration.",
@@ -1702,7 +1702,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-reconstruction/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/workflow-reconstruction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MSNovelist is not mentioned in any of the provided passages from the SIRIUS 4 paper.",
@@ -1722,7 +1722,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-reconstruction/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/workflow-reconstruction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ZODIAC is not mentioned in any of the provided passages from the SIRIUS 4 paper.",
@@ -1742,7 +1742,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-reconstruction/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/workflow-reconstruction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 is written in Java; is open source under the GNU General Public License (version 3)... a source copy is hosted on Git Hub (https://github.com/boecker-lab/sirius)",
       "asbval:note": "GitHub repository confirmed as hosting SIRIUS 4 source code.",
@@ -1762,7 +1762,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-reconstruction/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/workflow-reconstruction/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "a source copy is hosted on Git Hub (https://github.com/boecker-lab/sirius)",
       "asbval:note": "Paper provides GitHub URL as https://github.com/boecker-lab/sirius, not https://github.com/sirius-ms/sirius. The organization/account name differs.",
@@ -1782,7 +1782,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-reconstruction/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/workflow-reconstruction/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "CSI:FingerID web service (https://www.csi-fingerid.uni-jena.de/webapi/trainingstructures.csv?predictor=pos and https://www.csi-fingerid.uni-jena.de/webapi/trainingstructures.csv?predictor=neg)",
       "asbval:note": "Paper provides web service URLs but not a direct software repository URL matching the claim. The domain is csi-fingerid.uni-jena.de, not bio.informatik.uni-jena.de/software/csi-fingerid/.",
@@ -1802,7 +1802,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evidence-linking/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/evidence-linking/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "evidence-linking",
@@ -1815,7 +1815,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/expert-review-preparation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "expert-review-preparation",
@@ -1828,7 +1828,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/figure-table-interpretation/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/figure-table-interpretation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "figure-table-interpretation",
@@ -1841,7 +1841,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/output-grounding/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/output-grounding/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "output-grounding",
@@ -1854,7 +1854,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/reproducibility-gap-detection/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 12,
       "asbval:target_artifact_id": "reproducibility-gap-detection",
@@ -1867,7 +1867,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scientific-task-formulation/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/scientific-task-formulation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "scientific-task-formulation",
@@ -1880,7 +1880,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-reconstruction/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/skill/workflow-reconstruction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "workflow-reconstruction",
@@ -1893,7 +1893,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "SIRIUS is licensed under AGPL v3.",
       "asbval:note": null,
@@ -1913,7 +1913,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The current version of SIRIUS is 6.3.7.",
       "asbval:note": null,
@@ -1933,7 +1933,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "SIRIUS is a java-based software framework for the analysis of LC-MS/MS data of metabolites.",
       "asbval:note": "Text omits 'and other small mol[ecules]' qualifier from source excerpt",
@@ -1953,7 +1953,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "SIRIUS methods are offered to the scientific community as freely available resources.",
       "asbval:note": "Text attributes methods to 'SIRIUS' but source says 'Our methods'; minor scope shift from first-person to product name",
@@ -1973,7 +1973,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Redistribution of SIRIUS methods in whole or in part for commercial purposes is prohibited.",
       "asbval:note": null,
@@ -1993,7 +1993,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The SIRIUS web services CSI:FingerID, CANOPUS, and MSNovelist are hosted by the B\u00f6cker group.",
       "asbval:note": "Source excerpt includes 'and others' indicating additional services beyond the three named; text omits this qualifier",
@@ -2013,7 +2013,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "SIRIUS web services hosted by the B\u00f6cker group are for academic research and education use only.",
       "asbval:note": null,
@@ -2033,7 +2033,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Non-academic users can obtain SIRIUS licenses and services from Bright Giant GmbH.",
       "asbval:note": null,
@@ -2053,7 +2053,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41592-019-0344-8/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Users of SIRIUS tools are asked to cite the corresponding papers in any resulting publications.",
       "asbval:note": "Text attributes request to 'Users of SIRIUS tools' but source says 'We ask that users of our tools'; minor attribution shift",

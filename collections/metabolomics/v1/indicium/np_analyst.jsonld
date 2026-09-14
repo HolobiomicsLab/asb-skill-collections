@@ -126,7 +126,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "NP Analyst, an open online platform for Compound Activity Mapping",
       "asbval:note": "Paper describes NP Analyst platform; title appropriately names the tool for reconstruction.",
@@ -146,7 +146,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "NP Analyst, an open online platform for Compound Activity Mapping that accepts bioassay data of almost any type, and is compatible with mass spectrometry data from major instrument manufacturers via the mzML format.",
       "asbval:note": "Paper presents a complete platform with documented workflows, data formats, and validation steps suitable for reproducibility assessment.",
@@ -166,7 +166,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "NP Analyst, an open online platform for Compound Activity Mapping... This new platform is available at www.npanalyst.org.",
       "asbval:note": "[SUBSTRING-MATCH for npanalyst | role: primary tool] Case-insensitive match confirmed; paper extensively documents NP Analyst as the central tool.",
@@ -186,7 +186,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/card/task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For advanced users, the underlying processing algorithms are freely available as a command line tool via a Docker container at https://github.com/liningtonlab/npanalyst.",
       "asbval:note": "Paper references GitHub repository (https://github.com/liningtonlab/npanalyst) for Docker container distribution, but GitHub is a hosting platform, not a tool used in the analysis workflow itself. The actual tool is the Docker container with command-line interface. GitHub is the distribution mechanism, not a methodological tool.",
@@ -206,7 +206,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/card/task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "This claim describes the meta-task of creating a task card itself, not an output of the paper's scientific work. The paper does not discuss creating task cards or capsules. This appears to be a procedural instruction for the curation process rather than a claim about the paper's content.",
@@ -226,7 +226,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The 'expected_outputs' claim is meta-procedural (about creating a task card) rather than describing outputs from the paper's scientific work. This represents scope drift from the paper's actual contributions.",
@@ -243,7 +243,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evidence-linking/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/evidence-linking/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "NP Analyst, an open online platform for Compound Activity Mapping that accepts bioassay data of almost any type, and is compatible with mass spectrometry data from major instrument manufacturers via the mzML format. In addition, NP Analyst will accept processed mass spectrometry data from the MZmine 2 and GNPS open-source platforms, making it a versatile tool for integration with existing discovery workflows.",
       "asbval:note": "The paper demonstrates evidence linking through detailed workflow documentation, supplementary materials references, and reproducible outputs (job numbers, URLs, downloadable results files).",
@@ -263,7 +263,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evidence-linking/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/evidence-linking/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for NP Analyst | role: subject platform for compound activity mapping]. 'We now present NP Analyst, an open online platform for Compound Activity Mapping that accepts bioassay data of almost any type, and is compatible with mass spectrometry data from major instrument manufacturers via the mzML format.'",
       "asbval:note": "NP Analyst is the primary subject of the paper and is extensively documented with inputs, algorithms, outputs, and validation examples.",
@@ -283,7 +283,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evidence-linking/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/evidence-linking/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For advanced users, the underlying processing algorithms are freely available as a command line tool via a Docker container at https://github.com/liningtonlab/npanalyst.",
       "asbval:note": "GitHub repository is explicitly referenced as hosting the Docker container and command-line implementation of NP Analyst algorithms.",
@@ -303,7 +303,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evidence-linking/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/evidence-linking/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Each results file is assigned a unique job number which is used to create a permanent hyperlink to the results pages, providing a facile mechanism for collaborators to retrieve and share data. ... Upon completion, the results section is displayed, including interactive tabs for scatter plot, network, and community views, as well as a downloads page to export the results files. Export options include a graphML network file for use in network visualization tools (Cytoscape, Gephi) and CSV for use in spreadsheets and graph plotting tools (e.g., Excel, Tableau, Jmp, Spotfire).",
       "asbval:note": "Paper provides extensive reproducibility infrastructure: persistent job URLs, downloadable outputs in multiple formats, detailed documentation links, and public sample data accessible via www.npanalyst.org.",
@@ -323,7 +323,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evidence-linking/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/evidence-linking/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For full instructions on bioassay file formatting requirements see the online documentation at https://liningtonlab.github.io/npanalyst_documentation/NPAnalyst/file-import/ ... Instructions for both of these export methods are provided in the software documentation (https://liningtonlab.github.io/npanalyst_documentation/).",
       "asbval:note": "Paper references extensive online documentation but does not include complete reproducibility details in the article itself. Some implementation details (e.g., exact R-tree algorithm parameters, statistical thresholds) are not fully specified in the passages provided.",
@@ -343,7 +343,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evidence-linking/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/evidence-linking/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We validated this new platform by analyzing a 'low-resolution' antimicrobial bioassay data set for 925 natural product prefractions. From these results, three communities were selected for further study, leading to the isolation of three classes of bioactive metabolites including two new compounds (dracolactam C (3) and amychelin C (6)). ... Screening of purified amychelin C in the BioMAP assay recapitulated the spectrum of activity predicted from the original community, confirming this molecule as the predominant active component in this community.",
       "asbval:note": "Paper provides detailed case studies (Communities 12, 15, 16) tracing from NP Analyst predictions through isolation, characterization, and experimental validation of bioactivity.",
@@ -363,7 +363,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/expert-review-preparation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper is a primary research article describing NP Analyst platform development and validation. It does not discuss or demonstrate a meta-level skill for preparing articles for expert review, indexing tools, or gap detection in other papers. The research_question describes a methodological skill/workflow that is not the subject of this paper.",
@@ -383,7 +383,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/expert-review-preparation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes NP Analyst as a platform for compound activity mapping, not a skill or methodology for reviewing other scientific articles. The scope describes a meta-analytical task that is not addressed in this paper.",
@@ -403,7 +403,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/expert-review-preparation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We now present NP Analyst, an open online platform for Compound Activity Mapping that accepts bioassay data of almost any type, and is compatible with mass spectrometry data from major instrument manufacturers via the mzML format.",
       "asbval:note": "NP Analyst is the primary subject of the paper. Case-insensitive match confirmed.",
@@ -423,7 +423,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/expert-review-preparation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "NP Analyst, an open online platform for Compound Activity Mapping that accepts bioassay data of almost any type, and is compatible with mass spectrometry data from major instrument manufacturers via the mzML format.",
       "asbval:note": "The paper describes NP Analyst as a tool for integrating MS data with bioactivity data for compound discovery. The role is accurate regarding MS data and bioactivity correlation, but the phrase 'subject of artifact review in the task context' is not supported\u2014the paper is the primary research article, not a review artifact being examined by another task.",
@@ -443,7 +443,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/expert-review-preparation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For advanced users, the underlying processing algorithms are freely available as a command line tool via a Docker container at https://github.com/liningtonlab/npanalyst.",
       "asbval:note": "GitHub is mentioned as the hosting platform for the Docker container, but it is not presented as a primary tool used in the research workflow itself. It is a repository/distribution platform, not a data processing or analysis tool used in the study.",
@@ -463,7 +463,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/expert-review-preparation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "These skill names do not appear in the paper. The paper does not discuss or reference these meta-level analytical skills.",
@@ -483,7 +483,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/expert-review-preparation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No task IDs are referenced in the paper. This appears to be an internal identifier not grounded in the paper content.",
@@ -503,7 +503,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/reproducibility-gap-detection/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes NP Analyst as a platform for compound activity mapping and bioactive compound discovery. It does not present a workflow for reproducibility gap detection, missing information assessment, or methodological reproducibility evaluation. The paper's focus is on integrating bioassay and MS data for natural products discovery, not on assessing reproducibility gaps in scientific studies.",
@@ -523,7 +523,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/reproducibility-gap-detection/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We now present NP Analyst, an open online platform for Compound Activity Mapping that accepts bioassay data of almost any type, and is compatible with mass spectrometry data from major instrument manufacturers via the mzML format.",
       "asbval:note": "NP Analyst is confirmed as the primary tool in the paper. Case-insensitive match: 'NP Analyst' in paper = 'npanalyst' in card.",
@@ -543,7 +543,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/reproducibility-gap-detection/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "NP Analyst, an open online platform for Compound Activity Mapping that accepts bioassay data of almost any type, and is compatible with mass spectrometry data from major instrument manufacturers via the mzML format.",
       "asbval:note": "NP Analyst does relate metabolite MS data with bioactivity data (confirmed), but the paper uses it for bioactive compound discovery and dereplication, not for reproducibility assessment. The tool's actual role is compound activity mapping and bioactive metabolite prioritization from complex mixtures, not reproducibility gap detection.",
@@ -563,7 +563,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/reproducibility-gap-detection/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For advanced users, the underlying processing algorithms are freely available as a command line tool via a Docker container at https://github.com/liningtonlab/npanalyst.",
       "asbval:note": "GitHub is mentioned as a repository platform for the NP Analyst Docker container, but the paper's primary distribution mechanism is the web platform at www.npanalyst.org. GitHub is used for code distribution, not as the primary repository platform for indexing and verifying availability of code and data artifacts as the card claims.",
@@ -583,7 +583,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/reproducibility-gap-detection/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This new platform is available at www.npanalyst.org.",
       "asbval:note": "The paper's primary distribution mechanism is the web platform www.npanalyst.org, not GitHub. GitHub is mentioned only as a secondary option for advanced users deploying the Docker container. GitHub is not presented as the primary repository platform for the work.",
@@ -603,7 +603,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/reproducibility-gap-detection/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper's scope is natural products discovery through compound activity mapping, integrating bioassay and MS data. It does not address reproducibility gap detection or assessment of methodological reproducibility in scientific studies. The scope described in the card is fundamentally misaligned with the paper's actual research domain and objectives.",
@@ -623,7 +623,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scientific-task-formulation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/scientific-task-formulation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes NP Analyst, a platform for compound activity mapping integrating bioassay and MS data. The paper does not address task formulation, reproducibility assessment, or computational artifact evaluation as a research question. The card's research_question appears to be a generic meta-task description unrelated to the paper's actual scientific contribution.",
@@ -643,7 +643,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scientific-task-formulation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/scientific-task-formulation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We now present NP Analyst, an open online platform for Compound Activity Mapping that accepts bioassay data of almost any type, and is compatible with mass spectrometry data from major instrument manufacturers via the mzML format.",
       "asbval:note": "NP Analyst is the primary tool developed and described in the paper. Case-insensitive match confirmed.",
@@ -663,7 +663,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scientific-task-formulation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/scientific-task-formulation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "NP Analyst, an open online platform for Compound Activity Mapping that accepts bioassay data of almost any type, and is compatible with mass spectrometry data from major instrument manufacturers via the mzML format.",
       "asbval:note": "The role accurately describes NP Analyst's function: integrating MS metabolite data with bioactivity profiles.",
@@ -683,7 +683,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scientific-task-formulation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/scientific-task-formulation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For advanced users, the underlying processing algorithms are freely available as a command line tool via a Docker container at https://github.com/liningtonlab/npanalyst.",
       "asbval:note": "GitHub is mentioned as the hosting platform for the Docker container (https://github.com/liningtonlab/npanalyst), but the paper does not discuss GitHub as a tool in the context of the task formulation skill. GitHub is a repository platform, not a computational tool used within the NP Analyst workflow itself. The card's inclusion of GitHub with related_skills=['evidence-linking', 'expert-review-preparation', 'reproducibility-gap-detection', 'scientific-task-formulation'] is not supported by the paper's content.",
@@ -703,7 +703,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scientific-task-formulation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/scientific-task-formulation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss or reference any of these skills. These appear to be meta-level reproducibility and documentation skills not addressed in the NP Analyst paper.",
@@ -723,7 +723,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evidence-linking/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/evidence-linking/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "evidence-linking",
@@ -736,7 +736,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/expert-review-preparation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "expert-review-preparation",
@@ -749,7 +749,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/reproducibility-gap-detection/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "reproducibility-gap-detection",
@@ -762,7 +762,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scientific-task-formulation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/skill/scientific-task-formulation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "scientific-task-formulation",
@@ -775,7 +775,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Complete usage of the npanalyst CLI is documented.",
       "asbval:note": "substring_in_paper=false; text claims documentation exists but excerpt only references it without confirming completeness",
@@ -795,7 +795,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1021%2Facscentsci.1c01108/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The npanalyst source code is hosted on GitHub under the liningtonlab organization.",
       "asbval:note": "substring_in_paper=false; GitHub reference format suggests hosting location but does not explicitly state 'liningtonlab organization' in natural language",
