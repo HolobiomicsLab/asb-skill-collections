@@ -539,9 +539,12 @@ pytest tests/ -v
 - [ ] Run local pytest: `pytest tests/ -v` (passes)
 - [ ] Review `CITATION.cff` (authors, DOIs, license)
 - [ ] ~~Check that `indicium_version` is pinned~~ — **not applicable at v0** (no indicium dependency, no claim records, no release manifest; see "Indicium co-release")
-- [ ] Confirm the w3id redirect for `w3id.org/holobiomicslab/asb-skill/` — **it 404s today**, so every `@id` in the deposited collection is a dead link until the redirect config is submitted. The submission package — both files verbatim, the PR body, the owner-run steps, and every
-  target verified 200 — is `W3ID_HOLOBIOMICSLAB_PR.md` in the hub's `docs/asbb/release-artifacts/`.
-  Submitting it is the owner's: no agent opens a pull request against a third-party repository
+- [ ] Confirm the w3id redirect for `w3id.org/holobiomicslab/asb-skill/` — **submitted 2026-09-14 as
+  [perma-id/w3id.org#6690](https://github.com/perma-id/w3id.org/pull/6690), not yet merged**. Until it merges the IRI 404s, so every `@id` in the
+  deposited collection names its target but does not dereference. Tick this when
+  `curl -s -o /dev/null -w '%{http_code}' https://w3id.org/holobiomicslab/asb-skill/registry` returns 302 and
+  the same request with `-H 'Accept: application/ld+json'` returns 303. The rules, the body as submitted
+  and the local Apache test are `W3ID_HOLOBIOMICSLAB_PR.md` in the hub's `docs/asbb/release-artifacts/`.
 
 ### Release (tag push)
 

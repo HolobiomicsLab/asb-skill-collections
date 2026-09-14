@@ -620,6 +620,10 @@ XSD prefixes. Both ship. No third file is required.
 > `perma-id/w3id.org` now takes `ids/<name>/`, not a root-level directory, and the two older
 > drafts remain blocked on `HolobiomicsLab/indicium` being public (still private, all four of
 > their targets 404 on 2026-09-14). The `/holobiomicslab` targets all return 200.
+>
+> **Submitted 2026-09-14** as [perma-id/w3id.org#6690](https://github.com/perma-id/w3id.org/pull/6690), `/holobiomicslab` alone — no `/asb` and
+> no `/indicium` registration is submitted. Until it merges, `https://w3id.org/holobiomicslab/asb-skill/`
+> still returns 404.
 
 **If v1 ships claim records**, the ontology pin becomes real and belongs here — at that point snapshot the
 generated Turtle from the framework (`docs/ontology/asb_spine.ttl`), not a hand-copy in this repo. The
