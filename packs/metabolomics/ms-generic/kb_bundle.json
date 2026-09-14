@@ -554,7 +554,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -643,7 +645,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -669,7 +673,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -3512,7 +3518,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -4094,7 +4102,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -6020,7 +6030,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -6100,7 +6112,8 @@
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
       "repo_urls": [
-        "https://github.com/AndreySamokhin/mssearchr"
+        "https://github.com/AndreySamokhin/mssearchr",
+        "https://github.com/HUPO-PSI/mzPeak"
       ],
       "license_tier": "open",
       "provenance_tier": "literature",
@@ -7615,7 +7628,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -8920,7 +8935,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -9728,7 +9745,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -9873,7 +9892,8 @@
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
       "repo_urls": [
-        "https://github.com/matchms/matchms"
+        "https://github.com/matchms/matchms",
+        "https://github.com/HUPO-PSI/mzPeak"
       ],
       "license_tier": "open",
       "provenance_tier": "literature",
@@ -13441,7 +13461,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -13466,7 +13488,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -13494,7 +13518,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -13519,7 +13545,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -13543,7 +13571,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -15863,7 +15893,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -16312,7 +16344,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -17549,7 +17583,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -17634,7 +17670,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -17657,7 +17695,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -18686,7 +18726,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -18730,7 +18772,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -18754,7 +18798,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -18842,7 +18888,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -20083,7 +20131,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -20511,7 +20561,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -20660,7 +20712,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [

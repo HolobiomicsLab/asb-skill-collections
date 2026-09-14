@@ -3196,7 +3196,7 @@ papers:
 - name: mzpeak
   doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
-  repo_url: ''
+  repo_url: https://github.com/HUPO-PSI/mzPeak
   status: included
   wave: v2-expansion
   access:
@@ -6616,7 +6616,7 @@ papers:
 - name: 10.1186/s13321-020-00449-0
   doi: 10.1186/s13321-020-00449-0
   title: 10.1186/s13321-020-00449-0
-  repo_url: ''
+  repo_url: https://github.com/gbaquer/rMSIcleanup
   status: included
   wave: v2-expansion
   access:
@@ -6768,7 +6768,7 @@ papers:
 - name: DeepSAT
   doi: 10.1186/s13321-023-00738-4
   title: DeepSAT
-  repo_url: ''
+  repo_url: https://github.com/mwang87/DeepSAT
   status: included
   wave: v2-expansion
   access:

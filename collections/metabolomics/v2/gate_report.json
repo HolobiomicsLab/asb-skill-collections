@@ -1,6 +1,6 @@
 {
   "schema": "asbb-release-gate/1.1",
-  "generated_at": "2026-09-14T01:42:25.277807+00:00",
+  "generated_at": "2026-09-14T08:03:19.654904+00:00",
   "collection_dir": "/Users/nothiasl/git/asbcoll-wt-int/collections/metabolomics/v2",
   "corpus_path": "/Users/nothiasl/git/asbcoll-wt-int/collections/metabolomics/v2/corpus.yaml",
   "mode": "strict",
@@ -33,11 +33,11 @@
       "skill_kb.json"
     ],
     "config_sha256": "d8c4a1873e0ea091e6ae0218f73154cf3479325f875092aeada5d64190eea4c3",
-    "implementation_sha256": "fe678ffd1d0d4a1d8235ab4612237bd47d9434ddce34aa7b29fd89e4567e73e2"
+    "implementation_sha256": "dbf41e81642b23795b74884271caa6e057fa70756ce82d72c738d66299987341"
   },
   "binding": {
     "payload": {
-      "sha256": "a01123cb797a54dedb044f6a29cc7efaff0a0ca2454b01e5d64f94fb1eeebddb",
+      "sha256": "67b3b90950e1a7adda4803cdd79057b55aa65d3af98fda40484588b946b3368c",
       "entries": [
         {
           "path": ".claude-plugin",
@@ -45,8 +45,8 @@
         },
         {
           "path": ".claude-plugin/plugin.json",
-          "bytes": 1076,
-          "sha256": "89c48a26eebf875303796b56f2d7e9a7ecb298300009ec0b525a3c7c97c45a8f"
+          "bytes": 1112,
+          "sha256": "53a49714a0edd9afc20fb23a54c702bb59513eb69a3dfe19d964b4dd66be15b6"
         },
         {
           "path": ".zenodo.json",
@@ -99,8 +99,8 @@
         },
         {
           "path": "collection.yaml",
-          "bytes": 264788,
-          "sha256": "626a0f042a66613ad704c8cd3aff6fa18bd11e35507335feae58cd2598ff347d"
+          "bytes": 264750,
+          "sha256": "86811404d1b08d46b4bbb4bbf163e78c64f847103a19f0badc0e00b155dd0572"
         },
         {
           "path": "commands",
@@ -128,13 +128,13 @@
         },
         {
           "path": "corpus.yaml",
-          "bytes": 206470,
-          "sha256": "ce91fb5e734f96649adf59b48b4c71425b50ffa30ccfd2f94b6f6f250a1f4951"
+          "bytes": 206570,
+          "sha256": "b2f12d68c3aeb817e09ba9a41d99375066069779281c7cce5c04db7130459635"
         },
         {
           "path": "kb_bundle.json",
-          "bytes": 4390319,
-          "sha256": "b46bf0e28ebbc11a749c543baea8f155e3786a70232359549343e1b7cf62cb56"
+          "bytes": 3785974,
+          "sha256": "263c7d34ea924527909ce9f565a53bf521dbf61e350d0687f7dd174184e579e3"
         },
         {
           "path": "leaves",
@@ -57969,8 +57969,8 @@
     "manifest": null,
     "corpus": {
       "path": "corpus.yaml",
-      "bytes": 206470,
-      "sha256": "ce91fb5e734f96649adf59b48b4c71425b50ffa30ccfd2f94b6f6f250a1f4951",
+      "bytes": 206570,
+      "sha256": "b2f12d68c3aeb817e09ba9a41d99375066069779281c7cce5c04db7130459635",
       "location": "collection"
     },
     "cut_inputs": null
@@ -58275,5 +58275,5 @@
       "coverage": {}
     }
   ],
-  "receipt_sha256": "c62980dfebc0abc10ca62507a358839bca2c695d27413dd898b370cb94a4629f"
+  "receipt_sha256": "f7c64d5efad65046965eb31a4f4190d4f3cde3b2d3cbbc4eaad2b11c8e0e2aa5"
 }

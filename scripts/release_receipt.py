@@ -55,7 +55,13 @@ def tree_records(root: Path, excluded: tuple[Path, ...] = (), *, output_tree=Tru
         if any(path == item or item in path.parents for item in excluded):
             continue
         relative = path.relative_to(root)
-        if BYTECODE_CACHE in relative.parts:
+        # A cache *directory* and everything under it is skipped; a regular file
+        # that merely happens to be named __pycache__ is payload and stays bound.
+        # Matching the name anywhere in `parts` skipped that file too, which would
+        # have shipped an unbound path for the sake of its name.
+        if BYTECODE_CACHE in relative.parts[:-1] or (
+            relative.parts[-1] == BYTECODE_CACHE and path.is_dir()
+        ):
             continue
         label = relative.as_posix()
         if path.is_symlink() and (output_tree or not path.is_file()):

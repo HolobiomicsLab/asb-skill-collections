@@ -488,7 +488,7 @@ is: the test suite; `scripts.skill_index`; `marketplace.json` validation;
 `scripts.lint_skill_descriptions`; a sampled `derived_from` DOI resolution; EDAM IRI
 resolution; RO-Crate validation (inert — no collection ships an
 `ro-crate-metadata.json`, so the step validates zero files, emits a `::warning::` and
-never blocks, while every `collection.yaml` declares `ro_crate_path`); the indicium
+never blocks; no manifest declares `ro_crate_path` any more either); the indicium
 round-trip (inert — the CLI is not on PyPI, so it emits a `::warning::` and never
 blocks); LinkML schema validation (inert — `asb_skill_bundle.yaml` is in neither this
 repository nor PyPI, so the step resolves no schema, emits a `::warning::` and never

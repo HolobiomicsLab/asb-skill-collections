@@ -28,6 +28,34 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   keeps its historical score/slug order unchanged. See `docs/selection.md`.
 
 ### Fixed
+- Derive the collection's grounding map through the rule its packs already use.
+  `kb_bundle.json` feeds `perspicacite_kb_bind.py`, which clones every `repo_urls`
+  entry; the entries came from tool records that held the repository of *some*
+  paper citing the tool (issue #42). The unit builder was fixed and never run over
+  the collection, so the release was about to ship two answers: the `metabolomics`
+  plugin and the technique packs handing different repositories for one identical
+  skill. Re-derived over all 5,859 skills: 306 → 360 distinct repositories, 16,768
+  → 6,110 pointers, and skills with no repository 316 → 15. First, three papers
+  whose `corpus.yaml` row carried `repo_url: ''` are recorded, which is what keeps
+  55 skills from emptying — `10.1186/s13321-020-00449-0` (rMSIcleanup),
+  `10.1021/acs.jproteome.5c00435` (mzPeak) and `10.1186/s13321-023-00738-4`
+  (DeepSAT), all three Crossref-verified against public repositories. The 15 that
+  remain empty are one paper, `BitterMasS`, for which no public repository was
+  found; an honest absence rather than another paper's code.
+- Write unit `plugin.json` the way the tree carries it. The bundle writer was
+  corrected to `ensure_ascii=False`; the manifest writer three lines below it was
+  not, so it escaped the em dash and `Perspicacité` in every description it wrote.
+  The eight advertised technique packs have shipped `\u2014` / `\u00e9` in their
+  marketplace descriptions since packaged grounding landed, `origin/main` included.
+  Both writers now agree with the tree, and the nine manifests are re-encoded — the
+  documents parse identically either way, so no description changes.
+- Bind a payload file whose name happens to be `__pycache__`. The receipt skipped
+  any path with that name in any component, which is right for a cache directory
+  and wrong for a regular file: such a file would ship unbound, outside the
+  receipt, for the sake of its name. The skip now matches cache directories and
+  their contents only. No tracked path is affected today — the hole was
+  theoretical — and it rides with the regeneration the two items above require
+  rather than costing a fourth receipt rewrite of its own.
 - Ship the link-only grounding guard the repository has carried since
   2026-06-23. `bin/perspicacite_kb_bind.py` is a build-time copy of
   `scripts/perspicacite_kb_bind.py` and is the file an installed unit actually
@@ -106,10 +134,12 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   `continue-on-error` besides. It now emits a `::warning::` and says it did not
   run, the way gate 9 already does, and `docs/REGISTRY.md`,
   `docs/RELEASE_TRAIN_v0.md`, the PR template and `governance/CONTENT_POLICY.md`
-  no longer assert that a crate is present and valid. All four `collection.yaml`
-  files still declare `ro_crate_path: ro-crate-metadata.json`; whether to drop
-  the field or ship the crates is recorded for the maintainers, not decided
-  here.
+  no longer assert that a crate is present and valid. The `ro_crate_path` field
+  itself is dropped from all four manifests and from the generator that wrote it
+  unconditionally: a manifest a consumer reads should not name a file the release
+  does not ship, and the schema `asb_skill_collection.yaml` declares the slot
+  optional, so nothing requires it. Shipping real crates would make gate 8
+  enforceable and is v1 work.
 - Stop binding compiled-bytecode caches into a release receipt. The gate
   snapshots the tree it finds on disk, so the two `__pycache__` files that
   running `collections/metabolomics/v2/bin/`'s own search scripts leaves behind

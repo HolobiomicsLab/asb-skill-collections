@@ -655,7 +655,6 @@ def render_collection_yaml(
         "domain_topics": edam_topics,
         "source_collections": source_dois,
         "catalogue_membership": [REGISTRY_ROOT_IRI],
-        "ro_crate_path": "ro-crate-metadata.json",
     }
     return _yaml_dump(data)
 

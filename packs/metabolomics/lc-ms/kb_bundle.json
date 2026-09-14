@@ -1540,7 +1540,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [
@@ -7018,6 +7020,7 @@
       "repo_urls": [
         "https://github.com/bittremieuxlab/falcon",
         "https://github.com/stavis1/LipoCLEAN",
+        "https://github.com/HUPO-PSI/mzPeak",
         "https://github.com/secimTools/SECIMTools"
       ],
       "license_tier": "open",
@@ -29333,7 +29336,8 @@
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
       "repo_urls": [
-        "https://github.com/vdhooftcompmet/MS2LDA"
+        "https://github.com/vdhooftcompmet/MS2LDA",
+        "https://github.com/HUPO-PSI/mzPeak"
       ],
       "license_tier": "open",
       "provenance_tier": "literature",
@@ -66611,7 +66615,9 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/HUPO-PSI/mzPeak"
+      ],
       "license_tier": "open",
       "provenance_tier": "literature",
       "tools_used": [

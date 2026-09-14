@@ -1,6 +1,6 @@
 {
   "schema": "asbb-release-gate/1.1",
-  "generated_at": "2026-09-14T00:13:31.065326+00:00",
+  "generated_at": "2026-09-14T08:03:37.453275+00:00",
   "collection_dir": "/Users/nothiasl/git/asbcoll-wt-int/collections/transcriptomics/v1",
   "corpus_path": "/Users/nothiasl/git/asbcoll-wt-int/collections/transcriptomics/v1/corpus.yaml",
   "mode": "strict",
@@ -33,11 +33,11 @@
       "skill_kb.json"
     ],
     "config_sha256": "d8c4a1873e0ea091e6ae0218f73154cf3479325f875092aeada5d64190eea4c3",
-    "implementation_sha256": "fe678ffd1d0d4a1d8235ab4612237bd47d9434ddce34aa7b29fd89e4567e73e2"
+    "implementation_sha256": "dbf41e81642b23795b74884271caa6e057fa70756ce82d72c738d66299987341"
   },
   "binding": {
     "payload": {
-      "sha256": "7bfe1dbf16495f8e5ad42f48300c3d2a6085683d7869006f7a1066fbf1a47c3a",
+      "sha256": "095396b23f92529464d60b6a8b889b994b9faf740684c8103b7cdc03c3f1fef4",
       "entries": [
         {
           "path": "CITATION.cff",
@@ -2849,8 +2849,8 @@
         },
         {
           "path": "collection.yaml",
-          "bytes": 10501,
-          "sha256": "81a449d0a6b81c506f62eaeaa2092fe3220da0c0090a6052d6cba586d1315b0a"
+          "bytes": 10463,
+          "sha256": "331f858fe64f32b893fa38d75eba38f2bb2f919c4f3dd8e7a0cf05dc21f8f19f"
         },
         {
           "path": "corpus.yaml",
@@ -4919,5 +4919,5 @@
       "coverage": {}
     }
   ],
-  "receipt_sha256": "aa657dfb93b36964a51b323de3e386003021142328b0356b45b98bae7ab96af2"
+  "receipt_sha256": "1fc45251a5c3a9bb8d0e51e5b4c7b4a6b870d2cc15de47726632bb4e4337f79c"
 }

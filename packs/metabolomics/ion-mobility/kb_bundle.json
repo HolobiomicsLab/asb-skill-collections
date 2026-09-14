@@ -1670,7 +1670,8 @@
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
       "repo_urls": [
-        "https://github.com/stavis1/LipoCLEAN"
+        "https://github.com/stavis1/LipoCLEAN",
+        "https://github.com/HUPO-PSI/mzPeak"
       ],
       "license_tier": "open",
       "provenance_tier": "literature",
@@ -5439,7 +5440,8 @@
         "asb-paper-10-1021-acs-jproteome-5c00435"
       ],
       "repo_urls": [
-        "https://github.com/PNNL-m-q/mza"
+        "https://github.com/PNNL-m-q/mza",
+        "https://github.com/HUPO-PSI/mzPeak"
       ],
       "license_tier": "open",
       "provenance_tier": "literature",

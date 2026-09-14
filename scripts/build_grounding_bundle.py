@@ -173,7 +173,13 @@ def build_unit(unit_dir, collection_dir, bind_script):
     pj = json.loads(pj_path.read_text())
     if not pj.get("description", "").endswith(_SUFFIX):
         pj["description"] = pj.get("description", "") + _SUFFIX
-        pj_path.write_text(json.dumps(pj, indent=2) + "\n")
+        # ensure_ascii=False for the same reason the bundle above uses it: the
+        # shipped descriptions carry an em dash and "Perspicacité" literally, and
+        # the default escaped them, so this writer churned every manifest it
+        # touched. Both writers in this function now agree with the tree.
+        pj_path.write_text(
+            json.dumps(pj, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        )
         written.append(".claude-plugin/plugin.json")
     written.extend(stamp_copies(unit_dir, collection_dir))
     return written

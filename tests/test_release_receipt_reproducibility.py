@@ -84,3 +84,26 @@ def test_a_real_file_whose_own_name_resembles_a_cache_is_still_bound(tmp_path):
     bound = release_receipt.capture_target(collection, collection / "gate_report.json")
 
     assert any(entry["path"] == "__pycache__.md" for entry in bound["payload"]["entries"])
+
+
+def test_a_regular_file_named_exactly_like_a_cache_is_still_bound(tmp_path):
+    """The skip is about cache *directories*, not about the string.
+
+    `__pycache__.md` differs from the cache name; a file named `__pycache__`
+    does not. Skipping it on the name alone would ship a payload file the
+    receipt does not bind — an unbound path for the sake of its name — while a
+    real cache directory beside it must still be skipped.
+    """
+    collection = _collection(tmp_path / "collection")
+    (collection / "bin").mkdir()
+    (collection / "bin" / "search_skills.py").write_text("print('search')\n")
+    (collection / "__pycache__").write_text("A file, not a directory.\n")
+    _cache(collection)
+
+    bound = release_receipt.capture_target(collection, collection / "gate_report.json")
+    paths = [entry["path"] for entry in bound["payload"]["entries"]]
+
+    assert "__pycache__" in paths, (
+        "a regular file named __pycache__ is payload and must be bound")
+    assert not [p for p in paths if p.startswith("bin/__pycache__")], (
+        "the cache directory beside it must still be skipped")

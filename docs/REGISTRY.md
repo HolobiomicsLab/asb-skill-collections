@@ -266,7 +266,6 @@ asb-skill-collections/
 │   │       │   └── leaderboard.jsonld
 │   │       ├── kb.yaml                    # KB dependency + pinned profile
 │   │       ├── CITATION.cff               # per-collection citation (updated at release)
-│   │       ├── ro-crate-metadata.json     # RO-Crate 1.1 + Workflow Run 0.5 — declared, not yet shipped
 │   │       └── README.md
 │   └── epigenomics/
 │       └── v1/ ...
@@ -539,7 +538,7 @@ follows.
 | --- | --- |
 | `collection.yaml` schema compliance | Nothing. `layout_packaging` checks the on-disk layout and `unit_closure` that every declared member resolves, and `--catalogue-membership` checks that the catalogue's advertised members exist — none of them validates `collection.yaml` against a schema. `validate.yml` gate 1 does not either: it calls `linkml-validate --schema asb_skill_bundle.yaml`, a file that ships in the sibling `asb-schema` package and exists nowhere here, so every run failed with "File 'asb_skill_bundle.yaml' does not exist" behind `continue-on-error`. Measured against `asb-schema` v0.2 locally, the four manifests also carry seven fields (ten for `metabolomics/v2`) that its `SkillCollection` class does not declare. |
 | All `derived_from` DOIs resolve | `provenance_doi_license` checks that each leaf carries a source DOI **or** a repository URL, plus a licence tag. Nothing in this repository resolves a DOI over the network. |
-| RO-Crate metadata validity | No replacement. The release gate contains no RO-Crate check, and `validate.yml` gate 8 finds no crate to validate: every `collection.yaml` declares `ro_crate_path: ro-crate-metadata.json` and no collection ships that file. |
+| RO-Crate metadata validity | No replacement, and nothing claims otherwise. The release gate contains no RO-Crate check, `validate.yml` gate 8 finds no crate to validate, and the `ro_crate_path` field was dropped from the four manifests rather than left pointing at a file no collection ships. Shipping crates is v1 work; it would make gate 8 real. |
 | SKILL.md frontmatter discipline (description length, no marketing terms) | `python scripts/lint_skill_descriptions.py` — a separate script, not part of the gate. |
 | Open-access source tags (if `--require-open-access`) | `access_tier_oa`, which runs unconditionally; `release_gate.py` has no `--require-open-access` flag. |
 

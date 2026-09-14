@@ -1,6 +1,6 @@
 {
   "schema": "asbb-release-gate/1.1",
-  "generated_at": "2026-09-14T00:11:25.601562+00:00",
+  "generated_at": "2026-09-14T08:01:41.599904+00:00",
   "collection_dir": "/Users/nothiasl/git/asbcoll-wt-int/collections/metabolomics/v1",
   "corpus_path": "/Users/nothiasl/git/asbcoll-wt-int/collections/metabolomics/v1/corpus.yaml",
   "mode": "strict",
@@ -33,11 +33,11 @@
       "skill_kb.json"
     ],
     "config_sha256": "d8c4a1873e0ea091e6ae0218f73154cf3479325f875092aeada5d64190eea4c3",
-    "implementation_sha256": "fe678ffd1d0d4a1d8235ab4612237bd47d9434ddce34aa7b29fd89e4567e73e2"
+    "implementation_sha256": "dbf41e81642b23795b74884271caa6e057fa70756ce82d72c738d66299987341"
   },
   "binding": {
     "payload": {
-      "sha256": "0855b2e9808c6f5af7cacb93b9386d4e2261c2cad4ffe9d79011f73fced5bdba",
+      "sha256": "00885104b5aba094dae6c6d0568c42087f4f8b69fc1f0f8d225cabdb60774e91",
       "entries": [
         {
           "path": "CITATION.cff",
@@ -25565,8 +25565,8 @@
         },
         {
           "path": "collection.yaml",
-          "bytes": 71775,
-          "sha256": "f519202f709cd85dbee3bef06c3b2f2dc50b4b94d7b60e45b12f58a2e8fa4299"
+          "bytes": 71737,
+          "sha256": "2f58155bc154a9829da40240a1c6e40a88467153edd7d0e5509d56d8f53cc212"
         },
         {
           "path": "corpus.yaml",
@@ -41181,5 +41181,5 @@
       "coverage": {}
     }
   ],
-  "receipt_sha256": "e933f380207bb91eef31b06a1fbd5df41416ccbdb8284e66526f89b76bd91d5f"
+  "receipt_sha256": "36c0e85a72ed2d60fed0d104dc1d05c15c4a643308f257c41433e3eb9edc4181"
 }

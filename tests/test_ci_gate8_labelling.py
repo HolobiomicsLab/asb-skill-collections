@@ -1,8 +1,9 @@
 """Gate 8 (RO-Crate) must advertise itself as inert, for the same reason gate 9 does.
 
-No collection in this repository ships an `ro-crate-metadata.json`, while all four
-`collection.yaml` files declare `ro_crate_path: ro-crate-metadata.json`. The step
-therefore validates zero files, and it used to print
+No collection in this repository ships an `ro-crate-metadata.json`. The four
+`collection.yaml` files used to declare `ro_crate_path: ro-crate-metadata.json`
+anyway; the field was dropped when the crate claim was retired, so nothing now points
+at a file that does not exist. The step validates zero files, and it used to print
 "PASS: RO-Crate validation OK (0 crates checked)" — which reads, in the PR checks, the
 way an enforced gate that passed reads. Gate 9's labelling discipline
 (`tests/test_ci_gate_labelling.py`) is applied here to the second inert gate: say what
@@ -55,11 +56,13 @@ def test_header_marks_gate8_warn_only():
     )
 
 
-def test_no_collection_ships_the_crate_its_manifest_declares():
+def test_no_crate_is_shipped_and_none_is_declared():
     """The premise of this file, asserted rather than assumed.
 
-    If a crate is ever added, this test fails and gate 8 stops being inert — which
-    is the moment to restore its enforced labelling.
+    Gate 8 is inert because there is nothing to validate *and* nothing claims there
+    is. Either half changing is the moment to revisit the labelling: a crate
+    appearing makes the gate real, and a manifest declaring `ro_crate_path` again
+    re-creates the dangling path that dropping the field removed.
     """
     crates = list((ROOT / "collections").rglob("ro-crate-metadata.json"))
     manifests = sorted((ROOT / "collections").rglob("collection.yaml"))
@@ -67,9 +70,19 @@ def test_no_collection_ships_the_crate_its_manifest_declares():
 
     assert manifests, "no collection manifest found"
     assert not crates, f"a crate now ships ({crates}); gate 8 is no longer inert"
-    assert declaring == manifests, (
-        "every collection manifest is expected to declare ro_crate_path; "
-        f"{len(declaring)} of {len(manifests)} do"
+    assert not declaring, (
+        "no collection manifest may declare ro_crate_path while no crate ships; "
+        f"{[str(m.relative_to(ROOT)) for m in declaring]} do"
+    )
+
+
+def test_the_generator_does_not_reintroduce_the_field():
+    """Dropping it from the four manifests is undone by the next generation run
+    unless the generator stops writing it."""
+    gen = (ROOT / "scripts" / "collect_metabolomics_collection.py").read_text()
+    assert "ro_crate_path" not in gen, (
+        "the collection generator still writes ro_crate_path; the field would come "
+        "back on the next run"
     )
 
 
