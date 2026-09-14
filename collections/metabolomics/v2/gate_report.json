@@ -1,6 +1,6 @@
 {
   "schema": "asbb-release-gate/1.1",
-  "generated_at": "2026-09-14T08:03:19.654904+00:00",
+  "generated_at": "2026-09-14T09:32:26.072986+00:00",
   "collection_dir": "/Users/nothiasl/git/asbcoll-wt-int/collections/metabolomics/v2",
   "corpus_path": "/Users/nothiasl/git/asbcoll-wt-int/collections/metabolomics/v2/corpus.yaml",
   "mode": "strict",
@@ -37,7 +37,7 @@
   },
   "binding": {
     "payload": {
-      "sha256": "67b3b90950e1a7adda4803cdd79057b55aa65d3af98fda40484588b946b3368c",
+      "sha256": "b62a823f095210abb3a79a86362e24fcc96dd2d342b8c34a984f463341a6642d",
       "entries": [
         {
           "path": ".claude-plugin",
@@ -75,8 +75,8 @@
         },
         {
           "path": "USAGE.md",
-          "bytes": 22524,
-          "sha256": "8cae2166e764ca7e1f000d0d3b4671b9912577c346285a3788cb4f83e659b57f"
+          "bytes": 22749,
+          "sha256": "07de0067c9adea55ae84292087f01d26e215d2e3a420a0aa848705ce75555ed3"
         },
         {
           "path": "bin",
@@ -58275,5 +58275,5 @@
       "coverage": {}
     }
   ],
-  "receipt_sha256": "f7c64d5efad65046965eb31a4f4190d4f3cde3b2d3cbbc4eaad2b11c8e0e2aa5"
+  "receipt_sha256": "613d249dbd7f000565fbc57cf8ba3de966245d8841b82a14dadfcf38e8f8da26"
 }

@@ -606,7 +606,7 @@ stamped into the `@id` of every skill — 5,884 occurrences in `metabolomics/v2`
 context is the repository's `catalogue.jsonld`, which pins `schema.org` as `@vocab` plus the EDAM and
 XSD prefixes. Both ship. No third file is required.
 
-> **Open, and it is a registration, not a decision.** Neither `https://w3id.org/holobiomicslab/asb-skill/`
+> **Resolved 2026-09-14 for `/holobiomicslab`; the text below records the state before that.** Neither `https://w3id.org/holobiomicslab/asb-skill/`
 > nor `https://w3id.org/asb` resolves — both return 404 (checked 2026-09-13). A w3id IRI is designed to
 > be minted before it redirects, so this does not block a tag and the identifiers stay stable, but every
 > `@id` in the deposited collection is a dead link until the redirect config is submitted to the w3id.org
@@ -621,9 +621,11 @@ XSD prefixes. Both ship. No third file is required.
 > drafts remain blocked on `HolobiomicsLab/indicium` being public (still private, all four of
 > their targets 404 on 2026-09-14). The `/holobiomicslab` targets all return 200.
 >
-> **Submitted 2026-09-14** as [perma-id/w3id.org#6690](https://github.com/perma-id/w3id.org/pull/6690), `/holobiomicslab` alone — no `/asb` and
-> no `/indicium` registration is submitted. Until it merges, `https://w3id.org/holobiomicslab/asb-skill/`
-> still returns 404.
+> **Merged 2026-09-14** as [perma-id/w3id.org#6690](https://github.com/perma-id/w3id.org/pull/6690), `/holobiomicslab` alone — no `/asb` and
+> no `/indicium` registration is submitted, so those two bases still return 404. Checked live the same
+> day: `…/asb-skill/registry` answers 303 to the raw `catalogue.jsonld` for `application/ld+json` and 302
+> to the GitHub view otherwise; `…/asb-skill/collection/metabolomics/v2` answers 302 to the collection
+> directory. The `w3id-registration` register item is closed for this namespace.
 
 **If v1 ships claim records**, the ontology pin becomes real and belongs here — at that point snapshot the
 generated Turtle from the framework (`docs/ontology/asb_spine.ttl`), not a hand-copy in this repo. The

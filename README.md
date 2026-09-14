@@ -382,7 +382,10 @@ release** — only `metabolomics/v2` is published via the plugin.
 ## Status & caveats
 
 - **Zenodo DOI** — [10.5281/zenodo.20794027](https://doi.org/10.5281/zenodo.20794027).
-- **`w3id.org/holobiomicslab/…` IRIs** — reserved identifiers that **do not
-  resolve yet** (the redirect is not live); treat as stable names, not links.
+- **`w3id.org/holobiomicslab/…` IRIs** — resolve since 2026-09-14
+  ([perma-id/w3id.org#6690](https://github.com/perma-id/w3id.org/pull/6690)). The registry, contributors and leaderboard
+  IRIs content-negotiate: `Accept: application/ld+json` gets the raw JSON-LD (303),
+  a browser gets the GitHub view (302). A collection IRI redirects to its directory.
+  All targets follow `main`, not a release tag.
 - **HuggingFace mirror & leaderboard** — planned, not yet live.
 - **Benchmark / capsules** — to be released later.

@@ -456,8 +456,11 @@ per-build in `build_manifest.json`). The raw ASB capsules + benchmark layer
 (full end-to-end traceability) will be released later.
 
 > **IRIs:** the `w3id.org/holobiomicslab/…` identifiers in `collection.yaml` and
-> the docs are **reserved names that do not resolve yet** — stable identifiers,
-> not working links. The Zenodo DOI is likewise not minted yet (`10.5281/zenodo.20794027`).
+> the docs resolve since 2026-09-14. The registry, contributors and leaderboard IRIs
+> content-negotiate (`Accept: application/ld+json` gets the raw JSON-LD, a browser the
+> GitHub view); a collection IRI redirects to its directory. Targets follow `main`,
+> not a release tag. The Zenodo DOI is minted:
+> [`10.5281/zenodo.20794027`](https://doi.org/10.5281/zenodo.20794027) (`metabolomics-v0.1.0`).
 
 ## Provenance & policy
 
