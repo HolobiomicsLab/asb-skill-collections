@@ -28,6 +28,19 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   keeps its historical score/slug order unchanged. See `docs/selection.md`.
 
 ### Fixed
+- Ship the link-only grounding guard the repository has carried since
+  2026-06-23. `bin/perspicacite_kb_bind.py` is a build-time copy of
+  `scripts/perspicacite_kb_bind.py` and is the file an installed unit actually
+  runs; nothing compared the two. `5f79a87db` added `link_only` /
+  `build_local_manifest`, which refuse to embed a `noncommercial` or
+  `restricted` skill's sources and return a link-only manifest instead, and
+  re-vendored none of the nine copies. All nine — the collection and the eight
+  packs — still shipped the pre-guard binder, which clones every `repo_urls`
+  entry unconditionally, while 1,440 of the collection's 5,859 bundle records
+  (1,279 `restricted`, 161 `noncommercial`) now carry the `license_tier` the
+  guard reads. The copies are refreshed and a test asserts every shipped unit
+  vendors the current binder, so a helper change can no longer land in the
+  repository without reaching the consumer.
 - Stop erasing the repository of a skill that has no papers. `resolve_repo_urls`
   exists so a skill is never handed another paper's repository (issue #42), and
   it derives from the skill's DOIs — which leaves a skill with no DOIs with

@@ -1,6 +1,6 @@
 {
   "schema": "asbb-release-gate/1.1",
-  "generated_at": "2026-09-14T00:13:12.786320+00:00",
+  "generated_at": "2026-09-14T01:42:25.277807+00:00",
   "collection_dir": "/Users/nothiasl/git/asbcoll-wt-int/collections/metabolomics/v2",
   "corpus_path": "/Users/nothiasl/git/asbcoll-wt-int/collections/metabolomics/v2/corpus.yaml",
   "mode": "strict",
@@ -37,7 +37,7 @@
   },
   "binding": {
     "payload": {
-      "sha256": "f6df6645b981245aa2ab7b7d18a96ed62199ff7f02e50ec07c0d5da259b123e2",
+      "sha256": "a01123cb797a54dedb044f6a29cc7efaff0a0ca2454b01e5d64f94fb1eeebddb",
       "entries": [
         {
           "path": ".claude-plugin",
@@ -84,8 +84,8 @@
         },
         {
           "path": "bin/perspicacite_kb_bind.py",
-          "bytes": 11601,
-          "sha256": "8ead1d6b31aac8b48f4272675c6b331d0911571b26abf5e7bd4b94738caa5c5a"
+          "bytes": 12674,
+          "sha256": "598035a2d1b5cc94e9e80ac1e78963da89fcafd45e064a7bb05b1a0d87b39b8c"
         },
         {
           "path": "bin/search_skills.py",
@@ -58275,5 +58275,5 @@
       "coverage": {}
     }
   ],
-  "receipt_sha256": "9f4fe3c4ed9c244f7f8228d58410c1be78e990225fa655672d23095c3c521d91"
+  "receipt_sha256": "c62980dfebc0abc10ca62507a358839bca2c695d27413dd898b370cb94a4629f"
 }
