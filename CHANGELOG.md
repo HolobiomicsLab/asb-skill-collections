@@ -28,6 +28,22 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   keeps its historical score/slug order unchanged. See `docs/selection.md`.
 
 ### Fixed
+- Name real ontology terms in the 16,583 validation assertions of the three v1
+  collections (82 `indicium/*.jsonld` files: 14,912 `ClaimAssessment`, 1,374
+  `SkillTriageAssertion`, 297 `ScopeDriftAssertion`). They carried
+  `sepio:credibility_status` with SEPIO_0000338–0000341 and 0000301–0000303, and
+  `eco:evidence_type`; in the SEPIO release of 2023-06-13 none of those codes is a
+  status (0000340 is an annotation property, the others do not exist), so every
+  such triple expanded to an IRI no ontology defines. Each record now carries
+  `sepio:0000183` (evidence direction) — 0000403 supporting, 0000404 disputing,
+  0000405 inconclusive — and claim assessments `ro:0002558` (has evidence) with
+  ECO_0000501 (evidence used in automatic assertion); the context declares `ro`.
+  The direction is derived from the verdict each record already held
+  (`asbval:supported_raw`, `asbval:triage_status`), which stays unchanged, and all
+  16,583 legacy codes agreed with it. `partial` and uncertain verdicts both map to
+  inconclusive. This matches ASB's validation bridge 0.2.0. The three receipts are
+  regenerated and verify; `metabolomics/v2` carries no such records.
+  `tests/test_v1_validation_assertion_terms.py` holds the records to the terms.
 - Record `collection_dir` and `corpus_path` in `gate_report.json` relative to the
   checkout that holds the collection, not as absolute paths. The receipt ships inside
   the collection, so the four regenerated receipts published the gate machine's home

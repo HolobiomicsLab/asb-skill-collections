@@ -1,6 +1,6 @@
 {
   "schema": "asbb-release-gate/1.1",
-  "generated_at": "2026-09-14T12:29:07.766730+00:00",
+  "generated_at": "2026-09-14T14:13:38.488653+00:00",
   "collection_dir": "collections/epigenomics/v1",
   "corpus_path": "collections/epigenomics/v1/corpus.yaml",
   "mode": "strict",
@@ -37,7 +37,7 @@
   },
   "binding": {
     "payload": {
-      "sha256": "b2f28b418ec228d23fa03b6983f6b8b52ecf98b18b5d57ac0822427c12714527",
+      "sha256": "a2999905e95f176b7db04771a41aae1d2e51c70ee3c2000dad26c4abfd7a5d33",
       "entries": [
         {
           "path": "CITATION.cff",
@@ -3389,53 +3389,53 @@
         },
         {
           "path": "indicium/archr.jsonld",
-          "bytes": 197947,
-          "sha256": "5cdd57f720033be92185be013c91b615a2d5cd222539fe136966654d7b56a8da"
+          "bytes": 195577,
+          "sha256": "6fb738d6d6d89d91834345cf7cb06ade10c3afcc778d5c64832355b9301e6184"
         },
         {
           "path": "indicium/champ.jsonld",
-          "bytes": 336552,
-          "sha256": "e18b483d8e19e2a6302891cdd88dd5f513460c9be430f027bf5dee48be73f503"
+          "bytes": 332546,
+          "sha256": "4e277791f4efd0eb2cc78fa10bda71d876a0b5f56306a0f4c7ade59de3f9fa85"
         },
         {
           "path": "indicium/chromvar.jsonld",
-          "bytes": 440683,
-          "sha256": "2a2ded42381a59b30317c1eec29d03cc44e590c346720b726703a769546605c0"
+          "bytes": 435121,
+          "sha256": "453c82de59f518e7d5d2e4163b9df80be436c7617a792b2afe310a5a3d1373d7"
         },
         {
           "path": "indicium/cooltools.jsonld",
-          "bytes": 427917,
-          "sha256": "95eb4806dab5426ee5e7fa8b5274270472b4fec2681cc7504d00b8e8adc8c5d0"
+          "bytes": 422574,
+          "sha256": "19742e6f68f81e27d4c372f80820fbc8f16215c00b569a18054aa608f06dcbb3"
         },
         {
           "path": "indicium/hicpro.jsonld",
-          "bytes": 351646,
-          "sha256": "ea27ec885873aeb78036da2f685d3867ce8c88c3831569e850e048e2610deafd"
+          "bytes": 346762,
+          "sha256": "00b164bd4e5093802bf2e0bcc8b6618911591f696b2482406008d97c33497068"
         },
         {
           "path": "indicium/juicer.jsonld",
-          "bytes": 241958,
-          "sha256": "f30a916711c159124549bbaf6228b42c13c88d3a150922387e42d9f128c14550"
+          "bytes": 238684,
+          "sha256": "708f5991480c34457c4c7b220d26f98695e0b298cf812b32b8416d90c60f2606"
         },
         {
           "path": "indicium/macs.jsonld",
-          "bytes": 306019,
-          "sha256": "d7a525f062b7c8d2078935dbc8af11a35d15b2e72e0bd539a42a63d0df92c8f9"
+          "bytes": 302410,
+          "sha256": "464448ef6463849c160991c38931b5f880ba5b09b92f059bd633b587c5ba9fc7"
         },
         {
           "path": "indicium/methylkit.jsonld",
-          "bytes": 402337,
-          "sha256": "f09f5e059dbf1fc5a0fd82007fc55f03b012b0f400ebbe27984052f7599c6796"
+          "bytes": 397427,
+          "sha256": "0cfe7be0c679e23a6707e770ce5eeeb2d769feaef9282eec35f3eec3f5bd71d7"
         },
         {
           "path": "indicium/snapatac2.jsonld",
-          "bytes": 511692,
-          "sha256": "c4f76d77c1024a83bff8d87cc63e75fac6b5378a22faa5ab7b5b45a4ed0c5400"
+          "bytes": 505341,
+          "sha256": "c648b85d64361514cec91db9fdfcb021eccaa4fb50d87adda1152fd883db4557"
         },
         {
           "path": "indicium/tobias.jsonld",
-          "bytes": 325885,
-          "sha256": "03f918e06d91b7543334d6c78a377da03b19f0339e3a549d5e664efe4375b4b7"
+          "bytes": 321756,
+          "sha256": "641e56fbfe72b3d231e60f97065cd9b2eb9fbea296b9477678db0f0179d1c7c1"
         },
         {
           "path": "links.json",
@@ -5943,5 +5943,5 @@
       "coverage": {}
     }
   ],
-  "receipt_sha256": "2524c4a8eab07a6b4e64a12e1b43e9e9a2ef4da1bbe8ca1765a9134c825ac8f4"
+  "receipt_sha256": "a0942b69c6ae3e4829163fd2513b684369d681bfb096faed238e3bf10e72cdbb"
 }

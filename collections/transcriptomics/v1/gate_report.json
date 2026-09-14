@@ -1,6 +1,6 @@
 {
   "schema": "asbb-release-gate/1.1",
-  "generated_at": "2026-09-14T12:31:39.690441+00:00",
+  "generated_at": "2026-09-14T14:13:56.533692+00:00",
   "collection_dir": "collections/transcriptomics/v1",
   "corpus_path": "collections/transcriptomics/v1/corpus.yaml",
   "mode": "strict",
@@ -37,7 +37,7 @@
   },
   "binding": {
     "payload": {
-      "sha256": "af3a71a74fc1e0301445ab0fb28ff9db1abea035046b3149d206b13a8bce100d",
+      "sha256": "2495c146b8c1eb9a25755b40a079449ce0d8ac13f320d31197795662abca989b",
       "entries": [
         {
           "path": "CITATION.cff",
@@ -2863,43 +2863,43 @@
         },
         {
           "path": "indicium/deseq2.jsonld",
-          "bytes": 434987,
-          "sha256": "dccda7aac25a6387b4b6bc3d991d72d9b2c19a1b481f7476b08315d9791f53c9"
+          "bytes": 429724,
+          "sha256": "611f1118c16b25fba90eebe4f7a1dd60b81f009f1fbad1270b93f0791bb1f6a9"
         },
         {
           "path": "indicium/fgsea.jsonld",
-          "bytes": 403235,
-          "sha256": "c930446423b17d6180af0dd5885ae1e450bf8ec3a0f87e14479a6df7e136e442"
+          "bytes": 397824,
+          "sha256": "7a2c3297c7a36c0b9f8c55eb4032d5e2e8289f8eb2fc3c22667902eb9a8c2d64"
         },
         {
           "path": "indicium/limmavoom.jsonld",
-          "bytes": 227520,
-          "sha256": "fcd15310c68d143fba3eb0365cc00efce84b891b6f31fabf02451df7d8dae091"
+          "bytes": 224869,
+          "sha256": "faa57707a06d30fdf752965df136c5202ec7648efe277b848ce82af228fdae7b"
         },
         {
           "path": "indicium/salmon.jsonld",
-          "bytes": 408174,
-          "sha256": "41b1888679a8f0b54ae8bc917a5f2832b985eb916e1d9bce263ae64672b4472f"
+          "bytes": 402925,
+          "sha256": "0ff1ea7da7862e406bfe3480249907a47b0ac388334d6d0b4c944f8885af923e"
         },
         {
           "path": "indicium/scanpy.jsonld",
-          "bytes": 438783,
-          "sha256": "33911d22471f4985040e837eac1feb6b0722fd0f97ed5c842f0e76ceb651616b"
+          "bytes": 433278,
+          "sha256": "1016891280a1da878c92419536d6bd92fbcc5b6a31da3221ff071f128b17daa5"
         },
         {
           "path": "indicium/squidpy.jsonld",
-          "bytes": 402703,
-          "sha256": "a417c5e698cf4f39a4a09075404ca4c5b8804bce3214e20eb9797b48bb8e5014"
+          "bytes": 397847,
+          "sha256": "de2ff3f239d4d82ac08b7d50ef988ac20996531da9539fa5c65a03e5401fb877"
         },
         {
           "path": "indicium/suppa2.jsonld",
-          "bytes": 173676,
-          "sha256": "f07c0d87024659ab6e0cdfe64172ad75ac71b46d5245ded1c5b4afe4b89508cb"
+          "bytes": 171576,
+          "sha256": "bfe3d6bd452627ba9c31b79809781bb0f7f6d099735725cc3b23b3eb4929787d"
         },
         {
           "path": "indicium/tximport.jsonld",
-          "bytes": 426263,
-          "sha256": "339965651df5b5840f3ab7a9909a0490acab47bb4708c1fd59df2c1d5f1e2f95"
+          "bytes": 421080,
+          "sha256": "cb7c3616264a9b5b837201b29e4db4de83246c28cec2e9a43445f8d2993f7255"
         },
         {
           "path": "links.json",
@@ -4919,5 +4919,5 @@
       "coverage": {}
     }
   ],
-  "receipt_sha256": "398d07d369f0119f34a3b022a3befd36dff65b6928d0cd1be895a7034e47036d"
+  "receipt_sha256": "3b4bbd4659a9566d94c2665d3314140a4197de1ed1aa5cbcd362d1c6cee95247"
 }
