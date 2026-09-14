@@ -51,6 +51,22 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   and never re-run over the packs. Pack leaves are now byte copies of the
   collection leaf of the same slug and both indexes are the collection's own
   rows filtered to the pack's members.
+- Stop advertising a LinkML gate that has never run. `validate.yml` gate 1 called
+  `linkml-validate --schema asb_skill_bundle.yaml`, a file that ships in the
+  sibling `asb-schema` package and exists nowhere in this repository, so every
+  run printed `FAIL: LinkML validation failures` once per collection and exited
+  1 — and `continue-on-error: true` turned that into a green Validate. Measured
+  on the last green run on `main` (2026-09-05): four failures, all
+  `File 'asb_skill_bundle.yaml' does not exist`, job conclusion `success`. The
+  step now resolves its schema (checkout, then an installed `asb-schema`),
+  checks that the `linkml-validate` CLI is on PATH, and emits a `::warning::`
+  saying `GATE 1 DID NOT RUN` instead of failing where nobody looks.
+  `docs/REGISTRY.md`, `docs/RELEASE_TRAIN_v0.md` — which listed the gate as
+  blocking — the PR template and `governance/CONTENT_POLICY.md` no longer
+  assert that `collection.yaml` is schema-validated. Against `asb-schema` v0.2
+  the four manifests carry seven fields its `SkillCollection` class does not
+  declare (ten for `metabolomics/v2`) and no missing required slot, so turning
+  the gate on is a schema decision for the maintainers, not a switch.
 - Say what the RO-Crate gate measured. No collection ships an
   `ro-crate-metadata.json`, so `validate.yml` gate 8 validated zero files and
   printed `PASS: RO-Crate validation OK (0 crates checked)` — which reads in the

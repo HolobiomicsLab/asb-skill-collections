@@ -352,7 +352,7 @@ The release-gate reviews (gates 13, 14 in the SPEC: independent co-reviewer and 
 
 | Gate | Description | Trigger | Automated | Blocking |
 |---|---|---|---|---|
-| 1 | LinkML schema validation (collection.yaml, tools/*.yaml) | PR, push-main, tag | ✓ | ✓ |
+| 1 | LinkML schema validation (collection.yaml, tools/*.yaml) | PR, push-main, tag | ✓ | inert — the schema ships in `asb-schema` (unpublished, not vendored here), so the step validates zero files and never blocks |
 | 2 | No orphan skills (DOI resolution sample) | PR, push-main, tag | ✓ | ✓ |
 | 5 | Description discipline lint | PR, push-main, tag | ✓ | ✓ |
 | 6 | EDAM IRI resolution | PR, push-main, tag | ✓ | ✓ |

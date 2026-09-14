@@ -490,7 +490,9 @@ resolution; RO-Crate validation (inert — no collection ships an
 `ro-crate-metadata.json`, so the step validates zero files, emits a `::warning::` and
 never blocks, while every `collection.yaml` declares `ro_crate_path`); the indicium
 round-trip (inert — the CLI is not on PyPI, so it emits a `::warning::` and never
-blocks); LinkML schema validation; the pack-derivation gate
+blocks); LinkML schema validation (inert — `asb_skill_bundle.yaml` is in neither this
+repository nor PyPI, so the step resolves no schema, emits a `::warning::` and never
+blocks); the pack-derivation gate
 (`scripts.build_packs --check`); the advertised-count gate
 (`scripts.check_advertised_counts`); and the license-tier, provenance-tier and
 tool-catalogue gates — the first two over `collections/metabolomics/v2` and every

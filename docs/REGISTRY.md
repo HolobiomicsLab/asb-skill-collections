@@ -537,7 +537,7 @@ follows.
 
 | Advertised check | What actually runs it |
 | --- | --- |
-| `collection.yaml` schema compliance | Nothing. `layout_packaging` checks the on-disk layout and `unit_closure` that every declared member resolves, and `--catalogue-membership` checks that the catalogue's advertised members exist — none of them validates `collection.yaml` against a schema. |
+| `collection.yaml` schema compliance | Nothing. `layout_packaging` checks the on-disk layout and `unit_closure` that every declared member resolves, and `--catalogue-membership` checks that the catalogue's advertised members exist — none of them validates `collection.yaml` against a schema. `validate.yml` gate 1 does not either: it calls `linkml-validate --schema asb_skill_bundle.yaml`, a file that ships in the sibling `asb-schema` package and exists nowhere here, so every run failed with "File 'asb_skill_bundle.yaml' does not exist" behind `continue-on-error`. Measured against `asb-schema` v0.2 locally, the four manifests also carry seven fields (ten for `metabolomics/v2`) that its `SkillCollection` class does not declare. |
 | All `derived_from` DOIs resolve | `provenance_doi_license` checks that each leaf carries a source DOI **or** a repository URL, plus a licence tag. Nothing in this repository resolves a DOI over the network. |
 | RO-Crate metadata validity | No replacement. The release gate contains no RO-Crate check, and `validate.yml` gate 8 finds no crate to validate: every `collection.yaml` declares `ro_crate_path: ro-crate-metadata.json` and no collection ships that file. |
 | SKILL.md frontmatter discipline (description length, no marketing terms) | `python scripts/lint_skill_descriptions.py` — a separate script, not part of the gate. |
@@ -659,7 +659,7 @@ The promotion step is manual (move the directory), not automated. This allows:
 
 | Gate | Checked by | Blocks? | When |
 |------|-----------|---------|------|
-| **LinkML schema** | `validate.yml` gate 1 | PR | every commit to collections/ or staged-collections/ |
+| **LinkML schema** | `validate.yml` gate 1 | no — `continue-on-error`, and the schema it names is in neither this repository nor PyPI, so it validates nothing | every commit to collections/ or staged-collections/ |
 | **DOI resolution** | `validate.yml` gate 2 | PR | every commit |
 | **Description discipline** | `validate.yml` gate 5 | PR | every commit |
 | **EDAM IRI resolution** | `validate.yml` gate 6 | PR | every commit |
@@ -722,7 +722,7 @@ The promotion step is manual (move the directory), not automated. This allows:
 |-------|------|--------|----------|---|---|
 | **Native install surface** | `.claude-plugin/marketplace.json` | JSON | Users: `/plugin install <marketplace-name>@asb-skill-collections` | Manual (maintainer) | Lead curator approval |
 | **Machine registry** | `catalogue.jsonld` | JSON-LD (w3id IRIs) | Bots, linked-data clients, citation systems | Auto (regen_catalogue.py on tag) | Deterministic algorithm |
-| **Collection metadata** | `collections/<slug>/v<N>/collection.yaml` | YAML (LinkML schema) | Release gate, regen_catalogue.py | Manual (collection author) | LinkML validation (gate 1) |
+| **Collection metadata** | `collections/<slug>/v<N>/collection.yaml` | YAML (LinkML schema) | Release gate, regen_catalogue.py | Manual (collection author) | LinkML validation (gate 1) — declared, not running |
 | **KB grounding** | `collections/<slug>/v<N>/kb.yaml` | YAML | Install script, skill runtime | Manual (collection author) | Optional (fail-soft if absent) |
 | **Registry reconciliation** | `scripts/release_gate.py`, `regen_catalogue.py`, `check_advertised_counts.py` | shell commands | Maintainers, CI/CD, power users | Manual command invocation (gate also runs at promotion and release) | Release gate. (`asbb registry`, listed here until 2026-09-14, was a stub and was removed — §4.1) |
 

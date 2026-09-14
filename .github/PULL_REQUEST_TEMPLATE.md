@@ -23,7 +23,7 @@
 - [ ] If `is_coauthor: true`: `co_reviewer` block is present and co-reviewer has posted a sign-off comment
 
 ### For new collections
-- [ ] `collection.yaml` validates against LinkML schema
+- [ ] `collection.yaml` validates against LinkML schema — n/a in CI while `asb-schema` is unpublished; gate 1 validates zero files
 - [ ] `curator-criteria.yaml` is filled in for the domain
 - [ ] `CITATION.cff` includes all contributors
 - [ ] RO-Crate metadata is valid (Workflow Run Profile 0.5) — n/a while no collection ships a crate
