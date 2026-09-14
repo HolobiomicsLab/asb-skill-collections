@@ -1,6 +1,6 @@
 {
   "schema": "asbb-release-gate/1.1",
-  "generated_at": "2026-09-13T21:50:32.145632+00:00",
+  "generated_at": "2026-09-14T00:11:25.601562+00:00",
   "collection_dir": "/Users/nothiasl/git/asbcoll-wt-int/collections/metabolomics/v1",
   "corpus_path": "/Users/nothiasl/git/asbcoll-wt-int/collections/metabolomics/v1/corpus.yaml",
   "mode": "strict",
@@ -33,7 +33,7 @@
       "skill_kb.json"
     ],
     "config_sha256": "d8c4a1873e0ea091e6ae0218f73154cf3479325f875092aeada5d64190eea4c3",
-    "implementation_sha256": "c09751d8132dcabc83b8ca84601edacc058cf873daa81d7bc33733ab5f6b1102"
+    "implementation_sha256": "fe678ffd1d0d4a1d8235ab4612237bd47d9434ddce34aa7b29fd89e4567e73e2"
   },
   "binding": {
     "payload": {
@@ -41181,5 +41181,5 @@
       "coverage": {}
     }
   ],
-  "receipt_sha256": "aea11b599b6ebaa38cf15b2ee7811fa1e8969f3f1e39c62d90ec7936c62af4bd"
+  "receipt_sha256": "e933f380207bb91eef31b06a1fbd5df41416ccbdb8284e66526f89b76bd91d5f"
 }

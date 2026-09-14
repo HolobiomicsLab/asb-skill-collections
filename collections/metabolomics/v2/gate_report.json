@@ -1,6 +1,6 @@
 {
   "schema": "asbb-release-gate/1.1",
-  "generated_at": "2026-09-13T21:52:10.942233+00:00",
+  "generated_at": "2026-09-14T00:13:12.786320+00:00",
   "collection_dir": "/Users/nothiasl/git/asbcoll-wt-int/collections/metabolomics/v2",
   "corpus_path": "/Users/nothiasl/git/asbcoll-wt-int/collections/metabolomics/v2/corpus.yaml",
   "mode": "strict",
@@ -33,11 +33,11 @@
       "skill_kb.json"
     ],
     "config_sha256": "d8c4a1873e0ea091e6ae0218f73154cf3479325f875092aeada5d64190eea4c3",
-    "implementation_sha256": "c09751d8132dcabc83b8ca84601edacc058cf873daa81d7bc33733ab5f6b1102"
+    "implementation_sha256": "fe678ffd1d0d4a1d8235ab4612237bd47d9434ddce34aa7b29fd89e4567e73e2"
   },
   "binding": {
     "payload": {
-      "sha256": "b1fba744897a0347420af260edf6b00b3d1e40af560220d02953b1855fbfcf7d",
+      "sha256": "f6df6645b981245aa2ab7b7d18a96ed62199ff7f02e50ec07c0d5da259b123e2",
       "entries": [
         {
           "path": ".claude-plugin",
@@ -75,26 +75,12 @@
         },
         {
           "path": "USAGE.md",
-          "bytes": 21959,
-          "sha256": "4ecfb0fc61fc494b0b2044d626e0c61ee0fcfe6a9ad8f61f8efefbfa4f6c7876"
+          "bytes": 22524,
+          "sha256": "8cae2166e764ca7e1f000d0d3b4671b9912577c346285a3788cb4f83e659b57f"
         },
         {
           "path": "bin",
           "directory": true
-        },
-        {
-          "path": "bin/__pycache__",
-          "directory": true
-        },
-        {
-          "path": "bin/__pycache__/search_skills.cpython-311.pyc",
-          "bytes": 38894,
-          "sha256": "0f3e100bfc974337846b94e88957ddee417ffae07f2d68308bb6fa1257b703a4"
-        },
-        {
-          "path": "bin/__pycache__/semantic_search.cpython-311.pyc",
-          "bytes": 37560,
-          "sha256": "1544957ab9dfb2ec5992b89904e8dcc957435b818bf458ce664fe8d76bdee4b4"
         },
         {
           "path": "bin/perspicacite_kb_bind.py",
@@ -103,13 +89,13 @@
         },
         {
           "path": "bin/search_skills.py",
-          "bytes": 21871,
-          "sha256": "b0e9744ef594394c93c21a61925ff9d2a3502aa0f45fb7ad19c5791a9b2f77bb"
+          "bytes": 23077,
+          "sha256": "040142e31018bc9b6d5997a25a2b00d7efad11440cbdb726fd28c5fb23487f26"
         },
         {
           "path": "bin/semantic_search.py",
-          "bytes": 20950,
-          "sha256": "1e3e4c801f743e75215283a0b998ba930f70c1c3513267591ddc17853f120df7"
+          "bytes": 22156,
+          "sha256": "956951dd5169c9846508db7099b23ef615630db58d54286a190af14318b7706c"
         },
         {
           "path": "collection.yaml",
@@ -58202,7 +58188,7 @@
       "scope": "payload files",
       "required": true,
       "counts": {
-        "checked": 6867,
+        "checked": 6865,
         "skipped": 0,
         "missing": 0,
         "failed": 0
@@ -58289,5 +58275,5 @@
       "coverage": {}
     }
   ],
-  "receipt_sha256": "13312f6bb6123df769d1cb9149ec93bac0086c9bfc5e46d59afdc54579b012c1"
+  "receipt_sha256": "9f4fe3c4ed9c244f7f8228d58410c1be78e990225fa655672d23095c3c521d91"
 }

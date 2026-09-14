@@ -1,6 +1,6 @@
 {
   "schema": "asbb-release-gate/1.1",
-  "generated_at": "2026-09-13T21:52:46.774554+00:00",
+  "generated_at": "2026-09-14T00:10:50.935093+00:00",
   "collection_dir": "/Users/nothiasl/git/asbcoll-wt-int/collections/epigenomics/v1",
   "corpus_path": "/Users/nothiasl/git/asbcoll-wt-int/collections/epigenomics/v1/corpus.yaml",
   "mode": "strict",
@@ -33,7 +33,7 @@
       "skill_kb.json"
     ],
     "config_sha256": "d8c4a1873e0ea091e6ae0218f73154cf3479325f875092aeada5d64190eea4c3",
-    "implementation_sha256": "c09751d8132dcabc83b8ca84601edacc058cf873daa81d7bc33733ab5f6b1102"
+    "implementation_sha256": "fe678ffd1d0d4a1d8235ab4612237bd47d9434ddce34aa7b29fd89e4567e73e2"
   },
   "binding": {
     "payload": {
@@ -5943,5 +5943,5 @@
       "coverage": {}
     }
   ],
-  "receipt_sha256": "22230929870fc362efc587e3c20c1e98a8b166b41a9811ce53de658eb9d68846"
+  "receipt_sha256": "abb0278bc1a6dc2bf2a0acb33dc3aa50f862faadf7ecaaaf1bd4509471e146c4"
 }
