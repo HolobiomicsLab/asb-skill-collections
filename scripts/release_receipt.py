@@ -16,6 +16,7 @@ from typing import Any
 from asb_skill_collections import layout
 
 MANIFEST_NAME = "MANIFEST.gen.json"
+BYTECODE_CACHE = "__pycache__"
 INVENTORY_KEYS = ("skills", "tools", "workflows", "papers", "dois")
 WORKFLOW_NAMES = ("workflow.smk", "workflow.nf", "workflow.cwl", "workflow.yaml")
 
@@ -41,12 +42,22 @@ def file_record(path: Path, label: str) -> dict:
 
 
 def tree_records(root: Path, excluded: tuple[Path, ...] = (), *, output_tree=True) -> list[dict]:
-    """Snapshot a tree, rejecting output symlinks and unavailable entries."""
+    """Snapshot a tree, rejecting output symlinks and unavailable entries.
+
+    Compiled-bytecode caches are skipped. They are written by whoever last ran
+    a shipped script, are ignored by the repository, and reach no checkout or
+    deposition; binding one records the machine that generated the receipt
+    rather than the tree the release ships, and the receipt then fails
+    everywhere that machine's interpreter did not run.
+    """
     records = []
     for path in sorted(root.rglob("*")):
         if any(path == item or item in path.parents for item in excluded):
             continue
-        label = path.relative_to(root).as_posix()
+        relative = path.relative_to(root)
+        if BYTECODE_CACHE in relative.parts:
+            continue
+        label = relative.as_posix()
         if path.is_symlink() and (output_tree or not path.is_file()):
             raise ValueError(f"Unsupported tree symlink: {label}")
         if path.is_file():

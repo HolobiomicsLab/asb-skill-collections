@@ -51,6 +51,15 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   and never re-run over the packs. Pack leaves are now byte copies of the
   collection leaf of the same slug and both indexes are the collection's own
   rows filtered to the pack's members.
+- Stop binding compiled-bytecode caches into a release receipt. The gate
+  snapshots the tree it finds on disk, so the two `__pycache__` files that
+  running `collections/metabolomics/v2/bin/`'s own search scripts leaves behind
+  were bound as if the release shipped them. Measured on the shipped tree: a
+  strict run passed here and bound three cache entries, and that receipt then
+  failed `--verify` against `git archive` of the same commit — the state of
+  every checkout and of the Zenodo deposition. The receipt now records the
+  release rather than the machine that generated it, and a consumer who runs
+  the collection's scripts no longer invalidates their own receipt.
 - Aim the licence and provenance tier gates at the packs as well as the
   collection. `check_license_tiers` read `corpus.yaml` unconditionally and so
   raised `FileNotFoundError` on every pack, which is why the tiers a consumer
