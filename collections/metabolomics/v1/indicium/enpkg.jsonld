@@ -14,6 +14,10 @@
       "@id": "http://purl.obolibrary.org/obo/SEPIO_",
       "@prefix": true
     },
+    "ro": {
+      "@id": "http://purl.obolibrary.org/obo/RO_",
+      "@prefix": true
+    },
     "doco": "http://purl.org/spar/doco/",
     "fabio": "http://purl.org/spar/fabio/",
     "dcat": "http://www.w3.org/ns/dcat#",
@@ -218,13 +222,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "What are the conda and pip dependencies and installation procedures required to establish a functional ENPKG environment?",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:45:41.208942+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -238,13 +242,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "ENPKG",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:45:41.208942+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -258,13 +262,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "expected_outputs",
       "asbval:target_claim_text": "Installed conda environment with all ENPKG dependencies at pinned versions",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:45:41.208942+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -278,13 +282,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "expected_outputs",
       "asbval:target_claim_text": "Environment verification report listing all installed packages and versions",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:45:41.208942+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -298,13 +302,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "title",
       "asbval:target_claim_text": "Reconstruct the ENPKG full workflow installation and environment setup",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:45:41.208942+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -320,8 +324,8 @@
       "asbval:target_artifact_kind": "card",
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:45:41.208942+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -335,13 +339,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "What is the complete computational workflow executed by ENPKG from raw input data to final knowledge-graph-ready annotated outputs?",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:45:53.117637+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -355,13 +359,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "ENPKG",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:45:53.117637+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -375,13 +379,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "expected_outputs",
       "asbval:target_claim_text": "Annotated feature table with molecular identifications and confidence scores",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:45:53.117637+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -395,13 +399,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "expected_outputs",
       "asbval:target_claim_text": "Knowledge-graph output files in standardized format (RDF triples or equivalent)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:45:53.117637+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -415,13 +419,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "expected_outputs",
       "asbval:target_claim_text": "Spectral library matches and molecular network visualization outputs",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:45:53.117637+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -437,8 +441,8 @@
       "asbval:target_artifact_kind": "card",
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:45:53.117637+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -452,13 +456,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Create and validate isolated conda environments from dependency manifests to ensure reproducible, version-pinned execution of complex multi-tool workflows like ENPKG.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:47:14.572651+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -472,13 +476,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[0] - uv",
       "asbval:target_claim_text": "Modern Python package and dependency manager; used to install runtime and dev dependencies and create isolated .venv environments with locked transitive dependency versions.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:47:14.572651+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -492,13 +496,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[1] - conda",
       "asbval:target_claim_text": "Alternative package manager for creating isolated environments from environment.yml specifications; used in workflows that predate uv adoption.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:47:14.572651+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -512,13 +516,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[2] - pip",
       "asbval:target_claim_text": "Python package installer; used within conda environments to install packages not available via conda or to supplement conda dependency resolution.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:47:14.572651+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -532,13 +536,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[3] - Miniconda",
       "asbval:target_claim_text": "Lightweight conda distribution; alternative to full Anaconda for managing conda environments.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:47:14.572651+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -552,13 +556,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[4] - ENPKG",
       "asbval:target_claim_text": "ENPKG is a tool/workflow used in the paper with related skills including conda-environment-creation-and-management.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:47:14.572651+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -572,13 +576,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Verify that a computational environment (conda/pip, Python packages, external binaries) has been correctly installed and all declared dependencies are present at their specified versions before running a workflow.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:47:28.456425+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -592,13 +596,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[0]: conda",
       "asbval:target_claim_text": "Create and manage isolated Python environments; parse and apply environment specification files (environment.yml) to install pinned dependency versions.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:47:28.456425+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -612,13 +616,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[1]: pip",
       "asbval:target_claim_text": "Install and verify Python package versions within the activated conda environment using `pip show` to confirm installed versions match declared specifications.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:47:28.456425+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -632,13 +636,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[2]: uv",
       "asbval:target_claim_text": "Modern dependency manager for ENPKG full workflow; replaces conda/pip for syncing project dependencies and creating isolated .venv environments with version pinning.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:47:28.456425+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -652,13 +656,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[3]: ENPKG (enpkg_full)",
       "asbval:target_claim_text": "The target workflow framework whose core modules are imported during validation; environment must support all declared submodules and dependencies.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:47:28.456425+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -672,13 +676,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[4]: Sirius",
       "asbval:target_claim_text": "External binary required by ENPKG for compound annotation (SIRIUS/CSI:FingerID/CANOPUS); validation must confirm the executable at PATH_TO_SIRIUS is present and callable.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:47:28.456425+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -692,13 +696,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "After installing ENPKG or any component of the workflow via conda/pip dependency manifests and before executing workflow scripts. Apply this skill when you have just cloned a repository, created a fresh conda environment, or need to confirm that all runtime dependencies (includin",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:47:28.456425+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -712,13 +716,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Construct a sample-specific RDF knowledge graph by integrating metabolomics annotations, taxonomic metadata, and structural predictions, then validate graph integrity and schema compliance before merging with existing knowledge bases.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:47:43.088488+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -732,13 +736,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "ENPKG graph builder \u2014 Translates aggregated annotation outputs (features, spectra, predictions, metadata) into RDF triples and encodes them according to ENPKG vocabulary schema",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:47:43.088488+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -752,13 +756,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "GraphDB \u2014 RDF triple store for importing, validating, and querying generated knowledge graphs via SPARQL",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:47:43.088488+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -772,13 +776,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Open Tree of Life (OTT) \u2014 Validates and resolves sample taxonomy to ottID, ensuring consistent taxon linking across graph instances",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:47:43.088488+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -792,13 +796,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Wikidata \u2014 External URI source for compound identifiers and chemical metadata integrated into graph entities",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:47:43.088488+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -812,13 +816,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "NPClassifier \u2014 Provides natural product classification ontology integrated into compound metadata within the graph",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:47:43.088488+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -832,13 +836,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "ENPKG (as a tool with related_skills, version_used, etc.)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:47:43.088488+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -852,13 +856,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Apply this skill after completing all per-sample annotation steps (molecular networking, ISDB/spectral matching, SIRIUS/CSI:FingerID, and compounds metadata enhancement with Wikidata IDs and NPClassifier ontology).",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:47:43.088488+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -872,13 +876,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Use when the goal is to integrate heterogeneous metabolomics outputs into a unified, SPARQL-queryable knowledge graph that can be merged with other samples or external knowledge bases.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:47:43.088488+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -892,13 +896,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "When NOT to use: Input data are not yet fully annotated (e.g., raw spectral features lack molecular network assignment or structural prediction)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:47:43.088488+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -912,13 +916,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Generate a Molecular Network (MN) from LC-MS/MS DDA fragmentation spectra to group related compounds and enable spectral similarity-based annotation and structural relationships across a metabolomics dataset.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:05.620762+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -932,13 +936,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "MZmine - Pre-processes raw LC-MS/MS DDA data, detects features, and exports spectra for MN construction",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:05.620762+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -952,13 +956,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "ENPKG MN/ISDB/Taxo module - Orchestrates MN generation, spectral matching, and taxonomical reweighting on processed samples",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:05.620762+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -972,13 +976,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "MEMO - Generates MEMO matrix from samples' spectral data for comparative analysis of spectral fingerprints",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:05.620762+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -992,13 +996,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "ENPKG (general framework tool)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:05.620762+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1012,13 +1016,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "inputs",
       "asbval:target_claim_text": "LC-MS/MS DDA spectra in mzML or mzXML format (positive and/or negative ionization modes)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:05.620762+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1032,13 +1036,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "inputs",
       "asbval:target_claim_text": "MZmine-processed feature detection output",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:05.620762+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1052,13 +1056,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "inputs",
       "asbval:target_claim_text": "Sample metadata with taxon information",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:05.620762+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1072,13 +1076,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "outputs",
       "asbval:target_claim_text": "Molecular Network graph structure (nodes=MS2 spectra, edges=cosine similarity \u2265 threshold)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:05.620762+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1092,13 +1096,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "outputs",
       "asbval:target_claim_text": "Network-annotated feature table with cluster assignments",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:05.620762+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1112,13 +1116,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "outputs",
       "asbval:target_claim_text": "Spectral adjacency matrix",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:05.620762+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -1132,13 +1136,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "methods",
       "asbval:target_claim_text": "Molecular networking via matchms package with cosine similarity scoring",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:05.620762+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1152,13 +1156,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "methods",
       "asbval:target_claim_text": "Spectral matching against ISDB-LOTUS database with taxonomical reweighting",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:05.620762+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1172,13 +1176,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "methods",
       "asbval:target_claim_text": "SIRIUS/CSI:FingerID and CANOPUS for structural annotation",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:05.620762+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1192,13 +1196,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Execute the ENPKG full computational workflow to transform raw LC-MS/MS metabolomics data into sample-specific RDF knowledge graphs integrated with taxonomic, chemical, and activity metadata.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1212,13 +1216,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "MZmine for feature detection and peak picking",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1232,13 +1236,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Sirius/CSI:FingerID/CANOPUS for in silico structure annotation",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1252,13 +1256,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Open Tree of Life for taxonomic resolution",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1272,13 +1276,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "NPClassifier for ontological classification of natural product structures",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1292,13 +1296,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "ChEMBL for optional retrieval of compounds with reported bioactivity",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1312,13 +1316,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Wikidata for linked-data chemical and taxonomic identifiers",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1332,13 +1336,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "GraphDB for RDF triple store and SPARQL querying",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1352,13 +1356,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "enpkg_full as master orchestrator repository",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1372,13 +1376,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "enpkg_data_organization for organizing MZmine output into per-sample folder structure",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1392,13 +1396,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "enpkg_taxo_enhancer for resolving and linking sample taxa to Wikidata via Open Tree of Life",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1412,13 +1416,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "enpkg_mn_isdb_taxo for molecular networking and spectral-matching annotation with taxonomical reweighting",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1432,13 +1436,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "enpkg_sirius_canopus for executing Sirius/CSI:FingerID/CANOPUS annotation",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1452,13 +1456,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "enpkg_meta_analysis for retrieving NPClassifier and Wikidata IDs; optional ChEMBL integration",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1472,13 +1476,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "enpkg_graph_builder for constructing sample-specific RDF knowledge graph",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1492,13 +1496,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "ISDB-LOTUS for in silico spectral matching database",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1512,13 +1516,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "matchms for molecular networking and spectral matching",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1532,13 +1536,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "SPARQL for querying the RDF knowledge graph",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1552,13 +1556,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "RDFlib for formatting data in RDF turtle format",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1572,13 +1576,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "spec2vec for incorporating MS2 spectral data into the knowledge graph",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1592,13 +1596,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "GNPS MassIVE repository for data sharing and spectral analysis",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1612,13 +1616,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Zenodo for sharing individual sample-specific RDF knowledge graphs",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1632,13 +1636,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Input data are raw or MZmine-processed LC-MS/MS DDA data in positive and/or negative ionization modes",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1652,13 +1656,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Sample metadata must include or be resolvable to a taxonomic origin for Open Tree of Life integration",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1672,13 +1676,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Workflow enables SPARQL-queryable linked data on natural products",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1692,13 +1696,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Workflow enables cross-sample comparison and integration",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:29.807908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1712,13 +1716,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Verify that all declared Python packages in a conda or pip dependency manifest are installed at the correct versions in an isolated environment. This skill ensures reproducibility and prevents runtime errors caused by version mismatches or missing dependencies in computational wo",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:01.788264+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1732,13 +1736,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[0]",
       "asbval:target_claim_text": "conda \u2014 Environment manager and package installer; used to create isolated environments and verify installed package versions.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:01.788264+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1752,13 +1756,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[1]",
       "asbval:target_claim_text": "pip \u2014 Python package installer; used to install or verify versions of packages managed outside conda.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:01.788264+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1772,13 +1776,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[2]",
       "asbval:target_claim_text": "uv \u2014 Modern dependency manager replacing conda/pip for ENPKG; syncs dependencies into isolated .venv and maintains lock files.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:01.788264+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1792,13 +1796,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[3]",
       "asbval:target_claim_text": "ENPKG \u2014 Target computational workflow; compatibility check ensures all ENPKG submodules and dependencies are correctly installed before execution.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:01.788264+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -1812,13 +1816,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Establish a reproducible Python environment for a scientific workflow by declaring, resolving, and pinning all direct and transitive dependencies to exact versions. This ensures that the same code produces identical results across machines and time, critical for computational met",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:10.577653+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -1832,13 +1836,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[0]",
       "asbval:target_claim_text": "uv: Modern Python package manager used to resolve and lock dependencies; creates isolated .venv and reads pyproject.toml",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:10.577653+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1852,13 +1856,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[1]",
       "asbval:target_claim_text": "conda: Package manager for resolving conda dependencies from environment.yml; creates isolated conda environments",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:10.577653+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1872,13 +1876,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[2]",
       "asbval:target_claim_text": "pip: Package installer for Python packages specified in requirements.txt; used alongside conda for mixed dependency trees",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:10.577653+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1892,13 +1896,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[3]",
       "asbval:target_claim_text": "ENPKG full workflow: Target workflow whose dependencies are resolved and pinned; uses uv for dependency management",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:10.577653+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -1912,13 +1916,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[4] (ENPKG entity)",
       "asbval:target_claim_text": "ENPKG: Experimental Natural Products Knowledge Graph framework for organizing metabolomics data",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:10.577653+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1932,13 +1936,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Establish a reproducible Python environment for a scientific workflow by declaring, resolving, and pinning all direct and transitive dependencies to exact versions.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:10.577653+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -1952,13 +1956,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope - When to use",
       "asbval:target_claim_text": "When setting up a multi-stage bioinformatics workflow (e.g., ENPKG) that calls external tools (MZmine, Sirius, SPARQL engines) and depends on specific Python libraries",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:10.577653+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1972,13 +1976,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Clone a distributed ENPKG workflow repository from GitHub and navigate its modular structure to identify component repositories, configuration files, and workflow entry points.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:26.796417+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1992,13 +1996,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[0] - Git",
       "asbval:target_claim_text": "Version control system used to clone and manage the ENPKG repository from GitHub",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:26.796417+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2012,13 +2016,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[1] - enpkg_full",
       "asbval:target_claim_text": "Main orchestrator repository containing the complete workflow, configuration templates, and unified entry point script (00_workflow_all.sh)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:26.796417+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -2032,13 +2036,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[2] - enpkg_workflow",
       "asbval:target_claim_text": "Metarepository documenting the logical workflow architecture, linking to individual sample processing components",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:26.796417+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2052,13 +2056,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[3] - enpkg_data_organization",
       "asbval:target_claim_text": "Step 1 modular component: organizes MZmine output into per-sample folder structure",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:26.796417+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2072,13 +2076,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[4] - enpkg_taxo_enhancer",
       "asbval:target_claim_text": "Step 2 modular component: resolves taxonomy and links to Wikidata",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:26.796417+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2092,13 +2096,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[5] - enpkg_mn_isdb_taxo",
       "asbval:target_claim_text": "Step 3 modular component: generates molecular networks and performs ISDB annotation with taxonomical reweighting",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:26.796417+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2112,13 +2116,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[6] - enpkg_sirius_canopus",
       "asbval:target_claim_text": "Step 4 modular component: executes SIRIUS/CSI:FingerID/CANOPUS structural annotation",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:26.796417+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2132,13 +2136,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[7] - enpkg_meta_analysis",
       "asbval:target_claim_text": "Step 5 modular component: retrieves NPClassifier taxonomy and Wikidata IDs for annotated compounds; also includes optional ChEMBL integration",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:26.796417+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2152,13 +2156,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[8] - enpkg_graph_builder",
       "asbval:target_claim_text": "Step 6 modular component: constructs RDF knowledge graphs from all prior processing outputs",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:26.796417+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2172,13 +2176,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[9] - ENPKG (framework-level entry)",
       "asbval:target_claim_text": "ENPKG framework with related skills including repository-cloning-and-structure-navigation",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:26.796417+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2192,13 +2196,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Annotate LC-MS/MS metabolites within individual samples using parallel spectral matching (ISDB with taxonomical reweighting) and structure prediction (SIRIUS/CSI:FingerID/CANOPUS), then enrich annotations with Wikidata IDs and NPClassifier ontology.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:47.924007+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2212,13 +2216,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "MZmine",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:47.924007+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2232,13 +2236,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "enpkg_mn_isdb_taxo",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:47.924007+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2252,13 +2256,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "enpkg_sirius_canopus",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:47.924007+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2272,13 +2276,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "enpkg_meta_analysis",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:47.924007+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2292,13 +2296,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "SIRIUS",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:47.924007+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2312,13 +2316,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Open Tree of Life",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:47.924007+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2332,13 +2336,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Wikidata",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:47.924007+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2352,13 +2356,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "NPClassifier",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:47.924007+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2372,13 +2376,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "ChEMBL",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:47.924007+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2392,13 +2396,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "ENPKG (as a tool with metadata)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:47.924007+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2412,13 +2416,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Process each sample independently to enable iterative knowledge-graph assembly",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:47.924007+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2432,13 +2436,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "After MZmine feature detection and molecular networking on a single LC-MS/MS DDA sample",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:47.924007+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2452,13 +2456,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "When NOT to use: Input spectral data has not been processed by MZmine",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:47.924007+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2472,13 +2476,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "When NOT to use: Sample taxon is unknown or cannot be resolved against Open Tree of Life",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:47.924007+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2492,13 +2496,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "When NOT to use: You only have MS1 precursor masses without fragmentation spectra",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:47.924007+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2512,13 +2516,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "End-to-end processing of LC-MS/MS DDA metabolomics data through feature detection, molecular networking, and multi-method compound annotation to produce knowledge-graph-ready annotated outputs.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2532,13 +2536,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "MZmine for feature detection, peak alignment, and LC-MS/MS data preprocessing",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2552,13 +2556,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Sirius/CSI:FingerID/CANOPUS for ab initio structure prediction, molecular fingerprinting, and chemical class assignment",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2572,13 +2576,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Open Tree of Life for taxonomic reference and ottID resolution",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2592,13 +2596,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Wikidata for linked identifiers and structured metadata retrieval for annotated compounds",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2612,13 +2616,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "NPClassifier for natural product chemical class ontology assignment",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2632,13 +2636,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "ChEMBL for optional bioactivity integration and retrieval of compounds with reported activity against biological targets",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2652,13 +2656,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "enpkg_data_organization for organizing MZmine output into individual sample folders",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2672,13 +2676,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "enpkg_taxo_enhancer for resolving taxonomy and linking to Wikidata",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2692,13 +2696,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "enpkg_mn_isdb_taxo for molecular network generation, in silico database annotation, and taxonomical/chemical reweighting",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2712,13 +2716,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "enpkg_sirius_canopus for Sirius/CSI:FingerID/CANOPUS annotation execution",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2732,13 +2736,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "enpkg_meta_analysis for retrieving NPClassifier taxonomy and Wikidata ID; optional MEMO and ChEMBL integration",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2752,13 +2756,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "enpkg_graph_builder for integrating all processed data into RDF knowledge graph (TTL output)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2772,13 +2776,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "ENPKG Full Workflow for orchestration and execution of the complete end-to-end pipeline",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2792,13 +2796,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "parameters",
       "asbval:target_claim_text": "MZmine feature detection with noise level 1.0E4 (MS1), centroid mass detector, ADAP chromatogram builder with minimum group size 5 scans, minimum group intensity 1.0E4, minimum highest intensity 5.0E5, m/z tolerance 12 ppm",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2812,13 +2816,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "parameters",
       "asbval:target_claim_text": "SIRIUS v4.9.12 (PI mode) and v5.5.4 (NI mode) with ppm tolerance 10, maximum m/z 800, 10 candidates, adducts [M+H]+, [M+NH4]+, [M+K]+, [M+Na]+ (PI) or [M-H]\u2212, [M+K-2H]\u2212, [M+Na-2H]\u2212 (NI)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2832,13 +2836,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "parameters",
       "asbval:target_claim_text": "Molecular networking via matchms with m/z tolerance 0.01, modified cosine score cutoff 0.7, max_links 10, top_n 15",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2852,13 +2856,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "parameters",
       "asbval:target_claim_text": "ISDB-LOTUS spectral matching with m/z tolerance 0.01, minimal cosine score 0.2, 6 minimal matching fragments, MS1 ppm tolerance 10",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2872,13 +2876,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "expected_outputs",
       "asbval:target_claim_text": "RDF knowledge graph in TTL format with integrated spectral, structural, taxonomic, and bioactivity data; queryable via SPARQL",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2892,13 +2896,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "expected_outputs",
       "asbval:target_claim_text": "Individual sample-level knowledge graphs shareable on Zenodo; combinable into a unified KG",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2912,13 +2916,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "expected_outputs",
       "asbval:target_claim_text": "Structural annotations from ISDB and SIRIUS/CSI:FingerID with confidence scores (COSMIC, ZODIAC for SIRIUS; taxonomical score for ISDB)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2932,13 +2936,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "expected_outputs",
       "asbval:target_claim_text": "Chemical class annotations from CANOPUS with probability scores",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2952,13 +2956,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "methods",
       "asbval:target_claim_text": "Sample-centric approach: each sample processed individually for feature detection, networking, and annotation before integration into unified KG",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2972,13 +2976,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "methods",
       "asbval:target_claim_text": "Taxonomical reweighting of ISDB annotations based on taxonomic distance between candidate structure origin and sample organism",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2992,13 +2996,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "methods",
       "asbval:target_claim_text": "Chemical consistency reweighting via Network Annotation Propagation principle applied to MN clusters",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -3012,13 +3016,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "methods",
       "asbval:target_claim_text": "Federated SPARQL queries to link experimental annotations with Wikidata and ChEMBL for bioactivity and taxonomic context",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -3032,13 +3036,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Input: raw LC-MS/MS DDA spectral data (positive and/or negative ionization modes) paired with sample metadata (originating taxon)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -3052,13 +3056,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "NOT for input data already fully annotated and integrated into a knowledge graph",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -3072,13 +3076,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "NOT for spectral data lacking associated metadata (e.g., taxon information)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:20.350884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -3090,8 +3094,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.0,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -3103,8 +3107,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.2857142857142857,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -3116,8 +3120,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "promoted",
       "asbval:yes_rate": 1.0,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -3129,8 +3133,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "promoted",
       "asbval:yes_rate": 0.9230769230769231,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -3142,8 +3146,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "promoted",
       "asbval:yes_rate": 1.0,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -3155,8 +3159,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.0,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -3168,8 +3172,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.25,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -3181,8 +3185,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "promoted",
       "asbval:yes_rate": 0.8,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -3194,8 +3198,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "promoted",
       "asbval:yes_rate": 1.0,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -3207,8 +3211,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "promoted",
       "asbval:yes_rate": 1.0,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -3222,13 +3226,13 @@
       "asbval:supported_raw": "yes",
       "asbval:target_artifact_id": "claim_001",
       "asbval:target_artifact_kind": "ledger_claim",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:45:34.679561+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -3242,13 +3246,13 @@
       "asbval:supported_raw": "yes",
       "asbval:target_artifact_id": "claim_002",
       "asbval:target_artifact_kind": "ledger_claim",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:45:34.679561+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -3262,13 +3266,13 @@
       "asbval:supported_raw": "partial",
       "asbval:target_artifact_id": "claim_003",
       "asbval:target_artifact_kind": "ledger_claim",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:45:34.679561+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -3282,13 +3286,13 @@
       "asbval:supported_raw": "partial",
       "asbval:target_artifact_id": "claim_004",
       "asbval:target_artifact_kind": "ledger_claim",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:45:34.679561+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {

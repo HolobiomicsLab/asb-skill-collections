@@ -14,6 +14,10 @@
       "@id": "http://purl.obolibrary.org/obo/SEPIO_",
       "@prefix": true
     },
+    "ro": {
+      "@id": "http://purl.obolibrary.org/obo/RO_",
+      "@prefix": true
+    },
     "doco": "http://purl.org/spar/doco/",
     "fabio": "http://purl.org/spar/fabio/",
     "dcat": "http://www.w3.org/ns/dcat#",
@@ -234,13 +238,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "How does the QComics package parse Sciex Multiquant TXT export files to identify and locate QCpool samples that were injected at regular intervals across metabolomics or lipidomics sequences?",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:52:08.254516+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -254,13 +258,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Sciex Multiquant (> v3.0.3)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:52:08.254516+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -274,13 +278,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "ricoderks/QComics",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:52:08.254516+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -294,13 +298,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "expected_outputs",
       "asbval:target_claim_text": "Structured table of QCpool sample positions, injection indices, sequence IDs, and regularity metrics",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:52:08.254516+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -316,8 +320,8 @@
       "asbval:target_artifact_kind": "card",
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:52:08.254516+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -331,13 +335,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "What metrics does QComics compute from QCpool injection data to assess metabolomics or lipidomics study quality?",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:52:24.744908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -351,13 +355,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Sciex Multiquant (> v3.0.3)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:52:24.744908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -371,13 +375,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "QComics",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:52:24.744908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -391,13 +395,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "expected_outputs",
       "asbval:target_claim_text": "Quality overview report (table or figure) showing per-compound CV and signal-trend metrics across QCpool injections",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:52:24.744908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -413,8 +417,8 @@
       "asbval:target_artifact_kind": "card",
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:52:24.744908+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -428,13 +432,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Identifies and annotates quality control pool (QCpool) samples within metabolomics or lipidomics injection sequences exported from Sciex Multiquant, recording their positions and validating regular interval spacing to support quality assessment workflows.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:56:25.679884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -448,13 +452,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Identifies and annotates quality control pool (QCpool) samples within metabolomics or lipidomics injection sequences exported from Sciex Multiquant, recording their positions and validating regular interval spacing to support quality assessment workflows.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:56:25.679884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -468,13 +472,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Sciex Multiquant (role: Generates and exports the TXT file containing sample metadata and injection sequence that is parsed to locate QCpool samples)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:56:25.679884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -488,13 +492,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "QComics (role: Downstream package that consumes parsed QCpool annotations and injection sequence metadata for quality assessment and visualization of metabolomics/lipidomics study quality)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:56:25.679884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -508,13 +512,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[2].name",
       "asbval:target_claim_text": "ricoderks/QComics",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:56:25.679884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -528,13 +532,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[2].repo",
       "asbval:target_claim_text": "https://github.com/ricoderks/QComics",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:56:25.679884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -548,13 +552,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "inputs",
       "asbval:target_claim_text": "Sciex Multiquant TXT export file (version > 3.0.3) containing sample metadata and injection sequence",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:56:25.679884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -568,13 +572,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "outputs",
       "asbval:target_claim_text": "Structured annotation table with columns: sample name, injection index, [truncated in card]",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:56:25.679884+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -588,13 +592,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Detect and quantify instrumental signal drift or degradation across sequential metabolomics/lipidomics QC injections by computing trend metrics (slope, drift index, stability) from pooled sample intensities.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:56:41.949007+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -608,13 +612,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "flagging compounds or time windows where signal loss or systematic bias would compromise data quality",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:56:41.949007+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -628,13 +632,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Sciex Multiquant (v3.0.3+) software that analyzes QCpool samples and exports compound identifiers and signal intensities in txt format",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:56:41.949007+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -648,13 +652,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "QComics R/Python package that ingests parsed QCpool positional data and computes coefficient of variation, signal-trend metrics, and quality overview summaries including instrumental drift assessment",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:56:41.949007+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -668,13 +672,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Apply this skill when you have a time-series of repeated QCpool (pooled quality control) injections measured at regular intervals during one or more LC-MS/MS sequences",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:56:41.949007+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -688,13 +692,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "exported from Sciex Multiquant software (v3.0.3+) in txt format",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:56:41.949007+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -708,13 +712,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "assess whether signal intensity for individual compounds remained stable or showed degradation/drift over the sequence duration",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:56:41.949007+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -728,13 +732,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "before proceeding to statistical analysis or metabolite quantification, to rule out instrumental artifacts as confounders",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:56:41.949007+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -748,13 +752,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Compute coefficient of variation (CV) and signal-trend metrics from QCpool (quality control pool) samples injected at regular intervals during liquid chromatography\u2013mass spectrometry (LC-MS) sequences to rapidly assess technical reproducibility and instrumental drift in metabolom",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:56:58.605951+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -768,13 +772,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "detection of compounds with poor quality metrics before downstream analysis",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:56:58.605951+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -788,13 +792,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Sciex Multiquant (\u2265v3.0.3) txt export",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:56:58.605951+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -808,13 +812,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "QComics R/Python package that ingests Sciex Multiquant txt exports, computes per-compound CV and signal-trend metrics, and generates quality overview visualizations and summaries",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:56:58.605951+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -828,13 +832,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "QComics repo: https://github.com/ricoderks/QComics",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:56:58.605951+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -848,13 +852,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Apply this skill when you have a Sciex Multiquant (\u2265v3.0.3) txt export containing QCpool sample measurements at multiple timepoints within a sequence",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:56:58.605951+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -868,13 +872,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "QCpool samples were not injected at regular intervals during the sequence \u2014 CV and trend metrics require time-series structure to detect drift",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:56:58.605951+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -888,13 +892,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Interpret and validate the quality control design of metabolomics or lipidomics studies by parsing exported analytical sequences, locating pooled QC samples (QCpool), and verifying their regular injection intervals across one or more measurement sequences.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:14.226837+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -908,13 +912,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Sciex Multiquant \u2014 Instrument software that analyzes metabolomics/lipidomics samples and exports sequence metadata and QCpool annotations to TXT format",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:14.226837+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -928,13 +932,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "QComics \u2014 R/Python package that consumes parsed QCpool interval tables and annotated sequences to generate quality overview and trend plots for metabolomics studies",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:14.226837+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -948,13 +952,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[ricoderks/QComics]",
       "asbval:target_claim_text": "GitHub repository: https://github.com/ricoderks/QComics",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:14.226837+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -968,13 +972,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "When to use: Input is Sciex Multiquant TXT export files from a completed metabolomics or lipidomics analytical run",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:14.226837+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -988,13 +992,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Study design does not include pooled QC samples (QCpool) measured at regular intervals",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:14.226837+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1008,13 +1012,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Parse Sciex Multiquant text export files to extract sample metadata, injection sequence information, and quality control pool (QCpool) sample positions for metabolomics and lipidomics quality assessment workflows.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:28.550881+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -1028,13 +1032,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "systematic identification and validation of QCpool samples injected at regular intervals across analytical sequences",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:28.550881+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1048,13 +1052,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Sciex Multiquant (> v3.0.3)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:28.550881+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1068,13 +1072,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "QComics (role: Downstream R/Bioconductor package that consumes parsed QCpool sample tables and sequence metadata to generate quality overview plots and metrics)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:28.550881+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1088,13 +1092,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[ricoderks/QComics]",
       "asbval:target_claim_text": "GitHub repository: https://github.com/ricoderks/QComics",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:28.550881+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1108,13 +1112,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "When to use: You have Sciex Multiquant text export files from one or more metabolomics or lipidomics analytical sequences",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:28.550881+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1128,13 +1132,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "When NOT to use: The analytical sequence data is already preprocessed into a feature table or peak intensity matrix (use this skill only on raw sequence metadata)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:28.550881+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1148,13 +1152,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Calculate per-compound coefficient of variation (CV) from pooled quality control (QCpool) sample intensities measured at regular intervals during a metabolomics or lipidomics sequence. CV quantifies technical reproducibility and is a primary metric for assessing data quality befo",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:43.449345+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1168,13 +1172,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Sciex Multiquant",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:43.449345+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1188,13 +1192,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "QComics",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:43.449345+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1208,13 +1212,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[QComics].role",
       "asbval:target_claim_text": "Downstream package that aggregates per-compound CV values and signal-trend metrics into quality overview summaries and visualizations for rapid metabolomics/lipidomics study quality assessment",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:43.449345+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1228,13 +1232,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Apply this skill when you have Sciex Multiquant txt exports containing signal intensities from QCpool samples injected at regular intervals",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:43.449345+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -1248,13 +1252,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "CV calculation requires multiple measurements of the same biological or chemical composition",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:43.449345+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1268,13 +1272,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Identifies and locates quality control pooled (QCpool) samples from Sciex Multiquant text export files to validate their injection at regular intervals across metabolomics or lipidomics sequences.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:58.528522+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -1288,13 +1292,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "extracts injection metadata and validates temporal distribution for downstream quality assessment",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:58.528522+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1308,13 +1312,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Sciex Multiquant (\u2265v3.0.3) TXT export files containing metabolomics or lipidomics analytical sequences",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:58.528522+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1328,13 +1332,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "QCpool samples were injected at the designed regular intervals",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:58.528522+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1348,13 +1352,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Sciex Multiquant - Source software that acquires and exports metabolomics/lipidomics data and QCpool injection sequences in TXT format",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:58.528522+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1368,13 +1372,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "QComics - R/Python package that consumes parsed QCpool metadata to provide quick quality overview of metabolomics or lipidomics studies",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:58.528522+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1388,13 +1392,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "ricoderks/QComics GitHub repository and codecov.io evidence",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:57:58.528522+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1408,13 +1412,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Identifies and validates regular injection intervals of pooled QC samples (QCpool) within metabolomics or lipidomics analytical sequences exported from Sciex Multiquant.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:58:11.675597+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -1428,13 +1432,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Identifies and validates regular injection intervals of pooled QC samples (QCpool) within metabolomics or lipidomics analytical sequences exported from Sciex Multiquant.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:58:11.675597+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -1448,13 +1452,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Sciex Multiquant \u2014 Instrument software that analyzes pooled QC samples and exports injection sequence to TXT format for interval detection",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:58:11.675597+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1468,13 +1472,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "QComics \u2014 R/Python package that processes Sciex Multiquant TXT exports to identify QCpool samples and provide quick overview of metabolomics or lipidomics study quality",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:58:11.675597+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -1488,13 +1492,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[ricoderks/QComics].repo",
       "asbval:target_claim_text": "https://github.com/ricoderks/QComics",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:58:11.675597+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1508,13 +1512,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[ricoderks/QComics].evidence_spans",
       "asbval:target_claim_text": "codecov.io/gh/ricoderks/QComics",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:58:11.675597+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1528,13 +1532,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Generate a rapid visual and tabular assessment of metabolomics or lipidomics study quality by computing per-compound coefficient of variation (CV) and signal-trend metrics from QCpool injection sequences.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:58:27.105710+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -1548,13 +1552,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "This skill enables quick identification of compounds and instrumental phases with acceptable versus poor reproducibility and drift characteristics.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:58:27.105710+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1568,13 +1572,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Apply this skill when you have sequential QCpool (pooled quality control) samples analyzed with Sciex Multiquant (\u2265v3.0.3) and exported to txt format",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:58:27.105710+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -1588,13 +1592,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Study design does not include regular QCpool injections at intervals throughout the analytical sequence.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:58:27.105710+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1608,13 +1612,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Sciex Multiquant (name: 'Sciex Multiquant', role: 'Data acquisition and export; processes QCpool samples and exports positional data to txt format for downstream quality assessment')",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:58:27.105710+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1628,13 +1632,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "QComics (name: 'QComics', repo: 'https://github.com/ricoderks/QComics', role: 'Quality overview generation; parses Sciex Multiquant txt exports, computes CV and trend metrics per compound, and produces summary visualizations and reports')",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:58:27.105710+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -1648,13 +1652,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "parameters (implicit)",
       "asbval:target_claim_text": "Coefficient of variation (CV) or relative standard deviation (RSD) threshold for acceptable reproducibility",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:58:27.105710+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1668,13 +1672,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "expected_outputs",
       "asbval:target_claim_text": "Summary visualizations and reports of per-compound CV and signal-trend metrics",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:58:27.105710+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -1688,13 +1692,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "methods",
       "asbval:target_claim_text": "PCA-based clustering and Hotelling T2 ellipse for outlier detection",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:58:27.105710+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1708,13 +1712,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "methods",
       "asbval:target_claim_text": "Time series plots with tolerance windows for drift detection",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:58:27.105710+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1728,13 +1732,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Assess instrumental drift and signal degradation in metabolomics/lipidomics quality control by computing trend metrics (slope, drift, stability index) across sequential QCpool injection data.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:58:49.724322+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1748,13 +1752,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "This skill detects temporal instability in mass spectrometry signal that may compromise study reproducibility.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:58:49.724322+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1768,13 +1772,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "QComics \u2014 Primary tool for computing and aggregating signal-trend metrics (slope, drift, stability index) and generating quality overview visualizations from QCpool injection data.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:58:49.724322+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1788,13 +1792,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Sciex Multiquant \u2014 Upstream software (version > v3.0.3) that analyzes QCpool samples and exports positional data in txt format; required input source for trend assessment.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:58:49.724322+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1808,13 +1812,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Apply this skill when you have QCpool (pooled quality control) samples measured at regular intervals across one or more LC-MS/MS sequences and need to detect whether instrument performance degrades, drifts, or destabilizes during the analytical run.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:58:49.724322+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1828,13 +1832,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Input is already a quality-filtered feature table or normalized metabolite abundance matrix \u2014 signal trend assessment targets raw instrumental signals, not processed abundances.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:58:49.724322+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1848,13 +1852,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "QCpool samples were not measured at regular intervals throughout the sequence \u2014 trend assessment requires evenly-spaced or well-documented temporal distribution to detect drift reliably.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:58:49.724322+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1866,8 +1870,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.125,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1879,8 +1883,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "promoted",
       "asbval:yes_rate": 0.625,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1892,8 +1896,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.2857142857142857,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1905,8 +1909,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.16666666666666666,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1918,8 +1922,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.2857142857142857,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1931,8 +1935,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "promoted",
       "asbval:yes_rate": 0.6666666666666666,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1944,8 +1948,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.2857142857142857,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1957,8 +1961,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.0,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1970,8 +1974,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.4444444444444444,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1983,8 +1987,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "promoted",
       "asbval:yes_rate": 0.8571428571428571,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1998,13 +2002,13 @@
       "asbval:supported_raw": "yes",
       "asbval:target_artifact_id": "claim_001",
       "asbval:target_artifact_kind": "ledger_claim",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:51:55.781492+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2018,13 +2022,13 @@
       "asbval:supported_raw": "yes",
       "asbval:target_artifact_id": "claim_002",
       "asbval:target_artifact_kind": "ledger_claim",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:51:55.781492+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2038,13 +2042,13 @@
       "asbval:supported_raw": "yes",
       "asbval:target_artifact_id": "claim_003",
       "asbval:target_artifact_kind": "ledger_claim",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:51:55.781492+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2058,13 +2062,13 @@
       "asbval:supported_raw": "partial",
       "asbval:target_artifact_id": "claim_004",
       "asbval:target_artifact_kind": "ledger_claim",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:51:55.781492+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {

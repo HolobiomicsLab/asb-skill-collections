@@ -14,6 +14,10 @@
       "@id": "http://purl.obolibrary.org/obo/SEPIO_",
       "@prefix": true
     },
+    "ro": {
+      "@id": "http://purl.obolibrary.org/obo/RO_",
+      "@prefix": true
+    },
     "doco": "http://purl.org/spar/doco/",
     "fabio": "http://purl.org/spar/fabio/",
     "dcat": "http://www.w3.org/ns/dcat#",
@@ -248,13 +252,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "How does QuantyFey implement external calibration to convert raw mass spectrometry intensity measurements into quantified concentration values?",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:01:12.204729+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -268,13 +272,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "expected_outputs",
       "asbval:target_claim_text": "Quantified concentration table with sample identifiers and calculated concentration values",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:01:12.204729+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -288,13 +292,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "expected_outputs",
       "asbval:target_claim_text": "Calibration curve parameters (model coefficients and fit metrics)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:01:12.204729+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -308,13 +312,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Shiny",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:01:12.204729+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -329,8 +333,8 @@
       "asbval:target_artifact_kind": "card",
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:01:12.204729+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -344,13 +348,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "What correction strategies does QuantyFey implement to address intensity drifts in mass spectrometry datasets?",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:01:19.885348+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -364,13 +368,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Shiny",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:01:19.885348+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -384,13 +388,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "expected_outputs",
       "asbval:target_claim_text": "Corrected MS intensity table with drift correction applied",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:01:19.885348+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -404,13 +408,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "title_task",
       "asbval:target_claim_text": "Implement the Intensity Drift Correction module within the QuantyFey pipeline",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:01:19.885348+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -426,8 +430,8 @@
       "asbval:target_artifact_kind": "card",
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:01:19.885348+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -441,13 +445,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "title",
       "asbval:target_claim_text": "Extend QuantyFey's Shiny interface to support Linux/macOS deployment",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:01:28.015112+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -461,13 +465,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "What platform-specific dependencies currently prevent QuantyFey from running on Linux or macOS?",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:01:28.015112+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -481,13 +485,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Shiny",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:01:28.015112+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -501,13 +505,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "expected_outputs",
       "asbval:target_claim_text": "Modified Shiny application configuration files with platform-agnostic code",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:01:28.015112+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -521,13 +525,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "expected_outputs",
       "asbval:target_claim_text": "Platform dependency resolution and compatibility report",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:01:28.015112+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -541,13 +545,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "expected_outputs",
       "asbval:target_claim_text": "Test log confirming successful application launch on Linux or macOS",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:01:28.015112+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -563,8 +567,8 @@
       "asbval:target_artifact_kind": "card",
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:01:28.015112+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -578,13 +582,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Fit external calibration curves (linear or polynomial regression) to mass spectrometry intensity measurements using known concentration standards, then apply the fitted model to convert raw sample intensities into quantified concentration values. Essential when intensity drift oc",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:02:44.630594+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -598,13 +602,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "QuantyFey \u2014 Interactive Shiny application for visualization, regression model optimization, automatic model selection, drift correction, and quantification of MS data via external calibration",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:02:44.630594+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -618,13 +622,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Fit external calibration curves to mass spectrometry intensity measurements using known concentration standards, then apply the fitted model to convert raw sample intensities into quantified concentration values. Essential when intensity drift occurs during measurement runs.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:02:44.630594+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -638,13 +642,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Validation of mass spectrometry intensity tables after drift correction to ensure removal of drift artifacts and preservation of quantification accuracy.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:02:49.273069+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -658,13 +662,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "QuantyFey \u2014 Shiny application that performs intensity drift correction and generates the corrected intensity table to be validated",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:02:49.273069+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -678,13 +682,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope \u2014 drift correction strategies",
       "asbval:target_claim_text": "Internal Standard correction, statistical drift correction, custom or weighted bracketing",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:02:49.273069+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -698,13 +702,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope \u2014 application context",
       "asbval:target_claim_text": "After applying one or more intensity drift correction strategies within QuantyFey and before exporting the corrected intensity table for final quantification",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:02:49.273069+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -718,13 +722,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope \u2014 when NOT to use",
       "asbval:target_claim_text": "Input is raw, uncorrected MS intensity data \u2014 apply drift correction first using QuantyFey before validation",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:02:49.273069+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -738,13 +742,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Abstracts platform-specific file path conventions (Windows backslashes vs. Unix forward slashes) and system calls to enable a codebase to run identically across Windows, Linux, and macOS.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:02:55.692984+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -758,13 +762,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Shiny (Web application framework hosting the interactive interface that must be made cross-platform compatible)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:02:55.692984+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -778,13 +782,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "R (base) (Provides file.path() and normalizePath() functions for platform-agnostic path handling, and Sys.info() for OS detection)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:02:55.692984+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -798,13 +802,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "RTools (Windows-specific toolchain; conditional requirement for Windows builds that must be wrapped in OS checks)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:02:55.692984+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -818,13 +822,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Detection and correction of intensity drift artifacts in targeted mass spectrometry quantification data using statistical models and calibration-based strategies. This skill addresses systematic loss or gain of signal intensity over the course of a measurement sequence, which com",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:02.046693+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -838,13 +842,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "QuantyFey",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:02.046693+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -858,13 +862,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[0].role",
       "asbval:target_claim_text": "Interactive Shiny application for loading raw MS intensity data, selecting and applying drift correction strategies, optimizing regression models, and exporting corrected quantification tables.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:02.046693+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -878,13 +882,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope alignment",
       "asbval:target_claim_text": "Apply this skill when processing raw MS intensity tables from long measurement sequences where you observe systematic, time-dependent changes in signal magnitude",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:02.046693+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -898,13 +902,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope alignment",
       "asbval:target_claim_text": "Particularly critical when external calibration is used and calibration standards are distributed across the sequence",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:02.046693+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -918,13 +922,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Convert raw mass spectrometry intensity measurements into quantified concentration values using external calibration curve fitting.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:09.718377+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -938,13 +942,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "This skill is essential when processing targeted MS data that exhibits intensity drift, requiring application of drift-corrected calibration models to produce concentration tables with sample identifiers.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:09.718377+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -958,13 +962,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "QuantyFey",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:09.718377+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -978,13 +982,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[0].role",
       "asbval:target_claim_text": "Shiny application for interactive external calibration, drift correction, and quantification of targeted MS data",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:09.718377+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -998,13 +1002,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[0].role",
       "asbval:target_claim_text": "provides manual and automatic regression model optimization",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:09.718377+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -1018,13 +1022,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[0].role",
       "asbval:target_claim_text": "multiple drift correction strategies (IS, bracketing, weighted bracketing)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:09.718377+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1038,13 +1042,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[0].role",
       "asbval:target_claim_text": "concentration table output",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:09.718377+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1058,13 +1062,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[0].repo",
       "asbval:target_claim_text": "https://github.com/CDLMarkus/QuantyFey",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:09.718377+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -1078,13 +1082,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "A method for converting raw mass spectrometry intensity measurements into quantified concentration values by fitting external calibration curves (linear or polynomial regression) against known concentration standards and applying the model to sample data. Essential for handling i",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:18.531161+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1098,13 +1102,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "QuantyFey \u2014 Interactive Shiny application for MS data quantification via external calibration; provides drift correction strategies (IS correction, statistical drift models, custom/weighted bracketing), interactive and automatic regression model optimization (linear/quadratic), a",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:18.531161+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -1118,13 +1122,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "MS Quantitative Analysis via External Calibration Standards \u2014 method for converting raw MS intensity data paired with known-concentration calibration standard measurements into absolute or relative concentrations, especially critical when intensity drift is observed across the me",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:18.531161+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1138,13 +1142,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Selecting and applying intensity drift correction strategies to mass spectrometry datasets to remove systematic signal artifacts and ensure accurate quantification.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:26.583391+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1158,13 +1162,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "This skill addresses the common problem of signal intensity drifting over long measurement sequences by choosing from multiple correction methods suited to the dataset's characteristics.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:26.583391+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1178,13 +1182,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Apply this skill when you have loaded raw MS intensity tables into QuantyFey and observe or suspect intensity drift artifacts across your measurement sequence.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:26.583391+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1198,13 +1202,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Drift is especially likely in long-running targeted MS experiments where calibration curves or internal standards show systematic variation over time.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:26.583391+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1218,13 +1222,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Use this skill before proceeding to final quantification when external calibration is applied.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:26.583391+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1238,13 +1242,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Input is already a drift-corrected or preprocessed intensity table from another software pipeline",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:26.583391+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1258,13 +1262,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Measurement sequence has no detectable temporal drift or shows only random noise",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:26.583391+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1278,13 +1282,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Dataset lacks internal standards or calibration reference data needed for most correction strategies",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:26.583391+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1298,13 +1302,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "QuantyFey - Shiny application providing interactive selection, application, and optimization of intensity drift correction strategies for mass spectrometry data",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:26.583391+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -1318,13 +1322,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "GitHub repository: https://github.com/CDLMarkus/QuantyFey",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:26.583391+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -1338,13 +1342,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Identify and refactor Windows-only dependencies, file path conventions, and system calls in a Shiny application codebase to enable cross-platform (Linux/macOS) compatibility.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:36.828097+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1358,13 +1362,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Identify and refactor Windows-only dependencies, file path conventions, and system calls in a Shiny application codebase to enable cross-platform (Linux/macOS) compatibility.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:36.828097+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1378,13 +1382,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Shiny (Web application framework in which platform-specific dependencies are identified and refactored for cross-platform compatibility)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:36.828097+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1398,13 +1402,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "R (Programming language used to implement conditional code branches, platform detection, and cross-platform file path abstractions)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:36.828097+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1418,13 +1422,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Correct intensity drifts in targeted mass spectrometry datasets using external calibration and multiple drift correction strategies (Internal Standard, statistical models, bracketing methods)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:43.311206+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1438,13 +1442,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "ensure accurate quantification before downstream analysis",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:43.311206+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1458,13 +1462,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "intensity artifacts accumulate during MS measurement runs and would otherwise bias quantitative results",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:43.311206+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1478,13 +1482,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "raw MS intensity tables showing systematic drift during a measurement sequence",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:43.311206+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1498,13 +1502,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "external calibration standards are available in the measurement sequence",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:43.311206+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1518,13 +1522,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "QuantyFey",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:43.311206+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1538,13 +1542,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[0].role",
       "asbval:target_claim_text": "Interactive Shiny application for visualization, drift correction strategy selection, regression model optimization, and export of corrected MS quantification data",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:43.311206+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -1558,13 +1562,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Systematically identify and document platform-specific R package dependencies, system library requirements, and conditional code branches that prevent cross-platform execution of Shiny applications.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:51.471190+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1578,13 +1582,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "R Dependency and Package Compatibility Auditing for Shiny applications",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:51.471190+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1598,13 +1602,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Shiny (Target application framework being audited for platform-specific dependencies and conditional code branches)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:51.471190+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1618,13 +1622,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "R (Execution environment; version-specific dependencies must be identified and abstracted)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:51.471190+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1638,13 +1642,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "RTools (Windows-only prerequisite identified as platform-specific constraint)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:51.471190+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1658,13 +1662,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Apptainer (Alternative container deployment mechanism documented as workaround for Linux execution)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:51.471190+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1678,13 +1682,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Validate and optimize regression models (linear or polynomial) fitted to mass spectrometry external calibration data to ensure accurate conversion of raw intensity measurements to quantified concentration values.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:58.983152+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1698,13 +1702,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "This skill ensures the selected model appropriately captures the intensity\u2013concentration relationship and correctly handles intensity drift correction.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:58.983152+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1718,13 +1722,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "QuantyFey",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:58.983152+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1738,13 +1742,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[0].role",
       "asbval:target_claim_text": "Shiny application providing Interactive Regression Model Optimization and Automatic Optimization Module for selection and validation of linear or quadratic calibration models with multiple drift correction strategies",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:58.983152+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -1758,13 +1762,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "When you have fitted one or more regression models (linear or polynomial) to external calibration standards in MS data and need to verify model adequacy before applying it to unknown samples.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:58.983152+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1778,13 +1782,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Specifically when intensity drift is observed during measurement and you must choose between competing correction strategies (IS correction, drift correction, bracketing, or weighted bracketing)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:58.983152+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -1798,13 +1802,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "QuantyFey supports only linear and quadratic models",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:03:58.983152+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -1818,13 +1822,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Audit and refactor a Windows-only Shiny application to run on Linux and macOS by identifying platform-specific dependencies, replacing OS-dependent code patterns, and validating cross-platform functionality.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:04:08.658172+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1838,13 +1842,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Shiny (Interactive web framework for R; the application runtime to be refactored for cross-platform deployment)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:04:08.658172+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1858,13 +1862,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "R (Programming language and runtime environment; provides platform abstraction functions)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:04:08.658172+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1878,13 +1882,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "RStudio / R IDE (Development environment for testing and launching the refactored Shiny application)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:04:08.658172+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1898,13 +1902,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Audit and refactor a Windows-only Shiny application to run on Linux and macOS",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:04:08.658172+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1918,13 +1922,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Identify and document platform-specific system library dependencies, file path conventions, and conditional code branches in a cross-platform application to enable targeted remediation and cross-platform compatibility testing.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:04:16.545679+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1938,13 +1942,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "System-library-dependency-mapping for cross-platform applications; understanding OS-specific constraints before deployment",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:04:16.545679+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1958,13 +1962,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "Shiny (R web application framework for which platform-specific dependencies must be audited)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:04:16.545679+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1978,13 +1982,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "R (base and package ecosystem) for platform availability and conditional compilation scanning",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:04:16.545679+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -1998,13 +2002,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "RTools (Windows-specific development tools for R package compilation)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:04:16.545679+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -2016,8 +2020,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "promoted",
       "asbval:yes_rate": 1.0,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2029,8 +2033,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "promoted",
       "asbval:yes_rate": 1.0,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2042,8 +2046,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.0,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -2055,8 +2059,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "promoted",
       "asbval:yes_rate": 0.8,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2068,8 +2072,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "promoted",
       "asbval:yes_rate": 0.625,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2081,8 +2085,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "promoted",
       "asbval:yes_rate": 0.6666666666666666,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2094,8 +2098,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "promoted",
       "asbval:yes_rate": 0.7,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2107,8 +2111,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.0,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -2120,8 +2124,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "promoted",
       "asbval:yes_rate": 0.8571428571428571,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2133,8 +2137,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.0,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -2146,8 +2150,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "promoted",
       "asbval:yes_rate": 0.7142857142857143,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2159,8 +2163,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.0,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -2172,8 +2176,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.0,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -2187,13 +2191,13 @@
       "asbval:supported_raw": "yes",
       "asbval:target_artifact_id": "claim_001",
       "asbval:target_artifact_kind": "ledger_claim",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:01:01.582292+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2207,13 +2211,13 @@
       "asbval:supported_raw": "yes",
       "asbval:target_artifact_id": "claim_002",
       "asbval:target_artifact_kind": "ledger_claim",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:01:01.582292+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2227,13 +2231,13 @@
       "asbval:supported_raw": "yes",
       "asbval:target_artifact_id": "claim_003",
       "asbval:target_artifact_kind": "ledger_claim",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:01:01.582292+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -2247,13 +2251,13 @@
       "asbval:supported_raw": "no",
       "asbval:target_artifact_id": "claim_004",
       "asbval:target_artifact_kind": "ledger_claim",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T14:01:01.582292+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {

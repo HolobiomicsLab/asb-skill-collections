@@ -14,6 +14,10 @@
       "@id": "http://purl.obolibrary.org/obo/SEPIO_",
       "@prefix": true
     },
+    "ro": {
+      "@id": "http://purl.obolibrary.org/obo/RO_",
+      "@prefix": true
+    },
     "doco": "http://purl.org/spar/doco/",
     "fabio": "http://purl.org/spar/fabio/",
     "dcat": "http://www.w3.org/ns/dcat#",
@@ -132,13 +136,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "title",
       "asbval:target_claim_text": "Reconstruct: npanalyst",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:07:13.513376+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -152,13 +156,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Assess the scientific task and reproducibility context described by this article package.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:07:13.513376+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -172,13 +176,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "npanalyst",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:07:13.513376+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -192,13 +196,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "GitHub",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:07:13.513376+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -212,13 +216,13 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "expected_outputs",
       "asbval:target_claim_text": "A reviewed SciTask Card and capsule describing the benchmarkable task.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:07:13.513376+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -234,8 +238,8 @@
       "asbval:target_artifact_kind": "card",
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:07:13.513376+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -249,13 +253,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Link scientific claims to their supporting evidence by reviewing indexed article artifacts, connecting reported findings to outputs, and identifying missing materials or reproducibility information.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:07:40.619220+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -269,13 +273,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "npanalyst",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:07:40.619220+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -289,13 +293,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "GitHub",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:07:40.619220+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -309,13 +313,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Assess reproducibility and traceability of scientific article's findings by verifying claims are grounded in actual outputs, code, or supplementary materials",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:07:40.619220+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -329,13 +333,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Identify missing materials or reproducibility information",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:07:40.619220+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -349,13 +353,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Connect reported findings to outputs through validation examples",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:07:40.619220+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -369,13 +373,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Prepare a scientific article package for expert review by systematically indexing tools, workflow steps, and findings, then cross-referencing claims against available materials and available outputs to identify gaps.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:07:58.754035+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -389,13 +393,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Apply this skill when you have a complete or near-complete article package (text + supplementary materials + linked code repositories) and need to assess whether the scientific claims are traceable to concrete tools, data processing steps, and reproducible outputs.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:07:58.754035+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -409,13 +413,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[0].name",
       "asbval:target_claim_text": "npanalyst",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:07:58.754035+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -429,13 +433,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[0].role",
       "asbval:target_claim_text": "Example tool-chain for metabolite MS data and bio-activity correlation; the subject of artifact review in the task context",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:07:58.754035+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -449,13 +453,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[1].name",
       "asbval:target_claim_text": "GitHub",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:07:58.754035+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -469,13 +473,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[1].related_skills",
       "asbval:target_claim_text": "[\"evidence-linking\", \"expert-review-preparation\", \"reproducibility-gap-detection\", \"scientific-task-formulation\"]",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:07:58.754035+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -489,13 +493,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[1].source_task_ids",
       "asbval:target_claim_text": "[\"task_001\"]",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:07:58.754035+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -509,13 +513,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "A structured assessment workflow for identifying and documenting missing information, unavailable materials, or underdescribed methodological steps that prevent independent reproduction of a scientific study.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:08:11.392842+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -529,13 +533,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[0].name",
       "asbval:target_claim_text": "npanalyst",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:08:11.392842+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -549,13 +553,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[0].role",
       "asbval:target_claim_text": "Example tool-chain component that relates metabolite MS data with bio-activity data; used to illustrate reproducibility assessment of multi-modal data integration workflows",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:08:11.392842+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -569,13 +573,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[1].name",
       "asbval:target_claim_text": "GitHub",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:08:11.392842+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -589,13 +593,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[1].role",
       "asbval:target_claim_text": "Primary repository platform for indexing and verifying availability of code, configuration files, and linked data artifacts claimed in the article",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:08:11.392842+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -609,13 +613,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "A structured assessment workflow for identifying and documenting missing information, unavailable materials, or underdescribed methodological steps that prevent independent reproduction of a scientific study.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:08:11.392842+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -629,13 +633,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Formulate a well-scoped scientific task by assessing the reproducibility context, data provenance, and available computational artifacts described in a research article package.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:08:24.193264+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -649,13 +653,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[0].name",
       "asbval:target_claim_text": "npanalyst",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:08:24.193264+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -669,13 +673,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[0].role",
       "asbval:target_claim_text": "Tool-chain for relating metabolite MS data with bio-activity data; target of task formulation in the example article",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:08:24.193264+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -689,13 +693,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[1].name",
       "asbval:target_claim_text": "GitHub",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:08:24.193264+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -709,13 +713,13 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[1].related_skills",
       "asbval:target_claim_text": "['evidence-linking', 'expert-review-preparation', 'reproducibility-gap-detection', 'scientific-task-formulation']",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:08:24.193264+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -727,8 +731,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "promoted",
       "asbval:yes_rate": 0.8333333333333334,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000301"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
@@ -740,8 +744,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.14285714285714285,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -753,8 +757,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.16666666666666666,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -766,8 +770,8 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.4,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
@@ -781,13 +785,13 @@
       "asbval:supported_raw": "partial",
       "asbval:target_artifact_id": "claim_002",
       "asbval:target_artifact_kind": "ledger_claim",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:07:05.526117+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
@@ -801,13 +805,13 @@
       "asbval:supported_raw": "partial",
       "asbval:target_artifact_id": "claim_003",
       "asbval:target_artifact_kind": "ledger_claim",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T10:07:05.526117+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {

@@ -1,10 +1,11 @@
-"""Every advertised (installable) plugin must be free of the dead ASB namespace.
+"""Every advertised (installable) plugin must bind only the canonical ASB namespace.
 
-The `asb:` term base moved to `https://w3id.org/asb#`; the old bases
-(`holobiomicslab.eu/ns/asb`, the never-registered `asb.holobiomics.org`) resolve to
-nothing. A shipped JSON-LD `@context` still binding them would send a consumer to a
-dead domain. The public release is exactly what `marketplace.json` advertises
-(metabolomics/v2 + its packs), so this guard derives the shipped dirs from there —
+The canonical `asb:` term base is `https://w3id.org/asb#` (the base indicium pins).
+`https://holobiomicslab.eu/ns/asb#` resolves since 2026-09-14 and is an equivalent
+legacy base (owner decision, 2026-09-14); `asb.holobiomics.org` was never registered
+and resolves to nothing. A shipped JSON-LD `@context` binding either would give the
+public release a second term base for the same terms. The public release is exactly
+what `marketplace.json` advertises (metabolomics/v2 + its packs), so this guard derives the shipped dirs from there —
 it stays correct as the marketplace changes, and it deliberately does NOT cover the
 `*/v1/` collections, whose namespace migration is a separate human decision (they may
 be frozen at a DOI'd snapshot). See `orphan-grounding`'s neighbour in HUMAN_REVIEW_GATE.md.
@@ -50,7 +51,7 @@ def test_no_advertised_plugin_binds_a_dead_namespace():
                     offenders.append(f"{path.relative_to(ROOT)}: binds {base!r}")
                     break
     assert not offenders, (
-        "advertised plugins still bind the dead ASB namespace (migrate to "
+        "advertised plugins still bind a non-canonical ASB namespace (migrate to "
         "https://w3id.org/asb#):\n  " + "\n  ".join(offenders)
     )
 
