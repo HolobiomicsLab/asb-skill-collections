@@ -170,4 +170,4 @@ Apply a pretrained NMR2Struct model to a held-out test set of molecules with >19
 
 ---
 
-*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See [`artifact_provenance.json`](../../../capsules/nmr2struct/task_004/artifact_provenance.json) for what this release carries; it also lists the build artefacts the release does not promote.*

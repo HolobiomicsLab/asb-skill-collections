@@ -165,4 +165,4 @@ Implement the PynndescentKNNBuilder class by subclassing GraphBuilderCSR with py
 
 ---
 
-*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See [`artifact_provenance.json`](../../../capsules/squidpy/10_1038_s41592_021_01358_2__task_002/artifact_provenance.json) for what this release carries; it also lists the build artefacts the release does not promote.*

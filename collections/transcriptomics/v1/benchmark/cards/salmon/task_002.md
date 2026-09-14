@@ -201,4 +201,4 @@ Reproduce the mapping-rate and correlation metrics reported for yeast ERR458493 
 
 ---
 
-*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See [`artifact_provenance.json`](../../../capsules/salmon/10_1038_nmeth_4197__task_002/artifact_provenance.json) for what this release carries; it also lists the build artefacts the release does not promote.*

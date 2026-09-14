@@ -154,4 +154,4 @@ The rank 1 annotation is LPC(14:0).'
 
 ---
 
-*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See [`artifact_provenance.json`](../../../capsules/metaboannotator/10_1021_acs_analchem_1c03032__task_001/artifact_provenance.json) for what this release carries; it also lists the build artefacts the release does not promote.*

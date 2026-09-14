@@ -142,6 +142,28 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   enforceable and is v1 work. The gate's own warning is corrected with the field:
   it told the reader that four manifests still declared `ro_crate_path`, which
   stopped being true in the same change that dropped them.
+- Make a promoted capsule's own documents describe the capsule, not the build.
+  Dropping `ro_crate_path` from the manifests left the same claim standing one
+  layer down, in the two documents a consumer actually opens. 417 benchmark cards
+  ended with "See the `ro-crate-metadata.json` in this capsule for full
+  provenance" (336 in `metabolomics/v1`, 44 in `epigenomics/v1`, 37 in
+  `transcriptomics/v1`) and the release ships exactly 417 capsules, none of which
+  contains that file. The obvious repair — point the card at
+  `artifact_provenance.json`, which every capsule does carry — was measured before
+  it was taken, and it was not enough: those 417 manifests were promoted from the
+  build unchanged and declared **2,085 artefact paths of which 0 existed** in the
+  released capsule, so the redirect would have landed on a dead index. ASB's own
+  `validate_capsule_provenance` reports each of them as a dangling path; it had
+  never been run against a promoted collection. Both documents are now re-stated
+  against what the release carries: the card links to the capsule's provenance
+  file (417 of 417 links resolve), and the manifest lists the artefacts that are
+  present, every file the capsule holds, and — rather than silently dropping them
+  — the build artefacts the release does not promote. The rule lives in one place
+  (`scripts/release_capsule_truth.py`), `scripts/promote_benchmark_layer.py`
+  applies it while promoting so the next run cannot undo it, and a new
+  `validate.yml` gate holds the tree to it. `metabolomics/v2`, the public
+  collection, ships no capsules and is unchanged. Generating real crates (the
+  option that would make gate 8 enforceable) remains v1 work.
 - Stop binding compiled-bytecode caches into a release receipt. The gate
   snapshots the tree it finds on disk, so the two `__pycache__` files that
   running `collections/metabolomics/v2/bin/`'s own search scripts leaves behind

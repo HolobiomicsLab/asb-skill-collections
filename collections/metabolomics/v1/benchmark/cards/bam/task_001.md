@@ -157,4 +157,4 @@ Execute the BAM (biotransformation-based annotation method) pipeline end-to-end 
 
 ---
 
-*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See [`artifact_provenance.json`](../../../capsules/bam/task_001/artifact_provenance.json) for what this release carries; it also lists the build artefacts the release does not promote.*

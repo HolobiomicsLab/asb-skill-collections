@@ -161,4 +161,4 @@ Implement the Scoring Module that computes average InChIKey score and neighbourh
 
 ---
 
-*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See [`artifact_provenance.json`](../../../capsules/ms2query/https___zenodo_org_badge_latestdoi_306595295_svg__task_003/artifact_provenance.json) for what this release carries; it also lists the build artefacts the release does not promote.*

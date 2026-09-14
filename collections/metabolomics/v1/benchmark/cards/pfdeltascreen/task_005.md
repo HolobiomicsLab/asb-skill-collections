@@ -148,4 +148,4 @@ Extend PFΔScreen's input pipeline to accept an optional custom feature list (CS
 
 ---
 
-*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See [`artifact_provenance.json`](../../../capsules/pfdeltascreen/10_1007_s00216_023_05070_2__task_005/artifact_provenance.json) for what this release carries; it also lists the build artefacts the release does not promote.*

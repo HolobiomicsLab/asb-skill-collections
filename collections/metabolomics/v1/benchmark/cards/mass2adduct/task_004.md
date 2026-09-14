@@ -143,4 +143,4 @@ Convert a Cardinal MSProcessedImagingExperiment or MSContinuousImagingExperiment
 
 ---
 
-*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See [`artifact_provenance.json`](../../../capsules/mass2adduct/10_1021_acs_analchem_0c04720__task_004/artifact_provenance.json) for what this release carries; it also lists the build artefacts the release does not promote.*

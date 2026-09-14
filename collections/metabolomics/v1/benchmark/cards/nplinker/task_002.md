@@ -189,4 +189,4 @@ Train the Input-Output Kernel Regression (IOKR) model on 4138 GNPS library spect
 
 ---
 
-*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See [`artifact_provenance.json`](../../../capsules/nplinker/10_1371_journal_pcbi_1008920__task_002/artifact_provenance.json) for what this release carries; it also lists the build artefacts the release does not promote.*

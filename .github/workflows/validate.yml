@@ -353,6 +353,21 @@ jobs:
       - name: Pack-derivation gate
         run: python -m scripts.build_packs --check
 
+      # The promoted capsule is deliberately slim, and two documents inside it
+      # were promoted unchanged from the build, so both described files that are
+      # not here: 417 benchmark cards told the reader to open the capsule's
+      # `ro-crate-metadata.json`, and the 417 `artifact_provenance.json` files
+      # beside them listed 2,085 artefact paths of which 0 existed. This is gate
+      # 8's defect one layer down — a shipped document naming a file the release
+      # does not ship — in the artefacts whose whole purpose is to say what is
+      # there. The rule lives in one place and promotion applies it; this gate
+      # holds the tree to it.
+      - name: Released-capsule self-description gate
+        run: |
+          python scripts/release_capsule_truth.py --check \
+            collections/epigenomics/v1 collections/metabolomics/v1 \
+            collections/metabolomics/v2 collections/transcriptomics/v1
+
       # Every number the repository advertises about itself, against the census
       # of the unit that number is a claim about. The script and its tests
       # already existed; nothing ever ran them outside the suite's own fixtures.

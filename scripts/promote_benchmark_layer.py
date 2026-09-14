@@ -41,7 +41,13 @@ from asb_skill_collections import layout
 
 import yaml
 
+from release_capsule_truth import align_collection
+
 # Capsule subpaths to promote (text/reproducibility-relevant); the rest is heavy.
+# Anything the promoted capsule says about itself has to be re-stated against this
+# list rather than against the build: see scripts/release_capsule_truth.py, which is
+# applied at the end of promote() and holds the rule for both documents that used to
+# describe the build (the card footer and artifact_provenance.json).
 _CAPSULE_KEEP = ["ledger", "evaluation", "evidence", "inputs", "artifact_provenance.json"]
 _CAPSULE_KEEP_FIGS = _CAPSULE_KEEP + ["figures"]
 
@@ -177,6 +183,12 @@ def promote(collection_dir: Path, builds_root: Path, with_figures: bool, clean: 
         encoding="utf-8",
     )
     _write_manifest(collection_dir)
+    # The card footer and the capsule provenance manifest were both written against
+    # the build; the promoted capsule is slim, so both are re-stated against what
+    # this release actually carries before the collection is declared promoted.
+    aligned = align_collection(collection_dir, write=True)
+    counts["cards_retargeted"] = len(aligned["cards"])
+    counts["capsule_manifests_aligned"] = len(aligned["capsules"])
     return {**counts, "skill_task_links": len(links)}
 
 

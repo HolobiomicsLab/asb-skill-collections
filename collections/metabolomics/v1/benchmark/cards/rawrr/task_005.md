@@ -160,4 +160,4 @@ Verify the two-layer architecture dispatch path by calling rawrr internal assemb
 
 ---
 
-*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See [`artifact_provenance.json`](../../../capsules/rawrr/10_1021_acs_jproteome_0c00866__task_005/artifact_provenance.json) for what this release carries; it also lists the build artefacts the release does not promote.*
