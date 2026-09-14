@@ -1,6 +1,6 @@
 {
   "schema": "asbb-release-gate/1.1",
-  "generated_at": "2026-09-14T20:54:10.700981+00:00",
+  "generated_at": "2026-09-14T21:30:15.270113+00:00",
   "collection_dir": "collections/epigenomics/v1",
   "corpus_path": "collections/epigenomics/v1/corpus.yaml",
   "mode": "strict",
@@ -37,7 +37,7 @@
   },
   "binding": {
     "payload": {
-      "sha256": "6a4c669b03a5ab01222ae8bb93daf3cc358fa4a5e860b5d0de28c0105e1a3315",
+      "sha256": "63d46fbb799f0c27b883c78bd272e447b96cd0f0384b0b72950242783ca74f1d",
       "entries": [
         {
           "path": "CITATION.cff",
@@ -713,8 +713,8 @@
         },
         {
           "path": "capsules/archr/task_001/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "d81413bc1d15f214783187ac50d82760f5e6c56819b1efe00ab85bd105fdd7e3"
+          "bytes": 941,
+          "sha256": "8285a108cfbd63f7092c1c897f8b827006798516fb2a24a595afede36a85a4f6"
         },
         {
           "path": "capsules/archr/task_001/evaluation",
@@ -768,13 +768,18 @@
           "sha256": "a2dec1296c167d2d6ef3f71030906ea293ee65b905cab09f83497f781dbc44a7"
         },
         {
+          "path": "capsules/archr/task_001/ro-crate-metadata.json",
+          "bytes": 30820,
+          "sha256": "045e65ea8ddbc0aa8f055e4d0829458ba0d8ba91620d7243f970f99d016732bc"
+        },
+        {
           "path": "capsules/archr/task_002",
           "directory": true
         },
         {
           "path": "capsules/archr/task_002/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "fa1fa71e0f6390f4082ca018fcea9c80da0a82a573ecac60c9ad6920f72580be"
+          "bytes": 941,
+          "sha256": "765ad410976d4a310150d02c94bc6cafd543bb935fc76685760ac0d7f9296eea"
         },
         {
           "path": "capsules/archr/task_002/evaluation",
@@ -828,13 +833,18 @@
           "sha256": "8b7b70054bda88e5b4cbbacb3865e885548d7c2497b79656915ef0a3fba6fdfa"
         },
         {
+          "path": "capsules/archr/task_002/ro-crate-metadata.json",
+          "bytes": 31244,
+          "sha256": "9b337190037494a585b062746eb12e5d36c896c564ad7b82637d510dad480b7b"
+        },
+        {
           "path": "capsules/archr/task_003",
           "directory": true
         },
         {
           "path": "capsules/archr/task_003/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "848160efb8b312042c868c683d9acc490aa14186dadd4ed0adf766292a21d764"
+          "bytes": 941,
+          "sha256": "7ea8b96a35151d7416731c63fe7963c6b56cd7fb24cb22f7831a26646cabca73"
         },
         {
           "path": "capsules/archr/task_003/evaluation",
@@ -888,6 +898,11 @@
           "sha256": "1c26f015d93c1232e38c9e4a6da133d52bfff9a6a3afa1df55f836f1e765e535"
         },
         {
+          "path": "capsules/archr/task_003/ro-crate-metadata.json",
+          "bytes": 30643,
+          "sha256": "7917e0fe9e91db7c1e620ce615c5521624da34522c0e46232995c6e325d402d6"
+        },
+        {
           "path": "capsules/champ",
           "directory": true
         },
@@ -897,8 +912,8 @@
         },
         {
           "path": "capsules/champ/task_001/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "802a424d3cee7b12fbab2a50099b5b23faf3e449935f75bb5ee492bc1327f1f2"
+          "bytes": 941,
+          "sha256": "51d38bc235a8a7f315dde78ffdac671ca39251071a8629622abe129bcc4248d3"
         },
         {
           "path": "capsules/champ/task_001/evaluation",
@@ -952,13 +967,18 @@
           "sha256": "8958d54c2ee26effee47af07dc6b36c5c3732e3cfadb0e28cbdfd5c9ac2617a1"
         },
         {
+          "path": "capsules/champ/task_001/ro-crate-metadata.json",
+          "bytes": 90684,
+          "sha256": "f819f0fe9c809df663c12b9ef44c0ab17c7ddfec9f9dde62d6b1f09e77c29310"
+        },
+        {
           "path": "capsules/champ/task_002",
           "directory": true
         },
         {
           "path": "capsules/champ/task_002/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "d98675295003ff0fe969e12fb5232553dc16bf6cff2bb293bd7fc89c0ff57d65"
+          "bytes": 941,
+          "sha256": "af3696caa6967e673cbab1940cc457b87667f5af4c2c34a802f1d526b6c27654"
         },
         {
           "path": "capsules/champ/task_002/evaluation",
@@ -1012,13 +1032,18 @@
           "sha256": "b7bd615c2e04fe87078059a2e5edcc111b8d38cec83dcf4506583c77eed0d582"
         },
         {
+          "path": "capsules/champ/task_002/ro-crate-metadata.json",
+          "bytes": 91033,
+          "sha256": "c11c5c8ceda4c65c0fcd6da46aa08a481fce29ee6ad561c9f0c08c2da70f211f"
+        },
+        {
           "path": "capsules/champ/task_003",
           "directory": true
         },
         {
           "path": "capsules/champ/task_003/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "e65bc0e394d7f5d79d527a431f49244a87eacc00b4f089e9945470d009474526"
+          "bytes": 941,
+          "sha256": "b3d4cba40993aaa035b06e7fc12e34030ba9042de821914b96a0011252becb0a"
         },
         {
           "path": "capsules/champ/task_003/evaluation",
@@ -1072,13 +1097,18 @@
           "sha256": "56970690d22884c69661d525d74df252f27daf23ae9a2493b7ce1eb895c6cdf4"
         },
         {
+          "path": "capsules/champ/task_003/ro-crate-metadata.json",
+          "bytes": 91360,
+          "sha256": "0f413576bbd96720a49704b03d2d6f917c24da870f3dea20b686415b29f39ab7"
+        },
+        {
           "path": "capsules/champ/task_004",
           "directory": true
         },
         {
           "path": "capsules/champ/task_004/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "26e74f72d22f3f8ce2ea8a3078f82526b4219cf5b5db7bf416d4b6e560c83a2c"
+          "bytes": 941,
+          "sha256": "e0f262ddf8b89c33c59fea9696df57935b309f3407f58860898dcfa190c99749"
         },
         {
           "path": "capsules/champ/task_004/evaluation",
@@ -1132,13 +1162,18 @@
           "sha256": "f126f33bb89c1ed9417e3649f8bc1667ae6826a63a2fb1e6ba876be338b3ca6b"
         },
         {
+          "path": "capsules/champ/task_004/ro-crate-metadata.json",
+          "bytes": 91003,
+          "sha256": "c3e665a3c8f04741da3fb9a341575398b12725f157b30c9518bbccbf90d9602c"
+        },
+        {
           "path": "capsules/champ/task_005",
           "directory": true
         },
         {
           "path": "capsules/champ/task_005/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "394eba81f3756e920348a430db3808a6d189c9f48f70e592534b6e4020a5f5fe"
+          "bytes": 941,
+          "sha256": "ed6278424b94e6010cafe15090c1961704d9b191c6cccdba9f462a92a2fddc29"
         },
         {
           "path": "capsules/champ/task_005/evaluation",
@@ -1192,6 +1227,11 @@
           "sha256": "1c6e7dd98814d62f6de2b251922e85d90b44eb41e04642809dd9d11f4f3d3941"
         },
         {
+          "path": "capsules/champ/task_005/ro-crate-metadata.json",
+          "bytes": 90343,
+          "sha256": "cd52b70a19d40d7c3283a077c88cca886befa8e0ce38638da1f8ff422e2a18c0"
+        },
+        {
           "path": "capsules/chromvar",
           "directory": true
         },
@@ -1201,8 +1241,8 @@
         },
         {
           "path": "capsules/chromvar/task_001/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "2bba1a866bed57fdd67ef0dd3b1a1a4fd488ae9892c93f098ef7a1d962451b40"
+          "bytes": 941,
+          "sha256": "f870aa83e70f63842337a1e01514914a3338108bcbbda2365a108a388a5d7c0a"
         },
         {
           "path": "capsules/chromvar/task_001/evaluation",
@@ -1256,13 +1296,18 @@
           "sha256": "3246aa101af7157f942d21f6bf392bbfac5d1d00355a410f501d63d535223c53"
         },
         {
+          "path": "capsules/chromvar/task_001/ro-crate-metadata.json",
+          "bytes": 101194,
+          "sha256": "a5e76242b79977c0d6aeae6422b4adea80e65f18ddc9b6add757a81d8a408693"
+        },
+        {
           "path": "capsules/chromvar/task_002",
           "directory": true
         },
         {
           "path": "capsules/chromvar/task_002/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "11a49ae666b6a93f721c63e9b7e20a8c5821c7d1160c12414ddfe2de793030c9"
+          "bytes": 941,
+          "sha256": "4af7ad6bc40a27870893831587bef5a3f47431844401680c2a35b15a9ea22c01"
         },
         {
           "path": "capsules/chromvar/task_002/evaluation",
@@ -1316,13 +1361,18 @@
           "sha256": "69c9d58586bc7032daade043c1d36dcb3c849fe0a8550eea1ac9f2398a65dff2"
         },
         {
+          "path": "capsules/chromvar/task_002/ro-crate-metadata.json",
+          "bytes": 99108,
+          "sha256": "3550aef791321e1cf8c801fee3b5eeaa368a83df9b50e0b6ac8bdd7e9ad56f4b"
+        },
+        {
           "path": "capsules/chromvar/task_003",
           "directory": true
         },
         {
           "path": "capsules/chromvar/task_003/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "f3a99c5650d811e0c6e4833fe4e6aae76237cc7a29530d222ea077280a349d1f"
+          "bytes": 941,
+          "sha256": "3b6712245473f7adb87eed72ea200734606c6cbf149e906e6ec627c19d2dbbcc"
         },
         {
           "path": "capsules/chromvar/task_003/evaluation",
@@ -1376,13 +1426,18 @@
           "sha256": "4cd66ca45c1d2b6625b9c2250014ae10ac7b5bdffb7c8c64a1325851c6d7b602"
         },
         {
+          "path": "capsules/chromvar/task_003/ro-crate-metadata.json",
+          "bytes": 100469,
+          "sha256": "fb0aaed5b9d49ee095e20c82424958c6fce15d0255f286d83e99d3e6eb7533fa"
+        },
+        {
           "path": "capsules/chromvar/task_004",
           "directory": true
         },
         {
           "path": "capsules/chromvar/task_004/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "e18ceace1e1108e9ef7e88c10460df8577eb9aca82d6a330c3f68189cf5dc509"
+          "bytes": 941,
+          "sha256": "befb0e8fa72bc43845ee61af7bfae87771b75d6da9c064a7913b4af64cb2f564"
         },
         {
           "path": "capsules/chromvar/task_004/evaluation",
@@ -1436,13 +1491,18 @@
           "sha256": "a6238f449b3a3e596ea6ebca3c8f1cfc20a6927c058f6e67b8aee432ccca1472"
         },
         {
+          "path": "capsules/chromvar/task_004/ro-crate-metadata.json",
+          "bytes": 99797,
+          "sha256": "dfd0a00d057fe231e667ca1041b0c8d24e9bf9d315c6e9171ad96e0095f3b3a5"
+        },
+        {
           "path": "capsules/chromvar/task_005",
           "directory": true
         },
         {
           "path": "capsules/chromvar/task_005/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "36d0dcafb9d6f1746b27cb6cdd14fd4a420bf4f7a06ee53f19aa94e27f8b46fa"
+          "bytes": 941,
+          "sha256": "73c8a0ecf4af3e203c4267fbd39de7d328664fab13e744873a69e21ffeb08205"
         },
         {
           "path": "capsules/chromvar/task_005/evaluation",
@@ -1496,6 +1556,11 @@
           "sha256": "f0341557946f08f2fb73fa6acf38d5c0b845225ac8b15aca4ed2729c4a1f438a"
         },
         {
+          "path": "capsules/chromvar/task_005/ro-crate-metadata.json",
+          "bytes": 98899,
+          "sha256": "0d815986a9beec58d953f5bffe68f863dc38582c4cdd7097f65eafd077542e59"
+        },
+        {
           "path": "capsules/cooltools",
           "directory": true
         },
@@ -1505,8 +1570,8 @@
         },
         {
           "path": "capsules/cooltools/10_1101_2022_10_31_514564__task_001/artifact_provenance.json",
-          "bytes": 932,
-          "sha256": "1a8bd34d34566a0f28e35f17da78d120fbb5e7d5bba7af869debfaf3bc3432b3"
+          "bytes": 964,
+          "sha256": "1b84dd3c65b08640ac767b98727faee104d2481f0b8fa9e359069869057e36fd"
         },
         {
           "path": "capsules/cooltools/10_1101_2022_10_31_514564__task_001/evaluation",
@@ -1560,13 +1625,18 @@
           "sha256": "f7f980a6cdf89f114ac4f1d2a40577c80d63d0546195b23aef36a544bd435aa1"
         },
         {
+          "path": "capsules/cooltools/10_1101_2022_10_31_514564__task_001/ro-crate-metadata.json",
+          "bytes": 82782,
+          "sha256": "cb8db2aa1e20dd91d58d0f51fa19a3710d0887918438959f9edab0d40eeabbe7"
+        },
+        {
           "path": "capsules/cooltools/10_1101_2022_10_31_514564__task_002",
           "directory": true
         },
         {
           "path": "capsules/cooltools/10_1101_2022_10_31_514564__task_002/artifact_provenance.json",
-          "bytes": 932,
-          "sha256": "58428c501ad21d9635f28de47e7f0c3409ea41005831db8f1fbeefde1fb2f54e"
+          "bytes": 964,
+          "sha256": "71110097f2998bf157c43d2d627188706add522e32116101dd226f3299149167"
         },
         {
           "path": "capsules/cooltools/10_1101_2022_10_31_514564__task_002/evaluation",
@@ -1620,13 +1690,18 @@
           "sha256": "683ed9d2aa629b4c837727b5bb225be65b75315b6fd69c483fc3114e19ba10d6"
         },
         {
+          "path": "capsules/cooltools/10_1101_2022_10_31_514564__task_002/ro-crate-metadata.json",
+          "bytes": 81691,
+          "sha256": "d5e16afeaf7f0059d4f8dfb0aca24bcd1cf292f1010dc0839cc6d732013e9d0b"
+        },
+        {
           "path": "capsules/cooltools/10_1101_2022_10_31_514564__task_003",
           "directory": true
         },
         {
           "path": "capsules/cooltools/10_1101_2022_10_31_514564__task_003/artifact_provenance.json",
-          "bytes": 932,
-          "sha256": "342a42ae5dd5104c7e4e28c7bf1bc257e1f155e4bfa73c1f403b24f81b51f414"
+          "bytes": 964,
+          "sha256": "555726778d0b0a71fc0d3f8ca109beccadb61defc3d6c1076e649af326f3e4be"
         },
         {
           "path": "capsules/cooltools/10_1101_2022_10_31_514564__task_003/evaluation",
@@ -1680,13 +1755,18 @@
           "sha256": "5910d84c43384fdfaab2b9ff9cf4c067d71eef27d3b770990b2d4dc1b80c8702"
         },
         {
+          "path": "capsules/cooltools/10_1101_2022_10_31_514564__task_003/ro-crate-metadata.json",
+          "bytes": 82248,
+          "sha256": "0c4935b5773840dd9c33987871fc2324ad65ee99e9a567425bdf7c5b8280898d"
+        },
+        {
           "path": "capsules/cooltools/10_1101_2022_10_31_514564__task_004",
           "directory": true
         },
         {
           "path": "capsules/cooltools/10_1101_2022_10_31_514564__task_004/artifact_provenance.json",
-          "bytes": 932,
-          "sha256": "25ae7755717d9b27685022ba64f82ecdf41f7e2226bfe7c52aae3b0ce5393a0b"
+          "bytes": 964,
+          "sha256": "9cf61aae327fd0dca0fd33d091fd2d1b7fadd03fbe1a8297b0244320556f1d31"
         },
         {
           "path": "capsules/cooltools/10_1101_2022_10_31_514564__task_004/evaluation",
@@ -1740,13 +1820,18 @@
           "sha256": "07c22550f75e50c72db01f0b49c60289f826ee6ed86d52af2a863c4bbb63ba9c"
         },
         {
+          "path": "capsules/cooltools/10_1101_2022_10_31_514564__task_004/ro-crate-metadata.json",
+          "bytes": 81054,
+          "sha256": "37d8db8f52735b1cf7c02cf160e132d6241a76b640fab1d26fbde761e782371f"
+        },
+        {
           "path": "capsules/cooltools/10_1101_2022_10_31_514564__task_005",
           "directory": true
         },
         {
           "path": "capsules/cooltools/10_1101_2022_10_31_514564__task_005/artifact_provenance.json",
-          "bytes": 932,
-          "sha256": "ef3c2d3a4e58dbbf1b4e5e0178482584c285f1fbd98392cb1a3c79881a492031"
+          "bytes": 964,
+          "sha256": "595f02b55cf627820bda34516900b23282b664087d97cf1f8734dd7870ad2765"
         },
         {
           "path": "capsules/cooltools/10_1101_2022_10_31_514564__task_005/evaluation",
@@ -1800,6 +1885,11 @@
           "sha256": "ffe17d2f986bba853da0b6a5bb93641344cb9b9e5655860c2f617487fc1c52e2"
         },
         {
+          "path": "capsules/cooltools/10_1101_2022_10_31_514564__task_005/ro-crate-metadata.json",
+          "bytes": 82236,
+          "sha256": "ced71a2976bb06f5bdf839e4bf17f6afd76982dc2e87b2d58f26199f54aaeb98"
+        },
+        {
           "path": "capsules/hicpro",
           "directory": true
         },
@@ -1809,8 +1899,8 @@
         },
         {
           "path": "capsules/hicpro/10_1186_s13059_015_0831_x__task_001/artifact_provenance.json",
-          "bytes": 932,
-          "sha256": "5690bea5d4babffe06b7100388a28e467a40e9dd50def6dad3034766af3b4085"
+          "bytes": 964,
+          "sha256": "984a3d8f9057d912b9b42aaff571ff713f9b6f45deaa07ef0d6296ec3c1ba62f"
         },
         {
           "path": "capsules/hicpro/10_1186_s13059_015_0831_x__task_001/evaluation",
@@ -1864,13 +1954,18 @@
           "sha256": "92a862437d1df308368e676964f2296546f815f5afab0b6dbe07d1c48c3c85a8"
         },
         {
+          "path": "capsules/hicpro/10_1186_s13059_015_0831_x__task_001/ro-crate-metadata.json",
+          "bytes": 44821,
+          "sha256": "4816f415228f8330692a29203cf34562ca9ae4fdaaaec9a103289a3e2a89fc66"
+        },
+        {
           "path": "capsules/hicpro/10_1186_s13059_015_0831_x__task_002",
           "directory": true
         },
         {
           "path": "capsules/hicpro/10_1186_s13059_015_0831_x__task_002/artifact_provenance.json",
-          "bytes": 932,
-          "sha256": "e309be4f36167f78237ee09c91140281bff3f49a9372a9cf31818945cd66986d"
+          "bytes": 964,
+          "sha256": "be292fad7185c0a851001f6945fae81fc280996431db02bec39a76d473889619"
         },
         {
           "path": "capsules/hicpro/10_1186_s13059_015_0831_x__task_002/evaluation",
@@ -1924,13 +2019,18 @@
           "sha256": "92a862437d1df308368e676964f2296546f815f5afab0b6dbe07d1c48c3c85a8"
         },
         {
+          "path": "capsules/hicpro/10_1186_s13059_015_0831_x__task_002/ro-crate-metadata.json",
+          "bytes": 45704,
+          "sha256": "58fb018a644d2249d7444816fd83464d0fc4e528f699f99210d28ca5f1d222ed"
+        },
+        {
           "path": "capsules/hicpro/10_1186_s13059_015_0831_x__task_003",
           "directory": true
         },
         {
           "path": "capsules/hicpro/10_1186_s13059_015_0831_x__task_003/artifact_provenance.json",
-          "bytes": 932,
-          "sha256": "a4586eaafec0156690d6bce8b86a5baeef32363a9c777f343930064ec3e7eddb"
+          "bytes": 964,
+          "sha256": "d3ba3eaefdbe0dbf66a51474b5779757a9238e84fa5fa499b9b1e33ee6ec0875"
         },
         {
           "path": "capsules/hicpro/10_1186_s13059_015_0831_x__task_003/evaluation",
@@ -1984,13 +2084,18 @@
           "sha256": "91ffd696c41bd12b37308c27ff709018f37778c1264cf3eeec43d617e17f6220"
         },
         {
+          "path": "capsules/hicpro/10_1186_s13059_015_0831_x__task_003/ro-crate-metadata.json",
+          "bytes": 45463,
+          "sha256": "f72bce34ada234863020591344700781de56ebd802640e63c97615e2cff064f0"
+        },
+        {
           "path": "capsules/hicpro/10_1186_s13059_015_0831_x__task_004",
           "directory": true
         },
         {
           "path": "capsules/hicpro/10_1186_s13059_015_0831_x__task_004/artifact_provenance.json",
-          "bytes": 932,
-          "sha256": "492ce88933b2924689810285378d54195dc7977f653107990cb83a4e738c785e"
+          "bytes": 964,
+          "sha256": "a4ee6b3de9608e9a5dfea481bb8122fe431374cdcb566371668c1bd52bc55bf7"
         },
         {
           "path": "capsules/hicpro/10_1186_s13059_015_0831_x__task_004/evaluation",
@@ -2044,6 +2149,11 @@
           "sha256": "3f70a25a2d287b8676685d04fe4a37f81e421b0b0275d7fc0cc4ccda122ba97f"
         },
         {
+          "path": "capsules/hicpro/10_1186_s13059_015_0831_x__task_004/ro-crate-metadata.json",
+          "bytes": 47827,
+          "sha256": "62f30c0d19ff7c69c5c5f443e28fb92196fffc55743ee35ecd422acdbaa4b65c"
+        },
+        {
           "path": "capsules/juicer",
           "directory": true
         },
@@ -2053,8 +2163,8 @@
         },
         {
           "path": "capsules/juicer/task_001/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "8b892ce058cbd2b121464e9298fb1eb8cbb88cde41f176b84683e3fcaf8c806a"
+          "bytes": 941,
+          "sha256": "a1d4d9dd1f99c11753fc5c2a138b9b926c30b135f0e7961920dc24f01fd7d729"
         },
         {
           "path": "capsules/juicer/task_001/evaluation",
@@ -2108,13 +2218,18 @@
           "sha256": "73f607a3ef048a1892324025d1aac1907bdaba9edc86cfe6f5bd356e52ddc982"
         },
         {
+          "path": "capsules/juicer/task_001/ro-crate-metadata.json",
+          "bytes": 29610,
+          "sha256": "88ec3c9155be82a671d0eb734dff07280bc0335a830ece94112c1b9b8fc76ebd"
+        },
+        {
           "path": "capsules/juicer/task_002",
           "directory": true
         },
         {
           "path": "capsules/juicer/task_002/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "baa437f4f0c1a8e43779e043fcd21339b3c8039766990ac74f03c1822cf0a55b"
+          "bytes": 941,
+          "sha256": "6b8ccbcb3ef6f7d7ed026190d8cc78683ee8b3524fd77d2caf66f7c891901ffb"
         },
         {
           "path": "capsules/juicer/task_002/evaluation",
@@ -2168,13 +2283,18 @@
           "sha256": "76fd44319d185957340322dd3a59957a8535a5b2e836d20b9b82624e784c9271"
         },
         {
+          "path": "capsules/juicer/task_002/ro-crate-metadata.json",
+          "bytes": 30132,
+          "sha256": "51b6466b0ad5dad7b21aa4dbfe4787c98117e16525f3c33bcbc0de6350697539"
+        },
+        {
           "path": "capsules/juicer/task_003",
           "directory": true
         },
         {
           "path": "capsules/juicer/task_003/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "ac4b82ac18080937800d1842cd6b626b460c0930558b1914774f656c20c8e719"
+          "bytes": 941,
+          "sha256": "28b83d13e99d21b61e7a655605f916022818e6af7a8001fa352064d53e1dd0ae"
         },
         {
           "path": "capsules/juicer/task_003/evaluation",
@@ -2228,6 +2348,11 @@
           "sha256": "8a55691932d59db09b263c5de89206c2d043afb4e058a510e2336aab30bb0307"
         },
         {
+          "path": "capsules/juicer/task_003/ro-crate-metadata.json",
+          "bytes": 29572,
+          "sha256": "81fced42419682f27b8c82eb42bff4b26ee811d21c86958f165255713c31d17b"
+        },
+        {
           "path": "capsules/macs",
           "directory": true
         },
@@ -2237,8 +2362,8 @@
         },
         {
           "path": "capsules/macs/task_001/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "cb9abf76c225d94e2ab85740181816d2d87d946fa9a03be9eb369c26a0031656"
+          "bytes": 941,
+          "sha256": "8d2efadc247adf662e83179eb69d22f2c729722365b67c554c3a79d567833e53"
         },
         {
           "path": "capsules/macs/task_001/evaluation",
@@ -2292,13 +2417,18 @@
           "sha256": "2041984da725e7d7e47a20abee0335d914a610e0527437e013e69d3a4c13ae6e"
         },
         {
+          "path": "capsules/macs/task_001/ro-crate-metadata.json",
+          "bytes": 78662,
+          "sha256": "70cc9fb81397071b4a603681764777ffaab90efec6b4696b726a7fdb42d08a6c"
+        },
+        {
           "path": "capsules/macs/task_002",
           "directory": true
         },
         {
           "path": "capsules/macs/task_002/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "50cf0c35ed795ae31112b04be2af4963851efe02c1f78a499a384b1e631094b1"
+          "bytes": 941,
+          "sha256": "1ea66ac0b5cbb1ed740b8812d2765b68b7527afc1b1191eb6439acc615df2f50"
         },
         {
           "path": "capsules/macs/task_002/evaluation",
@@ -2352,13 +2482,18 @@
           "sha256": "98189c4e6310441adebc01954513ba2011d0ba5d226bea05f01a392b0d27d050"
         },
         {
+          "path": "capsules/macs/task_002/ro-crate-metadata.json",
+          "bytes": 78833,
+          "sha256": "c34fb16ac623e517bda9fbfc2823dc96ad7d668677fc3c5cc201ecc30f29eff0"
+        },
+        {
           "path": "capsules/macs/task_003",
           "directory": true
         },
         {
           "path": "capsules/macs/task_003/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "f96f4ea83a8c0e8e32e639690467f6a9ee4575e60dad69d938d94e6068f7c7a2"
+          "bytes": 941,
+          "sha256": "d44523ae9fb0bb7ecb19f7044690b821afcbb2597640e46c1c1b874e90d88a93"
         },
         {
           "path": "capsules/macs/task_003/evaluation",
@@ -2412,6 +2547,11 @@
           "sha256": "fb86e6c8ea244a3f2f913d808e491cb7e354235f82dc68e3ebcaf8b96246cde8"
         },
         {
+          "path": "capsules/macs/task_003/ro-crate-metadata.json",
+          "bytes": 76364,
+          "sha256": "a74df76403f18167f6292cb5b4b79bb7e1c9b3329d517095ff59f9dc62792306"
+        },
+        {
           "path": "capsules/methylkit",
           "directory": true
         },
@@ -2421,8 +2561,8 @@
         },
         {
           "path": "capsules/methylkit/task_001/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "8fc3ee22d85418a757f3aa8102fa54e708623c9cfd0efba02d17d0674a8594d9"
+          "bytes": 941,
+          "sha256": "f6e03f5f0ef5eef1fa035793ca0f3c6858165f8daa08bbc252d29ff841cc9be1"
         },
         {
           "path": "capsules/methylkit/task_001/evaluation",
@@ -2476,13 +2616,18 @@
           "sha256": "65f72d06c61c6a11ae3c444da327ac530177af5900d3fa7ba5de208d40ae7b87"
         },
         {
+          "path": "capsules/methylkit/task_001/ro-crate-metadata.json",
+          "bytes": 98172,
+          "sha256": "fd44d185fc5d496f16eb4216f49cca43f20e274399924dda76d4e32e7187bfab"
+        },
+        {
           "path": "capsules/methylkit/task_002",
           "directory": true
         },
         {
           "path": "capsules/methylkit/task_002/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "312fd2371bb6562ff216ee389b70bf8652a440dab4e426558b04a240279ee4a3"
+          "bytes": 941,
+          "sha256": "a9f8625ca5b2482e0083a08760904bddd71f053271261ad4140c314de31b46b9"
         },
         {
           "path": "capsules/methylkit/task_002/evaluation",
@@ -2536,13 +2681,18 @@
           "sha256": "db56dbe75f0a9046d9dea20a2ea7b3c4bcd5984a4e187b2e98749b94cfd82a59"
         },
         {
+          "path": "capsules/methylkit/task_002/ro-crate-metadata.json",
+          "bytes": 97475,
+          "sha256": "2925e328b860d54dae6136b9e3d05a5e9cef7fbf939dae2fcb17a33d26de2b4a"
+        },
+        {
           "path": "capsules/methylkit/task_003",
           "directory": true
         },
         {
           "path": "capsules/methylkit/task_003/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "068cca0ca4af12bbe67b86755fa7aa3475906a20331f7ebb4d452776bae2bb3c"
+          "bytes": 941,
+          "sha256": "b04d1a7fda8db1eff31421cd6dd641b3e9e60499ff052db755feb982b6665f24"
         },
         {
           "path": "capsules/methylkit/task_003/evaluation",
@@ -2596,13 +2746,18 @@
           "sha256": "ec7fb0a8dcebcf716e2dd288d72f7e4cb87ae5efba83b177485a8427d7099662"
         },
         {
+          "path": "capsules/methylkit/task_003/ro-crate-metadata.json",
+          "bytes": 98710,
+          "sha256": "031c4489392282269d1ca6f7bb2362b481a10c29ff88ad6b7bb35d2d743ebb07"
+        },
+        {
           "path": "capsules/methylkit/task_004",
           "directory": true
         },
         {
           "path": "capsules/methylkit/task_004/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "0279babe017ba4478c7064dba7b165549df2a68ce3ef3b85f2767e81e55583ad"
+          "bytes": 941,
+          "sha256": "a2ef53b63e6a30fc0f2ad4cd045b44fc9d3cdc8b85499d82f72cfb863524b6ae"
         },
         {
           "path": "capsules/methylkit/task_004/evaluation",
@@ -2656,13 +2811,18 @@
           "sha256": "5c773e983e7d3ba09a63c4c452b2ca8b8f1e824f92c3c9210500eb4e5b7de4d4"
         },
         {
+          "path": "capsules/methylkit/task_004/ro-crate-metadata.json",
+          "bytes": 98072,
+          "sha256": "5f73fa6c547c4ac30cafc142cf2e8301ca25f2f9158b644a3c02ce6c2dc9d272"
+        },
+        {
           "path": "capsules/methylkit/task_005",
           "directory": true
         },
         {
           "path": "capsules/methylkit/task_005/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "ef3cedf95eba69589513d2632db78a22f444831065c4f25fc279bf287b3b73da"
+          "bytes": 941,
+          "sha256": "cc94cbcdc5f736eed720fa89ee16be880501e1be89b2b2beeec8a6ee0e6dbdfd"
         },
         {
           "path": "capsules/methylkit/task_005/evaluation",
@@ -2716,6 +2876,11 @@
           "sha256": "d2c4e627a029631b4410fec45dc52406db7a52d60cbf8da50cef4ce4832af80b"
         },
         {
+          "path": "capsules/methylkit/task_005/ro-crate-metadata.json",
+          "bytes": 98445,
+          "sha256": "0aa842ff3bc062fe69d38a5513d9912905b586fc84fc72b8f2f78426bea701f4"
+        },
+        {
           "path": "capsules/seacr",
           "directory": true
         },
@@ -2725,8 +2890,8 @@
         },
         {
           "path": "capsules/seacr/task_001/artifact_provenance.json",
-          "bytes": 850,
-          "sha256": "3eb68d70217f18335134d909146fa6cf8ce0ffbdc7dbd8564f88eb9c62ff92d5"
+          "bytes": 882,
+          "sha256": "7898f3e54826f4ae75d0ab264431c1f9f28b124451d2ede60a21970f56f39858"
         },
         {
           "path": "capsules/seacr/task_001/evaluation",
@@ -2766,6 +2931,11 @@
           "sha256": "de5ab057180137a5ed507130027f902b5894d4835f6af5307afdc4af6f5952ce"
         },
         {
+          "path": "capsules/seacr/task_001/ro-crate-metadata.json",
+          "bytes": 9320,
+          "sha256": "9d5238c90d3e4b361d6c941ec672905d87b55b3cb97edfb7c0684f5d85103b41"
+        },
+        {
           "path": "capsules/snapatac2",
           "directory": true
         },
@@ -2775,8 +2945,8 @@
         },
         {
           "path": "capsules/snapatac2/10_1038_s41592_023_02139_9__task_001/artifact_provenance.json",
-          "bytes": 933,
-          "sha256": "ff6d33d79e92fea82c73613d47fe33323609b8c3f6d0bc2276491cdf742fd0e6"
+          "bytes": 965,
+          "sha256": "e819397b76a7f1a99b45e14015b54d1da004ad0942fc5ad40bbcef6a4f44dbe0"
         },
         {
           "path": "capsules/snapatac2/10_1038_s41592_023_02139_9__task_001/evaluation",
@@ -2830,13 +3000,18 @@
           "sha256": "63bc7e8aa8527c45557365086095e6c525322aaabd233584021f7c07612bfd2b"
         },
         {
+          "path": "capsules/snapatac2/10_1038_s41592_023_02139_9__task_001/ro-crate-metadata.json",
+          "bytes": 90385,
+          "sha256": "3e383596beb41ea1fc6095472aa65bb8483adf9698f8ed10d6506aafbef738aa"
+        },
+        {
           "path": "capsules/snapatac2/10_1038_s41592_023_02139_9__task_002",
           "directory": true
         },
         {
           "path": "capsules/snapatac2/10_1038_s41592_023_02139_9__task_002/artifact_provenance.json",
-          "bytes": 933,
-          "sha256": "0a4545ce7af533cd931862b10d552e48b28c5987206df1d42b0699f80be8fb19"
+          "bytes": 965,
+          "sha256": "9646f1d1b9cd98a1122cdbce25412fe648cd4761341262077af5acab5b258d03"
         },
         {
           "path": "capsules/snapatac2/10_1038_s41592_023_02139_9__task_002/evaluation",
@@ -2890,13 +3065,18 @@
           "sha256": "b6b32fecde711cf0a400878f50b3829ec820b4aea65ab9168d79f6b40a877f4e"
         },
         {
+          "path": "capsules/snapatac2/10_1038_s41592_023_02139_9__task_002/ro-crate-metadata.json",
+          "bytes": 89152,
+          "sha256": "77228b78f2265b3bd3d8a770c035d64ae81eac1b86cb0b672bb7a6ef540a4650"
+        },
+        {
           "path": "capsules/snapatac2/10_1038_s41592_023_02139_9__task_003",
           "directory": true
         },
         {
           "path": "capsules/snapatac2/10_1038_s41592_023_02139_9__task_003/artifact_provenance.json",
-          "bytes": 933,
-          "sha256": "210b55dc846b7909ff78da70662918a5643efbe0f19c003ed8da0c514ff990f4"
+          "bytes": 965,
+          "sha256": "2bee470a9d13f6084b43e8bcd7b2d720b0aed3078a468568388260a746ceb8b1"
         },
         {
           "path": "capsules/snapatac2/10_1038_s41592_023_02139_9__task_003/evaluation",
@@ -2950,13 +3130,18 @@
           "sha256": "be7a74b4d8d76141df8521ffcdecc70351b4ba15381cfa56a01442bd670fd5d2"
         },
         {
+          "path": "capsules/snapatac2/10_1038_s41592_023_02139_9__task_003/ro-crate-metadata.json",
+          "bytes": 89775,
+          "sha256": "3a07644b6bbb82adbea4ab9b2ac9ef42921286f8a3e852b900bb7a11a74b08ac"
+        },
+        {
           "path": "capsules/snapatac2/10_1038_s41592_023_02139_9__task_004",
           "directory": true
         },
         {
           "path": "capsules/snapatac2/10_1038_s41592_023_02139_9__task_004/artifact_provenance.json",
-          "bytes": 933,
-          "sha256": "11076aeb7dbe71cbf08e9179d2b942d1f08250c4fc901976a20a1a0b3a94f928"
+          "bytes": 965,
+          "sha256": "7f0d72ecf8896c0ecc6b67ce8d89b7a0e32e01c8700eeaaf1a181ceb4646d4c0"
         },
         {
           "path": "capsules/snapatac2/10_1038_s41592_023_02139_9__task_004/evaluation",
@@ -3010,13 +3195,18 @@
           "sha256": "b36a58dd6a5a615997c44709d25cbb841ddc76b7b35f6e4d43ff93b00038687f"
         },
         {
+          "path": "capsules/snapatac2/10_1038_s41592_023_02139_9__task_004/ro-crate-metadata.json",
+          "bytes": 93362,
+          "sha256": "f682dc97127dafa0b190b454599ba064ffd4e72c3f8c568451af924b11829ab7"
+        },
+        {
           "path": "capsules/snapatac2/10_1038_s41592_023_02139_9__task_005",
           "directory": true
         },
         {
           "path": "capsules/snapatac2/10_1038_s41592_023_02139_9__task_005/artifact_provenance.json",
-          "bytes": 933,
-          "sha256": "c57afc6aaaf668e314a9735e705196f0f7a69b8da8b7d088842bd53f2cd1cac9"
+          "bytes": 965,
+          "sha256": "0ebe75cde8e7ed5b90715d4a76bec337120bb9bfa72a1dc262898337a0bb4008"
         },
         {
           "path": "capsules/snapatac2/10_1038_s41592_023_02139_9__task_005/evaluation",
@@ -3070,6 +3260,11 @@
           "sha256": "42ee1afa8446367357517a96abb4e85bc86a7756477e0d8a76e48e459b9a9654"
         },
         {
+          "path": "capsules/snapatac2/10_1038_s41592_023_02139_9__task_005/ro-crate-metadata.json",
+          "bytes": 90600,
+          "sha256": "086114d3c8c43bf75adab4cc40aefba9ee1238bc72fab1b7f1ec10254c61ad16"
+        },
+        {
           "path": "capsules/tobias",
           "directory": true
         },
@@ -3079,8 +3274,8 @@
         },
         {
           "path": "capsules/tobias/10_1038_s41467_020_18035_1__task_001/artifact_provenance.json",
-          "bytes": 933,
-          "sha256": "c73088ff2093a6d5fdf433233772ea22dc76dd290763672831fbd3e25d329890"
+          "bytes": 965,
+          "sha256": "0c3c0f38b6ac63b7ec40fca3641273b3c2ff4ea621d2db06124887a6679c8ee8"
         },
         {
           "path": "capsules/tobias/10_1038_s41467_020_18035_1__task_001/evaluation",
@@ -3134,13 +3329,18 @@
           "sha256": "8bfcd876e119c99a52dc4477990ee4c14cbd0851f31c1568d093409052c5c4d0"
         },
         {
+          "path": "capsules/tobias/10_1038_s41467_020_18035_1__task_001/ro-crate-metadata.json",
+          "bytes": 16937,
+          "sha256": "4f414e3103436f2c9ac1837adff3dace316fd833bb17283331b71b3d56d7a4fa"
+        },
+        {
           "path": "capsules/tobias/10_1038_s41467_020_18035_1__task_002",
           "directory": true
         },
         {
           "path": "capsules/tobias/10_1038_s41467_020_18035_1__task_002/artifact_provenance.json",
-          "bytes": 933,
-          "sha256": "de78a820ccea6023bbc266549ea9839e09928ef3fe4a9f0b91a408affccb201d"
+          "bytes": 965,
+          "sha256": "b6e448c747e4cf0c751cb37d8a2e174586a9643973e3a81c0e94eb76c849b664"
         },
         {
           "path": "capsules/tobias/10_1038_s41467_020_18035_1__task_002/evaluation",
@@ -3194,13 +3394,18 @@
           "sha256": "133dc2e47d86721e911875d2473a21c1aec83a96efbd80a8a2f81506a40ddf80"
         },
         {
+          "path": "capsules/tobias/10_1038_s41467_020_18035_1__task_002/ro-crate-metadata.json",
+          "bytes": 17377,
+          "sha256": "f0314d086edb3b895420feabde92a5878e3349e36a2be03836c7822cea49dcca"
+        },
+        {
           "path": "capsules/tobias/10_1038_s41467_020_18035_1__task_003",
           "directory": true
         },
         {
           "path": "capsules/tobias/10_1038_s41467_020_18035_1__task_003/artifact_provenance.json",
-          "bytes": 933,
-          "sha256": "de1387195a1fbcb0fcebff743a7b358becf49b6bf0cf7ad5f6cf92e515a8a6df"
+          "bytes": 965,
+          "sha256": "b6f85753201e66933eab6b7003344003a74a78e4265734ee1f08e89d2474cfb6"
         },
         {
           "path": "capsules/tobias/10_1038_s41467_020_18035_1__task_003/evaluation",
@@ -3254,13 +3459,18 @@
           "sha256": "133dc2e47d86721e911875d2473a21c1aec83a96efbd80a8a2f81506a40ddf80"
         },
         {
+          "path": "capsules/tobias/10_1038_s41467_020_18035_1__task_003/ro-crate-metadata.json",
+          "bytes": 17950,
+          "sha256": "dc4deef0bd7ae5ef4a181dbd40fce492e065a20ac153b21ed21ac797caededb3"
+        },
+        {
           "path": "capsules/tobias/10_1038_s41467_020_18035_1__task_004",
           "directory": true
         },
         {
           "path": "capsules/tobias/10_1038_s41467_020_18035_1__task_004/artifact_provenance.json",
-          "bytes": 933,
-          "sha256": "f9ef808a17109c6b4c8974490b09d0e7772ef423a85aa862149bdfa74ff482ca"
+          "bytes": 965,
+          "sha256": "559560131f865af8aeca1637274782d4ca2931692da010a5c3cde0aadd10b1c1"
         },
         {
           "path": "capsules/tobias/10_1038_s41467_020_18035_1__task_004/evaluation",
@@ -3314,13 +3524,18 @@
           "sha256": "8bfcd876e119c99a52dc4477990ee4c14cbd0851f31c1568d093409052c5c4d0"
         },
         {
+          "path": "capsules/tobias/10_1038_s41467_020_18035_1__task_004/ro-crate-metadata.json",
+          "bytes": 18493,
+          "sha256": "72a4a65411ecbe10b4dc13ebf0cf7649bc8b5fa5639fcec68f442168bf99b1f7"
+        },
+        {
           "path": "capsules/tobias/10_1038_s41467_020_18035_1__task_005",
           "directory": true
         },
         {
           "path": "capsules/tobias/10_1038_s41467_020_18035_1__task_005/artifact_provenance.json",
-          "bytes": 933,
-          "sha256": "c293771b3b981dbd6f3503acb7963d87f983c117fdf2c868180fee75596ac5e3"
+          "bytes": 965,
+          "sha256": "af2f1677c364bce17c04715788729a06576d13c69653854c4df2d618a255dfec"
         },
         {
           "path": "capsules/tobias/10_1038_s41467_020_18035_1__task_005/evaluation",
@@ -3372,6 +3587,11 @@
           "path": "capsules/tobias/10_1038_s41467_020_18035_1__task_005/ledger/results.jsonl",
           "bytes": 800,
           "sha256": "8bfcd876e119c99a52dc4477990ee4c14cbd0851f31c1568d093409052c5c4d0"
+        },
+        {
+          "path": "capsules/tobias/10_1038_s41467_020_18035_1__task_005/ro-crate-metadata.json",
+          "bytes": 18912,
+          "sha256": "2fa34df73c229047322640e3bded3810c92027783a38a934efc650481837835c"
         },
         {
           "path": "collection.yaml",
@@ -5856,7 +6076,7 @@
       "scope": "payload files",
       "required": true,
       "counts": {
-        "checked": 746,
+        "checked": 790,
         "skipped": 0,
         "missing": 0,
         "failed": 0
@@ -5943,5 +6163,5 @@
       "coverage": {}
     }
   ],
-  "receipt_sha256": "abb8f65a4e1cd2473ed5aa5dd8bec7e7512e09fa0485c5b5c2cfcbccc0235891"
+  "receipt_sha256": "5ce973611b24c60531510e84e2ec5a3c9000c80bd056bc50596c7ccdf22ec7b4"
 }

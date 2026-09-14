@@ -13,7 +13,8 @@
       "evaluation/review_rubric.json",
       "evidence/source_snippets.md",
       "inputs/dataset_folder_tree.txt",
-      "inputs/dataset_preview.md"
+      "inputs/dataset_preview.md",
+      "ro-crate-metadata.json"
     ],
     "omitted_from_release": [
       "task_card.json",

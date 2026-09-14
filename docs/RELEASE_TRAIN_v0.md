@@ -71,7 +71,7 @@ This runbook documents the complete **linear release pipeline** for ASB-Skill-Co
 - ✓ No orphan skills (every skill is rooted in at least one paper)
 - ✓ Description discipline: starts with approved prefix, 50–300 chars, no marketing terms
 - ✓ EDAM IRIs are well-formed (http://edamontology.org/...)
-- ✗ RO-Crate metadata is present and valid — no collection ships a crate; gate 8 validates zero files
+- ✓ RO-Crate metadata is present and valid — every released capsule ships its build's crate, pruned to what the capsule holds, and gate 8 holds each to RO-Crate 1.1 (the Workflow Run Profile claim is not checked and not made)
 - ✓ verify-claims round-trip (indicium adapter) passes (gate 9)
 - ✓ Marketplace.json declares all skills
 
@@ -356,7 +356,7 @@ The release-gate reviews (gates 13, 14 in the SPEC: independent co-reviewer and 
 | 2 | No orphan skills (DOI resolution sample) | PR, push-main, tag | ✓ | ✓ |
 | 5 | Description discipline lint | PR, push-main, tag | ✓ | ✓ |
 | 6 | EDAM IRI resolution | PR, push-main, tag | ✓ | ✓ |
-| 8 | RO-Crate validation (Workflow Run Profile 0.5) | PR, push-main, tag | ✓ | inert — no crate exists, so the step validates zero files and never blocks |
+| 8 | RO-Crate validation (RO-Crate 1.1, per released capsule) | PR, push-main, tag | ✓ | ✓ — fails on any capsule whose crate is missing, names a file the capsule does not hold, omits one it holds, carries an absolute path or claims an unchecked profile; fails too when it finds no released capsule |
 | 9 | indicium round-trip (verify-claims CLI) | PR, push-main, tag | ✓ | warn-only (indicium-adapters not yet on PyPI) |
 | 10 | Plugin manifest validation (.claude-plugin/marketplace.json) | PR, push-main, tag | ✓ | ✓ |
 | 3, 4, 7 | PII/dual-use gate (FAIL on clinical IDs, WARN else) | TBD | ✗ | n/a |

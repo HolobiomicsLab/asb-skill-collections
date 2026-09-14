@@ -1,0 +1,1233 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "asbext": "https://w3id.org/asb/indicium-ext#",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "fabio": "http://purl.org/spar/fabio/",
+      "oa": "http://www.w3.org/ns/oa#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "p-plan": "http://purl.org/net/p-plan#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "repme": "https://w3id.org/reproduceme#",
+      "sepio": "http://purl.obolibrary.org/obo/SEPIO_"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": [
+        "Dataset",
+        "repme:ScientificWorkflow"
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ],
+      "dateCreated": "2026-06-15",
+      "description": "Load a valid mzPeak file using the R implementation with the arrow package and produce a structured tabular artifact (data frame or table) representing the spectrum data.",
+      "hasPart": [
+        {
+          "@id": "evidence/source_snippets.md"
+        },
+        {
+          "@id": "inputs/dataset_folder_tree.txt"
+        },
+        {
+          "@id": "inputs/dataset_preview.md"
+        },
+        {
+          "@id": "evaluation/evaluation_strategy.md"
+        },
+        {
+          "@id": "evaluation/review_rubric.json"
+        },
+        {
+          "@id": "artifact_provenance.json"
+        },
+        {
+          "@id": "ledger/claims.jsonl"
+        },
+        {
+          "@id": "ledger/results.jsonl"
+        }
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "mentions": [
+        {
+          "@id": "#action-task_003"
+        },
+        {
+          "@id": "urn:asb:task:task_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_001"
+        },
+        {
+          "@id": "urn:asb:claim:claim_002"
+        },
+        {
+          "@id": "urn:asb:claim:claim_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_004"
+        },
+        {
+          "@id": "urn:asb:claim:claim_005"
+        },
+        {
+          "@id": "urn:asb:claim:claim_006"
+        },
+        {
+          "@id": "urn:asb:claim:claim_007"
+        },
+        {
+          "@id": "urn:asb:claim:claim_008"
+        },
+        {
+          "@id": "urn:asb:claim:claim_009"
+        },
+        {
+          "@id": "urn:asb:claim:claim_010"
+        },
+        {
+          "@id": "urn:asb:claim:claim_011"
+        },
+        {
+          "@id": "urn:asb:result:result_001"
+        },
+        {
+          "@id": "urn:asb:result:result_002"
+        },
+        {
+          "@id": "urn:asb:result:result_003"
+        },
+        {
+          "@id": "urn:asb:result:result_004"
+        },
+        {
+          "@id": "urn:asb:result:result_005"
+        },
+        {
+          "@id": "urn:asb:result:result_006"
+        },
+        {
+          "@id": "urn:asb:result:result_007"
+        },
+        {
+          "@id": "urn:asb:result:result_008"
+        },
+        {
+          "@id": "urn:asb:result:result_009"
+        },
+        {
+          "@id": "urn:asb:result:result_010"
+        },
+        {
+          "@id": "urn:asb:result:result_011"
+        },
+        {
+          "@id": "#env-task_003"
+        }
+      ],
+      "name": "Reconstruct mzPeak file reading using the R (arrow) implementation",
+      "repme:hasComputationalEnvironment": {
+        "@id": "#computational-environment"
+      }
+    },
+    {
+      "@id": "evidence/source_snippets.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evidence/source_snippets.md"
+    },
+    {
+      "@id": "inputs/dataset_folder_tree.txt",
+      "@type": "File",
+      "encodingFormat": "text/plain",
+      "name": "inputs/dataset_folder_tree.txt"
+    },
+    {
+      "@id": "inputs/dataset_preview.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "inputs/dataset_preview.md"
+    },
+    {
+      "@id": "evaluation/evaluation_strategy.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evaluation/evaluation_strategy.md"
+    },
+    {
+      "@id": "evaluation/review_rubric.json",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "name": "evaluation/review_rubric.json"
+    },
+    {
+      "@id": "urn:asb:task:task_003",
+      "@type": [
+        "ScholarlyArticle",
+        "p-plan:Plan",
+        "http://purl.org/spar/fabio/SoftwarePaper"
+      ],
+      "asbext:task_kind": "component_reconstruction",
+      "description": "Load a valid mzPeak file using the R implementation with the arrow package and produce a structured tabular artifact (data frame or table) representing the spectrum data.",
+      "keywords": [
+        "mzpeak-format-file-parsing",
+        "arrow-tabular-data-reading",
+        "mass-spectrometry-data-structure-interpretation",
+        "spectrum-metadata-extraction"
+      ],
+      "name": "Reconstruct mzPeak file reading using the R (arrow) implementation",
+      "prov:wasInfluencedBy": [
+        {
+          "@id": "urn:asb:task:task_001"
+        }
+      ],
+      "repme:hasResearcher": [
+        {
+          "@id": "urn:asb:researcher:tim-van-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:theodore-alexandrov-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:aivett-bilbao-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:wout-bittremieux-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:ivan-brigante-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:chase-chambers-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:joshua-charkow-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:eric-deutsch-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:w-dowsey-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:yasin-el-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:ralf-gabriels-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:helge-hecht-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:steffen-heuckeroth-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:a-klein-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:michael-knierman-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:lennart-martens-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:l-moritz-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:laura-isobel-mccall-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:steffen-neumann-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:yasset-perez-riverol-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:l-r-st-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:j-price-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:jim-shofstahl-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:l-tabb-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:julian-uszkoreit-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:antonio-vizca-no-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:mingxun-wang-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:sander-willems-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:dirk-winkelhardt-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:oliver-kohlbacher-2025"
+        },
+        {
+          "@id": "urn:asb:researcher:p-wein-2025"
+        }
+      ],
+      "sameAs": "https://doi.org/10.1021/acs.jproteome.5c00435#task_003",
+      "schema:identifier": "10.1021/acs.jproteome.5c00435"
+    },
+    {
+      "@id": "urn:asb:researcher:tim-van-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Van Den Bossche, Tim"
+    },
+    {
+      "@id": "urn:asb:researcher:theodore-alexandrov-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Alexandrov, Theodore"
+    },
+    {
+      "@id": "urn:asb:researcher:aivett-bilbao-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Bilbao, Aivett"
+    },
+    {
+      "@id": "urn:asb:researcher:wout-bittremieux-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Bittremieux, Wout"
+    },
+    {
+      "@id": "urn:asb:researcher:ivan-brigante-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Brigante, Federico Ivan"
+    },
+    {
+      "@id": "urn:asb:researcher:chase-chambers-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Chambers, Matthew Chase"
+    },
+    {
+      "@id": "urn:asb:researcher:joshua-charkow-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Charkow, Joshua"
+    },
+    {
+      "@id": "urn:asb:researcher:eric-deutsch-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Deutsch, Eric"
+    },
+    {
+      "@id": "urn:asb:researcher:w-dowsey-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Dowsey, Andrew W."
+    },
+    {
+      "@id": "urn:asb:researcher:yasin-el-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "El Abiead, Yasin"
+    },
+    {
+      "@id": "urn:asb:researcher:ralf-gabriels-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Gabriels, Ralf"
+    },
+    {
+      "@id": "urn:asb:researcher:helge-hecht-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Hecht, Helge"
+    },
+    {
+      "@id": "urn:asb:researcher:steffen-heuckeroth-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Heuckeroth, Steffen"
+    },
+    {
+      "@id": "urn:asb:researcher:a-klein-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Klein, Joshua A."
+    },
+    {
+      "@id": "urn:asb:researcher:michael-knierman-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Knierman, Michael"
+    },
+    {
+      "@id": "urn:asb:researcher:lennart-martens-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Martens, Lennart"
+    },
+    {
+      "@id": "urn:asb:researcher:l-moritz-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Moritz, Robert L."
+    },
+    {
+      "@id": "urn:asb:researcher:laura-isobel-mccall-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "McCall, Laura-Isobel"
+    },
+    {
+      "@id": "urn:asb:researcher:steffen-neumann-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Neumann, Steffen"
+    },
+    {
+      "@id": "urn:asb:researcher:yasset-perez-riverol-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Perez-Riverol, Yasset"
+    },
+    {
+      "@id": "urn:asb:researcher:l-r-st-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Röst, Hannes L."
+    },
+    {
+      "@id": "urn:asb:researcher:j-price-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Price, Elliott J."
+    },
+    {
+      "@id": "urn:asb:researcher:jim-shofstahl-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Shofstahl, Jim"
+    },
+    {
+      "@id": "urn:asb:researcher:l-tabb-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Tabb, David L."
+    },
+    {
+      "@id": "urn:asb:researcher:julian-uszkoreit-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Uszkoreit, Julian"
+    },
+    {
+      "@id": "urn:asb:researcher:antonio-vizca-no-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Vizcaíno, Juan Antonio"
+    },
+    {
+      "@id": "urn:asb:researcher:mingxun-wang-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Wang, Mingxun"
+    },
+    {
+      "@id": "urn:asb:researcher:sander-willems-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Willems, Sander"
+    },
+    {
+      "@id": "urn:asb:researcher:dirk-winkelhardt-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Winkelhardt, Dirk"
+    },
+    {
+      "@id": "urn:asb:researcher:oliver-kohlbacher-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Kohlbacher, Oliver"
+    },
+    {
+      "@id": "urn:asb:researcher:p-wein-2025",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Wein, Samuel P."
+    },
+    {
+      "@id": "urn:asb:tool:openms",
+      "@type": "SoftwareApplication",
+      "name": "OpenMS"
+    },
+    {
+      "@id": "urn:asb:tool:arrow",
+      "@type": "SoftwareApplication",
+      "name": "arrow"
+    },
+    {
+      "@id": "urn:asb:tool:r",
+      "@type": "SoftwareApplication",
+      "name": "R"
+    },
+    {
+      "@id": "urn:asb:input:task_003_0",
+      "@type": "File",
+      "name": "Valid mzPeak file (mzPeak format)"
+    },
+    {
+      "@id": "urn:asb:input:task_003_1",
+      "@type": "File",
+      "name": "R implementation from mobiusklein/mzpeak_prototyping repository, R/ subdirectory"
+    },
+    {
+      "@id": "urn:asb:output:task_003_0",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Structured tabular artifact (R data frame) containing spectrum data fields",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_003"
+      }
+    },
+    {
+      "@id": "#action-task_003",
+      "@type": [
+        "CreateAction",
+        "prov:Activity",
+        "p-plan:Step"
+      ],
+      "description": "Load a valid mzPeak file using the R implementation with the arrow package and produce a structured tabular artifact (data frame or table) representing the spectrum data.",
+      "instrument": [
+        {
+          "@id": "urn:asb:tool:openms"
+        },
+        {
+          "@id": "urn:asb:tool:arrow"
+        },
+        {
+          "@id": "urn:asb:tool:r"
+        }
+      ],
+      "name": "Reconstruct mzPeak file reading using the R (arrow) implementation",
+      "object": [
+        {
+          "@id": "urn:asb:input:task_003_0"
+        },
+        {
+          "@id": "urn:asb:input:task_003_1"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "urn:asb:port:task_001/mzpeak_output"
+        }
+      ],
+      "repme:hasInputData": [
+        {
+          "@id": "urn:asb:input:task_003_0"
+        },
+        {
+          "@id": "urn:asb:input:task_003_1"
+        }
+      ],
+      "repme:hasOutputData": [
+        {
+          "@id": "urn:asb:output:task_003_0"
+        }
+      ],
+      "repme:hasResult": [
+        {
+          "@id": "urn:asb:result:result_010"
+        },
+        {
+          "@id": "urn:asb:result:result_005"
+        },
+        {
+          "@id": "urn:asb:result:result_001"
+        },
+        {
+          "@id": "urn:asb:result:result_011"
+        }
+      ],
+      "result": [
+        {
+          "@id": "urn:asb:output:task_003_0"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:claim:claim_001",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The mzPeak file format was initially described in a peer-reviewed publication."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 389,
+          "oa:start": 226
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzpeak/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The mzPeak file format was initially described in a peer-reviewed publication.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_002",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The mzPeak format was presented at the HUPO conference in Toronto, Canada on November 11, 2025."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 502,
+          "oa:start": 390
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzpeak/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The mzPeak format was presented at the HUPO conference in Toronto, Canada on November 11, 2025.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_003",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The mzPeak name is currently held in trust by the OpenMS Inc."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 644,
+          "oa:start": 582
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzpeak/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The mzPeak name is currently held in trust by the OpenMS Inc.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_004",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "This project is a work in progress with no stability guaranteed."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 766,
+          "oa:start": 704
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzpeak/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "This project is a work in progress with no stability guaranteed.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_005",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The primary mzPeak implementation is written in Rust and includes a library for reading and writing mzPeak files."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 891,
+          "oa:start": 768
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzpeak/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The primary mzPeak implementation is written in Rust and includes a library for reading and writing mzPeak files.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_006",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The Rust implementation includes command line tools for converting existing formats into mzPeak."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 971,
+          "oa:start": 893
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzpeak/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The Rust implementation includes command line tools for converting existing formats into mzPeak.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_007",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "A separate Python implementation exists in the `python/` directory."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1074,
+          "oa:start": 973
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzpeak/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "A separate Python implementation exists in the `python/` directory.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_008",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The Python implementation uses `pyarrow` and the PyData stack for reading mzPeak files."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1167,
+          "oa:start": 1076
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzpeak/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The Python implementation uses `pyarrow` and the PyData stack for reading mzPeak files.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_009",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The Python implementation does not currently support writing mzPeak files."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1279,
+          "oa:start": 1169
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzpeak/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The Python implementation does not currently support writing mzPeak files.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_010",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "An R implementation exists in the `R/` directory for reading mzPeak files."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1448,
+          "oa:start": 1281
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzpeak/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "An R implementation exists in the `R/` directory for reading mzPeak files.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_011",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "A draft specification document for the mzPeak format is available online."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 130,
+          "oa:start": 33
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzpeak/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "A draft specification document for the mzPeak format is available online.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:result:result_001",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The mzPeak file format was initially described in a peer-reviewed publication.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_001"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_002",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The mzPeak format was presented at the HUPO conference in Toronto, Canada on November 11, 2025.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_002"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_003",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The mzPeak name is currently held in trust by the OpenMS Inc.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_003"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_004",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "This project is a work in progress with no stability guaranteed.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_004"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_005",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The primary mzPeak implementation is written in Rust and includes a library for reading and writing mzPeak files.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_005"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_006",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The Rust implementation includes command line tools for converting existing formats into mzPeak.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_006"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_007",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "A separate Python implementation exists in the `python/` directory.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_007"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_008",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The Python implementation uses `pyarrow` and the PyData stack for reading mzPeak files.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_008"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_009",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The Python implementation does not currently support writing mzPeak files.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_009"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_010",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "An R implementation exists in the `R/` directory for reading mzPeak files.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_010"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_011",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "A draft specification document for the mzPeak format is available online.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_011"
+        }
+      ]
+    },
+    {
+      "@id": "#env-task_003",
+      "@type": [
+        "repme:ComputationalEnvironment"
+      ],
+      "repme:computeTier": "trivial"
+    },
+    {
+      "@id": "#agent-15-activity-task_003",
+      "@type": [
+        "prov:Activity"
+      ],
+      "prov:endedAtTime": "2026-06-15T13:16:12.606387+00:00",
+      "prov:qualifiedUsage": {
+        "@type": "prov:Usage",
+        "schema:name": "prompt_sha256",
+        "schema:value": "9959ee6fc63b3f74"
+      },
+      "prov:wasAssociatedWith": {
+        "schema:name": "anthropic/claude-haiku-4-5-20251001"
+      },
+      "schema:name": "Agent 1.5 Claim Extractor"
+    },
+    {
+      "@id": "#computational-environment",
+      "@type": "repme:ComputationalEnvironment",
+      "repme:buildId": "A36E5E26C9584FBEA157E489ACCF1E0B",
+      "repme:depsHash": "sha256:029a81c5ecba8cba0301a44071f97a928c55447fc2ef79df68b43e4ecdd157ba",
+      "repme:gitCommit": "ddf6c1becb15c939b16600b7655d44e2d2baa690",
+      "repme:platform": "darwin-25.5.0-arm64",
+      "repme:pythonVersion": "3.11.15",
+      "schema:dateCreated": "2026-06-15T13:12:31.978486Z",
+      "schema:hasPart": [
+        {
+          "@id": "#agent-config-agent1_entity"
+        },
+        {
+          "@id": "#agent-config-agent2a_outline"
+        },
+        {
+          "@id": "#agent-config-agent2b_card"
+        },
+        {
+          "@id": "#agent-config-agent3_critique"
+        },
+        {
+          "@id": "#agent-config-agent_classify"
+        }
+      ],
+      "schema:softwareVersion": "agentic-science-builder@0.1.0"
+    },
+    {
+      "@id": "#agent-config-agent1_entity",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v3",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent1_entity"
+    },
+    {
+      "@id": "#agent-config-agent2a_outline",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-sonnet-4-6",
+      "repme:promptVersion": "v2",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2a_outline"
+    },
+    {
+      "@id": "#agent-config-agent2b_card",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v4",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2b_card"
+    },
+    {
+      "@id": "#agent-config-agent3_critique",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent3_critique"
+    },
+    {
+      "@id": "#agent-config-agent_classify",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent_classify"
+    },
+    {
+      "@id": "artifact_provenance.json",
+      "@type": "File",
+      "name": "artifact_provenance.json",
+      "encodingFormat": "application/json"
+    },
+    {
+      "@id": "ledger/claims.jsonl",
+      "@type": "File",
+      "name": "ledger/claims.jsonl",
+      "encodingFormat": "application/jsonlines"
+    },
+    {
+      "@id": "ledger/results.jsonl",
+      "@type": "File",
+      "name": "ledger/results.jsonl",
+      "encodingFormat": "application/jsonlines"
+    }
+  ]
+}

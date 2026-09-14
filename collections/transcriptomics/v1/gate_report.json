@@ -1,6 +1,6 @@
 {
   "schema": "asbb-release-gate/1.1",
-  "generated_at": "2026-09-14T20:56:01.825955+00:00",
+  "generated_at": "2026-09-14T21:32:02.651695+00:00",
   "collection_dir": "collections/transcriptomics/v1",
   "corpus_path": "collections/transcriptomics/v1/corpus.yaml",
   "mode": "strict",
@@ -37,7 +37,7 @@
   },
   "binding": {
     "payload": {
-      "sha256": "c6355d60ca9c427918353791f90b8cb7a8f6751d15ef63954abd620960e4686f",
+      "sha256": "c2e2c36c52173319fefb1b788ac789b099cf63e1fc1cc27090a982a4889111f1",
       "entries": [
         {
           "path": "CITATION.cff",
@@ -625,8 +625,8 @@
         },
         {
           "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_001/artifact_provenance.json",
-          "bytes": 932,
-          "sha256": "41445aa9b033fe2129d91675879b5d0e3a2dd74a983736552acb6b4f10b2ae11"
+          "bytes": 964,
+          "sha256": "99cf1b32df5625e810367ea5c0d36e5c8c1b33053b82e886618570fdbc70571f"
         },
         {
           "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_001/evaluation",
@@ -680,13 +680,18 @@
           "sha256": "62b1dc1d632ffb1a99384687164533f5379087cb4cf0d584f70edcee7889869b"
         },
         {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_001/ro-crate-metadata.json",
+          "bytes": 102115,
+          "sha256": "9535da54e055904f11b63b0001f136b171aad7ff4a1a1bbd3c0fa38ab5d87a4b"
+        },
+        {
           "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_002",
           "directory": true
         },
         {
           "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_002/artifact_provenance.json",
-          "bytes": 932,
-          "sha256": "d5d5a144afd59b2aae35cd09ebe5aa3574134ec77e4b64f1635e231f08c67434"
+          "bytes": 964,
+          "sha256": "e827b7ffb80f43a76f973fea1252c71796fe9d6da048575a8268388acd300c83"
         },
         {
           "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_002/evaluation",
@@ -740,13 +745,18 @@
           "sha256": "ee6e65b6ff60bac192545202872f603e421086fa74184fbe122e91488fb8a695"
         },
         {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_002/ro-crate-metadata.json",
+          "bytes": 103190,
+          "sha256": "48124be19623fccaf2cf626bd732cd707f68c67753a4289070e0f64520ec6693"
+        },
+        {
           "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_003",
           "directory": true
         },
         {
           "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_003/artifact_provenance.json",
-          "bytes": 932,
-          "sha256": "1282ccdd7b17dc152ef0fbe71ed4523cb2826e4a6c774bc68e7152b331a38e8c"
+          "bytes": 964,
+          "sha256": "6c3439c282c00f9bb58e86d0d57f68994cbc1047e84974a0db0020a343125c20"
         },
         {
           "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_003/evaluation",
@@ -800,13 +810,18 @@
           "sha256": "bdecc38a3a152a132ca30df1231f96d4a9deea48046d13b1c87892479250c84a"
         },
         {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_003/ro-crate-metadata.json",
+          "bytes": 103797,
+          "sha256": "669b2e6550a577a1ef43a79d85104afe093fb7628e48a70b8fa3f1438314bcc9"
+        },
+        {
           "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_004",
           "directory": true
         },
         {
           "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_004/artifact_provenance.json",
-          "bytes": 932,
-          "sha256": "13281f138e7d68be8aa6e53418c3a0ce2dc145fe24239fcbb90f50a8cfad1d10"
+          "bytes": 964,
+          "sha256": "e51bad30275047dbf0eedb40a9fa2cfa1ec7b1a8da791825ff9c25a3f5f98ee0"
         },
         {
           "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_004/evaluation",
@@ -860,6 +875,11 @@
           "sha256": "ea97492633668fd21f0ba30a22fea515229aa4ce120dd912bd892926dd14416f"
         },
         {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_004/ro-crate-metadata.json",
+          "bytes": 102883,
+          "sha256": "86ef34b93ad20a2a6c6cad51a061fc8dff8289eda48ba62dd843e22fd0a8af7d"
+        },
+        {
           "path": "capsules/fgsea",
           "directory": true
         },
@@ -869,8 +889,8 @@
         },
         {
           "path": "capsules/fgsea/task_001/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "92c31dfc0de75cd2d44fc61dcb9bb12dde43f42fb789c24022b66e14d87b11a4"
+          "bytes": 941,
+          "sha256": "e6066c7adbb21c68d3f36283dec13d6a982f63fde9fe15ecf531ee6f4717386b"
         },
         {
           "path": "capsules/fgsea/task_001/evaluation",
@@ -924,13 +944,18 @@
           "sha256": "9948b455a6432557c42a7654d7863bed6a1167382880978e65d6f9421faa2f11"
         },
         {
+          "path": "capsules/fgsea/task_001/ro-crate-metadata.json",
+          "bytes": 84482,
+          "sha256": "e6250f0ddbb0a320398cf87f160b1752a2bc1d41fd383788721e6e154394338e"
+        },
+        {
           "path": "capsules/fgsea/task_002",
           "directory": true
         },
         {
           "path": "capsules/fgsea/task_002/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "b621964374e1d8e5ef28fcf230a03f84a7b51635fb9a957c112f8a4b0c065e04"
+          "bytes": 941,
+          "sha256": "6f239f778f23f26869855219c1afd2334bc67ca7f94e4641ae69bd0f3c45ce18"
         },
         {
           "path": "capsules/fgsea/task_002/evaluation",
@@ -984,13 +1009,18 @@
           "sha256": "22b994574baf25bd00aa384cb3ad97e8dff797808ced20a698faa85d2169dc15"
         },
         {
+          "path": "capsules/fgsea/task_002/ro-crate-metadata.json",
+          "bytes": 85015,
+          "sha256": "a71b4bd210d069c51ea02db6cbe29436a3f29eae39c1bd727cee402f9afb5744"
+        },
+        {
           "path": "capsules/fgsea/task_003",
           "directory": true
         },
         {
           "path": "capsules/fgsea/task_003/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "c10f37486f9219c6dc60f6058427efbd251b621e2bf7379993c084c1b6c0950c"
+          "bytes": 941,
+          "sha256": "3d9a855a76e8e83a0c926caf73165273ff5dfdb309e1cf1d333bbdf30b31f2d5"
         },
         {
           "path": "capsules/fgsea/task_003/evaluation",
@@ -1044,13 +1074,18 @@
           "sha256": "f6ba9a7eed634d4f7239100985664fba2afa37507cd6081f168544889cede230"
         },
         {
+          "path": "capsules/fgsea/task_003/ro-crate-metadata.json",
+          "bytes": 85229,
+          "sha256": "95fb88bf345e8a70b378b43ea2e4b7b53a63290590a01a7e2a902517473ca26b"
+        },
+        {
           "path": "capsules/fgsea/task_004",
           "directory": true
         },
         {
           "path": "capsules/fgsea/task_004/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "8b6f86d37631707bb149fcde1603c1771573fc5c428b10c62d576110d05f44cc"
+          "bytes": 941,
+          "sha256": "2693ab01aaee5683f89863d677e62d678ea1d1cc033e7ed83779dc56452ad022"
         },
         {
           "path": "capsules/fgsea/task_004/evaluation",
@@ -1104,13 +1139,18 @@
           "sha256": "358868ed36ef4cc80a8c6f77eea3dd90774f75d188604bfbeb62cdbbd4115869"
         },
         {
+          "path": "capsules/fgsea/task_004/ro-crate-metadata.json",
+          "bytes": 86204,
+          "sha256": "3720fbb912ff73f5545fdfd3e7255c75bdb610289ce2681847c81777431d2736"
+        },
+        {
           "path": "capsules/fgsea/task_005",
           "directory": true
         },
         {
           "path": "capsules/fgsea/task_005/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "d134bea883bf8831ef4543d17234b195c7572b0c8adbef5eabdcf1cbbb23b299"
+          "bytes": 941,
+          "sha256": "8596a9b98b08381e20812b2a89543a9f26fd6418f6b0cbcc9a9efe4af169e851"
         },
         {
           "path": "capsules/fgsea/task_005/evaluation",
@@ -1164,6 +1204,11 @@
           "sha256": "cc48852eebf90fa9c1d432e6e4ed1e210de7867ee73557657b6456686e8a18e2"
         },
         {
+          "path": "capsules/fgsea/task_005/ro-crate-metadata.json",
+          "bytes": 84983,
+          "sha256": "dad1709f7b6c54c40745fada7d96956a2c3f009ca007934535a26995e198d0a7"
+        },
+        {
           "path": "capsules/limmavoom",
           "directory": true
         },
@@ -1173,8 +1218,8 @@
         },
         {
           "path": "capsules/limmavoom/10_1093_nar_gkv007__task_001/artifact_provenance.json",
-          "bytes": 925,
-          "sha256": "517131b5cb750a3376bad9d9bd1b9a1460709641fcc2c075395b6fe7ec527921"
+          "bytes": 957,
+          "sha256": "e4b779555f9f4c36e3734b0380b71e8955b626398ab57f5527313040cf6e9868"
         },
         {
           "path": "capsules/limmavoom/10_1093_nar_gkv007__task_001/evaluation",
@@ -1228,13 +1273,18 @@
           "sha256": "eddf051f6dc68f8348f7973c9cfd91e225e4bafd94544ba26e1e83e17e4cdb23"
         },
         {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_001/ro-crate-metadata.json",
+          "bytes": 34745,
+          "sha256": "bbff92e8a19beb65de932b10542d3f0cae2bf76ce7bf5ba4d969c878e1c3374a"
+        },
+        {
           "path": "capsules/limmavoom/10_1093_nar_gkv007__task_002",
           "directory": true
         },
         {
           "path": "capsules/limmavoom/10_1093_nar_gkv007__task_002/artifact_provenance.json",
-          "bytes": 925,
-          "sha256": "d0d31be1a2d360ab733b277dcc63cad56a6fe8d22b590cf7a82ce3c446adfeeb"
+          "bytes": 957,
+          "sha256": "0d1ba59ce8d3a0bc4a0a05582619781e4e9082684bc7b110d4b79b9f88298fef"
         },
         {
           "path": "capsules/limmavoom/10_1093_nar_gkv007__task_002/evaluation",
@@ -1288,13 +1338,18 @@
           "sha256": "b1a29a38aa200f6be2cb0049ddd393d56057522ecb1996bbc7c6774fcbe375ad"
         },
         {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_002/ro-crate-metadata.json",
+          "bytes": 34726,
+          "sha256": "d5a2b1b0650fa23a7246289fd3afce0fb99c963106478a426314a9384b3a813c"
+        },
+        {
           "path": "capsules/limmavoom/10_1093_nar_gkv007__task_003",
           "directory": true
         },
         {
           "path": "capsules/limmavoom/10_1093_nar_gkv007__task_003/artifact_provenance.json",
-          "bytes": 925,
-          "sha256": "cf8afdb02c28521e58f5e30fe79a9477d015f92d21666f7f7ecf097798a87480"
+          "bytes": 957,
+          "sha256": "874b9504755dad6d6c33836f0d29991cfcb388636019e6877d00e9f44a770184"
         },
         {
           "path": "capsules/limmavoom/10_1093_nar_gkv007__task_003/evaluation",
@@ -1348,6 +1403,11 @@
           "sha256": "212a48532bbc99367d9370c5fd3ec2335684a4717e7e388b3965f68047969f38"
         },
         {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_003/ro-crate-metadata.json",
+          "bytes": 36662,
+          "sha256": "f428a146b7cd89204bdbde86057ba961e6b43afa6dc1edc2d42ca7b6cc289154"
+        },
+        {
           "path": "capsules/salmon",
           "directory": true
         },
@@ -1357,8 +1417,8 @@
         },
         {
           "path": "capsules/salmon/10_1038_nmeth_4197__task_001/artifact_provenance.json",
-          "bytes": 925,
-          "sha256": "4c662b5cb41a3a07ae46834d92d87003ac32008f401a4ef3e8a92a1d815fe0c3"
+          "bytes": 957,
+          "sha256": "ccb920eb6a9ec8cddf8f63a376bff2d60c77301b7c1b117931851d9af179b750"
         },
         {
           "path": "capsules/salmon/10_1038_nmeth_4197__task_001/evaluation",
@@ -1412,13 +1472,18 @@
           "sha256": "473c690e9e571f1a93c36713e8fdbc48b436a5b79e8b5492a6bb7e3aea85d3c1"
         },
         {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_001/ro-crate-metadata.json",
+          "bytes": 87250,
+          "sha256": "947c3f0c146117722af5b5b22ed06ac10ba71a2794a03353ba27768450df2b7f"
+        },
+        {
           "path": "capsules/salmon/10_1038_nmeth_4197__task_002",
           "directory": true
         },
         {
           "path": "capsules/salmon/10_1038_nmeth_4197__task_002/artifact_provenance.json",
-          "bytes": 925,
-          "sha256": "47a8cc94084c9430613feb65768eee6302301b638e22f05c3dd4a27619b46554"
+          "bytes": 957,
+          "sha256": "79cc3a729433dc13768edf05a609040a054d70b592e7c60dbdfba07e416412e4"
         },
         {
           "path": "capsules/salmon/10_1038_nmeth_4197__task_002/evaluation",
@@ -1472,13 +1537,18 @@
           "sha256": "3de671543db9173671faea531e05bb0dc3650fd7854ff76dabba4b59cda45ebe"
         },
         {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_002/ro-crate-metadata.json",
+          "bytes": 88631,
+          "sha256": "ea25110555781391f4882b3deec75e72c2079675a26611b7b3bf4ceb7c2d5f25"
+        },
+        {
           "path": "capsules/salmon/10_1038_nmeth_4197__task_003",
           "directory": true
         },
         {
           "path": "capsules/salmon/10_1038_nmeth_4197__task_003/artifact_provenance.json",
-          "bytes": 925,
-          "sha256": "902ed6d67ec1e81da6050f7a4799e66e283ab876d4bc5c420fc182d56ebc25cd"
+          "bytes": 957,
+          "sha256": "2ba101b24f89fcd1dcf299d38b01ef8eb79f3a5aef79168d2f16459581853bbd"
         },
         {
           "path": "capsules/salmon/10_1038_nmeth_4197__task_003/evaluation",
@@ -1532,13 +1602,18 @@
           "sha256": "49022c6e7486b8706ee786c5c186016941b5abb9bf7f03934963b1ed7510f67e"
         },
         {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_003/ro-crate-metadata.json",
+          "bytes": 86017,
+          "sha256": "5e75db87291816003d44d0caa997272b52737a4ae47eaefcaf6adf800cff7e89"
+        },
+        {
           "path": "capsules/salmon/10_1038_nmeth_4197__task_004",
           "directory": true
         },
         {
           "path": "capsules/salmon/10_1038_nmeth_4197__task_004/artifact_provenance.json",
-          "bytes": 925,
-          "sha256": "b9c36275f21d7396f8d5972e4030d63ca00e2ceb55faf90c1158928ae6ac9457"
+          "bytes": 957,
+          "sha256": "5bbd692db94f453a0bb488e5eeab19e1efafd066a385c5ef3fa0ef7fec603fab"
         },
         {
           "path": "capsules/salmon/10_1038_nmeth_4197__task_004/evaluation",
@@ -1592,13 +1667,18 @@
           "sha256": "666c4f649ac4921a149f73e8fd3a317c8ea57dc1c3c11d2960587129afc663a0"
         },
         {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_004/ro-crate-metadata.json",
+          "bytes": 86707,
+          "sha256": "10965945e52988416dd1d8bff5c69d7a78381fad5c3076263476ee082894b2d2"
+        },
+        {
           "path": "capsules/salmon/10_1038_nmeth_4197__task_005",
           "directory": true
         },
         {
           "path": "capsules/salmon/10_1038_nmeth_4197__task_005/artifact_provenance.json",
-          "bytes": 925,
-          "sha256": "d9536fd372396aff8d7976bda5dc1978fda7c373f79f0ed53f7eac70d6a302ef"
+          "bytes": 957,
+          "sha256": "635522ed907cef6e8386e53bf3c9630e6a7ca1473754c24608a28d8ebfdfb0e6"
         },
         {
           "path": "capsules/salmon/10_1038_nmeth_4197__task_005/evaluation",
@@ -1652,6 +1732,11 @@
           "sha256": "48ccc50b1eca5df1bcb6dc8de02ce4cb549b5aac3510c3f17a1783c5cd5d6b56"
         },
         {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_005/ro-crate-metadata.json",
+          "bytes": 85246,
+          "sha256": "ade9d367c923a3b2597e844f834c418ea3a5e11082e38c840146c53bf4e3e8f0"
+        },
+        {
           "path": "capsules/scanpy",
           "directory": true
         },
@@ -1661,8 +1746,8 @@
         },
         {
           "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_001/artifact_provenance.json",
-          "bytes": 932,
-          "sha256": "6d35b7d2c71e98fd6d05659530f80254f1b4a4c7b7c9c122c55bac58d7e1bbce"
+          "bytes": 964,
+          "sha256": "ea8eae523cb613b93a4791deb9c1007508de5241223bc4a07c6893f4d72eb93d"
         },
         {
           "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_001/evaluation",
@@ -1716,13 +1801,18 @@
           "sha256": "5cc0b51a061de2849e79b19e3c6348c44faf603606290e24dff5eabf635dc925"
         },
         {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_001/ro-crate-metadata.json",
+          "bytes": 97391,
+          "sha256": "e3e08806bc32448fb5aa667006516144f4a93d465b0458f0dd1c2dc54b227353"
+        },
+        {
           "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_002",
           "directory": true
         },
         {
           "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_002/artifact_provenance.json",
-          "bytes": 932,
-          "sha256": "88ae7e101f8fd32f804b68f8d0142095f222e03911ba9ab686370677ce3d46c1"
+          "bytes": 964,
+          "sha256": "0ba6bc9f2ece29e2ad39790e055fcddafc80c685d727cf91bfa1aac3578ad846"
         },
         {
           "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_002/evaluation",
@@ -1776,13 +1866,18 @@
           "sha256": "e2fd2e51f02d2c589df355efa8d6619c5449231d2dd609fe8abb1fa26469127a"
         },
         {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_002/ro-crate-metadata.json",
+          "bytes": 97031,
+          "sha256": "9d271157a46f8f727dabc0e6ba99b71b85d586fc4f48390ecc77c3e6f52ac7f8"
+        },
+        {
           "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_003",
           "directory": true
         },
         {
           "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_003/artifact_provenance.json",
-          "bytes": 932,
-          "sha256": "4cd6148bb856bed5822b65b0f9bbf43383c5eadcc63181888b39344929dd841e"
+          "bytes": 964,
+          "sha256": "45ea6d523112caccf83072b23d8dc440bc11817b7a38c593b5a99ba1fea3bab6"
         },
         {
           "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_003/evaluation",
@@ -1836,13 +1931,18 @@
           "sha256": "7dde06db1f9f28f95ea17f5a9d5c8bd9e34ce6a0c99b37c56188e2a84b40c6a8"
         },
         {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_003/ro-crate-metadata.json",
+          "bytes": 96753,
+          "sha256": "c475cc21f565ef589c71190e7d2cdf67475ddbcda163c87dddf22caf96c65969"
+        },
+        {
           "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_004",
           "directory": true
         },
         {
           "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_004/artifact_provenance.json",
-          "bytes": 932,
-          "sha256": "00970e87871ebc664868d67bb7f8fe6a0f80425cd24143a2f557856ef53f6c59"
+          "bytes": 964,
+          "sha256": "9047d6e51eded2730414a159197e70a480cbe28221cc051b927fec7faed88209"
         },
         {
           "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_004/evaluation",
@@ -1896,13 +1996,18 @@
           "sha256": "8832f8973641bfa443deb9673ea4cae6c0716ea7f70fb15bfb39235d03f43b01"
         },
         {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_004/ro-crate-metadata.json",
+          "bytes": 96063,
+          "sha256": "1496e9205826d190178977727ae67ce0f440f927bf1f9edcadad8e651157a665"
+        },
+        {
           "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_005",
           "directory": true
         },
         {
           "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_005/artifact_provenance.json",
-          "bytes": 932,
-          "sha256": "3145cc91b72ccbec89cc87fe3e7f84719372312991fd7b154b492dfc5ce293a9"
+          "bytes": 964,
+          "sha256": "cf06a2e6d7681f18ab2d419ec18b78f62cd5adb01457248f0e851f278c042c8b"
         },
         {
           "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_005/evaluation",
@@ -1956,6 +2061,11 @@
           "sha256": "495d94fb86a5ef523af5240c0443766317e69f1fcac98c056cb1407138a9ff16"
         },
         {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_005/ro-crate-metadata.json",
+          "bytes": 96626,
+          "sha256": "be45f4bf5f5b7c9081262c26171650d0826785493509cc4a0169daf0cd5e8882"
+        },
+        {
           "path": "capsules/sctransform",
           "directory": true
         },
@@ -1965,8 +2075,8 @@
         },
         {
           "path": "capsules/sctransform/task_001/artifact_provenance.json",
-          "bytes": 850,
-          "sha256": "18c8ddd22477d021ce2e799fcfbcf038b8ba3f7c685b579376fb1113636b6aa8"
+          "bytes": 882,
+          "sha256": "279a0c5a8d19cf2975eeb429c8ec49102b0abba083cf760bb19c14e13c3a94ff"
         },
         {
           "path": "capsules/sctransform/task_001/evaluation",
@@ -2006,6 +2116,11 @@
           "sha256": "8240dfa9632514d2d36ae5e186199b1fafd0a2b078a691dae4312a27ac11366b"
         },
         {
+          "path": "capsules/sctransform/task_001/ro-crate-metadata.json",
+          "bytes": 8070,
+          "sha256": "2dbc690aae8948930a10b2995be2865e0e7fc0bc50a88b74e4d8b9e21c8578ed"
+        },
+        {
           "path": "capsules/squidpy",
           "directory": true
         },
@@ -2015,8 +2130,8 @@
         },
         {
           "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_001/artifact_provenance.json",
-          "bytes": 933,
-          "sha256": "f9124c812a0e203f77eb99a11754d6d072786b68be80579402053e660000c24d"
+          "bytes": 965,
+          "sha256": "b4acdcd79039883dd9a2e915a62aa61a4d4c2b9b19e67a6665e3429902b15153"
         },
         {
           "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_001/evaluation",
@@ -2070,13 +2185,18 @@
           "sha256": "3e25407a2a744a48b17bd349b11cc6b861bc86a6cac851ba422545f5198cb1a1"
         },
         {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_001/ro-crate-metadata.json",
+          "bytes": 85890,
+          "sha256": "517397d75b0f07d1aab8e87e773827191222fe3340996976408d7539a4efa6d8"
+        },
+        {
           "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_002",
           "directory": true
         },
         {
           "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_002/artifact_provenance.json",
-          "bytes": 933,
-          "sha256": "892269867719170645e8ea5c1e958ab3d87e407a85f82bed44f187b0c1944cf0"
+          "bytes": 965,
+          "sha256": "40f98609d73625b708fc9faaffb5f1114b41e5d0adc26e134381476b6bfbbc52"
         },
         {
           "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_002/evaluation",
@@ -2130,13 +2250,18 @@
           "sha256": "ee8c8f556e0ab40ade74889d8b96c3b2c4b7fdfd18a5c7f13da86e249f011cba"
         },
         {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_002/ro-crate-metadata.json",
+          "bytes": 86058,
+          "sha256": "db7fb8cd777ee59ec4f60e01d9b55a5eb30ec4698d3d7690fe0d5ec5d29a6e02"
+        },
+        {
           "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_003",
           "directory": true
         },
         {
           "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_003/artifact_provenance.json",
-          "bytes": 933,
-          "sha256": "f02e24240bef22e4385934ef878372142112ac1b608089132b292e831acab94e"
+          "bytes": 965,
+          "sha256": "f89095bc82a685a30e1f76e8657523eb64ac6d88e8b6f2921822ce81bd9dbc84"
         },
         {
           "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_003/evaluation",
@@ -2190,13 +2315,18 @@
           "sha256": "2f8a0d0e0890b214ee86ce357a2f35fc270ad30f10d8bb98cbe664886f7fb953"
         },
         {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_003/ro-crate-metadata.json",
+          "bytes": 85115,
+          "sha256": "98d8f345b2dd218cf6c781a32bc289edb401df9450333ebbe04c8a3fd2feb054"
+        },
+        {
           "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_004",
           "directory": true
         },
         {
           "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_004/artifact_provenance.json",
-          "bytes": 933,
-          "sha256": "c15c99692f18d31c9e0a9e01a3a86a5dd1deaa8b9829746860d8641983837a93"
+          "bytes": 965,
+          "sha256": "984b6ec9e8803c5128506269a6a93126784fda255f3b400003e5ee1cac1659f4"
         },
         {
           "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_004/evaluation",
@@ -2250,13 +2380,18 @@
           "sha256": "76d8ad53188ac1209521fa2e2a969cc3472d46604b2a60754b707c94c80324b0"
         },
         {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_004/ro-crate-metadata.json",
+          "bytes": 85371,
+          "sha256": "97c9822760b76150073791cf3a910b7f51cbb33c80a9d874000cb99f8d98bcbb"
+        },
+        {
           "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_005",
           "directory": true
         },
         {
           "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_005/artifact_provenance.json",
-          "bytes": 933,
-          "sha256": "27ef183657c8a1b7df1613b941190131eee0df5d9fbfb78f0f4e01a80c069a57"
+          "bytes": 965,
+          "sha256": "c561a0f6cb9247690d171936a32986dbd6375b072315b6f27f3a6f78f6d380d8"
         },
         {
           "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_005/evaluation",
@@ -2310,6 +2445,11 @@
           "sha256": "3491e65e0f83b41e83d2f76e3bb4dca2c035e06f53cb4d9c2216bb941fc29f3c"
         },
         {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_005/ro-crate-metadata.json",
+          "bytes": 85658,
+          "sha256": "2ed31c712b5ade16c11c1ccf7033b6a620025d60dd77184535e41d373297f40a"
+        },
+        {
           "path": "capsules/suppa2",
           "directory": true
         },
@@ -2319,8 +2459,8 @@
         },
         {
           "path": "capsules/suppa2/task_001/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "600922e3592d5ce23ef5ca8ed5b5e16875049bf550c880352b12313224a8e604"
+          "bytes": 941,
+          "sha256": "a35258dfe547ebea950936b71b32bdcfa6727b381824946fbf7ddcc22f05f240"
         },
         {
           "path": "capsules/suppa2/task_001/evaluation",
@@ -2374,13 +2514,18 @@
           "sha256": "4b0edbbc4a89981cef9741fcd6adbb8a047fc152908df6f4f8f40fa01186f9cf"
         },
         {
+          "path": "capsules/suppa2/task_001/ro-crate-metadata.json",
+          "bytes": 23713,
+          "sha256": "132f2ce5c241235dcf9c5e564850175e54b0d65e53855e9ffe442e091f058d21"
+        },
+        {
           "path": "capsules/suppa2/task_002",
           "directory": true
         },
         {
           "path": "capsules/suppa2/task_002/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "92010b1d1cb066afd04d964a1930a7c951863894d8dee8eac7509c69024f10cf"
+          "bytes": 941,
+          "sha256": "b68e65ac6e95728d2a52b7d3b2e17e652c4bf9c57095cddf9196a71b1fee27e4"
         },
         {
           "path": "capsules/suppa2/task_002/evaluation",
@@ -2434,13 +2579,18 @@
           "sha256": "0d144f58b6b90e442dde9cb623b2ef431333c7e2b1afc4f07f830ee2f0fce96c"
         },
         {
+          "path": "capsules/suppa2/task_002/ro-crate-metadata.json",
+          "bytes": 23485,
+          "sha256": "af26d346f5487d08e0cd52bd09e8cdad849c210a4814c7ec956b944d8788836f"
+        },
+        {
           "path": "capsules/suppa2/task_003",
           "directory": true
         },
         {
           "path": "capsules/suppa2/task_003/artifact_provenance.json",
-          "bytes": 909,
-          "sha256": "f8f8ce532dffc86d94b569e7f0e847d2bc567e5d01ab50f507fdbabd6bc54b0f"
+          "bytes": 941,
+          "sha256": "00a6fb88a3ed1d8bbf1aa086cd877920932fe7265177957877a2ab4482788814"
         },
         {
           "path": "capsules/suppa2/task_003/evaluation",
@@ -2494,6 +2644,11 @@
           "sha256": "39fc25dc0a2e5759ed439d1a67525dbc9547275d5c845f14832ffd33392ea85f"
         },
         {
+          "path": "capsules/suppa2/task_003/ro-crate-metadata.json",
+          "bytes": 23588,
+          "sha256": "bd5e20cd6dbed6ab79a0b8e89eee3b3101e80ef081efa3b6d586706dafb01fa8"
+        },
+        {
           "path": "capsules/tximport",
           "directory": true
         },
@@ -2503,8 +2658,8 @@
         },
         {
           "path": "capsules/tximport/10_12688_f1000research_7563_1__task_001/artifact_provenance.json",
-          "bytes": 936,
-          "sha256": "2ea1fb7dc7f466b870498eee44711bcc480f75564f48ac186d0309d6bf4a9c62"
+          "bytes": 968,
+          "sha256": "ca49374ad55bae5afd1a1aceed054b5061456a7d4e3e9f0df83cb31399a523eb"
         },
         {
           "path": "capsules/tximport/10_12688_f1000research_7563_1__task_001/evaluation",
@@ -2558,13 +2713,18 @@
           "sha256": "ba27f30381346751924e5e9aad9fab2595e87fc684b94ba9ff2da459d8ece6ed"
         },
         {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_001/ro-crate-metadata.json",
+          "bytes": 89020,
+          "sha256": "3c45aae074928a0dc290cc8e0769c4061c46f96cc2e2a0ff57d2b53b48973a3a"
+        },
+        {
           "path": "capsules/tximport/10_12688_f1000research_7563_1__task_002",
           "directory": true
         },
         {
           "path": "capsules/tximport/10_12688_f1000research_7563_1__task_002/artifact_provenance.json",
-          "bytes": 936,
-          "sha256": "bcc5e237a2aadbf08f7d5c2308ce2b09e4c184e2a1413a0b16cc4837def27e14"
+          "bytes": 968,
+          "sha256": "ffc0b20833b974656cbeb47927e431dbb70371d7209229a021823beac9595143"
         },
         {
           "path": "capsules/tximport/10_12688_f1000research_7563_1__task_002/evaluation",
@@ -2618,13 +2778,18 @@
           "sha256": "8e78aeea2eadc61d87145cf0ba25f964c5991a722d900a78ff5cd2ba6b58aaf6"
         },
         {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_002/ro-crate-metadata.json",
+          "bytes": 89222,
+          "sha256": "06bdd6dda00a729f908066133c1dca82516d2c7753a9b18a066bf28553ccc245"
+        },
+        {
           "path": "capsules/tximport/10_12688_f1000research_7563_1__task_003",
           "directory": true
         },
         {
           "path": "capsules/tximport/10_12688_f1000research_7563_1__task_003/artifact_provenance.json",
-          "bytes": 936,
-          "sha256": "3d4564746f4f67012a2bf4ac1267d93582a0fb5af32a5164256ede8258334444"
+          "bytes": 968,
+          "sha256": "f6388a3cf6aab8ee1ccfbdc36c25635922e8053e4d09c0c3b8363c35c3f8260d"
         },
         {
           "path": "capsules/tximport/10_12688_f1000research_7563_1__task_003/evaluation",
@@ -2678,13 +2843,18 @@
           "sha256": "164f081f1697d93af80293dfcfda4b0bbe90a3cbd3bf09b7b618e955194288a6"
         },
         {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_003/ro-crate-metadata.json",
+          "bytes": 88743,
+          "sha256": "15f39ad1a657ff467b2c40103c8a07e0a89e6ca9d15a5a1ef4f47fc61b76c281"
+        },
+        {
           "path": "capsules/tximport/10_12688_f1000research_7563_1__task_004",
           "directory": true
         },
         {
           "path": "capsules/tximport/10_12688_f1000research_7563_1__task_004/artifact_provenance.json",
-          "bytes": 936,
-          "sha256": "5b7df84b664e54d7ef00e570217417ff38afa9be10c77a56e3ae1ae65debeb57"
+          "bytes": 968,
+          "sha256": "432fca5fb40788e4deeb1f52928dd6f3afbe3788e781db0056c33d13b9c8a554"
         },
         {
           "path": "capsules/tximport/10_12688_f1000research_7563_1__task_004/evaluation",
@@ -2738,13 +2908,18 @@
           "sha256": "ac164dbec377be42ec6183e0b477795c0b3b0f1bd609e7d3d568255cd31c1e5a"
         },
         {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_004/ro-crate-metadata.json",
+          "bytes": 89317,
+          "sha256": "698acc7311f0b7dc26fbe2f2939db55675d877e861d20ba8d948363fca98afb2"
+        },
+        {
           "path": "capsules/tximport/10_12688_f1000research_7563_1__task_005",
           "directory": true
         },
         {
           "path": "capsules/tximport/10_12688_f1000research_7563_1__task_005/artifact_provenance.json",
-          "bytes": 936,
-          "sha256": "b29bd9cfd0d410c07c171a86342e27cbf611776c8a7b451247148d73e054041a"
+          "bytes": 968,
+          "sha256": "8f5577845181cde1c352083557c0acb7470c857f8db9d9e36ee7f4b6b9e4a666"
         },
         {
           "path": "capsules/tximport/10_12688_f1000research_7563_1__task_005/evaluation",
@@ -2798,6 +2973,11 @@
           "sha256": "e81f21b9038dfc6db941a08fcf98fd90ec043c53000c7a2c6c43382a548228f4"
         },
         {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_005/ro-crate-metadata.json",
+          "bytes": 88766,
+          "sha256": "9eb71a34b0a88d5cc2ca96f30f1bd1401118fd5d97ba66e4e6d65091a382239c"
+        },
+        {
           "path": "capsules/wgcna",
           "directory": true
         },
@@ -2807,8 +2987,8 @@
         },
         {
           "path": "capsules/wgcna/task_001/artifact_provenance.json",
-          "bytes": 850,
-          "sha256": "1474c9dc788830d73bed539ece4352d369c050f69b004b15a72dbd959262652e"
+          "bytes": 882,
+          "sha256": "6255bb5b2f5413e036489b7c73423b9061c04aa76f08642f7e53f051abdee1ef"
         },
         {
           "path": "capsules/wgcna/task_001/evaluation",
@@ -2846,6 +3026,11 @@
           "path": "capsules/wgcna/task_001/inputs/dataset_preview.md",
           "bytes": 310,
           "sha256": "140a0a16f6158a9c304fd95dfe933f9fdb98017257abc4d67d69218946cbf5db"
+        },
+        {
+          "path": "capsules/wgcna/task_001/ro-crate-metadata.json",
+          "bytes": 8070,
+          "sha256": "02176ca706b899dae44407e8de2dd3de073e9a8231634ae970474b196d34d657"
         },
         {
           "path": "collection.yaml",
@@ -4832,7 +5017,7 @@
       "scope": "payload files",
       "required": true,
       "counts": {
-        "checked": 602,
+        "checked": 639,
         "skipped": 0,
         "missing": 0,
         "failed": 0
@@ -4919,5 +5104,5 @@
       "coverage": {}
     }
   ],
-  "receipt_sha256": "48da60dabc943b8b4b84acca78877c96249ab7413cc469be7c6a9700591023b3"
+  "receipt_sha256": "0b9c5d9f31c6422d9a52fc46bc8252a4e244b331aff5ff6d01d0e72f600a0c8f"
 }

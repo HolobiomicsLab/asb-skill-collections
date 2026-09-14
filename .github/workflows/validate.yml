@@ -9,9 +9,10 @@
 #   2. No orphan skills (DOI resolution sample)
 #   5. Description discipline lint (leading phrase, length, no marketing)
 #   6. EDAM IRI resolution
-#   8. RO-Crate validation (Workflow Run Profile 0.5) — WARN-ONLY / currently
-#      measures nothing: no collection ships an ro-crate-metadata.json, so the
-#      step validates zero files. It says so rather than printing a pass.
+#   8. RO-Crate validation (RO-Crate 1.1) — BLOCKING: every released capsule
+#      ships its build's crate pruned to what the capsule holds, and each is held
+#      to scripts/release_capsule_truth.py `crate_problems`. The Workflow Run
+#      Profile 0.5 claim is not checked, so the release copy does not make it.
 #   9. Indicium round-trip (verify-claims) — WARN-ONLY / inert: the CLI ships in
 #      indicium-adapters, not yet on PyPI, so this gate is advertised but does not
 #      run in public CI (emits a ::warning:: annotation; never blocks). See gate9-inert.
@@ -190,50 +191,47 @@ jobs:
 
       # -- Gate 8: RO-Crate validation ----------------------------------------
       - name: Validate RO-Crate metadata
-        # warn-only: depends on the `rocrate` package + crate files that may not be
-        # present in CI; surfaced as a warning, does not block the Validate job.
+        # BLOCKING. Every released capsule ships the RO-Crate its build wrote, pruned
+        # at promotion to the capsule the release carries
+        # (`scripts/release_capsule_truth.py`, `prune_crate`). This step holds each
+        # one to `crate_problems`, the rule the tests use too: RO-Crate 1.1's
+        # structural requirements, no profile claim this gate does not check, no
+        # path the capsule does not hold, no file in the capsule the crate does not
+        # describe, and no path of the machine that ran the build.
         #
-        # Today it finds none at all. No collection in this repository ships an
-        # ro-crate-metadata.json, and since the crate claim was retired no
-        # `collection.yaml` declares `ro_crate_path` either, so nothing points at a
-        # file that does not exist. A step that validated zero files used to print
-        # "PASS: RO-Crate validation OK (0 crates checked)", which reads in the PR
-        # checks exactly like an enforced gate that passed. It now says what it
-        # measured.
-        continue-on-error: true
+        # It checks RO-Crate 1.1 only. The builds claim the Workflow Run Crate 0.5
+        # profile, which requires a `mainEntity` workflow that none of the 417
+        # declares; the release copy drops that claim rather than ship it unchecked.
+        #
+        # Until crates shipped, this step found zero files, printed a pass and sat
+        # behind continue-on-error. Finding no released capsule now fails: it means
+        # the layout this gate reads has moved, not that there is nothing to check.
         run: |
           python - <<'EOF'
-          import sys, json, pathlib
+          import pathlib, sys
 
-          crate_files = list(pathlib.Path("collections").rglob("ro-crate-metadata.json"))
-          crate_files += list(pathlib.Path("staged-collections").rglob("ro-crate-metadata.json"))
-          if not crate_files:
-              print("::warning title=Gate 8 measured nothing::No ro-crate-metadata.json exists under collections/ or staged-collections/, so the RO-Crate gate validated zero files. Do not read a green Validate as gate 8 passing. No collection.yaml declares ro_crate_path any more either, so the gate has nothing to enforce until crates are generated.")
-              print("GATE 8 DID NOT RUN — no crate to validate.")
-              sys.exit(0)
-          failures = []
-          for crate_file in crate_files:
-              try:
-                  data = json.loads(crate_file.read_text())
-                  if "@context" not in data:
-                      failures.append(f"{crate_file}: missing @context")
-                  if "@graph" not in data:
-                      failures.append(f"{crate_file}: missing @graph")
-                  graph = data.get("@graph", [])
-                  root_ids = {"./", "."}
-                  root_entities = [e for e in graph if e.get("@id") in root_ids]
-                  if not root_entities:
-                      failures.append(
-                          f"{crate_file}: no root dataset entity (id ./ or .)"
-                      )
-              except json.JSONDecodeError as e:
-                  failures.append(f"{crate_file}: JSON parse error: {e}")
+          sys.path.insert(0, "scripts")
+          from release_capsule_truth import CRATE, crate_problems, released_capsules
+
+          bases = ("collections", "staged-collections")
+          roots = sorted(p.parent for b in bases for p in pathlib.Path(b).glob("*/*/collection.yaml"))
+          capsules = [c for root in roots for c in released_capsules(root)]
+          if not capsules:
+              print("FAIL: gate 8 found no released capsule under collections/ or staged-collections/; the layout it reads has moved.")
+              sys.exit(1)
+          inside = {c / CRATE for c in capsules}
+          failures = [
+              f"{p}: a crate outside a released capsule, which this gate does not check"
+              for b in bases for p in sorted(pathlib.Path(b).rglob(CRATE)) if p not in inside
+          ]
+          for capsule in capsules:
+              failures += [f"{capsule}: {problem}" for problem in crate_problems(capsule)]
           if failures:
-              print("FAIL: RO-Crate validation failures:")
-              for f in failures:
+              print(f"FAIL: {len(failures)} RO-Crate problem(s) across {len(capsules)} released capsules:")
+              for f in failures[:200]:
                   print(f"  - {f}")
               sys.exit(1)
-          print(f"PASS: RO-Crate validation OK ({len(crate_files)} crates checked)")
+          print(f"PASS: {len(capsules)} released capsules each ship an RO-Crate 1.1 that describes exactly what they hold")
           EOF
 
       # -- Gate 9: indicium round-trip (verify-claims) — WARN-ONLY -------------

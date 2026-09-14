@@ -486,9 +486,11 @@ Neither command runs in that workflow. What `validate.yml` actually runs, on eve
 PR to `main` and every push to `main` — not on a `staged-collections/` path filter —
 is: the test suite; `scripts.skill_index`; `marketplace.json` validation;
 `scripts.lint_skill_descriptions`; a sampled `derived_from` DOI resolution; EDAM IRI
-resolution; RO-Crate validation (inert — no collection ships an
-`ro-crate-metadata.json`, so the step validates zero files, emits a `::warning::` and
-never blocks; no manifest declares `ro_crate_path` any more either); the indicium
+resolution; RO-Crate validation (blocking since 2026-09-14 — every released capsule
+ships an `ro-crate-metadata.json`, its build's crate pruned to what the capsule holds,
+and the step fails the job on any crate that does not describe exactly that as
+RO-Crate 1.1, or when it finds no released capsule; no manifest declares
+`ro_crate_path`, since the crates are per capsule); the indicium
 round-trip (inert — the CLI is not on PyPI, so it emits a `::warning::` and never
 blocks); LinkML schema validation (blocking once resolvable, since 2026-09-14 — every
 `collection.yaml` is validated closed against `SkillCollection` in

@@ -1,0 +1,1346 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "asbext": "https://w3id.org/asb/indicium-ext#",
+      "chebi": "http://purl.obolibrary.org/obo/CHEBI_",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "fabio": "http://purl.org/spar/fabio/",
+      "ms": "http://purl.obolibrary.org/obo/MS_",
+      "ncbitaxon": "http://purl.obolibrary.org/obo/NCBITaxon_",
+      "oa": "http://www.w3.org/ns/oa#",
+      "obi": "http://purl.obolibrary.org/obo/OBI_",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "p-plan": "http://purl.org/net/p-plan#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "repme": "https://w3id.org/reproduceme#",
+      "sepio": "http://purl.obolibrary.org/obo/SEPIO_",
+      "uberon": "http://purl.obolibrary.org/obo/UBERON_"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": [
+        "Dataset",
+        "repme:ScientificWorkflow"
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ],
+      "dateCreated": "2026-06-15",
+      "description": "Create a bounded scientific task from the article package by linking a research question or finding to available inputs, expected outputs, tools, skills, workflow logic, evidence snippets, missing information, and an evaluation strategy.",
+      "hasPart": [
+        {
+          "@id": "evidence/source_snippets.md"
+        },
+        {
+          "@id": "inputs/dataset_folder_tree.txt"
+        },
+        {
+          "@id": "inputs/dataset_preview.md"
+        },
+        {
+          "@id": "evaluation/evaluation_strategy.md"
+        },
+        {
+          "@id": "evaluation/review_rubric.json"
+        },
+        {
+          "@id": "artifact_provenance.json"
+        },
+        {
+          "@id": "ledger/claims.jsonl"
+        },
+        {
+          "@id": "ledger/results.jsonl"
+        }
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "mentions": [
+        {
+          "@id": "#action-task_001"
+        },
+        {
+          "@id": "urn:asb:task:task_001"
+        },
+        {
+          "@id": "urn:asb:claim:claim_001"
+        },
+        {
+          "@id": "urn:asb:claim:claim_002"
+        },
+        {
+          "@id": "urn:asb:claim:claim_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_004"
+        },
+        {
+          "@id": "urn:asb:claim:claim_005"
+        },
+        {
+          "@id": "urn:asb:claim:claim_006"
+        },
+        {
+          "@id": "urn:asb:claim:claim_007"
+        },
+        {
+          "@id": "urn:asb:claim:claim_008"
+        },
+        {
+          "@id": "urn:asb:claim:claim_009"
+        },
+        {
+          "@id": "urn:asb:result:result_001"
+        },
+        {
+          "@id": "urn:asb:result:result_002"
+        },
+        {
+          "@id": "urn:asb:result:result_003"
+        },
+        {
+          "@id": "urn:asb:result:result_004"
+        },
+        {
+          "@id": "urn:asb:result:result_005"
+        },
+        {
+          "@id": "urn:asb:result:result_006"
+        },
+        {
+          "@id": "urn:asb:result:result_007"
+        },
+        {
+          "@id": "urn:asb:result:result_008"
+        },
+        {
+          "@id": "#env-task_001"
+        },
+        {
+          "@id": "http://edamontology.org/topic_3172"
+        }
+      ],
+      "name": "Reconstruct and evaluate a paper-grounded scientific task",
+      "repme:hasComputationalEnvironment": {
+        "@id": "#computational-environment"
+      }
+    },
+    {
+      "@id": "evidence/source_snippets.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evidence/source_snippets.md"
+    },
+    {
+      "@id": "inputs/dataset_folder_tree.txt",
+      "@type": "File",
+      "encodingFormat": "text/plain",
+      "name": "inputs/dataset_folder_tree.txt"
+    },
+    {
+      "@id": "inputs/dataset_preview.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "inputs/dataset_preview.md"
+    },
+    {
+      "@id": "evaluation/evaluation_strategy.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evaluation/evaluation_strategy.md"
+    },
+    {
+      "@id": "evaluation/review_rubric.json",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "name": "evaluation/review_rubric.json"
+    },
+    {
+      "@id": "urn:asb:task:task_001",
+      "@type": [
+        "ScholarlyArticle",
+        "p-plan:Plan",
+        "http://purl.org/spar/fabio/SoftwarePaper"
+      ],
+      "description": "Create a bounded scientific task from the article package by linking a research question or finding to available inputs, expected outputs, tools, skills, workflow logic, evidence snippets, missing information, and an evaluation strategy.",
+      "keywords": [
+        "scientific_task_formulation",
+        "evidence_linking",
+        "expert_review_preparation",
+        "output_grounding",
+        "figure_table_interpretation",
+        "workflow_reconstruction",
+        "reproducibility_gap_detection"
+      ],
+      "name": "Reconstruct and evaluate a paper-grounded scientific task"
+    },
+    {
+      "@id": "urn:asb:tool:sirius",
+      "@type": "SoftwareApplication",
+      "name": "SIRIUS",
+      "schema:url": "https://github.com/sirius-ms/sirius"
+    },
+    {
+      "@id": "urn:asb:tool:csi-fingerid",
+      "@type": "SoftwareApplication",
+      "name": "CSI:FingerID"
+    },
+    {
+      "@id": "urn:asb:tool:canopus",
+      "@type": "SoftwareApplication",
+      "name": "CANOPUS"
+    },
+    {
+      "@id": "urn:asb:tool:msnovelist",
+      "@type": "SoftwareApplication",
+      "name": "MSNovelist"
+    },
+    {
+      "@id": "urn:asb:tool:github",
+      "@type": "SoftwareApplication",
+      "name": "GitHub"
+    },
+    {
+      "@id": "urn:asb:input:task_001_0",
+      "@type": "File",
+      "name": "figure: figures/c-add-doc.svg"
+    },
+    {
+      "@id": "urn:asb:input:task_001_1",
+      "@type": "File",
+      "name": "figure: figures/c-bug.svg"
+    },
+    {
+      "@id": "urn:asb:input:task_001_2",
+      "@type": "File",
+      "name": "figure: figures/c-clipboard.svg"
+    },
+    {
+      "@id": "urn:asb:input:task_001_3",
+      "@type": "File",
+      "name": "figure: figures/c-controls-play.svg"
+    },
+    {
+      "@id": "urn:asb:input:task_001_4",
+      "@type": "File",
+      "name": "figure: figures/c-db.svg"
+    },
+    {
+      "@id": "urn:asb:input:task_001_5",
+      "@type": "File",
+      "name": "figure: figures/c-document.svg"
+    },
+    {
+      "@id": "urn:asb:input:task_001_6",
+      "@type": "File",
+      "name": "figure: figures/c-documents.svg"
+    },
+    {
+      "@id": "urn:asb:input:task_001_7",
+      "@type": "File",
+      "name": "figure: figures/c-download.svg"
+    },
+    {
+      "@id": "urn:asb:input:task_001_8",
+      "@type": "File",
+      "name": "figure: figures/c-dragndrop.svg"
+    },
+    {
+      "@id": "urn:asb:input:task_001_9",
+      "@type": "File",
+      "name": "figure: figures/c-export.svg"
+    },
+    {
+      "@id": "urn:asb:input:task_001_10",
+      "@type": "File",
+      "name": "figure: figures/c-fbmn.svg"
+    },
+    {
+      "@id": "urn:asb:input:task_001_11",
+      "@type": "File",
+      "name": "figure: figures/c-filter-down.svg"
+    },
+    {
+      "@id": "urn:asb:input:task_001_12",
+      "@type": "File",
+      "name": "figure: figures/c-filter-up.svg"
+    },
+    {
+      "@id": "urn:asb:input:task_001_13",
+      "@type": "File",
+      "name": "figure: figures/c-fingerprint.svg"
+    },
+    {
+      "@id": "urn:asb:input:task_001_14",
+      "@type": "File",
+      "name": "figure: figures/c-fmet.svg"
+    },
+    {
+      "@id": "urn:asb:input:task_001_15",
+      "@type": "File",
+      "name": "figure: figures/c-folder-close.svg"
+    },
+    {
+      "@id": "urn:asb:input:task_001_16",
+      "@type": "File",
+      "name": "figure: figures/c-folder-file.svg"
+    },
+    {
+      "@id": "urn:asb:input:task_001_17",
+      "@type": "File",
+      "name": "figure: figures/c-folder-open.svg"
+    },
+    {
+      "@id": "urn:asb:input:task_001_18",
+      "@type": "File",
+      "name": "figure: figures/c-folder.svg"
+    },
+    {
+      "@id": "urn:asb:input:task_001_19",
+      "@type": "File",
+      "name": "figure: figures/sirius-icon.png"
+    },
+    {
+      "@id": "urn:asb:input:task_001_20",
+      "@type": "File",
+      "name": "main_article: paper.md"
+    },
+    {
+      "@id": "urn:asb:output:task_001_0",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "figure: figures/c-add-doc.svg",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_001_1",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "figure: figures/c-bug.svg",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_001_2",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "figure: figures/c-clipboard.svg",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_001_3",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "figure: figures/c-controls-play.svg",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_001_4",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "figure: figures/c-db.svg",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_001_5",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "figure: figures/c-document.svg",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_001_6",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "figure: figures/c-documents.svg",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_001_7",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "figure: figures/c-download.svg",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_001_8",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "figure: figures/c-dragndrop.svg",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_001_9",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "figure: figures/c-export.svg",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_001_10",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "figure: figures/c-fbmn.svg",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_001_11",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "figure: figures/c-filter-down.svg",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_001_12",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "figure: figures/c-filter-up.svg",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_001_13",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "figure: figures/c-fingerprint.svg",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_001_14",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "figure: figures/c-fmet.svg",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_001_15",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "figure: figures/c-folder-close.svg",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_001_16",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "figure: figures/c-folder-file.svg",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_001_17",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "figure: figures/c-folder-open.svg",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_001_18",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "figure: figures/c-folder.svg",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_001_19",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "figure: figures/sirius-icon.png",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_001_20",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "We ask that users of our tools cite the corresponding papers in any resulting publications.</span>*",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "#action-task_001",
+      "@type": [
+        "CreateAction",
+        "prov:Activity",
+        "p-plan:Step"
+      ],
+      "description": "Create a bounded scientific task from the article package by linking a research question or finding to available inputs, expected outputs, tools, skills, workflow logic, evidence snippets, missing information, and an evaluation strategy.",
+      "instrument": [
+        {
+          "@id": "urn:asb:tool:sirius"
+        },
+        {
+          "@id": "urn:asb:tool:csi-fingerid"
+        },
+        {
+          "@id": "urn:asb:tool:canopus"
+        },
+        {
+          "@id": "urn:asb:tool:msnovelist"
+        },
+        {
+          "@id": "urn:asb:tool:github"
+        }
+      ],
+      "name": "Reconstruct and evaluate a paper-grounded scientific task",
+      "object": [
+        {
+          "@id": "urn:asb:input:task_001_0"
+        },
+        {
+          "@id": "urn:asb:input:task_001_1"
+        },
+        {
+          "@id": "urn:asb:input:task_001_2"
+        },
+        {
+          "@id": "urn:asb:input:task_001_3"
+        },
+        {
+          "@id": "urn:asb:input:task_001_4"
+        },
+        {
+          "@id": "urn:asb:input:task_001_5"
+        },
+        {
+          "@id": "urn:asb:input:task_001_6"
+        },
+        {
+          "@id": "urn:asb:input:task_001_7"
+        },
+        {
+          "@id": "urn:asb:input:task_001_8"
+        },
+        {
+          "@id": "urn:asb:input:task_001_9"
+        },
+        {
+          "@id": "urn:asb:input:task_001_10"
+        },
+        {
+          "@id": "urn:asb:input:task_001_11"
+        },
+        {
+          "@id": "urn:asb:input:task_001_12"
+        },
+        {
+          "@id": "urn:asb:input:task_001_13"
+        },
+        {
+          "@id": "urn:asb:input:task_001_14"
+        },
+        {
+          "@id": "urn:asb:input:task_001_15"
+        },
+        {
+          "@id": "urn:asb:input:task_001_16"
+        },
+        {
+          "@id": "urn:asb:input:task_001_17"
+        },
+        {
+          "@id": "urn:asb:input:task_001_18"
+        },
+        {
+          "@id": "urn:asb:input:task_001_19"
+        },
+        {
+          "@id": "urn:asb:input:task_001_20"
+        }
+      ],
+      "repme:hasInputData": [
+        {
+          "@id": "urn:asb:input:task_001_0"
+        },
+        {
+          "@id": "urn:asb:input:task_001_1"
+        },
+        {
+          "@id": "urn:asb:input:task_001_2"
+        },
+        {
+          "@id": "urn:asb:input:task_001_3"
+        },
+        {
+          "@id": "urn:asb:input:task_001_4"
+        },
+        {
+          "@id": "urn:asb:input:task_001_5"
+        },
+        {
+          "@id": "urn:asb:input:task_001_6"
+        },
+        {
+          "@id": "urn:asb:input:task_001_7"
+        },
+        {
+          "@id": "urn:asb:input:task_001_8"
+        },
+        {
+          "@id": "urn:asb:input:task_001_9"
+        },
+        {
+          "@id": "urn:asb:input:task_001_10"
+        },
+        {
+          "@id": "urn:asb:input:task_001_11"
+        },
+        {
+          "@id": "urn:asb:input:task_001_12"
+        },
+        {
+          "@id": "urn:asb:input:task_001_13"
+        },
+        {
+          "@id": "urn:asb:input:task_001_14"
+        },
+        {
+          "@id": "urn:asb:input:task_001_15"
+        },
+        {
+          "@id": "urn:asb:input:task_001_16"
+        },
+        {
+          "@id": "urn:asb:input:task_001_17"
+        },
+        {
+          "@id": "urn:asb:input:task_001_18"
+        },
+        {
+          "@id": "urn:asb:input:task_001_19"
+        },
+        {
+          "@id": "urn:asb:input:task_001_20"
+        }
+      ],
+      "repme:hasOutputData": [
+        {
+          "@id": "urn:asb:output:task_001_0"
+        },
+        {
+          "@id": "urn:asb:output:task_001_1"
+        },
+        {
+          "@id": "urn:asb:output:task_001_2"
+        },
+        {
+          "@id": "urn:asb:output:task_001_3"
+        },
+        {
+          "@id": "urn:asb:output:task_001_4"
+        },
+        {
+          "@id": "urn:asb:output:task_001_5"
+        },
+        {
+          "@id": "urn:asb:output:task_001_6"
+        },
+        {
+          "@id": "urn:asb:output:task_001_7"
+        },
+        {
+          "@id": "urn:asb:output:task_001_8"
+        },
+        {
+          "@id": "urn:asb:output:task_001_9"
+        },
+        {
+          "@id": "urn:asb:output:task_001_10"
+        },
+        {
+          "@id": "urn:asb:output:task_001_11"
+        },
+        {
+          "@id": "urn:asb:output:task_001_12"
+        },
+        {
+          "@id": "urn:asb:output:task_001_13"
+        },
+        {
+          "@id": "urn:asb:output:task_001_14"
+        },
+        {
+          "@id": "urn:asb:output:task_001_15"
+        },
+        {
+          "@id": "urn:asb:output:task_001_16"
+        },
+        {
+          "@id": "urn:asb:output:task_001_17"
+        },
+        {
+          "@id": "urn:asb:output:task_001_18"
+        },
+        {
+          "@id": "urn:asb:output:task_001_19"
+        },
+        {
+          "@id": "urn:asb:output:task_001_20"
+        }
+      ],
+      "repme:hasResult": [
+        {
+          "@id": "urn:asb:result:result_004"
+        }
+      ],
+      "result": [
+        {
+          "@id": "urn:asb:output:task_001_0"
+        },
+        {
+          "@id": "urn:asb:output:task_001_1"
+        },
+        {
+          "@id": "urn:asb:output:task_001_2"
+        },
+        {
+          "@id": "urn:asb:output:task_001_3"
+        },
+        {
+          "@id": "urn:asb:output:task_001_4"
+        },
+        {
+          "@id": "urn:asb:output:task_001_5"
+        },
+        {
+          "@id": "urn:asb:output:task_001_6"
+        },
+        {
+          "@id": "urn:asb:output:task_001_7"
+        },
+        {
+          "@id": "urn:asb:output:task_001_8"
+        },
+        {
+          "@id": "urn:asb:output:task_001_9"
+        },
+        {
+          "@id": "urn:asb:output:task_001_10"
+        },
+        {
+          "@id": "urn:asb:output:task_001_11"
+        },
+        {
+          "@id": "urn:asb:output:task_001_12"
+        },
+        {
+          "@id": "urn:asb:output:task_001_13"
+        },
+        {
+          "@id": "urn:asb:output:task_001_14"
+        },
+        {
+          "@id": "urn:asb:output:task_001_15"
+        },
+        {
+          "@id": "urn:asb:output:task_001_16"
+        },
+        {
+          "@id": "urn:asb:output:task_001_17"
+        },
+        {
+          "@id": "urn:asb:output:task_001_18"
+        },
+        {
+          "@id": "urn:asb:output:task_001_19"
+        },
+        {
+          "@id": "urn:asb:output:task_001_20"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:claim:claim_001",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "SIRIUS is licensed under AGPL v3."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 38,
+          "oa:start": 22
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_sirius/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "SIRIUS is licensed under AGPL v3.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_002",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The current version of SIRIUS is 6.3.7."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 113,
+          "oa:start": 99
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_sirius/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The current version of SIRIUS is 6.3.7.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_003",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "SIRIUS is a java-based software framework for the analysis of LC-MS/MS data of metabolites."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 778,
+          "oa:start": 671
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_sirius/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "SIRIUS is a java-based software framework for the analysis of LC-MS/MS data of metabolites.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_004",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "SIRIUS methods are offered to the scientific community as freely available resources."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 533,
+          "oa:start": 449
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_sirius/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "SIRIUS methods are offered to the scientific community as freely available resources.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_005",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Redistribution of SIRIUS methods in whole or in part for commercial purposes is prohibited."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 847,
+          "oa:start": 754
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_sirius/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Redistribution of SIRIUS methods in whole or in part for commercial purposes is prohibited.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_006",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The SIRIUS web services CSI:FingerID, CANOPUS, and MSNovelist are hosted by the Böcker group."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 733,
+          "oa:start": 632
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_sirius/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The SIRIUS web services CSI:FingerID, CANOPUS, and MSNovelist are hosted by the Böcker group.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_007",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "SIRIUS web services hosted by the Böcker group are for academic research and education use only."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 809,
+          "oa:start": 760
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_sirius/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "SIRIUS web services hosted by the Böcker group are for academic research and education use only.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_008",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Non-academic users can obtain SIRIUS licenses and services from Bright Giant GmbH."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 990,
+          "oa:start": 876
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_sirius/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Non-academic users can obtain SIRIUS licenses and services from Bright Giant GmbH.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_009",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Users of SIRIUS tools are asked to cite the corresponding papers in any resulting publications."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1081,
+          "oa:start": 991
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_sirius/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Users of SIRIUS tools are asked to cite the corresponding papers in any resulting publications.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:result:result_001",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "SIRIUS is licensed under AGPL v3.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_001"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_002",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The current version of SIRIUS is 6.3.7.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_002"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_003",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "SIRIUS is a java-based software framework for the analysis of LC-MS/MS data of metabolites.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_003"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_004",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "SIRIUS methods are offered to the scientific community as freely available resources.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_004"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_005",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Redistribution of SIRIUS methods in whole or in part for commercial purposes is prohibited.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_005"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_006",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The SIRIUS web services CSI:FingerID, CANOPUS, and MSNovelist are hosted by the Böcker group. SIRIUS web services hosted by the Böcker group are for academic research and education use only.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_006"
+        },
+        {
+          "@id": "urn:asb:claim:claim_007"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_007",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Non-academic users can obtain SIRIUS licenses and services from Bright Giant GmbH.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_008"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_008",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Users of SIRIUS tools are asked to cite the corresponding papers in any resulting publications.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_009"
+        }
+      ]
+    },
+    {
+      "@id": "#env-task_001",
+      "@type": [
+        "repme:ComputationalEnvironment"
+      ],
+      "repme:computeTier": "light"
+    },
+    {
+      "@id": "#agent-15-activity-task_001",
+      "@type": [
+        "prov:Activity"
+      ],
+      "prov:endedAtTime": "2026-06-15T21:26:58.604735+00:00",
+      "prov:qualifiedUsage": {
+        "@type": "prov:Usage",
+        "schema:name": "prompt_sha256",
+        "schema:value": "b4a1c16981a791aa"
+      },
+      "prov:wasAssociatedWith": {
+        "schema:name": "anthropic/claude-haiku-4-5-20251001"
+      },
+      "schema:name": "Agent 1.5 Claim Extractor"
+    },
+    {
+      "@id": "#computational-environment",
+      "@type": "repme:ComputationalEnvironment",
+      "repme:buildId": "2D67DED5EB95428499B186A4D7177DBA",
+      "repme:depsHash": null,
+      "repme:gitCommit": "8713018e077e78db4e0defb776d2c7f494485e53",
+      "repme:platform": "darwin-25.5.0-arm64",
+      "repme:pythonVersion": "3.11.15",
+      "schema:dateCreated": "2026-06-15T21:26:04.347548Z",
+      "schema:hasPart": [
+        {
+          "@id": "#agent-config-agent1_entity"
+        },
+        {
+          "@id": "#agent-config-agent2a_outline"
+        },
+        {
+          "@id": "#agent-config-agent2b_card"
+        },
+        {
+          "@id": "#agent-config-agent3_critique"
+        },
+        {
+          "@id": "#agent-config-agent_classify"
+        }
+      ],
+      "schema:softwareVersion": "agentic-science-builder@0.1.0"
+    },
+    {
+      "@id": "#agent-config-agent1_entity",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v3",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent1_entity"
+    },
+    {
+      "@id": "#agent-config-agent2a_outline",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-sonnet-4-6",
+      "repme:promptVersion": "v2",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2a_outline"
+    },
+    {
+      "@id": "#agent-config-agent2b_card",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v4",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2b_card"
+    },
+    {
+      "@id": "#agent-config-agent3_critique",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent3_critique"
+    },
+    {
+      "@id": "#agent-config-agent_classify",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent_classify"
+    },
+    {
+      "@id": "urn:asb:metabolomics:unknown",
+      "@type": "Dataset",
+      "assay_type": "LC-MS/MS",
+      "instrument": null,
+      "name": "Metabolomics Study Metadata",
+      "profile": "metabolomics_lcms",
+      "reproducibility_score": 0.226
+    },
+    {
+      "@id": "artifact_provenance.json",
+      "@type": "File",
+      "name": "artifact_provenance.json",
+      "encodingFormat": "application/json"
+    },
+    {
+      "@id": "ledger/claims.jsonl",
+      "@type": "File",
+      "name": "ledger/claims.jsonl",
+      "encodingFormat": "application/jsonlines"
+    },
+    {
+      "@id": "ledger/results.jsonl",
+      "@type": "File",
+      "name": "ledger/results.jsonl",
+      "encodingFormat": "application/jsonlines"
+    }
+  ]
+}
