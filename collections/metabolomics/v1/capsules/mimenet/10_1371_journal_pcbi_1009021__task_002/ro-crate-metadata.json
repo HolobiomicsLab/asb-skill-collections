@@ -1,0 +1,3608 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "asbext": "https://w3id.org/asb/indicium-ext#",
+      "chebi": "http://purl.obolibrary.org/obo/CHEBI_",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "fabio": "http://purl.org/spar/fabio/",
+      "ms": "http://purl.obolibrary.org/obo/MS_",
+      "ncbitaxon": "http://purl.obolibrary.org/obo/NCBITaxon_",
+      "oa": "http://www.w3.org/ns/oa#",
+      "obi": "http://purl.obolibrary.org/obo/OBI_",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "p-plan": "http://purl.org/net/p-plan#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "repme": "https://w3id.org/reproduceme#",
+      "sepio": "http://purl.obolibrary.org/obo/SEPIO_",
+      "uberon": "http://purl.obolibrary.org/obo/UBERON_"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": [
+        "Dataset",
+        "repme:ScientificWorkflow"
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ],
+      "dateCreated": "2026-06-15",
+      "description": "Train a MiMeNet neural network model on the full IBD (PRISM) dataset and evaluate its metabolite abundance prediction performance on the held-out IBD (External) dataset, reporting Spearman correlation coefficient (SCC) and prediction accuracy metrics.",
+      "hasPart": [
+        {
+          "@id": "evidence/source_snippets.md"
+        },
+        {
+          "@id": "inputs/dataset_folder_tree.txt"
+        },
+        {
+          "@id": "inputs/dataset_preview.md"
+        },
+        {
+          "@id": "evaluation/evaluation_strategy.md"
+        },
+        {
+          "@id": "evaluation/review_rubric.json"
+        },
+        {
+          "@id": "artifact_provenance.json"
+        },
+        {
+          "@id": "ledger/claims.jsonl"
+        },
+        {
+          "@id": "ledger/results.jsonl"
+        }
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "mentions": [
+        {
+          "@id": "#action-task_002"
+        },
+        {
+          "@id": "urn:asb:task:task_002"
+        },
+        {
+          "@id": "urn:asb:claim:claim_001"
+        },
+        {
+          "@id": "urn:asb:claim:claim_002"
+        },
+        {
+          "@id": "urn:asb:claim:claim_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_004"
+        },
+        {
+          "@id": "urn:asb:claim:claim_005"
+        },
+        {
+          "@id": "urn:asb:claim:claim_006"
+        },
+        {
+          "@id": "urn:asb:claim:claim_007"
+        },
+        {
+          "@id": "urn:asb:claim:claim_008"
+        },
+        {
+          "@id": "urn:asb:claim:claim_009"
+        },
+        {
+          "@id": "urn:asb:claim:claim_010"
+        },
+        {
+          "@id": "urn:asb:claim:claim_011"
+        },
+        {
+          "@id": "urn:asb:claim:claim_012"
+        },
+        {
+          "@id": "urn:asb:claim:claim_013"
+        },
+        {
+          "@id": "urn:asb:claim:claim_014"
+        },
+        {
+          "@id": "urn:asb:claim:claim_015"
+        },
+        {
+          "@id": "urn:asb:claim:claim_016"
+        },
+        {
+          "@id": "urn:asb:claim:claim_017"
+        },
+        {
+          "@id": "urn:asb:claim:claim_018"
+        },
+        {
+          "@id": "urn:asb:claim:claim_019"
+        },
+        {
+          "@id": "urn:asb:claim:claim_020"
+        },
+        {
+          "@id": "urn:asb:claim:claim_021"
+        },
+        {
+          "@id": "urn:asb:claim:claim_022"
+        },
+        {
+          "@id": "urn:asb:claim:claim_023"
+        },
+        {
+          "@id": "urn:asb:claim:claim_024"
+        },
+        {
+          "@id": "urn:asb:claim:claim_025"
+        },
+        {
+          "@id": "urn:asb:claim:claim_026"
+        },
+        {
+          "@id": "urn:asb:claim:claim_027"
+        },
+        {
+          "@id": "urn:asb:claim:claim_028"
+        },
+        {
+          "@id": "urn:asb:claim:claim_029"
+        },
+        {
+          "@id": "urn:asb:claim:claim_030"
+        },
+        {
+          "@id": "urn:asb:claim:claim_031"
+        },
+        {
+          "@id": "urn:asb:claim:claim_032"
+        },
+        {
+          "@id": "urn:asb:claim:claim_033"
+        },
+        {
+          "@id": "urn:asb:claim:claim_034"
+        },
+        {
+          "@id": "urn:asb:claim:claim_035"
+        },
+        {
+          "@id": "urn:asb:claim:claim_036"
+        },
+        {
+          "@id": "urn:asb:claim:claim_037"
+        },
+        {
+          "@id": "urn:asb:claim:claim_038"
+        },
+        {
+          "@id": "urn:asb:claim:claim_039"
+        },
+        {
+          "@id": "urn:asb:claim:claim_040"
+        },
+        {
+          "@id": "urn:asb:claim:claim_041"
+        },
+        {
+          "@id": "urn:asb:claim:claim_042"
+        },
+        {
+          "@id": "urn:asb:claim:claim_043"
+        },
+        {
+          "@id": "urn:asb:claim:claim_044"
+        },
+        {
+          "@id": "urn:asb:claim:claim_045"
+        },
+        {
+          "@id": "urn:asb:claim:claim_046"
+        },
+        {
+          "@id": "urn:asb:claim:claim_047"
+        },
+        {
+          "@id": "urn:asb:claim:claim_048"
+        },
+        {
+          "@id": "urn:asb:claim:claim_049"
+        },
+        {
+          "@id": "urn:asb:claim:claim_050"
+        },
+        {
+          "@id": "urn:asb:claim:claim_051"
+        },
+        {
+          "@id": "urn:asb:claim:claim_052"
+        },
+        {
+          "@id": "urn:asb:claim:claim_053"
+        },
+        {
+          "@id": "urn:asb:claim:claim_054"
+        },
+        {
+          "@id": "urn:asb:claim:claim_055"
+        },
+        {
+          "@id": "urn:asb:claim:claim_056"
+        },
+        {
+          "@id": "urn:asb:claim:claim_057"
+        },
+        {
+          "@id": "urn:asb:claim:claim_058"
+        },
+        {
+          "@id": "urn:asb:result:result_001"
+        },
+        {
+          "@id": "urn:asb:result:result_002"
+        },
+        {
+          "@id": "urn:asb:result:result_003"
+        },
+        {
+          "@id": "urn:asb:result:result_004"
+        },
+        {
+          "@id": "urn:asb:result:result_005"
+        },
+        {
+          "@id": "urn:asb:result:result_006"
+        },
+        {
+          "@id": "urn:asb:result:result_007"
+        },
+        {
+          "@id": "urn:asb:result:result_008"
+        },
+        {
+          "@id": "urn:asb:result:result_009"
+        },
+        {
+          "@id": "urn:asb:result:result_010"
+        },
+        {
+          "@id": "urn:asb:result:result_011"
+        },
+        {
+          "@id": "urn:asb:result:result_012"
+        },
+        {
+          "@id": "urn:asb:result:result_013"
+        },
+        {
+          "@id": "urn:asb:result:result_014"
+        },
+        {
+          "@id": "urn:asb:result:result_015"
+        },
+        {
+          "@id": "urn:asb:result:result_016"
+        },
+        {
+          "@id": "urn:asb:result:result_017"
+        },
+        {
+          "@id": "urn:asb:result:result_018"
+        },
+        {
+          "@id": "urn:asb:result:result_019"
+        },
+        {
+          "@id": "urn:asb:result:result_020"
+        },
+        {
+          "@id": "urn:asb:result:result_021"
+        },
+        {
+          "@id": "urn:asb:result:result_022"
+        },
+        {
+          "@id": "urn:asb:result:result_023"
+        },
+        {
+          "@id": "urn:asb:result:result_024"
+        },
+        {
+          "@id": "urn:asb:result:result_025"
+        },
+        {
+          "@id": "urn:asb:result:result_026"
+        },
+        {
+          "@id": "urn:asb:result:result_027"
+        },
+        {
+          "@id": "urn:asb:result:result_028"
+        },
+        {
+          "@id": "urn:asb:result:result_029"
+        },
+        {
+          "@id": "urn:asb:result:result_030"
+        },
+        {
+          "@id": "urn:asb:result:result_031"
+        },
+        {
+          "@id": "urn:asb:result:result_032"
+        },
+        {
+          "@id": "urn:asb:result:result_033"
+        },
+        {
+          "@id": "urn:asb:result:result_034"
+        },
+        {
+          "@id": "urn:asb:result:result_035"
+        },
+        {
+          "@id": "urn:asb:result:result_036"
+        },
+        {
+          "@id": "urn:asb:result:result_037"
+        },
+        {
+          "@id": "urn:asb:result:result_038"
+        },
+        {
+          "@id": "urn:asb:result:result_039"
+        },
+        {
+          "@id": "urn:asb:result:result_040"
+        },
+        {
+          "@id": "urn:asb:result:result_041"
+        },
+        {
+          "@id": "urn:asb:result:result_042"
+        },
+        {
+          "@id": "urn:asb:result:result_043"
+        },
+        {
+          "@id": "urn:asb:result:result_044"
+        },
+        {
+          "@id": "urn:asb:result:result_045"
+        },
+        {
+          "@id": "urn:asb:result:result_046"
+        },
+        {
+          "@id": "urn:asb:result:result_047"
+        },
+        {
+          "@id": "urn:asb:result:result_048"
+        },
+        {
+          "@id": "urn:asb:result:result_049"
+        },
+        {
+          "@id": "urn:asb:result:result_050"
+        },
+        {
+          "@id": "urn:asb:result:result_051"
+        },
+        {
+          "@id": "#env-task_002"
+        },
+        {
+          "@id": "http://edamontology.org/topic_3172"
+        }
+      ],
+      "name": "Reproduce MiMeNet external validation on the IBD (External) dataset",
+      "repme:hasComputationalEnvironment": {
+        "@id": "#computational-environment"
+      }
+    },
+    {
+      "@id": "evidence/source_snippets.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evidence/source_snippets.md"
+    },
+    {
+      "@id": "inputs/dataset_folder_tree.txt",
+      "@type": "File",
+      "encodingFormat": "text/plain",
+      "name": "inputs/dataset_folder_tree.txt"
+    },
+    {
+      "@id": "inputs/dataset_preview.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "inputs/dataset_preview.md"
+    },
+    {
+      "@id": "evaluation/evaluation_strategy.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evaluation/evaluation_strategy.md"
+    },
+    {
+      "@id": "evaluation/review_rubric.json",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "name": "evaluation/review_rubric.json"
+    },
+    {
+      "@id": "urn:asb:task:task_002",
+      "@type": [
+        "ScholarlyArticle",
+        "p-plan:Plan",
+        "http://purl.org/spar/fabio/SoftwarePaper"
+      ],
+      "asbext:task_kind": "reproduction",
+      "description": "Train a MiMeNet neural network model on the full IBD (PRISM) dataset and evaluate its metabolite abundance prediction performance on the held-out IBD (External) dataset, reporting Spearman correlation coefficient (SCC) and prediction accuracy metrics.",
+      "keywords": [
+        "microbiome-metabolome-abundance-normalization",
+        "centered-log-ratio-transformation-application",
+        "neural-network-hyperparameter-optimization",
+        "metabolite-prediction-correlation-evaluation",
+        "background-distribution-significance-thresholding",
+        "cross-dataset-model-generalization-assessment",
+        "comparative-machine-learning-benchmarking"
+      ],
+      "name": "Reproduce MiMeNet external validation on the IBD (External) dataset",
+      "prov:wasInfluencedBy": [
+        {
+          "@id": "urn:asb:task:task_001"
+        }
+      ],
+      "repme:hasResearcher": [
+        {
+          "@id": "urn:asb:researcher:derek-reiman-2021"
+        },
+        {
+          "@id": "urn:asb:researcher:t-layden-2021"
+        },
+        {
+          "@id": "urn:asb:researcher:yang-dai-2021"
+        }
+      ],
+      "sameAs": "https://doi.org/10.1371/journal.pcbi.1009021#task_002",
+      "schema:identifier": "10.1371/journal.pcbi.1009021"
+    },
+    {
+      "@id": "urn:asb:researcher:derek-reiman-2021",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Reiman, Derek"
+    },
+    {
+      "@id": "urn:asb:researcher:t-layden-2021",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Layden, Brian T."
+    },
+    {
+      "@id": "urn:asb:researcher:yang-dai-2021",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Dai, Yang"
+    },
+    {
+      "@id": "urn:asb:tool:mimenet",
+      "@type": "SoftwareApplication",
+      "name": "MiMeNet",
+      "schema:url": "https://github.com/YDaiLab/MiMeNet"
+    },
+    {
+      "@id": "urn:asb:tool:neural-networks",
+      "@type": "SoftwareApplication",
+      "name": "neural networks"
+    },
+    {
+      "@id": "urn:asb:tool:adam-optimizer",
+      "@type": "SoftwareApplication",
+      "name": "ADAM optimizer"
+    },
+    {
+      "@id": "urn:asb:tool:melonnpan",
+      "@type": "SoftwareApplication",
+      "name": "MelonnPan",
+      "schema:url": "https://github.com/biobakery/melonnpan"
+    },
+    {
+      "@id": "urn:asb:tool:random-forest",
+      "@type": "SoftwareApplication",
+      "name": "Random Forest"
+    },
+    {
+      "@id": "urn:asb:tool:elastic-net",
+      "@type": "SoftwareApplication",
+      "name": "Elastic Net"
+    },
+    {
+      "@id": "urn:asb:tool:wgcna",
+      "@type": "SoftwareApplication",
+      "name": "WGCNA"
+    },
+    {
+      "@id": "urn:asb:tool:cca-canonical-correlation-analysis",
+      "@type": "SoftwareApplication",
+      "name": "CCA (Canonical Correlation Analysis)"
+    },
+    {
+      "@id": "urn:asb:input:task_002_0",
+      "@type": "File",
+      "name": "IBD (PRISM) microbiome abundance data (201 microbial species, 121 IBD patients + 34 controls)"
+    },
+    {
+      "@id": "urn:asb:input:task_002_1",
+      "@type": "File",
+      "name": "IBD (PRISM) metabolome abundance data (8848 metabolites, 121 IBD patients + 34 controls)"
+    },
+    {
+      "@id": "urn:asb:input:task_002_2",
+      "@type": "File",
+      "name": "IBD (External) microbiome abundance data (two cohorts: 20 healthy subjects from LifeLines-DEEP + 43 subjects from Groningen)"
+    },
+    {
+      "@id": "urn:asb:input:task_002_3",
+      "@type": "File",
+      "name": "IBD (External) metabolome abundance data (paired with external microbiome cohorts)"
+    },
+    {
+      "@id": "urn:asb:output:task_002_0",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Mean Spearman correlation coefficients (SCC) for metabolite prediction on IBD (External) dataset",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_002"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_002_1",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Count of well-predicted metabolites on IBD (External) dataset (those with SCC above 95th percentile threshold)",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_002"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_002_2",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Per-metabolite prediction correlations table for IBD (External) evaluation",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_002"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_002_3",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Comparison metrics (SCC, prediction accuracy) versus benchmark models (MelonnPan, Random Forest, Elastic Net, WGCNA) on IBD (External) data",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_002"
+      }
+    },
+    {
+      "@id": "#action-task_002",
+      "@type": [
+        "CreateAction",
+        "prov:Activity",
+        "p-plan:Step"
+      ],
+      "description": "Train a MiMeNet neural network model on the full IBD (PRISM) dataset and evaluate its metabolite abundance prediction performance on the held-out IBD (External) dataset, reporting Spearman correlation coefficient (SCC) and prediction accuracy metrics.",
+      "instrument": [
+        {
+          "@id": "urn:asb:tool:mimenet"
+        },
+        {
+          "@id": "urn:asb:tool:neural-networks"
+        },
+        {
+          "@id": "urn:asb:tool:adam-optimizer"
+        },
+        {
+          "@id": "urn:asb:tool:melonnpan"
+        },
+        {
+          "@id": "urn:asb:tool:random-forest"
+        },
+        {
+          "@id": "urn:asb:tool:elastic-net"
+        },
+        {
+          "@id": "urn:asb:tool:wgcna"
+        },
+        {
+          "@id": "urn:asb:tool:cca-canonical-correlation-analysis"
+        }
+      ],
+      "name": "Reproduce MiMeNet external validation on the IBD (External) dataset",
+      "object": [
+        {
+          "@id": "urn:asb:input:task_002_0"
+        },
+        {
+          "@id": "urn:asb:input:task_002_1"
+        },
+        {
+          "@id": "urn:asb:input:task_002_2"
+        },
+        {
+          "@id": "urn:asb:input:task_002_3"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "urn:asb:port:task_001/benchmark_results"
+        }
+      ],
+      "repme:hasInputData": [
+        {
+          "@id": "urn:asb:input:task_002_0"
+        },
+        {
+          "@id": "urn:asb:input:task_002_1"
+        },
+        {
+          "@id": "urn:asb:input:task_002_2"
+        },
+        {
+          "@id": "urn:asb:input:task_002_3"
+        }
+      ],
+      "repme:hasOutputData": [
+        {
+          "@id": "urn:asb:output:task_002_0"
+        },
+        {
+          "@id": "urn:asb:output:task_002_1"
+        },
+        {
+          "@id": "urn:asb:output:task_002_2"
+        },
+        {
+          "@id": "urn:asb:output:task_002_3"
+        }
+      ],
+      "repme:hasResult": [
+        {
+          "@id": "urn:asb:result:result_015"
+        }
+      ],
+      "result": [
+        {
+          "@id": "urn:asb:output:task_002_0"
+        },
+        {
+          "@id": "urn:asb:output:task_002_1"
+        },
+        {
+          "@id": "urn:asb:output:task_002_2"
+        },
+        {
+          "@id": "urn:asb:output:task_002_3"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:claim:claim_001",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MiMeNet more accurately predicts metabolite abundances than MelonnPan, with mean Spearman correlation coefficients increasing from 0.108 to 0.309 in the IBD (PRISM) dataset."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 24180,
+          "oa:start": 24113
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MiMeNet more accurately predicts metabolite abundances than MelonnPan, with mean Spearman correlation coefficients increasing from 0.108 to 0.309 in the IBD (PRISM) dataset.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "IBD (PRISM) dataset evaluation",
+        "object": "0.108 to 0.309",
+        "qualifier": "increases",
+        "relation": "increases mean Spearman correlation coefficient for annotated metabolite prediction",
+        "subject": "MiMeNet vs MelonnPan"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_002",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "In the cystic fibrosis dataset, MiMeNet achieves a mean correlation of 0.457 compared to MelonnPan's 0.410."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 25730,
+          "oa:start": 25665
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "In the cystic fibrosis dataset, MiMeNet achieves a mean correlation of 0.457 compared to MelonnPan's 0.410.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "cystic fibrosis dataset evaluation",
+        "object": "0.457 vs 0.410",
+        "qualifier": "increases",
+        "relation": "achieves higher mean correlation coefficient",
+        "subject": "MiMeNet vs MelonnPan"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_003",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MiMeNet identified 351 well-predicted metabolites in the IBD (PRISM) dataset compared to MelonnPan's 198."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 26381,
+          "oa:start": 26233
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MiMeNet identified 351 well-predicted metabolites in the IBD (PRISM) dataset compared to MelonnPan's 198.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "IBD (PRISM) dataset metabolite prediction",
+        "object": "351 vs 198",
+        "qualifier": "increases",
+        "relation": "identifies more well-predicted metabolites",
+        "subject": "MiMeNet vs MelonnPan"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_004",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MiMeNet identified 143 well-predicted metabolites in the cystic fibrosis dataset while MelonnPan identified 104."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 26516,
+          "oa:start": 26450
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MiMeNet identified 143 well-predicted metabolites in the cystic fibrosis dataset while MelonnPan identified 104.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "cystic fibrosis dataset evaluation",
+        "object": "143 vs 104",
+        "qualifier": "increases",
+        "relation": "identifies more well-predicted metabolites",
+        "subject": "MiMeNet vs MelonnPan"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_005",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MiMeNet identified 29 well-predicted metabolites in the soil dataset while MelonnPan identified 4."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 26576,
+          "oa:start": 26518
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MiMeNet identified 29 well-predicted metabolites in the soil dataset while MelonnPan identified 4.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "soil dataset evaluation",
+        "object": "29 vs 4",
+        "qualifier": "increases",
+        "relation": "identifies more well-predicted metabolites",
+        "subject": "MiMeNet vs MelonnPan"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_006",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Multivariate learning increased well-predicted annotated metabolites from 333 to 366 in the IBD (PRISM) dataset."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 18507,
+          "oa:start": 18398
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Multivariate learning increased well-predicted annotated metabolites from 333 to 366 in the IBD (PRISM) dataset.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "IBD (PRISM) dataset multivariate learning evaluation",
+        "object": "333 to 366",
+        "qualifier": "increases",
+        "relation": "increases number of well-predicted annotated metabolites",
+        "subject": "multivariate learning in MiMeNet"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_007",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The Spearman correlation coefficients of annotated metabolites increased from 0.259 to 0.309 when using all metabolites to train MiMeNet, with significance p < 10^-47."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 18612,
+          "oa:start": 18535
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The Spearman correlation coefficients of annotated metabolites increased from 0.259 to 0.309 when using all metabolites to train MiMeNet, with significance p < 10^-47.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "IBD (PRISM) dataset multivariate learning",
+        "object": "0.259 to 0.309 (p < 10^-47)",
+        "qualifier": "increases",
+        "relation": "increases Spearman correlation coefficients of annotated metabolites",
+        "subject": "multivariate learning"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_008",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "77.50% of metabolites (6857 of 8848) were well-predicted in the IBD (PRISM) dataset."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 16093,
+          "oa:start": 16027
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "77.50% of metabolites (6857 of 8848) were well-predicted in the IBD (PRISM) dataset.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "IBD (PRISM) dataset evaluation",
+        "object": "77.50% (6857/8848)",
+        "qualifier": "has_property",
+        "relation": "achieves well-prediction rate of",
+        "subject": "MiMeNet prediction performance"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_009",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "94.08% of metabolites (143 of 152) were well-predicted in the cystic fibrosis dataset."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 16162,
+          "oa:start": 16113
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "94.08% of metabolites (143 of 152) were well-predicted in the cystic fibrosis dataset.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "cystic fibrosis dataset evaluation",
+        "object": "94.08% (143/152)",
+        "qualifier": "has_property",
+        "relation": "achieves well-prediction rate of",
+        "subject": "MiMeNet prediction performance"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_010",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "34.12% of metabolites (29 of 85) were well-predicted in the soil dataset."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 16210,
+          "oa:start": 16163
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "34.12% of metabolites (29 of 85) were well-predicted in the soil dataset.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "soil dataset evaluation",
+        "object": "34.12% (29/85)",
+        "qualifier": "has_property",
+        "relation": "achieves well-prediction rate of",
+        "subject": "MiMeNet prediction performance"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_011",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The cutoff Spearman correlation coefficient for well-predicted metabolites was 0.136 for the IBD (PRISM) dataset."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 15955,
+          "oa:start": 15890
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The cutoff Spearman correlation coefficient for well-predicted metabolites was 0.136 for the IBD (PRISM) dataset.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "IBD (PRISM) dataset",
+        "object": "0.136",
+        "qualifier": "has_property",
+        "relation": "cutoff Spearman correlation coefficient",
+        "subject": "well-predicted metabolite threshold"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_012",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The cutoff Spearman correlation coefficient for well-predicted metabolites was 0.129 for the cystic fibrosis dataset."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 15955,
+          "oa:start": 15890
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The cutoff Spearman correlation coefficient for well-predicted metabolites was 0.129 for the cystic fibrosis dataset.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "cystic fibrosis dataset",
+        "object": "0.129",
+        "qualifier": "has_property",
+        "relation": "cutoff Spearman correlation coefficient",
+        "subject": "well-predicted metabolite threshold"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_013",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The cutoff Spearman correlation coefficient for well-predicted metabolites was 0.410 for the soil dataset."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 15955,
+          "oa:start": 15890
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The cutoff Spearman correlation coefficient for well-predicted metabolites was 0.410 for the soil dataset.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "soil dataset",
+        "object": "0.410",
+        "qualifier": "has_property",
+        "relation": "cutoff Spearman correlation coefficient",
+        "subject": "well-predicted metabolite threshold"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_014",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The IBD (PRISM) dataset contains 121 IBD patients and 34 controls."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 52999,
+          "oa:start": 52938
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The IBD (PRISM) dataset contains 121 IBD patients and 34 controls.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "IBD study cohort description",
+        "object": "121 IBD patients and 34 controls",
+        "qualifier": "has_property",
+        "relation": "contains number of subjects",
+        "subject": "IBD (PRISM) dataset"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_015",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The IBD (PRISM) dataset contains 201 microbial features and 8848 metabolites."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 53465,
+          "oa:start": 53397
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The IBD (PRISM) dataset contains 201 microbial features and 8848 metabolites.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "IBD (PRISM) dataset description",
+        "object": "201 microbes and 8848 metabolites",
+        "qualifier": "has_property",
+        "relation": "contains features",
+        "subject": "IBD (PRISM) dataset"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_016",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The cystic fibrosis dataset contains 657 microbial features and 168 metabolites."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 53871,
+          "oa:start": 53641
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The cystic fibrosis dataset contains 657 microbial features and 168 metabolites.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "cystic fibrosis dataset description",
+        "object": "657 microbial features and 168 metabolites",
+        "qualifier": "has_property",
+        "relation": "contains features",
+        "subject": "cystic fibrosis dataset"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_017",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The soil dataset contains 446 microbial features and 85 metabolites."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5770,
+          "oa:start": 5717
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The soil dataset contains 446 microbial features and 85 metabolites.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "soil dataset description",
+        "object": "466 microbes and 85 metabolites",
+        "qualifier": "has_property",
+        "relation": "contains features",
+        "subject": "soil dataset"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_018",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MiMeNet uses a multi-layer perceptron neural network (MLPNN) to model the community metabolome profile based on microbiome samples."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 9334,
+          "oa:start": 9274
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MiMeNet uses a multi-layer perceptron neural network (MLPNN) to model the community metabolome profile based on microbiome samples.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "MiMeNet methodology",
+        "object": "community metabolome profile from microbiome",
+        "qualifier": "is_a",
+        "relation": "multi-layer perceptron neural network that models",
+        "subject": "MiMeNet"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_019",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MiMeNet benefits from multivariate learning by predicting the abundance of all metabolites at once, which facilitates prediction through shared information across different metabolites."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 10831,
+          "oa:start": 10763
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MiMeNet benefits from multivariate learning by predicting the abundance of all metabolites at once, which facilitates prediction through shared information across different metabolites.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "MiMeNet design rationale",
+        "object": "across all metabolites simultaneously",
+        "qualifier": "enables",
+        "relation": "enables training of more robust models by sharing information",
+        "subject": "multivariate learning in MiMeNet"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_020",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MiMeNet uses biclustering to organize microbes and metabolites into modules based on their feature attribution patterns."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 13070,
+          "oa:start": 13004
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MiMeNet uses biclustering to organize microbes and metabolites into modules based on their feature attribution patterns.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_021",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The IBD (External) dataset includes 43 IBD patients and 20 control subjects."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 13502,
+          "oa:start": 13440
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The IBD (External) dataset includes 43 IBD patients and 20 control subjects.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "IBD (External) dataset description",
+        "object": "43 IBD and 20 control subjects",
+        "qualifier": "has_property",
+        "relation": "contains number of subjects",
+        "subject": "IBD (External) dataset"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_022",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The cystic fibrosis dataset contains 172 patients with cystic fibrosis."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 53529,
+          "oa:start": 53467
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The cystic fibrosis dataset contains 172 patients with cystic fibrosis.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "cystic fibrosis dataset description",
+        "object": "172",
+        "qualifier": "has_property",
+        "relation": "contains number of patients",
+        "subject": "cystic fibrosis dataset"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_023",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MiMeNet identified 8 modules of microbes and 8 modules of metabolites in the IBD (PRISM) dataset."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 30236,
+          "oa:start": 30186
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MiMeNet identified 8 modules of microbes and 8 modules of metabolites in the IBD (PRISM) dataset.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_024",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Four metabolite modules were enriched in healthy subjects in the IBD study."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 35019,
+          "oa:start": 34929
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Four metabolite modules were enriched in healthy subjects in the IBD study.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "IBD metabolite module characterization",
+        "object": "healthy subjects",
+        "qualifier": "is_associated_with",
+        "relation": "are enriched in",
+        "subject": "metabolite modules"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_025",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Three metabolite modules were enriched in IBD patients."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 37601,
+          "oa:start": 37552
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Three metabolite modules were enriched in IBD patients.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "IBD metabolite module characterization",
+        "object": "IBD patients",
+        "qualifier": "is_associated_with",
+        "relation": "are enriched in",
+        "subject": "metabolite modules"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_026",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Module 2 (healthy-enriched) contained medium-chain fatty acids, triterpenoids, and cholesterols."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 35111,
+          "oa:start": 35034
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Module 2 (healthy-enriched) contained medium-chain fatty acids, triterpenoids, and cholesterols.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "IBD healthy-enriched metabolite modules",
+        "object": "medium-chain fatty acids, triterpenoids, and cholesterols",
+        "qualifier": "has_property",
+        "relation": "contains metabolite classes",
+        "subject": "module 2"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_027",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Module 7 (healthy-enriched) was mainly composed of short-chain fatty acids such as propionate, butyrate, and valeric acid."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 35797,
+          "oa:start": 35669
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Module 7 (healthy-enriched) was mainly composed of short-chain fatty acids such as propionate, butyrate, and valeric acid.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "IBD healthy-enriched metabolite modules",
+        "object": "short-chain fatty acids (propionate, butyrate, valeric acid)",
+        "qualifier": "has_property",
+        "relation": "contains metabolite classes",
+        "subject": "module 7"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_028",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MiMeNet uses ReLU (rectified linear unit) as the activation function in the neural network."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 55397,
+          "oa:start": 55343
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MiMeNet uses ReLU (rectified linear unit) as the activation function in the neural network.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "MiMeNet network architecture",
+        "object": "ReLU (rectified linear unit)",
+        "qualifier": "has_property",
+        "relation": "uses activation function",
+        "subject": "MiMeNet neural network"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_029",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MiMeNet uses L2 regularization and dropout for regularization to prevent overfitting."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 55720,
+          "oa:start": 55581
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MiMeNet uses L2 regularization and dropout for regularization to prevent overfitting.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "MiMeNet regularization strategy",
+        "object": "L2 regularization and dropout",
+        "qualifier": "prevents",
+        "relation": "prevents overfitting through",
+        "subject": "MiMeNet regularization"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_030",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MiMeNet training uses the ADAM optimizer and mean squared error (MSE) loss function."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 55904,
+          "oa:start": 55816
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MiMeNet training uses the ADAM optimizer and mean squared error (MSE) loss function.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "MiMeNet training protocol",
+        "object": "ADAM optimizer and MSE loss",
+        "qualifier": "has_property",
+        "relation": "uses optimizer and loss function",
+        "subject": "MiMeNet training"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_031",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MiMeNet evaluation was conducted using 10 iterations of 10-fold cross-validation."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 56431,
+          "oa:start": 56321
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MiMeNet evaluation was conducted using 10 iterations of 10-fold cross-validation.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "MiMeNet evaluation methodology",
+        "object": "10 iterations of 10-fold cross-validation",
+        "qualifier": "has_property",
+        "relation": "uses validation method",
+        "subject": "MiMeNet evaluation"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_032",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MiMeNet uses early stopping to prevent overfitting during neural network training."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 57016,
+          "oa:start": 56943
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MiMeNet uses early stopping to prevent overfitting during neural network training.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "MiMeNet training methodology",
+        "object": "early stopping",
+        "qualifier": "prevents",
+        "relation": "prevents overfitting using",
+        "subject": "MiMeNet training"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_033",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The microbiome impacts host development, normal metabolic processes, and pathogenesis of various diseases."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5395,
+          "oa:start": 5336
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The microbiome impacts host development, normal metabolic processes, and pathogenesis of various diseases.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_034",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The gut microbiome has been linked to inflammatory bowel disease (IBD), obesity, and diabetes mellitus."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5529,
+          "oa:start": 5469
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The gut microbiome has been linked to inflammatory bowel disease (IBD), obesity, and diabetes mellitus.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "gut microbiome-disease associations",
+        "object": "IBD, obesity, and diabetes mellitus",
+        "qualifier": "is_associated_with",
+        "relation": "is linked to",
+        "subject": "gut microbiome"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_035",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Bacterial metabolites play a central role in microbiome-host health interactions at a metabolic level."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5663,
+          "oa:start": 5608
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Bacterial metabolites play a central role in microbiome-host health interactions at a metabolic level.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "microbiome-metabolome function",
+        "object": "microbiome-host health interactions",
+        "qualifier": "has_property",
+        "relation": "play central role in",
+        "subject": "bacterial metabolites"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_036",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Strong associations between microbes and metabolites were found in gut and blood metabolomic profiles, and in the gut of patients with IBD."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5793,
+          "oa:start": 5730
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Strong associations between microbes and metabolites were found in gut and blood metabolomic profiles, and in the gut of patients with IBD.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "microbe-metabolite associations",
+        "object": "gut and blood metabolomic profiles, IBD patients",
+        "qualifier": "correlates_with",
+        "relation": "show strong associations in",
+        "subject": "microbes and metabolites"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_037",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Identification of microbiome-metabolome interaction mechanisms through modeling is essential for understanding how the microbiome affects host health and for development of precise therapies."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6064,
+          "oa:start": 5998
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Identification of microbiome-metabolome interaction mechanisms through modeling is essential for understanding how the microbiome affects host health and for development of precise therapies.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "microbiome research motivation",
+        "object": "microbiome effects on host health and chronic disease management",
+        "qualifier": "enables",
+        "relation": "enables understanding of and development of therapies for",
+        "subject": "microbiome-metabolome interaction modeling"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_038",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Early constraint-based stoichiometric modeling methods for microbiome-metabolome mapping have limitations due to reliance on annotated references."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6774,
+          "oa:start": 6703
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Early constraint-based stoichiometric modeling methods for microbiome-metabolome mapping have limitations due to reliance on annotated references.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "early microbiome-metabolome modeling methods",
+        "object": "annotated references",
+        "qualifier": "has_property",
+        "relation": "has limitations due to reliance on",
+        "subject": "constraint-based stoichiometric modeling"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_039",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Several machine learning models have been developed to map metagenomic features to metabolites as both data types have become increasingly available."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6840,
+          "oa:start": 6778
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Several machine learning models have been developed to map metagenomic features to metabolites as both data types have become increasingly available.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "recent microbiome-metabolome modeling approaches",
+        "object": "metagenomic features to metabolites",
+        "qualifier": "enables",
+        "relation": "enables mapping of",
+        "subject": "machine learning models"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_040",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MelonnPan models each metabolite individually, missing shared information across metabolomic features that could boost prediction performance."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7108,
+          "oa:start": 7040
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MelonnPan models each metabolite individually, missing shared information across metabolomic features that could boost prediction performance.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "MelonnPan methodology limitations",
+        "object": "individually, missing shared information",
+        "qualifier": "has_property",
+        "relation": "has limitation of modeling metabolites",
+        "subject": "MelonnPan"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_041",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MiMeNet performs better than models trained on only the annotated metabolite set when noise is added to the training data."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 19313,
+          "oa:start": 19248
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MiMeNet performs better than models trained on only the annotated metabolite set when noise is added to the training data.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "MiMeNet noise robustness evaluation",
+        "object": "noise in annotated metabolite data",
+        "qualifier": "increases",
+        "relation": "increases robustness to",
+        "subject": "multivariate learning in MiMeNet"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_042",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MiMeNet shows robust performance across different fold cross-validation settings (k=10, 5, 3, 2) in the IBD (PRISM) dataset."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 19813,
+          "oa:start": 19588
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MiMeNet shows robust performance across different fold cross-validation settings (k=10, 5, 3, 2) in the IBD (PRISM) dataset.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "IBD (PRISM) k-fold cross-validation analysis",
+        "object": "different k-fold settings (k=10 to 2)",
+        "qualifier": "has_property",
+        "relation": "shows robust performance across",
+        "subject": "MiMeNet"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_043",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Triterpenoids such as oleanolic acid and maslinic acid have been shown to have anti-inflammatory effects and enhance intestinal tight junction integrity."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 35311,
+          "oa:start": 35140
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Triterpenoids such as oleanolic acid and maslinic acid have been shown to have anti-inflammatory effects and enhance intestinal tight junction integrity.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "triterpenoid biological functions",
+        "object": "intestinal tight junction integrity",
+        "qualifier": "has_property",
+        "relation": "have anti-inflammatory effects and enhance",
+        "subject": "triterpenoids (oleanolic and maslinic acid)"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_044",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Both cholesterols and medium-chain fatty acids have been noted to be depleted in subjects with IBD."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5150,
+          "oa:start": 5064
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Both cholesterols and medium-chain fatty acids have been noted to be depleted in subjects with IBD.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "IBD metabolite depletion",
+        "object": "IBD subjects",
+        "qualifier": "decreases",
+        "relation": "are depleted in",
+        "subject": "cholesterols and MCFAs"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_045",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Secondary bile acids (deoxycholic acid and lithocholic acid) have been found to be reduced in IBD patients."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 35658,
+          "oa:start": 35545
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Secondary bile acids (deoxycholic acid and lithocholic acid) have been found to be reduced in IBD patients.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "IBD metabolite reduction",
+        "object": "IBD patients",
+        "qualifier": "decreases",
+        "relation": "are reduced in",
+        "subject": "secondary bile acids"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_046",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Short-chain fatty acids (propionate, butyrate, and valeric acid) have been shown to be protective against IBD."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5348,
+          "oa:start": 5265
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Short-chain fatty acids (propionate, butyrate, and valeric acid) have been shown to be protective against IBD.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "IBD protective metabolites",
+        "object": "IBD",
+        "qualifier": "prevents",
+        "relation": "are protective against",
+        "subject": "short-chain fatty acids"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_047",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Primary bile acids bind to the farnesoid X receptor, which is linked to elevated immune response in IBD."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 38034,
+          "oa:start": 37963
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Primary bile acids bind to the farnesoid X receptor, which is linked to elevated immune response in IBD.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "IBD bile acid immunology",
+        "object": "elevated immune response in IBD",
+        "qualifier": "correlates_with",
+        "relation": "bind farnesoid X receptor linked to",
+        "subject": "primary bile acids"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_048",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "N-acylethanolamines have been shown to alter the gut microbiome and potentially increase levels of lipopolysaccharides, causing inflammation."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 38300,
+          "oa:start": 38238
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "N-acylethanolamines have been shown to alter the gut microbiome and potentially increase levels of lipopolysaccharides, causing inflammation.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "N-acylethanolamine immunology",
+        "object": "cause gut inflammation",
+        "qualifier": "increases",
+        "relation": "increase lipopolysaccharides and",
+        "subject": "N-acylethanolamines"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_049",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Sphingosine-1-phosphate is a signaling sphingolipid that has been implicated in increased inflammation of the gut."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 38500,
+          "oa:start": 38437
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Sphingosine-1-phosphate is a signaling sphingolipid that has been implicated in increased inflammation of the gut.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "sphingolipid signaling in IBD",
+        "object": "increased gut inflammation",
+        "qualifier": "is_associated_with",
+        "relation": "is implicated in",
+        "subject": "sphingosine-1-phosphate"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_050",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Long-chain fatty acids (eicosapentaenoic acid, arachidonic acid, and docosapentaenoic acid) have been implicated with IBD."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 38632,
+          "oa:start": 38566
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Long-chain fatty acids (eicosapentaenoic acid, arachidonic acid, and docosapentaenoic acid) have been implicated with IBD.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "LCFA-IBD association",
+        "object": "IBD",
+        "qualifier": "is_associated_with",
+        "relation": "are implicated in",
+        "subject": "long-chain fatty acids (eicosapentaenoic, arachidonic, docosapentaenoic acid)"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_051",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Bacterial-derived sphingolipids have been shown to play a crucial role in the development of IBD through multiple signaling pathways."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 39095,
+          "oa:start": 39037
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Bacterial-derived sphingolipids have been shown to play a crucial role in the development of IBD through multiple signaling pathways.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "bacterial sphingolipid pathology",
+        "object": "IBD through signaling pathways",
+        "qualifier": "causes",
+        "relation": "play crucial role in development of",
+        "subject": "bacterial-derived sphingolipids"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_052",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Bacteria such as Bacteroides, Clostridium, Eubacterium, and Ruminococcus produce enzymes responsible for conversion of conjugated bile acids to secondary bile acids."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 44028,
+          "oa:start": 43961
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Bacteria such as Bacteroides, Clostridium, Eubacterium, and Ruminococcus produce enzymes responsible for conversion of conjugated bile acids to secondary bile acids.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "bacterial bile acid metabolism",
+        "object": "conjugated bile acids to secondary bile acids",
+        "qualifier": "produces",
+        "relation": "produce enzymes that convert",
+        "subject": "Bacteroides, Clostridium, Eubacterium, Ruminococcus"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_053",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Triterpenoids have been explored as therapeutic options for IBD."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5114,
+          "oa:start": 5070
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Triterpenoids have been explored as therapeutic options for IBD.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "IBD therapeutics",
+        "object": "IBD",
+        "qualifier": "treats",
+        "relation": "have been explored as therapies for",
+        "subject": "triterpenoids"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_054",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The accuracy of metabolite prediction decreases as training dataset size is reduced in both IBD (PRISM) and cystic fibrosis datasets."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 20358,
+          "oa:start": 20288
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The accuracy of metabolite prediction decreases as training dataset size is reduced in both IBD (PRISM) and cystic fibrosis datasets.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "training dataset size sensitivity analysis",
+        "object": "training dataset size",
+        "qualifier": "decreases",
+        "relation": "decreases with reduced",
+        "subject": "MiMeNet prediction accuracy"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_055",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Short-chain fatty acids, particularly butyrate, have been shown to be protective against inflammation in the gut and important for gut homeostasis."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 42702,
+          "oa:start": 42636
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Short-chain fatty acids, particularly butyrate, have been shown to be protective against inflammation in the gut and important for gut homeostasis.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "gut microbiota immunology",
+        "object": "inflammation and support homeostasis",
+        "qualifier": "prevents",
+        "relation": "are protective against gut",
+        "subject": "butyrate and short-chain fatty acids"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_056",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Five butyrate-producing microbes (Eubacterium biforme, Eubacterium hallii, Eubacterium rectale, Roseburia intestinalis, and Roseburia inulinivorans) were found in microbial module 6."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 42947,
+          "oa:start": 42836
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Five butyrate-producing microbes (Eubacterium biforme, Eubacterium hallii, Eubacterium rectale, Roseburia intestinalis, and Roseburia inulinivorans) were found in microbial module 6.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "MiMeNet module analysis",
+        "object": "microbial module 6",
+        "qualifier": "is_part_of",
+        "relation": "are clustered together in",
+        "subject": "butyrate-producing microbes"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_057",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Pairwise univariate correlation analysis identified only 12 significant correlations with butyrate, indicating that module-based analysis captures more biologically relevant interactions than pairwise methods."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 43235,
+          "oa:start": 43164
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Pairwise univariate correlation analysis identified only 12 significant correlations with butyrate, indicating that module-based analysis captures more biologically relevant interactions than pairwise",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "comparison of correlation analysis methods",
+        "object": "biologically relevant microbe-metabolite interactions",
+        "qualifier": "increases",
+        "relation": "captures more",
+        "subject": "MiMeNet module-based analysis vs pairwise correlation"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_058",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MiMeNet's modules capture biologically meaningful microbe-metabolite interactions by grouping microbes with similar functional effects on metabolites."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 43437,
+          "oa:start": 43372
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_mimenet"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MiMeNet's modules capture biologically meaningful microbe-metabolite interactions by grouping microbes with similar functional effects on metabolites.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "MiMeNet functional capability",
+        "object": "biologically meaningful microbe-metabolite interactions",
+        "qualifier": "enables",
+        "relation": "enable identification of",
+        "subject": "MiMeNet modules"
+      }
+    },
+    {
+      "@id": "urn:asb:result:result_001",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MiMeNet more accurately predicts metabolite abundances than MelonnPan, with mean Spearman correlation coefficients increasing from 0.108 to 0.309 in the IBD (PRISM) dataset.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_001"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_002",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "In the cystic fibrosis dataset, MiMeNet achieves a mean correlation of 0.457 compared to MelonnPan's 0.410.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_002"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_003",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MiMeNet identified 351 well-predicted metabolites in the IBD (PRISM) dataset compared to MelonnPan's 198. MiMeNet identified 143 well-predicted metabolites in the cystic fibrosis dataset while MelonnP",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_004"
+        },
+        {
+          "@id": "urn:asb:claim:claim_005"
+        },
+        {
+          "@id": "urn:asb:claim:claim_009"
+        },
+        {
+          "@id": "urn:asb:claim:claim_010"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_004",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Multivariate learning increased well-predicted annotated metabolites from 333 to 366 in the IBD (PRISM) dataset.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_006"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_005",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The Spearman correlation coefficients of annotated metabolites increased from 0.259 to 0.309 when using all metabolites to train MiMeNet, with significance p < 10^-47.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_007"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_006",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "77.50% of metabolites (6857 of 8848) were well-predicted in the IBD (PRISM) dataset.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_008"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_007",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The cutoff Spearman correlation coefficient for well-predicted metabolites was 0.136 for the IBD (PRISM) dataset. The cutoff Spearman correlation coefficient for well-predicted metabolites was 0.129 f",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_011"
+        },
+        {
+          "@id": "urn:asb:claim:claim_012"
+        },
+        {
+          "@id": "urn:asb:claim:claim_013"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_008",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The IBD (PRISM) dataset contains 121 IBD patients and 34 controls.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_014"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_009",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The IBD (PRISM) dataset contains 201 microbial features and 8848 metabolites.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_015"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_010",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The cystic fibrosis dataset contains 657 microbial features and 168 metabolites.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_016"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_011",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The soil dataset contains 446 microbial features and 85 metabolites.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_017"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_012",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MiMeNet uses a multi-layer perceptron neural network (MLPNN) to model the community metabolome profile based on microbiome samples.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_018"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_013",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MiMeNet benefits from multivariate learning by predicting the abundance of all metabolites at once, which facilitates prediction through shared information across different metabolites.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_019"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_014",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MiMeNet uses biclustering to organize microbes and metabolites into modules based on their feature attribution patterns.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_020"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_015",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The IBD (External) dataset includes 43 IBD patients and 20 control subjects.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_021"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_016",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The cystic fibrosis dataset contains 172 patients with cystic fibrosis.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_022"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_017",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MiMeNet identified 8 modules of microbes and 8 modules of metabolites in the IBD (PRISM) dataset.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_023"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_018",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Four metabolite modules were enriched in healthy subjects in the IBD study.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_024"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_019",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Three metabolite modules were enriched in IBD patients.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_025"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_020",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Module 2 (healthy-enriched) contained medium-chain fatty acids, triterpenoids, and cholesterols.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_026"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_021",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Module 7 (healthy-enriched) was mainly composed of short-chain fatty acids such as propionate, butyrate, and valeric acid. Short-chain fatty acids (propionate, butyrate, and valeric acid) have been sh",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_027"
+        },
+        {
+          "@id": "urn:asb:claim:claim_046"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_022",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MiMeNet uses ReLU (rectified linear unit) as the activation function in the neural network.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_028"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_023",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MiMeNet uses L2 regularization and dropout for regularization to prevent overfitting.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_029"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_024",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MiMeNet training uses the ADAM optimizer and mean squared error (MSE) loss function.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_030"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_025",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MiMeNet evaluation was conducted using 10 iterations of 10-fold cross-validation.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_031"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_026",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MiMeNet uses early stopping to prevent overfitting during neural network training.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_032"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_027",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The microbiome impacts host development, normal metabolic processes, and pathogenesis of various diseases.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_033"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_028",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The gut microbiome has been linked to inflammatory bowel disease (IBD), obesity, and diabetes mellitus.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_034"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_029",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Bacterial metabolites play a central role in microbiome-host health interactions at a metabolic level.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_035"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_030",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Strong associations between microbes and metabolites were found in gut and blood metabolomic profiles, and in the gut of patients with IBD.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_036"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_031",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Identification of microbiome-metabolome interaction mechanisms through modeling is essential for understanding how the microbiome affects host health and for development of precise therapies.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_037"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_032",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Early constraint-based stoichiometric modeling methods for microbiome-metabolome mapping have limitations due to reliance on annotated references.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_038"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_033",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Several machine learning models have been developed to map metagenomic features to metabolites as both data types have become increasingly available.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_039"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_034",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MelonnPan models each metabolite individually, missing shared information across metabolomic features that could boost prediction performance.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_040"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_035",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MiMeNet performs better than models trained on only the annotated metabolite set when noise is added to the training data.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_041"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_036",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MiMeNet shows robust performance across different fold cross-validation settings (k=10, 5, 3, 2) in the IBD (PRISM) dataset.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_042"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_037",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Triterpenoids such as oleanolic acid and maslinic acid have been shown to have anti-inflammatory effects and enhance intestinal tight junction integrity.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_043"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_038",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Both cholesterols and medium-chain fatty acids have been noted to be depleted in subjects with IBD.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_044"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_039",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Secondary bile acids (deoxycholic acid and lithocholic acid) have been found to be reduced in IBD patients.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_045"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_040",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Primary bile acids bind to the farnesoid X receptor, which is linked to elevated immune response in IBD.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_047"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_041",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "N-acylethanolamines have been shown to alter the gut microbiome and potentially increase levels of lipopolysaccharides, causing inflammation.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_048"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_042",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Sphingosine-1-phosphate is a signaling sphingolipid that has been implicated in increased inflammation of the gut.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_049"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_043",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Long-chain fatty acids (eicosapentaenoic acid, arachidonic acid, and docosapentaenoic acid) have been implicated with IBD.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_050"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_044",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Bacterial-derived sphingolipids have been shown to play a crucial role in the development of IBD through multiple signaling pathways.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_051"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_045",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Bacteria such as Bacteroides, Clostridium, Eubacterium, and Ruminococcus produce enzymes responsible for conversion of conjugated bile acids to secondary bile acids.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_052"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_046",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Triterpenoids have been explored as therapeutic options for IBD.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_053"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_047",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The accuracy of metabolite prediction decreases as training dataset size is reduced in both IBD (PRISM) and cystic fibrosis datasets.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_054"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_048",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Short-chain fatty acids, particularly butyrate, have been shown to be protective against inflammation in the gut and important for gut homeostasis.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_055"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_049",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Five butyrate-producing microbes (Eubacterium biforme, Eubacterium hallii, Eubacterium rectale, Roseburia intestinalis, and Roseburia inulinivorans) were found in microbial module 6.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_056"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_050",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Pairwise univariate correlation analysis identified only 12 significant correlations with butyrate, indicating that module-based analysis captures more biologically relevant interactions than pairwise",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_057"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_051",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MiMeNet's modules capture biologically meaningful microbe-metabolite interactions by grouping microbes with similar functional effects on metabolites.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_058"
+        }
+      ]
+    },
+    {
+      "@id": "#env-task_002",
+      "@type": [
+        "repme:ComputationalEnvironment"
+      ],
+      "repme:computeTier": "medium"
+    },
+    {
+      "@id": "#agent-15-activity-task_002",
+      "@type": [
+        "prov:Activity"
+      ],
+      "prov:endedAtTime": "2026-06-15T07:47:11.286911+00:00",
+      "prov:qualifiedUsage": {
+        "@type": "prov:Usage",
+        "schema:name": "prompt_sha256",
+        "schema:value": "4c2d77dc0bf8cac3"
+      },
+      "prov:wasAssociatedWith": {
+        "schema:name": "anthropic/claude-haiku-4-5-20251001"
+      },
+      "schema:name": "Agent 1.5 Claim Extractor"
+    },
+    {
+      "@id": "#computational-environment",
+      "@type": "repme:ComputationalEnvironment",
+      "repme:buildId": "E50F99438FAD40E5BBFECBA914901DE1",
+      "repme:depsHash": "sha256:4fffb5d3623041b6cc88cfe92427807d779db4274f6693748bfcaa96b06c7f79",
+      "repme:gitCommit": "ddf6c1becb15c939b16600b7655d44e2d2baa690",
+      "repme:platform": "darwin-25.5.0-arm64",
+      "repme:pythonVersion": "3.11.15",
+      "schema:dateCreated": "2026-06-15T07:36:06.396709Z",
+      "schema:hasPart": [
+        {
+          "@id": "#agent-config-agent1_entity"
+        },
+        {
+          "@id": "#agent-config-agent2a_outline"
+        },
+        {
+          "@id": "#agent-config-agent2b_card"
+        },
+        {
+          "@id": "#agent-config-agent3_critique"
+        },
+        {
+          "@id": "#agent-config-agent_classify"
+        }
+      ],
+      "schema:softwareVersion": "agentic-science-builder@0.1.0"
+    },
+    {
+      "@id": "#agent-config-agent1_entity",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v3",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent1_entity"
+    },
+    {
+      "@id": "#agent-config-agent2a_outline",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-sonnet-4-6",
+      "repme:promptVersion": "v2",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2a_outline"
+    },
+    {
+      "@id": "#agent-config-agent2b_card",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v4",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2b_card"
+    },
+    {
+      "@id": "#agent-config-agent3_critique",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent3_critique"
+    },
+    {
+      "@id": "#agent-config-agent_classify",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent_classify"
+    },
+    {
+      "@id": "urn:asb:metabolomics:unknown",
+      "@type": "Dataset",
+      "assay_type": "LC-MS/MS",
+      "instrument": null,
+      "name": "Metabolomics Study Metadata",
+      "profile": "metabolomics_lcms",
+      "reproducibility_score": 0.323
+    },
+    {
+      "@id": "artifact_provenance.json",
+      "@type": "File",
+      "name": "artifact_provenance.json",
+      "encodingFormat": "application/json"
+    },
+    {
+      "@id": "ledger/claims.jsonl",
+      "@type": "File",
+      "name": "ledger/claims.jsonl",
+      "encodingFormat": "application/jsonlines"
+    },
+    {
+      "@id": "ledger/results.jsonl",
+      "@type": "File",
+      "name": "ledger/results.jsonl",
+      "encodingFormat": "application/jsonlines"
+    }
+  ]
+}

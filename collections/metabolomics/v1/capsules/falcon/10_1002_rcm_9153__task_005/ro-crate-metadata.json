@@ -1,0 +1,893 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "asbext": "https://w3id.org/asb/indicium-ext#",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "fabio": "http://purl.org/spar/fabio/",
+      "oa": "http://www.w3.org/ns/oa#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "p-plan": "http://purl.org/net/p-plan#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "repme": "https://w3id.org/reproduceme#",
+      "sepio": "http://purl.obolibrary.org/obo/SEPIO_"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": [
+        "Dataset",
+        "repme:ScientificWorkflow"
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ],
+      "dateCreated": "2026-06-16",
+      "description": "Install falcon-ms and spectrum-utils==0.3.5, then execute the falcon command-line tool on the Bittremieux et al. 2021 public dataset to produce cluster assignments. Verify successful execution and non-empty output.",
+      "hasPart": [
+        {
+          "@id": "evidence/source_snippets.md"
+        },
+        {
+          "@id": "inputs/dataset_folder_tree.txt"
+        },
+        {
+          "@id": "inputs/dataset_preview.md"
+        },
+        {
+          "@id": "evaluation/evaluation_strategy.md"
+        },
+        {
+          "@id": "evaluation/review_rubric.json"
+        },
+        {
+          "@id": "artifact_provenance.json"
+        },
+        {
+          "@id": "ledger/claims.jsonl"
+        },
+        {
+          "@id": "ledger/results.jsonl"
+        }
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "mentions": [
+        {
+          "@id": "#action-task_005"
+        },
+        {
+          "@id": "urn:asb:task:task_005"
+        },
+        {
+          "@id": "urn:asb:claim:claim_001"
+        },
+        {
+          "@id": "urn:asb:claim:claim_002"
+        },
+        {
+          "@id": "urn:asb:claim:claim_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_004"
+        },
+        {
+          "@id": "urn:asb:claim:claim_005"
+        },
+        {
+          "@id": "urn:asb:claim:claim_006"
+        },
+        {
+          "@id": "urn:asb:claim:claim_007"
+        },
+        {
+          "@id": "urn:asb:claim:claim_008"
+        },
+        {
+          "@id": "urn:asb:claim:claim_009"
+        },
+        {
+          "@id": "urn:asb:result:result_001"
+        },
+        {
+          "@id": "urn:asb:result:result_002"
+        },
+        {
+          "@id": "urn:asb:result:result_003"
+        },
+        {
+          "@id": "urn:asb:result:result_004"
+        },
+        {
+          "@id": "urn:asb:result:result_005"
+        },
+        {
+          "@id": "urn:asb:result:result_006"
+        },
+        {
+          "@id": "urn:asb:result:result_007"
+        },
+        {
+          "@id": "urn:asb:result:result_008"
+        },
+        {
+          "@id": "urn:asb:result:result_009"
+        },
+        {
+          "@id": "#env-task_005"
+        }
+      ],
+      "name": "Reproduce the end-to-end falcon clustering run on the Bittremieux et al. 2021 dataset",
+      "repme:hasComputationalEnvironment": {
+        "@id": "#computational-environment"
+      }
+    },
+    {
+      "@id": "evidence/source_snippets.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evidence/source_snippets.md"
+    },
+    {
+      "@id": "inputs/dataset_folder_tree.txt",
+      "@type": "File",
+      "encodingFormat": "text/plain",
+      "name": "inputs/dataset_folder_tree.txt"
+    },
+    {
+      "@id": "inputs/dataset_preview.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "inputs/dataset_preview.md"
+    },
+    {
+      "@id": "evaluation/evaluation_strategy.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evaluation/evaluation_strategy.md"
+    },
+    {
+      "@id": "evaluation/review_rubric.json",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "name": "evaluation/review_rubric.json"
+    },
+    {
+      "@id": "urn:asb:task:task_005",
+      "@type": [
+        "ScholarlyArticle",
+        "p-plan:Plan",
+        "http://purl.org/spar/fabio/ResearchPaper"
+      ],
+      "asbext:task_kind": "reproduction",
+      "description": "Install falcon-ms and spectrum-utils==0.3.5, then execute the falcon command-line tool on the Bittremieux et al. 2021 public dataset to produce cluster assignments. Verify successful execution and non-empty output.",
+      "keywords": [
+        "command-line-tool-execution",
+        "python-package-installation-and-dependency-management",
+        "tandem-mass-spectrum-clustering",
+        "spectrum-similarity-nearest-neighbor-indexing"
+      ],
+      "name": "Reproduce the end-to-end falcon clustering run on the Bittremieux et al. 2021 dataset",
+      "repme:hasResearcher": [
+        {
+          "@id": "urn:asb:researcher:wout-bittremieux-2021"
+        },
+        {
+          "@id": "urn:asb:researcher:kris-laukens-2021"
+        },
+        {
+          "@id": "urn:asb:researcher:stafford-noble-2021"
+        },
+        {
+          "@id": "urn:asb:researcher:c-dorrestein-2021"
+        }
+      ],
+      "sameAs": "https://doi.org/10.1002/rcm.9153#task_005",
+      "schema:identifier": "10.1002/rcm.9153"
+    },
+    {
+      "@id": "urn:asb:researcher:wout-bittremieux-2021",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Bittremieux, Wout"
+    },
+    {
+      "@id": "urn:asb:researcher:kris-laukens-2021",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Laukens, Kris"
+    },
+    {
+      "@id": "urn:asb:researcher:stafford-noble-2021",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Noble, William Stafford"
+    },
+    {
+      "@id": "urn:asb:researcher:c-dorrestein-2021",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Dorrestein, Pieter C."
+    },
+    {
+      "@id": "urn:asb:tool:falcon",
+      "@type": "SoftwareApplication",
+      "name": "falcon",
+      "schema:url": "https://github.com/bittremieuxlab/falcon"
+    },
+    {
+      "@id": "urn:asb:tool:spectrum-utils-0-3-5",
+      "@type": "SoftwareApplication",
+      "name": "spectrum-utils==0.3.5",
+      "schema:version": "0.3.5"
+    },
+    {
+      "@id": "urn:asb:tool:python-3-8",
+      "@type": "SoftwareApplication",
+      "name": "Python 3.8+",
+      "schema:version": "3.8"
+    },
+    {
+      "@id": "urn:asb:input:task_005_0",
+      "@type": "File",
+      "name": "Public tandem MS/MS spectrum dataset associated with Bittremieux et al. 2021 (doi:10.1002/rcm.9153)"
+    },
+    {
+      "@id": "urn:asb:output:task_005_0",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Cluster assignment output file produced by falcon command-line tool",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_005"
+      }
+    },
+    {
+      "@id": "#action-task_005",
+      "@type": [
+        "CreateAction",
+        "prov:Activity",
+        "p-plan:Step"
+      ],
+      "description": "Install falcon-ms and spectrum-utils==0.3.5, then execute the falcon command-line tool on the Bittremieux et al. 2021 public dataset to produce cluster assignments. Verify successful execution and non-empty output.",
+      "instrument": [
+        {
+          "@id": "urn:asb:tool:falcon"
+        },
+        {
+          "@id": "urn:asb:tool:spectrum-utils-0-3-5"
+        },
+        {
+          "@id": "urn:asb:tool:python-3-8"
+        }
+      ],
+      "name": "Reproduce the end-to-end falcon clustering run on the Bittremieux et al. 2021 dataset",
+      "object": [
+        {
+          "@id": "urn:asb:input:task_005_0"
+        }
+      ],
+      "repme:hasInputData": [
+        {
+          "@id": "urn:asb:input:task_005_0"
+        }
+      ],
+      "repme:hasOutputData": [
+        {
+          "@id": "urn:asb:output:task_005_0"
+        }
+      ],
+      "repme:hasResult": [
+        {
+          "@id": "urn:asb:result:result_001"
+        },
+        {
+          "@id": "urn:asb:result:result_002"
+        },
+        {
+          "@id": "urn:asb:result:result_003"
+        },
+        {
+          "@id": "urn:asb:result:result_004"
+        },
+        {
+          "@id": "urn:asb:result:result_005"
+        },
+        {
+          "@id": "urn:asb:result:result_006"
+        },
+        {
+          "@id": "urn:asb:result:result_007"
+        },
+        {
+          "@id": "urn:asb:result:result_008"
+        },
+        {
+          "@id": "urn:asb:result:result_009"
+        }
+      ],
+      "result": [
+        {
+          "@id": "urn:asb:output:task_005_0"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:claim:claim_001",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The falcon spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 272,
+          "oa:start": 136
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_falcon/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The falcon spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "spectrum clustering application",
+        "object": "millions of MS/MS spectra",
+        "qualifier": "enables",
+        "relation": "enables highly efficient processing",
+        "subject": "falcon spectrum clustering tool"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_002",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "High-resolution spectra are binned and converted to low-dimensional vectors using feature hashing."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 378,
+          "oa:start": 280
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_falcon/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "High-resolution spectra are binned and converted to low-dimensional vectors using feature hashing.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "falcon spectrum processing pipeline",
+        "object": "feature hashing representation",
+        "qualifier": "produces",
+        "relation": "are converted to low-dimensional vectors",
+        "subject": "high-resolution spectra"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_003",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Spectrum vectors are used to construct nearest neighbor indexes for fast similarity searching."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 483,
+          "oa:start": 385
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_falcon/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Spectrum vectors are used to construct nearest neighbor indexes for fast similarity searching.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "falcon spectrum clustering pipeline",
+        "object": "rapid spectrum comparison",
+        "qualifier": "enables",
+        "relation": "enable fast similarity searching",
+        "subject": "nearest neighbor indexes"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_004",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Nearest neighbor indexes are used to efficiently compute a sparse pairwise distance matrix without exhaustively comparing all spectra."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 644,
+          "oa:start": 484
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_falcon/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Nearest neighbor indexes are used to efficiently compute a sparse pairwise distance matrix without exhaustively comparing all spectra.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "falcon spectrum clustering pipeline",
+        "object": "avoidance of exhaustive pairwise comparisons",
+        "qualifier": "enables",
+        "relation": "enable efficient computation of sparse distance matrix",
+        "subject": "nearest neighbor indexes"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_005",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Density-based clustering is performed to group similar spectra into clusters."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 738,
+          "oa:start": 661
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_falcon/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Density-based clustering is performed to group similar spectra into clusters.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "falcon spectrum clustering pipeline",
+        "object": "similar spectrum clusters",
+        "qualifier": "produces",
+        "relation": "groups spectra into clusters",
+        "subject": "density-based clustering"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_006",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The falcon software is available as open-source under the BSD license."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 811,
+          "oa:start": 740
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_falcon/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The falcon software is available as open-source under the BSD license.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "falcon software distribution",
+        "object": "BSD license",
+        "qualifier": "has_property",
+        "relation": "is available as open-source",
+        "subject": "falcon software"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_007",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "falcon requires Python 3.8+ and is available on the Linux and OSX platforms."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1017,
+          "oa:start": 928
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_falcon/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "falcon requires Python 3.8+ and is available on the Linux and OSX platforms.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "falcon software deployment",
+        "object": "Python 3.8+, Linux, OSX platforms",
+        "qualifier": "requires",
+        "relation": "requires Python version and specific operating systems",
+        "subject": "falcon"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_008",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "falcon can be installed via pip with the command: pip install falcon-ms spectrum-utils==0.3.5"
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1108,
+          "oa:start": 1019
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_falcon/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "falcon can be installed via pip with the command: pip install falcon-ms spectrum-utils==0.3.5",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "falcon software installation",
+        "object": "falcon-ms and spectrum-utils==0.3.5",
+        "qualifier": "requires",
+        "relation": "requires specific pip packages for installation",
+        "subject": "falcon"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_009",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The primary citation for falcon is Bittremieux et al. (2021) in Rapid Communications in Mass Spectrometry."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1097,
+          "oa:start": 874
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_falcon/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The primary citation for falcon is Bittremieux et al. (2021) in Rapid Communications in Mass Spectrometry.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:result:result_001",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The falcon spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_001"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_002",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "High-resolution spectra are binned and converted to low-dimensional vectors using feature hashing.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_002"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_003",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Spectrum vectors are used to construct nearest neighbor indexes for fast similarity searching.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_003"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_004",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Nearest neighbor indexes are used to efficiently compute a sparse pairwise distance matrix without exhaustively comparing all spectra.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_004"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_005",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Density-based clustering is performed to group similar spectra into clusters.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_005"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_006",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The falcon software is available as open-source under the BSD license.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_006"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_007",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "falcon requires Python 3.8+ and is available on the Linux and OSX platforms.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_007"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_008",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "falcon can be installed via pip with the command: pip install falcon-ms spectrum-utils==0.3.5",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_008"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_009",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The primary citation for falcon is Bittremieux et al.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_009"
+        }
+      ]
+    },
+    {
+      "@id": "#env-task_005",
+      "@type": [
+        "repme:ComputationalEnvironment"
+      ],
+      "repme:computeTier": "light"
+    },
+    {
+      "@id": "#agent-15-activity-task_005",
+      "@type": [
+        "prov:Activity"
+      ],
+      "prov:endedAtTime": "2026-06-16T07:30:54.125861+00:00",
+      "prov:qualifiedUsage": {
+        "@type": "prov:Usage",
+        "schema:name": "prompt_sha256",
+        "schema:value": "98cbb59fd13f8872"
+      },
+      "prov:wasAssociatedWith": {
+        "schema:name": "anthropic/claude-haiku-4-5-20251001"
+      },
+      "schema:name": "Agent 1.5 Claim Extractor"
+    },
+    {
+      "@id": "#computational-environment",
+      "@type": "repme:ComputationalEnvironment",
+      "repme:buildId": "0E708514E0A64CCD9FABEFC03E419C58",
+      "repme:depsHash": null,
+      "repme:gitCommit": "8713018e077e78db4e0defb776d2c7f494485e53",
+      "repme:platform": "darwin-25.5.0-arm64",
+      "repme:pythonVersion": "3.11.15",
+      "schema:dateCreated": "2026-06-16T07:27:41.703739Z",
+      "schema:hasPart": [
+        {
+          "@id": "#agent-config-agent1_entity"
+        },
+        {
+          "@id": "#agent-config-agent2a_outline"
+        },
+        {
+          "@id": "#agent-config-agent2b_card"
+        },
+        {
+          "@id": "#agent-config-agent3_critique"
+        },
+        {
+          "@id": "#agent-config-agent_classify"
+        }
+      ],
+      "schema:softwareVersion": "agentic-science-builder@0.1.0"
+    },
+    {
+      "@id": "#agent-config-agent1_entity",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v3",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent1_entity"
+    },
+    {
+      "@id": "#agent-config-agent2a_outline",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-sonnet-4-6",
+      "repme:promptVersion": "v2",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2a_outline"
+    },
+    {
+      "@id": "#agent-config-agent2b_card",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v4",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2b_card"
+    },
+    {
+      "@id": "#agent-config-agent3_critique",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent3_critique"
+    },
+    {
+      "@id": "#agent-config-agent_classify",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent_classify"
+    },
+    {
+      "@id": "artifact_provenance.json",
+      "@type": "File",
+      "name": "artifact_provenance.json",
+      "encodingFormat": "application/json"
+    },
+    {
+      "@id": "ledger/claims.jsonl",
+      "@type": "File",
+      "name": "ledger/claims.jsonl",
+      "encodingFormat": "application/jsonlines"
+    },
+    {
+      "@id": "ledger/results.jsonl",
+      "@type": "File",
+      "name": "ledger/results.jsonl",
+      "encodingFormat": "application/jsonlines"
+    }
+  ]
+}

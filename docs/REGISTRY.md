@@ -538,7 +538,7 @@ follows.
 | --- | --- |
 | `collection.yaml` schema compliance | Nothing. `layout_packaging` checks the on-disk layout and `unit_closure` that every declared member resolves, and `--catalogue-membership` checks that the catalogue's advertised members exist — none of them validates `collection.yaml` against a schema. `validate.yml` gate 1 does not either: it calls `linkml-validate --schema asb_skill_bundle.yaml`, a file that ships in the sibling `asb-schema` package and exists nowhere here, so every run failed with "File 'asb_skill_bundle.yaml' does not exist" behind `continue-on-error`. Measured against `asb-schema` v0.2 locally, the four manifests also carry seven fields (ten for `metabolomics/v2`) that its `SkillCollection` class does not declare. |
 | All `derived_from` DOIs resolve | `provenance_doi_license` checks that each leaf carries a source DOI **or** a repository URL, plus a licence tag. Nothing in this repository resolves a DOI over the network. |
-| RO-Crate metadata validity | No replacement, and nothing claims otherwise. The release gate contains no RO-Crate check, `validate.yml` gate 8 finds no crate to validate, and the `ro_crate_path` field was dropped from the four manifests rather than left pointing at a file no collection ships. Shipping crates is v1 work; it would make gate 8 real. |
+| RO-Crate metadata validity | `validate.yml` gate 8, blocking, since 2026-09-14. Every released capsule ships the crate its build wrote, pruned at promotion to what the capsule holds (`scripts/release_capsule_truth.py`), and the gate holds each to `crate_problems`: RO-Crate 1.1 context and descriptor, a root `Dataset`, every held file described and listed in `hasPart`, no entity naming a file the capsule does not hold, no absolute filesystem path. The build crates also claim Workflow Run Profile 0.5 but lack its `mainEntity`; the release copy drops that claim rather than ship one nothing checks. `release_gate.py` itself still has no RO-Crate check, and no manifest declares `ro_crate_path`: the crates are per capsule, not per collection. |
 | SKILL.md frontmatter discipline (description length, no marketing terms) | `python scripts/lint_skill_descriptions.py` — a separate script, not part of the gate. |
 | Open-access source tags (if `--require-open-access`) | `access_tier_oa`, which runs unconditionally; `release_gate.py` has no `--require-open-access` flag. |
 
@@ -662,7 +662,7 @@ The promotion step is manual (move the directory), not automated. This allows:
 | **DOI resolution** | `validate.yml` gate 2 | PR | every commit |
 | **Description discipline** | `validate.yml` gate 5 | PR | every commit |
 | **EDAM IRI resolution** | `validate.yml` gate 6 | PR | every commit |
-| **RO-Crate validity** | `validate.yml` gate 8 | no — `continue-on-error`, and it currently validates zero files | every commit |
+| **RO-Crate validity** | `validate.yml` gate 8 | PR — every released capsule's crate, held to RO-Crate 1.1 | every commit |
 | **indicium round-trip** | `validate.yml` gate 9 | PR | every commit (warn-only if indicium-adapters unavailable) |
 | **Marketplace.json schema** | `validate.yml` gate 10 | PR | every commit |
 | **Release-gate (release.yml)** | `release.yml` + human sign-off | tag | on `<slug>-v[0-9]*` tag |

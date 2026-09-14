@@ -1,0 +1,858 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "asbext": "https://w3id.org/asb/indicium-ext#",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "fabio": "http://purl.org/spar/fabio/",
+      "oa": "http://www.w3.org/ns/oa#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "p-plan": "http://purl.org/net/p-plan#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "repme": "https://w3id.org/reproduceme#",
+      "sepio": "http://purl.obolibrary.org/obo/SEPIO_"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": [
+        "Dataset",
+        "repme:ScientificWorkflow"
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ],
+      "dateCreated": "2026-06-16",
+      "description": "Implement the sinusoidal formula embedding layer as used in MIST-CF and verify that embedding vectors produced for a set of chemical formulas match expected numerical properties (dimensionality, value range, reproducibility) against reference outputs from the MIST-CF repository.",
+      "hasPart": [
+        {
+          "@id": "evidence/source_snippets.md"
+        },
+        {
+          "@id": "inputs/dataset_folder_tree.txt"
+        },
+        {
+          "@id": "inputs/dataset_preview.md"
+        },
+        {
+          "@id": "evaluation/evaluation_strategy.md"
+        },
+        {
+          "@id": "evaluation/review_rubric.json"
+        },
+        {
+          "@id": "artifact_provenance.json"
+        },
+        {
+          "@id": "ledger/claims.jsonl"
+        },
+        {
+          "@id": "ledger/results.jsonl"
+        }
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "mentions": [
+        {
+          "@id": "#action-task_004"
+        },
+        {
+          "@id": "urn:asb:task:task_004"
+        },
+        {
+          "@id": "urn:asb:claim:claim_001"
+        },
+        {
+          "@id": "urn:asb:claim:claim_002"
+        },
+        {
+          "@id": "urn:asb:claim:claim_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_004"
+        },
+        {
+          "@id": "urn:asb:claim:claim_005"
+        },
+        {
+          "@id": "urn:asb:claim:claim_006"
+        },
+        {
+          "@id": "urn:asb:claim:claim_007"
+        },
+        {
+          "@id": "urn:asb:claim:claim_008"
+        },
+        {
+          "@id": "urn:asb:result:result_001"
+        },
+        {
+          "@id": "urn:asb:result:result_002"
+        },
+        {
+          "@id": "urn:asb:result:result_003"
+        },
+        {
+          "@id": "urn:asb:result:result_004"
+        },
+        {
+          "@id": "urn:asb:result:result_005"
+        },
+        {
+          "@id": "urn:asb:result:result_006"
+        },
+        {
+          "@id": "urn:asb:result:result_007"
+        },
+        {
+          "@id": "urn:asb:result:result_008"
+        },
+        {
+          "@id": "#env-task_004"
+        }
+      ],
+      "name": "Reconstruct sinusoidal formula embeddings from the SCARF component within MIST-CF",
+      "repme:hasComputationalEnvironment": {
+        "@id": "#computational-environment"
+      }
+    },
+    {
+      "@id": "evidence/source_snippets.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evidence/source_snippets.md"
+    },
+    {
+      "@id": "inputs/dataset_folder_tree.txt",
+      "@type": "File",
+      "encodingFormat": "text/plain",
+      "name": "inputs/dataset_folder_tree.txt"
+    },
+    {
+      "@id": "inputs/dataset_preview.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "inputs/dataset_preview.md"
+    },
+    {
+      "@id": "evaluation/evaluation_strategy.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evaluation/evaluation_strategy.md"
+    },
+    {
+      "@id": "evaluation/review_rubric.json",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "name": "evaluation/review_rubric.json"
+    },
+    {
+      "@id": "urn:asb:task:task_004",
+      "@type": [
+        "ScholarlyArticle",
+        "p-plan:Plan",
+        "http://purl.org/spar/fabio/ResearchPaper"
+      ],
+      "asbext:task_kind": "component_reconstruction",
+      "description": "Implement the sinusoidal formula embedding layer as used in MIST-CF and verify that embedding vectors produced for a set of chemical formulas match expected numerical properties (dimensionality, value range, reproducibility) against reference outputs from the MIST-CF repository.",
+      "keywords": [
+        "sinusoidal-embedding-implementation",
+        "chemical-formula-representation",
+        "neural-network-layer-instantiation",
+        "embedding-vector-validation",
+        "numerical-reproducibility-testing",
+        "repository-code-integration"
+      ],
+      "name": "Reconstruct sinusoidal formula embeddings from the SCARF component within MIST-CF",
+      "prov:wasInfluencedBy": [
+        {
+          "@id": "urn:asb:task:task_001"
+        }
+      ],
+      "repme:hasResearcher": [
+        {
+          "@id": "urn:asb:researcher:samuel-goldman-2023"
+        },
+        {
+          "@id": "urn:asb:researcher:jiayi-xin-2023"
+        },
+        {
+          "@id": "urn:asb:researcher:joules-provenzano-2023"
+        },
+        {
+          "@id": "urn:asb:researcher:w-coley-2023"
+        }
+      ],
+      "sameAs": "https://doi.org/10.1021/acs.jcim.3c01082#task_004",
+      "schema:identifier": "10.1021/acs.jcim.3c01082"
+    },
+    {
+      "@id": "urn:asb:researcher:samuel-goldman-2023",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Goldman, Samuel"
+    },
+    {
+      "@id": "urn:asb:researcher:jiayi-xin-2023",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Xin, Jiayi"
+    },
+    {
+      "@id": "urn:asb:researcher:joules-provenzano-2023",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Provenzano, Joules"
+    },
+    {
+      "@id": "urn:asb:researcher:w-coley-2023",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Coley, Connor W."
+    },
+    {
+      "@id": "urn:asb:tool:mist",
+      "@type": "SoftwareApplication",
+      "name": "MIST"
+    },
+    {
+      "@id": "urn:asb:tool:scarf",
+      "@type": "SoftwareApplication",
+      "name": "SCARF"
+    },
+    {
+      "@id": "urn:asb:tool:mist-cf",
+      "@type": "SoftwareApplication",
+      "name": "MIST-CF"
+    },
+    {
+      "@id": "urn:asb:input:task_004_0",
+      "@type": "File",
+      "name": "MIST-CF repository (samgoldman97/mist-cf) containing sinusoidal formula embedding implementation"
+    },
+    {
+      "@id": "urn:asb:input:task_004_1",
+      "@type": "File",
+      "name": "Representative set of chemical formulas for embedding verification (e.g., C6H12O6, C3H7NO2, C8H10N4O2)"
+    },
+    {
+      "@id": "urn:asb:output:task_004_0",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Embedding vectors for each input chemical formula with shape (num_formulas, embedding_dimension)",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_004"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_004_1",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Validation report confirming dimensionality, value range, and reproducibility against reference outputs",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_004"
+      }
+    },
+    {
+      "@id": "#action-task_004",
+      "@type": [
+        "CreateAction",
+        "prov:Activity",
+        "p-plan:Step"
+      ],
+      "description": "Implement the sinusoidal formula embedding layer as used in MIST-CF and verify that embedding vectors produced for a set of chemical formulas match expected numerical properties (dimensionality, value range, reproducibility) against reference outputs from the MIST-CF repository.",
+      "instrument": [
+        {
+          "@id": "urn:asb:tool:mist"
+        },
+        {
+          "@id": "urn:asb:tool:scarf"
+        },
+        {
+          "@id": "urn:asb:tool:mist-cf"
+        }
+      ],
+      "name": "Reconstruct sinusoidal formula embeddings from the SCARF component within MIST-CF",
+      "object": [
+        {
+          "@id": "urn:asb:input:task_004_0"
+        },
+        {
+          "@id": "urn:asb:input:task_004_1"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "urn:asb:port:task_001/top_k_accuracy_scores"
+        }
+      ],
+      "repme:hasInputData": [
+        {
+          "@id": "urn:asb:input:task_004_0"
+        },
+        {
+          "@id": "urn:asb:input:task_004_1"
+        }
+      ],
+      "repme:hasOutputData": [
+        {
+          "@id": "urn:asb:output:task_004_0"
+        },
+        {
+          "@id": "urn:asb:output:task_004_1"
+        }
+      ],
+      "repme:hasResult": [
+        {
+          "@id": "urn:asb:result:result_008"
+        }
+      ],
+      "result": [
+        {
+          "@id": "urn:asb:output:task_004_0"
+        },
+        {
+          "@id": "urn:asb:output:task_004_1"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:claim:claim_001",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MIST-CF is an extension of MIST for annotating MS1 precursor masses from MS/MS data in a de novo setting."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 507,
+          "oa:start": 364
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mistcf/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "MIST-CF is an extension of MIST for annotating MS1 precursor masses from MS/MS data in a de novo setting.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "metabolomics data analysis",
+        "object": "MS1 precursor mass annotation from MS/MS data in de novo setting",
+        "qualifier": "is_a",
+        "relation": "is an extension designed for annotating precursor masses",
+        "subject": "MIST-CF"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_002",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 693,
+          "oa:start": 508
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mistcf/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "unknown mass spectrum analysis",
+        "object": "ranked formula and adduct assignments",
+        "qualifier": "has_property",
+        "relation": "ranks chemical formula and adduct assignments using energy-based modeling",
+        "subject": "MIST-CF"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_003",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MIST-CF does not reference any spectrum databases in its approach."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 732,
+          "oa:start": 694
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mistcf/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "MIST-CF does not reference any spectrum databases in its approach.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "chemical formula inference",
+        "object": "database-independent operation",
+        "qualifier": "has_property",
+        "relation": "operates without referencing spectrum databases",
+        "subject": "MIST-CF"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_004",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MIST-CF adopts a formula transformer neural network architecture."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 801,
+          "oa:start": 733
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mistcf/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "MIST-CF adopts a formula transformer neural network architecture.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "chemical formula inference",
+        "object": "formula transformer neural network",
+        "qualifier": "has_property",
+        "relation": "adopts formula transformer neural network architecture",
+        "subject": "MIST-CF"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_005",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MIST-CF learns in a data dependent fashion instead of computing fragmentation trees."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1042,
+          "oa:start": 802
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mistcf/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "MIST-CF learns in a data dependent fashion instead of computing fragmentation trees.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "chemical formula transformer design",
+        "object": "data-dependent learning approach",
+        "qualifier": "has_property",
+        "relation": "learns in data-dependent fashion avoiding fragmentation trees",
+        "subject": "MIST-CF"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_006",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MIST-CF utilizes an internal chemical subformula assignment protocol rather than SIRIUS fragmentation trees."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1042,
+          "oa:start": 945
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mistcf/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "MIST-CF utilizes an internal chemical subformula assignment protocol rather than SIRIUS fragmentation trees.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "chemical formula transformer architecture",
+        "object": "subformula assignment protocol",
+        "qualifier": "has_property",
+        "relation": "utilizes internal chemical subformula assignment instead of SIRIUS fragmentation trees",
+        "subject": "MIST-CF"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_007",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MIST-CF considers multiple adduct types beyond [M+H]+ in positive mode."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1119,
+          "oa:start": 1044
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mistcf/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "MIST-CF considers multiple adduct types beyond [M+H]+ in positive mode.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "adduct type assignment",
+        "object": "multiple adduct types beyond [M+H]+",
+        "qualifier": "has_property",
+        "relation": "considers multiple adduct types in positive mode",
+        "subject": "MIST-CF"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_008",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MIST-CF utilizes sinusoidal formula embeddings as developed in the prior work SCARF."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1240,
+          "oa:start": 1121
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mistcf/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "MIST-CF utilizes sinusoidal formula embeddings as developed in the prior work SCARF.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "formula embedding representation",
+        "object": "sinusoidal formula embeddings",
+        "qualifier": "has_property",
+        "relation": "utilizes sinusoidal formula embeddings from SCARF",
+        "subject": "MIST-CF"
+      }
+    },
+    {
+      "@id": "urn:asb:result:result_001",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MIST-CF is an extension of MIST for annotating MS1 precursor masses from MS/MS data in a de novo setting.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_001"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_002",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_002"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_003",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MIST-CF does not reference any spectrum databases in its approach.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_003"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_004",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MIST-CF adopts a formula transformer neural network architecture.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_004"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_005",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MIST-CF learns in a data dependent fashion instead of computing fragmentation trees.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_005"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_006",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MIST-CF utilizes an internal chemical subformula assignment protocol rather than SIRIUS fragmentation trees.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_006"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_007",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MIST-CF considers multiple adduct types beyond [M+H]+ in positive mode.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_007"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_008",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MIST-CF utilizes sinusoidal formula embeddings as developed in the prior work SCARF.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_008"
+        }
+      ]
+    },
+    {
+      "@id": "#env-task_004",
+      "@type": [
+        "repme:ComputationalEnvironment"
+      ],
+      "repme:computeTier": "trivial"
+    },
+    {
+      "@id": "#agent-15-activity-task_004",
+      "@type": [
+        "prov:Activity"
+      ],
+      "prov:endedAtTime": "2026-06-16T07:10:26.913608+00:00",
+      "prov:qualifiedUsage": {
+        "@type": "prov:Usage",
+        "schema:name": "prompt_sha256",
+        "schema:value": "bcf3f2758986c75d"
+      },
+      "prov:wasAssociatedWith": {
+        "schema:name": "anthropic/claude-haiku-4-5-20251001"
+      },
+      "schema:name": "Agent 1.5 Claim Extractor"
+    },
+    {
+      "@id": "#computational-environment",
+      "@type": "repme:ComputationalEnvironment",
+      "repme:buildId": "B5BEB2596A8344738657EB713F7A1518",
+      "repme:depsHash": null,
+      "repme:gitCommit": "8713018e077e78db4e0defb776d2c7f494485e53",
+      "repme:platform": "darwin-25.5.0-arm64",
+      "repme:pythonVersion": "3.11.15",
+      "schema:dateCreated": "2026-06-16T07:03:43.934252Z",
+      "schema:hasPart": [
+        {
+          "@id": "#agent-config-agent1_entity"
+        },
+        {
+          "@id": "#agent-config-agent2a_outline"
+        },
+        {
+          "@id": "#agent-config-agent2b_card"
+        },
+        {
+          "@id": "#agent-config-agent3_critique"
+        },
+        {
+          "@id": "#agent-config-agent_classify"
+        }
+      ],
+      "schema:softwareVersion": "agentic-science-builder@0.1.0"
+    },
+    {
+      "@id": "#agent-config-agent1_entity",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v3",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent1_entity"
+    },
+    {
+      "@id": "#agent-config-agent2a_outline",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-sonnet-4-6",
+      "repme:promptVersion": "v2",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2a_outline"
+    },
+    {
+      "@id": "#agent-config-agent2b_card",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v4",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2b_card"
+    },
+    {
+      "@id": "#agent-config-agent3_critique",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent3_critique"
+    },
+    {
+      "@id": "#agent-config-agent_classify",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent_classify"
+    },
+    {
+      "@id": "artifact_provenance.json",
+      "@type": "File",
+      "name": "artifact_provenance.json",
+      "encodingFormat": "application/json"
+    },
+    {
+      "@id": "ledger/claims.jsonl",
+      "@type": "File",
+      "name": "ledger/claims.jsonl",
+      "encodingFormat": "application/jsonlines"
+    },
+    {
+      "@id": "ledger/results.jsonl",
+      "@type": "File",
+      "name": "ledger/results.jsonl",
+      "encodingFormat": "application/jsonlines"
+    }
+  ]
+}

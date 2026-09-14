@@ -1,0 +1,609 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "EFO": "http://www.ebi.ac.uk/efo/EFO_",
+      "NCBITaxon": "http://purl.obolibrary.org/obo/NCBITaxon_",
+      "OBI": "http://purl.obolibrary.org/obo/OBI_",
+      "SO": "http://purl.obolibrary.org/obo/SO_",
+      "SRA": "https://www.ncbi.nlm.nih.gov/sra/",
+      "UBERON": "http://purl.obolibrary.org/obo/UBERON_",
+      "asbext": "https://w3id.org/asb/indicium-ext#",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "fabio": "http://purl.org/spar/fabio/",
+      "oa": "http://www.w3.org/ns/oa#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "p-plan": "http://purl.org/net/p-plan#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "repme": "https://w3id.org/reproduceme#",
+      "sepio": "http://purl.obolibrary.org/obo/SEPIO_"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": [
+        "Dataset",
+        "repme:ScientificWorkflow"
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ],
+      "dateCreated": "2026-06-15",
+      "description": "Run TOBIAS BINDetect to predict transcription factor occupancy by comparing ATAC-seq footprint scores at motif-matched sites across conditions, producing a structured table of bound/unbound predictions per TF motif.",
+      "hasPart": [
+        {
+          "@id": "evidence/source_snippets.md"
+        },
+        {
+          "@id": "inputs/dataset_folder_tree.txt"
+        },
+        {
+          "@id": "inputs/dataset_preview.md"
+        },
+        {
+          "@id": "evaluation/evaluation_strategy.md"
+        },
+        {
+          "@id": "evaluation/review_rubric.json"
+        },
+        {
+          "@id": "artifact_provenance.json"
+        },
+        {
+          "@id": "ledger/claims.jsonl"
+        },
+        {
+          "@id": "ledger/results.jsonl"
+        }
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "mentions": [
+        {
+          "@id": "#action-task_003"
+        },
+        {
+          "@id": "urn:asb:task:task_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_002"
+        },
+        {
+          "@id": "urn:asb:claim:claim_003"
+        },
+        {
+          "@id": "urn:asb:result:result_001"
+        },
+        {
+          "@id": "urn:asb:result:result_002"
+        },
+        {
+          "@id": "#env-task_003"
+        },
+        {
+          "@id": "http://edamontology.org/topic_0622"
+        }
+      ],
+      "name": "Reconstruct the transcription factor occupancy prediction step that classifies TF binding from footprint scores at motif sites",
+      "repme:hasComputationalEnvironment": {
+        "@id": "#computational-environment"
+      }
+    },
+    {
+      "@id": "evidence/source_snippets.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evidence/source_snippets.md"
+    },
+    {
+      "@id": "inputs/dataset_folder_tree.txt",
+      "@type": "File",
+      "encodingFormat": "text/plain",
+      "name": "inputs/dataset_folder_tree.txt"
+    },
+    {
+      "@id": "inputs/dataset_preview.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "inputs/dataset_preview.md"
+    },
+    {
+      "@id": "evaluation/evaluation_strategy.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evaluation/evaluation_strategy.md"
+    },
+    {
+      "@id": "evaluation/review_rubric.json",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "name": "evaluation/review_rubric.json"
+    },
+    {
+      "@id": "urn:asb:task:task_003",
+      "@type": [
+        "ScholarlyArticle",
+        "p-plan:Plan",
+        "http://purl.org/spar/fabio/ResearchPaper"
+      ],
+      "asbext:task_kind": "component_reconstruction",
+      "description": "Run TOBIAS BINDetect to predict transcription factor occupancy by comparing ATAC-seq footprint scores at motif-matched sites across conditions, producing a structured table of bound/unbound predictions per TF motif.",
+      "keywords": [
+        "atac-seq-footprint-scoring",
+        "transcription-factor-motif-matching",
+        "chromatin-accessibility-occupancy-prediction",
+        "tf-binding-site-classification"
+      ],
+      "name": "Reconstruct the transcription factor occupancy prediction step that classifies TF binding from footprint scores at motif sites",
+      "prov:wasInfluencedBy": [
+        {
+          "@id": "urn:asb:task:task_002"
+        }
+      ],
+      "repme:hasResearcher": [
+        {
+          "@id": "urn:asb:researcher:mette-bentsen-2020"
+        },
+        {
+          "@id": "urn:asb:researcher:philipp-goymann-2020"
+        },
+        {
+          "@id": "urn:asb:researcher:hendrik-schultheis-2020"
+        },
+        {
+          "@id": "urn:asb:researcher:kathrin-klee-2020"
+        },
+        {
+          "@id": "urn:asb:researcher:anastasiia-petrova-2020"
+        },
+        {
+          "@id": "urn:asb:researcher:ren-wiegandt-2020"
+        },
+        {
+          "@id": "urn:asb:researcher:annika-fust-2020"
+        },
+        {
+          "@id": "urn:asb:researcher:jens-preussner-2020"
+        },
+        {
+          "@id": "urn:asb:researcher:carsten-kuenne-2020"
+        },
+        {
+          "@id": "urn:asb:researcher:thomas-braun-2020"
+        },
+        {
+          "@id": "urn:asb:researcher:johnny-kim-2020"
+        },
+        {
+          "@id": "urn:asb:researcher:mario-looso-2020"
+        }
+      ],
+      "sameAs": "https://doi.org/10.1038/s41467-020-18035-1#task_003",
+      "schema:identifier": "10.1038/s41467-020-18035-1"
+    },
+    {
+      "@id": "urn:asb:researcher:mette-bentsen-2020",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Bentsen, Mette"
+    },
+    {
+      "@id": "urn:asb:researcher:philipp-goymann-2020",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Goymann, Philipp"
+    },
+    {
+      "@id": "urn:asb:researcher:hendrik-schultheis-2020",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Schultheis, Hendrik"
+    },
+    {
+      "@id": "urn:asb:researcher:kathrin-klee-2020",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Klee, Kathrin"
+    },
+    {
+      "@id": "urn:asb:researcher:anastasiia-petrova-2020",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Petrova, Anastasiia"
+    },
+    {
+      "@id": "urn:asb:researcher:ren-wiegandt-2020",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Wiegandt, René"
+    },
+    {
+      "@id": "urn:asb:researcher:annika-fust-2020",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Fust, Annika"
+    },
+    {
+      "@id": "urn:asb:researcher:jens-preussner-2020",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Preussner, Jens"
+    },
+    {
+      "@id": "urn:asb:researcher:carsten-kuenne-2020",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Kuenne, Carsten"
+    },
+    {
+      "@id": "urn:asb:researcher:thomas-braun-2020",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Braun, Thomas"
+    },
+    {
+      "@id": "urn:asb:researcher:johnny-kim-2020",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Kim, Johnny"
+    },
+    {
+      "@id": "urn:asb:researcher:mario-looso-2020",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Looso, Mario"
+    },
+    {
+      "@id": "urn:asb:tool:tobias",
+      "@type": "SoftwareApplication",
+      "name": "TOBIAS",
+      "schema:url": "https://github.com/loosolab/TOBIAS"
+    },
+    {
+      "@id": "urn:asb:input:task_003_0",
+      "@type": "File",
+      "name": "TOBIAS-preprocessed footprint score files (BIGWIG or HDF5 format) from ATAC-seq data, one per condition or replicate"
+    },
+    {
+      "@id": "urn:asb:input:task_003_1",
+      "@type": "File",
+      "name": "Motif database in JASPAR or compatible format containing transcription factor position-weight matrices"
+    },
+    {
+      "@id": "urn:asb:input:task_003_2",
+      "@type": "File",
+      "name": "Peak or genomic region coordinates (BED or NARROWPEAK format) where motif scanning will be performed"
+    },
+    {
+      "@id": "urn:asb:output:task_003_0",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Structured table (CSV/TSV) containing transcription factor motif occupancy predictions with columns: motif ID, genomic location, occupancy state (bound/unbound), binding score/probability, and conditi",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_003"
+      }
+    },
+    {
+      "@id": "#action-task_003",
+      "@type": [
+        "CreateAction",
+        "prov:Activity",
+        "p-plan:Step"
+      ],
+      "description": "Run TOBIAS BINDetect to predict transcription factor occupancy by comparing ATAC-seq footprint scores at motif-matched sites across conditions, producing a structured table of bound/unbound predictions per TF motif.",
+      "instrument": [
+        {
+          "@id": "urn:asb:tool:tobias"
+        }
+      ],
+      "name": "Reconstruct the transcription factor occupancy prediction step that classifies TF binding from footprint scores at motif sites",
+      "object": [
+        {
+          "@id": "urn:asb:input:task_003_0"
+        },
+        {
+          "@id": "urn:asb:input:task_003_1"
+        },
+        {
+          "@id": "urn:asb:input:task_003_2"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "urn:asb:port:task_002/footprint_scores_bigwig"
+        }
+      ],
+      "repme:hasInputData": [
+        {
+          "@id": "urn:asb:input:task_003_0"
+        },
+        {
+          "@id": "urn:asb:input:task_003_1"
+        },
+        {
+          "@id": "urn:asb:input:task_003_2"
+        }
+      ],
+      "repme:hasOutputData": [
+        {
+          "@id": "urn:asb:output:task_003_0"
+        }
+      ],
+      "repme:hasResult": [
+        {
+          "@id": "urn:asb:result:result_002"
+        }
+      ],
+      "result": [
+        {
+          "@id": "urn:asb:output:task_003_0"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:claim:claim_002",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "ATAC-seq applies a Tn5 Transposase to insert sequencing adapters into accessible chromatin."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 744,
+          "oa:start": 631
+        },
+        "oa:source": "urn:asb:build:asbb_epigenomics/coll_tobias/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "ATAC-seq applies a Tn5 Transposase to insert sequencing adapters into accessible chromatin.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "ATAC-seq assay",
+        "object": "accessible chromatin",
+        "qualifier": "produces",
+        "relation": "inserts sequencing adapters",
+        "subject": "Tn5 Transposase"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_003",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The local distribution of Tn5 insertions contains information about transcription factor binding due to visible depletion of insertions around sites bound by protein, known as footprints."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 918,
+          "oa:start": 746
+        },
+        "oa:source": "urn:asb:build:asbb_epigenomics/coll_tobias/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The local distribution of Tn5 insertions contains information about transcription factor binding due to visible depletion of insertions around sites bound by protein, known as footprints.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "ATAC-seq analysis",
+        "object": "depletion of insertions at protein-bound sites (footprints)",
+        "qualifier": "correlates_with",
+        "relation": "contains information about transcription factor binding",
+        "subject": "local distribution of Tn5 insertions"
+      }
+    },
+    {
+      "@id": "urn:asb:result:result_001",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "ATAC-seq applies a Tn5 Transposase to insert sequencing adapters into accessible chromatin.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_002"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_002",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The local distribution of Tn5 insertions contains information about transcription factor binding due to visible depletion of insertions around sites bound by protein, known as footprints.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_003"
+        }
+      ]
+    },
+    {
+      "@id": "#env-task_003",
+      "@type": [
+        "repme:ComputationalEnvironment"
+      ],
+      "repme:computeTier": "medium"
+    },
+    {
+      "@id": "#agent-15-activity-task_003",
+      "@type": [
+        "prov:Activity"
+      ],
+      "prov:endedAtTime": "2026-06-15T19:15:51.459284+00:00",
+      "prov:qualifiedUsage": {
+        "@type": "prov:Usage",
+        "schema:name": "prompt_sha256",
+        "schema:value": "a63e43abdae3599c"
+      },
+      "prov:wasAssociatedWith": {
+        "schema:name": "anthropic/claude-haiku-4-5-20251001"
+      },
+      "schema:name": "Agent 1.5 Claim Extractor"
+    },
+    {
+      "@id": "#computational-environment",
+      "@type": "repme:ComputationalEnvironment",
+      "repme:buildId": "F12B28CD558042CBA55A0D627DFC3D2A",
+      "repme:depsHash": null,
+      "repme:gitCommit": "ddf6c1becb15c939b16600b7655d44e2d2baa690",
+      "repme:platform": "darwin-25.5.0-arm64",
+      "repme:pythonVersion": "3.11.15",
+      "schema:dateCreated": "2026-06-15T19:12:09.182872Z",
+      "schema:hasPart": [
+        {
+          "@id": "#agent-config-agent1_entity"
+        },
+        {
+          "@id": "#agent-config-agent2a_outline"
+        },
+        {
+          "@id": "#agent-config-agent2b_card"
+        },
+        {
+          "@id": "#agent-config-agent3_critique"
+        },
+        {
+          "@id": "#agent-config-agent_classify"
+        }
+      ],
+      "schema:softwareVersion": "agentic-science-builder@0.1.0"
+    },
+    {
+      "@id": "#agent-config-agent1_entity",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v3",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent1_entity"
+    },
+    {
+      "@id": "#agent-config-agent2a_outline",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-sonnet-4-6",
+      "repme:promptVersion": "v2",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2a_outline"
+    },
+    {
+      "@id": "#agent-config-agent2b_card",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v4",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2b_card"
+    },
+    {
+      "@id": "#agent-config-agent3_critique",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent3_critique"
+    },
+    {
+      "@id": "#agent-config-agent_classify",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent_classify"
+    },
+    {
+      "@id": "http://edamontology.org/topic_0622",
+      "@type": "DefinedTerm",
+      "inDefinedTermSet": "http://edamontology.org/",
+      "name": "Genomics",
+      "termCode": "topic_0622"
+    },
+    {
+      "@id": "artifact_provenance.json",
+      "@type": "File",
+      "name": "artifact_provenance.json",
+      "encodingFormat": "application/json"
+    },
+    {
+      "@id": "ledger/claims.jsonl",
+      "@type": "File",
+      "name": "ledger/claims.jsonl",
+      "encodingFormat": "application/jsonlines"
+    },
+    {
+      "@id": "ledger/results.jsonl",
+      "@type": "File",
+      "name": "ledger/results.jsonl",
+      "encodingFormat": "application/jsonlines"
+    }
+  ]
+}

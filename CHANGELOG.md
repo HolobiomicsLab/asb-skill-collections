@@ -14,6 +14,21 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
 
 ## [Unreleased]
 
+### Added
+- Ship an RO-Crate with every released capsule and make `validate.yml` gate 8
+  blocking. The 417 capsules of `metabolomics/v1`, `epigenomics/v1` and
+  `transcriptomics/v1` now carry the `ro-crate-metadata.json` their build wrote,
+  imported only from a build whose shipped files are byte-identical
+  (`release_capsule_truth.py --import-crates-from`) and pruned to what the capsule
+  holds: entities for files promotion left behind are dropped with their
+  references, every held file is described and listed in `hasPart`, and 12,425
+  absolute `/outputs/` paths become `urn:asb:build:` locators. The build crates
+  claim Workflow Run Profile 0.5 without its `mainEntity`, so the release copy
+  keeps only the RO-Crate 1.1 claim. Promotion keeps and prunes the crate, and
+  gate 8 holds each capsule to `crate_problems`, failing on any problem and on
+  finding no released capsule rather than passing over zero files. The crates add
+  23 MB uncompressed, 1.9 MB compressed.
+
 ### Changed
 - Make `router` the default offline selector rule and give it a relevance-bearing
   tie-break inside an equal-score block: candidates are ordered by how many query

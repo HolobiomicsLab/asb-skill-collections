@@ -15,7 +15,8 @@
       "inputs/dataset_folder_tree.txt",
       "inputs/dataset_preview.md",
       "ledger/claims.jsonl",
-      "ledger/results.jsonl"
+      "ledger/results.jsonl",
+      "ro-crate-metadata.json"
     ],
     "omitted_from_release": [
       "task_card.json",

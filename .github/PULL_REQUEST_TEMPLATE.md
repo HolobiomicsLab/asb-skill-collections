@@ -26,7 +26,7 @@
 - [ ] `collection.yaml` validates against LinkML schema — n/a in CI while `asb-schema` is unpublished; gate 1 validates zero files
 - [ ] `curator-criteria.yaml` is filled in for the domain
 - [ ] `CITATION.cff` includes all contributors
-- [ ] RO-Crate metadata is valid (Workflow Run Profile 0.5) — n/a while no collection ships a crate
+- [ ] Every released capsule ships an RO-Crate 1.1 that describes exactly what it holds (gate 8 blocks otherwise)
 - [ ] At least 1 skill has `evidence_spans` linking to a verifiable paper quote
 - [ ] Description discipline passes CI lint (50-300 chars, "Use when..." lead)
 

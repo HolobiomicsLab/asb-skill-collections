@@ -1,0 +1,3178 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "asbext": "https://w3id.org/asb/indicium-ext#",
+      "chebi": "http://purl.obolibrary.org/obo/CHEBI_",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "fabio": "http://purl.org/spar/fabio/",
+      "ms": "http://purl.obolibrary.org/obo/MS_",
+      "ncbitaxon": "http://purl.obolibrary.org/obo/NCBITaxon_",
+      "oa": "http://www.w3.org/ns/oa#",
+      "obi": "http://purl.obolibrary.org/obo/OBI_",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "p-plan": "http://purl.org/net/p-plan#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "repme": "https://w3id.org/reproduceme#",
+      "sepio": "http://purl.obolibrary.org/obo/SEPIO_",
+      "uberon": "http://purl.obolibrary.org/obo/UBERON_"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": [
+        "Dataset",
+        "repme:ScientificWorkflow"
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ],
+      "dateCreated": "2026-06-15",
+      "description": "Compute precision and recall curves for MS2DeepScore, Spec2Vec, and classical spectral similarity on the reserved test set (3,601 spectra, 6,485,401 unique pairs) by varying Tanimoto score thresholds and measuring retrieval performance for structurally related compounds; save the precision/recall plot reproducing Figure 4.",
+      "hasPart": [
+        {
+          "@id": "evidence/source_snippets.md"
+        },
+        {
+          "@id": "inputs/dataset_folder_tree.txt"
+        },
+        {
+          "@id": "inputs/dataset_preview.md"
+        },
+        {
+          "@id": "evaluation/evaluation_strategy.md"
+        },
+        {
+          "@id": "evaluation/review_rubric.json"
+        },
+        {
+          "@id": "artifact_provenance.json"
+        },
+        {
+          "@id": "ledger/claims.jsonl"
+        },
+        {
+          "@id": "ledger/results.jsonl"
+        }
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "mentions": [
+        {
+          "@id": "#action-task_002"
+        },
+        {
+          "@id": "urn:asb:task:task_002"
+        },
+        {
+          "@id": "urn:asb:claim:claim_001"
+        },
+        {
+          "@id": "urn:asb:claim:claim_002"
+        },
+        {
+          "@id": "urn:asb:claim:claim_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_004"
+        },
+        {
+          "@id": "urn:asb:claim:claim_005"
+        },
+        {
+          "@id": "urn:asb:claim:claim_006"
+        },
+        {
+          "@id": "urn:asb:claim:claim_007"
+        },
+        {
+          "@id": "urn:asb:claim:claim_008"
+        },
+        {
+          "@id": "urn:asb:claim:claim_009"
+        },
+        {
+          "@id": "urn:asb:claim:claim_010"
+        },
+        {
+          "@id": "urn:asb:claim:claim_011"
+        },
+        {
+          "@id": "urn:asb:claim:claim_012"
+        },
+        {
+          "@id": "urn:asb:claim:claim_013"
+        },
+        {
+          "@id": "urn:asb:claim:claim_014"
+        },
+        {
+          "@id": "urn:asb:claim:claim_015"
+        },
+        {
+          "@id": "urn:asb:claim:claim_016"
+        },
+        {
+          "@id": "urn:asb:claim:claim_017"
+        },
+        {
+          "@id": "urn:asb:claim:claim_018"
+        },
+        {
+          "@id": "urn:asb:claim:claim_019"
+        },
+        {
+          "@id": "urn:asb:claim:claim_020"
+        },
+        {
+          "@id": "urn:asb:claim:claim_021"
+        },
+        {
+          "@id": "urn:asb:claim:claim_022"
+        },
+        {
+          "@id": "urn:asb:claim:claim_023"
+        },
+        {
+          "@id": "urn:asb:claim:claim_024"
+        },
+        {
+          "@id": "urn:asb:claim:claim_025"
+        },
+        {
+          "@id": "urn:asb:claim:claim_026"
+        },
+        {
+          "@id": "urn:asb:claim:claim_027"
+        },
+        {
+          "@id": "urn:asb:claim:claim_028"
+        },
+        {
+          "@id": "urn:asb:claim:claim_029"
+        },
+        {
+          "@id": "urn:asb:claim:claim_030"
+        },
+        {
+          "@id": "urn:asb:claim:claim_031"
+        },
+        {
+          "@id": "urn:asb:claim:claim_032"
+        },
+        {
+          "@id": "urn:asb:claim:claim_033"
+        },
+        {
+          "@id": "urn:asb:claim:claim_034"
+        },
+        {
+          "@id": "urn:asb:claim:claim_035"
+        },
+        {
+          "@id": "urn:asb:claim:claim_036"
+        },
+        {
+          "@id": "urn:asb:claim:claim_037"
+        },
+        {
+          "@id": "urn:asb:claim:claim_038"
+        },
+        {
+          "@id": "urn:asb:claim:claim_039"
+        },
+        {
+          "@id": "urn:asb:claim:claim_040"
+        },
+        {
+          "@id": "urn:asb:claim:claim_041"
+        },
+        {
+          "@id": "urn:asb:claim:claim_042"
+        },
+        {
+          "@id": "urn:asb:claim:claim_043"
+        },
+        {
+          "@id": "urn:asb:claim:claim_044"
+        },
+        {
+          "@id": "urn:asb:claim:claim_045"
+        },
+        {
+          "@id": "urn:asb:claim:claim_046"
+        },
+        {
+          "@id": "urn:asb:claim:claim_047"
+        },
+        {
+          "@id": "urn:asb:claim:claim_048"
+        },
+        {
+          "@id": "urn:asb:claim:claim_049"
+        },
+        {
+          "@id": "urn:asb:claim:claim_050"
+        },
+        {
+          "@id": "urn:asb:result:result_001"
+        },
+        {
+          "@id": "urn:asb:result:result_002"
+        },
+        {
+          "@id": "urn:asb:result:result_003"
+        },
+        {
+          "@id": "urn:asb:result:result_004"
+        },
+        {
+          "@id": "urn:asb:result:result_005"
+        },
+        {
+          "@id": "urn:asb:result:result_006"
+        },
+        {
+          "@id": "urn:asb:result:result_007"
+        },
+        {
+          "@id": "urn:asb:result:result_008"
+        },
+        {
+          "@id": "urn:asb:result:result_009"
+        },
+        {
+          "@id": "urn:asb:result:result_010"
+        },
+        {
+          "@id": "urn:asb:result:result_011"
+        },
+        {
+          "@id": "urn:asb:result:result_012"
+        },
+        {
+          "@id": "urn:asb:result:result_013"
+        },
+        {
+          "@id": "urn:asb:result:result_014"
+        },
+        {
+          "@id": "urn:asb:result:result_015"
+        },
+        {
+          "@id": "urn:asb:result:result_016"
+        },
+        {
+          "@id": "urn:asb:result:result_017"
+        },
+        {
+          "@id": "urn:asb:result:result_018"
+        },
+        {
+          "@id": "urn:asb:result:result_019"
+        },
+        {
+          "@id": "urn:asb:result:result_020"
+        },
+        {
+          "@id": "urn:asb:result:result_021"
+        },
+        {
+          "@id": "urn:asb:result:result_022"
+        },
+        {
+          "@id": "urn:asb:result:result_023"
+        },
+        {
+          "@id": "urn:asb:result:result_024"
+        },
+        {
+          "@id": "urn:asb:result:result_025"
+        },
+        {
+          "@id": "urn:asb:result:result_026"
+        },
+        {
+          "@id": "urn:asb:result:result_027"
+        },
+        {
+          "@id": "urn:asb:result:result_028"
+        },
+        {
+          "@id": "urn:asb:result:result_029"
+        },
+        {
+          "@id": "urn:asb:result:result_030"
+        },
+        {
+          "@id": "urn:asb:result:result_031"
+        },
+        {
+          "@id": "urn:asb:result:result_032"
+        },
+        {
+          "@id": "urn:asb:result:result_033"
+        },
+        {
+          "@id": "urn:asb:result:result_034"
+        },
+        {
+          "@id": "urn:asb:result:result_035"
+        },
+        {
+          "@id": "urn:asb:result:result_036"
+        },
+        {
+          "@id": "urn:asb:result:result_037"
+        },
+        {
+          "@id": "urn:asb:result:result_038"
+        },
+        {
+          "@id": "urn:asb:result:result_039"
+        },
+        {
+          "@id": "urn:asb:result:result_040"
+        },
+        {
+          "@id": "urn:asb:result:result_041"
+        },
+        {
+          "@id": "urn:asb:result:result_042"
+        },
+        {
+          "@id": "urn:asb:result:result_043"
+        },
+        {
+          "@id": "urn:asb:result:result_044"
+        },
+        {
+          "@id": "urn:asb:result:result_045"
+        },
+        {
+          "@id": "urn:asb:result:result_046"
+        },
+        {
+          "@id": "urn:asb:result:result_047"
+        },
+        {
+          "@id": "#env-task_002"
+        },
+        {
+          "@id": "http://edamontology.org/topic_3172"
+        }
+      ],
+      "name": "Reproduce precision–recall comparison of MS2DeepScore vs. Spec2Vec and Modified Cosine baselines",
+      "repme:hasComputationalEnvironment": {
+        "@id": "#computational-environment"
+      }
+    },
+    {
+      "@id": "evidence/source_snippets.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evidence/source_snippets.md"
+    },
+    {
+      "@id": "inputs/dataset_folder_tree.txt",
+      "@type": "File",
+      "encodingFormat": "text/plain",
+      "name": "inputs/dataset_folder_tree.txt"
+    },
+    {
+      "@id": "inputs/dataset_preview.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "inputs/dataset_preview.md"
+    },
+    {
+      "@id": "evaluation/evaluation_strategy.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evaluation/evaluation_strategy.md"
+    },
+    {
+      "@id": "evaluation/review_rubric.json",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "name": "evaluation/review_rubric.json"
+    },
+    {
+      "@id": "urn:asb:task:task_002",
+      "@type": [
+        "ScholarlyArticle",
+        "p-plan:Plan",
+        "http://purl.org/spar/fabio/ResearchPaper"
+      ],
+      "asbext:task_kind": "reproduction",
+      "description": "Compute precision and recall curves for MS2DeepScore, Spec2Vec, and classical spectral similarity on the reserved test set (3,601 spectra, 6,485,401 unique pairs) by varying Tanimoto score thresholds and measuring retrieval performance for structurally related compounds; save the precision/recall plot reproducing Figure 4.",
+      "keywords": [
+        "spectral-embedding-generation-from-neural-networks",
+        "compound-structural-similarity-retrieval",
+        "precision-recall-curve-generation-for-ranking-tasks",
+        "tanimoto-score-threshold-optimization",
+        "deep-learning-model-inference-on-test-sets"
+      ],
+      "name": "Reproduce precision–recall comparison of MS2DeepScore vs. Spec2Vec and Modified Cosine baselines",
+      "prov:wasInfluencedBy": [
+        {
+          "@id": "urn:asb:task:task_001"
+        }
+      ],
+      "repme:hasResearcher": [
+        {
+          "@id": "urn:asb:researcher:florian-huber-2021"
+        },
+        {
+          "@id": "urn:asb:researcher:sven-van-2021"
+        },
+        {
+          "@id": "urn:asb:researcher:lars-ridder-2021"
+        }
+      ],
+      "sameAs": "https://doi.org/10.1186/s13321-021-00558-4#task_002",
+      "schema:identifier": "10.1186/s13321-021-00558-4"
+    },
+    {
+      "@id": "urn:asb:researcher:florian-huber-2021",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Huber, Florian"
+    },
+    {
+      "@id": "urn:asb:researcher:sven-van-2021",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "van der Burg, Sven"
+    },
+    {
+      "@id": "urn:asb:researcher:lars-ridder-2021",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Ridder, Lars"
+    },
+    {
+      "@id": "urn:asb:tool:matchms",
+      "@type": "SoftwareApplication",
+      "name": "matchms"
+    },
+    {
+      "@id": "urn:asb:tool:ms2deepscore",
+      "@type": "SoftwareApplication",
+      "name": "MS2DeepScore",
+      "schema:url": "https://github.com/matchms/ms2deepscore"
+    },
+    {
+      "@id": "urn:asb:tool:rdkit",
+      "@type": "SoftwareApplication",
+      "name": "RDKit"
+    },
+    {
+      "@id": "urn:asb:tool:python",
+      "@type": "SoftwareApplication",
+      "name": "Python"
+    },
+    {
+      "@id": "urn:asb:tool:scikit-learn",
+      "@type": "SoftwareApplication",
+      "name": "scikit-learn"
+    },
+    {
+      "@id": "urn:asb:input:task_002_0",
+      "@type": "File",
+      "name": "Pretrained MS2DeepScore Siamese network model weights and architecture"
+    },
+    {
+      "@id": "urn:asb:input:task_002_1",
+      "@type": "File",
+      "name": "Test set spectra (3,601 spectra of 500 unique InChIKeys) with binned peak vectors and structural annotations"
+    },
+    {
+      "@id": "urn:asb:input:task_002_2",
+      "@type": "File",
+      "name": "Ground-truth Tanimoto scores matrix (500 × 500) computed from RDKit Daylight fingerprints"
+    },
+    {
+      "@id": "urn:asb:input:task_002_3",
+      "@type": "File",
+      "name": "Spec2Vec and classical spectral similarity baseline predictions on test set pairs"
+    },
+    {
+      "@id": "urn:asb:output:task_002_0",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Precision-recall curve plot comparing MS2DeepScore, Spec2Vec, and classical spectral similarity methods across Tanimoto score thresholds",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_002"
+      }
+    },
+    {
+      "@id": "#action-task_002",
+      "@type": [
+        "CreateAction",
+        "prov:Activity",
+        "p-plan:Step"
+      ],
+      "description": "Compute precision and recall curves for MS2DeepScore, Spec2Vec, and classical spectral similarity on the reserved test set (3,601 spectra, 6,485,401 unique pairs) by varying Tanimoto score thresholds and measuring retrieval performance for structurally related compounds; save the precision/recall plot reproducing Figure 4.",
+      "instrument": [
+        {
+          "@id": "urn:asb:tool:matchms"
+        },
+        {
+          "@id": "urn:asb:tool:ms2deepscore"
+        },
+        {
+          "@id": "urn:asb:tool:rdkit"
+        },
+        {
+          "@id": "urn:asb:tool:python"
+        },
+        {
+          "@id": "urn:asb:tool:scikit-learn"
+        }
+      ],
+      "name": "Reproduce precision–recall comparison of MS2DeepScore vs. Spec2Vec and Modified Cosine baselines",
+      "object": [
+        {
+          "@id": "urn:asb:input:task_002_0"
+        },
+        {
+          "@id": "urn:asb:input:task_002_1"
+        },
+        {
+          "@id": "urn:asb:input:task_002_2"
+        },
+        {
+          "@id": "urn:asb:input:task_002_3"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "urn:asb:port:task_001/rmse_no_filter"
+        }
+      ],
+      "repme:hasInputData": [
+        {
+          "@id": "urn:asb:input:task_002_0"
+        },
+        {
+          "@id": "urn:asb:input:task_002_1"
+        },
+        {
+          "@id": "urn:asb:input:task_002_2"
+        },
+        {
+          "@id": "urn:asb:input:task_002_3"
+        }
+      ],
+      "repme:hasOutputData": [
+        {
+          "@id": "urn:asb:output:task_002_0"
+        }
+      ],
+      "repme:hasResult": [
+        {
+          "@id": "urn:asb:result:result_008"
+        },
+        {
+          "@id": "urn:asb:result:result_009"
+        },
+        {
+          "@id": "urn:asb:result:result_010"
+        },
+        {
+          "@id": "urn:asb:result:result_011"
+        },
+        {
+          "@id": "urn:asb:result:result_014"
+        },
+        {
+          "@id": "urn:asb:result:result_023"
+        },
+        {
+          "@id": "urn:asb:result:result_026"
+        },
+        {
+          "@id": "urn:asb:result:result_030"
+        },
+        {
+          "@id": "urn:asb:result:result_031"
+        },
+        {
+          "@id": "urn:asb:result:result_044"
+        },
+        {
+          "@id": "urn:asb:result:result_047"
+        }
+      ],
+      "result": [
+        {
+          "@id": "urn:asb:output:task_002_0"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:claim:claim_001",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The dataset was retrieved from GNPS on 25/01/2021 and contains a total of 210,407 MS/MS spectra."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 370,
+          "oa:start": 275
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The dataset was retrieved from GNPS on 25/01/2021 and contains a total of 210,407 MS/MS spectra.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "GNPS spectral data collection",
+        "object": "210,407 MS/MS spectra",
+        "qualifier": "has_property",
+        "relation": "contains total number of spectra",
+        "subject": "MS/MS spectral dataset"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_002",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The full cleaned dataset contains 210,407 spectra, with 184,698 annotated with InChIKey and SMILES and/or InChI."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 904,
+          "oa:start": 805
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The full cleaned dataset contains 210,407 spectra, with 184,698 annotated with InChIKey and SMILES and/or InChI.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "metadata cleaning process",
+        "object": "184,698 out of 210,407 spectra",
+        "qualifier": "has_property",
+        "relation": "proportion annotated with structural identifiers",
+        "subject": "cleaned dataset"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_003",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "After filtering, the dataset resulted in 109,734 spectra with 15,062 unique InChIKeys."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1236,
+          "oa:start": 1184
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "After filtering, the dataset resulted in 109,734 spectra with 15,062 unique InChIKeys.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "spectral filtering for positive ionisation mode",
+        "object": "109,734 spectra of 15,062 unique InChIKeys",
+        "qualifier": "has_property",
+        "relation": "contains spectra and unique compounds",
+        "subject": "filtered dataset"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_004",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Peaks with intensities less than 0.1% of the maximum peak intensity were removed during spectral filtering."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1465,
+          "oa:start": 1394
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Peaks with intensities less than 0.1% of the maximum peak intensity were removed during spectral filtering.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "spectral data preprocessing",
+        "object": "< 0.1% of maximum peak intensity",
+        "qualifier": "has_property",
+        "relation": "intensity threshold for removal",
+        "subject": "peak filtering threshold"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_005",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Spectrum peaks were binned into 10,000 equally-sized bins ranging from 10 to 1000 m/z."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1869,
+          "oa:start": 1785
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Spectrum peaks were binned into 10,000 equally-sized bins ranging from 10 to 1000 m/z.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "spectral binning process",
+        "object": "10,000 bins from 10 to 1000 m/z",
+        "qualifier": "has_property",
+        "relation": "number of bins and mass range",
+        "subject": "spectrum binning strategy"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_006",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "9,948 out of 10,000 possible bins are known to the model."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2177,
+          "oa:start": 2100
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "9,948 out of 10,000 possible bins are known to the model.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "neural network training data preparation",
+        "object": "9,948 out of 10,000 bins",
+        "qualifier": "has_property",
+        "relation": "proportion of populated bins",
+        "subject": "model bin coverage"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_007",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The training set contains 102,536 spectra of 14,062 unique molecules."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 18978,
+          "oa:start": 18909
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The training set contains 102,536 spectra of 14,062 unique molecules.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "model training data composition",
+        "object": "102,536 spectra of 14,062 unique molecules",
+        "qualifier": "has_property",
+        "relation": "contains spectra and unique compounds",
+        "subject": "training set"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_008",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The validation set contains 3,597 spectra of 500 unique InChIKeys."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 18706,
+          "oa:start": 18649
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The validation set contains 3,597 spectra of 500 unique InChIKeys.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "model evaluation data composition",
+        "object": "3,597 spectra of 500 unique InChIKeys",
+        "qualifier": "has_property",
+        "relation": "contains spectra and unique compounds",
+        "subject": "validation set"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_009",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The test set contains 3,601 spectra of 500 unique InChIKeys."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2637,
+          "oa:start": 2588
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The test set contains 3,601 spectra of 500 unique InChIKeys.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "model evaluation data composition",
+        "object": "3,601 spectra of 500 unique InChIKeys",
+        "qualifier": "has_property",
+        "relation": "contains spectra and unique compounds",
+        "subject": "test set"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_010",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MS2DeepScore can predict Tanimoto scores between 0.1 and 0.9 with a RMSE between 0.13 and 0.2."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 21982,
+          "oa:start": 21901
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MS2DeepScore can predict Tanimoto scores between 0.1 and 0.9 with a RMSE between 0.13 and 0.2.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "MS2DeepScore model evaluation on test set",
+        "object": "RMSE between 0.13 and 0.2 for Tanimoto scores 0.1-0.9",
+        "qualifier": "has_property",
+        "relation": "prediction error across similarity range",
+        "subject": "MS2DeepScore predictions"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_011",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MS2DeepScore achieves a root mean squared error for predicted Tanimoto scores of about 0.15 when run without uncertainty restrictions."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 17556,
+          "oa:start": 17375
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MS2DeepScore achieves a root mean squared error for predicted Tanimoto scores of about 0.15 when run without uncertainty restrictions.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "MS2DeepScore baseline performance",
+        "object": "approximately 0.15",
+        "qualifier": "has_property",
+        "relation": "overall prediction error without uncertainty filtering",
+        "subject": "MS2DeepScore RMSE"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_012",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MS2DeepScore achieves a root mean squared error down to 0.1 with stronger restrictions on model uncertainty."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 17556,
+          "oa:start": 17488
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MS2DeepScore achieves a root mean squared error down to 0.1 with stronger restrictions on model uncertainty.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "MS2DeepScore with uncertainty filtering",
+        "object": "approximately 0.1",
+        "qualifier": "decreases",
+        "relation": "prediction error with uncertainty restrictions",
+        "subject": "MS2DeepScore RMSE"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_013",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MS2DeepScore clearly outperforms both classical measures and Spec2Vec with respect to identifying high Tanimoto pairs."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 31467,
+          "oa:start": 31384
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MS2DeepScore clearly outperforms both classical measures and Spec2Vec with respect to identifying high Tanimoto pairs.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_014",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Combining spectral predictions for the same compound pair reduces prediction error, with individual predictions showing higher RMSE than the median of predictions."
+      },
+      "oa:target": {
+        "@type": "oa:FragmentSelector",
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore",
+        "rdf:value": "fig5"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Combining spectral predictions for the same compound pair reduces prediction error, with individual predictions showing higher RMSE than the median of predictions.",
+      "source_type_uri": {
+        "@id": "http://purl.org/spar/doco/Figure"
+      },
+      "super_pattern": {
+        "context": "combining multiple spectra for same compound",
+        "object": "lower RMSE for median vs individual predictions",
+        "qualifier": "reduces",
+        "relation": "reduces prediction error compared to single predictions",
+        "subject": "median prediction strategy"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_015",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Removing outliers with interquartile range less than 0.2 retains 93% of all scores."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 33278,
+          "oa:start": 33230
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Removing outliers with interquartile range less than 0.2 retains 93% of all scores.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "outlier filtering based on prediction uncertainty",
+        "object": "93% of scores retained at IQR < 0.2",
+        "qualifier": "has_property",
+        "relation": "retention rate at IQR threshold",
+        "subject": "IQR-based filtering threshold"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_016",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "With IQR threshold less than 0.025, the average RMSE drops from about 0.17 to about 0.11."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 36196,
+          "oa:start": 35964
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "With IQR threshold less than 0.025, the average RMSE drops from about 0.17 to about 0.11.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "stringent uncertainty filtering on predictions",
+        "object": "0.17 to 0.11 at IQR < 0.025",
+        "qualifier": "decreases",
+        "relation": "reduces average RMSE with strict uncertainty threshold",
+        "subject": "Monte-Carlo Dropout filtering"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_017",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The dropout rate used in the neural network is 0.2."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1708,
+          "oa:start": 1696
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The dropout rate used in the neural network is 0.2.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "neural network regularization parameters",
+        "object": "0.2",
+        "qualifier": "has_property",
+        "relation": "dropout rate setting",
+        "subject": "dropout regularization"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_018",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The network uses L1 and L2 weight regularization with value 10^-6 in the first dense layer."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6773,
+          "oa:start": 6703
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The network uses L1 and L2 weight regularization with value 10^-6 in the first dense layer.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "neural network regularization parameters",
+        "object": "L1 and L2 both at 10^-6",
+        "qualifier": "has_property",
+        "relation": "regularization coefficients",
+        "subject": "weight regularization"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_019",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "For Monte-Carlo Dropout ensembles, N=10 embeddings were created from networks with dropout enabled."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7298,
+          "oa:start": 7212
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "For Monte-Carlo Dropout ensembles, N=10 embeddings were created from networks with dropout enabled.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "uncertainty quantification using Monte-Carlo Dropout",
+        "object": "10 embeddings",
+        "qualifier": "has_property",
+        "relation": "number of stochastic embeddings generated",
+        "subject": "ensemble size"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_020",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The neural network was trained using the Adam optimizer with a learning rate of 0.001."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7617,
+          "oa:start": 7457
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The neural network was trained using the Adam optimizer with a learning rate of 0.001.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "neural network training configuration",
+        "object": "0.001",
+        "qualifier": "has_property",
+        "relation": "learning rate setting",
+        "subject": "Adam optimizer"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_021",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "A batch size of 32 was used during model training."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7586,
+          "oa:start": 7560
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "A batch size of 32 was used during model training.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "neural network training configuration",
+        "object": "32",
+        "qualifier": "has_property",
+        "relation": "batch size during training",
+        "subject": "batch size"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_022",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Training continued until the validation loss did not decrease for 5 epochs using early stopping."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7687,
+          "oa:start": 7625
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Training continued until the validation loss did not decrease for 5 epochs using early stopping.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "neural network training termination",
+        "object": "5 epochs",
+        "qualifier": "has_property",
+        "relation": "patience epochs for no validation improvement",
+        "subject": "early stopping criterion"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_023",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The base network creates abstract embeddings with 200-dimensional vectors."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6477,
+          "oa:start": 6423
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The base network creates abstract embeddings with 200-dimensional vectors.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "Siamese network architecture",
+        "object": "200-dimensional vectors",
+        "qualifier": "has_property",
+        "relation": "dimension of output embeddings",
+        "subject": "spectral embedding dimension"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_024",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The first two densely connected layers each have 500 nodes."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6409,
+          "oa:start": 6362
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The first two densely connected layers each have 500 nodes.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "Siamese network architecture",
+        "object": "500 nodes per layer",
+        "qualifier": "has_property",
+        "relation": "node count in dense layers",
+        "subject": "hidden layer nodes"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_025",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Predicting all possible similarity scores between 3,601 test spectra (6,485,401 unique pairs) took 5-10 minutes on an Intel i7-8550U CPU."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 39709,
+          "oa:start": 39498
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Predicting all possible similarity scores between 3,601 test spectra (6,485,401 unique pairs) took 5-10 minutes on an Intel i7-8550U CPU.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "computational performance of MS2DeepScore",
+        "object": "5-10 minutes for 6,485,401 pairs",
+        "qualifier": "has_property",
+        "relation": "execution time on consumer CPU",
+        "subject": "inference time for full test set"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_026",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The t-SNE visualization was performed using cosine metric, perplex ity of 100, learning rate of 200, and 1000 iterations."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 8959,
+          "oa:start": 8860
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The t-SNE visualization was performed using cosine metric, perplex ity of 100, learning rate of 200, and 1000 iterations.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "embedding visualization parameters",
+        "object": "cosine metric, perplexity 100, learning rate 200",
+        "qualifier": "has_property",
+        "relation": "hyperparameters for dimensionality reduction",
+        "subject": "t-SNE algorithm settings"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_027",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The test set contains 14 chemical superclasses, 99 different chemical classes and 140 different chemical subclasses."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 42384,
+          "oa:start": 42245
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The test set contains 14 chemical superclasses, 99 different chemical classes and 140 different chemical subclasses.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "test set chemical diversity assessment",
+        "object": "14 superclasses, 99 classes, 140 subclasses",
+        "qualifier": "has_property",
+        "relation": "chemical classification diversity",
+        "subject": "test set composition"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_028",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MS2DeepScore achieves a mean absolute error of about 0.12."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 43194,
+          "oa:start": 43152
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MS2DeepScore achieves a mean absolute error of about 0.12.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "MS2DeepScore model accuracy",
+        "object": "approximately 0.12",
+        "qualifier": "has_property",
+        "relation": "mean absolute error",
+        "subject": "MS2DeepScore predictions"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_029",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Low-intensity peak removal data augmentation randomly removes non-zero bins with intensity below 0.4 in 0-20% of cases."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5041,
+          "oa:start": 4981
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Low-intensity peak removal data augmentation randomly removes non-zero bins with intensity below 0.4 in 0-20% of cases.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "data augmentation strategy",
+        "object": "0-20% removal rate for peaks with intensity < 0.4",
+        "qualifier": "has_property",
+        "relation": "augmentation parameter ranges",
+        "subject": "low-intensity peak removal"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_030",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Peak intensity jitter data augmentation applies changes between 0% and 40% to non-zero bin intensities."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5227,
+          "oa:start": 5140
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Peak intensity jitter data augmentation applies changes between 0% and 40% to non-zero bin intensities.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "data augmentation strategy",
+        "object": "±0-40% changes",
+        "qualifier": "has_property",
+        "relation": "magnitude of random intensity perturbations",
+        "subject": "peak intensity jitter"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_031",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "New peak addition data augmentation adds 0-10 randomly selected peaks with intensities between 0 and 0.01."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5402,
+          "oa:start": 5251
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "New peak addition data augmentation adds 0-10 randomly selected peaks with intensities between 0 and 0.01.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "data augmentation strategy",
+        "object": "0-10 peaks with intensity 0-0.01",
+        "qualifier": "has_property",
+        "relation": "number and magnitude of synthetic peaks",
+        "subject": "new peak addition"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_032",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MS2DeepScore uses Tanimoto scores on RDKit Daylight fingerprints with 2048 bits to compute structural similarities."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2438,
+          "oa:start": 2307
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MS2DeepScore uses Tanimoto scores on RDKit Daylight fingerprints with 2048 bits to compute structural similarities.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "structural similarity metric selection",
+        "object": "Tanimoto scores on RDKit Daylight 2048-bit fingerprints",
+        "qualifier": "has_property",
+        "relation": "fingerprint type and metric",
+        "subject": "MS2DeepScore training labels"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_033",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MS2DeepScore is implemented as a Siamese neural network with two components: a base network and a head part with cosine calculation."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5812,
+          "oa:start": 5756
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MS2DeepScore is implemented as a Siamese neural network with two components: a base network and a head part with cosine calculation.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "neural network architecture design",
+        "object": "Siamese network with base network and cosine head",
+        "qualifier": "is_a",
+        "relation": "network type and main components",
+        "subject": "MS2DeepScore architecture"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_034",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The input to the neural network is the binned spectrum vector ranging from 10 to 1000 m/z with up to 10,000 bins."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6361,
+          "oa:start": 6237
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The input to the neural network is the binned spectrum vector ranging from 10 to 1000 m/z with up to 10,000 bins.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "neural network input specification",
+        "object": "binned spectra, 10-1000 m/z, up to 10,000 bins",
+        "qualifier": "has_property",
+        "relation": "input vector composition and range",
+        "subject": "network input format"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_035",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MS2DeepScore can be trained to predict various structural similarity scores including Tanimoto on Daylight fingerprints, Tanimoto on Morgan-2, and Dice scores on Morgan-2."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 49585,
+          "oa:start": 49522
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MS2DeepScore can be trained to predict various structural similarity scores including Tanimoto on Daylight fingerprints, Tanimoto on Morgan-2, and Dice scores on Morgan-2.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "model generalization across fingerprint types",
+        "object": "Tanimoto/Dice on Daylight/Morgan fingerprints",
+        "qualifier": "enables",
+        "relation": "training on diverse similarity metrics",
+        "subject": "MS2DeepScore adaptability"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_036",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Molecules of the same chemical class tend to cluster together in t-SNE plots of MS2DeepScore embeddings."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 38817,
+          "oa:start": 38658
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Molecules of the same chemical class tend to cluster together in t-SNE plots of MS2DeepScore embeddings.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "embedding quality assessment via visualization",
+        "object": "compounds of same class cluster together",
+        "qualifier": "produces",
+        "relation": "chemical class coherent clustering",
+        "subject": "MS2DeepScore embeddings"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_037",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MS2DeepScore is available as an easily installable Python library running on Python 3.7 and 3.8."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 54875,
+          "oa:start": 54779
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MS2DeepScore is available as an easily installable Python library running on Python 3.7 and 3.8.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "software availability and distribution",
+        "object": "Python 3.7 and 3.8",
+        "qualifier": "has_property",
+        "relation": "implementation language and versions",
+        "subject": "MS2DeepScore software"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_038",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The spectral binning uses 10,000 equally-sized bins and only 9,948 of these are known to the model after training data filtering."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2176,
+          "oa:start": 2100
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The spectral binning uses 10,000 equally-sized bins and only 9,948 of these are known to the model after training data filtering.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "training data sparsity in bins",
+        "object": "9,948 of 10,000 bins populated",
+        "qualifier": "has_property",
+        "relation": "proportion of bins with training examples",
+        "subject": "spectral bin coverage"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_039",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The InChIKey split for training, validation, and test sets was 14,062, 500, and 500 respectively."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2978,
+          "oa:start": 2871
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The InChIKey split for training, validation, and test sets was 14,062, 500, and 500 respectively.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "dataset partitioning for model development",
+        "object": "14,062/500/500 InChIKeys",
+        "qualifier": "has_property",
+        "relation": "proportion allocation to train/val/test",
+        "subject": "InChIKey distribution across data subsets"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_040",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Peak intensities were square root transformed to avoid too strong a focus on the highest intensity peaks."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1757,
+          "oa:start": 1701
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Peak intensities were square root transformed to avoid too strong a focus on the highest intensity peaks.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "spectral preprocessing normalization",
+        "object": "square root transformation applied",
+        "qualifier": "reduces",
+        "relation": "reduces dominance of high-intensity peaks",
+        "subject": "peak intensity transformation"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_041",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The maximum number of peaks retained per spectrum was limited to 1,000 highest intensity peaks."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1528,
+          "oa:start": 1475
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The maximum number of peaks retained per spectrum was limited to 1,000 highest intensity peaks.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "spectral peak filtering",
+        "object": "1,000 highest intensity peaks",
+        "qualifier": "has_property",
+        "relation": "maximum peaks retained per spectrum",
+        "subject": "peak count limit"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_042",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MS2DeepScore does not require spectrum metadata such as parent mass and elemental formula as input."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 46226,
+          "oa:start": 45964
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MS2DeepScore does not require spectrum metadata such as parent mass and elemental formula as input.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "model input requirements comparison",
+        "object": "only peak m/z and intensity needed",
+        "qualifier": "has_property",
+        "relation": "does not require metadata features",
+        "subject": "MS2DeepScore input requirements"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_043",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MS2DeepScore is applicable to GC-MS data which generally lack precursor masses."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 47186,
+          "oa:start": 47070
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MS2DeepScore is applicable to GC-MS data which generally lack precursor masses.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "model applicability to different MS modalities",
+        "object": "works with data lacking precursor masses",
+        "qualifier": "enables",
+        "relation": "application to GC-MS data",
+        "subject": "MS2DeepScore adaptability"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_044",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Each training epoch uses one cycle of data generation that goes through all spectra in the training set once."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3675,
+          "oa:start": 3572
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Each training epoch uses one cycle of data generation that goes through all spectra in the training set once.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "training data generation protocol",
+        "object": "one complete pass through training spectra",
+        "qualifier": "has_property",
+        "relation": "data iteration frequency per epoch",
+        "subject": "training epoch structure"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_045",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Structural similarity labels are distributed into 10 equally-sized bins between 0 and 1 for balanced sampling."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3899,
+          "oa:start": 3828
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Structural similarity labels are distributed into 10 equally-sized bins between 0 and 1 for balanced sampling.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "handling imbalanced structural similarity distribution",
+        "object": "10 equally-sized bins from 0 to 1",
+        "qualifier": "has_property",
+        "relation": "number and size of similarity bins",
+        "subject": "binning strategy for similarity labels"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_046",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The validation set uses 10 cycles, iterating 10 times over 3,597 spectra to monitor training progress on 35,970 total spectrum pairs."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4563,
+          "oa:start": 4413
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The validation set uses 10 cycles, iterating 10 times over 3,597 spectra to monitor training progress on 35,970 total spectrum pairs.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "validation data generation protocol",
+        "object": "35,970 pairs from 10 cycles",
+        "qualifier": "has_property",
+        "relation": "total spectrum pairs evaluated per epoch",
+        "subject": "validation set composition"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_047",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "For final test evaluation, all possible spectrum pairs between the 3,601 test spectra were used, totaling 6,485,401 unique pairs."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4739,
+          "oa:start": 4633
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "For final test evaluation, all possible spectrum pairs between the 3,601 test spectra were used, totaling 6,485,401 unique pairs.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "test set evaluation protocol",
+        "object": "6,485,401 unique pairs",
+        "qualifier": "has_property",
+        "relation": "total unique spectrum pair combinations",
+        "subject": "test set pair coverage"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_048",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Accuracy is lower for the highest and lowest Tanimoto scores, partly attributed to regression to the mean effect."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 22199,
+          "oa:start": 21983
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Accuracy is lower for the highest and lowest Tanimoto scores, partly attributed to regression to the mean effect.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "MS2DeepScore prediction error analysis",
+        "object": "regression to the mean effect in training loss",
+        "qualifier": "correlates_with",
+        "relation": "lower accuracy at extreme similarity values",
+        "subject": "boundary prediction accuracy"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_049",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MS2DeepScore performs better when predicting structural similarity scores with less skewed distributions."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 26517,
+          "oa:start": 26379
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "MS2DeepScore performs better when predicting structural similarity scores with less skewed distributions.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "performance across different fingerprint metrics",
+        "object": "less skewed similarity score distributions",
+        "qualifier": "correlates_with",
+        "relation": "better performance with balanced label distribution",
+        "subject": "MS2DeepScore generalization"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_050",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Tanimoto scores on RDKit Daylight fingerprints result in 10-100 times more pairs in the 0.2-0.9 range compared to Morgan-3 fingerprints."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 26833,
+          "oa:start": 26658
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_ms2deepscore"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Tanimoto scores on RDKit Daylight fingerprints result in 10-100 times more pairs in the 0.2-0.9 range compared to Morgan-3 fingerprints.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "fingerprint type impact on score distribution",
+        "object": "10-100x more pairs in mid-range for Daylight",
+        "qualifier": "produces",
+        "relation": "difference in score distribution frequency",
+        "subject": "Daylight vs Morgan-3 fingerprints"
+      }
+    },
+    {
+      "@id": "urn:asb:result:result_001",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The dataset was retrieved from GNPS on 25/01/2021 and contains a total of 210,407 MS/MS spectra.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_001"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_002",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The full cleaned dataset contains 210,407 spectra, with 184,698 annotated with InChIKey and SMILES and/or InChI.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_002"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_003",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "After filtering, the dataset resulted in 109,734 spectra with 15,062 unique InChIKeys.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_003"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_004",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Peaks with intensities less than 0.1% of the maximum peak intensity were removed during spectral filtering.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_004"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_005",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Spectrum peaks were binned into 10,000 equally-sized bins ranging from 10 to 1000 m/z. The input to the neural network is the binned spectrum vector ranging from 10 to 1000 m/z with up to 10,000 bins.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_005"
+        },
+        {
+          "@id": "urn:asb:claim:claim_034"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_006",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "9,948 out of 10,000 possible bins are known to the model.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_006"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_007",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The training set contains 102,536 spectra of 14,062 unique molecules.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_007"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_008",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The validation set contains 3,597 spectra of 500 unique InChIKeys. The test set contains 3,601 spectra of 500 unique InChIKeys.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_008"
+        },
+        {
+          "@id": "urn:asb:claim:claim_009"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_009",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MS2DeepScore can predict Tanimoto scores between 0.1 and 0.9 with a RMSE between 0.13 and 0.2.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_010"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_010",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MS2DeepScore achieves a root mean squared error for predicted Tanimoto scores of about 0.15 when run without uncertainty restrictions. MS2DeepScore achieves a root mean squared error down to 0.1 with ",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_011"
+        },
+        {
+          "@id": "urn:asb:claim:claim_012"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_011",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MS2DeepScore clearly outperforms both classical measures and Spec2Vec with respect to identifying high Tanimoto pairs.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_013"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_012",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Combining spectral predictions for the same compound pair reduces prediction error, with individual predictions showing higher RMSE than the median of predictions.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_014"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_013",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Removing outliers with interquartile range less than 0.2 retains 93% of all scores.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_015"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_014",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "With IQR threshold less than 0.025, the average RMSE drops from about 0.17 to about 0.11.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_016"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_015",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The dropout rate used in the neural network is 0.2.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_017"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_016",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The network uses L1 and L2 weight regularization with value 10^-6 in the first dense layer.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_018"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_017",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "For Monte-Carlo Dropout ensembles, N=10 embeddings were created from networks with dropout enabled.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_019"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_018",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The neural network was trained using the Adam optimizer with a learning rate of 0.001.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_020"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_019",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "A batch size of 32 was used during model training.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_021"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_020",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Training continued until the validation loss did not decrease for 5 epochs using early stopping.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_022"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_021",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The base network creates abstract embeddings with 200-dimensional vectors.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_023"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_022",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The first two densely connected layers each have 500 nodes.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_024"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_023",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Predicting all possible similarity scores between 3,601 test spectra (6,485,401 unique pairs) took 5-10 minutes on an Intel i7-8550U CPU.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_025"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_024",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The t-SNE visualization was performed using cosine metric, perplex ity of 100, learning rate of 200, and 1000 iterations.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_026"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_025",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The test set contains 14 chemical superclasses, 99 different chemical classes and 140 different chemical subclasses.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_027"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_026",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MS2DeepScore achieves a mean absolute error of about 0.12.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_028"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_027",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Low-intensity peak removal data augmentation randomly removes non-zero bins with intensity below 0.4 in 0-20% of cases.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_029"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_028",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Peak intensity jitter data augmentation applies changes between 0% and 40% to non-zero bin intensities.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_030"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_029",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "New peak addition data augmentation adds 0-10 randomly selected peaks with intensities between 0 and 0.01.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_031"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_030",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MS2DeepScore uses Tanimoto scores on RDKit Daylight fingerprints with 2048 bits to compute structural similarities.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_032"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_031",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MS2DeepScore is implemented as a Siamese neural network with two components: a base network and a head part with cosine calculation.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_033"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_032",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MS2DeepScore can be trained to predict various structural similarity scores including Tanimoto on Daylight fingerprints, Tanimoto on Morgan-2, and Dice scores on Morgan-2.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_035"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_033",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Molecules of the same chemical class tend to cluster together in t-SNE plots of MS2DeepScore embeddings.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_036"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_034",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MS2DeepScore is available as an easily installable Python library running on Python 3.7 and 3.8.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_037"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_035",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The spectral binning uses 10,000 equally-sized bins and only 9,948 of these are known to the model after training data filtering.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_038"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_036",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The InChIKey split for training, validation, and test sets was 14,062, 500, and 500 respectively.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_039"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_037",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Peak intensities were square root transformed to avoid too strong a focus on the highest intensity peaks.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_040"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_038",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The maximum number of peaks retained per spectrum was limited to 1,000 highest intensity peaks.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_041"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_039",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MS2DeepScore does not require spectrum metadata such as parent mass and elemental formula as input.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_042"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_040",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MS2DeepScore is applicable to GC-MS data which generally lack precursor masses.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_043"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_041",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Each training epoch uses one cycle of data generation that goes through all spectra in the training set once.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_044"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_042",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Structural similarity labels are distributed into 10 equally-sized bins between 0 and 1 for balanced sampling.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_045"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_043",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The validation set uses 10 cycles, iterating 10 times over 3,597 spectra to monitor training progress on 35,970 total spectrum pairs.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_046"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_044",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "For final test evaluation, all possible spectrum pairs between the 3,601 test spectra were used, totaling 6,485,401 unique pairs.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_047"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_045",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Accuracy is lower for the highest and lowest Tanimoto scores, partly attributed to regression to the mean effect.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_048"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_046",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MS2DeepScore performs better when predicting structural similarity scores with less skewed distributions.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_049"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_047",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Tanimoto scores on RDKit Daylight fingerprints result in 10-100 times more pairs in the 0.2-0.9 range compared to Morgan-3 fingerprints.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_050"
+        }
+      ]
+    },
+    {
+      "@id": "#env-task_002",
+      "@type": [
+        "repme:ComputationalEnvironment"
+      ],
+      "repme:computeTier": "medium"
+    },
+    {
+      "@id": "#agent-15-activity-task_002",
+      "@type": [
+        "prov:Activity"
+      ],
+      "prov:endedAtTime": "2026-06-15T07:25:33.970677+00:00",
+      "prov:qualifiedUsage": {
+        "@type": "prov:Usage",
+        "schema:name": "prompt_sha256",
+        "schema:value": "bdce3b3eb2c398c7"
+      },
+      "prov:wasAssociatedWith": {
+        "schema:name": "anthropic/claude-haiku-4-5-20251001"
+      },
+      "schema:name": "Agent 1.5 Claim Extractor"
+    },
+    {
+      "@id": "#computational-environment",
+      "@type": "repme:ComputationalEnvironment",
+      "repme:buildId": "53301379839D4D61975FCAFC5F1D5B08",
+      "repme:depsHash": "sha256:4fffb5d3623041b6cc88cfe92427807d779db4274f6693748bfcaa96b06c7f79",
+      "repme:gitCommit": "ddf6c1becb15c939b16600b7655d44e2d2baa690",
+      "repme:platform": "darwin-25.5.0-arm64",
+      "repme:pythonVersion": "3.11.15",
+      "schema:dateCreated": "2026-06-15T07:16:19.552644Z",
+      "schema:hasPart": [
+        {
+          "@id": "#agent-config-agent1_entity"
+        },
+        {
+          "@id": "#agent-config-agent2a_outline"
+        },
+        {
+          "@id": "#agent-config-agent2b_card"
+        },
+        {
+          "@id": "#agent-config-agent3_critique"
+        },
+        {
+          "@id": "#agent-config-agent_classify"
+        }
+      ],
+      "schema:softwareVersion": "agentic-science-builder@0.1.0"
+    },
+    {
+      "@id": "#agent-config-agent1_entity",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v3",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent1_entity"
+    },
+    {
+      "@id": "#agent-config-agent2a_outline",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-sonnet-4-6",
+      "repme:promptVersion": "v2",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2a_outline"
+    },
+    {
+      "@id": "#agent-config-agent2b_card",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v4",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2b_card"
+    },
+    {
+      "@id": "#agent-config-agent3_critique",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent3_critique"
+    },
+    {
+      "@id": "#agent-config-agent_classify",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent_classify"
+    },
+    {
+      "@id": "urn:asb:metabolomics:unknown",
+      "@type": "Dataset",
+      "assay_type": "LC-MS/MS",
+      "instrument": null,
+      "name": "Metabolomics Study Metadata",
+      "profile": "metabolomics_lcms",
+      "reproducibility_score": 0.161
+    },
+    {
+      "@id": "artifact_provenance.json",
+      "@type": "File",
+      "name": "artifact_provenance.json",
+      "encodingFormat": "application/json"
+    },
+    {
+      "@id": "ledger/claims.jsonl",
+      "@type": "File",
+      "name": "ledger/claims.jsonl",
+      "encodingFormat": "application/jsonlines"
+    },
+    {
+      "@id": "ledger/results.jsonl",
+      "@type": "File",
+      "name": "ledger/results.jsonl",
+      "encodingFormat": "application/jsonlines"
+    }
+  ]
+}

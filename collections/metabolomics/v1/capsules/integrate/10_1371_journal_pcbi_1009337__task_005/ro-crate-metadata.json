@@ -1,0 +1,3341 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "asbext": "https://w3id.org/asb/indicium-ext#",
+      "chebi": "http://purl.obolibrary.org/obo/CHEBI_",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "fabio": "http://purl.org/spar/fabio/",
+      "ms": "http://purl.obolibrary.org/obo/MS_",
+      "ncbitaxon": "http://purl.obolibrary.org/obo/NCBITaxon_",
+      "oa": "http://www.w3.org/ns/oa#",
+      "obi": "http://purl.obolibrary.org/obo/OBI_",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "p-plan": "http://purl.org/net/p-plan#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "repme": "https://w3id.org/reproduceme#",
+      "sepio": "http://purl.obolibrary.org/obo/SEPIO_",
+      "uberon": "http://purl.obolibrary.org/obo/UBERON_"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": [
+        "Dataset",
+        "repme:ScientificWorkflow"
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ],
+      "dateCreated": "2026-06-15",
+      "description": "Classify metabolic reactions into regulatory categories (transcriptional, metabolic, combined, or unclassified) by computing Cohen's kappa concordance scores between RAS-vs-FFD and RPS-vs-FFD fold-change directions across all pairwise cell-line comparisons, and produce a labelled reaction classification table.",
+      "hasPart": [
+        {
+          "@id": "evidence/source_snippets.md"
+        },
+        {
+          "@id": "inputs/dataset_folder_tree.txt"
+        },
+        {
+          "@id": "inputs/dataset_preview.md"
+        },
+        {
+          "@id": "evaluation/evaluation_strategy.md"
+        },
+        {
+          "@id": "evaluation/review_rubric.json"
+        },
+        {
+          "@id": "artifact_provenance.json"
+        },
+        {
+          "@id": "ledger/claims.jsonl"
+        },
+        {
+          "@id": "ledger/results.jsonl"
+        }
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "mentions": [
+        {
+          "@id": "#action-task_005"
+        },
+        {
+          "@id": "urn:asb:task:task_005"
+        },
+        {
+          "@id": "urn:asb:claim:claim_001"
+        },
+        {
+          "@id": "urn:asb:claim:claim_002"
+        },
+        {
+          "@id": "urn:asb:claim:claim_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_004"
+        },
+        {
+          "@id": "urn:asb:claim:claim_005"
+        },
+        {
+          "@id": "urn:asb:claim:claim_006"
+        },
+        {
+          "@id": "urn:asb:claim:claim_007"
+        },
+        {
+          "@id": "urn:asb:claim:claim_008"
+        },
+        {
+          "@id": "urn:asb:claim:claim_009"
+        },
+        {
+          "@id": "urn:asb:claim:claim_010"
+        },
+        {
+          "@id": "urn:asb:claim:claim_011"
+        },
+        {
+          "@id": "urn:asb:claim:claim_012"
+        },
+        {
+          "@id": "urn:asb:claim:claim_013"
+        },
+        {
+          "@id": "urn:asb:claim:claim_014"
+        },
+        {
+          "@id": "urn:asb:claim:claim_015"
+        },
+        {
+          "@id": "urn:asb:claim:claim_016"
+        },
+        {
+          "@id": "urn:asb:claim:claim_017"
+        },
+        {
+          "@id": "urn:asb:claim:claim_018"
+        },
+        {
+          "@id": "urn:asb:claim:claim_019"
+        },
+        {
+          "@id": "urn:asb:claim:claim_020"
+        },
+        {
+          "@id": "urn:asb:claim:claim_021"
+        },
+        {
+          "@id": "urn:asb:claim:claim_022"
+        },
+        {
+          "@id": "urn:asb:claim:claim_023"
+        },
+        {
+          "@id": "urn:asb:claim:claim_024"
+        },
+        {
+          "@id": "urn:asb:claim:claim_025"
+        },
+        {
+          "@id": "urn:asb:claim:claim_026"
+        },
+        {
+          "@id": "urn:asb:claim:claim_027"
+        },
+        {
+          "@id": "urn:asb:claim:claim_028"
+        },
+        {
+          "@id": "urn:asb:claim:claim_029"
+        },
+        {
+          "@id": "urn:asb:claim:claim_030"
+        },
+        {
+          "@id": "urn:asb:claim:claim_031"
+        },
+        {
+          "@id": "urn:asb:claim:claim_032"
+        },
+        {
+          "@id": "urn:asb:claim:claim_033"
+        },
+        {
+          "@id": "urn:asb:claim:claim_034"
+        },
+        {
+          "@id": "urn:asb:claim:claim_035"
+        },
+        {
+          "@id": "urn:asb:claim:claim_036"
+        },
+        {
+          "@id": "urn:asb:claim:claim_038"
+        },
+        {
+          "@id": "urn:asb:claim:claim_039"
+        },
+        {
+          "@id": "urn:asb:claim:claim_040"
+        },
+        {
+          "@id": "urn:asb:claim:claim_041"
+        },
+        {
+          "@id": "urn:asb:claim:claim_042"
+        },
+        {
+          "@id": "urn:asb:claim:claim_043"
+        },
+        {
+          "@id": "urn:asb:claim:claim_044"
+        },
+        {
+          "@id": "urn:asb:claim:claim_045"
+        },
+        {
+          "@id": "urn:asb:claim:claim_046"
+        },
+        {
+          "@id": "urn:asb:claim:claim_047"
+        },
+        {
+          "@id": "urn:asb:claim:claim_048"
+        },
+        {
+          "@id": "urn:asb:claim:claim_049"
+        },
+        {
+          "@id": "urn:asb:claim:claim_050"
+        },
+        {
+          "@id": "urn:asb:claim:claim_051"
+        },
+        {
+          "@id": "urn:asb:claim:claim_052"
+        },
+        {
+          "@id": "urn:asb:claim:claim_053"
+        },
+        {
+          "@id": "urn:asb:claim:claim_054"
+        },
+        {
+          "@id": "urn:asb:claim:claim_055"
+        },
+        {
+          "@id": "urn:asb:claim:claim_056"
+        },
+        {
+          "@id": "urn:asb:claim:claim_057"
+        },
+        {
+          "@id": "urn:asb:claim:claim_058"
+        },
+        {
+          "@id": "urn:asb:claim:claim_059"
+        },
+        {
+          "@id": "urn:asb:claim:claim_060"
+        },
+        {
+          "@id": "urn:asb:result:result_001"
+        },
+        {
+          "@id": "urn:asb:result:result_002"
+        },
+        {
+          "@id": "urn:asb:result:result_003"
+        },
+        {
+          "@id": "urn:asb:result:result_004"
+        },
+        {
+          "@id": "urn:asb:result:result_005"
+        },
+        {
+          "@id": "urn:asb:result:result_006"
+        },
+        {
+          "@id": "urn:asb:result:result_007"
+        },
+        {
+          "@id": "urn:asb:result:result_008"
+        },
+        {
+          "@id": "urn:asb:result:result_009"
+        },
+        {
+          "@id": "urn:asb:result:result_010"
+        },
+        {
+          "@id": "urn:asb:result:result_011"
+        },
+        {
+          "@id": "urn:asb:result:result_012"
+        },
+        {
+          "@id": "urn:asb:result:result_013"
+        },
+        {
+          "@id": "urn:asb:result:result_014"
+        },
+        {
+          "@id": "urn:asb:result:result_015"
+        },
+        {
+          "@id": "urn:asb:result:result_016"
+        },
+        {
+          "@id": "urn:asb:result:result_017"
+        },
+        {
+          "@id": "urn:asb:result:result_018"
+        },
+        {
+          "@id": "urn:asb:result:result_019"
+        },
+        {
+          "@id": "urn:asb:result:result_020"
+        },
+        {
+          "@id": "urn:asb:result:result_021"
+        },
+        {
+          "@id": "urn:asb:result:result_022"
+        },
+        {
+          "@id": "urn:asb:result:result_023"
+        },
+        {
+          "@id": "urn:asb:result:result_024"
+        },
+        {
+          "@id": "urn:asb:result:result_025"
+        },
+        {
+          "@id": "urn:asb:result:result_026"
+        },
+        {
+          "@id": "urn:asb:result:result_027"
+        },
+        {
+          "@id": "urn:asb:result:result_028"
+        },
+        {
+          "@id": "urn:asb:result:result_029"
+        },
+        {
+          "@id": "urn:asb:result:result_030"
+        },
+        {
+          "@id": "urn:asb:result:result_031"
+        },
+        {
+          "@id": "urn:asb:result:result_032"
+        },
+        {
+          "@id": "urn:asb:result:result_033"
+        },
+        {
+          "@id": "urn:asb:result:result_034"
+        },
+        {
+          "@id": "urn:asb:result:result_035"
+        },
+        {
+          "@id": "urn:asb:result:result_036"
+        },
+        {
+          "@id": "urn:asb:result:result_037"
+        },
+        {
+          "@id": "urn:asb:result:result_038"
+        },
+        {
+          "@id": "urn:asb:result:result_039"
+        },
+        {
+          "@id": "urn:asb:result:result_040"
+        },
+        {
+          "@id": "urn:asb:result:result_041"
+        },
+        {
+          "@id": "urn:asb:result:result_042"
+        },
+        {
+          "@id": "urn:asb:result:result_043"
+        },
+        {
+          "@id": "urn:asb:result:result_044"
+        },
+        {
+          "@id": "urn:asb:result:result_045"
+        },
+        {
+          "@id": "urn:asb:result:result_046"
+        },
+        {
+          "@id": "urn:asb:result:result_047"
+        },
+        {
+          "@id": "urn:asb:result:result_048"
+        },
+        {
+          "@id": "urn:asb:result:result_049"
+        },
+        {
+          "@id": "urn:asb:result:result_050"
+        },
+        {
+          "@id": "urn:asb:result:result_051"
+        },
+        {
+          "@id": "urn:asb:result:result_052"
+        },
+        {
+          "@id": "urn:asb:result:result_053"
+        },
+        {
+          "@id": "urn:asb:result:result_054"
+        },
+        {
+          "@id": "urn:asb:result:result_055"
+        },
+        {
+          "@id": "urn:asb:result:result_056"
+        },
+        {
+          "@id": "#env-task_005"
+        },
+        {
+          "@id": "http://edamontology.org/topic_3172"
+        }
+      ],
+      "name": "Analyze reaction-level regulatory classification using the intersection of RPS-vs-FFD and RAS-vs-FFD fold-changes",
+      "repme:hasComputationalEnvironment": {
+        "@id": "#computational-environment"
+      }
+    },
+    {
+      "@id": "evidence/source_snippets.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evidence/source_snippets.md"
+    },
+    {
+      "@id": "inputs/dataset_folder_tree.txt",
+      "@type": "File",
+      "encodingFormat": "text/plain",
+      "name": "inputs/dataset_folder_tree.txt"
+    },
+    {
+      "@id": "inputs/dataset_preview.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "inputs/dataset_preview.md"
+    },
+    {
+      "@id": "evaluation/evaluation_strategy.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evaluation/evaluation_strategy.md"
+    },
+    {
+      "@id": "evaluation/review_rubric.json",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "name": "evaluation/review_rubric.json"
+    },
+    {
+      "@id": "urn:asb:task:task_005",
+      "@type": [
+        "ScholarlyArticle",
+        "p-plan:Plan",
+        "http://purl.org/spar/fabio/ResearchPaper"
+      ],
+      "asbext:task_kind": "analysis",
+      "description": "Classify metabolic reactions into regulatory categories (transcriptional, metabolic, combined, or unclassified) by computing Cohen's kappa concordance scores between RAS-vs-FFD and RPS-vs-FFD fold-change directions across all pairwise cell-line comparisons, and produce a labelled reaction classification table.",
+      "keywords": [
+        "reaction-flux-concordance-analysis",
+        "cohen-kappa-interrater-reliability-scoring",
+        "metabolic-regulation-classification-scheme",
+        "fold-change-sign-determination-statistics",
+        "fdr-correction-multiple-testing",
+        "flux-variability-analysis-interpretation",
+        "constraint-based-model-output-integration"
+      ],
+      "name": "Analyze reaction-level regulatory classification using the intersection of RPS-vs-FFD and RAS-vs-FFD fold-changes",
+      "prov:wasInfluencedBy": [
+        {
+          "@id": "urn:asb:task:task_001"
+        }
+      ],
+      "repme:hasResearcher": [
+        {
+          "@id": "urn:asb:researcher:marzia-di-2022"
+        },
+        {
+          "@id": "urn:asb:researcher:dario-pescini-2022"
+        },
+        {
+          "@id": "urn:asb:researcher:giovanni-galuzzi-2022"
+        },
+        {
+          "@id": "urn:asb:researcher:marcella-bonanomi-2022"
+        },
+        {
+          "@id": "urn:asb:researcher:daniela-gaglio-2022"
+        },
+        {
+          "@id": "urn:asb:researcher:eleonora-mangano-2022"
+        },
+        {
+          "@id": "urn:asb:researcher:clarissa-consolandi-2022"
+        },
+        {
+          "@id": "urn:asb:researcher:lilia-alberghina-2022"
+        },
+        {
+          "@id": "urn:asb:researcher:marco-vanoni-2022"
+        },
+        {
+          "@id": "urn:asb:researcher:chiara-damiani-2022"
+        }
+      ],
+      "sameAs": "https://doi.org/10.1371/journal.pcbi.1009337#task_005",
+      "schema:identifier": "10.1371/journal.pcbi.1009337"
+    },
+    {
+      "@id": "urn:asb:researcher:marzia-di-2022",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Di Filippo, Marzia"
+    },
+    {
+      "@id": "urn:asb:researcher:dario-pescini-2022",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Pescini, Dario"
+    },
+    {
+      "@id": "urn:asb:researcher:giovanni-galuzzi-2022",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Galuzzi, Bruno Giovanni"
+    },
+    {
+      "@id": "urn:asb:researcher:marcella-bonanomi-2022",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Bonanomi, Marcella"
+    },
+    {
+      "@id": "urn:asb:researcher:daniela-gaglio-2022",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Gaglio, Daniela"
+    },
+    {
+      "@id": "urn:asb:researcher:eleonora-mangano-2022",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Mangano, Eleonora"
+    },
+    {
+      "@id": "urn:asb:researcher:clarissa-consolandi-2022",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Consolandi, Clarissa"
+    },
+    {
+      "@id": "urn:asb:researcher:lilia-alberghina-2022",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Alberghina, Lilia"
+    },
+    {
+      "@id": "urn:asb:researcher:marco-vanoni-2022",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Vanoni, Marco"
+    },
+    {
+      "@id": "urn:asb:researcher:chiara-damiani-2022",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Damiani, Chiara"
+    },
+    {
+      "@id": "urn:asb:tool:constraint-based-stoichiometric-metabolic-models",
+      "@type": "SoftwareApplication",
+      "name": "constraint-based stoichiometric metabolic models"
+    },
+    {
+      "@id": "urn:asb:tool:cobrapy-for-optgpsampler-uniform-sampling",
+      "@type": "SoftwareApplication",
+      "name": "COBRApy (for optGpSampler uniform sampling)"
+    },
+    {
+      "@id": "urn:asb:input:task_005_0",
+      "@type": "File",
+      "name": "RAS (Reaction Activity Score) dataset for all reactions and cell lines from ENGRO2 model (Zenodo 10.5281/zenodo.5824504 or qLSLab/integrate repository)"
+    },
+    {
+      "@id": "urn:asb:input:task_005_1",
+      "@type": "File",
+      "name": "RPS (Reaction Propensity Score) dataset computed from intracellular metabolomics concentrations"
+    },
+    {
+      "@id": "urn:asb:input:task_005_2",
+      "@type": "File",
+      "name": "FFD (Feasible Flux Distributions) sampled from constrained ENGRO2 metabolic models for each cell line (10 batches of 100,000 steady-state solutions each)"
+    },
+    {
+      "@id": "urn:asb:input:task_005_3",
+      "@type": "File",
+      "name": "Intracellular metabolomics data (LC-MS metabolite abundance measurements from MTBLS3597)"
+    },
+    {
+      "@id": "urn:asb:input:task_005_4",
+      "@type": "File",
+      "name": "Transcriptomics data (RNA-seq read counts in FPKM, deposited as PRJNA767228)"
+    },
+    {
+      "@id": "urn:asb:output:task_005_0",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Reaction classification table (XLSX or CSV) with columns: reaction identifier, Cohen's kappa RPSvsFFD score, Cohen's kappa RPSvsRAS score, empirical p-value, FDR-adjusted p-value, regulatory class lab",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_005"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_005_1",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Q–Q plot comparing empirical probability distribution of Cohen's kappa agreement between independent datasets versus INTEGRATE RPS-vs-FFD concordance results",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_005"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_005_2",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Heatmap visualization of RPSvsRAS and RPSvsFFD concordance scores for reactions with fair concordance (score >0.2), annotated with reaction names and regulatory class assignments",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_005"
+      }
+    },
+    {
+      "@id": "#action-task_005",
+      "@type": [
+        "CreateAction",
+        "prov:Activity",
+        "p-plan:Step"
+      ],
+      "description": "Classify metabolic reactions into regulatory categories (transcriptional, metabolic, combined, or unclassified) by computing Cohen's kappa concordance scores between RAS-vs-FFD and RPS-vs-FFD fold-change directions across all pairwise cell-line comparisons, and produce a labelled reaction classification table.",
+      "instrument": [
+        {
+          "@id": "urn:asb:tool:constraint-based-stoichiometric-metabolic-models"
+        },
+        {
+          "@id": "urn:asb:tool:cobrapy-for-optgpsampler-uniform-sampling"
+        }
+      ],
+      "name": "Analyze reaction-level regulatory classification using the intersection of RPS-vs-FFD and RAS-vs-FFD fold-changes",
+      "object": [
+        {
+          "@id": "urn:asb:input:task_005_0"
+        },
+        {
+          "@id": "urn:asb:input:task_005_1"
+        },
+        {
+          "@id": "urn:asb:input:task_005_2"
+        },
+        {
+          "@id": "urn:asb:input:task_005_3"
+        },
+        {
+          "@id": "urn:asb:input:task_005_4"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "urn:asb:port:task_001/tsne_plot"
+        }
+      ],
+      "repme:hasInputData": [
+        {
+          "@id": "urn:asb:input:task_005_0"
+        },
+        {
+          "@id": "urn:asb:input:task_005_1"
+        },
+        {
+          "@id": "urn:asb:input:task_005_2"
+        },
+        {
+          "@id": "urn:asb:input:task_005_3"
+        },
+        {
+          "@id": "urn:asb:input:task_005_4"
+        }
+      ],
+      "repme:hasOutputData": [
+        {
+          "@id": "urn:asb:output:task_005_0"
+        },
+        {
+          "@id": "urn:asb:output:task_005_1"
+        },
+        {
+          "@id": "urn:asb:output:task_005_2"
+        }
+      ],
+      "repme:hasResult": [
+        {
+          "@id": "urn:asb:result:result_031"
+        },
+        {
+          "@id": "urn:asb:result:result_032"
+        },
+        {
+          "@id": "urn:asb:result:result_033"
+        },
+        {
+          "@id": "urn:asb:result:result_030"
+        },
+        {
+          "@id": "urn:asb:result:result_043"
+        },
+        {
+          "@id": "urn:asb:result:result_042"
+        },
+        {
+          "@id": "urn:asb:result:result_045"
+        },
+        {
+          "@id": "urn:asb:result:result_046"
+        },
+        {
+          "@id": "urn:asb:result:result_047"
+        },
+        {
+          "@id": "urn:asb:result:result_007"
+        },
+        {
+          "@id": "urn:asb:result:result_026"
+        },
+        {
+          "@id": "urn:asb:result:result_029"
+        }
+      ],
+      "result": [
+        {
+          "@id": "urn:asb:output:task_005_0"
+        },
+        {
+          "@id": "urn:asb:output:task_005_1"
+        },
+        {
+          "@id": "urn:asb:output:task_005_2"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:claim:claim_001",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Metabolism is directly and indirectly fine-tuned by a complex web of interacting regulatory mechanisms that fall into two major classes."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2348,
+          "oa:start": 2282
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Metabolism is directly and indirectly fine-tuned by a complex web of interacting regulatory mechanisms that fall into two major classes.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_002",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The expression level of metabolic enzymes sets the maximal theoretical flux level for each enzyme-controlled reaction."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2483,
+          "oa:start": 2413
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The expression level of metabolic enzymes sets the maximal theoretical flux level for each enzyme-controlled reaction.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_003",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Metabolic regulation controls the interactions of metabolites with enzymes, including substrates, cofactors, and allosteric modulators."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2616,
+          "oa:start": 2550
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Metabolic regulation controls the interactions of metabolites with enzymes, including substrates, cofactors, and allosteric modulators.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_004",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "High-throughput omics data analyzed separately do not accurately characterize the hierarchical regulation of metabolism."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2743,
+          "oa:start": 2677
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "High-throughput omics data analyzed separately do not accurately characterize the hierarchical regulation of metabolism.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_005",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "INTEGRATE computes differential reaction expression from transcriptomics data using constraint-based modeling to predict if differential enzyme expression originates differences in metabolic fluxes."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3132,
+          "oa:start": 3064
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "INTEGRATE computes differential reaction expression from transcriptomics data using constraint-based modeling to predict if differential enzyme expression originates differences in metabolic fluxes.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_006",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "INTEGRATE uses metabolomics to predict how differences in substrate availability translate into differences in metabolic fluxes."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 16120,
+          "oa:start": 16051
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "INTEGRATE uses metabolomics to predict how differences in substrate availability translate into differences in metabolic fluxes.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_007",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "INTEGRATE discriminates fluxes regulated at the metabolic and/or gene expression level by intersecting output datasets from transcriptomics and metabolomics analysis."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3342,
+          "oa:start": 3275
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "INTEGRATE discriminates fluxes regulated at the metabolic and/or gene expression level by intersecting output datasets from transcriptomics and metabolomics analysis.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_008",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The pipeline was demonstrated on a set of immortalized normal and cancer breast cell lines."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3408,
+          "oa:start": 3344
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The pipeline was demonstrated on a set of immortalized normal and cancer breast cell lines.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_009",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000034"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Knowing the regulatory level at which a given metabolic reaction is controlled will be valuable to inform targeted, truly personalized therapies in cancer patients."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3477,
+          "oa:start": 3409
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Knowing the regulatory level at which a given metabolic reaction is controlled will be valuable to inform targeted, truly personalized therapies in cancer patients.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_010",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000034"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "INTEGRATE can be applied to different fields where metabolism plays a driving role, including cancer and neurodegeneration."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6625,
+          "oa:start": 6560
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "INTEGRATE can be applied to different fields where metabolism plays a driving role, including cancer and neurodegeneration.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_011",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Each metabolic flux depends on at least two intertwined regulatory layers: one regulating the flux of each enzyme-catalyzed metabolic reaction, and another through auto-regulation via metabolite interactions."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7033,
+          "oa:start": 6994
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Each metabolic flux depends on at least two intertwined regulatory layers: one regulating the flux of each enzyme-catalyzed metabolic reaction, and another through auto-regulation via metabolite inter",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_012",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The upper level flux for each enzyme-catalyzed metabolic reaction depends on the levels and catalytic activities of metabolic enzymes, which are set by complex mechanisms orchestrated by signal transduction pathways."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7205,
+          "oa:start": 7137
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The upper level flux for each enzyme-catalyzed metabolic reaction depends on the levels and catalytic activities of metabolic enzymes, which are set by complex mechanisms orchestrated by signal transd",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_013",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Regulatory mechanisms of metabolic enzyme expression include epigenetic control of chromatin, transcription factors, transcription rate, and post-transcriptional/post-translational events."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7472,
+          "oa:start": 7404
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Regulatory mechanisms of metabolic enzyme expression include epigenetic control of chromatin, transcription factors, transcription rate, and post-transcriptional/post-translational events.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_014",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Auto-regulation of metabolism occurs through the interactions of metabolites (substrates, cofactors, allosteric modulators) with responsible enzymes."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7558,
+          "oa:start": 7490
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Auto-regulation of metabolism occurs through the interactions of metabolites (substrates, cofactors, allosteric modulators) with responsible enzymes.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_015",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The flux of an enzyme-catalyzed reaction depends on the concentration of its substrate(s)."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7625,
+          "oa:start": 7585
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The flux of an enzyme-catalyzed reaction depends on the concentration of its substrate(s).",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_016",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The Michaelis-Menten law approximates the dependence of reaction rate on substrate concentration for non-allosteric enzymes."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7757,
+          "oa:start": 7694
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The Michaelis-Menten law approximates the dependence of reaction rate on substrate concentration for non-allosteric enzymes.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_017",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The Michaelis constant K_m describes the substrate concentration at which the reaction rate is equal to V_max/2."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7953,
+          "oa:start": 7892
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The Michaelis constant K_m describes the substrate concentration at which the reaction rate is equal to V_max/2.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_018",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "At substrate concentrations below K_m, there is a linear increase in reaction rate with increasing substrate concentration."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 8033,
+          "oa:start": 7978
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "At substrate concentrations below K_m, there is a linear increase in reaction rate with increasing substrate concentration.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_019",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Metabolites within the same pathway or belonging to related biochemical pathways can fine-tune enzyme-catalyzed reactions through allosteric effects."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 9743,
+          "oa:start": 9674
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Metabolites within the same pathway or belonging to related biochemical pathways can fine-tune enzyme-catalyzed reactions through allosteric effects.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_020",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Differences in metabolic fluxes are only partially determined by variations in protein/gene expression."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 9947,
+          "oa:start": 9884
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Differences in metabolic fluxes are only partially determined by variations in protein/gene expression.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_021",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "In transcriptional control scenario, variations in flux through a metabolic reaction are mainly determined by variations in enzyme abundance when substrate is in large excess."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 10271,
+          "oa:start": 10203
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "In transcriptional control scenario, variations in flux through a metabolic reaction are mainly determined by variations in enzyme abundance when substrate is in large excess.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_022",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "In metabolic control scenario, variations in flux are mainly determined by variations in substrate abundance when enzyme is in large excess."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 10271,
+          "oa:start": 10203
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "In metabolic control scenario, variations in flux are mainly determined by variations in substrate abundance when enzyme is in large excess.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_023",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Combined metabolic and transcriptional control occurs when variations in fluxes are determined by concerted variations in both substrate and enzyme abundance."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 10923,
+          "oa:start": 10854
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Combined metabolic and transcriptional control occurs when variations in fluxes are determined by concerted variations in both substrate and enzyme abundance.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_024",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Direct determination of metabolic fluxes through labeled substrates lags behind other omics technologies, mainly due to technical difficulties at the sub-cellular level."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 11531,
+          "oa:start": 11465
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Direct determination of metabolic fluxes through labeled substrates lags behind other omics technologies, mainly due to technical difficulties at the sub-cellular level.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_025",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Integration of transcriptomics with metabolomics datasets has been limited mainly to gene-metabolite correlation analysis or pathway enrichment analysis."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 11864,
+          "oa:start": 11798
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Integration of transcriptomics with metabolomics datasets has been limited mainly to gene-metabolite correlation analysis or pathway enrichment analysis.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_026",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Constraint-based steady-state models represent a valuable framework to predict metabolic fluxes from high-throughput omics data."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 12192,
+          "oa:start": 12126
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Constraint-based steady-state models represent a valuable framework to predict metabolic fluxes from high-throughput omics data.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_027",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Methods using cross-sectional metabolomics data to predict fluxes require a priori assumptions on the relationship between metabolites and fluxes."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 14073,
+          "oa:start": 14007
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Methods using cross-sectional metabolomics data to predict fluxes require a priori assumptions on the relationship between metabolites and fluxes.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_028",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "INTEGRATE's novel hypothesis is that evidence for a monotonic relationship between fluxes and substrate abundances, and for a concurrent non-monotonic relationship between flux variation and enzyme abundance, indicates that a reaction is controlled metabolically."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 14532,
+          "oa:start": 14467
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "INTEGRATE's novel hypothesis is that evidence for a monotonic relationship between fluxes and substrate abundances, and for a concurrent non-monotonic relationship between flux variation and enzyme ab",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_029",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Current model-based approaches to discern transcriptionally from metabolically controlled fluxes have limitations in directly using metabolomics data."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 14766,
+          "oa:start": 14699
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Current model-based approaches to discern transcriptionally from metabolically controlled fluxes have limitations in directly using metabolomics data.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_030",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "INTEGRATE takes as input a metabolic network model with Gene-Protein-Reaction associations, transcriptomics data, intracellular metabolomics data, and extracellular flux data."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 17725,
+          "oa:start": 17662
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "INTEGRATE takes as input a metabolic network model with Gene-Protein-Reaction associations, transcriptomics data, intracellular metabolomics data, and extracellular flux data.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_031",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "INTEGRATE returns two lists of metabolic fluxes: fluxes that vary across cells consistently with both metabolic and transcriptional regulation, and fluxes that vary consistently with metabolic regulation only."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 17858,
+          "oa:start": 17789
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "INTEGRATE returns two lists of metabolic fluxes: fluxes that vary across cells consistently with both metabolic and transcriptional regulation, and fluxes that vary consistently with metabolic regulat",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_032",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "INTEGRATE generates three comparable datasets centered around the object reaction: Reaction Activity Scores, Feasible Flux Distributions, and Reaction Propensity Scores."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 19619,
+          "oa:start": 19552
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "INTEGRATE generates three comparable datasets centered around the object reaction: Reaction Activity Scores, Feasible Flux Distributions, and Reaction Propensity Scores.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_033",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Reaction Activity Score (RAS) is computed for each input model reaction based on the expression value and relationship among genes encoding catalyzing enzymes."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 19724,
+          "oa:start": 19656
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Reaction Activity Score (RAS) is computed for each input model reaction based on the expression value and relationship among genes encoding catalyzing enzymes.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_034",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Feasible Flux Distributions (FFD) dataset includes a large number of flux distributions obtained by uniformly sampling the feasible flux region of the metabolic model."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 19992,
+          "oa:start": 19923
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Feasible Flux Distributions (FFD) dataset includes a large number of flux distributions obtained by uniformly sampling the feasible flux region of the metabolic model.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_035",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Reaction Propensity Score (RPS) is computed based on the availability of reaction substrates, calculated as the product of substrate concentrations with each raised to a power equal to its stoichiometric coefficient."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 20369,
+          "oa:start": 20300
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Reaction Propensity Score (RPS) is computed based on the availability of reaction substrates, calculated as the product of substrate concentrations with each raised to a power equal to its stoichiomet",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_036",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Five breast cell lines were selected for study: one non-tumorigenic and four breast cancer cell lines with different molecular classifications."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 22021,
+          "oa:start": 21952
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Five breast cell lines were selected for study: one non-tumorigenic and four breast cancer cell lines with different molecular classifications.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_038",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Cell lines present significant differences in terms of metabolic profile."
+      },
+      "oa:target": {
+        "@type": "oa:FragmentSelector",
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate",
+        "rdf:value": "fig2"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Cell lines present significant differences in terms of metabolic profile.",
+      "source_type_uri": {
+        "@id": "http://purl.org/spar/doco/Figure"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_039",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The ratio of lactate produced over glucose consumed is quite similar across the five cell lines."
+      },
+      "oa:target": {
+        "@type": "oa:FragmentSelector",
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate",
+        "rdf:value": "fig2"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The ratio of lactate produced over glucose consumed is quite similar across the five cell lines.",
+      "source_type_uri": {
+        "@id": "http://purl.org/spar/doco/Figure"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_040",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Lactate and glutamate over glutamine ratios are more heterogeneous across the five cell lines compared to lactate/glucose ratio."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 25610,
+          "oa:start": 25572
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Lactate and glutamate over glutamine ratios are more heterogeneous across the five cell lines compared to lactate/glucose ratio.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_041",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "ENGRO2 core model consists of 494 reactions, 410 metabolites, and 494 genes."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 30129,
+          "oa:start": 30065
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "ENGRO2 core model consists of 494 reactions, 410 metabolites, and 494 genes.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_042",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "ENGRO1 model consisted of 84 reactions, 67 metabolites, and 216 genes in comparison to ENGRO2."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 30193,
+          "oa:start": 30130
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "ENGRO1 model consisted of 84 reactions, 67 metabolites, and 216 genes in comparison to ENGRO2.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_043",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Transcriptomics-derived constraints alone well discriminate the five cell line models."
+      },
+      "oa:target": {
+        "@type": "oa:FragmentSelector",
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate",
+        "rdf:value": "fig3"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Transcriptomics-derived constraints alone well discriminate the five cell line models.",
+      "source_type_uri": {
+        "@id": "http://purl.org/spar/doco/Figure"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_044",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Combination of transcriptomics-derived and extracellular flux constraints improves separation of feasible solutions between cell lines."
+      },
+      "oa:target": {
+        "@type": "oa:FragmentSelector",
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate",
+        "rdf:value": "fig3"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Combination of transcriptomics-derived and extracellular flux constraints improves separation of feasible solutions between cell lines.",
+      "source_type_uri": {
+        "@id": "http://purl.org/spar/doco/Figure"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_045",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Growth rate predictions improve when transcriptomics-derived constraints are combined with extracellular flux constraints."
+      },
+      "oa:target": {
+        "@type": "oa:FragmentSelector",
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate",
+        "rdf:value": "fig3"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Growth rate predictions improve when transcriptomics-derived constraints are combined with extracellular flux constraints.",
+      "source_type_uri": {
+        "@id": "http://purl.org/spar/doco/Figure"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_046",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "44 reactions resulted from consistent transcriptional and metabolic regulation."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 40238,
+          "oa:start": 40172
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "44 reactions resulted from consistent transcriptional and metabolic regulation.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_047",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "13 reactions resulted only metabolically regulated because of positive RPSvsFFD score above 0.2 and negative RPSvsRAS score below threshold."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 41331,
+          "oa:start": 41138
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "13 reactions resulted only metabolically regulated because of positive RPSvsFFD score above 0.2 and negative RPSvsRAS score below threshold.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_048",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Cohen's kappa values are considered to indicate fair concordance between 0.21 and 0.40."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 38597,
+          "oa:start": 38532
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Cohen's kappa values are considered to indicate fair concordance between 0.21 and 0.40.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_049",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "After FDR correction of p-values, concordance between RPSs and FFDs resulted statistically significant for 4 reactions."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 45209,
+          "oa:start": 45147
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "After FDR correction of p-values, concordance between RPSs and FFDs resulted statistically significant for 4 reactions.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_050",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "ACONT reaction catalyzes the production of cytosolic isocitrate from citrate and is metabolically controlled."
+      },
+      "oa:target": {
+        "@type": "oa:FragmentSelector",
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate",
+        "rdf:value": "fig5"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "ACONT reaction catalyzes the production of cytosolic isocitrate from citrate and is metabolically controlled.",
+      "source_type_uri": {
+        "@id": "http://purl.org/spar/doco/Figure"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_051",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "RPI reaction catalyzes the conversion of ribulose 5-phosphate to ribose 5-phosphate within the non-oxidative phase of the pentose phosphate pathway."
+      },
+      "oa:target": {
+        "@type": "oa:FragmentSelector",
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate",
+        "rdf:value": "fig5"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "RPI reaction catalyzes the conversion of ribulose 5-phosphate to ribose 5-phosphate within the non-oxidative phase of the pentose phosphate pathway.",
+      "source_type_uri": {
+        "@id": "http://purl.org/spar/doco/Figure"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_052",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Concordance scores are robust to the choice of sample, with standard deviation of Cohen's kappa values across batches being negligible for most reactions."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 44012,
+          "oa:start": 43947
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Concordance scores are robust to the choice of sample, with standard deviation of Cohen's kappa values across batches being negligible for most reactions.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_053",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Some flux variations show concordance between independent datasets beyond reasonable doubt according to empirical probability analysis."
+      },
+      "oa:target": {
+        "@type": "oa:FragmentSelector",
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate",
+        "rdf:value": "fig4"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Some flux variations show concordance between independent datasets beyond reasonable doubt according to empirical probability analysis.",
+      "source_type_uri": {
+        "@id": "http://purl.org/spar/doco/Figure"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_054",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "INTEGRATE integration of transcriptomics and metabolomics data enriches their expressive power by providing complementary views of metabolic state."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 50185,
+          "oa:start": 50116
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "INTEGRATE integration of transcriptomics and metabolomics data enriches their expressive power by providing complementary views of metabolic state.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_055",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Metabolic fluxes predicted by constraint-based modeling complement information on differential activity of reactions derived from gene expression data."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 50385,
+          "oa:start": 50320
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Metabolic fluxes predicted by constraint-based modeling complement information on differential activity of reactions derived from gene expression data.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_056",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "INTEGRATE indicated that aconitase (ACONT) metabolic regulation involves the cytosolic reaction while the aconitase flux itself is not regulated at transcriptional level."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 50941,
+          "oa:start": 50871
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "INTEGRATE indicated that aconitase (ACONT) metabolic regulation involves the cytosolic reaction while the aconitase flux itself is not regulated at transcriptional level.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_057",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "INTEGRATE does not have the ambition to predict exact flux values, but rather the sign of variation across cell lines."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 51506,
+          "oa:start": 51460
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "INTEGRATE does not have the ambition to predict exact flux values, but rather the sign of variation across cell lines.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_058",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The main novelty of INTEGRATE is the direct exploitation of metabolomics data to determine whether a flux is regulated at the metabolic level."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 53728,
+          "oa:start": 53660
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The main novelty of INTEGRATE is the direct exploitation of metabolomics data to determine whether a flux is regulated at the metabolic level.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_059",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000034"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The pipeline can be extended to integrate proteomics and phosphoproteomics data alongside transcriptomics-derived RAS."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 53926,
+          "oa:start": 53867
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The pipeline can be extended to integrate proteomics and phosphoproteomics data alongside transcriptomics-derived RAS.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_060",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Knowing whether a flux is controlled at the metabolic or enzymatic level is mandatory in designing therapeutic strategies and identifying metabolic reactions that indirectly affect target reactions."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 54920,
+          "oa:start": 54847
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_integrate"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Knowing whether a flux is controlled at the metabolic or enzymatic level is mandatory in designing therapeutic strategies and identifying metabolic reactions that indirectly affect target reactions.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:result:result_001",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Metabolism is directly and indirectly fine-tuned by a complex web of interacting regulatory mechanisms that fall into two major classes.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_001"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_002",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The expression level of metabolic enzymes sets the maximal theoretical flux level for each enzyme-controlled reaction.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_002"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_003",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Metabolic regulation controls the interactions of metabolites with enzymes, including substrates, cofactors, and allosteric modulators.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_003"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_004",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "High-throughput omics data analyzed separately do not accurately characterize the hierarchical regulation of metabolism.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_004"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_005",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "INTEGRATE computes differential reaction expression from transcriptomics data using constraint-based modeling to predict if differential enzyme expression originates differences in metabolic fluxes.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_005"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_006",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "INTEGRATE uses metabolomics to predict how differences in substrate availability translate into differences in metabolic fluxes.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_006"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_007",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "INTEGRATE discriminates fluxes regulated at the metabolic and/or gene expression level by intersecting output datasets from transcriptomics and metabolomics analysis.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_007"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_008",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The pipeline was demonstrated on a set of immortalized normal and cancer breast cell lines.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_008"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_009",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Knowing the regulatory level at which a given metabolic reaction is controlled will be valuable to inform targeted, truly personalized therapies in cancer patients.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_009"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_010",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "INTEGRATE can be applied to different fields where metabolism plays a driving role, including cancer and neurodegeneration.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_010"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_011",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Each metabolic flux depends on at least two intertwined regulatory layers: one regulating the flux of each enzyme-catalyzed metabolic reaction, and another through auto-regulation via metabolite inter",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_011"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_012",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The upper level flux for each enzyme-catalyzed metabolic reaction depends on the levels and catalytic activities of metabolic enzymes, which are set by complex mechanisms orchestrated by signal transd",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_012"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_013",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Regulatory mechanisms of metabolic enzyme expression include epigenetic control of chromatin, transcription factors, transcription rate, and post-transcriptional/post-translational events.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_013"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_014",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Auto-regulation of metabolism occurs through the interactions of metabolites (substrates, cofactors, allosteric modulators) with responsible enzymes.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_014"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_015",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The flux of an enzyme-catalyzed reaction depends on the concentration of its substrate(s).",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_015"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_016",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The Michaelis-Menten law approximates the dependence of reaction rate on substrate concentration for non-allosteric enzymes.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_016"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_017",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The Michaelis constant K_m describes the substrate concentration at which the reaction rate is equal to V_max/2.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_017"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_018",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "At substrate concentrations below K_m, there is a linear increase in reaction rate with increasing substrate concentration.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_018"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_019",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Metabolites within the same pathway or belonging to related biochemical pathways can fine-tune enzyme-catalyzed reactions through allosteric effects.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_019"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_020",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Differences in metabolic fluxes are only partially determined by variations in protein/gene expression.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_020"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_021",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "In transcriptional control scenario, variations in flux through a metabolic reaction are mainly determined by variations in enzyme abundance when substrate is in large excess. In metabolic control sce",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_021"
+        },
+        {
+          "@id": "urn:asb:claim:claim_022"
+        },
+        {
+          "@id": "urn:asb:claim:claim_023"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_022",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Direct determination of metabolic fluxes through labeled substrates lags behind other omics technologies, mainly due to technical difficulties at the sub-cellular level.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_024"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_023",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Integration of transcriptomics with metabolomics datasets has been limited mainly to gene-metabolite correlation analysis or pathway enrichment analysis.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_025"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_024",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Constraint-based steady-state models represent a valuable framework to predict metabolic fluxes from high-throughput omics data.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_026"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_025",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Methods using cross-sectional metabolomics data to predict fluxes require a priori assumptions on the relationship between metabolites and fluxes.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_027"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_026",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "INTEGRATE's novel hypothesis is that evidence for a monotonic relationship between fluxes and substrate abundances, and for a concurrent non-monotonic relationship between flux variation and enzyme ab",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_028"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_027",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Current model-based approaches to discern transcriptionally from metabolically controlled fluxes have limitations in directly using metabolomics data.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_029"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_028",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "INTEGRATE takes as input a metabolic network model with Gene-Protein-Reaction associations, transcriptomics data, intracellular metabolomics data, and extracellular flux data.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_030"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_029",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "INTEGRATE returns two lists of metabolic fluxes: fluxes that vary across cells consistently with both metabolic and transcriptional regulation, and fluxes that vary consistently with metabolic regulat",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_031"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_030",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "INTEGRATE generates three comparable datasets centered around the object reaction: Reaction Activity Scores, Feasible Flux Distributions, and Reaction Propensity Scores.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_032"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_031",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Reaction Activity Score (RAS) is computed for each input model reaction based on the expression value and relationship among genes encoding catalyzing enzymes.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_033"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_032",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Feasible Flux Distributions (FFD) dataset includes a large number of flux distributions obtained by uniformly sampling the feasible flux region of the metabolic model.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_034"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_033",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Reaction Propensity Score (RPS) is computed based on the availability of reaction substrates, calculated as the product of substrate concentrations with each raised to a power equal to its stoichiomet",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_035"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_034",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Five breast cell lines were selected for study: one non-tumorigenic and four breast cancer cell lines with different molecular classifications.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_036"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_035",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Cell lines present significant differences in terms of metabolic profile.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_038"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_036",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The ratio of lactate produced over glucose consumed is quite similar across the five cell lines. Lactate and glutamate over glutamine ratios are more heterogeneous across the five cell lines compared ",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_039"
+        },
+        {
+          "@id": "urn:asb:claim:claim_040"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_037",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "ENGRO2 core model consists of 494 reactions, 410 metabolites, and 494 genes.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_041"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_038",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "ENGRO1 model consisted of 84 reactions, 67 metabolites, and 216 genes in comparison to ENGRO2.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_042"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_039",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Transcriptomics-derived constraints alone well discriminate the five cell line models.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_043"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_040",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Combination of transcriptomics-derived and extracellular flux constraints improves separation of feasible solutions between cell lines.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_044"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_041",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Growth rate predictions improve when transcriptomics-derived constraints are combined with extracellular flux constraints.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_045"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_042",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "44 reactions resulted from consistent transcriptional and metabolic regulation.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_046"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_043",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "13 reactions resulted only metabolically regulated because of positive RPSvsFFD score above 0.2 and negative RPSvsRAS score below threshold.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_047"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_044",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Cohen's kappa values are considered to indicate fair concordance between 0.21 and 0.40.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_048"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_045",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "After FDR correction of p-values, concordance between RPSs and FFDs resulted statistically significant for 4 reactions.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_049"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_046",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "ACONT reaction catalyzes the production of cytosolic isocitrate from citrate and is metabolically controlled.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_050"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_047",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "RPI reaction catalyzes the conversion of ribulose 5-phosphate to ribose 5-phosphate within the non-oxidative phase of the pentose phosphate pathway.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_051"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_048",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Concordance scores are robust to the choice of sample, with standard deviation of Cohen's kappa values across batches being negligible for most reactions.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_052"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_049",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Some flux variations show concordance between independent datasets beyond reasonable doubt according to empirical probability analysis.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_053"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_050",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "INTEGRATE integration of transcriptomics and metabolomics data enriches their expressive power by providing complementary views of metabolic state.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_054"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_051",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Metabolic fluxes predicted by constraint-based modeling complement information on differential activity of reactions derived from gene expression data.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_055"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_052",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "INTEGRATE indicated that aconitase (ACONT) metabolic regulation involves the cytosolic reaction while the aconitase flux itself is not regulated at transcriptional level.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_056"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_053",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "INTEGRATE does not have the ambition to predict exact flux values, but rather the sign of variation across cell lines.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_057"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_054",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The main novelty of INTEGRATE is the direct exploitation of metabolomics data to determine whether a flux is regulated at the metabolic level.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_058"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_055",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The pipeline can be extended to integrate proteomics and phosphoproteomics data alongside transcriptomics-derived RAS.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_059"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_056",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Knowing whether a flux is controlled at the metabolic or enzymatic level is mandatory in designing therapeutic strategies and identifying metabolic reactions that indirectly affect target reactions.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_060"
+        }
+      ]
+    },
+    {
+      "@id": "#env-task_005",
+      "@type": [
+        "repme:ComputationalEnvironment"
+      ],
+      "repme:computeTier": "light"
+    },
+    {
+      "@id": "#agent-15-activity-task_005",
+      "@type": [
+        "prov:Activity"
+      ],
+      "prov:endedAtTime": "2026-06-15T08:38:28.725027+00:00",
+      "prov:qualifiedUsage": {
+        "@type": "prov:Usage",
+        "schema:name": "prompt_sha256",
+        "schema:value": "5d7cea02f1d0226c"
+      },
+      "prov:wasAssociatedWith": {
+        "schema:name": "anthropic/claude-haiku-4-5-20251001"
+      },
+      "schema:name": "Agent 1.5 Claim Extractor"
+    },
+    {
+      "@id": "#computational-environment",
+      "@type": "repme:ComputationalEnvironment",
+      "repme:buildId": "D72CEDBAD22448EA836792E4140431DD",
+      "repme:depsHash": "sha256:4fffb5d3623041b6cc88cfe92427807d779db4274f6693748bfcaa96b06c7f79",
+      "repme:gitCommit": "ddf6c1becb15c939b16600b7655d44e2d2baa690",
+      "repme:platform": "darwin-25.5.0-arm64",
+      "repme:pythonVersion": "3.11.15",
+      "schema:dateCreated": "2026-06-15T08:26:13.358086Z",
+      "schema:hasPart": [
+        {
+          "@id": "#agent-config-agent1_entity"
+        },
+        {
+          "@id": "#agent-config-agent2a_outline"
+        },
+        {
+          "@id": "#agent-config-agent2b_card"
+        },
+        {
+          "@id": "#agent-config-agent3_critique"
+        },
+        {
+          "@id": "#agent-config-agent_classify"
+        }
+      ],
+      "schema:softwareVersion": "agentic-science-builder@0.1.0"
+    },
+    {
+      "@id": "#agent-config-agent1_entity",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v3",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent1_entity"
+    },
+    {
+      "@id": "#agent-config-agent2a_outline",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-sonnet-4-6",
+      "repme:promptVersion": "v2",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2a_outline"
+    },
+    {
+      "@id": "#agent-config-agent2b_card",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v4",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2b_card"
+    },
+    {
+      "@id": "#agent-config-agent3_critique",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent3_critique"
+    },
+    {
+      "@id": "#agent-config-agent_classify",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent_classify"
+    },
+    {
+      "@id": "urn:asb:metabolomics:MTBLS3597",
+      "@type": "Dataset",
+      "assay_type": "LC-MS",
+      "instrument": "Q-TOF",
+      "name": "Metabolomics Study Metadata",
+      "profile": "metabolomics_lcms",
+      "reproducibility_score": 0.613
+    },
+    {
+      "@id": "artifact_provenance.json",
+      "@type": "File",
+      "name": "artifact_provenance.json",
+      "encodingFormat": "application/json"
+    },
+    {
+      "@id": "ledger/claims.jsonl",
+      "@type": "File",
+      "name": "ledger/claims.jsonl",
+      "encodingFormat": "application/jsonlines"
+    },
+    {
+      "@id": "ledger/results.jsonl",
+      "@type": "File",
+      "name": "ledger/results.jsonl",
+      "encodingFormat": "application/jsonlines"
+    }
+  ]
+}
