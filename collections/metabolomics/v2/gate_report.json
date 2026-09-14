@@ -1,8 +1,8 @@
 {
   "schema": "asbb-release-gate/1.1",
-  "generated_at": "2026-09-14T09:32:26.072986+00:00",
-  "collection_dir": "/Users/nothiasl/git/asbcoll-wt-int/collections/metabolomics/v2",
-  "corpus_path": "/Users/nothiasl/git/asbcoll-wt-int/collections/metabolomics/v2/corpus.yaml",
+  "generated_at": "2026-09-14T12:31:21.540251+00:00",
+  "collection_dir": "collections/metabolomics/v2",
+  "corpus_path": "collections/metabolomics/v2/corpus.yaml",
   "mode": "strict",
   "strict": true,
   "promote_logic_source": "agentic_science_builder.release.promote",
@@ -33,7 +33,7 @@
       "skill_kb.json"
     ],
     "config_sha256": "d8c4a1873e0ea091e6ae0218f73154cf3479325f875092aeada5d64190eea4c3",
-    "implementation_sha256": "dbf41e81642b23795b74884271caa6e057fa70756ce82d72c738d66299987341"
+    "implementation_sha256": "19a23eb426ff5d39d41f496b594177967d2eabd5fee10521735f20c786db0726"
   },
   "binding": {
     "payload": {
@@ -58275,5 +58275,5 @@
       "coverage": {}
     }
   ],
-  "receipt_sha256": "613d249dbd7f000565fbc57cf8ba3de966245d8841b82a14dadfcf38e8f8da26"
+  "receipt_sha256": "e23199ccc12b7a289a7b42faf96aa44e7098601d37eeb43f550ed8de3411879f"
 }

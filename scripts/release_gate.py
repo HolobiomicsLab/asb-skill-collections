@@ -1553,8 +1553,8 @@ def run_gate(
     report: dict[str, Any] = {
         "schema": _GATE_REPORT_SCHEMA,
         "generated_at": datetime.now(timezone.utc).isoformat(),
-        "collection_dir": str(collection_dir),
-        "corpus_path": str(resolved_corpus) if resolved_corpus else None,
+        "collection_dir": _recorded_path(collection_dir),
+        "corpus_path": _recorded_path(resolved_corpus) if resolved_corpus else None,
         "mode": mode,
         "strict": strict,
         "promote_logic_source": _PROMOTE_SOURCE,
@@ -1666,6 +1666,20 @@ def _validate_report_path(report_path: Path) -> None:
 
 def _absolute_report_path(path: Path) -> Path:
     return path.parent.resolve() / path.name
+
+
+def _recorded_path(path: Path) -> str:
+    """A path as the receipt records it: relative to the checkout that holds it.
+
+    The receipt ships inside the collection, so an absolute path would publish
+    the directory layout of whichever machine ran the gate. Outside a git
+    checkout there is no stable anchor, and the path is recorded as given.
+    """
+    path = Path(path).resolve()
+    for anchor in (path, *path.parents):
+        if (anchor / ".git").exists():
+            return path.relative_to(anchor).as_posix() or "."
+    return str(path)
 
 
 def main(argv: list[str] | None = None) -> int:

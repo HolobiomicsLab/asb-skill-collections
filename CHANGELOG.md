@@ -28,6 +28,13 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   keeps its historical score/slug order unchanged. See `docs/selection.md`.
 
 ### Fixed
+- Record `collection_dir` and `corpus_path` in `gate_report.json` relative to the
+  checkout that holds the collection, not as absolute paths. The receipt ships inside
+  the collection, so the four regenerated receipts published the gate machine's home
+  directory and worktree name, including in `collections/metabolomics/v2`, whose tree
+  on `main` carried no such path. Verification never reads either field. The four
+  receipts are regenerated and verify; `tests/test_release_gate_recorded_paths.py`
+  holds the rule and the shipped receipts to it.
 - Derive the collection's grounding map through the rule its packs already use.
   `kb_bundle.json` feeds `perspicacite_kb_bind.py`, which clones every `repo_urls`
   entry; the entries came from tool records that held the repository of *some*

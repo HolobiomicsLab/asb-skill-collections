@@ -1,8 +1,8 @@
 {
   "schema": "asbb-release-gate/1.1",
-  "generated_at": "2026-09-14T08:50:11.602459+00:00",
-  "collection_dir": "/Users/nothiasl/git/asbcoll-wt-int/collections/transcriptomics/v1",
-  "corpus_path": "/Users/nothiasl/git/asbcoll-wt-int/collections/transcriptomics/v1/corpus.yaml",
+  "generated_at": "2026-09-14T12:31:39.690441+00:00",
+  "collection_dir": "collections/transcriptomics/v1",
+  "corpus_path": "collections/transcriptomics/v1/corpus.yaml",
   "mode": "strict",
   "strict": true,
   "promote_logic_source": "agentic_science_builder.release.promote",
@@ -33,7 +33,7 @@
       "skill_kb.json"
     ],
     "config_sha256": "d8c4a1873e0ea091e6ae0218f73154cf3479325f875092aeada5d64190eea4c3",
-    "implementation_sha256": "dbf41e81642b23795b74884271caa6e057fa70756ce82d72c738d66299987341"
+    "implementation_sha256": "19a23eb426ff5d39d41f496b594177967d2eabd5fee10521735f20c786db0726"
   },
   "binding": {
     "payload": {
@@ -4919,5 +4919,5 @@
       "coverage": {}
     }
   ],
-  "receipt_sha256": "6d9ec122791e6a46f8c03aa39e413d7e3b91837a0ce2b9656cc617cc451b8264"
+  "receipt_sha256": "398d07d369f0119f34a3b022a3befd36dff65b6928d0cd1be895a7034e47036d"
 }
