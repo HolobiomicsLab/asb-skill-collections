@@ -139,7 +139,9 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   unconditionally: a manifest a consumer reads should not name a file the release
   does not ship, and the schema `asb_skill_collection.yaml` declares the slot
   optional, so nothing requires it. Shipping real crates would make gate 8
-  enforceable and is v1 work.
+  enforceable and is v1 work. The gate's own warning is corrected with the field:
+  it told the reader that four manifests still declared `ro_crate_path`, which
+  stopped being true in the same change that dropped them.
 - Stop binding compiled-bytecode caches into a release receipt. The gate
   snapshots the tree it finds on disk, so the two `__pycache__` files that
   running `collections/metabolomics/v2/bin/`'s own search scripts leaves behind

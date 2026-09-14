@@ -194,11 +194,12 @@ jobs:
         # present in CI; surfaced as a warning, does not block the Validate job.
         #
         # Today it finds none at all. No collection in this repository ships an
-        # ro-crate-metadata.json, while all four `collection.yaml` files declare
-        # `ro_crate_path: ro-crate-metadata.json`. A step that validated zero
-        # files used to print "PASS: RO-Crate validation OK (0 crates checked)",
-        # which reads in the PR checks exactly like an enforced gate that passed.
-        # It now says what it measured.
+        # ro-crate-metadata.json, and since the crate claim was retired no
+        # `collection.yaml` declares `ro_crate_path` either, so nothing points at a
+        # file that does not exist. A step that validated zero files used to print
+        # "PASS: RO-Crate validation OK (0 crates checked)", which reads in the PR
+        # checks exactly like an enforced gate that passed. It now says what it
+        # measured.
         continue-on-error: true
         run: |
           python - <<'EOF'
@@ -207,7 +208,7 @@ jobs:
           crate_files = list(pathlib.Path("collections").rglob("ro-crate-metadata.json"))
           crate_files += list(pathlib.Path("staged-collections").rglob("ro-crate-metadata.json"))
           if not crate_files:
-              print("::warning title=Gate 8 measured nothing::No ro-crate-metadata.json exists under collections/ or staged-collections/, so the RO-Crate gate validated zero files. Do not read a green Validate as gate 8 passing. The four collection.yaml files still declare ro_crate_path.")
+              print("::warning title=Gate 8 measured nothing::No ro-crate-metadata.json exists under collections/ or staged-collections/, so the RO-Crate gate validated zero files. Do not read a green Validate as gate 8 passing. No collection.yaml declares ro_crate_path any more either, so the gate has nothing to enforce until crates are generated.")
               print("GATE 8 DID NOT RUN — no crate to validate.")
               sys.exit(0)
           failures = []
