@@ -11,13 +11,13 @@ and emits a single curated *collection* under
 ``collections/metabolomics/v1/``:
 
     collections/metabolomics/v1/
-      collection.yaml                 # SkillCollection record (asb-schema v0.2)
+      collection.yaml                 # SkillCollection record (asb-schema v0.3)
       CITATION.cff                    # Citation File Format 1.2.0
       skills/<slug>/SKILL.md          # one per deduped skill, YAML frontmatter
       tools/<slug>.yaml               # one per deduped tool
 
 Grounding (the formats this script targets) was read from:
-  * asb-schema/.../asb_skill_collection.yaml  (SkillCollection v0.2 slots)
+  * asb-schema/.../asb_skill_collection.yaml  (SkillCollection v0.3 slots)
   * asb-schema/.../asb_skill_bundle.yaml      (ASBSkill.description discipline)
   * asb-skill-collections/scripts/regen_catalogue.py
         -> reads collection.yaml keys: @id|slug+version, title, version, slug,

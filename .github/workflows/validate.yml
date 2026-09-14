@@ -2,10 +2,10 @@
 # Enforces CI gates per section 14 of ASB-Skills Release Design Doc v2.
 #
 # Gates implemented here:
-#   1. LinkML schema validation (collection.yaml, tools/*.yaml) — WARN-ONLY /
-#      currently does not run: the schema asb_skill_bundle.yaml ships in the
-#      asb-schema package, which is not on PyPI and not in this repository.
-#      It says so rather than failing per collection behind continue-on-error.
+#   1. LinkML schema validation (collection.yaml) — BLOCKING once resolvable:
+#      every manifest is validated closed against SkillCollection in
+#      asb-schema >= 0.3.0. WARN-ONLY until that package is installable (it is
+#      not yet on PyPI): the step then says it did not run and exits 0.
 #   2. No orphan skills (DOI resolution sample)
 #   5. Description discipline lint (leading phrase, length, no marketing)
 #   6. EDAM IRI resolution
@@ -269,76 +269,80 @@ jobs:
 
       # -- Gate 1: LinkML schema validation ------------------------------------
       - name: LinkML schema validation
-        # warn-only: requires the `asb-schema` package (sibling repo, not yet on
-        # PyPI) for asb_skill_bundle.yaml. Until that schema is resolvable the
-        # gate says it did not run; it used to print a FAIL per collection that
-        # `continue-on-error` then swallowed, which is a red gate nobody reads.
-        continue-on-error: true
+        # Blocking once the schema is resolvable. Every collection.yaml is
+        # validated closed against the SkillCollection class of asb-schema
+        # >= 0.3.0, the first version that declares the keys the released
+        # manifests carry. Until that package is installable the step says it
+        # did not run and exits 0; it no longer hides behind continue-on-error.
         run: |
-          pip install asb-schema || echo "INFO: asb-schema not yet on PyPI; skipping LinkML gate"
+          pip install --only-binary :all: "asb-schema>=0.3.0" || echo "INFO: asb-schema>=0.3.0 is not installable; gate 1 will say it did not run"
           python - <<'EOF'
           import shutil, sys, pathlib, subprocess
 
+          SCHEMA_NAME = "asb_skill_collection.yaml"
+          MIN_VERSION = (0, 3, 0)
+
+          def did_not_run(reason):
+              print(f"::warning title=Gate 1 did not run::{reason} Do not read a green Validate as gate 1 passing.")
+              print(f"GATE 1 DID NOT RUN — {reason}")
+              sys.exit(0)
+
           try:
               import linkml_runtime  # noqa: F401
+              import yaml
           except ImportError:
-              print("::warning title=Gate 1 did not run::linkml_runtime is not installed, so no collection.yaml was validated against the LinkML schema. Do not read a green Validate as gate 1 passing.")
-              print("GATE 1 DID NOT RUN — linkml_runtime not available.")
-              sys.exit(0)
+              did_not_run("linkml_runtime is not installed, so no collection.yaml was validated against the LinkML schema.")
 
           if shutil.which("linkml-validate") is None:
-              print("::warning title=Gate 1 did not run::The linkml-validate CLI is not on PATH, so no collection.yaml was validated against the LinkML schema. Do not read a green Validate as gate 1 passing.")
-              print("GATE 1 DID NOT RUN — linkml-validate CLI not found.")
-              sys.exit(0)
+              did_not_run("The linkml-validate CLI is not on PATH, so no collection.yaml was validated against the LinkML schema.")
 
-          # The schema ships in the asb-schema package (sibling repo, not on
-          # PyPI). Resolve it rather than assuming a file in the checkout: the
-          # step ran for months with `--schema asb_skill_bundle.yaml` against a
-          # path that exists nowhere in this repository, so every run failed
-          # with "File 'asb_skill_bundle.yaml' does not exist" and every run
-          # was green.
+          # The schema ships in the asb-schema package. A copy at the root or
+          # under schema/ wins, so a local run can point at a candidate schema.
           schema = None
-          for candidate in (pathlib.Path("asb_skill_bundle.yaml"),
-                            pathlib.Path("schema/asb_skill_bundle.yaml")):
+          for candidate in (pathlib.Path(SCHEMA_NAME), pathlib.Path("schema") / SCHEMA_NAME):
               if candidate.is_file():
-                  schema = candidate
+                  schema = candidate.resolve()
                   break
           if schema is None:
               try:
                   from importlib.resources import files as _files
-                  packaged = _files("asb_schema") / "asb_skill_bundle.yaml"
+                  packaged = _files("asb_schema") / SCHEMA_NAME
                   if packaged.is_file():
-                      schema = pathlib.Path(str(packaged))
+                      schema = pathlib.Path(str(packaged)).resolve()
               except (ImportError, ModuleNotFoundError, AttributeError):
                   pass
           if schema is None:
-              print("::warning title=Gate 1 did not run::asb_skill_bundle.yaml is not in this repository and asb-schema is not installed, so no collection.yaml was validated against the LinkML schema. Do not read a green Validate as gate 1 passing.")
-              print("GATE 1 DID NOT RUN — no LinkML schema to validate against.")
-              sys.exit(0)
+              did_not_run(f"{SCHEMA_NAME} is not in this repository and asb-schema>=0.3.0 is not installed, so no collection.yaml was validated against the LinkML schema.")
 
-          collection_files = list(pathlib.Path("collections").rglob("collection.yaml"))
-          collection_files += list(
-              pathlib.Path("staged-collections").rglob("collection.yaml")
-          )
+          declared = str(yaml.safe_load(schema.read_text()).get("version", "0"))
+          try:
+              found = tuple(int(p) for p in declared.split(".")[:3])
+          except ValueError:
+              found = (0,)
+          if found < MIN_VERSION:
+              did_not_run(f"{schema} declares version {declared}; the released manifests need 0.3.0 or later, so validating against it would only report the keys it predates.")
+
+          collection_files = sorted(pathlib.Path("collections").rglob("collection.yaml"))
+          collection_files += sorted(pathlib.Path("staged-collections").rglob("collection.yaml"))
           if not collection_files:
-              print("::warning title=Gate 1 measured nothing::No collection.yaml exists under collections/ or staged-collections/, so the LinkML gate validated zero files.")
-              print("GATE 1 DID NOT RUN — no collection.yaml to validate.")
-              sys.exit(0)
+              did_not_run("No collection.yaml exists under collections/ or staged-collections/, so the LinkML gate validated zero files.")
 
           failures = []
           for cf in collection_files:
               result = subprocess.run(
-                  ["linkml-validate", "--schema", str(schema), str(cf)],
+                  ["linkml-validate", "--schema", str(schema),
+                   "--target-class", "SkillCollection", str(cf)],
                   capture_output=True, text=True
               )
               if result.returncode != 0:
-                  failures.append(f"{cf}: {result.stderr.strip()}")
+                  detail = (result.stdout + result.stderr).strip()
+                  failures.append(f"{cf}: {detail}")
           if failures:
-              print("FAIL: LinkML validation failures:")
+              print(f"FAIL: {len(failures)} of {len(collection_files)} collection.yaml files do not validate against {schema} (version {declared}):")
               for f in failures:
                   print(f"  - {f}")
               sys.exit(1)
-          print(f"PASS: LinkML validation OK ({len(collection_files)} files against {schema})")
+          print(f"PASS: {len(collection_files)} collection.yaml files validate closed against SkillCollection in {schema} (version {declared})")
           EOF
 
       # -- Gate: packs are re-derivable from their collection ------------------
