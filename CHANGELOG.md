@@ -38,9 +38,13 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   packs — still shipped the pre-guard binder, which clones every `repo_urls`
   entry unconditionally, while 1,440 of the collection's 5,859 bundle records
   (1,279 `restricted`, 161 `noncommercial`) now carry the `license_tier` the
-  guard reads. The copies are refreshed and a test asserts every shipped unit
-  vendors the current binder, so a helper change can no longer land in the
-  repository without reaching the consumer.
+  guard reads. The copies are refreshed and a test compares every vendored copy
+  that shares a filename with a repository source — the binder and
+  `scripts/pii_config.py` today — so a helper change can no longer land in the
+  repository without reaching the consumer. Unit assets authored in place are
+  outside it: `bin/search_skills.py` and `bin/semantic_search.py` are generated
+  by `scripts/router_shape.py`, and `workflows/bin/semantic_search.py` is the
+  historical copy `docs/selection.md` documents as outside that unification.
 - Stop erasing the repository of a skill that has no papers. `resolve_repo_urls`
   exists so a skill is never handed another paper's repository (issue #42), and
   it derives from the skill's DOIs — which leaves a skill with no DOIs with
