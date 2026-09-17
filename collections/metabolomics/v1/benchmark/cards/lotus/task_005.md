@@ -129,4 +129,4 @@ Execute the 5_addingOTL.R script on the cleaned organism table to enrich organis
 
 ---
 
-*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See [`artifact_provenance.json`](../../../capsules/lotus/10_1007_s00044_016_1764_y__task_005/artifact_provenance.json) for what this release carries; it also lists the build artefacts the release does not promote.*

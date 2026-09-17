@@ -1,6 +1,8 @@
 ---
 name: cluster-statistics-integration
-description: Use when after peak clustering has been performed on aligned GCIMS samples and a peak table matrix has been constructed, but the matrix contains NA values because some samples did not yield detected peaks at certain cluster positions.
+description: Use when after peak clustering has been performed on aligned GCIMS samples
+  and a peak table matrix has been constructed, but the matrix contains NA values
+  because some samples did not yield detected peaks at certain cluster positions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +14,8 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS

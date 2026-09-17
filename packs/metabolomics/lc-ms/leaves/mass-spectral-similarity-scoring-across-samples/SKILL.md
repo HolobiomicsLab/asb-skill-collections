@@ -1,6 +1,8 @@
 ---
 name: mass-spectral-similarity-scoring-across-samples
-description: Use when after XCMS feature detection, grouping, and retention time correction when you have aligned features with consistent retention times and intensity patterns across samples.
+description: Use when after XCMS feature detection, grouping, and retention time correction
+  when you have aligned features with consistent retention times and intensity patterns
+  across samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -18,13 +20,16 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
 evidence_spans:
 - ramclustR function is built to use xcms data
 - RC <- ramclustR(xcmsObj = xset, ExpDes=experiment)
-- submitting this score matrix for heirarchical clustering, and then cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
+- submitting this score matrix for heirarchical clustering, and then cutting the resulting
+  dendrogram into neat chunks using the dynamicTreeCut package
 - cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
 - We have adapted the 'findMain' function from the 'InterpretMSSpectrum' CRAN package
 claims: []

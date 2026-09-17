@@ -1,6 +1,8 @@
 ---
 name: feature-table-moniker-registration-and-versioning
-description: Use when after Asari completes feature detection and produces multiple feature table variants (full and quality-filtered preferred tables) from centroid mzML files within a PCPFM experiment.
+description: Use when after Asari completes feature detection and produces multiple
+  feature table variants (full and quality-filtered preferred tables) from centroid
+  mzML files within a PCPFM experiment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3941
@@ -13,6 +15,8 @@ metadata:
   - metDataModel
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

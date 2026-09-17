@@ -18,7 +18,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "adduct-ion-mass-calculation",
@@ -39,7 +46,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "github-actions",
+   "rdkit"
+  ]
  },
  {
   "slug": "adduct-ion-parent-ion-pairing-analysis",
@@ -64,7 +78,14 @@
    "CE-MS",
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "adduct-ion-prediction-and-filtering",
@@ -90,7 +111,17 @@
    "LC-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "dplyr",
+   "ggplot2",
+   "seurat",
+   "spamtp",
+   "tidyr"
+  ]
  },
  {
   "slug": "adduct-mass-calculation-from-smiles",
@@ -111,7 +142,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "github-actions",
+   "rdkit"
+  ]
  },
  {
   "slug": "adduct-mass-difference-matching",
@@ -133,7 +171,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "anndata-object-annotation",
@@ -153,7 +198,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-wanluliulab-spatialmeta",
+   "scikit-learn-nearestneighbors-for-knn-index-construction",
+   "spatialmeta"
+  ]
  },
  {
   "slug": "anndata-object-initialization-and-structuring",
@@ -173,7 +225,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-wanluliulab-spatialmeta",
+   "scikit-learn-nearestneighbors-for-knn-index-construction",
+   "spatialmeta"
+  ]
  },
  {
   "slug": "anndata-object-integration-and-metadata-mapping",
@@ -194,7 +253,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-wanluliulab-spatialmeta",
+   "scikit-learn-nearestneighbors-for-knn-index-construction",
+   "spatialmeta"
+  ]
  },
  {
   "slug": "attention-mechanism-implementation",
@@ -220,7 +286,16 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "autoencoder-encoder-decoder-design",
@@ -244,7 +319,16 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "batch-file-processing-orchestration",
@@ -266,7 +350,12 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "matlab"
+  ]
  },
  {
   "slug": "binary-spectral-data-extraction",
@@ -291,7 +380,15 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "calculator",
+   "pewlib",
+   "pewpew",
+   "python"
+  ]
  },
  {
   "slug": "biochemical-annotation-mapping",
@@ -314,7 +411,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "msi-explorer",
+   "napari",
+   "python"
+  ]
  },
  {
   "slug": "bioinformatic-object-conversion",
@@ -339,7 +443,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "dplyr",
+   "ggplot2",
+   "seurat",
+   "spamtp",
+   "tidyr"
+  ]
  },
  {
   "slug": "biological-reactant-pair-mapping-kegg",
@@ -361,7 +475,16 @@
    "LC-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "bonferroni-multiple-testing-correction",
@@ -385,7 +508,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "bruker-baf-data-import-and-conversion",
@@ -413,7 +543,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "candidate-formula-ranking",
@@ -435,7 +577,16 @@
    "LC-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "candidate-peak-filtering-annotation",
@@ -458,7 +609,15 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "link-only",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "devtools",
+   "rmsi",
+   "rmsicleanup",
+   "rmsiproc"
+  ]
  },
  {
   "slug": "cardinal-imaging-object-conversion",
@@ -480,7 +639,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "cardinal-object-structure-understanding",
@@ -504,7 +670,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "dplyr",
+   "ggplot2",
+   "seurat",
+   "spamtp",
+   "tidyr"
+  ]
  },
  {
   "slug": "cardinal-to-seurat-object-conversion",
@@ -530,7 +706,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "dplyr",
+   "ggplot2",
+   "seurat",
+   "spamtp",
+   "tidyr"
+  ]
  },
  {
   "slug": "cdf-file-format-parsing",
@@ -551,7 +737,12 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "matlab"
+  ]
  },
  {
   "slug": "cell-type-protein-profiling-integration",
@@ -575,7 +766,10 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": []
  },
  {
   "slug": "chemical-annotation-confidence-assessment",
@@ -601,7 +795,16 @@
    "CE-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "emperor",
+   "gnps",
+   "gnps2",
+   "massive",
+   "redu"
+  ]
  },
  {
   "slug": "chemical-database-query-and-matching",
@@ -623,7 +826,16 @@
    "LC-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "chemical-formula-annotation-mapping",
@@ -646,7 +858,15 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "link-only",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "devtools",
+   "rmsi",
+   "rmsicleanup",
+   "rmsiproc"
+  ]
  },
  {
   "slug": "chemical-transformation-annotation",
@@ -668,7 +888,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "chemical-transformation-library-lookup",
@@ -690,7 +917,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "ci-cd-workflow-triggering",
@@ -712,7 +946,24 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "canopus",
+   "gnps",
+   "ion-identity",
+   "javafx-24",
+   "jdk-25",
+   "lotus-database",
+   "memo",
+   "mzmine",
+   "mzmine2",
+   "mzmine3",
+   "open-tree-of-life",
+   "sirius",
+   "timar"
+  ]
  },
  {
   "slug": "col-mode-augmentation-pipeline-implementation",
@@ -738,7 +989,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "colocalization-coefficient-computation",
@@ -761,7 +1022,15 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "calculator",
+   "pewlib",
+   "pewpew",
+   "python"
+  ]
  },
  {
   "slug": "color-jitter-application-imaging",
@@ -783,7 +1052,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "command-line-software-installation-from-github",
@@ -811,7 +1090,19 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "computational-reproducibility-verification",
@@ -835,7 +1126,10 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": []
  },
  {
   "slug": "conda-environment-setup-and-activation",
@@ -858,7 +1152,19 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "conditional-dispatch-logic-implementation",
@@ -880,7 +1186,19 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "contrastive-learning-encoder-construction",
@@ -903,7 +1221,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "contrastive-learning-encoder-design",
@@ -926,7 +1254,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "contrastive-learning-loss-implementation",
@@ -948,7 +1286,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "contrastive-pair-generation",
@@ -970,7 +1318,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "convolutional-neural-network-encoding",
@@ -992,7 +1350,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "coordinate-system-normalization-1based-indexing",
@@ -1013,7 +1381,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
+   "lipidqmap"
+  ]
  },
  {
   "slug": "cross-database-entity-reconciliation",
@@ -1034,7 +1409,16 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "cross-domain-metadata-integration",
@@ -1063,7 +1447,18 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "foodmasst",
+   "gnps-masst",
+   "metadatamasst",
+   "microbemasst",
+   "microbiomemasst",
+   "plantmasst",
+   "tissuemasst"
+  ]
  },
  {
   "slug": "data-format-validation-and-integrity-checking",
@@ -1090,7 +1485,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "deep-learning-architecture-implementation",
@@ -1112,7 +1519,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "deep-learning-model-implementation-in-pytorch-or-tensorflow",
@@ -1135,7 +1552,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "deep-learning-model-training",
@@ -1156,7 +1583,12 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "meister"
+  ]
  },
  {
   "slug": "derivatization-chemistry-enumeration",
@@ -1177,7 +1609,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "github-actions",
+   "rdkit"
+  ]
  },
  {
   "slug": "derivatizing-matrix-configuration",
@@ -1199,7 +1638,14 @@
    "CE-MS",
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "github-actions",
+   "rdkit"
+  ]
  },
  {
   "slug": "derivatizing-matrix-ionization-rule-application",
@@ -1220,7 +1666,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "github-actions",
+   "rdkit"
+  ]
  },
  {
   "slug": "dimension-scale-linking-and-cross-group-indexing",
@@ -1243,7 +1696,14 @@
    "direct-infusion-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
+   "lipidqmap"
+  ]
  },
  {
   "slug": "dimple-pipeline-execution",
@@ -1264,7 +1724,12 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "matlab"
+  ]
  },
  {
   "slug": "domain-context-to-application-routing",
@@ -1292,7 +1757,18 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "foodmasst",
+   "gnps-masst",
+   "metadatamasst",
+   "microbemasst",
+   "microbiomemasst",
+   "plantmasst",
+   "tissuemasst"
+  ]
  },
  {
   "slug": "domain-specific-masst-api-integration",
@@ -1320,7 +1796,18 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "foodmasst",
+   "gnps-masst",
+   "metadatamasst",
+   "microbemasst",
+   "microbiomemasst",
+   "plantmasst",
+   "tissuemasst"
+  ]
  },
  {
   "slug": "encoder-output-dimension-reduction",
@@ -1343,7 +1830,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "environment-dependency-management",
@@ -1375,7 +1872,15 @@
    "direct-infusion-MS",
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "galaxy",
+   "matlab-compiler-runtime-8-3",
+   "python-2-7",
+   "r-3-0-1"
+  ]
  },
  {
   "slug": "error-handling-for-unsupported-formats",
@@ -1397,7 +1902,19 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "euclidean-distance-computation-for-spatial-alignment",
@@ -1418,7 +1935,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-wanluliulab-spatialmeta",
+   "scikit-learn-nearestneighbors-for-knn-index-construction",
+   "spatialmeta"
+  ]
  },
  {
   "slug": "experimental-design-metadata-integration",
@@ -1442,7 +1966,12 @@
    "direct-infusion-MS",
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "knime"
+  ]
  },
  {
   "slug": "feature-frequency-filtering-imaging",
@@ -1465,7 +1994,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biocparallel",
+   "cardinal",
+   "cardinalio"
+  ]
  },
  {
   "slug": "feature-metadata-alignment-across-dimensions",
@@ -1487,7 +2023,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
+   "lipidqmap"
+  ]
  },
  {
   "slug": "feature-statistical-annotation",
@@ -1511,7 +2054,12 @@
    "LC-MS",
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "knime"
+  ]
  },
  {
   "slug": "feature-table-export-and-formatting",
@@ -1538,7 +2086,15 @@
    "direct-infusion-MS",
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "mzmine2",
+   "openms",
+   "optimus"
+  ]
  },
  {
   "slug": "file-format-detection-and-routing",
@@ -1560,7 +2116,19 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "formula-assignment-in-mass-spectrometry",
@@ -1581,7 +2149,16 @@
    "LC-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "formula-network-extraction-from-mz",
@@ -1602,7 +2179,16 @@
    "LC-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "git-repository-cloning-and-version-control",
@@ -1623,7 +2209,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "github-actions",
+   "rdkit"
+  ]
  },
  {
   "slug": "graph-database-indexing-and-serialization",
@@ -1643,7 +2236,16 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "group-wise-chemical-enrichment-calculation",
@@ -1668,7 +2270,16 @@
    "CE-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "emperor",
+   "gnps",
+   "gnps2",
+   "massive",
+   "redu"
+  ]
  },
  {
   "slug": "hdf5-cardinal-format-preservation",
@@ -1689,7 +2300,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
+   "lipidqmap"
+  ]
  },
  {
   "slug": "hdf5-file-format-reading-and-writing",
@@ -1713,7 +2331,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
+   "lipidqmap"
+  ]
  },
  {
   "slug": "hdf5-file-structure-specification",
@@ -1735,7 +2360,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
+   "lipidqmap"
+  ]
  },
  {
   "slug": "high-dimensional-signal-enhancement",
@@ -1758,7 +2390,12 @@
    "CE-MS",
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "meister"
+  ]
  },
  {
   "slug": "high-resolution-spot-to-spot-integration",
@@ -1780,7 +2417,12 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hacca"
+  ]
  },
  {
   "slug": "histogram-peak-occurrence-analysis",
@@ -1802,7 +2444,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "image-intensity-jittering",
@@ -1823,7 +2472,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "image-visualization-formatting",
@@ -1845,7 +2504,19 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "imaging-data-workspace-integration",
@@ -1867,7 +2538,12 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "matlab"
+  ]
  },
  {
   "slug": "imaging-mass-spectrometry-characterization",
@@ -1892,7 +2568,14 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "javafx-24",
+   "jdk-25",
+   "mzmine"
+  ]
  },
  {
   "slug": "imaging-mass-spectrometry-ion-identification",
@@ -1916,7 +2599,16 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "imaging-parameter-metadata-annotation",
@@ -1941,7 +2633,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "chambm-pwiz-skyline-i-agree-to-the-vendor-licenses",
+   "docker",
+   "imzml-writer",
+   "msconvert",
+   "proteowizard",
+   "python"
+  ]
  },
  {
   "slug": "imzml-continuous-format-parsing",
@@ -1964,7 +2666,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biocparallel",
+   "cardinal",
+   "cardinalio"
+  ]
  },
  {
   "slug": "imzml-file-format-parsing",
@@ -1986,7 +2695,14 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-wanluliulab-spatialmeta",
+   "scikit-learn-nearestneighbors-for-knn-index-construction",
+   "spatialmeta"
+  ]
  },
  {
   "slug": "imzml-file-loading-and-import",
@@ -2007,7 +2723,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
+   "lipidqmap"
+  ]
  },
  {
   "slug": "imzml-metadata-parsing",
@@ -2030,7 +2753,15 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "calculator",
+   "pewlib",
+   "pewpew",
+   "python"
+  ]
  },
  {
   "slug": "in-source-fragment-adduct-candidate-flagging",
@@ -2050,12 +2781,18 @@
    "matchms"
   ],
   "dois": [
-   "10.1093/bioinformatics/btad088/7036334"
+   "10.1093/bioinformatics/btad088"
   ],
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "dbdipy",
+   "python"
+  ]
  },
  {
   "slug": "integrative-omics-pathway-enrichment",
@@ -2077,7 +2814,12 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "r-gui"
+  ]
  },
  {
   "slug": "intensity-dependent-missing-value-simulation",
@@ -2101,7 +2843,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "intensity-normalization-spectra",
@@ -2123,7 +2875,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "msi-explorer",
+   "napari",
+   "python"
+  ]
  },
  {
   "slug": "interactive-spectral-visualization-emperor",
@@ -2150,7 +2909,16 @@
    "CE-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "emperor",
+   "gnps",
+   "gnps2",
+   "massive",
+   "redu"
+  ]
  },
  {
   "slug": "internal-standard-intensity-calibration",
@@ -2173,7 +2941,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "internal-standard-ion-selection-and-application",
@@ -2195,7 +2975,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
+   "lipidqmap"
+  ]
  },
  {
   "slug": "ion-formula-matrix-classification",
@@ -2219,7 +3006,15 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "link-only",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "devtools",
+   "rmsi",
+   "rmsicleanup",
+   "rmsiproc"
+  ]
  },
  {
   "slug": "ion-image-augmentation-contrastive-learning",
@@ -2241,7 +3036,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "ion-image-augmentation-design",
@@ -2268,7 +3073,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "ion-image-augmentation-intensity-dependent",
@@ -2290,7 +3105,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "ion-image-embedding-optimization",
@@ -2312,7 +3137,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "ion-image-quantification-workflow",
@@ -2336,7 +3171,14 @@
    "direct-infusion-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
+   "lipidqmap"
+  ]
  },
  {
   "slug": "ion-mobility-filtering-and-tolerance-tuning",
@@ -2360,7 +3202,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "isobaric-ion-detection-msi",
@@ -2383,7 +3237,15 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "link-only",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "devtools",
+   "rmsi",
+   "rmsicleanup",
+   "rmsiproc"
+  ]
  },
  {
   "slug": "isobaric-ion-misclassification-documentation",
@@ -2406,7 +3268,15 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "link-only",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "devtools",
+   "rmsi",
+   "rmsicleanup",
+   "rmsiproc"
+  ]
  },
  {
   "slug": "isotope-corrected-image-quantitation",
@@ -2428,7 +3298,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
+   "lipidqmap"
+  ]
  },
  {
   "slug": "iterative-peak-selection-from-latent-space",
@@ -2453,7 +3330,16 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "java-build-artifact-validation",
@@ -2475,7 +3361,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "javafx-24",
+   "jdk-25",
+   "mzmine"
+  ]
  },
  {
   "slug": "keras-tensorflow-model-compilation",
@@ -2495,12 +3388,30 @@
    "Python"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac032/6510930"
+   "10.1093/bioinformatics/btac032"
   ],
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "h5py-2-7-1",
+   "keras",
+   "keras-2-2-0",
+   "numpy",
+   "numpy-1-15-4",
+   "pandas-1-1-1",
+   "python",
+   "python-3-6-12",
+   "scikit-learn-0-23-2",
+   "scipy-1-0-0",
+   "seaborn-0-9-0",
+   "tensorflow",
+   "tensorflow-1-8-0"
+  ]
  },
  {
   "slug": "knn-nearest-neighbor-matching-for-spot-correspondence",
@@ -2522,7 +3433,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-wanluliulab-spatialmeta",
+   "scikit-learn-nearestneighbors-for-knn-index-construction",
+   "spatialmeta"
+  ]
  },
  {
   "slug": "latent-feature-interpretation",
@@ -2547,7 +3465,16 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "latent-space-dimensionality-reduction",
@@ -2571,7 +3498,16 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "linear-axis-spatial-analysis",
@@ -2593,7 +3529,12 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "matlab"
+  ]
  },
  {
   "slug": "lipid-adduct-pairing-by-neutral-mass",
@@ -2614,7 +3555,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
+   "lipidqmap"
+  ]
  },
  {
   "slug": "lipid-category-classification",
@@ -2641,7 +3589,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "dplyr",
+   "ggplot2",
+   "seurat",
+   "spamtp",
+   "tidyr"
+  ]
  },
  {
   "slug": "lipid-database-querying",
@@ -2668,7 +3626,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "dplyr",
+   "ggplot2",
+   "seurat",
+   "spamtp",
+   "tidyr"
+  ]
  },
  {
   "slug": "lipid-feature-annotation-and-sorting",
@@ -2690,7 +3658,14 @@
    "direct-infusion-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
+   "lipidqmap"
+  ]
  },
  {
   "slug": "lipid-feature-identifier-matching",
@@ -2712,7 +3687,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
+   "lipidqmap"
+  ]
  },
  {
   "slug": "lipid-nomenclature-simplification",
@@ -2738,7 +3720,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "dplyr",
+   "ggplot2",
+   "seurat",
+   "spamtp",
+   "tidyr"
+  ]
  },
  {
   "slug": "m-z-annotation-reduction-quantification",
@@ -2764,7 +3756,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "dplyr",
+   "ggplot2",
+   "seurat",
+   "spamtp",
+   "tidyr"
+  ]
  },
  {
   "slug": "m-z-array-processing",
@@ -2786,7 +3788,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "msi-explorer",
+   "napari",
+   "python"
+  ]
  },
  {
   "slug": "m-z-metabolite-annotation-mapping",
@@ -2814,7 +3823,17 @@
    "LC-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "dplyr",
+   "ggplot2",
+   "seurat",
+   "spamtp",
+   "tidyr"
+  ]
  },
  {
   "slug": "m-z-value-clustering-mass-spectrometry",
@@ -2837,7 +3856,15 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "link-only",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "devtools",
+   "rmsi",
+   "rmsicleanup",
+   "rmsiproc"
+  ]
  },
  {
   "slug": "m-z-window-tolerance-application",
@@ -2859,7 +3886,15 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "calculator",
+   "pewlib",
+   "pewpew",
+   "python"
+  ]
  },
  {
   "slug": "maldi-imaging-mass-spectrometry-data-interpretation",
@@ -2885,7 +3920,13 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "google-colab",
+   "python-3"
+  ]
  },
  {
   "slug": "marker-ion-ranking-and-filtering",
@@ -2909,7 +3950,16 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "mass-accuracy-ppm-filtering",
@@ -2930,7 +3980,16 @@
    "LC-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "mass-difference-calculation-from-spectral-peaks",
@@ -2952,7 +4011,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "mass-difference-pairwise-calculation",
@@ -2976,7 +4042,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "mass-error-tolerance-filtering",
@@ -3000,7 +4073,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "dplyr",
+   "ggplot2",
+   "seurat",
+   "spamtp",
+   "tidyr"
+  ]
  },
  {
   "slug": "mass-recalibration-lock-mass-correction",
@@ -3023,7 +4106,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "chambm-pwiz-skyline-i-agree-to-the-vendor-licenses",
+   "docker",
+   "imzml-writer",
+   "msconvert",
+   "proteowizard",
+   "python"
+  ]
  },
  {
   "slug": "mass-spectral-feature-annotation",
@@ -3044,7 +4137,16 @@
    "LC-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "mass-spectrometry-adduct-annotation",
@@ -3078,7 +4180,21 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "git",
+   "github-actions",
+   "github-kbseah-mass2adduct",
+   "mass2adduct",
+   "mist",
+   "mist-cf",
+   "rdkit",
+   "scarf",
+   "sirius"
+  ]
  },
  {
   "slug": "mass-spectrometry-data-matrix-construction",
@@ -3098,7 +4214,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-wanluliulab-spatialmeta",
+   "scikit-learn-nearestneighbors-for-knn-index-construction",
+   "spatialmeta"
+  ]
  },
  {
   "slug": "mass-spectrometry-file-conversion",
@@ -3123,7 +4246,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "chambm-pwiz-skyline-i-agree-to-the-vendor-licenses",
+   "docker",
+   "imzml-writer",
+   "msconvert",
+   "proteowizard",
+   "python"
+  ]
  },
  {
   "slug": "mass-spectrometry-image-normalization",
@@ -3148,7 +4281,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "mass-spectrometry-image-preprocessing",
@@ -3171,7 +4316,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "mass-spectrometry-image-reconstruction",
@@ -3193,7 +4348,15 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "calculator",
+   "pewlib",
+   "pewpew",
+   "python"
+  ]
  },
  {
   "slug": "mass-spectrometry-imaging-data-import",
@@ -3217,7 +4380,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biocparallel",
+   "cardinal",
+   "cardinalio"
+  ]
  },
  {
   "slug": "mass-spectrometry-imaging-data-interpretation",
@@ -3242,7 +4412,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "mass-spectrometry-imaging-data-loading",
@@ -3268,7 +4445,17 @@
    "LC-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "dplyr",
+   "ggplot2",
+   "seurat",
+   "spamtp",
+   "tidyr"
+  ]
  },
  {
   "slug": "mass-spectrometry-imaging-data-processing",
@@ -3292,7 +4479,15 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "link-only",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "devtools",
+   "rmsi",
+   "rmsicleanup",
+   "rmsiproc"
+  ]
  },
  {
   "slug": "mass-spectrometry-imaging-data-representation",
@@ -3311,12 +4506,30 @@
    "scipy"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac032/6510930"
+   "10.1093/bioinformatics/btac032"
   ],
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "h5py-2-7-1",
+   "keras",
+   "keras-2-2-0",
+   "numpy",
+   "numpy-1-15-4",
+   "pandas-1-1-1",
+   "python",
+   "python-3-6-12",
+   "scikit-learn-0-23-2",
+   "scipy-1-0-0",
+   "seaborn-0-9-0",
+   "tensorflow",
+   "tensorflow-1-8-0"
+  ]
  },
  {
   "slug": "mass-spectrometry-imaging-line-scan-data-handling",
@@ -3342,7 +4555,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "mass-spectrometry-imaging-vendor-format-support",
@@ -3370,7 +4595,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "mass-spectrometry-ion-formula-assignment",
@@ -3392,7 +4629,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "github-actions",
+   "rdkit"
+  ]
  },
  {
   "slug": "mass-spectrometry-peak-detection-and-alignment",
@@ -3417,7 +4661,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biocparallel",
+   "cardinal",
+   "cardinalio"
+  ]
  },
  {
   "slug": "mass-spectrometry-peak-enumeration",
@@ -3440,7 +4691,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "mass-spectrometry-peak-intensity-encoding",
@@ -3465,7 +4723,16 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "mass-spectrometry-peak-pair-analysis",
@@ -3490,7 +4757,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "mass-spectrometry-peak-validation",
@@ -3512,7 +4786,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biocparallel",
+   "cardinal",
+   "cardinalio"
+  ]
  },
  {
   "slug": "mass-spectrum-histogram-interpretation",
@@ -3535,7 +4816,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "mass-spectrum-preprocessing-and-normalization",
@@ -3563,7 +4851,18 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "casanovo",
+   "cuda-toolkit",
+   "depthcharge",
+   "msi-explorer",
+   "napari",
+   "python",
+   "pytorch"
+  ]
  },
  {
   "slug": "mass-tolerance-parameter-calibration",
@@ -3587,7 +4886,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "matlab-data-structure-design",
@@ -3610,7 +4921,12 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "matlab"
+  ]
  },
  {
   "slug": "matlab-workspace-initialization",
@@ -3631,7 +4947,12 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "matlab"
+  ]
  },
  {
   "slug": "matrix-ion-spatial-distribution-visualization",
@@ -3654,7 +4975,15 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "link-only",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "devtools",
+   "rmsi",
+   "rmsicleanup",
+   "rmsiproc"
+  ]
  },
  {
   "slug": "mean-intensity-aggregation",
@@ -3676,7 +5005,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "msi-explorer",
+   "napari",
+   "python"
+  ]
  },
  {
   "slug": "memory-efficient-pairwise-statistics",
@@ -3698,7 +5034,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "metabolic-network-edge-construction",
@@ -3719,7 +5062,16 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "metabolite-adduct-correlation-spatial-analysis",
@@ -3747,7 +5099,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "metabolite-annotation-at-scale",
@@ -3776,7 +5135,17 @@
    "LC-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "dplyr",
+   "ggplot2",
+   "seurat",
+   "spamtp",
+   "tidyr"
+  ]
  },
  {
   "slug": "metabolite-detection-frequency-estimation",
@@ -3796,7 +5165,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-wanluliulab-spatialmeta",
+   "scikit-learn-nearestneighbors-for-knn-index-construction",
+   "spatialmeta"
+  ]
  },
  {
   "slug": "metabolite-edge-scoring-dbedges-bioedges",
@@ -3817,7 +5193,16 @@
    "LC-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "metabolite-feature-organization",
@@ -3837,7 +5222,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-wanluliulab-spatialmeta",
+   "scikit-learn-nearestneighbors-for-knn-index-construction",
+   "spatialmeta"
+  ]
  },
  {
   "slug": "metabolite-identification-validation",
@@ -3858,7 +5250,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "github-actions",
+   "rdkit"
+  ]
  },
  {
   "slug": "metabolite-level-expression-summarization",
@@ -3878,7 +5277,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-wanluliulab-spatialmeta",
+   "scikit-learn-nearestneighbors-for-knn-index-construction",
+   "spatialmeta"
+  ]
  },
  {
   "slug": "metabolomics-data-downstream-analysis",
@@ -3901,7 +5307,13 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "google-colab",
+   "python-3"
+  ]
  },
  {
   "slug": "metabolomics-preprocessing-normalization",
@@ -3925,7 +5337,10 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": []
  },
  {
   "slug": "microbe-compound-identification",
@@ -3951,7 +5366,18 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "foodmasst",
+   "gnps-masst",
+   "metadatamasst",
+   "microbemasst",
+   "microbiomemasst",
+   "plantmasst",
+   "tissuemasst"
+  ]
  },
  {
   "slug": "model-checkpoint-serialization",
@@ -3980,7 +5406,20 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-wanluliulab-spatialmeta",
+   "iceberg-webui",
+   "ms-pred-iceberg",
+   "ms-pred-scarf-model",
+   "pubchem",
+   "pytorch",
+   "scikit-learn-nearestneighbors-for-knn-index-construction",
+   "spatialmeta",
+   "tensorflow"
+  ]
  },
  {
   "slug": "model-validation-and-performance-evaluation",
@@ -4002,7 +5441,12 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "meister"
+  ]
  },
  {
   "slug": "module-loader-implementation",
@@ -4024,7 +5468,19 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "molecular-structure-transformation",
@@ -4045,7 +5501,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "github-actions",
+   "rdkit"
+  ]
  },
  {
   "slug": "molecular-weight-prediction-with-modifications",
@@ -4067,7 +5530,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "github-actions",
+   "rdkit"
+  ]
  },
  {
   "slug": "morphological-alignment-optimization",
@@ -4088,7 +5558,12 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hacca"
+  ]
  },
  {
   "slug": "ms2-annotation-interpretation",
@@ -4114,7 +5589,16 @@
    "CE-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "emperor",
+   "gnps",
+   "gnps2",
+   "massive",
+   "redu"
+  ]
  },
  {
   "slug": "msi-array-data-structure-handling",
@@ -4140,7 +5624,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biocparallel",
+   "cardinal",
+   "cardinalio"
+  ]
  },
  {
   "slug": "msi-data-format-interoperability",
@@ -4162,7 +5653,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "msi-data-import-csv",
@@ -4187,7 +5685,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "msi-data-matrix-import-and-validation",
@@ -4211,7 +5716,14 @@
    "LC-MS",
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "msi-data-processing-speed-measurement",
@@ -4231,7 +5743,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
+   "lipidqmap"
+  ]
  },
  {
   "slug": "msi-data-table-export",
@@ -4253,7 +5772,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "msi-explorer",
+   "napari",
+   "python"
+  ]
  },
  {
   "slug": "msi-data-visualization-and-spatial-analysis",
@@ -4276,7 +5802,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "msi-explorer",
+   "napari",
+   "python"
+  ]
  },
  {
   "slug": "msi-feature-metadata-preservation",
@@ -4301,7 +5834,17 @@
    "CE-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "dplyr",
+   "ggplot2",
+   "seurat",
+   "spamtp",
+   "tidyr"
+  ]
  },
  {
   "slug": "msi-imaging-experiment-class-manipulation",
@@ -4325,7 +5868,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biocparallel",
+   "cardinal",
+   "cardinalio"
+  ]
  },
  {
   "slug": "msi-intensity-matrix-isotope-correction",
@@ -4346,7 +5896,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
+   "lipidqmap"
+  ]
  },
  {
   "slug": "msi-intensity-matrix-normalization",
@@ -4368,7 +5925,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
+   "lipidqmap"
+  ]
  },
  {
   "slug": "msi-metadata-curation-and-storage",
@@ -4392,7 +5956,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "msi-metadata-harmonization-across-image-stacks",
@@ -4414,7 +5990,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
+   "lipidqmap"
+  ]
  },
  {
   "slug": "msi-peak-annotation",
@@ -4438,7 +6021,15 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "link-only",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "devtools",
+   "rmsi",
+   "rmsicleanup",
+   "rmsiproc"
+  ]
  },
  {
   "slug": "msi-peak-intensity-extraction",
@@ -4463,7 +6054,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "msi-preprocessing-parameter-configuration",
@@ -4491,7 +6089,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "msi-spectral-data-import",
@@ -4512,7 +6122,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "msi-explorer",
+   "napari",
+   "python"
+  ]
  },
  {
   "slug": "msimagingarray-object-manipulation",
@@ -4537,7 +6154,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biocparallel",
+   "cardinal",
+   "cardinalio"
+  ]
  },
  {
   "slug": "msimagingexperiment-object-validation",
@@ -4558,7 +6182,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biocparallel",
+   "cardinal",
+   "cardinalio"
+  ]
  },
  {
   "slug": "msms-spectrum-data-structure-manipulation",
@@ -4583,7 +6214,23 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "matplotlib",
+   "numba",
+   "numpy",
+   "pandas",
+   "proforma-2-0",
+   "pymzml",
+   "pyopenms",
+   "pyteomics",
+   "python",
+   "seaborn",
+   "spectrum-utils",
+   "unimod"
+  ]
  },
  {
   "slug": "multi-modal-spot-validation-and-quality-assessment",
@@ -4605,7 +6252,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-wanluliulab-spatialmeta",
+   "scikit-learn-nearestneighbors-for-knn-index-construction",
+   "spatialmeta"
+  ]
  },
  {
   "slug": "multi-omics-latent-space-learning",
@@ -4626,7 +6280,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-wanluliulab-spatialmeta",
+   "scikit-learn-nearestneighbors-for-knn-index-construction",
+   "spatialmeta"
+  ]
  },
  {
   "slug": "multimodal-spot-correspondence-mapping",
@@ -4648,7 +6309,12 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hacca"
+  ]
  },
  {
   "slug": "multiple-linear-regression-model-application",
@@ -4670,7 +6336,16 @@
    "LC-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "multiple-testing-correction-bonferroni",
@@ -4694,7 +6369,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "mzml-to-imzml-format-conversion",
@@ -4717,7 +6399,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "chambm-pwiz-skyline-i-agree-to-the-vendor-licenses",
+   "docker",
+   "imzml-writer",
+   "msconvert",
+   "proteowizard",
+   "python"
+  ]
  },
  {
   "slug": "natural-isotope-abundance-calculation",
@@ -4738,7 +6430,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
+   "lipidqmap"
+  ]
  },
  {
   "slug": "network-based-metabolite-identification",
@@ -4760,7 +6459,16 @@
    "LC-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "neural-network-hyperparameter-optimization",
@@ -4781,7 +6489,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-wanluliulab-spatialmeta",
+   "scikit-learn-nearestneighbors-for-knn-index-construction",
+   "spatialmeta"
+  ]
  },
  {
   "slug": "neural-network-projection-module-design",
@@ -4802,7 +6517,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "noise-estimation-snr-thresholding",
@@ -4825,7 +6550,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biocparallel",
+   "cardinal",
+   "cardinalio"
+  ]
  },
  {
   "slug": "nontargeted-metabolomics-data-processing",
@@ -4849,7 +6581,13 @@
    "direct-infusion-MS",
    "MS-imaging"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "masscube",
+   "python"
+  ]
  },
  {
   "slug": "notebook-execution-and-reproducibility",
@@ -4871,7 +6609,13 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "google-colab",
+   "python-3"
+  ]
  },
  {
   "slug": "open-source-mass-spectrometry-file-format-interoperability",
@@ -4900,7 +6644,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "overlapping-ion-detection",
@@ -4924,7 +6680,15 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "link-only",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "devtools",
+   "rmsi",
+   "rmsicleanup",
+   "rmsiproc"
+  ]
  },
  {
   "slug": "overlapping-peak-detection-interpretation",
@@ -4947,7 +6711,15 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "link-only",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "devtools",
+   "rmsi",
+   "rmsicleanup",
+   "rmsiproc"
+  ]
  },
  {
   "slug": "pairwise-mass-difference-computation",
@@ -4970,7 +6742,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "parameter-sharing-in-siamese-networks",
@@ -4992,7 +6771,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "peak-collision-flagging",
@@ -5015,7 +6804,15 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "link-only",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "devtools",
+   "rmsi",
+   "rmsicleanup",
+   "rmsiproc"
+  ]
  },
  {
   "slug": "peak-filtering-and-quality-control",
@@ -5038,7 +6835,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biocparallel",
+   "cardinal",
+   "cardinalio"
+  ]
  },
  {
   "slug": "peak-preservation-vs-noise-reduction-tradeoff",
@@ -5063,7 +6867,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biocparallel",
+   "cardinal",
+   "cardinalio"
+  ]
  },
  {
   "slug": "pearson-correlation-coefficient-computation",
@@ -5085,7 +6896,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "per-root-metabolite-profiling",
@@ -5107,7 +6925,12 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "matlab"
+  ]
  },
  {
   "slug": "pixel-binning-and-spatial-registration",
@@ -5133,7 +6956,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "pixel-intensity-scaling-and-thresholding",
@@ -5156,7 +6991,19 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "poisson-noise-generation",
@@ -5178,7 +7025,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "poisson-noise-injection-for-imaging",
@@ -5201,7 +7058,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "poisson-noise-injection-spectral",
@@ -5223,7 +7090,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "ppm-mass-accuracy-filtering",
@@ -5247,7 +7124,15 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "calculator",
+   "pewlib",
+   "pewpew",
+   "python"
+  ]
  },
  {
   "slug": "ppm-tolerance-scoring-and-ranking",
@@ -5269,7 +7154,16 @@
    "LC-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "probabilistic-classification-network-construction",
@@ -5290,12 +7184,30 @@
    "massNet"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac032/6510930"
+   "10.1093/bioinformatics/btac032"
   ],
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "h5py-2-7-1",
+   "keras",
+   "keras-2-2-0",
+   "numpy",
+   "numpy-1-15-4",
+   "pandas-1-1-1",
+   "python",
+   "python-3-6-12",
+   "scikit-learn-0-23-2",
+   "scipy-1-0-0",
+   "seaborn-0-9-0",
+   "tensorflow",
+   "tensorflow-1-8-0"
+  ]
  },
  {
   "slug": "python-environment-pinning",
@@ -5325,12 +7237,30 @@
    "Conda"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac032/6510930"
+   "10.1093/bioinformatics/btac032"
   ],
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "h5py-2-7-1",
+   "keras",
+   "keras-2-2-0",
+   "numpy",
+   "numpy-1-15-4",
+   "pandas-1-1-1",
+   "python",
+   "python-3-6-12",
+   "scikit-learn-0-23-2",
+   "scipy-1-0-0",
+   "seaborn-0-9-0",
+   "tensorflow",
+   "tensorflow-1-8-0"
+  ]
  },
  {
   "slug": "queued-spectrum-preview-generation",
@@ -5354,7 +7284,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biocparallel",
+   "cardinal",
+   "cardinalio"
+  ]
  },
  {
   "slug": "r-data-structure-conversion",
@@ -5379,7 +7316,14 @@
    "CE-MS",
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "random-missing-value-masking",
@@ -5400,7 +7344,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "raw-spectral-data-input-handling-without-peak-picking",
@@ -5420,12 +7374,30 @@
    "massNet"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac032/6510930"
+   "10.1093/bioinformatics/btac032"
   ],
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "h5py-2-7-1",
+   "keras",
+   "keras-2-2-0",
+   "numpy",
+   "numpy-1-15-4",
+   "pandas-1-1-1",
+   "python",
+   "python-3-6-12",
+   "scikit-learn-0-23-2",
+   "scipy-1-0-0",
+   "seaborn-0-9-0",
+   "tensorflow",
+   "tensorflow-1-8-0"
+  ]
  },
  {
   "slug": "raw-vendor-file-format-handling",
@@ -5449,7 +7421,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "chambm-pwiz-skyline-i-agree-to-the-vendor-licenses",
+   "docker",
+   "imzml-writer",
+   "msconvert",
+   "proteowizard",
+   "python"
+  ]
  },
  {
   "slug": "reconstruction-algorithm-implementation",
@@ -5471,7 +7453,12 @@
    "CE-MS",
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "meister"
+  ]
  },
  {
   "slug": "reference-database-tolerance-mapping",
@@ -5493,7 +7480,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "reference-dataset-validation-for-metabolite-ions",
@@ -5514,7 +7508,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "github-actions",
+   "rdkit"
+  ]
  },
  {
   "slug": "release-branch-management",
@@ -5534,7 +7535,16 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "canopus",
+   "csi-fingerid",
+   "github-actions",
+   "msnovelist",
+   "sirius"
+  ]
  },
  {
   "slug": "repository-administration",
@@ -5555,7 +7565,16 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "canopus",
+   "csi-fingerid",
+   "github-actions",
+   "msnovelist",
+   "sirius"
+  ]
  },
  {
   "slug": "representation-collapse-prevention",
@@ -5577,7 +7596,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "representation-vector-dimensionality-reduction",
@@ -5600,476 +7629,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
- },
- {
-  "slug": "reproducibility-gap-detection",
-  "name": "reproducibility-gap-detection",
-  "description": "Use when when curating a scientific workflow (especially deep learning or data-processing pipelines) and you need to verify that all steps described in the publication have corresponding available code, data downloads, trained model checkpoints, and explicit dependency specifications.",
-  "edam_operation": "http://edamontology.org/operation_3096",
-  "edam_topics": [
-   "http://edamontology.org/topic_0081",
-   "http://edamontology.org/topic_0091",
-   "http://edamontology.org/topic_3520",
-   "http://edamontology.org/topic_3375",
-   "http://edamontology.org/topic_3697",
-   "http://edamontology.org/topic_0769",
-   "http://edamontology.org/topic_3372",
-   "http://edamontology.org/topic_3673",
-   "http://edamontology.org/topic_3047",
-   "http://edamontology.org/topic_3071",
-   "http://edamontology.org/topic_3172",
-   "http://edamontology.org/topic_0601",
-   "http://edamontology.org/topic_3361",
-   "http://edamontology.org/topic_3298",
-   "http://edamontology.org/topic_0593",
-   "http://edamontology.org/topic_3674",
-   "http://edamontology.org/topic_3572",
-   "http://edamontology.org/topic_3373",
-   "http://edamontology.org/topic_3577",
-   "http://edamontology.org/topic_2269",
-   "http://edamontology.org/topic_3407",
-   "http://edamontology.org/topic_0121",
-   "http://edamontology.org/topic_3679",
-   "http://edamontology.org/topic_3050",
-   "http://edamontology.org/topic_0092",
-   "http://edamontology.org/topic_3676",
-   "http://edamontology.org/topic_3371",
-   "http://edamontology.org/topic_0625",
-   "http://edamontology.org/topic_3306",
-   "http://edamontology.org/topic_3473",
-   "http://edamontology.org/topic_3370",
-   "http://edamontology.org/topic_0003",
-   "http://edamontology.org/topic_0080",
-   "http://edamontology.org/topic_3307",
-   "http://edamontology.org/topic_3391",
-   "http://edamontology.org/topic_3365",
-   "http://edamontology.org/topic_0605",
-   "http://edamontology.org/topic_3173",
-   "http://edamontology.org/topic_3360",
-   "http://edamontology.org/topic_0220",
-   "http://edamontology.org/topic_3379",
-   "http://edamontology.org/topic_3314"
-  ],
-  "tools": [
-   "PyTorch",
-   "RDKit",
-   "molnetpack",
-   "3DMolMS",
-   "mzmine",
-   "mzmine3",
-   "JDK",
-   "JavaFX",
-   "GitHub",
-   "Python dependency management (requirements.txt, setup.py, environment specs)",
-   "GitLab",
-   "conda",
-   "GitHub repository inspection",
-   "BiG-SCAPE (optional dependency)",
-   "bowtie2, Bedtools, Samtools, MASH, HMMER",
-   "BinDiscover",
-   "Travis CI",
-   "SIRIUS",
-   "CSI:FingerID",
-   "CANOPUS",
-   "MSNovelist",
-   "Bright Giant GmbH",
-   "Bitbucket",
-   "TeraChem",
-   "LearnReactions.py",
-   "ChEMBL Structure Curation Pipeline Checker",
-   "PostgreSQL",
-   "Docker",
-   "DearOMG-community.exe",
-   "DearOMG-vendor.exe",
-   "DearOMG-parser.exe",
-   "Python API (dear_omg.py)",
-   "Snakemake",
-   "uv",
-   "venv",
-   "pip",
-   "DIATAGeR R package",
-   "MetaboLights",
-   "MS-DIAL",
-   "MZMine",
-   "DiGress",
-   "DiffMS",
-   "Zenodo",
-   "netgsa R package",
-   "ggplot2",
-   "Cytoscape",
-   "DNEA R package",
-   "Filigree Java application",
-   "BiocParallel",
-   "GLASSO (graphical lasso)",
-   "eicCluster",
-   "Bioconductor",
-   "MassBank",
-   "R",
-   "eRah",
-   "CRAN (erah)",
-   "GitHub Actions (R-CMD-check)",
-   "Codecov",
-   "OpenMS",
-   "KNIME",
-   "Python",
-   "Doxygen",
-   "nanobind",
-   "GitHub (source repository)",
-   "pyOpenMS",
-   "README indexing and cross-referencing",
-   "Setup/dependency file inspection (setup.py, requirements.txt, environment.yml, pyproject.toml)",
-   "G-Aligner",
-   "Google Drive",
-   "GcDuo",
-   "GNPS2",
-   "GitHub Actions",
-   "ProteoSAFe",
-   "nose2",
-   "act",
-   "CCMS Deployment Package",
-   "GNPS",
-   "GitHub (CCMS-UCSD/GNPS_Workflows)",
-   "CCMS-Integration-Tests",
-   "FraGNNet",
-   "ms-pred (ICEBERG)",
-   "Fiora",
-   "MassSpecGym",
-   "HPLG (Heuristic Peak List Generator)",
-   "HP (Heuristic Processor)",
-   "homologueDiscoverer",
-   "dplyr",
-   "YAML configuration templates",
-   "Gradle",
-   "MZmine",
-   "ViMMS (Virtual Metabolomics Mass Spectrometer)",
-   "HMDB",
-   "Thermo IAPI",
-   "pytest",
-   "InstantClue",
-   "jmzTab-m",
-   "jmzTab-m CLI",
-   "jmzTab-m-webapp",
-   "GitHub Actions Maven workflow",
-   "MetDNA2",
-   "knitr and rmarkdown",
-   "Python 3.9.0",
-   "numpy",
-   "openpyxl",
-   "numpy, scipy, matplotlib",
-   "brain-isotopic-distribution",
-   "GitHub repository (RaoboXu/Lipidwizard)",
-   "scikit-learn",
-   "mypy",
-   "Ruff",
-   "Sphinx",
-   "LipiDex-2",
-   "LipiDex",
-   "Jupyter Notebook (001-007.ipynb series)",
-   "mzbatch.py",
-   "requirements.txt",
-   "m2r",
-   "Flask",
-   "SQLite / SQLAlchemy",
-   "Docker Compose",
-   "Conda / environment.yml",
-   "unittest / pytest",
-   "Git version tags and changelog",
-   "GNPS_MASST",
-   "MEANtools",
-   "MetaboAnalystR",
-   "MetaboAnalyst Web Server",
-   "MSnbase",
-   "xcms",
-   "MetaboAnalyst web server",
-   "Hugging Face Hub",
-   "metabolitics-frontend",
-   "Metabolome-Transformer",
-   "GNPS (Global Natural Product Social Molecular Networking Platform)",
-   "AirdPro",
-   "MetaPro",
-   "Redis",
-   "MongoDB",
-   "TransOmics (MetDIT component)",
-   "NetOmics (MetDIT component)",
-   "R v4.3.3",
-   "TBtools v2.096",
-   "GitHub (ShawnWx2019/MetMiner)",
-   "tidymass",
-   "MFAssignR",
-   "mineMS2",
-   "MINNO",
-   "GitHub (LewisResearchGroup/MINNO repository)",
-   "molDiscovery",
-   "Spyder",
-   "Anaconda",
-   "MRMkit",
-   "GNPS (Global Natural Products Social Molecular Networking)",
-   "Sirius 6",
-   "ISDB-LOTUS",
-   "MatchMS",
-   "MZmine 4",
-   "Visual Studio",
-   ".NET Framework 4.7.2, .NET Core 3.1, .NET 6, .NET Standard 2.0",
-   "mzML, abf, cdf data formats",
-   "MSIannotator",
-   "MATLAB",
-   "MSIght",
-   "PyPI",
-   "ReadTheDocs documentation",
-   "GitHub repository",
-   "Python 3.8",
-   "GitHub version control",
-   "MZmine 2",
-   "mzmine2",
-   "JDK 25",
-   "JavaFX 24",
-   "GitHub Actions (dev_build_release workflow)",
-   "TensorFlow",
-   "proteowizard",
-   "mzMine",
-   "XCMS",
-   "msconvert",
-   "NeatMS",
-   "Keras",
-   "pandas",
-   "Jupyter notebook",
-   "dash / jupyter-dash",
-   "ProteoWizard / msconvert",
-   "config.py",
-   "network_auralization.py",
-   "utils.py",
-   "Python 3.6",
-   "Norm-ISWSVR",
-   "NP³ MS Workflow",
-   "mamba / conda",
-   "GNPS2 Library Search",
-   "npanalyst",
-   "antiSMASH",
-   "BiG-SCAPE",
-   "scikit-learn (KNN)",
-   "Pfam database",
-   "CTD (Common Tool Description) files",
-   "Galaxy",
-   "nextflow",
-   "PeakDetective",
-   "GitLab CI/CD",
-   "Maven",
-   "Open Babel",
-   "PeakMeister",
-   "POMAShiny",
-   "POMA",
-   "bs4Dash",
-   "PPGB-MS2",
-   "CFM-ID",
-   "Shiny",
-   "Protomix",
-   "pyicoshift",
-   "QC4Metabolomics",
-   "xtb",
-   "alfabet",
-   "RaMP-DB (R package)",
-   "RaMP-Backend",
-   "Travis CI / AppVeyor",
-   "Conda / Mamba",
-   "Google Colab",
-   "GNPS2_Workflows repository",
-   "ProteoWizard",
-   "ProteoWizard msconvert",
-   "Time_Corecctor (RI-based-CPSC)",
-   "SGMNS",
-   "Spyder 3.7",
-   "MSConvert",
-   "conda/pip",
-   "SIMPEL",
-   "Figshare",
-   "SManalyst",
-   "MetaS/MetaS",
-   "SONAR-MSI",
-   "SpectraX",
-   "Hugging Face Model Hub (MS-ML)",
-   "GitHub repository (hejjack/SpecTUS)",
-   "Jupyter notebooks (5_inference_on_open_data.ipynb)",
-   "spectus-demo repository",
-   "Jupyter",
-   "Conda",
-   "Jupyter Notebook",
-   "ms2deepscore",
-   "SKYLINE",
-   "MetaboAnalyst",
-   "statTarget",
-   "Combat",
-   "MZmine2",
-   "SIEVE",
-   "RGtk2",
-   "struct",
-   "structToolbox",
-   "BiocManager",
-   "NumPy",
-   "limma"
-  ],
-  "dois": [
-   "10.1093/bioinformatics/btad354",
-   "10.1021/acs.jproteome.5c00423",
-   "10.1021/acs.analchem.3c04946",
-   "10.1016/j.jece.2025.119962",
-   "10.1021/acs.analchem.1c05224",
-   "10.1128/msystems.00937-21",
-   "10.1186/s13321-023-00734-8",
-   "10.1021/ac202450g",
-   "10.1021/acs.analchem.8b04698",
-   "10.1093/nar/gku436",
-   "10.1021/acs.jcim.4c00760",
-   "10.1186/s13321-020-00478-9",
-   "10.3390/app13105969",
-   "10.1038/s41587-021-01045-9",
-   "10.1021/acs.analchem.5c03451",
-   "10.1177/14690667231164766",
-   "10.1007/s12539-025-00786-4",
-   "10.1101/2024.05.30.596727v2",
-   "10.1101/2024.11.13.623458v1",
-   "10.1016/j.aca.2025.344698",
-   "10.48550/arxiv.2502.09571",
-   "10.1186/s12859-024-05994-1",
-   "10.1016/j.chroma.2018.09.050",
-   "10.1021/acs.analchem.6b02927",
-   "10.1074/mcp.M113.031278",
-   "10.26434/chemrxiv-2024-1zk33",
-   "10.48550/arxiv.2404.02360",
-   "10.1007/s11306-025-02379-0",
-   "10.1186/s12859-023-05525-4",
-   "10.1093/bib/bbaf080",
-   "10.1186/s12859-023-05346-5",
-   "10.1038/s41596-025-01237-6",
-   "10.1038/s41467-025-65993-5",
-   "10.1038/s41596-020-0317-5",
-   "10.1002/imt2.195",
-   "10.1021/acs.analchem.5c04111",
-   "10.1021/acs.analchem.4c05315",
-   "10.1289/EHP7722",
-   "10.1093/bioinformatics/btac647/6722615",
-   "10.1186/s13321-024-00804-5",
-   "10.1038/s41467-021-23953-9",
-   "10.1021/acs.analchem.2c04603",
-   "10.1021/acs.analchem.0c03895",
-   "10.1038/s41598-018-31154-6",
-   "10.1038/s41467-022-34537-6",
-   "10.1021/acs.analchem.3c04419",
-   "10.1021/acs.analchem.5c00277",
-   "10.1101/2024.10.07.617094v3",
-   "10.1021/acs.analchem.4c00359",
-   "10.1016/j.cels.2018.03.011",
-   "10.1021/acs.analchem.0c02560",
-   "10.1021/acs.analchem.5c01414",
-   "10.1093/bioinformatics/btab060/6125380",
-   "10.1021/jasms.1c00013",
-   "10.48550/arxiv.2501.01950",
-   "10.1093/bioinformatics/btac355/6593484",
-   "10.1021/acs.analchem.3c03594",
-   "10.1186/s13321-023-00741-9",
-   "10.1038/s41587-023-01985-4",
-   "10.1101/2024.08.02.606356v2",
-   "10.1186/s13020-024-01031-8",
-   "10.1371/journal.pbio.3003307",
-   "10.1093/nar/gkae253",
-   "10.1038/s41467-024-48009-6",
-   "10.1101/2025.11.07.687008v1",
-   "10.1101/2025.11.07.687008",
-   "10.1109/tcbbio.2025.3563807",
-   "10.1038/s41467-025-66163-3",
-   "10.1039/d2mo00168c",
-   "10.1093/bioinformatics/btae373",
-   "10.1093/bioadv/vbad061/7172446",
-   "10.1021/acs.analchem.4c02038",
-   "10.1007/s11306-023-02018-6",
-   "10.1016/j.aca.2018.05.001",
-   "10.1021/acs.analchem.3c04607",
-   "10.1111/jipb.13774",
-   "10.1016/j.envres.2020.110114",
-   "10.1186/s13321-025-01051-y",
-   "10.1021/acs.analchem.3c04501",
-   "10.1038/s41467-021-23986-0",
-   "10.1021/acs.analchem.2c04632",
-   "10.1021/acs.analchem.0c03060",
-   "10.1002/cmtd.202400088",
-   "10.5281/zenodo.5607185",
-   "10.5281/zenodo.5794106",
-   "10.48550/arxiv.2510.09716",
-   "10.1038/s41467-024-54137-w",
-   "10.1021/acs.analchem.4c00527",
-   "10.1002/rcm.9253",
-   "10.1021/acs.analchem.2c00557",
-   "10.1016/j.chemolab.2024.105063",
-   "10.1021/acs.jproteome.4c01140",
-   "10.1371/journal.pone.0321239",
-   "10.1186/1471-2105-11-395",
-   "10.1038/s41587-023-01690-2",
-   "10.1021/acs.analchem.1c02220",
-   "10.48550/arxiv.2410.22030",
-   "10.1101/2023.03.01.530642v1",
-   "10.1021/jasms.4c00467",
-   "10.1021/acs.analchem.3c05829",
-   "10.1021/acscentsci.1c01108",
-   "10.1093/pnasnexus/pgac257/6847575",
-   "10.1038/nmeth.3959",
-   "10.1021/acs.analchem.3c00764",
-   "10.1007/s11306-022-01899-3",
-   "10.1021/acs.analchem.4c03513",
-   "10.1016/j.dmd.2025.100183",
-   "10.3390/plants12152880",
-   "10.1371/journal.pcbi.1009148",
-   "10.1021/acs.analchem.4c04375",
-   "10.1021/acs.analchem.5b02287",
-   "10.1093/bioadv/vbae192",
-   "10.1021/acs.analchem.4c07078",
-   "10.1021/acs.jcim.4c00446",
-   "10.3390/metabo8010016",
-   "10.1021/acs.analchem.2c02093",
-   "10.1101/2024.08.07.607073v1",
-   "10.1038/s41586-023-06906-8",
-   "10.1021/acs.analchem.3c02583",
-   "10.1021/acs.analchem.5c03730",
-   "10.1021/acs.analchem.3c00849",
-   "10.1038/s42004-023-00939-w",
-   "10.5281/zenodo.5501673",
-   "10.1038/s42003-024-05844-z",
-   "10.1101/2024.11.04.621329v1",
-   "10.1038/s41592-019-0344-8",
-   "10.3390/biom15111562",
-   "10.3390/metabo13080941",
-   "10.1021/acs.analchem.1c00113",
-   "10.1021/acs.analchem.5c03682",
-   "10.1021/jasms.3c00322",
-   "10.26434/chemrxiv-2024-37v2j",
-   "10.48550/arxiv.2502.05114",
-   "10.1021/acs.analchem.3c04444",
-   "10.1038/nbt.3689",
-   "10.1016/j.aca.2018.08.002",
-   "10.1093/bioinformatics/btaa1031",
-   "10.21105/joss.02694",
-   "10.1007/s11306-018-1363-7",
-   "10.1038/s42004-024-01189-0",
-   "10.1021/acs.jproteome.3c00784",
-   "10.3390/metabo10100416",
-   "10.1038/s41467-022-32155-w",
-   "10.1186/s13321-024-00858-5",
-   "10.3389/fmolb.2022.952149",
-   "10.1021/acs.analchem.5c03390",
-   "10.1186/s13321-023-00724-w",
-   "10.1016/j.jpba.2022.114681",
-   "10.21105/joss.02410",
-   "10.1038/s43588-025-00923-5",
-   "10.1016/j.aca.2019.02.010",
-   "10.1007/s11306-021-01839-7",
-   "10.3390/metabo9090171",
-   "10.1007/s42081-023-00205-2",
-   "10.1021/ac051437y",
-   "10.1038/s42256-020-00234-6"
-  ],
-  "techniques": [
-   "MS-imaging"
-  ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "resnet-architecture-modification-for-dimensionality-control",
@@ -6091,7 +7661,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "roi-definition-and-extraction",
@@ -6113,7 +7693,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "msi-explorer",
+   "napari",
+   "python"
+  ]
  },
  {
   "slug": "root-developmental-tissue-profiling",
@@ -6135,7 +7722,12 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "matlab"
+  ]
  },
  {
   "slug": "savitzky-golay-filter-application",
@@ -6160,7 +7752,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biocparallel",
+   "cardinal",
+   "cardinalio"
+  ]
  },
  {
   "slug": "scan-filter-file-organization",
@@ -6182,7 +7781,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "chambm-pwiz-skyline-i-agree-to-the-vendor-licenses",
+   "docker",
+   "imzml-writer",
+   "msconvert",
+   "proteowizard",
+   "python"
+  ]
  },
  {
   "slug": "search-result-visualization-across-domains",
@@ -6210,7 +7819,18 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "foodmasst",
+   "gnps-masst",
+   "metadatamasst",
+   "microbemasst",
+   "microbiomemasst",
+   "plantmasst",
+   "tissuemasst"
+  ]
  },
  {
   "slug": "seurat-assay-metadata-extraction",
@@ -6237,7 +7857,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "dplyr",
+   "ggplot2",
+   "seurat",
+   "spamtp",
+   "tidyr"
+  ]
  },
  {
   "slug": "signal-preprocessing-chain-normalization-smoothing-baseline",
@@ -6262,7 +7892,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biocparallel",
+   "cardinal",
+   "cardinalio"
+  ]
  },
  {
   "slug": "signal-quality-assessment",
@@ -6285,7 +7922,14 @@
    "CE-MS",
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "msi-explorer",
+   "napari",
+   "python"
+  ]
  },
  {
   "slug": "single-cell-spatial-metabolomics-data-processing",
@@ -6311,7 +7955,10 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": []
  },
  {
   "slug": "smiles-molecular-parsing",
@@ -6331,7 +7978,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "github-actions",
+   "rdkit"
+  ]
  },
  {
   "slug": "sodium-adduct-detection-and-classification",
@@ -6357,7 +8011,14 @@
    "CE-MS",
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "software-plugin-development",
@@ -6378,7 +8039,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "github-actions",
+   "rdkit"
+  ]
  },
  {
   "slug": "spatial-coordinate-mapping-msi",
@@ -6403,7 +8071,17 @@
    "CE-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "dplyr",
+   "ggplot2",
+   "seurat",
+   "spamtp",
+   "tidyr"
+  ]
  },
  {
   "slug": "spatial-coordinate-metadata-extraction",
@@ -6423,7 +8101,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-wanluliulab-spatialmeta",
+   "scikit-learn-nearestneighbors-for-knn-index-construction",
+   "spatialmeta"
+  ]
  },
  {
   "slug": "spatial-coordinate-registration-across-modalities",
@@ -6445,7 +8130,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-wanluliulab-spatialmeta",
+   "scikit-learn-nearestneighbors-for-knn-index-construction",
+   "spatialmeta"
+  ]
  },
  {
   "slug": "spatial-correlation-analysis-in-imaging-mass-spectrometry",
@@ -6472,7 +8164,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "spatial-correlation-filtering-in-msi",
@@ -6496,7 +8195,14 @@
    "direct-infusion-MS",
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "spatial-distribution-pattern-analysis",
@@ -6520,7 +8226,15 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "link-only",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "devtools",
+   "rmsi",
+   "rmsicleanup",
+   "rmsiproc"
+  ]
  },
  {
   "slug": "spatial-feature-embedding",
@@ -6545,7 +8259,16 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "spatial-filtering-ion-images",
@@ -6566,7 +8289,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "spatial-metabolomics-feature-annotation",
@@ -6592,7 +8325,17 @@
    "LC-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "dplyr",
+   "ggplot2",
+   "seurat",
+   "spamtp",
+   "tidyr"
+  ]
  },
  {
   "slug": "spatial-metabolomics-integration",
@@ -6613,7 +8356,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-wanluliulab-spatialmeta",
+   "scikit-learn-nearestneighbors-for-knn-index-construction",
+   "spatialmeta"
+  ]
  },
  {
   "slug": "spatial-overlap-analysis-imaging",
@@ -6638,7 +8388,15 @@
    "MS-imaging",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "link-only",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "devtools",
+   "rmsi",
+   "rmsicleanup",
+   "rmsiproc"
+  ]
  },
  {
   "slug": "spatial-pixel-coordinate-alignment",
@@ -6661,7 +8419,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "chambm-pwiz-skyline-i-agree-to-the-vendor-licenses",
+   "docker",
+   "imzml-writer",
+   "msconvert",
+   "proteowizard",
+   "python"
+  ]
  },
  {
   "slug": "spatial-segmentation-shrunken-centroids",
@@ -6687,7 +8455,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "dplyr",
+   "ggplot2",
+   "seurat",
+   "spamtp",
+   "tidyr"
+  ]
  },
  {
   "slug": "spatial-spectral-array-processing",
@@ -6710,7 +8488,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biocparallel",
+   "cardinal",
+   "cardinalio"
+  ]
  },
  {
   "slug": "spatial-spot-coordinate-registration",
@@ -6731,7 +8516,12 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hacca"
+  ]
  },
  {
   "slug": "spatial-transcriptome-metabolome-coregistration",
@@ -6753,7 +8543,12 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hacca"
+  ]
  },
  {
   "slug": "spatial-transcriptomics-integration",
@@ -6776,7 +8571,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-wanluliulab-spatialmeta",
+   "scikit-learn-nearestneighbors-for-knn-index-construction",
+   "spatialmeta"
+  ]
  },
  {
   "slug": "spatio-molecular-matrix-processing",
@@ -6799,7 +8601,13 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "google-colab",
+   "python-3"
+  ]
  },
  {
   "slug": "spectral-annotation-and-overlay-visualization",
@@ -6820,7 +8628,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "spectral-baseline-correction",
@@ -6842,7 +8657,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "msi-explorer",
+   "napari",
+   "python"
+  ]
  },
  {
   "slug": "spectral-data-normalization-tic",
@@ -6867,7 +8689,17 @@
    "LC-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "dplyr",
+   "ggplot2",
+   "seurat",
+   "spamtp",
+   "tidyr"
+  ]
  },
  {
   "slug": "spectral-dimension-verification",
@@ -6889,7 +8721,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biocparallel",
+   "cardinal",
+   "cardinalio"
+  ]
  },
  {
   "slug": "spectral-image-filtering",
@@ -6910,7 +8749,17 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "color-jitter-augmentation",
+   "filtering-augmentation",
+   "intensity-dependent-missing-value-augmentation",
+   "poisson-noise-augmentation",
+   "random-missing-value-augmentation",
+   "resnet18"
+  ]
  },
  {
   "slug": "spectral-ion-matching-across-vendors",
@@ -6934,7 +8783,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "spectral-library-matching-and-scoring",
@@ -6967,7 +8828,15 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "docker",
+   "msi-explorer",
+   "napari",
+   "python"
+  ]
  },
  {
   "slug": "spectral-noise-reduction-msi",
@@ -6989,7 +8858,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "msi-explorer",
+   "napari",
+   "python"
+  ]
  },
  {
   "slug": "spectral-peak-parent-product-pairing",
@@ -7011,7 +8887,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "spectral-peak-picking-derivative-based",
@@ -7035,7 +8918,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biocparallel",
+   "cardinal",
+   "cardinalio"
+  ]
  },
  {
   "slug": "spectral-reference-peak-summarization",
@@ -7058,7 +8948,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biocparallel",
+   "cardinal",
+   "cardinalio"
+  ]
  },
  {
   "slug": "spectral-search-result-aggregation",
@@ -7086,7 +8983,18 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "foodmasst",
+   "gnps-masst",
+   "metadatamasst",
+   "microbemasst",
+   "microbiomemasst",
+   "plantmasst",
+   "tissuemasst"
+  ]
  },
  {
   "slug": "spectrum-peak-counting-and-reporting",
@@ -7111,7 +9019,17 @@
    "GC-MS",
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bruker-solarix",
+   "corems",
+   "docker",
+   "matplotlib",
+   "numpy",
+   "pandas"
+  ]
  },
  {
   "slug": "spot-level-intensity-aggregation",
@@ -7132,7 +9050,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-wanluliulab-spatialmeta",
+   "scikit-learn-nearestneighbors-for-knn-index-construction",
+   "spatialmeta"
+  ]
  },
  {
   "slug": "summary-visualization-artifact-generation",
@@ -7162,7 +9087,18 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "foodmasst",
+   "gnps-masst",
+   "metadatamasst",
+   "microbemasst",
+   "microbiomemasst",
+   "plantmasst",
+   "tissuemasst"
+  ]
  },
  {
   "slug": "tissue-spatial-analysis-pipeline-execution",
@@ -7188,7 +9124,10 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": []
  },
  {
   "slug": "total-ion-current-quantification",
@@ -7211,7 +9150,19 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "two-dimensional-spectral-map-analysis",
@@ -7236,7 +9187,13 @@
    "GC-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "npfimg",
+   "xcms"
+  ]
  },
  {
   "slug": "variational-autoencoder-training",
@@ -7256,7 +9213,14 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-wanluliulab-spatialmeta",
+   "scikit-learn-nearestneighbors-for-knn-index-construction",
+   "spatialmeta"
+  ]
  },
  {
   "slug": "vendor-file-format-specification-handling",
@@ -7279,6 +9243,18 @@
    "CE-MS",
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  }
 ]

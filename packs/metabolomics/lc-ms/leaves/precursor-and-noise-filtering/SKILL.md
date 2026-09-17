@@ -1,6 +1,8 @@
 ---
 name: precursor-and-noise-filtering
-description: Use when you have loaded raw tandem MS spectra (in MGF, mzML, or similar format) and need to prepare them for peptide identification, spectral library matching, or intensity-based analysis.
+description: Use when you have loaded raw tandem MS spectra (in MGF, mzML, or similar
+  format) and need to prepare them for peptide identification, spectral library matching,
+  or intensity-based analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3645
@@ -18,16 +20,21 @@ metadata:
   - Numba
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
 - pymzML (version 2.5.2)
 - pyOpenMS (version 2.7.0)
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
 - import seaborn as sns
-- Spectrum processing in spectrum_utils has been optimized for computational efficiency using [NumPy](https://www.numpy.org/)
+- Spectrum processing in spectrum_utils has been optimized for computational efficiency
+  using [NumPy](https://www.numpy.org/)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

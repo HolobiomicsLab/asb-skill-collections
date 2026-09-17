@@ -1,6 +1,9 @@
 ---
 name: energy-based-model-inference
-description: Use when when you have an unknown MS/MS spectrum (m/z and intensity pairs) and need to assign a chemical formula and ionization adduct to the precursor mass, particularly when spectrum database lookups are unavailable or when you want to exploit learned patterns in fragmentation rather than.
+description: Use when when you have an unknown MS/MS spectrum (m/z and intensity pairs)
+  and need to assign a chemical formula and ionization adduct to the precursor mass,
+  particularly when spectrum database lookups are unavailable or when you want to
+  exploit learned patterns in fragmentation rather than.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,6 +15,8 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf

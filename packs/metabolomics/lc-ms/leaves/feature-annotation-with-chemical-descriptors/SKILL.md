@@ -1,6 +1,8 @@
 ---
 name: feature-annotation-with-chemical-descriptors
-description: Use when you have a feature list (m/z values, retention times, and optionally molecular formulas or neutral masses) from LC- or GC-HRMS data and need to rapidly identify features matching characteristic chemical signatures (e.
+description: Use when you have a feature list (m/z values, retention times, and optionally
+  molecular formulas or neutral masses) from LC- or GC-HRMS data and need to rapidly
+  identify features matching characteristic chemical signatures (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -15,6 +17,8 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen

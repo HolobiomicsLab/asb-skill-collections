@@ -1,6 +1,8 @@
 ---
 name: peak-intensity-vector-transformation
-description: Use when you have a peak intensity matrix from LC/GC-MS analysis with known QC sample indices and suspect batch-related systematic variation in feature intensities. Use it as a preprocessing step before downstream analysis (e.
+description: Use when you have a peak intensity matrix from LC/GC-MS analysis with
+  known QC sample indices and suspect batch-related systematic variation in feature
+  intensities. Use it as a preprocessing step before downstream analysis (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -12,11 +14,14 @@ metadata:
   - mzrtsim
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
 - github.com__yufree__mzrtsim
 claims: []
 provenance:

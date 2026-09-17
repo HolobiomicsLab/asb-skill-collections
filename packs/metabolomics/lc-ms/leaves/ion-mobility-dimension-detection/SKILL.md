@@ -1,6 +1,8 @@
 ---
 name: ion-mobility-dimension-detection
-description: Use when when processing raw mass spectrometry data files of unknown or mixed provenance, and you need to automatically route IMS inputs to their corresponding analysis pipeline.
+description: Use when when processing raw mass spectrometry data files of unknown
+  or mixed provenance, and you need to automatically route IMS inputs to their corresponding
+  analysis pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3823
@@ -15,6 +17,8 @@ metadata:
   - LC-MS
   - GC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3

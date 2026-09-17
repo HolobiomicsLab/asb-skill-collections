@@ -1,6 +1,8 @@
 ---
 name: peak-pairwise-comparison
-description: Use when after molecular formula assignment and peak filtering are complete, when you have a filtered peak list (m/z values and molecular formulas) and want to discover biochemical transformations without prior knowledge of reaction networks.
+description: Use when after molecular formula assignment and peak filtering are complete,
+  when you have a filtered peak list (m/z values and molecular formulas) and want
+  to discover biochemical transformations without prior knowledge of reaction networks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,12 +15,15 @@ metadata:
   - KEGG database
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

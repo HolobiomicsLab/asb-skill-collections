@@ -1,6 +1,7 @@
 ---
 name: multi-batch-experimental-design-understanding
-description: Use when your metabolomics experiment includes samples acquired across multiple instrument runs, different preparation dates, or distinct sample cohorts.
+description: Use when your metabolomics experiment includes samples acquired across
+  multiple instrument runs, different preparation dates, or distinct sample cohorts.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -16,6 +17,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

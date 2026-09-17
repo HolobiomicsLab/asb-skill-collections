@@ -1,6 +1,8 @@
 ---
 name: metabolite-candidate-ranking-interpretation
-description: Use when after running annotateRC() on LC-MS AIF features, when you need to validate whether a feature's rank-1 annotation is reliable or when you suspect that structurally similar metabolites (e.
+description: Use when after running annotateRC() on LC-MS AIF features, when you need
+  to validate whether a feature's rank-1 annotation is reliable or when you suspect
+  that structurally similar metabolites (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -17,11 +19,14 @@ metadata:
   - plotResultSpec
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - To install this package, start R (version "4.5.0" or higher)
 - start R (version "4.5.0" or higher)
 claims: []

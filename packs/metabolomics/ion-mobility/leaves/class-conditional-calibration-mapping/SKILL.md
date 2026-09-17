@@ -1,6 +1,9 @@
 ---
 name: class-conditional-calibration-mapping
-description: Use when you have TWIM-MS experimental data (arrival times and ion mobility parameters) paired with pre-assigned biomolecular class labels for an ion population, and you need to obtain class-conditioned CCS values without first performing feature-level identification.
+description: Use when you have TWIM-MS experimental data (arrival times and ion mobility
+  parameters) paired with pre-assigned biomolecular class labels for an ion population,
+  and you need to obtain class-conditioned CCS values without first performing feature-level
+  identification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -13,6 +16,8 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal

@@ -144,4 +144,4 @@ Load FTICR HAM mzML files from Zenodo (doi:10.5281/zenodo.18494293), detect chro
 
 ---
 
-*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See [`artifact_provenance.json`](../../../capsules/xcms/task_004/artifact_provenance.json) for what this release carries; it also lists the build artefacts the release does not promote.*

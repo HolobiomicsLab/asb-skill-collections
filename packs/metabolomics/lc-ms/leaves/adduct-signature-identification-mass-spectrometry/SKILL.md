@@ -1,6 +1,9 @@
 ---
 name: adduct-signature-identification-mass-spectrometry
-description: Use when you have statistically significant LC-MS features (e.g., filtered by p-value < 0.01) from multi-assay metabolomics datasets and need to group features that represent the same metabolite ionized under different ESI conditions (e.g., [M+H]+, [M+Na]+, [M+NH4]+).
+description: Use when you have statistically significant LC-MS features (e.g., filtered
+  by p-value < 0.01) from multi-assay metabolomics datasets and need to group features
+  that represent the same metabolite ionized under different ESI conditions (e.g.,
+  [M+H]+, [M+Na]+, [M+NH4]+).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -15,13 +18,16 @@ metadata:
   - MamsiStructSearch
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
 - doi: 10.1371/journal.pcbi.1011814
   title: ''
 evidence_spans:
-- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry datasets.
+- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry
+  datasets.
 - import pandas as pd
 - import numpy as np
 - 'Dependencies: scipy'

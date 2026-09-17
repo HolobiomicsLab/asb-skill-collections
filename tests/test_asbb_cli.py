@@ -103,6 +103,34 @@ def test_cli_search_and_get(demo_root, capsys):
     assert "alpha" in capsys.readouterr().out
 
 
+def test_registry_is_neither_advertised_nor_accepted(capsys):
+    """`asbb registry` was removed on 2026-09-14; it must not drift back.
+
+    Until then it was advertised in ``--help`` and documented in
+    docs/REGISTRY.md §4.1 with two subcommands, while doing neither: it printed a
+    Phase-1.7 placeholder and exited 1. A reader consulted the help, planned a
+    release step around it, and found the gap at the point of use. The contract
+    now is argparse's own — an unknown subcommand, a clear error, exit 2 — and not
+    a placeholder that exits 1, nor a traceback.
+    """
+    from asb_skill_collections.asbb_cli import main
+
+    with pytest.raises(SystemExit) as helped:
+        main(["--help"])
+    assert helped.value.code == 0
+    advertised = capsys.readouterr().out
+    assert "registry" not in advertised
+    # the removal is confined to `registry`: every other surface still shows.
+    for kept in ("search", "get", "verify", "doctor", "install", "uninstall"):
+        assert kept in advertised, kept
+
+    with pytest.raises(SystemExit) as refused:
+        main(["registry", "list"])
+    assert refused.value.code == 2
+    refusal = capsys.readouterr().err
+    assert "invalid choice" in refusal and "registry" in refusal
+
+
 def test_mcp_server_requires_extra():
     """Without the mcp extra, importing the server exits cleanly with guidance."""
     try:

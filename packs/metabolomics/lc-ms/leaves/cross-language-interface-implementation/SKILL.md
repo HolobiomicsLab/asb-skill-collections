@@ -1,6 +1,8 @@
 ---
 name: cross-language-interface-implementation
-description: Use when you have a mature R analysis pipeline (e.g., using Spectra objects for MS data) but need access to specialized algorithms or calculations available only in Python libraries (e.g., CosineGreedy similarity from matchms).
+description: Use when you have a mature R analysis pipeline (e.g., using Spectra objects
+  for MS data) but need access to specialized algorithms or calculations available
+  only in Python libraries (e.g., CosineGreedy similarity from matchms).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -16,12 +18,16 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
 evidence_spans:
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based MS analysis in R
-- MS analysis in R. By wrapping Python functionality into R functions, *SpectriPy* allows a seamless integration of Python libraries into R
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based
+  MS analysis in R
+- MS analysis in R. By wrapping Python functionality into R functions, *SpectriPy*
+  allows a seamless integration of Python libraries into R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,8 @@
 ---
 name: molecular-formula-prediction-from-fragmentation
-description: Use when you have MS/MS fragmentation spectra (from Orbitrap or Q-TOF instruments) in MGF format with known precursor m/z, adduct type, and collision energy, and you need to generate ranked molecular formula candidates.
+description: Use when you have MS/MS fragmentation spectra (from Orbitrap or Q-TOF
+  instruments) in MGF format with known precursor m/z, adduct type, and collision
+  energy, and you need to generate ranked molecular formula candidates.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +16,8 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

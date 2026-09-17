@@ -1,6 +1,9 @@
 ---
 name: heatmap-visualization-design
-description: 'Use when after training a DeepMSProfiler model and generating per-sample predictions: when you need to display Pearson or Spearman correlation coefficients between individual metabolite signals and disease class labels in a matrix form suitable for publication or exploratory review of.'
+description: 'Use when after training a DeepMSProfiler model and generating per-sample
+  predictions: when you need to display Pearson or Spearman correlation coefficients
+  between individual metabolite signals and disease class labels in a matrix form
+  suitable for publication or exploratory review of.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +17,8 @@ metadata:
   - DeepMSProfiler
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler

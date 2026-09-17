@@ -1,6 +1,9 @@
 ---
 name: smiles-molecular-parsing
-description: Use when when you have a list of candidate metabolite identifiers in SMILES or mol format and need to programmatically apply chemical transformations (e.g., derivatization reactions), compute molecular weights, or enumerate adduct ions for mass spectrometry matching.
+description: Use when when you have a list of candidate metabolite identifiers in
+  SMILES or mol format and need to programmatically apply chemical transformations
+  (e.g., derivatization reactions), compute molecular weights, or enumerate adduct
+  ions for mass spectrometry matching.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -11,6 +14,8 @@ metadata:
   - RDKit
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid

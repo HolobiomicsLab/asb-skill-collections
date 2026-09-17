@@ -1,6 +1,8 @@
 ---
 name: compound-list-annotation-and-filtering
-description: Use when after marker identification or feature selection has produced a list of discriminatory m/z features, and before pathway enrichment analysis (e.g., KEGG).
+description: Use when after marker identification or feature selection has produced
+  a list of discriminatory m/z features, and before pathway enrichment analysis (e.g.,
+  KEGG).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3282
@@ -16,12 +18,16 @@ metadata:
   - R (>= 3.5.0)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
 evidence_spans:
-- several R packages are utilized in the background processes, including ggfortify, ggplot2, igraph
-- several R packages are utilized in the background processes, including ggplot2, igraph, MASS
+- several R packages are utilized in the background processes, including ggfortify,
+  ggplot2, igraph
+- several R packages are utilized in the background processes, including ggplot2,
+  igraph, MASS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,9 @@
 ---
 name: peak-background-binary-classification
-description: Use when you have LC-HRMS profile-mode chromatograms with extracted local maxima exported as standardized 2D rt×mz areas, and you need to disambiguate true chromatographic peaks from background signals (including wall artifacts and noise) at scale.
+description: Use when you have LC-HRMS profile-mode chromatograms with extracted local
+  maxima exported as standardized 2D rt×mz areas, and you need to disambiguate true
+  chromatographic peaks from background signals (including wall artifacts and noise)
+  at scale.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -14,6 +17,13 @@ metadata:
   - TOPPView (OpenMS)
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: christophuv/PeakBot
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot
@@ -42,6 +52,7 @@ attribution:
 
 # peak-background-binary-classification
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Train and apply a convolutional neural network to classify local maxima in LC-HRMS data as chromatographic peaks (with optional isomeric annotation) or background noise, while simultaneously predicting peak bounding-box coordinates and center location. This skill is essential for automated, high-throughput peak detection in untargeted metabolomics workflows.

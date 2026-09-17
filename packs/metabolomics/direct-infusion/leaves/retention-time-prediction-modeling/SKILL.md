@@ -1,6 +1,8 @@
 ---
 name: retention-time-prediction-modeling
-description: Use when you have a set of small-molecule compounds (e.g., from MS/MS library matching or database annotation) that require retention time validation or ranking to resolve ambiguous identifications.
+description: Use when you have a set of small-molecule compounds (e.g., from MS/MS
+  library matching or database annotation) that require retention time validation
+  or ranking to resolve ambiguous identifications.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3803
@@ -19,6 +21,8 @@ metadata:
   - GC-MS
   - CE-MS
   - direct-infusion-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b05765
   title: Retip

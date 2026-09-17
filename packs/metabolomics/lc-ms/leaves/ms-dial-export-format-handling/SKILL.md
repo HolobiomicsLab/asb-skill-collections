@@ -1,6 +1,9 @@
 ---
 name: ms-dial-export-format-handling
-description: Use when you have performed lipid identification in MS-DIAL and need to pass the results to LipoCLEAN or another downstream quality-filtering tool. The skill is required whenever you are preparing MS-DIAL output for consumption by external analysis pipelines that expect standardized export formats.
+description: Use when you have performed lipid identification in MS-DIAL and need
+  to pass the results to LipoCLEAN or another downstream quality-filtering tool. The
+  skill is required whenever you are preparing MS-DIAL output for consumption by external
+  analysis pipelines that expect standardized export formats.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -12,6 +15,8 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c04040
   title: lipoclean

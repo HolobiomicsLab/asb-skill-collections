@@ -1,0 +1,3118 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "asbext": "https://w3id.org/asb/indicium-ext#",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "fabio": "http://purl.org/spar/fabio/",
+      "oa": "http://www.w3.org/ns/oa#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "p-plan": "http://purl.org/net/p-plan#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "repme": "https://w3id.org/reproduceme#",
+      "sepio": "http://purl.obolibrary.org/obo/SEPIO_"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": [
+        "Dataset",
+        "repme:ScientificWorkflow"
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ],
+      "dateCreated": "2026-06-16",
+      "description": "Implement the Monitor component to track availability and error state of external web services (CIR, CTS, PubChem, IDSM, BridgeDb) during annotation runs. Produce a structured JSON status report per service including uptime, error counts, and response times.",
+      "hasPart": [
+        {
+          "@id": "evidence/source_snippets.md"
+        },
+        {
+          "@id": "inputs/dataset_folder_tree.txt"
+        },
+        {
+          "@id": "inputs/dataset_preview.md"
+        },
+        {
+          "@id": "evaluation/evaluation_strategy.md"
+        },
+        {
+          "@id": "evaluation/review_rubric.json"
+        },
+        {
+          "@id": "artifact_provenance.json"
+        },
+        {
+          "@id": "ledger/claims.jsonl"
+        },
+        {
+          "@id": "ledger/results.jsonl"
+        }
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "mentions": [
+        {
+          "@id": "#action-task_003"
+        },
+        {
+          "@id": "urn:asb:task:task_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_001"
+        },
+        {
+          "@id": "urn:asb:claim:claim_002"
+        },
+        {
+          "@id": "urn:asb:claim:claim_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_004"
+        },
+        {
+          "@id": "urn:asb:claim:claim_005"
+        },
+        {
+          "@id": "urn:asb:claim:claim_006"
+        },
+        {
+          "@id": "urn:asb:claim:claim_007"
+        },
+        {
+          "@id": "urn:asb:claim:claim_008"
+        },
+        {
+          "@id": "urn:asb:claim:claim_009"
+        },
+        {
+          "@id": "urn:asb:claim:claim_010"
+        },
+        {
+          "@id": "urn:asb:claim:claim_011"
+        },
+        {
+          "@id": "urn:asb:claim:claim_012"
+        },
+        {
+          "@id": "urn:asb:claim:claim_013"
+        },
+        {
+          "@id": "urn:asb:claim:claim_014"
+        },
+        {
+          "@id": "urn:asb:claim:claim_015"
+        },
+        {
+          "@id": "urn:asb:claim:claim_016"
+        },
+        {
+          "@id": "urn:asb:claim:claim_017"
+        },
+        {
+          "@id": "urn:asb:claim:claim_018"
+        },
+        {
+          "@id": "urn:asb:claim:claim_019"
+        },
+        {
+          "@id": "urn:asb:claim:claim_020"
+        },
+        {
+          "@id": "urn:asb:claim:claim_021"
+        },
+        {
+          "@id": "urn:asb:claim:claim_022"
+        },
+        {
+          "@id": "urn:asb:claim:claim_023"
+        },
+        {
+          "@id": "urn:asb:claim:claim_024"
+        },
+        {
+          "@id": "urn:asb:claim:claim_025"
+        },
+        {
+          "@id": "urn:asb:claim:claim_026"
+        },
+        {
+          "@id": "urn:asb:claim:claim_027"
+        },
+        {
+          "@id": "urn:asb:claim:claim_028"
+        },
+        {
+          "@id": "urn:asb:claim:claim_029"
+        },
+        {
+          "@id": "urn:asb:claim:claim_030"
+        },
+        {
+          "@id": "urn:asb:claim:claim_031"
+        },
+        {
+          "@id": "urn:asb:claim:claim_032"
+        },
+        {
+          "@id": "urn:asb:claim:claim_033"
+        },
+        {
+          "@id": "urn:asb:claim:claim_034"
+        },
+        {
+          "@id": "urn:asb:claim:claim_035"
+        },
+        {
+          "@id": "urn:asb:claim:claim_036"
+        },
+        {
+          "@id": "urn:asb:claim:claim_037"
+        },
+        {
+          "@id": "urn:asb:claim:claim_038"
+        },
+        {
+          "@id": "urn:asb:claim:claim_039"
+        },
+        {
+          "@id": "urn:asb:claim:claim_040"
+        },
+        {
+          "@id": "urn:asb:claim:claim_041"
+        },
+        {
+          "@id": "urn:asb:claim:claim_042"
+        },
+        {
+          "@id": "urn:asb:claim:claim_043"
+        },
+        {
+          "@id": "urn:asb:claim:claim_044"
+        },
+        {
+          "@id": "urn:asb:claim:claim_045"
+        },
+        {
+          "@id": "urn:asb:claim:claim_046"
+        },
+        {
+          "@id": "urn:asb:claim:claim_047"
+        },
+        {
+          "@id": "urn:asb:claim:claim_048"
+        },
+        {
+          "@id": "urn:asb:claim:claim_049"
+        },
+        {
+          "@id": "urn:asb:claim:claim_050"
+        },
+        {
+          "@id": "urn:asb:claim:claim_051"
+        },
+        {
+          "@id": "urn:asb:claim:claim_052"
+        },
+        {
+          "@id": "urn:asb:claim:claim_053"
+        },
+        {
+          "@id": "urn:asb:claim:claim_054"
+        },
+        {
+          "@id": "urn:asb:claim:claim_055"
+        },
+        {
+          "@id": "urn:asb:claim:claim_056"
+        },
+        {
+          "@id": "urn:asb:claim:claim_057"
+        },
+        {
+          "@id": "urn:asb:claim:claim_058"
+        },
+        {
+          "@id": "urn:asb:result:result_001"
+        },
+        {
+          "@id": "urn:asb:result:result_002"
+        },
+        {
+          "@id": "urn:asb:result:result_003"
+        },
+        {
+          "@id": "urn:asb:result:result_004"
+        },
+        {
+          "@id": "urn:asb:result:result_005"
+        },
+        {
+          "@id": "urn:asb:result:result_006"
+        },
+        {
+          "@id": "urn:asb:result:result_007"
+        },
+        {
+          "@id": "urn:asb:result:result_008"
+        },
+        {
+          "@id": "urn:asb:result:result_009"
+        },
+        {
+          "@id": "urn:asb:result:result_010"
+        },
+        {
+          "@id": "urn:asb:result:result_011"
+        },
+        {
+          "@id": "urn:asb:result:result_012"
+        },
+        {
+          "@id": "urn:asb:result:result_013"
+        },
+        {
+          "@id": "urn:asb:result:result_014"
+        },
+        {
+          "@id": "urn:asb:result:result_015"
+        },
+        {
+          "@id": "urn:asb:result:result_016"
+        },
+        {
+          "@id": "urn:asb:result:result_017"
+        },
+        {
+          "@id": "urn:asb:result:result_018"
+        },
+        {
+          "@id": "urn:asb:result:result_019"
+        },
+        {
+          "@id": "urn:asb:result:result_020"
+        },
+        {
+          "@id": "urn:asb:result:result_021"
+        },
+        {
+          "@id": "urn:asb:result:result_022"
+        },
+        {
+          "@id": "urn:asb:result:result_023"
+        },
+        {
+          "@id": "urn:asb:result:result_024"
+        },
+        {
+          "@id": "urn:asb:result:result_025"
+        },
+        {
+          "@id": "urn:asb:result:result_026"
+        },
+        {
+          "@id": "urn:asb:result:result_027"
+        },
+        {
+          "@id": "urn:asb:result:result_028"
+        },
+        {
+          "@id": "urn:asb:result:result_029"
+        },
+        {
+          "@id": "urn:asb:result:result_030"
+        },
+        {
+          "@id": "urn:asb:result:result_031"
+        },
+        {
+          "@id": "urn:asb:result:result_032"
+        },
+        {
+          "@id": "urn:asb:result:result_033"
+        },
+        {
+          "@id": "urn:asb:result:result_034"
+        },
+        {
+          "@id": "urn:asb:result:result_035"
+        },
+        {
+          "@id": "urn:asb:result:result_036"
+        },
+        {
+          "@id": "urn:asb:result:result_037"
+        },
+        {
+          "@id": "urn:asb:result:result_038"
+        },
+        {
+          "@id": "urn:asb:result:result_039"
+        },
+        {
+          "@id": "urn:asb:result:result_040"
+        },
+        {
+          "@id": "urn:asb:result:result_041"
+        },
+        {
+          "@id": "urn:asb:result:result_042"
+        },
+        {
+          "@id": "urn:asb:result:result_043"
+        },
+        {
+          "@id": "urn:asb:result:result_044"
+        },
+        {
+          "@id": "urn:asb:result:result_045"
+        },
+        {
+          "@id": "urn:asb:result:result_046"
+        },
+        {
+          "@id": "urn:asb:result:result_047"
+        },
+        {
+          "@id": "urn:asb:result:result_048"
+        },
+        {
+          "@id": "urn:asb:result:result_049"
+        },
+        {
+          "@id": "urn:asb:result:result_050"
+        },
+        {
+          "@id": "urn:asb:result:result_051"
+        },
+        {
+          "@id": "urn:asb:result:result_052"
+        },
+        {
+          "@id": "#env-task_003"
+        }
+      ],
+      "name": "Reconstruct the Monitor-based service status tracking during annotation",
+      "repme:hasComputationalEnvironment": {
+        "@id": "#computational-environment"
+      }
+    },
+    {
+      "@id": "evidence/source_snippets.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evidence/source_snippets.md"
+    },
+    {
+      "@id": "inputs/dataset_folder_tree.txt",
+      "@type": "File",
+      "encodingFormat": "text/plain",
+      "name": "inputs/dataset_folder_tree.txt"
+    },
+    {
+      "@id": "inputs/dataset_preview.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "inputs/dataset_preview.md"
+    },
+    {
+      "@id": "evaluation/evaluation_strategy.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evaluation/evaluation_strategy.md"
+    },
+    {
+      "@id": "evaluation/review_rubric.json",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "name": "evaluation/review_rubric.json"
+    },
+    {
+      "@id": "urn:asb:task:task_003",
+      "@type": [
+        "ScholarlyArticle",
+        "p-plan:Plan",
+        "http://purl.org/spar/fabio/SoftwarePaper"
+      ],
+      "asbext:task_kind": "component_reconstruction",
+      "description": "Implement the Monitor component to track availability and error state of external web services (CIR, CTS, PubChem, IDSM, BridgeDb) during annotation runs. Produce a structured JSON status report per service including uptime, error counts, and response times.",
+      "keywords": [
+        "web-service-health-monitoring",
+        "asynchronous-event-aggregation",
+        "error-state-tracking-across-microservices",
+        "api-response-latency-measurement",
+        "json-structured-reporting"
+      ],
+      "name": "Reconstruct the Monitor-based service status tracking during annotation",
+      "prov:wasInfluencedBy": [
+        {
+          "@id": "urn:asb:task:task_002"
+        }
+      ],
+      "repme:hasResearcher": [
+        {
+          "@id": "urn:asb:researcher:al-troj-k-2022"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:researcher:al-troj-k-2022",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Troják et al."
+    },
+    {
+      "@id": "urn:asb:tool:msmetaenhancer",
+      "@type": "SoftwareApplication",
+      "name": "MSMetaEnhancer",
+      "schema:url": "https://github.com/RECETOX/MSMetaEnhancer"
+    },
+    {
+      "@id": "urn:asb:tool:python",
+      "@type": "SoftwareApplication",
+      "name": "Python"
+    },
+    {
+      "@id": "urn:asb:tool:cir",
+      "@type": "SoftwareApplication",
+      "name": "CIR"
+    },
+    {
+      "@id": "urn:asb:tool:cts",
+      "@type": "SoftwareApplication",
+      "name": "CTS"
+    },
+    {
+      "@id": "urn:asb:tool:pubchem",
+      "@type": "SoftwareApplication",
+      "name": "PubChem"
+    },
+    {
+      "@id": "urn:asb:tool:idsm",
+      "@type": "SoftwareApplication",
+      "name": "IDSM"
+    },
+    {
+      "@id": "urn:asb:tool:bridgedb",
+      "@type": "SoftwareApplication",
+      "name": "BridgeDb"
+    },
+    {
+      "@id": "urn:asb:tool:pytest",
+      "@type": "SoftwareApplication",
+      "name": "pytest"
+    },
+    {
+      "@id": "urn:asb:input:task_003_0",
+      "@type": "File",
+      "name": "List of active web service converters (CIR, CTS, PubChem, IDSM, BridgeDb) and their endpoint URLs"
+    },
+    {
+      "@id": "urn:asb:input:task_003_1",
+      "@type": "File",
+      "name": "Asynchronous annotation run events (request start, response received, error occurred)"
+    },
+    {
+      "@id": "urn:asb:output:task_003_0",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Structured JSON status report per service including uptime percentage, error count, mean response time, and last check timestamp",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_003"
+      }
+    },
+    {
+      "@id": "#action-task_003",
+      "@type": [
+        "CreateAction",
+        "prov:Activity",
+        "p-plan:Step"
+      ],
+      "description": "Implement the Monitor component to track availability and error state of external web services (CIR, CTS, PubChem, IDSM, BridgeDb) during annotation runs. Produce a structured JSON status report per service including uptime, error counts, and response times.",
+      "instrument": [
+        {
+          "@id": "urn:asb:tool:msmetaenhancer"
+        },
+        {
+          "@id": "urn:asb:tool:python"
+        },
+        {
+          "@id": "urn:asb:tool:cir"
+        },
+        {
+          "@id": "urn:asb:tool:cts"
+        },
+        {
+          "@id": "urn:asb:tool:pubchem"
+        },
+        {
+          "@id": "urn:asb:tool:idsm"
+        },
+        {
+          "@id": "urn:asb:tool:bridgedb"
+        },
+        {
+          "@id": "urn:asb:tool:pytest"
+        }
+      ],
+      "name": "Reconstruct the Monitor-based service status tracking during annotation",
+      "object": [
+        {
+          "@id": "urn:asb:input:task_003_0"
+        },
+        {
+          "@id": "urn:asb:input:task_003_1"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "urn:asb:port:task_002/job_enumeration"
+        }
+      ],
+      "repme:hasInputData": [
+        {
+          "@id": "urn:asb:input:task_003_0"
+        },
+        {
+          "@id": "urn:asb:input:task_003_1"
+        }
+      ],
+      "repme:hasOutputData": [
+        {
+          "@id": "urn:asb:output:task_003_0"
+        }
+      ],
+      "repme:hasResult": [
+        {
+          "@id": "urn:asb:result:result_043"
+        }
+      ],
+      "result": [
+        {
+          "@id": "urn:asb:output:task_003_0"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:claim:claim_001",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MSMetaEnhancer is a tool used for .msp files annotation."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 718,
+          "oa:start": 659
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "MSMetaEnhancer is a tool used for .msp files annotation.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_002",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MSMetaEnhancer adds metadata like SMILES, InChI, and CAS number to files."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 299,
+          "oa:start": 212
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "MSMetaEnhancer adds metadata like SMILES, InChI, and CAS number to files.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_003",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MSMetaEnhancer fetches metadata from CIR, CTS, PubChem, IDSM, and BridgeDb services."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 521,
+          "oa:start": 212
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "MSMetaEnhancer fetches metadata from CIR, CTS, PubChem, IDSM, and BridgeDb services.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_004",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MSMetaEnhancer uses asynchronous implementation of annotation process allowing for optimal fetching speed."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 619,
+          "oa:start": 522
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "MSMetaEnhancer uses asynchronous implementation of annotation process allowing for optimal fetching speed.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_005",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The citation for MSMetaEnhancer is Troják et al., (2022). MSMetaEnhancer: A Python package for mass spectra metadata annotation. Journal of Open Source Software, 7(79), 4494."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 840,
+          "oa:start": 651
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The citation for MSMetaEnhancer is Troják et al., (2022). MSMetaEnhancer: A Python package for mass spectra metadata annotation. Journal of Open Source Software, 7(79), 4494.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_006",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MSMetaEnhancer has a modular architecture that makes it easy to add new conversion services."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1718,
+          "oa:start": 1629
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "MSMetaEnhancer has a modular architecture that makes it easy to add new conversion services.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_007",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "There are two main types of converters in MSMetaEnhancer: Web Converters and Compute Converters."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1870,
+          "oa:start": 1719
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "There are two main types of converters in MSMetaEnhancer: Web Converters and Compute Converters.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_008",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Web Converters are services that make HTTP requests to external APIs."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1828,
+          "oa:start": 1763
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Web Converters are services that make HTTP requests to external APIs.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_009",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Compute Converters are services that perform local computations."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1894,
+          "oa:start": 1831
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Compute Converters are services that perform local computations.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_010",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Converter is an abstract base class for all converters in MSMetaEnhancer."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2068,
+          "oa:start": 2016
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Converter is an abstract base class for all converters in MSMetaEnhancer.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_011",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "WebConverter is a base class for web-based API services in MSMetaEnhancer."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2127,
+          "oa:start": 2071
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "WebConverter is a base class for web-based API services in MSMetaEnhancer.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_012",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "ComputeConverter is a base class for local computation services in MSMetaEnhancer."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2193,
+          "oa:start": 2130
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "ComputeConverter is a base class for local computation services in MSMetaEnhancer.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_013",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Job represents a conversion task defined as source attribute to target attribute using specific converter."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2285,
+          "oa:start": 2211
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Job represents a conversion task defined as source attribute to target attribute using specific converter.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_014",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Converter Builder automatically discovers and instantiates available converters."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5205,
+          "oa:start": 5117
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Converter Builder automatically discovers and instantiates available converters.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_015",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Converters automatically generate methods like compound_name_to_inchi() based on conversions list."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2549,
+          "oa:start": 2428
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Converters automatically generate methods like compound_name_to_inchi() based on conversions list.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_016",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Web converters should be created in MSMetaEnhancer/libs/converters/web/ directory."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2700,
+          "oa:start": 2620
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Web converters should be created in MSMetaEnhancer/libs/converters/web/ directory.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_017",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Converters should define endpoints as a dictionary in their __init__ method."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2907,
+          "oa:start": 2825
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Converters should define endpoints as a dictionary in their __init__ method.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_018",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Converters should define conversions as tuples of source attribute, target attribute, and conversion method."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3019,
+          "oa:start": 2915
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Converters should define conversions as tuples of source attribute, target attribute, and conversion method.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_019",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Web converters should use Throttler for rate limiting if needed."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3090,
+          "oa:start": 3025
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Web converters should use Throttler for rate limiting if needed.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_020",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Web converters should be registered in MSMetaEnhancer/libs/converters/web/__init__.py file."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3390,
+          "oa:start": 3314
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Web converters should be registered in MSMetaEnhancer/libs/converters/web/__init__.py file.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_021",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Compute converters should be created in MSMetaEnhancer/libs/converters/compute/ directory."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3636,
+          "oa:start": 3553
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Compute converters should be created in MSMetaEnhancer/libs/converters/compute/ directory.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_022",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Compute converters should use asynch=False when creating conversion methods."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3792,
+          "oa:start": 3724
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Compute converters should use asynch=False when creating conversion methods.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_023",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Compute converters should be registered in MSMetaEnhancer/libs/converters/compute/__init__.py file."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3948,
+          "oa:start": 3872
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Compute converters should be registered in MSMetaEnhancer/libs/converters/compute/__init__.py file.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_024",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Converter developers should always handle API errors gracefully and return empty dictionaries when data is not available."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4186,
+          "oa:start": 4076
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Converter developers should always handle API errors gracefully and return empty dictionaries when data is not available.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_025",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Converter developers should respect API rate limits using throttling mechanisms."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4260,
+          "oa:start": 4189
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Converter developers should respect API rate limits using throttling mechanisms.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_026",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Converter developers should validate input data before making API calls."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4327,
+          "oa:start": 4263
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Converter developers should validate input data before making API calls.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_027",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Converter developers should implement robust response parsing that handles various response formats."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4424,
+          "oa:start": 4330
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Converter developers should implement robust response parsing that handles various response formats.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_028",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Converter developers should include docstrings for all methods explaining parameters and return values."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4520,
+          "oa:start": 4427
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Converter developers should include docstrings for all methods explaining parameters and return values.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_029",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Converter developers should write comprehensive tests including service availability and conversion functionality."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4617,
+          "oa:start": 4523
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Converter developers should write comprehensive tests including service availability and conversion functionality.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_030",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Developers should run pytest tests/ to ensure they haven't broken existing tests."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4744,
+          "oa:start": 4670
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Developers should run pytest tests/ to ensure they haven't broken existing tests.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_031",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Developers can use Throttler class for rate limiting in converters."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4850,
+          "oa:start": 4794
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Developers can use Throttler class for rate limiting in converters.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_032",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Developers can use @lru_cache decorator for caching responses in converters."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4910,
+          "oa:start": 4853
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Developers can use @lru_cache decorator for caching responses in converters.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_033",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Developers can use @escape_single_quotes decorator for input sanitization in converters."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5016,
+          "oa:start": 4943
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Developers can use @escape_single_quotes decorator for input sanitization in converters.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_034",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "CTS or PubChem converters serve as reference implementations for Web Converter Template."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5145,
+          "oa:start": 5055
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "CTS or PubChem converters serve as reference implementations for Web Converter Template.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_035",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "RDKit converter serves as a reference implementation for Compute Converter Template."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5232,
+          "oa:start": 5148
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "RDKit converter serves as a reference implementation for Compute Converter Template.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_036",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The Application class serves as a top-level interface to use MSMetaEnhancer tool."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5572,
+          "oa:start": 5499
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The Application class serves as a top-level interface to use MSMetaEnhancer tool.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_037",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The main method of Application class is asynchronous annotate_spectra method."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5686,
+          "oa:start": 5575
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The main method of Application class is asynchronous annotate_spectra method.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_038",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "annotate_spectra method runs annotation process using given conversions."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5686,
+          "oa:start": 5616
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "annotate_spectra method runs annotation process using given conversions.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_039",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "It is possible to specify particular conversion jobs in annotate_spectra which will be executed in respecting the given order."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5781,
+          "oa:start": 5689
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "It is possible to specify particular conversion jobs in annotate_spectra which will be executed in respecting the given order.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_040",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "If no jobs are given to annotate_spectra, all jobs supported by given services are used."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5852,
+          "oa:start": 5782
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "If no jobs are given to annotate_spectra, all jobs supported by given services are used.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_041",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Application class allows loading and saving spectra files in supported formats."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5958,
+          "oa:start": 5855
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Application class allows loading and saving spectra files in supported formats.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_042",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Application class allows curation of given spectra."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5958,
+          "oa:start": 5933
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Application class allows curation of given spectra.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_043",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "In version 0.1.3, multidict was passed instead of frozendict to aiohttp.ClientSession.post because it is required by the package."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6271,
+          "oa:start": 6174
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "In version 0.1.3, multidict was passed instead of frozendict to aiohttp.ClientSession.post because it is required by the package.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_044",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "In version 0.1.3, only the first result is taken when there are multiple hits in CIR conversions."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6361,
+          "oa:start": 6290
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "In version 0.1.3, only the first result is taken when there are multiple hits in CIR conversions.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_045",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "In version 0.1.3, PubChem now supports ISOMERIC_SMILES and CANONICAL_SMILES instead of generic SMILES."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6467,
+          "oa:start": 6376
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "In version 0.1.3, PubChem now supports ISOMERIC_SMILES and CANONICAL_SMILES instead of generic SMILES.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_046",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "In version 0.1.2 released on 2022-01-06, generate_options() function was added to Galaxy submodule."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6716,
+          "oa:start": 6564
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "In version 0.1.2 released on 2022-01-06, generate_options() function was added to Galaxy submodule.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_047",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "In version 0.1.2, monitoring of services status during annotation process was added."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6803,
+          "oa:start": 6749
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "In version 0.1.2, monitoring of services status during annotation process was added.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_048",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "In version 0.1.2, validation of obtained metadata was added."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6862,
+          "oa:start": 6831
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "In version 0.1.2, validation of obtained metadata was added.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_049",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "In version 0.1.2, structure and contents of documentation were changed."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6925,
+          "oa:start": 6885
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "In version 0.1.2, structure and contents of documentation were changed.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_050",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "In version 0.1.2, tests checking contents and consistency of individual services were removed."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7020,
+          "oa:start": 6958
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "In version 0.1.2, tests checking contents and consistency of individual services were removed.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_051",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "In version 0.1.1 released on 2021-12-07, get_conversion_functions was added on the level of Converter."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7110,
+          "oa:start": 7058
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "In version 0.1.1 released on 2021-12-07, get_conversion_functions was added on the level of Converter.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_052",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "In version 0.1.1, computation of all available jobs in Application was changed."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7178,
+          "oa:start": 7127
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "In version 0.1.1, computation of all available jobs in Application was changed.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_053",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "In version 0.1.1, get_all_conversions on the level of Annotator was removed."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7246,
+          "oa:start": 7195
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "In version 0.1.1, get_all_conversions on the level of Annotator was removed.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_054",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "In version 0.1.0 released on 2021-11-16, conda environment files were added."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7325,
+          "oa:start": 7301
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "In version 0.1.0 released on 2021-11-16, conda environment files were added.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_055",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "In version 0.1.0, IDSM SPARQL was used for PubChem service."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7387,
+          "oa:start": 7346
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "In version 0.1.0, IDSM SPARQL was used for PubChem service.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_056",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "In version 0.1.0, logging and quantitative progress of annotation process were added."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7468,
+          "oa:start": 7408
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "In version 0.1.0, logging and quantitative progress of annotation process were added.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_057",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "In version 0.1.0, generalised requests to obtain multiple values at once were added."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7544,
+          "oa:start": 7489
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "In version 0.1.0, generalised requests to obtain multiple values at once were added.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_058",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "In version 0.1.0, asynchronous requests were added to MSMetaEnhancer."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7588,
+          "oa:start": 7565
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_msmetaenhancer/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "In version 0.1.0, asynchronous requests were added to MSMetaEnhancer.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:result:result_001",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MSMetaEnhancer is a tool used for .msp files annotation.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_001"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_002",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MSMetaEnhancer adds metadata like SMILES, InChI, and CAS number to files.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_002"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_003",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MSMetaEnhancer fetches metadata from CIR, CTS, PubChem, IDSM, and BridgeDb services.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_003"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_004",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MSMetaEnhancer uses asynchronous implementation of annotation process allowing for optimal fetching speed.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_004"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_005",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The citation for MSMetaEnhancer is Troják et al., (2022).",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_005"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_006",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MSMetaEnhancer has a modular architecture that makes it easy to add new conversion services.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_006"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_007",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "There are two main types of converters in MSMetaEnhancer: Web Converters and Compute Converters.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_007"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_008",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Web Converters are services that make HTTP requests to external APIs.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_008"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_009",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Compute Converters are services that perform local computations.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_009"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_010",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Converter is an abstract base class for all converters in MSMetaEnhancer.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_010"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_011",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "WebConverter is a base class for web-based API services in MSMetaEnhancer.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_011"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_012",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "ComputeConverter is a base class for local computation services in MSMetaEnhancer.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_012"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_013",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Job represents a conversion task defined as source attribute to target attribute using specific converter.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_013"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_014",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Converter Builder automatically discovers and instantiates available converters.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_014"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_015",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Converters automatically generate methods like compound_name_to_inchi() based on conversions list.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_015"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_016",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Web converters should be created in MSMetaEnhancer/libs/converters/web/ directory. Web converters should be registered in MSMetaEnhancer/libs/converters/web/__init__.py file. Compute converters should",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_016"
+        },
+        {
+          "@id": "urn:asb:claim:claim_020"
+        },
+        {
+          "@id": "urn:asb:claim:claim_021"
+        },
+        {
+          "@id": "urn:asb:claim:claim_023"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_017",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Converters should define endpoints as a dictionary in their __init__ method.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_017"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_018",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Converters should define conversions as tuples of source attribute, target attribute, and conversion method.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_018"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_019",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Web converters should use Throttler for rate limiting if needed. Developers can use Throttler class for rate limiting in converters.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_019"
+        },
+        {
+          "@id": "urn:asb:claim:claim_031"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_020",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Compute converters should use asynch=False when creating conversion methods.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_022"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_021",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Converter developers should always handle API errors gracefully and return empty dictionaries when data is not available.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_024"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_022",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Converter developers should respect API rate limits using throttling mechanisms.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_025"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_023",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Converter developers should validate input data before making API calls.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_026"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_024",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Converter developers should implement robust response parsing that handles various response formats.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_027"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_025",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Converter developers should include docstrings for all methods explaining parameters and return values.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_028"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_026",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Converter developers should write comprehensive tests including service availability and conversion functionality.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_029"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_027",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Developers should run pytest tests/ to ensure they haven't broken existing tests.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_030"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_028",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Developers can use @lru_cache decorator for caching responses in converters.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_032"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_029",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Developers can use @escape_single_quotes decorator for input sanitization in converters.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_033"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_030",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "CTS or PubChem converters serve as reference implementations for Web Converter Template.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_034"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_031",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "RDKit converter serves as a reference implementation for Compute Converter Template.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_035"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_032",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The Application class serves as a top-level interface to use MSMetaEnhancer tool.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_036"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_033",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The main method of Application class is asynchronous annotate_spectra method.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_037"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_034",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "annotate_spectra method runs annotation process using given conversions.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_038"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_035",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "It is possible to specify particular conversion jobs in annotate_spectra which will be executed in respecting the given order.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_039"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_036",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "If no jobs are given to annotate_spectra, all jobs supported by given services are used.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_040"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_037",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Application class allows loading and saving spectra files in supported formats.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_041"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_038",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Application class allows curation of given spectra.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_042"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_039",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "In version 0.1.3, multidict was passed instead of frozendict to aiohttp.ClientSession.post because it is required by the package.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_043"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_040",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "In version 0.1.3, only the first result is taken when there are multiple hits in CIR conversions.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_044"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_041",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "In version 0.1.3, PubChem now supports ISOMERIC_SMILES and CANONICAL_SMILES instead of generic SMILES.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_045"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_042",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "In version 0.1.2 released on 2022-01-06, generate_options() function was added to Galaxy submodule.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_046"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_043",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "In version 0.1.2, monitoring of services status during annotation process was added. In version 0.1.0, logging and quantitative progress of annotation process were added.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_047"
+        },
+        {
+          "@id": "urn:asb:claim:claim_056"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_044",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "In version 0.1.2, validation of obtained metadata was added.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_048"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_045",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "In version 0.1.2, structure and contents of documentation were changed.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_049"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_046",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "In version 0.1.2, tests checking contents and consistency of individual services were removed.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_050"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_047",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "In version 0.1.1 released on 2021-12-07, get_conversion_functions was added on the level of Converter.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_051"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_048",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "In version 0.1.1, computation of all available jobs in Application was changed.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_052"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_049",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "In version 0.1.1, get_all_conversions on the level of Annotator was removed.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_053"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_050",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "In version 0.1.0 released on 2021-11-16, conda environment files were added.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_054"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_051",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "In version 0.1.0, IDSM SPARQL was used for PubChem service.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_055"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_052",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "In version 0.1.0, generalised requests to obtain multiple values at once were added. In version 0.1.0, asynchronous requests were added to MSMetaEnhancer.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_057"
+        },
+        {
+          "@id": "urn:asb:claim:claim_058"
+        }
+      ]
+    },
+    {
+      "@id": "#env-task_003",
+      "@type": [
+        "repme:ComputationalEnvironment"
+      ],
+      "repme:computeTier": "trivial"
+    },
+    {
+      "@id": "#agent-15-activity-task_003",
+      "@type": [
+        "prov:Activity"
+      ],
+      "prov:endedAtTime": "2026-06-16T05:44:47.107756+00:00",
+      "prov:qualifiedUsage": {
+        "@type": "prov:Usage",
+        "schema:name": "prompt_sha256",
+        "schema:value": "ede662a3799d3af7"
+      },
+      "prov:wasAssociatedWith": {
+        "schema:name": "anthropic/claude-haiku-4-5-20251001"
+      },
+      "schema:name": "Agent 1.5 Claim Extractor"
+    },
+    {
+      "@id": "#computational-environment",
+      "@type": "repme:ComputationalEnvironment",
+      "repme:buildId": "4BEE313FF840420FBFC7571E300E5D76",
+      "repme:depsHash": null,
+      "repme:gitCommit": "8713018e077e78db4e0defb776d2c7f494485e53",
+      "repme:platform": "darwin-25.5.0-arm64",
+      "repme:pythonVersion": "3.11.15",
+      "schema:dateCreated": "2026-06-16T05:39:18.838022Z",
+      "schema:hasPart": [
+        {
+          "@id": "#agent-config-agent1_entity"
+        },
+        {
+          "@id": "#agent-config-agent2a_outline"
+        },
+        {
+          "@id": "#agent-config-agent2b_card"
+        },
+        {
+          "@id": "#agent-config-agent3_critique"
+        },
+        {
+          "@id": "#agent-config-agent_classify"
+        }
+      ],
+      "schema:softwareVersion": "agentic-science-builder@0.1.0"
+    },
+    {
+      "@id": "#agent-config-agent1_entity",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v3",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent1_entity"
+    },
+    {
+      "@id": "#agent-config-agent2a_outline",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-sonnet-4-6",
+      "repme:promptVersion": "v2",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2a_outline"
+    },
+    {
+      "@id": "#agent-config-agent2b_card",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v4",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2b_card"
+    },
+    {
+      "@id": "#agent-config-agent3_critique",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent3_critique"
+    },
+    {
+      "@id": "#agent-config-agent_classify",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent_classify"
+    },
+    {
+      "@id": "artifact_provenance.json",
+      "@type": "File",
+      "name": "artifact_provenance.json",
+      "encodingFormat": "application/json"
+    },
+    {
+      "@id": "ledger/claims.jsonl",
+      "@type": "File",
+      "name": "ledger/claims.jsonl",
+      "encodingFormat": "application/jsonlines"
+    },
+    {
+      "@id": "ledger/results.jsonl",
+      "@type": "File",
+      "name": "ledger/results.jsonl",
+      "encodingFormat": "application/jsonlines"
+    }
+  ]
+}

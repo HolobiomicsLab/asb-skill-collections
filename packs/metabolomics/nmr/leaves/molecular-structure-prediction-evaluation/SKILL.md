@@ -1,6 +1,7 @@
 ---
 name: molecular-structure-prediction-evaluation
-description: Use when you have trained a multitask NMR-to-structure model and need to quantify its predictive accuracy on held-out test molecules.
+description: Use when you have trained a multitask NMR-to-structure model and need
+  to quantify its predictive accuracy on held-out test molecules.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -14,6 +15,8 @@ metadata:
   - NMR2Struct model
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct

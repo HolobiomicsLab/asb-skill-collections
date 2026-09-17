@@ -1,6 +1,7 @@
 ---
 name: mass-spectrometry-data-quality-filtering
-description: Use when you have generated a complete feature table from mzML files (e.g., Asari 'full' feature table) and need to curate it for downstream analysis.
+description: Use when you have generated a complete feature table from mzML files
+  (e.g., Asari 'full' feature table) and need to curate it for downstream analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +16,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

@@ -1,0 +1,3300 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "EFO": "http://www.ebi.ac.uk/efo/EFO_",
+      "NCBITaxon": "http://purl.obolibrary.org/obo/NCBITaxon_",
+      "OBI": "http://purl.obolibrary.org/obo/OBI_",
+      "SO": "http://purl.obolibrary.org/obo/SO_",
+      "SRA": "https://www.ncbi.nlm.nih.gov/sra/",
+      "UBERON": "http://purl.obolibrary.org/obo/UBERON_",
+      "asbext": "https://w3id.org/asb/indicium-ext#",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "fabio": "http://purl.org/spar/fabio/",
+      "oa": "http://www.w3.org/ns/oa#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "p-plan": "http://purl.org/net/p-plan#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "repme": "https://w3id.org/reproduceme#",
+      "sepio": "http://purl.obolibrary.org/obo/SEPIO_"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": [
+        "Dataset",
+        "repme:ScientificWorkflow"
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ],
+      "dateCreated": "2026-06-15",
+      "description": "Apply independent filtering and IHW-based p-value adjustment to DESeq2 results from the airway dataset, reproducing the automatic filtering behavior of results() and separately applying Independent Hypothesis Weighting, then verify that filtered gene counts and adjusted p-value outputs match expected behavior.",
+      "hasPart": [
+        {
+          "@id": "evidence/source_snippets.md"
+        },
+        {
+          "@id": "inputs/dataset_folder_tree.txt"
+        },
+        {
+          "@id": "inputs/dataset_preview.md"
+        },
+        {
+          "@id": "evaluation/evaluation_strategy.md"
+        },
+        {
+          "@id": "evaluation/review_rubric.json"
+        },
+        {
+          "@id": "artifact_provenance.json"
+        },
+        {
+          "@id": "ledger/claims.jsonl"
+        },
+        {
+          "@id": "ledger/results.jsonl"
+        }
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "mentions": [
+        {
+          "@id": "#action-task_004"
+        },
+        {
+          "@id": "urn:asb:task:task_004"
+        },
+        {
+          "@id": "urn:asb:claim:claim_001"
+        },
+        {
+          "@id": "urn:asb:claim:claim_002"
+        },
+        {
+          "@id": "urn:asb:claim:claim_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_004"
+        },
+        {
+          "@id": "urn:asb:claim:claim_005"
+        },
+        {
+          "@id": "urn:asb:claim:claim_006"
+        },
+        {
+          "@id": "urn:asb:claim:claim_007"
+        },
+        {
+          "@id": "urn:asb:claim:claim_008"
+        },
+        {
+          "@id": "urn:asb:claim:claim_009"
+        },
+        {
+          "@id": "urn:asb:claim:claim_010"
+        },
+        {
+          "@id": "urn:asb:claim:claim_011"
+        },
+        {
+          "@id": "urn:asb:claim:claim_012"
+        },
+        {
+          "@id": "urn:asb:claim:claim_013"
+        },
+        {
+          "@id": "urn:asb:claim:claim_014"
+        },
+        {
+          "@id": "urn:asb:claim:claim_015"
+        },
+        {
+          "@id": "urn:asb:claim:claim_016"
+        },
+        {
+          "@id": "urn:asb:claim:claim_017"
+        },
+        {
+          "@id": "urn:asb:claim:claim_018"
+        },
+        {
+          "@id": "urn:asb:claim:claim_019"
+        },
+        {
+          "@id": "urn:asb:claim:claim_020"
+        },
+        {
+          "@id": "urn:asb:claim:claim_021"
+        },
+        {
+          "@id": "urn:asb:claim:claim_022"
+        },
+        {
+          "@id": "urn:asb:claim:claim_023"
+        },
+        {
+          "@id": "urn:asb:claim:claim_024"
+        },
+        {
+          "@id": "urn:asb:claim:claim_025"
+        },
+        {
+          "@id": "urn:asb:claim:claim_026"
+        },
+        {
+          "@id": "urn:asb:claim:claim_027"
+        },
+        {
+          "@id": "urn:asb:claim:claim_028"
+        },
+        {
+          "@id": "urn:asb:claim:claim_029"
+        },
+        {
+          "@id": "urn:asb:claim:claim_030"
+        },
+        {
+          "@id": "urn:asb:claim:claim_031"
+        },
+        {
+          "@id": "urn:asb:claim:claim_032"
+        },
+        {
+          "@id": "urn:asb:claim:claim_033"
+        },
+        {
+          "@id": "urn:asb:claim:claim_034"
+        },
+        {
+          "@id": "urn:asb:claim:claim_035"
+        },
+        {
+          "@id": "urn:asb:claim:claim_036"
+        },
+        {
+          "@id": "urn:asb:claim:claim_037"
+        },
+        {
+          "@id": "urn:asb:claim:claim_038"
+        },
+        {
+          "@id": "urn:asb:claim:claim_039"
+        },
+        {
+          "@id": "urn:asb:claim:claim_040"
+        },
+        {
+          "@id": "urn:asb:claim:claim_041"
+        },
+        {
+          "@id": "urn:asb:claim:claim_042"
+        },
+        {
+          "@id": "urn:asb:claim:claim_043"
+        },
+        {
+          "@id": "urn:asb:claim:claim_044"
+        },
+        {
+          "@id": "urn:asb:claim:claim_045"
+        },
+        {
+          "@id": "urn:asb:claim:claim_046"
+        },
+        {
+          "@id": "urn:asb:claim:claim_047"
+        },
+        {
+          "@id": "urn:asb:claim:claim_048"
+        },
+        {
+          "@id": "urn:asb:claim:claim_049"
+        },
+        {
+          "@id": "urn:asb:claim:claim_050"
+        },
+        {
+          "@id": "urn:asb:claim:claim_051"
+        },
+        {
+          "@id": "urn:asb:claim:claim_052"
+        },
+        {
+          "@id": "urn:asb:claim:claim_053"
+        },
+        {
+          "@id": "urn:asb:claim:claim_054"
+        },
+        {
+          "@id": "urn:asb:claim:claim_055"
+        },
+        {
+          "@id": "urn:asb:claim:claim_056"
+        },
+        {
+          "@id": "urn:asb:claim:claim_057"
+        },
+        {
+          "@id": "urn:asb:claim:claim_058"
+        },
+        {
+          "@id": "urn:asb:claim:claim_059"
+        },
+        {
+          "@id": "urn:asb:claim:claim_060"
+        },
+        {
+          "@id": "urn:asb:result:result_001"
+        },
+        {
+          "@id": "urn:asb:result:result_002"
+        },
+        {
+          "@id": "urn:asb:result:result_003"
+        },
+        {
+          "@id": "urn:asb:result:result_004"
+        },
+        {
+          "@id": "urn:asb:result:result_005"
+        },
+        {
+          "@id": "urn:asb:result:result_006"
+        },
+        {
+          "@id": "urn:asb:result:result_007"
+        },
+        {
+          "@id": "urn:asb:result:result_008"
+        },
+        {
+          "@id": "urn:asb:result:result_009"
+        },
+        {
+          "@id": "urn:asb:result:result_010"
+        },
+        {
+          "@id": "urn:asb:result:result_011"
+        },
+        {
+          "@id": "urn:asb:result:result_012"
+        },
+        {
+          "@id": "urn:asb:result:result_013"
+        },
+        {
+          "@id": "urn:asb:result:result_014"
+        },
+        {
+          "@id": "urn:asb:result:result_015"
+        },
+        {
+          "@id": "urn:asb:result:result_016"
+        },
+        {
+          "@id": "urn:asb:result:result_017"
+        },
+        {
+          "@id": "urn:asb:result:result_018"
+        },
+        {
+          "@id": "urn:asb:result:result_019"
+        },
+        {
+          "@id": "urn:asb:result:result_020"
+        },
+        {
+          "@id": "urn:asb:result:result_021"
+        },
+        {
+          "@id": "urn:asb:result:result_022"
+        },
+        {
+          "@id": "urn:asb:result:result_023"
+        },
+        {
+          "@id": "urn:asb:result:result_024"
+        },
+        {
+          "@id": "urn:asb:result:result_025"
+        },
+        {
+          "@id": "urn:asb:result:result_026"
+        },
+        {
+          "@id": "urn:asb:result:result_027"
+        },
+        {
+          "@id": "urn:asb:result:result_028"
+        },
+        {
+          "@id": "urn:asb:result:result_029"
+        },
+        {
+          "@id": "urn:asb:result:result_030"
+        },
+        {
+          "@id": "urn:asb:result:result_031"
+        },
+        {
+          "@id": "urn:asb:result:result_032"
+        },
+        {
+          "@id": "urn:asb:result:result_033"
+        },
+        {
+          "@id": "urn:asb:result:result_034"
+        },
+        {
+          "@id": "urn:asb:result:result_035"
+        },
+        {
+          "@id": "urn:asb:result:result_036"
+        },
+        {
+          "@id": "urn:asb:result:result_037"
+        },
+        {
+          "@id": "urn:asb:result:result_038"
+        },
+        {
+          "@id": "urn:asb:result:result_039"
+        },
+        {
+          "@id": "urn:asb:result:result_040"
+        },
+        {
+          "@id": "urn:asb:result:result_041"
+        },
+        {
+          "@id": "urn:asb:result:result_042"
+        },
+        {
+          "@id": "urn:asb:result:result_043"
+        },
+        {
+          "@id": "urn:asb:result:result_044"
+        },
+        {
+          "@id": "urn:asb:result:result_045"
+        },
+        {
+          "@id": "urn:asb:result:result_046"
+        },
+        {
+          "@id": "urn:asb:result:result_047"
+        },
+        {
+          "@id": "urn:asb:result:result_048"
+        },
+        {
+          "@id": "urn:asb:result:result_049"
+        },
+        {
+          "@id": "urn:asb:result:result_050"
+        },
+        {
+          "@id": "urn:asb:result:result_051"
+        },
+        {
+          "@id": "urn:asb:result:result_052"
+        },
+        {
+          "@id": "urn:asb:result:result_053"
+        },
+        {
+          "@id": "urn:asb:result:result_054"
+        },
+        {
+          "@id": "urn:asb:result:result_055"
+        },
+        {
+          "@id": "urn:asb:result:result_056"
+        },
+        {
+          "@id": "urn:asb:result:result_057"
+        },
+        {
+          "@id": "urn:asb:result:result_058"
+        },
+        {
+          "@id": "urn:asb:result:result_059"
+        },
+        {
+          "@id": "#env-task_004"
+        },
+        {
+          "@id": "http://edamontology.org/topic_0622"
+        }
+      ],
+      "name": "Reproduce the ~10x speedup of apeglm's nbinomC fast mode on the pasilla dataset",
+      "repme:hasComputationalEnvironment": {
+        "@id": "#computational-environment"
+      }
+    },
+    {
+      "@id": "evidence/source_snippets.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evidence/source_snippets.md"
+    },
+    {
+      "@id": "inputs/dataset_folder_tree.txt",
+      "@type": "File",
+      "encodingFormat": "text/plain",
+      "name": "inputs/dataset_folder_tree.txt"
+    },
+    {
+      "@id": "inputs/dataset_preview.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "inputs/dataset_preview.md"
+    },
+    {
+      "@id": "evaluation/evaluation_strategy.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evaluation/evaluation_strategy.md"
+    },
+    {
+      "@id": "evaluation/review_rubric.json",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "name": "evaluation/review_rubric.json"
+    },
+    {
+      "@id": "urn:asb:task:task_004",
+      "@type": [
+        "ScholarlyArticle",
+        "p-plan:Plan",
+        "http://purl.org/spar/fabio/ResearchPaper"
+      ],
+      "asbext:task_kind": "reproduction",
+      "description": "Apply independent filtering and IHW-based p-value adjustment to DESeq2 results from the airway dataset, reproducing the automatic filtering behavior of results() and separately applying Independent Hypothesis Weighting, then verify that filtered gene counts and adjusted p-value outputs match expected behavior.",
+      "keywords": [
+        "differential-gene-expression-analysis",
+        "independent-filtering-optimization",
+        "p-value-adjustment-methodology",
+        "hypothesis-weighting-statistical-control",
+        "rnaseq-count-matrix-analysis",
+        "factor-design-specification"
+      ],
+      "name": "Reproduce the ~10x speedup of apeglm's nbinomC fast mode on the pasilla dataset",
+      "repme:hasResearcher": [
+        {
+          "@id": "urn:asb:researcher:i-love-2014"
+        },
+        {
+          "@id": "urn:asb:researcher:wolfgang-huber-2014"
+        },
+        {
+          "@id": "urn:asb:researcher:simon-anders-2014"
+        }
+      ],
+      "sameAs": "https://doi.org/10.1186/s13059-014-0550-8#task_004",
+      "schema:identifier": "10.1186/s13059-014-0550-8"
+    },
+    {
+      "@id": "urn:asb:researcher:i-love-2014",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Love, Michael I"
+    },
+    {
+      "@id": "urn:asb:researcher:wolfgang-huber-2014",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Huber, Wolfgang"
+    },
+    {
+      "@id": "urn:asb:researcher:simon-anders-2014",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Anders, Simon"
+    },
+    {
+      "@id": "urn:asb:tool:deseq2",
+      "@type": "SoftwareApplication",
+      "name": "DESeq2",
+      "schema:url": "https://github.com/thelovelab/DESeq2"
+    },
+    {
+      "@id": "urn:asb:tool:ihw",
+      "@type": "SoftwareApplication",
+      "name": "IHW"
+    },
+    {
+      "@id": "urn:asb:input:task_004_0",
+      "@type": "File",
+      "name": "airway SummarizedExperiment dataset from Bioconductor airway package"
+    },
+    {
+      "@id": "urn:asb:output:task_004_0",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Results table with log2 fold changes, p-values, and adjusted p-values after automatic independent filtering (default alpha=0.1)",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_004"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_004_1",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Results table with IHW-adjusted p-values and metadata containing ihwResult object",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_004"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_004_2",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Summary statistics comparing gene counts retained after standard filtering vs. IHW filtering",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_004"
+      }
+    },
+    {
+      "@id": "#action-task_004",
+      "@type": [
+        "CreateAction",
+        "prov:Activity",
+        "p-plan:Step"
+      ],
+      "description": "Apply independent filtering and IHW-based p-value adjustment to DESeq2 results from the airway dataset, reproducing the automatic filtering behavior of results() and separately applying Independent Hypothesis Weighting, then verify that filtered gene counts and adjusted p-value outputs match expected behavior.",
+      "instrument": [
+        {
+          "@id": "urn:asb:tool:deseq2"
+        },
+        {
+          "@id": "urn:asb:tool:ihw"
+        }
+      ],
+      "name": "Reproduce the ~10x speedup of apeglm's nbinomC fast mode on the pasilla dataset",
+      "object": [
+        {
+          "@id": "urn:asb:input:task_004_0"
+        }
+      ],
+      "repme:hasInputData": [
+        {
+          "@id": "urn:asb:input:task_004_0"
+        }
+      ],
+      "repme:hasOutputData": [
+        {
+          "@id": "urn:asb:output:task_004_0"
+        },
+        {
+          "@id": "urn:asb:output:task_004_1"
+        },
+        {
+          "@id": "urn:asb:output:task_004_2"
+        }
+      ],
+      "repme:hasResult": [
+        {
+          "@id": "urn:asb:result:result_026"
+        },
+        {
+          "@id": "urn:asb:result:result_027"
+        },
+        {
+          "@id": "urn:asb:result:result_028"
+        }
+      ],
+      "result": [
+        {
+          "@id": "urn:asb:output:task_004_0"
+        },
+        {
+          "@id": "urn:asb:output:task_004_1"
+        },
+        {
+          "@id": "urn:asb:output:task_004_2"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:claim:claim_001",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "DESeq2 provides methods to test for differential expression by use of negative binomial generalized linear models."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 913,
+          "oa:start": 784
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "DESeq2 provides methods to test for differential expression by use of negative binomial generalized linear models.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "RNA-seq data analysis",
+        "object": "negative binomial generalized linear models",
+        "qualifier": "enables",
+        "relation": "enables testing for differential expression",
+        "subject": "DESeq2"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_002",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The DESeq2 estimates of dispersion and logarithmic fold changes incorporate data-driven prior distributions."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1017,
+          "oa:start": 801
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "The DESeq2 estimates of dispersion and logarithmic fold changes incorporate data-driven prior distributions.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "differential expression analysis",
+        "object": "prior distributions",
+        "qualifier": "has_property",
+        "relation": "incorporate data-driven prior distributions",
+        "subject": "DESeq2 dispersion and log fold change estimates"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_003",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "DESeq2 should be cited with the reference Love, M.I., Huber, W., Anders, S. (2014) published in Genome Biology volume 15:550."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2152,
+          "oa:start": 1998
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "DESeq2 should be cited with the reference Love, M.I., Huber, W., Anders, S. (2014) published in Genome Biology volume 15:550.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_004",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Other Bioconductor packages with similar aims to DESeq2 include edgeR, limma, DSS, EBSeq, and baySeq."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2527,
+          "oa:start": 2230
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "Other Bioconductor packages with similar aims to DESeq2 include edgeR, limma, DSS, EBSeq, and baySeq.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_005",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "DESeq2 internally corrects for library size, so transformed or normalized values should not be used as input."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7685,
+          "oa:start": 7528
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "DESeq2 internally corrects for library size, so transformed or normalized values should not be used as input.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_006",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The DESeqDataSet class extends the RangedSummarizedExperiment class."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 8042,
+          "oa:start": 7944
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "The DESeqDataSet class extends the RangedSummarizedExperiment class.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_007",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The design formula in DESeq2 must be specified to express the variables which will be used in modeling."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 8640,
+          "oa:start": 8500
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "The design formula in DESeq2 must be specified to express the variables which will be used in modeling.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_008",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The variable of interest should be placed at the end of the design formula to benefit from default package settings."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 9191,
+          "oa:start": 9004
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "The variable of interest should be placed at the end of the design formula to benefit from default package settings.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_009",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Tximport is the recommended pipeline for DESeq2 to create gene-level count matrices from transcript abundance estimates."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 9877,
+          "oa:start": 9608
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "Tximport is the recommended pipeline for DESeq2 to create gene-level count matrices from transcript abundance estimates.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_010",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Tximport can import transcript abundance estimates from Salmon, Sailfish, kallisto, and RSEM."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 10328,
+          "oa:start": 9894
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "Tximport can import transcript abundance estimates from Salmon, Sailfish, kallisto, and RSEM.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_011",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Using fast transcript abundance quantifiers corrects for potential changes in gene length across samples from differential isoform usage."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 10533,
+          "oa:start": 10419
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "Using fast transcript abundance quantifiers corrects for potential changes in gene length across samples from differential isoform usage.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_012",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Salmon, Sailfish, and kallisto are substantially faster and require less memory and disk usage compared to alignment-based methods."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 10772,
+          "oa:start": 10568
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "Salmon, Sailfish, and kallisto are substantially faster and require less memory and disk usage compared to alignment-based methods.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_013",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Using fast quantifiers allows avoiding discarding fragments that can align to multiple genes with homologous sequence, increasing sensitivity."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 10921,
+          "oa:start": 10784
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "Using fast quantifiers allows avoiding discarding fragments that can align to multiple genes with homologous sequence, increasing sensitivity.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_014",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The Salmon software should be used with the --gcBias flag to estimate a correction factor for systematic biases in RNA-seq data."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 11725,
+          "oa:start": 11534
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "The Salmon software should be used with the --gcBias flag to estimate a correction factor for systematic biases in RNA-seq data.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_015",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "It is absolutely critical that the columns of the count matrix and rows of the column data are in the same order."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 17217,
+          "oa:start": 17072
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "It is absolutely critical that the columns of the count matrix and rows of the column data are in the same order.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_016",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The featureCounts function in Rsubread can quickly produce count matrices from alignment files."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 15591,
+          "oa:start": 15397
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "The featureCounts function in Rsubread can quickly produce count matrices from alignment files.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_017",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "By default, R chooses a reference level for factors based on alphabetical order."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 22654,
+          "oa:start": 22568
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "By default, R chooses a reference level for factors based on alphabetical order.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_018",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "DESeq2 will not make guesses about which column of the count matrix belongs to which row of the column data."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 17389,
+          "oa:start": 17219
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "DESeq2 will not make guesses about which column of the count matrix belongs to which row of the column data.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_019",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Technical replicates can be collapsed into single columns using the collapseReplicates function in DESeq2."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 24156,
+          "oa:start": 24001
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "Technical replicates can be collapsed into single columns using the collapseReplicates function in DESeq2.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_020",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The pasilla dataset is from an experiment on Drosophila melanogaster cell cultures investigating RNAi knock-down of the splicing factor pasilla."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 24698,
+          "oa:start": 24540
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "The pasilla dataset is from an experiment on Drosophila melanogaster cell cultures investigating RNAi knock-down of the splicing factor pasilla.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_021",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The results function extracts a results table with log2 fold changes, p values and adjusted p values."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 25404,
+          "oa:start": 25255
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "The results function extracts a results table with log2 fold changes, p values and adjusted p values.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_022",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "By default, results are for the last variable in the design formula and the last level compared to the reference level."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 25662,
+          "oa:start": 25405
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "By default, results are for the last variable in the design formula and the last level compared to the reference level.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_023",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Log fold change shrinkage is useful for visualization and ranking of genes."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 27279,
+          "oa:start": 27189
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "Log fold change shrinkage is useful for visualization and ranking of genes.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_024",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The apeglm method is the default shrinkage estimator in DESeq2 as of version 1.28.0."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 33783,
+          "oa:start": 33596
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "The apeglm method is the default shrinkage estimator in DESeq2 as of version 1.28.0.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_025",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The ashr shrinkage estimator fits a mixture of Normal distributions to form the prior."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 34032,
+          "oa:start": 33786
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "The ashr shrinkage estimator fits a mixture of Normal distributions to form the prior.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_026",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The apeglm method has been sped up to take roughly the same time as the normal method, approximately 5 seconds for the pasilla dataset."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 35780,
+          "oa:start": 35608
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "The apeglm method has been sped up to take roughly the same time as the normal method, approximately 5 seconds for the pasilla dataset.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_027",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The pasilla dataset contains approximately 10,000 genes and 7 samples."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 35779,
+          "oa:start": 35727
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "The pasilla dataset contains approximately 10,000 genes and 7 samples.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_028",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Setting apeMethod=\"nbinomC\" produces a 10x speedup but returns lfcSE column with NA."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 35992,
+          "oa:start": 35883
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "Setting apeMethod=\"nbinomC\" produces a 10x speedup but returns lfcSE column with NA.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_029",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Batch effects should be corrected for by including known batch variables in the design formula or using functions like svaseq or RUV."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 36485,
+          "oa:start": 36083
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "Batch effects should be corrected for by including known batch variables in the design formula or using functions like svaseq or RUV.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_030",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The plotCounts function normalizes counts by estimated size factors and adds a pseudocount of 1/2 for log scale plotting."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 37045,
+          "oa:start": 36827
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "The plotCounts function normalizes counts by estimated size factors and adds a pseudocount of 1/2 for log scale plotting.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_031",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "For a log2 fold change of -1, the treatment induces a multiplicative change of 0.5 in gene expression level."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 38257,
+          "oa:start": 38027
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "For a log2 fold change of -1, the treatment induces a multiplicative change of 0.5 in gene expression level.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_032",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "If all samples in a row have zero counts, baseMean, log2 fold change, p value and adjusted p value will all be set to NA."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 38711,
+          "oa:start": 38528
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "If all samples in a row have zero counts, baseMean, log2 fold change, p value and adjusted p value will all be set to NA.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_033",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Extreme count outliers detected by Cook's distance cause p value and adjusted p value to be set to NA."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 38891,
+          "oa:start": 38714
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "Extreme count outliers detected by Cook's distance cause p value and adjusted p value to be set to NA.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_034",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Low mean normalized count causes only the adjusted p value to be set to NA through independent filtering."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 39209,
+          "oa:start": 39054
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "Low mean normalized count causes only the adjusted p value to be set to NA through independent filtering.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_035",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The regionReport package can generate an HTML and PDF summary of DESeq2 results with plots."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 39534,
+          "oa:start": 39369
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "The regionReport package can generate an HTML and PDF summary of DESeq2 results with plots.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_036",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The Glimma package can generate interactive MA-plots of DESeq2 output."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 39980,
+          "oa:start": 39808
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "The Glimma package can generate interactive MA-plots of DESeq2 output.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_037",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The pcaExplorer package can generate PCA plots, boxplots of counts and other summaries from DESeq2 output."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 40254,
+          "oa:start": 40048
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "The pcaExplorer package can generate PCA plots, boxplots of counts and other summaries from DESeq2 output.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_038",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The iSEE package provides functions for creating an interactive Shiny-based graphical user interface for exploring SummarizedExperiment objects."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 40475,
+          "oa:start": 40334
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "The iSEE package provides functions for creating an interactive Shiny-based graphical user interface for exploring SummarizedExperiment objects.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_039",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The iSEEde package provides additional panels for interactive visualization of differential expression results in iSEE applications."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 41175,
+          "oa:start": 40982
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "The iSEEde package provides additional panels for interactive visualization of differential expression results in iSEE applications.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_040",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "DEvis is available on CRAN and GitHub for analysis of differential expression data."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 41666,
+          "oa:start": 41544
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "DEvis is available on CRAN and GitHub for analysis of differential expression data.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_041",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Results can be exported using base R functions write.csv or write.delim."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 41811,
+          "oa:start": 41705
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "Results can be exported using base R functions write.csv or write.delim.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_042",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Multi-factor designs can be analyzed by including additional variables in the design formula."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 42413,
+          "oa:start": 42276
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "Multi-factor designs can be analyzed by including additional variables in the design formula.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_043",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "DESeq2 can analyze experimental designs with fixed effects including multiple factors, interactions, and continuous variables."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 42640,
+          "oa:start": 42414
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "DESeq2 can analyze experimental designs with fixed effects including multiple factors, interactions, and continuous variables.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_044",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Adding variables to the design can control for additional variation in counts and increase sensitivity for finding differences."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 42936,
+          "oa:start": 42642
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "Adding variables to the design can control for additional variation in counts and increase sensitivity for finding differences.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_045",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "In experiments with many samples, there will likely be technical variation affecting the observed counts that must be modeled."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 43375,
+          "oa:start": 43148
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "In experiments with many samples, there will likely be technical variation affecting the observed counts that must be modeled.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_046",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Variance stabilizing transformation and rlog are used to remove the dependence of variance on the mean."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 48157,
+          "oa:start": 47953
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "Variance stabilizing transformation and rlog are used to remove the dependence of variance on the mean.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_047",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "VST and rlog produce transformed data on the log2 scale which has been normalized with respect to library size."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 47951,
+          "oa:start": 47801
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "VST and rlog produce transformed data on the log2 scale which has been normalized with respect to library size.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_048",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The rlog function may take too long for experiments with many samples (e.g. 100s), so vst is a faster choice."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 48883,
+          "oa:start": 48754
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "The rlog function may take too long for experiments with many samples (e.g. 100s), so vst is a faster choice.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_049",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The rlog function requires fitting a shrinkage term for each sample and each gene which takes time."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 49021,
+          "oa:start": 48885
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "The rlog function requires fitting a shrinkage term for each sample and each gene which takes time.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_050",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Transformation functions vst and rlog have a blind argument for whether transformation should be blind to sample information."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 49296,
+          "oa:start": 49129
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "Transformation functions vst and rlog have a blind argument for whether transformation should be blind to sample information.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_051",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "When blind equals TRUE, vst and rlog functions re-estimate dispersions using only an intercept."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 49410,
+          "oa:start": 49297
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "When blind equals TRUE, vst and rlog functions re-estimate dispersions using only an intercept.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_052",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Blind dispersion estimation should be used to compare samples in a manner unbiased by experimental groups for quality assurance."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 49593,
+          "oa:start": 49411
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "Blind dispersion estimation should be used to compare samples in a manner unbiased by experimental groups for quality assurance.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_053",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Blind dispersion estimation is not appropriate when expecting many genes will have large differences explainable by experimental design."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 49891,
+          "oa:start": 49618
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "Blind dispersion estimation is not appropriate when expecting many genes will have large differences explainable by experimental design.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_054",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Using blind dispersion estimation can lead to overly shrinking transformed values when design differences are misattributed as noise."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 50139,
+          "oa:start": 49892
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "Using blind dispersion estimation can lead to overly shrinking transformed values when design differences are misattributed as noise.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_055",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Setting blind to FALSE uses dispersions already estimated or estimates them using the current design formula."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 50322,
+          "oa:start": 50141
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "Setting blind to FALSE uses dispersions already estimated or estimates them using the current design formula.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_056",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Transformation functions vst and rlog return an object of class DESeqTransform, which is a subclass of RangedSummarizedExperiment."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 50836,
+          "oa:start": 50710
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "Transformation functions vst and rlog return an object of class DESeqTransform, which is a subclass of RangedSummarizedExperiment.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_057",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "For approximately 20 samples, rlog may take 30 seconds while vst takes less than 1 second."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 50963,
+          "oa:start": 50838
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "For approximately 20 samples, rlog may take 30 seconds while vst takes less than 1 second.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_058",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Running times for vst and rlog are shorter when using blind=FALSE if the function DESeq has already been run."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 51139,
+          "oa:start": 50964
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "Running times for vst and rlog are shorter when using blind=FALSE if the function DESeq has already been run.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_059",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Pre-filtering low count genes reduces memory size of the dds object and increases speed of count modeling in DESeq2."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 21622,
+          "oa:start": 21460
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "Pre-filtering low count genes reduces memory size of the dds object and increases speed of count modeling in DESeq2.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_060",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Pre-filtering improves visualizations by not plotting features with no information for differential expression."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 21767,
+          "oa:start": 21623
+        },
+        "oa:source": "urn:asb:build:asbb_transcriptomics/coll_deseq2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_004"
+      },
+      "schema:name": "Pre-filtering improves visualizations by not plotting features with no information for differential expression.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:result:result_001",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "DESeq2 provides methods to test for differential expression by use of negative binomial generalized linear models.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_001"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_002",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The DESeq2 estimates of dispersion and logarithmic fold changes incorporate data-driven prior distributions.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_002"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_003",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "DESeq2 should be cited with the reference Love, M.I., Huber, W., Anders, S.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_003"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_004",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Other Bioconductor packages with similar aims to DESeq2 include edgeR, limma, DSS, EBSeq, and baySeq.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_004"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_005",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "DESeq2 internally corrects for library size, so transformed or normalized values should not be used as input.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_005"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_006",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The DESeqDataSet class extends the RangedSummarizedExperiment class.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_006"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_007",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The design formula in DESeq2 must be specified to express the variables which will be used in modeling.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_007"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_008",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The variable of interest should be placed at the end of the design formula to benefit from default package settings.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_008"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_009",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Tximport is the recommended pipeline for DESeq2 to create gene-level count matrices from transcript abundance estimates.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_009"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_010",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Tximport can import transcript abundance estimates from Salmon, Sailfish, kallisto, and RSEM.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_010"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_011",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Using fast transcript abundance quantifiers corrects for potential changes in gene length across samples from differential isoform usage.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_011"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_012",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Salmon, Sailfish, and kallisto are substantially faster and require less memory and disk usage compared to alignment-based methods.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_012"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_013",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Using fast quantifiers allows avoiding discarding fragments that can align to multiple genes with homologous sequence, increasing sensitivity.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_013"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_014",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The Salmon software should be used with the --gcBias flag to estimate a correction factor for systematic biases in RNA-seq data.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_014"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_015",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "It is absolutely critical that the columns of the count matrix and rows of the column data are in the same order.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_015"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_016",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The featureCounts function in Rsubread can quickly produce count matrices from alignment files.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_016"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_017",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "By default, R chooses a reference level for factors based on alphabetical order.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_017"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_018",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "DESeq2 will not make guesses about which column of the count matrix belongs to which row of the column data.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_018"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_019",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Technical replicates can be collapsed into single columns using the collapseReplicates function in DESeq2.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_019"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_020",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The pasilla dataset is from an experiment on Drosophila melanogaster cell cultures investigating RNAi knock-down of the splicing factor pasilla.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_020"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_021",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The results function extracts a results table with log2 fold changes, p values and adjusted p values.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_021"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_022",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "By default, results are for the last variable in the design formula and the last level compared to the reference level.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_022"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_023",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Log fold change shrinkage is useful for visualization and ranking of genes.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_023"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_024",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The apeglm method is the default shrinkage estimator in DESeq2 as of version 1.28.0.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_024"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_025",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The ashr shrinkage estimator fits a mixture of Normal distributions to form the prior.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_025"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_026",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The apeglm method has been sped up to take roughly the same time as the normal method, approximately 5 seconds for the pasilla dataset.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_026"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_027",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The pasilla dataset contains approximately 10,000 genes and 7 samples.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_027"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_028",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Setting apeMethod=\"nbinomC\" produces a 10x speedup but returns lfcSE column with NA.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_028"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_029",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Batch effects should be corrected for by including known batch variables in the design formula or using functions like svaseq or RUV.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_029"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_030",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The plotCounts function normalizes counts by estimated size factors and adds a pseudocount of 1/2 for log scale plotting.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_030"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_031",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "For a log2 fold change of -1, the treatment induces a multiplicative change of 0.5 in gene expression level.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_031"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_032",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "If all samples in a row have zero counts, baseMean, log2 fold change, p value and adjusted p value will all be set to NA.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_032"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_033",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Extreme count outliers detected by Cook's distance cause p value and adjusted p value to be set to NA.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_033"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_034",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Low mean normalized count causes only the adjusted p value to be set to NA through independent filtering.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_034"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_035",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The regionReport package can generate an HTML and PDF summary of DESeq2 results with plots.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_035"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_036",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The Glimma package can generate interactive MA-plots of DESeq2 output. The pcaExplorer package can generate PCA plots, boxplots of counts and other summaries from DESeq2 output.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_036"
+        },
+        {
+          "@id": "urn:asb:claim:claim_037"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_037",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The iSEE package provides functions for creating an interactive Shiny-based graphical user interface for exploring SummarizedExperiment objects.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_038"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_038",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The iSEEde package provides additional panels for interactive visualization of differential expression results in iSEE applications.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_039"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_039",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "DEvis is available on CRAN and GitHub for analysis of differential expression data.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_040"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_040",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Results can be exported using base R functions write.csv or write.delim.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_041"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_041",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Multi-factor designs can be analyzed by including additional variables in the design formula.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_042"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_042",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "DESeq2 can analyze experimental designs with fixed effects including multiple factors, interactions, and continuous variables.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_043"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_043",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Adding variables to the design can control for additional variation in counts and increase sensitivity for finding differences.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_044"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_044",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "In experiments with many samples, there will likely be technical variation affecting the observed counts that must be modeled.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_045"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_045",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Variance stabilizing transformation and rlog are used to remove the dependence of variance on the mean.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_046"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_046",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "VST and rlog produce transformed data on the log2 scale which has been normalized with respect to library size.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_047"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_047",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The rlog function may take too long for experiments with many samples (e.g.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_048"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_048",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The rlog function requires fitting a shrinkage term for each sample and each gene which takes time.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_049"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_049",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Transformation functions vst and rlog have a blind argument for whether transformation should be blind to sample information.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_050"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_050",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "When blind equals TRUE, vst and rlog functions re-estimate dispersions using only an intercept.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_051"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_051",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Blind dispersion estimation should be used to compare samples in a manner unbiased by experimental groups for quality assurance.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_052"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_052",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Blind dispersion estimation is not appropriate when expecting many genes will have large differences explainable by experimental design.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_053"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_053",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Using blind dispersion estimation can lead to overly shrinking transformed values when design differences are misattributed as noise.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_054"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_054",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Setting blind to FALSE uses dispersions already estimated or estimates them using the current design formula.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_055"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_055",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Transformation functions vst and rlog return an object of class DESeqTransform, which is a subclass of RangedSummarizedExperiment.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_056"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_056",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "For approximately 20 samples, rlog may take 30 seconds while vst takes less than 1 second.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_057"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_057",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Running times for vst and rlog are shorter when using blind=FALSE if the function DESeq has already been run.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_058"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_058",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Pre-filtering low count genes reduces memory size of the dds object and increases speed of count modeling in DESeq2.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_059"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_059",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Pre-filtering improves visualizations by not plotting features with no information for differential expression.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_060"
+        }
+      ]
+    },
+    {
+      "@id": "#env-task_004",
+      "@type": [
+        "repme:ComputationalEnvironment"
+      ],
+      "repme:computeTier": "light"
+    },
+    {
+      "@id": "#agent-15-activity-task_004",
+      "@type": [
+        "prov:Activity"
+      ],
+      "prov:endedAtTime": "2026-06-15T18:15:17.696564+00:00",
+      "prov:qualifiedUsage": {
+        "@type": "prov:Usage",
+        "schema:name": "prompt_sha256",
+        "schema:value": "496d2ea95f277630"
+      },
+      "prov:wasAssociatedWith": {
+        "schema:name": "anthropic/claude-haiku-4-5-20251001"
+      },
+      "schema:name": "Agent 1.5 Claim Extractor"
+    },
+    {
+      "@id": "#computational-environment",
+      "@type": "repme:ComputationalEnvironment",
+      "repme:buildId": "EE0E6B9FB31D495BA129FF0539452BF3",
+      "repme:depsHash": null,
+      "repme:gitCommit": "ddf6c1becb15c939b16600b7655d44e2d2baa690",
+      "repme:platform": "darwin-25.5.0-arm64",
+      "repme:pythonVersion": "3.11.15",
+      "schema:dateCreated": "2026-06-15T18:08:52.585088Z",
+      "schema:hasPart": [
+        {
+          "@id": "#agent-config-agent1_entity"
+        },
+        {
+          "@id": "#agent-config-agent2a_outline"
+        },
+        {
+          "@id": "#agent-config-agent2b_card"
+        },
+        {
+          "@id": "#agent-config-agent3_critique"
+        },
+        {
+          "@id": "#agent-config-agent_classify"
+        }
+      ],
+      "schema:softwareVersion": "agentic-science-builder@0.1.0"
+    },
+    {
+      "@id": "#agent-config-agent1_entity",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v3",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent1_entity"
+    },
+    {
+      "@id": "#agent-config-agent2a_outline",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-sonnet-4-6",
+      "repme:promptVersion": "v2",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2a_outline"
+    },
+    {
+      "@id": "#agent-config-agent2b_card",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v4",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2b_card"
+    },
+    {
+      "@id": "#agent-config-agent3_critique",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent3_critique"
+    },
+    {
+      "@id": "#agent-config-agent_classify",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent_classify"
+    },
+    {
+      "@id": "http://edamontology.org/topic_0622",
+      "@type": "DefinedTerm",
+      "inDefinedTermSet": "http://edamontology.org/",
+      "name": "Genomics",
+      "termCode": "topic_0622"
+    },
+    {
+      "@id": "artifact_provenance.json",
+      "@type": "File",
+      "name": "artifact_provenance.json",
+      "encodingFormat": "application/json"
+    },
+    {
+      "@id": "ledger/claims.jsonl",
+      "@type": "File",
+      "name": "ledger/claims.jsonl",
+      "encodingFormat": "application/jsonlines"
+    },
+    {
+      "@id": "ledger/results.jsonl",
+      "@type": "File",
+      "name": "ledger/results.jsonl",
+      "encodingFormat": "application/jsonlines"
+    }
+  ]
+}

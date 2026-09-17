@@ -1,6 +1,8 @@
 ---
 name: gallery-benchmark-data-extraction
-description: Use when you have access to a computation-times table or performance log documenting rendering execution times for multiple visualization examples across different plotting backends (e.
+description: Use when you have access to a computation-times table or performance
+  log documenting rendering execution times for multiple visualization examples across
+  different plotting backends (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -16,12 +18,15 @@ metadata:
   - matplotlib
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
 evidence_spans:
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 - ms_data.plot(x="m/z", y="intensity", kind="spectrum")
 - conda create --name=pyopenms-viz python=3.12
 - Multiple backends supported including matplotlib, bokeh, and plotly

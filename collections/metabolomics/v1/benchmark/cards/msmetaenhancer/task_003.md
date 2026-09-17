@@ -172,4 +172,4 @@ Implement the Monitor component to track availability and error state of externa
 
 ---
 
-*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See [`artifact_provenance.json`](../../../capsules/msmetaenhancer/https___doi_org_10_21105_joss_04494__task_003/artifact_provenance.json) for what this release carries; it also lists the build artefacts the release does not promote.*

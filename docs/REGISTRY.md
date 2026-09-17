@@ -10,7 +10,9 @@ The ASB-Skill-Collections registry is the **public installation front door** for
 2. **Semantic catalogue** (`catalogue.jsonld`) — the authoritative registry, machine-queryable, linked-data native
 3. **Collection filesystem** (`collections/` + `staged-collections/`) — the backing storage for versioned skill bundles, benchmarks, and provenance
 
-It also clarifies the non-install roles of the `asbb` CLI helper (registry operations, verification, doctor checks — not the install path).
+The local `asbb install` / `uninstall` materializer is described in §4. The
+remaining registry and release sections retain historical design material;
+`registry`, `verify` and `doctor` currently print stubs.
 
 ---
 
@@ -21,26 +23,29 @@ It also clarifies the non-install roles of the `asbb` CLI helper (registry opera
 Users discover and install collections via the Claude Code `/plugin install` command:
 
 ```bash
-/plugin install <slug>-v<N>@HolobiomicsLab/asb-skill-collections
+/plugin marketplace add HolobiomicsLab/asb-skill-collections
+/plugin install <marketplace-name>@asb-skill-collections
 ```
 
 **Example:**
 ```bash
-/plugin install metabolomics-v1@HolobiomicsLab/asb-skill-collections
+/plugin install metabolomics@asb-skill-collections
+# Or a technique pack:
+/plugin install metabolomics-lc-ms@asb-skill-collections
 ```
 
-This command:
-1. **Resolves the plugin source:** looks up `<slug>-v<N>` in the marketplace.json on GitHub (`https://raw.githubusercontent.com/HolobiomicsLab/asb-skill-collections/main/.claude-plugin/marketplace.json`)
-2. **Fetches the skill bundle:** downloads the skill files, tools, and metadata from `collections/<slug>/v<N>/`
-3. **Registers locally:** links the bundle into the user's `~/.claude/skills/` directory for Claude Code discovery
-4. **Sets up MCP tools** (optional): if the bundle declares tools in `mcp/tools.json`, registers them in the user's MCP server config
-5. **Links the KB** (optional): if `kb.yaml` specifies a Perspicacité or snapshot URL, provisions access to the grounding knowledge base
+Use `plugins[].name` from `.claude-plugin/marketplace.json`, such as
+`metabolomics` or `metabolomics-lc-ms`. Its `source` points to the versioned
+collection or pack directory; the plugin host handles installation and discovery.
+Release tags such as `<slug>-v<N>` are separate from install names. Native host
+storage and grounding setup are not performed by the local materializer below.
 
 ### 1.2 The marketplace.json schema
 
 **Location:** `.claude-plugin/marketplace.json` (NOT the repo root — the manifest lives under the `.claude-plugin/` directory)
 
-**Schema:**
+**Historical proposed schema** (current install names and sources come from the
+actual `plugins[].name` and `plugins[].source` fields):
 
 ```json
 {
@@ -261,7 +266,6 @@ asb-skill-collections/
 │   │       │   └── leaderboard.jsonld
 │   │       ├── kb.yaml                    # KB dependency + pinned profile
 │   │       ├── CITATION.cff               # per-collection citation (updated at release)
-│   │       ├── ro-crate-metadata.json     # RO-Crate 1.1 + Workflow Run 0.5
 │   │       └── README.md
 │   └── epigenomics/
 │       └── v1/ ...
@@ -354,67 +358,196 @@ access:
 fallback: "warn"  # warn | skip_grounding | fail
 ```
 
-**Install behavior:** The `asb-skills install` command reads `kb.yaml` and either:
-- **MCP:** registers the endpoint in the user's MCP config and points skills to it
-- **Snapshot:** downloads and unpacks the KB archive to `~/.claude/skills/<slug>-v<N>/kb/`
-- **Fallback:** logs a warning and allows skills to run without grounding (graceful degrade)
+**Current local install behavior:** `asbb install` copies published grounding
+metadata and bundled scripts; it does not register MCP endpoints, download a KB,
+or install scientific tools. Keyword search is offline. Optional grounding uses
+the unit's `bin/perspicacite_kb_bind.py`: `resolve` is offline, `prepare`/`query`
+require Perspicacité, and `local` retrieves source material over the network.
 
 ---
 
-## 4. The asbb CLI Helper (Registry Operations)
+## 4. The asbb CLI Helper (Local Installation)
 
 > **Caveat (locked):** The `asbb` CLI is **to-build (Phase 1.7)** and is scoped to **`registry` / `verify` / `doctor` ONLY**. It is a **registry utility, NOT the install surface**. The install surface is the Claude Code plugin marketplace (`/plugin install <slug>-v<N>@HolobiomicsLab/asb-skill-collections`, resolved via `.claude-plugin/marketplace.json`). Commands beyond `registry`/`verify`/`doctor` shown elsewhere in this doc (e.g. `export-sssom`) are aspirational/post-Phase-1.7 and are not part of the v0 surface.
+
+> **Superseded in fact, not yet in governance (2026-09-13, revised 2026-09-14).**
+> The shipped CLI is `search / get / verify / doctor / install / uninstall`.
+> `install` and `uninstall` materialise packs into non-Claude runtimes (Codex,
+> Gemini, Copilot, Cursor, Cline, VS Code Copilot, or any directory via `--dest`)
+> and are covered by tests; `verify` and `doctor` are the commands that remain
+> Phase-1.7 stubs. So the locked sentences above are false about the release
+> candidate in two ways: the CLI is not scoped to three commands, and it *is* an
+> install surface — for every runtime other than Claude Code, where the plugin
+> marketplace stays the recommended path. The lock itself is a governance
+> decision and is left for the owner to retire or restate; this note exists so the
+> document does not contradict `asbb --help` unremarked. See
+> [offline selection](selection.md) and the install section of the root README.
+>
+> **`asbb registry` was removed on 2026-09-14** (owner decision). It was the
+> third stub, and unlike `verify` and `doctor` it was also documented here with a
+> two-subcommand surface and a sample transcript, so a reader could plan a
+> release step around it and only discover at the point of use that it answered
+> nothing. §4.1 records what it claimed and what does the work instead.
+
 
 The `asbb` command-line tool provides operations that do not go through Claude Code's `/plugin install`:
 
 ```bash
-# Install path (Claude Code native — the ONLY install surface):
+# Install path, Claude Code (recommended there):
 /plugin install metabolomics-v1@HolobiomicsLab/asb-skill-collections
 #   resolved via .claude-plugin/marketplace.json
 
-# Registry operations (asbb CLI — Phase 1.7, registry/verify/doctor only):
-asbb registry ...   # registry subcommands (list / validate published collections)
+# Install path, every other runtime (shipped, not a stub):
+asbb install metabolomics-lc-ms --runtime agents   # codex | copilot | gemini | claude
+asbb install metabolomics-lc-ms --dest ~/some/skills/dir
+
+# Registry operations (asbb CLI — Phase 1.7 stubs: they print a placeholder and exit 1):
 asbb verify ...     # validate a collection / catalogue / marketplace before release
 asbb doctor         # health check: DOI resolution, KB reachability, manifest availability
+
+# Registry reconciliation (shipped, not a stub). `asbb registry` was removed
+# 2026-09-14; these are what actually do the job — see §4.1:
+python scripts/release_gate.py <collection> --strict   # catalogue membership, layout, unit closure
+python scripts/regen_catalogue.py                      # rebuild catalogue.jsonld from collections/
+python scripts/check_advertised_counts.py              # advertised counts vs the units on disk
 ```
 
-### 4.1 asbb registry commands
+`install` resolves the marketplace name and a source contained in that checkout;
+it does not fetch the collection.
 
-**`asbb registry list`**
-Lists all published collections from the catalogue.
+**Roots:** `agents`, `codex`, `copilot` and `gemini` use their respective
+`~/.<runtime>/skills` directories. `claude` uses the current project's
+`.claude/skills`, or `~/.claude/skills` with `--user`. Rules targets use project
+`.cursor/rules`, `.clinerules` and `.github/instructions`. `--dest` uses exactly
+the supplied directory. From another project, make the checkout importable and
+pass `--repo /path/to/checkout` (examples in [README.md](../README.md)).
 
-```
-Metabolomics Skills Collection (metabolomics-v1)
-  Skills: 42  Tools: 8  DOI: 10.5281/zenodo.PLACEHOLDER
-  Released: 2026-06-30  Lead: Curator Name (ORCID)
-  Openness: open
-  Install: /plugin install metabolomics-v1@HolobiomicsLab/asb-skill-collections
-```
+**Managed unit:** every install — not only `--copy`, `--dest` and the rules
+targets — copies the pack source into `<destination>/.asbb-units/<content-id>`,
+where the content identifier is a SHA-256 over the pack slug, runtime, declared
+version and a digest of the source itself. The source's directory structure is
+retained, including advertised `skills/`, leaf data, indexes, `bin/` and
+supporting content. `.git`, `.cache`, `.venv`, `__pycache__`, `.pytest_cache`
+and `.ruff_cache` are excluded wherever they occur; nothing else is. An asset
+that resolves outside the pack, or that is neither a regular file nor a
+directory, is refused before anything is written; links inside the pack are
+materialised as files. The installer does not establish grounding quality and
+does not copy external dependencies.
 
-**`asbb registry validate [--remote]`**
-Validates local catalogue.jsonld + marketplace.json against schemas.
-- `--remote`: also checks Zenodo DOI resolution + w3id.org IRI reachability
+Each advertised entry records the unit twice: an absolute path, and the same
+directory relative to the entry's own directory (`../.asbb-units/<content-id>`
+for skill entries, `.asbb-units/<content-id>` for rules entries, which sit in the
+destination itself). Readers resolve the relative form against the directory they
+read the entry from and fall back to the absolute one, so a destination that is
+moved wholesale keeps working. Management follows: `uninstall --dest` and
+`install --dest` naming the new location recognise the moved unit as the same
+unit, proved by the receipt it carried with it and by the recorded root no longer
+holding it — a *copy*, whose original is still in place, is never claimed.
 
-**`asbb registry doctor`**
-Health check: Perspicacité KB endpoint reachability, marketplace.json HTTP availability, Zenodo API status.
+The destination and the source pack may not contain each other, in either
+direction, and two advertised entries may not resolve to the same destination
+path or to one inside another; both are refused while the plan is being built.
+Each owned entry covers its whole subtree, so keep personal files outside it.
 
-### 4.2 asbb verify-collection
+**Entries:** skill targets place an adapter directory at the advertised name —
+a symlink into the unit by default, a real directory under `--copy` and
+`--dest`. Rules targets render one file per skill, under that runtime's own
+filename convention and renderer metadata. Both carry the unit's path and tell
+the consumer to resolve paths and run commands from the installed unit, so the
+installation keeps working after the checkout is moved or removed. Leaves
+remain data.
 
-Pre-release validation for a collection directory (used in the release gate):
+**Receipt and cleanup:** `~/.asbb/installed.json` records, per pack and runtime,
+the canonical destination, the mode, the owned entries with a content hash each,
+the unit path and digest, and the source (`path`, `version`, `source_digest`).
+The version comes from the pack's `.claude-plugin/plugin.json`, then the
+marketplace entry, else `unversioned`. The digests describe the source at
+install time.
 
-```bash
-asbb verify-collection collections/metabolomics/v1 \
-  --require-open-access \
-  --check-dois \
-  --validate-ro-crate
-```
+Re-run `install` with the same target to update the installation and clean up
+what the previous revision left; there is no separate `sync` command.
+`--dry-run` previews an install without writing. `--force` overwrites an entry
+this pack does not own, including one another installed pack owns; that transfer
+is recorded, and the displaced pack's own uninstall will then leave it alone.
+`uninstall <pack> --runtime <id>` (or `--dest DIR`) removes only entries that
+are still owned and unchanged, plus the unit once nothing else refers to it;
+anything it cannot prove it owns is preserved and reported on stderr. Match the
+original destination, project cwd and Claude `--user` setting when uninstalling.
+A moved installation still works; managing it again requires the recorded root.
 
-Checks:
-- collection.yaml schema compliance
-- All derived_from DOIs resolve
-- RO-Crate metadata validity
-- SKILL.md frontmatter discipline (description length, no marketing terms)
-- Open-access source tags (if `--require-open-access`)
+The local adapter and filesystem contract is tested with synthetic units. It is
+not a claim of a version-pinned native host smoke test. The following
+verification and export subsections describe historical planned behavior, not
+implemented commands beyond the current stubs; §4.1 records a command that has
+since been removed outright.
+
+### 4.1 asbb registry commands (removed 2026-09-14)
+
+**`asbb registry` is no longer a command.** `asbb registry list`, like any other
+argument after it, is an argparse `invalid choice` on the top-level parser and
+exits 2. It is not deprecated or hidden: it is gone.
+
+**Why.** From Phase 1.7 until 2026-09-14 the subcommand was advertised in
+`asbb --help`, documented in this section with two subcommands (`list` and
+`validate`) and a sample transcript, and did neither: both printed
+`(Phase 1.7 stub — not yet implemented)` on stderr and exited 1. That is worse
+than an absent command. A reader consults `--help` or this section, plans a
+release step around `asbb registry validate`, and only discovers the gap at the
+point of use. The owner's decision was to remove the advertised surface rather
+than leave a promise the code does not keep. Nothing was lost with it, because
+nothing was implemented; no CI job, script or test invoked it.
+
+**Where the work went.** The registry is reconciled by scripts that exist:
+
+| The removed command claimed | What does the job |
+|---|---|
+| `asbb registry list` — list every published collection from the catalogue, with skill/tool counts, DOI, release date, lead curator, openness and install line | `catalogue.jsonld` is that list; rebuild it deterministically with `python scripts/regen_catalogue.py`. For what a checkout ships rather than what is published, `asbb search --list-collections` |
+| `asbb registry validate [--remote]` — validate `catalogue.jsonld` + `marketplace.json` against their schemas, and (with `--remote`) Zenodo DOI and w3id.org IRI reachability | `python scripts/release_gate.py <collection> --strict` — `check_catalogue_membership` (each `collection.yaml`'s advertised members against `catalogue.jsonld` and the files on disk), `check_layout` and `check_unit_closure`. The `--remote` half has no direct replacement: `validate.yml` samples `derived_from` DOI resolution (its own gate 2) and checks EDAM IRIs (its gate 6), which is neither Zenodo concept-DOI nor w3id.org reachability — and those are `validate.yml`'s gate numbers, not this document's (`governance/CONTENT_POLICY.md` §7.1) |
+| (the counts a `list` output would have quoted) | `python scripts/check_advertised_counts.py` — advertised totals against the units on disk |
+
+~~**`asbb registry doctor`** — Health check: Perspicacité KB endpoint reachability,
+marketplace.json HTTP availability, Zenodo API status.~~
+**This subcommand never existed** even while `asbb registry` did; it was struck
+2026-09-13, one day before the parent command was removed. `asbb doctor` is a
+separate top-level command, still present, and still a stub.
+
+> **`asbb verify` and `asbb doctor` are unchanged and remain Phase-1.7 stubs.**
+> They print `(Phase 1.7 stub — not yet implemented)` on stderr and exit 1 — since
+> 2026-09-13, when all of the stubs stopped printing on stdout and exiting 0. A
+> command that answers *is this consistent?* — and a health check most of all — must
+> not report success having looked at nothing, because no caller can tell that from a
+> healthy answer. Neither command's `--help` says it is a stub. Whether they follow
+> `registry` out of the CLI is a separate owner decision; see
+> `governance/CONTENT_POLICY.md` §7.1.
+
+### 4.2 asbb verify-collection (never existed)
+
+**There is no `asbb verify-collection`.** Unlike `asbb registry`, which was
+advertised and then removed, this name has never been a subcommand at all: the
+top-level parser takes `search / get / verify / doctor / install / uninstall`, so
+the invocation this section used to print is an argparse `invalid choice` that
+exits 2, and none of its three flags exists on any command in this repository.
+The paragraph below is accurate and names the real route.
+
+The content gate (`python scripts/release_gate.py <collection> --strict`) produces `gate_report.json`, or the `--report` destination, with scoped item counts, separate file coverage, payload/manifest digests, input closure, recomputed inventory and policy/configuration version. Only the selected receipt and `MANIFEST.gen.json` are excluded from the payload digest. Recheck a saved strict receipt with `--verify` and the same `--report` override; ASB cut manifests require source directories via `--inputs`. Strict gating and re-verification use exits 0 verified, 1 failed/uncheckable, 2 usage error. Advisory mode retains 0 for nonempty diagnostics and explicitly states “diagnostic run, not a release verification”; empty required measurements exit 1 in either mode. Optional absent workflows are `not_applicable`. A `collection.yaml` declaration of `unit_type: data-only` or `unit_type: empty` identifies a nonskill unit but cannot obtain skill validation or a passing release receipt from zero skill checks.
+
+What the removed invocation's *Checks* list advertised maps onto that route as
+follows.
+
+| Advertised check | What actually runs it |
+| --- | --- |
+| `collection.yaml` schema compliance | Nothing. `layout_packaging` checks the on-disk layout and `unit_closure` that every declared member resolves, and `--catalogue-membership` checks that the catalogue's advertised members exist — none of them validates `collection.yaml` against a schema. `validate.yml` gate 1 validates every manifest closed against `SkillCollection` in `asb-schema` >= 0.3.0 and fails the job when one does not validate. That package is not on PyPI yet, so in CI the step still says it did not run. It used to call `linkml-validate --schema asb_skill_bundle.yaml`, a file that exists nowhere here, so every run failed behind `continue-on-error`; and `asb-schema` 0.2 did not declare seven keys the manifests carry (ten for `metabolomics/v2`). 0.3.0 declares them, and the four manifests validate against it locally. |
+| All `derived_from` DOIs resolve | `provenance_doi_license` checks that each leaf carries a source DOI **or** a repository URL, plus a licence tag. Nothing in this repository resolves a DOI over the network. |
+| RO-Crate metadata validity | `validate.yml` gate 8, blocking, since 2026-09-14. Every released capsule ships the crate its build wrote, pruned at promotion to what the capsule holds (`scripts/release_capsule_truth.py`), and the gate holds each to `crate_problems`: RO-Crate 1.1 context and descriptor, a root `Dataset`, every held file described and listed in `hasPart`, no entity naming a file the capsule does not hold, no absolute filesystem path. The build crates also claim Workflow Run Profile 0.5 but lack its `mainEntity`; the release copy drops that claim rather than ship one nothing checks. `release_gate.py` itself still has no RO-Crate check, and no manifest declares `ro_crate_path`: the crates are per capsule, not per collection. |
+| SKILL.md frontmatter discipline (description length, no marketing terms) | `python scripts/lint_skill_descriptions.py` — a separate script, not part of the gate. |
+| Open-access source tags (if `--require-open-access`) | `access_tier_oa`, which runs unconditionally; `release_gate.py` has no `--require-open-access` flag. |
+
+A strict receipt records thirteen checks: the eight content checks
+`access_tier_oa`, `catalogue_membership`, `composite_workflows`,
+`layout_packaging`, `pii_dual_use`, `provenance_doi_license`,
+`strip_verbatim_similarity` and `unit_closure`, and the five that bind the
+receipt to what it measured — `collection_inventory`, `cut_manifest`,
+`gate_input_files`, `target_binding` and `target_stability`.
 
 ### 4.3 asbb export-sssom
 
@@ -455,7 +588,7 @@ The `release.yml` does **not** auto-update marketplace.json; instead:
    - Adds a new entry to `plugins[]` with the slug, version, DOI, and released_at timestamp
    - Or updates an existing entry if this is a patch release
 3. Commits + pushes the marketplace update
-4. Users can now install via `/plugin install <slug>-v<N>@...`
+4. Users can now install via `/plugin install <marketplace-name>@asb-skill-collections`
 
 **Rationale:** Marketplace entries are declarations of public readiness; they should not be auto-populated from every tag. A maintainer's explicit sign-off ensures quality.
 
@@ -482,19 +615,17 @@ The promotion step is manual (move the directory), not automated. This allows:
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                       User: /plugin install                     │
-│              metabolomics-v1@HolobiomicsLab/asb-skills          │
+│              metabolomics@asb-skill-collections                 │
 └────────────────────────┬────────────────────────────────────────┘
                          │
                          ├──> Resolve in marketplace.json (GitHub raw)
                          │    ↓
-                         ├──> Fetch from collections/metabolomics/v1/
-                         │    ├─ skills/, tools.json, mcp/
-                         │    ├─ kb.yaml (grounding config)
-                         │    └─ ro-crate-metadata.json
+                         ├──> Fetch the marketplace entry's source unit
+                         │    ├─ skills/ (advertisements)
+                         │    ├─ leaves/, indexes, bin/ (retrieval assets)
+                         │    └─ grounding metadata
                          │    ↓
-                         ├──> Link to ~/.claude/skills/metabolomics-v1/
-                         ├──> Register MCP tools (if present)
-                         └──> Set up KB access (MCP or snapshot)
+                         └──> Plugin host installs and discovers the unit
                          
 ┌─────────────────────────────────────────────────────────────────┐
 │                  release.yml (on tag)                           │
@@ -520,18 +651,18 @@ The promotion step is manual (move the directory), not automated. This allows:
                               
                               Commit + push
                               
-    → Now users can `/plugin install metabolomics-v1@...`
+    → Now users can `/plugin install metabolomics@asb-skill-collections`
 ```
 
 ### 6.2 Quality gates
 
 | Gate | Checked by | Blocks? | When |
 |------|-----------|---------|------|
-| **LinkML schema** | `validate.yml` gate 1 | PR | every commit to collections/ or staged-collections/ |
+| **LinkML schema** | `validate.yml` gate 1 | PR, once `asb-schema` >= 0.3.0 is installable; until then it says it did not run and validates nothing | every commit to collections/ or staged-collections/ |
 | **DOI resolution** | `validate.yml` gate 2 | PR | every commit |
 | **Description discipline** | `validate.yml` gate 5 | PR | every commit |
 | **EDAM IRI resolution** | `validate.yml` gate 6 | PR | every commit |
-| **RO-Crate validity** | `validate.yml` gate 8 | PR | every commit |
+| **RO-Crate validity** | `validate.yml` gate 8 | PR — every released capsule's crate, held to RO-Crate 1.1 | every commit |
 | **indicium round-trip** | `validate.yml` gate 9 | PR | every commit (warn-only if indicium-adapters unavailable) |
 | **Marketplace.json schema** | `validate.yml` gate 10 | PR | every commit |
 | **Release-gate (release.yml)** | `release.yml` + human sign-off | tag | on `<slug>-v[0-9]*` tag |
@@ -574,7 +705,7 @@ The promotion step is manual (move the directory), not automated. This allows:
 | **Gate report schema** | agent | Formal schema for `gate_report.json` | Phase 0.3 |
 | **MANIFEST.gen.json schema** | agent | Manifest format (corpus SHA, ASB ver, KB profile, LLM, seed) | Phase 0.4 |
 | **Zenodo PLACEHOLDER DOI** | human | Replace `10.5281/zenodo.PLACEHOLDER*` with real concept DOIs | Phase 1.9 |
-| **asbb CLI bootstrap** | agent | Skeleton `asbb` CLI with `registry list` + `verify-collection` | Phase 1.7 |
+| **asbb CLI bootstrap** | agent | ~~Skeleton `asbb` CLI with `registry list` + `verify-collection`~~ **Withdrawn 2026-09-14**: `asbb registry` was removed rather than implemented; the reconciliation it would have wrapped lives in `scripts/release_gate.py` (§4.1) | Phase 1.7 |
 
 ### 7.3 Known issues
 
@@ -588,11 +719,11 @@ The promotion step is manual (move the directory), not automated. This allows:
 
 | Layer | File | Format | Audience | Update trigger | Governance |
 |-------|------|--------|----------|---|---|
-| **Install surface** | `.claude-plugin/marketplace.json` | JSON (schema 1.0) | Users: `/plugin install <slug>-v<N>@...` | Manual (maintainer) | Lead curator approval |
+| **Native install surface** | `.claude-plugin/marketplace.json` | JSON | Users: `/plugin install <marketplace-name>@asb-skill-collections` | Manual (maintainer) | Lead curator approval |
 | **Machine registry** | `catalogue.jsonld` | JSON-LD (w3id IRIs) | Bots, linked-data clients, citation systems | Auto (regen_catalogue.py on tag) | Deterministic algorithm |
-| **Collection metadata** | `collections/<slug>/v<N>/collection.yaml` | YAML (LinkML schema) | Release gate, regen_catalogue.py | Manual (collection author) | LinkML validation (gate 1) |
+| **Collection metadata** | `collections/<slug>/v<N>/collection.yaml` | YAML (LinkML schema) | Release gate, regen_catalogue.py | Manual (collection author) | LinkML validation (gate 1) — blocking once `asb-schema` >= 0.3.0 is installable |
 | **KB grounding** | `collections/<slug>/v<N>/kb.yaml` | YAML | Install script, skill runtime | Manual (collection author) | Optional (fail-soft if absent) |
-| **Registry helper** | `asbb` CLI | shell commands | Maintainers, CI/CD, power users | Manual command invocation | No auto trigger |
+| **Registry reconciliation** | `scripts/release_gate.py`, `regen_catalogue.py`, `check_advertised_counts.py` | shell commands | Maintainers, CI/CD, power users | Manual command invocation (gate also runs at promotion and release) | Release gate. (`asbb registry`, listed here until 2026-09-14, was a stub and was removed — §4.1) |
 
 ---
 

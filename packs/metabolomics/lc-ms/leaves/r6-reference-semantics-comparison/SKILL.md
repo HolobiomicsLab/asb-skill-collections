@@ -1,6 +1,8 @@
 ---
 name: r6-reference-semantics-comparison
-description: Use when you need to understand or validate whether calling filter_mispicked_ions() (or similar R6 filter methods) with different copy_object settings will mutate your original data object in memory or preserve it.
+description: Use when you need to understand or validate whether calling filter_mispicked_ions()
+  (or similar R6 filter methods) with different copy_object settings will mutate your
+  original data object in memory or preserve it.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,6 +15,8 @@ metadata:
   - data.table
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr

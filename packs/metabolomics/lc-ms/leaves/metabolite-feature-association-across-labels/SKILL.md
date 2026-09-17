@@ -1,6 +1,9 @@
 ---
 name: metabolite-feature-association-across-labels
-description: Use when after PuInc_seeker has identified putative incorporations (m/z features showing significant fold-change and p-value signals between labeled and unlabeled sample groups) and you need to assign base peaks—the most intense isotopologue signals—and validate isotope-pair mass gaps match.
+description: Use when after PuInc_seeker has identified putative incorporations (m/z
+  features showing significant fold-change and p-value signals between labeled and
+  unlabeled sample groups) and you need to assign base peaks—the most intense isotopologue
+  signals—and validate isotope-pair mass gaps match.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -14,6 +17,8 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5b03628
   title: geoRge

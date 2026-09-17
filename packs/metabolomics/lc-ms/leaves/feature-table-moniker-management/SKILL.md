@@ -1,6 +1,8 @@
 ---
 name: feature-table-moniker-management
-description: Use when when processing a metabolomics feature table through multiple sequential transformations (e.g., imputation, normalization, batch correction, annotation) and you need to track which version of the table is being used at each step.
+description: Use when when processing a metabolomics feature table through multiple
+  sequential transformations (e.g., imputation, normalization, batch correction, annotation)
+  and you need to track which version of the table is being used at each step.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,6 +15,8 @@ metadata:
   - metDataModel
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

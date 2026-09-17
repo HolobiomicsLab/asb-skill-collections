@@ -1,6 +1,8 @@
 ---
 name: blank-contamination-filtering
-description: Use when your peak table includes features flagged in blank control samples (e.g., solvent blanks, media blanks) at relative abundance above a project-specific threshold.
+description: Use when your peak table includes features flagged in blank control samples
+  (e.g., solvent blanks, media blanks) at relative abundance above a project-specific
+  threshold.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +15,8 @@ metadata:
   - data.table
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr

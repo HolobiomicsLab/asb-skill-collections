@@ -1,6 +1,8 @@
 ---
 name: metabolite-ratio-batch-correction
-description: Use when your input is a SummarizedExperiment containing multiple batches or injection sequences of metabolomics samples (study samples, QC replicates, calibration lines) with measured ion areas for compounds and assigned internal standards.
+description: Use when your input is a SummarizedExperiment containing multiple batches
+  or injection sequences of metabolomics samples (study samples, QC replicates, calibration
+  lines) with measured ion areas for compounds and assigned internal standards.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -14,6 +16,8 @@ metadata:
   - mzQualityDashboard
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality

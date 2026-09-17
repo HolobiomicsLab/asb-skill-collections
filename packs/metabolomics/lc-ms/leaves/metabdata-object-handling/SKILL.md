@@ -1,6 +1,9 @@
 ---
 name: metabdata-object-handling
-description: Use when you have a raw peak-picked untargeted LC-MS dataframe with columns containing mass-to-charge (m/z), retention time (rt), feature identifiers, adduct annotations, and sample measurements in non-standard column names or mixed column sets.
+description: Use when you have a raw peak-picked untargeted LC-MS dataframe with columns
+  containing mass-to-charge (m/z), retention time (rt), feature identifiers, adduct
+  annotations, and sample measurements in non-standard column names or mixed column
+  sets.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -12,12 +15,16 @@ metadata:
   - metabCombiner
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,8 @@
 ---
 name: ms2-fragment-m-z-grouping-and-aggregation
-description: Use when you have extracted MS/MS spectra for a given metabolomic feature across multiple replicates (e.g., after top-TIC filtering) and need to identify which fragments are reproducible across replicates.
+description: Use when you have extracted MS/MS spectra for a given metabolomic feature
+  across multiple replicates (e.g., after top-TIC filtering) and need to identify
+  which fragments are reproducible across replicates.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,13 +18,18 @@ metadata:
   - extract_raw_spectra
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
 evidence_spans:
 - devtools::install_github("BiosystemEngineeringLab-IITB/dures", auth_token = NULL)
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager", "knitr", "markdown"),
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager",
+  "knitr", "markdown"),
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

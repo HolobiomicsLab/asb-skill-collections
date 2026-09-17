@@ -1,6 +1,8 @@
 ---
 name: twim-ms-calibration-mapping
-description: Use when you have raw or processed arrival-time data from a TWIM-MS instrument and need to convert it to CCS values for comparison across experiments or biomolecular classes.
+description: Use when you have raw or processed arrival-time data from a TWIM-MS instrument
+  and need to convert it to CCS values for comparison across experiments or biomolecular
+  classes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +15,8 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal

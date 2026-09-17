@@ -1,6 +1,7 @@
 ---
 name: data-quality-assessment-from-molecular-descriptors
-description: Use when processing spectral datasets from open mass spectra libraries (OMSLs) where structural identifiers and ionization metadata are incomplete or inconsistent.
+description: Use when processing spectral datasets from open mass spectra libraries
+  (OMSLs) where structural identifiers and ionization metadata are incomplete or inconsistent.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,6 +17,13 @@ metadata:
   - spectra-hash (SPLASH)
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
@@ -44,6 +52,7 @@ attribution:
 
 # data-quality-assessment-from-molecular-descriptors
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Assess and filter mass spectrometry spectral data based on completeness and consistency of molecular structural identifiers (SMILES, InChI, InChIKey) and associated metadata (precursor m/z, adduct information). This skill identifies spectra lacking critical structural or ionization descriptors and removes them to ensure dataset quality and analytical reliability.

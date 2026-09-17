@@ -1,6 +1,9 @@
 ---
 name: cytoscape-edge-node-file-formatting
-description: Use when after computing pairwise mass-difference transformations between FT-ICR MS peaks and matching them to a reference biochemical transformation key, you have putative edge data (source peak, target peak, transformation type, mass error) and node data (peaks with m/z, molecular formula.
+description: Use when after computing pairwise mass-difference transformations between
+  FT-ICR MS peaks and matching them to a reference biochemical transformation key,
+  you have putative edge data (source peak, target peak, transformation type, mass
+  error) and node data (peaks with m/z, molecular formula.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -12,13 +15,17 @@ metadata:
   - Cytoscape
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
-- Networks are then constructed using Cytoscape [79] and colored based on their molecular class.
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
+- Networks are then constructed using Cytoscape [79] and colored based on their molecular
+  class.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

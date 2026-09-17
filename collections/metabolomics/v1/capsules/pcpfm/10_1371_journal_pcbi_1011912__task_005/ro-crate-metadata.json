@@ -1,0 +1,2941 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "asbext": "https://w3id.org/asb/indicium-ext#",
+      "chebi": "http://purl.obolibrary.org/obo/CHEBI_",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "fabio": "http://purl.org/spar/fabio/",
+      "ms": "http://purl.obolibrary.org/obo/MS_",
+      "ncbitaxon": "http://purl.obolibrary.org/obo/NCBITaxon_",
+      "oa": "http://www.w3.org/ns/oa#",
+      "obi": "http://purl.obolibrary.org/obo/OBI_",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "p-plan": "http://purl.org/net/p-plan#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "repme": "https://w3id.org/reproduceme#",
+      "sepio": "http://purl.obolibrary.org/obo/SEPIO_",
+      "uberon": "http://purl.obolibrary.org/obo/UBERON_"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": [
+        "Dataset",
+        "repme:ScientificWorkflow"
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ],
+      "dateCreated": "2026-06-15",
+      "description": "Apply batch correction to a multi-batch interpolated feature table using pycombat, then verify that the corrected table preserves sample and feature counts while reducing inter-batch variance for selected metabolite features.",
+      "hasPart": [
+        {
+          "@id": "evidence/source_snippets.md"
+        },
+        {
+          "@id": "inputs/dataset_folder_tree.txt"
+        },
+        {
+          "@id": "inputs/dataset_preview.md"
+        },
+        {
+          "@id": "evaluation/evaluation_strategy.md"
+        },
+        {
+          "@id": "evaluation/review_rubric.json"
+        },
+        {
+          "@id": "artifact_provenance.json"
+        },
+        {
+          "@id": "ledger/claims.jsonl"
+        },
+        {
+          "@id": "ledger/results.jsonl"
+        }
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "mentions": [
+        {
+          "@id": "#action-task_005"
+        },
+        {
+          "@id": "urn:asb:task:task_005"
+        },
+        {
+          "@id": "urn:asb:claim:claim_001"
+        },
+        {
+          "@id": "urn:asb:claim:claim_002"
+        },
+        {
+          "@id": "urn:asb:claim:claim_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_004"
+        },
+        {
+          "@id": "urn:asb:claim:claim_005"
+        },
+        {
+          "@id": "urn:asb:claim:claim_006"
+        },
+        {
+          "@id": "urn:asb:claim:claim_007"
+        },
+        {
+          "@id": "urn:asb:claim:claim_008"
+        },
+        {
+          "@id": "urn:asb:claim:claim_009"
+        },
+        {
+          "@id": "urn:asb:claim:claim_010"
+        },
+        {
+          "@id": "urn:asb:claim:claim_011"
+        },
+        {
+          "@id": "urn:asb:claim:claim_012"
+        },
+        {
+          "@id": "urn:asb:claim:claim_013"
+        },
+        {
+          "@id": "urn:asb:claim:claim_014"
+        },
+        {
+          "@id": "urn:asb:claim:claim_015"
+        },
+        {
+          "@id": "urn:asb:claim:claim_016"
+        },
+        {
+          "@id": "urn:asb:claim:claim_017"
+        },
+        {
+          "@id": "urn:asb:claim:claim_018"
+        },
+        {
+          "@id": "urn:asb:claim:claim_019"
+        },
+        {
+          "@id": "urn:asb:claim:claim_020"
+        },
+        {
+          "@id": "urn:asb:claim:claim_021"
+        },
+        {
+          "@id": "urn:asb:claim:claim_022"
+        },
+        {
+          "@id": "urn:asb:claim:claim_023"
+        },
+        {
+          "@id": "urn:asb:claim:claim_024"
+        },
+        {
+          "@id": "urn:asb:claim:claim_025"
+        },
+        {
+          "@id": "urn:asb:claim:claim_026"
+        },
+        {
+          "@id": "urn:asb:claim:claim_027"
+        },
+        {
+          "@id": "urn:asb:claim:claim_028"
+        },
+        {
+          "@id": "urn:asb:claim:claim_029"
+        },
+        {
+          "@id": "urn:asb:claim:claim_030"
+        },
+        {
+          "@id": "urn:asb:claim:claim_031"
+        },
+        {
+          "@id": "urn:asb:claim:claim_032"
+        },
+        {
+          "@id": "urn:asb:claim:claim_033"
+        },
+        {
+          "@id": "urn:asb:claim:claim_034"
+        },
+        {
+          "@id": "urn:asb:claim:claim_035"
+        },
+        {
+          "@id": "urn:asb:claim:claim_036"
+        },
+        {
+          "@id": "urn:asb:claim:claim_037"
+        },
+        {
+          "@id": "urn:asb:claim:claim_038"
+        },
+        {
+          "@id": "urn:asb:claim:claim_039"
+        },
+        {
+          "@id": "urn:asb:claim:claim_040"
+        },
+        {
+          "@id": "urn:asb:claim:claim_041"
+        },
+        {
+          "@id": "urn:asb:claim:claim_042"
+        },
+        {
+          "@id": "urn:asb:claim:claim_043"
+        },
+        {
+          "@id": "urn:asb:claim:claim_044"
+        },
+        {
+          "@id": "urn:asb:claim:claim_045"
+        },
+        {
+          "@id": "urn:asb:claim:claim_046"
+        },
+        {
+          "@id": "urn:asb:claim:claim_047"
+        },
+        {
+          "@id": "urn:asb:claim:claim_048"
+        },
+        {
+          "@id": "urn:asb:claim:claim_049"
+        },
+        {
+          "@id": "urn:asb:claim:claim_050"
+        },
+        {
+          "@id": "urn:asb:claim:claim_051"
+        },
+        {
+          "@id": "urn:asb:claim:claim_052"
+        },
+        {
+          "@id": "urn:asb:result:result_001"
+        },
+        {
+          "@id": "urn:asb:result:result_002"
+        },
+        {
+          "@id": "urn:asb:result:result_003"
+        },
+        {
+          "@id": "urn:asb:result:result_004"
+        },
+        {
+          "@id": "urn:asb:result:result_005"
+        },
+        {
+          "@id": "urn:asb:result:result_006"
+        },
+        {
+          "@id": "urn:asb:result:result_007"
+        },
+        {
+          "@id": "urn:asb:result:result_008"
+        },
+        {
+          "@id": "urn:asb:result:result_009"
+        },
+        {
+          "@id": "urn:asb:result:result_010"
+        },
+        {
+          "@id": "urn:asb:result:result_011"
+        },
+        {
+          "@id": "urn:asb:result:result_012"
+        },
+        {
+          "@id": "urn:asb:result:result_013"
+        },
+        {
+          "@id": "urn:asb:result:result_014"
+        },
+        {
+          "@id": "urn:asb:result:result_015"
+        },
+        {
+          "@id": "urn:asb:result:result_016"
+        },
+        {
+          "@id": "urn:asb:result:result_017"
+        },
+        {
+          "@id": "urn:asb:result:result_018"
+        },
+        {
+          "@id": "urn:asb:result:result_019"
+        },
+        {
+          "@id": "urn:asb:result:result_020"
+        },
+        {
+          "@id": "urn:asb:result:result_021"
+        },
+        {
+          "@id": "urn:asb:result:result_022"
+        },
+        {
+          "@id": "urn:asb:result:result_023"
+        },
+        {
+          "@id": "urn:asb:result:result_024"
+        },
+        {
+          "@id": "urn:asb:result:result_025"
+        },
+        {
+          "@id": "urn:asb:result:result_026"
+        },
+        {
+          "@id": "urn:asb:result:result_027"
+        },
+        {
+          "@id": "urn:asb:result:result_028"
+        },
+        {
+          "@id": "urn:asb:result:result_029"
+        },
+        {
+          "@id": "urn:asb:result:result_030"
+        },
+        {
+          "@id": "urn:asb:result:result_031"
+        },
+        {
+          "@id": "urn:asb:result:result_032"
+        },
+        {
+          "@id": "urn:asb:result:result_033"
+        },
+        {
+          "@id": "urn:asb:result:result_034"
+        },
+        {
+          "@id": "urn:asb:result:result_035"
+        },
+        {
+          "@id": "urn:asb:result:result_036"
+        },
+        {
+          "@id": "urn:asb:result:result_037"
+        },
+        {
+          "@id": "urn:asb:result:result_038"
+        },
+        {
+          "@id": "urn:asb:result:result_039"
+        },
+        {
+          "@id": "urn:asb:result:result_040"
+        },
+        {
+          "@id": "urn:asb:result:result_041"
+        },
+        {
+          "@id": "urn:asb:result:result_042"
+        },
+        {
+          "@id": "urn:asb:result:result_043"
+        },
+        {
+          "@id": "urn:asb:result:result_044"
+        },
+        {
+          "@id": "urn:asb:result:result_045"
+        },
+        {
+          "@id": "urn:asb:result:result_046"
+        },
+        {
+          "@id": "urn:asb:result:result_047"
+        },
+        {
+          "@id": "urn:asb:result:result_048"
+        },
+        {
+          "@id": "urn:asb:result:result_049"
+        },
+        {
+          "@id": "urn:asb:result:result_050"
+        },
+        {
+          "@id": "urn:asb:result:result_051"
+        },
+        {
+          "@id": "#env-task_005"
+        },
+        {
+          "@id": "http://edamontology.org/topic_3172"
+        }
+      ],
+      "name": "Extend PCPFM batch correction step to validate pycombat output retains sample count and reduces batch variance",
+      "repme:hasComputationalEnvironment": {
+        "@id": "#computational-environment"
+      }
+    },
+    {
+      "@id": "evidence/source_snippets.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evidence/source_snippets.md"
+    },
+    {
+      "@id": "inputs/dataset_folder_tree.txt",
+      "@type": "File",
+      "encodingFormat": "text/plain",
+      "name": "inputs/dataset_folder_tree.txt"
+    },
+    {
+      "@id": "inputs/dataset_preview.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "inputs/dataset_preview.md"
+    },
+    {
+      "@id": "evaluation/evaluation_strategy.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evaluation/evaluation_strategy.md"
+    },
+    {
+      "@id": "evaluation/review_rubric.json",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "name": "evaluation/review_rubric.json"
+    },
+    {
+      "@id": "urn:asb:task:task_005",
+      "@type": [
+        "ScholarlyArticle",
+        "p-plan:Plan",
+        "http://purl.org/spar/fabio/ResearchPaper"
+      ],
+      "asbext:task_kind": "extension",
+      "description": "Apply batch correction to a multi-batch interpolated feature table using pycombat, then verify that the corrected table preserves sample and feature counts while reducing inter-batch variance for selected metabolite features.",
+      "keywords": [
+        "batch-effect-variance-quantification",
+        "metabolomic-feature-table-processing",
+        "batch-correction-quality-assessment",
+        "multi-batch-experimental-design-understanding",
+        "inter-sample-variance-calculation"
+      ],
+      "name": "Extend PCPFM batch correction step to validate pycombat output retains sample count and reduces batch variance",
+      "repme:hasResearcher": [
+        {
+          "@id": "urn:asb:researcher:m-mitchell-2024"
+        },
+        {
+          "@id": "urn:asb:researcher:yuanye-chi-2024"
+        },
+        {
+          "@id": "urn:asb:researcher:maheshwor-thapa-2024"
+        },
+        {
+          "@id": "urn:asb:researcher:zhiqiang-pang-2024"
+        },
+        {
+          "@id": "urn:asb:researcher:jianguo-xia-2024"
+        },
+        {
+          "@id": "urn:asb:researcher:shuzhao-li-2024"
+        }
+      ],
+      "sameAs": "https://doi.org/10.1371/journal.pcbi.1011912#task_005",
+      "schema:identifier": "10.1371/journal.pcbi.1011912"
+    },
+    {
+      "@id": "urn:asb:researcher:m-mitchell-2024",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Mitchell, Joshua M."
+    },
+    {
+      "@id": "urn:asb:researcher:yuanye-chi-2024",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Chi, Yuanye"
+    },
+    {
+      "@id": "urn:asb:researcher:maheshwor-thapa-2024",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Thapa, Maheshwor"
+    },
+    {
+      "@id": "urn:asb:researcher:zhiqiang-pang-2024",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Pang, Zhiqiang"
+    },
+    {
+      "@id": "urn:asb:researcher:jianguo-xia-2024",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Xia, Jianguo"
+    },
+    {
+      "@id": "urn:asb:researcher:shuzhao-li-2024",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Li, Shuzhao"
+    },
+    {
+      "@id": "urn:asb:tool:thermorawfileparser",
+      "@type": "SoftwareApplication",
+      "name": "ThermoRawFileParser"
+    },
+    {
+      "@id": "urn:asb:tool:pycombat",
+      "@type": "SoftwareApplication",
+      "name": "pycombat"
+    },
+    {
+      "@id": "urn:asb:tool:python",
+      "@type": "SoftwareApplication",
+      "name": "Python"
+    },
+    {
+      "@id": "urn:asb:input:task_005_0",
+      "@type": "File",
+      "name": "task_002.expected_outputs[0]: Blank-masked feature table in TSV format with low-intensity background features removed, indexed by feature identifier and sample"
+    },
+    {
+      "@id": "urn:asb:input:task_005_1",
+      "@type": "File",
+      "name": "Interpolated feature table (.tsv) with missing values imputed to 0.5× minimum feature intensity"
+    },
+    {
+      "@id": "urn:asb:input:task_005_2",
+      "@type": "File",
+      "name": "Sample metadata CSV with batch field indicating experimental batch or acquisition group for each sample"
+    },
+    {
+      "@id": "urn:asb:output:task_005_0",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Batch-corrected feature table (.tsv) with identical dimensions to input, feature intensities adjusted to remove systematic batch biases",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_005"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_005_1",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Quantitative validation report containing: sample count, feature count, pre- and post-correction inter-batch variance estimates for ≥5 representative features",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_005"
+      }
+    },
+    {
+      "@id": "#action-task_005",
+      "@type": [
+        "CreateAction",
+        "prov:Activity",
+        "p-plan:Step"
+      ],
+      "description": "Apply batch correction to a multi-batch interpolated feature table using pycombat, then verify that the corrected table preserves sample and feature counts while reducing inter-batch variance for selected metabolite features.",
+      "instrument": [
+        {
+          "@id": "urn:asb:tool:thermorawfileparser"
+        },
+        {
+          "@id": "urn:asb:tool:pycombat"
+        },
+        {
+          "@id": "urn:asb:tool:python"
+        }
+      ],
+      "name": "Extend PCPFM batch correction step to validate pycombat output retains sample count and reduces batch variance",
+      "object": [
+        {
+          "@id": "urn:asb:input:task_005_0"
+        },
+        {
+          "@id": "urn:asb:input:task_005_1"
+        },
+        {
+          "@id": "urn:asb:input:task_005_2"
+        }
+      ],
+      "repme:hasInputData": [
+        {
+          "@id": "urn:asb:input:task_005_0"
+        },
+        {
+          "@id": "urn:asb:input:task_005_1"
+        },
+        {
+          "@id": "urn:asb:input:task_005_2"
+        }
+      ],
+      "repme:hasOutputData": [
+        {
+          "@id": "urn:asb:output:task_005_0"
+        },
+        {
+          "@id": "urn:asb:output:task_005_1"
+        }
+      ],
+      "repme:hasResult": [
+        {
+          "@id": "urn:asb:result:result_037"
+        }
+      ],
+      "result": [
+        {
+          "@id": "urn:asb:output:task_005_0"
+        },
+        {
+          "@id": "urn:asb:output:task_005_1"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:claim:claim_001",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The Python-Centric Pipeline for Metabolomics is designed to take raw LC-MS metabolomics data and ready them for downstream statistical analysis."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 298,
+          "oa:start": 151
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The Python-Centric Pipeline for Metabolomics is designed to take raw LC-MS metabolomics data and ready them for downstream statistical analysis.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_002",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The pipeline can convert Thermo .raw files to mzML format using ThermoRawFileParser."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 377,
+          "oa:start": 327
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The pipeline can convert Thermo .raw files to mzML format using ThermoRawFileParser.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_003",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The pipeline can process mzML data to feature tables using Asari."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 424,
+          "oa:start": 381
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The pipeline can process mzML data to feature tables using Asari.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_004",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The pipeline performs pre-annotation to group features to empirical compounds using khipu."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 537,
+          "oa:start": 476
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The pipeline performs pre-annotation to group features to empirical compounds using khipu.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_005",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The pipeline can perform MS2 annotation using matchms with a custom database defaulting to MoNA."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 709,
+          "oa:start": 641
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The pipeline can perform MS2 annotation using matchms with a custom database defaulting to MoNA.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_006",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Asari supports a visual dashboard to explore and inspect individual features."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 802,
+          "oa:start": 728
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Asari supports a visual dashboard to explore and inspect individual features.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_007",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The pipeline developers are working to add support for GC and other data types."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 849,
+          "oa:start": 807
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The pipeline developers are working to add support for GC and other data types.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_008",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "To replicate the presented results, users need to run the download extras command."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 948,
+          "oa:start": 857
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "To replicate the presented results, users need to run the download extras command.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_009",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Mitchell et al. 2024 published a paper on common data models to streamline metabolomics processing and annotation in a Python pipeline."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1187,
+          "oa:start": 975
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Mitchell et al. 2024 published a paper on common data models to streamline metabolomics processing and annotation in a Python pipeline.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_010",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Li et al. 2023 published a paper on trackable and scalable LC-MS metabolomics data processing using asari in Nature Communications."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1366,
+          "oa:start": 1195
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Li et al. 2023 published a paper on trackable and scalable LC-MS metabolomics data processing using asari in Nature Communications.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_011",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "There was an issue regarding sample names that do not match their mzML file names, which was fixed as of 2/28/24."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1543,
+          "oa:start": 1430
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "There was an issue regarding sample names that do not match their mzML file names, which was fixed as of 2/28/24.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_012",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The pipeline inputs should include raw files in .raw or .mzML format and a CSV file for metadata."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1918,
+          "oa:start": 1816
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The pipeline inputs should include raw files in .raw or .mzML format and a CSV file for metadata.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_013",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The pipeline outputs are intended to be immediately usable for downstream analysis tools like MetaboAnalyst or common tools in R and Python."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2033,
+          "oa:start": 1924
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The pipeline outputs are intended to be immediately usable for downstream analysis tools like MetaboAnalyst or common tools in R and Python.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_014",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The preferred installation mechanism for PCPFM is pip."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2366,
+          "oa:start": 2325
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The preferred installation mechanism for PCPFM is pip.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_015",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The HMDB is not to be used for commercial purposes."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2526,
+          "oa:start": 2463
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The HMDB is not to be used for commercial purposes.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_016",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Annotation sources including the HMDB are free for public non-commercial use."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2722,
+          "oa:start": 2596
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Annotation sources including the HMDB are free for public non-commercial use.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_017",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The download extras command can download LC-MS/MS databases from MoNA, a JMS-compliant version of the HMDB, and LMSD."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2531,
+          "oa:start": 2370
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The download extras command can download LC-MS/MS databases from MoNA, a JMS-compliant version of the HMDB, and LMSD.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_018",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The preprocessing command can create a new CSV file using rules specified in a JSON preprocessing configuration file."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3195,
+          "oa:start": 3099
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The preprocessing command can create a new CSV file using rules specified in a JSON preprocessing configuration file.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_019",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The preprocessing configuration supports searching for substrings in specified fields to populate metadata values."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3640,
+          "oa:start": 3432
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The preprocessing configuration supports searching for substrings in specified fields to populate metadata values.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_020",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "If multiple preprocessing rules match, the specified values are concatenated using an underscore."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3900,
+          "oa:start": 3843
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "If multiple preprocessing rules match, the specified values are concatenated using an underscore.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_021",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The assemble command creates an experiment directory to store the project."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4068,
+          "oa:start": 4019
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The assemble command creates an experiment directory to store the project.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_022",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The experiment object is used throughout processing and stores intermediates."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4213,
+          "oa:start": 4142
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The experiment object is used throughout processing and stores intermediates.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_023",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Filters can be applied to include or exclude acquisitions based on metadata field values."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4455,
+          "oa:start": 4288
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Filters can be applied to include or exclude acquisitions based on metadata field values.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_024",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The convert command converts .raw files to centroid .mzML files."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4597,
+          "oa:start": 4537
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The convert command converts .raw files to centroid .mzML files.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_025",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The ThermoRawFileParser can be used on Mac with mono installed."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4892,
+          "oa:start": 4709
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The ThermoRawFileParser can be used on Mac with mono installed.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_026",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The asari command processes .mzML files into metabolomic feature tables."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4987,
+          "oa:start": 4922
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The asari command processes .mzML files into metabolomic feature tables.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_027",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The asari command automatically infers the correct ionization mode for the experiment."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5125,
+          "oa:start": 5022
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The asari command automatically infers the correct ionization mode for the experiment.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_028",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "After asari is run, two feature table monikers are generated: 'full' and 'preferred' for the full and preferred feature tables respectively."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5421,
+          "oa:start": 5279
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "After asari is run, two feature table monikers are generated: 'full' and 'preferred' for the full and preferred feature tables respectively.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_029",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The QAQC command can generate PCA plots limited to two components."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5637,
+          "oa:start": 5605
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The QAQC command can generate PCA plots limited to two components.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_030",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The QAQC command can generate t-SNE plots limited to two components."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5672,
+          "oa:start": 5639
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The QAQC command can generate t-SNE plots limited to two components.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_031",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Blank masking removes features that are likely due to background ions and contaminants."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6387,
+          "oa:start": 6305
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Blank masking removes features that are likely due to background ions and contaminants.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_032",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Blank masking is achieved by comparing the intensity of a feature in study samples to those in blanks."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6500,
+          "oa:start": 6393
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Blank masking is achieved by comparing the intensity of a feature in study samples to those in blanks.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_033",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The default blank_intensity_ratio is 3."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6676,
+          "oa:start": 6641
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The default blank_intensity_ratio is 3.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_034",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Metadata values for drop sample commands are case sensitive."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7077,
+          "oa:start": 7035
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Metadata values for drop sample commands are case sensitive.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_035",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The default TIC normalization percentile is 0.90 (90%)."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7279,
+          "oa:start": 7190
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The default TIC normalization percentile is 0.90 (90%).",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_036",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The default feature retention percentile is 50% (0.50)."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7600,
+          "oa:start": 7542
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The default feature retention percentile is 50% (0.50).",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_037",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The default imputation ratio is 0.5."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7859,
+          "oa:start": 7834
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The default imputation ratio is 0.5.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_038",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Batch correction is performed using pycombat."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7990,
+          "oa:start": 7945
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Batch correction is performed using pycombat.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_039",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Log transformation is performed using log2 by default."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 8108,
+          "oa:start": 8089
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Log transformation is performed using log2 by default.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_040",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "EmpCpds are groups of associated features, typically isotopes and adducts, that belong to the same tentative compound."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 8387,
+          "oa:start": 8235
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "EmpCpds are groups of associated features, typically isotopes and adducts, that belong to the same tentative compound.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_041",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "By default, charges up to z=3 are used for EmpCpd construction."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 8453,
+          "oa:start": 8416
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "By default, charges up to z=3 are used for EmpCpd construction.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_042",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "By default, m+13C3 isotopologues are considered for EmpCpd construction."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 8489,
+          "oa:start": 8455
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "By default, m+13C3 isotopologues are considered for EmpCpd construction.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_043",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "For orbitrap LC data, a default 5 ppm tolerance and 2 second retention time tolerance is sufficient for EmpCpd construction."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 8613,
+          "oa:start": 8531
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "For orbitrap LC data, a default 5 ppm tolerance and 2 second retention time tolerance is sufficient for EmpCpd construction.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_044",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Level 4 annotations are not currently generated for singletons because their adducts cannot be inferred."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 8856,
+          "oa:start": 8762
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Level 4 annotations are not currently generated for singletons because their adducts cannot be inferred.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_045",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MS1 Level 1b annotation compares feature retention time and m/z values to those of authentic standards libraries."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 9060,
+          "oa:start": 8927
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "MS1 Level 1b annotation compares feature retention time and m/z values to those of authentic standards libraries.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_046",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MS2 mapping is performed by comparing precursor retention time and m/z to retention times and m/z values of features."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 9377,
+          "oa:start": 9264
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "MS2 mapping is performed by comparing precursor retention time and m/z to retention times and m/z values of features.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_047",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The default m/z tolerance for MS2 to feature mapping is 5 ppm."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 9516,
+          "oa:start": 9444
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The default m/z tolerance for MS2 to feature mapping is 5 ppm.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_048",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The default retention time tolerance for MS2 mapping is 30 seconds."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 9589,
+          "oa:start": 9518
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The default retention time tolerance for MS2 mapping is 30 seconds.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_049",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The MoNA database is used as the default for MS2 annotation if no custom database is provided."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 9860,
+          "oa:start": 9689
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The MoNA database is used as the default for MS2 annotation if no custom database is provided.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_050",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The generate_output command creates three output tables in the results subdirectory."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 10146,
+          "oa:start": 10027
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The generate_output command creates three output tables in the results subdirectory.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_051",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The report command generates a PDF report in the output directory."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 10217,
+          "oa:start": 10172
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The report command generates a PDF report in the output directory.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_052",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The reset command destroys all user generated tables and EmpCpds but keeps the outputs from Asari intact."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 10381,
+          "oa:start": 10279
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pcpfm/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The reset command destroys all user generated tables and EmpCpds but keeps the outputs from Asari intact.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:result:result_001",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The Python-Centric Pipeline for Metabolomics is designed to take raw LC-MS metabolomics data and ready them for downstream statistical analysis.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_001"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_002",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The pipeline can convert Thermo .raw files to mzML format using ThermoRawFileParser.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_002"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_003",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The pipeline can process mzML data to feature tables using Asari.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_003"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_004",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The pipeline performs pre-annotation to group features to empirical compounds using khipu.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_004"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_005",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The pipeline can perform MS2 annotation using matchms with a custom database defaulting to MoNA.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_005"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_006",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Asari supports a visual dashboard to explore and inspect individual features.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_006"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_007",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The pipeline developers are working to add support for GC and other data types.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_007"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_008",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "To replicate the presented results, users need to run the download extras command.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_008"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_009",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Mitchell et al.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_009"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_010",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Li et al.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_010"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_011",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "There was an issue regarding sample names that do not match their mzML file names, which was fixed as of 2/28/24.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_011"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_012",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The pipeline inputs should include raw files in .raw or .mzML format and a CSV file for metadata.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_012"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_013",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The pipeline outputs are intended to be immediately usable for downstream analysis tools like MetaboAnalyst or common tools in R and Python.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_013"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_014",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The preferred installation mechanism for PCPFM is pip.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_014"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_015",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The HMDB is not to be used for commercial purposes.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_015"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_016",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Annotation sources including the HMDB are free for public non-commercial use.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_016"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_017",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The download extras command can download LC-MS/MS databases from MoNA, a JMS-compliant version of the HMDB, and LMSD.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_017"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_018",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The preprocessing command can create a new CSV file using rules specified in a JSON preprocessing configuration file.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_018"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_019",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The preprocessing configuration supports searching for substrings in specified fields to populate metadata values.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_019"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_020",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "If multiple preprocessing rules match, the specified values are concatenated using an underscore.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_020"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_021",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The assemble command creates an experiment directory to store the project.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_021"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_022",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The experiment object is used throughout processing and stores intermediates.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_022"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_023",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Filters can be applied to include or exclude acquisitions based on metadata field values.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_023"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_024",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The convert command converts .raw files to centroid .mzML files.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_024"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_025",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The ThermoRawFileParser can be used on Mac with mono installed.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_025"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_026",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The asari command processes .mzML files into metabolomic feature tables.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_026"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_027",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The asari command automatically infers the correct ionization mode for the experiment.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_027"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_028",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "After asari is run, two feature table monikers are generated: 'full' and 'preferred' for the full and preferred feature tables respectively.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_028"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_029",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The QAQC command can generate PCA plots limited to two components. The QAQC command can generate t-SNE plots limited to two components.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_029"
+        },
+        {
+          "@id": "urn:asb:claim:claim_030"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_030",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Blank masking removes features that are likely due to background ions and contaminants.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_031"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_031",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Blank masking is achieved by comparing the intensity of a feature in study samples to those in blanks.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_032"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_032",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The default blank_intensity_ratio is 3.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_033"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_033",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Metadata values for drop sample commands are case sensitive.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_034"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_034",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The default TIC normalization percentile is 0.90 (90%).",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_035"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_035",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The default feature retention percentile is 50% (0.50).",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_036"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_036",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The default imputation ratio is 0.5.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_037"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_037",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Batch correction is performed using pycombat.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_038"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_038",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Log transformation is performed using log2 by default.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_039"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_039",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "EmpCpds are groups of associated features, typically isotopes and adducts, that belong to the same tentative compound.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_040"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_040",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "By default, charges up to z=3 are used for EmpCpd construction.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_041"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_041",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "By default, m+13C3 isotopologues are considered for EmpCpd construction.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_042"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_042",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "For orbitrap LC data, a default 5 ppm tolerance and 2 second retention time tolerance is sufficient for EmpCpd construction.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_043"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_043",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Level 4 annotations are not currently generated for singletons because their adducts cannot be inferred.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_044"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_044",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MS1 Level 1b annotation compares feature retention time and m/z values to those of authentic standards libraries.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_045"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_045",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MS2 mapping is performed by comparing precursor retention time and m/z to retention times and m/z values of features.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_046"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_046",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The default m/z tolerance for MS2 to feature mapping is 5 ppm.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_047"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_047",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The default retention time tolerance for MS2 mapping is 30 seconds.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_048"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_048",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The MoNA database is used as the default for MS2 annotation if no custom database is provided.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_049"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_049",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The generate_output command creates three output tables in the results subdirectory.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_050"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_050",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The report command generates a PDF report in the output directory.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_051"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_051",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The reset command destroys all user generated tables and EmpCpds but keeps the outputs from Asari intact.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_052"
+        }
+      ]
+    },
+    {
+      "@id": "#env-task_005",
+      "@type": [
+        "repme:ComputationalEnvironment"
+      ],
+      "repme:computeTier": "light"
+    },
+    {
+      "@id": "#agent-15-activity-task_005",
+      "@type": [
+        "prov:Activity"
+      ],
+      "prov:endedAtTime": "2026-06-15T12:51:30.627546+00:00",
+      "prov:qualifiedUsage": {
+        "@type": "prov:Usage",
+        "schema:name": "prompt_sha256",
+        "schema:value": "3227b0d96d450eb6"
+      },
+      "prov:wasAssociatedWith": {
+        "schema:name": "anthropic/claude-haiku-4-5-20251001"
+      },
+      "schema:name": "Agent 1.5 Claim Extractor"
+    },
+    {
+      "@id": "#computational-environment",
+      "@type": "repme:ComputationalEnvironment",
+      "repme:buildId": "D9BD577C1B5E47CDB9FB4A6A1EEE2885",
+      "repme:depsHash": "sha256:029a81c5ecba8cba0301a44071f97a928c55447fc2ef79df68b43e4ecdd157ba",
+      "repme:gitCommit": "ddf6c1becb15c939b16600b7655d44e2d2baa690",
+      "repme:platform": "darwin-25.5.0-arm64",
+      "repme:pythonVersion": "3.11.15",
+      "schema:dateCreated": "2026-06-15T12:44:55.862138Z",
+      "schema:hasPart": [
+        {
+          "@id": "#agent-config-agent1_entity"
+        },
+        {
+          "@id": "#agent-config-agent2a_outline"
+        },
+        {
+          "@id": "#agent-config-agent2b_card"
+        },
+        {
+          "@id": "#agent-config-agent3_critique"
+        },
+        {
+          "@id": "#agent-config-agent_classify"
+        }
+      ],
+      "schema:softwareVersion": "agentic-science-builder@0.1.0"
+    },
+    {
+      "@id": "#agent-config-agent1_entity",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v3",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent1_entity"
+    },
+    {
+      "@id": "#agent-config-agent2a_outline",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-sonnet-4-6",
+      "repme:promptVersion": "v2",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2a_outline"
+    },
+    {
+      "@id": "#agent-config-agent2b_card",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v4",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2b_card"
+    },
+    {
+      "@id": "#agent-config-agent3_critique",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent3_critique"
+    },
+    {
+      "@id": "#agent-config-agent_classify",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent_classify"
+    },
+    {
+      "@id": "urn:asb:metabolomics:unknown",
+      "@type": "Dataset",
+      "assay_type": "LC-MS/MS",
+      "instrument": "Orbitrap",
+      "name": "Metabolomics Study Metadata",
+      "profile": "metabolomics_lcms",
+      "reproducibility_score": 0.516
+    },
+    {
+      "@id": "artifact_provenance.json",
+      "@type": "File",
+      "name": "artifact_provenance.json",
+      "encodingFormat": "application/json"
+    },
+    {
+      "@id": "ledger/claims.jsonl",
+      "@type": "File",
+      "name": "ledger/claims.jsonl",
+      "encodingFormat": "application/jsonlines"
+    },
+    {
+      "@id": "ledger/results.jsonl",
+      "@type": "File",
+      "name": "ledger/results.jsonl",
+      "encodingFormat": "application/jsonlines"
+    }
+  ]
+}

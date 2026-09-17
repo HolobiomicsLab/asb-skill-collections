@@ -1,6 +1,8 @@
 ---
 name: spectral-mz-range-filtering
-description: Use when you have loaded an MsmsSpectrum object from a proteomics or metabolomics dataset and need to focus the analysis window on a specific m/z range relevant to your experiment (e.g., 100–1400 m/z for typical tryptic peptides).
+description: Use when you have loaded an MsmsSpectrum object from a proteomics or
+  metabolomics dataset and need to focus the analysis window on a specific m/z range
+  relevant to your experiment (e.g., 100–1400 m/z for typical tryptic peptides).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +14,8 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils

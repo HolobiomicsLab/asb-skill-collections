@@ -1,6 +1,9 @@
 ---
 name: metabolite-feature-clustering-by-retention-time
-description: Use when after XCMS feature detection, grouping, retention time correction, regrouping, and missing value filling on LC-MS or GC-MS data, when you have an aligned feature table with retention times and intensity profiles across multiple samples and need to collapse redundant features into.
+description: Use when after XCMS feature detection, grouping, retention time correction,
+  regrouping, and missing value filling on LC-MS or GC-MS data, when you have an aligned
+  feature table with retention times and intensity profiles across multiple samples
+  and need to collapse redundant features into.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -19,13 +22,16 @@ metadata:
   - LC-MS
   - GC-MS
   - direct-infusion-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
 evidence_spans:
 - ramclustR function is built to use xcms data
 - RC <- ramclustR(xcmsObj = xset, ExpDes=experiment)
-- submitting this score matrix for heirarchical clustering, and then cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
+- submitting this score matrix for heirarchical clustering, and then cutting the resulting
+  dendrogram into neat chunks using the dynamicTreeCut package
 - cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
 - We have adapted the 'findMain' function from the 'InterpretMSSpectrum' CRAN package
 claims: []

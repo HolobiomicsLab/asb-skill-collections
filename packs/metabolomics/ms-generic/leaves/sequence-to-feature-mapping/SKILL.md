@@ -1,6 +1,9 @@
 ---
 name: sequence-to-feature-mapping
-description: Use when when you have a list of polypeptide sequences (plain text, CSV, or FASTA format) and need to compute their monoisotopic mass and average mass for downstream mass spectrometry interpretation, database matching, or physico-chemical property annotation.
+description: Use when when you have a list of polypeptide sequences (plain text, CSV,
+  or FASTA format) and need to compute their monoisotopic mass and average mass for
+  downstream mass spectrometry interpretation, database matching, or physico-chemical
+  property annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0399
@@ -17,6 +20,8 @@ metadata:
   - SQLAlchemy
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics

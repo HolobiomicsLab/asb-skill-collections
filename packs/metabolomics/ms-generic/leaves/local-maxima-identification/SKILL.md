@@ -1,6 +1,7 @@
 ---
 name: local-maxima-identification
-description: Use when you have raw LC-HRMS profile-mode data and need to identify candidate chromatographic peaks before classification or feature extraction.
+description: Use when you have raw LC-HRMS profile-mode data and need to identify
+  candidate chromatographic peaks before classification or feature extraction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -14,6 +15,13 @@ metadata:
   - OpenMS (TOPPView)
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: christophuv/PeakBot
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot
@@ -42,6 +50,7 @@ attribution:
 
 # local-maxima-identification
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Detect local maxima in LC-HRMS profile-mode chromatographic data using smoothing and gradient-descent algorithms, then extract each as a standardized two-dimensional (rt × mz) feature matrix for machine learning input. This preprocessing step converts raw mass spectrometry profiles into CNN-compatible peak candidates.

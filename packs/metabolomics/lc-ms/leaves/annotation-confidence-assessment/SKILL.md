@@ -1,6 +1,7 @@
 ---
 name: annotation-confidence-assessment
-description: Use when after MS-FINDER in silico annotation has been executed on exported LC-MS features and multiple database matches (with HRR scores) have been returned.
+description: Use when after MS-FINDER in silico annotation has been executed on exported
+  LC-MS features and multiple database matches (with HRR scores) have been returned.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -14,6 +15,8 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR

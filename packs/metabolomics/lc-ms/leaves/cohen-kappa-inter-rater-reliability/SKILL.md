@@ -1,6 +1,8 @@
 ---
 name: cohen-kappa-inter-rater-reliability
-description: Use when when you have two independent predictions of categorical outcomes (up/down/no-change variation signs) across multiple sample pairs and need to measure agreement beyond what would be expected by chance.
+description: Use when when you have two independent predictions of categorical outcomes
+  (up/down/no-change variation signs) across multiple sample pairs and need to measure
+  agreement beyond what would be expected by chance.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -18,14 +20,21 @@ metadata:
   - Matplotlib/Seaborn
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
-- we exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72]
-- we exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions
-- we first performed the Mann-Whitney U test [73] (p-value < 0.05) between the FFD distributions of each pair of the five cell lines
-- We quantified the level of concordance of the 10 variation signs (1 for each pair of cell lines) for a given pair of datasets by means of the Cohen's kappa metric, which has been commonly used to
+- we exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72]
+- we exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72], and we sampled a million steady state solutions
+- we first performed the Mann-Whitney U test [73] (p-value < 0.05) between the FFD
+  distributions of each pair of the five cell lines
+- We quantified the level of concordance of the 10 variation signs (1 for each pair
+  of cell lines) for a given pair of datasets by means of the Cohen's kappa metric,
+  which has been commonly used to
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

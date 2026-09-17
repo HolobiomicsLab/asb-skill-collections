@@ -1,6 +1,9 @@
 ---
 name: ei-spectrum-normalization
-description: Use when you have raw electron ionization mass spectra (m/z and intensity pairs) that you intend to match against a library using the Identity (EI Normal) or Similarity (EI Simple) algorithms. Different ionization runs and instrument conditions produce spectra with varying absolute intensities;
+description: Use when you have raw electron ionization mass spectra (m/z and intensity
+  pairs) that you intend to match against a library using the Identity (EI Normal)
+  or Similarity (EI Simple) algorithms. Different ionization runs and instrument conditions
+  produce spectra with varying absolute intensities;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,12 +15,17 @@ metadata:
   - R
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr
 evidence_spans:
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users for conducting library searches against electron ionization mass spectral databases.
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users for conducting library searches against electron ionization mass spectral
+  databases.
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users
 - enhance the capabilities of R users for conducting library searches
 claims: []
 provenance:

@@ -1,6 +1,8 @@
 ---
 name: batch-effect-visualization-pca
-description: Use when after applying CordBat batch correction to a log2-transformed metabolite matrix from multi-batch metabolomics data, you want to quantitatively and visually assess whether the correction successfully reduced batch effects.
+description: Use when after applying CordBat batch correction to a log2-transformed
+  metabolite matrix from multi-batch metabolomics data, you want to quantitatively
+  and visually assess whether the correction successfully reduced batch effects.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3935
@@ -15,12 +17,15 @@ metadata:
   - dplyr
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05748
   title: CordBat
 evidence_spans:
 - pca_res <- prcomp(cordbat_example[, metabolite_cols], scale. = TRUE)
-- fit <- CordBat( X = X_mat, batch = batch_vec, group = group_vec, ref.batch = "Ref", grouping = FALSE, print.detail = FALSE )
+- fit <- CordBat( X = X_mat, batch = batch_vec, group = group_vec, ref.batch = "Ref",
+  grouping = FALSE, print.detail = FALSE )
 - '%\VignetteEngine{knitr::rmarkdown}'
 claims: []
 provenance:

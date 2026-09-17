@@ -1,6 +1,9 @@
 ---
 name: ranked-result-extraction-and-display
-description: Use when after running annotateRC on LC–MS AIF data when you need to inspect whether a feature has multiple plausible annotations (e.g., isobaric lipids, isomers with the same fatty-acyl chain) or when the rank-1 annotation confidence is borderline and alternatives should be evaluated.
+description: Use when after running annotateRC on LC–MS AIF data when you need to
+  inspect whether a feature has multiple plausible annotations (e.g., isobaric lipids,
+  isomers with the same fatty-acyl chain) or when the rank-1 annotation confidence
+  is borderline and alternatives should be evaluated.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -14,11 +17,14 @@ metadata:
   - RamClustR
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - To install this package, start R (version "4.5.0" or higher)
 claims: []
 provenance:

@@ -1,0 +1,1282 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "MOD": "http://purl.obolibrary.org/obo/MOD_",
+      "MS": "http://purl.obolibrary.org/obo/MS_",
+      "NCBITaxon": "http://purl.obolibrary.org/obo/NCBITaxon_",
+      "OBI": "http://purl.obolibrary.org/obo/OBI_",
+      "PRIDE": "https://www.ebi.ac.uk/pride/archive/projects/",
+      "UBERON": "http://purl.obolibrary.org/obo/UBERON_",
+      "asbext": "https://w3id.org/asb/indicium-ext#",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "fabio": "http://purl.org/spar/fabio/",
+      "oa": "http://www.w3.org/ns/oa#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "p-plan": "http://purl.org/net/p-plan#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "repme": "https://w3id.org/reproduceme#",
+      "sepio": "http://purl.obolibrary.org/obo/SEPIO_"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": [
+        "Dataset",
+        "repme:ScientificWorkflow"
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ],
+      "dateCreated": "2026-06-16",
+      "description": "Install the Pyteomics package via pip from PyPI and verify successful import of five core modules (pyteomics.mass, pyteomics.pepxml, pyteomics.mzid, pyteomics.tandem, pyteomics.auxiliary) in a Python environment. Produce a validation report confirming installation success and module availability.",
+      "hasPart": [
+        {
+          "@id": "evidence/source_snippets.md"
+        },
+        {
+          "@id": "inputs/dataset_folder_tree.txt"
+        },
+        {
+          "@id": "inputs/dataset_preview.md"
+        },
+        {
+          "@id": "evaluation/evaluation_strategy.md"
+        },
+        {
+          "@id": "evaluation/review_rubric.json"
+        },
+        {
+          "@id": "artifact_provenance.json"
+        },
+        {
+          "@id": "ledger/claims.jsonl"
+        },
+        {
+          "@id": "ledger/results.jsonl"
+        }
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "mentions": [
+        {
+          "@id": "#action-task_001"
+        },
+        {
+          "@id": "urn:asb:task:task_001"
+        },
+        {
+          "@id": "urn:asb:claim:claim_001"
+        },
+        {
+          "@id": "urn:asb:claim:claim_002"
+        },
+        {
+          "@id": "urn:asb:claim:claim_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_004"
+        },
+        {
+          "@id": "urn:asb:claim:claim_005"
+        },
+        {
+          "@id": "urn:asb:claim:claim_006"
+        },
+        {
+          "@id": "urn:asb:claim:claim_007"
+        },
+        {
+          "@id": "urn:asb:claim:claim_008"
+        },
+        {
+          "@id": "urn:asb:claim:claim_009"
+        },
+        {
+          "@id": "urn:asb:claim:claim_010"
+        },
+        {
+          "@id": "urn:asb:claim:claim_011"
+        },
+        {
+          "@id": "urn:asb:claim:claim_012"
+        },
+        {
+          "@id": "urn:asb:claim:claim_013"
+        },
+        {
+          "@id": "urn:asb:claim:claim_014"
+        },
+        {
+          "@id": "urn:asb:claim:claim_015"
+        },
+        {
+          "@id": "urn:asb:claim:claim_016"
+        },
+        {
+          "@id": "urn:asb:claim:claim_017"
+        },
+        {
+          "@id": "urn:asb:claim:claim_018"
+        },
+        {
+          "@id": "urn:asb:claim:claim_019"
+        },
+        {
+          "@id": "urn:asb:claim:claim_020"
+        },
+        {
+          "@id": "urn:asb:result:result_001"
+        },
+        {
+          "@id": "urn:asb:result:result_002"
+        },
+        {
+          "@id": "urn:asb:result:result_003"
+        },
+        {
+          "@id": "urn:asb:result:result_004"
+        },
+        {
+          "@id": "urn:asb:result:result_005"
+        },
+        {
+          "@id": "urn:asb:result:result_006"
+        },
+        {
+          "@id": "urn:asb:result:result_007"
+        },
+        {
+          "@id": "urn:asb:result:result_008"
+        },
+        {
+          "@id": "urn:asb:result:result_009"
+        },
+        {
+          "@id": "urn:asb:result:result_010"
+        },
+        {
+          "@id": "urn:asb:result:result_011"
+        },
+        {
+          "@id": "urn:asb:result:result_012"
+        },
+        {
+          "@id": "urn:asb:result:result_013"
+        },
+        {
+          "@id": "urn:asb:result:result_014"
+        },
+        {
+          "@id": "urn:asb:result:result_015"
+        },
+        {
+          "@id": "urn:asb:result:result_016"
+        },
+        {
+          "@id": "urn:asb:result:result_017"
+        },
+        {
+          "@id": "#env-task_001"
+        },
+        {
+          "@id": "http://edamontology.org/topic_0121"
+        }
+      ],
+      "name": "Reproduce the Pyteomics installation via pip and verify core module imports",
+      "repme:hasComputationalEnvironment": {
+        "@id": "#computational-environment"
+      }
+    },
+    {
+      "@id": "evidence/source_snippets.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evidence/source_snippets.md"
+    },
+    {
+      "@id": "inputs/dataset_folder_tree.txt",
+      "@type": "File",
+      "encodingFormat": "text/plain",
+      "name": "inputs/dataset_folder_tree.txt"
+    },
+    {
+      "@id": "inputs/dataset_preview.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "inputs/dataset_preview.md"
+    },
+    {
+      "@id": "evaluation/evaluation_strategy.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evaluation/evaluation_strategy.md"
+    },
+    {
+      "@id": "evaluation/review_rubric.json",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "name": "evaluation/review_rubric.json"
+    },
+    {
+      "@id": "urn:asb:task:task_001",
+      "@type": [
+        "ScholarlyArticle",
+        "p-plan:Plan",
+        "http://purl.org/spar/fabio/SoftwarePaper"
+      ],
+      "asbext:task_kind": "reproduction",
+      "description": "Install the Pyteomics package via pip from PyPI and verify successful import of five core modules (pyteomics.mass, pyteomics.pepxml, pyteomics.mzid, pyteomics.tandem, pyteomics.auxiliary) in a Python environment. Produce a validation report confirming installation success and module availability.",
+      "keywords": [
+        "python-package-installation-management",
+        "module-import-verification",
+        "python-environment-configuration",
+        "installation-validation-reporting"
+      ],
+      "name": "Reproduce the Pyteomics installation via pip and verify core module imports"
+    },
+    {
+      "@id": "urn:asb:tool:python",
+      "@type": "SoftwareApplication",
+      "name": "Python"
+    },
+    {
+      "@id": "urn:asb:tool:pip",
+      "@type": "SoftwareApplication",
+      "name": "pip"
+    },
+    {
+      "@id": "urn:asb:input:task_001_0",
+      "@type": "File",
+      "name": "Python 3 interpreter with pip package manager available"
+    },
+    {
+      "@id": "urn:asb:input:task_001_1",
+      "@type": "File",
+      "name": "PyPI repository access (public package index)"
+    },
+    {
+      "@id": "urn:asb:output:task_001_0",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Installation validation report (text or JSON) confirming successful pip installation and listing import status (success/failure) for each of the five core modules",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "#action-task_001",
+      "@type": [
+        "CreateAction",
+        "prov:Activity",
+        "p-plan:Step"
+      ],
+      "description": "Install the Pyteomics package via pip from PyPI and verify successful import of five core modules (pyteomics.mass, pyteomics.pepxml, pyteomics.mzid, pyteomics.tandem, pyteomics.auxiliary) in a Python environment. Produce a validation report confirming installation success and module availability.",
+      "instrument": [
+        {
+          "@id": "urn:asb:tool:python"
+        },
+        {
+          "@id": "urn:asb:tool:pip"
+        }
+      ],
+      "name": "Reproduce the Pyteomics installation via pip and verify core module imports",
+      "object": [
+        {
+          "@id": "urn:asb:input:task_001_0"
+        },
+        {
+          "@id": "urn:asb:input:task_001_1"
+        }
+      ],
+      "repme:hasInputData": [
+        {
+          "@id": "urn:asb:input:task_001_0"
+        },
+        {
+          "@id": "urn:asb:input:task_001_1"
+        }
+      ],
+      "repme:hasOutputData": [
+        {
+          "@id": "urn:asb:output:task_001_0"
+        }
+      ],
+      "repme:hasResult": [
+        {
+          "@id": "urn:asb:result:result_001"
+        },
+        {
+          "@id": "urn:asb:result:result_003"
+        },
+        {
+          "@id": "urn:asb:result:result_004"
+        },
+        {
+          "@id": "urn:asb:result:result_015"
+        }
+      ],
+      "result": [
+        {
+          "@id": "urn:asb:output:task_001_0"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:claim:claim_001",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Pyteomics is a collection of lightweight and handy tools for Python that help to handle various sorts of proteomics data."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1168,
+          "oa:start": 1047
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pyteomics/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Pyteomics is a collection of lightweight and handy tools for Python that help to handle various sorts of proteomics data.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_002",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Pyteomics provides modules to facilitate calculation of mass and isotopic distribution of polypeptides."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 651,
+          "oa:start": 621
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pyteomics/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Pyteomics provides modules to facilitate calculation of mass and isotopic distribution of polypeptides.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_003",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Pyteomics provides modules to facilitate calculation of charge and pI of polypeptides."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 679,
+          "oa:start": 666
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pyteomics/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Pyteomics provides modules to facilitate calculation of charge and pI of polypeptides.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_004",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Pyteomics provides modules to facilitate prediction of chromatographic retention time of polypeptides."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 714,
+          "oa:start": 684
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pyteomics/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Pyteomics provides modules to facilitate prediction of chromatographic retention time of polypeptides.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_005",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Pyteomics supports recent versions of Python 3."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 938,
+          "oa:start": 891
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pyteomics/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Pyteomics supports recent versions of Python 3.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_006",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Pyteomics can be installed using pip Python package manager."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1037,
+          "oa:start": 967
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pyteomics/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Pyteomics can be installed using pip Python package manager.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_007",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Pyteomics can be installed from Bioconda using conda."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1848,
+          "oa:start": 1803
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pyteomics/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Pyteomics can be installed from Bioconda using conda.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_008",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "On Arch Linux and related distros, Pyteomics can be installed from AUR."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1254,
+          "oa:start": 1182
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pyteomics/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "On Arch Linux and related distros, Pyteomics can be installed from AUR.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_009",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "NumPy is an optional dependency for Pyteomics."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1388,
+          "oa:start": 1356
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pyteomics/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "NumPy is an optional dependency for Pyteomics.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_010",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Matplotlib is used by the pyteomics.pylab_aux module."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1472,
+          "oa:start": 1390
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pyteomics/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Matplotlib is used by the pyteomics.pylab_aux module.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_011",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "lxml is used by XML parsing modules and the pyteomics.mass.mass.Unimod class."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1578,
+          "oa:start": 1474
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pyteomics/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "lxml is used by XML parsing modules and the pyteomics.mass.mass.Unimod class.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_012",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Pandas can be used with pyteomics.pepxml, pyteomics.tandem, pyteomics.mzid, and pyteomics.auxiliary modules."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2697,
+          "oa:start": 2522
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pyteomics/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Pandas can be used with pyteomics.pepxml, pyteomics.tandem, pyteomics.mzid, and pyteomics.auxiliary modules.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_013",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "SQLAlchemy is used by the pyteomics.mass.unimod module."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1850,
+          "oa:start": 1760
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pyteomics/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "SQLAlchemy is used by the pyteomics.mass.unimod module.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_014",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Pynumpress adds support for Numpress compression in mzML."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1956,
+          "oa:start": 1852
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pyteomics/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Pynumpress adds support for Numpress compression in mzML.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_015",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "h5py and optionally hdf5plugin are used by the pyteomics.mzmlb module."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3043,
+          "oa:start": 2894
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pyteomics/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "h5py and optionally hdf5plugin are used by the pyteomics.mzmlb module.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_016",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "psims is used by the pyteomics.proforma module."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2211,
+          "oa:start": 2108
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pyteomics/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "psims is used by the pyteomics.proforma module.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_017",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "spectrum_utils is optionally used for spectrum annotation in the pyteomics.pylab_aux module."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3301,
+          "oa:start": 3152
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pyteomics/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "spectrum_utils is optionally used for spectrum annotation in the pyteomics.pylab_aux module.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_018",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "All dependencies in Pyteomics are optional."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2391,
+          "oa:start": 2362
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pyteomics/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "All dependencies in Pyteomics are optional.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_019",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Pyteomics can be installed with the XML extra to get dependencies needed to read XML format."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2628,
+          "oa:start": 2546
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pyteomics/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Pyteomics can be installed with the XML extra to get dependencies needed to read XML format.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_020",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Currently provided extras for Pyteomics installation are XML, TDA, graphics, DF, Unimod, numpress, mzMLb, and proforma."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3847,
+          "oa:start": 3737
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pyteomics/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Currently provided extras for Pyteomics installation are XML, TDA, graphics, DF, Unimod, numpress, mzMLb, and proforma.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:result:result_001",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Pyteomics is a collection of lightweight and handy tools for Python that help to handle various sorts of proteomics data.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_001"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_002",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Pyteomics provides modules to facilitate calculation of mass and isotopic distribution of polypeptides. Pyteomics provides modules to facilitate calculation of charge and pI of polypeptides. Pyteomics",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_002"
+        },
+        {
+          "@id": "urn:asb:claim:claim_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_004"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_003",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Pyteomics supports recent versions of Python 3.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_005"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_004",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Pyteomics can be installed using pip Python package manager.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_006"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_005",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Pyteomics can be installed from Bioconda using conda.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_007"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_006",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "On Arch Linux and related distros, Pyteomics can be installed from AUR.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_008"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_007",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "NumPy is an optional dependency for Pyteomics.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_009"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_008",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Matplotlib is used by the pyteomics.pylab_aux module. spectrum_utils is optionally used for spectrum annotation in the pyteomics.pylab_aux module.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_010"
+        },
+        {
+          "@id": "urn:asb:claim:claim_017"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_009",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "lxml is used by XML parsing modules and the pyteomics.mass.mass.Unimod class.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_011"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_010",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Pandas can be used with pyteomics.pepxml, pyteomics.tandem, pyteomics.mzid, and pyteomics.auxiliary modules.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_012"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_011",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "SQLAlchemy is used by the pyteomics.mass.unimod module.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_013"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_012",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Pynumpress adds support for Numpress compression in mzML.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_014"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_013",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "h5py and optionally hdf5plugin are used by the pyteomics.mzmlb module.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_015"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_014",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "psims is used by the pyteomics.proforma module.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_016"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_015",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "All dependencies in Pyteomics are optional.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_018"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_016",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Pyteomics can be installed with the XML extra to get dependencies needed to read XML format.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_019"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_017",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Currently provided extras for Pyteomics installation are XML, TDA, graphics, DF, Unimod, numpress, mzMLb, and proforma.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_020"
+        }
+      ]
+    },
+    {
+      "@id": "#env-task_001",
+      "@type": [
+        "repme:ComputationalEnvironment"
+      ],
+      "repme:computeTier": "trivial"
+    },
+    {
+      "@id": "#agent-15-activity-task_001",
+      "@type": [
+        "prov:Activity"
+      ],
+      "prov:endedAtTime": "2026-06-16T07:15:30.317888+00:00",
+      "prov:qualifiedUsage": {
+        "@type": "prov:Usage",
+        "schema:name": "prompt_sha256",
+        "schema:value": "70f0347d00e18109"
+      },
+      "prov:wasAssociatedWith": {
+        "schema:name": "anthropic/claude-haiku-4-5-20251001"
+      },
+      "schema:name": "Agent 1.5 Claim Extractor"
+    },
+    {
+      "@id": "#computational-environment",
+      "@type": "repme:ComputationalEnvironment",
+      "repme:buildId": "6C6F78D031C3485B999CF219C3B1DAB0",
+      "repme:depsHash": null,
+      "repme:gitCommit": "8713018e077e78db4e0defb776d2c7f494485e53",
+      "repme:platform": "darwin-25.5.0-arm64",
+      "repme:pythonVersion": "3.11.15",
+      "schema:dateCreated": "2026-06-16T07:11:48.713208Z",
+      "schema:hasPart": [
+        {
+          "@id": "#agent-config-agent1_entity"
+        },
+        {
+          "@id": "#agent-config-agent2a_outline"
+        },
+        {
+          "@id": "#agent-config-agent2b_card"
+        },
+        {
+          "@id": "#agent-config-agent3_critique"
+        },
+        {
+          "@id": "#agent-config-agent_classify"
+        }
+      ],
+      "schema:softwareVersion": "agentic-science-builder@0.1.0"
+    },
+    {
+      "@id": "#agent-config-agent1_entity",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v3",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent1_entity"
+    },
+    {
+      "@id": "#agent-config-agent2a_outline",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-sonnet-4-6",
+      "repme:promptVersion": "v2",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2a_outline"
+    },
+    {
+      "@id": "#agent-config-agent2b_card",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v4",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2b_card"
+    },
+    {
+      "@id": "#agent-config-agent3_critique",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent3_critique"
+    },
+    {
+      "@id": "#agent-config-agent_classify",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent_classify"
+    },
+    {
+      "@id": "http://edamontology.org/topic_0121",
+      "@type": "DefinedTerm",
+      "inDefinedTermSet": "http://edamontology.org/",
+      "name": "Proteomics",
+      "termCode": "topic_0121"
+    },
+    {
+      "@id": "artifact_provenance.json",
+      "@type": "File",
+      "name": "artifact_provenance.json",
+      "encodingFormat": "application/json"
+    },
+    {
+      "@id": "ledger/claims.jsonl",
+      "@type": "File",
+      "name": "ledger/claims.jsonl",
+      "encodingFormat": "application/jsonlines"
+    },
+    {
+      "@id": "ledger/results.jsonl",
+      "@type": "File",
+      "name": "ledger/results.jsonl",
+      "encodingFormat": "application/jsonlines"
+    }
+  ]
+}

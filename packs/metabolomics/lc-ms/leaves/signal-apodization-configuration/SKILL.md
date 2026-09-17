@@ -1,6 +1,9 @@
 ---
 name: signal-apodization-configuration
-description: Use when when processing raw Bruker Solarix transient files (.d format) destined for FT-MS analysis, especially for ESI-negative or low-abundance natural organic matter samples where baseline noise and side-lobe artifacts around intense peaks degrade peak picking and formula assignment accuracy.
+description: Use when when processing raw Bruker Solarix transient files (.d format)
+  destined for FT-MS analysis, especially for ESI-negative or low-abundance natural
+  organic matter samples where baseline noise and side-lobe artifacts around intense
+  peaks degrade peak picking and formula assignment accuracy.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -14,12 +17,15 @@ metadata:
   - Bruker Solarix instrument
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development and data analysis of small molecules analysis.'
+- '**CoreMS** is a comprehensive mass spectrometry framework for software development
+  and data analysis of small molecules analysis.'
 - import numpy as np
 - from matplotlib import pyplot
 claims: []

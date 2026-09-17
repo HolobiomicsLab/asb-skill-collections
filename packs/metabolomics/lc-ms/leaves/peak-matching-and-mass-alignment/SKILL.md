@@ -1,6 +1,7 @@
 ---
 name: peak-matching-and-mass-alignment
-description: Use when when you have raw MS2 spectra (m/z and intensity pairs) and a curated reference peak list from a large training dataset (e.
+description: Use when when you have raw MS2 spectra (m/z and intensity pairs) and
+  a curated reference peak list from a large training dataset (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,15 +14,21 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- this way, we built a set of known BGC-spectrum pairs. To avoid etabolites based on properties absent from an MS2 spectrum,
-- we use library MS2 spectra from the public, community-driven GNPS knowledge base [33] as a training set for the IOKR model
-- 'Molecular fingerprints are extracted from SMILES strings using the Chemistry Development Kit [29]. The fingerprint vector is composed of three concatenated sets of fingerprints: CDK Substructure,'
+- this way, we built a set of known BGC-spectrum pairs. To avoid etabolites based
+  on properties absent from an MS2 spectrum,
+- we use library MS2 spectra from the public, community-driven GNPS knowledge base
+  [33] as a training set for the IOKR model
+- 'Molecular fingerprints are extracted from SMILES strings using the Chemistry Development
+  Kit [29]. The fingerprint vector is composed of three concatenated sets of fingerprints:
+  CDK Substructure,'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

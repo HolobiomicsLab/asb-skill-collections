@@ -1,6 +1,8 @@
 ---
 name: nearest-neighbor-index-querying
-description: Use when you have millions of MS/MS spectra to cluster and have already constructed nearest neighbor indexes (partitioned Voronoi diagrams of spectrum vectors bucketed by precursor m/z).
+description: Use when you have millions of MS/MS spectra to cluster and have already
+  constructed nearest neighbor indexes (partitioned Voronoi diagrams of spectrum vectors
+  bucketed by precursor m/z).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3696
@@ -12,11 +14,14 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

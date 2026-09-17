@@ -1,6 +1,8 @@
 ---
 name: biochemical-transformation-matching
-description: Use when after you have detected and assigned molecular formulas to peaks in a single FT-ICR MS sample, and you want to infer which biochemical or abiotic reactions are occurring by examining pairwise mass differences.
+description: Use when after you have detected and assigned molecular formulas to peaks
+  in a single FT-ICR MS sample, and you want to infer which biochemical or abiotic
+  reactions are occurring by examining pairwise mass differences.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3628
@@ -15,16 +17,22 @@ metadata:
   - KEGG database
   techniques:
   - direct-infusion-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
-- Molecular transformation networks for each sample (mass difference network-based approach) are generated in this step
+- Molecular transformation networks for each sample (mass difference network-based
+  approach) are generated in this step
 - The MetaboDirect pipeline consists of 6 major steps/categories (Fig. 1)
-- The MetaboDirect pipeline was developed in Python 3.8 and requires the Python dependencies NumPy, pandas
+- The MetaboDirect pipeline was developed in Python 3.8 and requires the Python dependencies
+  NumPy, pandas
 - developed in Python 3.8 [38] and R 4.0.2 [39]
-- Networks are then constructed using Cytoscape and colored based on their molecular class
-- Networks are then constructed using Cytoscape [79] and colored based on their molecular class.
+- Networks are then constructed using Cytoscape and colored based on their molecular
+  class
+- Networks are then constructed using Cytoscape [79] and colored based on their molecular
+  class.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

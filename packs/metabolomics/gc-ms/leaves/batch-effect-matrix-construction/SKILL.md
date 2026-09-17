@@ -1,6 +1,9 @@
 ---
 name: batch-effect-matrix-construction
-description: 'Use when when you need to generate synthetic metabolomics feature tables with quantified batch effects for validating batch-correction methods. Use this skill when: (1) you want reproducible, ground-truth batch effects overlaid on condition-only variation;'
+description: 'Use when when you need to generate synthetic metabolomics feature tables
+  with quantified batch effects for validating batch-correction methods. Use this
+  skill when: (1) you want reproducible, ground-truth batch effects overlaid on condition-only
+  variation;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -14,11 +17,14 @@ metadata:
   - SummarizedExperiment
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
 - github.com__yufree__mzrtsim
 claims: []
 provenance:

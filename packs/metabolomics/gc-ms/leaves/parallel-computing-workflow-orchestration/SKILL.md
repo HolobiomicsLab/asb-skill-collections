@@ -1,6 +1,7 @@
 ---
 name: parallel-computing-workflow-orchestration
-description: Use when when compiling EI or MS/MS spectral libraries from multiple gigabyte-scale sources (e.
+description: Use when when compiling EI or MS/MS spectral libraries from multiple
+  gigabyte-scale sources (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -18,6 +19,8 @@ metadata:
   - MS-DIAL
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler

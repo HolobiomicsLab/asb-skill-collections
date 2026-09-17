@@ -1,6 +1,9 @@
 ---
 name: cnn-inference-on-spectral-data
-description: Use when you have preprocessed MS/MS spectral data (normalized peak intensities and m/z values) in memory or on disk, a trained CNN model checkpoint available, and you need to generate molecular embedding vectors for matching against a reference database of known metabolites.
+description: Use when you have preprocessed MS/MS spectral data (normalized peak intensities
+  and m/z values) in memory or on disk, a trained CNN model checkpoint available,
+  and you need to generate molecular embedding vectors for matching against a reference
+  database of known metabolites.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -16,6 +19,8 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.02.07.637102v1
   title: ChemEmbed

@@ -1,8 +1,10 @@
 ---
 name: cross-language-implementation-compatibility
-description: Use when when a new file format specification has multiple language implementations and you need to validate that all implementations correctly interpret the specification.
+description: Use when when a new file format specification has multiple language implementations
+  and you need to validate that all implementations correctly interpret the specification.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -18,6 +20,8 @@ metadata:
   - Apache Arrow
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak

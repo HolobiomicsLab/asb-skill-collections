@@ -1,6 +1,8 @@
 ---
 name: retention-time-alignment-validation
-description: Use when after sample alignment step in untargeted LC-MS workflows, particularly when processing multi-sample cohorts with QC samples interspersed throughout the sequence.
+description: Use when after sample alignment step in untargeted LC-MS workflows, particularly
+  when processing multi-sample cohorts with QC samples interspersed throughout the
+  sequence.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +14,8 @@ metadata:
   - SLAW alignment module
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw

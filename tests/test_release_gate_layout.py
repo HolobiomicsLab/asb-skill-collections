@@ -34,7 +34,17 @@ sys.path.insert(0, str(REPO_ROOT))
 from scripts import release_gate  # noqa: E402
 
 CLEAN_BODY = "# skill\nChromatographic separation improved analyte resolution.\n"
-LEAF_FM = {"name": "s1", "derived_from": [{"doi": "10.1/x"}], "license": "CC-BY-4.0"}
+# The span is what makes this fixture *measurable*, not merely well-formed. The
+# content checks report the scope they measured, and one that inspects a skill
+# declaring no evidence span has measured nothing — so a spanless collection is
+# uncheckable, never clean. Without this the promotion assertions below would be
+# resting on two hard-gate content checks that never ran.
+LEAF_FM = {
+    "name": "s1",
+    "derived_from": [{"doi": "10.1/x"}],
+    "license": "CC-BY-4.0",
+    "evidence_spans": [{"doi": "10.1/x", "text": "Synthetic evidence for this operation."}],
+}
 PAPERS = [{"doi": "10.1/x", "status": "included", "access": {"type": "gold-oa"}, "repo_url": ""}]
 
 

@@ -14,7 +14,7 @@ Layout produced (everything-together, but layer-addressable):
       benchmark/
         cards/<tool>/task_*.{json,md}                 # SciTask benchmark tasks
         challenges/<tool>/{WORKFLOW_CHALLENGE.md,workflow.yaml}
-      capsules/<tool>/<capsule>/                       # slim: ledger+evaluation+evidence+inputs
+      capsules/<tool>/<capsule>/                       # slim: ledger+evaluation+evidence+inputs+crate
       indicium/<tool>.jsonld                           # per-tool knowledge graph
       links.json                                       # skill <-> task cross-links
       MANIFEST.yaml                                    # install/release layers
@@ -41,15 +41,17 @@ from asb_skill_collections import layout
 
 import yaml
 
+from release_capsule_truth import align_collection
+from release_capsule_truth import CRATE, slug_from_build as _slug_from_build
+
 # Capsule subpaths to promote (text/reproducibility-relevant); the rest is heavy.
-_CAPSULE_KEEP = ["ledger", "evaluation", "evidence", "inputs", "artifact_provenance.json"]
+# Anything the promoted capsule says about itself has to be re-stated against this
+# list rather than against the build: see scripts/release_capsule_truth.py, which is
+# applied at the end of promote() and holds the rule for the three documents that
+# used to describe the build (the card footer, artifact_provenance.json and the
+# RO-Crate, which is copied here and pruned there).
+_CAPSULE_KEEP = ["ledger", "evaluation", "evidence", "inputs", "artifact_provenance.json", CRATE]
 _CAPSULE_KEEP_FIGS = _CAPSULE_KEEP + ["figures"]
-
-
-def _slug_from_build(dirname: str) -> str:
-    s = re.sub(r"^coll_", "", dirname)
-    s = re.sub(r"_grounded$", "", s)  # e.g. spec2vec_grounded -> spec2vec
-    return s.strip("_").lower()
 
 
 def _iter_build_dirs(builds_root: Path):
@@ -177,6 +179,14 @@ def promote(collection_dir: Path, builds_root: Path, with_figures: bool, clean: 
         encoding="utf-8",
     )
     _write_manifest(collection_dir)
+    # The card footer, the capsule provenance manifest and the crate were all written
+    # against the build; the promoted capsule is slim, so all three are re-stated
+    # against what this release actually carries before the collection is declared
+    # promoted.
+    aligned = align_collection(collection_dir, write=True)
+    counts["cards_retargeted"] = len(aligned["cards"])
+    counts["capsule_manifests_aligned"] = len(aligned["capsules"])
+    counts["crates_pruned"] = len(aligned["crates"])
     return {**counts, "skill_task_links": len(links)}
 
 

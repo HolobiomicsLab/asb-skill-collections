@@ -38,7 +38,27 @@ The co-reviewer must:
 - Be identity-verified at >=Reviewer tier in `contributors.jsonld`
 - Have posted a sign-off comment on the PR
 
-CI checks all three conditions. Merge is blocked until satisfied.
+**At v0, CI checks none of the three, and gate 13 is formally waived** — see
+`CONTENT_POLICY.md` §9 (LOCKED 2026-06-14) and §13. What `verify-coi.yml` actually does is
+narrower and worth stating exactly, because a reader who takes the previous paragraph at face
+value believes a check ran:
+
+- it compares the **declared** COI against the one detected from OpenAlex authorship, and fails on a
+  mismatch — this is a real check and it is the one with teeth;
+- it tests that a `co_reviewer` block is **present** (truthy), and looks at nothing inside it;
+- ORCID distinctness, the >=Reviewer tier lookup and the sign-off comment are **not implemented**.
+  `sign_off_pr` appears three times in this repository, all in documentation and none in code.
+
+It has also never run: its path filter is `collections/**/reviews/*.yaml` and no `reviews/`
+directory exists under `collections/` or `staged-collections/` — the only one in the tree holds a
+lone `.gitkeep`. No review attestation has been committed, so v0 has no attestation for the gate to
+check.
+
+**v1.** The three conditions become enforced when gate 13's waiver expires (§9, ~Q4 2026). Of the
+three, ORCID distinctness is the one with genuine integrity value and the one that is not blocked:
+it is a string comparison plus one further `check_coi.py` call. The tier lookup cannot be switched
+on before `contributors.jsonld` has a record — it currently reads `"contributors": []`, so the check
+would fail closed on every PR.
 
 ## Lead Curator non-self minimum
 

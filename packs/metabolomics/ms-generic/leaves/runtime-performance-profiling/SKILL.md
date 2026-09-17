@@ -1,6 +1,8 @@
 ---
 name: runtime-performance-profiling
-description: 'Use when when you need to empirically validate that one mass spectrometry data processing library achieves higher throughput than competing alternatives. Specifically: you have multiple candidate libraries (e.'
+description: 'Use when when you need to empirically validate that one mass spectrometry
+  data processing library achieves higher throughput than competing alternatives.
+  Specifically: you have multiple candidate libraries (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -20,6 +22,8 @@ metadata:
   - matplotlib / seaborn
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils

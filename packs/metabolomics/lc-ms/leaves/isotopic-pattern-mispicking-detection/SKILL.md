@@ -1,6 +1,8 @@
 ---
 name: isotopic-pattern-mispicking-detection
-description: Use when you have a peak table from tandem MS preprocessing (e.g., MS-DIAL, Metaboscape) and suspect that isotopic patterns have been incorrectly split during feature detection.
+description: Use when you have a peak table from tandem MS preprocessing (e.g., MS-DIAL,
+  Metaboscape) and suspect that isotopic patterns have been incorrectly split during
+  feature detection.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -15,6 +17,8 @@ metadata:
   - ggplot2 / plotly
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr

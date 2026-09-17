@@ -1,6 +1,9 @@
 ---
 name: isotopologue-adduct-cross-assay-link-encoding
-description: Use when after structural cluster assignment and correlation clustering are complete, and you need to represent the full set of structural relationships (isotopologues, adducts, cross-assay links, and correlation co-membership) in a single unified graph for interactive visualization, network.
+description: Use when after structural cluster assignment and correlation clustering
+  are complete, and you need to represent the full set of structural relationships
+  (isotopologues, adducts, cross-assay links, and correlation co-membership) in a
+  single unified graph for interactive visualization, network.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0360
@@ -17,6 +20,8 @@ metadata:
   - MamsiStructSearch
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi

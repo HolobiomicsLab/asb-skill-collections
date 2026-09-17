@@ -1,6 +1,9 @@
 ---
 name: metadata-structure-transformation
-description: Use when you have raw tabular experimental metadata (mass spectrometry or NMR sample descriptions, sample-to-treatment mappings, instrument parameters, etc.) that needs to be deposited into a structured online repository like Metabolomics Workbench, but the raw format does not conform to the.
+description: Use when you have raw tabular experimental metadata (mass spectrometry
+  or NMR sample descriptions, sample-to-treatment mappings, instrument parameters,
+  etc.) that needs to be deposited into a structured online repository like Metabolomics
+  Workbench, but the raw format does not conform to the.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3750
@@ -13,6 +16,8 @@ metadata:
   - MESSES (Metadata from Experimental SpreadSheets Extraction System)
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -20,7 +25,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema
+  <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

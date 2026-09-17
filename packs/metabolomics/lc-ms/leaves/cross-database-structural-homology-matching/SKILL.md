@@ -1,6 +1,8 @@
 ---
 name: cross-database-structural-homology-matching
-description: Use when when you have antiSMASH-predicted BGCs and wish to link them to metabolomic data via structure prediction, but only BGCs with sufficient structural homology to characterized reference clusters will yield reliable predictions.
+description: Use when when you have antiSMASH-predicted BGCs and wish to link them
+  to metabolomic data via structure prediction, but only BGCs with sufficient structural
+  homology to characterized reference clusters will yield reliable predictions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0346
@@ -17,13 +19,16 @@ metadata:
   - BLAST
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- after downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - genomes were run through antiSMASH v5.0.0 for BGC detection
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs

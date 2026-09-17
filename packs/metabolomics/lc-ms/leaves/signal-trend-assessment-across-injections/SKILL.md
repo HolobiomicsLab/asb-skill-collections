@@ -1,6 +1,8 @@
 ---
 name: signal-trend-assessment-across-injections
-description: Use when you have QCpool (pooled quality control) samples measured at regular intervals across one or more LC-MS/MS sequences and need to detect whether instrument performance degrades, drifts, or destabilizes during the analytical run.
+description: Use when you have QCpool (pooled quality control) samples measured at
+  regular intervals across one or more LC-MS/MS sequences and need to detect whether
+  instrument performance degrades, drifts, or destabilizes during the analytical run.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -12,11 +14,14 @@ metadata:
   - Sciex Multiquant
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
 evidence_spans:
-- The goal of the `QComics` package is to have a quick overview of the quality of a metabolomics or lipidomics study
+- The goal of the `QComics` package is to have a quick overview of the quality of
+  a metabolomics or lipidomics study
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,9 @@
 ---
 name: lipid-species-identification
-description: Use when you have centroid-mode LC–MS AIF chromatograms processed by xcms and RamClustR (or equivalent), a feature table with m/z and retention time coordinates, and you need to resolve individual lipid species identities with confidence scores and fragmentation evidence.
+description: Use when you have centroid-mode LC–MS AIF chromatograms processed by
+  xcms and RamClustR (or equivalent), a feature table with m/z and retention time
+  coordinates, and you need to resolve individual lipid species identities with confidence
+  scores and fragmentation evidence.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -16,11 +19,14 @@ metadata:
   - R (≥4.5.0)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - start R (version "4.5.0" or higher)
 claims: []
 provenance:

@@ -1,6 +1,7 @@
 ---
 name: metabolomics-feature-table-filtering
-description: Use when when you have a raw LC-MS peak table imported from vendor software (e.
+description: Use when when you have a raw LC-MS peak table imported from vendor software
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +16,8 @@ metadata:
   - MPACT
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr

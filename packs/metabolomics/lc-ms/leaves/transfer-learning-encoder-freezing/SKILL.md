@@ -1,6 +1,8 @@
 ---
 name: transfer-learning-encoder-freezing
-description: Use when you have a pretrained spectrum encoder (e.g., TCN on mass spectrometry data) that has learned useful representations, and you need to train new components (e.g., a rescoring module) for a related but distinct task (e.
+description: Use when you have a pretrained spectrum encoder (e.g., TCN on mass spectrometry
+  data) that has learned useful representations, and you need to train new components
+  (e.g., a rescoring module) for a related but distinct task (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +14,8 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

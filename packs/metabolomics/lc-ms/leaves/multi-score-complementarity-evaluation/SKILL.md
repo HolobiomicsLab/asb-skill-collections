@@ -1,6 +1,9 @@
 ---
 name: multi-score-complementarity-evaluation
-description: Use when you have two or more independent scoring functions ranking the same set of candidate links (GCF-MF pairs, BGC-spectrum associations, etc.), and you want to determine whether they capture complementary information that justifies combining them.
+description: Use when you have two or more independent scoring functions ranking the
+  same set of candidate links (GCF-MF pairs, BGC-spectrum associations, etc.), and
+  you want to determine whether they capture complementary information that justifies
+  combining them.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -16,13 +19,16 @@ metadata:
   - Paired Omics Data Platform
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- after downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - genomes were run through antiSMASH v5.0.0 for BGC detection
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs

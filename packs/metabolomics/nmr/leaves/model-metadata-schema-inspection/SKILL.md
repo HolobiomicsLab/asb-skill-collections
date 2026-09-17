@@ -1,13 +1,19 @@
 ---
 name: model-metadata-schema-inspection
-description: Use when when preparing to send peak data (1H and 13C NMR measurements) to a machine learning classification endpoint and you need to verify the current model's input/output names and schema, especially before implementing or updating code that constructs JSON payloads for the /api/smart3/search.
+description: Use when when preparing to send peak data (1H and 13C NMR measurements)
+  to a machine learning classification endpoint and you need to verify the current
+  model's input/output names and schema, especially before implementing or updating
+  code that constructs JSON payloads for the /api/smart3/search.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_topics: []
   tools:
   - TensorFlow Serving
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT

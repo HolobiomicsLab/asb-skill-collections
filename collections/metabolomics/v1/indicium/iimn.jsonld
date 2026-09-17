@@ -14,6 +14,10 @@
       "@id": "http://purl.obolibrary.org/obo/SEPIO_",
       "@prefix": true
     },
+    "ro": {
+      "@id": "http://purl.obolibrary.org/obo/RO_",
+      "@prefix": true
+    },
     "doco": "http://purl.org/spar/doco/",
     "fabio": "http://purl.org/spar/fabio/",
     "dcat": "http://www.w3.org/ns/dcat#",
@@ -360,7 +364,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes IIMN workflow integration with MZmine for ion identity molecular networking, feature grouping, and spectral library generation. It does not discuss or document the internal module dispatch routing logic for LC, GC, IMS, or MS Imaging data types. The paper focuses on the IIMN feature (ion identity networking) and its application to LC-MS metabolomics, not on MZmine's internal architecture or data-type routing mechanisms.",
@@ -370,17 +374,17 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "How does mzmine route input mass spectrometry data to the appropriate processing module based on the declared data type?",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:02.572380+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No control-flow diagrams, pseudocode, or documentation of module dispatch routing for different data types (LC, GC, IMS, MS Imaging) are present in the paper. The paper describes IIMN workflow steps and MZmine modules (metaCorrelate, ion identity networking, GNPS export) but does not document internal routing logic.",
@@ -390,17 +394,17 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "expected_outputs",
       "asbval:target_claim_text": "Control-flow diagram or pseudocode documenting the conditional routing logic for LC, GC, IMS, and MS Imaging module dispatch",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:02.572380+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not present a data-type classification schema or dispatch decision criteria for routing different MS data types. It focuses on LC-MS metabolomics workflows and IIMN integration, not on MZmine's internal data-type classification or routing architecture.",
@@ -410,17 +414,17 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "expected_outputs",
       "asbval:target_claim_text": "Data-type classification schema and dispatch decision criteria",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:02.572380+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/card/task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To reach a broad user base, we interfaced the IIMN workflow with three widely used open source MS processing tools (MZmine17, MS-DIAL18, and XCMS13,16).",
       "asbval:note": "MZmine is confirmed as a tool used in the paper for IIMN workflow integration. [SUBSTRING-MATCH for MZmine | role: MS data processing tool for IIMN]",
@@ -430,17 +434,17 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "mzmine",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:02.572380+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/card/task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages insufficient to judge. The paper does not mention Java Development Kit (JDK) version or any specific Java version used in MZmine development or deployment.",
@@ -450,17 +454,17 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "JDK 25",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:02.572380+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/card/task_001/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages insufficient to judge. The paper does not mention JavaFX or any GUI framework version used in MZmine.",
@@ -470,17 +474,17 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "JavaFX 24",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:02.572380+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000341"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate task card requests reconstruction of MZmine's internal module dispatch routing logic for different MS data types (LC, GC, IMS, MS Imaging). The paper is a methods/application paper describing Ion Identity Molecular Networking (IIMN) integration into MZmine and GNPS for LC-MS metabolomics. It does not document or discuss MZmine's internal architecture, data-type routing, or conditional dispatch logic.",
@@ -492,12 +496,12 @@
       "asbval:target_artifact_kind": "card",
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:02.572380+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/card/task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper discusses mzmine as a feature-finding tool for LC-MS metabolomics data processing and IIMN workflow integration, but contains no mention of GitHub Actions workflows, CI/CD pipelines, build artifacts, or automated release processes.",
@@ -507,17 +511,17 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "title",
       "asbval:target_claim_text": "Reproduce the automated development build and release artifact produced by GitHub Actions for mzmine",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:16.440678+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/card/task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss GitHub Actions, CI/CD workflows, or build automation. The paper focuses on the scientific application and functionality of mzmine for metabolomics analysis, not software engineering or deployment infrastructure.",
@@ -527,17 +531,17 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Does the mzmine GitHub Actions workflow 'dev_build_release.yml' successfully complete and produce a passing build artifact?",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:16.440678+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/card/task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To reach a broad user base, we interfaced the IIMN workflow with three widely used open source MS processing tools (MZmine17, MS-DIAL18, and XCMS13,16).",
       "asbval:note": "mzmine (case-insensitive match: MZmine) is confirmed as a tool used in the paper for feature-finding and IIMN workflow implementation.",
@@ -547,17 +551,17 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "mzmine",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:16.440678+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/card/task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention JDK, Java Development Kit, or any specific Java version. No technical build environment specifications are discussed.",
@@ -567,17 +571,17 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "JDK 25",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:16.440678+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/card/task_002/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention JavaFX or any GUI framework dependencies. No software dependencies or build requirements are specified.",
@@ -587,17 +591,17 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "JavaFX 24",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:16.440678+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/card/task_002/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss GitHub Actions, CI/CD workflows, build status reports, or artifact generation. The paper is a scientific publication about metabolomics analysis methods, not a software engineering or DevOps document.",
@@ -607,17 +611,17 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "expected_outputs",
       "asbval:target_claim_text": "GitHub Actions workflow run completion status report (pass/fail) and downloadable build artifact file(s)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:16.440678+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/card/task_002/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper contains no discussion of build logs, compilation, Java versions, or JavaFX dependencies. These are software engineering concerns not addressed in this metabolomics research paper.",
@@ -627,17 +631,17 @@
       "asbval:target_artifact_kind": "card",
       "asbval:target_claim_field": "expected_outputs",
       "asbval:target_claim_text": "Build artifact log or summary confirming successful compilation with JDK 25 and JavaFX 24 dependencies",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:16.440678+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/card/task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate task card describes a software engineering / DevOps task (reproducing GitHub Actions CI/CD workflows and build artifacts), while the paper is a scientific research publication about Ion Identity Molecular Networking (IIMN) for mass spectrometry-based metabolomics.",
@@ -650,12 +654,12 @@
       "asbval:target_artifact_kind": "card",
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:49:16.440678+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
-      "@id": "asbval:assertion/skill/build-artifact-retrieval-and-validation/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/build-artifact-retrieval-and-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about Ion Identity Molecular Networking (IIMN) for mass spectrometry metabolomics. No discussion of CI/CD workflows, GitHub Actions, build artifacts, JAR files, installers, or software compilation pipelines. The paper does mention GitHub as a repository for source code (passage 4, 7, 10: 'source code is shared on GitHub under an open source license'), but this is incidental to code availability, not about build artifact validation.",
@@ -665,17 +669,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Retrieve and validate build artifacts produced by an automated CI/CD workflow (e.g., GitHub Actions), confirming successful compilation and integrity of generated packages (JAR, installers, portable bundles).",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:17.510891+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/build-artifact-retrieval-and-validation/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/build-artifact-retrieval-and-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper scope is entirely focused on IIMN methodology, molecular networking, mass spectrometry data processing, and metabolomics analysis. No mention of software build processes, CI/CD pipelines, artifact validation, or deployment workflows.",
@@ -685,17 +689,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Retrieve and validate build artifacts produced by an automated CI/CD workflow (e.g., GitHub Actions), confirming successful compilation and integrity of generated packages (JAR, installers, portable bundles).",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:17.510891+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/build-artifact-retrieval-and-validation/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/build-artifact-retrieval-and-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper mentions GitHub as a code repository (passages 4, 7, 10) but does not discuss GitHub Actions, CI/CD workflows, or artifact hosting. No mention of dev_build_release.yml or any build automation.",
@@ -705,17 +709,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "GitHub Actions as automated CI/CD platform that executes dev_build_release.yml workflow and hosts build artifacts",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:17.510891+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/build-artifact-retrieval-and-validation/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/build-artifact-retrieval-and-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention gradle, Java compilation, or build systems. The paper discusses MZmine as a feature-finding tool but does not address its build infrastructure.",
@@ -725,17 +729,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "gradle as build system invoked by workflow to compile Java source code and package distributions",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:17.510891+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/build-artifact-retrieval-and-validation/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/build-artifact-retrieval-and-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss Java Development Kit versions, compilation requirements, or technical dependencies for building mzmine. MZmine is mentioned as a tool used for data processing (passages 3, 7, 8, 9), not as a subject of build validation.",
@@ -745,17 +749,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "JDK 25 as Java Development Kit required by mzmine compilation",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:17.510891+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/build-artifact-retrieval-and-validation/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/build-artifact-retrieval-and-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention JavaFX, GUI frameworks, or technical dependencies. MZmine is referenced as a data processing tool, not as a software project whose build artifacts are being validated.",
@@ -765,17 +769,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "JavaFX 24 as GUI framework dependency bundled within mzmine artifacts",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:17.510891+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/build-artifact-retrieval-and-validation/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/build-artifact-retrieval-and-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper discusses MZmine as a feature-finding tool used for LC-MS data processing within the IIMN workflow (passages 3, 7, 8, 9). It is not the subject of build artifact validation. The paper mentions MZmine's GitHub repository for code availability but not for build artifact retrieval or validation.",
@@ -785,17 +789,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "mzmine as target application whose automated build artifacts are being retrieved and validated",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:17.510891+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-workflow-triggering/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/ci-cd-workflow-triggering/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper is about Ion Identity Molecular Networking (IIMN) for mass spectrometry-based metabolomics analysis. It does not discuss GitHub Actions, CI/CD workflows, build pipelines, or software release automation. The research question describes a software engineering/DevOps task entirely unrelated to the paper's scientific content.",
@@ -805,17 +809,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Trigger and monitor automated build and release workflows in GitHub Actions to validate that development branches produce passing build artifacts without manual intervention. This skill verifies CI/CD pipeline completeness and artifact generation for mass spectrometry software di",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:32.905596+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-workflow-triggering/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/ci-cd-workflow-triggering/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper contains no discussion of GitHub Actions, CI/CD pipelines, build workflows, or artifact generation. The scope describes a DevOps/software engineering practice not addressed in this metabolomics research paper.",
@@ -825,17 +829,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Trigger and monitor automated build and release workflows in GitHub Actions to validate that development branches produce passing build artifacts without manual intervention.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:32.905596+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-workflow-triggering/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/ci-cd-workflow-triggering/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GitHub Actions is not mentioned anywhere in the paper. The paper discusses IIMN workflow, GNPS platform, and mass spectrometry data processing tools (MZmine, XCMS, MS-DIAL), but not GitHub Actions or CI/CD infrastructure.",
@@ -845,17 +849,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[0]",
       "asbval:target_claim_text": "GitHub Actions - CI/CD platform used to define and execute automated build and release workflows",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:32.905596+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-workflow-triggering/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/ci-cd-workflow-triggering/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "JDK 25 is not mentioned in the paper. While MZmine is discussed as a feature-finding tool used in the IIMN workflow, there is no discussion of Java compilation, JDK versions, or build infrastructure.",
@@ -865,17 +869,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[1]",
       "asbval:target_claim_text": "JDK 25 - Java Development Kit required to compile mzmine source code during workflow execution",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:32.905596+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-workflow-triggering/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/ci-cd-workflow-triggering/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "JavaFX 24 is not mentioned in the paper. While MZmine is discussed as a tool for feature detection and ion identity networking, there is no discussion of its GUI framework, JavaFX, or packaging requirements.",
@@ -885,17 +889,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[2]",
       "asbval:target_claim_text": "JavaFX 24 - Graphics toolkit required for mzmine GUI compilation and packaging",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:32.905596+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-workflow-triggering/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/ci-cd-workflow-triggering/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To reach a broad user base, we interfaced the IIMN workflow with three widely used open source MS processing tools (MZmine17, MS-DIAL18, and XCMS13,16).",
       "asbval:note": "MZmine is mentioned extensively in the paper as one of three feature-finding tools integrated with IIMN. However, the paper does not discuss MZmine as a target for CI/CD workflows, build artifacts, or release automation. The paper discusses MZmine's functional role in metabolomics data processing, not its software development or distribution infrastructure.",
@@ -905,17 +909,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[3]",
       "asbval:target_claim_text": "mzmine - Target application being built and released via the workflow",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:32.905596+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
-      "@id": "asbval:assertion/skill/conditional-routing-logic-extraction/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/conditional-routing-logic-extraction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss mzmine's internal conditional routing logic, control-flow pathways, or dispatch mechanisms. Paper mentions mzmine as a tool used for IIMN data processing but does not reverse-engineer or document its module initialization or data-type routing architecture.",
@@ -925,17 +929,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Extract and synthesize the conditional branching logic that routes mass spectrometry input data (LC, GC, IMS, MS imaging) to appropriate processing modules in mzmine.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:42.230407+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/conditional-routing-logic-extraction/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/conditional-routing-logic-extraction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To reach a broad user base, we interfaced the IIMN workflow with three widely used open source MS processing tools (MZmine17, MS-DIAL18, and XCMS13,16).",
       "asbval:note": "Paper confirms mzmine is used as an open-source MS processing tool integrated with IIMN, but does not document or analyze mzmine's internal conditional routing logic, control-flow, or module dispatch mechanisms. The paper uses mzmine as an application tool, not as a subject of reverse-engineering for routing logic.",
@@ -945,17 +949,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "mzmine (Open-source MS data processing framework to be reverse-engineered for conditional routing logic across LC, GC, IMS, and MALDI input types)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:42.230407+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
-      "@id": "asbval:assertion/skill/conditional-routing-logic-extraction/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/conditional-routing-logic-extraction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention JDK, Java Development Kit, or any programming language toolkit. No evidence of source code analysis or reverse-engineering of mzmine's implementation.",
@@ -965,17 +969,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "JDK 25 (Java Development Kit required for parsing and analyzing mzmine source code)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:42.230407+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/conditional-routing-logic-extraction/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/conditional-routing-logic-extraction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention JavaFX, GUI frameworks, or UI-driven data type selection mechanisms in mzmine.",
@@ -985,17 +989,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "JavaFX 24 (GUI framework used in mzmine; relevant for understanding UI-driven data type selection and module dispatch)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:42.230407+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/conditional-routing-logic-extraction/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/conditional-routing-logic-extraction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper describes IIMN workflow integration with mzmine for LC-MS metabolomics data processing, but does not address conditional routing logic, control-flow pathways, or selective module initialization based on input data types (GC, IMS, MALDI). The paper focuses on IIMN functionality, not mzmine's internal architecture.",
@@ -1005,17 +1009,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Extract and synthesize the conditional branching logic that routes mass spectrometry input data (LC, GC, IMS, MS imaging) to appropriate processing modules in mzmine.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:42.230407+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/control-flow-diagram-synthesis/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/control-flow-diagram-synthesis/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper describes Ion Identity Molecular Networking (IIMN) workflow for LC-MS metabolomics data processing. No mention of control-flow diagram synthesis, pseudocode generation, or dispatcher pattern reconstruction from source code. Paper does not address software architecture documentation or conditional branching logic analysis.",
@@ -1025,17 +1029,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Synthesize control-flow diagrams and pseudocode from conditional branching logic in a source codebase to document how input data types (LC, GC, IMS, MS Imaging) are routed to distinct processing modules.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:51.185576+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/control-flow-diagram-synthesis/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/control-flow-diagram-synthesis/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To reach a broad user base, we interfaced the IIMN workflow with three widely used open source MS processing tools (MZmine17, MS-DIAL18, and XCMS13,16)... MS-DIAL34 is a polyvalent mass spectrometry data processing software capable of processing various nontargeted LC-MS metabolomics experiments, including ion mobility mass spectrometry",
       "asbval:note": "Paper mentions mzmine as a tool integrated with IIMN and notes MS-DIAL's capability to process ion mobility mass spectrometry (IMS), but does not describe or document the internal control-flow logic, dispatcher patterns, or conditional routing of different input data types (LC, GC, IMS, MS Imaging) within mzmine or other tools. The paper focuses on IIMN workflow integration, not software architecture or dispatch logic.",
@@ -1045,17 +1049,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Understand how a multi-instrument mass spectrometry platform (such as mzmine) selectively routes data to different processing pipelines based on declared input type (LC, GC, IMS, or MS Imaging).",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:51.185576+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
-      "@id": "asbval:assertion/skill/control-flow-diagram-synthesis/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/control-flow-diagram-synthesis/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for MZmine | role: feature-finding and ion identity networking tool]",
       "asbval:note": "MZmine is extensively discussed as a primary tool for IIMN workflow implementation. Paper states: 'To reach a broad user base, we interfaced the IIMN workflow with three widely used open source MS processing tools (MZmine17, MS-DIAL18, and XCMS13,16)' and provides detailed sections on 'IIMN with MZmine'.",
@@ -1065,17 +1069,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[0].name",
       "asbval:target_claim_text": "mzmine",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:51.185576+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
-      "@id": "asbval:assertion/skill/control-flow-diagram-synthesis/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/control-flow-diagram-synthesis/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss reconstructing or synthesizing control-flow diagrams from mzmine's source code. MZmine is presented as a tool for executing IIMN workflows, not as a subject of architectural analysis or dispatcher pattern documentation.",
@@ -1085,17 +1089,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[0].role",
       "asbval:target_claim_text": "Target software platform whose module dispatch routing logic is reconstructed and synthesized into a control-flow diagram",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:51.185576+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/control-flow-diagram-synthesis/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/control-flow-diagram-synthesis/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention JDK, Java compiler, runtime environment, or any specific Java version. No discussion of build tools or compilation infrastructure for mzmine.",
@@ -1105,17 +1109,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[1].name",
       "asbval:target_claim_text": "JDK 25",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:51.185576+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/control-flow-diagram-synthesis/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/control-flow-diagram-synthesis/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss Java compilation, runtime analysis, or source code analysis tools. No mention of development infrastructure.",
@@ -1125,17 +1129,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[1].role",
       "asbval:target_claim_text": "Java compiler and runtime environment used to build, execute, and analyze mzmine source code",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:51.185576+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/control-flow-diagram-synthesis/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/control-flow-diagram-synthesis/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention JavaFX, GUI frameworks, or any specific version of GUI libraries used by mzmine.",
@@ -1145,17 +1149,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[2].name",
       "asbval:target_claim_text": "JavaFX 24",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:51.185576+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/control-flow-diagram-synthesis/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/control-flow-diagram-synthesis/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss GUI frameworks, event handlers, or dispatch logic in user interfaces. Focus is on IIMN workflow functionality, not GUI architecture.",
@@ -1165,17 +1169,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[2].role",
       "asbval:target_claim_text": "GUI framework used by mzmine for user-facing module dispatch interfaces; may contain dispatch event handlers and routing logic",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:50:51.185576+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/data-type-classification-schema-design/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/data-type-classification-schema-design/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper focuses on Ion Identity Molecular Networking (IIMN) for LC-MS2 metabolomics data. While it mentions support for LC-MS data and briefly references MS-DIAL's capability to process 'various nontargeted LC-MS metabolomics experiments, including ion mobility mass spectrometry', the paper does not describe or implement a general data-type classification schema for routing LC, GC, IMS, and MS imaging to distinct processing pipelines. The paper's scope is narrowly focused on connecting ion species within LC-MS2 networks, not on designing a multi-instrument type-classification system.",
@@ -1185,17 +1189,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Design and implement a data-type classification schema that declares and categorizes mass spectrometry input types (LC, GC, IMS, MS imaging) to enable selective, type-aware processing module dispatch.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:04.019160+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/data-type-classification-schema-design/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/data-type-classification-schema-design/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To reach a broad user base, we interfaced the IIMN workflow with three widely used open source MS processing tools (MZmine17, MS-DIAL18, and XCMS13,16)... MS-DIAL34 is a polyvalent mass spectrometry data processing software capable of processing various nontargeted LC-MS metabolomics experiments, including ion mobility mass spectrometry",
       "asbval:note": "MZmine is confirmed as a tool integrated with IIMN for LC-MS data processing. However, the paper does not describe MZmine as implementing a general data-type classification schema or module dispatch routing for GC, IMS, and MS imaging. The paper only documents MZmine's role in the IIMN workflow for LC-MS2 data. MS-DIAL is noted to support ion mobility, but no evidence shows either tool implements the claimed type-classification schema for selective module dispatch across multiple instrument types.",
@@ -1205,17 +1209,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "mzmine - Host software platform that implements module dispatch routing for LC, GC, IMS, and MS imaging data types",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:04.019160+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
-      "@id": "asbval:assertion/skill/data-type-classification-schema-design/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/data-type-classification-schema-design/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention JDK, Java, or any programming language/runtime environment. While MZmine is Java-based (implied by its open-source nature and GitHub repository), the paper provides no evidence that JDK 25 or any specific Java version is used, nor does it discuss implementation of a type classification schema in Java.",
@@ -1225,17 +1229,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "JDK 25 - Java runtime and language framework used to implement the type classification schema and dispatch conditionals",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:04.019160+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/data-type-classification-schema-design/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/data-type-classification-schema-design/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention JavaFX, UI frameworks, or any user interface for data-type selection and routing. While MZmine has a GUI, the paper does not describe or reference JavaFX or any specific UI framework for the claimed data-type classification feature.",
@@ -1245,17 +1249,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "JavaFX 24 - UI framework for presenting data-type selection and routing status to users during input configuration",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:04.019160+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/data-type-classification-schema-design/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/data-type-classification-schema-design/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not address multi-instrument routing, GC, MALDI imaging, or conditional workflow dispatch based on data type. The paper is exclusively focused on LC-MS2 metabolomics and the IIMN workflow within that modality. No evidence of a general-purpose type-classification schema for multi-instrument systems is present.",
@@ -1265,17 +1269,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Apply this skill when building or auditing a multi-instrument MS data processing system that must route different chromatography modes (LC, GC), ion mobility, or imaging modalities (MALDI) to distinct processing workflows.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:04.019160+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-api-integration/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/github-actions-api-integration/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about Ion Identity Molecular Networking (IIMN) for mass spectrometry metabolomics. No mention of GitHub Actions, CI/CD pipelines, API integration, or build artifact retrieval. This is a software engineering task card completely unrelated to the paper's scientific content.",
@@ -1285,17 +1289,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Programmatically trigger and monitor GitHub Actions workflows via the GitHub Actions API to validate CI/CD pipelines and retrieve build artifacts.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:15.922581+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-api-integration/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/github-actions-api-integration/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention GitHub Actions, CI/CD platforms, or workflow automation tools. The paper discusses mass spectrometry data processing tools (MZmine, XCMS, MS-DIAL) and GNPS web platform, not software development infrastructure.",
@@ -1305,17 +1309,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "GitHub Actions (CI/CD automation platform)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:15.922581+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-api-integration/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/github-actions-api-integration/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To reach a broad user base, we interfaced the IIMN workflow with three widely used open source MS processing tools (MZmine17, MS-DIAL18, and XCMS13,16).",
       "asbval:note": "MZmine is mentioned extensively in the paper as a mass spectrometry data processing tool integrated with IIMN, not as a 'build artifact' to be validated by CI/CD. The paper discusses MZmine's functional role in metabolomics workflows, not its compilation or release pipeline.",
@@ -1325,17 +1329,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "mzmine (target build artifact\u2014software package whose compilation is validated)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:15.922581+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-api-integration/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/github-actions-api-integration/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Java Development Kit, JDK versions, or build dependencies. No discussion of mzmine compilation requirements or Java runtime environments.",
@@ -1345,17 +1349,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "JDK 25 (Java compiler and runtime required to build mzmine)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:15.922581+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-api-integration/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/github-actions-api-integration/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention JavaFX, GUI frameworks, or mzmine's technical dependencies. The paper focuses on IIMN's scientific functionality and integration with data processing tools, not their implementation details.",
@@ -1365,17 +1369,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "JavaFX 24 (GUI framework dependency for mzmine compilation)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:15.922581+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/java-application-build-verification/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/java-application-build-verification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about Ion Identity Molecular Networking (IIMN) for mass spectrometry metabolomics. No mention of Java applications, GitHub Actions, CI/CD pipelines, or build verification workflows. The paper does mention GitHub as a repository for code (e.g., 'source code is shared on GitHub under an open source license'), but not in the context of Java build verification or CI/CD.",
@@ -1385,17 +1389,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Verify that a Java application's automated build workflow (GitHub Actions CI/CD) successfully compiles, produces valid artifacts, and passes integrity checks.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:26.187579+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/java-application-build-verification/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/java-application-build-verification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper mentions GitHub as a code repository ('source code is shared on GitHub under an open source license' in passage [4]) but does not discuss GitHub Actions, CI/CD workflows, or automated build processes.",
@@ -1405,17 +1409,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "GitHub Actions as CI/CD platform",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:26.187579+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/java-application-build-verification/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/java-application-build-verification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper contains no mention of JDK, Java Development Kit, or any Java compiler versions. The paper is about metabolomics data analysis, not Java development.",
@@ -1425,17 +1429,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "JDK 25 as Java Development Kit",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:26.187579+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/java-application-build-verification/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/java-application-build-verification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention JavaFX, graphics libraries, or GUI framework dependencies. The paper focuses on mass spectrometry data processing algorithms and workflows.",
@@ -1445,17 +1449,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "JavaFX 24 as graphics library dependency",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:26.187579+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/java-application-build-verification/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/java-application-build-verification/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To reach a broad user base, we interfaced the IIMN workflow with three widely used open source MS processing tools (MZmine17, MS-DIAL18, and XCMS13,16).",
       "asbval:note": "Paper mentions MZmine (case-insensitive match: mzmine) as one of three open source mass spectrometry processing tools integrated with IIMN. However, the paper does not discuss MZmine as a Java application subject to build verification, CI/CD workflows, or GitHub Actions. MZmine is mentioned as a tool for feature detection and ion identity annotation in metabolomics workflows, not as a Java build target.",
@@ -1465,17 +1469,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "mzmine as target Java application",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:26.187579+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
-      "@id": "asbval:assertion/skill/java-application-build-verification/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/java-application-build-verification/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper's scope is entirely focused on Ion Identity Molecular Networking (IIMN) methodology for mass spectrometry-based metabolomics. There is no discussion of Java application builds, GitHub Actions workflows, CI/CD pipelines, or build artifact verification.",
@@ -1485,17 +1489,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Verify Java application's automated build workflow (GitHub Actions CI/CD)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:26.187579+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/java-source-code-inspection/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/java-source-code-inspection/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper is about Ion Identity Molecular Networking (IIMN) for mass spectrometry-based metabolomics. It does not discuss Java source code inspection, code archaeology, control flow tracing, or software engineering techniques. The paper focuses on a computational workflow for connecting ion species in molecular networks, not on Java codebase analysis methods.",
@@ -1505,17 +1509,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "A code archaeology technique for tracing control flow, data type routing, and module dispatch logic in large Java codebases by systematically locating entry points, type declarations, conditional routing logic, and synthesizing findings into control-flow diagrams or pseudocode.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:36.020091+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/java-source-code-inspection/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/java-source-code-inspection/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not address Java source code inspection or software engineering archaeology. The scope describes metabolomics data processing workflows, not code analysis techniques.",
@@ -1525,17 +1529,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "A code archaeology technique for tracing control flow, data type routing, and module dispatch logic in large Java codebases",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:36.020091+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/java-source-code-inspection/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/java-source-code-inspection/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To reach a broad user base, we interfaced the IIMN workflow with three widely used open source MS processing tools (MZmine17, MS-DIAL18, and XCMS13,16).",
       "asbval:note": "The paper confirms MZmine is a mass spectrometry data processing software and mentions it is open source with modular capabilities. However, the paper does not discuss Java source code inspection, control flow tracing, or code archaeology. The paper uses MZmine as an application tool for IIMN workflow, not as a subject of source code inspection. The claim conflates the tool's functional role (MS data processing) with a software engineering analysis task that is not addressed in the paper.",
@@ -1545,17 +1549,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "mzmine (Source codebase for Java source inspection; mass spectrometry data processing software with modular dispatch logic across LC, GC, IMS, and MS Imaging input types)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:36.020091+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
-      "@id": "asbval:assertion/skill/java-source-code-inspection/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/java-source-code-inspection/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention JDK, Java Development Kit, or any Java compilation/debugging tools. The paper is focused on the IIMN workflow and metabolomics analysis, not on Java development or source code inspection.",
@@ -1565,17 +1569,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "JDK 25 (Java Development Kit for compiling, running, and debugging the mzmine source code during inspection)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:36.020091+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/java-source-code-inspection/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/java-source-code-inspection/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention JavaFX, GUI frameworks, or UI-driven data type selection flows. While the paper discusses MZmine's role in the IIMN workflow, it does not address the underlying GUI framework or source code inspection of UI components.",
@@ -1585,17 +1589,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "JavaFX 24 (GUI framework used by mzmine; helpful for understanding module initialization and UI-driven data type selection flows)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:36.020091+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/module-dispatch-architecture-analysis/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/module-dispatch-architecture-analysis/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper describes Ion Identity Molecular Networking (IIMN) workflow and its integration into feature-finding tools (MZmine, MS-DIAL, XCMS), but does not discuss or analyze module dispatch architecture, conditional branching patterns, factory patterns, or reverse-engineering of routing logic. The paper is a methods/application paper, not a software architecture analysis paper.",
@@ -1605,17 +1609,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Systematic tracing of conditional branching and factory patterns in a scientific software codebase to reconstruct how input data types (LC, GC, IMS, MS imaging) are routed to their corresponding processing modules.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:47.542691+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/module-dispatch-architecture-analysis/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/module-dispatch-architecture-analysis/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not address software architecture analysis, module dispatch logic, or code-level tracing. It describes IIMN as a workflow feature integrated into existing tools but does not analyze how those tools route different data types internally.",
@@ -1625,17 +1629,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "scope",
       "asbval:target_claim_text": "Systematic tracing of conditional branching and factory patterns in a scientific software codebase to reconstruct how input data types (LC, GC, IMS, MS imaging) are routed to their corresponding processing modules.",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:47.542691+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/module-dispatch-architecture-analysis/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/module-dispatch-architecture-analysis/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for MZmine | role: feature-finding tool used in IIMN workflow] 'To reach a broad user base, we interfaced the IIMN workflow with three widely used open source MS processing tools (MZmine17, MS-DIAL18, and XCMS13,16).'",
       "asbval:note": "Paper confirms MZmine is used in the IIMN workflow and mentions it is open source with source code available, but does not discuss or analyze its module dispatch architecture, data-type enums, or factory patterns. The paper uses MZmine as a tool for implementing IIMN, not as a subject of architectural analysis.",
@@ -1645,17 +1649,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[0]",
       "asbval:target_claim_text": "mzmine \u2014 Mass spectrometry data processing platform whose module dispatch architecture is being traced; provides the source code, data-type enums, and factory patterns to analyze",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:47.542691+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
-      "@id": "asbval:assertion/skill/module-dispatch-architecture-analysis/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/module-dispatch-architecture-analysis/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention JDK, Java compiler, runtime environment, or any build tools. MZmine is mentioned as a tool but no technical requirements for building or inspecting its source code are discussed.",
@@ -1665,17 +1669,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[1]",
       "asbval:target_claim_text": "JDK 25 \u2014 Java compiler and runtime environment required to build and inspect the mzmine source code",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:47.542691+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/module-dispatch-architecture-analysis/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/module-dispatch-architecture-analysis/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention JavaFX, GUI frameworks, or UI components in relation to MZmine or any other tool. The paper focuses on the IIMN workflow and data processing, not on GUI architecture or event handling.",
@@ -1685,17 +1689,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools[2]",
       "asbval:target_claim_text": "JavaFX 24 \u2014 GUI framework used in mzmine; module initialization may be tied to UI components, so tracing dispatch may intersect with JavaFX event handling",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:51:47.542691+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-status-monitoring/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/workflow-status-monitoring/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper is about Ion Identity Molecular Networking (IIMN) for mass spectrometry metabolomics analysis. It does not discuss CI/CD workflows, GitHub Actions, workflow monitoring, artifact production, or build pipeline validation. The paper focuses on scientific methodology for connecting ion species in molecular networks, not software engineering practices.",
@@ -1705,17 +1709,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "research_question",
       "asbval:target_claim_text": "Monitor the execution status and completion of automated CI/CD workflows (e.g., GitHub Actions) in real time, polling for status updates and verifying successful artifact production. This skill is essential when validating that build pipelines for scientific software (such as mas",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:52:04.330531+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-status-monitoring/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/workflow-status-monitoring/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GitHub Actions is not mentioned anywhere in the paper. The paper does not discuss CI/CD workflows or GitHub Actions.",
@@ -1725,17 +1729,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "GitHub Actions (CI/CD automation platform for triggering and monitoring workflow execution)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:52:04.330531+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-status-monitoring/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/workflow-status-monitoring/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GitHub Actions API is not mentioned in the paper. The paper does not discuss API-based workflow monitoring.",
@@ -1745,17 +1749,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "GitHub Actions API (Programmatic polling interface for workflow run status and artifact metadata retrieval)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:52:04.330531+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-status-monitoring/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/workflow-status-monitoring/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "JDK 25 is not mentioned in the paper. While MZmine is discussed as a tool used in the IIMN workflow, no specific Java version or build requirements are specified.",
@@ -1765,17 +1769,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "JDK 25 (Java compiler and runtime required to build and validate mzmine artifacts)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:52:04.330531+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-status-monitoring/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/workflow-status-monitoring/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "JavaFX 24 is not mentioned in the paper. While MZmine is discussed, no GUI toolkit or JavaFX details are provided.",
@@ -1785,17 +1789,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "JavaFX 24 (GUI toolkit packaged with mzmine artifacts for cross-platform UI rendering)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0007675"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:52:04.330531+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000340"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-status-monitoring/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/workflow-status-monitoring/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To reach a broad user base, we interfaced the IIMN workflow with three widely used open source MS processing tools (MZmine17, MS-DIAL18, and XCMS13,16).",
       "asbval:note": "MZmine is confirmed as an open-source mass spectrometry data processing tool used in the paper's IIMN workflow. However, the card's claims about CI/CD workflows, GitHub Actions, JDK 25, and JavaFX are not supported by the paper.",
@@ -1805,17 +1809,17 @@
       "asbval:target_artifact_kind": "skill_bundle",
       "asbval:target_claim_field": "tools",
       "asbval:target_claim_text": "mzmine (open-source software for mass spectrometry data processing)",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:52:04.330531+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
-      "@id": "asbval:assertion/skill/build-artifact-retrieval-and-validation/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/build-artifact-retrieval-and-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "build-artifact-retrieval-and-validation",
@@ -1823,12 +1827,12 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.0,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-workflow-triggering/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/ci-cd-workflow-triggering/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "ci-cd-workflow-triggering",
@@ -1836,12 +1840,12 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.0,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/conditional-routing-logic-extraction/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/conditional-routing-logic-extraction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "conditional-routing-logic-extraction",
@@ -1849,12 +1853,12 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.0,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/control-flow-diagram-synthesis/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/control-flow-diagram-synthesis/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "control-flow-diagram-synthesis",
@@ -1862,12 +1866,12 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.125,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/data-type-classification-schema-design/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/data-type-classification-schema-design/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "data-type-classification-schema-design",
@@ -1875,12 +1879,12 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.0,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-api-integration/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/github-actions-api-integration/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "github-actions-api-integration",
@@ -1888,12 +1892,12 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.0,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/java-application-build-verification/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/java-application-build-verification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "java-application-build-verification",
@@ -1901,12 +1905,12 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.0,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/java-source-code-inspection/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/java-source-code-inspection/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "java-source-code-inspection",
@@ -1914,12 +1918,12 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.0,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/module-dispatch-architecture-analysis/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/module-dispatch-architecture-analysis/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "module-dispatch-architecture-analysis",
@@ -1927,12 +1931,12 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.0,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-status-monitoring/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/skill/workflow-status-monitoring/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "workflow-status-monitoring",
@@ -1940,12 +1944,12 @@
       "asbval:threshold": 0.6,
       "asbval:triage_status": "critique",
       "asbval:yes_rate": 0.16666666666666666,
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000302"
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000404"
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mzmine is an open-source software for mass spectrometry data processing.",
       "asbval:note": null,
@@ -1955,17 +1959,17 @@
       "asbval:supported_raw": "yes",
       "asbval:target_artifact_id": "claim_001",
       "asbval:target_artifact_kind": "ledger_claim",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:52.425292+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mzmine aims to provide a user-friendly, flexible and easily extendable software.",
       "asbval:note": null,
@@ -1975,17 +1979,17 @@
       "asbval:supported_raw": "yes",
       "asbval:target_artifact_id": "claim_002",
       "asbval:target_artifact_kind": "ledger_claim",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:52.425292+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mzmine provides a complete set of modules covering the entire MS data analysis workflow.",
       "asbval:note": null,
@@ -1995,17 +1999,17 @@
       "asbval:supported_raw": "yes",
       "asbval:target_artifact_id": "claim_003",
       "asbval:target_artifact_kind": "ledger_claim",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:52.425292+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mzmine supports liquid chromatography (LC).",
       "asbval:note": null,
@@ -2015,17 +2019,17 @@
       "asbval:supported_raw": "yes",
       "asbval:target_artifact_id": "claim_004",
       "asbval:target_artifact_kind": "ledger_claim",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:52.425292+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mzmine supports gas chromatography (GC).",
       "asbval:note": "Source excerpt is fragmented; substring_in_paper=false suggests context may be incomplete",
@@ -2035,17 +2039,17 @@
       "asbval:supported_raw": "partial",
       "asbval:target_artifact_id": "claim_005",
       "asbval:target_artifact_kind": "ledger_claim",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:52.425292+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mzmine supports ion mobility spectrometry (IMS).",
       "asbval:note": "Source excerpt is fragmented; substring_in_paper=false suggests context may be incomplete",
@@ -2055,17 +2059,17 @@
       "asbval:supported_raw": "partial",
       "asbval:target_artifact_id": "claim_006",
       "asbval:target_artifact_kind": "ledger_claim",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:52.425292+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mzmine supports MS imaging such as MALDI.",
       "asbval:note": null,
@@ -2075,17 +2079,17 @@
       "asbval:supported_raw": "yes",
       "asbval:target_artifact_id": "claim_007",
       "asbval:target_artifact_kind": "ledger_claim",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:52.425292+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000338"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000403"
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mzmine supports most MS instruments.",
       "asbval:note": "Source excerpt is fragmented; substring_in_paper=false suggests context may be incomplete",
@@ -2095,17 +2099,17 @@
       "asbval:supported_raw": "partial",
       "asbval:target_artifact_id": "claim_008",
       "asbval:target_artifact_kind": "ledger_claim",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:52.425292+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The project is written using JDK version 25.",
       "asbval:note": "Source excerpt appears to be URL-encoded badge metadata rather than natural text; substring_in_paper=false indicates extraction from non-text source",
@@ -2115,17 +2119,17 @@
       "asbval:supported_raw": "partial",
       "asbval:target_artifact_id": "claim_009",
       "asbval:target_artifact_kind": "ledger_claim",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:52.425292+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-021-23953-9/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The project uses JavaFX version 24.",
       "asbval:note": "Source excerpt appears to be URL-encoded badge metadata rather than natural text; substring_in_paper=false indicates extraction from non-text source",
@@ -2135,13 +2139,13 @@
       "asbval:supported_raw": "partial",
       "asbval:target_artifact_id": "claim_010",
       "asbval:target_artifact_kind": "ledger_claim",
-      "eco:evidence_type": {
-        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
-      },
       "prov:wasAttributedTo": "anthropic/claude-haiku-4-5-20251001",
       "prov:wasGeneratedAtTime": "2026-06-15T21:48:52.425292+00:00",
-      "sepio:credibility_status": {
-        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000339"
+      "ro:0002558": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000501"
+      },
+      "sepio:0000183": {
+        "@id": "http://purl.obolibrary.org/obo/SEPIO_0000405"
       }
     },
     {

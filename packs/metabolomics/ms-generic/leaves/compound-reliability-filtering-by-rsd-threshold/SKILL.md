@@ -1,6 +1,9 @@
 ---
 name: compound-reliability-filtering-by-rsd-threshold
-description: Use when apply this filter after batch correction of compound/internal-standard ratios when you have pooled study quality control (SQC) samples and need to determine which compounds are sufficiently reproducible for downstream reporting. Use it specifically when the nonReportableRSD threshold (e.
+description: Use when apply this filter after batch correction of compound/internal-standard
+  ratios when you have pooled study quality control (SQC) samples and need to determine
+  which compounds are sufficiently reproducible for downstream reporting. Use it specifically
+  when the nonReportableRSD threshold (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +17,8 @@ metadata:
   - mzQualityDashboard
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality

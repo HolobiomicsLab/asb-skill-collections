@@ -1,6 +1,9 @@
 ---
 name: spectral-library-polarity-separation
-description: Use when you have loaded an MS2 library (from NIST, GNPS, or other sources via read_lib()) that contains both positive and negative ionization modes mixed in a single file, and you need to produce two separate, polarity-specific MSP files for use in MS-DIAL or similar tandem MS analysis software.
+description: Use when you have loaded an MS2 library (from NIST, GNPS, or other sources
+  via read_lib()) that contains both positive and negative ionization modes mixed
+  in a single file, and you need to produce two separate, polarity-specific MSP files
+  for use in MS-DIAL or similar tandem MS analysis software.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -23,6 +26,8 @@ metadata:
   - complete_mgf
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler

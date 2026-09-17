@@ -1,6 +1,8 @@
 ---
 name: condition-effect-matrix-generation
-description: 'Use when you need to create a synthetic feature table with known, ground-truth condition effects for method validation when: (1) testing normalization or batch-correction algorithms that must not confound condition signal with batch noise;'
+description: 'Use when you need to create a synthetic feature table with known, ground-truth
+  condition effects for method validation when: (1) testing normalization or batch-correction
+  algorithms that must not confound condition signal with batch noise;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,11 +16,14 @@ metadata:
   - HMDB / MoNA databases
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
 - github.com__yufree__mzrtsim
 claims: []
 provenance:

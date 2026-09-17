@@ -1,6 +1,7 @@
 ---
 name: online-proteomics-resource-integration
-description: Use when your analysis requires MS/MS spectra from public proteomics datasets but you want to avoid manual download and format conversion.
+description: Use when your analysis requires MS/MS spectra from public proteomics
+  datasets but you want to avoid manual download and format conversion.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3634
@@ -16,12 +17,16 @@ metadata:
   - PSI-MOD Protein Modifications Ontology
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

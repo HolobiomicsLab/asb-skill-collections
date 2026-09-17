@@ -1,6 +1,9 @@
 ---
 name: spectrum-processing-throughput-benchmarking
-description: Use when when selecting a spectrum processing library for high-throughput proteomics or metabolomics workflows, or when optimizing an existing pipeline for computational efficiency. Apply this skill when you have access to representative raw MS data (e.
+description: Use when when selecting a spectrum processing library for high-throughput
+  proteomics or metabolomics workflows, or when optimizing an existing pipeline for
+  computational efficiency. Apply this skill when you have access to representative
+  raw MS data (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -19,16 +22,21 @@ metadata:
   - matplotlib
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
 - pymzML (version 2.5.2)
 - pyOpenMS (version 2.7.0)
 - import seaborn as sns
-- Spectrum processing in spectrum_utils has been optimized for computational efficiency using [NumPy](https://www.numpy.org/)
+- Spectrum processing in spectrum_utils has been optimized for computational efficiency
+  using [NumPy](https://www.numpy.org/)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

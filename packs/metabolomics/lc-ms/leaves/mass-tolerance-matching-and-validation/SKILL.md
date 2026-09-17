@@ -1,6 +1,8 @@
 ---
 name: mass-tolerance-matching-and-validation
-description: Use when you have an MS/MS spectrum with observed peaks and a peptidoform specification (e.g., ProForma 2.0 notation such as 'EM[Oxidation]EVEES[Phospho]PEK'), and you need to annotate which observed peaks correspond to known fragment ions.
+description: Use when you have an MS/MS spectrum with observed peaks and a peptidoform
+  specification (e.g., ProForma 2.0 notation such as 'EM[Oxidation]EVEES[Phospho]PEK'),
+  and you need to annotate which observed peaks correspond to known fragment ions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,12 +16,16 @@ metadata:
   - Numba
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

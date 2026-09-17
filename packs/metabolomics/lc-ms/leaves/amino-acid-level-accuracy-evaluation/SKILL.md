@@ -1,6 +1,8 @@
 ---
 name: amino-acid-level-accuracy-evaluation
-description: Use when you have predicted peptide sequences from a de novo sequencing tool (e.g., Casanovo) and want to understand the fine-grained accuracy of the predictions beyond exact-match peptide-level scoring.
+description: Use when you have predicted peptide sequences from a de novo sequencing
+  tool (e.g., Casanovo) and want to understand the fine-grained accuracy of the predictions
+  beyond exact-match peptide-level scoring.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -15,14 +17,18 @@ metadata:
   - limelight-import-casanovo
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-024-49731-x
   title: Casanovo
 - doi: 10.1093/bib/bbac542
   title: ''
 evidence_spans:
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing.
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing.
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing
 - Pytorch is installed automatically when installing Casanovo
 - Upgraded minimum Lightning version to 2.6.
 claims: []

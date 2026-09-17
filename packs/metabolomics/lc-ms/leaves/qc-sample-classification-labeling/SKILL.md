@@ -1,6 +1,8 @@
 ---
 name: qc-sample-classification-labeling
-description: Use when when loading multiple LC-MS runs (mzML files) into an MsExperiment object and the injection sequence contains an interleaved or documented pattern of QC and sample runs (e.g., two QC, four sample, two QC, four sample, two QC).
+description: Use when when loading multiple LC-MS runs (mzML files) into an MsExperiment
+  object and the injection sequence contains an interleaved or documented pattern
+  of QC and sample runs (e.g., two QC, four sample, two QC, four sample, two QC).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -15,6 +17,8 @@ metadata:
   - TARDIS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis

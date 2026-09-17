@@ -1,6 +1,8 @@
 ---
 name: multi-module-joint-training
-description: Use when when you have a pretrained encoder that captures domain knowledge (e.g., spectral feature extraction) and need to train task-specific decoder or scoring modules on top of it without degrading the encoder's learned representations.
+description: Use when when you have a pretrained encoder that captures domain knowledge
+  (e.g., spectral feature extraction) and need to train task-specific decoder or scoring
+  modules on top of it without degrading the encoder's learned representations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -13,6 +15,8 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

@@ -1,6 +1,8 @@
 ---
 name: spectral-peak-clustering-gc-ims
-description: Use when after peak detection on individual GC-IMS samples, when you need to assign consistent cluster IDs to peaks detected across multiple samples to enable cross-sample comparison and quantification.
+description: Use when after peak detection on individual GC-IMS samples, when you
+  need to assign consistent cluster IDs to peaks detected across multiple samples
+  to enable cross-sample comparison and quantification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -13,6 +15,8 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS

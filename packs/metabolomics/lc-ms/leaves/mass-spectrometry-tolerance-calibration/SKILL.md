@@ -1,6 +1,7 @@
 ---
 name: mass-spectrometry-tolerance-calibration
-description: Use when after generating a feature table from mzML data (via Asari) and before performing MS1 or MS2 annotation.
+description: Use when after generating a feature table from mzML data (via Asari)
+  and before performing MS1 or MS2 annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,6 +16,8 @@ metadata:
   - mass2chem
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

@@ -1,6 +1,8 @@
 ---
 name: adduct-and-fragment-neutral-mass-calculation
-description: Use when you have an LC-MS peak-intensity matrix with observed m/z values (from negative or positive mode ionization) and need to map each peak to candidate neutral masses in KEGG. Use this skill when you have a curated Cpd.
+description: Use when you have an LC-MS peak-intensity matrix with observed m/z values
+  (from negative or positive mode ionization) and need to map each peak to candidate
+  neutral masses in KEGG. Use this skill when you have a curated Cpd.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,14 +17,19 @@ metadata:
   - KEGG database
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
 evidence_spans:
-- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides tools for context-based annotation of untargeted LC-MS data.
+- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides
+  tools for context-based annotation of untargeted LC-MS data.
 - mWISE (metabolomics Wise Inference of Speck Entities) is an R package
-- The default table of adducts and fragments is built using information from CAMERA R package
-- The default table of adducts and fragments is built using information from CAMERA R package, H. Tong et al., and cliqueMS.
+- The default table of adducts and fragments is built using information from CAMERA
+  R package
+- The default table of adducts and fragments is built using information from CAMERA
+  R package, H. Tong et al., and cliqueMS.
 - information from CAMERA R package, H. Tong et al., and cliqueMS.
 claims: []
 provenance:

@@ -1,6 +1,8 @@
 ---
 name: kendrick-mass-defect-calculation
-description: Use when you have a feature list from LC- or GC-HRMS analysis (with m/z, retention time, and exact mass columns) and you want to detect homologous series of PFAS compounds that repeat by CF₂ mass increments (typically ≈34 Da).
+description: Use when you have a feature list from LC- or GC-HRMS analysis (with m/z,
+  retention time, and exact mass columns) and you want to detect homologous series
+  of PFAS compounds that repeat by CF₂ mass increments (typically ≈34 Da).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +16,8 @@ metadata:
   - pandas
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen

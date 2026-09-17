@@ -1,0 +1,2106 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "asbext": "https://w3id.org/asb/indicium-ext#",
+      "chebi": "http://purl.obolibrary.org/obo/CHEBI_",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "fabio": "http://purl.org/spar/fabio/",
+      "ms": "http://purl.obolibrary.org/obo/MS_",
+      "ncbitaxon": "http://purl.obolibrary.org/obo/NCBITaxon_",
+      "oa": "http://www.w3.org/ns/oa#",
+      "obi": "http://purl.obolibrary.org/obo/OBI_",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "p-plan": "http://purl.org/net/p-plan#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "repme": "https://w3id.org/reproduceme#",
+      "sepio": "http://purl.obolibrary.org/obo/SEPIO_",
+      "uberon": "http://purl.obolibrary.org/obo/UBERON_"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": [
+        "Dataset",
+        "repme:ScientificWorkflow"
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ],
+      "dateCreated": "2026-06-15",
+      "description": "Extract relative standard deviation of QC samples (RSDQC) values for each compound across all internal standard candidates from a batch-corrected experiment object, and identify the internal standard achieving the lowest RSDQC per compound. Produce a recommendation table.",
+      "hasPart": [
+        {
+          "@id": "evidence/source_snippets.md"
+        },
+        {
+          "@id": "inputs/dataset_folder_tree.txt"
+        },
+        {
+          "@id": "inputs/dataset_preview.md"
+        },
+        {
+          "@id": "evaluation/evaluation_strategy.md"
+        },
+        {
+          "@id": "evaluation/review_rubric.json"
+        },
+        {
+          "@id": "artifact_provenance.json"
+        },
+        {
+          "@id": "ledger/claims.jsonl"
+        },
+        {
+          "@id": "ledger/results.jsonl"
+        }
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "mentions": [
+        {
+          "@id": "#action-task_003"
+        },
+        {
+          "@id": "urn:asb:task:task_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_001"
+        },
+        {
+          "@id": "urn:asb:claim:claim_002"
+        },
+        {
+          "@id": "urn:asb:claim:claim_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_004"
+        },
+        {
+          "@id": "urn:asb:claim:claim_005"
+        },
+        {
+          "@id": "urn:asb:claim:claim_006"
+        },
+        {
+          "@id": "urn:asb:claim:claim_007"
+        },
+        {
+          "@id": "urn:asb:claim:claim_008"
+        },
+        {
+          "@id": "urn:asb:claim:claim_009"
+        },
+        {
+          "@id": "urn:asb:claim:claim_010"
+        },
+        {
+          "@id": "urn:asb:claim:claim_011"
+        },
+        {
+          "@id": "urn:asb:claim:claim_012"
+        },
+        {
+          "@id": "urn:asb:claim:claim_013"
+        },
+        {
+          "@id": "urn:asb:claim:claim_014"
+        },
+        {
+          "@id": "urn:asb:claim:claim_015"
+        },
+        {
+          "@id": "urn:asb:claim:claim_016"
+        },
+        {
+          "@id": "urn:asb:claim:claim_017"
+        },
+        {
+          "@id": "urn:asb:claim:claim_018"
+        },
+        {
+          "@id": "urn:asb:claim:claim_019"
+        },
+        {
+          "@id": "urn:asb:claim:claim_020"
+        },
+        {
+          "@id": "urn:asb:claim:claim_021"
+        },
+        {
+          "@id": "urn:asb:claim:claim_022"
+        },
+        {
+          "@id": "urn:asb:claim:claim_023"
+        },
+        {
+          "@id": "urn:asb:claim:claim_024"
+        },
+        {
+          "@id": "urn:asb:claim:claim_025"
+        },
+        {
+          "@id": "urn:asb:claim:claim_026"
+        },
+        {
+          "@id": "urn:asb:claim:claim_027"
+        },
+        {
+          "@id": "urn:asb:claim:claim_028"
+        },
+        {
+          "@id": "urn:asb:claim:claim_029"
+        },
+        {
+          "@id": "urn:asb:claim:claim_030"
+        },
+        {
+          "@id": "urn:asb:claim:claim_031"
+        },
+        {
+          "@id": "urn:asb:claim:claim_032"
+        },
+        {
+          "@id": "urn:asb:claim:claim_033"
+        },
+        {
+          "@id": "urn:asb:claim:claim_034"
+        },
+        {
+          "@id": "urn:asb:claim:claim_035"
+        },
+        {
+          "@id": "urn:asb:claim:claim_036"
+        },
+        {
+          "@id": "urn:asb:result:result_001"
+        },
+        {
+          "@id": "urn:asb:result:result_002"
+        },
+        {
+          "@id": "urn:asb:result:result_003"
+        },
+        {
+          "@id": "urn:asb:result:result_004"
+        },
+        {
+          "@id": "urn:asb:result:result_005"
+        },
+        {
+          "@id": "urn:asb:result:result_006"
+        },
+        {
+          "@id": "urn:asb:result:result_007"
+        },
+        {
+          "@id": "urn:asb:result:result_008"
+        },
+        {
+          "@id": "urn:asb:result:result_009"
+        },
+        {
+          "@id": "urn:asb:result:result_010"
+        },
+        {
+          "@id": "urn:asb:result:result_011"
+        },
+        {
+          "@id": "urn:asb:result:result_012"
+        },
+        {
+          "@id": "urn:asb:result:result_013"
+        },
+        {
+          "@id": "urn:asb:result:result_014"
+        },
+        {
+          "@id": "urn:asb:result:result_015"
+        },
+        {
+          "@id": "urn:asb:result:result_016"
+        },
+        {
+          "@id": "urn:asb:result:result_017"
+        },
+        {
+          "@id": "urn:asb:result:result_018"
+        },
+        {
+          "@id": "urn:asb:result:result_019"
+        },
+        {
+          "@id": "urn:asb:result:result_020"
+        },
+        {
+          "@id": "urn:asb:result:result_021"
+        },
+        {
+          "@id": "urn:asb:result:result_022"
+        },
+        {
+          "@id": "urn:asb:result:result_023"
+        },
+        {
+          "@id": "urn:asb:result:result_024"
+        },
+        {
+          "@id": "urn:asb:result:result_025"
+        },
+        {
+          "@id": "urn:asb:result:result_026"
+        },
+        {
+          "@id": "urn:asb:result:result_027"
+        },
+        {
+          "@id": "urn:asb:result:result_028"
+        },
+        {
+          "@id": "urn:asb:result:result_029"
+        },
+        {
+          "@id": "urn:asb:result:result_030"
+        },
+        {
+          "@id": "urn:asb:result:result_031"
+        },
+        {
+          "@id": "urn:asb:result:result_032"
+        },
+        {
+          "@id": "urn:asb:result:result_033"
+        },
+        {
+          "@id": "urn:asb:result:result_034"
+        },
+        {
+          "@id": "urn:asb:result:result_035"
+        },
+        {
+          "@id": "#env-task_003"
+        },
+        {
+          "@id": "http://edamontology.org/topic_3172"
+        }
+      ],
+      "name": "Reproduce the RSDQC-based internal standard recommendation output from the analysed experiment",
+      "repme:hasComputationalEnvironment": {
+        "@id": "#computational-environment"
+      }
+    },
+    {
+      "@id": "evidence/source_snippets.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evidence/source_snippets.md"
+    },
+    {
+      "@id": "inputs/dataset_folder_tree.txt",
+      "@type": "File",
+      "encodingFormat": "text/plain",
+      "name": "inputs/dataset_folder_tree.txt"
+    },
+    {
+      "@id": "inputs/dataset_preview.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "inputs/dataset_preview.md"
+    },
+    {
+      "@id": "evaluation/evaluation_strategy.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evaluation/evaluation_strategy.md"
+    },
+    {
+      "@id": "evaluation/review_rubric.json",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "name": "evaluation/review_rubric.json"
+    },
+    {
+      "@id": "urn:asb:task:task_003",
+      "@type": [
+        "ScholarlyArticle",
+        "p-plan:Plan",
+        "http://purl.org/spar/fabio/SoftwarePaper"
+      ],
+      "asbext:task_kind": "reproduction",
+      "description": "Extract relative standard deviation of QC samples (RSDQC) values for each compound across all internal standard candidates from a batch-corrected experiment object, and identify the internal standard achieving the lowest RSDQC per compound. Produce a recommendation table.",
+      "keywords": [
+        "internal-standard-selection-optimization",
+        "batch-corrected-data-extraction",
+        "qc-sample-variability-assessment",
+        "compound-standard-ratio-normalization",
+        "metabolomics-quality-metric-interpretation"
+      ],
+      "name": "Reproduce the RSDQC-based internal standard recommendation output from the analysed experiment",
+      "repme:hasResearcher": [
+        {
+          "@id": "urn:asb:researcher:maas-pascal"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:researcher:maas-pascal",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Pascal Maas"
+    },
+    {
+      "@id": "urn:asb:tool:r",
+      "@type": "SoftwareApplication",
+      "name": "R"
+    },
+    {
+      "@id": "urn:asb:tool:mzquality",
+      "@type": "SoftwareApplication",
+      "name": "mzQuality",
+      "schema:url": "https://github.com/hankemeierlab/mzQuality"
+    },
+    {
+      "@id": "urn:asb:tool:summarizedexperiment",
+      "@type": "SoftwareApplication",
+      "name": "SummarizedExperiment"
+    },
+    {
+      "@id": "urn:asb:input:task_003_0",
+      "@type": "File",
+      "name": "task_002.expected_outputs[0]: SummarizedExperiment object with 'ratio_corrected' assay containing batch-corrected Compound/Internal Standard ratios"
+    },
+    {
+      "@id": "urn:asb:input:task_003_1",
+      "@type": "File",
+      "name": "Batch-corrected SummarizedExperiment object with QC sample assays and internal standard ratio data"
+    },
+    {
+      "@id": "urn:asb:output:task_003_0",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Recommendation table (tab-delimited or CSV) with columns: compound, recommended_internal_standard, min_RSDQC",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_003"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_003_1",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Full RSDQC matrix (tab-delimited or CSV) with compounds as rows and internal standard candidates as columns, showing RSDQC for each pair",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_003"
+      }
+    },
+    {
+      "@id": "#action-task_003",
+      "@type": [
+        "CreateAction",
+        "prov:Activity",
+        "p-plan:Step"
+      ],
+      "description": "Extract relative standard deviation of QC samples (RSDQC) values for each compound across all internal standard candidates from a batch-corrected experiment object, and identify the internal standard achieving the lowest RSDQC per compound. Produce a recommendation table.",
+      "instrument": [
+        {
+          "@id": "urn:asb:tool:r"
+        },
+        {
+          "@id": "urn:asb:tool:mzquality"
+        },
+        {
+          "@id": "urn:asb:tool:summarizedexperiment"
+        }
+      ],
+      "name": "Reproduce the RSDQC-based internal standard recommendation output from the analysed experiment",
+      "object": [
+        {
+          "@id": "urn:asb:input:task_003_0"
+        },
+        {
+          "@id": "urn:asb:input:task_003_1"
+        }
+      ],
+      "repme:hasInputData": [
+        {
+          "@id": "urn:asb:input:task_003_0"
+        },
+        {
+          "@id": "urn:asb:input:task_003_1"
+        }
+      ],
+      "repme:hasOutputData": [
+        {
+          "@id": "urn:asb:output:task_003_0"
+        },
+        {
+          "@id": "urn:asb:output:task_003_1"
+        }
+      ],
+      "repme:hasResult": [
+        {
+          "@id": "urn:asb:result:result_007"
+        }
+      ],
+      "result": [
+        {
+          "@id": "urn:asb:output:task_003_0"
+        },
+        {
+          "@id": "urn:asb:output:task_003_1"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:claim:claim_001",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "mzQuality features outlier detection, batch-correction using pooled study quality control samples (SQC), filters for removing unreliable compounds, various plots for inspecting, and generating reports for further processing."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 817,
+          "oa:start": 513
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "mzQuality features outlier detection, batch-correction using pooled study quality control samples (SQC), filters for removing unreliable compounds, various plots for inspecting, and generating reports",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_002",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "mzQuality is available as an interactive Shiny dashboard application called mzQualityDashboard."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1068,
+          "oa:start": 923
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "mzQuality is available as an interactive Shiny dashboard application called mzQualityDashboard.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_003",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Quality Control is an important step in the analysis of mass spectrometry data."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1823,
+          "oa:start": 1744
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Quality Control is an important step in the analysis of mass spectrometry data.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_004",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Existing tools phenomis and qmtools are designed with access to a phenotype in mind."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1917,
+          "oa:start": 1824
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Existing tools phenomis and qmtools are designed with access to a phenotype in mind.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_005",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "mzQuality was developed to perform outlier detection, batch correction and other quality control steps without the need for defined phenotypes."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2182,
+          "oa:start": 2039
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "mzQuality was developed to perform outlier detection, batch correction and other quality control steps without the need for defined phenotypes.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_006",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "mzQuality follows the recommendations of the mQACC for quality control by leveraging on proper batch design and the addition of various quality control samples."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2336,
+          "oa:start": 2183
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "mzQuality follows the recommendations of the mQACC for quality control by leveraging on proper batch design and the addition of various quality control samples.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_007",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "mzQuality is capable of recommending different internal standards by exhaustively calculating the Relative Standard Deviation of QC samples (RSDQC) of batch-corrected ratios."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2527,
+          "oa:start": 2338
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "mzQuality is capable of recommending different internal standards by exhaustively calculating the Relative Standard Deviation of QC samples (RSDQC) of batch-corrected ratios.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_008",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "By supplying calibration line samples and known concentrations for spiked compounds, mzQuality is able to calculate absolute concentrations."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2763,
+          "oa:start": 2610
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "By supplying calibration line samples and known concentrations for spiked compounds, mzQuality is able to calculate absolute concentrations.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_009",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "mzQuality features import of data from a variety of formats, including a generalized tab-delimited format and Sciex OS text exports."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3134,
+          "oa:start": 3000
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "mzQuality features import of data from a variety of formats, including a generalized tab-delimited format and Sciex OS text exports.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_010",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "phenomis provides tools for post-processing like quality control and normalization, as well as univariate statistics."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3744,
+          "oa:start": 3632
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "phenomis provides tools for post-processing like quality control and normalization, as well as univariate statistics.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_011",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "qmtools contains functions for processing quantitative metabolomics data, including imputation, normalization and filtering."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3949,
+          "oa:start": 3831
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "qmtools contains functions for processing quantitative metabolomics data, including imputation, normalization and filtering.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_012",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MatrixQCvis features interactive visualization of data quality metrics for various -omics datasets and uses the SummarizedExperiment object."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4226,
+          "oa:start": 4044
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "MatrixQCvis features interactive visualization of data quality metrics for various -omics datasets and uses the SummarizedExperiment object.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_013",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "mQACC is the Metabolomics Quality Assurance and Control Consortium."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4476,
+          "oa:start": 4295
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "mQACC is the Metabolomics Quality Assurance and Control Consortium.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_014",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "HUPO is the Human Proteome Organization."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4646,
+          "oa:start": 4511
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "HUPO is the Human Proteome Organization.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_015",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "HUPO has a Quality Control working group that focuses on quality control in proteomics."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4780,
+          "oa:start": 4647
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "HUPO has a Quality Control working group that focuses on quality control in proteomics.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_016",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "mzQuality requires input data to be in a tab-delimited format."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 16815,
+          "oa:start": 16728
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "mzQuality requires input data to be in a tab-delimited format.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_017",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The required columns for mzQuality input data include aliquot, compound, area, type, injection_time, and batch."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3743,
+          "oa:start": 3452
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The required columns for mzQuality input data include aliquot, compound, area, type, injection_time, and batch.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_018",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The readData function reads in data and checks for any missing or incorrect columns."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 17445,
+          "oa:start": 17305
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The readData function reads in data and checks for any missing or incorrect columns.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_019",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The buildExperiment function creates a SummarizedExperiment object from a data frame."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 17563,
+          "oa:start": 17446
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The buildExperiment function creates a SummarizedExperiment object from a data frame.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_020",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "In the current version of mzQuality, only one sample type can be used for calculating concentrations."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 18005,
+          "oa:start": 17892
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "In the current version of mzQuality, only one sample type can be used for calculating concentrations.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_021",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "mzQuality internally uses Bioconductor's SummarizedExperiment object to store data."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5935,
+          "oa:start": 5845
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "mzQuality internally uses Bioconductor's SummarizedExperiment object to store data.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_022",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The buildExperiment function automatically calculates the compound / Internal Standard ratio for each sample and stores it in the ratio assay."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7781,
+          "oa:start": 7632
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The buildExperiment function automatically calculates the compound / Internal Standard ratio for each sample and stores it in the ratio assay.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_023",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The convertExperiment function converts names in an already built SummarizedExperiment object to the ones mzQuality uses."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 8375,
+          "oa:start": 8047
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The convertExperiment function converts names in an already built SummarizedExperiment object to the ones mzQuality uses.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_024",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The doAnalysis function tests QC samples for outliers using their Compound / Internal Standard ratio."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 9517,
+          "oa:start": 9375
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The doAnalysis function tests QC samples for outliers using their Compound / Internal Standard ratio.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_025",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The doAnalysis function tests Study Samples for mis-injections using their Internal Standard areas."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 9611,
+          "oa:start": 9518
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The doAnalysis function tests Study Samples for mis-injections using their Internal Standard areas.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_026",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "aliquotPlot shows the distribution of the selected assay per aliquot, colored per sample type."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 11131,
+          "oa:start": 11012
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "aliquotPlot shows the distribution of the selected assay per aliquot, colored per sample type.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_027",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The aliquotPlot can be used to inspect technical replicates for similar peak areas and peak ratios within a batch."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 11274,
+          "oa:start": 11132
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The aliquotPlot can be used to inspect technical replicates for similar peak areas and peak ratios within a batch.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_028",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "All plots in mzQuality can be faceted using the facetPlot function."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4643,
+          "oa:start": 4596
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "All plots in mzQuality can be faceted using the facetPlot function.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_029",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The facetPlot function allows faceting by any column present in colData."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 12120,
+          "oa:start": 11957
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The facetPlot function allows faceting by any column present in colData.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_030",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "compoundPlot is a scatter plot of a selected compound across samples."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 12533,
+          "oa:start": 12454
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "compoundPlot is a scatter plot of a selected compound across samples.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_031",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "PCA plot can be used to inspect variation within- and between batches."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 13367,
+          "oa:start": 13258
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "PCA plot can be used to inspect variation within- and between batches.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_032",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "In the PCA plot, Quality Control samples used for batch correction should ideally be centered and form a tight cluster."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 13874,
+          "oa:start": 13743
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "In the PCA plot, Quality Control samples used for batch correction should ideally be centered and form a tight cluster.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_033",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The violin plot can be used to inspect the distribution of sample types."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5351,
+          "oa:start": 5280
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The violin plot can be used to inspect the distribution of sample types.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_034",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The Concentration Plot shows a linear model based on calculated ratio and known concentration."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 15098,
+          "oa:start": 14972
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The Concentration Plot shows a linear model based on calculated ratio and known concentration.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_035",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The createReports function creates a folder containing the results of analysis separated by Plots and Reports."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 15656,
+          "oa:start": 15519
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The createReports function creates a folder containing the results of analysis separated by Plots and Reports.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_036",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "mzQuality is designed to be used by anyone with basic knowledge of R."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2999,
+          "oa:start": 2846
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_mzquality/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "mzQuality is designed to be used by anyone with basic knowledge of R.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:result:result_001",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "mzQuality features outlier detection, batch-correction using pooled study quality control samples (SQC), filters for removing unreliable compounds, various plots for inspecting, and generating reports",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_001"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_002",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "mzQuality is available as an interactive Shiny dashboard application called mzQualityDashboard.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_002"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_003",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Quality Control is an important step in the analysis of mass spectrometry data.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_003"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_004",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Existing tools phenomis and qmtools are designed with access to a phenotype in mind.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_004"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_005",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "mzQuality was developed to perform outlier detection, batch correction and other quality control steps without the need for defined phenotypes.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_005"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_006",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "mzQuality follows the recommendations of the mQACC for quality control by leveraging on proper batch design and the addition of various quality control samples.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_006"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_007",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "mzQuality is capable of recommending different internal standards by exhaustively calculating the Relative Standard Deviation of QC samples (RSDQC) of batch-corrected ratios.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_007"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_008",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "By supplying calibration line samples and known concentrations for spiked compounds, mzQuality is able to calculate absolute concentrations.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_008"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_009",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "mzQuality features import of data from a variety of formats, including a generalized tab-delimited format and Sciex OS text exports.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_009"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_010",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "phenomis provides tools for post-processing like quality control and normalization, as well as univariate statistics.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_010"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_011",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "qmtools contains functions for processing quantitative metabolomics data, including imputation, normalization and filtering.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_011"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_012",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MatrixQCvis features interactive visualization of data quality metrics for various -omics datasets and uses the SummarizedExperiment object.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_012"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_013",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "mQACC is the Metabolomics Quality Assurance and Control Consortium.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_013"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_014",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "HUPO is the Human Proteome Organization.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_014"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_015",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "HUPO has a Quality Control working group that focuses on quality control in proteomics.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_015"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_016",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "mzQuality requires input data to be in a tab-delimited format.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_016"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_017",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The required columns for mzQuality input data include aliquot, compound, area, type, injection_time, and batch.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_017"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_018",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The readData function reads in data and checks for any missing or incorrect columns.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_018"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_019",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The buildExperiment function creates a SummarizedExperiment object from a data frame.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_019"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_020",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "In the current version of mzQuality, only one sample type can be used for calculating concentrations.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_020"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_021",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "mzQuality internally uses Bioconductor's SummarizedExperiment object to store data.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_021"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_022",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The buildExperiment function automatically calculates the compound / Internal Standard ratio for each sample and stores it in the ratio assay.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_022"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_023",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The convertExperiment function converts names in an already built SummarizedExperiment object to the ones mzQuality uses.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_023"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_024",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The doAnalysis function tests QC samples for outliers using their Compound / Internal Standard ratio. The doAnalysis function tests Study Samples for mis-injections using their Internal Standard areas",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_024"
+        },
+        {
+          "@id": "urn:asb:claim:claim_025"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_025",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "aliquotPlot shows the distribution of the selected assay per aliquot, colored per sample type.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_026"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_026",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The aliquotPlot can be used to inspect technical replicates for similar peak areas and peak ratios within a batch.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_027"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_027",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "All plots in mzQuality can be faceted using the facetPlot function.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_028"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_028",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The facetPlot function allows faceting by any column present in colData.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_029"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_029",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "compoundPlot is a scatter plot of a selected compound across samples.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_030"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_030",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "PCA plot can be used to inspect variation within- and between batches.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_031"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_031",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "In the PCA plot, Quality Control samples used for batch correction should ideally be centered and form a tight cluster.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_032"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_032",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The violin plot can be used to inspect the distribution of sample types.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_033"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_033",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The Concentration Plot shows a linear model based on calculated ratio and known concentration.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_034"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_034",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The createReports function creates a folder containing the results of analysis separated by Plots and Reports.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_035"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_035",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "mzQuality is designed to be used by anyone with basic knowledge of R.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_036"
+        }
+      ]
+    },
+    {
+      "@id": "#env-task_003",
+      "@type": [
+        "repme:ComputationalEnvironment"
+      ],
+      "repme:computeTier": "trivial"
+    },
+    {
+      "@id": "#agent-15-activity-task_003",
+      "@type": [
+        "prov:Activity"
+      ],
+      "prov:endedAtTime": "2026-06-15T13:26:14.235311+00:00",
+      "prov:qualifiedUsage": {
+        "@type": "prov:Usage",
+        "schema:name": "prompt_sha256",
+        "schema:value": "f58b1a2071b8e834"
+      },
+      "prov:wasAssociatedWith": {
+        "schema:name": "anthropic/claude-haiku-4-5-20251001"
+      },
+      "schema:name": "Agent 1.5 Claim Extractor"
+    },
+    {
+      "@id": "#computational-environment",
+      "@type": "repme:ComputationalEnvironment",
+      "repme:buildId": "AB19B8133BA2418EADCEE301B87F78F3",
+      "repme:depsHash": "sha256:029a81c5ecba8cba0301a44071f97a928c55447fc2ef79df68b43e4ecdd157ba",
+      "repme:gitCommit": "ddf6c1becb15c939b16600b7655d44e2d2baa690",
+      "repme:platform": "darwin-25.5.0-arm64",
+      "repme:pythonVersion": "3.11.15",
+      "schema:dateCreated": "2026-06-15T13:20:50.050063Z",
+      "schema:hasPart": [
+        {
+          "@id": "#agent-config-agent1_entity"
+        },
+        {
+          "@id": "#agent-config-agent2a_outline"
+        },
+        {
+          "@id": "#agent-config-agent2b_card"
+        },
+        {
+          "@id": "#agent-config-agent3_critique"
+        },
+        {
+          "@id": "#agent-config-agent_classify"
+        }
+      ],
+      "schema:softwareVersion": "agentic-science-builder@0.1.0"
+    },
+    {
+      "@id": "#agent-config-agent1_entity",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v3",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent1_entity"
+    },
+    {
+      "@id": "#agent-config-agent2a_outline",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-sonnet-4-6",
+      "repme:promptVersion": "v2",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2a_outline"
+    },
+    {
+      "@id": "#agent-config-agent2b_card",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v4",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2b_card"
+    },
+    {
+      "@id": "#agent-config-agent3_critique",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent3_critique"
+    },
+    {
+      "@id": "#agent-config-agent_classify",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent_classify"
+    },
+    {
+      "@id": "urn:asb:metabolomics:unknown",
+      "@type": "Dataset",
+      "assay_type": "targeted mass spectrometry",
+      "instrument": "Sciex",
+      "name": "Metabolomics Study Metadata",
+      "profile": "metabolomics_lcms",
+      "reproducibility_score": 0.387
+    },
+    {
+      "@id": "artifact_provenance.json",
+      "@type": "File",
+      "name": "artifact_provenance.json",
+      "encodingFormat": "application/json"
+    },
+    {
+      "@id": "ledger/claims.jsonl",
+      "@type": "File",
+      "name": "ledger/claims.jsonl",
+      "encodingFormat": "application/jsonlines"
+    },
+    {
+      "@id": "ledger/results.jsonl",
+      "@type": "File",
+      "name": "ledger/results.jsonl",
+      "encodingFormat": "application/jsonlines"
+    }
+  ]
+}

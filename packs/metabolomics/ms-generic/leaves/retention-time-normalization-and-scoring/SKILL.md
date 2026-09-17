@@ -1,6 +1,7 @@
 ---
 name: retention-time-normalization-and-scoring
-description: Use when you have XCMS-aligned feature tables with retention time values and need to compute pairwise feature similarity.
+description: Use when you have XCMS-aligned feature tables with retention time values
+  and need to compute pairwise feature similarity.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -14,6 +15,8 @@ metadata:
   - RAMClustR
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust

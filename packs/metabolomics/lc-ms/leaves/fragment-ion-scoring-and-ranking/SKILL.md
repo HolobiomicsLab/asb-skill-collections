@@ -1,6 +1,9 @@
 ---
 name: fragment-ion-scoring-and-ranking
-description: Use when when you have an experimental MS/MS spectrum (centroid mode) and need to convert it into a scored fragment library entry, or when you must rank candidate fragments by confidence before performing spectrum-to-spectrum matching in metabolite annotation workflows.
+description: Use when when you have an experimental MS/MS spectrum (centroid mode)
+  and need to convert it into a scored fragment library entry, or when you must rank
+  candidate fragments by confidence before performing spectrum-to-spectrum matching
+  in metabolite annotation workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,11 +18,14 @@ metadata:
   - RamClustR
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - start R (version "4.5.0" or higher)
 claims: []
 provenance:

@@ -1,8 +1,12 @@
 ---
 name: api-request-response-handling
-description: Use when you have nuclear magnetic resonance (NMR) peak data (proton 1H and carbon-13 13C measurements) that you need to classify using a deployed deep learning model, and you have access to a TensorFlow Serving instance running the SMART 3 classification model.
+description: Use when you have nuclear magnetic resonance (NMR) peak data (proton
+  1H and carbon-13 13C measurements) that you need to classify using a deployed deep
+  learning model, and you have access to a TensorFlow Serving instance running the
+  SMART 3 classification model.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -12,6 +16,8 @@ metadata:
   - DeepSAT
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT

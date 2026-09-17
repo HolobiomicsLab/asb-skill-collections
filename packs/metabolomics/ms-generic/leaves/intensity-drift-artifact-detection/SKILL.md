@@ -1,6 +1,8 @@
 ---
 name: intensity-drift-artifact-detection
-description: Use when processing raw MS intensity tables from long measurement sequences where you observe systematic, time-dependent changes in signal magnitude (e.g., progressive increase or decrease in peak intensity across a run).
+description: Use when processing raw MS intensity tables from long measurement sequences
+  where you observe systematic, time-dependent changes in signal magnitude (e.g.,
+  progressive increase or decrease in peak intensity across a run).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -11,6 +13,8 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey

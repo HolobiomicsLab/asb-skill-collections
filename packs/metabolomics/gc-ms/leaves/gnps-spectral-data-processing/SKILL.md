@@ -1,6 +1,8 @@
 ---
 name: gnps-spectral-data-processing
-description: Use when your input is raw or semi-processed MS/MS spectra fetched from GNPS or a compatible library (e.g., EMBL-MCF 2.0, NIST23) and you need to prepare them for neural-network-based formula prediction.
+description: Use when your input is raw or semi-processed MS/MS spectra fetched from
+  GNPS or a compatible library (e.g., EMBL-MCF 2.0, NIST23) and you need to prepare
+  them for neural-network-based formula prediction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -13,6 +15,8 @@ metadata:
   - GNPS
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

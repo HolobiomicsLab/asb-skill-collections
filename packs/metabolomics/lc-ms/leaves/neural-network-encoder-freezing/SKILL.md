@@ -1,6 +1,8 @@
 ---
 name: neural-network-encoder-freezing
-description: Use when when you have a pre-trained encoder (e.g., TCN spectrum encoder in FIDDLE) that has learned useful representations on a source task (e.g., MS/MS spectrum encoding), and you want to train lightweight task-specific modules (e.
+description: Use when when you have a pre-trained encoder (e.g., TCN spectrum encoder
+  in FIDDLE) that has learned useful representations on a source task (e.g., MS/MS
+  spectrum encoding), and you want to train lightweight task-specific modules (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +14,8 @@ metadata:
   - FIDDLE
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

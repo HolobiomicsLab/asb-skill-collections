@@ -1,6 +1,8 @@
 ---
 name: ms-ms-spectral-interpretation
-description: Use when you have acquired MS/MS spectral data (in mzML, mzXML, or equivalent format) for unknown compounds and need to identify the most probable metabolite structure.
+description: Use when you have acquired MS/MS spectral data (in mzML, mzXML, or equivalent
+  format) for unknown compounds and need to identify the most probable metabolite
+  structure.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,6 +15,8 @@ metadata:
   - PubChem
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma

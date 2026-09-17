@@ -1,8 +1,12 @@
 ---
 name: chemical-shift-data-formatting
-description: Use when you have collected or parsed 1H and 13C NMR peak data (chemical shift values and intensities) and need to submit it to the SMART 3 /api/smart3/search endpoint or similar TensorFlow Serving-backed molecular classification system that expects peaks as JSON rather than raw spectroscopic files.
+description: Use when you have collected or parsed 1H and 13C NMR peak data (chemical
+  shift values and intensities) and need to submit it to the SMART 3 /api/smart3/search
+  endpoint or similar TensorFlow Serving-backed molecular classification system that
+  expects peaks as JSON rather than raw spectroscopic files.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0593
@@ -12,6 +16,8 @@ metadata:
   - DeepSAT
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT

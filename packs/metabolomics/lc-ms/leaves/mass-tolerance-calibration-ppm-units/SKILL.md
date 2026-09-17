@@ -1,6 +1,9 @@
 ---
 name: mass-tolerance-calibration-ppm-units
-description: Use when when linking statistically significant LC-MS features into structural clusters based on adduct signatures and cross-assay references (e.g., [M+H]+/[M-H]−), and you need to specify the maximum allowed deviation (in ppm) between observed m/z values and calculated neutral masses.
+description: Use when when linking statistically significant LC-MS features into structural
+  clusters based on adduct signatures and cross-assay references (e.g., [M+H]+/[M-H]−),
+  and you need to specify the maximum allowed deviation (in ppm) between observed
+  m/z values and calculated neutral masses.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -19,6 +22,8 @@ metadata:
   - pandas / numpy
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi

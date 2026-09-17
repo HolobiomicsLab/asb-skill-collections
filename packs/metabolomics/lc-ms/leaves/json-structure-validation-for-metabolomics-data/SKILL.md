@@ -1,6 +1,7 @@
 ---
 name: json-structure-validation-for-metabolomics-data
-description: Use when after serializing empirical compound collections to JSON format via khipu's build_empCpds command, or before ingesting empCpd.
+description: Use when after serializing empirical compound collections to JSON format
+  via khipu's build_empCpds command, or before ingesting empCpd.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0336
@@ -14,6 +15,8 @@ metadata:
   - metDataModel
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

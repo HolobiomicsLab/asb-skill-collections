@@ -149,4 +149,4 @@ Extract 200-dimensional spectral embeddings from the MS2DeepScore base network f
 
 ---
 
-*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See [`artifact_provenance.json`](../../../capsules/ms2deepscore/10_1186_s13321_021_00558_4__task_005/artifact_provenance.json) for what this release carries; it also lists the build artefacts the release does not promote.*

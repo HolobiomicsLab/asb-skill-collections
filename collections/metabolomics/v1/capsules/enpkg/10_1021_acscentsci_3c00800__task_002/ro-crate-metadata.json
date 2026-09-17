@@ -1,0 +1,740 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "EFO": "http://www.ebi.ac.uk/efo/EFO_",
+      "NCBITaxon": "http://purl.obolibrary.org/obo/NCBITaxon_",
+      "OBI": "http://purl.obolibrary.org/obo/OBI_",
+      "SO": "http://purl.obolibrary.org/obo/SO_",
+      "SRA": "https://www.ncbi.nlm.nih.gov/sra/",
+      "UBERON": "http://purl.obolibrary.org/obo/UBERON_",
+      "asbext": "https://w3id.org/asb/indicium-ext#",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "fabio": "http://purl.org/spar/fabio/",
+      "oa": "http://www.w3.org/ns/oa#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "p-plan": "http://purl.org/net/p-plan#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "repme": "https://w3id.org/reproduceme#",
+      "sepio": "http://purl.obolibrary.org/obo/SEPIO_"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": [
+        "Dataset",
+        "repme:ScientificWorkflow"
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ],
+      "dateCreated": "2026-06-15",
+      "description": "Execute the complete ENPKG full workflow on the provided example or test dataset, producing all final annotated output files ready for knowledge-graph integration and natural products annotation.",
+      "hasPart": [
+        {
+          "@id": "evidence/source_snippets.md"
+        },
+        {
+          "@id": "inputs/dataset_folder_tree.txt"
+        },
+        {
+          "@id": "inputs/dataset_preview.md"
+        },
+        {
+          "@id": "evaluation/evaluation_strategy.md"
+        },
+        {
+          "@id": "evaluation/review_rubric.json"
+        },
+        {
+          "@id": "artifact_provenance.json"
+        },
+        {
+          "@id": "ledger/claims.jsonl"
+        },
+        {
+          "@id": "ledger/results.jsonl"
+        }
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "mentions": [
+        {
+          "@id": "#action-task_002"
+        },
+        {
+          "@id": "urn:asb:task:task_002"
+        },
+        {
+          "@id": "urn:asb:claim:claim_001"
+        },
+        {
+          "@id": "urn:asb:claim:claim_002"
+        },
+        {
+          "@id": "urn:asb:claim:claim_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_004"
+        },
+        {
+          "@id": "urn:asb:result:result_001"
+        },
+        {
+          "@id": "urn:asb:result:result_002"
+        },
+        {
+          "@id": "urn:asb:result:result_003"
+        },
+        {
+          "@id": "urn:asb:result:result_004"
+        },
+        {
+          "@id": "#env-task_002"
+        },
+        {
+          "@id": "http://edamontology.org/topic_0622"
+        }
+      ],
+      "name": "Reconstruct the end-to-end ENPKG pipeline execution on a sample dataset",
+      "repme:hasComputationalEnvironment": {
+        "@id": "#computational-environment"
+      }
+    },
+    {
+      "@id": "evidence/source_snippets.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evidence/source_snippets.md"
+    },
+    {
+      "@id": "inputs/dataset_folder_tree.txt",
+      "@type": "File",
+      "encodingFormat": "text/plain",
+      "name": "inputs/dataset_folder_tree.txt"
+    },
+    {
+      "@id": "inputs/dataset_preview.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "inputs/dataset_preview.md"
+    },
+    {
+      "@id": "evaluation/evaluation_strategy.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evaluation/evaluation_strategy.md"
+    },
+    {
+      "@id": "evaluation/review_rubric.json",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "name": "evaluation/review_rubric.json"
+    },
+    {
+      "@id": "urn:asb:task:task_002",
+      "@type": [
+        "ScholarlyArticle",
+        "p-plan:Plan",
+        "http://purl.org/spar/fabio/ResearchPaper"
+      ],
+      "asbext:task_kind": "component_reconstruction",
+      "description": "Execute the complete ENPKG full workflow on the provided example or test dataset, producing all final annotated output files ready for knowledge-graph integration and natural products annotation.",
+      "keywords": [
+        "natural-products-workflow-orchestration",
+        "spectral-data-processing-and-annotation",
+        "molecular-networking-construction",
+        "knowledge-graph-generation-and-validation",
+        "sample-centric-metabolite-annotation"
+      ],
+      "name": "Reconstruct the end-to-end ENPKG pipeline execution on a sample dataset",
+      "repme:hasResearcher": [
+        {
+          "@id": "urn:asb:researcher:arnaud-gaudry-2024"
+        },
+        {
+          "@id": "urn:asb:researcher:marco-pagni-2024"
+        },
+        {
+          "@id": "urn:asb:researcher:florence-mehl-2024"
+        },
+        {
+          "@id": "urn:asb:researcher:s-bastien-moretti-2024"
+        },
+        {
+          "@id": "urn:asb:researcher:luis-manuel-quiros-guerrero-2024"
+        },
+        {
+          "@id": "urn:asb:researcher:luca-cappelletti-2024"
+        },
+        {
+          "@id": "urn:asb:researcher:adriano-rutz-2024"
+        },
+        {
+          "@id": "urn:asb:researcher:marcel-kaiser-2024"
+        },
+        {
+          "@id": "urn:asb:researcher:laurence-marcourt-2024"
+        },
+        {
+          "@id": "urn:asb:researcher:ferreira-queiroz-2024"
+        },
+        {
+          "@id": "urn:asb:researcher:jean-robert-ioset-2024"
+        },
+        {
+          "@id": "urn:asb:researcher:antonio-grondin-2024"
+        },
+        {
+          "@id": "urn:asb:researcher:bruno-david-2024"
+        },
+        {
+          "@id": "urn:asb:researcher:jean-luc-wolfender-2024"
+        },
+        {
+          "@id": "urn:asb:researcher:pierre-marie-allard-2024"
+        }
+      ],
+      "sameAs": "https://doi.org/10.1021/acscentsci.3c00800#task_002",
+      "schema:identifier": "10.1021/acscentsci.3c00800"
+    },
+    {
+      "@id": "urn:asb:researcher:arnaud-gaudry-2024",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Gaudry, Arnaud"
+    },
+    {
+      "@id": "urn:asb:researcher:marco-pagni-2024",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Pagni, Marco"
+    },
+    {
+      "@id": "urn:asb:researcher:florence-mehl-2024",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Mehl, Florence"
+    },
+    {
+      "@id": "urn:asb:researcher:s-bastien-moretti-2024",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Moretti, Sébastien"
+    },
+    {
+      "@id": "urn:asb:researcher:luis-manuel-quiros-guerrero-2024",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Quiros-Guerrero, Luis-Manuel"
+    },
+    {
+      "@id": "urn:asb:researcher:luca-cappelletti-2024",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Cappelletti, Luca"
+    },
+    {
+      "@id": "urn:asb:researcher:adriano-rutz-2024",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Rutz, Adriano"
+    },
+    {
+      "@id": "urn:asb:researcher:marcel-kaiser-2024",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Kaiser, Marcel"
+    },
+    {
+      "@id": "urn:asb:researcher:laurence-marcourt-2024",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Marcourt, Laurence"
+    },
+    {
+      "@id": "urn:asb:researcher:ferreira-queiroz-2024",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Queiroz, Emerson Ferreira"
+    },
+    {
+      "@id": "urn:asb:researcher:jean-robert-ioset-2024",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Ioset, Jean-Robert"
+    },
+    {
+      "@id": "urn:asb:researcher:antonio-grondin-2024",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Grondin, Antonio"
+    },
+    {
+      "@id": "urn:asb:researcher:bruno-david-2024",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "David, Bruno"
+    },
+    {
+      "@id": "urn:asb:researcher:jean-luc-wolfender-2024",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Wolfender, Jean-Luc"
+    },
+    {
+      "@id": "urn:asb:researcher:pierre-marie-allard-2024",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Allard, Pierre-Marie"
+    },
+    {
+      "@id": "urn:asb:tool:enpkg",
+      "@type": "SoftwareApplication",
+      "name": "ENPKG"
+    },
+    {
+      "@id": "urn:asb:input:task_002_0",
+      "@type": "File",
+      "name": "ENPKG repository (enpkg_full) with installation instructions and example dataset"
+    },
+    {
+      "@id": "urn:asb:input:task_002_1",
+      "@type": "File",
+      "name": "Example or test dataset (raw spectral data and sample metadata files)"
+    },
+    {
+      "@id": "urn:asb:output:task_002_0",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Annotated feature table with molecular identifications and confidence scores",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_002"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_002_1",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Knowledge-graph output files in standardized format (RDF triples or equivalent)",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_002"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_002_2",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Spectral library matches and molecular network visualization outputs",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_002"
+      }
+    },
+    {
+      "@id": "#action-task_002",
+      "@type": [
+        "CreateAction",
+        "prov:Activity",
+        "p-plan:Step"
+      ],
+      "description": "Execute the complete ENPKG full workflow on the provided example or test dataset, producing all final annotated output files ready for knowledge-graph integration and natural products annotation.",
+      "instrument": [
+        {
+          "@id": "urn:asb:tool:enpkg"
+        }
+      ],
+      "name": "Reconstruct the end-to-end ENPKG pipeline execution on a sample dataset",
+      "object": [
+        {
+          "@id": "urn:asb:input:task_002_0"
+        },
+        {
+          "@id": "urn:asb:input:task_002_1"
+        }
+      ],
+      "repme:hasInputData": [
+        {
+          "@id": "urn:asb:input:task_002_0"
+        },
+        {
+          "@id": "urn:asb:input:task_002_1"
+        }
+      ],
+      "repme:hasOutputData": [
+        {
+          "@id": "urn:asb:output:task_002_0"
+        },
+        {
+          "@id": "urn:asb:output:task_002_1"
+        },
+        {
+          "@id": "urn:asb:output:task_002_2"
+        }
+      ],
+      "repme:hasResult": [
+        {
+          "@id": "urn:asb:result:result_002"
+        },
+        {
+          "@id": "urn:asb:result:result_003"
+        }
+      ],
+      "result": [
+        {
+          "@id": "urn:asb:output:task_002_0"
+        },
+        {
+          "@id": "urn:asb:output:task_002_1"
+        },
+        {
+          "@id": "urn:asb:output:task_002_2"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:claim:claim_001",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "ENPKG is a computational workflow for which a scientific paper exists."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 433,
+          "oa:start": 311
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_enpkg/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "ENPKG is a computational workflow for which a scientific paper exists.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_002",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The ENPKG workflow guide covers installation, setup, and execution."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 245,
+          "oa:start": 149
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_enpkg/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The ENPKG workflow guide covers installation, setup, and execution.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_003",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The ENPKG full workflow is a computational workflow that can be explored by users."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 187,
+          "oa:start": 119
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_enpkg/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The ENPKG full workflow is a computational workflow that can be explored by users.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_004",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The ENPKG scientific paper contains insights and methodologies that power the workflow."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 503,
+          "oa:start": 434
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_enpkg/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The ENPKG scientific paper contains insights and methodologies that power the workflow.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:result:result_001",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "ENPKG is a computational workflow for which a scientific paper exists.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_001"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_002",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The ENPKG workflow guide covers installation, setup, and execution.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_002"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_003",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The ENPKG full workflow is a computational workflow that can be explored by users.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_003"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_004",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The ENPKG scientific paper contains insights and methodologies that power the workflow.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_004"
+        }
+      ]
+    },
+    {
+      "@id": "#env-task_002",
+      "@type": [
+        "repme:ComputationalEnvironment"
+      ],
+      "repme:computeTier": "medium"
+    },
+    {
+      "@id": "#agent-15-activity-task_002",
+      "@type": [
+        "prov:Activity"
+      ],
+      "prov:endedAtTime": "2026-06-15T21:45:34.675663+00:00",
+      "prov:qualifiedUsage": {
+        "@type": "prov:Usage",
+        "schema:name": "prompt_sha256",
+        "schema:value": "81a4ae16c0698e1f"
+      },
+      "prov:wasAssociatedWith": {
+        "schema:name": "anthropic/claude-haiku-4-5-20251001"
+      },
+      "schema:name": "Agent 1.5 Claim Extractor"
+    },
+    {
+      "@id": "#computational-environment",
+      "@type": "repme:ComputationalEnvironment",
+      "repme:buildId": "018C1242F47646B0ADB4EFD0DD61E1E0",
+      "repme:depsHash": null,
+      "repme:gitCommit": "8713018e077e78db4e0defb776d2c7f494485e53",
+      "repme:platform": "darwin-25.5.0-arm64",
+      "repme:pythonVersion": "3.11.15",
+      "schema:dateCreated": "2026-06-15T21:43:50.964518Z",
+      "schema:hasPart": [
+        {
+          "@id": "#agent-config-agent1_entity"
+        },
+        {
+          "@id": "#agent-config-agent2a_outline"
+        },
+        {
+          "@id": "#agent-config-agent2b_card"
+        },
+        {
+          "@id": "#agent-config-agent3_critique"
+        },
+        {
+          "@id": "#agent-config-agent_classify"
+        }
+      ],
+      "schema:softwareVersion": "agentic-science-builder@0.1.0"
+    },
+    {
+      "@id": "#agent-config-agent1_entity",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v3",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent1_entity"
+    },
+    {
+      "@id": "#agent-config-agent2a_outline",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-sonnet-4-6",
+      "repme:promptVersion": "v2",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2a_outline"
+    },
+    {
+      "@id": "#agent-config-agent2b_card",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v4",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2b_card"
+    },
+    {
+      "@id": "#agent-config-agent3_critique",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent3_critique"
+    },
+    {
+      "@id": "#agent-config-agent_classify",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent_classify"
+    },
+    {
+      "@id": "http://edamontology.org/topic_0622",
+      "@type": "DefinedTerm",
+      "inDefinedTermSet": "http://edamontology.org/",
+      "name": "Genomics",
+      "termCode": "topic_0622"
+    },
+    {
+      "@id": "artifact_provenance.json",
+      "@type": "File",
+      "name": "artifact_provenance.json",
+      "encodingFormat": "application/json"
+    },
+    {
+      "@id": "ledger/claims.jsonl",
+      "@type": "File",
+      "name": "ledger/claims.jsonl",
+      "encodingFormat": "application/jsonlines"
+    },
+    {
+      "@id": "ledger/results.jsonl",
+      "@type": "File",
+      "name": "ledger/results.jsonl",
+      "encodingFormat": "application/jsonlines"
+    }
+  ]
+}

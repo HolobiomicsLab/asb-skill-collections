@@ -1,6 +1,9 @@
 ---
 name: r-data-frame-aggregation
-description: Use when when you have extracted multiple spectral attributes (e.g., base-peak m/z, intensity, retention time, scan index) from individual MS scans via accessor functions and need to organize them into a single rectangular data frame for batch analysis, filtering, or export to external tools.
+description: Use when when you have extracted multiple spectral attributes (e.g.,
+  base-peak m/z, intensity, retention time, scan index) from individual MS scans via
+  accessor functions and need to organize them into a single rectangular data frame
+  for batch analysis, filtering, or export to external tools.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -14,6 +17,8 @@ metadata:
   - Spectra
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -21,9 +26,12 @@ derived_from:
   title: ''
 evidence_spans:
 - The `rawrr` executable will run out of the box
-- '`R` functions requesting access to data stored in binary raw files (reader family functions listed in Table 1) invoke compiled `C#` wrapper methods'
-- Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
-- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
+- '`R` functions requesting access to data stored in binary raw files (reader family
+  functions listed in Table 1) invoke compiled `C#` wrapper methods'
+- Calling a wrapper method typically results in the execution of methods defined in
+  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
+- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher
+  Scientific
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

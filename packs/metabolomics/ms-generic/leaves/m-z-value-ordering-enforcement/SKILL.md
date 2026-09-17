@@ -1,6 +1,8 @@
 ---
 name: m-z-value-ordering-enforcement
-description: Use when when implementing or modifying data replacement methods (e.g., `mz<-`, `peaksData<-`) in a writable MsBackend subclass, or when accepting user-supplied m/z vectors destined for storage in a Spectra backend.
+description: Use when when implementing or modifying data replacement methods (e.g.,
+  `mz<-`, `peaksData<-`) in a writable MsBackend subclass, or when accepting user-supplied
+  m/z vectors destined for storage in a Spectra backend.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,6 +16,8 @@ metadata:
   - R base
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra

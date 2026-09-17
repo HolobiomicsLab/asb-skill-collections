@@ -1,6 +1,7 @@
 ---
 name: molecular-identifier-completeness-verification
-description: Use when during MSP, MGF, JSON, or CSV file parsing when standardizing mass spectra from heterogeneous open mass spectral libraries (OMSLs).
+description: Use when during MSP, MGF, JSON, or CSV file parsing when standardizing
+  mass spectra from heterogeneous open mass spectral libraries (OMSLs).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,6 +17,13 @@ metadata:
   - FragHub
   techniques:
   - GC-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
@@ -44,6 +52,7 @@ attribution:
 
 # molecular-identifier-completeness-verification
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Verify that mass spectra possess all required chemical identifiers (SMILES, InChI, InChIKey) and consistent adduct–ionmode pairs before inclusion in a standardized spectral library. This skill ensures data completeness and chemical consistency, preventing analysis with ambiguous or contradictory molecular information.

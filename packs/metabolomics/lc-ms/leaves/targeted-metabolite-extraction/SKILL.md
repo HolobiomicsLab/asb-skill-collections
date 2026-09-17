@@ -1,6 +1,9 @@
 ---
 name: targeted-metabolite-extraction
-description: Use when you have centroided LC-MS data (.mzML format) and a curated list of targeted metabolites or lipids (with m/z, retention time, and polarity) that you want to quantify and quality-assess across multiple analytical runs, and you need both per-run AUC values and averaged QC metrics for each.
+description: Use when you have centroided LC-MS data (.mzML format) and a curated
+  list of targeted metabolites or lipids (with m/z, retention time, and polarity)
+  that you want to quantify and quality-assess across multiple analytical runs, and
+  you need both per-run AUC values and averaged QC metrics for each.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3704
@@ -18,12 +21,15 @@ metadata:
   - MsExperiment
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
 evidence_spans:
 - loads MS data as `Spectra` objects so it's easily integrated with other tools
-- It makes use of an established retention time correction algorithm from the `xcms` package
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
 - R package for *TArgeted Raw Data Integration In Spectrometry*
 - knitr::include_graphics
 - kableExtra::kable

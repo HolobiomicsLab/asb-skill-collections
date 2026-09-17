@@ -1,6 +1,8 @@
 ---
 name: chemical-formula-enumeration
-description: Use when you have an unknown MS/MS spectrum with a measured precursor m/z and want to generate a list of plausible chemical formula–adduct pairs to rank or filter downstream.
+description: Use when you have an unknown MS/MS spectrum with a measured precursor
+  m/z and want to generate a list of plausible chemical formula–adduct pairs to rank
+  or filter downstream.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,6 +14,8 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf

@@ -1,6 +1,7 @@
 ---
 name: multi-class-label-assignment
-description: Use when you have raw LC-MS metabolomics data from multiple disease groups and need to classify new or existing samples into discrete disease categories.
+description: Use when you have raw LC-MS metabolomics data from multiple disease groups
+  and need to classify new or existing samples into discrete disease categories.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3766
@@ -14,6 +15,8 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler

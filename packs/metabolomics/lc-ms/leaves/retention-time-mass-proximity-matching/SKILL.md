@@ -1,6 +1,9 @@
 ---
 name: retention-time-mass-proximity-matching
-description: Use when after sample alignment and grouping of isotopologues and adducts have been completed, when the aligned feature table contains NA or zero entries (missing intensities) for features that are detected in some samples but fall below the detection threshold in others.
+description: Use when after sample alignment and grouping of isotopologues and adducts
+  have been completed, when the aligned feature table contains NA or zero entries
+  (missing intensities) for features that are detected in some samples but fall below
+  the detection threshold in others.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -13,6 +16,8 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw

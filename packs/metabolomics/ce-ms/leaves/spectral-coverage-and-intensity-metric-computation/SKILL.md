@@ -1,6 +1,9 @@
 ---
 name: spectral-coverage-and-intensity-metric-computation
-description: Use when you have completed a ViMMS simulation run or processed real LC-MS/MS data and need to quantitatively assess whether one DDA controller (e.g., WeightedDEWController with exclusion) outperforms another (e.g., TopNController) in terms of spectral coverage and signal recovery.
+description: Use when you have completed a ViMMS simulation run or processed real
+  LC-MS/MS data and need to quantitatively assess whether one DDA controller (e.g.,
+  WeightedDEWController with exclusion) outperforms another (e.g., TopNController)
+  in terms of spectral coverage and signal recovery.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,6 +19,8 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms

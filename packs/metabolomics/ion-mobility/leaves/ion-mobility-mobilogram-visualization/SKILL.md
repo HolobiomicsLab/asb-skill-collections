@@ -1,6 +1,8 @@
 ---
 name: ion-mobility-mobilogram-visualization
-description: Use when when you have mass spectrometry data with ion mobility (drift time or 1/K₀) measurements as a continuous dimension and want to visualize intensity distributions across the ion mobility axis.
+description: Use when when you have mass spectrometry data with ion mobility (drift
+  time or 1/K₀) measurements as a continuous dimension and want to visualize intensity
+  distributions across the ion mobility axis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -18,6 +20,8 @@ metadata:
   - pyOpenMS
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz

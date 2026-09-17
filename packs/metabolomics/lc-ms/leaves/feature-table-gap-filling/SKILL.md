@@ -1,6 +1,8 @@
 ---
 name: feature-table-gap-filling
-description: Use when you have an aligned feature table from untargeted LC-MS with missing intensity values (NA or zero entries) for features that are present in some samples but fell below detection threshold in others.
+description: Use when you have an aligned feature table from untargeted LC-MS with
+  missing intensity values (NA or zero entries) for features that are present in some
+  samples but fell below detection threshold in others.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -13,6 +15,8 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw

@@ -1,0 +1,3204 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "asbext": "https://w3id.org/asb/indicium-ext#",
+      "chebi": "http://purl.obolibrary.org/obo/CHEBI_",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "fabio": "http://purl.org/spar/fabio/",
+      "ms": "http://purl.obolibrary.org/obo/MS_",
+      "ncbitaxon": "http://purl.obolibrary.org/obo/NCBITaxon_",
+      "oa": "http://www.w3.org/ns/oa#",
+      "obi": "http://purl.obolibrary.org/obo/OBI_",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "p-plan": "http://purl.org/net/p-plan#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "repme": "https://w3id.org/reproduceme#",
+      "sepio": "http://purl.obolibrary.org/obo/SEPIO_",
+      "uberon": "http://purl.obolibrary.org/obo/UBERON_"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": [
+        "Dataset",
+        "repme:ScientificWorkflow"
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ],
+      "dateCreated": "2026-06-15",
+      "description": "Convert pre-processed MS/MS spectra into spectrum documents by representing peaks and neutral losses as words, then aggregate pre-trained Word2Vec word vectors into single spectrum vectors via weighted summation, outputting one vector file per spectrum.",
+      "hasPart": [
+        {
+          "@id": "evidence/source_snippets.md"
+        },
+        {
+          "@id": "inputs/dataset_folder_tree.txt"
+        },
+        {
+          "@id": "inputs/dataset_preview.md"
+        },
+        {
+          "@id": "evaluation/evaluation_strategy.md"
+        },
+        {
+          "@id": "evaluation/review_rubric.json"
+        },
+        {
+          "@id": "artifact_provenance.json"
+        },
+        {
+          "@id": "ledger/claims.jsonl"
+        },
+        {
+          "@id": "ledger/results.jsonl"
+        }
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "mentions": [
+        {
+          "@id": "#action-task_003"
+        },
+        {
+          "@id": "urn:asb:task:task_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_001"
+        },
+        {
+          "@id": "urn:asb:claim:claim_002"
+        },
+        {
+          "@id": "urn:asb:claim:claim_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_004"
+        },
+        {
+          "@id": "urn:asb:claim:claim_005"
+        },
+        {
+          "@id": "urn:asb:claim:claim_006"
+        },
+        {
+          "@id": "urn:asb:claim:claim_007"
+        },
+        {
+          "@id": "urn:asb:claim:claim_008"
+        },
+        {
+          "@id": "urn:asb:claim:claim_009"
+        },
+        {
+          "@id": "urn:asb:claim:claim_010"
+        },
+        {
+          "@id": "urn:asb:claim:claim_011"
+        },
+        {
+          "@id": "urn:asb:claim:claim_012"
+        },
+        {
+          "@id": "urn:asb:claim:claim_013"
+        },
+        {
+          "@id": "urn:asb:claim:claim_014"
+        },
+        {
+          "@id": "urn:asb:claim:claim_015"
+        },
+        {
+          "@id": "urn:asb:claim:claim_016"
+        },
+        {
+          "@id": "urn:asb:claim:claim_017"
+        },
+        {
+          "@id": "urn:asb:claim:claim_018"
+        },
+        {
+          "@id": "urn:asb:claim:claim_019"
+        },
+        {
+          "@id": "urn:asb:claim:claim_020"
+        },
+        {
+          "@id": "urn:asb:claim:claim_021"
+        },
+        {
+          "@id": "urn:asb:claim:claim_022"
+        },
+        {
+          "@id": "urn:asb:claim:claim_023"
+        },
+        {
+          "@id": "urn:asb:claim:claim_024"
+        },
+        {
+          "@id": "urn:asb:claim:claim_025"
+        },
+        {
+          "@id": "urn:asb:claim:claim_026"
+        },
+        {
+          "@id": "urn:asb:claim:claim_027"
+        },
+        {
+          "@id": "urn:asb:claim:claim_028"
+        },
+        {
+          "@id": "urn:asb:claim:claim_029"
+        },
+        {
+          "@id": "urn:asb:claim:claim_030"
+        },
+        {
+          "@id": "urn:asb:claim:claim_031"
+        },
+        {
+          "@id": "urn:asb:claim:claim_032"
+        },
+        {
+          "@id": "urn:asb:claim:claim_033"
+        },
+        {
+          "@id": "urn:asb:claim:claim_034"
+        },
+        {
+          "@id": "urn:asb:claim:claim_035"
+        },
+        {
+          "@id": "urn:asb:claim:claim_036"
+        },
+        {
+          "@id": "urn:asb:claim:claim_037"
+        },
+        {
+          "@id": "urn:asb:claim:claim_038"
+        },
+        {
+          "@id": "urn:asb:claim:claim_039"
+        },
+        {
+          "@id": "urn:asb:claim:claim_040"
+        },
+        {
+          "@id": "urn:asb:claim:claim_041"
+        },
+        {
+          "@id": "urn:asb:claim:claim_042"
+        },
+        {
+          "@id": "urn:asb:claim:claim_043"
+        },
+        {
+          "@id": "urn:asb:claim:claim_044"
+        },
+        {
+          "@id": "urn:asb:claim:claim_045"
+        },
+        {
+          "@id": "urn:asb:claim:claim_046"
+        },
+        {
+          "@id": "urn:asb:claim:claim_047"
+        },
+        {
+          "@id": "urn:asb:claim:claim_048"
+        },
+        {
+          "@id": "urn:asb:claim:claim_049"
+        },
+        {
+          "@id": "urn:asb:claim:claim_050"
+        },
+        {
+          "@id": "urn:asb:claim:claim_051"
+        },
+        {
+          "@id": "urn:asb:claim:claim_052"
+        },
+        {
+          "@id": "urn:asb:claim:claim_053"
+        },
+        {
+          "@id": "urn:asb:claim:claim_054"
+        },
+        {
+          "@id": "urn:asb:claim:claim_055"
+        },
+        {
+          "@id": "urn:asb:result:result_001"
+        },
+        {
+          "@id": "urn:asb:result:result_002"
+        },
+        {
+          "@id": "urn:asb:result:result_003"
+        },
+        {
+          "@id": "urn:asb:result:result_004"
+        },
+        {
+          "@id": "urn:asb:result:result_005"
+        },
+        {
+          "@id": "urn:asb:result:result_006"
+        },
+        {
+          "@id": "urn:asb:result:result_007"
+        },
+        {
+          "@id": "urn:asb:result:result_008"
+        },
+        {
+          "@id": "urn:asb:result:result_009"
+        },
+        {
+          "@id": "urn:asb:result:result_010"
+        },
+        {
+          "@id": "urn:asb:result:result_011"
+        },
+        {
+          "@id": "urn:asb:result:result_012"
+        },
+        {
+          "@id": "urn:asb:result:result_013"
+        },
+        {
+          "@id": "urn:asb:result:result_014"
+        },
+        {
+          "@id": "urn:asb:result:result_015"
+        },
+        {
+          "@id": "urn:asb:result:result_016"
+        },
+        {
+          "@id": "urn:asb:result:result_017"
+        },
+        {
+          "@id": "urn:asb:result:result_018"
+        },
+        {
+          "@id": "urn:asb:result:result_019"
+        },
+        {
+          "@id": "urn:asb:result:result_020"
+        },
+        {
+          "@id": "urn:asb:result:result_021"
+        },
+        {
+          "@id": "urn:asb:result:result_022"
+        },
+        {
+          "@id": "urn:asb:result:result_023"
+        },
+        {
+          "@id": "urn:asb:result:result_024"
+        },
+        {
+          "@id": "urn:asb:result:result_025"
+        },
+        {
+          "@id": "urn:asb:result:result_026"
+        },
+        {
+          "@id": "urn:asb:result:result_027"
+        },
+        {
+          "@id": "urn:asb:result:result_028"
+        },
+        {
+          "@id": "urn:asb:result:result_029"
+        },
+        {
+          "@id": "urn:asb:result:result_030"
+        },
+        {
+          "@id": "urn:asb:result:result_031"
+        },
+        {
+          "@id": "urn:asb:result:result_032"
+        },
+        {
+          "@id": "urn:asb:result:result_033"
+        },
+        {
+          "@id": "urn:asb:result:result_034"
+        },
+        {
+          "@id": "urn:asb:result:result_035"
+        },
+        {
+          "@id": "urn:asb:result:result_036"
+        },
+        {
+          "@id": "urn:asb:result:result_037"
+        },
+        {
+          "@id": "urn:asb:result:result_038"
+        },
+        {
+          "@id": "urn:asb:result:result_039"
+        },
+        {
+          "@id": "urn:asb:result:result_040"
+        },
+        {
+          "@id": "urn:asb:result:result_041"
+        },
+        {
+          "@id": "urn:asb:result:result_042"
+        },
+        {
+          "@id": "urn:asb:result:result_043"
+        },
+        {
+          "@id": "urn:asb:result:result_044"
+        },
+        {
+          "@id": "urn:asb:result:result_045"
+        },
+        {
+          "@id": "urn:asb:result:result_046"
+        },
+        {
+          "@id": "urn:asb:result:result_047"
+        },
+        {
+          "@id": "urn:asb:result:result_048"
+        },
+        {
+          "@id": "urn:asb:result:result_049"
+        },
+        {
+          "@id": "urn:asb:result:result_050"
+        },
+        {
+          "@id": "urn:asb:result:result_051"
+        },
+        {
+          "@id": "urn:asb:result:result_052"
+        },
+        {
+          "@id": "urn:asb:result:result_053"
+        },
+        {
+          "@id": "#env-task_003"
+        },
+        {
+          "@id": "http://edamontology.org/topic_3172"
+        }
+      ],
+      "name": "Reconstruct the Spec2Vec spectrum-document construction and weighted vector aggregation step",
+      "repme:hasComputationalEnvironment": {
+        "@id": "#computational-environment"
+      }
+    },
+    {
+      "@id": "evidence/source_snippets.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evidence/source_snippets.md"
+    },
+    {
+      "@id": "inputs/dataset_folder_tree.txt",
+      "@type": "File",
+      "encodingFormat": "text/plain",
+      "name": "inputs/dataset_folder_tree.txt"
+    },
+    {
+      "@id": "inputs/dataset_preview.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "inputs/dataset_preview.md"
+    },
+    {
+      "@id": "evaluation/evaluation_strategy.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evaluation/evaluation_strategy.md"
+    },
+    {
+      "@id": "evaluation/review_rubric.json",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "name": "evaluation/review_rubric.json"
+    },
+    {
+      "@id": "urn:asb:task:task_003",
+      "@type": [
+        "ScholarlyArticle",
+        "p-plan:Plan",
+        "http://purl.org/spar/fabio/ResearchPaper"
+      ],
+      "asbext:task_kind": "component_reconstruction",
+      "description": "Convert pre-processed MS/MS spectra into spectrum documents by representing peaks and neutral losses as words, then aggregate pre-trained Word2Vec word vectors into single spectrum vectors via weighted summation, outputting one vector file per spectrum.",
+      "keywords": [
+        "mass-spectrometry-spectrum-tokenization",
+        "word-embedding-aggregation-for-spectral-data",
+        "neutral-loss-calculation-from-precursor",
+        "word2vec-vocabulary-matching-and-unknown-peak-handling",
+        "spectral-vector-normalization-by-intensity",
+        "missing-fraction-quality-filtering-for-embeddings"
+      ],
+      "name": "Reconstruct the Spec2Vec spectrum-document construction and weighted vector aggregation step",
+      "prov:wasInfluencedBy": [
+        {
+          "@id": "urn:asb:task:task_002"
+        }
+      ],
+      "repme:hasResearcher": [
+        {
+          "@id": "urn:asb:researcher:florian-huber-2021"
+        },
+        {
+          "@id": "urn:asb:researcher:lars-ridder-2021"
+        },
+        {
+          "@id": "urn:asb:researcher:stefan-verhoeven-2021"
+        },
+        {
+          "@id": "urn:asb:researcher:h-spaaks-2021"
+        },
+        {
+          "@id": "urn:asb:researcher:faruk-diblen-2021"
+        },
+        {
+          "@id": "urn:asb:researcher:simon-rogers-2021"
+        }
+      ],
+      "sameAs": "https://doi.org/10.1371/journal.pcbi.1008724#task_003",
+      "schema:identifier": "10.1371/journal.pcbi.1008724"
+    },
+    {
+      "@id": "urn:asb:researcher:florian-huber-2021",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Huber, Florian"
+    },
+    {
+      "@id": "urn:asb:researcher:lars-ridder-2021",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Ridder, Lars"
+    },
+    {
+      "@id": "urn:asb:researcher:stefan-verhoeven-2021",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Verhoeven, Stefan"
+    },
+    {
+      "@id": "urn:asb:researcher:h-spaaks-2021",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Spaaks, Jurriaan H."
+    },
+    {
+      "@id": "urn:asb:researcher:faruk-diblen-2021",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Diblen, Faruk"
+    },
+    {
+      "@id": "urn:asb:researcher:simon-rogers-2021",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Rogers, Simon"
+    },
+    {
+      "@id": "urn:asb:tool:word2vec",
+      "@type": "SoftwareApplication",
+      "name": "Word2Vec"
+    },
+    {
+      "@id": "urn:asb:tool:gensim",
+      "@type": "SoftwareApplication",
+      "name": "gensim"
+    },
+    {
+      "@id": "urn:asb:tool:matchms",
+      "@type": "SoftwareApplication",
+      "name": "matchms",
+      "schema:url": "https://github.com/matchms/matchms"
+    },
+    {
+      "@id": "urn:asb:tool:spec2vec",
+      "@type": "SoftwareApplication",
+      "name": "spec2vec",
+      "schema:url": "https://github.com/iomega/spec2vec"
+    },
+    {
+      "@id": "urn:asb:tool:numpy",
+      "@type": "SoftwareApplication",
+      "name": "Numpy"
+    },
+    {
+      "@id": "urn:asb:tool:numba",
+      "@type": "SoftwareApplication",
+      "name": "Numba"
+    },
+    {
+      "@id": "urn:asb:tool:pandas",
+      "@type": "SoftwareApplication",
+      "name": "Pandas"
+    },
+    {
+      "@id": "urn:asb:input:task_003_0",
+      "@type": "File",
+      "name": "Pre-processed MS/MS spectra in mzML, mzXML, or tabular format (m/z, intensity, precursor m/z per spectrum)"
+    },
+    {
+      "@id": "urn:asb:input:task_003_1",
+      "@type": "File",
+      "name": "Pre-trained Word2Vec model (gensim format) from reference dataset (e.g., AllPositive or UniqueInchikey)"
+    },
+    {
+      "@id": "urn:asb:output:task_003_0",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Spectrum vector file containing spectrum identifiers and their corresponding Word2Vec-aggregated embedding vectors (one vector per spectrum)",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_003"
+      }
+    },
+    {
+      "@id": "#action-task_003",
+      "@type": [
+        "CreateAction",
+        "prov:Activity",
+        "p-plan:Step"
+      ],
+      "description": "Convert pre-processed MS/MS spectra into spectrum documents by representing peaks and neutral losses as words, then aggregate pre-trained Word2Vec word vectors into single spectrum vectors via weighted summation, outputting one vector file per spectrum.",
+      "instrument": [
+        {
+          "@id": "urn:asb:tool:word2vec"
+        },
+        {
+          "@id": "urn:asb:tool:gensim"
+        },
+        {
+          "@id": "urn:asb:tool:matchms"
+        },
+        {
+          "@id": "urn:asb:tool:spec2vec"
+        },
+        {
+          "@id": "urn:asb:tool:numpy"
+        },
+        {
+          "@id": "urn:asb:tool:numba"
+        },
+        {
+          "@id": "urn:asb:tool:pandas"
+        }
+      ],
+      "name": "Reconstruct the Spec2Vec spectrum-document construction and weighted vector aggregation step",
+      "object": [
+        {
+          "@id": "urn:asb:input:task_003_0"
+        },
+        {
+          "@id": "urn:asb:input:task_003_1"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "urn:asb:port:task_002/library_matching_results"
+        }
+      ],
+      "repme:hasInputData": [
+        {
+          "@id": "urn:asb:input:task_003_0"
+        },
+        {
+          "@id": "urn:asb:input:task_003_1"
+        }
+      ],
+      "repme:hasOutputData": [
+        {
+          "@id": "urn:asb:output:task_003_0"
+        }
+      ],
+      "repme:hasResult": [
+        {
+          "@id": "urn:asb:result:result_001"
+        },
+        {
+          "@id": "urn:asb:result:result_002"
+        },
+        {
+          "@id": "urn:asb:result:result_021"
+        },
+        {
+          "@id": "urn:asb:result:result_022"
+        },
+        {
+          "@id": "urn:asb:result:result_024"
+        },
+        {
+          "@id": "urn:asb:result:result_025"
+        },
+        {
+          "@id": "urn:asb:result:result_027"
+        },
+        {
+          "@id": "urn:asb:result:result_028"
+        },
+        {
+          "@id": "urn:asb:result:result_037"
+        },
+        {
+          "@id": "urn:asb:result:result_047"
+        },
+        {
+          "@id": "urn:asb:result:result_048"
+        }
+      ],
+      "result": [
+        {
+          "@id": "urn:asb:output:task_003_0"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:claim:claim_001",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Spec2Vec is a novel spectral similarity score inspired by Word2Vec, a natural language processing algorithm."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 514,
+          "oa:start": 452
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Spec2Vec is a novel spectral similarity score inspired by Word2Vec, a natural language processing algorithm.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "metabolomics spectral similarity scoring",
+        "object": "novel spectral similarity score",
+        "qualifier": "is_a",
+        "relation": "is inspired by Word2Vec natural language processing algorithm",
+        "subject": "Spec2Vec"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_002",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Spec2Vec learns fragmental relationships within a large set of spectral data to derive abstract spectral embeddings."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 842,
+          "oa:start": 693
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Spec2Vec learns fragmental relationships within a large set of spectral data to derive abstract spectral embeddings.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "spectral data analysis",
+        "object": "spectral embeddings for similarity assessment",
+        "qualifier": "produces",
+        "relation": "learns fragmental relationships to derive abstract spectral embeddings",
+        "subject": "Spec2Vec"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_003",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Spec2Vec scores correlate better with structural similarity than cosine-based scores using data from nearly 13,000 unique molecules."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1076,
+          "oa:start": 989
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Spec2Vec scores correlate better with structural similarity than cosine-based scores using data from nearly 13,000 unique molecules.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "GNPS MS/MS libraries with nearly 13,000 unique molecules",
+        "object": "structural similarity",
+        "qualifier": "correlates_with",
+        "relation": "correlate better with structural similarity than cosine-based scores",
+        "subject": "Spec2Vec scores"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_004",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Spec2Vec is computationally more scalable, allowing structural analogue searches in large databases within seconds."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1431,
+          "oa:start": 1312
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Spec2Vec is computationally more scalable, allowing structural analogue searches in large databases within seconds.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "structural analogue search task",
+        "object": "faster searching in large databases",
+        "qualifier": "has_property",
+        "relation": "is computationally more scalable than alternatives",
+        "subject": "Spec2Vec"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_005",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Cosine-based similarity scores are the most widely used measures of spectral similarity."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6394,
+          "oa:start": 6328
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Cosine-based similarity scores are the most widely used measures of spectral similarity.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_006",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Studies investigating whether molecules with high structural similarity result in spectra with high spectral cosine similarity show only partial support for this relationship."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6459,
+          "oa:start": 6395
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Studies investigating whether molecules with high structural similarity result in spectra with high spectral cosine similarity show only partial support for this relationship.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_007",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Modifications of cosine-based scores have been proposed including raising the m/z and intensity components to different powers and shifting fragment peaks by the difference in precursor m/z."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6656,
+          "oa:start": 6593
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Modifications of cosine-based scores have been proposed including raising the m/z and intensity components to different powers and shifting fragment peaks by the difference in precursor m/z.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_008",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Despite limitations of cosine-based methods, no fundamentally different spectral similarity scores have been proposed."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6917,
+          "oa:start": 6850
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Despite limitations of cosine-based methods, no fundamentally different spectral similarity scores have been proposed.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_009",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The AllPositive dataset comprised 95,320 positive ionization mode mass spectra, of which 77,092 had InChIKey annotations."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 12155,
+          "oa:start": 12095
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The AllPositive dataset comprised 95,320 positive ionization mode mass spectra, of which 77,092 had InChIKey annotations.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_010",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The UniqueInchikey dataset consisted of 12,797 spectra with unique InChIKeys."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 12352,
+          "oa:start": 12277
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The UniqueInchikey dataset consisted of 12,797 spectra with unique InChIKeys.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_011",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Spec2Vec spectrum similarity score correlates stronger with structural similarity than cosine or modified cosine scores."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 15677,
+          "oa:start": 15609
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Spec2Vec spectrum similarity score correlates stronger with structural similarity than cosine or modified cosine scores.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "spectral similarity evaluation",
+        "object": "structural similarity compared to cosine and modified cosine scores",
+        "qualifier": "correlates_with",
+        "relation": "correlates stronger with structural similarity",
+        "subject": "Spec2Vec spectrum similarity score"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_012",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The poor correlation between cosine and modified cosine similarity scores and structural similarity can largely be explained by high false positive rates."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 16172,
+          "oa:start": 16109
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The poor correlation between cosine and modified cosine similarity scores and structural similarity can largely be explained by high false positive rates.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "similarity score evaluation",
+        "object": "poorer correlation for cosine and modified cosine scores",
+        "qualifier": "causes",
+        "relation": "explains poor correlation between cosine similarity scores and structural similarity",
+        "subject": "high false positive rates"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_013",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Spec2Vec library matching achieved up to 88% accuracy compared to cosine similarity score based library matching."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 20317,
+          "oa:start": 20128
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Spec2Vec library matching achieved up to 88% accuracy compared to cosine similarity score based library matching.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "library matching task",
+        "object": "88% accuracy compared to cosine-based matching",
+        "qualifier": "increases",
+        "relation": "achieves higher accuracy in library matching",
+        "subject": "Spec2Vec"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_014",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Training a Spec2Vec model on the UniqueInchikey dataset takes about 30 minutes on an Intel i7-8550U CPU."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 22853,
+          "oa:start": 22790
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Training a Spec2Vec model on the UniqueInchikey dataset takes about 30 minutes on an Intel i7-8550U CPU.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_015",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Querying 1030 spectra against 76,062 spectra took 140 seconds on an Intel i7-8550U CPU, or 0.14 seconds per query spectrum."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 28194,
+          "oa:start": 28130
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Querying 1030 spectra against 76,062 spectra took 140 seconds on an Intel i7-8550U CPU, or 0.14 seconds per query spectrum.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_016",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "For 60% of queries for unknown molecules, the top-10 list contained suggested molecules with a structural similarity score of greater than 0.6."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 24690,
+          "oa:start": 24615
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "For 60% of queries for unknown molecules, the top-10 list contained suggested molecules with a structural similarity score of greater than 0.6.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_017",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "For molecules with masses larger than 200 Da, Spec2Vec was often able to detect highly related molecules for unknown queries."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 24946,
+          "oa:start": 24820
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "For molecules with masses larger than 200 Da, Spec2Vec was often able to detect highly related molecules for unknown queries.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_018",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Spec2Vec is able to cluster higher fractions of spectra into high structural similarity clusters when compared to the modified cosine score."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 33166,
+          "oa:start": 33093
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Spec2Vec is able to cluster higher fractions of spectra into high structural similarity clusters when compared to the modified cosine score.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "molecular networking and cluster analysis",
+        "object": "compared to modified cosine score",
+        "qualifier": "increases",
+        "relation": "clusters higher fractions of spectra into high structural similarity clusters",
+        "subject": "Spec2Vec"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_019",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Computing spectral similarities between all possible spectra pairs (approximately 82 million unique pairs) took 300 seconds on an Intel i7-8550U CPU using Spec2Vec."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 33368,
+          "oa:start": 33235
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Computing spectral similarities between all possible spectra pairs (approximately 82 million unique pairs) took 300 seconds on an Intel i7-8550U CPU using Spec2Vec.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_020",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Spec2Vec is an unsupervised method that can be trained on any collection of spectra, independent of whether chemical structures are known."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 12942,
+          "oa:start": 12824
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Spec2Vec is an unsupervised method that can be trained on any collection of spectra, independent of whether chemical structures are known.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_021",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Peaks in mass spectra have no particular order comparable to word order in a document, so Spec2Vec sets window-size to 500 meaning the entire spectrum counts as context."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 43346,
+          "oa:start": 43083
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Peaks in mass spectra have no particular order comparable to word order in a document, so Spec2Vec sets window-size to 500 meaning the entire spectrum counts as context.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_022",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Continuous bag of words (CBOW) was generally observed to perform better than skip gram for Spec2Vec."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 43471,
+          "oa:start": 43320
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Continuous bag of words (CBOW) was generally observed to perform better than skip gram for Spec2Vec.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_023",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Model performance for Spec2Vec does not necessarily improve with longer training runs when using negative sampling."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 43726,
+          "oa:start": 43634
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Model performance for Spec2Vec does not necessarily improve with longer training runs when using negative sampling.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_024",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Training a Spec2Vec model with negative sampling (negative = 5) and 15 iterations on AllPositive or up to 50 epochs on UniqueInchikey achieves optimal model performance."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 44324,
+          "oa:start": 43978
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Training a Spec2Vec model with negative sampling (negative = 5) and 15 iterations on AllPositive or up to 50 epochs on UniqueInchikey achieves optimal model performance.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_025",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Spec2Vec represents a spectrum as a weighted sum of its fragment and loss word vectors."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 10959,
+          "oa:start": 10789
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Spec2Vec represents a spectrum as a weighted sum of its fragment and loss word vectors.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_026",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The structural similarity between two molecules was measured using Tanimoto similarity based on daylight-like molecular fingerprints."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 48534,
+          "oa:start": 48468
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The structural similarity between two molecules was measured using Tanimoto similarity based on daylight-like molecular fingerprints.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_027",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Neutral losses between 5.0 and 200.0 Da were added as features in Spec2Vec document representation."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 42659,
+          "oa:start": 42553
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Neutral losses between 5.0 and 200.0 Da were added as features in Spec2Vec document representation.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_028",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Peaks are represented in Spec2Vec documents with their position up to a defined decimal precision, using a binning of two decimals."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 42402,
+          "oa:start": 42335
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Peaks are represented in Spec2Vec documents with their position up to a defined decimal precision, using a binning of two decimals.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_029",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Models trained on AllPositive with 2-decimal binning contained about 97% of all possible peaks and losses."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 47713,
+          "oa:start": 47643
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Models trained on AllPositive with 2-decimal binning contained about 97% of all possible peaks and losses.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_030",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000034"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Spec2Vec is not meant to be the endpoint but rather the start of a new direction in spectral similarity scoring."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 36687,
+          "oa:start": 36590
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Spec2Vec is not meant to be the endpoint but rather the start of a new direction in spectral similarity scoring.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_031",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Spec2Vec is particularly suited to act as a pre-selection funnel for selecting promising candidates for further exploration using computationally more expensive similarity measures."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 36798,
+          "oa:start": 36686
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Spec2Vec is particularly suited to act as a pre-selection funnel for selecting promising candidates for further exploration using computationally more expensive similarity measures.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "large-scale library searching",
+        "object": "efficient selection of promising candidates",
+        "qualifier": "enables",
+        "relation": "acts as pre-selection funnel for computationally expensive measures",
+        "subject": "Spec2Vec"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_032",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Spec2Vec can be applied to molecular networking, which is becoming an increasingly popular tool for exploring metabolomic datasets."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 29601,
+          "oa:start": 29530
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Spec2Vec can be applied to molecular networking, which is becoming an increasingly popular tool for exploring metabolomic datasets.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_033",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "GNPS users can calculate Spec2Vec scores for spectra in their positive ionisation mode datasets using a pretrained model."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 37587,
+          "oa:start": 37523
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "GNPS users can calculate Spec2Vec scores for spectra in their positive ionisation mode datasets using a pretrained model.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_034",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Training the Spec2Vec embedding on 95,320 spectra took 40 minutes when training for 15 iterations."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 36589,
+          "oa:start": 36527
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Training the Spec2Vec embedding on 95,320 spectra took 40 minutes when training for 15 iterations.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_035",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Spec2Vec requires training on a large spectra dataset to work effectively, but this does not necessarily need to be library spectra."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 36260,
+          "oa:start": 36012
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Spec2Vec requires training on a large spectra dataset to work effectively, but this does not necessarily need to be library spectra.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_036",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Cosine-based methods are very good at revealing nearly equal spectra but are not well-suited to handle molecules with multiple local chemical modifications."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6849,
+          "oa:start": 6782
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Cosine-based methods are very good at revealing nearly equal spectra but are not well-suited to handle molecules with multiple local chemical modifications.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "spectral comparison",
+        "object": "limited capability for modified compounds",
+        "qualifier": "has_property",
+        "relation": "good at revealing nearly equal spectra but poorly handle molecules with multiple local modifications",
+        "subject": "cosine-based methods"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_037",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Spec2Vec takes relationships between fragments into account rather than relying only on binary assessment of each fragment match."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 10987,
+          "oa:start": 10927
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Spec2Vec takes relationships between fragments into account rather than relying only on binary assessment of each fragment match.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "spectral similarity assessment",
+        "object": "superior to binary match/no-match assessment",
+        "qualifier": "has_property",
+        "relation": "considers relationships between fragments",
+        "subject": "Spec2Vec"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_038",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Spec2Vec is unsupervised and can be trained on any collection of spectra, unlike database searching methods that require known structural information."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 11210,
+          "oa:start": 11147
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Spec2Vec is unsupervised and can be trained on any collection of spectra, unlike database searching methods that require known structural information.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "metabolite identification",
+        "object": "unlike supervised database searching methods",
+        "qualifier": "is_a",
+        "relation": "is unsupervised and trainable on any spectra collection",
+        "subject": "Spec2Vec"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_039",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The probability of randomly picking a spectral pair with structural similarity score greater than 0.6 is p = 0.0103."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 24758,
+          "oa:start": 24687
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The probability of randomly picking a spectral pair with structural similarity score greater than 0.6 is p = 0.0103.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_040",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Spec2Vec improved performance for larger compounds (greater than 400 Da) is likely explained by the higher number of relevant fragments."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 27854,
+          "oa:start": 27672
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Spec2Vec improved performance for larger compounds (greater than 400 Da) is likely explained by the higher number of relevant fragments.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_041",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The current study used a large LC-MS dataset from GNPS containing 154,820 spectra."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 40021,
+          "oa:start": 39963
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The current study used a large LC-MS dataset from GNPS containing 154,820 spectra.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_042",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "After data cleaning and automated lookup, 128,042 out of 154,820 spectra could be linked to an InChIKey."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 40407,
+          "oa:start": 40355
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "After data cleaning and automated lookup, 128,042 out of 154,820 spectra could be linked to an InChIKey.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_043",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The AllPositive dataset contains 112,956 spectra with positive ionization mode, of which 92,954 have InChIKey annotations."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 40527,
+          "oa:start": 40459
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The AllPositive dataset contains 112,956 spectra with positive ionization mode, of which 92,954 have InChIKey annotations.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_044",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "All peaks with m/z ratios outside the range [0, 1000] were removed from spectra."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 40925,
+          "oa:start": 40868
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "All peaks with m/z ratios outside the range [0, 1000] were removed from spectra.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_045",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "All spectra with fewer than 10 peaks were discarded from the analysis."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 38827,
+          "oa:start": 38804
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "All spectra with fewer than 10 peaks were discarded from the analysis.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_046",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Different peak filtering procedures were used for Spec2Vec and cosine-based similarity scores to ensure fair comparison."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 41140,
+          "oa:start": 41070
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Different peak filtering procedures were used for Spec2Vec and cosine-based similarity scores to ensure fair comparison.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_047",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "For cosine score calculations, all peaks with relative intensities less than 0.01 compared to the highest intensity peak were ignored."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 41281,
+          "oa:start": 41210
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "For cosine score calculations, all peaks with relative intensities less than 0.01 compared to the highest intensity peak were ignored.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_048",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The maximum number of peaks kept per spectrum in Spec2Vec was set to scale linearly with the estimated parent mass."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 41724,
+          "oa:start": 41656
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The maximum number of peaks kept per spectrum in Spec2Vec was set to scale linearly with the estimated parent mass.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_049",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Spec2Vec can estimate the impact of unknown words (peaks) by assessing the uncovered weighted part of a spectrum."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 45831,
+          "oa:start": 45646
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Spec2Vec can estimate the impact of unknown words (peaks) by assessing the uncovered weighted part of a spectrum.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_050",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "By setting a missing fraction threshold at less than 0.05, Spec2Vec similarity scores for spectra far outside the learned peaks can be avoided."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 47441,
+          "oa:start": 47374
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "By setting a missing fraction threshold at less than 0.05, Spec2Vec similarity scores for spectra far outside the learned peaks can be avoided.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_051",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "A two-step verbatim-first discipline was used to ensure that spectral similarity claims are grounded in the actual data."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 47923,
+          "oa:start": 47857
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "A two-step verbatim-first discipline was used to ensure that spectral similarity claims are grounded in the actual data.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_052",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The modified cosine score combines matching peak m/z and the m/z shifted by the difference in precursor m/z."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 15468,
+          "oa:start": 15404
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The modified cosine score combines matching peak m/z and the m/z shifted by the difference in precursor m/z.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_053",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Spec2Vec and modified cosine score matchms packages are freely available and can be installed via conda."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 48795,
+          "oa:start": 48710
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "Spec2Vec and modified cosine score matchms packages are freely available and can be installed via conda.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_054",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "All-vs-all similarity score matrices for cosine score, modified cosine score, and fingerprint-based similarity are available on Zenodo for the UniqueInchikey dataset."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 50497,
+          "oa:start": 50429
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "All-vs-all similarity score matrices for cosine score, modified cosine score, and fingerprint-based similarity are available on Zenodo for the UniqueInchikey dataset.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_055",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The two most important trained Word2Vec models can be downloaded from Zenodo: one trained on UniqueInchikey and one trained on AllPositive."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 49296,
+          "oa:start": 49234
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/pkg_spec2vec"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_003"
+      },
+      "schema:name": "The two most important trained Word2Vec models can be downloaded from Zenodo: one trained on UniqueInchikey and one trained on AllPositive.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:result:result_001",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Spec2Vec is a novel spectral similarity score inspired by Word2Vec, a natural language processing algorithm.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_001"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_002",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Spec2Vec learns fragmental relationships within a large set of spectral data to derive abstract spectral embeddings.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_002"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_003",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Spec2Vec scores correlate better with structural similarity than cosine-based scores using data from nearly 13,000 unique molecules.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_003"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_004",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Spec2Vec is computationally more scalable, allowing structural analogue searches in large databases within seconds.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_004"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_005",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Cosine-based similarity scores are the most widely used measures of spectral similarity.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_005"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_006",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Studies investigating whether molecules with high structural similarity result in spectra with high spectral cosine similarity show only partial support for this relationship.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_006"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_007",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Modifications of cosine-based scores have been proposed including raising the m/z and intensity components to different powers and shifting fragment peaks by the difference in precursor m/z.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_007"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_008",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Despite limitations of cosine-based methods, no fundamentally different spectral similarity scores have been proposed.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_008"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_009",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The AllPositive dataset comprised 95,320 positive ionization mode mass spectra, of which 77,092 had InChIKey annotations. The AllPositive dataset contains 112,956 spectra with positive ionization mode",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_009"
+        },
+        {
+          "@id": "urn:asb:claim:claim_043"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_010",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The UniqueInchikey dataset consisted of 12,797 spectra with unique InChIKeys.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_010"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_011",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Spec2Vec spectrum similarity score correlates stronger with structural similarity than cosine or modified cosine scores.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_011"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_012",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The poor correlation between cosine and modified cosine similarity scores and structural similarity can largely be explained by high false positive rates.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_012"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_013",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Spec2Vec library matching achieved up to 88% accuracy compared to cosine similarity score based library matching.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_013"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_014",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Training a Spec2Vec model on the UniqueInchikey dataset takes about 30 minutes on an Intel i7-8550U CPU.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_014"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_015",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Querying 1030 spectra against 76,062 spectra took 140 seconds on an Intel i7-8550U CPU, or 0.14 seconds per query spectrum.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_015"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_016",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "For 60% of queries for unknown molecules, the top-10 list contained suggested molecules with a structural similarity score of greater than 0.6.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_016"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_017",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "For molecules with masses larger than 200 Da, Spec2Vec was often able to detect highly related molecules for unknown queries.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_017"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_018",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Spec2Vec is able to cluster higher fractions of spectra into high structural similarity clusters when compared to the modified cosine score.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_018"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_019",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Computing spectral similarities between all possible spectra pairs (approximately 82 million unique pairs) took 300 seconds on an Intel i7-8550U CPU using Spec2Vec.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_019"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_020",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Spec2Vec is an unsupervised method that can be trained on any collection of spectra, independent of whether chemical structures are known. Spec2Vec is unsupervised and can be trained on any collection",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_020"
+        },
+        {
+          "@id": "urn:asb:claim:claim_038"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_021",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Peaks in mass spectra have no particular order comparable to word order in a document, so Spec2Vec sets window-size to 500 meaning the entire spectrum counts as context.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_021"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_022",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Continuous bag of words (CBOW) was generally observed to perform better than skip gram for Spec2Vec.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_022"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_023",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Model performance for Spec2Vec does not necessarily improve with longer training runs when using negative sampling.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_023"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_024",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Training a Spec2Vec model with negative sampling (negative = 5) and 15 iterations on AllPositive or up to 50 epochs on UniqueInchikey achieves optimal model performance.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_024"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_025",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Spec2Vec represents a spectrum as a weighted sum of its fragment and loss word vectors.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_025"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_026",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The structural similarity between two molecules was measured using Tanimoto similarity based on daylight-like molecular fingerprints.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_026"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_027",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Neutral losses between 5.0 and 200.0 Da were added as features in Spec2Vec document representation.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_027"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_028",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Peaks are represented in Spec2Vec documents with their position up to a defined decimal precision, using a binning of two decimals.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_028"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_029",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Models trained on AllPositive with 2-decimal binning contained about 97% of all possible peaks and losses.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_029"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_030",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Spec2Vec is not meant to be the endpoint but rather the start of a new direction in spectral similarity scoring.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_030"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_031",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Spec2Vec is particularly suited to act as a pre-selection funnel for selecting promising candidates for further exploration using computationally more expensive similarity measures.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_031"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_032",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Spec2Vec can be applied to molecular networking, which is becoming an increasingly popular tool for exploring metabolomic datasets.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_032"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_033",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "GNPS users can calculate Spec2Vec scores for spectra in their positive ionisation mode datasets using a pretrained model.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_033"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_034",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Training the Spec2Vec embedding on 95,320 spectra took 40 minutes when training for 15 iterations.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_034"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_035",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Spec2Vec requires training on a large spectra dataset to work effectively, but this does not necessarily need to be library spectra.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_035"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_036",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Cosine-based methods are very good at revealing nearly equal spectra but are not well-suited to handle molecules with multiple local chemical modifications.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_036"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_037",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Spec2Vec takes relationships between fragments into account rather than relying only on binary assessment of each fragment match.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_037"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_038",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The probability of randomly picking a spectral pair with structural similarity score greater than 0.6 is p = 0.0103.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_039"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_039",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Spec2Vec improved performance for larger compounds (greater than 400 Da) is likely explained by the higher number of relevant fragments.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_040"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_040",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The current study used a large LC-MS dataset from GNPS containing 154,820 spectra.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_041"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_041",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "After data cleaning and automated lookup, 128,042 out of 154,820 spectra could be linked to an InChIKey.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_042"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_042",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "All peaks with m/z ratios outside the range [0, 1000] were removed from spectra.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_044"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_043",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "All spectra with fewer than 10 peaks were discarded from the analysis.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_045"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_044",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Different peak filtering procedures were used for Spec2Vec and cosine-based similarity scores to ensure fair comparison.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_046"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_045",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "For cosine score calculations, all peaks with relative intensities less than 0.01 compared to the highest intensity peak were ignored.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_047"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_046",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The maximum number of peaks kept per spectrum in Spec2Vec was set to scale linearly with the estimated parent mass.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_048"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_047",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Spec2Vec can estimate the impact of unknown words (peaks) by assessing the uncovered weighted part of a spectrum.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_049"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_048",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "By setting a missing fraction threshold at less than 0.05, Spec2Vec similarity scores for spectra far outside the learned peaks can be avoided.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_050"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_049",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "A two-step verbatim-first discipline was used to ensure that spectral similarity claims are grounded in the actual data.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_051"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_050",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The modified cosine score combines matching peak m/z and the m/z shifted by the difference in precursor m/z.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_052"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_051",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Spec2Vec and modified cosine score matchms packages are freely available and can be installed via conda.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_053"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_052",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "All-vs-all similarity score matrices for cosine score, modified cosine score, and fingerprint-based similarity are available on Zenodo for the UniqueInchikey dataset.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_054"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_053",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The two most important trained Word2Vec models can be downloaded from Zenodo: one trained on UniqueInchikey and one trained on AllPositive.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_055"
+        }
+      ]
+    },
+    {
+      "@id": "#env-task_003",
+      "@type": [
+        "repme:ComputationalEnvironment"
+      ],
+      "repme:computeTier": "light"
+    },
+    {
+      "@id": "#agent-15-activity-task_003",
+      "@type": [
+        "prov:Activity"
+      ],
+      "prov:endedAtTime": "2026-06-15T06:54:32.010299+00:00",
+      "prov:qualifiedUsage": {
+        "@type": "prov:Usage",
+        "schema:name": "prompt_sha256",
+        "schema:value": "9cde2adedeede25a"
+      },
+      "prov:wasAssociatedWith": {
+        "schema:name": "anthropic/claude-haiku-4-5-20251001"
+      },
+      "schema:name": "Agent 1.5 Claim Extractor"
+    },
+    {
+      "@id": "#computational-environment",
+      "@type": "repme:ComputationalEnvironment",
+      "repme:buildId": "690A9243050F447D9CB56F16BB4FF2A2",
+      "repme:depsHash": "sha256:4fffb5d3623041b6cc88cfe92427807d779db4274f6693748bfcaa96b06c7f79",
+      "repme:gitCommit": "ddf6c1becb15c939b16600b7655d44e2d2baa690",
+      "repme:platform": "darwin-25.5.0-arm64",
+      "repme:pythonVersion": "3.11.15",
+      "schema:dateCreated": "2026-06-15T06:52:33.010680Z",
+      "schema:hasPart": [
+        {
+          "@id": "#agent-config-agent1_entity"
+        },
+        {
+          "@id": "#agent-config-agent2a_outline"
+        },
+        {
+          "@id": "#agent-config-agent2b_card"
+        },
+        {
+          "@id": "#agent-config-agent3_critique"
+        },
+        {
+          "@id": "#agent-config-agent_classify"
+        }
+      ],
+      "schema:softwareVersion": "agentic-science-builder@0.1.0"
+    },
+    {
+      "@id": "#agent-config-agent1_entity",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v3",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent1_entity"
+    },
+    {
+      "@id": "#agent-config-agent2a_outline",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-sonnet-4-6",
+      "repme:promptVersion": "v2",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2a_outline"
+    },
+    {
+      "@id": "#agent-config-agent2b_card",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v4",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2b_card"
+    },
+    {
+      "@id": "#agent-config-agent3_critique",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent3_critique"
+    },
+    {
+      "@id": "#agent-config-agent_classify",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent_classify"
+    },
+    {
+      "@id": "urn:asb:metabolomics:unknown",
+      "@type": "Dataset",
+      "assay_type": "LC-MS",
+      "instrument": null,
+      "name": "Metabolomics Study Metadata",
+      "profile": "metabolomics_lcms",
+      "reproducibility_score": 0.419
+    },
+    {
+      "@id": "artifact_provenance.json",
+      "@type": "File",
+      "name": "artifact_provenance.json",
+      "encodingFormat": "application/json"
+    },
+    {
+      "@id": "ledger/claims.jsonl",
+      "@type": "File",
+      "name": "ledger/claims.jsonl",
+      "encodingFormat": "application/jsonlines"
+    },
+    {
+      "@id": "ledger/results.jsonl",
+      "@type": "File",
+      "name": "ledger/results.jsonl",
+      "encodingFormat": "application/jsonlines"
+    }
+  ]
+}

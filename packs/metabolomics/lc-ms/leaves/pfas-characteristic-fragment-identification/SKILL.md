@@ -1,6 +1,7 @@
 ---
 name: pfas-characteristic-fragment-identification
-description: Use when you have centroided data-dependent acquisition (ddMS2) mzML spectra from LC- or GC-HRMS and need to prioritize putative PFAS features.
+description: Use when you have centroided data-dependent acquisition (ddMS2) mzML
+  spectra from LC- or GC-HRMS and need to prioritize putative PFAS features.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3647
@@ -14,11 +15,14 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
 evidence_spans:
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data
 - PFΔScreen is an open-source Python based non-target screening software tool
 claims: []
 provenance:

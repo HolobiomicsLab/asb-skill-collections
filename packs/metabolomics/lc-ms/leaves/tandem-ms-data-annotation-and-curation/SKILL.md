@@ -1,6 +1,9 @@
 ---
 name: tandem-ms-data-annotation-and-curation
-description: Use when you have an unknown tandem MS/MS spectrum (precursor m/z and fragment peaks) and need to infer the molecular formula and ionization mode (e.g., [M+H]+, [M+Na]+, [M+K]+, [M+NH4]+) in a de novo setting without access to spectral libraries.
+description: Use when you have an unknown tandem MS/MS spectrum (precursor m/z and
+  fragment peaks) and need to infer the molecular formula and ionization mode (e.g.,
+  [M+H]+, [M+Na]+, [M+K]+, [M+NH4]+) in a de novo setting without access to spectral
+  libraries.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,11 +15,14 @@ metadata:
   - MIST-CF model
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
-- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS fragmentation trees)
+- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS
+  fragmentation trees)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

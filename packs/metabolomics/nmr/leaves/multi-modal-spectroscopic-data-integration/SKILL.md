@@ -1,6 +1,8 @@
 ---
 name: multi-modal-spectroscopic-data-integration
-description: Use when you have acquired complementary spectroscopic measurements (NMR, HSQC, COSY, IR) for the same molecular sample and need to combine them for structure elucidation.
+description: Use when you have acquired complementary spectroscopic measurements (NMR,
+  HSQC, COSY, IR) for the same molecular sample and need to combine them for structure
+  elucidation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -15,6 +17,8 @@ metadata:
   - RDKit
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/ange.202517611
   title: MMST

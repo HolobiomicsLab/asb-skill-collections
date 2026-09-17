@@ -1,6 +1,9 @@
 ---
 name: peptide-sequence-composition-parsing
-description: Use when you have peptide or protein sequences (as FASTA strings or text identifiers) and need to compute their mass, isotopic envelope, charge state, isoelectric point, or chromatographic retention time for MS matching, peak annotation, or property prediction.
+description: Use when you have peptide or protein sequences (as FASTA strings or text
+  identifiers) and need to compute their mass, isotopic envelope, charge state, isoelectric
+  point, or chromatographic retention time for MS matching, peak annotation, or property
+  prediction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0399
@@ -20,6 +23,8 @@ metadata:
   - pip / conda
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics

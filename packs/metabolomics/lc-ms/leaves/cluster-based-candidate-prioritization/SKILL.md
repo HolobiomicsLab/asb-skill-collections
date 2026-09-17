@@ -1,6 +1,9 @@
 ---
 name: cluster-based-candidate-prioritization
-description: Use when after mass-to-charge matching has produced a large table of candidate KEGG metabolites with multiple adduct assignments per feature. Use it when you observe that multiple candidate ions co-elute and share similar intensity profiles, suggesting they derive from the same parent metabolite;
+description: Use when after mass-to-charge matching has produced a large table of
+  candidate KEGG metabolites with multiple adduct assignments per feature. Use it
+  when you observe that multiple candidate ions co-elute and share similar intensity
+  profiles, suggesting they derive from the same parent metabolite;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -14,11 +17,14 @@ metadata:
   - cliqueMS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
 evidence_spans:
-- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides tools for context-based annotation of untargeted LC-MS data.
+- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides
+  tools for context-based annotation of untargeted LC-MS data.
 - mWISE (metabolomics Wise Inference of Speck Entities) is an R package
 claims: []
 provenance:

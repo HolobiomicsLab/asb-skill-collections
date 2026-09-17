@@ -1,6 +1,9 @@
 ---
 name: gcxgc-preprocessed-data-handling
-description: Use when you have preprocessed individual GCxGC-MS chromatograms (each smoothed with Whittaker smoother, baseline-corrected with asymmetric least squares, and aligned against a reference using 2D correlation optimized warping) and need to consolidate them into a single analytical object for.
+description: Use when you have preprocessed individual GCxGC-MS chromatograms (each
+  smoothed with Whittaker smoother, baseline-corrected with asymmetric least squares,
+  and aligned against a reference using 2D correlation optimized warping) and need
+  to consolidate them into a single analytical object for.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,13 +18,16 @@ metadata:
   - colorRamps
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
 - doi: 10.1371/journal.pntd.0006215
   title: ''
 evidence_spans:
-- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional gas chromatography data.
+- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional
+  gas chromatography data.
 - This is the vignette to explain the implementation of RGCxGC package.
 claims: []
 provenance:

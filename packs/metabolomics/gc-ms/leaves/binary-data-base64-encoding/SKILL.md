@@ -1,6 +1,7 @@
 ---
 name: binary-data-base64-encoding
-description: Use when when converting simulated or real LC/GC-MS spectral data (m/z–retention-time intensity matrices) into mzML format for archival, sharing, or downstream processing.
+description: Use when when converting simulated or real LC/GC-MS spectral data (m/z–retention-time
+  intensity matrices) into mzML format for archival, sharing, or downstream processing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -13,11 +14,14 @@ metadata:
   - mzrtsim
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
 - The underlying engine handles binary data encoding via the `base64enc` package
 - github.com__yufree__mzrtsim
 claims: []

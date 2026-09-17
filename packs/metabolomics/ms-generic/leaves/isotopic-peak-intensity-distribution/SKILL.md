@@ -1,6 +1,8 @@
 ---
 name: isotopic-peak-intensity-distribution
-description: Use when when you have one or more peptide sequences (as strings) and need to predict their isotopic distribution pattern for MS instrument simulation, peak deconvolution, or validation of observed isotopic envelopes.
+description: Use when when you have one or more peptide sequences (as strings) and
+  need to predict their isotopic distribution pattern for MS instrument simulation,
+  peak deconvolution, or validation of observed isotopic envelopes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,6 +18,8 @@ metadata:
   - Pyteomics
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics

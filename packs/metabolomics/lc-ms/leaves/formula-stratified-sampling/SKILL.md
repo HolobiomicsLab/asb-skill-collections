@@ -1,6 +1,9 @@
 ---
 name: formula-stratified-sampling
-description: 'Use when when preparing MS/MS spectral training data where: (1) the initial TCN train/test split contains imbalanced positive and negative examples, (2) certain molecular formulas are over-represented in the positive class, (3) you are training a Siamese architecture rescore model that requires.'
+description: 'Use when when preparing MS/MS spectral training data where: (1) the
+  initial TCN train/test split contains imbalanced positive and negative examples,
+  (2) certain molecular formulas are over-represented in the positive class, (3) you
+  are training a Siamese architecture rescore model that requires.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +15,8 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

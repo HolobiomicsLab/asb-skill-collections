@@ -1,6 +1,9 @@
 ---
 name: ion-mobility-arrival-time-conversion
-description: Use when you have a feature table containing raw ion mobility arrival time measurements paired with experimentally assigned biomolecular class labels (e.g., lipid, protein, carbohydrate), and you need to compute CCS values for downstream structural or comparative analysis.
+description: Use when you have a feature table containing raw ion mobility arrival
+  time measurements paired with experimentally assigned biomolecular class labels
+  (e.g., lipid, protein, carbohydrate), and you need to compute CCS values for downstream
+  structural or comparative analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +16,8 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal

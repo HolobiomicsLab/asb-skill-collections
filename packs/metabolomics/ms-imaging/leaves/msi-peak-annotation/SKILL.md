@@ -1,8 +1,12 @@
 ---
 name: msi-peak-annotation
-description: Use when you have processed MSI data (peak matrix and spatial coordinates) from matrix-assisted laser desorption/ionization (MALDI) or silver-assisted laser desorption/ionization (AgLDI) experiments, and you need to computationally distinguish matrix ions from analyte ions before downstream feature.
+description: Use when you have processed MSI data (peak matrix and spatial coordinates)
+  from matrix-assisted laser desorption/ionization (MALDI) or silver-assisted laser
+  desorption/ionization (AgLDI) experiments, and you need to computationally distinguish
+  matrix ions from analyte ions before downstream feature.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,11 +19,14 @@ metadata:
   - devtools
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
 evidence_spans:
-- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI data
+- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI
+  data
 - devtools::install_github("prafols/rMSI", ref = "0.8")
 - devtools::install_github("prafols/rMSIproc", ref = "0.2")
 - rMSIcleanup is an open-source R package

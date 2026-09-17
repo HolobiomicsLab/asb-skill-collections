@@ -1,6 +1,8 @@
 ---
 name: atom-bond-feature-importance-ranking
-description: Use when you have a trained GNN model for molecular property prediction (such as CCS) and need to understand which atomic and bond features are most influential in driving predictions.
+description: Use when you have a trained GNN model for molecular property prediction
+  (such as CCS) and need to understand which atomic and bond features are most influential
+  in driving predictions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -14,6 +16,8 @@ metadata:
   - RDKit
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs

@@ -20,7 +20,6 @@ from __future__ import annotations
 import argparse
 import json
 import shutil
-import sys
 from pathlib import Path
 
 # Invoked by path (`python scripts/x.py`), only `scripts/` lands on sys.path, so
@@ -35,6 +34,9 @@ from asb_skill_collections import layout
 
 REPO = Path(__file__).resolve().parent.parent
 SEARCH_SCRIPT = REPO / "collections" / "metabolomics" / "v2" / "bin" / "search_skills.py"
+SELECTOR_SOURCE = REPO / "asb_skill_collections" / "asb_skill_index.py"
+SELECTOR_BEGIN = b"# BEGIN VENDORED SELECTOR\n"
+SELECTOR_END = b"# END VENDORED SELECTOR\n"
 ROUTER_SLUG = "_router"
 
 ROUTER_TEMPLATE = """---
@@ -154,12 +156,41 @@ def write_router(unit: Path, count: int) -> None:
     (out / "SKILL.md").write_text(body, encoding="utf-8")
 
 
+def embed_selector(script: bytes) -> bytes:
+    """Replace a marked vendor block with the canonical module's exact bytes."""
+    if script.count(SELECTOR_BEGIN) != 1 or script.count(SELECTOR_END) != 1:
+        raise ValueError("retrieval script must contain exactly one selector block")
+    before, body = script.split(SELECTOR_BEGIN)
+    _, after = body.split(SELECTOR_END)
+    return before + SELECTOR_BEGIN + SELECTOR_SOURCE.read_bytes() + SELECTOR_END + after
+
+
+def refresh_scripts(unit: Path) -> dict:
+    """Regenerate standalone selectors without changing indexes or skill files.
+
+    The collection router supplies the wrapper for technique packs. Existing
+    semantic wrappers retain their embedding implementation; only their marked
+    keyword selector is regenerated.
+    """
+    scripts = {unit / "bin" / "search_skills.py": SEARCH_SCRIPT.read_bytes()}
+    semantic = unit / "bin" / "semantic_search.py"
+    if semantic.is_file():
+        scripts[semantic] = semantic.read_bytes()
+    updated = []
+    for path, template in scripts.items():
+        generated = embed_selector(template)
+        if not path.is_file() or path.read_bytes() != generated:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(generated)
+            updated.append(str(path))
+    return {"unit": str(unit), "updated": updated}
+
+
 def shape(unit: Path, source_index: Path, keep: set[str]) -> dict:
     """Apply the whole conversion to one unit and report what changed."""
     slugs = set(leaf_slugs(unit))
     moved = move_leaves(unit, keep | {ROUTER_SLUG})
-    (unit / "bin").mkdir(exist_ok=True)
-    shutil.copy2(SEARCH_SCRIPT, unit / "bin" / "search_skills.py")
+    refresh_scripts(unit)
     indexed = write_index(unit, source_index, slugs)
     write_router(unit, indexed or len(slugs))
     return {"unit": str(unit), "moved": moved, "indexed": indexed, "leaves": len(slugs)}
@@ -168,12 +199,19 @@ def shape(unit: Path, source_index: Path, keep: set[str]) -> dict:
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     p.add_argument("units", nargs="+", help="unit directories to convert")
-    p.add_argument("--index", required=True, help="parent skills_index.json to subset")
+    p.add_argument("--index", help="parent skills_index.json to subset (required for conversion)")
     p.add_argument("--keep", default="", help="comma-separated slugs to keep advertised")
+    p.add_argument("--scripts-only", action="store_true",
+                   help="refresh vendored selectors only; do not move leaves or rewrite indexes")
     args = p.parse_args(argv)
+    if not args.scripts_only and not args.index:
+        p.error("--index is required unless --scripts-only is used")
     keep = {s for s in args.keep.split(",") if s}
     for raw in args.units:
-        print(shape(Path(raw), Path(args.index), keep))
+        if args.scripts_only:
+            print(refresh_scripts(Path(raw)))
+        else:
+            print(shape(Path(raw), Path(args.index), keep))
     return 0
 
 

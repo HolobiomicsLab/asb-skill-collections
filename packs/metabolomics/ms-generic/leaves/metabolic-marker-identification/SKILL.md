@@ -1,6 +1,9 @@
 ---
 name: metabolic-marker-identification
-description: Use when after batch effect removal and sample integration, when you have a normalized feature-by-sample abundance matrix (finalData) with corresponding sample group labels (finalLabel), and need to identify which metabolites discriminate between biological conditions or phenotypes for focused.
+description: Use when after batch effect removal and sample integration, when you
+  have a normalized feature-by-sample abundance matrix (finalData) with corresponding
+  sample group labels (finalLabel), and need to identify which metabolites discriminate
+  between biological conditions or phenotypes for focused.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +18,8 @@ metadata:
   - varSelRF
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo

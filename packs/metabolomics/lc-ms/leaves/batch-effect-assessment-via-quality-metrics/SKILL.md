@@ -1,6 +1,8 @@
 ---
 name: batch-effect-assessment-via-quality-metrics
-description: Use when when you have processed metabolomics LC-MS/MS data organized by batch and sample type (including pooled QC replicates), and you need to quantify whether batch-to-batch and matrix effects are acceptable for downstream reporting.
+description: Use when when you have processed metabolomics LC-MS/MS data organized
+  by batch and sample type (including pooled QC replicates), and you need to quantify
+  whether batch-to-batch and matrix effects are acceptable for downstream reporting.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -14,6 +16,8 @@ metadata:
   - mzQualityDashboard
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality

@@ -20,7 +20,13 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mixomics",
+   "rgcxgc"
+  ]
  },
  {
   "slug": "accurate-mass-database-search",
@@ -47,7 +53,16 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "openms",
+   "pyopenms",
+   "smartpeak",
+   "smartpeakcli",
+   "smartpeakgui"
+  ]
  },
  {
   "slug": "adduct-ionmode-consistency-checking",
@@ -70,7 +85,13 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "python",
+   "spectra-hash"
+  ]
  },
  {
   "slug": "algorithm-parameter-comparison-analysis",
@@ -95,7 +116,17 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bruker-solarix",
+   "corems",
+   "docker",
+   "matplotlib",
+   "numpy",
+   "pandas"
+  ]
  },
  {
   "slug": "analyte-discrimination-machine-learning",
@@ -119,7 +150,13 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "npfimg",
+   "xcms"
+  ]
  },
  {
   "slug": "assay-matrix-formatting",
@@ -141,7 +178,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "base64enc",
+   "mzrtsim",
+   "summarizedexperiment"
+  ]
  },
  {
   "slug": "automated-peak-detection-without-conventional-picking",
@@ -165,7 +209,13 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "npfimg",
+   "xcms"
+  ]
  },
  {
   "slug": "automated-reaction-network-exploration",
@@ -190,7 +240,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "crest",
+   "geodesic-interpolate",
+   "molbar",
+   "orca",
+   "qcxms2",
+   "xtb"
+  ]
  },
  {
   "slug": "axis-label-format-customization",
@@ -207,7 +267,12 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "injectiondesign"
+  ]
  },
  {
   "slug": "baseline-comparison-analysis",
@@ -232,7 +297,13 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-hassounlab-esp",
+   "lda-latent-dirichlet-allocation"
+  ]
  },
  {
   "slug": "baseline-correction-algorithm-selection",
@@ -254,7 +325,13 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mixomics",
+   "rgcxgc"
+  ]
  },
  {
   "slug": "baseline-method-comparison-and-benchmarking",
@@ -277,7 +354,13 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "npfimg",
+   "xcms"
+  ]
  },
  {
   "slug": "baseline-model-training-and-evaluation",
@@ -301,7 +384,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "iceberg-webui",
+   "ms-pred-iceberg",
+   "ms-pred-scarf-model",
+   "pubchem",
+   "pytorch",
+   "tensorflow"
+  ]
  },
  {
   "slug": "batch-effect-correction-qc-reference",
@@ -325,7 +418,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "base64enc",
+   "mzrtsim",
+   "summarizedexperiment"
+  ]
  },
  {
   "slug": "batch-effect-matrix-construction",
@@ -348,7 +448,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "base64enc",
+   "mzrtsim",
+   "summarizedexperiment"
+  ]
  },
  {
   "slug": "binary-data-base64-encoding",
@@ -370,7 +477,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "base64enc",
+   "mzrtsim",
+   "summarizedexperiment"
+  ]
  },
  {
   "slug": "bleu-score-metric-computation",
@@ -393,7 +507,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "python-3",
+   "pytorch"
+  ]
  },
  {
   "slug": "breath-biomarker-discovery",
@@ -416,7 +537,13 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "npfimg",
+   "xcms"
+  ]
  },
  {
   "slug": "carbon-oxidation-state-assessment",
@@ -439,7 +566,33 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cytoscape",
+   "dropms",
+   "formularity",
+   "freda",
+   "i-van-krevelen",
+   "keggrest",
+   "matplotlib",
+   "metaboanalyst",
+   "metabodirect",
+   "numpy",
+   "pandas",
+   "pmartr",
+   "py4cytoscape",
+   "python",
+   "python-numpy-pandas",
+   "r-4-0-2",
+   "r-vegan-package",
+   "seaborn",
+   "syncsa",
+   "ultramassexplorer",
+   "vegan",
+   "vegan-r-package"
+  ]
  },
  {
   "slug": "centroided-ms-feature-detection",
@@ -465,7 +618,15 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "msconvert",
+   "openms",
+   "pyopenms",
+   "python"
+  ]
  },
  {
   "slug": "chemical-identifier-unification",
@@ -488,7 +649,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "chemical-identifier-verification",
@@ -510,7 +681,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "chemical-mass-tolerance-matching",
@@ -535,7 +716,15 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mongodb",
+   "pytest",
+   "python",
+   "rdkit"
+  ]
  },
  {
   "slug": "chemical-match-score-interpretation",
@@ -560,7 +749,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "chemical-metadata-retrieval-and-aggregation",
@@ -584,7 +783,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "chemical-name-normalization-and-publish-database-integration",
@@ -615,7 +824,17 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "chemical-structure-fingerprint-comparison",
@@ -644,7 +863,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gensim",
+   "matchms",
+   "numba",
+   "numpy",
+   "pandas",
+   "rdkit",
+   "scipy",
+   "spec2vec",
+   "word2vec"
+  ]
  },
  {
   "slug": "chemical-type-classification-and-annotation",
@@ -668,7 +900,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "cheminformatics-database-querying",
@@ -691,7 +933,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "chromatogram-alignment-warping",
@@ -713,7 +965,13 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mixomics",
+   "rgcxgc"
+  ]
  },
  {
   "slug": "chromatogram-artifact-removal",
@@ -735,7 +993,13 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mixomics",
+   "rgcxgc"
+  ]
  },
  {
   "slug": "chromatogram-baseline-correction-preprocessing",
@@ -757,7 +1021,13 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mixomics",
+   "rgcxgc"
+  ]
  },
  {
   "slug": "chromatogram-netcdf-file-import",
@@ -780,7 +1050,13 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mixomics",
+   "rgcxgc"
+  ]
  },
  {
   "slug": "chromatographic-modality-classification",
@@ -804,7 +1080,14 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "javafx-24",
+   "jdk-25",
+   "mzmine"
+  ]
  },
  {
   "slug": "chromatographic-noise-modeling",
@@ -827,7 +1110,14 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "base64enc",
+   "mzrtsim",
+   "summarizedexperiment"
+  ]
  },
  {
   "slug": "chromatographic-peak-detection-and-segmentation",
@@ -850,7 +1140,13 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "masscube",
+   "python"
+  ]
  },
  {
   "slug": "chromatographic-peak-detection-msw",
@@ -876,7 +1172,24 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "github",
+   "gnps",
+   "limma",
+   "massspecwavelet",
+   "metabocoreutils",
+   "msbackendmgf",
+   "msdatahub",
+   "msfeatures",
+   "pheatmap",
+   "spectra",
+   "xcms",
+   "zenodo"
+  ]
  },
  {
   "slug": "chromatographic-peak-detection-wavelet",
@@ -899,7 +1212,24 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "github",
+   "gnps",
+   "limma",
+   "massspecwavelet",
+   "metabocoreutils",
+   "msbackendmgf",
+   "msdatahub",
+   "msfeatures",
+   "pheatmap",
+   "spectra",
+   "xcms",
+   "zenodo"
+  ]
  },
  {
   "slug": "chromatographic-peak-detection-with-prominence-control",
@@ -927,7 +1257,28 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "asari-mass-functions-module-nn-cluster-by-mz-seeds",
+   "asari-massgrid-class-build-grid-sample-wise-add-sample-build-grid-by-centroiding-bin-track-mzs",
+   "asari-peaks-module",
+   "hmdb-4",
+   "https-github-com-shuzhao-li-asari",
+   "jms",
+   "khipu",
+   "lowess",
+   "mass-functions-nn-cluster-by-mz-seeds",
+   "numpy",
+   "proteowizard",
+   "pymzml",
+   "python",
+   "scipy",
+   "scipy-signal-detrend",
+   "scipy-signal-find-peaks"
+  ]
  },
  {
   "slug": "chromatographic-peak-extraction-and-retention-time-filtering",
@@ -952,7 +1303,24 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "github",
+   "gnps",
+   "limma",
+   "massspecwavelet",
+   "metabocoreutils",
+   "msbackendmgf",
+   "msdatahub",
+   "msfeatures",
+   "pheatmap",
+   "spectra",
+   "xcms",
+   "zenodo"
+  ]
  },
  {
   "slug": "chromatographic-peak-overlap-resolution",
@@ -974,7 +1342,14 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "gnps-gc",
+   "mshub"
+  ]
  },
  {
   "slug": "chromatographic-peak-resolution",
@@ -994,7 +1369,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "gnps-gc",
+   "mshub"
+  ]
  },
  {
   "slug": "chromatographic-retention-time-matching",
@@ -1015,7 +1397,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "chromatography-data-decimation",
@@ -1036,7 +1428,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "chromatography-data-preprocessing",
@@ -1060,7 +1457,15 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "python",
+   "pytorch",
+   "rdkit"
+  ]
  },
  {
   "slug": "cluster-statistics-integration",
@@ -1081,7 +1486,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "coeluting-compound-resolution",
@@ -1102,7 +1512,14 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "gnps-gc",
+   "mshub"
+  ]
  },
  {
   "slug": "coeluting-ion-separation",
@@ -1122,7 +1539,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "gnps-gc",
+   "mshub"
+  ]
  },
  {
   "slug": "cohort-stratified-metabolic-performance-analysis",
@@ -1146,7 +1570,12 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "prima-panel"
+  ]
  },
  {
   "slug": "comparative-algorithm-benchmarking-for-peak-detection",
@@ -1168,7 +1597,13 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "npfimg",
+   "xcms"
+  ]
  },
  {
   "slug": "compound-area-aggregation-across-samples",
@@ -1191,7 +1626,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "compound-data-subsetting-by-threshold",
@@ -1213,7 +1658,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "compound-identification-from-ms-data",
@@ -1239,7 +1694,17 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bruker-solarix",
+   "corems",
+   "docker",
+   "matplotlib",
+   "numpy",
+   "pandas"
+  ]
  },
  {
   "slug": "compound-identification-ranking-evaluation",
@@ -1264,7 +1729,14 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "python",
+   "pytorch-cu118"
+  ]
  },
  {
   "slug": "compound-identifier-standardization",
@@ -1288,7 +1760,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "drugbank-extraction-py",
+   "prepare-wikidata-lotus-prefect-py",
+   "pubchem"
+  ]
  },
  {
   "slug": "compound-isotope-and-adduct-grouping",
@@ -1315,7 +1794,17 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "dynamictreecut",
+   "interpretmsspectrum",
+   "msfinder",
+   "ramclustr",
+   "sirius",
+   "xcms"
+  ]
  },
  {
   "slug": "compound-structural-fingerprint-comparison",
@@ -1339,7 +1828,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "concentration-matrix-estimation-gc-ms",
@@ -1362,7 +1861,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "python-3",
+   "pytorch"
+  ]
  },
  {
   "slug": "condition-effect-matrix-generation",
@@ -1385,7 +1891,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "base64enc",
+   "mzrtsim",
+   "summarizedexperiment"
+  ]
  },
  {
   "slug": "conditional-routing-logic-extraction",
@@ -1410,7 +1923,24 @@
    "CE-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "canopus",
+   "gnps",
+   "ion-identity",
+   "javafx-24",
+   "jdk-25",
+   "lotus-database",
+   "memo",
+   "mzmine",
+   "mzmine2",
+   "mzmine3",
+   "open-tree-of-life",
+   "sirius",
+   "timar"
+  ]
  },
  {
   "slug": "control-flow-diagram-synthesis",
@@ -1434,7 +1964,24 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "canopus",
+   "gnps",
+   "ion-identity",
+   "javafx-24",
+   "jdk-25",
+   "lotus-database",
+   "memo",
+   "mzmine",
+   "mzmine2",
+   "mzmine3",
+   "open-tree-of-life",
+   "sirius",
+   "timar"
+  ]
  },
  {
   "slug": "corpus-size-coverage-scaling-analysis",
@@ -1462,7 +2009,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gensim",
+   "matchms",
+   "numba",
+   "numpy",
+   "pandas",
+   "rdkit",
+   "scipy",
+   "spec2vec",
+   "word2vec"
+  ]
  },
  {
   "slug": "cosine-similarity-spectral-clustering",
@@ -1484,7 +2044,14 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "gnps-gc",
+   "mshub"
+  ]
  },
  {
   "slug": "cross-assay-feature-linkage-analysis",
@@ -1512,7 +2079,24 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cytoscape",
+   "mamsi-mamsistructsearch",
+   "mamsistructsearch",
+   "matplotlib",
+   "mbpls",
+   "networkx",
+   "numpy",
+   "pandas",
+   "python",
+   "pyvis",
+   "scikit-learn",
+   "scipy",
+   "xcms"
+  ]
  },
  {
   "slug": "data-normalization-in-mass-spectrometry",
@@ -1534,7 +2118,12 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mzmine"
+  ]
  },
  {
   "slug": "data-structure-design-for-spectral-searches",
@@ -1557,7 +2146,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "data-type-classification-schema-design",
@@ -1581,7 +2180,24 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "canopus",
+   "gnps",
+   "ion-identity",
+   "javafx-24",
+   "jdk-25",
+   "lotus-database",
+   "memo",
+   "mzmine",
+   "mzmine2",
+   "mzmine3",
+   "open-tree-of-life",
+   "sirius",
+   "timar"
+  ]
  },
  {
   "slug": "deconvolved-spectrum-comparison",
@@ -1602,7 +2218,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "gnps-gc",
+   "mshub"
+  ]
  },
  {
   "slug": "drift-retention-time-alignment",
@@ -1626,7 +2249,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "drift-time-filtering",
@@ -1649,7 +2277,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "drift-time-retention-time-distance-metric-selection",
@@ -1670,7 +2303,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "drug-database-record-extraction",
@@ -1692,7 +2330,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "drugbank-extraction-py",
+   "prepare-wikidata-lotus-prefect-py",
+   "pubchem"
+  ]
  },
  {
   "slug": "dysregulation-score-computation",
@@ -1716,7 +2361,16 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cox-nnet",
+   "cox-ph",
+   "cytoscape",
+   "h2o",
+   "lilikoi-v2-0"
+  ]
  },
  {
   "slug": "ei-mass-spectra-structure-representation",
@@ -1738,7 +2392,12 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mssearchr"
+  ]
  },
  {
   "slug": "ei-mass-spectrum-simulation",
@@ -1764,7 +2423,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "crest",
+   "geodesic-interpolate",
+   "molbar",
+   "orca",
+   "qcxms2",
+   "xtb"
+  ]
  },
  {
   "slug": "ei-spectral-library-parsing-and-merging",
@@ -1792,7 +2461,22 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "nist",
+   "parallel",
+   "riken"
+  ]
  },
  {
   "slug": "ei-spectrum-normalization",
@@ -1813,7 +2497,12 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mssearchr"
+  ]
  },
  {
   "slug": "eic-similarity-correlation-analysis",
@@ -1835,7 +2524,24 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "github",
+   "gnps",
+   "limma",
+   "massspecwavelet",
+   "metabocoreutils",
+   "msbackendmgf",
+   "msdatahub",
+   "msfeatures",
+   "pheatmap",
+   "spectra",
+   "xcms",
+   "zenodo"
+  ]
  },
  {
   "slug": "electron-ionization-spectral-comparison",
@@ -1858,7 +2564,12 @@
    "GC-MS",
    "CE-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mssearchr"
+  ]
  },
  {
   "slug": "empirical-compound-construction-and-grouping",
@@ -1887,7 +2598,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "hmdb",
+   "khipu",
+   "lipid-map",
+   "matchms",
+   "metaboanalyst",
+   "pycombat",
+   "python",
+   "thermorawfileparser"
+  ]
  },
  {
   "slug": "empirical-compound-pre-annotation",
@@ -1912,7 +2636,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "hmdb",
+   "khipu",
+   "lipid-map",
+   "matchms",
+   "metaboanalyst",
+   "pycombat",
+   "python",
+   "thermorawfileparser"
+  ]
  },
  {
   "slug": "ensemble-model-weight-learning-for-spectral-prediction",
@@ -1937,7 +2674,13 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-hassounlab-esp",
+   "lda-latent-dirichlet-allocation"
+  ]
  },
  {
   "slug": "exact-mass-lookup-and-aggregation-from-chemical-databases",
@@ -1964,7 +2707,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "exact-mass-utilization-for-compound-identification",
@@ -1988,7 +2741,17 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "feature-group-refinement-multicriteria",
@@ -2011,7 +2774,24 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "github",
+   "gnps",
+   "limma",
+   "massspecwavelet",
+   "metabocoreutils",
+   "msbackendmgf",
+   "msdatahub",
+   "msfeatures",
+   "pheatmap",
+   "spectra",
+   "xcms",
+   "zenodo"
+  ]
  },
  {
   "slug": "feature-intensity-normalization-and-batch-correction",
@@ -2037,7 +2817,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "hmdb",
+   "khipu",
+   "lipid-map",
+   "matchms",
+   "metaboanalyst",
+   "pycombat",
+   "python",
+   "thermorawfileparser"
+  ]
  },
  {
   "slug": "feature-pair-scoring-in-metabolomics",
@@ -2061,7 +2854,17 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "dynamictreecut",
+   "interpretmsspectrum",
+   "msfinder",
+   "ramclustr",
+   "sirius",
+   "xcms"
+  ]
  },
  {
   "slug": "feature-table-matrix-assembly",
@@ -2084,7 +2887,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "base64enc",
+   "mzrtsim",
+   "summarizedexperiment"
+  ]
  },
  {
   "slug": "file-path-resolution-and-validation",
@@ -2107,7 +2917,16 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "openms",
+   "pyopenms",
+   "smartpeak",
+   "smartpeakcli",
+   "smartpeakgui"
+  ]
  },
  {
   "slug": "fixed-size-integration-method",
@@ -2129,7 +2948,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "fragmentation-database-construction",
@@ -2154,7 +2978,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "crest",
+   "geodesic-interpolate",
+   "molbar",
+   "orca",
+   "qcxms2",
+   "xtb"
+  ]
  },
  {
   "slug": "fticr-mass-calibration-edgeshift",
@@ -2176,7 +3010,24 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "github",
+   "gnps",
+   "limma",
+   "massspecwavelet",
+   "metabocoreutils",
+   "msbackendmgf",
+   "msdatahub",
+   "msfeatures",
+   "pheatmap",
+   "spectra",
+   "xcms",
+   "zenodo"
+  ]
  },
  {
   "slug": "ftms-raw-data-loading-and-parsing",
@@ -2201,7 +3052,17 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bruker-solarix",
+   "corems",
+   "docker",
+   "matplotlib",
+   "numpy",
+   "pandas"
+  ]
  },
  {
   "slug": "gaussian-peak-shape-evaluation",
@@ -2224,7 +3085,28 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "asari-mass-functions-module-nn-cluster-by-mz-seeds",
+   "asari-massgrid-class-build-grid-sample-wise-add-sample-build-grid-by-centroiding-bin-track-mzs",
+   "asari-peaks-module",
+   "hmdb-4",
+   "https-github-com-shuzhao-li-asari",
+   "jms",
+   "khipu",
+   "lowess",
+   "mass-functions-nn-cluster-by-mz-seeds",
+   "numpy",
+   "proteowizard",
+   "pymzml",
+   "python",
+   "scipy",
+   "scipy-signal-detrend",
+   "scipy-signal-find-peaks"
+  ]
  },
  {
   "slug": "gaussian-peakshape-fitting-evaluation",
@@ -2248,7 +3130,28 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "asari-mass-functions-module-nn-cluster-by-mz-seeds",
+   "asari-massgrid-class-build-grid-sample-wise-add-sample-build-grid-by-centroiding-bin-track-mzs",
+   "asari-peaks-module",
+   "hmdb-4",
+   "https-github-com-shuzhao-li-asari",
+   "jms",
+   "khipu",
+   "lowess",
+   "mass-functions-nn-cluster-by-mz-seeds",
+   "numpy",
+   "proteowizard",
+   "pymzml",
+   "python",
+   "scipy",
+   "scipy-signal-detrend",
+   "scipy-signal-find-peaks"
+  ]
  },
  {
   "slug": "gc-column-polarity-specific-ri-filtering",
@@ -2276,7 +3179,22 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "nist",
+   "parallel",
+   "riken"
+  ]
  },
  {
   "slug": "gc-ims-matrix-table-generation",
@@ -2298,7 +3216,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "gc-ims-peak-alignment-evaluation",
@@ -2320,7 +3243,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "gc-ms-abundance-preprocessing",
@@ -2343,7 +3271,15 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "envipat",
+   "isoscan",
+   "mzr",
+   "proteowizard-msconvert"
+  ]
  },
  {
   "slug": "gc-ms-chromatogram-processing",
@@ -2367,7 +3303,17 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bruker-solarix",
+   "corems",
+   "docker",
+   "matplotlib",
+   "numpy",
+   "pandas"
+  ]
  },
  {
   "slug": "gc-ms-data-preprocessing-and-normalization",
@@ -2390,7 +3336,13 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "npfimg",
+   "xcms"
+  ]
  },
  {
   "slug": "gc-ms-molecular-family-organization",
@@ -2410,7 +3362,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "gnps-gc",
+   "mshub"
+  ]
  },
  {
   "slug": "gc-ms-spectral-deconvolution",
@@ -2432,7 +3391,14 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "gnps-gc",
+   "mshub"
+  ]
  },
  {
   "slug": "gc-ms-spectral-library-matching",
@@ -2455,7 +3421,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bruker-solarix",
+   "corems",
+   "docker",
+   "matplotlib",
+   "numpy",
+   "pandas"
+  ]
  },
  {
   "slug": "gc-ms-spectral-preprocessing",
@@ -2478,7 +3454,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "python-3",
+   "pytorch"
+  ]
  },
  {
   "slug": "gc-ms-spectral-similarity-clustering",
@@ -2499,7 +3482,14 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "gnps-gc",
+   "mshub"
+  ]
  },
  {
   "slug": "gcims-dataset-object-creation",
@@ -2522,7 +3512,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "gcms-spectrum-deconvolution",
@@ -2542,7 +3537,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "gnps-gc",
+   "mshub"
+  ]
  },
  {
   "slug": "gcxgc-chromatogram-object-manipulation",
@@ -2567,7 +3569,13 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mixomics",
+   "rgcxgc"
+  ]
  },
  {
   "slug": "gcxgc-ms-multivariate-analysis",
@@ -2591,7 +3599,13 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mixomics",
+   "rgcxgc"
+  ]
  },
  {
   "slug": "gcxgc-preprocessed-data-handling",
@@ -2616,7 +3630,13 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mixomics",
+   "rgcxgc"
+  ]
  },
  {
   "slug": "gibbs-sampler-implementation-and-convergence",
@@ -2642,7 +3662,10 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": []
  },
  {
   "slug": "gnps-spectral-data-processing",
@@ -2664,7 +3687,13 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "fiddle",
+   "msfiddle"
+  ]
  },
  {
   "slug": "graph-clustering-community-detection",
@@ -2686,7 +3715,14 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "gnps-gc",
+   "mshub"
+  ]
  },
  {
   "slug": "ground-truth-intensity-calculation",
@@ -2709,7 +3745,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "base64enc",
+   "mzrtsim",
+   "summarizedexperiment"
+  ]
  },
  {
   "slug": "hierarchical-clustering-parameter-optimization",
@@ -2731,7 +3774,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "hmdb-metabolite-query-and-retrieval",
@@ -2757,7 +3805,18 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "human-metabolome-database-hmdb",
+   "openpyxl",
+   "pandas",
+   "pyqt5",
+   "python",
+   "python-3-9",
+   "xlsxwriter"
+  ]
  },
  {
   "slug": "image-based-feature-extraction-ms-maps",
@@ -2781,7 +3840,13 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "npfimg",
+   "xcms"
+  ]
  },
  {
   "slug": "image-processing-for-metabolomics",
@@ -2803,7 +3868,13 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "npfimg",
+   "xcms"
+  ]
  },
  {
   "slug": "image-processing-on-two-dimensional-mass-spectrometry-maps",
@@ -2825,7 +3896,13 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "npfimg",
+   "xcms"
+  ]
  },
  {
   "slug": "imaging-mass-spectrometry-characterization",
@@ -2850,7 +3927,14 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "javafx-24",
+   "jdk-25",
+   "mzmine"
+  ]
  },
  {
   "slug": "imputation-algorithm-selection",
@@ -2875,7 +3959,10 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": []
  },
  {
   "slug": "in-silico-fragment-m-z-calculation",
@@ -2901,7 +3988,20 @@
    "direct-infusion-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-q-tof-uhplc-hrms-ms",
+   "bruker-q-tof-uhplc-hrms-ms",
+   "compound-discoverer",
+   "lipidmatch",
+   "ms-dial",
+   "mzmine",
+   "q-exactive-orbitrap",
+   "sciex-q-tof-uhplc-hrms-ms",
+   "xcms"
+  ]
  },
  {
   "slug": "injection-order-assignment-and-scheduling",
@@ -2921,7 +4021,12 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "injectiondesign"
+  ]
  },
  {
   "slug": "injection-order-direction-specification",
@@ -2941,7 +4046,12 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "injectiondesign"
+  ]
  },
  {
   "slug": "instrument-metadata-parsing",
@@ -2965,7 +4075,14 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "javafx-24",
+   "jdk-25",
+   "mzmine"
+  ]
  },
  {
   "slug": "ion-mobility-dimension-detection",
@@ -2989,7 +4106,14 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "javafx-24",
+   "jdk-25",
+   "mzmine"
+  ]
  },
  {
   "slug": "ion-mobility-spectrometry-peak-extraction",
@@ -3011,7 +4135,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "ionisation-method-hardware-correspondence",
@@ -3033,7 +4162,14 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "javafx-24",
+   "jdk-25",
+   "mzmine"
+  ]
  },
  {
   "slug": "ionization-mode-detection-from-mass-spectrometry-data",
@@ -3056,7 +4192,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "hmdb",
+   "khipu",
+   "lipid-map",
+   "matchms",
+   "metaboanalyst",
+   "pycombat",
+   "python",
+   "thermorawfileparser"
+  ]
  },
  {
   "slug": "isotope-labeling-data-integration",
@@ -3088,7 +4237,21 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biocmanager",
+   "devtools",
+   "dplyr",
+   "ggplot2",
+   "isopairfinder",
+   "purrr",
+   "readr",
+   "stringr",
+   "tibble",
+   "tidyr"
+  ]
  },
  {
   "slug": "java-source-code-inspection",
@@ -3112,7 +4275,24 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "canopus",
+   "gnps",
+   "ion-identity",
+   "javafx-24",
+   "jdk-25",
+   "lotus-database",
+   "memo",
+   "mzmine",
+   "mzmine2",
+   "mzmine3",
+   "open-tree-of-life",
+   "sirius",
+   "timar"
+  ]
  },
  {
   "slug": "kovats-retention-index-extraction-and-assignment",
@@ -3139,7 +4319,22 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "nist",
+   "parallel",
+   "riken"
+  ]
  },
  {
   "slug": "large-scale-all-pairs-similarity-benchmarking",
@@ -3169,7 +4364,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gensim",
+   "matchms",
+   "numba",
+   "numpy",
+   "pandas",
+   "rdkit",
+   "scipy",
+   "spec2vec",
+   "word2vec"
+  ]
  },
  {
   "slug": "lc-ms-feature-extraction-and-alignment",
@@ -3194,7 +4402,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "hmdb",
+   "khipu",
+   "lipid-map",
+   "matchms",
+   "metaboanalyst",
+   "pycombat",
+   "python",
+   "thermorawfileparser"
+  ]
  },
  {
   "slug": "lc-ms-feature-grouping-and-compounding",
@@ -3218,7 +4439,24 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "github",
+   "gnps",
+   "limma",
+   "massspecwavelet",
+   "metabocoreutils",
+   "msbackendmgf",
+   "msdatahub",
+   "msfeatures",
+   "pheatmap",
+   "spectra",
+   "xcms",
+   "zenodo"
+  ]
  },
  {
   "slug": "least-squares-optimization-spectral-deconvolution",
@@ -3241,7 +4479,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "python-3",
+   "pytorch"
+  ]
  },
  {
   "slug": "left-censored-missing-value-classification",
@@ -3266,7 +4511,10 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": []
  },
  {
   "slug": "left-censored-missingness-simulation",
@@ -3290,7 +4538,10 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": []
  },
  {
   "slug": "level-4-annotation-assignment",
@@ -3316,7 +4567,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "hmdb",
+   "khipu",
+   "lipid-map",
+   "matchms",
+   "metaboanalyst",
+   "pycombat",
+   "python",
+   "thermorawfileparser"
+  ]
  },
  {
   "slug": "library-object-validation",
@@ -3340,7 +4604,22 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "nist",
+   "parallel",
+   "riken"
+  ]
  },
  {
   "slug": "library-spectrum-database-searching",
@@ -3362,7 +4641,12 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mssearchr"
+  ]
  },
  {
   "slug": "linear-algebra-peak-reconstruction",
@@ -3385,7 +4669,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "python-3",
+   "pytorch"
+  ]
  },
  {
   "slug": "linear-score-calculation-from-coefficients",
@@ -3410,7 +4701,12 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mimir"
+  ]
  },
  {
   "slug": "lipid-feature-normalization",
@@ -3434,7 +4730,12 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "multiabler"
+  ]
  },
  {
   "slug": "log-transformation-preprocessing",
@@ -3456,7 +4757,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "base64enc",
+   "mzrtsim",
+   "summarizedexperiment"
+  ]
  },
  {
   "slug": "low-resolution-compound-identification",
@@ -3479,7 +4787,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bruker-solarix",
+   "corems",
+   "docker",
+   "matplotlib",
+   "numpy",
+   "pandas"
+  ]
  },
  {
   "slug": "low-resolution-mass-spectra-library-matching",
@@ -3502,7 +4820,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bruker-solarix",
+   "corems",
+   "docker",
+   "matplotlib",
+   "numpy",
+   "pandas"
+  ]
  },
  {
   "slug": "marker-feature-identification-and-validation",
@@ -3527,7 +4855,13 @@
    "GC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "npfimg",
+   "xcms"
+  ]
  },
  {
   "slug": "marker-feature-identification-chromatography-ms",
@@ -3551,7 +4885,13 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "npfimg",
+   "xcms"
+  ]
  },
  {
   "slug": "mass-calibration-against-reference-standards",
@@ -3575,7 +4915,17 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bruker-solarix",
+   "corems",
+   "docker",
+   "matplotlib",
+   "numpy",
+   "pandas"
+  ]
  },
  {
   "slug": "mass-chromatogram-alignment",
@@ -3599,7 +4949,24 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "github",
+   "gnps",
+   "limma",
+   "massspecwavelet",
+   "metabocoreutils",
+   "msbackendmgf",
+   "msdatahub",
+   "msfeatures",
+   "pheatmap",
+   "spectra",
+   "xcms",
+   "zenodo"
+  ]
  },
  {
   "slug": "mass-error-and-retention-time-alignment",
@@ -3623,7 +4990,15 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "envipat",
+   "isoscan",
+   "mzr",
+   "proteowizard-msconvert"
+  ]
  },
  {
   "slug": "mass-spectral-component-extraction",
@@ -3644,7 +5019,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "gnps-gc",
+   "mshub"
+  ]
  },
  {
   "slug": "mass-spectral-data-augmentation",
@@ -3667,7 +5049,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "python-3",
+   "pytorch"
+  ]
  },
  {
   "slug": "mass-spectral-data-validation",
@@ -3691,7 +5080,15 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "jupyter",
+   "jupyter-notebooks",
+   "ms2deepscore",
+   "python"
+  ]
  },
  {
   "slug": "mass-spectral-matrix-prediction",
@@ -3714,7 +5111,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "python-3",
+   "pytorch"
+  ]
  },
  {
   "slug": "mass-spectral-metadata-harmonization",
@@ -3744,7 +5148,22 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "nist",
+   "parallel",
+   "riken"
+  ]
  },
  {
   "slug": "mass-spectral-metadata-standardization",
@@ -3773,7 +5192,22 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "nist",
+   "parallel",
+   "riken"
+  ]
  },
  {
   "slug": "mass-spectral-missing-word-fraction-computation",
@@ -3800,7 +5234,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gensim",
+   "matchms",
+   "numba",
+   "numpy",
+   "pandas",
+   "rdkit",
+   "scipy",
+   "spec2vec",
+   "word2vec"
+  ]
  },
  {
   "slug": "mass-spectral-similarity-scoring-across-samples",
@@ -3827,7 +5274,17 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "dynamictreecut",
+   "interpretmsspectrum",
+   "msfinder",
+   "ramclustr",
+   "sirius",
+   "xcms"
+  ]
  },
  {
   "slug": "mass-spectrometry-column-polarity-filtering",
@@ -3849,7 +5306,22 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "nist",
+   "parallel",
+   "riken"
+  ]
  },
  {
   "slug": "mass-spectrometry-compound-extraction",
@@ -3875,7 +5347,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "mass-spectrometry-data-alignment",
@@ -3897,7 +5379,12 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "matlab"
+  ]
  },
  {
   "slug": "mass-spectrometry-data-format-conversion",
@@ -3932,7 +5419,26 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-masshunter",
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "microsoft-visual-c-runtime-x64",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "net-framework",
+   "nist",
+   "parallel",
+   "pnnl-preprocessor",
+   "riken"
+  ]
  },
  {
   "slug": "mass-spectrometry-data-formatting",
@@ -3955,7 +5461,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "mass-spectrometry-data-parsing",
@@ -4001,7 +5517,43 @@
    "GC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "asari-mass-functions-module-nn-cluster-by-mz-seeds",
+   "asari-massgrid-class-build-grid-sample-wise-add-sample-build-grid-by-centroiding-bin-track-mzs",
+   "asari-peaks-module",
+   "gnps-lcms-visualization-dashboard",
+   "hmdb-4",
+   "https-github-com-shuzhao-li-asari",
+   "idsl-ipa",
+   "jms",
+   "khipu",
+   "lowess",
+   "mass-functions-nn-cluster-by-mz-seeds",
+   "matchms",
+   "memo",
+   "memo-ms",
+   "metfrag",
+   "mzmine-2",
+   "numpy",
+   "proteowizard",
+   "pubchem",
+   "pubchempy",
+   "pymzml",
+   "python",
+   "rdkit",
+   "scikit-bio",
+   "scipy",
+   "scipy-signal-detrend",
+   "scipy-signal-find-peaks",
+   "sirius",
+   "spec2vec",
+   "spectra",
+   "xcms"
+  ]
  },
  {
   "slug": "mass-spectrometry-data-quality-filtering",
@@ -4025,7 +5577,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "hmdb",
+   "khipu",
+   "lipid-map",
+   "matchms",
+   "metaboanalyst",
+   "pycombat",
+   "python",
+   "thermorawfileparser"
+  ]
  },
  {
   "slug": "mass-spectrometry-feature-grouping",
@@ -4061,7 +5626,34 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "biotransformer",
+   "cts",
+   "github",
+   "gnps",
+   "limma",
+   "massspecwavelet",
+   "metabocoreutils",
+   "metfrag",
+   "msbackendmgf",
+   "msconvert",
+   "msdatahub",
+   "msfeatures",
+   "openms",
+   "patroon",
+   "pheatmap",
+   "pubchem",
+   "pyopenms",
+   "python",
+   "sirius",
+   "spectra",
+   "xcms",
+   "zenodo"
+  ]
  },
  {
   "slug": "mass-spectrometry-library-matching",
@@ -4089,7 +5681,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gensim",
+   "matchms",
+   "numba",
+   "numpy",
+   "pandas",
+   "rdkit",
+   "scipy",
+   "spec2vec",
+   "word2vec"
+  ]
  },
  {
   "slug": "mass-spectrometry-m-z-accuracy-assessment",
@@ -4111,7 +5716,24 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "github",
+   "gnps",
+   "limma",
+   "massspecwavelet",
+   "metabocoreutils",
+   "msbackendmgf",
+   "msdatahub",
+   "msfeatures",
+   "pheatmap",
+   "spectra",
+   "xcms",
+   "zenodo"
+  ]
  },
  {
   "slug": "mass-spectrometry-match-factor-filtering",
@@ -4133,7 +5755,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "mass-spectrometry-matrix-background-simulation",
@@ -4157,7 +5789,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "base64enc",
+   "mzrtsim",
+   "summarizedexperiment"
+  ]
  },
  {
   "slug": "mass-spectrometry-network-construction",
@@ -4177,7 +5816,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "gnps-gc",
+   "mshub"
+  ]
  },
  {
   "slug": "mass-spectrometry-raw-data-encoding",
@@ -4202,7 +5848,14 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "base64enc",
+   "mzrtsim",
+   "summarizedexperiment"
+  ]
  },
  {
   "slug": "mass-spectrometry-scoring-method-validation",
@@ -4226,7 +5879,17 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "dynamictreecut",
+   "interpretmsspectrum",
+   "msfinder",
+   "ramclustr",
+   "sirius",
+   "xcms"
+  ]
  },
  {
   "slug": "mass-spectrometry-screening-workflows",
@@ -4259,7 +5922,17 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biotransformer",
+   "cts",
+   "metfrag",
+   "patroon",
+   "pubchem",
+   "sirius"
+  ]
  },
  {
   "slug": "mass-spectrometry-spectrum-tokenization",
@@ -4286,7 +5959,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gensim",
+   "matchms",
+   "numba",
+   "numpy",
+   "pandas",
+   "rdkit",
+   "scipy",
+   "spec2vec",
+   "word2vec"
+  ]
  },
  {
   "slug": "mass-spectrometry-tolerance-window-calibration",
@@ -4311,7 +5997,18 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "aer",
+   "getfeatistics",
+   "ggplot2",
+   "lme4",
+   "metfrag",
+   "ms-dial",
+   "xcms"
+  ]
  },
  {
   "slug": "mass-spectrum-extraction-and-formatting",
@@ -4332,7 +6029,14 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "gnps-gc",
+   "mshub"
+  ]
  },
  {
   "slug": "mass-spectrum-peak-list-handling",
@@ -4353,7 +6057,12 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mssearchr"
+  ]
  },
  {
   "slug": "mass-spectrum-peak-matching",
@@ -4375,7 +6084,12 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mssearchr"
+  ]
  },
  {
   "slug": "mass-spectrum-tensor-encoding",
@@ -4402,7 +6116,16 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "python",
+   "pytorch",
+   "rdkit"
+  ]
  },
  {
   "slug": "match-factor-threshold-filtering",
@@ -4426,7 +6149,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "metabolite-annotation-ensemble-ranking",
@@ -4453,7 +6186,13 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-hassounlab-esp",
+   "lda-latent-dirichlet-allocation"
+  ]
  },
  {
   "slug": "metabolite-annotation-mlp-gnn-ensemble",
@@ -4478,7 +6217,13 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-hassounlab-esp",
+   "lda-latent-dirichlet-allocation"
+  ]
  },
  {
   "slug": "metabolite-biomarker-classification-via-unsupervised-projection",
@@ -4502,7 +6247,13 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mixomics",
+   "rgcxgc"
+  ]
  },
  {
   "slug": "metabolite-cluster-evaluation",
@@ -4526,7 +6277,17 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "dynamictreecut",
+   "interpretmsspectrum",
+   "msfinder",
+   "ramclustr",
+   "sirius",
+   "xcms"
+  ]
  },
  {
   "slug": "metabolite-feature-clustering-by-retention-time",
@@ -4554,7 +6315,17 @@
    "GC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "dynamictreecut",
+   "interpretmsspectrum",
+   "msfinder",
+   "ramclustr",
+   "sirius",
+   "xcms"
+  ]
  },
  {
   "slug": "metabolite-identifier-annotation",
@@ -4578,7 +6349,12 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biotransformer"
+  ]
  },
  {
   "slug": "metabolite-quantification-accuracy-assessment",
@@ -4602,7 +6378,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "metabolite-rank-performance-evaluation",
@@ -4626,7 +6412,13 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-hassounlab-esp",
+   "lda-latent-dirichlet-allocation"
+  ]
  },
  {
   "slug": "metabolite-score-projection",
@@ -4652,7 +6444,12 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mimir"
+  ]
  },
  {
   "slug": "metabolite-signal-drift-detection",
@@ -4679,7 +6476,15 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "dplyr",
+   "hruv",
+   "ruv-iii",
+   "summarizedexperiment"
+  ]
  },
  {
   "slug": "metabolite-spectral-data-merging",
@@ -4706,7 +6511,22 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "nist",
+   "parallel",
+   "riken"
+  ]
  },
  {
   "slug": "metabolite-tandem-ms-library-curation",
@@ -4731,7 +6551,22 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "nist",
+   "parallel",
+   "riken"
+  ]
  },
  {
   "slug": "metabolite-to-gene-mapping",
@@ -4757,7 +6592,10 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": []
  },
  {
   "slug": "metabolomic-feature-alignment",
@@ -4780,7 +6618,17 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "factoextra",
+   "ggplot2",
+   "igraph",
+   "largemetabo",
+   "mixomics",
+   "r"
+  ]
  },
  {
   "slug": "metabolomic-feature-extraction-from-mzml",
@@ -4804,7 +6652,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "hmdb",
+   "khipu",
+   "lipid-map",
+   "matchms",
+   "metaboanalyst",
+   "pycombat",
+   "python",
+   "thermorawfileparser"
+  ]
  },
  {
   "slug": "metabolomic-feature-table-filtering",
@@ -4828,7 +6689,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "hmdb",
+   "khipu",
+   "lipid-map",
+   "matchms",
+   "metaboanalyst",
+   "pycombat",
+   "python",
+   "thermorawfileparser"
+  ]
  },
  {
   "slug": "metabolomic-feature-table-processing",
@@ -4850,7 +6724,12 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "avir-r"
+  ]
  },
  {
   "slug": "metabolomics-feature-table-conversion",
@@ -4872,7 +6751,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "base64enc",
+   "mzrtsim",
+   "summarizedexperiment"
+  ]
  },
  {
   "slug": "metabolomics-feature-table-curation",
@@ -4897,7 +6783,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "hmdb",
+   "khipu",
+   "lipid-map",
+   "matchms",
+   "metaboanalyst",
+   "pycombat",
+   "python",
+   "thermorawfileparser"
+  ]
  },
  {
   "slug": "metabolomics-feature-transformation",
@@ -4922,7 +6821,18 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "aer",
+   "getfeatistics",
+   "ggplot2",
+   "lme4",
+   "metfrag",
+   "ms-dial",
+   "xcms"
+  ]
  },
  {
   "slug": "metabolomics-imputation-method-application",
@@ -4947,7 +6857,10 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": []
  },
  {
   "slug": "metabolomics-matrix-manipulation",
@@ -4971,7 +6884,10 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": []
  },
  {
   "slug": "metabolomics-software-benchmarking",
@@ -4996,7 +6912,14 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "idsl-ipa",
+   "mzmine-2",
+   "xcms"
+  ]
  },
  {
   "slug": "metabolomics-workflow-step-enumeration",
@@ -5018,7 +6941,16 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "openms",
+   "pyopenms",
+   "smartpeak",
+   "smartpeakcli",
+   "smartpeakgui"
+  ]
  },
  {
   "slug": "metadata-coldata-integration",
@@ -5040,7 +6972,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "base64enc",
+   "mzrtsim",
+   "summarizedexperiment"
+  ]
  },
  {
   "slug": "metadata-field-extraction-and-restructuring",
@@ -5062,7 +7001,22 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "nist",
+   "parallel",
+   "riken"
+  ]
  },
  {
   "slug": "microbiome-metabolome-prediction-modeling",
@@ -5092,7 +7046,41 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "adam-optimizer",
+   "canonical-correlation-analysis-cca",
+   "cca-canonical-correlation-analysis",
+   "consensus-clustering",
+   "cytoscape",
+   "elastic-net",
+   "elastic-net-regression",
+   "hierarchical-clustering-euclidean-distance-complete-linkage",
+   "melonnpan",
+   "melonnpan-elastic-net-linear-regression",
+   "mimenet",
+   "ned",
+   "neural-networks",
+   "neural-networks-mlpnn-with-relu-activation",
+   "numpy",
+   "python",
+   "python-scikit-learn",
+   "python-scikit-learn-seaborn-or-matplotlib-for-visualization",
+   "random-forest",
+   "random-forest-regression",
+   "relu-activation",
+   "scikit-learn",
+   "scikit-learn-mlpregressor",
+   "scikit-learn-python",
+   "scipy-spearman-correlation",
+   "seaborn",
+   "seaborn-clustermap",
+   "tensorflow",
+   "tensorflow-or-pytorch",
+   "wgcna"
+  ]
  },
  {
   "slug": "missing-data-mechanism-specification",
@@ -5118,7 +7106,10 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": []
  },
  {
   "slug": "missing-fraction-quality-filtering-for-embeddings",
@@ -5144,7 +7135,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gensim",
+   "matchms",
+   "numba",
+   "numpy",
+   "pandas",
+   "rdkit",
+   "scipy",
+   "spec2vec",
+   "word2vec"
+  ]
  },
  {
   "slug": "mnar-data-handling",
@@ -5171,7 +7175,10 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": []
  },
  {
   "slug": "model-checkpoint-persistence",
@@ -5194,7 +7201,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "python-3",
+   "pytorch"
+  ]
  },
  {
   "slug": "modulation-parameter-configuration",
@@ -5216,7 +7230,13 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mixomics",
+   "rgcxgc"
+  ]
  },
  {
   "slug": "module-coverage-mapping",
@@ -5238,7 +7258,14 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "javafx-24",
+   "jdk-25",
+   "mzmine"
+  ]
  },
  {
   "slug": "module-dispatch-architecture-analysis",
@@ -5262,7 +7289,24 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "canopus",
+   "gnps",
+   "ion-identity",
+   "javafx-24",
+   "jdk-25",
+   "lotus-database",
+   "memo",
+   "mzmine",
+   "mzmine2",
+   "mzmine3",
+   "open-tree-of-life",
+   "sirius",
+   "timar"
+  ]
  },
  {
   "slug": "molecular-fingerprint-structural-similarity-tanimoto",
@@ -5290,7 +7334,20 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gensim",
+   "matchms",
+   "numba",
+   "numpy",
+   "pandas",
+   "rdkit",
+   "scipy",
+   "spec2vec",
+   "word2vec"
+  ]
  },
  {
   "slug": "molecular-fragment-prediction-interpretation",
@@ -5315,7 +7372,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "iceberg-webui",
+   "ms-pred-iceberg",
+   "ms-pred-scarf-model",
+   "pubchem",
+   "pytorch",
+   "tensorflow"
+  ]
  },
  {
   "slug": "molecular-identifier-completeness-verification",
@@ -5340,7 +7407,13 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "python",
+   "spectra-hash"
+  ]
  },
  {
   "slug": "molecular-network-graph-parsing",
@@ -5360,7 +7433,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "gnps-gc",
+   "mshub"
+  ]
  },
  {
   "slug": "molecular-spectrum-prediction-baseline",
@@ -5382,7 +7462,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "iceberg",
+   "iceberg-model",
+   "iceberg-webui",
+   "ms-pred",
+   "ms-pred-scarf-model",
+   "pubchem"
+  ]
  },
  {
   "slug": "molecular-structure-generation-evaluation",
@@ -5407,7 +7497,18 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cfm-id",
+   "cfmid",
+   "msgo-model",
+   "python",
+   "python-3-7",
+   "torch",
+   "torch-1-7-1"
+  ]
  },
  {
   "slug": "molecular-weight-prediction-from-ei-ms",
@@ -5432,7 +7533,16 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "python",
+   "pytorch",
+   "rdkit"
+  ]
  },
  {
   "slug": "mona-metadata-field-extraction",
@@ -5454,7 +7564,22 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "nist",
+   "parallel",
+   "riken"
+  ]
  },
  {
   "slug": "ms-data-format-identification",
@@ -5478,7 +7603,14 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "javafx-24",
+   "jdk-25",
+   "mzmine"
+  ]
  },
  {
   "slug": "ms-instrument-type-classification",
@@ -5500,7 +7632,14 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "javafx-24",
+   "jdk-25",
+   "mzmine"
+  ]
  },
  {
   "slug": "ms-peak-table-format-validation",
@@ -5525,7 +7664,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "ms-spectral-library-matching",
@@ -5550,7 +7699,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "ms1-feature-detection-and-annotation",
@@ -5577,7 +7736,16 @@
    "GC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "openms",
+   "pyopenms",
+   "smartpeak",
+   "smartpeakcli",
+   "smartpeakgui"
+  ]
  },
  {
   "slug": "msp-file-format-parsing",
@@ -5605,7 +7773,22 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "nist",
+   "parallel",
+   "riken"
+  ]
  },
  {
   "slug": "msp-file-parsing",
@@ -5626,7 +7809,12 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mssearchr"
+  ]
  },
  {
   "slug": "multi-batch-experimental-design-understanding",
@@ -5651,7 +7839,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "hmdb",
+   "khipu",
+   "lipid-map",
+   "matchms",
+   "metaboanalyst",
+   "pycombat",
+   "python",
+   "thermorawfileparser"
+  ]
  },
  {
   "slug": "multi-dimensional-sample-stratification",
@@ -5672,7 +7873,12 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "injectiondesign"
+  ]
  },
  {
   "slug": "multi-task-attention-mechanism-integration",
@@ -5695,7 +7901,13 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-hassounlab-esp",
+   "lda-latent-dirichlet-allocation"
+  ]
  },
  {
   "slug": "multiway-principal-component-analysis-score-extraction",
@@ -5718,7 +7930,13 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mixomics",
+   "rgcxgc"
+  ]
  },
  {
   "slug": "mz-retention-time-tolerance-parameter-configuration",
@@ -5742,7 +7960,20 @@
    "GC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "hmdb",
+   "khipu",
+   "lipid-map",
+   "matchms",
+   "metaboanalyst",
+   "pycombat",
+   "python",
+   "thermorawfileparser"
+  ]
  },
  {
   "slug": "mzml-file-format-generation",
@@ -5769,7 +8000,14 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "base64enc",
+   "mzrtsim",
+   "summarizedexperiment"
+  ]
  },
  {
   "slug": "mzml-file-import-xcms",
@@ -5794,7 +8032,24 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "github",
+   "gnps",
+   "limma",
+   "massspecwavelet",
+   "metabocoreutils",
+   "msbackendmgf",
+   "msdatahub",
+   "msfeatures",
+   "pheatmap",
+   "spectra",
+   "xcms",
+   "zenodo"
+  ]
  },
  {
   "slug": "nested-data-structure-construction-for-chemical-metadata",
@@ -5819,7 +8074,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "network-topology-comparison",
@@ -5842,7 +8107,14 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "gnps-gc",
+   "mshub"
+  ]
  },
  {
   "slug": "network-topology-validation",
@@ -5863,7 +8135,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "gnps-gc",
+   "mshub"
+  ]
  },
  {
   "slug": "neural-network-model-deployment",
@@ -5890,7 +8169,13 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "pyeva",
+   "python"
+  ]
  },
  {
   "slug": "neutral-loss-annotation-interpretation",
@@ -5919,7 +8204,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gensim",
+   "matchms",
+   "numba",
+   "numpy",
+   "pandas",
+   "rdkit",
+   "scipy",
+   "spec2vec",
+   "word2vec"
+  ]
  },
  {
   "slug": "neutral-loss-calculation-from-precursor",
@@ -5952,7 +8250,24 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gensim",
+   "matchms",
+   "memo",
+   "memo-ms",
+   "numba",
+   "numpy",
+   "pandas",
+   "python",
+   "rdkit",
+   "scikit-bio",
+   "scipy",
+   "spec2vec",
+   "word2vec"
+  ]
  },
  {
   "slug": "neutral-loss-extraction-and-weighting",
@@ -5979,7 +8294,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gensim",
+   "matchms",
+   "numba",
+   "numpy",
+   "pandas",
+   "rdkit",
+   "scipy",
+   "spec2vec",
+   "word2vec"
+  ]
  },
  {
   "slug": "nmr-metabolomic-quality-control-reporting",
@@ -6003,7 +8331,12 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "prima-panel"
+  ]
  },
  {
   "slug": "noise-artifact-reduction-optimization",
@@ -6028,7 +8361,13 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mixomics",
+   "rgcxgc"
+  ]
  },
  {
   "slug": "noise-level-parameter-tuning",
@@ -6050,7 +8389,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "noise-suppression-spectral-imaging",
@@ -6073,7 +8417,13 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "npfimg",
+   "xcms"
+  ]
  },
  {
   "slug": "nps-classification-prediction",
@@ -6098,7 +8448,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "matplotlib-or-seaborn-for-visualization",
+   "pandas-for-tabular-data-manipulation-and-aggregation",
+   "ps2ms",
+   "python-deep-learning-framework-pytorch-or-tensorflow",
+   "rdkit",
+   "rdkit-or-similar-cheminformatics-library-for-molecular-fingerprint-computation"
+  ]
  },
  {
   "slug": "orthogonal-projection-deconvolution",
@@ -6121,7 +8481,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "python-3",
+   "pytorch"
+  ]
  },
  {
   "slug": "overlapped-peak-deconvolution-validation",
@@ -6144,7 +8511,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "python-3",
+   "pytorch"
+  ]
  },
  {
   "slug": "overlapped-peak-resolution-transformer",
@@ -6167,7 +8541,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "python-3",
+   "pytorch"
+  ]
  },
  {
   "slug": "overlapped-peak-separation-evaluation",
@@ -6190,7 +8571,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "python-3",
+   "pytorch"
+  ]
  },
  {
   "slug": "parallel-computation-for-large-library-processing",
@@ -6218,7 +8606,22 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "nist",
+   "parallel",
+   "riken"
+  ]
  },
  {
   "slug": "parallel-computing-workflow-orchestration",
@@ -6245,7 +8648,22 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "nist",
+   "parallel",
+   "riken"
+  ]
  },
  {
   "slug": "pareto-scaling-normalization",
@@ -6266,7 +8684,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "base64enc",
+   "mzrtsim",
+   "summarizedexperiment"
+  ]
  },
  {
   "slug": "peak-detection-cwt-optimization",
@@ -6288,7 +8713,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "peak-extraction-rescue-algorithms",
@@ -6311,7 +8741,12 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "r-shiny"
+  ]
  },
  {
   "slug": "peak-feature-retention-time-alignment",
@@ -6335,7 +8770,13 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mixomics",
+   "rgcxgc"
+  ]
  },
  {
   "slug": "peak-filtering-and-preprocessing-lc-ms",
@@ -6363,7 +8804,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gensim",
+   "matchms",
+   "numba",
+   "numpy",
+   "pandas",
+   "rdkit",
+   "scipy",
+   "spec2vec",
+   "word2vec"
+  ]
  },
  {
   "slug": "peak-integration-parameter-optimization",
@@ -6385,7 +8839,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "peak-intensity-normalization-weighted-aggregation",
@@ -6413,7 +8872,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gensim",
+   "matchms",
+   "numba",
+   "numpy",
+   "pandas",
+   "rdkit",
+   "scipy",
+   "spec2vec",
+   "word2vec"
+  ]
  },
  {
   "slug": "peak-intensity-vector-transformation",
@@ -6434,7 +8906,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "base64enc",
+   "mzrtsim",
+   "summarizedexperiment"
+  ]
  },
  {
   "slug": "peak-list-simulation-with-controlled-effects",
@@ -6461,7 +8940,14 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "base64enc",
+   "mzrtsim",
+   "summarizedexperiment"
+  ]
  },
  {
   "slug": "peak-picking-algorithm-comparison",
@@ -6486,7 +8972,14 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "idsl-ipa",
+   "mzmine-2",
+   "xcms"
+  ]
  },
  {
   "slug": "performance-metric-extraction-from-publications",
@@ -6510,7 +9003,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "idsl-ipa",
+   "mzmine-2",
+   "xcms"
+  ]
  },
  {
   "slug": "plate-layout-parameter-configuration",
@@ -6530,7 +9030,12 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "injectiondesign"
+  ]
  },
  {
   "slug": "ppb-level-marker-detection-and-sensitivity-assessment",
@@ -6555,7 +9060,13 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "npfimg",
+   "xcms"
+  ]
  },
  {
   "slug": "published-metabolic-profile-implementation",
@@ -6580,7 +9091,12 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mimir"
+  ]
  },
  {
   "slug": "pure-component-spectrum-extraction",
@@ -6606,7 +9122,14 @@
    "GC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "python-3",
+   "pytorch"
+  ]
  },
  {
   "slug": "pytorch-model-loading-and-forward-pass",
@@ -6631,7 +9154,16 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "python",
+   "pytorch",
+   "rdkit"
+  ]
  },
  {
   "slug": "qc-sample-batch-drift-correction",
@@ -6654,7 +9186,14 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "metcorr",
+   "ouks",
+   "r-4-1-2"
+  ]
  },
  {
   "slug": "qc-sample-type-classification",
@@ -6675,7 +9214,12 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "injectiondesign"
+  ]
  },
  {
   "slug": "qc-type-color-marker-assignment",
@@ -6695,7 +9239,12 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "injectiondesign"
+  ]
  },
  {
   "slug": "quality-control-metric-distribution-analysis",
@@ -6722,7 +9271,28 @@
    "GC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "asari-mass-functions-module-nn-cluster-by-mz-seeds",
+   "asari-massgrid-class-build-grid-sample-wise-add-sample-build-grid-by-centroiding-bin-track-mzs",
+   "asari-peaks-module",
+   "hmdb-4",
+   "https-github-com-shuzhao-li-asari",
+   "jms",
+   "khipu",
+   "lowess",
+   "mass-functions-nn-cluster-by-mz-seeds",
+   "numpy",
+   "proteowizard",
+   "pymzml",
+   "python",
+   "scipy",
+   "scipy-signal-detrend",
+   "scipy-signal-find-peaks"
+  ]
  },
  {
   "slug": "quality-control-sample-aggregation",
@@ -6743,7 +9313,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "base64enc",
+   "mzrtsim",
+   "summarizedexperiment"
+  ]
  },
  {
   "slug": "r-data-structure-processing",
@@ -6766,7 +9343,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "r-object-inspection-and-validation",
@@ -6788,7 +9370,22 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "nist",
+   "parallel",
+   "riken"
+  ]
  },
  {
   "slug": "r-s4-object-accessor-usage",
@@ -6810,7 +9407,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "base64enc",
+   "mzrtsim",
+   "summarizedexperiment"
+  ]
  },
  {
   "slug": "rank-performance-metric-computation",
@@ -6834,7 +9438,13 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-hassounlab-esp",
+   "lda-latent-dirichlet-allocation"
+  ]
  },
  {
   "slug": "ranking-task-loss-optimization",
@@ -6858,7 +9468,13 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-hassounlab-esp",
+   "lda-latent-dirichlet-allocation"
+  ]
  },
  {
   "slug": "raw-chromatography-data-parsing",
@@ -6879,7 +9495,14 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "gnps-gc",
+   "mshub"
+  ]
  },
  {
   "slug": "reactant-ion-peak-exclusion",
@@ -6901,7 +9524,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "retention-index-assignment-and-filtering",
@@ -6930,7 +9558,22 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "nist",
+   "parallel",
+   "riken"
+  ]
  },
  {
   "slug": "retention-index-calibration-and-alignment",
@@ -6955,7 +9598,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bruker-solarix",
+   "corems",
+   "docker",
+   "matplotlib",
+   "numpy",
+   "pandas"
+  ]
  },
  {
   "slug": "retention-index-calibration-application",
@@ -6978,7 +9631,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bruker-solarix",
+   "corems",
+   "docker",
+   "matplotlib",
+   "numpy",
+   "pandas"
+  ]
  },
  {
   "slug": "retention-index-extraction-from-nist-database",
@@ -7003,7 +9666,22 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "nist",
+   "parallel",
+   "riken"
+  ]
  },
  {
   "slug": "retention-time-alignment-across-batches",
@@ -7027,7 +9705,14 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "idsl-ipa",
+   "mzmine-2",
+   "xcms"
+  ]
  },
  {
   "slug": "retention-time-and-mass-based-sorting",
@@ -7051,7 +9736,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "retention-time-and-mass-sorting-of-chromatographic-peaks",
@@ -7076,7 +9771,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "retention-time-based-feature-grouping",
@@ -7099,7 +9804,24 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "github",
+   "gnps",
+   "limma",
+   "massspecwavelet",
+   "metabocoreutils",
+   "msbackendmgf",
+   "msdatahub",
+   "msfeatures",
+   "pheatmap",
+   "spectra",
+   "xcms",
+   "zenodo"
+  ]
  },
  {
   "slug": "retention-time-feature-clustering",
@@ -7121,7 +9843,24 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "github",
+   "gnps",
+   "limma",
+   "massspecwavelet",
+   "metabocoreutils",
+   "msbackendmgf",
+   "msdatahub",
+   "msfeatures",
+   "pheatmap",
+   "spectra",
+   "xcms",
+   "zenodo"
+  ]
  },
  {
   "slug": "retention-time-filtering",
@@ -7142,7 +9881,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "retention-time-prediction-modeling",
@@ -7170,7 +9914,12 @@
    "CE-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "retip"
+  ]
  },
  {
   "slug": "retention-time-prediction-optimization",
@@ -7203,7 +9952,21 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "numpy",
+   "pandas",
+   "pyg",
+   "python",
+   "pytorch",
+   "rdkit",
+   "torch-cluster",
+   "torch-scatter",
+   "torch-sparse",
+   "torchmetrics"
+  ]
  },
  {
   "slug": "sample-batch-balancing-across-classification-dimensions",
@@ -7223,7 +9986,12 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "injectiondesign"
+  ]
  },
  {
   "slug": "sample-capacity-constraint-setting",
@@ -7243,7 +10011,12 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "injectiondesign"
+  ]
  },
  {
   "slug": "sample-metadata-extraction",
@@ -7263,7 +10036,12 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "injectiondesign"
+  ]
  },
  {
   "slug": "sample-study-size-stratified-algorithm-selection",
@@ -7286,7 +10064,28 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "asari-mass-functions-module-nn-cluster-by-mz-seeds",
+   "asari-massgrid-class-build-grid-sample-wise-add-sample-build-grid-by-centroiding-bin-track-mzs",
+   "asari-peaks-module",
+   "hmdb-4",
+   "https-github-com-shuzhao-li-asari",
+   "jms",
+   "khipu",
+   "lowess",
+   "mass-functions-nn-cluster-by-mz-seeds",
+   "numpy",
+   "proteowizard",
+   "pymzml",
+   "python",
+   "scipy",
+   "scipy-signal-detrend",
+   "scipy-signal-find-peaks"
+  ]
  },
  {
   "slug": "savitzky-golay-smoothing-application",
@@ -7310,7 +10109,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "scalability-extrapolation-and-throughput-estimation",
@@ -7336,7 +10140,28 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "asari-mass-functions-module-nn-cluster-by-mz-seeds",
+   "asari-massgrid-class-build-grid-sample-wise-add-sample-build-grid-by-centroiding-bin-track-mzs",
+   "asari-peaks-module",
+   "hmdb-4",
+   "https-github-com-shuzhao-li-asari",
+   "jms",
+   "khipu",
+   "lowess",
+   "mass-functions-nn-cluster-by-mz-seeds",
+   "numpy",
+   "proteowizard",
+   "pymzml",
+   "python",
+   "scipy",
+   "scipy-signal-detrend",
+   "scipy-signal-find-peaks"
+  ]
  },
  {
   "slug": "separation-technique-workflow-alignment",
@@ -7358,7 +10183,14 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "javafx-24",
+   "jdk-25",
+   "mzmine"
+  ]
  },
  {
   "slug": "signal-acquisition-error-quantification",
@@ -7381,7 +10213,13 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "npfimg",
+   "xcms"
+  ]
  },
  {
   "slug": "similarity-score-computation",
@@ -7403,7 +10241,12 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mssearchr"
+  ]
  },
  {
   "slug": "small-molecule-structure-matching",
@@ -7425,7 +10268,12 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biotransformer"
+  ]
  },
  {
   "slug": "smiles-notation-parsing",
@@ -7448,7 +10296,22 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "nist",
+   "parallel",
+   "riken"
+  ]
  },
  {
   "slug": "software-architecture-documentation-review",
@@ -7471,7 +10334,14 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "javafx-24",
+   "jdk-25",
+   "mzmine"
+  ]
  },
  {
   "slug": "software-feature-inventory-and-comparison",
@@ -7503,7 +10373,33 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cytoscape",
+   "dropms",
+   "formularity",
+   "freda",
+   "i-van-krevelen",
+   "keggrest",
+   "matplotlib",
+   "metaboanalyst",
+   "metabodirect",
+   "numpy",
+   "pandas",
+   "pmartr",
+   "py4cytoscape",
+   "python",
+   "python-numpy-pandas",
+   "r-4-0-2",
+   "r-vegan-package",
+   "seaborn",
+   "syncsa",
+   "ultramassexplorer",
+   "vegan",
+   "vegan-r-package"
+  ]
  },
  {
   "slug": "spectral-adduct-ionmode-validation",
@@ -7526,7 +10422,13 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "python",
+   "spectra-hash"
+  ]
  },
  {
   "slug": "spectral-batch-submission-to-networking-server",
@@ -7546,7 +10448,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "gnps-gc",
+   "mshub"
+  ]
  },
  {
   "slug": "spectral-database-integration-and-sampling",
@@ -7572,7 +10481,14 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "base64enc",
+   "mzrtsim",
+   "summarizedexperiment"
+  ]
  },
  {
   "slug": "spectral-feature-annotation",
@@ -7593,7 +10509,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "gnps-gc",
+   "mshub"
+  ]
  },
  {
   "slug": "spectral-feature-extraction",
@@ -7625,7 +10548,15 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "python-3-11-7",
+   "pytorch",
+   "scikit-learn",
+   "tensorflow"
+  ]
  },
  {
   "slug": "spectral-library-compilation-and-merging",
@@ -7657,7 +10588,22 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "nist",
+   "parallel",
+   "riken"
+  ]
  },
  {
   "slug": "spectral-library-matching-and-m-z-peak-ranking",
@@ -7683,7 +10629,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "spectral-library-matching-validation",
@@ -7708,7 +10664,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "spectral-library-merging-and-deduplication",
@@ -7734,7 +10700,22 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "nist",
+   "parallel",
+   "riken"
+  ]
  },
  {
   "slug": "spectral-library-metadata-assignment",
@@ -7758,7 +10739,22 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "nist",
+   "parallel",
+   "riken"
+  ]
  },
  {
   "slug": "spectral-library-metadata-reorganization",
@@ -7781,7 +10777,22 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "nist",
+   "parallel",
+   "riken"
+  ]
  },
  {
   "slug": "spectral-library-molecular-networking",
@@ -7803,7 +10814,14 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "gnps-gc",
+   "mshub"
+  ]
  },
  {
   "slug": "spectral-library-polarity-separation",
@@ -7835,7 +10853,22 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "nist",
+   "parallel",
+   "riken"
+  ]
  },
  {
   "slug": "spectral-match-score-interpretation",
@@ -7859,7 +10892,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "spectral-metadata-extraction",
@@ -7888,7 +10931,25 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "matplotlib",
+   "mssearchr",
+   "numba",
+   "numpy",
+   "pandas",
+   "proforma-2-0",
+   "pymzml",
+   "pyopenms",
+   "pyteomics",
+   "python",
+   "r-gui",
+   "seaborn",
+   "spectrum-utils",
+   "unimod"
+  ]
  },
  {
   "slug": "spectral-noise-filtering",
@@ -7912,7 +10973,14 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "idsl-ipa",
+   "mzmine-2",
+   "xcms"
+  ]
  },
  {
   "slug": "spectral-peak-clustering-gc-ims",
@@ -7934,7 +11002,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "spectral-peak-shape-modeling",
@@ -7960,7 +11033,14 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "base64enc",
+   "mzrtsim",
+   "summarizedexperiment"
+  ]
  },
  {
   "slug": "spectral-peak-word-embedding-representation",
@@ -7988,7 +11068,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gensim",
+   "matchms",
+   "numba",
+   "numpy",
+   "pandas",
+   "rdkit",
+   "scipy",
+   "spec2vec",
+   "word2vec"
+  ]
  },
  {
   "slug": "spectral-prediction-model-fusion",
@@ -8014,7 +11107,13 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-hassounlab-esp",
+   "lda-latent-dirichlet-allocation"
+  ]
  },
  {
   "slug": "spectral-similarity-matching-and-comparison",
@@ -8041,7 +11140,24 @@
    "CE-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "github",
+   "gnps",
+   "limma",
+   "massspecwavelet",
+   "metabocoreutils",
+   "msbackendmgf",
+   "msdatahub",
+   "msfeatures",
+   "pheatmap",
+   "spectra",
+   "xcms",
+   "zenodo"
+  ]
  },
  {
   "slug": "spectral-similarity-scoring",
@@ -8086,7 +11202,33 @@
    "GC-MS",
    "CE-MS"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bruker-solarix",
+   "comparador",
+   "corems",
+   "docker",
+   "iontoolpack",
+   "masscube",
+   "matplotlib",
+   "metaboshiny",
+   "metfrag",
+   "mirador",
+   "numpy",
+   "pandas",
+   "peakqc",
+   "peakquant",
+   "pubchem",
+   "pubchempy",
+   "python",
+   "rdkit",
+   "simile",
+   "sirius",
+   "spectra",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "spectral-similarity-scoring-computation",
@@ -8117,7 +11259,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gensim",
+   "matchms",
+   "numba",
+   "numpy",
+   "pandas",
+   "rdkit",
+   "scipy",
+   "spec2vec",
+   "word2vec"
+  ]
  },
  {
   "slug": "spectral-similarity-scoring-ei-simple",
@@ -8139,7 +11294,12 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mssearchr"
+  ]
  },
  {
   "slug": "spectral-vector-normalization-by-intensity",
@@ -8166,7 +11326,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gensim",
+   "matchms",
+   "numba",
+   "numpy",
+   "pandas",
+   "rdkit",
+   "scipy",
+   "spec2vec",
+   "word2vec"
+  ]
  },
  {
   "slug": "spectrum-document-conversion-peak-loss-representation",
@@ -8195,7 +11368,20 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gensim",
+   "matchms",
+   "numba",
+   "numpy",
+   "pandas",
+   "rdkit",
+   "scipy",
+   "spec2vec",
+   "word2vec"
+  ]
  },
  {
   "slug": "spectrum-metadata-filtering",
@@ -8217,7 +11403,13 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "python",
+   "spectra-hash"
+  ]
  },
  {
   "slug": "spectrum-peak-counting-and-reporting",
@@ -8242,7 +11434,17 @@
    "GC-MS",
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bruker-solarix",
+   "corems",
+   "docker",
+   "matplotlib",
+   "numpy",
+   "pandas"
+  ]
  },
  {
   "slug": "structural-similarity-ground-truth-validation",
@@ -8270,7 +11472,20 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gensim",
+   "matchms",
+   "numba",
+   "numpy",
+   "pandas",
+   "rdkit",
+   "scipy",
+   "spec2vec",
+   "word2vec"
+  ]
  },
  {
   "slug": "structure-ranking-from-spectral-data",
@@ -8293,7 +11508,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "iceberg",
+   "iceberg-model",
+   "iceberg-webui",
+   "ms-pred",
+   "ms-pred-scarf-model",
+   "pubchem"
+  ]
  },
  {
   "slug": "tandem-ms-data-reorganization",
@@ -8322,7 +11547,22 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "nist",
+   "parallel",
+   "riken"
+  ]
  },
  {
   "slug": "tandem-ms-peak-assignment",
@@ -8345,7 +11585,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "iceberg",
+   "iceberg-model",
+   "iceberg-webui",
+   "ms-pred",
+   "ms-pred-scarf-model",
+   "pubchem"
+  ]
  },
  {
   "slug": "temporal-profile-correlation-analysis",
@@ -8365,13 +11615,19 @@
    "matchms"
   ],
   "dois": [
-   "10.1093/bioinformatics/btad088/7036334"
+   "10.1093/bioinformatics/btad088"
   ],
   "techniques": [
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "dbdipy",
+   "python"
+  ]
  },
  {
   "slug": "train-validation-test-split-management",
@@ -8396,7 +11652,14 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "python-3",
+   "pytorch"
+  ]
  },
  {
   "slug": "transformer-model-inference",
@@ -8421,7 +11684,16 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "python",
+   "pytorch",
+   "rdkit"
+  ]
  },
  {
   "slug": "transformer-model-training",
@@ -8447,7 +11719,14 @@
    "GC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "python-3",
+   "pytorch"
+  ]
  },
  {
   "slug": "two-dimensional-chromatography-data-handling",
@@ -8470,7 +11749,13 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mixomics",
+   "rgcxgc"
+  ]
  },
  {
   "slug": "two-dimensional-correlation-optimized-warping-parameter-tuning",
@@ -8492,7 +11777,13 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mixomics",
+   "rgcxgc"
+  ]
  },
  {
   "slug": "two-dimensional-ms-image-processing",
@@ -8515,7 +11806,13 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "npfimg",
+   "xcms"
+  ]
  },
  {
   "slug": "two-dimensional-spectral-map-analysis",
@@ -8540,7 +11837,13 @@
    "GC-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "npfimg",
+   "xcms"
+  ]
  },
  {
   "slug": "two-dimensional-tic-folding",
@@ -8562,7 +11865,13 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mixomics",
+   "rgcxgc"
+  ]
  },
  {
   "slug": "unique-compound-enumeration",
@@ -8583,7 +11892,17 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "unsupervised-pattern-discovery-spectra",
@@ -8607,7 +11926,13 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-hassounlab-esp",
+   "lda-latent-dirichlet-allocation"
+  ]
  },
  {
   "slug": "untargeted-metabolomics-marker-identification",
@@ -8630,7 +11955,13 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "npfimg",
+   "xcms"
+  ]
  },
  {
   "slug": "whittaker-smoother-signal-denoising",
@@ -8654,7 +11985,13 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mixomics",
+   "rgcxgc"
+  ]
  },
  {
   "slug": "within-batch-randomization-by-metadata-attribute",
@@ -8674,7 +12011,12 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "injectiondesign"
+  ]
  },
  {
   "slug": "word-embedding-aggregation-for-spectral-data",
@@ -8701,7 +12043,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gensim",
+   "matchms",
+   "numba",
+   "numpy",
+   "pandas",
+   "rdkit",
+   "scipy",
+   "spec2vec",
+   "word2vec"
+  ]
  },
  {
   "slug": "word-embedding-based-spectrum-representation",
@@ -8729,7 +12084,20 @@
   "techniques": [
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gensim",
+   "matchms",
+   "numba",
+   "numpy",
+   "pandas",
+   "rdkit",
+   "scipy",
+   "spec2vec",
+   "word2vec"
+  ]
  },
  {
   "slug": "word2vec-embedding-training-mass-spectrometry",
@@ -8761,7 +12129,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gensim",
+   "matchms",
+   "numba",
+   "numpy",
+   "pandas",
+   "rdkit",
+   "scipy",
+   "spec2vec",
+   "word2vec"
+  ]
  },
  {
   "slug": "word2vec-model-inference-unknown-word-handling",
@@ -8788,7 +12169,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gensim",
+   "matchms",
+   "numba",
+   "numpy",
+   "pandas",
+   "rdkit",
+   "scipy",
+   "spec2vec",
+   "word2vec"
+  ]
  },
  {
   "slug": "word2vec-vocabulary-matching-and-unknown-peak-handling",
@@ -8816,7 +12210,20 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gensim",
+   "matchms",
+   "numba",
+   "numpy",
+   "pandas",
+   "rdkit",
+   "scipy",
+   "spec2vec",
+   "word2vec"
+  ]
  },
  {
   "slug": "workflow-routing-configuration",
@@ -8840,7 +12247,14 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "javafx-24",
+   "jdk-25",
+   "mzmine"
+  ]
  },
  {
   "slug": "xcms-data-import-preprocessing",
@@ -8866,7 +12280,24 @@
    "GC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "github",
+   "gnps",
+   "limma",
+   "massspecwavelet",
+   "metabocoreutils",
+   "msbackendmgf",
+   "msdatahub",
+   "msfeatures",
+   "pheatmap",
+   "spectra",
+   "xcms",
+   "zenodo"
+  ]
  },
  {
   "slug": "xcms-feature-extraction-and-grouping",
@@ -8890,7 +12321,13 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "george",
+   "xcms"
+  ]
  },
  {
   "slug": "xcms-parameter-optimization-msw",
@@ -8914,7 +12351,24 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "github",
+   "gnps",
+   "limma",
+   "massspecwavelet",
+   "metabocoreutils",
+   "msbackendmgf",
+   "msdatahub",
+   "msfeatures",
+   "pheatmap",
+   "spectra",
+   "xcms",
+   "zenodo"
+  ]
  },
  {
   "slug": "xcms-workflow-execution",
@@ -8940,6 +12394,23 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "github",
+   "gnps",
+   "limma",
+   "massspecwavelet",
+   "metabocoreutils",
+   "msbackendmgf",
+   "msdatahub",
+   "msfeatures",
+   "pheatmap",
+   "spectra",
+   "xcms",
+   "zenodo"
+  ]
  }
 ]

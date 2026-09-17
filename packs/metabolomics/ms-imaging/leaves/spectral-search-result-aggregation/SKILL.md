@@ -1,6 +1,8 @@
 ---
 name: spectral-search-result-aggregation
-description: Use when when you have executed batch searches of MS/MS spectra against multiple domain-specific MASST indices and need to consolidate results across domains (e.
+description: Use when when you have executed batch searches of MS/MS spectra against
+  multiple domain-specific MASST indices and need to consolidate results across domains
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -19,6 +21,8 @@ metadata:
   - jobs.py
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst

@@ -1,6 +1,9 @@
 ---
 name: msbackend-api-implementation
-description: Use when you need to create a new backend to integrate MS data from a novel file format, database, or in-memory storage system into the Spectra ecosystem. Use this skill when existing backends (MsBackendMemory, MsBackendMzR, MsBackendSql, etc.) do not support your data source or storage paradigm.
+description: Use when you need to create a new backend to integrate MS data from a
+  novel file format, database, or in-memory storage system into the Spectra ecosystem.
+  Use this skill when existing backends (MsBackendMemory, MsBackendMzR, MsBackendSql,
+  etc.) do not support your data source or storage paradigm.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -15,6 +18,8 @@ metadata:
   - MsBackendMemory
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -22,7 +27,8 @@ evidence_spans:
 - library(Spectra) library(IRanges)
 - '`DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)'
 - DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)
-- extension of the of *in-memory* and *on-disk* data representations from the `r Biocpkg("MSnbase")` package
+- extension of the of *in-memory* and *on-disk* data representations from the `r Biocpkg("MSnbase")`
+  package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

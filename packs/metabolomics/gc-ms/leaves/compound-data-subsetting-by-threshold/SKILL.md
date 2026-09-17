@@ -1,6 +1,9 @@
 ---
 name: compound-data-subsetting-by-threshold
-description: Use when you have a GC-MS dataset with a Match.Factor column (or equivalent quality metric) and need to evaluate how many unique compounds are retained at different confidence thresholds, or when you must subset the compound list to a user-defined quality level before downstream cheminformatics.
+description: Use when you have a GC-MS dataset with a Match.Factor column (or equivalent
+  quality metric) and need to evaluate how many unique compounds are retained at different
+  confidence thresholds, or when you must subset the compound list to a user-defined
+  quality level before downstream cheminformatics.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,12 +16,16 @@ metadata:
   - Agilent Unknowns Analysis
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- any software or utility that generates the necessary information can be used with simple modifications
-- any software or utility that generates the necessary information can be used with simple modifications (e.g. changing the column names)
+- any software or utility that generates the necessary information can be used with
+  simple modifications
+- any software or utility that generates the necessary information can be used with
+  simple modifications (e.g. changing the column names)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

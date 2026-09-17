@@ -1,6 +1,8 @@
 ---
 name: chromatographic-profile-quality-assessment
-description: Use when running targeted peak detection on LC-MS data acquired with multiple overlapping m/z scan windows and observing distorted or periodically discontinuous peak profiles in EIC plots.
+description: Use when running targeted peak detection on LC-MS data acquired with
+  multiple overlapping m/z scan windows and observing distorted or periodically discontinuous
+  peak profiles in EIC plots.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,11 +18,14 @@ metadata:
   - ProteoWizard/MSConvert
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
 evidence_spans:
-- It makes use of an established retention time correction algorithm from the `xcms` package
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
 - loads MS data as `Spectra` objects so it's easily integrated with other tools
 - R package for *TArgeted Raw Data Integration In Spectrometry*
 - knitr::include_graphics

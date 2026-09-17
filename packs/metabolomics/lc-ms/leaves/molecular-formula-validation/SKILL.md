@@ -1,6 +1,8 @@
 ---
 name: molecular-formula-validation
-description: Use when when you have a feature list from HRMS with tentatively assigned molecular formulas (from in silico tools or databases) and need to assess formula plausibility before applying downstream PFAS-specific filters.
+description: Use when when you have a feature list from HRMS with tentatively assigned
+  molecular formulas (from in silico tools or databases) and need to assess formula
+  plausibility before applying downstream PFAS-specific filters.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,6 +15,8 @@ metadata:
   - OpenMS / pyOpenMS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen

@@ -1,6 +1,8 @@
 ---
 name: model-ablation-study-design
-description: Use when you need to measure how much a specific model capability or architectural feature contributes to prediction performance, especially when that capability is non-obvious or orthogonal to baseline methods.
+description: Use when you need to measure how much a specific model capability or
+  architectural feature contributes to prediction performance, especially when that
+  capability is non-obvious or orthogonal to baseline methods.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -13,12 +15,15 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
 - an extension of MIST for annotating MS1 precursor masses from MS/MS data
-- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach
+- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum
+  using an end-to-end energy based modeling approach
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

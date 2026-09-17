@@ -1,6 +1,7 @@
 ---
 name: metabolite-feature-matching-across-datasets
-description: Use when you have two independent LC-MS untargeted metabolomic feature tables (e.
+description: Use when you have two independent LC-MS untargeted metabolomic feature
+  tables (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -12,6 +13,8 @@ metadata:
   - Matlab
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c03592
   title: m2s

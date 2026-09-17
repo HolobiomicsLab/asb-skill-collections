@@ -1,6 +1,8 @@
 ---
 name: fragment-intensity-aggregation
-description: Use when after extracting raw MS/MS spectra from mzML files but before consensus spectrum generation, when you observe high-resolution fragment lists where nearby peaks (within a specified mass tolerance, typically 0.
+description: Use when after extracting raw MS/MS spectra from mzML files but before
+  consensus spectrum generation, when you observe high-resolution fragment lists where
+  nearby peaks (within a specified mass tolerance, typically 0.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,13 +16,18 @@ metadata:
   - data.table
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
 evidence_spans:
 - devtools::install_github("BiosystemEngineeringLab-IITB/dures", auth_token = NULL)
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager", "knitr", "markdown"),
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager",
+  "knitr", "markdown"),
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

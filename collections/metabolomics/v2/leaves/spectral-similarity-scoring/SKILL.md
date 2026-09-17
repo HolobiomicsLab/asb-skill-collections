@@ -34,6 +34,11 @@ metadata:
   - GC-MS
   - CE-MS
   license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: huaxuyu/masscube
   provenance_tier: literature
 derived_from:
 - doi: 10.5281/zenodo.14009575

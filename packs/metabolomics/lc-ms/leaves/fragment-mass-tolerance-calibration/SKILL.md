@@ -1,6 +1,8 @@
 ---
 name: fragment-mass-tolerance-calibration
-description: 'Use when when implementing fragment ion annotation in proteomics workflows and needing to determine whether neutral loss annotation (e.g., H2O: -18.010565, NH3: -17.026549) should be enabled to maximize peak interpretation.'
+description: 'Use when when implementing fragment ion annotation in proteomics workflows
+  and needing to determine whether neutral loss annotation (e.g., H2O: -18.010565,
+  NH3: -17.026549) should be enabled to maximize peak interpretation.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,6 +17,8 @@ metadata:
   - PSI-MOD
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils

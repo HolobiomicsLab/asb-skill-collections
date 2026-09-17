@@ -1,6 +1,9 @@
 ---
 name: nmr-spectrum-to-structure-inference
-description: Use when you have 1D NMR spectra (¹H or ¹³C or both) for an unknown organic compound with ≤19 heavy atoms and need to rapidly predict its molecular formula and connectivity graph without manual peak interpretation or exhaustive combinatorial search.
+description: Use when you have 1D NMR spectra (¹H or ¹³C or both) for an unknown organic
+  compound with ≤19 heavy atoms and need to rapidly predict its molecular formula
+  and connectivity graph without manual peak interpretation or exhaustive combinatorial
+  search.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3346
@@ -12,6 +15,8 @@ metadata:
   - Convolutional neural network
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct

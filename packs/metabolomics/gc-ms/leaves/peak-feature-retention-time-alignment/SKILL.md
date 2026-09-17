@@ -1,6 +1,8 @@
 ---
 name: peak-feature-retention-time-alignment
-description: Use when you have preprocessed (smoothed and baseline-corrected) 2D-GCxGC-MS chromatograms from multiple samples and need to align their peak positions to a common reference chromatogram before multivariate analysis.
+description: Use when you have preprocessed (smoothed and baseline-corrected) 2D-GCxGC-MS
+  chromatograms from multiple samples and need to align their peak positions to a
+  common reference chromatogram before multivariate analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,13 +16,16 @@ metadata:
   - baseline_corr
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
 - doi: 10.1371/journal.pntd.0006215
   title: ''
 evidence_spans:
-- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional gas chromatography data.
+- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional
+  gas chromatography data.
 - This is the vignette to explain the implementation of RGCxGC package.
 claims: []
 provenance:

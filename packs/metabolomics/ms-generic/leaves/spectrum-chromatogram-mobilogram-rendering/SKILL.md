@@ -1,6 +1,9 @@
 ---
 name: spectrum-chromatogram-mobilogram-rendering
-description: Use when you have mass spectrometry data in a Pandas DataFrame with columns for m/z and intensity (spectrum), retention time and intensity (chromatogram), or drift time and intensity (mobilogram), and need to render 1D traces as static or interactive plots for exploratory analysis, quality control.
+description: Use when you have mass spectrometry data in a Pandas DataFrame with columns
+  for m/z and intensity (spectrum), retention time and intensity (chromatogram), or
+  drift time and intensity (mobilogram), and need to render 1D traces as static or
+  interactive plots for exploratory analysis, quality control.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -16,12 +19,15 @@ metadata:
   - Pandas
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
 evidence_spans:
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 - Multiple backends supported including matplotlib, bokeh, and plotly
 - Rendering is typically slower than the BOKEH backend
 - ms_data.plot(x="m/z", y="intensity", kind="spectrum")

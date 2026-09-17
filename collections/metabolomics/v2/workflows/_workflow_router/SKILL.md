@@ -21,7 +21,7 @@ attribution:
 This is the **goal-level** entry point for the ASB Metabolomics collection. Where the
 leaf router (`metabolomics-collection-router`) finds ONE atomic skill, this router selects
 an **end-to-end composite workflow super-skill** — an ordered pipeline of stages, each
-delegating to vetted leaf skills, with grounding and a gradable `workflow.yaml`.
+delegating to vetted leaf skills, with grounding and a declarative `workflow.yaml`.
 
 Use it in three steps: **select → run → ground**.
 
@@ -47,7 +47,7 @@ in order of precision:
    `ion-mobility-MS`, `NMR`. Filter `techniques` first.
 2. **Goal phrasing** — match the user's intent against each row's `description`.
 
-Available workflows (this staged set):
+Available workflows (published as outlines):
 
 | workflow | technique | what it does |
 |---|---|---|
@@ -70,8 +70,10 @@ If no workflow fits the goal, fall back to the **leaf router**
 Read the chosen `workflows/<slug>/SKILL.md` and follow its **Stages** in order. Each stage
 carries: a goal, candidate leaf skills (primary first), the tools to install/invoke, and
 its typed inputs/outputs. The machine-readable `workflows/<slug>/workflow.yaml` is the DAG
-(`after`, `inputs_from`) and is gradable by `asb solve-workflow`. Honor the I/O contract:
-each stage consumes the prior stage's declared outputs. Optional stages are marked.
+(`after`, `inputs_from`). Automatic grading of that DAG (`asb solve-workflow`) is **not part
+of this release**: no released ASB version loads these files, so run the stages yourself.
+Honor the I/O contract: each stage consumes the prior stage's declared outputs. Optional
+stages are marked.
 
 For a stage's leaf skills, read each `skills/<leaf-slug>/SKILL.md` for the procedure, or
 use the leaf router to pick among the candidates for your exact data.
@@ -83,6 +85,7 @@ were distilled from. Each stage's `grounding.kb_slugs`/`dois` (in `workflow.yaml
 the `asb-paper-<doi>` KBs. Use the collection's `/ground` command or
 `bin/perspicacite_kb_bind.py` (Perspicacité KB; serverless local-clone fallback).
 
-> These workflows are **staged** (not yet released). Bindings were chosen by semantic
-> retrieval (`text-embedding-3-large`) + deterministic selection. `derived_from_workflows`
-> in each frontmatter is the eval-ablation set.
+> These workflows are published as **outlines**: the stage structure is validated, the
+> execution is not. Bindings were chosen by semantic retrieval (`text-embedding-3-large`) +
+> deterministic selection. `derived_from_workflows` in each frontmatter is a provenance
+> record; no ablation experiment consuming it is released.

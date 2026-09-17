@@ -1,6 +1,7 @@
 ---
 name: embedding-space-normalization-and-geometry
-description: Use when when designing a Siamese or multi-branch neural architecture where two or more embedding streams (e.
+description: Use when when designing a Siamese or multi-branch neural architecture
+  where two or more embedding streams (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -13,6 +14,8 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

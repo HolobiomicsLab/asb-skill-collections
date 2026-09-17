@@ -1,6 +1,8 @@
 ---
 name: adduct-ionmode-consistency-checking
-description: Use when parsing, standardizing, or filtering MS spectra from mixed or heterogeneous databases where adduct assignment may be manually entered, auto-inferred, or missing.
+description: Use when parsing, standardizing, or filtering MS spectra from mixed or
+  heterogeneous databases where adduct assignment may be manually entered, auto-inferred,
+  or missing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +16,13 @@ metadata:
   - FragHub
   techniques:
   - GC-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
@@ -42,6 +51,7 @@ attribution:
 
 # adduct-ionmode-consistency-checking
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Validates that adduct polarity matches ionization mode in mass spectra, removing spectra with contradictory adduct–ionmode pairs (e.g., negative adducts in positive ionmode or positive adducts in negative ionmode). This ensures chemical plausibility and data integrity in standardized spectral libraries.

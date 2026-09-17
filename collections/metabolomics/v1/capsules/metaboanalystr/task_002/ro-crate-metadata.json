@@ -1,0 +1,320 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "asbext": "https://w3id.org/asb/indicium-ext#",
+      "chebi": "http://purl.obolibrary.org/obo/CHEBI_",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "fabio": "http://purl.org/spar/fabio/",
+      "ms": "http://purl.obolibrary.org/obo/MS_",
+      "ncbitaxon": "http://purl.obolibrary.org/obo/NCBITaxon_",
+      "oa": "http://www.w3.org/ns/oa#",
+      "obi": "http://purl.obolibrary.org/obo/OBI_",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "p-plan": "http://purl.org/net/p-plan#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "repme": "https://w3id.org/reproduceme#",
+      "sepio": "http://purl.obolibrary.org/obo/SEPIO_",
+      "uberon": "http://purl.obolibrary.org/obo/UBERON_"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": [
+        "Dataset",
+        "repme:ScientificWorkflow"
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ],
+      "dateCreated": "2026-06-16",
+      "description": "Execute the MetaboAnalystR 4.0 LC-MS workflow on a public metabolomics dataset and characterize the resulting feature table by reporting sample count, feature count, and peak intensity summary statistics.",
+      "hasPart": [
+        {
+          "@id": "evidence/source_snippets.md"
+        },
+        {
+          "@id": "inputs/dataset_folder_tree.txt"
+        },
+        {
+          "@id": "inputs/dataset_preview.md"
+        },
+        {
+          "@id": "evaluation/evaluation_strategy.md"
+        },
+        {
+          "@id": "evaluation/review_rubric.json"
+        },
+        {
+          "@id": "artifact_provenance.json"
+        }
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "mentions": [
+        {
+          "@id": "#action-task_002"
+        },
+        {
+          "@id": "urn:asb:task:task_002"
+        },
+        {
+          "@id": "#env-task_002"
+        },
+        {
+          "@id": "http://edamontology.org/topic_3172"
+        }
+      ],
+      "name": "Analyze feature table output produced by the MetaboAnalystR 4.0 LC-MS workflow on a public metabolomics dataset",
+      "repme:hasComputationalEnvironment": {
+        "@id": "#computational-environment"
+      }
+    },
+    {
+      "@id": "evidence/source_snippets.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evidence/source_snippets.md"
+    },
+    {
+      "@id": "inputs/dataset_folder_tree.txt",
+      "@type": "File",
+      "encodingFormat": "text/plain",
+      "name": "inputs/dataset_folder_tree.txt"
+    },
+    {
+      "@id": "inputs/dataset_preview.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "inputs/dataset_preview.md"
+    },
+    {
+      "@id": "evaluation/evaluation_strategy.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evaluation/evaluation_strategy.md"
+    },
+    {
+      "@id": "evaluation/review_rubric.json",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "name": "evaluation/review_rubric.json"
+    },
+    {
+      "@id": "urn:asb:task:task_002",
+      "@type": [
+        "ScholarlyArticle",
+        "p-plan:Plan",
+        "http://purl.org/spar/fabio/SoftwarePaper"
+      ],
+      "asbext:task_kind": "analysis",
+      "description": "Execute the MetaboAnalystR 4.0 LC-MS workflow on a public metabolomics dataset and characterize the resulting feature table by reporting sample count, feature count, and peak intensity summary statistics.",
+      "keywords": [
+        "lcms-feature-detection-and-quantification",
+        "metabolite-feature-table-interpretation",
+        "peak-intensity-distribution-analysis",
+        "metabolomics-data-format-handling"
+      ],
+      "name": "Analyze feature table output produced by the MetaboAnalystR 4.0 LC-MS workflow on a public metabolomics dataset",
+      "prov:wasInfluencedBy": [
+        {
+          "@id": "urn:asb:task:task_001"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:tool:metaboanalystr",
+      "@type": "SoftwareApplication",
+      "name": "MetaboAnalystR",
+      "schema:url": "https://github.com/xia-lab/MetaboAnalystR"
+    },
+    {
+      "@id": "urn:asb:input:task_002_0",
+      "@type": "File",
+      "name": "Raw LC-MS data in mzML format from a public metabolomics repository (MetaboLights or MassIVE accession)"
+    },
+    {
+      "@id": "urn:asb:output:task_002_0",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Feature table with rows as detected metabolite features and columns as samples, including peak intensity values",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_002"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_002_1",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Summary statistics report containing feature count, sample count, and peak intensity descriptive statistics (mean, median, SD, min, max)",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_002"
+      }
+    },
+    {
+      "@id": "#action-task_002",
+      "@type": [
+        "CreateAction",
+        "prov:Activity",
+        "p-plan:Step"
+      ],
+      "description": "Execute the MetaboAnalystR 4.0 LC-MS workflow on a public metabolomics dataset and characterize the resulting feature table by reporting sample count, feature count, and peak intensity summary statistics.",
+      "instrument": [
+        {
+          "@id": "urn:asb:tool:metaboanalystr"
+        }
+      ],
+      "name": "Analyze feature table output produced by the MetaboAnalystR 4.0 LC-MS workflow on a public metabolomics dataset",
+      "object": [
+        {
+          "@id": "urn:asb:input:task_002_0"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "urn:asb:port:task_001/feature_table"
+        }
+      ],
+      "repme:hasInputData": [
+        {
+          "@id": "urn:asb:input:task_002_0"
+        }
+      ],
+      "repme:hasOutputData": [
+        {
+          "@id": "urn:asb:output:task_002_0"
+        },
+        {
+          "@id": "urn:asb:output:task_002_1"
+        }
+      ],
+      "result": [
+        {
+          "@id": "urn:asb:output:task_002_0"
+        },
+        {
+          "@id": "urn:asb:output:task_002_1"
+        }
+      ]
+    },
+    {
+      "@id": "#env-task_002",
+      "@type": [
+        "repme:ComputationalEnvironment"
+      ],
+      "repme:computeTier": "light"
+    },
+    {
+      "@id": "#computational-environment",
+      "@type": "repme:ComputationalEnvironment",
+      "repme:buildId": "8BB39684895B421EB4F0000AF1CF317A",
+      "repme:depsHash": null,
+      "repme:gitCommit": "8713018e077e78db4e0defb776d2c7f494485e53",
+      "repme:platform": "darwin-25.5.0-arm64",
+      "repme:pythonVersion": "3.11.15",
+      "schema:dateCreated": "2026-06-16T06:24:34.128834Z",
+      "schema:hasPart": [
+        {
+          "@id": "#agent-config-agent1_entity"
+        },
+        {
+          "@id": "#agent-config-agent2a_outline"
+        },
+        {
+          "@id": "#agent-config-agent2b_card"
+        },
+        {
+          "@id": "#agent-config-agent3_critique"
+        },
+        {
+          "@id": "#agent-config-agent_classify"
+        }
+      ],
+      "schema:softwareVersion": "agentic-science-builder@0.1.0"
+    },
+    {
+      "@id": "#agent-config-agent1_entity",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v3",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent1_entity"
+    },
+    {
+      "@id": "#agent-config-agent2a_outline",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-sonnet-4-6",
+      "repme:promptVersion": "v2",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2a_outline"
+    },
+    {
+      "@id": "#agent-config-agent2b_card",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v4",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2b_card"
+    },
+    {
+      "@id": "#agent-config-agent3_critique",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent3_critique"
+    },
+    {
+      "@id": "#agent-config-agent_classify",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent_classify"
+    },
+    {
+      "@id": "urn:asb:metabolomics:unknown",
+      "@type": "Dataset",
+      "assay_type": "LC-MS",
+      "instrument": null,
+      "name": "Metabolomics Study Metadata",
+      "profile": "metabolomics_lcms",
+      "reproducibility_score": 0.226
+    },
+    {
+      "@id": "artifact_provenance.json",
+      "@type": "File",
+      "name": "artifact_provenance.json",
+      "encodingFormat": "application/json"
+    }
+  ]
+}

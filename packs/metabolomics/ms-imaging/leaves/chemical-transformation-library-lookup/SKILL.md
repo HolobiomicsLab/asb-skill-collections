@@ -1,6 +1,9 @@
 ---
 name: chemical-transformation-library-lookup
-description: Use when you have a histogram of mass differences (from pairwise comparisons of detected m/z values in MALDI-MS or MSI data) and need to annotate which differences correspond to known molecular adducts—particularly when investigating unexpected or ambiguous peaks in the mass spectrum, or when.
+description: Use when you have a histogram of mass differences (from pairwise comparisons
+  of detected m/z values in MALDI-MS or MSI data) and need to annotate which differences
+  correspond to known molecular adducts—particularly when investigating unexpected
+  or ambiguous peaks in the mass spectrum, or when.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3431
@@ -13,13 +16,17 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - We can match massdiffs to specific adduct types using the same function `adductMatch`
-- If the data matrix is very large, it may need to be reformatted to be loaded into memory during an R session.
+- If the data matrix is very large, it may need to be reformatted to be loaded into
+  memory during an R session.
 - corrPairsMSI(d,d.diff.annot)
 claims: []
 provenance:

@@ -1,6 +1,8 @@
 ---
 name: feature-pairing-confidence-scoring
-description: Use when you have two LC-MS feature tables (each with m/z, retention time, and intensity columns) and need to establish reliable correspondence between features across datasets.
+description: Use when you have two LC-MS feature tables (each with m/z, retention
+  time, and intensity columns) and need to establish reliable correspondence between
+  features across datasets.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -12,6 +14,8 @@ metadata:
   - M2S
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c03592
   title: m2s

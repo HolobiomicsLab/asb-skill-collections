@@ -1,6 +1,9 @@
 ---
 name: mzml-file-parsing
-description: Use when you have raw LC- or GC-HRMS data from vendor instruments (ESI or APCI ionization) that needs to be converted to a vendor-neutral format for non-target screening, or you already have mzML files that require loading into a Python environment for downstream feature detection and MS2 spectral.
+description: Use when you have raw LC- or GC-HRMS data from vendor instruments (ESI
+  or APCI ionization) that needs to be converted to a vendor-neutral format for non-target
+  screening, or you already have mzML files that require loading into a Python environment
+  for downstream feature detection and MS2 spectral.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -16,12 +19,15 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
 evidence_spans:
 - PFΔScreen is an open-source Python based non-target screening software tool
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data
 - pyOpenMS (Python interface to the C++ OpenMS library)
 claims: []
 provenance:

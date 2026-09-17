@@ -1,6 +1,7 @@
 ---
 name: swath-ms-spectrum-deconvolution
-description: Use when you have SWATH-MS raw data (mzML or vendor format) from an untargeted metabolomics experiment and need to identify metabolites.
+description: Use when you have SWATH-MS raw data (mzML or vendor format) from an untargeted
+  metabolomics experiment and need to identify metabolites.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -11,6 +12,13 @@ metadata:
   - DecoMetDIA
   techniques:
   - LC-MS
+  license_tier: open
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ZhuMSLab/DecoMetDIA
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b02655
   title: DecoMetDIA

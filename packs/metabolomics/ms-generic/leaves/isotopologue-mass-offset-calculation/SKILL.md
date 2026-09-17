@@ -1,6 +1,8 @@
 ---
 name: isotopologue-mass-offset-calculation
-description: Use when you have a peak-picked feature table (HDF5 format with m/z, drift_time, retention_time, intensity columns) and need to identify and label isotopic signatures within singly charged species.
+description: Use when you have a peak-picked feature table (HDF5 format with m/z,
+  drift_time, retention_time, intensity columns) and need to identify and label isotopic
+  signatures within singly charged species.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,6 +15,8 @@ metadata:
   - ProteoWizard msconvert
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos

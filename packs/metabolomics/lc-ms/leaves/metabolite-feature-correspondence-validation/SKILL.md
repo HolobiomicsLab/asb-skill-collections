@@ -1,6 +1,9 @@
 ---
 name: metabolite-feature-correspondence-validation
-description: Use when after m/z grouping and pairwise alignment detection when you have a metabCombiner object containing candidate feature pair alignments and need to select a subset of mutually abundant, high-confidence anchors to anchor a nonlinear retention time mapping spline.
+description: Use when after m/z grouping and pairwise alignment detection when you
+  have a metabCombiner object containing candidate feature pair alignments and need
+  to select a subset of mutually abundant, high-confidence anchors to anchor a nonlinear
+  retention time mapping spline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,12 +16,16 @@ metadata:
   - mgcv
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

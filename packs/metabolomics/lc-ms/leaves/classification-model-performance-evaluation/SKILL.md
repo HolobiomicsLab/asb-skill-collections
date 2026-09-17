@@ -1,6 +1,8 @@
 ---
 name: classification-model-performance-evaluation
-description: Use when after fitting and optimizing a MB-PLS model on training data, apply this skill to the held-out test set (typically 10% of the original sample) to obtain unbiased performance estimates.
+description: Use when after fitting and optimizing a MB-PLS model on training data,
+  apply this skill to the held-out test set (typically 10% of the original sample)
+  to obtain unbiased performance estimates.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -17,6 +19,8 @@ metadata:
   - MamsiPls
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -24,7 +28,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MAMSI is a Python framework
-- 'It is based on MB_PLS package: Baum et al., (2019). Multiblock PLS: Block dependent prediction modeling for Python.'
+- 'It is based on MB_PLS package: Baum et al., (2019). Multiblock PLS: Block dependent
+  prediction modeling for Python.'
 - import pandas as pd
 - import numpy as np
 - from sklearn.model_selection import train_test_split

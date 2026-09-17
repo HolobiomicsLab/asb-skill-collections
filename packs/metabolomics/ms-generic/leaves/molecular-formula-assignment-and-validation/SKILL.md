@@ -1,6 +1,8 @@
 ---
 name: molecular-formula-assignment-and-validation
-description: Use when you have a calibrated FT-ICR transient (ESI_NEG or similar ionization mode) and need to annotate each detected m/z peak with its most likely elemental composition.
+description: Use when you have a calibrated FT-ICR transient (ESI_NEG or similar ionization
+  mode) and need to annotate each detected m/z peak with its most likely elemental
+  composition.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,12 +17,15 @@ metadata:
   - matplotlib
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np

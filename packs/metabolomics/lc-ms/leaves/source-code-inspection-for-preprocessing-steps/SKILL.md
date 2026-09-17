@@ -1,6 +1,8 @@
 ---
 name: source-code-inspection-for-preprocessing-steps
-description: Use when when you need to verify that a specific data transformation (e.g., precursor m/z zeroing, feature scaling, or field masking) is applied consistently across multiple execution workflows (training, evaluation, inference) in a codebase.
+description: Use when when you need to verify that a specific data transformation
+  (e.g., precursor m/z zeroing, feature scaling, or field masking) is applied consistently
+  across multiple execution workflows (training, evaluation, inference) in a codebase.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -12,6 +14,8 @@ metadata:
   - FIDDLE
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

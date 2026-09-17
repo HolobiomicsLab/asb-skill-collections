@@ -1,6 +1,9 @@
 ---
 name: centered-log-ratio-normalization
-description: Use when apply CLR normalization when you have count-based microbiome or metabolome compositional data (e.g., 16S rRNA gene abundances, LC-MS/MS metabolite abundances) that will be used as input to multivariate predictive models (neural networks, regression, correlation analysis).
+description: Use when apply CLR normalization when you have count-based microbiome
+  or metabolome compositional data (e.g., 16S rRNA gene abundances, LC-MS/MS metabolite
+  abundances) that will be used as input to multivariate predictive models (neural
+  networks, regression, correlation analysis).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -22,16 +25,25 @@ metadata:
   - SciPy
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
-- we benchmarked MiMeNet against other general regression models, i.e., Random Forest (RF), multivariate Elastic Net, and canonical correlation analysis (CCA) models
+- we benchmarked MiMeNet against other general regression models, i.e., Random Forest
+  (RF), multivariate Elastic Net, and canonical correlation analysis (CCA) models
 - MiMeNet (Microbiome-Metabolome Network), a multi-layer perceptron (MLPNN)
-- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome abundance features (green) are used to train a neural network to predict metabolite abundance features (blue).
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function.
-- MelonnPan and NED models were obtained from their respective GitHub repositories and executed using default parameters as according to their tutorials. Random Forest, multivariate Elastic Net, and
+- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome
+  abundance features (green) are used to train a neural network to predict metabolite
+  abundance features (blue).
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function.
+- MelonnPan and NED models were obtained from their respective GitHub repositories
+  and executed using default parameters as according to their tutorials. Random Forest,
+  multivariate Elastic Net, and
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

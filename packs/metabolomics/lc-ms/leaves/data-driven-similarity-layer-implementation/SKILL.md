@@ -1,6 +1,9 @@
 ---
 name: data-driven-similarity-layer-implementation
-description: Use when you have untargeted metabolomics mass spectrometry data (MS2 spectra with m/z values and intensities) and an existing knowledge-driven metabolite network, and you need to enhance annotation accuracy and coverage by leveraging experimental similarity patterns rather than relying solely on.
+description: Use when you have untargeted metabolomics mass spectrometry data (MS2
+  spectra with m/z values and intensities) and an existing knowledge-driven metabolite
+  network, and you need to enhance annotation accuracy and coverage by leveraging
+  experimental similarity patterns rather than relying solely on.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,11 +14,19 @@ metadata:
   - MrnAnnoAlgo3 (MetDNA3)
   techniques:
   - LC-MS
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ZhuMetLab/MrnAnnoAlgo3
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-63536-6
   title: MetDNA3
 evidence_spans:
-- '`MrnAnnoAlgo3` is the core algorithm module of **MetDNA3**, designed to annotate metabolites'
+- '`MrnAnnoAlgo3` is the core algorithm module of **MetDNA3**, designed to annotate
+  metabolites'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -39,6 +50,7 @@ attribution:
 
 # data-driven-similarity-layer-implementation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Construct and integrate a data-driven layer into a two-layer metabolite annotation topology by extracting feature similarity and co-occurrence patterns from mass spectrometry data. This layer complements knowledge-driven annotations and enables recursive propagation of metabolite identities across experimentally-derived networks.

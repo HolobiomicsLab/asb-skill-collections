@@ -150,4 +150,4 @@ Pull the TIMA Docker image from adafede/tima-r and verify container startup and 
 
 ---
 
-*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See [`artifact_provenance.json`](../../../capsules/tima/10_5281_zenodo_5797920__task_003/artifact_provenance.json) for what this release carries; it also lists the build artefacts the release does not promote.*

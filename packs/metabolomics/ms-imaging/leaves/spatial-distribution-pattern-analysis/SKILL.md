@@ -1,8 +1,12 @@
 ---
 name: spatial-distribution-pattern-analysis
-description: Use when when you have loaded MSI peak data with associated m/z values and need to disambiguate matrix ions from analyte ions. Apply this skill when chemical formula alone is insufficient (e.g., overlapping or isobaric peaks exist) and you have pixel-level spatial intensity maps for each ion.
+description: Use when when you have loaded MSI peak data with associated m/z values
+  and need to disambiguate matrix ions from analyte ions. Apply this skill when chemical
+  formula alone is insufficient (e.g., overlapping or isobaric peaks exist) and you
+  have pixel-level spatial intensity maps for each ion.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,11 +19,14 @@ metadata:
   - devtools
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
 evidence_spans:
-- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI data
+- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI
+  data
 - devtools::install_github("prafols/rMSI", ref = "0.8")
 - devtools::install_github("prafols/rMSIproc", ref = "0.2")
 - rMSIcleanup is an open-source R package

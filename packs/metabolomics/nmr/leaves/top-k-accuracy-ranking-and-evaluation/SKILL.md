@@ -1,6 +1,8 @@
 ---
 name: top-k-accuracy-ranking-and-evaluation
-description: Use when a machine learning model produces multiple ranked predictions (each with an associated confidence score) for a single input, and you need to quantify how often the correct answer appears in the top-k predictions.
+description: Use when a machine learning model produces multiple ranked predictions
+  (each with an associated confidence score) for a single input, and you need to quantify
+  how often the correct answer appears in the top-k predictions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -11,6 +13,8 @@ metadata:
   - NMR2Struct transformer + CNN model
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct

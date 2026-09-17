@@ -1,6 +1,9 @@
 ---
 name: simulation-evaluation-data-capture
-description: Use when when you have simulated DDA (data-dependent acquisition) scans from a ViMMS Environment and need to (1) quantify how well the simulated acquisition matched real or reference data (via evaluation metrics), and (2) export the results as standards-compliant mzML files for comparison with.
+description: Use when when you have simulated DDA (data-dependent acquisition) scans
+  from a ViMMS Environment and need to (1) quantify how well the simulated acquisition
+  matched real or reference data (via evaluation metrics), and (2) export the results
+  as standards-compliant mzML files for comparison with.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -15,17 +18,22 @@ metadata:
   - Environment
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
 evidence_spans:
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible and modular framework designed to simulate fragmentation strategies'
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive and modular framework for the simulation of fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible
+  and modular framework designed to simulate fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive
+  and modular framework for the simulation of fragmentation strategies'
 - Existing mzML files can be converted into chemical lists using `ChemicalMixtureFromMZML`.
 - '`TopNController` – standard Top‑N data dependent acquisition.'
-- Mass Spectrometer – either an in silico model (`IndependentMassSpectrometer`) or a real instrument.
+- Mass Spectrometer – either an in silico model (`IndependentMassSpectrometer`) or
+  a real instrument.
 - Environment – orchestrates interaction between the mass spectrometer and the controller.
 claims: []
 provenance:

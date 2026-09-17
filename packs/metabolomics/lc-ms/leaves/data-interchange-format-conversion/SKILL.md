@@ -1,6 +1,9 @@
 ---
 name: data-interchange-format-conversion
-description: Use when you have deconvoluted or processed MS/MS spectra from SWATH-MS data that need to be (1) ingested into tools requiring open formats (e.g., spectral library matching, metabolite identification pipelines), (2) archived in public repositories, or (3) shared across different analysis platforms.
+description: Use when you have deconvoluted or processed MS/MS spectra from SWATH-MS
+  data that need to be (1) ingested into tools requiring open formats (e.g., spectral
+  library matching, metabolite identification pipelines), (2) archived in public repositories,
+  or (3) shared across different analysis platforms.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -11,6 +14,13 @@ metadata:
   - DecoMetDIA
   techniques:
   - LC-MS
+  license_tier: open
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ZhuMSLab/DecoMetDIA
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b02655
   title: DecoMetDIA

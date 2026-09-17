@@ -1,6 +1,8 @@
 ---
 name: spectral-library-format-conversion
-description: Use when when you have mass spectral libraries from multiple sources (NIST, MoNA, RIKEN, GNPS) in disparate formats (MSP, MGF, MOL folder structures) or with misaligned metadata (e.
+description: Use when when you have mass spectral libraries from multiple sources
+  (NIST, MoNA, RIKEN, GNPS) in disparate formats (MSP, MGF, MOL folder structures)
+  or with misaligned metadata (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -21,6 +23,8 @@ metadata:
   - ChemmineOB
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler

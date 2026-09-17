@@ -1,6 +1,9 @@
 ---
 name: isotopic-envelope-calculation
-description: Use when when you have one or more peptide sequences (as strings) and need to predict their theoretical isotopic distribution for comparison against experimental MS peaks, validation of mass calibration, or simulation of expected peptide signals in a mass spectrometry assay.
+description: Use when when you have one or more peptide sequences (as strings) and
+  need to predict their theoretical isotopic distribution for comparison against experimental
+  MS peaks, validation of mass calibration, or simulation of expected peptide signals
+  in a mass spectrometry assay.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -17,6 +20,8 @@ metadata:
   - pandas
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics

@@ -1,6 +1,8 @@
 ---
 name: metabolite-protein-network-construction
-description: Use when after generating metabolite-disease correlation data and protein association predictions from a deep learning metabolomics module (e.g., DeepMSProfiler's feature extraction step).
+description: Use when after generating metabolite-disease correlation data and protein
+  association predictions from a deep learning metabolomics module (e.g., DeepMSProfiler's
+  feature extraction step).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3083
@@ -12,6 +14,8 @@ metadata:
   - Python (networkx, igraph, matplotlib/seaborn)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler

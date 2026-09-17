@@ -1,6 +1,9 @@
 ---
 name: msi-feature-metadata-preservation
-description: Use when you are converting a processed Cardinal MSImagingExperiment object (containing normalized peaks, optional spatial shrunken centroids segmentation, and feature m/z annotations) into a Seurat object for downstream pathway analysis, differential metabolite expression, or integrative.
+description: Use when you are converting a processed Cardinal MSImagingExperiment
+  object (containing normalized peaks, optional spatial shrunken centroids segmentation,
+  and feature m/z annotations) into a Seurat object for downstream pathway analysis,
+  differential metabolite expression, or integrative.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -15,6 +18,13 @@ metadata:
   techniques:
   - CE-MS
   - MS-imaging
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ''
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -48,6 +58,7 @@ attribution:
 
 # MSI Feature Metadata Preservation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Preserve mass-to-charge (m/z) feature metadata and spatial coordinates during conversion of Cardinal MSI objects to Seurat-compatible spatial objects, ensuring downstream annotation and analysis retain complete feature provenance and spatial context.

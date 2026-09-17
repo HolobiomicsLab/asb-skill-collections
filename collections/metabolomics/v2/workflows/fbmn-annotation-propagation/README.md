@@ -1,8 +1,12 @@
-# feature-based-molecular-networking-and-propagation-workflow — STAGING
+# feature-based-molecular-networking-and-propagation-workflow
 
-**Status:** STAGING ONLY — promote via `release_gate.py` after human review.
+**Status:** published as an **outline** — the structure is validated, the execution is not.
 **Kind:** composite-workflow (P1 canonical set).
 **Bound by:** perspicacite-semantic (text-embedding-3-large retrieval + EDAM-aware primary selection).
+
+> Automatic grading of `workflow.yaml` (`asb solve-workflow`, checkpoint mode) is **not part of
+> this release**: no released ASB version loads these files. Follow the stages yourself. The stage
+> structure is validated by `validate_workflows.py` through `release_gate.py`.
 
 ## Stages
 
@@ -13,4 +17,5 @@
 5. **propagate** — spread seed annotations + chemical classes across molecular families  →  `graph-based-feature-annotation`, `chemical-class-metadata-integration`, `molecular-network-node-annotation`, `molecular-network-attribute-enrichment`, `molecular-network-annotation-integration`
 6. **consolidate** — consolidate network family + seed + class + propagated annotations into one table  →  `feature-metadata-annotation`, `feature-consolidation-across-batches`, `untargeted-metabolomics-dataset-integration`, `lcms-feature-table-construction`, `feature-annotation-consolidation`
 
-`derived_from_workflows` in the frontmatter is the eval-ablation set (SPEC §8).
+`derived_from_workflows` in the frontmatter is a provenance record — the ASB per-paper workflows
+whose structure corroborated this pipeline. No ablation experiment consuming it is released.

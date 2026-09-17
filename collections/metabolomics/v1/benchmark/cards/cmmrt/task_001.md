@@ -144,4 +144,4 @@ Train a heavily regularized deep neural network with cosine annealing warm resta
 
 ---
 
-*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See [`artifact_provenance.json`](../../../capsules/cmmrt/10_1186_s13321_022_00613_8__task_001/artifact_provenance.json) for what this release carries; it also lists the build artefacts the release does not promote.*

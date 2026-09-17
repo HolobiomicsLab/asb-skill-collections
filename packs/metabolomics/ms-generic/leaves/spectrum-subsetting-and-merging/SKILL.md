@@ -1,6 +1,8 @@
 ---
 name: spectrum-subsetting-and-merging
-description: Use when when you have a large MsBackend object and need to (1) select a contiguous or non-contiguous range of spectra for focused analysis, or (2) combine spectra from multiple independently-loaded backends (e.
+description: Use when when you have a large MsBackend object and need to (1) select
+  a contiguous or non-contiguous range of spectra for focused analysis, or (2) combine
+  spectra from multiple independently-loaded backends (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,11 +16,14 @@ metadata:
   - IRanges
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 - library(Spectra) library(IRanges)
 - library(Spectra)
 claims: []

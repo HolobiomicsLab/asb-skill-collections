@@ -1,6 +1,7 @@
 ---
 name: candidate-rank-scoring
-description: Use when after compound database dereplication has generated per-spectrum candidate lists (e.
+description: Use when after compound database dereplication has generated per-spectrum
+  candidate lists (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -17,6 +18,8 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-023-00695-y
   title: MAW

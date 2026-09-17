@@ -1,6 +1,8 @@
 ---
 name: mzml-spectrum-chromatogram-object-construction
-description: Use when you have an indexed gzip–compressed mzML file (mzML.gz with internal index structure) and need to retrieve and work with individual spectra or chromatograms by integer index without decompressing the entire file.
+description: Use when you have an indexed gzip–compressed mzML file (mzML.gz with
+  internal index structure) and need to retrieve and work with individual spectra
+  or chromatograms by integer index without decompressing the entire file.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -13,6 +15,8 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml

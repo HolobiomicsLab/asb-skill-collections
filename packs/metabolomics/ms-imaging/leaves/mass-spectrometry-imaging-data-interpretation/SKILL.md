@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-imaging-data-interpretation
-description: Use when when you have preprocessed MALDI-MSI data (in msimat format) and want to determine whether abundant peaks are actually molecular adducts of simpler parent ions rather than distinct metabolites.
+description: Use when when you have preprocessed MALDI-MSI data (in msimat format)
+  and want to determine whether abundant peaks are actually molecular adducts of simpler
+  parent ions rather than distinct metabolites.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -16,11 +18,14 @@ metadata:
   - MSiReader
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - library(mass2adduct)
 claims: []
 provenance:

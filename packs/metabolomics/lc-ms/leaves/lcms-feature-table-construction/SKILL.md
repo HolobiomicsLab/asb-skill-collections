@@ -1,6 +1,9 @@
 ---
 name: lcms-feature-table-construction
-description: Use when you have centroided, single-polarity mzML files from DDA LC-MS experiments and need to generate a quantitative feature table with aligned m/z and retention time coordinates, isotopic annotations, and MS2 spectra for downstream statistical or annotation analysis.
+description: Use when you have centroided, single-polarity mzML files from DDA LC-MS
+  experiments and need to generate a quantitative feature table with aligned m/z and
+  retention time coordinates, isotopic annotations, and MS2 spectra for downstream
+  statistical or annotation analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3634
@@ -14,11 +17,14 @@ metadata:
   - ProteoWizard
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
 evidence_spans:
-- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo, ADAP'
+- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo,
+  ADAP'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,9 @@
 ---
 name: spectral-feature-clustering-by-intensity-correlation
-description: Use when you have an annotated LC-MS feature table with KEGG candidate matches and adduct assignments (output from the matching stage), and you need to disambiguate which features co-elute and correlate in intensity, signaling a common metabolite origin before applying adduct-based filtering.
+description: Use when you have an annotated LC-MS feature table with KEGG candidate
+  matches and adduct assignments (output from the matching stage), and you need to
+  disambiguate which features co-elute and correlate in intensity, signaling a common
+  metabolite origin before applying adduct-based filtering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -13,11 +16,14 @@ metadata:
   - CAMERA
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
 evidence_spans:
-- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides tools for context-based annotation of untargeted LC-MS data.
+- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides
+  tools for context-based annotation of untargeted LC-MS data.
 - mWISE (metabolomics Wise Inference of Speck Entities) is an R package
 claims: []
 provenance:

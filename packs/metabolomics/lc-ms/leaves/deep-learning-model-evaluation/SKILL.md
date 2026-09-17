@@ -1,6 +1,8 @@
 ---
 name: deep-learning-model-evaluation
-description: Use when after training a Siamese neural network on MS/MS spectrum pairs, use this skill to quantify prediction performance on a disjoint test set (e.g., 3600+ spectra from 500 unseen compounds).
+description: Use when after training a Siamese neural network on MS/MS spectrum pairs,
+  use this skill to quantify prediction performance on a disjoint test set (e.g.,
+  3600+ spectra from 500 unseen compounds).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -15,15 +17,21 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
 - Our MS2DeepScore Python library offers two types of data generators
 - To estimate the uncertainty of a prediction we used Monte-Carlo Dropout ensembles
-- Our MS2DeepScore Python library offers two types of data generators, one which iterates over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over all spectra and was used for
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities.
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities
+- Our MS2DeepScore Python library offers two types of data generators, one which iterates
+  over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over
+  all spectra and was used for
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities.
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities
 - mean squared error (MSE) loss
 claims: []
 provenance:

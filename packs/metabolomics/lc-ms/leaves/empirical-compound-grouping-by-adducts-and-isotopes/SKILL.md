@@ -1,6 +1,7 @@
 ---
 name: empirical-compound-grouping-by-adducts-and-isotopes
-description: Use when after feature table normalization and imputation are complete, immediately before MS1 and MS2 annotation.
+description: Use when after feature table normalization and imputation are complete,
+  immediately before MS1 and MS2 annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -16,6 +17,8 @@ metadata:
   - mass2chem
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

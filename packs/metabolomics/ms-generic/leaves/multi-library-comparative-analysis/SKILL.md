@@ -1,6 +1,7 @@
 ---
 name: multi-library-comparative-analysis
-description: Use when you need to evaluate whether a newly released or candidate library (e.g., spectrum_utils v0.4.
+description: Use when you need to evaluate whether a newly released or candidate library
+  (e.g., spectrum_utils v0.4.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -21,6 +22,8 @@ metadata:
   - matplotlib / seaborn
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils

@@ -1,6 +1,9 @@
 ---
 name: model-hyperparameter-transfer-and-tuning
-description: Use when you have a trained baseline GNN model with established hyperparameters (dropout rate, learning rate, epochs, optimizer settings) and want to evaluate whether alternative message-passing GNN architectures (Graph Attention Networks, Message-Passing Neural Networks) achieve comparable or.
+description: Use when you have a trained baseline GNN model with established hyperparameters
+  (dropout rate, learning rate, epochs, optimizer settings) and want to evaluate whether
+  alternative message-passing GNN architectures (Graph Attention Networks, Message-Passing
+  Neural Networks) achieve comparable or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -13,6 +16,8 @@ metadata:
   - enveda/ccs-prediction
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs

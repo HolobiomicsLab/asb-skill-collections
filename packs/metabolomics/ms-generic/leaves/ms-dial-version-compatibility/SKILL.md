@@ -1,6 +1,9 @@
 ---
 name: ms-dial-version-compatibility
-description: Use when you are preparing to run LipoCLEAN on MS-DIAL output and need to create or update a configuration file, or you have switched between MS-DIAL 4 and MS-DIAL 5 data and need to verify that your options file and trained model are compatible with the current version's column naming and scaling.
+description: Use when you are preparing to run LipoCLEAN on MS-DIAL output and need
+  to create or update a configuration file, or you have switched between MS-DIAL 4
+  and MS-DIAL 5 data and need to verify that your options file and trained model are
+  compatible with the current version's column naming and scaling.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -12,6 +15,8 @@ metadata:
   - MS-DIAL
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c04040
   title: lipoclean

@@ -1,0 +1,938 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "asbext": "https://w3id.org/asb/indicium-ext#",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "fabio": "http://purl.org/spar/fabio/",
+      "oa": "http://www.w3.org/ns/oa#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "p-plan": "http://purl.org/net/p-plan#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "repme": "https://w3id.org/reproduceme#",
+      "sepio": "http://purl.obolibrary.org/obo/SEPIO_"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": [
+        "Dataset",
+        "repme:ScientificWorkflow"
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ],
+      "dateCreated": "2026-06-15",
+      "description": "Implement an extension to PALS Viewer that accepts user-uploaded metabolite set files (CSV/JSON format) and processes them through the PLAGE scoring pipeline to return a scored results table, extending beyond the three currently shipped set types (pathways, Molecular Families, Mass2Motifs).",
+      "hasPart": [
+        {
+          "@id": "evidence/source_snippets.md"
+        },
+        {
+          "@id": "inputs/dataset_folder_tree.txt"
+        },
+        {
+          "@id": "inputs/dataset_preview.md"
+        },
+        {
+          "@id": "evaluation/evaluation_strategy.md"
+        },
+        {
+          "@id": "evaluation/review_rubric.json"
+        },
+        {
+          "@id": "artifact_provenance.json"
+        },
+        {
+          "@id": "ledger/claims.jsonl"
+        },
+        {
+          "@id": "ledger/results.jsonl"
+        }
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "mentions": [
+        {
+          "@id": "#action-task_005"
+        },
+        {
+          "@id": "urn:asb:task:task_005"
+        },
+        {
+          "@id": "urn:asb:claim:claim_001"
+        },
+        {
+          "@id": "urn:asb:claim:claim_002"
+        },
+        {
+          "@id": "urn:asb:claim:claim_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_004"
+        },
+        {
+          "@id": "urn:asb:claim:claim_005"
+        },
+        {
+          "@id": "urn:asb:claim:claim_006"
+        },
+        {
+          "@id": "urn:asb:claim:claim_007"
+        },
+        {
+          "@id": "urn:asb:claim:claim_008"
+        },
+        {
+          "@id": "urn:asb:claim:claim_009"
+        },
+        {
+          "@id": "urn:asb:claim:claim_010"
+        },
+        {
+          "@id": "urn:asb:result:result_001"
+        },
+        {
+          "@id": "urn:asb:result:result_002"
+        },
+        {
+          "@id": "urn:asb:result:result_003"
+        },
+        {
+          "@id": "urn:asb:result:result_004"
+        },
+        {
+          "@id": "urn:asb:result:result_005"
+        },
+        {
+          "@id": "urn:asb:result:result_006"
+        },
+        {
+          "@id": "urn:asb:result:result_007"
+        },
+        {
+          "@id": "urn:asb:result:result_008"
+        },
+        {
+          "@id": "urn:asb:result:result_009"
+        },
+        {
+          "@id": "urn:asb:result:result_010"
+        },
+        {
+          "@id": "#env-task_005"
+        }
+      ],
+      "name": "Extend PALS to support user-supplied custom metabolite set collections via PALS Viewer API",
+      "repme:hasComputationalEnvironment": {
+        "@id": "#computational-environment"
+      }
+    },
+    {
+      "@id": "evidence/source_snippets.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evidence/source_snippets.md"
+    },
+    {
+      "@id": "inputs/dataset_folder_tree.txt",
+      "@type": "File",
+      "encodingFormat": "text/plain",
+      "name": "inputs/dataset_folder_tree.txt"
+    },
+    {
+      "@id": "inputs/dataset_preview.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "inputs/dataset_preview.md"
+    },
+    {
+      "@id": "evaluation/evaluation_strategy.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evaluation/evaluation_strategy.md"
+    },
+    {
+      "@id": "evaluation/review_rubric.json",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "name": "evaluation/review_rubric.json"
+    },
+    {
+      "@id": "urn:asb:task:task_005",
+      "@type": [
+        "ScholarlyArticle",
+        "p-plan:Plan",
+        "http://purl.org/spar/fabio/ResearchPaper"
+      ],
+      "asbext:task_kind": "extension",
+      "description": "Implement an extension to PALS Viewer that accepts user-uploaded metabolite set files (CSV/JSON format) and processes them through the PLAGE scoring pipeline to return a scored results table, extending beyond the three currently shipped set types (pathways, Molecular Families, Mass2Motifs).",
+      "keywords": [
+        "metabolite-set-file-parsing-and-validation",
+        "plage-pathway-activity-level-decomposition",
+        "custom-metabolite-set-integration",
+        "activity-score-computation-and-reporting"
+      ],
+      "name": "Extend PALS to support user-supplied custom metabolite set collections via PALS Viewer API",
+      "prov:wasInfluencedBy": [
+        {
+          "@id": "urn:asb:task:task_002"
+        }
+      ],
+      "repme:hasResearcher": [
+        {
+          "@id": "urn:asb:researcher:john-tomfohr-2005"
+        },
+        {
+          "@id": "urn:asb:researcher:jun-lu-2005"
+        },
+        {
+          "@id": "urn:asb:researcher:b-kepler-2005"
+        }
+      ],
+      "sameAs": "https://doi.org/10.1186/1471-2105-6-225#task_005",
+      "schema:identifier": "10.1186/1471-2105-6-225"
+    },
+    {
+      "@id": "urn:asb:researcher:john-tomfohr-2005",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Tomfohr, John"
+    },
+    {
+      "@id": "urn:asb:researcher:jun-lu-2005",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Lu, Jun"
+    },
+    {
+      "@id": "urn:asb:researcher:b-kepler-2005",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Kepler, Thomas B"
+    },
+    {
+      "@id": "urn:asb:tool:pals-viewer",
+      "@type": "SoftwareApplication",
+      "name": "PALS Viewer",
+      "schema:url": "https://github.com/glasgowcompbio/PALS"
+    },
+    {
+      "@id": "urn:asb:tool:pals-pathway-activity-level-scoring",
+      "@type": "SoftwareApplication",
+      "name": "PALS (Pathway Activity Level Scoring)",
+      "schema:url": "https://github.com/glasgowcompbio/PALS"
+    },
+    {
+      "@id": "urn:asb:input:task_005_0",
+      "@type": "File",
+      "name": "User-uploaded metabolite set file in CSV or JSON format containing metabolite identifiers and groupings"
+    },
+    {
+      "@id": "urn:asb:input:task_005_1",
+      "@type": "File",
+      "name": "PALS Viewer application and existing PLAGE scoring pipeline infrastructure"
+    },
+    {
+      "@id": "urn:asb:output:task_005_0",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Scored results table with metabolite set names, activity level scores, and associated statistics",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_005"
+      }
+    },
+    {
+      "@id": "#action-task_005",
+      "@type": [
+        "CreateAction",
+        "prov:Activity",
+        "p-plan:Step"
+      ],
+      "description": "Implement an extension to PALS Viewer that accepts user-uploaded metabolite set files (CSV/JSON format) and processes them through the PLAGE scoring pipeline to return a scored results table, extending beyond the three currently shipped set types (pathways, Molecular Families, Mass2Motifs).",
+      "instrument": [
+        {
+          "@id": "urn:asb:tool:pals-viewer"
+        },
+        {
+          "@id": "urn:asb:tool:pals-pathway-activity-level-scoring"
+        }
+      ],
+      "name": "Extend PALS to support user-supplied custom metabolite set collections via PALS Viewer API",
+      "object": [
+        {
+          "@id": "urn:asb:input:task_005_0"
+        },
+        {
+          "@id": "urn:asb:input:task_005_1"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "urn:asb:port:task_002/pathway_scores_table"
+        }
+      ],
+      "repme:hasInputData": [
+        {
+          "@id": "urn:asb:input:task_005_0"
+        },
+        {
+          "@id": "urn:asb:input:task_005_1"
+        }
+      ],
+      "repme:hasOutputData": [
+        {
+          "@id": "urn:asb:output:task_005_0"
+        }
+      ],
+      "repme:hasResult": [
+        {
+          "@id": "urn:asb:result:result_001"
+        },
+        {
+          "@id": "urn:asb:result:result_005"
+        },
+        {
+          "@id": "urn:asb:result:result_009"
+        }
+      ],
+      "result": [
+        {
+          "@id": "urn:asb:output:task_005_0"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:claim:claim_001",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "PALS (Pathway Activity Level Scoring) is a tool that performs database queries of pathways."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 375,
+          "oa:start": 275
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pals/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "PALS (Pathway Activity Level Scoring) is a tool that performs database queries of pathways.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "pathway analysis in metabolomics",
+        "object": "pathway queries",
+        "qualifier": "has_property",
+        "relation": "performs database queries of pathways",
+        "subject": "PALS"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_002",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "PALS decomposes activity levels in pathways via the PLAGE method."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 420,
+          "oa:start": 351
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pals/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "PALS decomposes activity levels in pathways via the PLAGE method.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "pathway analysis",
+        "object": "decomposed activity levels",
+        "qualifier": "produces",
+        "relation": "decomposes activity levels in pathways using PLAGE method",
+        "subject": "PALS"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_003",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "PALS results are more robust to noise and missing peaks compared to ORA and GSEA."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 570,
+          "oa:start": 465
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pals/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "PALS results are more robust to noise and missing peaks compared to ORA and GSEA.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "metabolomic data analysis",
+        "object": "improved robustness",
+        "qualifier": "has_property",
+        "relation": "more robust to noise and missing peaks than ORA and GSEA",
+        "subject": "PALS"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_004",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Noise and missing peaks are prevalent in metabolomics peak data."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 662,
+          "oa:start": 571
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pals/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Noise and missing peaks are prevalent in metabolomics peak data.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "metabolomics",
+        "object": "noise and missing peaks",
+        "qualifier": "has_property",
+        "relation": "contains noise and missing peaks as prevalent issues",
+        "subject": "metabolomics peak data"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_005",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The decomposition approach in PALS is amenable to the analysis of any group of metabolite sets, not just pathways."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1095,
+          "oa:start": 1009
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pals/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The decomposition approach in PALS is amenable to the analysis of any group of metabolite sets, not just pathways.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "metabolite set analysis",
+        "object": "flexible metabolite set analysis",
+        "qualifier": "enables",
+        "relation": "analysis of any group of metabolite sets beyond pathways",
+        "subject": "PALS decomposition approach"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_006",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Metabolite sets obtained from the grouping of metabolites according to their fragmentation spectra can be analysed with PALS."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 910,
+          "oa:start": 800
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pals/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Metabolite sets obtained from the grouping of metabolites according to their fragmentation spectra can be analysed with PALS.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "PALS Viewer application",
+        "object": "spectral-grouped metabolite analysis",
+        "qualifier": "enables",
+        "relation": "analysis of metabolite sets grouped by fragmentation spectra",
+        "subject": "PALS"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_007",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "PALS can analyse Molecular Families from GNPS."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 960,
+          "oa:start": 915
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pals/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "PALS can analyse Molecular Families from GNPS.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "metabolite set analysis",
+        "object": "GNPS Molecular Families",
+        "qualifier": "enables",
+        "relation": "analysis of Molecular Families from GNPS",
+        "subject": "PALS"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_008",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "PALS can analyse Mass2Motifs from MS2LDA."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1005,
+          "oa:start": 962
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pals/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "PALS can analyse Mass2Motifs from MS2LDA.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "metabolite set analysis",
+        "object": "MS2LDA Mass2Motifs",
+        "qualifier": "enables",
+        "relation": "analysis of Mass2Motifs from MS2LDA",
+        "subject": "PALS"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_009",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "PALS Viewer presents results in a user-friendly manner."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 465,
+          "oa:start": 433
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pals/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "PALS Viewer presents results in a user-friendly manner.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "pathway analysis visualization",
+        "object": "accessible result presentation",
+        "qualifier": "has_property",
+        "relation": "presents results in user-friendly manner",
+        "subject": "PALS Viewer"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_010",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Pathway analysis is an important task in understanding complex metabolomic data."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 272,
+          "oa:start": 193
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_pals/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Pathway analysis is an important task in understanding complex metabolomic data.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "metabolomics",
+        "object": "improved understanding of metabolomics",
+        "qualifier": "has_property",
+        "relation": "important for understanding complex metabolomic data",
+        "subject": "pathway analysis"
+      }
+    },
+    {
+      "@id": "urn:asb:result:result_001",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "PALS (Pathway Activity Level Scoring) is a tool that performs database queries of pathways.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_001"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_002",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "PALS decomposes activity levels in pathways via the PLAGE method.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_002"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_003",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "PALS results are more robust to noise and missing peaks compared to ORA and GSEA.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_003"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_004",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Noise and missing peaks are prevalent in metabolomics peak data.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_004"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_005",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The decomposition approach in PALS is amenable to the analysis of any group of metabolite sets, not just pathways.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_005"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_006",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Metabolite sets obtained from the grouping of metabolites according to their fragmentation spectra can be analysed with PALS.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_006"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_007",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "PALS can analyse Molecular Families from GNPS.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_007"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_008",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "PALS can analyse Mass2Motifs from MS2LDA.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_008"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_009",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "PALS Viewer presents results in a user-friendly manner.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_009"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_010",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Pathway analysis is an important task in understanding complex metabolomic data.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_010"
+        }
+      ]
+    },
+    {
+      "@id": "#env-task_005",
+      "@type": [
+        "repme:ComputationalEnvironment"
+      ],
+      "repme:computeTier": "light"
+    },
+    {
+      "@id": "#agent-15-activity-task_005",
+      "@type": [
+        "prov:Activity"
+      ],
+      "prov:endedAtTime": "2026-06-15T21:31:51.545692+00:00",
+      "prov:qualifiedUsage": {
+        "@type": "prov:Usage",
+        "schema:name": "prompt_sha256",
+        "schema:value": "2f2b26fde86679d6"
+      },
+      "prov:wasAssociatedWith": {
+        "schema:name": "anthropic/claude-haiku-4-5-20251001"
+      },
+      "schema:name": "Agent 1.5 Claim Extractor"
+    },
+    {
+      "@id": "#computational-environment",
+      "@type": "repme:ComputationalEnvironment",
+      "repme:buildId": "77E40AB4076C42C3A663EBE474D78581",
+      "repme:depsHash": null,
+      "repme:gitCommit": "8713018e077e78db4e0defb776d2c7f494485e53",
+      "repme:platform": "darwin-25.5.0-arm64",
+      "repme:pythonVersion": "3.11.15",
+      "schema:dateCreated": "2026-06-15T21:26:44.675412Z",
+      "schema:hasPart": [
+        {
+          "@id": "#agent-config-agent1_entity"
+        },
+        {
+          "@id": "#agent-config-agent2a_outline"
+        },
+        {
+          "@id": "#agent-config-agent2b_card"
+        },
+        {
+          "@id": "#agent-config-agent3_critique"
+        },
+        {
+          "@id": "#agent-config-agent_classify"
+        }
+      ],
+      "schema:softwareVersion": "agentic-science-builder@0.1.0"
+    },
+    {
+      "@id": "#agent-config-agent1_entity",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v3",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent1_entity"
+    },
+    {
+      "@id": "#agent-config-agent2a_outline",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-sonnet-4-6",
+      "repme:promptVersion": "v2",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2a_outline"
+    },
+    {
+      "@id": "#agent-config-agent2b_card",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v4",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2b_card"
+    },
+    {
+      "@id": "#agent-config-agent3_critique",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent3_critique"
+    },
+    {
+      "@id": "#agent-config-agent_classify",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent_classify"
+    },
+    {
+      "@id": "artifact_provenance.json",
+      "@type": "File",
+      "name": "artifact_provenance.json",
+      "encodingFormat": "application/json"
+    },
+    {
+      "@id": "ledger/claims.jsonl",
+      "@type": "File",
+      "name": "ledger/claims.jsonl",
+      "encodingFormat": "application/jsonlines"
+    },
+    {
+      "@id": "ledger/results.jsonl",
+      "@type": "File",
+      "name": "ledger/results.jsonl",
+      "encodingFormat": "application/jsonlines"
+    }
+  ]
+}

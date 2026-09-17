@@ -1,6 +1,9 @@
 ---
 name: peptidoform-representation-and-interpretation
-description: Use when when you have a tandem mass spectrometry spectrum with a known or inferred peptide sequence that may contain post-translational modifications (phosphorylation, glycosylation, cross-links), and you need to annotate which observed m/z peaks correspond to specific fragment ion types (b, y, a.
+description: Use when when you have a tandem mass spectrometry spectrum with a known
+  or inferred peptide sequence that may contain post-translational modifications (phosphorylation,
+  glycosylation, cross-links), and you need to annotate which observed m/z peaks correspond
+  to specific fragment ion types (b, y, a.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -18,6 +21,8 @@ metadata:
   - Glycan Naming Ontology
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils

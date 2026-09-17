@@ -1,6 +1,7 @@
 ---
 name: ondiskmsnexp-object-manipulation-and-export
-description: Use when you have raw CE-MS data and need to (1) transform migration time values to effective mobility using two calibration markers (e.
+description: Use when you have raw CE-MS data and need to (1) transform migration
+  time values to effective mobility using two calibration markers (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -16,11 +17,14 @@ metadata:
   - Spectra
   techniques:
   - CE-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
 evidence_spans:
-- there is no implementation in R that performs effective mobility transformation of CE-MS(/MS) data
+- there is no implementation in R that performs effective mobility transformation
+  of CE-MS(/MS) data
 - Description and usage of MobilityTransformR
 - compute Procaine's effective mobility using mobilityTransform
 - The transformation is performed using functionality from the packages `r BiocStyle::Biocpkg("MSnbase")`

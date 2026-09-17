@@ -1,6 +1,7 @@
 ---
 name: probability-threshold-tuning-for-chemical-detection
-description: Use when you have a trained NeatMS neural network model (.h5 format) and need to select an operating threshold for peak classification on your LCMS dataset.
+description: Use when you have a trained NeatMS neural network model (.h5 format)
+  and need to select an operating threshold for peak classification on your LCMS dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,11 +16,14 @@ metadata:
   - scikit-learn
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
 evidence_spans:
-- NeatMS provides the necessary functions to do that, all we will have to do is create a `Neural network handler` object
+- NeatMS provides the necessary functions to do that, all we will have to do is create
+  a `Neural network handler` object
 - Calling the method `get_threshold()` will compute and return the optimal threshold
 - After installation, you should be able to import NeatMS
 - Import the required libraries first

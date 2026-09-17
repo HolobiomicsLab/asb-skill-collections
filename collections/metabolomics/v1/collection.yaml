@@ -2009,4 +2009,3 @@ source_collections:
 - 10.7554/eLife.70780
 catalogue_membership:
 - https://w3id.org/holobiomicslab/asb-skill/registry
-ro_crate_path: ro-crate-metadata.json

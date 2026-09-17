@@ -131,6 +131,15 @@ alignment and is then repeated against the corrected retention times; and
 `fillChromPeaks` accepts only `rdata.xcms.group`, so gap filling cannot be moved
 after annotation.
 
+`parameter_optimisation` is the exception, and the exception comes from the same
+evidence. `abims_xcms_xcmsSet.xml` declares a single `data` input
+(`rdata.msnbase.raw,rdata`) and never mentions IPO; `ipo4xcmsSet.xml` emits
+`IPO_parameters4xcmsSet.tsv`, a parameter *report* a person reads and then enters
+into the peak-picking form. The stage therefore **orders** `peak_detection`
+without feeding it: there is no Galaxy dataset connection to declare, so
+`workflow.yaml` records `after: parameter_optimisation` and no `inputs_from`
+edge.
+
 | stage | W4M tools | emits |
 | --- | --- | --- |
 | `import_raw` | `MSnbase readMSData`, `Mz(X)ML Shaper` | rdata.msnbase.raw |

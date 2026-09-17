@@ -1,6 +1,9 @@
 ---
 name: metabolic-model-constraint-specification
-description: Use when you have a generic constraint-based metabolic model (SBML format) and cross-sectional omics data (RNA-seq, intracellular metabolomics, YSI or bioanalyzer extracellular flux measurements) for multiple biological samples and need to create sample-specific models that discriminate whether.
+description: Use when you have a generic constraint-based metabolic model (SBML format)
+  and cross-sectional omics data (RNA-seq, intracellular metabolomics, YSI or bioanalyzer
+  extracellular flux measurements) for multiple biological samples and need to create
+  sample-specific models that discriminate whether.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -27,15 +30,21 @@ metadata:
   - qLSLab/integrate pipeline
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
 - using constraint-based stoichiometric metabolic models as a scaffold
-- we set flux boundaries as a function of gene expression as done, among others, by eFlux [36]
-- we set flux boundaries as a function of gene expression as done, among others, by eFlux [36] and TRFBA
-- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability Analysis, as in GX-FBA [26]
-- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability Analysis, as in scFBA [38]
+- we set flux boundaries as a function of gene expression as done, among others, by
+  eFlux [36]
+- we set flux boundaries as a function of gene expression as done, among others, by
+  eFlux [36] and TRFBA
+- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability
+  Analysis, as in GX-FBA [26]
+- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability
+  Analysis, as in scFBA [38]
 - raw reads were mapped with STAR aligner (v.2.6.1d) to human reference genome (hg38)
 claims: []
 provenance:

@@ -1,6 +1,8 @@
 ---
 name: background-ion-drift-detection-and-removal
-description: Use when processing MS-DIAL peak lists from untargeted LC-MS/MS experiments (DDA or DIA mode) where you suspect instrumental background contamination or ion source carry-over is generating false positive features.
+description: Use when processing MS-DIAL peak lists from untargeted LC-MS/MS experiments
+  (DDA or DIA mode) where you suspect instrumental background contamination or ion
+  source carry-over is generating false positive features.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -12,6 +14,8 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR

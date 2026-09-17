@@ -26,7 +26,7 @@ Metabolomics** ([26181](https://www.dagstuhl.de/en/seminars/seminar-calendar/sem
 
 > **This release — `metabolomics-v0.2.0` (preliminary):**
 > [`collections/metabolomics/v2`](collections/metabolomics/v2) — **5,859 skills**
-> across **909 tools** distilled from **568 papers**, for computational
+> across **909 tools** distilled from **566 papers**, for computational
 > metabolomics — predominantly **LC-MS/MS**, but also LC-MS, GC-MS,
 > mass-spectrometry imaging, ion mobility and lipidomics, with some **NMR** and
 > multi-omics / statistics / pathway tools. New in this version: **21 composite
@@ -63,51 +63,62 @@ and will ship under the same layout — no rename, just new entries under `colle
 
 ---
 
-## 📦 Install
+## Install
 
-> [!TIP]
-> **Fastest path** — two lines in Claude Code: the full collection, or a lighter per-technique pack.
+> [!IMPORTANT]
+> The release-verified perimeter is the complete `metabolomics` domain installed
+> as a managed snapshot, Claude Code from a local-checkout marketplace, and the
+> checkout CLI. Exact lifecycle output, uninstall residue and pending surfaces
+> are recorded in [the usage guide](collections/metabolomics/v2/USAGE.md#1-install-one-domain-collection).
+> The complete-snapshot and shared-selector behaviour was verified on
+> `int/collections-release-2026-09-13` at `777671bc3`; this source revision
+> predates those fixes.
 
-### 🚀 Claude Code (native plugin)
+### Claude Code public marketplace transport — pending verification
 
-```bash
-/plugin marketplace add HolobiomicsLab/asb-skill-collections
-/plugin install metabolomics@asb-skill-collections          # full collection (5,859 skills)
-```
+The equivalent local-checkout marketplace route was exercised with Claude Code
+2.1.241. The public GitHub transport remains pending because this rehearsal had
+no usable DNS; it is not inferred from the local result. Claude's component
+inventory saw `_router`, `asb-contribute`, `asb-metabolomics` and `ground`.
 
-### 🧩 Lighter per-technique packs — load only what you need
-
-```bash
-/plugin install metabolomics-lc-ms@asb-skill-collections    # also: gc-ms, nmr, ms-imaging,
-                                                            # ion-mobility, ce-ms,
-                                                            # direct-infusion, ms-generic
-```
+### Lighter per-technique packs — experimental, not verified end to end
 
 > [!NOTE]
 > Packs **overlap** (a multi-technique skill appears in several) — install **one** full plugin **or** a few packs, not both. See [packs/metabolomics/](packs/metabolomics/README.md).
 
-### 🌐 Web UI — Claude · ChatGPT · Mistral
+### Web UI — experimental, not verified end to end
 
-No CLI: upload the search indexes +
-the few skills you need as the assistant's knowledge (Claude *Projects*, ChatGPT
-*Custom GPT/Project*, Mistral *Agent/Library*) and paste a routing instruction —
-step-by-step in [USAGE.md](collections/metabolomics/v2/USAGE.md#chat-assistants-via-the-web-ui-claude--chatgpt--mistral).
+This route was not exercised for the release and no end-to-end instructions are
+asserted here.
 
-### 🤖 Any other agent / IDE
+### Any other agent / IDE — data access only
 
 The collection is plain Markdown + JSON — point your
 agent at `collections/metabolomics/v2/` and read the indexes. See
 [AGENTS.md](AGENTS.md).
 
-## 🌍 Install beyond Claude Code
+## Runtime adapters — experimental, not verified end to end
 
-Other agent runtimes have no `/plugin install`. Use the bundled `asbb` CLI from a
-local clone to materialize a pack into the runtime's own location.
+Other agent runtimes have no `/plugin install`; the bundled `asbb` CLI
+materialises a marketplace pack into the runtime's own location from a local
+clone. It creates a content-addressed, source-independent snapshot and points
+its host entries into that snapshot. Rerun `install` after updating the
+checkout; there is no separate update command. `uninstall` removes unchanged
+owned entries and snapshots while preserving conflicts. This behaviour was
+verified for `--runtime agents`; Codex, Copilot CLI, Gemini CLI, Cursor, Cline
+and VS Code were not launched, so their adapters remain experimental.
+
+The exact managed-install and local Claude Code commands that were exercised are
+in the [usage guide](collections/metabolomics/v2/USAGE.md#1-install-one-domain-collection).
+
+### `asbb` CLI — a programmatic skill provider over your checkout
+
+The `asbb` CLI offers offline, key-free retrieval from an existing checkout:
 
 ```bash
-git clone https://github.com/HolobiomicsLab/asb-skill-collections.git
-cd asb-skill-collections
-python3 -m asb_skill_collections.asbb_cli install --list-runtimes      # see all targets
+python3 -m asb_skill_collections.asbb_cli search "untargeted LC-MS/MS annotation" --collection metabolomics --target workflows --k 1
+python3 -m asb_skill_collections.asbb_cli get untargeted-lcmsms-annotation --collection metabolomics/v2 --target workflows | sed -n '1,24p'
+python3 -m asb_skill_collections.asbb_cli search --list-collections
 ```
 
 **Skill-native runtimes** (read `SKILL.md` directly):
@@ -120,13 +131,15 @@ python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --runtime a
 # Vendor into a project for Claude Code: --runtime claude  (add --user for ~/.claude)
 ```
 
-**Rules/instruction IDEs** (a `SKILL.md` is rendered into their format — run from
-the target project):
+**Rules/instruction IDEs** (rendered instructions backed by a complete unit — run
+from the target project, making the checkout importable and naming it explicitly):
 
 ```bash
-python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --runtime cursor          # .cursor/rules/*.mdc
-python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --runtime cline           # .clinerules/*.md
-python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --runtime vscode-copilot  # .github/instructions/*.instructions.md
+ASB_COLLECTIONS_REPO=/path/to/asb-skill-collections
+export PYTHONPATH="$ASB_COLLECTIONS_REPO${PYTHONPATH:+:$PYTHONPATH}"
+python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --repo "$ASB_COLLECTIONS_REPO" --runtime cursor          # .cursor/rules/*.mdc
+python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --repo "$ASB_COLLECTIONS_REPO" --runtime cline           # .clinerules/*.md
+python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --repo "$ASB_COLLECTIONS_REPO" --runtime vscode-copilot  # .github/instructions/*.instructions.md
 ```
 
 **Anything else** (pi, Antigravity, or a runtime without a preset):
@@ -135,10 +148,25 @@ python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --runtime v
 python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --dest ~/some/skills/dir
 ```
 
-Skill-native installs **symlink** by default (a `git pull` in the clone updates
-them); add `--copy` for a self-contained copy. `--dry-run` previews, `--force`
-overwrites unmanaged files, and `asbb uninstall <pack> --runtime <id>` cleanly
-removes exactly what was installed (tracked in `~/.asbb/installed.json`).
+Every install copies the pack's shipped files into a managed snapshot under
+`<destination>/.asbb-units/`, including its leaves, indexes, helpers and workflows.
+Local caches, virtual environments and Git metadata are excluded. The advertised
+entries identify this installed root for relative paths and commands, naming it
+both absolutely and relative to the entry's own directory, so an installation
+that is later moved on disk stays usable — and `uninstall`/`install` accept a
+`--dest` naming where it was moved to. Skill-native
+entries **symlink** to adapters in the snapshot by default; `--copy` (also used by
+`--dest`) creates real adapter directories. Rules targets receive rendered files
+with the same root instructions. All modes retain their shipped assets after the
+checkout is moved or removed; rerun `install` to refresh the snapshot.
+
+`--dry-run` previews without writing. A conflicting entry requires `--force`,
+which records its transfer to the new pack. `asbb uninstall <pack> --runtime <id>`
+(or `--dest DIR`) removes only unchanged entries still owned by that pack and its
+unchanged managed snapshot. Replaced entries and unsafe paths are preserved and
+reported. Versions, content identities and ownership are tracked in
+`~/.asbb/installed.json`. Skipped entries retain their assets and receipts for
+later cleanup; legacy receipts without ownership evidence require manual review.
 
 > For **Claude Code**, the plugin marketplace above remains the recommended path.
 
@@ -159,10 +187,15 @@ asbb search --list-collections
 ```
 
 `search`/`get` read the checkout you cloned (point elsewhere with
-`ASB_COLLECTIONS_ROOT` / `--repo`); the ranking matches each collection's
-`bin/semantic_search.py` keyword mode — no API key. Without installing anything,
+`ASB_COLLECTIONS_ROOT` / `--repo`); search shares the measured, versioned selector
+with MCP and the collection-level router and semantic keyword scripts — no API key. Without installing anything,
 the same surface is `python3 -m asb_skill_collections.asbb_cli search …` from the
 clone.
+
+Each keyword hit explains its score, matched fields and filters, and carries a
+qualified collection/version/target/slug. The router's `--json` output uses the
+same dictionaries. See [offline selection](docs/selection.md) for the measured
+comparison, workflow paths and the temporary `ASB_SELECTOR_RULE=package` option.
 
 > **Not on PyPI in v0.** `asb-skill-collections` is unpublished by
 > [design decision 5](https://github.com/HolobiomicsLab/AgenticScienceBuilder) —
@@ -171,31 +204,11 @@ clone.
 > v1, once the corpus ships as package data. Maintainers: the (currently dormant)
 > release flow is in [`docs/RELEASING_PYPI.md`](docs/RELEASING_PYPI.md).
 
-### 🔌 MCP skill-server — for any MCP agent
+### MCP skill-server — pending current verification
 
-Expose the same retrieval over the Model Context Protocol so Claude Desktop,
-Cursor, Cline, Codex, etc. can search and fetch skills at run time. Same checkout,
-plus the `mcp` extra:
-
-```bash
-uv pip install -e ".[mcp]"     # from the clone above
-ASB_COLLECTIONS_ROOT=/path/to/checkout asb-mcp
-```
-
-```jsonc
-// Claude Desktop / Code  →  mcpServers
-{
-  "asb-skills": {
-    "command": "uv",
-    "args": ["run", "--directory", "/path/to/asb-skill-collections", "asb-mcp"],
-    "env": { "ASB_COLLECTIONS_ROOT": "/path/to/asb-skill-collections" }
-  }
-}
-```
-
-Tools: `list_collections`, `search_skills`, `search_workflows`, `search_tools`,
-`get_skill`, `get_workflow`. Pairs naturally with a Perspicacité MCP — one server
-for skill retrieval, one for evidence grounding.
+The pinned release audit records a successful checkout stdio trial. This
+rehearsal could not install the optional `mcp` dependency because PyPI DNS
+resolution failed, so no current handshake or host integration is claimed.
 
 ## Use
 
@@ -204,6 +217,9 @@ tool name, or keyword) or `tools_index.json`; read its `SKILL.md` and follow the
 procedure; then optionally **ground** it against the source paper/repo to verify a
 parameter or claim — see the **🔎 Grounding (Perspicacité)** section below.
 Requirements (libraries, per-skill tool deps) are in [USAGE §0](collections/metabolomics/v2/USAGE.md).
+The shared offline ranking rule, explanations, tie handling and its limited
+22-query documentation-label measurement are described in
+[How offline skill selection works](docs/selection.md).
 
 ## 🔎 Grounding (Perspicacité)
 
@@ -217,7 +233,9 @@ with a serverless fallback**:
 
 - **`kb` (Perspicacité)** — RAG over the source paper's full text **+ supplementary
   information**, persistent and citable. The per-paper KB (`asb-paper-<doi>`) is auto-created
-  and ingested on first use via the MCP tools `ensure_kb` / `ground_paper`.
+  and ingested on first use by `perspicacite_kb_bind.py prepare`, which calls the
+  Perspicacité HTTP API directly (`POST /api/kb`, then `/api/kb/<slug>/dois`); queries
+  go through `/api/chat` scoped to the bound KB. No MCP server is required.
 - **`local` (serverless)** — **no server**: `git clone` the skill's source repo + best-effort
   open-access paper, then read the files directly.
 
@@ -246,7 +264,7 @@ The `kb` backend needs a reachable Perspicacité (`PERSPICACITE_BASE`, default
 | File | Contents |
 |---|---|
 | `leaves/<slug>/SKILL.md` | one evidence-grounded skill each (frontmatter: EDAM IRIs, `derived_from` DOIs, `evidence_spans`, `tools`, `attribution`). Shipped as data and retrieved on demand, so installing does not charge the corpus to the session's context. |
-| `skills/_router/SKILL.md` | the only advertised skill — searches the corpus and points at the leaf to read |
+| `skills/*/SKILL.md` | three advertised entries: the router, collection/licence policy and contribution channel |
 | `tools/<slug>.yaml` | deduplicated software-tool records with EDAM + source DOIs |
 | `skills_index.json` / `tools_index.json` | machine search indexes |
 | `kb_bundle.json` | skill → source-paper KB slugs **+ `repo_urls`** (grounding map) |
@@ -347,6 +365,14 @@ contributions earn a place on the contributor leaderboard and can become
 co-authorship on the next release DOI — the full flywheel is documented in
 [CONTRIBUTION_LOOP.md](governance/CONTRIBUTION_LOOP.md).
 
+Before packaging, run `python -m scripts.unit_closure` from the repository root
+to compare each shipped unit's indexes with its leaves and check declared
+`metadata.helper` files. `--prune` removes stale pack rows only when they are
+absent from the pack's declared collection/version parent; it preserves JSON
+formatting and never changes leaves. `metadata.issue_templates` contains
+repository pointers read on GitHub and does not require local copies.
+The metabolomics v2 unit vendors its feedback helper and shared PII configuration under `scripts/`, so the helper remains runnable after installation.
+
 ## Other collections
 
 `collections/` also contains `epigenomics/v1`, `transcriptomics/v1`, and the
@@ -356,7 +382,10 @@ release** — only `metabolomics/v2` is published via the plugin.
 ## Status & caveats
 
 - **Zenodo DOI** — [10.5281/zenodo.20794027](https://doi.org/10.5281/zenodo.20794027).
-- **`w3id.org/holobiomicslab/…` IRIs** — reserved identifiers that **do not
-  resolve yet** (the redirect is not live); treat as stable names, not links.
+- **`w3id.org/holobiomicslab/…` IRIs** — resolve since 2026-09-14
+  ([perma-id/w3id.org#6690](https://github.com/perma-id/w3id.org/pull/6690)). The registry, contributors and leaderboard
+  IRIs content-negotiate: `Accept: application/ld+json` gets the raw JSON-LD (303),
+  a browser gets the GitHub view (302). A collection IRI redirects to its directory.
+  All targets follow `main`, not a release tag.
 - **HuggingFace mirror & leaderboard** — planned, not yet live.
 - **Benchmark / capsules** — to be released later.

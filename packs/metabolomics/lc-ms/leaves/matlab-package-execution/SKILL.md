@@ -1,6 +1,8 @@
 ---
 name: matlab-package-execution
-description: Use when you have two separate LC-MS untargeted metabolomic feature datasets (each with retention time and m/z values) and need to establish feature-to-feature correspondence between them.
+description: Use when you have two separate LC-MS untargeted metabolomic feature datasets
+  (each with retention time and m/z values) and need to establish feature-to-feature
+  correspondence between them.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -12,6 +14,8 @@ metadata:
   - M2S
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c03592
   title: m2s

@@ -1,6 +1,8 @@
 ---
 name: adduct-regex-pattern-matching
-description: Use when ingesting mass spectrometry spectra from heterogeneous databases or libraries where adduct annotations may be incomplete, incorrectly formatted, or inconsistent with the ionization mode. Use it before downstream analysis (e.
+description: Use when ingesting mass spectrometry spectra from heterogeneous databases
+  or libraries where adduct annotations may be incomplete, incorrectly formatted,
+  or inconsistent with the ionization mode. Use it before downstream analysis (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,6 +16,13 @@ metadata:
   - spectra-hash
   techniques:
   - LC-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
@@ -42,6 +51,7 @@ attribution:
 
 # adduct-regex-pattern-matching
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Validate and enforce ionmode–adduct consistency in mass spectrometry spectra by applying regex pattern matching to detect and flag spectra with mismatched or malformed adduct annotations. This skill removes spectra where negative adducts appear in positive-mode ionization (or vice versa) and filters out spectra with missing or syntactically invalid adduct strings.

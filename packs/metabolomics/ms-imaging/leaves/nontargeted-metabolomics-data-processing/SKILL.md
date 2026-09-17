@@ -1,6 +1,8 @@
 ---
 name: nontargeted-metabolomics-data-processing
-description: Use when you have raw LC-MS data in vendor or mzML format and need to systematically discover and extract all detectable metabolite features across the full retention time range, without predefined target lists.
+description: Use when you have raw LC-MS data in vendor or mzML format and need to
+  systematically discover and extract all detectable metabolite features across the
+  full retention time range, without predefined target lists.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,12 +17,21 @@ metadata:
   - LC-MS
   - direct-infusion-MS
   - MS-imaging
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: huaxuyu/masscube
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube
 evidence_spans:
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing.
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing.
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing
 - masscube is an integrated Python package
 claims: []
 provenance:
@@ -45,6 +56,7 @@ attribution:
 
 # nontargeted-metabolomics-data-processing
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Nontargeted metabolomics data processing is a workflow for extracting chromatographic features from raw LC-MS data without prior knowledge of target analytes. It combines peak detection, segmentation, feature quality evaluation, and annotation to generate a comprehensive feature table suitable for discovery and comparative metabolomics studies.

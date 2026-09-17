@@ -1,6 +1,9 @@
 ---
 name: lc-ms-feature-quality-assessment
-description: Use when you have generated feature tables from LC-MS data using different parameter combinations (e.g., varying Centwave, FeatureFinderMetabo, or ADAP peak picking settings) and need to objectively compare their outputs to select the -performing configuration for your dataset.
+description: Use when you have generated feature tables from LC-MS data using different
+  parameter combinations (e.g., varying Centwave, FeatureFinderMetabo, or ADAP peak
+  picking settings) and need to objectively compare their outputs to select the -performing
+  configuration for your dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,11 +18,14 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
 evidence_spans:
-- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo, ADAP'
+- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo,
+  ADAP'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

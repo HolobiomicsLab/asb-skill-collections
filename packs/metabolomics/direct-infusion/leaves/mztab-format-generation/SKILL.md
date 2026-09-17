@@ -1,6 +1,7 @@
 ---
 name: mztab-format-generation
-description: Use when after completing peak detection, MS1 feature picking, and accurate mass database search (e.g., against HMDB) on FIA-MS or LC-MS(/MS) data.
+description: Use when after completing peak detection, MS1 feature picking, and accurate
+  mass database search (e.g., against HMDB) on FIA-MS or LC-MS(/MS) data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -16,6 +17,8 @@ metadata:
   techniques:
   - LC-MS
   - direct-infusion-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c03421
   title: SmartPeak
@@ -23,7 +26,8 @@ evidence_spans:
 - The software is based on the OpenMS toolkit
 - The software is based on the OpenMS toolkit.
 - SmartPeak automates targeted and quantitative metabolomics data processing
-- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with a possibility to run in headless mode
+- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with
+  a possibility to run in headless mode
 - SmartPeak CLI provides an equivalent of SmartPeak GUI application
 claims: []
 provenance:

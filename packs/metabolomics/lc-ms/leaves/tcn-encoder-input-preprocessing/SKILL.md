@@ -1,6 +1,9 @@
 ---
 name: tcn-encoder-input-preprocessing
-description: Use when when reproducing or auditing FIDDLE's formula prediction pipeline, or when implementing the TCN encoder in your own codebase and need to confirm that the precursor m/z (env[:, 0]) has been removed from the feature vector to avoid leakage of mass information into the model's learned.
+description: Use when when reproducing or auditing FIDDLE's formula prediction pipeline,
+  or when implementing the TCN encoder in your own codebase and need to confirm that
+  the precursor m/z (env[:, 0]) has been removed from the feature vector to avoid
+  leakage of mass information into the model's learned.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -13,6 +16,8 @@ metadata:
   - FIDDLE
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

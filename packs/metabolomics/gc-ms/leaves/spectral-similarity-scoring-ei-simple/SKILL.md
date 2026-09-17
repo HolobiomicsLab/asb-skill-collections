@@ -1,6 +1,8 @@
 ---
 name: spectral-similarity-scoring-ei-simple
-description: Use when you have a query electron ionization (EI) mass spectrum and need to search it against a library of known EI mass spectra to identify unknown compounds. Use it when exact identity matching (e.
+description: Use when you have a query electron ionization (EI) mass spectrum and
+  need to search it against a library of known EI mass spectra to identify unknown
+  compounds. Use it when exact identity matching (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,12 +15,17 @@ metadata:
   - NIST API
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr
 evidence_spans:
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users for conducting library searches against electron ionization mass spectral databases.
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users for conducting library searches against electron ionization mass spectral
+  databases.
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users
 - enhance the capabilities of R users for conducting library searches
 claims: []
 provenance:

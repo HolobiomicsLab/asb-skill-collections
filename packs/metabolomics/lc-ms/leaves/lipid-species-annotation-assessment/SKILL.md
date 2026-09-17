@@ -1,6 +1,8 @@
 ---
 name: lipid-species-annotation-assessment
-description: Use when after running MetaboAnnotatoR's annotateRC function when you need to (1) verify that the top-ranked annotation for a feature is correct, (2) understand what alternative lipid structures (e.
+description: Use when after running MetaboAnnotatoR's annotateRC function when you
+  need to (1) verify that the top-ranked annotation for a feature is correct, (2)
+  understand what alternative lipid structures (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -12,11 +14,14 @@ metadata:
   - R
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - To install this package, start R (version "4.5.0" or higher)
 claims: []
 provenance:

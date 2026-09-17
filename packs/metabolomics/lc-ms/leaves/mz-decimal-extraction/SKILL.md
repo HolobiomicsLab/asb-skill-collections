@@ -1,6 +1,7 @@
 ---
 name: mz-decimal-extraction
-description: Use when after loading a feature table with m/z values from MS-Dial output when you need to identify and remove features with anomalous decimal m/z values.
+description: Use when after loading a feature table with m/z values from MS-Dial output
+  when you need to identify and remove features with anomalous decimal m/z values.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +14,8 @@ metadata:
   - MS-Dial
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -21,7 +24,9 @@ derived_from:
 evidence_spans:
 - The R package margheRita addresses the complete workflow
 - The R package margheRita
-- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
+- The R package margheRita addresses the complete workflow for metabolomic profiling
+  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
+  spectrometry (MS/MS)
 - The R package margheRita addresses the complete workflow for metabolomic profiling
 claims: []
 provenance:

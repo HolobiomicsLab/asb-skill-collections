@@ -9,16 +9,26 @@ Checks per workflow:
   - SKILL.md frontmatter parses; metadata.kind == composite-workflow; schema_version 0.3.0.
   - every member_skills slug AND every workflow.yaml steps[].skills slug resolves in the
     target collection's skills_index.json.
-  - workflow.yaml parses; steps[].after / inputs_from reference only earlier step ids
-    (valid DAG, no cycles, no dangling refs).
+  - workflow.yaml parses; steps[].after / inputs_from reference only earlier step ids,
+    and every inputs_from type is declared by both endpoint steps.
+  - collection.yaml workflows_count, when declared, matches the workflow directories.
   - no cross-stage skill collisions (a leaf appears in only one stage).
   - tools carry no script-filename leaks (*.py) and no case-duplicates.
+
+``verification.final_outputs[].type`` is intentionally not compared with step output
+types: final outputs describe file kinds and use a different vocabulary from step ports.
 
 Exit 0 if all pass, 1 otherwise. Usage:
   python validate_workflows.py --workflows <dir> --collection <released-or-staged collection dir>
 """
 from __future__ import annotations
-import argparse, json, os, sys, glob
+
+import argparse
+import glob
+import json
+import os
+import sys
+
 import yaml
 
 
@@ -33,6 +43,55 @@ def _frontmatter(path):
         if lines[i].strip() == "---":
             return yaml.safe_load("\n".join(lines[1:i])) or {}
     return {}
+
+
+def validate_port_types(workflow_name, steps):
+    """Return type errors for earlier-step ``inputs_from`` edges.
+
+    Only step input/output ports share this vocabulary.  The file kinds under
+    ``verification.final_outputs[].type`` are intentionally outside this check.
+    Dangling or forward producer ids remain the caller's DAG-validation concern.
+    """
+    errors, earlier_steps = [], {}
+    for consumer in steps:
+        consumer_id = consumer.get("id")
+        consumer_types = {
+            declared_type
+            for port in (consumer.get("inputs") or [])
+            if isinstance(port, dict) and "type" in port
+            for declared_type in (
+                port["type"],
+                f"{port['type']}:{port['flavour']}" if port.get("flavour") else port["type"],
+            )
+        }
+        for producer_id, transferred_types in (consumer.get("inputs_from") or {}).items():
+            producer = earlier_steps.get(producer_id)
+            if producer is None:
+                continue
+            producer_types = {
+                declared_type
+                for port in (producer.get("outputs") or [])
+                if isinstance(port, dict) and "type" in port
+                for declared_type in (
+                    port["type"],
+                    f"{port['type']}:{port['flavour']}" if port.get("flavour") else port["type"],
+                )
+            }
+            declared_types = sorted(str(port_type) for port_type in producer_types)
+            for port_type in transferred_types or []:
+                prefix = (
+                    f"{workflow_name}/{consumer_id}: inputs_from producer {producer_id!r} "
+                    f"requests type {port_type!r}"
+                )
+                if port_type not in producer_types:
+                    errors.append(f"{prefix}, but producer outputs declare {declared_types}")
+                if port_type not in consumer_types:
+                    errors.append(
+                        f"{prefix}, but consumer inputs do not declare it; "
+                        f"producer outputs declare {declared_types}"
+                    )
+        earlier_steps[consumer_id] = consumer
+    return errors
 
 
 def validate_one(d, idx):
@@ -52,8 +111,10 @@ def validate_one(d, idx):
     for s in ms:
         if s not in idx:
             errs.append(f"{name}: member_skill unresolved: {s}")
+    steps = wf.get("steps", [])
+    errs.extend(validate_port_types(name, steps))
     ids, seen = set(), {}
-    for st in wf.get("steps", []):
+    for st in steps:
         for s in (st.get("skills") or []):
             if s not in idx:
                 errs.append(f"{name}/{st['id']}: skill unresolved: {s}")
@@ -90,6 +151,16 @@ def main():
             if os.path.isdir(d) and not os.path.basename(d).startswith("_")
             and os.path.basename(d) not in ("_archive", "bin")]
     all_errs, n_ok = [], 0
+    collection_yaml = os.path.join(a.collection, "collection.yaml")
+    if os.path.isfile(collection_yaml):
+        collection_meta = yaml.safe_load(open(collection_yaml)) or {}
+        if ("workflows_count" in collection_meta
+                and collection_meta["workflows_count"] != len(dirs)):
+            all_errs.append(
+                "collection.yaml workflows_count mismatch: "
+                f"declared {collection_meta['workflows_count']}, "
+                f"on-disk workflow directories {len(dirs)}"
+            )
     for d in dirs:
         errs = validate_one(d, idx)
         if errs:

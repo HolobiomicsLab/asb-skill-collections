@@ -13,6 +13,8 @@ metadata:
   - Biobase
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo10040135
   title: notame
@@ -22,7 +24,8 @@ evidence_spans:
 - This package can be used to analyze preprocessed LC-MS data in non-targeted metabolomics
 - library(notame)
 - reads them to R, conducts additional preprocessing and statistical analyses
-- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package by Bioconductor'
+- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package
+  by Bioconductor'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +50,7 @@ attribution:
 
 # Reconstruct the feature clustering algorithm producing Cluster_ID assignments
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Group correlated LC-MS metabolic features into clusters based on mass-to-charge ratio proximity, retention time co-elution, and abundance correlation, then assign cluster identifiers named after the highest-abundance feature in each cluster. This skill resolves isotopologues, adducts, and in-source fragments that represent the same underlying metabolite.

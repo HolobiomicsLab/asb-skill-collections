@@ -1,6 +1,7 @@
 ---
 name: deep-learning-model-training-with-monitoring
-description: Use when you have a pre-trained deep learning encoder (e.g., TCN spectrum encoder trained on a large corpus) and want to adapt it to a new task (e.
+description: Use when you have a pre-trained deep learning encoder (e.g., TCN spectrum
+  encoder trained on a large corpus) and want to adapt it to a new task (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +13,8 @@ metadata:
   - FIDDLE
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

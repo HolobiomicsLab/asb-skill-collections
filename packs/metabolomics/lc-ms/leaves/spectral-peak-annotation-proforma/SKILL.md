@@ -1,6 +1,9 @@
 ---
 name: spectral-peak-annotation-proforma
-description: Use when you have an annotated or raw tandem mass spectrometry spectrum and need to identify which observed peaks correspond to expected peptide fragment ions from a known or predicted peptidoform. Use it before spectrum visualization if you want highlighted, labeled fragment matches;
+description: Use when you have an annotated or raw tandem mass spectrometry spectrum
+  and need to identify which observed peaks correspond to expected peptide fragment
+  ions from a known or predicted peptidoform. Use it before spectrum visualization
+  if you want highlighted, labeled fragment matches;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3647
@@ -13,12 +16,16 @@ metadata:
   - HUPO-PSI PSI-MOD CV
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,8 @@
 ---
 name: numerical-equivalence-testing
-description: Use when you need to confirm that omitting an optional input parameter (such as secondaryAssay in buildExperiment) produces the expected mathematical result—specifically, when a default value should neutralize a transformation (e.
+description: Use when you need to confirm that omitting an optional input parameter
+  (such as secondaryAssay in buildExperiment) produces the expected mathematical result—specifically,
+  when a default value should neutralize a transformation (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +15,8 @@ metadata:
   - SummarizedExperiment
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality

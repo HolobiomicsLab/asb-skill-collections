@@ -1,6 +1,7 @@
 ---
 name: spectral-noise-classification
-description: Use when you have MS/MS spectra contaminated with noise ions and need to improve compound identification accuracy.
+description: Use when you have MS/MS spectra contaminated with noise ions and need
+  to improve compound identification accuracy.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,6 +17,8 @@ metadata:
   - ms_entropy
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-025-02646-x
   title: Spectral Denoising

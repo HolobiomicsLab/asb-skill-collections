@@ -2,11 +2,17 @@
 # Enforces CI gates per section 14 of ASB-Skills Release Design Doc v2.
 #
 # Gates implemented here:
-#   1. LinkML schema validation (collection.yaml, tools/*.yaml)
+#   1. LinkML schema validation (collection.yaml) — BLOCKING once resolvable:
+#      every manifest is validated closed against SkillCollection in
+#      asb-schema >= 0.3.0. WARN-ONLY until that package is installable (it is
+#      not yet on PyPI): the step then says it did not run and exits 0.
 #   2. No orphan skills (DOI resolution sample)
 #   5. Description discipline lint (leading phrase, length, no marketing)
 #   6. EDAM IRI resolution
-#   8. RO-Crate validation (Workflow Run Profile 0.5)
+#   8. RO-Crate validation (RO-Crate 1.1) — BLOCKING: every released capsule
+#      ships its build's crate pruned to what the capsule holds, and each is held
+#      to scripts/release_capsule_truth.py `crate_problems`. The Workflow Run
+#      Profile 0.5 claim is not checked, so the release copy does not make it.
 #   9. Indicium round-trip (verify-claims) — WARN-ONLY / inert: the CLI ships in
 #      indicium-adapters, not yet on PyPI, so this gate is advertised but does not
 #      run in public CI (emits a ::warning:: annotation; never blocks). See gate9-inert.
@@ -185,38 +191,47 @@ jobs:
 
       # -- Gate 8: RO-Crate validation ----------------------------------------
       - name: Validate RO-Crate metadata
-        # warn-only: depends on the `rocrate` package + crate files that may not be
-        # present in CI; surfaced as a warning, does not block the Validate job.
-        continue-on-error: true
+        # BLOCKING. Every released capsule ships the RO-Crate its build wrote, pruned
+        # at promotion to the capsule the release carries
+        # (`scripts/release_capsule_truth.py`, `prune_crate`). This step holds each
+        # one to `crate_problems`, the rule the tests use too: RO-Crate 1.1's
+        # structural requirements, no profile claim this gate does not check, no
+        # path the capsule does not hold, no file in the capsule the crate does not
+        # describe, and no path of the machine that ran the build.
+        #
+        # It checks RO-Crate 1.1 only. The builds claim the Workflow Run Crate 0.5
+        # profile, which requires a `mainEntity` workflow that none of the 417
+        # declares; the release copy drops that claim rather than ship it unchecked.
+        #
+        # Until crates shipped, this step found zero files, printed a pass and sat
+        # behind continue-on-error. Finding no released capsule now fails: it means
+        # the layout this gate reads has moved, not that there is nothing to check.
         run: |
           python - <<'EOF'
-          import sys, json, pathlib
+          import pathlib, sys
 
-          crate_files = list(pathlib.Path("collections").rglob("ro-crate-metadata.json"))
-          crate_files += list(pathlib.Path("staged-collections").rglob("ro-crate-metadata.json"))
-          failures = []
-          for crate_file in crate_files:
-              try:
-                  data = json.loads(crate_file.read_text())
-                  if "@context" not in data:
-                      failures.append(f"{crate_file}: missing @context")
-                  if "@graph" not in data:
-                      failures.append(f"{crate_file}: missing @graph")
-                  graph = data.get("@graph", [])
-                  root_ids = {"./", "."}
-                  root_entities = [e for e in graph if e.get("@id") in root_ids]
-                  if not root_entities:
-                      failures.append(
-                          f"{crate_file}: no root dataset entity (id ./ or .)"
-                      )
-              except json.JSONDecodeError as e:
-                  failures.append(f"{crate_file}: JSON parse error: {e}")
+          sys.path.insert(0, "scripts")
+          from release_capsule_truth import CRATE, crate_problems, released_capsules
+
+          bases = ("collections", "staged-collections")
+          roots = sorted(p.parent for b in bases for p in pathlib.Path(b).glob("*/*/collection.yaml"))
+          capsules = [c for root in roots for c in released_capsules(root)]
+          if not capsules:
+              print("FAIL: gate 8 found no released capsule under collections/ or staged-collections/; the layout it reads has moved.")
+              sys.exit(1)
+          inside = {c / CRATE for c in capsules}
+          failures = [
+              f"{p}: a crate outside a released capsule, which this gate does not check"
+              for b in bases for p in sorted(pathlib.Path(b).rglob(CRATE)) if p not in inside
+          ]
+          for capsule in capsules:
+              failures += [f"{capsule}: {problem}" for problem in crate_problems(capsule)]
           if failures:
-              print("FAIL: RO-Crate validation failures:")
-              for f in failures:
+              print(f"FAIL: {len(failures)} RO-Crate problem(s) across {len(capsules)} released capsules:")
+              for f in failures[:200]:
                   print(f"  - {f}")
               sys.exit(1)
-          print(f"PASS: RO-Crate validation OK ({len(crate_files)} crates checked)")
+          print(f"PASS: {len(capsules)} released capsules each ship an RO-Crate 1.1 that describes exactly what they hold")
           EOF
 
       # -- Gate 9: indicium round-trip (verify-claims) — WARN-ONLY -------------
@@ -252,53 +267,139 @@ jobs:
 
       # -- Gate 1: LinkML schema validation ------------------------------------
       - name: LinkML schema validation
-        # warn-only: requires the `asb-schema` package (sibling repo, not yet on
-        # PyPI) for asb_skill_bundle.yaml; surfaced as a warning until published.
-        continue-on-error: true
+        # Blocking once the schema is resolvable. Every collection.yaml is
+        # validated closed against the SkillCollection class of asb-schema
+        # >= 0.3.0, the first version that declares the keys the released
+        # manifests carry. Until that package is installable the step says it
+        # did not run and exits 0; it no longer hides behind continue-on-error.
         run: |
-          pip install asb-schema || echo "INFO: asb-schema not yet on PyPI; skipping LinkML gate"
+          pip install --only-binary :all: "asb-schema>=0.3.0" || echo "INFO: asb-schema>=0.3.0 is not installable; gate 1 will say it did not run"
           python - <<'EOF'
-          import sys, pathlib, subprocess
+          import shutil, sys, pathlib, subprocess
+
+          SCHEMA_NAME = "asb_skill_collection.yaml"
+          MIN_VERSION = (0, 3, 0)
+
+          def did_not_run(reason):
+              print(f"::warning title=Gate 1 did not run::{reason} Do not read a green Validate as gate 1 passing.")
+              print(f"GATE 1 DID NOT RUN — {reason}")
+              sys.exit(0)
 
           try:
               import linkml_runtime  # noqa: F401
+              import yaml
           except ImportError:
-              print("SKIP: linkml_runtime not available")
-              sys.exit(0)
+              did_not_run("linkml_runtime is not installed, so no collection.yaml was validated against the LinkML schema.")
 
-          collection_files = list(pathlib.Path("collections").rglob("collection.yaml"))
-          collection_files += list(
-              pathlib.Path("staged-collections").rglob("collection.yaml")
-          )
+          if shutil.which("linkml-validate") is None:
+              did_not_run("The linkml-validate CLI is not on PATH, so no collection.yaml was validated against the LinkML schema.")
+
+          # The schema ships in the asb-schema package. A copy at the root or
+          # under schema/ wins, so a local run can point at a candidate schema.
+          schema = None
+          for candidate in (pathlib.Path(SCHEMA_NAME), pathlib.Path("schema") / SCHEMA_NAME):
+              if candidate.is_file():
+                  schema = candidate.resolve()
+                  break
+          if schema is None:
+              try:
+                  from importlib.resources import files as _files
+                  packaged = _files("asb_schema") / SCHEMA_NAME
+                  if packaged.is_file():
+                      schema = pathlib.Path(str(packaged)).resolve()
+              except (ImportError, ModuleNotFoundError, AttributeError):
+                  pass
+          if schema is None:
+              did_not_run(f"{SCHEMA_NAME} is not in this repository and asb-schema>=0.3.0 is not installed, so no collection.yaml was validated against the LinkML schema.")
+
+          declared = str(yaml.safe_load(schema.read_text()).get("version", "0"))
+          try:
+              found = tuple(int(p) for p in declared.split(".")[:3])
+          except ValueError:
+              found = (0,)
+          if found < MIN_VERSION:
+              did_not_run(f"{schema} declares version {declared}; the released manifests need 0.3.0 or later, so validating against it would only report the keys it predates.")
+
+          collection_files = sorted(pathlib.Path("collections").rglob("collection.yaml"))
+          collection_files += sorted(pathlib.Path("staged-collections").rglob("collection.yaml"))
           if not collection_files:
-              print("SKIP: no collection.yaml files found")
-              sys.exit(0)
+              did_not_run("No collection.yaml exists under collections/ or staged-collections/, so the LinkML gate validated zero files.")
 
           failures = []
           for cf in collection_files:
               result = subprocess.run(
-                  ["linkml-validate", "--schema", "asb_skill_bundle.yaml", str(cf)],
+                  ["linkml-validate", "--schema", str(schema),
+                   "--target-class", "SkillCollection", str(cf)],
                   capture_output=True, text=True
               )
               if result.returncode != 0:
-                  failures.append(f"{cf}: {result.stderr.strip()}")
+                  detail = (result.stdout + result.stderr).strip()
+                  failures.append(f"{cf}: {detail}")
           if failures:
-              print("FAIL: LinkML validation failures:")
+              print(f"FAIL: {len(failures)} of {len(collection_files)} collection.yaml files do not validate against {schema} (version {declared}):")
               for f in failures:
                   print(f"  - {f}")
               sys.exit(1)
-          print(f"PASS: LinkML validation OK ({len(collection_files)} files)")
+          print(f"PASS: {len(collection_files)} collection.yaml files validate closed against SkillCollection in {schema} (version {declared})")
           EOF
 
+      # -- Gate: packs are re-derivable from their collection ------------------
+      # marketplace.json advertises eight technique packs beside the collection,
+      # so the pack tree is what most installs actually get. It was split from
+      # the collection once, by hand, and nothing re-derived it afterwards: a
+      # leaf added the next day never arrived, three front-matter keys were
+      # dropped from all 4,949 copies, and a later DOI repair reached only the
+      # collection. Every gate stayed green, because each pack was internally
+      # consistent with its own indexes. This one compares the packs with the
+      # collection they claim to be a view of.
+      - name: Pack-derivation gate
+        run: python -m scripts.build_packs --check
+
+      # The promoted capsule is deliberately slim, and two documents inside it
+      # were promoted unchanged from the build, so both described files that are
+      # not here: 417 benchmark cards told the reader to open the capsule's
+      # `ro-crate-metadata.json`, and the 417 `artifact_provenance.json` files
+      # beside them listed 2,085 artefact paths of which 0 existed. This is gate
+      # 8's defect one layer down — a shipped document naming a file the release
+      # does not ship — in the artefacts whose whole purpose is to say what is
+      # there. The rule lives in one place and promotion applies it; this gate
+      # holds the tree to it.
+      - name: Released-capsule self-description gate
+        run: |
+          python scripts/release_capsule_truth.py --check \
+            collections/epigenomics/v1 collections/metabolomics/v1 \
+            collections/metabolomics/v2 collections/transcriptomics/v1
+
+      # Every number the repository advertises about itself, against the census
+      # of the unit that number is a claim about. The script and its tests
+      # already existed; nothing ever ran them outside the suite's own fixtures.
+      #
+      # It would not have caught the stale lc-ms count, and that is worth
+      # recording rather than glossing: the pack really did hold 2,616 leaves,
+      # so `advertised=2616, actual=2616` passed, while the collection's own
+      # ABOUT.md said 2,617 for the same technique. Both numbers were true of
+      # their own unit and contradicted each other, and no census could see it
+      # because they counted different units. The gate above is what makes them
+      # one number; this one is what keeps them one number, across the six sites
+      # that now carry 2,617 and the 138 claims beside them.
+      - name: Advertised-count gate
+        run: python -m scripts.check_advertised_counts
+
       # -- Gate: License-tier enforcement ------
+      # Aimed at the packs as well as the collection: the tiers a consumer
+      # actually installs are the copies'. A pack ships no corpus of its own, so
+      # the corpus half of this gate reports "no corpus of its own" rather than
+      # passing silently -- see scripts/check_license_tiers.corpus_violations.
       - name: License-tier gate
-        run: python -m scripts.check_license_tiers collections/metabolomics/v2
+        run: python -m scripts.check_license_tiers collections/metabolomics/v2 packs/*/*/
 
       # Every published skill must be able to show where its content came from,
       # and the SKILL.md must agree with the index. Ported from the dev line and
-      # wired here once its producer had been run over the corpus.
+      # wired here once its producer had been run over the corpus. Aimed at the
+      # packs too: before the pack generator existed, every pack index entry
+      # carried no provenance_tier at all and this gate failed on the first row.
       - name: Provenance-tier gate
-        run: python -m scripts.check_provenance_tiers collections/metabolomics/v2
+        run: python -m scripts.check_provenance_tiers collections/metabolomics/v2 packs/*/*/
 
       # The catalogue's own licence fields must agree with tools_index.json, and
       # every tool a skill claims to use must exist. Wired once the enrichers had

@@ -1,6 +1,9 @@
 ---
 name: missing-value-imputation-by-data-recursion
-description: Use when after sample alignment and feature grouping in untargeted LC-MS workflows, when the aligned feature table contains missing intensity values (NA or zero entries) due to features falling below the detection limit in some samples but being present above-threshold in others.
+description: Use when after sample alignment and feature grouping in untargeted LC-MS
+  workflows, when the aligned feature table contains missing intensity values (NA
+  or zero entries) due to features falling below the detection limit in some samples
+  but being present above-threshold in others.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -13,6 +16,8 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw

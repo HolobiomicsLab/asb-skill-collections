@@ -23,10 +23,10 @@
 - [ ] If `is_coauthor: true`: `co_reviewer` block is present and co-reviewer has posted a sign-off comment
 
 ### For new collections
-- [ ] `collection.yaml` validates against LinkML schema
+- [ ] `collection.yaml` validates closed against `SkillCollection` in `asb-schema` >= 0.3.0 — gate 1 blocks once that package is installable, and says it did not run until then
 - [ ] `curator-criteria.yaml` is filled in for the domain
 - [ ] `CITATION.cff` includes all contributors
-- [ ] RO-Crate metadata is valid (Workflow Run Profile 0.5)
+- [ ] Every released capsule ships an RO-Crate 1.1 that describes exactly what it holds (gate 8 blocks otherwise)
 - [ ] At least 1 skill has `evidence_spans` linking to a verifiable paper quote
 - [ ] Description discipline passes CI lint (50-300 chars, "Use when..." lead)
 

@@ -1,6 +1,9 @@
 ---
 name: interactive-network-visualization-rendering
-description: Use when after structural clustering (isotopologue grouping, adduct detection, cross-assay linking) and correlation clustering of LC-MS features, when you need to inspect and communicate the topology of structural relationships—particularly when the number of features or link types is too dense for.
+description: Use when after structural clustering (isotopologue grouping, adduct detection,
+  cross-assay linking) and correlation clustering of LC-MS features, when you need
+  to inspect and communicate the topology of structural relationships—particularly
+  when the number of features or link types is too dense for.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3083
@@ -17,6 +20,8 @@ metadata:
   - MamsiStructSearch
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi

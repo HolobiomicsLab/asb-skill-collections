@@ -1,6 +1,8 @@
 ---
 name: bruker-solarix-format-parsing
-description: Use when you have acquired Bruker Solarix FT-ICR-MS raw data (e.g., ESI_NEG_SRFA.d) and need to programmatically access the transient time-domain signal and metadata for zero-filling, apodization windowing (e.g., Hanning), or mass calibration.
+description: Use when you have acquired Bruker Solarix FT-ICR-MS raw data (e.g., ESI_NEG_SRFA.d)
+  and need to programmatically access the transient time-domain signal and metadata
+  for zero-filling, apodization windowing (e.g., Hanning), or mass calibration.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -15,12 +17,15 @@ metadata:
   - Bruker Solarix instrument
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development and data analysis of small molecules analysis.'
+- '**CoreMS** is a comprehensive mass spectrometry framework for software development
+  and data analysis of small molecules analysis.'
 - import numpy as np
 - from matplotlib import pyplot
 claims: []

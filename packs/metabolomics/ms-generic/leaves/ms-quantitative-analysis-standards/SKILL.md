@@ -1,6 +1,8 @@
 ---
 name: ms-quantitative-analysis-standards
-description: Use when you have raw MS intensity data paired with known-concentration calibration standard measurements, and you need to convert intensities to absolute or relative concentrations.
+description: Use when you have raw MS intensity data paired with known-concentration
+  calibration standard measurements, and you need to convert intensities to absolute
+  or relative concentrations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -11,6 +13,8 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey

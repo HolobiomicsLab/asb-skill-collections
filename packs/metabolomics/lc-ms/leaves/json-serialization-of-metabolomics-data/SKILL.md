@@ -1,6 +1,8 @@
 ---
 name: json-serialization-of-metabolomics-data
-description: Use when after pre-annotation grouping (e.g., via khipu) has assigned features to empirical compounds, or when exporting feature tables and metadata from asari for downstream analysis in MetaboAnalyst or custom R/Python workflows.
+description: Use when after pre-annotation grouping (e.g., via khipu) has assigned
+  features to empirical compounds, or when exporting feature tables and metadata from
+  asari for downstream analysis in MetaboAnalyst or custom R/Python workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -14,6 +16,8 @@ metadata:
   - metDataModel
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

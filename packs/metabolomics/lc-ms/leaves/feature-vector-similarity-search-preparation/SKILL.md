@@ -1,6 +1,8 @@
 ---
 name: feature-vector-similarity-search-preparation
-description: Use when you have millions of MS/MS spectra in mzML, mzXML, or MGF format and need to identify similar spectra for clustering, but exhaustive pairwise cosine-similarity computation would be prohibitively slow.
+description: Use when you have millions of MS/MS spectra in mzML, mzXML, or MGF format
+  and need to identify similar spectra for clustering, but exhaustive pairwise cosine-similarity
+  computation would be prohibitively slow.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -12,11 +14,14 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

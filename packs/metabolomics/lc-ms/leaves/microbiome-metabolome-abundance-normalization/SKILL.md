@@ -1,6 +1,9 @@
 ---
 name: microbiome-metabolome-abundance-normalization
-description: Use when when you have raw count matrices from paired microbiome (16S rRNA or metagenomic) and metabolomic (LC-MS/MS) profiling data that will be used to train or apply a predictive model (e.g., MiMeNet, MelonnPan, Random Forest) to predict metabolite abundances from microbial composition.
+description: Use when when you have raw count matrices from paired microbiome (16S
+  rRNA or metagenomic) and metabolomic (LC-MS/MS) profiling data that will be used
+  to train or apply a predictive model (e.g., MiMeNet, MelonnPan, Random Forest) to
+  predict metabolite abundances from microbial composition.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -18,16 +21,24 @@ metadata:
   - HUMAnN2
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
-- An MLPNN model is composed of multiple fully connected hidden layers composed of perceptrons
-- MiMeNet is an integrative MLPNN, which trains models to accurately predict the metabolome based on a microbiome
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function.
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function
-- MelonnPan was downloaded from https://github.com/biobakery/melonnpan and executed using the given instructions
-- Multivariate Elastic Net models were implemented using ElasticNet and GridSearchCV using 5-fold internal cross-validation
+- An MLPNN model is composed of multiple fully connected hidden layers composed of
+  perceptrons
+- MiMeNet is an integrative MLPNN, which trains models to accurately predict the metabolome
+  based on a microbiome
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function.
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function
+- MelonnPan was downloaded from https://github.com/biobakery/melonnpan and executed
+  using the given instructions
+- Multivariate Elastic Net models were implemented using ElasticNet and GridSearchCV
+  using 5-fold internal cross-validation
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

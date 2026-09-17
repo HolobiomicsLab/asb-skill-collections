@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-file-format-handling
-description: Use when when you have Thermo Fisher Scientific Orbitrap .raw files (e.g., from Q Exactive HF instruments) and need to extract spectral, chromatographic, or metadata directly into R for downstream statistical analysis, benchmarking, or integration with Bioconductor workflows.
+description: Use when when you have Thermo Fisher Scientific Orbitrap .raw files (e.g.,
+  from Q Exactive HF instruments) and need to extract spectral, chromatographic, or
+  metadata directly into R for downstream statistical analysis, benchmarking, or integration
+  with Bioconductor workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -17,6 +20,8 @@ metadata:
   - Bioconductor Spectra
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -24,10 +29,13 @@ derived_from:
   title: ''
 evidence_spans:
 - rawrr::readSpectrum
-- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file
-- The extracted information is written to a temporary location on the harddrive, read back into memory and parsed into `R` objects using RawFileReader API
+- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime,
+  in the `r BiocStyle::Biocpkg('rawrr')` executable file
+- The extracted information is written to a temporary location on the harddrive, read
+  back into memory and parsed into `R` objects using RawFileReader API
 - 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'
-- In case you prefer to compile `rawrr.exe` from C# source code, please install the .NET 8.0
+- In case you prefer to compile `rawrr.exe` from C# source code, please install the
+  .NET 8.0
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

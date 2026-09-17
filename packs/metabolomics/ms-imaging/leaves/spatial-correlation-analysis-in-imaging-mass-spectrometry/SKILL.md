@@ -1,6 +1,8 @@
 ---
 name: spatial-correlation-analysis-in-imaging-mass-spectrometry
-description: Use when after annotating ion pairs with known adducts (using adductMatch or diffGetPeaks), use this skill to filter suspected adduct pairs by testing if their pixel-level intensity profiles are significantly correlated.
+description: Use when after annotating ion pairs with known adducts (using adductMatch
+  or diffGetPeaks), use this skill to filter suspected adduct pairs by testing if
+  their pixel-level intensity profiles are significantly correlated.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3674
@@ -18,11 +20,14 @@ metadata:
   - mass2adduct (R package)
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - library(mass2adduct)
 claims: []
 provenance:

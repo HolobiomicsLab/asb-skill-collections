@@ -1,6 +1,7 @@
 ---
 name: matrix-subsetting-with-index-reordering
-description: Use when when you need to subset a backend containing multiple MS spectra to a user-defined subset (e.
+description: Use when when you need to subset a backend containing multiple MS spectra
+  to a user-defined subset (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +15,8 @@ metadata:
   - MsBackendMemory
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra

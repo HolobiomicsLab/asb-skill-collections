@@ -1,6 +1,8 @@
 ---
 name: full-scan-acquisition-strategy
-description: Use when you need to assess MS1-level ionization efficiency, peak detection sensitivity, and chromatographic separation without the overhead of MS/MS fragmentation. Use it to benchmark full-scan detection across chemically diverse samples (e.
+description: Use when you need to assess MS1-level ionization efficiency, peak detection
+  sensitivity, and chromatographic separation without the overhead of MS/MS fragmentation.
+  Use it to benchmark full-scan detection across chemically diverse samples (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,14 +18,18 @@ metadata:
   - HMDB
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
 evidence_spans:
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible and modular framework designed to simulate fragmentation strategies'
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive and modular framework for the simulation of fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible
+  and modular framework designed to simulate fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive
+  and modular framework for the simulation of fragmentation strategies'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

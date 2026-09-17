@@ -1,6 +1,9 @@
 ---
 name: tandem-ms-feature-table-import-and-parsing
-description: Use when when you have raw feature tables exported from a tandem LC-MS/MS preprocessing tool (e.g., Progenesis QI, MS-DIAL, Bruker Metaboscape) and need to combine them with sample metadata (group assignments, replicate structure) before applying feature filtering or quality control workflows.
+description: Use when when you have raw feature tables exported from a tandem LC-MS/MS
+  preprocessing tool (e.g., Progenesis QI, MS-DIAL, Bruker Metaboscape) and need to
+  combine them with sample metadata (group assignments, replicate structure) before
+  applying feature filtering or quality control workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -14,6 +17,8 @@ metadata:
   - MPACT (Python/Anaconda)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr

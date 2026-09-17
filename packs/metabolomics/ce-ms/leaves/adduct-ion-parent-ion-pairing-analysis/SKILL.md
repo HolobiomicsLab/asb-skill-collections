@@ -1,6 +1,8 @@
 ---
 name: adduct-ion-parent-ion-pairing-analysis
-description: Use when when you have binned mass spectrometry imaging peaks and want to understand which detected mass-to-charge ratios represent the same metabolite in different ionization states (parent vs. adduct form).
+description: Use when when you have binned mass spectrometry imaging peaks and want
+  to understand which detected mass-to-charge ratios represent the same metabolite
+  in different ionization states (parent vs. adduct form).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,11 +18,14 @@ metadata:
   techniques:
   - CE-MS
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - library(mass2adduct)
 claims: []
 provenance:

@@ -1,6 +1,8 @@
 ---
 name: multi-hypothesis-scoring-and-enumeration
-description: Use when when you have an unknown tandem mass spectrum (MS/MS peaks with m/z and intensity) and need to assign both the precursor chemical formula and its ionization adduct type (e.g., [M+H]+, [M+Na]+, [M+K]+, [M+NH4]+).
+description: Use when when you have an unknown tandem mass spectrum (MS/MS peaks with
+  m/z and intensity) and need to assign both the precursor chemical formula and its
+  ionization adduct type (e.g., [M+H]+, [M+Na]+, [M+K]+, [M+NH4]+).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -12,11 +14,14 @@ metadata:
   - MIST-CF formula transformer
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
-- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS fragmentation trees)
+- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS
+  fragmentation trees)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

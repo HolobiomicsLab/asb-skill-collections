@@ -1,6 +1,9 @@
 ---
 name: calibration-quality-assessment
-description: Use when after applying polynomial m/z domain recalibration using a reference peak list (e.g., SRFA.ref) to a Bruker FT-ICR dataset. Use this skill to verify that calibration has converged and that mass error statistics support reliable downstream annotation.
+description: Use when after applying polynomial m/z domain recalibration using a reference
+  peak list (e.g., SRFA.ref) to a Bruker FT-ICR dataset. Use this skill to verify
+  that calibration has converged and that mass error statistics support reliable downstream
+  annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -14,12 +17,15 @@ metadata:
   - Bruker Solarix reader (ReadBrukerSolarix)
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development and data analysis of small molecules analysis.'
+- '**CoreMS** is a comprehensive mass spectrometry framework for software development
+  and data analysis of small molecules analysis.'
 - import numpy as np
 - import pandas as pd
 claims: []

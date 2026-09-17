@@ -1,8 +1,12 @@
 ---
 name: mass-spectrometry-data-structure-decoding
-description: Use when when you have a mzPeak file (uncompressed ZIP archive containing Parquet tables) and need to access decoded spectral data arrays (m/z, intensity), spectrum metadata (scan descriptors, precursors), or chromatogram data in a form suitable for Python/R analysis pipelines.
+description: Use when when you have a mzPeak file (uncompressed ZIP archive containing
+  Parquet tables) and need to access decoded spectral data arrays (m/z, intensity),
+  spectrum metadata (scan descriptors, precursors), or chromatogram data in a form
+  suitable for Python/R analysis pipelines.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,6 +20,8 @@ metadata:
   - mzpeakts
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak

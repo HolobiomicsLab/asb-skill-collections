@@ -1,6 +1,8 @@
 ---
 name: metabolite-data-log-transformation
-description: Use when you have raw or baseline-corrected metabolite abundance measurements from mass spectrometry and need to prepare them for batch effect correction (e.g., CordBat) or multivariate analysis (e.g., PCA).
+description: Use when you have raw or baseline-corrected metabolite abundance measurements
+  from mass spectrometry and need to prepare them for batch effect correction (e.g.,
+  CordBat) or multivariate analysis (e.g., PCA).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,12 +16,15 @@ metadata:
   - ggplot2
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05748
   title: CordBat
 evidence_spans:
 - pca_res <- prcomp(cordbat_example[, metabolite_cols], scale. = TRUE)
-- fit <- CordBat( X = X_mat, batch = batch_vec, group = group_vec, ref.batch = "Ref", grouping = FALSE, print.detail = FALSE )
+- fit <- CordBat( X = X_mat, batch = batch_vec, group = group_vec, ref.batch = "Ref",
+  grouping = FALSE, print.detail = FALSE )
 - '%\VignetteEngine{knitr::rmarkdown}'
 claims: []
 provenance:

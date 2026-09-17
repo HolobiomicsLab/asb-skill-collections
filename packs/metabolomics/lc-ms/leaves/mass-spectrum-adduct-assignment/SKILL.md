@@ -1,6 +1,8 @@
 ---
 name: mass-spectrum-adduct-assignment
-description: Use when when analyzing tandem mass spectra with unknown precursor adduct identity, especially for positive-mode data containing non-protonated adducts ([M+Na]+, [M+K]+, [M+NH4]+).
+description: Use when when analyzing tandem mass spectra with unknown precursor adduct
+  identity, especially for positive-mode data containing non-protonated adducts ([M+Na]+,
+  [M+K]+, [M+NH4]+).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -12,11 +14,14 @@ metadata:
   - MIST-CF
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
-- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS fragmentation trees)
+- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS
+  fragmentation trees)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

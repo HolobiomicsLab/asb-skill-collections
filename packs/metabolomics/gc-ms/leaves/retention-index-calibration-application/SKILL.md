@@ -1,6 +1,8 @@
 ---
 name: retention-index-calibration-application
-description: Use when when processing GC-MS data where retention time alone is insufficient for compound identification due to instrument drift or method variation, and you need to match detected peaks against a spectral library (e.
+description: Use when when processing GC-MS data where retention time alone is insufficient
+  for compound identification due to instrument drift or method variation, and you
+  need to match detected peaks against a spectral library (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -14,12 +16,15 @@ metadata:
   - PNNLMetV20191015.MSL
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development and data analysis of small molecules analysis.'
+- '**CoreMS** is a comprehensive mass spectrometry framework for software development
+  and data analysis of small molecules analysis.'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

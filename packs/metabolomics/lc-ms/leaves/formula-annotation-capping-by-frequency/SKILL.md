@@ -1,6 +1,8 @@
 ---
 name: formula-annotation-capping-by-frequency
-description: Use when when preparing multi-formula MS/MS training data for a rescore model, if the raw positive examples show extreme imbalance (some formulas represented by hundreds of spectra while others have only a few).
+description: Use when when preparing multi-formula MS/MS training data for a rescore
+  model, if the raw positive examples show extreme imbalance (some formulas represented
+  by hundreds of spectra while others have only a few).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +14,8 @@ metadata:
   - FIDDLE
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

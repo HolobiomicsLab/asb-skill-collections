@@ -1,6 +1,9 @@
 ---
 name: tabular-data-io-and-masking
-description: Use when after generating a preliminary feature table from LC-MS data (e.g., via Asari), when experimental design includes blank samples or negative controls and you need to filter out features that are likely instrumental or chemical background rather than true biological signal.
+description: Use when after generating a preliminary feature table from LC-MS data
+  (e.g., via Asari), when experimental design includes blank samples or negative controls
+  and you need to filter out features that are likely instrumental or chemical background
+  rather than true biological signal.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +16,8 @@ metadata:
   - metDataModel
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

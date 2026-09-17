@@ -1,6 +1,7 @@
 ---
 name: spectral-data-serialization
-description: Use when after completing MS/MS spectra detection and peak recognition on tandem MS breath samples.
+description: Use when after completing MS/MS spectra detection and peak recognition
+  on tandem MS breath samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,6 +13,8 @@ metadata:
   - BreathXplorer
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00152
   title: BreathXplorer

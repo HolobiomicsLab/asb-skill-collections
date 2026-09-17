@@ -1,6 +1,8 @@
 ---
 name: retention-time-alignment-scoring
-description: Use when after feature m/z grouping and pairwise alignment detection have identified candidate feature pairs, and anchor points have been selected to establish retention time correspondence.
+description: Use when after feature m/z grouping and pairwise alignment detection
+  have identified candidate feature pairs, and anchor points have been selected to
+  establish retention time correspondence.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -14,12 +16,16 @@ metadata:
   - mgcv
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

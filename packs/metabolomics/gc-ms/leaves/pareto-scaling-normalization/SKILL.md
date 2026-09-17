@@ -1,6 +1,9 @@
 ---
 name: pareto-scaling-normalization
-description: Use when you have peak intensity vectors from LC/GC-MS experiments with corresponding QC (quality control) sample measurements, and you need to correct for batch effects—especially when QC samples show systematic shifts in peak heights across analytical batches.
+description: Use when you have peak intensity vectors from LC/GC-MS experiments with
+  corresponding QC (quality control) sample measurements, and you need to correct
+  for batch effects—especially when QC samples show systematic shifts in peak heights
+  across analytical batches.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,11 +15,14 @@ metadata:
   - mzrtsim
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
 - github.com__yufree__mzrtsim
 claims: []
 provenance:

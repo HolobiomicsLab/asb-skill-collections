@@ -1,8 +1,11 @@
 ---
 name: spectral-data-integrity-checking
-description: Use when after converting mass-spectrometry data from an existing format (mzML, mzXML, or vendor-specific formats) into mzPeak using command-line tools or API calls.
+description: Use when after converting mass-spectrometry data from an existing format
+  (mzML, mzXML, or vendor-specific formats) into mzPeak using command-line tools or
+  API calls.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +17,8 @@ metadata:
   - JSON Schema validator
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak

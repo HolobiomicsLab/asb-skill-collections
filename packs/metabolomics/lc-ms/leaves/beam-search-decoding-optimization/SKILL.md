@@ -1,6 +1,8 @@
 ---
 name: beam-search-decoding-optimization
-description: Use when using Casanovo for de novo peptide sequencing on high-stakes datasets (immunopeptidomics, paleoproteomics, or monoclonal antibody discovery) where missing the correct sequence in the top-1 prediction is costly.
+description: Use when using Casanovo for de novo peptide sequencing on high-stakes
+  datasets (immunopeptidomics, paleoproteomics, or monoclonal antibody discovery)
+  where missing the correct sequence in the top-1 prediction is costly.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -16,14 +18,18 @@ metadata:
   - limelight-import-casanovo
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-024-49731-x
   title: Casanovo
 - doi: 10.1093/bib/bbac542
   title: ''
 evidence_spans:
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing.
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing.
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing
 - Pytorch is installed automatically when installing Casanovo
 - Upgraded minimum Lightning version to 2.6.
 - Upgraded minimum DepthCharge version to 0.4.10.

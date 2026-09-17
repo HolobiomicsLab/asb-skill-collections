@@ -1,8 +1,12 @@
 ---
 name: structured-data-element-checking
-description: Use when you have generated or received a mass spectrometry data file in a structured format (e.g., mzPeak, Parquet-based archive) and need to verify it conforms to the published specification before use in analysis pipelines, sharing with collaborators, or publishing.
+description: Use when you have generated or received a mass spectrometry data file
+  in a structured format (e.g., mzPeak, Parquet-based archive) and need to verify
+  it conforms to the published specification before use in analysis pipelines, sharing
+  with collaborators, or publishing.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +19,8 @@ metadata:
   - mzPeak specification (living document)
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak

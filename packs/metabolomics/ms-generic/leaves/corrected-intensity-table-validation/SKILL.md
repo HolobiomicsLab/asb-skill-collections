@@ -1,6 +1,9 @@
 ---
 name: corrected-intensity-table-validation
-description: Use when after applying one or more intensity drift correction strategies (Internal Standard correction, statistical drift correction, custom or weighted bracketing) within QuantyFey and before exporting the corrected intensity table for final quantification.
+description: Use when after applying one or more intensity drift correction strategies
+  (Internal Standard correction, statistical drift correction, custom or weighted
+  bracketing) within QuantyFey and before exporting the corrected intensity table
+  for final quantification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -11,6 +14,8 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey

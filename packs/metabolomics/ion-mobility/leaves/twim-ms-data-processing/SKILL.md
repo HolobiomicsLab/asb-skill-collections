@@ -1,6 +1,8 @@
 ---
 name: twim-ms-data-processing
-description: 'Use when you have TWIM-MS data (arrival time and m/z values) from a multi-omic sample and need to: (1) establish a CCS calibration curve from known standards, (2) assign unidentified features to biomolecular classes (e.'
+description: 'Use when you have TWIM-MS data (arrival time and m/z values) from a
+  multi-omic sample and need to: (1) establish a CCS calibration curve from known
+  standards, (2) assign unidentified features to biomolecular classes (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -14,6 +16,8 @@ metadata:
   - MOCCal
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal

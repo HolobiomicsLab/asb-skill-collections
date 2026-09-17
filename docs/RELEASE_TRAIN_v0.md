@@ -71,7 +71,7 @@ This runbook documents the complete **linear release pipeline** for ASB-Skill-Co
 - ✓ No orphan skills (every skill is rooted in at least one paper)
 - ✓ Description discipline: starts with approved prefix, 50–300 chars, no marketing terms
 - ✓ EDAM IRIs are well-formed (http://edamontology.org/...)
-- ✓ RO-Crate metadata is present and valid
+- ✓ RO-Crate metadata is present and valid — every released capsule ships its build's crate, pruned to what the capsule holds, and gate 8 holds each to RO-Crate 1.1 (the Workflow Run Profile claim is not checked and not made)
 - ✓ verify-claims round-trip (indicium adapter) passes (gate 9)
 - ✓ Marketplace.json declares all skills
 
@@ -118,7 +118,7 @@ TAG: metabolomics-v1
 ```bash
 pytest tests/ -v
 ```
-Runs gates: 1, 2, 5, 6, 8, 9, 10 (same as validate.yml; gates 3, 4, 7, 11–14 not automated in v0).
+The suite tests gate behavior; a target-specific content receipt comes from `python scripts/release_gate.py <collection> --strict`. It writes `gate_report.json` (override with `--report`), schema `asbb-release-gate/1.1`, with per-check `checked / skipped / missing / failed` item counts and separate inspected-file coverage. The receipt binds the final payload tree (excluding only that receipt and `MANIFEST.gen.json`), the manifest digest when present, source inputs, recomputed inventory and policy/configuration version. Supply `--inputs <source-dir> [...]` for an ASB cut's source closure. `--verify` rechecks the saved strict receipt without writing; strict gating and re-verification return 0 for verified, 1 for failed or uncheckable, and 2 for usage errors. Empty required measurements are uncheckable and return 1 in both modes. Nonempty advisory runs retain exit 0 and state “diagnostic run, not a release verification”. This receipt establishes the stated content/integrity checks, not publication approval.
 
 **If pytest fails:** release.yml **stops**. The tag is pushed but the workflow fails. The maintainer must fix the code, amend the collection in `collections/`, re-run pytest locally to confirm, then (optionally) re-push to `main` and re-tag.
 
@@ -164,14 +164,19 @@ ELSE (token is set):
 
 **Zenodo topology (v0, LOCKED):**
 - **Exactly ONE concept-DOI per collection-release** (versioned deposition, all versions linked under one concept).
-- **The KB snapshot, the indicium schema version, and the asb: ontology Turtle ride as FILES inside that single deposition — they do NOT get separate DOIs.**
-- **indicium has its OWN concept-DOI** (minted by the indicium repo's own Zenodo releases). The collection deposition only pins/attaches the indicium version as a file; it does not re-mint a DOI for indicium.
-- **Attached files inside the versioned deposition:**
-  - `<slug>-v<N>.zip` (the collection directory)
-  - the **KB snapshot** for this collection (grounding KB archive)
-  - `indicium_version.txt` (the indicium release version pinned by this release; indicium itself is DOI'd separately — see "Indicium co-release" below)
-  - `asb_ontology.ttl` (the asb: ontology Turtle snapshot at this release; see SPEC.md §5.1)
-  - `CITATION.cff` (for reproducibility)
+- **The KB binder rides as a FILE inside that single deposition — it does NOT get a separate DOI.**
+- **indicium has its OWN concept-DOI** (minted by the indicium repo's own Zenodo releases).
+- **Attached files inside the versioned deposition, as `release.yml` actually uploads them:**
+  - `<slug>-v<N>.zip` — the collection directory, plus `scripts/perspicacite_kb_bind.py`,
+    `scripts/requirements.txt` and `AGENTS.md` so the archive is self-contained
+  - `<slug>-v<N>-leafemb.npz` — the prebuilt leaf embedding cache, **only when a maintainer has
+    placed it** (fail-soft; absent by default, and semantic retrieval re-embeds on first use)
+  - `kb_bundle.json` and `CITATION.cff` ride **inside** the zip, not as separate uploads
+
+  ~~`indicium_version.txt`~~ and ~~`asb_ontology.ttl`~~ are **struck (2026-09-13)** — see
+  `governance/CONTENT_POLICY.md` §7.4. Neither ever existed, `release.yml` has no stage that would
+  attach them, and a v0 collection contains no JSON-LD, no claim records and no `asb:`-typed
+  artefact for that ontology to describe.
 
 **DOI output:** Minted DOI is passed to the next step via GitHub output `steps.zenodo.outputs.doi`.
 
@@ -301,17 +306,23 @@ ELSE:
 
 **What this means for the release train:**
 
-1. **Before tagging a collection**, check the indicium version pinned in the release/profile.
-   - Lookup: `agenticsciencebuilder_dev/docs/asbb/RELEASE.yaml` (not yet finalized; assume it exists and carries `indicium_version: <tag>`)
-   - Or, look at the pinned version in the AgenticScienceBuilder codebase (e.g., `setup.py` or `pyproject.toml`).
+**Not applicable to a v0 collection release (2026-09-13).** This repository has no indicium
+dependency — `indicium-adapters` is `pip install ... || echo WARNING` in two workflows and is not on
+PyPI — and a shipped collection contains no claim records for the indicium schema to govern. There is
+therefore nothing for a collection tag to pin. The steps below are kept for **v1**, when claim records
+ship, and one of them has to change first:
 
-2. **At Zenodo deposit time**, attach the indicium version as a metadata file:
-   - Create `indicium_version.txt` containing the tag (e.g., `v1.11.0`) or full version identifier
-   - Include it in the zipped collection
-   - This makes the pin publicly discoverable
+1. **Before tagging**, check the indicium version pinned in the release/profile.
+   - Lookup: `agenticsciencebuilder_dev/docs/asbb/RELEASE.yaml` — **this file does not exist**; treat
+     the lookup as unavailable rather than assuming it carries `indicium_version`.
+   - Or read the pinned version in the AgenticScienceBuilder codebase.
 
-3. **If indicium is released AFTER the collection tag**, update the collection CITATION.cff manually and push a patch commit (e.g., `git commit -m "chore: pin indicium to <tag>"`) before the Zenodo step runs.
-   - v0 guidance: keep releases close together; synchronize tags within 24 hours.
+2. **Pin a commit SHA, not a tag.** `~/git/indicium` has **zero tags**, and its two version strings
+   disagree — `pyproject.toml` says `2.0.0`, the installed distribution reports `1.12.0`. "The tag
+   (e.g. `v1.11.0`)" is unproducible; a SHA identifies the schema exactly and is available today.
+
+3. **If indicium is released AFTER the collection tag**, update `CITATION.cff` and push a patch commit
+   before the Zenodo step runs. v0 guidance: keep releases close together; synchronize within 24 hours.
 
 4. **Breaking change policy:** If a new major version of indicium ships before your release:
    - Rebase collection against the new indicium
@@ -341,11 +352,11 @@ The release-gate reviews (gates 13, 14 in the SPEC: independent co-reviewer and 
 
 | Gate | Description | Trigger | Automated | Blocking |
 |---|---|---|---|---|
-| 1 | LinkML schema validation (collection.yaml, tools/*.yaml) | PR, push-main, tag | ✓ | ✓ |
+| 1 | LinkML schema validation (collection.yaml, closed, `SkillCollection`) | PR, push-main, tag | ✓ | once `asb-schema` >= 0.3.0 is installable; until then (not yet on PyPI) the step says it did not run and never blocks |
 | 2 | No orphan skills (DOI resolution sample) | PR, push-main, tag | ✓ | ✓ |
 | 5 | Description discipline lint | PR, push-main, tag | ✓ | ✓ |
 | 6 | EDAM IRI resolution | PR, push-main, tag | ✓ | ✓ |
-| 8 | RO-Crate validation (Workflow Run Profile 0.5) | PR, push-main, tag | ✓ | ✓ |
+| 8 | RO-Crate validation (RO-Crate 1.1, per released capsule) | PR, push-main, tag | ✓ | ✓ — fails on any capsule whose crate is missing, names a file the capsule does not hold, omits one it holds, carries an absolute path or claims an unchecked profile; fails too when it finds no released capsule |
 | 9 | indicium round-trip (verify-claims CLI) | PR, push-main, tag | ✓ | warn-only (indicium-adapters not yet on PyPI) |
 | 10 | Plugin manifest validation (.claude-plugin/marketplace.json) | PR, push-main, tag | ✓ | ✓ |
 | 3, 4, 7 | PII/dual-use gate (FAIL on clinical IDs, WARN else) | TBD | ✗ | n/a |
@@ -527,7 +538,14 @@ pytest tests/ -v
 - [ ] Confirm collection in `collections/<slug>/v<N>/` is complete
 - [ ] Run local pytest: `pytest tests/ -v` (passes)
 - [ ] Review `CITATION.cff` (authors, DOIs, license)
-- [ ] Check that `indicium_version` is pinned (in release manifest, if it exists)
+- [ ] ~~Check that `indicium_version` is pinned~~ — **not applicable at v0** (no indicium dependency, no claim records, no release manifest; see "Indicium co-release")
+- [x] Confirm the w3id redirect for `w3id.org/holobiomicslab/asb-skill/` — **live since 2026-09-14**
+  ([perma-id/w3id.org#6690](https://github.com/perma-id/w3id.org/pull/6690), merged the same day). Checked:
+  `curl -s -o /dev/null -w '%{http_code}' https://w3id.org/holobiomicslab/asb-skill/registry` returns 302, and
+  303 with `-H 'Accept: application/ld+json'`. Re-run both before the tag. The targets follow `main`; once
+  the tag exists, repointing `collection/…` at it is a one-line follow-up PR to the same file. The rules,
+  the body as submitted and the local Apache test are `W3ID_HOLOBIOMICSLAB_PR.md` in the hub's
+  `docs/asbb/release-artifacts/`.
 
 ### Release (tag push)
 

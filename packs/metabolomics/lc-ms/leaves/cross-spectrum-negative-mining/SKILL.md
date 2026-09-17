@@ -1,6 +1,8 @@
 ---
 name: cross-spectrum-negative-mining
-description: Use when when training a Siamese architecture rescore model for MS/MS-based molecular formula prediction and you have an imbalanced training set with far fewer negative than positive spectrum pairs.
+description: Use when when training a Siamese architecture rescore model for MS/MS-based
+  molecular formula prediction and you have an imbalanced training set with far fewer
+  negative than positive spectrum pairs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -13,6 +15,8 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

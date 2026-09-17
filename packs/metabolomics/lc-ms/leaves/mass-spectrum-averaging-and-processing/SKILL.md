@@ -1,6 +1,8 @@
 ---
 name: mass-spectrum-averaging-and-processing
-description: Use when you have loaded a Bruker Solarix transient file (.d format with .ser or .fid content) and need to generate a processed mass spectrum for peak picking and molecular formula annotation.
+description: Use when you have loaded a Bruker Solarix transient file (.d format with
+  .ser or .fid content) and need to generate a processed mass spectrum for peak picking
+  and molecular formula annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -13,12 +15,15 @@ metadata:
   - matplotlib
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development and data analysis of small molecules analysis.'
+- '**CoreMS** is a comprehensive mass spectrometry framework for software development
+  and data analysis of small molecules analysis.'
 - import numpy as np
 - from matplotlib import pyplot
 claims: []

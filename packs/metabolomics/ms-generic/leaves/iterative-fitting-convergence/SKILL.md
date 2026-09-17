@@ -14,6 +14,8 @@ metadata:
   - mzapy.peaks.find_peaks_1d_gauss
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c01653
   title: mzapy

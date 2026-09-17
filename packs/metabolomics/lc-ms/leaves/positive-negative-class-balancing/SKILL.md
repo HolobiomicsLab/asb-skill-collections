@@ -1,6 +1,9 @@
 ---
 name: positive-negative-class-balancing
-description: Use when when training a formula rescoring model on MS/MS spectra where positive examples (correct molecular formulas) are unevenly distributed across molecular formula groups or vastly outnumbered by negative examples (incorrect candidates), resulting in class imbalance that degrades model.
+description: Use when when training a formula rescoring model on MS/MS spectra where
+  positive examples (correct molecular formulas) are unevenly distributed across molecular
+  formula groups or vastly outnumbered by negative examples (incorrect candidates),
+  resulting in class imbalance that degrades model.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +15,8 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

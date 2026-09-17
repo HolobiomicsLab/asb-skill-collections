@@ -1,6 +1,9 @@
 ---
 name: pairwise-similarity-scoring-weighted-metrics
-description: Use when after anchor selection and RT mapping spline fitting, when you have a fitted metabCombiner object with pre-aligned feature pair candidates and need to determine which parameter weights (A for RT, B for m/z, C for similarity score) discriminate true metabolite matches from false positives.
+description: Use when after anchor selection and RT mapping spline fitting, when you
+  have a fitted metabCombiner object with pre-aligned feature pair candidates and
+  need to determine which parameter weights (A for RT, B for m/z, C for similarity
+  score) discriminate true metabolite matches from false positives.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,12 +16,16 @@ metadata:
   - mgcv
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

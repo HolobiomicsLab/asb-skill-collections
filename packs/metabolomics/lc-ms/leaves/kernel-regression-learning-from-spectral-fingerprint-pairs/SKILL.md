@@ -1,6 +1,7 @@
 ---
 name: kernel-regression-learning-from-spectral-fingerprint-pairs
-description: Use when when you have a training set of MS2 spectra with known chemical structures (e.
+description: Use when when you have a training set of MS2 spectra with known chemical
+  structures (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -17,18 +18,26 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- the metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
-- we use library MS2 spectra from the public, community-driven GNPS knowledge base [33] as a training set for the IOKR model
-- To assign one or more molecular structures to BGCs, according to how many high-scoring matches are found in MIBiG
-- Molecular fingerprints are extracted from SMILES strings using the Chemistry Development Kit
-- Molecular fingerprints are extracted from SMILES strings using the Chemistry Development Kit [29]
-- we filter the input spectra to include only the peaks found in the training data, before using the Probability Product Kernel (PPK)
+- the metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+  and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
+- we use library MS2 spectra from the public, community-driven GNPS knowledge base
+  [33] as a training set for the IOKR model
+- To assign one or more molecular structures to BGCs, according to how many high-scoring
+  matches are found in MIBiG
+- Molecular fingerprints are extracted from SMILES strings using the Chemistry Development
+  Kit
+- Molecular fingerprints are extracted from SMILES strings using the Chemistry Development
+  Kit [29]
+- we filter the input spectra to include only the peaks found in the training data,
+  before using the Probability Product Kernel (PPK)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

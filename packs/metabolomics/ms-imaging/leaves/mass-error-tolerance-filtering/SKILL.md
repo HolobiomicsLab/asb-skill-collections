@@ -1,6 +1,9 @@
 ---
 name: mass-error-tolerance-filtering
-description: 'Use when when annotating full-scan MS or MS imaging data against a metabolite database (e.g., LipidMaps, HMDB) and you need to control the stringency of m/z matching. Use this filter to balance annotation sensitivity against specificity: tighter ppm tolerances (e.'
+description: 'Use when when annotating full-scan MS or MS imaging data against a metabolite
+  database (e.g., LipidMaps, HMDB) and you need to control the stringency of m/z matching.
+  Use this filter to balance annotation sensitivity against specificity: tighter ppm
+  tolerances (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +17,13 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ''
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -47,6 +57,7 @@ attribution:
 
 # mass-error-tolerance-filtering
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Applies a parts-per-million (ppm) error threshold during metabolite annotation to match experimental m/z values against a reference database, accepting only matches within the specified mass tolerance. This filter reduces false-positive annotations by rejecting candidates whose theoretical m/z deviates beyond the tolerance window.

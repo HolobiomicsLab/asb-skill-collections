@@ -1,6 +1,9 @@
 ---
 name: electron-ionization-spectral-comparison
-description: Use when you have a query electron ionization (EI) mass spectrum in msp format and wish to identify it by matching against a reference spectral library. Apply this skill when you need ranked similarity scores between the query and each library entry to prioritize candidate identifications.
+description: Use when you have a query electron ionization (EI) mass spectrum in msp
+  format and wish to identify it by matching against a reference spectral library.
+  Apply this skill when you need ranked similarity scores between the query and each
+  library entry to prioritize candidate identifications.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,12 +17,17 @@ metadata:
   techniques:
   - GC-MS
   - CE-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr
 evidence_spans:
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users for conducting library searches against electron ionization mass spectral databases.
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users for conducting library searches against electron ionization mass spectral
+  databases.
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users
 - enhance the capabilities of R users for conducting library searches
 claims: []
 provenance:

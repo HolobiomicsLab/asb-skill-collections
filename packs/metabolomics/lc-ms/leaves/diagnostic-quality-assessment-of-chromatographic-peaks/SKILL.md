@@ -1,6 +1,8 @@
 ---
 name: diagnostic-quality-assessment-of-chromatographic-peaks
-description: Use when after running targeted peak detection in TARDIS (screening_mode = FALSE) on centroided .mzML LC–MS files, apply this skill to verify that integrated peaks for your target compounds exhibit acceptable quality.
+description: Use when after running targeted peak detection in TARDIS (screening_mode
+  = FALSE) on centroided .mzML LC–MS files, apply this skill to verify that integrated
+  peaks for your target compounds exhibit acceptable quality.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -15,6 +17,8 @@ metadata:
   - MSConvert (ProteoWizard)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -23,7 +27,8 @@ evidence_spans:
 - loads MS data as `Spectra` objects so it's easily integrated with other tools
 - rmarkdown::html_document
 - Quick start for targeted peak integration of LC-MS data using TARDIS
-- It makes use of an established retention time correction algorithm from the `xcms` package
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

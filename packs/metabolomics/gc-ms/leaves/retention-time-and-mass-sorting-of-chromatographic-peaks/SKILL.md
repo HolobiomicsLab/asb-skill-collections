@@ -1,6 +1,8 @@
 ---
 name: retention-time-and-mass-sorting-of-chromatographic-peaks
-description: Use when you have raw GC-MS output from Agilent Unknowns Analysis (a .CSV with columns Component.RT, Base.Peak.MZ, Component.Area, Compound.Name, Match.Factor, File.
+description: Use when you have raw GC-MS output from Agilent Unknowns Analysis (a
+  .CSV with columns Component.RT, Base.Peak.MZ, Component.Area, Compound.Name, Match.Factor,
+  File.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -16,13 +18,18 @@ metadata:
   - PubChem
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- any software or utility that generates the necessary information can be used with simple modifications
-- any software or utility that generates the necessary information can be used with simple modifications (e.g. changing the column names)
-- The recommended software for generating the necessary data in the default format (i.e. with correct column names) is Unknowns Analysis
+- any software or utility that generates the necessary information can be used with
+  simple modifications
+- any software or utility that generates the necessary information can be used with
+  simple modifications (e.g. changing the column names)
+- The recommended software for generating the necessary data in the default format
+  (i.e. with correct column names) is Unknowns Analysis
 - uafR taps into an amazing set of cheminformatics packages -- ChemmineR, fmcsR, webchem
 claims: []
 provenance:

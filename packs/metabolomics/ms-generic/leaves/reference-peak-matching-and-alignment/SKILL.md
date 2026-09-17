@@ -1,6 +1,7 @@
 ---
 name: reference-peak-matching-and-alignment
-description: Use when when you have a processed mass spectrum object (e.g., from Bruker FT-ICR acquisition) and a reference peak list (e.g., SRFA.
+description: Use when when you have a processed mass spectrum object (e.g., from Bruker
+  FT-ICR acquisition) and a reference peak list (e.g., SRFA.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,12 +15,15 @@ metadata:
   - Bruker Solarix
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development and data analysis of small molecules analysis.'
+- '**CoreMS** is a comprehensive mass spectrometry framework for software development
+  and data analysis of small molecules analysis.'
 - import numpy as np
 - import pandas as pd
 claims: []

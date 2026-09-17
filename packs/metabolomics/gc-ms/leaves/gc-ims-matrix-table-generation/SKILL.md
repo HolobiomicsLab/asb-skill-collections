@@ -1,6 +1,8 @@
 ---
 name: gc-ims-matrix-table-generation
-description: Use when after integratePeaks has been executed with a chosen integration method (e.g., fixed_size with RIP saturation threshold of 0.1) on a clustered, baseline-corrected GC-IMS dataset.
+description: Use when after integratePeaks has been executed with a chosen integration
+  method (e.g., fixed_size with RIP saturation threshold of 0.1) on a clustered, baseline-corrected
+  GC-IMS dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -13,6 +15,8 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS

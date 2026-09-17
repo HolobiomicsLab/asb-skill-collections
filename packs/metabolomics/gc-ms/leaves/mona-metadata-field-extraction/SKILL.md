@@ -1,6 +1,8 @@
 ---
 name: mona-metadata-field-extraction
-description: Use when when you have loaded a MoNA mass spectral library (GC-MS or LC-MS/MS) in MSP format and observe that SMILES strings are present in the Comment field rather than in a dedicated SMILES metadata field.
+description: Use when when you have loaded a MoNA mass spectral library (GC-MS or
+  LC-MS/MS) in MSP format and observe that SMILES strings are present in the Comment
+  field rather than in a dedicated SMILES metadata field.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -13,6 +15,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler

@@ -1,6 +1,9 @@
 ---
 name: ft-icr-spectrum-recalibration-validation
-description: 'Use when after applying mass calibration functions (LedFord, linear, or quadratic equations) to an FT-ICR transient or magnitude-mode dataset, before running SearchMolecularFormulas. Specifically, validate recalibration when: (1) comparing recalibrated spectra against reference calibration files (e.'
+description: 'Use when after applying mass calibration functions (LedFord, linear,
+  or quadratic equations) to an FT-ICR transient or magnitude-mode dataset, before
+  running SearchMolecularFormulas. Specifically, validate recalibration when: (1)
+  comparing recalibrated spectra against reference calibration files (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,12 +18,15 @@ metadata:
   - matplotlib
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development and data analysis of small molecules analysis.'
+- '**CoreMS** is a comprehensive mass spectrometry framework for software development
+  and data analysis of small molecules analysis.'
 - import pandas as pd
 - import numpy as np
 claims: []

@@ -17,6 +17,8 @@ metadata:
   - Glycan Naming Ontology
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -24,7 +26,8 @@ evidence_spans:
 - spectrum_utils is a Python package
 - spectrum = sus.MsmsSpectrum.from_usi(usi)
 - Modifications are defined by controlled vocabularies (CVs), including [Unimod](https://www.unimod.org/)
-- fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma) specification
+- fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma)
+  specification
 - 'Specify modifications by their name: `EM[Oxidation]EVEES[Phospho]PEK`'
 claims: []
 provenance:

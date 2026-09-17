@@ -1,6 +1,8 @@
 ---
 name: ripp-peptide-identification-from-spectra
-description: Use when you have LC-MS/MS spectra (MGF, mzXML, mzML, or mzData format) and either raw genome nucleotide sequences or antiSMASH/BOA genome mining tool output, and you need to identify which RiPPs are present in your sample.
+description: Use when you have LC-MS/MS spectra (MGF, mzXML, mzML, or mzData format)
+  and either raw genome nucleotide sequences or antiSMASH/BOA genome mining tool output,
+  and you need to identify which RiPPs are present in your sample.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -17,15 +19,24 @@ metadata:
   - ProteoWizard
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
 evidence_spans:
-- The latest version is available in the Natural Product Discovery toolkit (NPDtools) at https://github.com/ablab/npdtools
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel RiPPs
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally modified Peptides (RiPPs)
-- 'MetaMiner uses either raw nucleotide sequences or specific genome mining tools'' output: raw nucleotide sequences `.fasta` format or *antiSMASH*''s `.final.gbk` or `.gbk` file'
-- matches tandem mass spectra against the constructed post-translationally modified RiPPs structure database using Dereplicator
+- The latest version is available in the Natural Product Discovery toolkit (NPDtools)
+  at https://github.com/ablab/npdtools
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel RiPPs
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally
+  modified Peptides (RiPPs)
+- 'MetaMiner uses either raw nucleotide sequences or specific genome mining tools''
+  output: raw nucleotide sequences `.fasta` format or *antiSMASH*''s `.final.gbk`
+  or `.gbk` file'
+- matches tandem mass spectra against the constructed post-translationally modified
+  RiPPs structure database using Dereplicator
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

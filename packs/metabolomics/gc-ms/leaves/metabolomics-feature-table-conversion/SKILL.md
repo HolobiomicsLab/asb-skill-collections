@@ -1,6 +1,9 @@
 ---
 name: metabolomics-feature-table-conversion
-description: Use when you have generated a feature table via mzrtsim() with simulated LC/GC-MS abundances, condition assignments, and batch labels, and you need to pass it to Bioconductor tools (e.g., for batch correction, normalization, or statistical analysis) that expect SummarizedExperiment-class input.
+description: Use when you have generated a feature table via mzrtsim() with simulated
+  LC/GC-MS abundances, condition assignments, and batch labels, and you need to pass
+  it to Bioconductor tools (e.g., for batch correction, normalization, or statistical
+  analysis) that expect SummarizedExperiment-class input.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -13,12 +16,16 @@ metadata:
   - mzrtsim
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
-- For seamless integration with Bioconductor workflows, use `mzrtsim_se()` which wraps the simulation in a `SummarizedExperiment`
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
+- For seamless integration with Bioconductor workflows, use `mzrtsim_se()` which wraps
+  the simulation in a `SummarizedExperiment`
 - github.com__yufree__mzrtsim
 claims: []
 provenance:

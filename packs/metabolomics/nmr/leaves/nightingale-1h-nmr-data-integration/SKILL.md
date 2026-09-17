@@ -1,6 +1,9 @@
 ---
 name: nightingale-1h-nmr-data-integration
-description: Use when you have newly assayed 1H-NMR metabolomics data from Nightingale Health (CSV or TSV format) and need to apply one or more published metabolic risk scores (Deelen et al. all-cause mortality, van den Akker MetaboAge, Würtz cardiovascular event risk, etc.).
+description: Use when you have newly assayed 1H-NMR metabolomics data from Nightingale
+  Health (CSV or TSV format) and need to apply one or more published metabolic risk
+  scores (Deelen et al. all-cause mortality, van den Akker MetaboAge, Würtz cardiovascular
+  event risk, etc.).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -13,6 +16,8 @@ metadata:
   - MiMIR
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac388
   title: MiMIR

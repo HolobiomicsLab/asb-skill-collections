@@ -1,6 +1,7 @@
 ---
 name: raw-spectral-data-input-handling-without-peak-picking
-description: Use when when you have raw mass spectrometry imaging data (full m/z profiles with intensity arrays) and want to classify spatial regions (e.
+description: Use when when you have raw mass spectrometry imaging data (full m/z profiles
+  with intensity arrays) and want to classify spatial regions (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -16,8 +17,10 @@ metadata:
   - massNet
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
-- doi: 10.1093/bioinformatics/btac032/6510930
+- doi: 10.1093/bioinformatics/btac032
   title: massNet
 evidence_spans:
 - numpy(1.15.4)
@@ -29,15 +32,15 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_massnet_cq
-    doi: 10.1093/bioinformatics/btac032/6510930
+    doi: 10.1093/bioinformatics/btac032
     title: massNet
   dedup_kept_from: coll_massnet_cq
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1093/bioinformatics/btac032/6510930
+  original_doi: 10.1093/bioinformatics/btac032
   all_source_dois:
-  - 10.1093/bioinformatics/btac032/6510930
+  - 10.1093/bioinformatics/btac032
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias
@@ -46,6 +49,7 @@ attribution:
 
 # raw-spectral-data-input-handling-without-peak-picking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Skill to accept and preprocess raw mass spectrometry imaging (MSI) data directly into a deep learning classifier without performing prior peak picking or feature extraction. This avoids information loss from peak detection thresholding and enables probabilistic end-to-end learning on full spectral tensors.

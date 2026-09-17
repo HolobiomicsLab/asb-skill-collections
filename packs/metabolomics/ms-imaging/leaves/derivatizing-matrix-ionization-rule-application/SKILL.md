@@ -1,6 +1,7 @@
 ---
 name: derivatizing-matrix-ionization-rule-application
-description: Use when when working with mass spectrometry imaging data from metabolites treated with derivatizing matrices (e.
+description: Use when when working with mass spectrometry imaging data from metabolites
+  treated with derivatizing matrices (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -12,6 +13,8 @@ metadata:
   - RDKit
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid

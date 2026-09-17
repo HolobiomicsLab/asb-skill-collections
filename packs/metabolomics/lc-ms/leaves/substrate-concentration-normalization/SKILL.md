@@ -1,6 +1,8 @@
 ---
 name: substrate-concentration-normalization
-description: Use when you have LC-MS normalized intracellular metabolite abundance data from multiple cell lines (or samples) and need to compute reaction-level propensity scores that account for substrate availability as a predictor of metabolic flux.
+description: Use when you have LC-MS normalized intracellular metabolite abundance
+  data from multiple cell lines (or samples) and need to compute reaction-level propensity
+  scores that account for substrate availability as a predictor of metabolic flux.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -16,11 +18,14 @@ metadata:
   - INTEGRATE pipeline (qLSLab/integrate)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
-- Data analysis and isotopic natural abundance correction were performed with MassHunter ProFinder (Agilent)
+- Data analysis and isotopic natural abundance correction were performed with MassHunter
+  ProFinder (Agilent)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

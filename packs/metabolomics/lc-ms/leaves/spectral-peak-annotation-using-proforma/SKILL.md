@@ -1,6 +1,9 @@
 ---
 name: spectral-peak-annotation-using-proforma
-description: Use when you have a tandem mass spectrum with observed m/z peaks and a known peptide sequence (as a ProForma string, optionally with post-translational modifications), and you want to determine which observed peaks correspond to expected fragment ions (b-type, y-type, a-type) within a specified.
+description: Use when you have a tandem mass spectrum with observed m/z peaks and
+  a known peptide sequence (as a ProForma string, optionally with post-translational
+  modifications), and you want to determine which observed peaks correspond to expected
+  fragment ions (b-type, y-type, a-type) within a specified.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -16,6 +19,8 @@ metadata:
   - PSI-MOD
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -25,7 +30,8 @@ evidence_spans:
 - import matplotlib.pyplot as plt
 - fig, ax = plt.subplots(figsize=(12, 6))
 - Modifications are defined by controlled vocabularies (CVs), including [Unimod](https://www.unimod.org/)
-- fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma) specification
+- fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma)
+  specification
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

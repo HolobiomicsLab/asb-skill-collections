@@ -1,6 +1,9 @@
 ---
 name: twim-ms-data-preprocessing
-description: Use when you have raw or processed TWIM-MS experimental data (arrival times, m/z, ion mobility parameters) and need to compute class-conditioned CCS values or assign biomolecular class labels directly from high-dimensional ion mobility measurements.
+description: Use when you have raw or processed TWIM-MS experimental data (arrival
+  times, m/z, ion mobility parameters) and need to compute class-conditioned CCS values
+  or assign biomolecular class labels directly from high-dimensional ion mobility
+  measurements.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,12 +16,15 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
 evidence_spans:
 - MOCCal, or Multi-Omic CCS Calibrator, is a Python application
-- Functionality includes collision cross section (CCS) calibration, experimental data biomolecular class assignment, and experimental class-specific CCS calculations
+- Functionality includes collision cross section (CCS) calibration, experimental data
+  biomolecular class assignment, and experimental class-specific CCS calculations
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

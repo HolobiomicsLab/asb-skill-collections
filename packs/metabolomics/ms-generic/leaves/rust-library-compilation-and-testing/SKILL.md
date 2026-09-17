@@ -1,8 +1,11 @@
 ---
 name: rust-library-compilation-and-testing
-description: Use when when you have access to Rust source code in a repository with a Cargo manifest (Cargo.toml) and need to verify that a library's read and write APIs produce byte-equivalent or structurally equivalent output.
+description: Use when when you have access to Rust source code in a repository with
+  a Cargo manifest (Cargo.toml) and need to verify that a library's read and write
+  APIs produce byte-equivalent or structurally equivalent output.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,6 +16,8 @@ metadata:
   - mzPeak Rust library
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak

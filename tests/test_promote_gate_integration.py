@@ -19,7 +19,9 @@ sys.path.insert(0, str(REPO_ROOT))
 from scripts import release_gate  # noqa: E402
 
 _CLEAN_BODY = "# skill\nChromatographic separation improved analyte resolution.\n"
-_LEAF = {"name": "s1", "derived_from": [{"doi": "10.1/x"}], "license": "CC-BY-4.0"}
+_EVIDENCE = [{"doi": "10.1/x", "text": "Synthetic evidence for this operation."}]
+_LEAF = {"name": "s1", "derived_from": [{"doi": "10.1/x"}], "license": "CC-BY-4.0",
+         "evidence_spans": _EVIDENCE}
 
 
 def _collection(tmp_path, papers, skills):
@@ -51,7 +53,7 @@ CASES = [
      [("s1", _LEAF, _CLEAN_BODY)], True),
     ("skill_without_source_doi",
      [{"doi": "10.1/x", "status": "included", "access": {"type": "gold-oa"}, "repo_url": ""}],
-     [("s1", {"name": "s1", "license": "CC-BY-4.0"}, _CLEAN_BODY)], True),
+     [("s1", {"name": "s1", "license": "CC-BY-4.0", "evidence_spans": _EVIDENCE}, _CLEAN_BODY)], True),
 ]
 
 

@@ -1,6 +1,9 @@
 ---
 name: chromatographic-retention-time-matching
-description: Use when you have GC-MS data with multiple replicate injections or samples, need to identify a predefined set of query chemicals by name, and want to consolidate all instances of those chemicals (which may appear with varying match factors or peak areas across different samples or injection.
+description: Use when you have GC-MS data with multiple replicate injections or samples,
+  need to identify a predefined set of query chemicals by name, and want to consolidate
+  all instances of those chemicals (which may appear with varying match factors or
+  peak areas across different samples or injection.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -12,13 +15,18 @@ metadata:
   - spreadOut
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- any software or utility that generates the necessary information can be used with simple modifications
-- any software or utility that generates the necessary information can be used with simple modifications (e.g. changing the column names)
-- mzExacto() collects the same information for a set of query chemicals and uses it to precisely search the advanced dictionary for samples that have those chemicals
+- any software or utility that generates the necessary information can be used with
+  simple modifications
+- any software or utility that generates the necessary information can be used with
+  simple modifications (e.g. changing the column names)
+- mzExacto() collects the same information for a set of query chemicals and uses it
+  to precisely search the advanced dictionary for samples that have those chemicals
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

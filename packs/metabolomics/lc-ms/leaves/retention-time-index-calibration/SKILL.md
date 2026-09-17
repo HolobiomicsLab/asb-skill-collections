@@ -13,14 +13,19 @@ metadata:
   - MsBackendRawFileReader
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
 evidence_spans:
-- Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific.
-- invoke compiled `C#` wrapper methods using a system call. Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo
+- Calling a wrapper method typically results in the execution of methods defined in
+  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific.
+- invoke compiled `C#` wrapper methods using a system call. Calling a wrapper method
+  typically results in the execution of methods defined in the `RawFileReader` dynamic
+  link library provided by Thermo
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-scoring-method-validation
-description: Use when you have high-resolution LC-MS data processed through both XCMS feature detection and RAMClustR clustering, and you need to verify the reliability of molecular weight assignments before downstream annotation or statistical analysis.
+description: Use when you have high-resolution LC-MS data processed through both XCMS
+  feature detection and RAMClustR clustering, and you need to verify the reliability
+  of molecular weight assignments before downstream annotation or statistical analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3645
@@ -15,6 +17,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust

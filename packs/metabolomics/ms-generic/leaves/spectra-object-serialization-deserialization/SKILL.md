@@ -1,6 +1,9 @@
 ---
 name: spectra-object-serialization-deserialization
-description: Use when you have Spectra objects in an R environment and need to apply Python MS algorithms (e.g., matchms similarity scoring, spectrum normalization, or filtering) that operate on Python spectral objects, then return results back to R for further analysis or visualization.
+description: Use when you have Spectra objects in an R environment and need to apply
+  Python MS algorithms (e.g., matchms similarity scoring, spectrum normalization,
+  or filtering) that operate on Python spectral objects, then return results back
+  to R for further analysis or visualization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -16,13 +19,18 @@ metadata:
   - spectrum_utils
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
 evidence_spans:
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based MS analysis in R
-- integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based MS analysis in R
-- MS analysis in R. By wrapping Python functionality into R functions, *SpectriPy* allows a seamless integration of Python libraries into R
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based
+  MS analysis in R
+- integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based
+  MS analysis in R
+- MS analysis in R. By wrapping Python functionality into R functions, *SpectriPy*
+  allows a seamless integration of Python libraries into R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,8 @@
 ---
 name: lc-ms-data-structure-validation
-description: Use when before launching TARDIS peak detection on a new LC–MS dataset or target compound list. Apply this skill when you have raw MS data files in vendor formats (e.g., .raw, .d) and/or a spreadsheet-based target list (.xlsx or .
+description: Use when before launching TARDIS peak detection on a new LC–MS dataset
+  or target compound list. Apply this skill when you have raw MS data files in vendor
+  formats (e.g., .raw, .d) and/or a spreadsheet-based target list (.xlsx or .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -14,6 +16,8 @@ metadata:
   - Spectra
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis

@@ -1,0 +1,3060 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "asbext": "https://w3id.org/asb/indicium-ext#",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "fabio": "http://purl.org/spar/fabio/",
+      "oa": "http://www.w3.org/ns/oa#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "p-plan": "http://purl.org/net/p-plan#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "repme": "https://w3id.org/reproduceme#",
+      "sepio": "http://purl.obolibrary.org/obo/SEPIO_"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": [
+        "Dataset",
+        "repme:ScientificWorkflow"
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ],
+      "dateCreated": "2026-06-16",
+      "description": "Run MetaMiner on S. griseus_fragment.fasta genome with MSV000080102 spectral data under lantibiotic class search to identify RiPP compounds, and verify that AmfS (core peptide TGSQVSLLVCEYSSLSVVLCTP with modifications T-18GS-18QVS-18LLVCEYS-18SLSVVLCTP) is reported in significant_matches.tsv.",
+      "hasPart": [
+        {
+          "@id": "evidence/source_snippets.md"
+        },
+        {
+          "@id": "inputs/dataset_folder_tree.txt"
+        },
+        {
+          "@id": "inputs/dataset_preview.md"
+        },
+        {
+          "@id": "evaluation/evaluation_strategy.md"
+        },
+        {
+          "@id": "evaluation/review_rubric.json"
+        },
+        {
+          "@id": "artifact_provenance.json"
+        },
+        {
+          "@id": "ledger/claims.jsonl"
+        },
+        {
+          "@id": "ledger/results.jsonl"
+        }
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "mentions": [
+        {
+          "@id": "#action-task_001"
+        },
+        {
+          "@id": "urn:asb:task:task_001"
+        },
+        {
+          "@id": "urn:asb:claim:claim_001"
+        },
+        {
+          "@id": "urn:asb:claim:claim_002"
+        },
+        {
+          "@id": "urn:asb:claim:claim_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_004"
+        },
+        {
+          "@id": "urn:asb:claim:claim_005"
+        },
+        {
+          "@id": "urn:asb:claim:claim_006"
+        },
+        {
+          "@id": "urn:asb:claim:claim_007"
+        },
+        {
+          "@id": "urn:asb:claim:claim_008"
+        },
+        {
+          "@id": "urn:asb:claim:claim_009"
+        },
+        {
+          "@id": "urn:asb:claim:claim_010"
+        },
+        {
+          "@id": "urn:asb:claim:claim_011"
+        },
+        {
+          "@id": "urn:asb:claim:claim_012"
+        },
+        {
+          "@id": "urn:asb:claim:claim_013"
+        },
+        {
+          "@id": "urn:asb:claim:claim_014"
+        },
+        {
+          "@id": "urn:asb:claim:claim_015"
+        },
+        {
+          "@id": "urn:asb:claim:claim_016"
+        },
+        {
+          "@id": "urn:asb:claim:claim_017"
+        },
+        {
+          "@id": "urn:asb:claim:claim_018"
+        },
+        {
+          "@id": "urn:asb:claim:claim_019"
+        },
+        {
+          "@id": "urn:asb:claim:claim_020"
+        },
+        {
+          "@id": "urn:asb:claim:claim_021"
+        },
+        {
+          "@id": "urn:asb:claim:claim_022"
+        },
+        {
+          "@id": "urn:asb:claim:claim_023"
+        },
+        {
+          "@id": "urn:asb:claim:claim_024"
+        },
+        {
+          "@id": "urn:asb:claim:claim_025"
+        },
+        {
+          "@id": "urn:asb:claim:claim_026"
+        },
+        {
+          "@id": "urn:asb:claim:claim_027"
+        },
+        {
+          "@id": "urn:asb:claim:claim_028"
+        },
+        {
+          "@id": "urn:asb:claim:claim_029"
+        },
+        {
+          "@id": "urn:asb:claim:claim_030"
+        },
+        {
+          "@id": "urn:asb:claim:claim_031"
+        },
+        {
+          "@id": "urn:asb:claim:claim_032"
+        },
+        {
+          "@id": "urn:asb:claim:claim_033"
+        },
+        {
+          "@id": "urn:asb:claim:claim_034"
+        },
+        {
+          "@id": "urn:asb:claim:claim_035"
+        },
+        {
+          "@id": "urn:asb:claim:claim_036"
+        },
+        {
+          "@id": "urn:asb:claim:claim_037"
+        },
+        {
+          "@id": "urn:asb:claim:claim_038"
+        },
+        {
+          "@id": "urn:asb:claim:claim_039"
+        },
+        {
+          "@id": "urn:asb:claim:claim_040"
+        },
+        {
+          "@id": "urn:asb:claim:claim_041"
+        },
+        {
+          "@id": "urn:asb:claim:claim_042"
+        },
+        {
+          "@id": "urn:asb:claim:claim_043"
+        },
+        {
+          "@id": "urn:asb:claim:claim_044"
+        },
+        {
+          "@id": "urn:asb:claim:claim_045"
+        },
+        {
+          "@id": "urn:asb:claim:claim_046"
+        },
+        {
+          "@id": "urn:asb:claim:claim_047"
+        },
+        {
+          "@id": "urn:asb:claim:claim_048"
+        },
+        {
+          "@id": "urn:asb:claim:claim_049"
+        },
+        {
+          "@id": "urn:asb:claim:claim_050"
+        },
+        {
+          "@id": "urn:asb:claim:claim_051"
+        },
+        {
+          "@id": "urn:asb:claim:claim_052"
+        },
+        {
+          "@id": "urn:asb:claim:claim_053"
+        },
+        {
+          "@id": "urn:asb:claim:claim_054"
+        },
+        {
+          "@id": "urn:asb:claim:claim_055"
+        },
+        {
+          "@id": "urn:asb:claim:claim_056"
+        },
+        {
+          "@id": "urn:asb:claim:claim_057"
+        },
+        {
+          "@id": "urn:asb:claim:claim_058"
+        },
+        {
+          "@id": "urn:asb:result:result_001"
+        },
+        {
+          "@id": "urn:asb:result:result_002"
+        },
+        {
+          "@id": "urn:asb:result:result_003"
+        },
+        {
+          "@id": "urn:asb:result:result_004"
+        },
+        {
+          "@id": "urn:asb:result:result_005"
+        },
+        {
+          "@id": "urn:asb:result:result_006"
+        },
+        {
+          "@id": "urn:asb:result:result_007"
+        },
+        {
+          "@id": "urn:asb:result:result_008"
+        },
+        {
+          "@id": "urn:asb:result:result_009"
+        },
+        {
+          "@id": "urn:asb:result:result_010"
+        },
+        {
+          "@id": "urn:asb:result:result_011"
+        },
+        {
+          "@id": "urn:asb:result:result_012"
+        },
+        {
+          "@id": "urn:asb:result:result_013"
+        },
+        {
+          "@id": "urn:asb:result:result_014"
+        },
+        {
+          "@id": "urn:asb:result:result_015"
+        },
+        {
+          "@id": "urn:asb:result:result_016"
+        },
+        {
+          "@id": "urn:asb:result:result_017"
+        },
+        {
+          "@id": "urn:asb:result:result_018"
+        },
+        {
+          "@id": "urn:asb:result:result_019"
+        },
+        {
+          "@id": "urn:asb:result:result_020"
+        },
+        {
+          "@id": "urn:asb:result:result_021"
+        },
+        {
+          "@id": "urn:asb:result:result_022"
+        },
+        {
+          "@id": "urn:asb:result:result_023"
+        },
+        {
+          "@id": "urn:asb:result:result_024"
+        },
+        {
+          "@id": "urn:asb:result:result_025"
+        },
+        {
+          "@id": "urn:asb:result:result_026"
+        },
+        {
+          "@id": "urn:asb:result:result_027"
+        },
+        {
+          "@id": "urn:asb:result:result_028"
+        },
+        {
+          "@id": "urn:asb:result:result_029"
+        },
+        {
+          "@id": "urn:asb:result:result_030"
+        },
+        {
+          "@id": "urn:asb:result:result_031"
+        },
+        {
+          "@id": "urn:asb:result:result_032"
+        },
+        {
+          "@id": "urn:asb:result:result_033"
+        },
+        {
+          "@id": "urn:asb:result:result_034"
+        },
+        {
+          "@id": "urn:asb:result:result_035"
+        },
+        {
+          "@id": "urn:asb:result:result_036"
+        },
+        {
+          "@id": "urn:asb:result:result_037"
+        },
+        {
+          "@id": "urn:asb:result:result_038"
+        },
+        {
+          "@id": "urn:asb:result:result_039"
+        },
+        {
+          "@id": "urn:asb:result:result_040"
+        },
+        {
+          "@id": "urn:asb:result:result_041"
+        },
+        {
+          "@id": "urn:asb:result:result_042"
+        },
+        {
+          "@id": "urn:asb:result:result_043"
+        },
+        {
+          "@id": "#env-task_001"
+        }
+      ],
+      "name": "Reproduce AmfS lantibiotic identification via MetaMiner on S. griseus FASTA input",
+      "repme:hasComputationalEnvironment": {
+        "@id": "#computational-environment"
+      }
+    },
+    {
+      "@id": "evidence/source_snippets.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evidence/source_snippets.md"
+    },
+    {
+      "@id": "inputs/dataset_folder_tree.txt",
+      "@type": "File",
+      "encodingFormat": "text/plain",
+      "name": "inputs/dataset_folder_tree.txt"
+    },
+    {
+      "@id": "inputs/dataset_preview.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "inputs/dataset_preview.md"
+    },
+    {
+      "@id": "evaluation/evaluation_strategy.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evaluation/evaluation_strategy.md"
+    },
+    {
+      "@id": "evaluation/review_rubric.json",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "name": "evaluation/review_rubric.json"
+    },
+    {
+      "@id": "urn:asb:task:task_001",
+      "@type": [
+        "ScholarlyArticle",
+        "p-plan:Plan",
+        "http://purl.org/spar/fabio/SoftwarePaper"
+      ],
+      "asbext:task_kind": "reproduction",
+      "description": "Run MetaMiner on S. griseus_fragment.fasta genome with MSV000080102 spectral data under lantibiotic class search to identify RiPP compounds, and verify that AmfS (core peptide TGSQVSLLVCEYSSLSVVLCTP with modifications T-18GS-18QVS-18LLVCEYS-18SLSVVLCTP) is reported in significant_matches.tsv.",
+      "keywords": [
+        "ribosomally-synthesized-peptide-identification",
+        "mass-spectrometry-database-matching",
+        "post-translational-modification-detection",
+        "genome-sequence-mining",
+        "lantibiotic-structure-annotation",
+        "spectral-library-matching-ripp"
+      ],
+      "name": "Reproduce AmfS lantibiotic identification via MetaMiner on S. griseus FASTA input",
+      "repme:hasResearcher": [
+        {
+          "@id": "urn:asb:researcher:cao-liu-2019"
+        },
+        {
+          "@id": "urn:asb:researcher:gurevich-alexey-2019"
+        },
+        {
+          "@id": "urn:asb:researcher:mohimani-hosein-2019"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:researcher:cao-liu-2019",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Liu Cao"
+    },
+    {
+      "@id": "urn:asb:researcher:gurevich-alexey-2019",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Alexey Gurevich"
+    },
+    {
+      "@id": "urn:asb:researcher:mohimani-hosein-2019",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Hosein Mohimani"
+    },
+    {
+      "@id": "urn:asb:tool:npdtools-2-5-0",
+      "@type": "SoftwareApplication",
+      "name": "NPDtools 2.5.0",
+      "schema:url": "https://github.com/ablab/npdtools",
+      "schema:version": "2.5.0"
+    },
+    {
+      "@id": "urn:asb:tool:metaminer",
+      "@type": "SoftwareApplication",
+      "name": "MetaMiner",
+      "schema:url": "https://github.com/mohimanilab/MetaMiner"
+    },
+    {
+      "@id": "urn:asb:tool:dereplicator",
+      "@type": "SoftwareApplication",
+      "name": "Dereplicator"
+    },
+    {
+      "@id": "urn:asb:tool:proteowizard",
+      "@type": "SoftwareApplication",
+      "name": "ProteoWizard"
+    },
+    {
+      "@id": "urn:asb:tool:npdtools",
+      "@type": "SoftwareApplication",
+      "name": "NPDtools",
+      "schema:url": "https://github.com/ablab/npdtools"
+    },
+    {
+      "@id": "urn:asb:tool:joblib",
+      "@type": "SoftwareApplication",
+      "name": "joblib"
+    },
+    {
+      "@id": "urn:asb:input:task_001_0",
+      "@type": "File",
+      "name": "S.griseus_fragment.fasta reference genome sequence file"
+    },
+    {
+      "@id": "urn:asb:input:task_001_1",
+      "@type": "File",
+      "name": "LC-MS/MS spectral data from MSV000080102 in centroided MGF, mzXML, mzML, or mzData format"
+    },
+    {
+      "@id": "urn:asb:output:task_001_0",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "significant_matches.tsv tab-separated report with columns: SpecFile, Scan, SpectrumMass, Retention, Charge, Score, P-Value, FDR, PeptideMass, SeqFile, Class, FragmentSeq, ModifiedSeq",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_001_1",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Verified identification of AmfS lantibiotic with core sequence TGSQVSLLVCEYSSLSVVLCTP and modified sequence T-18GS-18QVS-18LLVCEYS-18SLSVVLCTP",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "#action-task_001",
+      "@type": [
+        "CreateAction",
+        "prov:Activity",
+        "p-plan:Step"
+      ],
+      "description": "Run MetaMiner on S. griseus_fragment.fasta genome with MSV000080102 spectral data under lantibiotic class search to identify RiPP compounds, and verify that AmfS (core peptide TGSQVSLLVCEYSSLSVVLCTP with modifications T-18GS-18QVS-18LLVCEYS-18SLSVVLCTP) is reported in significant_matches.tsv.",
+      "instrument": [
+        {
+          "@id": "urn:asb:tool:npdtools-2-5-0"
+        },
+        {
+          "@id": "urn:asb:tool:metaminer"
+        },
+        {
+          "@id": "urn:asb:tool:dereplicator"
+        },
+        {
+          "@id": "urn:asb:tool:proteowizard"
+        },
+        {
+          "@id": "urn:asb:tool:npdtools"
+        },
+        {
+          "@id": "urn:asb:tool:joblib"
+        }
+      ],
+      "name": "Reproduce AmfS lantibiotic identification via MetaMiner on S. griseus FASTA input",
+      "object": [
+        {
+          "@id": "urn:asb:input:task_001_0"
+        },
+        {
+          "@id": "urn:asb:input:task_001_1"
+        }
+      ],
+      "repme:hasInputData": [
+        {
+          "@id": "urn:asb:input:task_001_0"
+        },
+        {
+          "@id": "urn:asb:input:task_001_1"
+        }
+      ],
+      "repme:hasOutputData": [
+        {
+          "@id": "urn:asb:output:task_001_0"
+        },
+        {
+          "@id": "urn:asb:output:task_001_1"
+        }
+      ],
+      "repme:hasResult": [
+        {
+          "@id": "urn:asb:result:result_002"
+        },
+        {
+          "@id": "urn:asb:result:result_007"
+        },
+        {
+          "@id": "urn:asb:result:result_012"
+        },
+        {
+          "@id": "urn:asb:result:result_013"
+        },
+        {
+          "@id": "urn:asb:result:result_014"
+        },
+        {
+          "@id": "urn:asb:result:result_015"
+        },
+        {
+          "@id": "urn:asb:result:result_027"
+        },
+        {
+          "@id": "urn:asb:result:result_028"
+        },
+        {
+          "@id": "urn:asb:result:result_029"
+        },
+        {
+          "@id": "urn:asb:result:result_030"
+        },
+        {
+          "@id": "urn:asb:result:result_031"
+        },
+        {
+          "@id": "urn:asb:result:result_032"
+        }
+      ],
+      "result": [
+        {
+          "@id": "urn:asb:output:task_001_0"
+        },
+        {
+          "@id": "urn:asb:output:task_001_1"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:claim:claim_001",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "NPDtools version 2.5.0 was released under the Apache 2.0 License on November 28, 2019."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 510,
+          "oa:start": 407
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "NPDtools version 2.5.0 was released under the Apache 2.0 License on November 28, 2019.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_002",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner is a metabologenomic pipeline which integrates metabolomic and genomic data to identify RiPPs and biosynthetic gene clusters encoding them."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2740,
+          "oa:start": 2615
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner is a metabologenomic pipeline which integrates metabolomic and genomic data to identify RiPPs and biosynthetic gene clusters encoding them.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_003",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner is developed in collaboration of Carnegie Mellon University, Saint Petersburg State University, and University of California San Diego."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2921,
+          "oa:start": 2879
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner is developed in collaboration of Carnegie Mellon University, Saint Petersburg State University, and University of California San Diego.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_004",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner works with liquid chromatography–tandem mass spectrometry data (LS-MS/MS) for metabolomic data."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1219,
+          "oa:start": 1114
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner works with liquid chromatography–tandem mass spectrometry data (LS-MS/MS) for metabolomic data.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_005",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Spectra files must be centroided and in an open spectrum format (MGF, mzXML, mzML or mzData)."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1312,
+          "oa:start": 1219
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Spectra files must be centroided and in an open spectrum format (MGF, mzXML, mzML or mzData).",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_006",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner natively supports MGF, mzXML, mzData and uses msconvert utility from the ProteoWizard package to convert spectra in other formats to MGF."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1461,
+          "oa:start": 1313
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner natively supports MGF, mzXML, mzData and uses msconvert utility from the ProteoWizard package to convert spectra in other formats to MGF.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_007",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner accepts raw nucleotide sequences in .fasta format as genomic input."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1598,
+          "oa:start": 1516
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner accepts raw nucleotide sequences in .fasta format as genomic input.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_008",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner accepts antiSMASH's .final.gbk or .gbk file as genomic input."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1641,
+          "oa:start": 1599
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner accepts antiSMASH's .final.gbk or .gbk file as genomic input.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_009",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner accepts BOA's .annotated.txt file as genomic input."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1671,
+          "oa:start": 1642
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner accepts BOA's .annotated.txt file as genomic input.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_010",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner accepts predicted and translated RiPP amino acid sequences in .fasta format as genomic input."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1820,
+          "oa:start": 1672
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner accepts predicted and translated RiPP amino acid sequences in .fasta format as genomic input.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_011",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Users can assemble DNA short reads with SPAdes or metaSPAdes before running MetaMiner."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1903,
+          "oa:start": 1846
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Users can assemble DNA short reads with SPAdes or metaSPAdes before running MetaMiner.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_012",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner reports all detected RiPPs in plain text tab-separated value files (.tsv)."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2063,
+          "oa:start": 1972
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner reports all detected RiPPs in plain text tab-separated value files (.tsv).",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_013",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner output files include SpecFile column containing filepath of the spectra file."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2175,
+          "oa:start": 2135
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner output files include SpecFile column containing filepath of the spectra file.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_014",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner output files include Scan column containing scan number of the identified spectrum."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2253,
+          "oa:start": 2176
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner output files include Scan column containing scan number of the identified spectrum.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_015",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner output files include SpectrumMass column containing mass of the spectrum in Daltons."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2314,
+          "oa:start": 2254
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner output files include SpectrumMass column containing mass of the spectrum in Daltons.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_016",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner output files include Retention column containing retention time of the spectrum in seconds."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2371,
+          "oa:start": 2315
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner output files include Retention column containing retention time of the spectrum in seconds.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_017",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner output files include Charge column containing charge of the spectrum."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2407,
+          "oa:start": 2372
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner output files include Charge column containing charge of the spectrum.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_018",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner output files include Score column containing score of the compound–spectrum match."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2456,
+          "oa:start": 2408
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner output files include Score column containing score of the compound–spectrum match.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_019",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner output files include P-Value column indicating statistical significance of the compound–spectrum match."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2527,
+          "oa:start": 2457
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner output files include P-Value column indicating statistical significance of the compound–spectrum match.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_020",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner output files include FDR column containing estimated False Discovery Rate."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2604,
+          "oa:start": 2528
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner output files include FDR column containing estimated False Discovery Rate.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_021",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner output files include PeptideMass column containing mass of the compound in Daltons."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2655,
+          "oa:start": 2605
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner output files include PeptideMass column containing mass of the compound in Daltons.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_022",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner output files include SeqFile column containing filepath of the genome sequence file."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2706,
+          "oa:start": 2656
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner output files include SeqFile column containing filepath of the genome sequence file.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_023",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner output files include Class column indicating class of the identified RiPP compound."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2755,
+          "oa:start": 2707
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner output files include Class column indicating class of the identified RiPP compound.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_024",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner output files include FragmentSeq column containing raw initial sequence of the identified compound."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2821,
+          "oa:start": 2756
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner output files include FragmentSeq column containing raw initial sequence of the identified compound.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_025",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner output files include ModifiedSeq column containing sequence of the identified compound with all applied modifications."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2911,
+          "oa:start": 2822
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner output files include ModifiedSeq column containing sequence of the identified compound with all applied modifications.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_026",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner identifies putative BGCs and corresponding precursor peptides as a first pipeline step."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3047,
+          "oa:start": 2968
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner identifies putative BGCs and corresponding precursor peptides as a first pipeline step.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_027",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner constructs putative RiPP structure databases as a second pipeline step."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3097,
+          "oa:start": 3048
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner constructs putative RiPP structure databases as a second pipeline step.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_028",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner matches tandem mass spectra against the constructed post-translationally modified RiPPs structure database using Dereplicator as a third pipeline step."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3227,
+          "oa:start": 3098
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner matches tandem mass spectra against the constructed post-translationally modified RiPPs structure database using Dereplicator as a third pipeline step.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_029",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner enlarges the set of described RiPPs via spectral networking as a fourth pipeline step."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3293,
+          "oa:start": 3228
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner enlarges the set of described RiPPs via spectral networking as a fourth pipeline step.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_030",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner requires a 64-bit Linux system or macOS and Python versions 2.6-2.7, 3.3 and higher."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3450,
+          "oa:start": 3353
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner requires a 64-bit Linux system or macOS and Python versions 2.6-2.7, 3.3 and higher.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_031",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner requires joblib Python library for parallel processing of multiple spectra or sequence files."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3565,
+          "oa:start": 3451
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner requires joblib Python library for parallel processing of multiple spectra or sequence files.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_032",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Without joblib installed, MetaMiner processes everything in a single thread."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3615,
+          "oa:start": 3566
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Without joblib installed, MetaMiner processes everything in a single thread.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_033",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner requires matplotlib and networkx Python libraries for presenting Spectral Network propagation graphs."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3722,
+          "oa:start": 3616
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner requires matplotlib and networkx Python libraries for presenting Spectral Network propagation graphs.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_034",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Without matplotlib and networkx, MetaMiner generates propagation in plain text format only."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3812,
+          "oa:start": 3723
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Without matplotlib and networkx, MetaMiner generates propagation in plain text format only.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_035",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "There is no need for compilation of MetaMiner sources and users can directly download and run the binaries."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3912,
+          "oa:start": 3813
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "There is no need for compilation of MetaMiner sources and users can directly download and run the binaries.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_036",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner is an integral part of the NPDtools package."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4020,
+          "oa:start": 3985
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner is an integral part of the NPDtools package.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_037",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The MetaMiner test data is located in share/npdtools/test_data/ directory."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4193,
+          "oa:start": 4120
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The MetaMiner test data is located in share/npdtools/test_data/ directory.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_038",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "SPAdes version 3.13.0 is available for download to assemble DNA short reads."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4299,
+          "oa:start": 4261
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "SPAdes version 3.13.0 is available for download to assemble DNA short reads.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_039",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "antiSMASH 4 can be installed using conda with Python 2.7."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 9264,
+          "oa:start": 9211
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "antiSMASH 4 can be installed using conda with Python 2.7.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_040",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "BOA environment is created in conda with Python 2.7."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4583,
+          "oa:start": 4551
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "BOA environment is created in conda with Python 2.7.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_041",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner default search mode considers RiPP class as 'lantibiotic'."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4842,
+          "oa:start": 4778
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner default search mode considers RiPP class as 'lantibiotic'.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_042",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner identified a lantibiotic with original sequence TGSQVSLLVCEYSSLSVVLCTP in test data."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5003,
+          "oa:start": 4923
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner identified a lantibiotic with original sequence TGSQVSLLVCEYSSLSVVLCTP in test data.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_043",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The test sequence after modifications shows as T-18GS-18QVS-18LLVCEYS-18SLSVVLCTP in MetaMiner output."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5069,
+          "oa:start": 5004
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The test sequence after modifications shows as T-18GS-18QVS-18LLVCEYS-18SLSVVLCTP in MetaMiner output.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_044",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The modifications T-18 and S-18 correspond to dehydrobutyrine and dehydroalanine respectively."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5183,
+          "oa:start": 5087
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The modifications T-18 and S-18 correspond to dehydrobutyrine and dehydroalanine respectively.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_045",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The test sequences correspond to AmfS peptide."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5230,
+          "oa:start": 5184
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The test sequences correspond to AmfS peptide.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_046",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner accepts nucleotide or amino acid FASTA files with extensions .fna, .fasta, or .fa."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5669,
+          "oa:start": 5579
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner accepts nucleotide or amino acid FASTA files with extensions .fna, .fasta, or .fa.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_047",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner accepts antiSMASH output files with .gbk extension."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5704,
+          "oa:start": 5670
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner accepts antiSMASH output files with .gbk extension.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_048",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner accepts BOA output files with .txt extension."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5729,
+          "oa:start": 5705
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner accepts BOA output files with .txt extension.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_049",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "At least one sequence file is required for MetaMiner unless correspondence file with RefSeq IDs is specified."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5870,
+          "oa:start": 5768
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "At least one sequence file is required for MetaMiner unless correspondence file with RefSeq IDs is specified.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_050",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner correspondence file should be tab-separated with two columns listing basenames of spectra and sequence files."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6031,
+          "oa:start": 5931
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner correspondence file should be tab-separated with two columns listing basenames of spectra and sequence files.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_051",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner correspondence file may include RefSeq IDs prefixed with #RefSeq: which are automatically downloaded from NCBI."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 18059,
+          "oa:start": 17901
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner correspondence file may include RefSeq IDs prefixed with #RefSeq: which are automatically downloaded from NCBI.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_052",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner performs all-vs-all analysis if correspondence file is not provided."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6238,
+          "oa:start": 6187
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner performs all-vs-all analysis if correspondence file is not provided.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_053",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Valid RiPP classes for MetaMiner include formylated, glycocin, lantibiotic, lap, lassopeptide, linaridin, proteusin, cyanobactin, and methanobactin."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 18430,
+          "oa:start": 18278
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Valid RiPP classes for MetaMiner include formylated, glycocin, lantibiotic, lap, lassopeptide, linaridin, proteusin, cyanobactin, and methanobactin.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_054",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner can specify 'all' to try all RiPP classes one by one."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6496,
+          "oa:start": 6440
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner can specify 'all' to try all RiPP classes one by one.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_055",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner --blind option enables search in blind mode for new PTMs with arbitrary mass shifts."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6596,
+          "oa:start": 6512
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner --blind option enables search in blind mode for new PTMs with arbitrary mass shifts.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_056",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner --spec-network option accepts path to Spectral Network output from GNPS Data Analysis workflow."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 18774,
+          "oa:start": 18703
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner --spec-network option accepts path to Spectral Network output from GNPS Data Analysis workflow.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_057",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "MetaMiner with --spec-network option saves results under <outdir>/spec_nets/."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 19169,
+          "oa:start": 19080
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "MetaMiner with --spec-network option saves results under <outdir>/spec_nets/.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_058",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000033"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Users should cite Cao et al, Cell Systems, 2019 when using MetaMiner."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6920,
+          "oa:start": 6880
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_dereplicator/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Users should cite Cao et al, Cell Systems, 2019 when using MetaMiner.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:result:result_001",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "NPDtools version 2.5.0 was released under the Apache 2.0 License on November 28, 2019.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_001"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_002",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner is a metabologenomic pipeline which integrates metabolomic and genomic data to identify RiPPs and biosynthetic gene clusters encoding them.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_002"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_003",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner is developed in collaboration of Carnegie Mellon University, Saint Petersburg State University, and University of California San Diego.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_003"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_004",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner works with liquid chromatography–tandem mass spectrometry data (LS-MS/MS) for metabolomic data.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_004"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_005",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Spectra files must be centroided and in an open spectrum format (MGF, mzXML, mzML or mzData).",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_005"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_006",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner natively supports MGF, mzXML, mzData and uses msconvert utility from the ProteoWizard package to convert spectra in other formats to MGF.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_006"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_007",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner accepts raw nucleotide sequences in .fasta format as genomic input. MetaMiner accepts predicted and translated RiPP amino acid sequences in .fasta format as genomic input.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_007"
+        },
+        {
+          "@id": "urn:asb:claim:claim_010"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_008",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner accepts antiSMASH's .final.gbk or .gbk file as genomic input. MetaMiner accepts BOA's .annotated.txt file as genomic input.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_008"
+        },
+        {
+          "@id": "urn:asb:claim:claim_009"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_009",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Users can assemble DNA short reads with SPAdes or metaSPAdes before running MetaMiner.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_011"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_010",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner reports all detected RiPPs in plain text tab-separated value files (.tsv).",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_012"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_011",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner output files include SpecFile column containing filepath of the spectra file. MetaMiner output files include Scan column containing scan number of the identified spectrum. MetaMiner output f",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_013"
+        },
+        {
+          "@id": "urn:asb:claim:claim_014"
+        },
+        {
+          "@id": "urn:asb:claim:claim_015"
+        },
+        {
+          "@id": "urn:asb:claim:claim_016"
+        },
+        {
+          "@id": "urn:asb:claim:claim_017"
+        },
+        {
+          "@id": "urn:asb:claim:claim_018"
+        },
+        {
+          "@id": "urn:asb:claim:claim_019"
+        },
+        {
+          "@id": "urn:asb:claim:claim_020"
+        },
+        {
+          "@id": "urn:asb:claim:claim_021"
+        },
+        {
+          "@id": "urn:asb:claim:claim_022"
+        },
+        {
+          "@id": "urn:asb:claim:claim_023"
+        },
+        {
+          "@id": "urn:asb:claim:claim_024"
+        },
+        {
+          "@id": "urn:asb:claim:claim_025"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_012",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner identifies putative BGCs and corresponding precursor peptides as a first pipeline step.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_026"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_013",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner constructs putative RiPP structure databases as a second pipeline step.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_027"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_014",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner matches tandem mass spectra against the constructed post-translationally modified RiPPs structure database using Dereplicator as a third pipeline step.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_028"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_015",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner enlarges the set of described RiPPs via spectral networking as a fourth pipeline step.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_029"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_016",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner requires a 64-bit Linux system or macOS and Python versions 2.6-2.7, 3.3 and higher.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_030"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_017",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner requires joblib Python library for parallel processing of multiple spectra or sequence files.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_031"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_018",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Without joblib installed, MetaMiner processes everything in a single thread.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_032"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_019",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner requires matplotlib and networkx Python libraries for presenting Spectral Network propagation graphs.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_033"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_020",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Without matplotlib and networkx, MetaMiner generates propagation in plain text format only.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_034"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_021",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "There is no need for compilation of MetaMiner sources and users can directly download and run the binaries.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_035"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_022",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner is an integral part of the NPDtools package.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_036"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_023",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The MetaMiner test data is located in share/npdtools/test_data/ directory.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_037"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_024",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "SPAdes version 3.13.0 is available for download to assemble DNA short reads.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_038"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_025",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "antiSMASH 4 can be installed using conda with Python 2.7.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_039"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_026",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "BOA environment is created in conda with Python 2.7.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_040"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_027",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner default search mode considers RiPP class as 'lantibiotic'.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_041"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_028",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner identified a lantibiotic with original sequence TGSQVSLLVCEYSSLSVVLCTP in test data.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_042"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_029",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The test sequence after modifications shows as T-18GS-18QVS-18LLVCEYS-18SLSVVLCTP in MetaMiner output.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_043"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_030",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The modifications T-18 and S-18 correspond to dehydrobutyrine and dehydroalanine respectively.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_044"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_031",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The test sequences correspond to AmfS peptide.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_045"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_032",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner accepts nucleotide or amino acid FASTA files with extensions .fna, .fasta, or .fa.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_046"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_033",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner accepts antiSMASH output files with .gbk extension. MetaMiner accepts BOA output files with .txt extension.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_047"
+        },
+        {
+          "@id": "urn:asb:claim:claim_048"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_034",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "At least one sequence file is required for MetaMiner unless correspondence file with RefSeq IDs is specified.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_049"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_035",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner correspondence file should be tab-separated with two columns listing basenames of spectra and sequence files.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_050"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_036",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner correspondence file may include RefSeq IDs prefixed with #RefSeq: which are automatically downloaded from NCBI.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_051"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_037",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner performs all-vs-all analysis if correspondence file is not provided.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_052"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_038",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Valid RiPP classes for MetaMiner include formylated, glycocin, lantibiotic, lap, lassopeptide, linaridin, proteusin, cyanobactin, and methanobactin.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_053"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_039",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner can specify 'all' to try all RiPP classes one by one.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_054"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_040",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner --blind option enables search in blind mode for new PTMs with arbitrary mass shifts.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_055"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_041",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner --spec-network option accepts path to Spectral Network output from GNPS Data Analysis workflow.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_056"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_042",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "MetaMiner with --spec-network option saves results under <outdir>/spec_nets/.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_057"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_043",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Users should cite Cao et al, Cell Systems, 2019 when using MetaMiner.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_058"
+        }
+      ]
+    },
+    {
+      "@id": "#env-task_001",
+      "@type": [
+        "repme:ComputationalEnvironment"
+      ],
+      "repme:computeTier": "medium"
+    },
+    {
+      "@id": "#agent-15-activity-task_001",
+      "@type": [
+        "prov:Activity"
+      ],
+      "prov:endedAtTime": "2026-06-16T05:46:42.207612+00:00",
+      "prov:qualifiedUsage": {
+        "@type": "prov:Usage",
+        "schema:name": "prompt_sha256",
+        "schema:value": "5139e37f95cfe43d"
+      },
+      "prov:wasAssociatedWith": {
+        "schema:name": "anthropic/claude-haiku-4-5-20251001"
+      },
+      "schema:name": "Agent 1.5 Claim Extractor"
+    },
+    {
+      "@id": "#computational-environment",
+      "@type": "repme:ComputationalEnvironment",
+      "repme:buildId": "767CADF9136A4A109E15BD9C3FAF8F41",
+      "repme:depsHash": null,
+      "repme:gitCommit": "8713018e077e78db4e0defb776d2c7f494485e53",
+      "repme:platform": "darwin-25.5.0-arm64",
+      "repme:pythonVersion": "3.11.15",
+      "schema:dateCreated": "2026-06-16T05:40:19.330164Z",
+      "schema:hasPart": [
+        {
+          "@id": "#agent-config-agent1_entity"
+        },
+        {
+          "@id": "#agent-config-agent2a_outline"
+        },
+        {
+          "@id": "#agent-config-agent2b_card"
+        },
+        {
+          "@id": "#agent-config-agent3_critique"
+        },
+        {
+          "@id": "#agent-config-agent_classify"
+        }
+      ],
+      "schema:softwareVersion": "agentic-science-builder@0.1.0"
+    },
+    {
+      "@id": "#agent-config-agent1_entity",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v3",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent1_entity"
+    },
+    {
+      "@id": "#agent-config-agent2a_outline",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-sonnet-4-6",
+      "repme:promptVersion": "v2",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2a_outline"
+    },
+    {
+      "@id": "#agent-config-agent2b_card",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v4",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2b_card"
+    },
+    {
+      "@id": "#agent-config-agent3_critique",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent3_critique"
+    },
+    {
+      "@id": "#agent-config-agent_classify",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent_classify"
+    },
+    {
+      "@id": "artifact_provenance.json",
+      "@type": "File",
+      "name": "artifact_provenance.json",
+      "encodingFormat": "application/json"
+    },
+    {
+      "@id": "ledger/claims.jsonl",
+      "@type": "File",
+      "name": "ledger/claims.jsonl",
+      "encodingFormat": "application/jsonlines"
+    },
+    {
+      "@id": "ledger/results.jsonl",
+      "@type": "File",
+      "name": "ledger/results.jsonl",
+      "encodingFormat": "application/jsonlines"
+    }
+  ]
+}

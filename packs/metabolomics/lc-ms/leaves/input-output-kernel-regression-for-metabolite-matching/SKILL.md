@@ -1,6 +1,9 @@
 ---
 name: input-output-kernel-regression-for-metabolite-matching
-description: Use when apply IOKR when you have BGCs with structural predictions based on MIBiG homology (cumulative BLAST score ≥10,000) and you wish to rank hypothetical BGC–spectrum links using metabolite structure information rather than genomic or strain-based features alone.
+description: Use when apply IOKR when you have BGCs with structural predictions based
+  on MIBiG homology (cumulative BLAST score ≥10,000) and you wish to rank hypothetical
+  BGC–spectrum links using metabolite structure information rather than genomic or
+  strain-based features alone.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3658
@@ -19,13 +22,16 @@ metadata:
   - Klekota-Roth fingerprints
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- after downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - genomes were run through antiSMASH v5.0.0 for BGC detection
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs

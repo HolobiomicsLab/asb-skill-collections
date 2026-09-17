@@ -1,6 +1,8 @@
 ---
 name: evaluation-data-collection-for-simulation-assessment
-description: Use when you are developing or comparing new data-dependent acquisition (DDA) strategies in ViMMS and need to evaluate how well each strategy fragments sampled compounds from the HMDB database.
+description: Use when you are developing or comparing new data-dependent acquisition
+  (DDA) strategies in ViMMS and need to evaluate how well each strategy fragments
+  sampled compounds from the HMDB database.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -15,6 +17,8 @@ metadata:
   - MZMine
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms

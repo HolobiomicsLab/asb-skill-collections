@@ -1,6 +1,7 @@
 ---
 name: cross-sample-metabolite-matching
-description: Use when after feature extraction (MS1 peak picking, MS2 recognition, or targeted list extraction) from multiple individual samples and before annotation.
+description: Use when after feature extraction (MS1 peak picking, MS2 recognition,
+  or targeted list extraction) from multiple individual samples and before annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -13,6 +14,8 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo12030212
   title: JPA

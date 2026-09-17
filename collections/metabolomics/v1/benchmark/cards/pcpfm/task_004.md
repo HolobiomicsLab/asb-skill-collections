@@ -144,4 +144,4 @@ Build empirical compounds (EmpCpds) from a preferred feature table using khipu w
 
 ---
 
-*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See [`artifact_provenance.json`](../../../capsules/pcpfm/10_1371_journal_pcbi_1011912__task_004/artifact_provenance.json) for what this release carries; it also lists the build artefacts the release does not promote.*

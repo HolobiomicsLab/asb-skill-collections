@@ -1,6 +1,8 @@
 ---
 name: pfas-characteristic-mass-difference-detection
-description: Use when you have centroided MS2 spectra (ddMS2 data in mzML format) from HRMS analysis and need to identify potential PFAS compounds among thousands of features.
+description: Use when you have centroided MS2 spectra (ddMS2 data in mzML format)
+  from HRMS analysis and need to identify potential PFAS compounds among thousands
+  of features.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -16,11 +18,14 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
 evidence_spans:
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data
 - PFΔScreen is an open-source Python based non-target screening software tool
 claims: []
 provenance:

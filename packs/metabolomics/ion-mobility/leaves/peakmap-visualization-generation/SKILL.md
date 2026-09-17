@@ -1,6 +1,9 @@
 ---
 name: peakmap-visualization-generation
-description: Use when you have mass spectrometry data loaded into a Pandas DataFrame with columns for m/z, retention time (or ion mobility), and intensity, and you need to visualize the complete 2D peak map landscape to identify co-eluting features, assess data quality, or explore retention time and.
+description: Use when you have mass spectrometry data loaded into a Pandas DataFrame
+  with columns for m/z, retention time (or ion mobility), and intensity, and you need
+  to visualize the complete 2D peak map landscape to identify co-eluting features,
+  assess data quality, or explore retention time and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -16,12 +19,15 @@ metadata:
   - bokeh
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
 evidence_spans:
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 - ms_data.plot(x="m/z", y="intensity", kind="spectrum")
 - conda create --name=pyopenms-viz python=3.12
 - Multiple backends supported including matplotlib, bokeh, and plotly

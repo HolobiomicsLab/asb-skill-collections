@@ -1,6 +1,8 @@
 ---
 name: igzip-compression-and-indexed-block-format
-description: Use when you have mzML mass spectrometry files that need both compression and rapid random access by spectrum ID (e.g., direct retrieval of spectrum 2540 without sequential scanning).
+description: Use when you have mzML mass spectrometry files that need both compression
+  and rapid random access by spectrum ID (e.g., direct retrieval of spectrum 2540
+  without sequential scanning).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -14,6 +16,8 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml

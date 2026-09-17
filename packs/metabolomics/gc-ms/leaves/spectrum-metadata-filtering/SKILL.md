@@ -1,6 +1,8 @@
 ---
 name: spectrum-metadata-filtering
-description: Use when importing mass spectra from multiple open mass spectra libraries (OMSLs) or databases with heterogeneous metadata quality. Use when you observe spectra annotated with negative adducts (e.
+description: Use when importing mass spectra from multiple open mass spectra libraries
+  (OMSLs) or databases with heterogeneous metadata quality. Use when you observe spectra
+  annotated with negative adducts (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +15,13 @@ metadata:
   - spectra-hash
   techniques:
   - GC-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
@@ -41,6 +50,7 @@ attribution:
 
 # spectrum-metadata-filtering
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Filters mass spectra by validating ionmode–adduct polarity consistency and removing spectra with missing, malformed, or incompatible adduct annotations. Applied during MS data standardization to ensure only spectra with valid metadata annotations are retained in downstream analysis.

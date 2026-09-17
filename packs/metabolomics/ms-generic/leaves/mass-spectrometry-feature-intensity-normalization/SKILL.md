@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-feature-intensity-normalization
-description: Use when after aligning raw mass spectra into a 2D feature intensity matrix (features × time points) but before computing pointwise correlation to identify feature pairs with matching temporal profiles.
+description: Use when after aligning raw mass spectra into a 2D feature intensity
+  matrix (features × time points) but before computing pointwise correlation to identify
+  feature pairs with matching temporal profiles.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,11 +17,14 @@ metadata:
   - scipy.stats
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
-- doi: 10.1093/bioinformatics/btad088/7036334
+- doi: 10.1093/bioinformatics/btad088
   title: DBDIpy
 evidence_spans:
-- DBDIpy is an open-source Python library for the curation and interpretation of dielectric barrier discharge ionisation mass spectrometric datasets
+- DBDIpy is an open-source Python library for the curation and interpretation of dielectric
+  barrier discharge ionisation mass spectrometric datasets
 - DBDIpy is an open-source Python library
 claims: []
 provenance:
@@ -27,15 +32,15 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_dbdipy_cq
-    doi: 10.1093/bioinformatics/btad088/7036334
+    doi: 10.1093/bioinformatics/btad088
     title: DBDIpy
   dedup_kept_from: coll_dbdipy_cq
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1093/bioinformatics/btad088/7036334
+  original_doi: 10.1093/bioinformatics/btad088
   all_source_dois:
-  - 10.1093/bioinformatics/btad088/7036334
+  - 10.1093/bioinformatics/btad088
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias

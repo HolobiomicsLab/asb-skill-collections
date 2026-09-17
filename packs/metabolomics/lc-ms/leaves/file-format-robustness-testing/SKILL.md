@@ -1,6 +1,9 @@
 ---
 name: file-format-robustness-testing
-description: Use when when processing MS spectral data from multiple open mass spectra libraries (OMSLs) in mixed formats (MSP, MGF, JSON, CSV), especially when source data exhibits missing fields, malformed entries, inconsistent adduct representations, or non-standard format variants that may cause silent.
+description: Use when when processing MS spectral data from multiple open mass spectra
+  libraries (OMSLs) in mixed formats (MSP, MGF, JSON, CSV), especially when source
+  data exhibits missing fields, malformed entries, inconsistent adduct representations,
+  or non-standard format variants that may cause silent.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -16,6 +19,13 @@ metadata:
   - FragHub
   techniques:
   - LC-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
@@ -44,6 +54,7 @@ attribution:
 
 # file-format-robustness-testing
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Validate and standardize mass spectrometry data across heterogeneous file formats (MSP, MGF, JSON, CSV) by implementing format-specific parsers with comprehensive edge-case handling, metadata validation, and structural integrity checks to ensure consistent spectrum parsing without data loss.

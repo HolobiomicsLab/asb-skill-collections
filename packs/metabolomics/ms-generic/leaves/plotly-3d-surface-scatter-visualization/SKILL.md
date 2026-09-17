@@ -1,6 +1,9 @@
 ---
 name: plotly-3d-surface-scatter-visualization
-description: Use when you have mass spectrometry data (m/z, retention time, intensity) loaded into a Pandas DataFrame and need to explore the full 3D structure of a peak map interactively, particularly when static 2D heatmaps obscure important intensity relationships or when stakeholders require browser-based.
+description: Use when you have mass spectrometry data (m/z, retention time, intensity)
+  loaded into a Pandas DataFrame and need to explore the full 3D structure of a peak
+  map interactively, particularly when static 2D heatmaps obscure important intensity
+  relationships or when stakeholders require browser-based.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3945
@@ -17,11 +20,14 @@ metadata:
   - alphatims
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
 evidence_spans:
-- integrates seamlessly with various plotting library backends (matpotlib, bokeh and plotly)
+- integrates seamlessly with various plotting library backends (matpotlib, bokeh and
+  plotly)
 - 'Extension: PLOTLY'
 - pyopenms ... pymzml ... pyteomics
 claims: []

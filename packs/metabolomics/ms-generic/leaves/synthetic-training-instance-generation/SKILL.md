@@ -1,6 +1,9 @@
 ---
 name: synthetic-training-instance-generation
-description: Use when when you have a small set of matched reference features (isolated, high-quality chromatographic peaks from reference chromatograms that have been aligned to a ground-truth reference list) and need to train a CNN model for peak detection in LC-HRMS profile mode data.
+description: Use when when you have a small set of matched reference features (isolated,
+  high-quality chromatographic peaks from reference chromatograms that have been aligned
+  to a ground-truth reference list) and need to train a CNN model for peak detection
+  in LC-HRMS profile mode data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +17,13 @@ metadata:
   - CUDA
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: christophuv/PeakBot
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot
@@ -42,6 +52,7 @@ attribution:
 
 # Synthetic training instance generation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Generate large labelled datasets for CNN model training by iteratively combining matched reference features (peaks with borders, centers, and identities) in various proportions and spatial arrangements. This augmentation strategy creates diverse training instances that include chromatographic peaks with isomeric variants and background signals, enabling the model to generalize across different LC-HRMS chromatographic conditions.

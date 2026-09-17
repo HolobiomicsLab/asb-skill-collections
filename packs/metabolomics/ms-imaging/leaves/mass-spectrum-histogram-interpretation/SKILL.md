@@ -1,6 +1,9 @@
 ---
 name: mass-spectrum-histogram-interpretation
-description: Use when after computing all pairwise mass differences from a mass spectrometry imaging dataset, when you need to identify which mass differences correspond to real molecular adducts (e.g., metabolite–matrix or metabolite–salt ions) rather than noise.
+description: Use when after computing all pairwise mass differences from a mass spectrometry
+  imaging dataset, when you need to identify which mass differences correspond to
+  real molecular adducts (e.g., metabolite–matrix or metabolite–salt ions) rather
+  than noise.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,11 +17,14 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - library(mass2adduct)
 claims: []
 provenance:

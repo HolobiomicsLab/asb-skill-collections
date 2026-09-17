@@ -1,6 +1,9 @@
 ---
 name: multi-backend-visualization-abstraction
-description: Use when when building a mass spectrometry visualization library that must support multiple plotting backends (matplotlib for static output, bokeh and plotly for interactive exploration) with a uniform DataFrame-based API, and where different plot kinds (spectrum, chromatogram, mobilogram, peakmap).
+description: Use when when building a mass spectrometry visualization library that
+  must support multiple plotting backends (matplotlib for static output, bokeh and
+  plotly for interactive exploration) with a uniform DataFrame-based API, and where
+  different plot kinds (spectrum, chromatogram, mobilogram, peakmap).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -16,6 +19,8 @@ metadata:
   - bokeh
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -25,7 +30,8 @@ evidence_spans:
 - Multiple backends supported including matplotlib, bokeh, and plotly
 - Rendering is typically slower than the BOKEH backend
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

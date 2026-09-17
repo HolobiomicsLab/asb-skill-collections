@@ -1,6 +1,9 @@
 ---
 name: quality-control-sample-aggregation
-description: Use when you have a feature intensity matrix (peak vector) and a corresponding set of QC sample indices from a multi-batch LC/GC-MS experiment, and you need to establish batch-invariant reference statistics before applying QC-based batch correction methods such as bcpareto(), bccenter(), or.
+description: Use when you have a feature intensity matrix (peak vector) and a corresponding
+  set of QC sample indices from a multi-batch LC/GC-MS experiment, and you need to
+  establish batch-invariant reference statistics before applying QC-based batch correction
+  methods such as bcpareto(), bccenter(), or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,11 +15,14 @@ metadata:
   - mzrtsim
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
 - github.com__yufree__mzrtsim
 claims: []
 provenance:

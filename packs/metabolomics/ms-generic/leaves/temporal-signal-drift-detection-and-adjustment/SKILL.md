@@ -1,6 +1,9 @@
 ---
 name: temporal-signal-drift-detection-and-adjustment
-description: Use when raw MS quantification data (feature-by-sample intensity matrix) shows systematic variation in detector response across the run sequence—i.e., when the same analyte produces different intensities at different timepoints in the measurement despite constant sample concentration.
+description: Use when raw MS quantification data (feature-by-sample intensity matrix)
+  shows systematic variation in detector response across the run sequence—i.e., when
+  the same analyte produces different intensities at different timepoints in the measurement
+  despite constant sample concentration.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,11 +15,14 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
 evidence_spans:
-- '**QuantyFey** is a Shiny application for the **visualization, analysis, and quantification** of **mass spectrometry (MS) data**'
+- '**QuantyFey** is a Shiny application for the **visualization, analysis, and quantification**
+  of **mass spectrometry (MS) data**'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

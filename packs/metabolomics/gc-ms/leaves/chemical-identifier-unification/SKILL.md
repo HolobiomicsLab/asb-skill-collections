@@ -1,6 +1,7 @@
 ---
 name: chemical-identifier-unification
-description: 'Use when when you have raw GC-MS output (CSV with columns: Component.RT, Base.Peak.MZ, Component.Area, Compound.Name, Match.Factor, File.'
+description: 'Use when when you have raw GC-MS output (CSV with columns: Component.RT,
+  Base.Peak.MZ, Component.Area, Compound.Name, Match.Factor, File.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -14,14 +15,18 @@ metadata:
   - PubChem
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- To perform the chemical structure matches and summarize atomic features, uafR taps into an amazing set of cheminformatics packages -- [ChemmineR]
+- To perform the chemical structure matches and summarize atomic features, uafR taps
+  into an amazing set of cheminformatics packages -- [ChemmineR]
 - Modern programming languages allow even complex workflows to be automated
 - Modern programming languages allow even complex workflows to be automated.
-- uafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html), [fmcsR](https://bioconductor.org/packages/release/bioc
+- uafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html),
+  [fmcsR](https://bioconductor.org/packages/release/bioc
 - '[fmcsR](https://bioconductor.org/packages/release/bioc/html/fmcsR.html), [webchem](https://cran.r-project.org/web/packages/webchem/index.html)'
 claims: []
 provenance:

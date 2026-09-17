@@ -1,6 +1,8 @@
 ---
 name: gc-ims-peak-alignment-evaluation
-description: Use when after peak detection in GC-IMS preprocessing, when you need to assess whether detected peaks from multiple samples align to the same chemical entities (clusters) using hierarchical clustering.
+description: Use when after peak detection in GC-IMS preprocessing, when you need
+  to assess whether detected peaks from multiple samples align to the same chemical
+  entities (clusters) using hierarchical clustering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -13,6 +15,8 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS

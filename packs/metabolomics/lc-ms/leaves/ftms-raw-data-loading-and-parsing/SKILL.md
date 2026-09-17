@@ -1,6 +1,9 @@
 ---
 name: ftms-raw-data-loading-and-parsing
-description: Use when you have received raw FT-ICR transient data from Bruker Solarix or ThermoFisher instruments and need to perform signal processing, apodization, calibration, or molecular formula assignment in CoreMS. The data must be in native vendor format (.d directory with ser/fid files, or .
+description: Use when you have received raw FT-ICR transient data from Bruker Solarix
+  or ThermoFisher instruments and need to perform signal processing, apodization,
+  calibration, or molecular formula assignment in CoreMS. The data must be in native
+  vendor format (.d directory with ser/fid files, or .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -16,12 +19,15 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np

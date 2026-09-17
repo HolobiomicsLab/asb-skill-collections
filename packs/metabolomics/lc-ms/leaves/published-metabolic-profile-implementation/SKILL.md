@@ -1,6 +1,9 @@
 ---
 name: published-metabolic-profile-implementation
-description: Use when you have Nightingale Health 1H-NMR metabolomics measurements for a new cohort and wish to compute one or more established metabolic risk scores (mortality, MetaboAge, cardiovascular event, type-2 diabetes, COVID-19 severity) without recalibration.
+description: Use when you have Nightingale Health 1H-NMR metabolomics measurements
+  for a new cohort and wish to compute one or more established metabolic risk scores
+  (mortality, MetaboAge, cardiovascular event, type-2 diabetes, COVID-19 severity)
+  without recalibration.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -15,6 +18,8 @@ metadata:
   - LC-MS
   - GC-MS
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac388
   title: MiMIR

@@ -1,6 +1,7 @@
 ---
 name: mass-spectrometry-workflow-orchestration-snakemake
-description: Use when when you have a collection of mzML.gz files from a multidimensional MS instrument (e.
+description: Use when when you have a collection of mzML.gz files from a multidimensional
+  MS instrument (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3637
@@ -17,11 +18,14 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
-- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python application programming interface and command-line tool
+- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python
+  application programming interface and command-line tool
 - import deimos
 - A Snakemake configuration file in YAML format is required.
 - Use conda to create a virtual environment with required dependencies.

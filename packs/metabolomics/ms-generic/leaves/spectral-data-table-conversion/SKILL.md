@@ -1,8 +1,11 @@
 ---
 name: spectral-data-table-conversion
-description: Use when when you have mzPeak format spectrum files and need to work with spectrum metadata, intensity/m/z arrays, or precursor information in a tabular, columnar, or vectorized computing environment.
+description: Use when when you have mzPeak format spectrum files and need to work
+  with spectrum metadata, intensity/m/z arrays, or precursor information in a tabular,
+  columnar, or vectorized computing environment.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,6 +19,8 @@ metadata:
   - Rust (mzPeak CLI tools)
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak

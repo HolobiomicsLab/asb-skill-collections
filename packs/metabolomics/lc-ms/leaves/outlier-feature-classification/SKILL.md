@@ -1,6 +1,8 @@
 ---
 name: outlier-feature-classification
-description: Use when after peak picking by MS-DIAL and import into R, when the feature table contains m/z values with decimal components that fall within the [4, 8] interval (indicating instrumental artifacts or calibration errors).
+description: Use when after peak picking by MS-DIAL and import into R, when the feature
+  table contains m/z values with decimal components that fall within the [4, 8] interval
+  (indicating instrumental artifacts or calibration errors).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +16,8 @@ metadata:
   - notame
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -22,7 +26,9 @@ derived_from:
 evidence_spans:
 - The R package margheRita addresses the complete workflow
 - The R package margheRita
-- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
+- The R package margheRita addresses the complete workflow for metabolomic profiling
+  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
+  spectrometry (MS/MS)
 - The R package margheRita addresses the complete workflow for metabolomic profiling
 claims: []
 provenance:

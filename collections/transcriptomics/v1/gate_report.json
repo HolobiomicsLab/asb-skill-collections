@@ -1,12 +1,13 @@
 {
-  "schema": "asbb-release-gate/1.0",
-  "generated_at": "2026-08-21T09:13:38.582777+00:00",
+  "schema": "asbb-release-gate/1.1",
+  "generated_at": "2026-09-14T21:32:02.651695+00:00",
   "collection_dir": "collections/transcriptomics/v1",
   "corpus_path": "collections/transcriptomics/v1/corpus.yaml",
   "mode": "strict",
   "strict": true,
-  "promote_logic_source": "vendored-fallback",
+  "promote_logic_source": "agentic_science_builder.release.promote",
   "policy": {
+    "version": "asbb-content-gate/1.1",
     "oa_tiers": [
       "diamond",
       "gold-oa",
@@ -23,22 +24,4809 @@
     "text_field_cap": 300,
     "ngram_jaccard_threshold": 0.3,
     "similarity_ratio_threshold": 0.92,
-    "pii_config_version": "2026-07-10.2",
-    "require_open_access": true
+    "pii_config_version": "2026-09-13.1",
+    "require_open_access": true,
+    "kb_sidecar_max_bytes": 65536,
+    "collection_kb_max_bytes": 67108864,
+    "allowed_skill_files": [
+      "SKILL.md",
+      "skill_kb.json"
+    ],
+    "config_sha256": "d8c4a1873e0ea091e6ae0218f73154cf3479325f875092aeada5d64190eea4c3",
+    "implementation_sha256": "19a23eb426ff5d39d41f496b594177967d2eabd5fee10521735f20c786db0726"
   },
+  "binding": {
+    "payload": {
+      "sha256": "c2e2c36c52173319fefb1b788ac789b099cf63e1fc1cc27090a982a4889111f1",
+      "entries": [
+        {
+          "path": "CITATION.cff",
+          "bytes": 1316,
+          "sha256": "197e4d214352213b5ee6dcee73ab6ac2961d7ca0b9d992f64781c43ab55a2749"
+        },
+        {
+          "path": "MANIFEST.yaml",
+          "bytes": 1016,
+          "sha256": "f51275a51a52cc500200d65b26a4177e838c4eed86d27690d66476463b8d78e4"
+        },
+        {
+          "path": "benchmark",
+          "directory": true
+        },
+        {
+          "path": "benchmark/cards",
+          "directory": true
+        },
+        {
+          "path": "benchmark/cards/deseq2",
+          "directory": true
+        },
+        {
+          "path": "benchmark/cards/deseq2/task_001.json",
+          "bytes": 14599,
+          "sha256": "a0bb5b1f896893eed6047d3b06c8c4e86f0b0d2b48cf97c458c8122a89cc89ab"
+        },
+        {
+          "path": "benchmark/cards/deseq2/task_001.md",
+          "bytes": 9546,
+          "sha256": "dc758fcb377953a8784fe9f7e3640dc63ec37c2704ee32bbd9e1a6365ca0dc9b"
+        },
+        {
+          "path": "benchmark/cards/deseq2/task_002.json",
+          "bytes": 18919,
+          "sha256": "75a8e4a0503c162fc201707e6169040827d75a2d520fafd69733b901fc8e02e7"
+        },
+        {
+          "path": "benchmark/cards/deseq2/task_002.md",
+          "bytes": 10990,
+          "sha256": "d086d1a5373bed5131d70dba50ef17d9f82055d3e8db68386bece7c00c81ef0d"
+        },
+        {
+          "path": "benchmark/cards/deseq2/task_003.json",
+          "bytes": 19082,
+          "sha256": "cbcdb99c3dd0c4e7d62b79184dccc36d66e2f4857fb06378484b4dcd501e223d"
+        },
+        {
+          "path": "benchmark/cards/deseq2/task_003.md",
+          "bytes": 12120,
+          "sha256": "493df012632ad3b6d99aca397a5d1c3b8516a7a845921e71f6aaa716c2f8b05e"
+        },
+        {
+          "path": "benchmark/cards/deseq2/task_004.json",
+          "bytes": 17160,
+          "sha256": "46a315a24d1f16980256471c7af540546fd0a93fc659cfaa7a83e4f0a3ecec7e"
+        },
+        {
+          "path": "benchmark/cards/deseq2/task_004.md",
+          "bytes": 10948,
+          "sha256": "29143c1610d147c2a33c75cf352cc4b97483aa48c9819b9d476dcdfca3033cbb"
+        },
+        {
+          "path": "benchmark/cards/fgsea",
+          "directory": true
+        },
+        {
+          "path": "benchmark/cards/fgsea/task_001.json",
+          "bytes": 19727,
+          "sha256": "aeae16513f9f42c2194892d5b67815f9f7b9235e6a2c9cc39144e978389f0871"
+        },
+        {
+          "path": "benchmark/cards/fgsea/task_001.md",
+          "bytes": 12028,
+          "sha256": "c980a609d32613da93bffe8ec189eaa6ff9b016ee3d909adcc00c2152b9d6b74"
+        },
+        {
+          "path": "benchmark/cards/fgsea/task_002.json",
+          "bytes": 20153,
+          "sha256": "9d00c8bec9d6a384758d4f7216fbdf7c6686aa514d0416217f0e235886283a17"
+        },
+        {
+          "path": "benchmark/cards/fgsea/task_002.md",
+          "bytes": 12275,
+          "sha256": "67b543be9f0cfff2d37f66ef2ee68cd2518297c6b0a995181661a4ebffb5ae66"
+        },
+        {
+          "path": "benchmark/cards/fgsea/task_003.json",
+          "bytes": 22143,
+          "sha256": "dd63a48cc32940690edb94208de4d018454be16c2432bf41bc67caa955757214"
+        },
+        {
+          "path": "benchmark/cards/fgsea/task_003.md",
+          "bytes": 13339,
+          "sha256": "f6b84ae9ad7d27b98fce87ff9c7dbb14795cb3d602135f84495bef3c4ac55035"
+        },
+        {
+          "path": "benchmark/cards/fgsea/task_004.json",
+          "bytes": 23997,
+          "sha256": "43755dbbd87bca0a2569d9bab86995a78a39ae04e4f1756ff0e16f95cdc5685d"
+        },
+        {
+          "path": "benchmark/cards/fgsea/task_004.md",
+          "bytes": 14036,
+          "sha256": "d85100a66595392f2297cdbd501c960a7b57c2dc3f03861b365a317c7e6868ce"
+        },
+        {
+          "path": "benchmark/cards/fgsea/task_005.json",
+          "bytes": 21705,
+          "sha256": "119f515aa279148e71d7416c225427387389d739abddba1a0fe9a00326bed2da"
+        },
+        {
+          "path": "benchmark/cards/fgsea/task_005.md",
+          "bytes": 13142,
+          "sha256": "0c2a6ac605749e8c87ecafbb16986f3dfd9cf3bc8f60a5f951ac4fd795569e7b"
+        },
+        {
+          "path": "benchmark/cards/limmavoom",
+          "directory": true
+        },
+        {
+          "path": "benchmark/cards/limmavoom/task_001.json",
+          "bytes": 12662,
+          "sha256": "c894784bc9fa8354c66e936a7bc427aac3832abb70898da7a572852121335d09"
+        },
+        {
+          "path": "benchmark/cards/limmavoom/task_001.md",
+          "bytes": 8842,
+          "sha256": "96675a82ee8c1cd9bb751ea7f9cd6f5adb89e22f5a0acd43bd8b75e3b5e50f72"
+        },
+        {
+          "path": "benchmark/cards/limmavoom/task_002.json",
+          "bytes": 13202,
+          "sha256": "58abaab10a57cf7e210533e01ae1f594b9da069267b50bbac9d6834de713cd3e"
+        },
+        {
+          "path": "benchmark/cards/limmavoom/task_002.md",
+          "bytes": 9169,
+          "sha256": "d800353ffc7b7e169ad96b1cb65fbb798cba1da3939a3768a78f6d1ebbe474c5"
+        },
+        {
+          "path": "benchmark/cards/limmavoom/task_003.json",
+          "bytes": 20125,
+          "sha256": "1f3914724f2e99cb677253d7fa5ebb9cd3be9682dcdb06fbcfa28715e246ff1a"
+        },
+        {
+          "path": "benchmark/cards/limmavoom/task_003.md",
+          "bytes": 13209,
+          "sha256": "a56d4e9188906b09fb5f80c0b523f6c5f11b0859e476886efbff753e9fd656d7"
+        },
+        {
+          "path": "benchmark/cards/salmon",
+          "directory": true
+        },
+        {
+          "path": "benchmark/cards/salmon/task_001.json",
+          "bytes": 31012,
+          "sha256": "0d82d54000ab4cd8e0348d008ac7bc50ee734c2913a6e60232ee0a52911749ad"
+        },
+        {
+          "path": "benchmark/cards/salmon/task_001.md",
+          "bytes": 18615,
+          "sha256": "8070d681ac312f9b7f49e5c824415e58d97d1117876ecbf415a53d9a1b9bb15b"
+        },
+        {
+          "path": "benchmark/cards/salmon/task_002.json",
+          "bytes": 31923,
+          "sha256": "4e19586b67f3201b23130a3c35627d540fd5c32cda41ce56617e022f4da54535"
+        },
+        {
+          "path": "benchmark/cards/salmon/task_002.md",
+          "bytes": 19173,
+          "sha256": "a91b4c6e95b0c4141435cd6671a9d9438a97fcacb16ae3b25c9bbb152118ab0b"
+        },
+        {
+          "path": "benchmark/cards/salmon/task_003.json",
+          "bytes": 27528,
+          "sha256": "37c8c192ad47e7339f4fb9775069248e76e64940671e7e795321ed3052cad553"
+        },
+        {
+          "path": "benchmark/cards/salmon/task_003.md",
+          "bytes": 19320,
+          "sha256": "e830c2d588f6028fb849303ce53b95b1b5d1ef4bc2902d01114ee54fd7080cf7"
+        },
+        {
+          "path": "benchmark/cards/salmon/task_004.json",
+          "bytes": 26139,
+          "sha256": "34d21f52ae1702a2ccb11575322436b7fc28711ad2ec9747355b5ee64a03ee65"
+        },
+        {
+          "path": "benchmark/cards/salmon/task_004.md",
+          "bytes": 15619,
+          "sha256": "e9f955451bf54a979aaf7d9745db3325f2ab80f76754b2b34142a136749e8309"
+        },
+        {
+          "path": "benchmark/cards/salmon/task_005.json",
+          "bytes": 20778,
+          "sha256": "8581ed7350c27254f22d41c64d2099d21ab31e2bcf07a4ff08640f45eaa25030"
+        },
+        {
+          "path": "benchmark/cards/salmon/task_005.md",
+          "bytes": 13539,
+          "sha256": "656cff41e67ef25b8d94fc84a20cab3cebd481cd1b1ae4a4bba3319d44d67bca"
+        },
+        {
+          "path": "benchmark/cards/scanpy",
+          "directory": true
+        },
+        {
+          "path": "benchmark/cards/scanpy/task_001.json",
+          "bytes": 19676,
+          "sha256": "161acc8b5d789ada0389079f8f6201056b9cf5e22f8ca7be8968fd22b87b8b9f"
+        },
+        {
+          "path": "benchmark/cards/scanpy/task_001.md",
+          "bytes": 10845,
+          "sha256": "ecd45244c731030efe3fb17598e960cd2caffcb3c54d508aaf8de16a017cf392"
+        },
+        {
+          "path": "benchmark/cards/scanpy/task_002.json",
+          "bytes": 19066,
+          "sha256": "18138d6de8b0c0d6a088dd62e80fe61c966dcf021d1492ac659bd1b8391b10be"
+        },
+        {
+          "path": "benchmark/cards/scanpy/task_002.md",
+          "bytes": 10496,
+          "sha256": "87ed8170e12c68cc2241297518f6be7775ddcf9ffab7a902c81ed15dfd9817eb"
+        },
+        {
+          "path": "benchmark/cards/scanpy/task_003.json",
+          "bytes": 18850,
+          "sha256": "e50c9c1087b4578571679f713566622df69c39abc7f6655dea73042715bd8083"
+        },
+        {
+          "path": "benchmark/cards/scanpy/task_003.md",
+          "bytes": 10798,
+          "sha256": "acb26fdc54a387bf511a4c5fb8f587d37d1f956b7cd6434783b507a1c2d85328"
+        },
+        {
+          "path": "benchmark/cards/scanpy/task_004.json",
+          "bytes": 16756,
+          "sha256": "6dc82fca849413a044737c7ce5470933f7ff931b023d8fa5c515b6a0da9e85e9"
+        },
+        {
+          "path": "benchmark/cards/scanpy/task_004.md",
+          "bytes": 9555,
+          "sha256": "d72167d2add94fd4fd8af68c25d9f8e034a3e3b3f582c139d3f3ec4bbe4cdcd2"
+        },
+        {
+          "path": "benchmark/cards/scanpy/task_005.json",
+          "bytes": 18695,
+          "sha256": "5c73db84b1ebc337e3d4b10fa23a83959c678de9370a3cecd19abe013539e0a1"
+        },
+        {
+          "path": "benchmark/cards/scanpy/task_005.md",
+          "bytes": 10813,
+          "sha256": "e1be525277ddcc0c17de03675d377146f44d6662844419a2e16621fe48bef146"
+        },
+        {
+          "path": "benchmark/cards/sctransform",
+          "directory": true
+        },
+        {
+          "path": "benchmark/cards/sctransform/task_001.json",
+          "bytes": 5572,
+          "sha256": "201174e4d489c6a4236c8f7055680de9a6711d2e508aea711704d90c39833eea"
+        },
+        {
+          "path": "benchmark/cards/sctransform/task_001.md",
+          "bytes": 3539,
+          "sha256": "789b698822d924d2a7282939333e03f30dae394feea79b63012432b51ee30916"
+        },
+        {
+          "path": "benchmark/cards/squidpy",
+          "directory": true
+        },
+        {
+          "path": "benchmark/cards/squidpy/task_001.json",
+          "bytes": 20786,
+          "sha256": "497fb5f02993a9e65a79d5f7456ab0af2b75cfa59e621b85c6dce3c376ee479d"
+        },
+        {
+          "path": "benchmark/cards/squidpy/task_001.md",
+          "bytes": 11548,
+          "sha256": "4d17d175044e64051e8ef80205eff77c7c595cea414d3c3fa1fa872748d94dc6"
+        },
+        {
+          "path": "benchmark/cards/squidpy/task_002.json",
+          "bytes": 21569,
+          "sha256": "7b706e5b51138b5af2f490c5415d3a86fc9407a4ec822384e0c57ff08b5cc0de"
+        },
+        {
+          "path": "benchmark/cards/squidpy/task_002.md",
+          "bytes": 11927,
+          "sha256": "dc66e7b9d0145edbd82fc23ef41b3882a805c1f045f5eca371cb69d8a06aecaf"
+        },
+        {
+          "path": "benchmark/cards/squidpy/task_003.json",
+          "bytes": 17835,
+          "sha256": "893ff29f61c5c0d2fcb4db35832fffb25d10bf752c875d7eef91eb34f8991ab7"
+        },
+        {
+          "path": "benchmark/cards/squidpy/task_003.md",
+          "bytes": 9940,
+          "sha256": "383299b9c15a10633fbc60dff08d45bf5024a66a9f73210f642b9b8b699c5035"
+        },
+        {
+          "path": "benchmark/cards/squidpy/task_004.json",
+          "bytes": 19580,
+          "sha256": "9f49c18353d99b4ebf6df21610c39616f348ca71653c1e26a13931df4430a688"
+        },
+        {
+          "path": "benchmark/cards/squidpy/task_004.md",
+          "bytes": 10873,
+          "sha256": "d2d8ef210e6f17ff3aa4a9189a9b8125331a8532be1ac95e9dda0f8a41801070"
+        },
+        {
+          "path": "benchmark/cards/squidpy/task_005.json",
+          "bytes": 20106,
+          "sha256": "98edb4c7fc9656405d48575aa2e45dfadbbed7cef83ab947757b5edab1bcb6d2"
+        },
+        {
+          "path": "benchmark/cards/squidpy/task_005.md",
+          "bytes": 11354,
+          "sha256": "489729542af74c2127652c66fcecda8f99d6cbcd310c9f6b0c1c91e0fd4ce130"
+        },
+        {
+          "path": "benchmark/cards/suppa2",
+          "directory": true
+        },
+        {
+          "path": "benchmark/cards/suppa2/task_001.json",
+          "bytes": 13445,
+          "sha256": "8763d9cd0ce827f0505dc5b9adcd2364e94b9baf84352a7f706400bbaed8e2c6"
+        },
+        {
+          "path": "benchmark/cards/suppa2/task_001.md",
+          "bytes": 11510,
+          "sha256": "58a3fa906c6c0ba10a2d7e0e2a9d56596cbc32e4a2896bebc15a52373a7da424"
+        },
+        {
+          "path": "benchmark/cards/suppa2/task_002.json",
+          "bytes": 12220,
+          "sha256": "9ca1f9be870da97bc3d51dbd2f1181fbfe4cb0266e01dc4975cd16c9e239dd11"
+        },
+        {
+          "path": "benchmark/cards/suppa2/task_002.md",
+          "bytes": 10228,
+          "sha256": "1002fbab5df1a9c408502d6f94bb2bd9c90178ad76318b6793a5b59f249295fd"
+        },
+        {
+          "path": "benchmark/cards/suppa2/task_003.json",
+          "bytes": 12253,
+          "sha256": "32c7cc1bb75205d517a52e6d639541610fe647c614e40844c1f2761d263edec5"
+        },
+        {
+          "path": "benchmark/cards/suppa2/task_003.md",
+          "bytes": 10270,
+          "sha256": "cf76942bc40742149352018c9436bbd317b668a7986f19377f53173d27e70eb3"
+        },
+        {
+          "path": "benchmark/cards/tximport",
+          "directory": true
+        },
+        {
+          "path": "benchmark/cards/tximport/task_001.json",
+          "bytes": 15663,
+          "sha256": "5a6794ba3c505b14da9f1e71f1a0c15c31b7465ccd9c62e91ae8510d046ab811"
+        },
+        {
+          "path": "benchmark/cards/tximport/task_001.md",
+          "bytes": 9345,
+          "sha256": "138aefdc72d7fa3fa537877b25207cbf8ddfab463179f742be6c6fc4aadb6ed5"
+        },
+        {
+          "path": "benchmark/cards/tximport/task_002.json",
+          "bytes": 16250,
+          "sha256": "de5f4733be88b6a0d8520d7351f3a987384ea9ffee988131cc9226412720f846"
+        },
+        {
+          "path": "benchmark/cards/tximport/task_002.md",
+          "bytes": 9906,
+          "sha256": "e7ee8553b1d494f03f888e6313432dbb416321f32065537b44f63cf317218a35"
+        },
+        {
+          "path": "benchmark/cards/tximport/task_003.json",
+          "bytes": 15086,
+          "sha256": "e2a4f40b081c3958f4695cbfaf649dca0a4ef9ea15326687583b7f8990f59cc2"
+        },
+        {
+          "path": "benchmark/cards/tximport/task_003.md",
+          "bytes": 10050,
+          "sha256": "aca556197fe439bfcc767c139ca89648ee5b8f29f910c524ab61426b7d545987"
+        },
+        {
+          "path": "benchmark/cards/tximport/task_004.json",
+          "bytes": 16187,
+          "sha256": "e081d4ec98d191d96b199db00f0d6cfaedc8ec5bc0a0d2d70cdee5b2ae3c2a02"
+        },
+        {
+          "path": "benchmark/cards/tximport/task_004.md",
+          "bytes": 10641,
+          "sha256": "10e426b42bfdaf8beab93002218f16b04cdbcafbba69411b9536cad97c35f099"
+        },
+        {
+          "path": "benchmark/cards/tximport/task_005.json",
+          "bytes": 14596,
+          "sha256": "8a279c45490716a81083812588bdfe35ef32f3a1199b23acebf24855622d40af"
+        },
+        {
+          "path": "benchmark/cards/tximport/task_005.md",
+          "bytes": 9102,
+          "sha256": "588e658e46bbb96603fc8e8eeb01961c71aa4b6ee4eb14edde612e664b13d819"
+        },
+        {
+          "path": "benchmark/cards/wgcna",
+          "directory": true
+        },
+        {
+          "path": "benchmark/cards/wgcna/task_001.json",
+          "bytes": 5700,
+          "sha256": "45812998def9d9e12d93d1172e93871da8861f5fb87bd6fed6fbdfbd97ea6e09"
+        },
+        {
+          "path": "benchmark/cards/wgcna/task_001.md",
+          "bytes": 3641,
+          "sha256": "acb57ced7136b7bcc955e200bb9e6961e00b2dc3d9dd4427aca32137125b8ff8"
+        },
+        {
+          "path": "benchmark/challenges",
+          "directory": true
+        },
+        {
+          "path": "benchmark/challenges/deseq2",
+          "directory": true
+        },
+        {
+          "path": "benchmark/challenges/deseq2/WORKFLOW_CHALLENGE.md",
+          "bytes": 24421,
+          "sha256": "4632b7c06a0f6f59670b93124ec46883a48d8c147b3116bcc64b4ce5b27f757a"
+        },
+        {
+          "path": "benchmark/challenges/deseq2/workflow.yaml",
+          "bytes": 21033,
+          "sha256": "b1f8a47e33b03beaa2ce9aca10c874a9395110024f5f6be159f96f24ed8037fd"
+        },
+        {
+          "path": "benchmark/challenges/fgsea",
+          "directory": true
+        },
+        {
+          "path": "benchmark/challenges/fgsea/WORKFLOW_CHALLENGE.md",
+          "bytes": 28243,
+          "sha256": "a787fc284c845684e98aa1a103a8702e1a26c9880a0fc027cf0e464bc9260c50"
+        },
+        {
+          "path": "benchmark/challenges/fgsea/workflow.yaml",
+          "bytes": 21111,
+          "sha256": "c81cd737b27251deb93e6da858d085bf9496dd51182d8e7f6a53cad750fd8999"
+        },
+        {
+          "path": "benchmark/challenges/limmavoom",
+          "directory": true
+        },
+        {
+          "path": "benchmark/challenges/limmavoom/WORKFLOW_CHALLENGE.md",
+          "bytes": 13276,
+          "sha256": "b6eb4b3295b4b5f68d53a68b2a967e8ab880226bbcf573e00bb6b3c199187ae4"
+        },
+        {
+          "path": "benchmark/challenges/limmavoom/workflow.yaml",
+          "bytes": 8382,
+          "sha256": "459315a0022aa4ad2adb6f4758ff3fb072bd846e76c70574433f5bc17a666e1e"
+        },
+        {
+          "path": "benchmark/challenges/salmon",
+          "directory": true
+        },
+        {
+          "path": "benchmark/challenges/salmon/WORKFLOW_CHALLENGE.md",
+          "bytes": 28904,
+          "sha256": "8efb6f82005671001ee99b0cbc43fdc2425a8209a002f417e24c10e04a4b487c"
+        },
+        {
+          "path": "benchmark/challenges/salmon/workflow.yaml",
+          "bytes": 21868,
+          "sha256": "7db6bec8d7562f314d34f4247700c6d03165f01606cee61a880e938b11e379c4"
+        },
+        {
+          "path": "benchmark/challenges/scanpy",
+          "directory": true
+        },
+        {
+          "path": "benchmark/challenges/scanpy/WORKFLOW_CHALLENGE.md",
+          "bytes": 23940,
+          "sha256": "f7fd78d2aa46eddf8e41cac594aaac51c8d4897e190e93f0616edd01d1b2627b"
+        },
+        {
+          "path": "benchmark/challenges/scanpy/workflow.yaml",
+          "bytes": 19149,
+          "sha256": "81985d7805acf28deb54a0461c50f1dbbbf6da67305ca05e9c49ba7fb8f2af18"
+        },
+        {
+          "path": "benchmark/challenges/sctransform",
+          "directory": true
+        },
+        {
+          "path": "benchmark/challenges/sctransform/WORKFLOW_CHALLENGE.md",
+          "bytes": 3649,
+          "sha256": "e7ff97700be5c8bb947073601289138660a44aa6dcc06f07e1d626093b55819a"
+        },
+        {
+          "path": "benchmark/challenges/sctransform/workflow.yaml",
+          "bytes": 1336,
+          "sha256": "2d23281bd94055b8423483de7233b026f71747e24fa14875054b4d499b424cd4"
+        },
+        {
+          "path": "benchmark/challenges/squidpy",
+          "directory": true
+        },
+        {
+          "path": "benchmark/challenges/squidpy/WORKFLOW_CHALLENGE.md",
+          "bytes": 24492,
+          "sha256": "8ccbb0e1580f5b8abd8e6ed9160e6213a33e412c9274a74445c4b6641b62b97b"
+        },
+        {
+          "path": "benchmark/challenges/squidpy/workflow.yaml",
+          "bytes": 18515,
+          "sha256": "8bfff301d12ead06be162b4bf990368f741bf37779d2464fc534ff2c050a35ba"
+        },
+        {
+          "path": "benchmark/challenges/suppa2",
+          "directory": true
+        },
+        {
+          "path": "benchmark/challenges/suppa2/WORKFLOW_CHALLENGE.md",
+          "bytes": 9802,
+          "sha256": "2871a5424add97ed455703864dbdcd8b3f981ea888ac2595ef2a71947b87ed89"
+        },
+        {
+          "path": "benchmark/challenges/suppa2/workflow.yaml",
+          "bytes": 5569,
+          "sha256": "b028a0cc8f76feacbeb4bacadeb911f96893a5546f5beba29c83fb0c7c7e99b2"
+        },
+        {
+          "path": "benchmark/challenges/tximport",
+          "directory": true
+        },
+        {
+          "path": "benchmark/challenges/tximport/WORKFLOW_CHALLENGE.md",
+          "bytes": 25340,
+          "sha256": "b573a0da3f8cc312bc8d2f3dda4d8f5c6b1e35a4111a448da45f3487be14ffd3"
+        },
+        {
+          "path": "benchmark/challenges/tximport/workflow.yaml",
+          "bytes": 20844,
+          "sha256": "b3f6650f7cb7eb46fe6bc58dfeac094307471ded2fdca75c8d4d19982f4efa14"
+        },
+        {
+          "path": "benchmark/challenges/wgcna",
+          "directory": true
+        },
+        {
+          "path": "benchmark/challenges/wgcna/WORKFLOW_CHALLENGE.md",
+          "bytes": 4597,
+          "sha256": "36ec9fdcd99d34c9175087c145b58410ca57567d9f2fa5480c2b9849ce4f5812"
+        },
+        {
+          "path": "benchmark/challenges/wgcna/workflow.yaml",
+          "bytes": 1412,
+          "sha256": "dfa6d389a1b26830d9280985fec38e47db233501f0c78ff03a3a6798817d5bda"
+        },
+        {
+          "path": "capsules",
+          "directory": true
+        },
+        {
+          "path": "capsules/deseq2",
+          "directory": true
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_001",
+          "directory": true
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_001/artifact_provenance.json",
+          "bytes": 964,
+          "sha256": "99cf1b32df5625e810367ea5c0d36e5c8c1b33053b82e886618570fdbc70571f"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_001/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_001/evaluation/evaluation_strategy.md",
+          "bytes": 1229,
+          "sha256": "3232070568dfc9ed353eab2ee1264a95a73e2aacfbf92079163ada151d76eb5e"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_001/evaluation/review_rubric.json",
+          "bytes": 2556,
+          "sha256": "be40f01057406e6b2d12c1402f00ea71353b3bbca4c1a938690a368ef48a216c"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_001/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_001/evidence/source_snippets.md",
+          "bytes": 2024,
+          "sha256": "1ef6a9a3bdabc5f9deca1d19b50ada5390dd4f970d29f844212908f9dc4cb049"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_001/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_001/inputs/dataset_folder_tree.txt",
+          "bytes": 30,
+          "sha256": "ccddb3f0b7ea5b50641b81afa66a1ef95c5eef7aa45d0a0ccfeba4caa648bd02"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_001/inputs/dataset_preview.md",
+          "bytes": 2093,
+          "sha256": "42eaf2737df67ed042a6a0665b763c33dd875e61717b8d1e8ef0e5f5901b3c49"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_001/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_001/ledger/claims.jsonl",
+          "bytes": 3039,
+          "sha256": "42995c93ed65589d17cbd68595a709f0f7f533c65f33a7e6a682e3ed3fe6eeb5"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_001/ledger/results.jsonl",
+          "bytes": 1009,
+          "sha256": "62b1dc1d632ffb1a99384687164533f5379087cb4cf0d584f70edcee7889869b"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_001/ro-crate-metadata.json",
+          "bytes": 102115,
+          "sha256": "9535da54e055904f11b63b0001f136b171aad7ff4a1a1bbd3c0fa38ab5d87a4b"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_002",
+          "directory": true
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_002/artifact_provenance.json",
+          "bytes": 964,
+          "sha256": "e827b7ffb80f43a76f973fea1252c71796fe9d6da048575a8268388acd300c83"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_002/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_002/evaluation/evaluation_strategy.md",
+          "bytes": 1855,
+          "sha256": "f5ed372605eb74095e9735af5a753cb16bb796e2ec7e18a4d5f0bc903cf7a5e8"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_002/evaluation/review_rubric.json",
+          "bytes": 4821,
+          "sha256": "c5a61b510052efc996bd8513f765a68312f45db18081d1fe55f186aa438fb5f5"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_002/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_002/evidence/source_snippets.md",
+          "bytes": 2255,
+          "sha256": "1b2e22dba7eff8fb94730a5d1b41860df73aa3c7ce5dd0343897645cde8be81d"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_002/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_002/inputs/dataset_folder_tree.txt",
+          "bytes": 30,
+          "sha256": "ccddb3f0b7ea5b50641b81afa66a1ef95c5eef7aa45d0a0ccfeba4caa648bd02"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_002/inputs/dataset_preview.md",
+          "bytes": 2093,
+          "sha256": "42eaf2737df67ed042a6a0665b763c33dd875e61717b8d1e8ef0e5f5901b3c49"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_002/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_002/ledger/claims.jsonl",
+          "bytes": 3765,
+          "sha256": "e3af9d2e239e0e1beb37d122909cad0e56e586d9fa61b0c6d6906a1a1c2defef"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_002/ledger/results.jsonl",
+          "bytes": 1292,
+          "sha256": "ee6e65b6ff60bac192545202872f603e421086fa74184fbe122e91488fb8a695"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_002/ro-crate-metadata.json",
+          "bytes": 103190,
+          "sha256": "48124be19623fccaf2cf626bd732cd707f68c67753a4289070e0f64520ec6693"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_003",
+          "directory": true
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_003/artifact_provenance.json",
+          "bytes": 964,
+          "sha256": "6c3439c282c00f9bb58e86d0d57f68994cbc1047e84974a0db0020a343125c20"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_003/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_003/evaluation/evaluation_strategy.md",
+          "bytes": 1566,
+          "sha256": "2130db777e229790353d9904743d94c178213da295ec26ee98579aa1086d1e78"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_003/evaluation/review_rubric.json",
+          "bytes": 4111,
+          "sha256": "af833c34f803361d8631415c223cead2df993076d9dd89d2872c08beebbcb8f7"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_003/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_003/evidence/source_snippets.md",
+          "bytes": 3064,
+          "sha256": "9bb83eb157b18a3675c29ae00ac7b9b47fed6a48665ee1a46fe71dd7db8fc6a0"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_003/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_003/inputs/dataset_folder_tree.txt",
+          "bytes": 30,
+          "sha256": "ccddb3f0b7ea5b50641b81afa66a1ef95c5eef7aa45d0a0ccfeba4caa648bd02"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_003/inputs/dataset_preview.md",
+          "bytes": 2093,
+          "sha256": "42eaf2737df67ed042a6a0665b763c33dd875e61717b8d1e8ef0e5f5901b3c49"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_003/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_003/ledger/claims.jsonl",
+          "bytes": 2318,
+          "sha256": "7fc62236fd803a5a00385c36fcd676543dfa0485cf76e4e2be5a707a4091736d"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_003/ledger/results.jsonl",
+          "bytes": 663,
+          "sha256": "bdecc38a3a152a132ca30df1231f96d4a9deea48046d13b1c87892479250c84a"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_003/ro-crate-metadata.json",
+          "bytes": 103797,
+          "sha256": "669b2e6550a577a1ef43a79d85104afe093fb7628e48a70b8fa3f1438314bcc9"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_004",
+          "directory": true
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_004/artifact_provenance.json",
+          "bytes": 964,
+          "sha256": "e51bad30275047dbf0eedb40a9fa2cfa1ec7b1a8da791825ff9c25a3f5f98ee0"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_004/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_004/evaluation/evaluation_strategy.md",
+          "bytes": 1631,
+          "sha256": "02a8bdf48e78e5b194adb6371b741f82dc95bf3bf160c1f6cb952281c74f1484"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_004/evaluation/review_rubric.json",
+          "bytes": 4077,
+          "sha256": "60804ee3083a57bc834860ba519d04298755c885059416b2bfd30fb9cb4eb17c"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_004/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_004/evidence/source_snippets.md",
+          "bytes": 2401,
+          "sha256": "456b1767bc817c7b83f51a1524ec28863221d50a982f870aa922863a6edbf328"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_004/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_004/inputs/dataset_folder_tree.txt",
+          "bytes": 30,
+          "sha256": "ccddb3f0b7ea5b50641b81afa66a1ef95c5eef7aa45d0a0ccfeba4caa648bd02"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_004/inputs/dataset_preview.md",
+          "bytes": 2093,
+          "sha256": "42eaf2737df67ed042a6a0665b763c33dd875e61717b8d1e8ef0e5f5901b3c49"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_004/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_004/ledger/claims.jsonl",
+          "bytes": 2629,
+          "sha256": "7cdccce96ead3a1bda3bfc7438ce26040ceef1cd2b3ed05aaabcce508b7d4036"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_004/ledger/results.jsonl",
+          "bytes": 978,
+          "sha256": "ea97492633668fd21f0ba30a22fea515229aa4ce120dd912bd892926dd14416f"
+        },
+        {
+          "path": "capsules/deseq2/10_1186_s13059_014_0550_8__task_004/ro-crate-metadata.json",
+          "bytes": 102883,
+          "sha256": "86ef34b93ad20a2a6c6cad51a061fc8dff8289eda48ba62dd843e22fd0a8af7d"
+        },
+        {
+          "path": "capsules/fgsea",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_001",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_001/artifact_provenance.json",
+          "bytes": 941,
+          "sha256": "e6066c7adbb21c68d3f36283dec13d6a982f63fde9fe15ecf531ee6f4717386b"
+        },
+        {
+          "path": "capsules/fgsea/task_001/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_001/evaluation/evaluation_strategy.md",
+          "bytes": 1522,
+          "sha256": "16c07ee7ec5f1d25173ef104fef8b633a23a79bdb8480e9441167e878e11e884"
+        },
+        {
+          "path": "capsules/fgsea/task_001/evaluation/review_rubric.json",
+          "bytes": 4359,
+          "sha256": "6456819677e277c58cffb0cacbdc8020f8c792bd4541881110a4ef1344d31419"
+        },
+        {
+          "path": "capsules/fgsea/task_001/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_001/evidence/source_snippets.md",
+          "bytes": 2788,
+          "sha256": "6314e38bf0f4c98084674ce72b13449da4b8f6fdecf4e2c939757078ec517489"
+        },
+        {
+          "path": "capsules/fgsea/task_001/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_001/inputs/dataset_folder_tree.txt",
+          "bytes": 90,
+          "sha256": "49386f1c7dc2ab6bba42dcaff341b5e880e8f5321c639cec63c258c06830d225"
+        },
+        {
+          "path": "capsules/fgsea/task_001/inputs/dataset_preview.md",
+          "bytes": 2185,
+          "sha256": "0f0c45e32f1c97ab93bba49053cb40b04fb3ee33d638ac3b92d82bfcd6f83484"
+        },
+        {
+          "path": "capsules/fgsea/task_001/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_001/ledger/claims.jsonl",
+          "bytes": 3215,
+          "sha256": "45da1df68c06f87f50fc1cae18f1f2260d1d1f1dac8ead37355883674573fcd2"
+        },
+        {
+          "path": "capsules/fgsea/task_001/ledger/results.jsonl",
+          "bytes": 1282,
+          "sha256": "9948b455a6432557c42a7654d7863bed6a1167382880978e65d6f9421faa2f11"
+        },
+        {
+          "path": "capsules/fgsea/task_001/ro-crate-metadata.json",
+          "bytes": 84482,
+          "sha256": "e6250f0ddbb0a320398cf87f160b1752a2bc1d41fd383788721e6e154394338e"
+        },
+        {
+          "path": "capsules/fgsea/task_002",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_002/artifact_provenance.json",
+          "bytes": 941,
+          "sha256": "6f239f778f23f26869855219c1afd2334bc67ca7f94e4641ae69bd0f3c45ce18"
+        },
+        {
+          "path": "capsules/fgsea/task_002/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_002/evaluation/evaluation_strategy.md",
+          "bytes": 1696,
+          "sha256": "def8786f86d99457709d70ab0acba8167a2003e8e0e908d51740cfd6f24806a6"
+        },
+        {
+          "path": "capsules/fgsea/task_002/evaluation/review_rubric.json",
+          "bytes": 4426,
+          "sha256": "925d7d2759a3dccbe13b7fe7d7808b1ce664c3e752ac5c7e97f6771dd15205c3"
+        },
+        {
+          "path": "capsules/fgsea/task_002/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_002/evidence/source_snippets.md",
+          "bytes": 2862,
+          "sha256": "b071717be7122d547c04b4d04603a615411e49478cbeb7ac8bdba8877b085e62"
+        },
+        {
+          "path": "capsules/fgsea/task_002/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_002/inputs/dataset_folder_tree.txt",
+          "bytes": 90,
+          "sha256": "49386f1c7dc2ab6bba42dcaff341b5e880e8f5321c639cec63c258c06830d225"
+        },
+        {
+          "path": "capsules/fgsea/task_002/inputs/dataset_preview.md",
+          "bytes": 2185,
+          "sha256": "0f0c45e32f1c97ab93bba49053cb40b04fb3ee33d638ac3b92d82bfcd6f83484"
+        },
+        {
+          "path": "capsules/fgsea/task_002/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_002/ledger/claims.jsonl",
+          "bytes": 9265,
+          "sha256": "c7760b269d1a52be25f867e63f43add8dd9782d3db8dab88e21cb5699116b253"
+        },
+        {
+          "path": "capsules/fgsea/task_002/ledger/results.jsonl",
+          "bytes": 3379,
+          "sha256": "22b994574baf25bd00aa384cb3ad97e8dff797808ced20a698faa85d2169dc15"
+        },
+        {
+          "path": "capsules/fgsea/task_002/ro-crate-metadata.json",
+          "bytes": 85015,
+          "sha256": "a71b4bd210d069c51ea02db6cbe29436a3f29eae39c1bd727cee402f9afb5744"
+        },
+        {
+          "path": "capsules/fgsea/task_003",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_003/artifact_provenance.json",
+          "bytes": 941,
+          "sha256": "3d9a855a76e8e83a0c926caf73165273ff5dfdb309e1cf1d333bbdf30b31f2d5"
+        },
+        {
+          "path": "capsules/fgsea/task_003/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_003/evaluation/evaluation_strategy.md",
+          "bytes": 1328,
+          "sha256": "ce4c9fbc85f1f260cc1f3ea2e08b492e11ba597fd8b5ae0777320f19ac884f18"
+        },
+        {
+          "path": "capsules/fgsea/task_003/evaluation/review_rubric.json",
+          "bytes": 3698,
+          "sha256": "d71a9c953306095035c49609471942fb8aafef167bd08eadeabf7d061624fe0d"
+        },
+        {
+          "path": "capsules/fgsea/task_003/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_003/evidence/source_snippets.md",
+          "bytes": 3410,
+          "sha256": "eadb7472e117f97645a9989f2fd8ce592939e577ee8bd9eed47e4cc93dc9bb56"
+        },
+        {
+          "path": "capsules/fgsea/task_003/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_003/inputs/dataset_folder_tree.txt",
+          "bytes": 90,
+          "sha256": "49386f1c7dc2ab6bba42dcaff341b5e880e8f5321c639cec63c258c06830d225"
+        },
+        {
+          "path": "capsules/fgsea/task_003/inputs/dataset_preview.md",
+          "bytes": 2185,
+          "sha256": "0f0c45e32f1c97ab93bba49053cb40b04fb3ee33d638ac3b92d82bfcd6f83484"
+        },
+        {
+          "path": "capsules/fgsea/task_003/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_003/ledger/claims.jsonl",
+          "bytes": 3422,
+          "sha256": "0b668ca800c6591ff04bc5f4346c34ef86f0810900ddcbf6ed564b8cab842554"
+        },
+        {
+          "path": "capsules/fgsea/task_003/ledger/results.jsonl",
+          "bytes": 1417,
+          "sha256": "f6ba9a7eed634d4f7239100985664fba2afa37507cd6081f168544889cede230"
+        },
+        {
+          "path": "capsules/fgsea/task_003/ro-crate-metadata.json",
+          "bytes": 85229,
+          "sha256": "95fb88bf345e8a70b378b43ea2e4b7b53a63290590a01a7e2a902517473ca26b"
+        },
+        {
+          "path": "capsules/fgsea/task_004",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_004/artifact_provenance.json",
+          "bytes": 941,
+          "sha256": "2693ab01aaee5683f89863d677e62d678ea1d1cc033e7ed83779dc56452ad022"
+        },
+        {
+          "path": "capsules/fgsea/task_004/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_004/evaluation/evaluation_strategy.md",
+          "bytes": 1564,
+          "sha256": "eeaa5790da6b50f43c212caf7ab37b9fadb4675b59357ef7b16ec8e8c039f180"
+        },
+        {
+          "path": "capsules/fgsea/task_004/evaluation/review_rubric.json",
+          "bytes": 3975,
+          "sha256": "55ce8a4eb57619ee67958624b2f324b21a6392f8b791f65f0fb37c1010c15284"
+        },
+        {
+          "path": "capsules/fgsea/task_004/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_004/evidence/source_snippets.md",
+          "bytes": 3330,
+          "sha256": "9b2ca8f63b7c4a75fcfdb645a5b93f9ac694aa75459a1c4d0c7ceb51dad10f6b"
+        },
+        {
+          "path": "capsules/fgsea/task_004/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_004/inputs/dataset_folder_tree.txt",
+          "bytes": 90,
+          "sha256": "49386f1c7dc2ab6bba42dcaff341b5e880e8f5321c639cec63c258c06830d225"
+        },
+        {
+          "path": "capsules/fgsea/task_004/inputs/dataset_preview.md",
+          "bytes": 2185,
+          "sha256": "0f0c45e32f1c97ab93bba49053cb40b04fb3ee33d638ac3b92d82bfcd6f83484"
+        },
+        {
+          "path": "capsules/fgsea/task_004/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_004/ledger/claims.jsonl",
+          "bytes": 10166,
+          "sha256": "e3c930e791a90b195b13677c777ec9f6043e4bf3ac2a82f58602c99429afb244"
+        },
+        {
+          "path": "capsules/fgsea/task_004/ledger/results.jsonl",
+          "bytes": 4047,
+          "sha256": "358868ed36ef4cc80a8c6f77eea3dd90774f75d188604bfbeb62cdbbd4115869"
+        },
+        {
+          "path": "capsules/fgsea/task_004/ro-crate-metadata.json",
+          "bytes": 86204,
+          "sha256": "3720fbb912ff73f5545fdfd3e7255c75bdb610289ce2681847c81777431d2736"
+        },
+        {
+          "path": "capsules/fgsea/task_005",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_005/artifact_provenance.json",
+          "bytes": 941,
+          "sha256": "8596a9b98b08381e20812b2a89543a9f26fd6418f6b0cbcc9a9efe4af169e851"
+        },
+        {
+          "path": "capsules/fgsea/task_005/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_005/evaluation/evaluation_strategy.md",
+          "bytes": 1578,
+          "sha256": "95362e9101793c3613a8c486fdf78c244776ab7b5922cf06cca88d7e76061062"
+        },
+        {
+          "path": "capsules/fgsea/task_005/evaluation/review_rubric.json",
+          "bytes": 3587,
+          "sha256": "cc77c5db9dd1748d4fc068de3f3b41f2e20e05796a1030062f7446bedee5652b"
+        },
+        {
+          "path": "capsules/fgsea/task_005/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_005/evidence/source_snippets.md",
+          "bytes": 2998,
+          "sha256": "46e24a138030a289dffa37da7ca5154de3b65c8423b38461503a55347ba6667a"
+        },
+        {
+          "path": "capsules/fgsea/task_005/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_005/inputs/dataset_folder_tree.txt",
+          "bytes": 90,
+          "sha256": "49386f1c7dc2ab6bba42dcaff341b5e880e8f5321c639cec63c258c06830d225"
+        },
+        {
+          "path": "capsules/fgsea/task_005/inputs/dataset_preview.md",
+          "bytes": 2185,
+          "sha256": "0f0c45e32f1c97ab93bba49053cb40b04fb3ee33d638ac3b92d82bfcd6f83484"
+        },
+        {
+          "path": "capsules/fgsea/task_005/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/fgsea/task_005/ledger/claims.jsonl",
+          "bytes": 3205,
+          "sha256": "eae2a0c11285e84e68176b781854cbd8276c21a6c781349191b8deb40859f7e5"
+        },
+        {
+          "path": "capsules/fgsea/task_005/ledger/results.jsonl",
+          "bytes": 1298,
+          "sha256": "cc48852eebf90fa9c1d432e6e4ed1e210de7867ee73557657b6456686e8a18e2"
+        },
+        {
+          "path": "capsules/fgsea/task_005/ro-crate-metadata.json",
+          "bytes": 84983,
+          "sha256": "dad1709f7b6c54c40745fada7d96956a2c3f009ca007934535a26995e198d0a7"
+        },
+        {
+          "path": "capsules/limmavoom",
+          "directory": true
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_001",
+          "directory": true
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_001/artifact_provenance.json",
+          "bytes": 957,
+          "sha256": "e4b779555f9f4c36e3734b0380b71e8955b626398ab57f5527313040cf6e9868"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_001/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_001/evaluation/evaluation_strategy.md",
+          "bytes": 1407,
+          "sha256": "24fd2cd0e00387a17e928f5d94bdd783841f55cb56403b0c9cc99bf413e6bc87"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_001/evaluation/review_rubric.json",
+          "bytes": 3358,
+          "sha256": "b9e6b17d0a53b8718d1f65f7b10db1cdd51897a2634c77df39b3b32d01efd9f1"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_001/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_001/evidence/source_snippets.md",
+          "bytes": 1922,
+          "sha256": "207f2b5fc0ab08462d9f4b649d7d0d202ef2fcbe3c33d5c4e8256a61c7636dbe"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_001/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_001/inputs/dataset_folder_tree.txt",
+          "bytes": 9,
+          "sha256": "59548707fb6fe356a4fc2cf93ff7c6c58e9d0181ce05c87110d714beaef58823"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_001/inputs/dataset_preview.md",
+          "bytes": 2039,
+          "sha256": "c64e87c0f079243506f224c9b9211d192452a78578a1423e1b2c5c2693ba7e98"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_001/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_001/ledger/claims.jsonl",
+          "bytes": 5899,
+          "sha256": "73a35767d989456957943f2c4d94b5152c3f7aeb8374e8dfc284c5d84aa8a146"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_001/ledger/results.jsonl",
+          "bytes": 1707,
+          "sha256": "eddf051f6dc68f8348f7973c9cfd91e225e4bafd94544ba26e1e83e17e4cdb23"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_001/ro-crate-metadata.json",
+          "bytes": 34745,
+          "sha256": "bbff92e8a19beb65de932b10542d3f0cae2bf76ce7bf5ba4d969c878e1c3374a"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_002",
+          "directory": true
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_002/artifact_provenance.json",
+          "bytes": 957,
+          "sha256": "0d1ba59ce8d3a0bc4a0a05582619781e4e9082684bc7b110d4b79b9f88298fef"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_002/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_002/evaluation/evaluation_strategy.md",
+          "bytes": 1592,
+          "sha256": "2404d80a262fc9ef4c47fef98ef08e83dcd7e96414ac9be584b29f3d4d3ad6b8"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_002/evaluation/review_rubric.json",
+          "bytes": 4075,
+          "sha256": "e8908e8f74f63864b794d01d6d14897a3c9378c3bda8f0463512facbb8720d33"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_002/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_002/evidence/source_snippets.md",
+          "bytes": 1897,
+          "sha256": "4460932dc256153e748f2829e7638812ae7e9502127e6e17e9cfecb035c1d76c"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_002/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_002/inputs/dataset_folder_tree.txt",
+          "bytes": 9,
+          "sha256": "59548707fb6fe356a4fc2cf93ff7c6c58e9d0181ce05c87110d714beaef58823"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_002/inputs/dataset_preview.md",
+          "bytes": 2039,
+          "sha256": "c64e87c0f079243506f224c9b9211d192452a78578a1423e1b2c5c2693ba7e98"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_002/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_002/ledger/claims.jsonl",
+          "bytes": 3055,
+          "sha256": "df155da70b01cf9c75b9d4a9be3d308a3b1468595b79a6b2a01b0809d5faefa0"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_002/ledger/results.jsonl",
+          "bytes": 1002,
+          "sha256": "b1a29a38aa200f6be2cb0049ddd393d56057522ecb1996bbc7c6774fcbe375ad"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_002/ro-crate-metadata.json",
+          "bytes": 34726,
+          "sha256": "d5a2b1b0650fa23a7246289fd3afce0fb99c963106478a426314a9384b3a813c"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_003",
+          "directory": true
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_003/artifact_provenance.json",
+          "bytes": 957,
+          "sha256": "874b9504755dad6d6c33836f0d29991cfcb388636019e6877d00e9f44a770184"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_003/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_003/evaluation/evaluation_strategy.md",
+          "bytes": 1977,
+          "sha256": "83841d6652eb548783f3ebd37d6d2ed2e7e4b5e1a763edfe5ba7442a89c8a40b"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_003/evaluation/review_rubric.json",
+          "bytes": 5166,
+          "sha256": "1c9585054ada9822f3921a96cafe52241defd3e70e84e11550852bc4cedd0270"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_003/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_003/evidence/source_snippets.md",
+          "bytes": 3275,
+          "sha256": "1e53cfb900d45fdd30a8c27995662415d3cb3ef67036a359703fb172db0c5afc"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_003/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_003/inputs/dataset_folder_tree.txt",
+          "bytes": 9,
+          "sha256": "59548707fb6fe356a4fc2cf93ff7c6c58e9d0181ce05c87110d714beaef58823"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_003/inputs/dataset_preview.md",
+          "bytes": 2039,
+          "sha256": "c64e87c0f079243506f224c9b9211d192452a78578a1423e1b2c5c2693ba7e98"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_003/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_003/ledger/claims.jsonl",
+          "bytes": 5610,
+          "sha256": "56bf88219d468614766f8b66c63fb99fcd8eb24c727fd4c601f42e4ee59ebaba"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_003/ledger/results.jsonl",
+          "bytes": 1167,
+          "sha256": "212a48532bbc99367d9370c5fd3ec2335684a4717e7e388b3965f68047969f38"
+        },
+        {
+          "path": "capsules/limmavoom/10_1093_nar_gkv007__task_003/ro-crate-metadata.json",
+          "bytes": 36662,
+          "sha256": "f428a146b7cd89204bdbde86057ba961e6b43afa6dc1edc2d42ca7b6cc289154"
+        },
+        {
+          "path": "capsules/salmon",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_001",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_001/artifact_provenance.json",
+          "bytes": 957,
+          "sha256": "ccb920eb6a9ec8cddf8f63a376bff2d60c77301b7c1b117931851d9af179b750"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_001/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_001/evaluation/evaluation_strategy.md",
+          "bytes": 3392,
+          "sha256": "1040d27bc2c1643004229dd46af1223c1ee98d5125665e7dbf5f913f403d154c"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_001/evaluation/review_rubric.json",
+          "bytes": 6260,
+          "sha256": "dd7e7574a4d13783d3b0d3077492121ac69902d9d4d47349cd49731f463a5ff9"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_001/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_001/evidence/source_snippets.md",
+          "bytes": 4908,
+          "sha256": "0e2dcdc2e56916a1a1bdbab4c3909d58c9833e4a3b4fc56381cdd2ee054f3a48"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_001/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_001/inputs/dataset_folder_tree.txt",
+          "bytes": 9,
+          "sha256": "59548707fb6fe356a4fc2cf93ff7c6c58e9d0181ce05c87110d714beaef58823"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_001/inputs/dataset_preview.md",
+          "bytes": 2047,
+          "sha256": "4129993b12ea2abba488c916f28ac73acc265d8e56b38fa3bc5adddc1b6febe5"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_001/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_001/ledger/claims.jsonl",
+          "bytes": 14944,
+          "sha256": "04dedc3855281386bf668731847ddc924a24031baa707ce33de9bcae3c0f1f2f"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_001/ledger/results.jsonl",
+          "bytes": 4835,
+          "sha256": "473c690e9e571f1a93c36713e8fdbc48b436a5b79e8b5492a6bb7e3aea85d3c1"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_001/ro-crate-metadata.json",
+          "bytes": 87250,
+          "sha256": "947c3f0c146117722af5b5b22ed06ac10ba71a2794a03353ba27768450df2b7f"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_002",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_002/artifact_provenance.json",
+          "bytes": 957,
+          "sha256": "79cc3a729433dc13768edf05a609040a054d70b592e7c60dbdfba07e416412e4"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_002/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_002/evaluation/evaluation_strategy.md",
+          "bytes": 3131,
+          "sha256": "ac9203d5f191a06c3abffd0bd879644fe531814b1a783d1c1753487c3e92d1e2"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_002/evaluation/review_rubric.json",
+          "bytes": 7732,
+          "sha256": "a1a553b27f6a59d815ac23f1a7459c687cd63ba1c3b2055590c3828dd84bea3b"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_002/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_002/evidence/source_snippets.md",
+          "bytes": 5691,
+          "sha256": "d8cee890de375ba5f7905435727c876927a79991b24432f095088d21f6b76944"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_002/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_002/inputs/dataset_folder_tree.txt",
+          "bytes": 9,
+          "sha256": "59548707fb6fe356a4fc2cf93ff7c6c58e9d0181ce05c87110d714beaef58823"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_002/inputs/dataset_preview.md",
+          "bytes": 2047,
+          "sha256": "4129993b12ea2abba488c916f28ac73acc265d8e56b38fa3bc5adddc1b6febe5"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_002/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_002/ledger/claims.jsonl",
+          "bytes": 8174,
+          "sha256": "7a92a2b59e0325146334c7f18929affb357eeb529ab720a0909258738c9de7ae"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_002/ledger/results.jsonl",
+          "bytes": 2900,
+          "sha256": "3de671543db9173671faea531e05bb0dc3650fd7854ff76dabba4b59cda45ebe"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_002/ro-crate-metadata.json",
+          "bytes": 88631,
+          "sha256": "ea25110555781391f4882b3deec75e72c2079675a26611b7b3bf4ceb7c2d5f25"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_003",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_003/artifact_provenance.json",
+          "bytes": 957,
+          "sha256": "2ba101b24f89fcd1dcf299d38b01ef8eb79f3a5aef79168d2f16459581853bbd"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_003/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_003/evaluation/evaluation_strategy.md",
+          "bytes": 3278,
+          "sha256": "2bb68fc30c943d1f9236e9e7be7f79d925f4247b70513c61dc46b4f0e91ad805"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_003/evaluation/review_rubric.json",
+          "bytes": 6586,
+          "sha256": "6d55b1087af9206033a63fc11d53192907582a56b97d233c34bc4919709e13f0"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_003/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_003/evidence/source_snippets.md",
+          "bytes": 5523,
+          "sha256": "86d8383a2cf8c2e37677083f6efdb706fec16eed520c007cca03b5754b9755c6"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_003/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_003/inputs/dataset_folder_tree.txt",
+          "bytes": 9,
+          "sha256": "59548707fb6fe356a4fc2cf93ff7c6c58e9d0181ce05c87110d714beaef58823"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_003/inputs/dataset_preview.md",
+          "bytes": 2047,
+          "sha256": "4129993b12ea2abba488c916f28ac73acc265d8e56b38fa3bc5adddc1b6febe5"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_003/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_003/ledger/claims.jsonl",
+          "bytes": 808,
+          "sha256": "fc0a72ce3078a4d1981daf864695e384d648f15f078d093c4f8637039eea4ace"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_003/ledger/results.jsonl",
+          "bytes": 342,
+          "sha256": "49022c6e7486b8706ee786c5c186016941b5abb9bf7f03934963b1ed7510f67e"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_003/ro-crate-metadata.json",
+          "bytes": 86017,
+          "sha256": "5e75db87291816003d44d0caa997272b52737a4ae47eaefcaf6adf800cff7e89"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_004",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_004/artifact_provenance.json",
+          "bytes": 957,
+          "sha256": "5bbd692db94f453a0bb488e5eeab19e1efafd066a385c5ef3fa0ef7fec603fab"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_004/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_004/evaluation/evaluation_strategy.md",
+          "bytes": 1704,
+          "sha256": "0bd30bb2f4fc3d47d849a31b5b994bed749f37c4a3a3dd71d874be0ae65b2731"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_004/evaluation/review_rubric.json",
+          "bytes": 4273,
+          "sha256": "64dfd52297a560d074d0402ab8643d6e52d69dc8bba5c5a3abef42a18406e318"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_004/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_004/evidence/source_snippets.md",
+          "bytes": 4270,
+          "sha256": "d15c90428854de0511b5f37ef32feba3f93fee4c8792b49fc53a9e5a2191cbe7"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_004/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_004/inputs/dataset_folder_tree.txt",
+          "bytes": 9,
+          "sha256": "59548707fb6fe356a4fc2cf93ff7c6c58e9d0181ce05c87110d714beaef58823"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_004/inputs/dataset_preview.md",
+          "bytes": 2047,
+          "sha256": "4129993b12ea2abba488c916f28ac73acc265d8e56b38fa3bc5adddc1b6febe5"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_004/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_004/ledger/claims.jsonl",
+          "bytes": 14956,
+          "sha256": "35267cf6734ca8938ed4f9aa3606a03d362f1de206a706a7bb83c0e1394d0369"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_004/ledger/results.jsonl",
+          "bytes": 4690,
+          "sha256": "666c4f649ac4921a149f73e8fd3a317c8ea57dc1c3c11d2960587129afc663a0"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_004/ro-crate-metadata.json",
+          "bytes": 86707,
+          "sha256": "10965945e52988416dd1d8bff5c69d7a78381fad5c3076263476ee082894b2d2"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_005",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_005/artifact_provenance.json",
+          "bytes": 957,
+          "sha256": "635522ed907cef6e8386e53bf3c9630e6a7ca1473754c24608a28d8ebfdfb0e6"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_005/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_005/evaluation/evaluation_strategy.md",
+          "bytes": 1744,
+          "sha256": "35730b07f19e672dffd8b23a9df7f112c4a396c30cc1f2460e20e2c0c0f80710"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_005/evaluation/review_rubric.json",
+          "bytes": 3468,
+          "sha256": "d87da6ac3a008254507c2253b85ab75e04ce1196e64ec01bbbbc5a6de76abbaa"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_005/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_005/evidence/source_snippets.md",
+          "bytes": 3884,
+          "sha256": "195d0d213eb4337bf9eebf9e6588ecfe5f27483b87e3d32e0f7c97c3ca6158ca"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_005/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_005/inputs/dataset_folder_tree.txt",
+          "bytes": 9,
+          "sha256": "59548707fb6fe356a4fc2cf93ff7c6c58e9d0181ce05c87110d714beaef58823"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_005/inputs/dataset_preview.md",
+          "bytes": 2047,
+          "sha256": "4129993b12ea2abba488c916f28ac73acc265d8e56b38fa3bc5adddc1b6febe5"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_005/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_005/ledger/claims.jsonl",
+          "bytes": 876,
+          "sha256": "ccb190db469d8ced2acc6a92328870379c6d14ace11261857f46ede6fd18a57b"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_005/ledger/results.jsonl",
+          "bytes": 328,
+          "sha256": "48ccc50b1eca5df1bcb6dc8de02ce4cb549b5aac3510c3f17a1783c5cd5d6b56"
+        },
+        {
+          "path": "capsules/salmon/10_1038_nmeth_4197__task_005/ro-crate-metadata.json",
+          "bytes": 85246,
+          "sha256": "ade9d367c923a3b2597e844f834c418ea3a5e11082e38c840146c53bf4e3e8f0"
+        },
+        {
+          "path": "capsules/scanpy",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_001",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_001/artifact_provenance.json",
+          "bytes": 964,
+          "sha256": "ea8eae523cb613b93a4791deb9c1007508de5241223bc4a07c6893f4d72eb93d"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_001/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_001/evaluation/evaluation_strategy.md",
+          "bytes": 1172,
+          "sha256": "875ae08015fdc0c146d1c1524b9ce1ee717482a4764d17896c48e1bd2db33eac"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_001/evaluation/review_rubric.json",
+          "bytes": 3522,
+          "sha256": "863f2cb9cb2b92f3d595f93853c6d97d3e6463713e44b00696aadab4e66d3714"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_001/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_001/evidence/source_snippets.md",
+          "bytes": 2228,
+          "sha256": "0f4e16eb7df13afaff2683e21a9baaae085691e2156921063126c601897b28dc"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_001/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_001/inputs/dataset_folder_tree.txt",
+          "bytes": 621,
+          "sha256": "8ab31e0cab44a215483928836ab6060365483369aa74128af3ca720f1d5b8ac1"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_001/inputs/dataset_preview.md",
+          "bytes": 3304,
+          "sha256": "7130753fa97a6a633f84aac46fbfd65a30a30460fa0c6cbec6f9e88657584237"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_001/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_001/ledger/claims.jsonl",
+          "bytes": 7658,
+          "sha256": "b357af8c2cd8939fceb51827451f596da1a32236f2e613caf01128d71e709417"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_001/ledger/results.jsonl",
+          "bytes": 2780,
+          "sha256": "5cc0b51a061de2849e79b19e3c6348c44faf603606290e24dff5eabf635dc925"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_001/ro-crate-metadata.json",
+          "bytes": 97391,
+          "sha256": "e3e08806bc32448fb5aa667006516144f4a93d465b0458f0dd1c2dc54b227353"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_002",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_002/artifact_provenance.json",
+          "bytes": 964,
+          "sha256": "0ba6bc9f2ece29e2ad39790e055fcddafc80c685d727cf91bfa1aac3578ad846"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_002/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_002/evaluation/evaluation_strategy.md",
+          "bytes": 1025,
+          "sha256": "d4f6e83c6408cbb1e1b2e34fb331c013ebc655a2cf8022531fdd73af067b95c0"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_002/evaluation/review_rubric.json",
+          "bytes": 2710,
+          "sha256": "e408e1fd358bda6fb7e37f42e0822055fc51308f4a790e0bb1a7596bfdec1f59"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_002/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_002/evidence/source_snippets.md",
+          "bytes": 2627,
+          "sha256": "2d5b9ee29733bfc29163e25f2c58b8fed2b15b2d03d32038df6349d2def1eaaa"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_002/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_002/inputs/dataset_folder_tree.txt",
+          "bytes": 621,
+          "sha256": "8ab31e0cab44a215483928836ab6060365483369aa74128af3ca720f1d5b8ac1"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_002/inputs/dataset_preview.md",
+          "bytes": 3304,
+          "sha256": "7130753fa97a6a633f84aac46fbfd65a30a30460fa0c6cbec6f9e88657584237"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_002/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_002/ledger/claims.jsonl",
+          "bytes": 1927,
+          "sha256": "c030b0d0f78416119fd250844f840eac803e16980eb9f494367dee3f8027381d"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_002/ledger/results.jsonl",
+          "bytes": 764,
+          "sha256": "e2fd2e51f02d2c589df355efa8d6619c5449231d2dd609fe8abb1fa26469127a"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_002/ro-crate-metadata.json",
+          "bytes": 97031,
+          "sha256": "9d271157a46f8f727dabc0e6ba99b71b85d586fc4f48390ecc77c3e6f52ac7f8"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_003",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_003/artifact_provenance.json",
+          "bytes": 964,
+          "sha256": "45ea6d523112caccf83072b23d8dc440bc11817b7a38c593b5a99ba1fea3bab6"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_003/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_003/evaluation/evaluation_strategy.md",
+          "bytes": 1270,
+          "sha256": "34f13292d1c3e6ae09564b97836285a033ad9cae45b684f3acb47038b8a6874e"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_003/evaluation/review_rubric.json",
+          "bytes": 3198,
+          "sha256": "96b402a40de1634aed6333b36385b11734cc594b8e91213afd25a1e84d78cfcb"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_003/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_003/evidence/source_snippets.md",
+          "bytes": 2164,
+          "sha256": "d9de068886688467853ed3e397a2d4a4ab40e4715b60e60ddc0b397ba7e2b31e"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_003/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_003/inputs/dataset_folder_tree.txt",
+          "bytes": 621,
+          "sha256": "8ab31e0cab44a215483928836ab6060365483369aa74128af3ca720f1d5b8ac1"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_003/inputs/dataset_preview.md",
+          "bytes": 3304,
+          "sha256": "7130753fa97a6a633f84aac46fbfd65a30a30460fa0c6cbec6f9e88657584237"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_003/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_003/ledger/claims.jsonl",
+          "bytes": 7006,
+          "sha256": "f2fadd6921e41950ddfe6b2a11af6a5c85f72cd50cb9ba52219d25dc0e047566"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_003/ledger/results.jsonl",
+          "bytes": 1833,
+          "sha256": "7dde06db1f9f28f95ea17f5a9d5c8bd9e34ce6a0c99b37c56188e2a84b40c6a8"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_003/ro-crate-metadata.json",
+          "bytes": 96753,
+          "sha256": "c475cc21f565ef589c71190e7d2cdf67475ddbcda163c87dddf22caf96c65969"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_004",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_004/artifact_provenance.json",
+          "bytes": 964,
+          "sha256": "9047d6e51eded2730414a159197e70a480cbe28221cc051b927fec7faed88209"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_004/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_004/evaluation/evaluation_strategy.md",
+          "bytes": 1021,
+          "sha256": "6e3372c79fd35d2e41dfcae9c05f06bdc32efe3d7bd9d9b73a44ee77ccdfb334"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_004/evaluation/review_rubric.json",
+          "bytes": 2761,
+          "sha256": "376b338350d3fbc93fcf64b82c52cd4ef88af4c8680572bc1bdb35d83c09e6ca"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_004/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_004/evidence/source_snippets.md",
+          "bytes": 1918,
+          "sha256": "83cbe63a2e040035353dba187cf95b85a7f854b4ff80cf29431716d3735bcd7a"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_004/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_004/inputs/dataset_folder_tree.txt",
+          "bytes": 621,
+          "sha256": "8ab31e0cab44a215483928836ab6060365483369aa74128af3ca720f1d5b8ac1"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_004/inputs/dataset_preview.md",
+          "bytes": 3304,
+          "sha256": "7130753fa97a6a633f84aac46fbfd65a30a30460fa0c6cbec6f9e88657584237"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_004/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_004/ledger/claims.jsonl",
+          "bytes": 2635,
+          "sha256": "89b02a6d45aa10cc04617d758858df626e81a01f0f84b39338cf0b67569b8102"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_004/ledger/results.jsonl",
+          "bytes": 1050,
+          "sha256": "8832f8973641bfa443deb9673ea4cae6c0716ea7f70fb15bfb39235d03f43b01"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_004/ro-crate-metadata.json",
+          "bytes": 96063,
+          "sha256": "1496e9205826d190178977727ae67ce0f440f927bf1f9edcadad8e651157a665"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_005",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_005/artifact_provenance.json",
+          "bytes": 964,
+          "sha256": "cf06a2e6d7681f18ab2d419ec18b78f62cd5adb01457248f0e851f278c042c8b"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_005/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_005/evaluation/evaluation_strategy.md",
+          "bytes": 763,
+          "sha256": "9a186260d55810e9f397814985005f0ec70902451156921ade7a87f4495391f0"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_005/evaluation/review_rubric.json",
+          "bytes": 2167,
+          "sha256": "0ddbe67f866e4e860a1d7eca34240cf1ff776afa8df4ccdd60b8a53471fcd860"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_005/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_005/evidence/source_snippets.md",
+          "bytes": 2319,
+          "sha256": "b48007dddc68370d1f35ddefcfca53a25cd142df396751f36a2b2a702c5e929a"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_005/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_005/inputs/dataset_folder_tree.txt",
+          "bytes": 621,
+          "sha256": "8ab31e0cab44a215483928836ab6060365483369aa74128af3ca720f1d5b8ac1"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_005/inputs/dataset_preview.md",
+          "bytes": 3304,
+          "sha256": "7130753fa97a6a633f84aac46fbfd65a30a30460fa0c6cbec6f9e88657584237"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_005/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_005/ledger/claims.jsonl",
+          "bytes": 2244,
+          "sha256": "566662a214e32381450938337415cf01d7435ee10a8d797d214b018b6684d6f2"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_005/ledger/results.jsonl",
+          "bytes": 578,
+          "sha256": "495d94fb86a5ef523af5240c0443766317e69f1fcac98c056cb1407138a9ff16"
+        },
+        {
+          "path": "capsules/scanpy/10_1186_s13059_017_1382_0__task_005/ro-crate-metadata.json",
+          "bytes": 96626,
+          "sha256": "be45f4bf5f5b7c9081262c26171650d0826785493509cc4a0169daf0cd5e8882"
+        },
+        {
+          "path": "capsules/sctransform",
+          "directory": true
+        },
+        {
+          "path": "capsules/sctransform/task_001",
+          "directory": true
+        },
+        {
+          "path": "capsules/sctransform/task_001/artifact_provenance.json",
+          "bytes": 882,
+          "sha256": "279a0c5a8d19cf2975eeb429c8ec49102b0abba083cf760bb19c14e13c3a94ff"
+        },
+        {
+          "path": "capsules/sctransform/task_001/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/sctransform/task_001/evaluation/evaluation_strategy.md",
+          "bytes": 573,
+          "sha256": "94930f60dd00a4bc8b31a4c95256756007a945580a37a3cc7fd888f779990f5c"
+        },
+        {
+          "path": "capsules/sctransform/task_001/evaluation/review_rubric.json",
+          "bytes": 1557,
+          "sha256": "d9a917e764bd0fbec22fc6b0dbaf54fe68fe36c9b862e95a7fc16be8b71b0015"
+        },
+        {
+          "path": "capsules/sctransform/task_001/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/sctransform/task_001/evidence/source_snippets.md",
+          "bytes": 57,
+          "sha256": "de38fefa4cf24af876a08d5cb108b3f9866c5458c8a469b7ffbdc0a13e7db596"
+        },
+        {
+          "path": "capsules/sctransform/task_001/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/sctransform/task_001/inputs/dataset_folder_tree.txt",
+          "bytes": 9,
+          "sha256": "59548707fb6fe356a4fc2cf93ff7c6c58e9d0181ce05c87110d714beaef58823"
+        },
+        {
+          "path": "capsules/sctransform/task_001/inputs/dataset_preview.md",
+          "bytes": 288,
+          "sha256": "8240dfa9632514d2d36ae5e186199b1fafd0a2b078a691dae4312a27ac11366b"
+        },
+        {
+          "path": "capsules/sctransform/task_001/ro-crate-metadata.json",
+          "bytes": 8070,
+          "sha256": "2dbc690aae8948930a10b2995be2865e0e7fc0bc50a88b74e4d8b9e21c8578ed"
+        },
+        {
+          "path": "capsules/squidpy",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_001",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_001/artifact_provenance.json",
+          "bytes": 965,
+          "sha256": "b4acdcd79039883dd9a2e915a62aa61a4d4c2b9b19e67a6665e3429902b15153"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_001/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_001/evaluation/evaluation_strategy.md",
+          "bytes": 1020,
+          "sha256": "311063288b5e8811669f6fb618fa0156f5a7f691fd3cdc50216de6e6d658bb1c"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_001/evaluation/review_rubric.json",
+          "bytes": 3093,
+          "sha256": "b97855bad72f78149c876cbd8ecdca3ce6e9ef2740f8634b1bfe4b72a6391cb2"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_001/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_001/evidence/source_snippets.md",
+          "bytes": 2713,
+          "sha256": "f08c1e64e5650516e64f2fce9a5db0b0532b06389e2670051572c9651c43d0ef"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_001/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_001/inputs/dataset_folder_tree.txt",
+          "bytes": 864,
+          "sha256": "6bcab341ba8cca0c75c6a96de17bc21942962e97cd858ec6506efaeeead6ed96"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_001/inputs/dataset_preview.md",
+          "bytes": 3541,
+          "sha256": "0b57583345d58c3d9dbe44231a0ac5a6ef87e75b064798935a34ab8b6a0c36f1"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_001/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_001/ledger/claims.jsonl",
+          "bytes": 6415,
+          "sha256": "00931d8079157a6046f9150145b3ce64a2f804cf9dff155075d0515e10e72345"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_001/ledger/results.jsonl",
+          "bytes": 1891,
+          "sha256": "3e25407a2a744a48b17bd349b11cc6b861bc86a6cac851ba422545f5198cb1a1"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_001/ro-crate-metadata.json",
+          "bytes": 85890,
+          "sha256": "517397d75b0f07d1aab8e87e773827191222fe3340996976408d7539a4efa6d8"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_002",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_002/artifact_provenance.json",
+          "bytes": 965,
+          "sha256": "40f98609d73625b708fc9faaffb5f1114b41e5d0adc26e134381476b6bfbbc52"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_002/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_002/evaluation/evaluation_strategy.md",
+          "bytes": 715,
+          "sha256": "a6e8e40f358eb29db21b2d460ed6fff8a08724cf55a7195500923e12982c6c5c"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_002/evaluation/review_rubric.json",
+          "bytes": 2399,
+          "sha256": "3f145831fb5a1dbeea0df0859f41cea506a81cd6a5b5ccd944db5d98f8804877"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_002/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_002/evidence/source_snippets.md",
+          "bytes": 2929,
+          "sha256": "b0c12097aafe3a3c08fd32793d717ee5a96784fc8eac49ef081eac08fcdd2b3f"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_002/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_002/inputs/dataset_folder_tree.txt",
+          "bytes": 864,
+          "sha256": "6bcab341ba8cca0c75c6a96de17bc21942962e97cd858ec6506efaeeead6ed96"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_002/inputs/dataset_preview.md",
+          "bytes": 3541,
+          "sha256": "0b57583345d58c3d9dbe44231a0ac5a6ef87e75b064798935a34ab8b6a0c36f1"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_002/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_002/ledger/claims.jsonl",
+          "bytes": 1132,
+          "sha256": "7195596a0055646b7aedb8d21f648ab54d3025415d169d9b79dcf91b7127674e"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_002/ledger/results.jsonl",
+          "bytes": 316,
+          "sha256": "ee8c8f556e0ab40ade74889d8b96c3b2c4b7fdfd18a5c7f13da86e249f011cba"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_002/ro-crate-metadata.json",
+          "bytes": 86058,
+          "sha256": "db7fb8cd777ee59ec4f60e01d9b55a5eb30ec4698d3d7690fe0d5ec5d29a6e02"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_003",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_003/artifact_provenance.json",
+          "bytes": 965,
+          "sha256": "f89095bc82a685a30e1f76e8657523eb64ac6d88e8b6f2921822ce81bd9dbc84"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_003/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_003/evaluation/evaluation_strategy.md",
+          "bytes": 1046,
+          "sha256": "fc970ea96e10fdac25ac2e841dabdfe2e00a70caa92355ae5dcc43d490507626"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_003/evaluation/review_rubric.json",
+          "bytes": 2765,
+          "sha256": "365bc56b2842820166485a03a45a4bcea8b7fc0e8eedc0e3415fea45ae3607e9"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_003/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_003/evidence/source_snippets.md",
+          "bytes": 1753,
+          "sha256": "4ed604dea0dae00789e1702b23ec957ffbb4208e3f475b86f4bd953f362b66b5"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_003/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_003/inputs/dataset_folder_tree.txt",
+          "bytes": 864,
+          "sha256": "6bcab341ba8cca0c75c6a96de17bc21942962e97cd858ec6506efaeeead6ed96"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_003/inputs/dataset_preview.md",
+          "bytes": 3541,
+          "sha256": "0b57583345d58c3d9dbe44231a0ac5a6ef87e75b064798935a34ab8b6a0c36f1"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_003/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_003/ledger/claims.jsonl",
+          "bytes": 6559,
+          "sha256": "89a01e5e6c7efe72fa2bee45db108dba4fda93affd7e6abd49ec54b3fa326d1d"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_003/ledger/results.jsonl",
+          "bytes": 2522,
+          "sha256": "2f8a0d0e0890b214ee86ce357a2f35fc270ad30f10d8bb98cbe664886f7fb953"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_003/ro-crate-metadata.json",
+          "bytes": 85115,
+          "sha256": "98d8f345b2dd218cf6c781a32bc289edb401df9450333ebbe04c8a3fd2feb054"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_004",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_004/artifact_provenance.json",
+          "bytes": 965,
+          "sha256": "984b6ec9e8803c5128506269a6a93126784fda255f3b400003e5ee1cac1659f4"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_004/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_004/evaluation/evaluation_strategy.md",
+          "bytes": 915,
+          "sha256": "659f7f60683302e063028398bdca29fe7c338aa6898ab109f4ed672e1ab34edc"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_004/evaluation/review_rubric.json",
+          "bytes": 2534,
+          "sha256": "bf76b02e18a8bbf23034e1a1be8a130d3b67ee84485ab9a6f68dda44416bc7f6"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_004/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_004/evidence/source_snippets.md",
+          "bytes": 2249,
+          "sha256": "b9a6a68bf2073ea584487c5edc29140fcbe50608ee1f088cc7a2f6f1fa990c02"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_004/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_004/inputs/dataset_folder_tree.txt",
+          "bytes": 864,
+          "sha256": "6bcab341ba8cca0c75c6a96de17bc21942962e97cd858ec6506efaeeead6ed96"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_004/inputs/dataset_preview.md",
+          "bytes": 3541,
+          "sha256": "0b57583345d58c3d9dbe44231a0ac5a6ef87e75b064798935a34ab8b6a0c36f1"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_004/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_004/ledger/claims.jsonl",
+          "bytes": 3217,
+          "sha256": "76200f976bd0c53ece6fba3b191345f00b1427e80250db55f9f8426bc7aab5c7"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_004/ledger/results.jsonl",
+          "bytes": 504,
+          "sha256": "76d8ad53188ac1209521fa2e2a969cc3472d46604b2a60754b707c94c80324b0"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_004/ro-crate-metadata.json",
+          "bytes": 85371,
+          "sha256": "97c9822760b76150073791cf3a910b7f51cbb33c80a9d874000cb99f8d98bcbb"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_005",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_005/artifact_provenance.json",
+          "bytes": 965,
+          "sha256": "c561a0f6cb9247690d171936a32986dbd6375b072315b6f27f3a6f78f6d380d8"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_005/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_005/evaluation/evaluation_strategy.md",
+          "bytes": 1517,
+          "sha256": "574c52e929bdaf4bfeb518204e8c3c4169ba82fafe0f27bb57ac56d10fa30252"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_005/evaluation/review_rubric.json",
+          "bytes": 3762,
+          "sha256": "f0512ae72d87adf46de3a594cb57e6ec2f514d97ee6762325a94159582145f34"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_005/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_005/evidence/source_snippets.md",
+          "bytes": 2261,
+          "sha256": "e54022707372da3a5ae15d172bb42946102e33b1c17a8b9d474bdc93782e3426"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_005/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_005/inputs/dataset_folder_tree.txt",
+          "bytes": 864,
+          "sha256": "6bcab341ba8cca0c75c6a96de17bc21942962e97cd858ec6506efaeeead6ed96"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_005/inputs/dataset_preview.md",
+          "bytes": 3541,
+          "sha256": "0b57583345d58c3d9dbe44231a0ac5a6ef87e75b064798935a34ab8b6a0c36f1"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_005/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_005/ledger/claims.jsonl",
+          "bytes": 1743,
+          "sha256": "bae59998a88013aa8254783f0a8acb5f63dd4fa343bcd0741ace466320f70f04"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_005/ledger/results.jsonl",
+          "bytes": 660,
+          "sha256": "3491e65e0f83b41e83d2f76e3bb4dca2c035e06f53cb4d9c2216bb941fc29f3c"
+        },
+        {
+          "path": "capsules/squidpy/10_1038_s41592_021_01358_2__task_005/ro-crate-metadata.json",
+          "bytes": 85658,
+          "sha256": "2ed31c712b5ade16c11c1ccf7033b6a620025d60dd77184535e41d373297f40a"
+        },
+        {
+          "path": "capsules/suppa2",
+          "directory": true
+        },
+        {
+          "path": "capsules/suppa2/task_001",
+          "directory": true
+        },
+        {
+          "path": "capsules/suppa2/task_001/artifact_provenance.json",
+          "bytes": 941,
+          "sha256": "a35258dfe547ebea950936b71b32bdcfa6727b381824946fbf7ddcc22f05f240"
+        },
+        {
+          "path": "capsules/suppa2/task_001/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/suppa2/task_001/evaluation/evaluation_strategy.md",
+          "bytes": 1637,
+          "sha256": "3f21484ba03398cb28363c94a4fea523ffd5f51f2073951481558eba05288f29"
+        },
+        {
+          "path": "capsules/suppa2/task_001/evaluation/review_rubric.json",
+          "bytes": 4668,
+          "sha256": "4afc66f271e597ae4b8d8749c860bcc709b1224cc5e7119f2268595185770f8a"
+        },
+        {
+          "path": "capsules/suppa2/task_001/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/suppa2/task_001/evidence/source_snippets.md",
+          "bytes": 1680,
+          "sha256": "1423c7a3027f6d105509913d764f33046166cd9f8e2b92ab3607a558e07f3a01"
+        },
+        {
+          "path": "capsules/suppa2/task_001/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/suppa2/task_001/inputs/dataset_folder_tree.txt",
+          "bytes": 9,
+          "sha256": "59548707fb6fe356a4fc2cf93ff7c6c58e9d0181ce05c87110d714beaef58823"
+        },
+        {
+          "path": "capsules/suppa2/task_001/inputs/dataset_preview.md",
+          "bytes": 1760,
+          "sha256": "51404e1fa5db3ace9a45c2f578e43fb15817ff13cd8771753d22b4ab0eb01f73"
+        },
+        {
+          "path": "capsules/suppa2/task_001/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/suppa2/task_001/ledger/claims.jsonl",
+          "bytes": 1495,
+          "sha256": "65295e596482d0000189a687cb83beff1f87775897ab75720203cee7f5b3203c"
+        },
+        {
+          "path": "capsules/suppa2/task_001/ledger/results.jsonl",
+          "bytes": 608,
+          "sha256": "4b0edbbc4a89981cef9741fcd6adbb8a047fc152908df6f4f8f40fa01186f9cf"
+        },
+        {
+          "path": "capsules/suppa2/task_001/ro-crate-metadata.json",
+          "bytes": 23713,
+          "sha256": "132f2ce5c241235dcf9c5e564850175e54b0d65e53855e9ffe442e091f058d21"
+        },
+        {
+          "path": "capsules/suppa2/task_002",
+          "directory": true
+        },
+        {
+          "path": "capsules/suppa2/task_002/artifact_provenance.json",
+          "bytes": 941,
+          "sha256": "b68e65ac6e95728d2a52b7d3b2e17e652c4bf9c57095cddf9196a71b1fee27e4"
+        },
+        {
+          "path": "capsules/suppa2/task_002/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/suppa2/task_002/evaluation/evaluation_strategy.md",
+          "bytes": 1291,
+          "sha256": "8116862ef82ca02d810a5ba588b02489c479f31b20c59b7ddea38b3160a59d76"
+        },
+        {
+          "path": "capsules/suppa2/task_002/evaluation/review_rubric.json",
+          "bytes": 3576,
+          "sha256": "d874aede555cba001bb260f321479589e541f78c34f7728d79a795f6d0a21b58"
+        },
+        {
+          "path": "capsules/suppa2/task_002/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/suppa2/task_002/evidence/source_snippets.md",
+          "bytes": 1790,
+          "sha256": "c8efc45b5fe6e440931a6dcdb0bba7341612e983f3dd3df3f69c1483e318c3de"
+        },
+        {
+          "path": "capsules/suppa2/task_002/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/suppa2/task_002/inputs/dataset_folder_tree.txt",
+          "bytes": 9,
+          "sha256": "59548707fb6fe356a4fc2cf93ff7c6c58e9d0181ce05c87110d714beaef58823"
+        },
+        {
+          "path": "capsules/suppa2/task_002/inputs/dataset_preview.md",
+          "bytes": 1760,
+          "sha256": "51404e1fa5db3ace9a45c2f578e43fb15817ff13cd8771753d22b4ab0eb01f73"
+        },
+        {
+          "path": "capsules/suppa2/task_002/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/suppa2/task_002/ledger/claims.jsonl",
+          "bytes": 1585,
+          "sha256": "3a8d2bcb5c33e45ac2c1f9415e48ef242802278d4bbeb720f667e27edc90165a"
+        },
+        {
+          "path": "capsules/suppa2/task_002/ledger/results.jsonl",
+          "bytes": 635,
+          "sha256": "0d144f58b6b90e442dde9cb623b2ef431333c7e2b1afc4f07f830ee2f0fce96c"
+        },
+        {
+          "path": "capsules/suppa2/task_002/ro-crate-metadata.json",
+          "bytes": 23485,
+          "sha256": "af26d346f5487d08e0cd52bd09e8cdad849c210a4814c7ec956b944d8788836f"
+        },
+        {
+          "path": "capsules/suppa2/task_003",
+          "directory": true
+        },
+        {
+          "path": "capsules/suppa2/task_003/artifact_provenance.json",
+          "bytes": 941,
+          "sha256": "00a6fb88a3ed1d8bbf1aa086cd877920932fe7265177957877a2ab4482788814"
+        },
+        {
+          "path": "capsules/suppa2/task_003/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/suppa2/task_003/evaluation/evaluation_strategy.md",
+          "bytes": 1549,
+          "sha256": "69d01d50bc04d187e8a1093a1fc63cee7e95d0f227ba8232ec7c701cf5976f06"
+        },
+        {
+          "path": "capsules/suppa2/task_003/evaluation/review_rubric.json",
+          "bytes": 4164,
+          "sha256": "727bcdefcbf254e8ec22af4b1dcf324743deb16bbb89b001c7dd4cc67e630a84"
+        },
+        {
+          "path": "capsules/suppa2/task_003/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/suppa2/task_003/evidence/source_snippets.md",
+          "bytes": 1684,
+          "sha256": "8df29be20318233e01f07012b7e908d5af1508d44f477f6f00e6cf2f5c7066bd"
+        },
+        {
+          "path": "capsules/suppa2/task_003/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/suppa2/task_003/inputs/dataset_folder_tree.txt",
+          "bytes": 9,
+          "sha256": "59548707fb6fe356a4fc2cf93ff7c6c58e9d0181ce05c87110d714beaef58823"
+        },
+        {
+          "path": "capsules/suppa2/task_003/inputs/dataset_preview.md",
+          "bytes": 1760,
+          "sha256": "51404e1fa5db3ace9a45c2f578e43fb15817ff13cd8771753d22b4ab0eb01f73"
+        },
+        {
+          "path": "capsules/suppa2/task_003/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/suppa2/task_003/ledger/claims.jsonl",
+          "bytes": 2312,
+          "sha256": "2e05499ab6265d950b70aa7e0a118b1d8d965259e6e73a3b347a25adddc6c54b"
+        },
+        {
+          "path": "capsules/suppa2/task_003/ledger/results.jsonl",
+          "bytes": 929,
+          "sha256": "39fc25dc0a2e5759ed439d1a67525dbc9547275d5c845f14832ffd33392ea85f"
+        },
+        {
+          "path": "capsules/suppa2/task_003/ro-crate-metadata.json",
+          "bytes": 23588,
+          "sha256": "bd5e20cd6dbed6ab79a0b8e89eee3b3101e80ef081efa3b6d586706dafb01fa8"
+        },
+        {
+          "path": "capsules/tximport",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_001",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_001/artifact_provenance.json",
+          "bytes": 968,
+          "sha256": "ca49374ad55bae5afd1a1aceed054b5061456a7d4e3e9f0df83cb31399a523eb"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_001/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_001/evaluation/evaluation_strategy.md",
+          "bytes": 1109,
+          "sha256": "722bf30600fd54ba1b7850039e2f4c62f3f4b4900f165fcb8413f25df1d3f53d"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_001/evaluation/review_rubric.json",
+          "bytes": 3555,
+          "sha256": "92baaa906b8a765a8040c942c05e91dd13c382d256ad0ae994b44f33bae23482"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_001/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_001/evidence/source_snippets.md",
+          "bytes": 2715,
+          "sha256": "bd324d7c5c05ed7f990279f5a652a1e194e971838f502a2a0be39c7eee212fc9"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_001/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_001/inputs/dataset_folder_tree.txt",
+          "bytes": 9,
+          "sha256": "59548707fb6fe356a4fc2cf93ff7c6c58e9d0181ce05c87110d714beaef58823"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_001/inputs/dataset_preview.md",
+          "bytes": 2039,
+          "sha256": "a25532b21fef0ff7cfb4eb8e6860604fd4fa335e8a7a2bfc9696136bd7c3bb5e"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_001/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_001/ledger/claims.jsonl",
+          "bytes": 4912,
+          "sha256": "94d63ed4da1f9c42503d0acd222a74eaad213bc6271169175a8acf97f9d5cd75"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_001/ledger/results.jsonl",
+          "bytes": 1957,
+          "sha256": "ba27f30381346751924e5e9aad9fab2595e87fc684b94ba9ff2da459d8ece6ed"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_001/ro-crate-metadata.json",
+          "bytes": 89020,
+          "sha256": "3c45aae074928a0dc290cc8e0769c4061c46f96cc2e2a0ff57d2b53b48973a3a"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_002",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_002/artifact_provenance.json",
+          "bytes": 968,
+          "sha256": "ffc0b20833b974656cbeb47927e431dbb70371d7209229a021823beac9595143"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_002/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_002/evaluation/evaluation_strategy.md",
+          "bytes": 1101,
+          "sha256": "8297cd8ccf3c01bbed99d9cdacb2429962d2a97fae0158b6e3ccff9e1229c55e"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_002/evaluation/review_rubric.json",
+          "bytes": 2966,
+          "sha256": "ad94c4aae040f97c14c68b1539a4941ecdbbb5595f62f2f9c585335239c9e29a"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_002/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_002/evidence/source_snippets.md",
+          "bytes": 2357,
+          "sha256": "b63f5190367f288f90eb56eb4026423d08f216c32d60635de78f799fbacecc21"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_002/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_002/inputs/dataset_folder_tree.txt",
+          "bytes": 9,
+          "sha256": "59548707fb6fe356a4fc2cf93ff7c6c58e9d0181ce05c87110d714beaef58823"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_002/inputs/dataset_preview.md",
+          "bytes": 2039,
+          "sha256": "a25532b21fef0ff7cfb4eb8e6860604fd4fa335e8a7a2bfc9696136bd7c3bb5e"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_002/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_002/ledger/claims.jsonl",
+          "bytes": 1774,
+          "sha256": "9bc9726df62ca6e6b9ebddb290cf731eabe394ec51c52031ce323c93ebd836a3"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_002/ledger/results.jsonl",
+          "bytes": 701,
+          "sha256": "8e78aeea2eadc61d87145cf0ba25f964c5991a722d900a78ff5cd2ba6b58aaf6"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_002/ro-crate-metadata.json",
+          "bytes": 89222,
+          "sha256": "06bdd6dda00a729f908066133c1dca82516d2c7753a9b18a066bf28553ccc245"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_003",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_003/artifact_provenance.json",
+          "bytes": 968,
+          "sha256": "f6388a3cf6aab8ee1ccfbdc36c25635922e8053e4d09c0c3b8363c35c3f8260d"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_003/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_003/evaluation/evaluation_strategy.md",
+          "bytes": 1326,
+          "sha256": "2eecc860c4cd4d08c63a525c5fd325c9a88942dd5cfa4de7c700658361abe2fd"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_003/evaluation/review_rubric.json",
+          "bytes": 3417,
+          "sha256": "a133558f24b533cb9227b7616e1e8c161bb8cf39d924f25039b7c2c8f7e67e69"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_003/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_003/evidence/source_snippets.md",
+          "bytes": 2663,
+          "sha256": "587b25507a0e0bee1498357b7592deb616570018a0c8e89be91ccd8d240dd449"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_003/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_003/inputs/dataset_folder_tree.txt",
+          "bytes": 9,
+          "sha256": "59548707fb6fe356a4fc2cf93ff7c6c58e9d0181ce05c87110d714beaef58823"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_003/inputs/dataset_preview.md",
+          "bytes": 2039,
+          "sha256": "a25532b21fef0ff7cfb4eb8e6860604fd4fa335e8a7a2bfc9696136bd7c3bb5e"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_003/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_003/ledger/claims.jsonl",
+          "bytes": 3859,
+          "sha256": "076078d78c4b36121fd104008f041a7112aee004821e13b34ff50109f9fcb90c"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_003/ledger/results.jsonl",
+          "bytes": 1503,
+          "sha256": "164f081f1697d93af80293dfcfda4b0bbe90a3cbd3bf09b7b618e955194288a6"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_003/ro-crate-metadata.json",
+          "bytes": 88743,
+          "sha256": "15f39ad1a657ff467b2c40103c8a07e0a89e6ca9d15a5a1ef4f47fc61b76c281"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_004",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_004/artifact_provenance.json",
+          "bytes": 968,
+          "sha256": "432fca5fb40788e4deeb1f52928dd6f3afbe3788e781db0056c33d13b9c8a554"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_004/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_004/evaluation/evaluation_strategy.md",
+          "bytes": 1378,
+          "sha256": "5fb4ad9d81fddd6bd438cdbeb01c6cc9202136387d7d36b825474e86d653def8"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_004/evaluation/review_rubric.json",
+          "bytes": 4120,
+          "sha256": "dd2f2a1ebd0247de8c268c4fd22ada728adb4adadd96cfd760a0424aa93d4a47"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_004/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_004/evidence/source_snippets.md",
+          "bytes": 2787,
+          "sha256": "cef4e29c7dc1180bd2caabf4248e7628ab8fcf68feab54d3d296592802098ec4"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_004/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_004/inputs/dataset_folder_tree.txt",
+          "bytes": 9,
+          "sha256": "59548707fb6fe356a4fc2cf93ff7c6c58e9d0181ce05c87110d714beaef58823"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_004/inputs/dataset_preview.md",
+          "bytes": 2039,
+          "sha256": "a25532b21fef0ff7cfb4eb8e6860604fd4fa335e8a7a2bfc9696136bd7c3bb5e"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_004/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_004/ledger/claims.jsonl",
+          "bytes": 6127,
+          "sha256": "0b116b5ac5e7901063405de6bd0beec03c9ba756f18cb3d178d910b9bbf8728e"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_004/ledger/results.jsonl",
+          "bytes": 2350,
+          "sha256": "ac164dbec377be42ec6183e0b477795c0b3b0f1bd609e7d3d568255cd31c1e5a"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_004/ro-crate-metadata.json",
+          "bytes": 89317,
+          "sha256": "698acc7311f0b7dc26fbe2f2939db55675d877e861d20ba8d948363fca98afb2"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_005",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_005/artifact_provenance.json",
+          "bytes": 968,
+          "sha256": "8f5577845181cde1c352083557c0acb7470c857f8db9d9e36ee7f4b6b9e4a666"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_005/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_005/evaluation/evaluation_strategy.md",
+          "bytes": 1265,
+          "sha256": "f0b1dc5698fa00c261521552181401fb5062f41a26e18712bc4c9a54fd8e4b83"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_005/evaluation/review_rubric.json",
+          "bytes": 3184,
+          "sha256": "895ec6975e5a7e9ece615a9224c8310c6cd6dfb84b13817abf548d03df13a2fe"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_005/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_005/evidence/source_snippets.md",
+          "bytes": 2264,
+          "sha256": "b77edb4199d059c739af0614bd74eaae7f36ab75b89ee97679cfcf9ca73caf48"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_005/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_005/inputs/dataset_folder_tree.txt",
+          "bytes": 9,
+          "sha256": "59548707fb6fe356a4fc2cf93ff7c6c58e9d0181ce05c87110d714beaef58823"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_005/inputs/dataset_preview.md",
+          "bytes": 2039,
+          "sha256": "a25532b21fef0ff7cfb4eb8e6860604fd4fa335e8a7a2bfc9696136bd7c3bb5e"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_005/ledger",
+          "directory": true
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_005/ledger/claims.jsonl",
+          "bytes": 5352,
+          "sha256": "73e2827c32334d9f6041a7d38332cf47540c3d6c52d961fa27e829b62b104494"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_005/ledger/results.jsonl",
+          "bytes": 1865,
+          "sha256": "e81f21b9038dfc6db941a08fcf98fd90ec043c53000c7a2c6c43382a548228f4"
+        },
+        {
+          "path": "capsules/tximport/10_12688_f1000research_7563_1__task_005/ro-crate-metadata.json",
+          "bytes": 88766,
+          "sha256": "9eb71a34b0a88d5cc2ca96f30f1bd1401118fd5d97ba66e4e6d65091a382239c"
+        },
+        {
+          "path": "capsules/wgcna",
+          "directory": true
+        },
+        {
+          "path": "capsules/wgcna/task_001",
+          "directory": true
+        },
+        {
+          "path": "capsules/wgcna/task_001/artifact_provenance.json",
+          "bytes": 882,
+          "sha256": "6255bb5b2f5413e036489b7c73423b9061c04aa76f08642f7e53f051abdee1ef"
+        },
+        {
+          "path": "capsules/wgcna/task_001/evaluation",
+          "directory": true
+        },
+        {
+          "path": "capsules/wgcna/task_001/evaluation/evaluation_strategy.md",
+          "bytes": 573,
+          "sha256": "94930f60dd00a4bc8b31a4c95256756007a945580a37a3cc7fd888f779990f5c"
+        },
+        {
+          "path": "capsules/wgcna/task_001/evaluation/review_rubric.json",
+          "bytes": 1557,
+          "sha256": "d9a917e764bd0fbec22fc6b0dbaf54fe68fe36c9b862e95a7fc16be8b71b0015"
+        },
+        {
+          "path": "capsules/wgcna/task_001/evidence",
+          "directory": true
+        },
+        {
+          "path": "capsules/wgcna/task_001/evidence/source_snippets.md",
+          "bytes": 57,
+          "sha256": "de38fefa4cf24af876a08d5cb108b3f9866c5458c8a469b7ffbdc0a13e7db596"
+        },
+        {
+          "path": "capsules/wgcna/task_001/inputs",
+          "directory": true
+        },
+        {
+          "path": "capsules/wgcna/task_001/inputs/dataset_folder_tree.txt",
+          "bytes": 9,
+          "sha256": "59548707fb6fe356a4fc2cf93ff7c6c58e9d0181ce05c87110d714beaef58823"
+        },
+        {
+          "path": "capsules/wgcna/task_001/inputs/dataset_preview.md",
+          "bytes": 310,
+          "sha256": "140a0a16f6158a9c304fd95dfe933f9fdb98017257abc4d67d69218946cbf5db"
+        },
+        {
+          "path": "capsules/wgcna/task_001/ro-crate-metadata.json",
+          "bytes": 8070,
+          "sha256": "02176ca706b899dae44407e8de2dd3de073e9a8231634ae970474b196d34d657"
+        },
+        {
+          "path": "collection.yaml",
+          "bytes": 10463,
+          "sha256": "331f858fe64f32b893fa38d75eba38f2bb2f919c4f3dd8e7a0cf05dc21f8f19f"
+        },
+        {
+          "path": "corpus.yaml",
+          "bytes": 4071,
+          "sha256": "14a7ffb42ae01c62cc2c35418303f41a414915b6725ec8e43e968a6fabae7033"
+        },
+        {
+          "path": "indicium",
+          "directory": true
+        },
+        {
+          "path": "indicium/deseq2.jsonld",
+          "bytes": 440196,
+          "sha256": "9e5090bd491de0a997ce452caded05565c3e11332440dfdf0b1bbf6e8ab777e3"
+        },
+        {
+          "path": "indicium/fgsea.jsonld",
+          "bytes": 405115,
+          "sha256": "1fe7edde08fa5e7010d61d057d33986fbb92eaffc9bf803ca7dfcb6d1fea9c3f"
+        },
+        {
+          "path": "indicium/limmavoom.jsonld",
+          "bytes": 230116,
+          "sha256": "5273f96619731f570062578f983fee3cd2588dbd65a0953c311d5698937fb435"
+        },
+        {
+          "path": "indicium/salmon.jsonld",
+          "bytes": 411241,
+          "sha256": "c3d7c7e504930710d0af1bd430358f01f651df01550eefe00606b3bf8220727e"
+        },
+        {
+          "path": "indicium/scanpy.jsonld",
+          "bytes": 444260,
+          "sha256": "f1ad1e45856fa5de3be6d14fb7d9d742e263990600208f0f38828efa5a0142b8"
+        },
+        {
+          "path": "indicium/squidpy.jsonld",
+          "bytes": 407822,
+          "sha256": "b3629bec7d250b74a63592fe7bb05ae7205f088f620098b823dff8fb0726a2fd"
+        },
+        {
+          "path": "indicium/suppa2.jsonld",
+          "bytes": 175928,
+          "sha256": "c6f910dbde9e9a4481650d4d11bc5c35b25d8ba2d3b85d56d7600d4ea0f6d3cb"
+        },
+        {
+          "path": "indicium/tximport.jsonld",
+          "bytes": 432556,
+          "sha256": "fbdd8a387af40ac7329cf9ac4d2110ff40dc7a6c02333a18bffe1c87a06d5c15"
+        },
+        {
+          "path": "links.json",
+          "bytes": 15637,
+          "sha256": "0bdb2fa86f6e646618b5a9a26ed8364079e4e9ff16ef4013cd104d43401a9c9e"
+        },
+        {
+          "path": "skills",
+          "directory": true
+        },
+        {
+          "path": "skills/adaptive-prior-distribution-selection",
+          "directory": true
+        },
+        {
+          "path": "skills/adaptive-prior-distribution-selection/SKILL.md",
+          "bytes": 7322,
+          "sha256": "d9b92f78980efaad2b13cbbc999901982b3e2a65c863da7def63622817377266"
+        },
+        {
+          "path": "skills/adjacency-matrix-sparsity-analysis",
+          "directory": true
+        },
+        {
+          "path": "skills/adjacency-matrix-sparsity-analysis/SKILL.md",
+          "bytes": 7418,
+          "sha256": "41d347b31da1be92cab5fc17dbc16bdd37094b2e5a67fd1ee17cc10af2b44d1b"
+        },
+        {
+          "path": "skills/alternative-splicing-event-comparison-across-conditions",
+          "directory": true
+        },
+        {
+          "path": "skills/alternative-splicing-event-comparison-across-conditions/SKILL.md",
+          "bytes": 6070,
+          "sha256": "12508965ecab5a1bbcc34cba6728892cc27b4702ddc76ae6b4248e52a7d75d9a"
+        },
+        {
+          "path": "skills/alternative-splicing-event-parsing",
+          "directory": true
+        },
+        {
+          "path": "skills/alternative-splicing-event-parsing/SKILL.md",
+          "bytes": 7620,
+          "sha256": "ef19f3bdfdfb2505cfb9c940087a52db716ece795b43a8511f1c7286dd4959e2"
+        },
+        {
+          "path": "skills/anndata-object-manipulation",
+          "directory": true
+        },
+        {
+          "path": "skills/anndata-object-manipulation/SKILL.md",
+          "bytes": 7607,
+          "sha256": "cde453cb60a848f5f7099f5287b254bc6caf78467c3031cc51b2b55536e8ad17"
+        },
+        {
+          "path": "skills/anndata-object-manipulation-and-inspection",
+          "directory": true
+        },
+        {
+          "path": "skills/anndata-object-manipulation-and-inspection/SKILL.md",
+          "bytes": 8696,
+          "sha256": "2674b9959a3044fe91e9cbbd3159109f5ed0a666e939a4c07852d47c7cd4838c"
+        },
+        {
+          "path": "skills/anndata-object-structure-validation",
+          "directory": true
+        },
+        {
+          "path": "skills/anndata-object-structure-validation/SKILL.md",
+          "bytes": 7492,
+          "sha256": "96994fcde96887a35286be52d6d0613f58142358067587909159bcecce438670"
+        },
+        {
+          "path": "skills/bayesian-effect-size-moderation",
+          "directory": true
+        },
+        {
+          "path": "skills/bayesian-effect-size-moderation/SKILL.md",
+          "bytes": 9498,
+          "sha256": "1ad8fa7a34d761654f0184cac47c1af6be2f47c9fa7b07ecb905474e1370a782"
+        },
+        {
+          "path": "skills/bioconductor-package-operation",
+          "directory": true
+        },
+        {
+          "path": "skills/bioconductor-package-operation/SKILL.md",
+          "bytes": 8186,
+          "sha256": "5d8320c194cf8dba68f5a41b9f50f1940ff3d9b17101b4e05300cf62ce96db7a"
+        },
+        {
+          "path": "skills/biological-sequence-read-mapping",
+          "directory": true
+        },
+        {
+          "path": "skills/biological-sequence-read-mapping/SKILL.md",
+          "bytes": 8927,
+          "sha256": "08f463d287bbbf85b16861c402559f95c610983b780840033cda2b80965ab510"
+        },
+        {
+          "path": "skills/boundary-case-read-classification-via-sequence-alignment",
+          "directory": true
+        },
+        {
+          "path": "skills/boundary-case-read-classification-via-sequence-alignment/SKILL.md",
+          "bytes": 7732,
+          "sha256": "f288ae504d5257d28ee9935224f11c5f6a331b353b01254c394ac291fe48c0d6"
+        },
+        {
+          "path": "skills/buffer-management-and-flush-protocols",
+          "directory": true
+        },
+        {
+          "path": "skills/buffer-management-and-flush-protocols/SKILL.md",
+          "bytes": 7124,
+          "sha256": "15a1567099430e5673a03ff2644e4254bbe8f5db7e70357a1e92b1ce3d7ffab6"
+        },
+        {
+          "path": "skills/c-stream-io-debugging",
+          "directory": true
+        },
+        {
+          "path": "skills/c-stream-io-debugging/SKILL.md",
+          "bytes": 6878,
+          "sha256": "ba41b00eeb6608a9234394aa552601799b6465ceedbcb269f4fdbfbc5566ff3d"
+        },
+        {
+          "path": "skills/categorical-annotation-handling-in-omics-data",
+          "directory": true
+        },
+        {
+          "path": "skills/categorical-annotation-handling-in-omics-data/SKILL.md",
+          "bytes": 7416,
+          "sha256": "3b72110dae6419950cced4ffd6370e3d214974abcfd2c71599e0e55aad654eea"
+        },
+        {
+          "path": "skills/chain-pruning-threshold-optimization",
+          "directory": true
+        },
+        {
+          "path": "skills/chain-pruning-threshold-optimization/SKILL.md",
+          "bytes": 8291,
+          "sha256": "88672b8af37115809bd221c28bddfe7d3db4219a35273e5447cafedc2d83fb63"
+        },
+        {
+          "path": "skills/ci-pipeline-reproducibility-verification",
+          "directory": true
+        },
+        {
+          "path": "skills/ci-pipeline-reproducibility-verification/SKILL.md",
+          "bytes": 6798,
+          "sha256": "f60c88888652351bd8af7803095d93193f4320085bf8ae895f95dbc320650a92"
+        },
+        {
+          "path": "skills/coefficient-and-standard-error-interpretation",
+          "directory": true
+        },
+        {
+          "path": "skills/coefficient-and-standard-error-interpretation/SKILL.md",
+          "bytes": 6617,
+          "sha256": "32e61ca7111cbe62dc96df9aaa1d03c7d5c95ade4fa39fe6924af7093804baf9"
+        },
+        {
+          "path": "skills/count-data-normalization-rna-seq",
+          "directory": true
+        },
+        {
+          "path": "skills/count-data-normalization-rna-seq/SKILL.md",
+          "bytes": 7867,
+          "sha256": "d547be8d124f2fabb9980ca0519b83f03f72c082b9851925508f09dc7527b9ec"
+        },
+        {
+          "path": "skills/count-matrix-format-validation",
+          "directory": true
+        },
+        {
+          "path": "skills/count-matrix-format-validation/SKILL.md",
+          "bytes": 7903,
+          "sha256": "e03076817cf6bba31b3aa233e8f8ee09b6b99635223653ddaf17f5602c61cc32"
+        },
+        {
+          "path": "skills/dask-array-lazy-evaluation-verification",
+          "directory": true
+        },
+        {
+          "path": "skills/dask-array-lazy-evaluation-verification/SKILL.md",
+          "bytes": 7043,
+          "sha256": "74ab7cfe169dc457177311d6882b4c75cb83a45fc743e79ef758c6796d590209"
+        },
+        {
+          "path": "skills/dask-array-materialization-and-collection",
+          "directory": true
+        },
+        {
+          "path": "skills/dask-array-materialization-and-collection/SKILL.md",
+          "bytes": 6394,
+          "sha256": "aef0794cef078b59a16175e2f0886a3320e64cef2cb671c69fd069e614af537d"
+        },
+        {
+          "path": "skills/deseq2-object-initialization-from-transcript-data",
+          "directory": true
+        },
+        {
+          "path": "skills/deseq2-object-initialization-from-transcript-data/SKILL.md",
+          "bytes": 7299,
+          "sha256": "5879eaa8591e50ac6839bdf751fd7d01e5bce5b5837980e6c63932445d36d806"
+        },
+        {
+          "path": "skills/deseqdataset-construction-from-quantification",
+          "directory": true
+        },
+        {
+          "path": "skills/deseqdataset-construction-from-quantification/SKILL.md",
+          "bytes": 7142,
+          "sha256": "67f163639db33b55024313721645b7f8f6fbdd930df1ca6f3e55a7f823bf039f"
+        },
+        {
+          "path": "skills/design-matrix-construction-experiments",
+          "directory": true
+        },
+        {
+          "path": "skills/design-matrix-construction-experiments/SKILL.md",
+          "bytes": 6366,
+          "sha256": "0760c62a90eec819ec5cba60935d5b695c15f2c6f84864cf55f394444bb1c6f2"
+        },
+        {
+          "path": "skills/differential-expression-empirical-bayes-moderation",
+          "directory": true
+        },
+        {
+          "path": "skills/differential-expression-empirical-bayes-moderation/SKILL.md",
+          "bytes": 6965,
+          "sha256": "9723087afc8435d934723b53419c49a5265d16bee7b1f868ea804144d0656c2a"
+        },
+        {
+          "path": "skills/differential-expression-result-interpretation",
+          "directory": true
+        },
+        {
+          "path": "skills/differential-expression-result-interpretation/SKILL.md",
+          "bytes": 7578,
+          "sha256": "148c9e439b030b42b9ac4680fe55d6fbf7a6e359302f73c288d26a271a1b2374"
+        },
+        {
+          "path": "skills/differential-gene-expression-analysis",
+          "directory": true
+        },
+        {
+          "path": "skills/differential-gene-expression-analysis/SKILL.md",
+          "bytes": 7771,
+          "sha256": "7ac10709f1a5559727c0cac3037a65a3c170c778699511f5a84106700f9ecd85"
+        },
+        {
+          "path": "skills/differential-splicing-statistical-testing",
+          "directory": true
+        },
+        {
+          "path": "skills/differential-splicing-statistical-testing/SKILL.md",
+          "bytes": 6454,
+          "sha256": "53024c61b851cc4fd7186c33edb4fd5e93662da8706b7b795d94d221acb83d58"
+        },
+        {
+          "path": "skills/dimensionality-reduction-via-pca",
+          "directory": true
+        },
+        {
+          "path": "skills/dimensionality-reduction-via-pca/SKILL.md",
+          "bytes": 5929,
+          "sha256": "3516baa9cf191fa11ec4f2ea9808d2fb1e5ef7b03cef76416167804a6be226aa"
+        },
+        {
+          "path": "skills/dimensionality-reduction-via-reverse-pca",
+          "directory": true
+        },
+        {
+          "path": "skills/dimensionality-reduction-via-reverse-pca/SKILL.md",
+          "bytes": 6560,
+          "sha256": "f63b22367e441fb9361871a862188568981d403979b5b6c82c6d438802c180f5"
+        },
+        {
+          "path": "skills/dispersion-estimation-negative-binomial",
+          "directory": true
+        },
+        {
+          "path": "skills/dispersion-estimation-negative-binomial/SKILL.md",
+          "bytes": 6383,
+          "sha256": "4a2058bfd4850528033f8d12875532ea07085a7bcbb6cbfe246a3493204c500b"
+        },
+        {
+          "path": "skills/edger-dgeobject-construction",
+          "directory": true
+        },
+        {
+          "path": "skills/edger-dgeobject-construction/SKILL.md",
+          "bytes": 7477,
+          "sha256": "ef4b938f02aa50e2d0d91f72408c661d3ed874b39bf58e3280dacc7353d864c0"
+        },
+        {
+          "path": "skills/empirical-bayes-variance-estimation",
+          "directory": true
+        },
+        {
+          "path": "skills/empirical-bayes-variance-estimation/SKILL.md",
+          "bytes": 7463,
+          "sha256": "acb2cf4639b84e055dcc12c6f38644c73127a030ef4171e91897fa0b01a912ae"
+        },
+        {
+          "path": "skills/euclidean-distance-computation-approximation",
+          "directory": true
+        },
+        {
+          "path": "skills/euclidean-distance-computation-approximation/SKILL.md",
+          "bytes": 8597,
+          "sha256": "fe69e55ccfa651c9f357477df2bb8047f6ce09586585bd73bbd7de2fc0dae109"
+        },
+        {
+          "path": "skills/evidence-linking",
+          "directory": true
+        },
+        {
+          "path": "skills/evidence-linking/SKILL.md",
+          "bytes": 7579,
+          "sha256": "e8c6dcc7b779754f2a37ca307cb5c7da61ca40efaf2a0aaaccd34e8ea557faec"
+        },
+        {
+          "path": "skills/expert-review-preparation",
+          "directory": true
+        },
+        {
+          "path": "skills/expert-review-preparation/SKILL.md",
+          "bytes": 7087,
+          "sha256": "12e789264ac3113e49d3fab818014a2b0024ac666c2cddd50ecd31322e85b45b"
+        },
+        {
+          "path": "skills/factor-design-specification",
+          "directory": true
+        },
+        {
+          "path": "skills/factor-design-specification/SKILL.md",
+          "bytes": 7124,
+          "sha256": "63067584787f0ea2bb4f5731569dee3840ac069cf46652c39032cbb1b661bb59"
+        },
+        {
+          "path": "skills/fold-change-interpretation-and-ranking",
+          "directory": true
+        },
+        {
+          "path": "skills/fold-change-interpretation-and-ranking/SKILL.md",
+          "bytes": 7758,
+          "sha256": "15b5df68944a759abc51b27417237519a77320482625749ad518dadf661fe7c1"
+        },
+        {
+          "path": "skills/gene-expression-linear-modeling",
+          "directory": true
+        },
+        {
+          "path": "skills/gene-expression-linear-modeling/SKILL.md",
+          "bytes": 7198,
+          "sha256": "3c9e3f067fdd81ac16ddb124724a8a10d6912e04645477b8dbc7901f41460c01"
+        },
+        {
+          "path": "skills/gene-expression-log-transformation",
+          "directory": true
+        },
+        {
+          "path": "skills/gene-expression-log-transformation/SKILL.md",
+          "bytes": 4979,
+          "sha256": "d4f3de45bb1f0b0c43860fcd87a65ea982f778ed37df0ef1a5c1e2fb52337985"
+        },
+        {
+          "path": "skills/gene-expression-matrix-normalization",
+          "directory": true
+        },
+        {
+          "path": "skills/gene-expression-matrix-normalization/SKILL.md",
+          "bytes": 6148,
+          "sha256": "f36fdab55eb3efcbc4d3afb869d7cdbdb00762805fb19db14075afea333747ae"
+        },
+        {
+          "path": "skills/gene-expression-ranking-preparation",
+          "directory": true
+        },
+        {
+          "path": "skills/gene-expression-ranking-preparation/SKILL.md",
+          "bytes": 7029,
+          "sha256": "6f446f11d322fe6b3dc0f3f7e6512726cf65ab646ef30c9e0a6faa7d8e314754"
+        },
+        {
+          "path": "skills/gene-expression-statistical-testing",
+          "directory": true
+        },
+        {
+          "path": "skills/gene-expression-statistical-testing/SKILL.md",
+          "bytes": 7048,
+          "sha256": "f6f6acb663b393c0c8b8e3129d826fb1f3f33c7614ee8716beb0549d9750e195"
+        },
+        {
+          "path": "skills/gene-filtering-by-expression-level",
+          "directory": true
+        },
+        {
+          "path": "skills/gene-filtering-by-expression-level/SKILL.md",
+          "bytes": 6294,
+          "sha256": "0bf4f3ecdceb3dcc89aa06473c996e92a4bac6bcb29b5d364deca4f04903d7e9"
+        },
+        {
+          "path": "skills/gene-identifier-deduplication-and-filtering",
+          "directory": true
+        },
+        {
+          "path": "skills/gene-identifier-deduplication-and-filtering/SKILL.md",
+          "bytes": 6632,
+          "sha256": "50b4b5495c7ee80bb1c5b5f0e1e4447d90a4aa4a4291e1e75c6c26837b8b7ad9"
+        },
+        {
+          "path": "skills/gene-length-offset-matrix-computation",
+          "directory": true
+        },
+        {
+          "path": "skills/gene-length-offset-matrix-computation/SKILL.md",
+          "bytes": 7175,
+          "sha256": "da9416cd0b66d59dabb2d9491de22e6cf946b3ae4f957bf2ed197158692e76fe"
+        },
+        {
+          "path": "skills/gene-level-summarization-from-transcripts",
+          "directory": true
+        },
+        {
+          "path": "skills/gene-level-summarization-from-transcripts/SKILL.md",
+          "bytes": 8062,
+          "sha256": "2ac074fbcd65cd80a12ffc7cc3dcd0fb2a476b77ff869b23cec9b8b4edfc97f4"
+        },
+        {
+          "path": "skills/gene-set-enrichment-analysis",
+          "directory": true
+        },
+        {
+          "path": "skills/gene-set-enrichment-analysis/SKILL.md",
+          "bytes": 8372,
+          "sha256": "efb5da7330d03dcda43cc0a15b17ec29f0e9f1961229c2986501a4dd80de46df"
+        },
+        {
+          "path": "skills/gene-set-enrichment-scoring-coregulation",
+          "directory": true
+        },
+        {
+          "path": "skills/gene-set-enrichment-scoring-coregulation/SKILL.md",
+          "bytes": 7708,
+          "sha256": "aec384e1b477b3d6a20c25181807b3208e7c4a47be59e57cda4fee76d40b0185"
+        },
+        {
+          "path": "skills/genomic-database-identifier-mapping",
+          "directory": true
+        },
+        {
+          "path": "skills/genomic-database-identifier-mapping/SKILL.md",
+          "bytes": 6628,
+          "sha256": "1e3ba22c3d7782b3d8d8caebd6d7154ca75d8feb7212b5fb64ceadb3d6e265b1"
+        },
+        {
+          "path": "skills/git-repository-cloning-and-fork-management",
+          "directory": true
+        },
+        {
+          "path": "skills/git-repository-cloning-and-fork-management/SKILL.md",
+          "bytes": 5950,
+          "sha256": "9c48daef42a8e30be979f5a7769dd831a3f915e15c02740ec53e8c2100583e1f"
+        },
+        {
+          "path": "skills/graph-builder-subclassing-squidpy",
+          "directory": true
+        },
+        {
+          "path": "skills/graph-builder-subclassing-squidpy/SKILL.md",
+          "bytes": 8188,
+          "sha256": "db0a6a5fa1eb73656f4ead7a3f5e2fbe5d643544ea4f457335d1587582009a49"
+        },
+        {
+          "path": "skills/gsea-result-interpretation-visualization",
+          "directory": true
+        },
+        {
+          "path": "skills/gsea-result-interpretation-visualization/SKILL.md",
+          "bytes": 8099,
+          "sha256": "a5e08107572529f6b540da0f7cc5b5bf8bc08ef03d6597ed6b4202d82a0b4e6c"
+        },
+        {
+          "path": "skills/gtf-file-parsing",
+          "directory": true
+        },
+        {
+          "path": "skills/gtf-file-parsing/SKILL.md",
+          "bytes": 6751,
+          "sha256": "4635d4bfabbe4b3d19811eb5f4ba2cfd056aa1da8604afe71ff4edd9d5973bfe"
+        },
+        {
+          "path": "skills/hatch-environment-configuration-and-activation",
+          "directory": true
+        },
+        {
+          "path": "skills/hatch-environment-configuration-and-activation/SKILL.md",
+          "bytes": 6845,
+          "sha256": "adcb92033b4d5fc48870244e768ecb68c3e78163c23c87e4bba8c426ac0e381e"
+        },
+        {
+          "path": "skills/highly-variable-gene-selection",
+          "directory": true
+        },
+        {
+          "path": "skills/highly-variable-gene-selection/SKILL.md",
+          "bytes": 5704,
+          "sha256": "ca6782f66be5af58fec21f9f33e27dec097d51b06f8153adf94ed76b1157ce06"
+        },
+        {
+          "path": "skills/hypothesis-weighting-statistical-control",
+          "directory": true
+        },
+        {
+          "path": "skills/hypothesis-weighting-statistical-control/SKILL.md",
+          "bytes": 7441,
+          "sha256": "107d41ef7ccf3d893e5d8682b40497850e5feb2a9b3cda64821ded1ed00d3196"
+        },
+        {
+          "path": "skills/image-feature-extraction-from-tissue-sections",
+          "directory": true
+        },
+        {
+          "path": "skills/image-feature-extraction-from-tissue-sections/SKILL.md",
+          "bytes": 7650,
+          "sha256": "4aac1062a68851246dca516ec4894a06ad280f5a7705bed869eec9406fb9c97f"
+        },
+        {
+          "path": "skills/independent-filtering-multiple-testing-correction",
+          "directory": true
+        },
+        {
+          "path": "skills/independent-filtering-multiple-testing-correction/SKILL.md",
+          "bytes": 7014,
+          "sha256": "413d4fd5b8ea3a751236c76b4db8b5f57b1e306c1a54c4c0a0eb06a5c0efbffb"
+        },
+        {
+          "path": "skills/independent-filtering-optimization",
+          "directory": true
+        },
+        {
+          "path": "skills/independent-filtering-optimization/SKILL.md",
+          "bytes": 7148,
+          "sha256": "feae52a12e018f1e62190e9b85de00ee28b700dd3ff76f139bc59508121212c0"
+        },
+        {
+          "path": "skills/index-construction-determinism",
+          "directory": true
+        },
+        {
+          "path": "skills/index-construction-determinism/SKILL.md",
+          "bytes": 9167,
+          "sha256": "0f9362b423d8962de052fb1e9bdda3ad82b6f8c70915dc827a703ad9a36ab050"
+        },
+        {
+          "path": "skills/inferential-replicate-handling",
+          "directory": true
+        },
+        {
+          "path": "skills/inferential-replicate-handling/SKILL.md",
+          "bytes": 7061,
+          "sha256": "2ea63d470a9912186025b5055a206e9a6e8c8534c223a0098733fde54f00b31a"
+        },
+        {
+          "path": "skills/isoform-structure-annotation",
+          "directory": true
+        },
+        {
+          "path": "skills/isoform-structure-annotation/SKILL.md",
+          "bytes": 7433,
+          "sha256": "2e9dffad91112710aec99f1833780c7577ed2ee6a313857b5b7f9659ba001302"
+        },
+        {
+          "path": "skills/isoform-usage-bias-correction",
+          "directory": true
+        },
+        {
+          "path": "skills/isoform-usage-bias-correction/SKILL.md",
+          "bytes": 10365,
+          "sha256": "1e097fc955d675510d7d29c095b7cb76c9b295e6292f11c934fa04abd798c593"
+        },
+        {
+          "path": "skills/k-mer-orientation-bug-diagnosis",
+          "directory": true
+        },
+        {
+          "path": "skills/k-mer-orientation-bug-diagnosis/SKILL.md",
+          "bytes": 9813,
+          "sha256": "99c7a1f2de550ee2b55e002ef25c8ae9f56b10cebe099a76c7c960d336900aaa"
+        },
+        {
+          "path": "skills/k-nearest-neighbor-graph-construction",
+          "directory": true
+        },
+        {
+          "path": "skills/k-nearest-neighbor-graph-construction/SKILL.md",
+          "bytes": 5925,
+          "sha256": "442bd438f96a0db7c50d49b5b76fdfde1b095ce80e273ff50299291bb103c7bb"
+        },
+        {
+          "path": "skills/lazy-computation-orchestration-with-dask",
+          "directory": true
+        },
+        {
+          "path": "skills/lazy-computation-orchestration-with-dask/SKILL.md",
+          "bytes": 8091,
+          "sha256": "7689a343993929c073d40d333188fb5548adbac222d902c5a662a15b8aaf308f"
+        },
+        {
+          "path": "skills/leiden-clustering-of-cells",
+          "directory": true
+        },
+        {
+          "path": "skills/leiden-clustering-of-cells/SKILL.md",
+          "bytes": 5833,
+          "sha256": "960edc7c2029b55e253676c9837b68d891fb4ceefa27da1978b2515dcdb0c96e"
+        },
+        {
+          "path": "skills/leiden-clustering-partitioning",
+          "directory": true
+        },
+        {
+          "path": "skills/leiden-clustering-partitioning/SKILL.md",
+          "bytes": 6506,
+          "sha256": "1f67bf66bab75f26eafd45a24a85121d35f048b2fbf9ea6a8ab7998dc2e94a28"
+        },
+        {
+          "path": "skills/linear-model-fitting-for-gene-expression",
+          "directory": true
+        },
+        {
+          "path": "skills/linear-model-fitting-for-gene-expression/SKILL.md",
+          "bytes": 6145,
+          "sha256": "669dad12e5a44721055e6c198485d043c40ec69dc00c0e14f8794319206c9f53"
+        },
+        {
+          "path": "skills/local-splicing-event-detection",
+          "directory": true
+        },
+        {
+          "path": "skills/local-splicing-event-detection/SKILL.md",
+          "bytes": 6985,
+          "sha256": "29b1045e672bf066a718de57dccf4683da53dd9dc9db1927a662a88f9d6383fd"
+        },
+        {
+          "path": "skills/log-fold-change-shrinkage-estimation",
+          "directory": true
+        },
+        {
+          "path": "skills/log-fold-change-shrinkage-estimation/SKILL.md",
+          "bytes": 7293,
+          "sha256": "d29e497ae6d5e668d87246e9e62a49cfbdfec68b88f5ff0490dd45473c8d3401"
+        },
+        {
+          "path": "skills/ma-plot-visualization-and-interpretation",
+          "directory": true
+        },
+        {
+          "path": "skills/ma-plot-visualization-and-interpretation/SKILL.md",
+          "bytes": 7405,
+          "sha256": "1a0e220b8a85ae8843fd006f59a7daa8f5e9d65ab32670a4df8e573ae7c0b068"
+        },
+        {
+          "path": "skills/mapping-agreement-cross-tool-validation",
+          "directory": true
+        },
+        {
+          "path": "skills/mapping-agreement-cross-tool-validation/SKILL.md",
+          "bytes": 8276,
+          "sha256": "8e877f70c5b9317d4eefcddcf09a9cb267f3834af437888a01700a23dcce20e1"
+        },
+        {
+          "path": "skills/marker-gene-identification-by-clustering",
+          "directory": true
+        },
+        {
+          "path": "skills/marker-gene-identification-by-clustering/SKILL.md",
+          "bytes": 6140,
+          "sha256": "0e905421fae1898039e62a69236dcbf74a47855150d627292ca8dc2eb9b55e70"
+        },
+        {
+          "path": "skills/matplotlib-plot-reference-image-comparison",
+          "directory": true
+        },
+        {
+          "path": "skills/matplotlib-plot-reference-image-comparison/SKILL.md",
+          "bytes": 6268,
+          "sha256": "4323a7e1f51090190d726326711ce142e7eabb50be2b9e8a03db01319456e382"
+        },
+        {
+          "path": "skills/matrix-equivalence-validation",
+          "directory": true
+        },
+        {
+          "path": "skills/matrix-equivalence-validation/SKILL.md",
+          "bytes": 8071,
+          "sha256": "56caca37628a8657c25cc1b89b4829a9854b0ddaa21f9ba46f63f3a21eeb27df"
+        },
+        {
+          "path": "skills/memory-efficient-single-cell-computation",
+          "directory": true
+        },
+        {
+          "path": "skills/memory-efficient-single-cell-computation/SKILL.md",
+          "bytes": 8451,
+          "sha256": "69e76c3661011d99da63bd92238ca19b6d831cd4df4a0e551665036d9d9a36e5"
+        },
+        {
+          "path": "skills/method-comparison-differential-calls",
+          "directory": true
+        },
+        {
+          "path": "skills/method-comparison-differential-calls/SKILL.md",
+          "bytes": 10887,
+          "sha256": "2ab6bf8ed165ca85609170692433cb8a24c38ebb35660349f3f6d98d3da8c81f"
+        },
+        {
+          "path": "skills/microarray-expression-data-loading",
+          "directory": true
+        },
+        {
+          "path": "skills/microarray-expression-data-loading/SKILL.md",
+          "bytes": 6178,
+          "sha256": "bef7af79dd5a37096b5bf6282e09dbf77b7a5b375743dce33901dadc44d4e805"
+        },
+        {
+          "path": "skills/microarray-expression-normalization-log-quantile",
+          "directory": true
+        },
+        {
+          "path": "skills/microarray-expression-normalization-log-quantile/SKILL.md",
+          "bytes": 6223,
+          "sha256": "a49ef97d0a44fce39ee16b7e4abcc9984572cfb822daa8a21ee283aa4e8eafa4"
+        },
+        {
+          "path": "skills/moderated-t-statistic-computation",
+          "directory": true
+        },
+        {
+          "path": "skills/moderated-t-statistic-computation/SKILL.md",
+          "bytes": 6891,
+          "sha256": "0c63257cba3d3b330965b7a4ff29f134facecc1aaad62d92f972303d6d4cee4e"
+        },
+        {
+          "path": "skills/monte-carlo-p-value-estimation-adaptive",
+          "directory": true
+        },
+        {
+          "path": "skills/monte-carlo-p-value-estimation-adaptive/SKILL.md",
+          "bytes": 7639,
+          "sha256": "e3eb5e6e2a865d592bfde0a6a16fcd840ff2025c9aaa313a36d4ee6f5c0e1c5f"
+        },
+        {
+          "path": "skills/multi-conditional-data-coregulation-scoring",
+          "directory": true
+        },
+        {
+          "path": "skills/multi-conditional-data-coregulation-scoring/SKILL.md",
+          "bytes": 7983,
+          "sha256": "001e2de61d0df2d8faf7bf73ec98b9afff529927f34bcffe35fba84b38103292"
+        },
+        {
+          "path": "skills/multiple-testing-correction-visualization",
+          "directory": true
+        },
+        {
+          "path": "skills/multiple-testing-correction-visualization/SKILL.md",
+          "bytes": 7349,
+          "sha256": "b82d2709d73fabf7a00574cf0bd98d66ff26ae4aea8636644a010effa9bb326a"
+        },
+        {
+          "path": "skills/nearest-neighbor-graph-construction-pynndescent",
+          "directory": true
+        },
+        {
+          "path": "skills/nearest-neighbor-graph-construction-pynndescent/SKILL.md",
+          "bytes": 6955,
+          "sha256": "32199d37eaaa2f705a5371ca7f863d8a6f58aa204c9c044cebd90f04045f53f0"
+        },
+        {
+          "path": "skills/neighborhood-enrichment-computation",
+          "directory": true
+        },
+        {
+          "path": "skills/neighborhood-enrichment-computation/SKILL.md",
+          "bytes": 6705,
+          "sha256": "84ad3a5c9450200edb3ffa20c3316fc18b3aad2c53c35657b885fec60f5a39f4"
+        },
+        {
+          "path": "skills/oarfish-quantification-format-handling",
+          "directory": true
+        },
+        {
+          "path": "skills/oarfish-quantification-format-handling/SKILL.md",
+          "bytes": 6678,
+          "sha256": "0554b63550dc20f9b565c5d7f9b0ef41483d22a04da120dd010df2a21545e5a1"
+        },
+        {
+          "path": "skills/overdispersion-estimation-validation",
+          "directory": true
+        },
+        {
+          "path": "skills/overdispersion-estimation-validation/SKILL.md",
+          "bytes": 7771,
+          "sha256": "52779929c6f8fa7790a05c92a20fd4fe81ad36ebdc6b2030528f10cde08a7689"
+        },
+        {
+          "path": "skills/p-value-adjustment-methodology",
+          "directory": true
+        },
+        {
+          "path": "skills/p-value-adjustment-methodology/SKILL.md",
+          "bytes": 7157,
+          "sha256": "8939070424292cd0afc8061f565c01e9c73a1c24b3486fd8f22ec8e349a22e4d"
+        },
+        {
+          "path": "skills/paga-graph-abstraction",
+          "directory": true
+        },
+        {
+          "path": "skills/paga-graph-abstraction/SKILL.md",
+          "bytes": 6657,
+          "sha256": "a97370006f203df70c9ee108b3044a5c7d6c8dc26947bf25e27ca144516b8ffb"
+        },
+        {
+          "path": "skills/paired-end-read-quantification",
+          "directory": true
+        },
+        {
+          "path": "skills/paired-end-read-quantification/SKILL.md",
+          "bytes": 6624,
+          "sha256": "dd9398879d0d4c09709bd80e2e23050992b236725b210d95accf4b4ce041924f"
+        },
+        {
+          "path": "skills/pathway-activity-correlation-analysis",
+          "directory": true
+        },
+        {
+          "path": "skills/pathway-activity-correlation-analysis/SKILL.md",
+          "bytes": 9099,
+          "sha256": "3d32fe47f78bb6947697066c78d906e33ae193e91ea9ffe5aa07e911371d688a"
+        },
+        {
+          "path": "skills/pathway-cell-type-association-validation",
+          "directory": true
+        },
+        {
+          "path": "skills/pathway-cell-type-association-validation/SKILL.md",
+          "bytes": 10669,
+          "sha256": "4cd39f979664a8b509219f028d86e6f7adf5df530fafa4d213bcce24c04272f2"
+        },
+        {
+          "path": "skills/pathway-enrichment-statistical-ranking",
+          "directory": true
+        },
+        {
+          "path": "skills/pathway-enrichment-statistical-ranking/SKILL.md",
+          "bytes": 7639,
+          "sha256": "594661bc34c5c66192780b7bc3414dde2debb3a0f782662948ba59e8dccc137d"
+        },
+        {
+          "path": "skills/pathway-set-enrichment-analysis",
+          "directory": true
+        },
+        {
+          "path": "skills/pathway-set-enrichment-analysis/SKILL.md",
+          "bytes": 8803,
+          "sha256": "d467ba8c5cabe76b83691e023bb94466e334357eff762cabf1566e90d2de7712"
+        },
+        {
+          "path": "skills/pearson-correlation-analysis-genomics",
+          "directory": true
+        },
+        {
+          "path": "skills/pearson-correlation-analysis-genomics/SKILL.md",
+          "bytes": 8686,
+          "sha256": "4cdf79040f112992348c1556443d596ddd669c540017008de1cdd88f4aaadc93"
+        },
+        {
+          "path": "skills/pearson-correlation-computation-across-tools",
+          "directory": true
+        },
+        {
+          "path": "skills/pearson-correlation-computation-across-tools/SKILL.md",
+          "bytes": 8976,
+          "sha256": "38d32f31b70d2a744f823fcf85140780be49938b55c887c9031910694dedd419"
+        },
+        {
+          "path": "skills/per-read-mapping-agreement-assessment",
+          "directory": true
+        },
+        {
+          "path": "skills/per-read-mapping-agreement-assessment/SKILL.md",
+          "bytes": 8448,
+          "sha256": "89d328b730d420f068a2a25a9d9162744496eda67678fc59bbba0707e9079ffc"
+        },
+        {
+          "path": "skills/precision-weight-calculation-rna-seq",
+          "directory": true
+        },
+        {
+          "path": "skills/precision-weight-calculation-rna-seq/SKILL.md",
+          "bytes": 7052,
+          "sha256": "aa3dc9a3739975f954dc11e7df77a0df7c9f2a54f027c93d3186a85783fa62f5"
+        },
+        {
+          "path": "skills/principal-component-analysis-dimensionality-reduction",
+          "directory": true
+        },
+        {
+          "path": "skills/principal-component-analysis-dimensionality-reduction/SKILL.md",
+          "bytes": 8842,
+          "sha256": "68e32e65a9efbb7ded3b6b3d7fdc7a9d9d94b8b718f07d2b2424ccb1b897f9ac"
+        },
+        {
+          "path": "skills/prior-distribution-fitting-for-genomics",
+          "directory": true
+        },
+        {
+          "path": "skills/prior-distribution-fitting-for-genomics/SKILL.md",
+          "bytes": 7085,
+          "sha256": "8dbb269246bfbc22ab9822662c40ef4ad7eeaad0eb867720d4914db4ce3764da"
+        },
+        {
+          "path": "skills/psi-calculation-from-isoform-abundance",
+          "directory": true
+        },
+        {
+          "path": "skills/psi-calculation-from-isoform-abundance/SKILL.md",
+          "bytes": 6333,
+          "sha256": "53cad816a93e622c0e42e9fab4e64fe655f82f794a7faf5524030c4f68459afb"
+        },
+        {
+          "path": "skills/psi-matrix-loading-and-normalization",
+          "directory": true
+        },
+        {
+          "path": "skills/psi-matrix-loading-and-normalization/SKILL.md",
+          "bytes": 6976,
+          "sha256": "4e196df516a3e6eeea98fb9784a932e96f5cf9e39fcaf9feb7f6f0a82888ceef"
+        },
+        {
+          "path": "skills/pytest-test-suite-execution-and-result-interpretation",
+          "directory": true
+        },
+        {
+          "path": "skills/pytest-test-suite-execution-and-result-interpretation/SKILL.md",
+          "bytes": 7658,
+          "sha256": "b872bc052d79402b377e338f2482c6c347d293ec4b0cd39dba4ee9a3a5208223"
+        },
+        {
+          "path": "skills/python-data-structure-verification",
+          "directory": true
+        },
+        {
+          "path": "skills/python-data-structure-verification/SKILL.md",
+          "bytes": 7099,
+          "sha256": "5fdae2088eb0d12a2cfac47e7e1bcefdd928bcf24e4c711dbcc4f82e9199c2f2"
+        },
+        {
+          "path": "skills/quantification-output-parsing",
+          "directory": true
+        },
+        {
+          "path": "skills/quantification-output-parsing/SKILL.md",
+          "bytes": 7515,
+          "sha256": "eae475595c533a3661298d7947b0605bdf5ee1597c771bb0bd71e9427567658d"
+        },
+        {
+          "path": "skills/read-mapping-rate-calculation",
+          "directory": true
+        },
+        {
+          "path": "skills/read-mapping-rate-calculation/SKILL.md",
+          "bytes": 7836,
+          "sha256": "5e8d12415d77faefd8562e06a7eb33a6e303dc9a0a3fdbf9c4f5a9d7e22ade04"
+        },
+        {
+          "path": "skills/reduction-plot-interpretation-and-visualization",
+          "directory": true
+        },
+        {
+          "path": "skills/reduction-plot-interpretation-and-visualization/SKILL.md",
+          "bytes": 7572,
+          "sha256": "0342de87f052b2f09a3968420ef049a8e8a8dd7f8399c2cff457b6bfc9ac696d"
+        },
+        {
+          "path": "skills/reproducibility-gap-detection",
+          "directory": true
+        },
+        {
+          "path": "skills/reproducibility-gap-detection/SKILL.md",
+          "bytes": 6130,
+          "sha256": "76ea5683800997b42b99e4bc1afccd6e9a935a2ff6badc05c3c6ef57869cbb59"
+        },
+        {
+          "path": "skills/results-table-extraction-and-comparison",
+          "directory": true
+        },
+        {
+          "path": "skills/results-table-extraction-and-comparison/SKILL.md",
+          "bytes": 8136,
+          "sha256": "05482030bbd8e187c9ac81d74b61c754699088272d3998b3629ea2372ed40512"
+        },
+        {
+          "path": "skills/rna-seq-abundance-matrix-handling",
+          "directory": true
+        },
+        {
+          "path": "skills/rna-seq-abundance-matrix-handling/SKILL.md",
+          "bytes": 9191,
+          "sha256": "8902ff43a43e4c13f68ba8cb123314de578884d69b5a5fdd1a60569070c2793e"
+        },
+        {
+          "path": "skills/rna-seq-count-matrix-generation",
+          "directory": true
+        },
+        {
+          "path": "skills/rna-seq-count-matrix-generation/SKILL.md",
+          "bytes": 8356,
+          "sha256": "33940cfeed9f88f4cad455c6bb000d496884944e8ab4c47561690c17e0e585a2"
+        },
+        {
+          "path": "skills/rna-seq-count-normalization",
+          "directory": true
+        },
+        {
+          "path": "skills/rna-seq-count-normalization/SKILL.md",
+          "bytes": 8501,
+          "sha256": "f8635de498b1283a37a337c703dacdec9499a6f5c42a089d730fcc7bf0ab7da2"
+        },
+        {
+          "path": "skills/rna-seq-count-normalization-tmm",
+          "directory": true
+        },
+        {
+          "path": "skills/rna-seq-count-normalization-tmm/SKILL.md",
+          "bytes": 8673,
+          "sha256": "7ca4c9bbb2ca68adeed306322e6c900a920e7e5fb5da4bb754cb1f35166162d5"
+        },
+        {
+          "path": "skills/rna-seq-differential-expression-analysis",
+          "directory": true
+        },
+        {
+          "path": "skills/rna-seq-differential-expression-analysis/SKILL.md",
+          "bytes": 9464,
+          "sha256": "67d5a7f6e962e00e8b5ef55006b9599a29921c9dae6f83f25af9d62c5bb5baae"
+        },
+        {
+          "path": "skills/rna-seq-experimental-design-specification",
+          "directory": true
+        },
+        {
+          "path": "skills/rna-seq-experimental-design-specification/SKILL.md",
+          "bytes": 7254,
+          "sha256": "ce8181afa0e7b9b40494267f7e0e54f62f66ac296dc593082d1f2d67c648cee2"
+        },
+        {
+          "path": "skills/rna-seq-quantification-selective-alignment",
+          "directory": true
+        },
+        {
+          "path": "skills/rna-seq-quantification-selective-alignment/SKILL.md",
+          "bytes": 11184,
+          "sha256": "e181a7bdea6bbed55270667502f37814d88f42c04fd10c4476b11f3ce012e82f"
+        },
+        {
+          "path": "skills/rna-seq-quantification-validation",
+          "directory": true
+        },
+        {
+          "path": "skills/rna-seq-quantification-validation/SKILL.md",
+          "bytes": 10624,
+          "sha256": "008f34ecc23363a6ddb2d9d220d0378b89f8752652d21ce2f08c7c38cdfdb92d"
+        },
+        {
+          "path": "skills/rna-seq-read-mapping-parameter-tuning",
+          "directory": true
+        },
+        {
+          "path": "skills/rna-seq-read-mapping-parameter-tuning/SKILL.md",
+          "bytes": 9051,
+          "sha256": "26f44057c970baa69b5adb39d98c990ee8770dc9d1f9c8f8cef76096173ac5c3"
+        },
+        {
+          "path": "skills/rnaseq-count-matrix-analysis",
+          "directory": true
+        },
+        {
+          "path": "skills/rnaseq-count-matrix-analysis/SKILL.md",
+          "bytes": 8033,
+          "sha256": "6bfd1e6e1b76efc6d21aceebad10cf118766d357d3aa051ad3da67490567a371"
+        },
+        {
+          "path": "skills/salmon-output-parsing",
+          "directory": true
+        },
+        {
+          "path": "skills/salmon-output-parsing/SKILL.md",
+          "bytes": 7023,
+          "sha256": "bd4c7f1e2e412ebd965f9097a1122d42963451cbb11d61b62a836053b9ce64ac"
+        },
+        {
+          "path": "skills/salmon-quantification-output-verification",
+          "directory": true
+        },
+        {
+          "path": "skills/salmon-quantification-output-verification/SKILL.md",
+          "bytes": 7716,
+          "sha256": "f38bdf6acc09c89fc501e1558564130cafc71393e6fe16702d9e19a3d59df69e"
+        },
+        {
+          "path": "skills/sam-bam-mapping-record-inspection",
+          "directory": true
+        },
+        {
+          "path": "skills/sam-bam-mapping-record-inspection/SKILL.md",
+          "bytes": 8199,
+          "sha256": "b71878012a507f22f53a7b2985883d4b8705819f9799a8c4370ea717f571919c"
+        },
+        {
+          "path": "skills/sam-record-parsing-and-validation",
+          "directory": true
+        },
+        {
+          "path": "skills/sam-record-parsing-and-validation/SKILL.md",
+          "bytes": 7608,
+          "sha256": "251124f26a5927bc8976053c53bdad8b9b368060c559d762a48465425f921963"
+        },
+        {
+          "path": "skills/sample-metadata-preparation-and-assignment",
+          "directory": true
+        },
+        {
+          "path": "skills/sample-metadata-preparation-and-assignment/SKILL.md",
+          "bytes": 6562,
+          "sha256": "5fd07eb115fa233c346f9672604aa7cd9da10bc3415e4dd496c4efdfad50aa1b"
+        },
+        {
+          "path": "skills/scanpy-preprocessing-pipeline-execution",
+          "directory": true
+        },
+        {
+          "path": "skills/scanpy-preprocessing-pipeline-execution/SKILL.md",
+          "bytes": 8314,
+          "sha256": "87a49518b373dffd42e0a11ba7e433865797dbbfa5ac665a20ab313a70ae5ae1"
+        },
+        {
+          "path": "skills/scientific-task-formulation",
+          "directory": true
+        },
+        {
+          "path": "skills/scientific-task-formulation/SKILL.md",
+          "bytes": 5566,
+          "sha256": "bcaeab013b7c0dc0e4120c45e80c8d44a49a025f302c2929d62da41085469a6c"
+        },
+        {
+          "path": "skills/seed-representation-variant-comparison",
+          "directory": true
+        },
+        {
+          "path": "skills/seed-representation-variant-comparison/SKILL.md",
+          "bytes": 9448,
+          "sha256": "310fd3623b6955740a60d90143823c61c2e48a98202ffbd2cd6e979adedc16ca"
+        },
+        {
+          "path": "skills/selective-alignment-parameter-tuning",
+          "directory": true
+        },
+        {
+          "path": "skills/selective-alignment-parameter-tuning/SKILL.md",
+          "bytes": 10145,
+          "sha256": "21a00c197275d8f55c0db303118e8e3460d25ef443b77d473b177668e26c3476"
+        },
+        {
+          "path": "skills/selective-alignment-sensitivity-evaluation",
+          "directory": true
+        },
+        {
+          "path": "skills/selective-alignment-sensitivity-evaluation/SKILL.md",
+          "bytes": 8671,
+          "sha256": "a1f82abfaa3c8da320cb335a534862013db35b7c4196246fd34acee6a08907b8"
+        },
+        {
+          "path": "skills/seurat-workflow-orchestration-for-scrnaseq",
+          "directory": true
+        },
+        {
+          "path": "skills/seurat-workflow-orchestration-for-scrnaseq/SKILL.md",
+          "bytes": 9103,
+          "sha256": "fa6f85fbdfbf85bf71bb7c035e128596823e423e18e1c2ac7fce156985f59fc3"
+        },
+        {
+          "path": "skills/single-cell-graph-construction-neighborhood",
+          "directory": true
+        },
+        {
+          "path": "skills/single-cell-graph-construction-neighborhood/SKILL.md",
+          "bytes": 7216,
+          "sha256": "7641fa1b1dfd51140fb2f14bade334810fa463781468e2926587d0fac0f46066"
+        },
+        {
+          "path": "skills/single-cell-rna-seq-normalization",
+          "directory": true
+        },
+        {
+          "path": "skills/single-cell-rna-seq-normalization/SKILL.md",
+          "bytes": 5675,
+          "sha256": "97ed31b95297efc73ea6901c38c3119f09eb18270c0abeca7ef683dc667a9940"
+        },
+        {
+          "path": "skills/single-cell-rna-seq-quality-control-and-normalization",
+          "directory": true
+        },
+        {
+          "path": "skills/single-cell-rna-seq-quality-control-and-normalization/SKILL.md",
+          "bytes": 7925,
+          "sha256": "3ad983354049069cbda006b5d4951d509dc002f1f2df48b3f7c6d7ab704834e9"
+        },
+        {
+          "path": "skills/sparse-matrix-csr-format-assembly",
+          "directory": true
+        },
+        {
+          "path": "skills/sparse-matrix-csr-format-assembly/SKILL.md",
+          "bytes": 7024,
+          "sha256": "5c1fb03974379f55bafc3a328f5f273f4415cee7f5af51181970330af8f2b2c4"
+        },
+        {
+          "path": "skills/sparse-matrix-format-handling",
+          "directory": true
+        },
+        {
+          "path": "skills/sparse-matrix-format-handling/SKILL.md",
+          "bytes": 8292,
+          "sha256": "0e33a0e9b807b0e2534b34edde9ba56f604c3352abce87260eca5e78b0e6a4c7"
+        },
+        {
+          "path": "skills/sparse-matrix-verification-and-validation",
+          "directory": true
+        },
+        {
+          "path": "skills/sparse-matrix-verification-and-validation/SKILL.md",
+          "bytes": 6319,
+          "sha256": "8705b014159cdb5dd13c2710ad4a2a07917d189fdbe43018c4df786235a0b397"
+        },
+        {
+          "path": "skills/spatial-coordinate-indexing-dense-to-sparse",
+          "directory": true
+        },
+        {
+          "path": "skills/spatial-coordinate-indexing-dense-to-sparse/SKILL.md",
+          "bytes": 7451,
+          "sha256": "6402ca8dec9449d7954c9cf55bd497883eae9b08e18d6579e9395b1cbc705a34"
+        },
+        {
+          "path": "skills/spatial-coordinate-integration-with-imaging-data",
+          "directory": true
+        },
+        {
+          "path": "skills/spatial-coordinate-integration-with-imaging-data/SKILL.md",
+          "bytes": 6983,
+          "sha256": "9dc4a1368f733d8abba31148b45b844d87d71fdbf0a821ac0bc8ebd708a37333"
+        },
+        {
+          "path": "skills/spatial-enrichment-score-validation",
+          "directory": true
+        },
+        {
+          "path": "skills/spatial-enrichment-score-validation/SKILL.md",
+          "bytes": 6758,
+          "sha256": "6404045b9de5b120eeba945434169328118fe00de8b040e48ae058078ca07634"
+        },
+        {
+          "path": "skills/spatial-gene-ranking-computation",
+          "directory": true
+        },
+        {
+          "path": "skills/spatial-gene-ranking-computation/SKILL.md",
+          "bytes": 6554,
+          "sha256": "a6c4f65e3745086bd3b72b51e26ee94ac1d207c476b9abd748bdbf0406b91429"
+        },
+        {
+          "path": "skills/spatial-neighbor-graph-construction",
+          "directory": true
+        },
+        {
+          "path": "skills/spatial-neighbor-graph-construction/SKILL.md",
+          "bytes": 6725,
+          "sha256": "1116ada0e2e1714ba34aa39c37afbda7c2588e2335f2ab24687121f079934e49"
+        },
+        {
+          "path": "skills/spatial-neighbor-graph-properties-validation",
+          "directory": true
+        },
+        {
+          "path": "skills/spatial-neighbor-graph-properties-validation/SKILL.md",
+          "bytes": 6060,
+          "sha256": "3c8ce5b13d40e0f143ffbf08bad5324442cda5bab3839e113b5ef033a22db99e"
+        },
+        {
+          "path": "skills/spatial-omics-dataset-loading",
+          "directory": true
+        },
+        {
+          "path": "skills/spatial-omics-dataset-loading/SKILL.md",
+          "bytes": 5497,
+          "sha256": "9337c870056d41baae55c3817a91da0e7cd5e9bc6215932914fdaf099352e86f"
+        },
+        {
+          "path": "skills/spatial-statistics-interpretation",
+          "directory": true
+        },
+        {
+          "path": "skills/spatial-statistics-interpretation/SKILL.md",
+          "bytes": 7064,
+          "sha256": "abd8b8069902a32eb52441f58542a9ecec7b48f6078b59f46b7ff5f390e8c5dc"
+        },
+        {
+          "path": "skills/splicing-matrix-normalization",
+          "directory": true
+        },
+        {
+          "path": "skills/splicing-matrix-normalization/SKILL.md",
+          "bytes": 7972,
+          "sha256": "762d0e2d4cce4cc2eb0344bed2d6d805392dfa0c897c4a86b86769590ec3bb1e"
+        },
+        {
+          "path": "skills/statistical-comparison-p-value-conservation",
+          "directory": true
+        },
+        {
+          "path": "skills/statistical-comparison-p-value-conservation/SKILL.md",
+          "bytes": 8696,
+          "sha256": "b7c4623d5358e4eb40eecd4ed10a24a8b97f159aaca22807a0a671fc42360330"
+        },
+        {
+          "path": "skills/statistical-hypothesis-testing-rna-seq",
+          "directory": true
+        },
+        {
+          "path": "skills/statistical-hypothesis-testing-rna-seq/SKILL.md",
+          "bytes": 8252,
+          "sha256": "4c6550931124e8fbd1566de31144d22c866df385137d3f1fb3e4f3488d31ac8c"
+        },
+        {
+          "path": "skills/statistical-precision-comparison-ranked-outputs",
+          "directory": true
+        },
+        {
+          "path": "skills/statistical-precision-comparison-ranked-outputs/SKILL.md",
+          "bytes": 7103,
+          "sha256": "cd78b588b7d87088d5946271c81e196df5cdeb787d49dd03853a4a1ebf1c0594"
+        },
+        {
+          "path": "skills/statistical-ranking-wilcoxon-test",
+          "directory": true
+        },
+        {
+          "path": "skills/statistical-ranking-wilcoxon-test/SKILL.md",
+          "bytes": 6696,
+          "sha256": "4a54065a5e1bbaa0a65eb0ea35833b006ae023c40172ffa304e16dffebb14ca6"
+        },
+        {
+          "path": "skills/temporal-gene-expression-dynamics",
+          "directory": true
+        },
+        {
+          "path": "skills/temporal-gene-expression-dynamics/SKILL.md",
+          "bytes": 8449,
+          "sha256": "75fb3c8f98a2254f6fa9ed3654f47c9768ac8ab36ad1e8c0d15fd742987ad850"
+        },
+        {
+          "path": "skills/test-failure-diagnosis-and-logging-analysis",
+          "directory": true
+        },
+        {
+          "path": "skills/test-failure-diagnosis-and-logging-analysis/SKILL.md",
+          "bytes": 7770,
+          "sha256": "2b9d307deaa3fff5d1b4ee303aa2f5bf0c52dbfc1a09b78f90d7d38f0031788d"
+        },
+        {
+          "path": "skills/trajectory-inference-preprocessing",
+          "directory": true
+        },
+        {
+          "path": "skills/trajectory-inference-preprocessing/SKILL.md",
+          "bytes": 7561,
+          "sha256": "91a9abffb1e338959f83ef1090491ecd946b128c9d3528fbd521215cc5c99d3b"
+        },
+        {
+          "path": "skills/transcript-abundance-correlation-analysis",
+          "directory": true
+        },
+        {
+          "path": "skills/transcript-abundance-correlation-analysis/SKILL.md",
+          "bytes": 9166,
+          "sha256": "bc0450357671f0e68964ccbe6edcd09315ea3345560171673d661433c5d0ef12"
+        },
+        {
+          "path": "skills/transcript-abundance-quantification-import",
+          "directory": true
+        },
+        {
+          "path": "skills/transcript-abundance-quantification-import/SKILL.md",
+          "bytes": 7758,
+          "sha256": "11e1369eb7ad66e65f56486910ec80051be188a37a9ad7b98f09b7c0197582f5"
+        },
+        {
+          "path": "skills/transcript-event-extraction",
+          "directory": true
+        },
+        {
+          "path": "skills/transcript-event-extraction/SKILL.md",
+          "bytes": 7087,
+          "sha256": "b66da7a58b32cfc70606f7e39daac5e47cc81be74866f8a746c6a14fa18d24e6"
+        },
+        {
+          "path": "skills/transcript-expression-quantification-handling",
+          "directory": true
+        },
+        {
+          "path": "skills/transcript-expression-quantification-handling/SKILL.md",
+          "bytes": 6271,
+          "sha256": "8c1d4ac7d4ad08e1f5db4e540326b564a6e7c859df0b3cc8e157d6dafc75fd74"
+        },
+        {
+          "path": "skills/transcript-level-abundance-import",
+          "directory": true
+        },
+        {
+          "path": "skills/transcript-level-abundance-import/SKILL.md",
+          "bytes": 9516,
+          "sha256": "0a37396ffb105cd90f3402a29b9e5f47a17bb308c08eb5ceb95765eae2ab7122"
+        },
+        {
+          "path": "skills/transcript-level-count-aggregation",
+          "directory": true
+        },
+        {
+          "path": "skills/transcript-level-count-aggregation/SKILL.md",
+          "bytes": 8674,
+          "sha256": "aa0d8d9a5290e010167934c2bef50f077ed76ccc00636c86b6a626e04ca99fed"
+        },
+        {
+          "path": "skills/transcript-quantification-benchmark-comparison",
+          "directory": true
+        },
+        {
+          "path": "skills/transcript-quantification-benchmark-comparison/SKILL.md",
+          "bytes": 9787,
+          "sha256": "a642aef749507b4e7dfc84c78611b23612b193dc31bef50865b0fd22e0d9f8b3"
+        },
+        {
+          "path": "skills/transcript-quantification-integration",
+          "directory": true
+        },
+        {
+          "path": "skills/transcript-quantification-integration/SKILL.md",
+          "bytes": 7167,
+          "sha256": "f2e261978654433776937d0ac767438c4dc15136b26e3f0ac397d40bac8d02d1"
+        },
+        {
+          "path": "skills/transcript-to-gene-aggregation",
+          "directory": true
+        },
+        {
+          "path": "skills/transcript-to-gene-aggregation/SKILL.md",
+          "bytes": 8285,
+          "sha256": "deda2d2592014897fc2c0526d53cb4effa748a929f78343577d8a481db250525"
+        },
+        {
+          "path": "skills/transcript-to-gene-mapping",
+          "directory": true
+        },
+        {
+          "path": "skills/transcript-to-gene-mapping/SKILL.md",
+          "bytes": 8255,
+          "sha256": "77aa644ce6ef3620b685b2fbdcd8c42a47956b6c861c9c9c44e9fcb4f5aa7234"
+        },
+        {
+          "path": "skills/umap-embedding-visualization",
+          "directory": true
+        },
+        {
+          "path": "skills/umap-embedding-visualization/SKILL.md",
+          "bytes": 6959,
+          "sha256": "fcc363778b03ec3db2854b3e803af7cf04e2c2121ccff67e356c0a9e1785b78e"
+        },
+        {
+          "path": "skills/uncertainty-aware-significance-assessment",
+          "directory": true
+        },
+        {
+          "path": "skills/uncertainty-aware-significance-assessment/SKILL.md",
+          "bytes": 6721,
+          "sha256": "727fd8fce2ca4365354891c9c20d48a03dc24a54de38677427392cae937a0f5b"
+        },
+        {
+          "path": "tools",
+          "directory": true
+        },
+        {
+          "path": "tools/anndata.yaml",
+          "bytes": 400,
+          "sha256": "02a9e7bf9b209bce551b01dc1d6b66dd7dea4e285325b8e00a4c4505a0eb2dcd"
+        },
+        {
+          "path": "tools/data-table.yaml",
+          "bytes": 177,
+          "sha256": "cebea56c56d8b8f1dda219aac25e22bd6f02f535a16f7c8129e5b718dde2e946"
+        },
+        {
+          "path": "tools/deseq2.yaml",
+          "bytes": 711,
+          "sha256": "2615f92e399f6ae35d3b122a9959fde8a6436f6d82a1a680901d2786fe14da22"
+        },
+        {
+          "path": "tools/edger.yaml",
+          "bytes": 512,
+          "sha256": "6e263a8b4b2b8e0aeeefc1525f90cf0d2e5f8af62504c862a4fc2f09b0bd4f8a"
+        },
+        {
+          "path": "tools/fgsea.yaml",
+          "bytes": 384,
+          "sha256": "e7948f45d105212172ae2be99b175216099ff884739c6163706ac13bf32e197e"
+        },
+        {
+          "path": "tools/geoquery.yaml",
+          "bytes": 171,
+          "sha256": "70641218d961cbc2af4603c6acd5d2a363b32467bbf436461e66b050bd0924c9"
+        },
+        {
+          "path": "tools/ggplot2.yaml",
+          "bytes": 241,
+          "sha256": "9760237e376379f7418ef6d554899a27ca1c778da9cc4bf5e444a1d5407f7244"
+        },
+        {
+          "path": "tools/git.yaml",
+          "bytes": 294,
+          "sha256": "e9bdc99f98dfaafc854138019405e71b364c7209490096165c737e855442ee32"
+        },
+        {
+          "path": "tools/github.yaml",
+          "bytes": 213,
+          "sha256": "fb4694dfdffd2a56ea1a146383ef6de4795bce30559a6e0d4f0fda5228da4f26"
+        },
+        {
+          "path": "tools/hatch.yaml",
+          "bytes": 307,
+          "sha256": "b4ca4df2ba801b2ec2aa98b48b8565397302f3b38e716c20067e3034847bc3d9"
+        },
+        {
+          "path": "tools/ihw.yaml",
+          "bytes": 377,
+          "sha256": "9c2062f5c0120ace2f342580a8ab12ef14677559949b6779b3c9adf75f661a75"
+        },
+        {
+          "path": "tools/limma.yaml",
+          "bytes": 675,
+          "sha256": "80d346d6b304f16cbb7bc266bfb058b516ccd0152c05ed43bb0c71cc48b73ded"
+        },
+        {
+          "path": "tools/matplotlib.yaml",
+          "bytes": 313,
+          "sha256": "c423f258e261c201b2ebd89b9b743233205976e8557349ee11b3ffe022810934"
+        },
+        {
+          "path": "tools/minimap2.yaml",
+          "bytes": 321,
+          "sha256": "0673bfb27b7c45f5463631fa222d698737da9d5d58ed14df4218e4bc512d55dc"
+        },
+        {
+          "path": "tools/msigdbr.yaml",
+          "bytes": 315,
+          "sha256": "7ef53f5f1df7a593763c0c4866ca75e20c1ea655bbb524c996755302a9ecbca8"
+        },
+        {
+          "path": "tools/numpy.yaml",
+          "bytes": 300,
+          "sha256": "fb656f2a2b78aed0b414754e257dc001f9810bae8a55a1d7ad0b32b1ce278670"
+        },
+        {
+          "path": "tools/pip.yaml",
+          "bytes": 228,
+          "sha256": "92dc19bc2f09f548c7b77e3aecce18c4bf8c7f761547d5907cc77c7f0fd25500"
+        },
+        {
+          "path": "tools/piscem-rs.yaml",
+          "bytes": 398,
+          "sha256": "a14eb6599524e0609a89e32331c442d9e668c894c43a86a8c0abed9550bff6c6"
+        },
+        {
+          "path": "tools/pufferfish.yaml",
+          "bytes": 287,
+          "sha256": "568245e8789baaf71ba58254b1fe2143abd7524f9d2b06b1adda412af7af1e49"
+        },
+        {
+          "path": "tools/pynndescent.yaml",
+          "bytes": 347,
+          "sha256": "155bb29224a2445543b1907783e978d061eb732167e8985059617bcefde6e94a"
+        },
+        {
+          "path": "tools/pytest.yaml",
+          "bytes": 463,
+          "sha256": "83597c70d60e4c9614a89db0990751ec989bcda96586e3f08ab9610b4f7742ff"
+        },
+        {
+          "path": "tools/python.yaml",
+          "bytes": 451,
+          "sha256": "3dc54ef4be2548b3f86e0e189979cd0577e8d34bc91590187fa35925c65e5163"
+        },
+        {
+          "path": "tools/r.yaml",
+          "bytes": 543,
+          "sha256": "2f8e954ac53f73a00f0b468664c3d77254560be07d55187afa5573be6f4ed1eb"
+        },
+        {
+          "path": "tools/readr.yaml",
+          "bytes": 657,
+          "sha256": "c4f16854f01e3b185be1be54c1f6d46b23da71f82d2c321f6d9ff7f6153eb5a5"
+        },
+        {
+          "path": "tools/salmon-1-11-4-c-version-pre-fix.yaml",
+          "bytes": 349,
+          "sha256": "c59a3603c242e1a697bdcbf01e606be8a2d7673714f49c26a89deef8a01f7550"
+        },
+        {
+          "path": "tools/salmon-1-12-0.yaml",
+          "bytes": 364,
+          "sha256": "03757690e5e364cc9474af795ea31ceedd0594eff7004fd32b119bd08f6afada"
+        },
+        {
+          "path": "tools/salmon-2-0.yaml",
+          "bytes": 482,
+          "sha256": "e2dd3ac478f5bf0d231b34339d388353796bd67061b2c9910e2c452a469432ca"
+        },
+        {
+          "path": "tools/salmon-rust-port.yaml",
+          "bytes": 318,
+          "sha256": "631bbab65502f9ff2dd44e40edb7b159b231e005aa884988ca7c3fa21ad8c30d"
+        },
+        {
+          "path": "tools/salmon.yaml",
+          "bytes": 596,
+          "sha256": "688ed7400ce6bd774ff916c7573e3b64ed9076471082c896d3ead7418ef98dc3"
+        },
+        {
+          "path": "tools/scanpy.yaml",
+          "bytes": 474,
+          "sha256": "744849e1331e6fd48ec4f3091495949c5e4a7a304f8588b0b11c27d771fd4089"
+        },
+        {
+          "path": "tools/scipy-sparse.yaml",
+          "bytes": 300,
+          "sha256": "b11f8e3d126a21a8a161810cd29cebfab5b4f9fb739863bbac044b405c7371c9"
+        },
+        {
+          "path": "tools/seurat.yaml",
+          "bytes": 260,
+          "sha256": "dc0414c6b38b8b07cb1437f12403364c9a6f764426e0c1f4fb05b16cf218114b"
+        },
+        {
+          "path": "tools/squidpy.yaml",
+          "bytes": 347,
+          "sha256": "7af4b172adc04de70977dc299ba87b6bfcc663a70098d677746eb3b68b9e383a"
+        },
+        {
+          "path": "tools/suppa2.yaml",
+          "bytes": 265,
+          "sha256": "f8243984165ac8314d33cc13768bd92792b3e2f2212222668a67e693184378e9"
+        },
+        {
+          "path": "tools/tximport.yaml",
+          "bytes": 666,
+          "sha256": "6e50b7e110c875a98b68098e6492a99815748ee9a96e965eec44a16c7b878380"
+        },
+        {
+          "path": "tools/tximportdata.yaml",
+          "bytes": 326,
+          "sha256": "213dd001eb8af4d765bf1918d126ee7b169be331304b0175677f083b1711b6fc"
+        },
+        {
+          "path": "tools/voom.yaml",
+          "bytes": 311,
+          "sha256": "83e7fa30af6782a5e4df86204ae2ec13ce52f69074465abc871ba23d78c42a1c"
+        }
+      ],
+      "excluded_paths": [
+        "MANIFEST.gen.json",
+        "gate_report.json"
+      ]
+    },
+    "manifest": null,
+    "corpus": {
+      "path": "corpus.yaml",
+      "bytes": 4071,
+      "sha256": "14a7ffb42ae01c62cc2c35418303f41a414915b6725ec8e43e968a6fabae7033",
+      "location": "collection"
+    },
+    "cut_inputs": null
+  },
+  "inventory": {
+    "skills": 166,
+    "tools": 37,
+    "workflows": 0,
+    "papers": 10,
+    "dois": 10
+  },
+  "unit_type": "skills",
+  "input_paths": [],
+  "verification_scope": "content-policy checks and bound artifact integrity",
+  "release_verified": true,
+  "zero_item_checks": [
+    "composite_workflows",
+    "layout_packaging",
+    "unit_closure",
+    "catalogue_membership",
+    "cut_manifest"
+  ],
   "overall_status": "pass",
   "blocking": false,
   "exit_code": 0,
   "summary_counts": {
-    "pass": 5,
+    "pass": 11,
     "warn": 0,
-    "fail": 0
+    "fail": 0,
+    "uncheckable": 0,
+    "not_applicable": 2
   },
   "hard_gate_ids": [
     2,
     5,
     6,
     8,
+    10,
     15
   ],
   "checks": [
@@ -52,7 +4840,16 @@
       "hard_gate": true,
       "summary": "Every included paper's access.type is in the OA allowed set (v0 OA-only).  (10 included papers checked)",
       "n_findings": 0,
-      "details": []
+      "details": [],
+      "scope": "included papers",
+      "required": true,
+      "counts": {
+        "checked": 10,
+        "skipped": 0,
+        "missing": 0,
+        "failed": 0
+      },
+      "coverage": {}
     },
     {
       "name": "strip_verbatim_similarity",
@@ -64,7 +4861,20 @@
       "hard_gate": true,
       "summary": "OA papers exempt from caps (unlimited verbatim w/ attribution; >300-char spans \u2192 advisory WARN).  Non-OA and link-only (no reuse right established): per-span text cap 300 chars, cumulative cap 1500 chars/DOI.  Near-verbatim similarity flagged for all.  (1282 verbatim spans scanned)",
       "n_findings": 0,
-      "details": []
+      "details": [],
+      "scope": "evidence spans",
+      "required": true,
+      "counts": {
+        "checked": 1282,
+        "skipped": 0,
+        "missing": 0,
+        "failed": 0
+      },
+      "coverage": {
+        "inspected_files": 166,
+        "files_without_spans": 0,
+        "missing_files": 0
+      }
     },
     {
       "name": "pii_dual_use",
@@ -73,9 +4883,22 @@
         6
       ],
       "hard_gate": true,
-      "summary": "Two-tier PII / dual-use scan of verbatim quote spans (pii_config=2026-07-10.2).  (1282 spans scanned)",
+      "summary": "Two-tier PII / dual-use scan of verbatim quote spans (pii_config=2026-09-13.1).  (1282 spans scanned)",
       "n_findings": 0,
-      "details": []
+      "details": [],
+      "scope": "evidence spans",
+      "required": true,
+      "counts": {
+        "checked": 1282,
+        "skipped": 0,
+        "missing": 0,
+        "failed": 0
+      },
+      "coverage": {
+        "inspected_files": 166,
+        "files_without_spans": 0,
+        "missing_files": 0
+      }
     },
     {
       "name": "provenance_doi_license",
@@ -86,21 +4909,200 @@
       "hard_gate": true,
       "summary": "Every skill carries provenance (source DOI or repository) + a license SPDX tag.  (166 skills checked)",
       "n_findings": 0,
-      "details": []
+      "details": [],
+      "scope": "leaf skills",
+      "required": true,
+      "counts": {
+        "checked": 166,
+        "skipped": 0,
+        "missing": 0,
+        "failed": 0
+      },
+      "coverage": {}
     },
     {
       "name": "composite_workflows",
-      "status": "pass",
+      "status": "not_applicable",
       "gates": [],
       "hard_gate": false,
-      "summary": "Composite workflow super-skills resolve to real leaves with a valid DAG.",
+      "summary": "Composite workflow super-skills resolve to real leaves with a valid typed DAG and matching layout count.",
+      "n_findings": 1,
+      "details": [
+        {
+          "status": "not_applicable",
+          "message": "No workflows/ subtree; no workflow validation performed."
+        }
+      ],
+      "scope": "composite workflows",
+      "required": false,
+      "counts": {
+        "checked": 0,
+        "skipped": 0,
+        "missing": 0,
+        "failed": 0
+      },
+      "coverage": {}
+    },
+    {
+      "name": "layout_packaging",
+      "status": "pass",
+      "gates": [
+        10
+      ],
+      "hard_gate": true,
+      "summary": "Each skill dir holds SKILL.md (+ optional skill_kb.json) within budget; skills_index.json matches the leaf directories.  (166 skills checked)",
       "n_findings": 1,
       "details": [
         {
           "status": "pass",
-          "message": "No workflows/ subtree (n/a)."
+          "message": "No skills_index.json \u2014 index consistency is not applicable."
         }
-      ]
+      ],
+      "scope": "items",
+      "required": true,
+      "counts": {
+        "checked": 0,
+        "skipped": 0,
+        "missing": 0,
+        "failed": 0
+      },
+      "coverage": {}
+    },
+    {
+      "name": "unit_closure",
+      "status": "pass",
+      "gates": [
+        10
+      ],
+      "hard_gate": true,
+      "summary": "Pack indexes match their leaves; declared helpers stay inside each unit.",
+      "n_findings": 0,
+      "details": [],
+      "scope": "items",
+      "required": true,
+      "counts": {
+        "checked": 0,
+        "skipped": 0,
+        "missing": 0,
+        "failed": 0
+      },
+      "coverage": {}
+    },
+    {
+      "name": "gate_input_files",
+      "status": "pass",
+      "gates": [],
+      "hard_gate": true,
+      "summary": "gate_input_files",
+      "n_findings": 0,
+      "details": [],
+      "scope": "gate input files",
+      "required": true,
+      "counts": {
+        "checked": 2,
+        "skipped": 0,
+        "missing": 0,
+        "failed": 0
+      },
+      "coverage": {}
+    },
+    {
+      "name": "target_binding",
+      "status": "pass",
+      "gates": [],
+      "hard_gate": true,
+      "summary": "target_binding",
+      "n_findings": 0,
+      "details": [],
+      "scope": "payload files",
+      "required": true,
+      "counts": {
+        "checked": 639,
+        "skipped": 0,
+        "missing": 0,
+        "failed": 0
+      },
+      "coverage": {}
+    },
+    {
+      "name": "catalogue_membership",
+      "status": "pass",
+      "gates": [
+        10
+      ],
+      "hard_gate": true,
+      "summary": "Collection counts and advertised members match disk and published indexes.  (1 catalogues checked)",
+      "n_findings": 1,
+      "details": [
+        {
+          "status": "pass",
+          "message": "All 1 collection catalogues agree."
+        }
+      ],
+      "scope": "items",
+      "required": true,
+      "counts": {
+        "checked": 0,
+        "skipped": 0,
+        "missing": 0,
+        "failed": 0
+      },
+      "coverage": {}
+    },
+    {
+      "name": "collection_inventory",
+      "status": "pass",
+      "gates": [],
+      "hard_gate": true,
+      "summary": "collection_inventory",
+      "n_findings": 0,
+      "details": [],
+      "scope": "inventory fields",
+      "required": true,
+      "counts": {
+        "checked": 5,
+        "skipped": 0,
+        "missing": 0,
+        "failed": 0
+      },
+      "coverage": {}
+    },
+    {
+      "name": "cut_manifest",
+      "status": "not_applicable",
+      "gates": [],
+      "hard_gate": true,
+      "summary": "cut_manifest",
+      "n_findings": 0,
+      "details": [],
+      "scope": "manifest bindings",
+      "required": false,
+      "counts": {
+        "checked": 0,
+        "skipped": 0,
+        "missing": 0,
+        "failed": 0
+      },
+      "coverage": {}
+    },
+    {
+      "name": "target_stability",
+      "status": "pass",
+      "gates": [],
+      "hard_gate": true,
+      "summary": "target_stability",
+      "n_findings": 0,
+      "details": [],
+      "scope": "target and input snapshots",
+      "required": true,
+      "counts": {
+        "checked": 1,
+        "skipped": 0,
+        "missing": 0,
+        "failed": 0
+      },
+      "coverage": {}
     }
-  ]
+  ],
+  "receipt_sha256": "0b9c5d9f31c6422d9a52fc46bc8252a4e244b331aff5ff6d01d0e72f600a0c8f"
 }

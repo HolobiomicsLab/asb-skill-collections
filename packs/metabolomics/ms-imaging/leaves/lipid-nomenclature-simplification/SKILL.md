@@ -1,6 +1,9 @@
 ---
 name: lipid-nomenclature-simplification
-description: Use when you have spatial metabolomics data with semicolon-delimited isomer name annotations (such as the 'all_IsomerNames' column in SpaMTP Seurat objects) and you need to reduce annotation complexity before pathway analysis, statistical testing, or visualization.
+description: Use when you have spatial metabolomics data with semicolon-delimited
+  isomer name annotations (such as the 'all_IsomerNames' column in SpaMTP Seurat objects)
+  and you need to reduce annotation complexity before pathway analysis, statistical
+  testing, or visualization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -16,6 +19,13 @@ metadata:
   - Seurat
   techniques:
   - MS-imaging
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ''
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -52,6 +62,7 @@ attribution:
 
 # lipid-nomenclature-simplification
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Simplify complex lipid nomenclature annotations into standardized Lipid Maps categories and classes, reducing annotation redundancy while preserving metabolite identity. This skill is essential when spatial metabolomic datasets contain multiple isomer names per m/z and you need a unified, interpretable annotation system for downstream analysis.

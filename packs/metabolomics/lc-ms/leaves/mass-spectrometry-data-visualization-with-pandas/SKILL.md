@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-data-visualization-with-pandas
-description: Use when your input is a Pandas DataFrame containing mass spectrometry measurements (m/z and intensity columns for spectra, retention time and intensity for chromatograms, or x, y, z for 2D/3D peak maps) and you need to generate static plots (matplotlib) or interactive web-based visualizations.
+description: Use when your input is a Pandas DataFrame containing mass spectrometry
+  measurements (m/z and intensity columns for spectra, retention time and intensity
+  for chromatograms, or x, y, z for 2D/3D peak maps) and you need to generate static
+  plots (matplotlib) or interactive web-based visualizations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -17,12 +20,15 @@ metadata:
   - bokeh
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
 evidence_spans:
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 - Multiple backends supported including matplotlib, bokeh, and plotly
 - Rendering is typically slower than the BOKEH backend
 - ms_data.plot(x="m/z", y="intensity", kind="spectrum")

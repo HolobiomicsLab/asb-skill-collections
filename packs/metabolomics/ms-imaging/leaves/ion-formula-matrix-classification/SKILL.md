@@ -1,8 +1,11 @@
 ---
 name: ion-formula-matrix-classification
-description: Use when you have peak data from MSI experiments (stored as .zip peak matrix files) where matrix ions (e.g., silver adducts in AgLDI-MSI) dominate the spectrum and obscure analyte signals.
+description: Use when you have peak data from MSI experiments (stored as .zip peak
+  matrix files) where matrix ions (e.g., silver adducts in AgLDI-MSI) dominate the
+  spectrum and obscure analyte signals.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,11 +18,14 @@ metadata:
   - devtools
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
 evidence_spans:
-- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI data
+- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI
+  data
 - devtools::install_github("prafols/rMSI", ref = "0.8")
 - devtools::install_github("prafols/rMSIproc", ref = "0.2")
 - rMSIcleanup is an open-source R package

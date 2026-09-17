@@ -1,6 +1,9 @@
 ---
 name: m-z-and-retention-time-window-validation
-description: Use when before committing to full-scale targeted peak integration across all LC–MS runs in a metabolomics or lipidomics study. Apply this skill when you have a curated list of 5–50+ target compounds with theoretical m/z values and expected retention times, centroided .
+description: Use when before committing to full-scale targeted peak integration across
+  all LC–MS runs in a metabolomics or lipidomics study. Apply this skill when you
+  have a curated list of 5–50+ target compounds with theoretical m/z values and expected
+  retention times, centroided .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,6 +18,8 @@ metadata:
   - MSConvert (ProteoWizard)
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -23,7 +28,8 @@ evidence_spans:
 - loads MS data as `Spectra` objects so it's easily integrated with other tools
 - rmarkdown::html_document
 - Quick start for targeted peak integration of LC-MS data using TARDIS
-- It makes use of an established retention time correction algorithm from the `xcms` package
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

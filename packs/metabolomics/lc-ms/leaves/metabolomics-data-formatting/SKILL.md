@@ -1,6 +1,9 @@
 ---
 name: metabolomics-data-formatting
-description: Use when after running feature clustering (Gravity) or drift correction (Blueshift) on LCMS data, when you have a processed feature table and need to standardize its structure, validate metadata completeness, enforce missing-value thresholds, and generate a QC report documenting pass/fail status.
+description: Use when after running feature clustering (Gravity) or drift correction
+  (Blueshift) on LCMS data, when you have a processed feature table and need to standardize
+  its structure, validate metadata completeness, enforce missing-value thresholds,
+  and generate a QC report documenting pass/fail status.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -20,8 +23,10 @@ metadata:
   - dplyr / tidyr
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
-- doi: 10.1093/bioinformatics/btaf290/8128335
+- doi: 10.1093/bioinformatics/btaf290
   title: Eclipse
 - doi: 10.1101/2020.11.20.391912
   title: ''
@@ -35,7 +40,7 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_eclipse_cq
-    doi: 10.1093/bioinformatics/btaf290/8128335
+    doi: 10.1093/bioinformatics/btaf290
     title: Eclipse
   - build: coll_metenp_cq
     doi: 10.1101/2020.11.20.391912
@@ -44,9 +49,9 @@ provenance:
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1093/bioinformatics/btaf290/8128335
+  original_doi: 10.1093/bioinformatics/btaf290
   all_source_dois:
-  - 10.1093/bioinformatics/btaf290/8128335
+  - 10.1093/bioinformatics/btaf290
   - 10.1101/2020.11.20.391912
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []

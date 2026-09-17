@@ -1,6 +1,8 @@
 ---
 name: ms-ms-spectrum-prediction
-description: Use when you have MS/MS spectra (in MGF format) with required metadata fields (TITLE, PRECURSOR_MZ, PRECURSOR_TYPE, COLLISION_ENERGY) and need to predict candidate molecular formulas ranked by confidence.
+description: Use when you have MS/MS spectra (in MGF format) with required metadata
+  fields (TITLE, PRECURSOR_MZ, PRECURSOR_TYPE, COLLISION_ENERGY) and need to predict
+  candidate molecular formulas ranked by confidence.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +16,8 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

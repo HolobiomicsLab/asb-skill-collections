@@ -1,6 +1,8 @@
 ---
 name: metabolomics-feature-selection-significance-filtering
-description: Use when you have fitted an MB-PLS model on multi-assay LC-MS intensity data (e.g., HPOS, LPOS, LNEG), computed MB-VIP scores for all features, and need to identify which features are statistically significant for your phenotypic outcome.
+description: Use when you have fitted an MB-PLS model on multi-assay LC-MS intensity
+  data (e.g., HPOS, LPOS, LNEG), computed MB-VIP scores for all features, and need
+  to identify which features are statistically significant for your phenotypic outcome.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -18,6 +20,8 @@ metadata:
   - MamsiStructSearch
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -25,7 +29,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MAMSI is a Python framework
-- 'It is based on MB_PLS package: Baum et al., (2019). Multiblock PLS: Block dependent prediction modeling for Python.'
+- 'It is based on MB_PLS package: Baum et al., (2019). Multiblock PLS: Block dependent
+  prediction modeling for Python.'
 - import pandas as pd
 - import numpy as np
 - from sklearn.model_selection import train_test_split

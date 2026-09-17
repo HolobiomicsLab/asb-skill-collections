@@ -1,6 +1,9 @@
 ---
 name: xcms-object-handling-and-preprocessing
-description: Use when you have raw gas or liquid chromatography–mass spectrometry data (in NetCDF or mzML format) and need to detect features, align them across samples by retention time and mass-to-charge ratio, correct for retention time drift, and fill missing values before downstream metabolite clustering.
+description: Use when you have raw gas or liquid chromatography–mass spectrometry
+  data (in NetCDF or mzML format) and need to detect features, align them across samples
+  by retention time and mass-to-charge ratio, correct for retention time drift, and
+  fill missing values before downstream metabolite clustering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -15,15 +18,19 @@ metadata:
   - InterpretMSSpectrum
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
 evidence_spans:
 - ramclustR function is built to use xcms data
 - RC <- ramclustR(xcmsObj = xset, ExpDes=experiment)
-- submitting this score matrix for heirarchical clustering, and then cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
+- submitting this score matrix for heirarchical clustering, and then cutting the resulting
+  dendrogram into neat chunks using the dynamicTreeCut package
 - cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
-- XCMS is a commonly used tool to detect all the signals from a metabolomics dataset, generating aligned features
+- XCMS is a commonly used tool to detect all the signals from a metabolomics dataset,
+  generating aligned features
 - XCMS is a commonly used tool to detect all the signals from a metabolomics dataset
 claims: []
 provenance:

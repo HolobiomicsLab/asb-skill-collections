@@ -1,6 +1,8 @@
 ---
 name: file-format-validation
-description: Use when after writing parsed spectra to a new MSP file using mssearchr's MSP writer, or when integrating MSP files from external sources into an R analysis pipeline.
+description: Use when after writing parsed spectra to a new MSP file using mssearchr's
+  MSP writer, or when integrating MSP files from external sources into an R analysis
+  pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -17,14 +19,19 @@ metadata:
   - JSON Schema validators (various)
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr
 - doi: 10.1021/acs.jproteome.5c00435
   title: ''
 evidence_spans:
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users for conducting library searches against electron ionization mass spectral databases.
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users for conducting library searches against electron ionization mass spectral
+  databases.
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users
 - enhance the capabilities of R users for conducting library searches
 claims: []
 provenance:

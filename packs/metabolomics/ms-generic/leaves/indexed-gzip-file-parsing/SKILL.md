@@ -1,6 +1,7 @@
 ---
 name: indexed-gzip-file-parsing
-description: Use when you have compressed mzML.gz files and need to retrieve specific spectra by numeric identifier without decompressing the entire file.
+description: Use when you have compressed mzML.gz files and need to retrieve specific
+  spectra by numeric identifier without decompressing the entire file.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -12,6 +13,8 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml

@@ -1,6 +1,8 @@
 ---
 name: chromatographic-misalignment-detection
-description: Use when after running XCMS-based alignment on LC-MS datasets with hundreds of samples or data acquisition periods longer than a week, when the assumption that all m/z bins in the same sample share a single warping function is likely to fail.
+description: Use when after running XCMS-based alignment on LC-MS datasets with hundreds
+  of samples or data acquisition periods longer than a week, when the assumption that
+  all m/z bins in the same sample share a single warping function is likely to fail.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,11 +15,14 @@ metadata:
   - xcms
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
 evidence_spans:
-- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an alignment algorithm
+- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an
+  alignment algorithm
 - '`ncGTW` is an R package developed as a plug-in of `xcms`'
 - ncGTW is an R package developed as a plug-in of xcms
 claims: []

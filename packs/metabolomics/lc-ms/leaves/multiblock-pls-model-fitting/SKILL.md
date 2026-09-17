@@ -1,6 +1,9 @@
 ---
 name: multiblock-pls-model-fitting
-description: Use when you have split multi-assay LC-MS intensity data into training (90%) and test (10%) subsets with assay-specific column prefixes, and you need to fit a discriminant or regression model that respects the block structure (separate assays) while jointly predicting a phenotypic outcome (e.
+description: Use when you have split multi-assay LC-MS intensity data into training
+  (90%) and test (10%) subsets with assay-specific column prefixes, and you need to
+  fit a discriminant or regression model that respects the block structure (separate
+  assays) while jointly predicting a phenotypic outcome (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3929
@@ -17,6 +20,8 @@ metadata:
   - matplotlib
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -24,7 +29,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MAMSI is a Python framework
-- 'It is based on MB_PLS package: Baum et al., (2019). Multiblock PLS: Block dependent prediction modeling for Python.'
+- 'It is based on MB_PLS package: Baum et al., (2019). Multiblock PLS: Block dependent
+  prediction modeling for Python.'
 - import pandas as pd
 - import numpy as np
 - from sklearn.model_selection import train_test_split

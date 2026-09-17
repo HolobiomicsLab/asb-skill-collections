@@ -1,6 +1,7 @@
 ---
 name: mass-spectrometry-plot-type-specialization
-description: Use when you have a Pandas DataFrame containing mass spectrometry data (e.
+description: Use when you have a Pandas DataFrame containing mass spectrometry data
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -15,6 +16,8 @@ metadata:
   - Plotly
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz

@@ -1,6 +1,8 @@
 ---
 name: python-random-access-implementation
-description: Use when when you have an indexed gzip file (mzML.gz with internal index structure) and need to retrieve individual spectra or chromatograms by integer index without decompressing the entire file.
+description: Use when when you have an indexed gzip file (mzML.gz with internal index
+  structure) and need to retrieve individual spectra or chromatograms by integer index
+  without decompressing the entire file.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -13,6 +15,8 @@ metadata:
   - pymzML
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml

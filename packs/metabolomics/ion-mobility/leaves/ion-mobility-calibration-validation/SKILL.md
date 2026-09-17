@@ -1,6 +1,9 @@
 ---
 name: ion-mobility-calibration-validation
-description: Use when when you have positive- or negative-mode ion mobility spectrometry data with tunemix reference standards (known m/z, drift times, and CCS values) and need to verify that the calibration model accurately captures the relationship between drift time, reference m/z, and collision cross.
+description: Use when when you have positive- or negative-mode ion mobility spectrometry
+  data with tunemix reference standards (known m/z, drift times, and CCS values) and
+  need to verify that the calibration model accurately captures the relationship between
+  drift time, reference m/z, and collision cross.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,13 +18,16 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
 - DEIMoS is a Python application programming interface
 - DEIMoS is a Python application programming interface and command-line tool
-- Functionality includes feature detection, feature alignment, collision cross section (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
+- Functionality includes feature detection, feature alignment, collision cross section
+  (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
 - import deimos
 - import numpy as np
 claims: []

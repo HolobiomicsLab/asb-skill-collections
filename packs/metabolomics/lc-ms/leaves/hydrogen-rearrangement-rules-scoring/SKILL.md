@@ -1,6 +1,7 @@
 ---
 name: hydrogen-rearrangement-rules-scoring
-description: Use when after MS-CleanR has filtered and clustered LC-MS features and formatted them for MS-FINDER input (m/z, retention time, MS/MS spectra).
+description: Use when after MS-CleanR has filtered and clustered LC-MS features and
+  formatted them for MS-FINDER input (m/z, retention time, MS/MS spectra).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3860
@@ -13,6 +14,8 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR

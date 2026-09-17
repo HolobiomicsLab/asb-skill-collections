@@ -1,6 +1,9 @@
 ---
 name: numeric-list-construction-validation
-description: Use when implementing a backendInitialize() method for a custom MsBackend class and you have raw m/z and intensity vectors (from files, data frames, or lists) that must be converted into the internal NumericList representation required by the Spectra package.
+description: Use when implementing a backendInitialize() method for a custom MsBackend
+  class and you have raw m/z and intensity vectors (from files, data frames, or lists)
+  that must be converted into the internal NumericList representation required by
+  the Spectra package.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -14,6 +17,8 @@ metadata:
   - IRanges
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra

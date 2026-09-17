@@ -1,8 +1,12 @@
 ---
 name: spectral-array-extraction-and-reconstruction
-description: Use when your input is an mzPeak archive (ZIP of Parquet files) and you need to recover spectrum signal data (m/z values and intensities) for downstream analysis, visualization, or format conversion. Use this skill when working with profile or centroid mode spectra stored in `spectra_data.
+description: Use when your input is an mzPeak archive (ZIP of Parquet files) and you
+  need to recover spectrum signal data (m/z values and intensities) for downstream
+  analysis, visualization, or format conversion. Use this skill when working with
+  profile or centroid mode spectra stored in `spectra_data.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +19,8 @@ metadata:
   - pandas
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak

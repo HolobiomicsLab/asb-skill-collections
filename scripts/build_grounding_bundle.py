@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 """build_grounding_bundle — emit self-contained grounding artifacts into a unit
 (a per-technique pack or the full collection): filtered+enriched kb_bundle.json,
-vendored perspicacite_kb_bind.py, /ground command, GROUNDING.md."""
+vendored perspicacite_kb_bind.py, /ground command, GROUNDING.md. Copied leaves
+also receive the licence signal declared by their source collection leaves."""
+
 from __future__ import annotations
+
 import argparse
 import json
 import re
 import shutil
 from pathlib import Path
+
 # Invoked by path (`python scripts/x.py`), only `scripts/` lands on sys.path, so
 # the repo root has to be added before the sibling package can be imported.
 if __package__ in (None, ""):
@@ -17,6 +21,7 @@ if __package__ in (None, ""):
     _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
 
 from asb_skill_collections import layout
+from scripts.stamp_skill_license import stamp_copies
 
 try:
     import yaml
@@ -35,15 +40,26 @@ def _normalize_repo_url(u):
     return u
 
 
-def resolve_repo_urls(skill_dois, corpus_papers):
-    """Repositories to clone as `repo`-tier grounding for a skill: its own papers'.
+def resolve_repo_urls(skill_dois, corpus_papers, declared=None):
+    """Repositories to clone as `repo`-tier grounding for a skill: its own sources'.
 
     Tool records used to contribute here too, via their `canonical_url`. That field
     held the repository of *some* paper citing the tool, not necessarily one of this
     skill's papers and never the tool's own home, so a skill grounded on paper A
     could be handed paper B's repository to read. Issue #42.
+
+    A skill with no papers is the other half of that rule. Deriving from its DOIs
+    yields nothing, but its declared `repo_urls` is not another paper's repository —
+    it is the skill's own source, the only one it has, so it is kept rather than
+    erased.
     """
     out = []
+    if not skill_dois:
+        for u in declared or []:
+            url = _normalize_repo_url(u)
+            if url and url not in out:
+                out.append(url)
+        return out
     by_doi = {p.get("doi"): p for p in corpus_papers}
     for d in skill_dois:
         url = _normalize_repo_url((by_doi.get(d) or {}).get("repo_url"))
@@ -61,16 +77,22 @@ def filter_and_enrich_bundle(full_bundle, skill_slugs, corpus_papers):
         if rec is None:
             continue
         rec = dict(rec)
-        rec["repo_urls"] = resolve_repo_urls(rec.get("dois") or [], corpus_papers)
+        rec["repo_urls"] = resolve_repo_urls(
+            rec.get("dois") or [], corpus_papers, rec.get("repo_urls")
+        )
         kept[slug] = rec
         dois.update(rec.get("dois") or [])
-    out = {k: full_bundle[k] for k in ("collection", "version", "perspicacite_kb_mode", "kb_prefix") if k in full_bundle}
+    out = {
+        k: full_bundle[k]
+        for k in ("collection", "version", "perspicacite_kb_mode", "kb_prefix")
+        if k in full_bundle
+    }
     out["distinct_dois"] = sorted(dois)
     out["skills"] = kept
     return out
 
 
-GROUND_COMMAND = '''---
+GROUND_COMMAND = """---
 description: Ground the ASB skill in play against its source paper/repo (Perspicacité KB, with a serverless local-clone fallback).
 argument-hint: "[skill-slug-or-doi] [question]"
 ---
@@ -85,7 +107,7 @@ Steps:
 4. Answer the user's question grounded in what you retrieved; cite the KB/repo/paper. If neither backend yields a source, say so and proceed ungrounded.
 
 Arguments: $ARGUMENTS
-'''
+"""
 
 
 def render_ground_command():
@@ -115,27 +137,51 @@ def _read_corpus(collection_dir):
     p = collection_dir / "corpus.yaml"
     return (yaml.safe_load(p.read_text())["papers"]) if p.is_file() and yaml else []
 
+
 def build_unit(unit_dir, collection_dir, bind_script):
-    unit_dir, collection_dir, bind_script = Path(unit_dir), Path(collection_dir), Path(bind_script)
+    """Build grounding artifacts and refresh copied leaves' declared licence signal."""
+    unit_dir, collection_dir, bind_script = (
+        Path(unit_dir),
+        Path(collection_dir),
+        Path(bind_script),
+    )
     if not any(d.is_dir() for d in layout.skill_dirs(unit_dir)):
         raise ValueError(f"no skill dir in unit {unit_dir}")
     slugs = {d.name for d in layout.slug_dirs(unit_dir)}
     full = json.loads((collection_dir / "kb_bundle.json").read_text())
     bundle = filter_and_enrich_bundle(full, slugs, _read_corpus(collection_dir))
     written = []
-    (unit_dir / "kb_bundle.json").write_text(json.dumps(bundle, indent=2) + "\n"); written.append("kb_bundle.json")
+    # ensure_ascii=False matches every other producer of this file
+    # (scripts/build_packs.py, scripts/skill_index.py); the default escapes the
+    # non-ASCII tool names the shipped bundles carry literally, so re-running
+    # this over a tree another producer wrote reformatted hundreds of rows.
+    (unit_dir / "kb_bundle.json").write_text(
+        json.dumps(bundle, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
+    written.append("kb_bundle.json")
     (unit_dir / "bin").mkdir(exist_ok=True)
-    shutil.copyfile(bind_script, unit_dir / "bin" / "perspicacite_kb_bind.py"); written.append("bin/perspicacite_kb_bind.py")
+    shutil.copyfile(bind_script, unit_dir / "bin" / "perspicacite_kb_bind.py")
+    written.append("bin/perspicacite_kb_bind.py")
     (unit_dir / "commands").mkdir(exist_ok=True)
-    (unit_dir / "commands" / "ground.md").write_text(render_ground_command()); written.append("commands/ground.md")
-    (unit_dir / "GROUNDING.md").write_text(render_grounding_doc(unit_dir.name)); written.append("GROUNDING.md")
+    (unit_dir / "commands" / "ground.md").write_text(render_ground_command())
+    written.append("commands/ground.md")
+    (unit_dir / "GROUNDING.md").write_text(render_grounding_doc(unit_dir.name))
+    written.append("GROUNDING.md")
     pj_path = unit_dir / ".claude-plugin" / "plugin.json"
     if not pj_path.is_file():
         raise ValueError(f"no .claude-plugin/plugin.json in unit {unit_dir}")
     pj = json.loads(pj_path.read_text())
     if not pj.get("description", "").endswith(_SUFFIX):
         pj["description"] = pj.get("description", "") + _SUFFIX
-        pj_path.write_text(json.dumps(pj, indent=2) + "\n"); written.append(".claude-plugin/plugin.json")
+        # ensure_ascii=False for the same reason the bundle above uses it: the
+        # shipped descriptions carry an em dash and "Perspicacité" literally, and
+        # the default escaped them, so this writer churned every manifest it
+        # touched. Both writers in this function now agree with the tree.
+        pj_path.write_text(
+            json.dumps(pj, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        )
+        written.append(".claude-plugin/plugin.json")
+    written.extend(stamp_copies(unit_dir, collection_dir))
     return written
 
 
@@ -143,7 +189,10 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--unit", required=True)
     ap.add_argument("--collection", required=True)
-    ap.add_argument("--bind-script", default=str(Path(__file__).with_name("perspicacite_kb_bind.py")))
+    ap.add_argument(
+        "--bind-script",
+        default=str(Path(__file__).with_name("perspicacite_kb_bind.py")),
+    )
     a = ap.parse_args(argv)
     for w in build_unit(Path(a.unit), Path(a.collection), Path(a.bind_script)):
         print("wrote", Path(a.unit) / w)

@@ -1,6 +1,8 @@
 ---
 name: adduct-ion-mass-calculation
-description: Use when when you have derivatized metabolite structures (SMILES or mol format) and need to predict their ionization products in MS imaging, particularly when the derivatizing matrix produces non-standard adducts (e.
+description: Use when when you have derivatized metabolite structures (SMILES or mol
+  format) and need to predict their ionization products in MS imaging, particularly
+  when the derivatizing matrix produces non-standard adducts (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,6 +14,8 @@ metadata:
   - Met-ID
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid

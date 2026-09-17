@@ -1,6 +1,8 @@
 ---
 name: r-statistical-model-serialization
-description: Use when after training a customized R statistical or machine learning model on annotated training data, you need to persist the trained model object for reuse in downstream analysis workflows without retraining.
+description: Use when after training a customized R statistical or machine learning
+  model on annotated training data, you need to persist the trained model object for
+  reuse in downstream analysis workflows without retraining.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -14,6 +16,8 @@ metadata:
   - DNMS2Purifier.r
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c00736
   title: DNMS2Purifier
@@ -42,6 +46,7 @@ attribution:
 
 # R statistical model serialization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Serialize trained R statistical models to .rds binary files for persistence and downstream reuse in reproducible bioinformatic workflows. This skill ensures trained models (e.g., machine learning classifiers) can be saved, version-controlled, and reliably loaded in production pipelines.

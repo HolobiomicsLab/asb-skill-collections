@@ -108,4 +108,4 @@ All three are **advisory** — the human reviewer and maintainer still make the 
 - **COI policy:** [COI_POLICY.md](../../governance/COI_POLICY.md)
 - **Reviewer onboarding:** [CONTRIBUTING.md](../CONTRIBUTING.md) Step 0–1
 - **Attestation template:** `templates/attestation.yaml.template`
-- **Collections guide:** [README.md](../README.md#collections)
+- **Collections guide:** [README.md](../../README.md#whats-in-the-collection)

@@ -1,6 +1,9 @@
 ---
 name: aromaticity-index-computation
-description: Use when after molecular formula assignment from FT-ICR MS peaks and elemental composition tabulation (C, H, O, N, S, P counts), when you need to quantify the degree of aromaticity and carbon-skeleton unsaturation for each detected compound to support Van Krevelen classification, chemodiversity.
+description: Use when after molecular formula assignment from FT-ICR MS peaks and
+  elemental composition tabulation (C, H, O, N, S, P counts), when you need to quantify
+  the degree of aromaticity and carbon-skeleton unsaturation for each detected compound
+  to support Van Krevelen classification, chemodiversity.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -14,12 +17,16 @@ metadata:
   - MetaboDirect
   techniques:
   - direct-infusion-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - requires the Python dependencies NumPy [40], pandas [41, 42]
-- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39] and is available to install through the Python Package Index... It requires the Python dependencies NumPy
+- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39] and
+  is available to install through the Python Package Index... It requires the Python
+  dependencies NumPy
 - It requires the Python dependencies NumPy [40], pandas [41, 42]
 claims: []
 provenance:

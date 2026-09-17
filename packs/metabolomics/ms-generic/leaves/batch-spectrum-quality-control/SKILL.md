@@ -1,6 +1,8 @@
 ---
 name: batch-spectrum-quality-control
-description: Use when when ingesting spectra from multiple open mass spectrometry libraries (OMSLs) in .mgf, .msp, .json, or .csv format and you observe mixed experimental protocols, inconsistent adduct annotations, or partial metadata.
+description: Use when when ingesting spectra from multiple open mass spectrometry
+  libraries (OMSLs) in .mgf, .msp, .json, or .csv format and you observe mixed experimental
+  protocols, inconsistent adduct annotations, or partial metadata.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +16,13 @@ metadata:
   - FragHub
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
@@ -42,6 +51,7 @@ attribution:
 
 # Batch Spectrum Quality Control
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Remove mass spectra that violate ionmode–adduct polarity consistency, lack chemical identifiers, or fail quality thresholds during bulk standardization of open mass spectrometry libraries. This skill detects and logs mismatched adducts, missing annotations, and low-entropy spectra to ensure only high-quality, annotated spectra are retained.

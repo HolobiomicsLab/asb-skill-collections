@@ -1,6 +1,9 @@
 ---
 name: silhouette-analysis-threshold-optimization
-description: Use when when you have a pre-computed hierarchical dendrogram from structural clustering (e.g., of LC-MS features based on m/z and retention time) and want to compare or validate the cluster assignments produced by a fixed constant-threshold method.
+description: Use when when you have a pre-computed hierarchical dendrogram from structural
+  clustering (e.g., of LC-MS features based on m/z and retention time) and want to
+  compare or validate the cluster assignments produced by a fixed constant-threshold
+  method.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -17,6 +20,8 @@ metadata:
   - MAMSI (Multi-Assay Mass Spectrometry Integration)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi

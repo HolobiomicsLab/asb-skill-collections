@@ -1,0 +1,3393 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "asbext": "https://w3id.org/asb/indicium-ext#",
+      "chebi": "http://purl.obolibrary.org/obo/CHEBI_",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "fabio": "http://purl.org/spar/fabio/",
+      "ms": "http://purl.obolibrary.org/obo/MS_",
+      "ncbitaxon": "http://purl.obolibrary.org/obo/NCBITaxon_",
+      "oa": "http://www.w3.org/ns/oa#",
+      "obi": "http://purl.obolibrary.org/obo/OBI_",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "p-plan": "http://purl.org/net/p-plan#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "repme": "https://w3id.org/reproduceme#",
+      "sepio": "http://purl.obolibrary.org/obo/SEPIO_",
+      "uberon": "http://purl.obolibrary.org/obo/UBERON_"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": [
+        "Dataset",
+        "repme:ScientificWorkflow"
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ],
+      "dateCreated": "2026-06-15",
+      "description": "Run findPatternsExplainingComponents on the Penicillium nordicum ms2Lib object and extracted GNPS components using metric=c('recall','precision','size') and top=5, then verify that pattern P70 achieves F1-score=1.0 for component 8 while all other top-5 patterns have recall=1.0 but lower precision.",
+      "hasPart": [
+        {
+          "@id": "evidence/source_snippets.md"
+        },
+        {
+          "@id": "inputs/dataset_folder_tree.txt"
+        },
+        {
+          "@id": "inputs/dataset_preview.md"
+        },
+        {
+          "@id": "evaluation/evaluation_strategy.md"
+        },
+        {
+          "@id": "evaluation/review_rubric.json"
+        },
+        {
+          "@id": "artifact_provenance.json"
+        },
+        {
+          "@id": "ledger/claims.jsonl"
+        },
+        {
+          "@id": "ledger/results.jsonl"
+        }
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "mentions": [
+        {
+          "@id": "#action-task_001"
+        },
+        {
+          "@id": "urn:asb:task:task_001"
+        },
+        {
+          "@id": "urn:asb:claim:claim_001"
+        },
+        {
+          "@id": "urn:asb:claim:claim_002"
+        },
+        {
+          "@id": "urn:asb:claim:claim_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_004"
+        },
+        {
+          "@id": "urn:asb:claim:claim_005"
+        },
+        {
+          "@id": "urn:asb:claim:claim_006"
+        },
+        {
+          "@id": "urn:asb:claim:claim_007"
+        },
+        {
+          "@id": "urn:asb:claim:claim_008"
+        },
+        {
+          "@id": "urn:asb:claim:claim_009"
+        },
+        {
+          "@id": "urn:asb:claim:claim_010"
+        },
+        {
+          "@id": "urn:asb:claim:claim_011"
+        },
+        {
+          "@id": "urn:asb:claim:claim_012"
+        },
+        {
+          "@id": "urn:asb:claim:claim_013"
+        },
+        {
+          "@id": "urn:asb:claim:claim_014"
+        },
+        {
+          "@id": "urn:asb:claim:claim_015"
+        },
+        {
+          "@id": "urn:asb:claim:claim_016"
+        },
+        {
+          "@id": "urn:asb:claim:claim_017"
+        },
+        {
+          "@id": "urn:asb:claim:claim_018"
+        },
+        {
+          "@id": "urn:asb:claim:claim_019"
+        },
+        {
+          "@id": "urn:asb:claim:claim_020"
+        },
+        {
+          "@id": "urn:asb:claim:claim_021"
+        },
+        {
+          "@id": "urn:asb:claim:claim_022"
+        },
+        {
+          "@id": "urn:asb:claim:claim_023"
+        },
+        {
+          "@id": "urn:asb:claim:claim_024"
+        },
+        {
+          "@id": "urn:asb:claim:claim_025"
+        },
+        {
+          "@id": "urn:asb:claim:claim_026"
+        },
+        {
+          "@id": "urn:asb:claim:claim_027"
+        },
+        {
+          "@id": "urn:asb:claim:claim_028"
+        },
+        {
+          "@id": "urn:asb:claim:claim_029"
+        },
+        {
+          "@id": "urn:asb:claim:claim_030"
+        },
+        {
+          "@id": "urn:asb:claim:claim_031"
+        },
+        {
+          "@id": "urn:asb:claim:claim_032"
+        },
+        {
+          "@id": "urn:asb:claim:claim_033"
+        },
+        {
+          "@id": "urn:asb:claim:claim_034"
+        },
+        {
+          "@id": "urn:asb:claim:claim_035"
+        },
+        {
+          "@id": "urn:asb:claim:claim_036"
+        },
+        {
+          "@id": "urn:asb:claim:claim_037"
+        },
+        {
+          "@id": "urn:asb:claim:claim_038"
+        },
+        {
+          "@id": "urn:asb:claim:claim_039"
+        },
+        {
+          "@id": "urn:asb:claim:claim_040"
+        },
+        {
+          "@id": "urn:asb:claim:claim_041"
+        },
+        {
+          "@id": "urn:asb:claim:claim_042"
+        },
+        {
+          "@id": "urn:asb:claim:claim_043"
+        },
+        {
+          "@id": "urn:asb:claim:claim_045"
+        },
+        {
+          "@id": "urn:asb:claim:claim_047"
+        },
+        {
+          "@id": "urn:asb:claim:claim_048"
+        },
+        {
+          "@id": "urn:asb:claim:claim_049"
+        },
+        {
+          "@id": "urn:asb:claim:claim_050"
+        },
+        {
+          "@id": "urn:asb:claim:claim_051"
+        },
+        {
+          "@id": "urn:asb:claim:claim_052"
+        },
+        {
+          "@id": "urn:asb:claim:claim_053"
+        },
+        {
+          "@id": "urn:asb:claim:claim_054"
+        },
+        {
+          "@id": "urn:asb:claim:claim_055"
+        },
+        {
+          "@id": "urn:asb:claim:claim_056"
+        },
+        {
+          "@id": "urn:asb:claim:claim_057"
+        },
+        {
+          "@id": "urn:asb:claim:claim_058"
+        },
+        {
+          "@id": "urn:asb:result:result_001"
+        },
+        {
+          "@id": "urn:asb:result:result_002"
+        },
+        {
+          "@id": "urn:asb:result:result_003"
+        },
+        {
+          "@id": "urn:asb:result:result_004"
+        },
+        {
+          "@id": "urn:asb:result:result_005"
+        },
+        {
+          "@id": "urn:asb:result:result_006"
+        },
+        {
+          "@id": "urn:asb:result:result_007"
+        },
+        {
+          "@id": "urn:asb:result:result_008"
+        },
+        {
+          "@id": "urn:asb:result:result_009"
+        },
+        {
+          "@id": "urn:asb:result:result_010"
+        },
+        {
+          "@id": "urn:asb:result:result_011"
+        },
+        {
+          "@id": "urn:asb:result:result_012"
+        },
+        {
+          "@id": "urn:asb:result:result_013"
+        },
+        {
+          "@id": "urn:asb:result:result_014"
+        },
+        {
+          "@id": "urn:asb:result:result_015"
+        },
+        {
+          "@id": "urn:asb:result:result_016"
+        },
+        {
+          "@id": "urn:asb:result:result_017"
+        },
+        {
+          "@id": "urn:asb:result:result_018"
+        },
+        {
+          "@id": "urn:asb:result:result_019"
+        },
+        {
+          "@id": "urn:asb:result:result_020"
+        },
+        {
+          "@id": "urn:asb:result:result_021"
+        },
+        {
+          "@id": "urn:asb:result:result_022"
+        },
+        {
+          "@id": "urn:asb:result:result_023"
+        },
+        {
+          "@id": "urn:asb:result:result_024"
+        },
+        {
+          "@id": "urn:asb:result:result_025"
+        },
+        {
+          "@id": "urn:asb:result:result_026"
+        },
+        {
+          "@id": "urn:asb:result:result_027"
+        },
+        {
+          "@id": "urn:asb:result:result_028"
+        },
+        {
+          "@id": "urn:asb:result:result_029"
+        },
+        {
+          "@id": "urn:asb:result:result_030"
+        },
+        {
+          "@id": "urn:asb:result:result_031"
+        },
+        {
+          "@id": "urn:asb:result:result_032"
+        },
+        {
+          "@id": "urn:asb:result:result_033"
+        },
+        {
+          "@id": "urn:asb:result:result_034"
+        },
+        {
+          "@id": "urn:asb:result:result_035"
+        },
+        {
+          "@id": "urn:asb:result:result_036"
+        },
+        {
+          "@id": "urn:asb:result:result_037"
+        },
+        {
+          "@id": "urn:asb:result:result_038"
+        },
+        {
+          "@id": "urn:asb:result:result_039"
+        },
+        {
+          "@id": "urn:asb:result:result_040"
+        },
+        {
+          "@id": "urn:asb:result:result_041"
+        },
+        {
+          "@id": "urn:asb:result:result_042"
+        },
+        {
+          "@id": "urn:asb:result:result_043"
+        },
+        {
+          "@id": "urn:asb:result:result_044"
+        },
+        {
+          "@id": "urn:asb:result:result_045"
+        },
+        {
+          "@id": "urn:asb:result:result_046"
+        },
+        {
+          "@id": "#env-task_001"
+        },
+        {
+          "@id": "http://edamontology.org/topic_3172"
+        }
+      ],
+      "name": "Reproduce the count of GNPS components extracted from the Penicillium nordicum molecular network",
+      "repme:hasComputationalEnvironment": {
+        "@id": "#computational-environment"
+      }
+    },
+    {
+      "@id": "evidence/source_snippets.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evidence/source_snippets.md"
+    },
+    {
+      "@id": "inputs/dataset_folder_tree.txt",
+      "@type": "File",
+      "encodingFormat": "text/plain",
+      "name": "inputs/dataset_folder_tree.txt"
+    },
+    {
+      "@id": "inputs/dataset_preview.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "inputs/dataset_preview.md"
+    },
+    {
+      "@id": "evaluation/evaluation_strategy.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evaluation/evaluation_strategy.md"
+    },
+    {
+      "@id": "evaluation/review_rubric.json",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "name": "evaluation/review_rubric.json"
+    },
+    {
+      "@id": "urn:asb:task:task_001",
+      "@type": [
+        "ScholarlyArticle",
+        "p-plan:Plan",
+        "http://purl.org/spar/fabio/SoftwarePaper"
+      ],
+      "asbext:task_kind": "reproduction",
+      "description": "Run findPatternsExplainingComponents on the Penicillium nordicum ms2Lib object and extracted GNPS components using metric=c('recall','precision','size') and top=5, then verify that pattern P70 achieves F1-score=1.0 for component 8 while all other top-5 patterns have recall=1.0 but lower precision.",
+      "keywords": [
+        "fragmentation-pattern-extraction-and-ranking",
+        "network-component-identification-and-filtering",
+        "precision-recall-optimization-in-spectral-annotation",
+        "graph-based-metabolite-similarity-assessment",
+        "gnps-molecular-network-integration"
+      ],
+      "name": "Reproduce the count of GNPS components extracted from the Penicillium nordicum molecular network",
+      "repme:hasResearcher": [
+        {
+          "@id": "urn:asb:researcher:gianfrotta-coline"
+        },
+        {
+          "@id": "urn:asb:researcher:th-venot-etienne"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:researcher:gianfrotta-coline",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Coline Gianfrotta"
+    },
+    {
+      "@id": "urn:asb:researcher:th-venot-etienne",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Etienne Thévenot"
+    },
+    {
+      "@id": "urn:asb:tool:minems2",
+      "@type": "SoftwareApplication",
+      "name": "mineMS2",
+      "schema:url": "https://github.com/odisce/mineMS2"
+    },
+    {
+      "@id": "urn:asb:tool:igraph",
+      "@type": "SoftwareApplication",
+      "name": "igraph"
+    },
+    {
+      "@id": "urn:asb:tool:r",
+      "@type": "SoftwareApplication",
+      "name": "R"
+    },
+    {
+      "@id": "urn:asb:input:task_001_0",
+      "@type": "File",
+      "name": "Penicillium nordicum ms2Lib object with 51 MS/MS spectra, discretized m/z differences, and extracted fragmentation patterns"
+    },
+    {
+      "@id": "urn:asb:input:task_001_1",
+      "@type": "File",
+      "name": "GNPS molecular network in GraphML format with connected components, cliques, and high-similarity node pairs"
+    },
+    {
+      "@id": "urn:asb:output:task_001_0",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Table or data frame with pattern identifiers, recall, precision, F1-score, and size metrics for top-5 patterns per component, confirming P70 achieves F1=1.0 for component 8",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_001_1",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Verification report confirming pattern P70 F1-score=1.0 and all other top-5 patterns have recall=1.0 with precision<1.0",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "#action-task_001",
+      "@type": [
+        "CreateAction",
+        "prov:Activity",
+        "p-plan:Step"
+      ],
+      "description": "Run findPatternsExplainingComponents on the Penicillium nordicum ms2Lib object and extracted GNPS components using metric=c('recall','precision','size') and top=5, then verify that pattern P70 achieves F1-score=1.0 for component 8 while all other top-5 patterns have recall=1.0 but lower precision.",
+      "instrument": [
+        {
+          "@id": "urn:asb:tool:minems2"
+        },
+        {
+          "@id": "urn:asb:tool:igraph"
+        },
+        {
+          "@id": "urn:asb:tool:r"
+        }
+      ],
+      "name": "Reproduce the count of GNPS components extracted from the Penicillium nordicum molecular network",
+      "object": [
+        {
+          "@id": "urn:asb:input:task_001_0"
+        },
+        {
+          "@id": "urn:asb:input:task_001_1"
+        }
+      ],
+      "repme:hasInputData": [
+        {
+          "@id": "urn:asb:input:task_001_0"
+        },
+        {
+          "@id": "urn:asb:input:task_001_1"
+        }
+      ],
+      "repme:hasOutputData": [
+        {
+          "@id": "urn:asb:output:task_001_0"
+        },
+        {
+          "@id": "urn:asb:output:task_001_1"
+        }
+      ],
+      "repme:hasResult": [
+        {
+          "@id": "urn:asb:result:result_005"
+        },
+        {
+          "@id": "urn:asb:result:result_006"
+        },
+        {
+          "@id": "urn:asb:result:result_007"
+        },
+        {
+          "@id": "urn:asb:result:result_008"
+        },
+        {
+          "@id": "urn:asb:result:result_022"
+        },
+        {
+          "@id": "urn:asb:result:result_023"
+        },
+        {
+          "@id": "urn:asb:result:result_024"
+        },
+        {
+          "@id": "urn:asb:result:result_025"
+        },
+        {
+          "@id": "urn:asb:result:result_026"
+        },
+        {
+          "@id": "urn:asb:result:result_027"
+        },
+        {
+          "@id": "urn:asb:result:result_028"
+        },
+        {
+          "@id": "urn:asb:result:result_029"
+        },
+        {
+          "@id": "urn:asb:result:result_033"
+        },
+        {
+          "@id": "urn:asb:result:result_046"
+        }
+      ],
+      "result": [
+        {
+          "@id": "urn:asb:output:task_001_0"
+        },
+        {
+          "@id": "urn:asb:output:task_001_1"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:claim:claim_001",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "mineMS2 patterns are graphs with ion peaks as nodes and m/z differences as edges."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2658,
+          "oa:start": 2568
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "mineMS2 patterns are graphs with ion peaks as nodes and m/z differences as edges.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "mineMS2 fragmentation pattern representation",
+        "object": "graph-based representation",
+        "qualifier": "is_a",
+        "relation": "graphs with ion peaks as nodes and m/z differences as edges",
+        "subject": "mineMS2 patterns"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_002",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "mineMS2 m/z differences include not only neutral losses but also m/z differences between ions that belong to distinct fragmentation paths."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2929,
+          "oa:start": 2723
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "mineMS2 m/z differences include not only neutral losses but also m/z differences between ions that belong to distinct fragmentation paths.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_003",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The mineMS2 method is independent of external spectral databases and knowledge of the molecular formula of precursor ions."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3131,
+          "oa:start": 2979
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The mineMS2 method is independent of external spectral databases and knowledge of the molecular formula of precursor ions.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "mineMS2 characterization approach",
+        "object": "de novo characterization capability",
+        "qualifier": "has_property",
+        "relation": "is independent of external databases and precursor formula knowledge",
+        "subject": "mineMS2"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_004",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "mineMS2 patterns are complementary to MS2LDA patterns because they consist of exact graphs rather than probabilistic lists."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 18242,
+          "oa:start": 17834
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "mineMS2 patterns are complementary to MS2LDA patterns because they consist of exact graphs rather than probabilistic lists.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "fragmentation pattern mining approaches",
+        "object": "improved interpretability over MS2LDA",
+        "qualifier": "enhances",
+        "relation": "facilitates chemical interpretation compared to probabilistic lists",
+        "subject": "mineMS2 exact graph structure"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_005",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The dataset contains 51 MS/MS spectra from secondary metabolites of Penicillium nordicum."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1397,
+          "oa:start": 1156
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The dataset contains 51 MS/MS spectra from secondary metabolites of Penicillium nordicum.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "Penicillium nordicum metabolomics study",
+        "object": "51 spectra",
+        "qualifier": "has_property",
+        "relation": "contains 51 MS/MS spectra",
+        "subject": "dataset"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_006",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The Penicillium nordicum spectra were acquired on a Luna C18 column using HPLC coupled to an LTQ Orbitrap XL hybrid mass spectrometer."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1356,
+          "oa:start": 1224
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The Penicillium nordicum spectra were acquired on a Luna C18 column using HPLC coupled to an LTQ Orbitrap XL hybrid mass spectrometer.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "Penicillium nordicum metabolomics study",
+        "object": "specific instrument configuration",
+        "qualifier": "has_property",
+        "relation": "uses Luna C18 HPLC and LTQ Orbitrap XL hybrid MS",
+        "subject": "spectra acquisition"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_007",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The Penicillium nordicum spectra were acquired in positive ionization mode at HCD20 collision energy with a resolution of 7,500."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1460,
+          "oa:start": 1358
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The Penicillium nordicum spectra were acquired in positive ionization mode at HCD20 collision energy with a resolution of 7,500.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "Penicillium nordicum MS/MS acquisition parameters",
+        "object": "analytical parameters",
+        "qualifier": "has_property",
+        "relation": "positive ionization mode, HCD20 collision energy, 7500 resolution",
+        "subject": "MS/MS analysis"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_008",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The molecular network was precomputed on the GNPS website and extracted in GraphML format."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1291,
+          "oa:start": 1092
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The molecular network was precomputed on the GNPS website and extracted in GraphML format.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "Penicillium nordicum analysis workflow",
+        "object": "pnordicum_ms2_gnps.graphml file",
+        "qualifier": "has_property",
+        "relation": "precomputed on GNPS and extracted in GraphML format",
+        "subject": "molecular network"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_009",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "mineMS2 can be coupled to GNPS MS/MS molecular networking to focus on patterns that best explain components of the network."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1055,
+          "oa:start": 930
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "mineMS2 can be coupled to GNPS MS/MS molecular networking to focus on patterns that best explain components of the network.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "mineMS2 integration with molecular networking",
+        "object": "network component explanation",
+        "qualifier": "enables",
+        "relation": "coupling to GNPS molecular networks to identify explanatory patterns",
+        "subject": "mineMS2"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_010",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "It is recommended to compute the patterns and the GNPS network using the same .mgf input file to avoid matching issues."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1163,
+          "oa:start": 1057
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "It is recommended to compute the patterns and the GNPS network using the same .mgf input file to avoid matching issues.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "mineMS2 and GNPS analysis workflow",
+        "object": "accurate matching between patterns and networks",
+        "qualifier": "requires",
+        "relation": "using same .mgf input file",
+        "subject": "pattern and network computation"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_011",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The ms2Lib class is used throughout the workflow to store the spectra data and metadata, the m/z differences, the fragmentation graphs, and the patterns."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3738,
+          "oa:start": 3582
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The ms2Lib class is used throughout the workflow to store the spectra data and metadata, the m/z differences, the fragmentation graphs, and the patterns.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "mineMS2 software implementation",
+        "object": "comprehensive data storage capability",
+        "qualifier": "has_property",
+        "relation": "stores spectral data, metadata, m/z differences, fragmentation graphs, and patterns",
+        "subject": "ms2Lib class"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_012",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The ms2Lib constructor function can take the collection of MS/MS spectra as input as a single mgf file, a vector of individual mgf file names, the name of a directory containing individual spectra as mgf files, or a list of Spectrum2 objects."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 19937,
+          "oa:start": 19513
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The ms2Lib constructor function can take the collection of MS/MS spectra as input as a single mgf file, a vector of individual mgf file names, the name of a directory containing individual spectra as ",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "mineMS2 data input specification",
+        "object": "flexible spectral data loading",
+        "qualifier": "has_property",
+        "relation": "accepts multiple input format types",
+        "subject": "ms2Lib constructor"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_013",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Supplementary metadata about the spectra can be provided as a tsv tabular file."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4223,
+          "oa:start": 4089
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Supplementary metadata about the spectra can be provided as a tsv tabular file.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "mineMS2 metadata input",
+        "object": "optional metadata input format",
+        "qualifier": "has_property",
+        "relation": "can be provided as tsv file",
+        "subject": "supplementary metadata"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_014",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The metadata are not used in the computations of m/z differences, fragmentation graphs, or frequent patterns but can be displayed in plot titles."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4355,
+          "oa:start": 4225
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The metadata are not used in the computations of m/z differences, fragmentation graphs, or frequent patterns but can be displayed in plot titles.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "mineMS2 metadata usage",
+        "object": "display-only functionality",
+        "qualifier": "has_property",
+        "relation": "not used in computational algorithms but used for display",
+        "subject": "supplementary metadata"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_015",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Two columns mz.precursor and file are automatically inserted at the beginning of the metadata table stored in the ms2Lib object."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4610,
+          "oa:start": 4418
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Two columns mz.precursor and file are automatically inserted at the beginning of the metadata table stored in the ms2Lib object.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "ms2Lib metadata table construction",
+        "object": "automatic metadata augmentation",
+        "qualifier": "has_property",
+        "relation": "automatically includes mz.precursor and file columns",
+        "subject": "ms2Lib metadata table"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_016",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The discretizeMzDifferences method computes the m/z differences between the peaks in each spectrum and discretizes them for the whole spectra collection."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5441,
+          "oa:start": 5157
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The discretizeMzDifferences method computes the m/z differences between the peaks in each spectrum and discretizes them for the whole spectra collection.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "mineMS2 fragmentation graph computation",
+        "object": "aligned m/z differences",
+        "qualifier": "has_property",
+        "relation": "computes and discretizes m/z differences across spectra",
+        "subject": "discretizeMzDifferences method"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_017",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The m/z differences computed by discretizeMzDifferences include not only neutral losses but also differences between ions that belong to distinct fragmentation paths of the precursor."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5609,
+          "oa:start": 5443
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The m/z differences computed by discretizeMzDifferences include not only neutral losses but also differences between ions that belong to distinct fragmentation paths of the precursor.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "m/z difference computation in discretizeMzDifferences",
+        "object": "comprehensive fragmentation information",
+        "qualifier": "has_property",
+        "relation": "includes neutral losses and inter-path differences",
+        "subject": "computed m/z differences"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_018",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The default value of the ppm parameter in discretizeMzDifferences is 15."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 24754,
+          "oa:start": 24616
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The default value of the ppm parameter in discretizeMzDifferences is 15.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "discretizeMzDifferences parameter settings",
+        "object": "15 ppm mass accuracy tolerance",
+        "qualifier": "has_property",
+        "relation": "default value is 15",
+        "subject": "ppm parameter"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_019",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The default value of the dmz parameter in discretizeMzDifferences is 0.007 Da."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 24833,
+          "oa:start": 24756
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The default value of the dmz parameter in discretizeMzDifferences is 0.007 Da.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "discretizeMzDifferences parameter settings",
+        "object": "0.007 Da minimum deviation",
+        "qualifier": "has_property",
+        "relation": "default value is 0.007 Da",
+        "subject": "dmz parameter"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_020",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The default value of the count parameter in discretizeMzDifferences is 2."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 24967,
+          "oa:start": 24835
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The default value of the count parameter in discretizeMzDifferences is 2.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "discretizeMzDifferences parameter settings",
+        "object": "minimum frequency threshold",
+        "qualifier": "has_property",
+        "relation": "default value is 2 spectra",
+        "subject": "count parameter"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_021",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The default value of the maxFrags parameter in discretizeMzDifferences is 15."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 25471,
+          "oa:start": 25311
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The default value of the maxFrags parameter in discretizeMzDifferences is 15.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "discretizeMzDifferences parameter settings",
+        "object": "maximum fragments for graph building",
+        "qualifier": "has_property",
+        "relation": "default value is 15 fragments",
+        "subject": "maxFrags parameter"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_022",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The default value of the limMzFormula parameter in discretizeMzDifferences is c(14.5, 200)."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 25917,
+          "oa:start": 25800
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The default value of the limMzFormula parameter in discretizeMzDifferences is c(14.5, 200).",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "discretizeMzDifferences parameter settings",
+        "object": "m/z difference formula search range",
+        "qualifier": "has_property",
+        "relation": "default range is 14.5 to 200 Da",
+        "subject": "limMzFormula parameter"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_023",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The mineClosedSubgraphs method extracts frequent subgraphs among the fragmentation graphs."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 28256,
+          "oa:start": 28079
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The mineClosedSubgraphs method extracts frequent subgraphs among the fragmentation graphs.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "mineMS2 pattern mining",
+        "object": "fragmentation patterns",
+        "qualifier": "has_property",
+        "relation": "extracts frequent subgraphs as patterns",
+        "subject": "mineClosedSubgraphs method"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_024",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The default value of the count parameter in mineClosedSubgraphs is 2."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 28381,
+          "oa:start": 28258
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The default value of the count parameter in mineClosedSubgraphs is 2.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "mineClosedSubgraphs parameter settings",
+        "object": "minimum pattern support",
+        "qualifier": "has_property",
+        "relation": "default value is 2 spectra",
+        "subject": "count parameter"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_025",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The default value of the sizeMin parameter in mineClosedSubgraphs is 1."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 28440,
+          "oa:start": 28383
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The default value of the sizeMin parameter in mineClosedSubgraphs is 1.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "mineClosedSubgraphs parameter settings",
+        "object": "minimum pattern size",
+        "qualifier": "has_property",
+        "relation": "default value is 1",
+        "subject": "sizeMin parameter"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_026",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "When the number of frequent m/z differences is above 600 and sizeMin is set to 1, the sizeMin value will be automatically increased to 2."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7113,
+          "oa:start": 6905
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "When the number of frequent m/z differences is above 600 and sizeMin is set to 1, the sizeMin value will be automatically increased to 2.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "mineClosedSubgraphs computational safeguards",
+        "object": "computational load reduction",
+        "qualifier": "has_property",
+        "relation": "automatically increases to 2 when >600 frequent m/z differences",
+        "subject": "sizeMin parameter adjustment"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_027",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The findGNPSComponents function extracts connected components from the molecular network."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5231,
+          "oa:start": 5077
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The findGNPSComponents function extracts connected components from the molecular network.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "GNPS network component extraction",
+        "object": "network connectivity patterns",
+        "qualifier": "is_a",
+        "relation": "subgraphs with connected nodes",
+        "subject": "connected components"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_028",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The findGNPSComponents function can extract cliques from the molecular network."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5310,
+          "oa:start": 5233
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The findGNPSComponents function can extract cliques from the molecular network.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "GNPS network component extraction",
+        "object": "fully connected network substructures",
+        "qualifier": "is_a",
+        "relation": "subgraphs with fully connected node pairs",
+        "subject": "cliques"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_029",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The findGNPSComponents function selects a set of disjoint cliques by decreasing order of size."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2754,
+          "oa:start": 2444
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The findGNPSComponents function selects a set of disjoint cliques by decreasing order of size.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "GNPS clique extraction algorithm",
+        "object": "computationally efficient clique representation",
+        "qualifier": "has_property",
+        "relation": "selects disjoint cliques in decreasing size order",
+        "subject": "mineMS2 clique selection"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_030",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The findGNPSComponents function can extract high similarity pairs of nodes from the molecular network."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5774,
+          "oa:start": 5669
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The findGNPSComponents function can extract high similarity pairs of nodes from the molecular network.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "GNPS network component extraction",
+        "object": "spectral similarity relationships",
+        "qualifier": "is_a",
+        "relation": "spectrum pairs with cosine score above threshold",
+        "subject": "high similarity pairs"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_031",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The minSize parameter of findGNPSComponents specifies the minimum size of detected cliques."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6028,
+          "oa:start": 5863
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The minSize parameter of findGNPSComponents specifies the minimum size of detected cliques.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "findGNPSComponents parameter specification",
+        "object": "clique size filtering",
+        "qualifier": "has_property",
+        "relation": "controls minimum clique size threshold",
+        "subject": "minSize parameter"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_032",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The pairThreshold parameter of findGNPSComponents specifies the threshold of the cosine score for high similarity pairs of nodes."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6115,
+          "oa:start": 6030
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The pairThreshold parameter of findGNPSComponents specifies the threshold of the cosine score for high similarity pairs of nodes.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "findGNPSComponents parameter specification",
+        "object": "similarity pair selection criterion",
+        "qualifier": "has_property",
+        "relation": "controls cosine score threshold for similarity pairs",
+        "subject": "pairThreshold parameter"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_033",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Nine components were selected from the Penicillium nordicum GNPS molecular network."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3205,
+          "oa:start": 3171
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Nine components were selected from the Penicillium nordicum GNPS molecular network.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "Penicillium nordicum network analysis",
+        "object": "network decomposition",
+        "qualifier": "has_property",
+        "relation": "9 components selected",
+        "subject": "GNPS network components"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_034",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Components 6, 7, 8 and 9 are the connected components of the Penicillium nordicum network."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3281,
+          "oa:start": 3207
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Components 6, 7, 8 and 9 are the connected components of the Penicillium nordicum network.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "Penicillium nordicum network component classification",
+        "object": "2 clusters and 2 pairs",
+        "qualifier": "is_a",
+        "relation": "connected components of the network",
+        "subject": "components 6, 7, 8, 9"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_035",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Components 1, 3, and 4 are disjoint cliques from component 6 (the larger cluster)."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3362,
+          "oa:start": 3283
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Components 1, 3, and 4 are disjoint cliques from component 6 (the larger cluster).",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "Penicillium nordicum network component classification",
+        "object": "component 6 substructures",
+        "qualifier": "is_part_of",
+        "relation": "disjoint cliques from component 6",
+        "subject": "components 1, 3, 4"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_036",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Components 2 and 5 are disjoint cliques from component 7 (the smaller cluster)."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 3441,
+          "oa:start": 3364
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Components 2 and 5 are disjoint cliques from component 7 (the smaller cluster).",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "Penicillium nordicum network component classification",
+        "object": "component 7 substructures",
+        "qualifier": "is_part_of",
+        "relation": "disjoint cliques from component 7",
+        "subject": "components 2, 5"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_037",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The recall metric measures the proportion of explained spectra among the component spectra."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7723,
+          "oa:start": 7579
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The recall metric measures the proportion of explained spectra among the component spectra.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "mineMS2 pattern explanation metrics",
+        "object": "pattern completeness assessment",
+        "qualifier": "has_property",
+        "relation": "measures proportion of explained vs component spectra",
+        "subject": "recall metric"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_038",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The precision metric measures the proportion of component spectra among the explained spectra."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7880,
+          "oa:start": 7725
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The precision metric measures the proportion of component spectra among the explained spectra.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "mineMS2 pattern explanation metrics",
+        "object": "pattern specificity assessment",
+        "qualifier": "has_property",
+        "relation": "measures proportion of component vs explained spectra",
+        "subject": "precision metric"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_039",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The F1-score is the harmonic mean of precision and recall."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 8068,
+          "oa:start": 7882
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The F1-score is the harmonic mean of precision and recall.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "mineMS2 pattern explanation metrics",
+        "object": "balanced pattern quality measure",
+        "qualifier": "is_a",
+        "relation": "harmonic mean of precision and recall",
+        "subject": "F1-score metric"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_040",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "For the pair of spectra with precursor m/z values of 370.1283 and 404.0891 (component 8), the best explaining pattern P70 has an F1-score of 1."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4436,
+          "oa:start": 4170
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "For the pair of spectra with precursor m/z values of 370.1283 and 404.0891 (component 8), the best explaining pattern P70 has an F1-score of 1.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "Penicillium nordicum component 8 analysis",
+        "object": "perfect pattern explanation",
+        "qualifier": "has_property",
+        "relation": "F1-score of 1 for component 8",
+        "subject": "pattern P70"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_041",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The largest component in the Penicillium nordicum GNPS network consists of 21 spectra."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 4800,
+          "oa:start": 4689
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The largest component in the Penicillium nordicum GNPS network consists of 21 spectra.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "Penicillium nordicum network analysis",
+        "object": "major network cluster",
+        "qualifier": "has_property",
+        "relation": "contains 21 spectra",
+        "subject": "largest network component"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_042",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The m/z difference of 99.0683 is shared by 19 out of 21 fragmentation spectra in the largest component."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5097,
+          "oa:start": 4950
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The m/z difference of 99.0683 is shared by 19 out of 21 fragmentation spectra in the largest component.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "largest Penicillium nordicum component analysis",
+        "object": "component-specific fragmentation signature",
+        "qualifier": "has_property",
+        "relation": "present in 19 of 21 component spectra",
+        "subject": "m/z difference 99.0683"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_043",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The m/z difference of 99.0683 has a precision of 1, indicating it is not present in any other spectra of the dataset."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5113,
+          "oa:start": 5070
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The m/z difference of 99.0683 has a precision of 1, indicating it is not present in any other spectra of the dataset.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "largest Penicillium nordicum component analysis",
+        "object": "exclusive fragmentation pattern",
+        "qualifier": "has_property",
+        "relation": "component-specific with precision 1",
+        "subject": "m/z difference 99.0683"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_045",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The m/z difference of 186.079 has a possible formula of C11H10ON2."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5521,
+          "oa:start": 5355
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The m/z difference of 186.079 has a possible formula of C11H10ON2.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "component 4 pattern analysis",
+        "object": "tryptophan loss candidate",
+        "qualifier": "has_property",
+        "relation": "possible formula C11H10ON2",
+        "subject": "m/z difference 186.079"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_047",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "A total of multiple patterns include the m/z difference of 186.079."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 5895,
+          "oa:start": 5783
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "A total of multiple patterns include the m/z difference of 186.079.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "tryptophan loss pattern discovery",
+        "object": "cross-pattern tryptophan signatures",
+        "qualifier": "has_property",
+        "relation": "multiple patterns contain this m/z difference",
+        "subject": "patterns with m/z 186.079"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_048",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "A pattern including the m/z difference 186.079 is found in 7 spectra."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6130,
+          "oa:start": 5937
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "A pattern including the m/z difference 186.079 is found in 7 spectra.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "tryptophan-containing tetrapeptide discovery",
+        "object": "coordinated tryptophan-bearing peptides",
+        "qualifier": "has_property",
+        "relation": "present in 7 spectra",
+        "subject": "pattern with 186.079 m/z difference"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_049",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "mineMS2 discovers new similarities between spectra that are not all linked together in the GNPS network."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 6130,
+          "oa:start": 5971
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "mineMS2 discovers new similarities between spectra that are not all linked together in the GNPS network.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "mineMS2 capability assessment",
+        "object": "improved connectivity assessment",
+        "qualifier": "enables",
+        "relation": "discovers spectral similarities beyond GNPS network links",
+        "subject": "mineMS2"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_050",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The default ppm tolerance in mineMS2 is 15 ppm."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7143,
+          "oa:start": 6882
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The default ppm tolerance in mineMS2 is 15 ppm.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "mineMS2 parameter optimization",
+        "object": "mass accuracy setting",
+        "qualifier": "has_property",
+        "relation": "default value is 15 ppm",
+        "subject": "ppm tolerance"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_051",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "When ppm tolerance was set to 7 ppm on the LIMS-DB dataset, the average F1-score decreased to 0.47."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7143,
+          "oa:start": 7005
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "When ppm tolerance was set to 7 ppm on the LIMS-DB dataset, the average F1-score decreased to 0.47.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "LIMS-DB ppm tolerance optimization",
+        "object": "reduced pattern quality",
+        "qualifier": "decreases",
+        "relation": "decreases F1-score to 0.47",
+        "subject": "ppm tolerance 7"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_052",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "With the default ppm tolerance of 15 ppm on the LIMS-DB dataset, the average F1-score is 0.53."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7143,
+          "oa:start": 7130
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "With the default ppm tolerance of 15 ppm on the LIMS-DB dataset, the average F1-score is 0.53.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "LIMS-DB ppm tolerance optimization",
+        "object": "baseline pattern quality",
+        "qualifier": "produces",
+        "relation": "achieves F1-score of 0.53",
+        "subject": "default ppm tolerance 15"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_053",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "At 7 ppm tolerance, patterns explaining ChemOnt concepts contained 5.2 m/z differences on average."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7310,
+          "oa:start": 7145
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "At 7 ppm tolerance, patterns explaining ChemOnt concepts contained 5.2 m/z differences on average.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "LIMS-DB pattern composition analysis",
+        "object": "reduced pattern complexity",
+        "qualifier": "has_property",
+        "relation": "contain average 5.2 m/z differences",
+        "subject": "7 ppm tolerance patterns"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_054",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "At 15 ppm tolerance, patterns explaining ChemOnt concepts contained 6.8 m/z differences on average."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7310,
+          "oa:start": 7285
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "At 15 ppm tolerance, patterns explaining ChemOnt concepts contained 6.8 m/z differences on average.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "LIMS-DB pattern composition analysis",
+        "object": "enhanced pattern complexity",
+        "qualifier": "has_property",
+        "relation": "contain average 6.8 m/z differences",
+        "subject": "15 ppm tolerance patterns"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_055",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The default maximum number of fragments in discretizeMzDifferences is set to 15."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7646,
+          "oa:start": 7481
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The default maximum number of fragments in discretizeMzDifferences is set to 15.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "mineMS2 parameter selection rationale",
+        "object": "computational-information trade-off",
+        "qualifier": "has_property",
+        "relation": "set to 15 fragments",
+        "subject": "maxFrags default"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_056",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Mining the LIMS-DB dataset with maxFrags of 20 increased running time to 1.5 hours."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7889,
+          "oa:start": 7648
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "Mining the LIMS-DB dataset with maxFrags of 20 increased running time to 1.5 hours.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "LIMS-DB maxFrags optimization",
+        "object": "computational cost increase",
+        "qualifier": "increases",
+        "relation": "increases runtime to 1.5 hours",
+        "subject": "maxFrags 20 parameter"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_057",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The default maxFrags of 15 requires 20 minutes to mine the LIMS-DB dataset."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 7822,
+          "oa:start": 7796
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The default maxFrags of 15 requires 20 minutes to mine the LIMS-DB dataset.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "LIMS-DB runtime baseline",
+        "object": "baseline computational time",
+        "qualifier": "has_property",
+        "relation": "requires 20 minutes for LIMS-DB",
+        "subject": "maxFrags 15 default"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_058",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The GNPS network for Penicillium nordicum contains 2 clusters of sizes 21 and 11, in addition to 2 pairs."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 2202,
+          "oa:start": 2122
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_minems2/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_001"
+      },
+      "schema:name": "The GNPS network for Penicillium nordicum contains 2 clusters of sizes 21 and 11, in addition to 2 pairs.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "Penicillium nordicum GNPS network structure",
+        "object": "network topology",
+        "qualifier": "has_property",
+        "relation": "contains 2 clusters (21 and 11 nodes) and 2 pairs",
+        "subject": "GNPS network components"
+      }
+    },
+    {
+      "@id": "urn:asb:result:result_001",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "mineMS2 patterns are graphs with ion peaks as nodes and m/z differences as edges.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_001"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_002",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "mineMS2 m/z differences include not only neutral losses but also m/z differences between ions that belong to distinct fragmentation paths.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_002"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_003",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The mineMS2 method is independent of external spectral databases and knowledge of the molecular formula of precursor ions.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_003"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_004",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "mineMS2 patterns are complementary to MS2LDA patterns because they consist of exact graphs rather than probabilistic lists.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_004"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_005",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The dataset contains 51 MS/MS spectra from secondary metabolites of Penicillium nordicum.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_005"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_006",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The Penicillium nordicum spectra were acquired on a Luna C18 column using HPLC coupled to an LTQ Orbitrap XL hybrid mass spectrometer.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_006"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_007",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The Penicillium nordicum spectra were acquired in positive ionization mode at HCD20 collision energy with a resolution of 7,500.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_007"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_008",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The molecular network was precomputed on the GNPS website and extracted in GraphML format.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_008"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_009",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "mineMS2 can be coupled to GNPS MS/MS molecular networking to focus on patterns that best explain components of the network.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_009"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_010",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "It is recommended to compute the patterns and the GNPS network using the same .mgf input file to avoid matching issues.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_010"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_011",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The ms2Lib class is used throughout the workflow to store the spectra data and metadata, the m/z differences, the fragmentation graphs, and the patterns.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_011"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_012",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The ms2Lib constructor function can take the collection of MS/MS spectra as input as a single mgf file, a vector of individual mgf file names, the name of a directory containing individual spectra as ",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_012"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_013",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Supplementary metadata about the spectra can be provided as a tsv tabular file.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_013"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_014",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The metadata are not used in the computations of m/z differences, fragmentation graphs, or frequent patterns but can be displayed in plot titles.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_014"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_015",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Two columns mz.precursor and file are automatically inserted at the beginning of the metadata table stored in the ms2Lib object.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_015"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_016",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The discretizeMzDifferences method computes the m/z differences between the peaks in each spectrum and discretizes them for the whole spectra collection.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_016"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_017",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The m/z differences computed by discretizeMzDifferences include not only neutral losses but also differences between ions that belong to distinct fragmentation paths of the precursor.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_017"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_018",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The default value of the ppm parameter in discretizeMzDifferences is 15. The default value of the dmz parameter in discretizeMzDifferences is 0.007 Da. The default value of the count parameter in disc",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_018"
+        },
+        {
+          "@id": "urn:asb:claim:claim_019"
+        },
+        {
+          "@id": "urn:asb:claim:claim_020"
+        },
+        {
+          "@id": "urn:asb:claim:claim_021"
+        },
+        {
+          "@id": "urn:asb:claim:claim_024"
+        },
+        {
+          "@id": "urn:asb:claim:claim_025"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_019",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The default value of the limMzFormula parameter in discretizeMzDifferences is c(14.5, 200).",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_022"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_020",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The mineClosedSubgraphs method extracts frequent subgraphs among the fragmentation graphs.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_023"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_021",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "When the number of frequent m/z differences is above 600 and sizeMin is set to 1, the sizeMin value will be automatically increased to 2.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_026"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_022",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The findGNPSComponents function extracts connected components from the molecular network. The findGNPSComponents function can extract cliques from the molecular network. The findGNPSComponents functio",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_027"
+        },
+        {
+          "@id": "urn:asb:claim:claim_028"
+        },
+        {
+          "@id": "urn:asb:claim:claim_030"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_023",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The findGNPSComponents function selects a set of disjoint cliques by decreasing order of size.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_029"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_024",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The minSize parameter of findGNPSComponents specifies the minimum size of detected cliques.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_031"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_025",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The pairThreshold parameter of findGNPSComponents specifies the threshold of the cosine score for high similarity pairs of nodes.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_032"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_026",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Nine components were selected from the Penicillium nordicum GNPS molecular network.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_033"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_027",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Components 6, 7, 8 and 9 are the connected components of the Penicillium nordicum network.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_034"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_028",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Components 1, 3, and 4 are disjoint cliques from component 6 (the larger cluster).",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_035"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_029",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Components 2 and 5 are disjoint cliques from component 7 (the smaller cluster).",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_036"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_030",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The recall metric measures the proportion of explained spectra among the component spectra. The precision metric measures the proportion of component spectra among the explained spectra.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_037"
+        },
+        {
+          "@id": "urn:asb:claim:claim_038"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_031",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The F1-score is the harmonic mean of precision and recall.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_039"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_032",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "For the pair of spectra with precursor m/z values of 370.1283 and 404.0891 (component 8), the best explaining pattern P70 has an F1-score of 1.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_040"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_033",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The largest component in the Penicillium nordicum GNPS network consists of 21 spectra.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_041"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_034",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The m/z difference of 99.0683 is shared by 19 out of 21 fragmentation spectra in the largest component.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_042"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_035",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The m/z difference of 99.0683 has a precision of 1, indicating it is not present in any other spectra of the dataset.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_043"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_036",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The m/z difference of 186.079 has a possible formula of C11H10ON2.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_045"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_037",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "A total of multiple patterns include the m/z difference of 186.079.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_047"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_038",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "A pattern including the m/z difference 186.079 is found in 7 spectra.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_048"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_039",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "mineMS2 discovers new similarities between spectra that are not all linked together in the GNPS network.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_049"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_040",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The default ppm tolerance in mineMS2 is 15 ppm.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_050"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_041",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "When ppm tolerance was set to 7 ppm on the LIMS-DB dataset, the average F1-score decreased to 0.47. With the default ppm tolerance of 15 ppm on the LIMS-DB dataset, the average F1-score is 0.53.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_051"
+        },
+        {
+          "@id": "urn:asb:claim:claim_052"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_042",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "At 7 ppm tolerance, patterns explaining ChemOnt concepts contained 5.2 m/z differences on average. At 15 ppm tolerance, patterns explaining ChemOnt concepts contained 6.8 m/z differences on average.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_053"
+        },
+        {
+          "@id": "urn:asb:claim:claim_054"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_043",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The default maximum number of fragments in discretizeMzDifferences is set to 15.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_055"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_044",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Mining the LIMS-DB dataset with maxFrags of 20 increased running time to 1.5 hours.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_056"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_045",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The default maxFrags of 15 requires 20 minutes to mine the LIMS-DB dataset.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_057"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_046",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The GNPS network for Penicillium nordicum contains 2 clusters of sizes 21 and 11, in addition to 2 pairs.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_058"
+        }
+      ]
+    },
+    {
+      "@id": "#env-task_001",
+      "@type": [
+        "repme:ComputationalEnvironment"
+      ],
+      "repme:computeTier": "light"
+    },
+    {
+      "@id": "#agent-15-activity-task_001",
+      "@type": [
+        "prov:Activity"
+      ],
+      "prov:endedAtTime": "2026-06-15T13:51:30.871898+00:00",
+      "prov:qualifiedUsage": {
+        "@type": "prov:Usage",
+        "schema:name": "prompt_sha256",
+        "schema:value": "78425303be93e0dc"
+      },
+      "prov:wasAssociatedWith": {
+        "schema:name": "anthropic/claude-haiku-4-5-20251001"
+      },
+      "schema:name": "Agent 1.5 Claim Extractor"
+    },
+    {
+      "@id": "#computational-environment",
+      "@type": "repme:ComputationalEnvironment",
+      "repme:buildId": "58176662639846D5B0B3CF597508A060",
+      "repme:depsHash": "sha256:029a81c5ecba8cba0301a44071f97a928c55447fc2ef79df68b43e4ecdd157ba",
+      "repme:gitCommit": "ddf6c1becb15c939b16600b7655d44e2d2baa690",
+      "repme:platform": "darwin-25.5.0-arm64",
+      "repme:pythonVersion": "3.11.15",
+      "schema:dateCreated": "2026-06-15T13:45:44.511197Z",
+      "schema:hasPart": [
+        {
+          "@id": "#agent-config-agent1_entity"
+        },
+        {
+          "@id": "#agent-config-agent2a_outline"
+        },
+        {
+          "@id": "#agent-config-agent2b_card"
+        },
+        {
+          "@id": "#agent-config-agent3_critique"
+        },
+        {
+          "@id": "#agent-config-agent_classify"
+        }
+      ],
+      "schema:softwareVersion": "agentic-science-builder@0.1.0"
+    },
+    {
+      "@id": "#agent-config-agent1_entity",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v3",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent1_entity"
+    },
+    {
+      "@id": "#agent-config-agent2a_outline",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-sonnet-4-6",
+      "repme:promptVersion": "v2",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2a_outline"
+    },
+    {
+      "@id": "#agent-config-agent2b_card",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v4",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2b_card"
+    },
+    {
+      "@id": "#agent-config-agent3_critique",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent3_critique"
+    },
+    {
+      "@id": "#agent-config-agent_classify",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent_classify"
+    },
+    {
+      "@id": "urn:asb:metabolomics:unknown",
+      "@type": "Dataset",
+      "assay_type": "LC-MS/MS",
+      "instrument": "Orbitrap",
+      "name": "Metabolomics Study Metadata",
+      "profile": "metabolomics_lcms",
+      "reproducibility_score": 0.548
+    },
+    {
+      "@id": "artifact_provenance.json",
+      "@type": "File",
+      "name": "artifact_provenance.json",
+      "encodingFormat": "application/json"
+    },
+    {
+      "@id": "ledger/claims.jsonl",
+      "@type": "File",
+      "name": "ledger/claims.jsonl",
+      "encodingFormat": "application/jsonlines"
+    },
+    {
+      "@id": "ledger/results.jsonl",
+      "@type": "File",
+      "name": "ledger/results.jsonl",
+      "encodingFormat": "application/jsonlines"
+    }
+  ]
+}

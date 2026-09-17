@@ -1,6 +1,8 @@
 ---
 name: intensity-threshold-noise-filtering
-description: Use when you have loaded a raw or partially processed MsmsSpectrum object and need to reduce spectral noise before annotation, matching, or visualization. Use it especially when spectra contain many weak peaks (e.
+description: Use when you have loaded a raw or partially processed MsmsSpectrum object
+  and need to reduce spectral noise before annotation, matching, or visualization.
+  Use it especially when spectra contain many weak peaks (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -12,6 +14,8 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils

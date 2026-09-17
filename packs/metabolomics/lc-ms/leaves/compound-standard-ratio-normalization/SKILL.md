@@ -1,6 +1,9 @@
 ---
 name: compound-standard-ratio-normalization
-description: Use when you have raw peak area or intensity measurements for both compounds and their corresponding internal standards across all study samples (including QC and calibration samples), and you need to normalize for instrument variability and injection efficiency before batch correction or quality.
+description: Use when you have raw peak area or intensity measurements for both compounds
+  and their corresponding internal standards across all study samples (including QC
+  and calibration samples), and you need to normalize for instrument variability and
+  injection efficiency before batch correction or quality.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -14,6 +17,8 @@ metadata:
   - mzQualityDashboard
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality

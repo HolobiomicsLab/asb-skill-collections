@@ -1,6 +1,9 @@
 ---
 name: low-resolution-compound-identification
-description: Use when you have low-resolution GC-MS data (e.g., ANDI NetCDF format) with detected peaks that lack high mass accuracy, and you need to assign compound identities using a combination of retention index (RI) calibration and mass spectral library matching.
+description: Use when you have low-resolution GC-MS data (e.g., ANDI NetCDF format)
+  with detected peaks that lack high mass accuracy, and you need to assign compound
+  identities using a combination of retention index (RI) calibration and mass spectral
+  library matching.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -14,12 +17,15 @@ metadata:
   - PNNLMetV20191015.MSL
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development and data analysis of small molecules analysis.'
+- '**CoreMS** is a comprehensive mass spectrometry framework for software development
+  and data analysis of small molecules analysis.'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

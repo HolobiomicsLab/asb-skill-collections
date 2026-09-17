@@ -1,8 +1,12 @@
-# genome-scale-metabolic-flux-modeling-workflow — STAGING
+# genome-scale-metabolic-flux-modeling-workflow
 
-**Status:** STAGING ONLY — promote via `release_gate.py` after human review.
+**Status:** published as an **outline** — the structure is validated, the execution is not.
 **Kind:** composite-workflow (P1 canonical set).
 **Bound by:** perspicacite-semantic (text-embedding-3-large retrieval + EDAM-aware primary selection).
+
+> Automatic grading of `workflow.yaml` (`asb solve-workflow`, checkpoint mode) is **not part of
+> this release**: no released ASB version loads these files. Follow the stages yourself. The stage
+> structure is validated by `validate_workflows.py` through `release_gate.py`.
 
 ## Stages
 
@@ -12,4 +16,5 @@
 4. **community_consensus** — draft per-organism/community-member GEMs -> gap-filled consensus community model  →  `metabolic-model-merging-consensus-building`, `community-metabolic-reconstruction-synthesis`, `metabolic-model-consensus-integration`, `community-metabolic-pathway-integration`, `systems-biology-model-standardization`
 5. **report** — consolidate sampled/interpreted flux states + consensus community model into a flux-state report  →  `constraint-based-model-sampling-and-flux-prediction`, `mass-action-law-flux-prediction`, `extracellular-flux-constraint-integration`
 
-`derived_from_workflows` in the frontmatter is the eval-ablation set (SPEC §8).
+`derived_from_workflows` in the frontmatter is a provenance record — the ASB per-paper workflows
+whose structure corroborated this pipeline. No ablation experiment consuming it is released.

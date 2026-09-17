@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-embedding-generation
-description: Use when when you have preprocessed MS/MS spectral data (normalized peak intensities and m/z values) and need to convert individual spectra into fixed-dimensional vector representations for similarity-based metabolite matching or comparative analysis.
+description: Use when when you have preprocessed MS/MS spectral data (normalized peak
+  intensities and m/z values) and need to convert individual spectra into fixed-dimensional
+  vector representations for similarity-based metabolite matching or comparative analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -13,6 +15,8 @@ metadata:
   - ChemEmbed
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.02.07.637102v1
   title: ChemEmbed

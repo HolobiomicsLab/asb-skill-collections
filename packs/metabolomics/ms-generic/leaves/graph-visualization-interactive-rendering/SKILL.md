@@ -1,6 +1,9 @@
 ---
 name: graph-visualization-interactive-rendering
-description: Use when after constructing a NetworkX graph object from structural clusters (via MamsiStructSearch), when you need to interactively explore feature relationships or publish a static network diagram showing isotopologue links, adduct relationships, and cross-assay connections.
+description: Use when after constructing a NetworkX graph object from structural clusters
+  (via MamsiStructSearch), when you need to interactively explore feature relationships
+  or publish a static network diagram showing isotopologue links, adduct relationships,
+  and cross-assay connections.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -16,6 +19,8 @@ metadata:
   - MamsiStructSearch
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -26,7 +31,8 @@ evidence_spans:
 - 'Dependencies: pyvis'
 - 'Dependencies: matplotlib'
 - import pandas as pd
-- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry datasets.
+- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry
+  datasets.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

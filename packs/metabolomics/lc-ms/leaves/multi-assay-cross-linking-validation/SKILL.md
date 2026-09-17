@@ -1,6 +1,8 @@
 ---
 name: multi-assay-cross-linking-validation
-description: Use when you have statistically significant features from multiple LC-MS assays with different ionization modes (e.g., positive and negative ESI) and need to collapse redundant feature representations into single structural entities.
+description: Use when you have statistically significant features from multiple LC-MS
+  assays with different ionization modes (e.g., positive and negative ESI) and need
+  to collapse redundant feature representations into single structural entities.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -19,6 +21,8 @@ metadata:
   - peakPantheR
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi

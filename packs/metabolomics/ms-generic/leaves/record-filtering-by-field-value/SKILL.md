@@ -1,6 +1,9 @@
 ---
 name: record-filtering-by-field-value
-description: Use when when you have a table of JSON records and need to select a subset matching a specific condition—for example, filtering records where 'status=active' before building a string value, or filtering 'experiment_type=MS' before constructing a matrix of dictionary objects.
+description: Use when when you have a table of JSON records and need to select a subset
+  matching a specific condition—for example, filtering records where 'status=active'
+  before building a string value, or filtering 'experiment_type=MS' before constructing
+  a matrix of dictionary objects.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +15,8 @@ metadata:
   - MESSES
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -19,7 +24,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_
+  (`jsonschema <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

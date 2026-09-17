@@ -1,6 +1,7 @@
 ---
 name: cardinal-imaging-object-conversion
-description: Use when you have mass spectrometry imaging data in Cardinal format (versions 2.
+description: Use when you have mass spectrometry imaging data in Cardinal format (versions
+  2.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,12 +14,17 @@ metadata:
   - R
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- If you are using Cardinal to process your MSI data, data objects in the `MSProcessedImagingExperiment` or `MSContinuousImagingExperiment` formats can be converted to mass2adduct's `msimat` format
-- This package presents tools for counting and identifying possible adducts in MS data
+- If you are using Cardinal to process your MSI data, data objects in the `MSProcessedImagingExperiment`
+  or `MSContinuousImagingExperiment` formats can be converted to mass2adduct's `msimat`
+  format
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - library(mass2adduct)
 claims: []
 provenance:

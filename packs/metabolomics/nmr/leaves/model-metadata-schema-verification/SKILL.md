@@ -1,14 +1,20 @@
 ---
 name: model-metadata-schema-verification
-description: Use when before submitting peak data or other inputs to a machine learning classification API for the first time, after a model update, or if you encounter unexpected prediction errors. It is essential when the underlying model's input names or structure may change and require code updates.
+description: Use when before submitting peak data or other inputs to a machine learning
+  classification API for the first time, after a model update, or if you encounter
+  unexpected prediction errors. It is essential when the underlying model's input
+  names or structure may change and require code updates.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_topics: []
   tools:
   - tensorflow serving
   - TensorFlow Serving
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT

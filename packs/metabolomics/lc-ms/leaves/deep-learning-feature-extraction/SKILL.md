@@ -1,6 +1,8 @@
 ---
 name: deep-learning-feature-extraction
-description: Use when you have preprocessed and normalized LC-MS metabolomics data from multiple disease groups (e.g., healthy, disease-A, disease-B) and need to identify which m/z features or their patterns discriminate between phenotypes.
+description: Use when you have preprocessed and normalized LC-MS metabolomics data
+  from multiple disease groups (e.g., healthy, disease-A, disease-B) and need to identify
+  which m/z features or their patterns discriminate between phenotypes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -15,6 +17,8 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler

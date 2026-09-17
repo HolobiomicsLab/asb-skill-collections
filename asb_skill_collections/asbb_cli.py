@@ -5,7 +5,7 @@ Subcommands:
                                 source file (offline, no API key; reads a local
                                 checkout). The thin programmatic surface, also
                                 exposed over MCP by asb_mcp_server.py.
-  registry / verify / doctor  — registry utilities (Phase 1.7 stubs).
+  verify / doctor             — registry utilities (Phase 1.7 stubs).
   install / uninstall         — materialize packs into NON-Claude runtimes
                                 (Codex, Gemini, Copilot, Cursor, Cline,
                                 VS Code Copilot, or any dir via --dest).
@@ -16,6 +16,13 @@ For Claude Code the canonical install path remains the plugin marketplace::
 
 `install` resolves packs from a LOCAL checkout (run from a clone or pass
 --repo); the published wheel ships only this package, not the packs.
+
+`registry` was removed on 2026-09-14. It was advertised in `--help` and
+documented with two subcommands, `list` and `validate`, while doing neither:
+a reader planned around a surface that answered nothing. What reconciles the
+registry is `scripts/release_gate.py` (`catalogue_membership`, `layout`,
+`unit_closure`), plus `scripts/regen_catalogue.py` and
+`scripts/check_advertised_counts.py`.
 """
 from __future__ import annotations
 
@@ -32,28 +39,21 @@ except (ImportError, PackageNotFoundError):  # running from a checkout
 _TO_BUILD = "(Phase 1.7 stub — not yet implemented)"
 
 
-def _cmd_registry(args: argparse.Namespace) -> int:
-    """`asbb registry` — inspect the published collection registry."""
-    action = getattr(args, "registry_action", None) or "list"
-    print(f"asbb registry {action}: {_TO_BUILD}")
-    print(
-        "Install collections via the plugin marketplace, NOT this CLI:\n"
-        "  /plugin install <slug>-v<N>@HolobiomicsLab/asb-skill-collections"
-    )
-    return 0
-
-
 def _cmd_verify(args: argparse.Namespace) -> int:
     """`asbb verify` — validate a collection / catalogue / marketplace."""
     target = getattr(args, "target", None) or "."
-    print(f"asbb verify {target}: {_TO_BUILD}")
-    return 0
+    print(f"asbb verify {target}: {_TO_BUILD}", file=sys.stderr)
+    print(f"  use: python scripts/release_gate.py {target} --strict", file=sys.stderr)
+    return 1
 
 
 def _cmd_doctor(args: argparse.Namespace) -> int:
     """`asbb doctor` — health check (DOI resolution, KB reachability, manifest)."""
-    print(f"asbb doctor: {_TO_BUILD}")
-    return 0
+    # The exit code matters more here than in the others: a health check that
+    # reports success having checked nothing is indistinguishable, to any script
+    # or CI step, from a healthy system.
+    print(f"asbb doctor: {_TO_BUILD}", file=sys.stderr)
+    return 1
 
 
 def _cmd_search(args) -> int:
@@ -140,6 +140,13 @@ def _cmd_install(args) -> int:
         slugs = ", ".join(list_pack_slugs(repo))
         print(f"error: unknown pack {args.pack!r}; valid: {slugs}", file=sys.stderr)
         return 1
+    except ValueError as e:
+        # resolve_pack refuses a marketplace source that leaves the checkout
+        # (absolute, parent-relative, or through a symlink). The refusal was
+        # reaching the user as a traceback: install() already converts the same
+        # class of refusal into a message and exit 1, and so must this.
+        print(f"error: {e}", file=sys.stderr)
+        return 1
     opts = _install_opts(args)
     try:
         written = install(pack, target, opts)
@@ -164,7 +171,14 @@ def _cmd_uninstall(args) -> int:
         print(f"error: unknown runtime {args.runtime!r}", file=sys.stderr)
         return 1
     opts = _install_opts(args)
-    removed = uninstall(args.pack, target, opts)
+    try:
+        removed = uninstall(args.pack, target, opts)
+    except (FileExistsError, ValueError) as e:
+        # Same contract as _cmd_install above: a refusal is a message and exit 1,
+        # never a traceback. The commonest way to reach here is a moved install —
+        # the recorded dest_root no longer matches --dest — so name the recovery.
+        print(f"error: {e}", file=sys.stderr)
+        return 1
     print(f"removed {len(removed)} entry(ies) for {args.pack}")
     return 0
 
@@ -173,7 +187,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="asbb",
         description=(
-            "asb-skill-collections CLI: registry/verify/doctor utilities + "
+            "asb-skill-collections CLI: verify/doctor utilities + "
             "install/uninstall for non-Claude runtimes "
             "(for Claude Code, use /plugin install)."
         ),
@@ -181,7 +195,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--version", action="version", version=f"asbb {__version__}"
     )
-    sub = parser.add_subparsers(dest="command", metavar="{search,get,registry,verify,doctor,install,uninstall}")
+    sub = parser.add_subparsers(dest="command", metavar="{search,get,verify,doctor,install,uninstall}")
 
     # asbb search <query> [--collection ...] [--target skills|workflows|tools]
     p_search = sub.add_parser("search", help="Keyword-search skills/workflows/tools (offline, no key).")
@@ -202,19 +216,6 @@ def build_parser() -> argparse.ArgumentParser:
     p_get.add_argument("--target", choices=["skills", "workflows", "tools"], default="skills")
     p_get.add_argument("--repo", help="Path to a checkout (else ASB_COLLECTIONS_ROOT / CWD).")
     p_get.set_defaults(func=_cmd_get)
-
-    # asbb registry [list|validate]
-    p_registry = sub.add_parser(
-        "registry", help="Inspect/validate the published collection registry."
-    )
-    p_registry.add_argument(
-        "registry_action",
-        nargs="?",
-        choices=["list", "validate"],
-        default="list",
-        help="Registry action (default: list).",
-    )
-    p_registry.set_defaults(func=_cmd_registry)
 
     # asbb verify [target]
     p_verify = sub.add_parser(

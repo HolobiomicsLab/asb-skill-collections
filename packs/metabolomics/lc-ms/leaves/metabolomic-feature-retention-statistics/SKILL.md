@@ -1,6 +1,9 @@
 ---
 name: metabolomic-feature-retention-statistics
-description: Use when after applying the CV_ratio() filtering function to a normalized metabolomic feature matrix (e.g., Urine_RP_NEG_norm.txt) in margheRita, generate retention statistics to report how many features passed the threshold (CV ratio > 1.0) and characterize the distribution of retained CV ratios.
+description: Use when after applying the CV_ratio() filtering function to a normalized
+  metabolomic feature matrix (e.g., Urine_RP_NEG_norm.txt) in margheRita, generate
+  retention statistics to report how many features passed the threshold (CV ratio
+  > 1.0) and characterize the distribution of retained CV ratios.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +15,8 @@ metadata:
   - margheRita
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -20,7 +25,9 @@ derived_from:
 evidence_spans:
 - The R package margheRita addresses the complete workflow
 - The R package margheRita
-- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
+- The R package margheRita addresses the complete workflow for metabolomic profiling
+  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
+  spectrometry (MS/MS)
 - The R package margheRita addresses the complete workflow for metabolomic profiling
 claims: []
 provenance:

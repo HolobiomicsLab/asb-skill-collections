@@ -1,6 +1,8 @@
 ---
 name: effective-mobility-calibration-single-marker
-description: Use when when you have CE-MS data with migration times that vary between runs due to electroosmotic flow drift, but you possess a reliable internal standard with a known effective mobility value.
+description: Use when when you have CE-MS data with migration times that vary between
+  runs due to electroosmotic flow drift, but you possess a reliable internal standard
+  with a known effective mobility value.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -16,13 +18,16 @@ metadata:
   - Spectra
   techniques:
   - CE-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
 evidence_spans:
 - Description and usage of MobilityTransformR
 - compute Procaine's effective mobility using mobilityTransform
-- there is no implementation in R that performs effective mobility transformation of CE-MS(/MS) data
+- there is no implementation in R that performs effective mobility transformation
+  of CE-MS(/MS) data
 - The transformation is performed using functionality from the packages `r BiocStyle::Biocpkg("MSnbase")`
 - The transformation is performed using functionality from the packages `r BiocStyle::Biocpkg("MetaboCoreUtils")`
 - The transformation is performed using functionality from the packages `r BiocStyle::Biocpkg("xcms")`

@@ -1,8 +1,12 @@
 ---
 name: apache-arrow-columnar-format-parsing
-description: Use when you have mzPeak files stored as Parquet tables within a ZIP archive and need to load spectrum metadata, chromatogram metadata, signal data (profile or centroid), or peaks into memory for analysis in R, Python, or another Arrow-supported language.
+description: Use when you have mzPeak files stored as Parquet tables within a ZIP
+  archive and need to load spectrum metadata, chromatogram metadata, signal data (profile
+  or centroid), or peaks into memory for analysis in R, Python, or another Arrow-supported
+  language.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,11 +20,14 @@ metadata:
   - mzPeak Rust implementation
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
 evidence_spans:
-- R implementation in `R/`, which is also a complete re-implementation using the [`arrow`](https://arrow.apache.org/docs/r/) for _reading_ only
+- R implementation in `R/`, which is also a complete re-implementation using the [`arrow`](https://arrow.apache.org/docs/r/)
+  for _reading_ only
 - There is also an R implementation in `R/`
 claims: []
 provenance:

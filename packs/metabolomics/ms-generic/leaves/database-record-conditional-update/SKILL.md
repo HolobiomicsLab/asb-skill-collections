@@ -1,6 +1,9 @@
 ---
 name: database-record-conditional-update
-description: 'Use when when processing mass spectrometry spectral records from a database where critical fields (e.g., adduct annotation) are absent or null, and you have a secondary field (e.g., ionmode: ''pos''/''neg'') that can deterministically populate the missing field.'
+description: 'Use when when processing mass spectrometry spectral records from a database
+  where critical fields (e.g., adduct annotation) are absent or null, and you have
+  a secondary field (e.g., ionmode: ''pos''/''neg'') that can deterministically populate
+  the missing field.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,6 +17,13 @@ metadata:
   - RDkit
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
@@ -42,6 +52,7 @@ attribution:
 
 # database-record-conditional-update
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Conditionally update database records based on field state and metadata consistency rules, such as auto-assigning adducts to spectra when missing. This skill ensures data completeness and consistency by applying ionization-mode-aware logic before writing records back to storage.

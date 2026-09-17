@@ -1,6 +1,9 @@
 ---
 name: ccs-calibration-polynomial-fitting
-description: Use when you have acquired tunemix or reference standard data in ion mobility spectrometry with known m/z, drift time, and CCS values, and you need to establish a drift-time-to-CCS mapping for a specific instrument, ionization mode (positive or negative), and buffer gas.
+description: Use when you have acquired tunemix or reference standard data in ion
+  mobility spectrometry with known m/z, drift time, and CCS values, and you need to
+  establish a drift-time-to-CCS mapping for a specific instrument, ionization mode
+  (positive or negative), and buffer gas.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,13 +17,16 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
 - DEIMoS is a Python application programming interface
 - DEIMoS is a Python application programming interface and command-line tool
-- Functionality includes feature detection, feature alignment, collision cross section (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
+- Functionality includes feature detection, feature alignment, collision cross section
+  (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
 - import deimos
 - import numpy as np
 claims: []

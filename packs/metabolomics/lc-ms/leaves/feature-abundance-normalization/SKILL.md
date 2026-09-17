@@ -1,6 +1,9 @@
 ---
 name: feature-abundance-normalization
-description: Use when after peak picking (e.g., via MS-DIAL) and quality control filtering, when you have a raw feature abundance matrix with intensity values across multiple samples and need to make intensities comparable before statistical testing or multivariate analysis.
+description: Use when after peak picking (e.g., via MS-DIAL) and quality control filtering,
+  when you have a raw feature abundance matrix with intensity values across multiple
+  samples and need to make intensities comparable before statistical testing or multivariate
+  analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +16,8 @@ metadata:
   - notame
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -21,7 +26,9 @@ derived_from:
 evidence_spans:
 - The R package margheRita addresses the complete workflow
 - The R package margheRita
-- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
+- The R package margheRita addresses the complete workflow for metabolomic profiling
+  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
+  spectrometry (MS/MS)
 - The R package margheRita addresses the complete workflow for metabolomic profiling
 claims: []
 provenance:

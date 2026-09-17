@@ -32,7 +32,7 @@ contributors:
   orcid: https://orcid.org/0000-0001-6711-6719
 skills_count: 5859
 tools_count: 909
-workflows_count: 10
+workflows_count: 21
 skills:
 - 2d-nmr-pulse-sequence-implementation
 - 2d-tic-preprocessing
@@ -2721,6 +2721,7 @@ skills:
 - massql-query-generation
 - massql-query-language-syntax
 - masst-output-visualization
+- masster
 - match-factor-threshold-filtering
 - matlab-data-structure-design
 - matlab-package-execution
@@ -7491,4 +7492,3 @@ source_collections:
 - 10.7554/eLife.70780
 catalogue_membership:
 - https://w3id.org/holobiomicslab/asb-skill/registry
-ro_crate_path: ro-crate-metadata.json

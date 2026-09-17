@@ -1,6 +1,8 @@
 ---
 name: msp-file-parsing-edge-case-handling
-description: Use when you are parsing mass spectrometry spectral library files in MSP format and need to guarantee that all spectrum records are either successfully integrated into the final dataset or explicitly logged with a reason for exclusion.
+description: Use when you are parsing mass spectrometry spectral library files in
+  MSP format and need to guarantee that all spectrum records are either successfully
+  integrated into the final dataset or explicitly logged with a reason for exclusion.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,6 +16,13 @@ metadata:
   - FragHub
   techniques:
   - CE-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
@@ -42,6 +51,7 @@ attribution:
 
 # MSP file parsing edge case handling
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Detect and safely handle malformed or incomplete spectrum records during line-by-line MSP file parsing to prevent silent data loss. This skill ensures that spectra with invalid metadata, missing chemical identifiers, or inconsistent adduct–ionmode combinations are logged with explicit deletion reasons rather than dropped without trace.

@@ -1,6 +1,7 @@
 ---
 name: execution-time-metric-analysis
-description: Use when you have computation-time metrics from a gallery or benchmark suite comparing multiple plotting backends on the same data types (e.
+description: Use when you have computation-time metrics from a gallery or benchmark
+  suite comparing multiple plotting backends on the same data types (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -16,12 +17,15 @@ metadata:
   - matplotlib
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
 evidence_spans:
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 - ms_data.plot(x="m/z", y="intensity", kind="spectrum")
 - conda create --name=pyopenms-viz python=3.12
 - Multiple backends supported including matplotlib, bokeh, and plotly

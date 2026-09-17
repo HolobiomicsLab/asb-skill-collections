@@ -1,6 +1,8 @@
 ---
 name: extracted-ion-electropherogram-generation
-description: Use when you have CE-MS raw data (mzML or netCDF format) containing a target compound of known m/z ratio and you need to resolve it as a distinct peak on the effective mobility scale rather than migration time scale.
+description: Use when you have CE-MS raw data (mzML or netCDF format) containing a
+  target compound of known m/z ratio and you need to resolve it as a distinct peak
+  on the effective mobility scale rather than migration time scale.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3630
@@ -16,6 +18,8 @@ metadata:
   - R
   techniques:
   - CE-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR

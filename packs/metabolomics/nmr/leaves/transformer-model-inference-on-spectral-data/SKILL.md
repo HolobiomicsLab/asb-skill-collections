@@ -1,6 +1,8 @@
 ---
 name: transformer-model-inference-on-spectral-data
-description: Use when you have a 1D 1H NMR spectrum represented as chemical shift vs. intensity values, a corresponding list of detected peak positions, and you need to assign metabolite identities to those peaks.
+description: Use when you have a 1D 1H NMR spectrum represented as chemical shift
+  vs. intensity values, a corresponding list of detected peak positions, and you need
+  to assign metabolite identities to those peaks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,6 +17,8 @@ metadata:
   - NMRformer
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c05632
   title: NMRformer

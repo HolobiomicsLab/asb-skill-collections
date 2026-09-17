@@ -1,6 +1,8 @@
 ---
 name: de-novo-peptide-sequencing
-description: Use when you have annotated MS/MS spectra in MGF format and need to identify peptide sequences that may not exist in reference protein databases—such as in immunopeptidomics, metaproteomics, paleoproteomics, venomics, or monoclonal antibody assembly workflows.
+description: Use when you have annotated MS/MS spectra in MGF format and need to identify
+  peptide sequences that may not exist in reference protein databases—such as in immunopeptidomics,
+  metaproteomics, paleoproteomics, venomics, or monoclonal antibody assembly workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3646
@@ -15,14 +17,18 @@ metadata:
   - CUDA Toolkit
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-024-49731-x
   title: Casanovo
 - doi: 10.1093/bib/bbac542
   title: ''
 evidence_spans:
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing.
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing.
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing
 - Pytorch is installed automatically when installing Casanovo
 - Upgraded minimum Lightning version to 2.6.
 claims: []

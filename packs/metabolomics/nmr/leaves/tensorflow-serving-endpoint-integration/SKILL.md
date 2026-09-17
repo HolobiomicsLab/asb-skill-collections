@@ -1,8 +1,11 @@
 ---
 name: tensorflow-serving-endpoint-integration
-description: Use when you have nuclear magnetic resonance (NMR) peak data (1H and 13C measurements) that you need to classify using a deployed SMART 3 model, and you want to submit peaks programmatically rather than through a web UI.
+description: Use when you have nuclear magnetic resonance (NMR) peak data (1H and
+  13C measurements) that you need to classify using a deployed SMART 3 model, and
+  you want to submit peaks programmatically rather than through a web UI.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0593
@@ -12,6 +15,8 @@ metadata:
   - DeepSAT
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT

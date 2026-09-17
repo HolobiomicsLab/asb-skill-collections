@@ -1,6 +1,8 @@
 ---
 name: lc-ms-feature-extraction-and-alignment
-description: Use when you have centroid mzML files from LC-MS experiments (converted from Thermo .raw or other vendor formats) and need to identify and quantify individual chemical features across multiple samples.
+description: Use when you have centroid mzML files from LC-MS experiments (converted
+  from Thermo .raw or other vendor formats) and need to identify and quantify individual
+  chemical features across multiple samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -16,6 +18,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

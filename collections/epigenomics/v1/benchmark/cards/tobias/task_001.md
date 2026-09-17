@@ -144,4 +144,4 @@ Correct Tn5 transposase insertion bias from an ATAC-seq BAM file using the TOBIA
 
 ---
 
-*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See [`artifact_provenance.json`](../../../capsules/tobias/10_1038_s41467_020_18035_1__task_001/artifact_provenance.json) for what this release carries; it also lists the build artefacts the release does not promote.*

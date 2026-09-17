@@ -6,6 +6,7 @@ derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo
 schema_version: 0.2.0
+entry_kind: software
 license_tier: unknown
 license: null
 license_detection: null

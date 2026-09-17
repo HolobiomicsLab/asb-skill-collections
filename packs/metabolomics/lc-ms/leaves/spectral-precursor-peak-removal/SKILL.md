@@ -1,6 +1,7 @@
 ---
 name: spectral-precursor-peak-removal
-description: Use when after loading a raw MsmsSpectrum object from a tandem mass spectrometry experiment (e.g., via USI) and before intensity filtering or scaling.
+description: Use when after loading a raw MsmsSpectrum object from a tandem mass spectrometry
+  experiment (e.g., via USI) and before intensity filtering or scaling.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -14,15 +15,21 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
-- Spectrum processing in spectrum_utils has been optimized for computational efficiency using [NumPy](https://www.numpy.org/)
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
+- Spectrum processing in spectrum_utils has been optimized for computational efficiency
+  using [NumPy](https://www.numpy.org/)
 - import numpy as np
-- optimized for computational efficiency using [NumPy](https://www.numpy.org/) and [Numba](http://numba.pydata.org/)
+- optimized for computational efficiency using [NumPy](https://www.numpy.org/) and
+  [Numba](http://numba.pydata.org/)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

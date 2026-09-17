@@ -1,6 +1,7 @@
 ---
 name: mass-spectrometry-package-integration
-description: Use when you have R Spectra objects and need to apply Python-only MS algorithms (e.
+description: Use when you have R Spectra objects and need to apply Python-only MS
+  algorithms (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,12 +17,16 @@ metadata:
   - reticulate
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
 evidence_spans:
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R.
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based
+  MS analysis in R
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based
+  MS analysis in R.
 - integration of Python MS packages into a [*Spectra*]-based MS analysis in R
 claims: []
 provenance:

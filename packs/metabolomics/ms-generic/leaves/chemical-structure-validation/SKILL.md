@@ -1,6 +1,9 @@
 ---
 name: chemical-structure-validation
-description: Use when after compound database dereplication with SIRIUS or MetFrag has produced candidate annotations (CSV or JSON format), and you need to filter implausible structures, compute standardized molecular descriptors, and rank candidates by confidence before reporting final metabolite.
+description: Use when after compound database dereplication with SIRIUS or MetFrag
+  has produced candidate annotations (CSV or JSON format), and you need to filter
+  implausible structures, compute standardized molecular descriptors, and rank candidates
+  by confidence before reporting final metabolite.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -15,6 +18,8 @@ metadata:
   - MetFrag
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-023-00695-y
   title: MAW

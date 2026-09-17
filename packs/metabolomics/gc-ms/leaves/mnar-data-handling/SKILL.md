@@ -1,6 +1,9 @@
 ---
 name: mnar-data-handling
-description: Use when you have metabolomics data (targeted LC/MS or untargeted GC/MS) with left-censored missing values below the limit of quantification (LOQ) or limit of detection (LOD), and you need to impute these values while preserving the underlying distributional structure and avoiding bias from.
+description: Use when you have metabolomics data (targeted LC/MS or untargeted GC/MS)
+  with left-censored missing values below the limit of quantification (LOQ) or limit
+  of detection (LOD), and you need to impute these values while preserving the underlying
+  distributional structure and avoiding bias from.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -18,6 +21,13 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-SA-4.0
+    url: WandeRum/GSimp
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp
@@ -47,6 +57,7 @@ attribution:
 
 # MNAR Data Handling
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 A multi-step preprocessing and imputation pipeline for left-censored metabolomics data where missingness is not random (MNAR), combining log-transformation, quantile-regression initialization, scaling, Gibbs sampling imputation, and recovery transformations to produce complete datasets suitable for downstream analysis.

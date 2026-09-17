@@ -1,6 +1,9 @@
 ---
 name: bonferroni-multiple-testing-correction
-description: Use when when you have performed many pairwise correlation tests between candidate parent and adduct ion intensity pairs in MSI data and need to identify statistically significant relationships while controlling for multiple-comparison bias.
+description: Use when when you have performed many pairwise correlation tests between
+  candidate parent and adduct ion intensity pairs in MSI data and need to identify
+  statistically significant relationships while controlling for multiple-comparison
+  bias.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -15,13 +18,17 @@ metadata:
   - corrPairsMSIchunks
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - We can match massdiffs to specific adduct types using the same function `adductMatch`
-- If the data matrix is very large, it may need to be reformatted to be loaded into memory during an R session.
+- If the data matrix is very large, it may need to be reformatted to be loaded into
+  memory during an R session.
 - corrPairsMSI(d,d.diff.annot)
 claims: []
 provenance:

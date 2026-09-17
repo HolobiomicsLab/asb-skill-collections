@@ -1,6 +1,9 @@
 ---
 name: c-sharp-wrapper-method-validation
-description: Use when when integrating an R package that wraps a compiled .NET assembly (such as rawrr), you need to verify that the internal dispatch mechanism between the R layer and the C# layer is operational before attempting to read actual raw data files.
+description: Use when when integrating an R package that wraps a compiled .NET assembly
+  (such as rawrr), you need to verify that the internal dispatch mechanism between
+  the R layer and the C# layer is operational before attempting to read actual raw
+  data files.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -11,13 +14,16 @@ metadata:
   - rawrr
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
 evidence_spans:
-- The extracted information is written to a temporary location on the harddrive, read back into memory and parsed into `R` objects using RawFileReader API
+- The extracted information is written to a temporary location on the harddrive, read
+  back into memory and parsed into `R` objects using RawFileReader API
 - 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'
 claims: []
 provenance:

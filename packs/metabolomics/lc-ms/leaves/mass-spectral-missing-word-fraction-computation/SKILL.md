@@ -1,6 +1,9 @@
 ---
 name: mass-spectral-missing-word-fraction-computation
-description: Use when when applying a pre-trained Spec2Vec Word2Vec model to new mass spectra (particularly those outside the model's training distribution), you need to assess whether peaks and neutral losses in query spectra have been seen during model training.
+description: Use when when applying a pre-trained Spec2Vec Word2Vec model to new mass
+  spectra (particularly those outside the model's training distribution), you need
+  to assess whether peaks and neutral losses in query spectra have been seen during
+  model training.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -18,15 +21,21 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
 evidence_spans:
 - we introduce Spec2Vec, a novel spectral similarity score
-- spec2vec (https://github.com/iomega/spec2vec). Both packages are freely available and can be installed via conda
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31] (https://github.com/matchms/matchms)
-- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]
+- spec2vec (https://github.com/iomega/spec2vec). Both packages are freely available
+  and can be installed via conda
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms [31] (https://github.com/matchms/matchms)
+- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim
+  [37]
 - Spec2Vec was optimised by making extensive use of Numpy [24]
 claims: []
 provenance:

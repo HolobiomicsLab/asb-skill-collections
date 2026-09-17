@@ -1,6 +1,9 @@
 ---
 name: array-of-objects-construction
-description: Use when you have tabular experimental data (e.g., sample metadata, mass spectrometry parameters, NMR acquisition details) in JSON table format and need to produce a list of structured objects for submission to a data repository (e.g., Metabolomics Workbench) or downstream format conversion.
+description: Use when you have tabular experimental data (e.g., sample metadata, mass
+  spectrometry parameters, NMR acquisition details) in JSON table format and need
+  to produce a list of structured objects for submission to a data repository (e.g.,
+  Metabolomics Workbench) or downstream format conversion.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,6 +16,8 @@ metadata:
   - messes
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -20,7 +25,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_
+  (`jsonschema <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,8 +1,12 @@
 ---
 name: spectrum-metadata-extraction
-description: Use when when you have raw mass spectrometry data from diverse instrument vendors (Thermo, Sciex, etc.) and need to harmonize and standardize spectrum-level metadata—including scan information, precursor m/z and charge, and ion selection parameters—into a queryable, vendor-agnostic tabular schema.
+description: Use when when you have raw mass spectrometry data from diverse instrument
+  vendors (Thermo, Sciex, etc.) and need to harmonize and standardize spectrum-level
+  metadata—including scan information, precursor m/z and charge, and ion selection
+  parameters—into a queryable, vendor-agnostic tabular schema.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +19,8 @@ metadata:
   - arrow (R package)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak

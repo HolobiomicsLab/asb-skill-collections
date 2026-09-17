@@ -1,6 +1,7 @@
 ---
 name: batch-aware-normalization-workflows
-description: Use when your LC-MS feature table exhibits intensity variations across samples that correlate with technical batches (e.
+description: Use when your LC-MS feature table exhibits intensity variations across
+  samples that correlate with technical batches (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -14,6 +15,8 @@ metadata:
   - Asari
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

@@ -1,6 +1,9 @@
 ---
 name: msp-file-parsing
-description: Use when you have a Mass Spectrum Point (MSP) file containing electron ionization mass spectral records with header fields and peak intensity pairs, and you need to load it into an R data structure for library searching, format validation, or round-trip conversion.
+description: Use when you have a Mass Spectrum Point (MSP) file containing electron
+  ionization mass spectral records with header fields and peak intensity pairs, and
+  you need to load it into an R data structure for library searching, format validation,
+  or round-trip conversion.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -12,12 +15,17 @@ metadata:
   - R
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr
 evidence_spans:
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users for conducting library searches against electron ionization mass spectral databases.
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users for conducting library searches against electron ionization mass spectral
+  databases.
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users
 - enhance the capabilities of R users for conducting library searches
 claims: []
 provenance:

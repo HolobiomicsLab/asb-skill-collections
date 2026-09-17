@@ -1,0 +1,1129 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "asbext": "https://w3id.org/asb/indicium-ext#",
+      "chebi": "http://purl.obolibrary.org/obo/CHEBI_",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "fabio": "http://purl.org/spar/fabio/",
+      "ms": "http://purl.obolibrary.org/obo/MS_",
+      "ncbitaxon": "http://purl.obolibrary.org/obo/NCBITaxon_",
+      "oa": "http://www.w3.org/ns/oa#",
+      "obi": "http://purl.obolibrary.org/obo/OBI_",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "p-plan": "http://purl.org/net/p-plan#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "repme": "https://w3id.org/reproduceme#",
+      "sepio": "http://purl.obolibrary.org/obo/SEPIO_",
+      "uberon": "http://purl.obolibrary.org/obo/UBERON_"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": [
+        "Dataset",
+        "repme:ScientificWorkflow"
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ],
+      "dateCreated": "2026-06-15",
+      "description": "Combine DNN-predicted retention times with meta-learned chromatographic projections to generate RT-based likelihood scores for candidate metabolite annotations. Produce a ranked candidate list with RT probability scores for a query spectrum.",
+      "hasPart": [
+        {
+          "@id": "evidence/source_snippets.md"
+        },
+        {
+          "@id": "inputs/dataset_folder_tree.txt"
+        },
+        {
+          "@id": "inputs/dataset_preview.md"
+        },
+        {
+          "@id": "evaluation/evaluation_strategy.md"
+        },
+        {
+          "@id": "evaluation/review_rubric.json"
+        },
+        {
+          "@id": "artifact_provenance.json"
+        },
+        {
+          "@id": "ledger/claims.jsonl"
+        },
+        {
+          "@id": "ledger/results.jsonl"
+        }
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "mentions": [
+        {
+          "@id": "#action-task_005"
+        },
+        {
+          "@id": "urn:asb:task:task_005"
+        },
+        {
+          "@id": "urn:asb:claim:claim_001"
+        },
+        {
+          "@id": "urn:asb:claim:claim_002"
+        },
+        {
+          "@id": "urn:asb:claim:claim_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_004"
+        },
+        {
+          "@id": "urn:asb:claim:claim_005"
+        },
+        {
+          "@id": "urn:asb:claim:claim_006"
+        },
+        {
+          "@id": "urn:asb:claim:claim_007"
+        },
+        {
+          "@id": "urn:asb:claim:claim_008"
+        },
+        {
+          "@id": "urn:asb:claim:claim_009"
+        },
+        {
+          "@id": "urn:asb:claim:claim_010"
+        },
+        {
+          "@id": "urn:asb:claim:claim_011"
+        },
+        {
+          "@id": "urn:asb:claim:claim_012"
+        },
+        {
+          "@id": "urn:asb:claim:claim_013"
+        },
+        {
+          "@id": "urn:asb:claim:claim_014"
+        },
+        {
+          "@id": "urn:asb:result:result_001"
+        },
+        {
+          "@id": "urn:asb:result:result_002"
+        },
+        {
+          "@id": "urn:asb:result:result_003"
+        },
+        {
+          "@id": "urn:asb:result:result_004"
+        },
+        {
+          "@id": "urn:asb:result:result_005"
+        },
+        {
+          "@id": "urn:asb:result:result_006"
+        },
+        {
+          "@id": "urn:asb:result:result_007"
+        },
+        {
+          "@id": "urn:asb:result:result_008"
+        },
+        {
+          "@id": "urn:asb:result:result_009"
+        },
+        {
+          "@id": "urn:asb:result:result_010"
+        },
+        {
+          "@id": "urn:asb:result:result_011"
+        },
+        {
+          "@id": "urn:asb:result:result_012"
+        },
+        {
+          "@id": "#env-task_005"
+        },
+        {
+          "@id": "http://edamontology.org/topic_3172"
+        }
+      ],
+      "name": "Extend DNN+meta-learned projections integration for probabilistic metabolite annotation scoring",
+      "repme:hasComputationalEnvironment": {
+        "@id": "#computational-environment"
+      }
+    },
+    {
+      "@id": "evidence/source_snippets.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evidence/source_snippets.md"
+    },
+    {
+      "@id": "inputs/dataset_folder_tree.txt",
+      "@type": "File",
+      "encodingFormat": "text/plain",
+      "name": "inputs/dataset_folder_tree.txt"
+    },
+    {
+      "@id": "inputs/dataset_preview.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "inputs/dataset_preview.md"
+    },
+    {
+      "@id": "evaluation/evaluation_strategy.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evaluation/evaluation_strategy.md"
+    },
+    {
+      "@id": "evaluation/review_rubric.json",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "name": "evaluation/review_rubric.json"
+    },
+    {
+      "@id": "urn:asb:task:task_005",
+      "@type": [
+        "ScholarlyArticle",
+        "p-plan:Plan",
+        "http://purl.org/spar/fabio/ResearchPaper"
+      ],
+      "asbext:task_kind": "extension",
+      "description": "Combine DNN-predicted retention times with meta-learned chromatographic projections to generate RT-based likelihood scores for candidate metabolite annotations. Produce a ranked candidate list with RT probability scores for a query spectrum.",
+      "keywords": [
+        "molecular-descriptor-fingerprint-generation",
+        "retention-time-prediction-deep-neural-network",
+        "bayesian-meta-learning-chromatographic-projection",
+        "metabolite-candidate-ranking-likelihood-scoring",
+        "uncertainty-quantification-rt-prediction"
+      ],
+      "name": "Extend DNN+meta-learned projections integration for probabilistic metabolite annotation scoring",
+      "prov:wasInfluencedBy": [
+        {
+          "@id": "urn:asb:task:task_003"
+        }
+      ],
+      "repme:hasResearcher": [
+        {
+          "@id": "urn:asb:researcher:a-garc-a-2022"
+        },
+        {
+          "@id": "urn:asb:researcher:alberto-gil-de-la-fuente-2022"
+        },
+        {
+          "@id": "urn:asb:researcher:coral-barbas-2022"
+        },
+        {
+          "@id": "urn:asb:researcher:abraham-otero-2022"
+        }
+      ],
+      "sameAs": "https://doi.org/10.1186/s13321-022-00613-8#task_005",
+      "schema:identifier": "10.1186/s13321-022-00613-8"
+    },
+    {
+      "@id": "urn:asb:researcher:a-garc-a-2022",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "García, Constantino A."
+    },
+    {
+      "@id": "urn:asb:researcher:alberto-gil-de-la-fuente-2022",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Gil-de-la-Fuente, Alberto"
+    },
+    {
+      "@id": "urn:asb:researcher:coral-barbas-2022",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Barbas, Coral"
+    },
+    {
+      "@id": "urn:asb:researcher:abraham-otero-2022",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Otero, Abraham"
+    },
+    {
+      "@id": "urn:asb:tool:alvadesc",
+      "@type": "SoftwareApplication",
+      "name": "alvaDesc"
+    },
+    {
+      "@id": "urn:asb:input:task_005_0",
+      "@type": "File",
+      "name": "Query spectrum (m/z, intensity pairs) and neutral mass of unknown metabolite"
+    },
+    {
+      "@id": "urn:asb:input:task_005_1",
+      "@type": "File",
+      "name": "Candidate metabolite structures (SMILES or InChI) from reference database (e.g., METLIN)"
+    },
+    {
+      "@id": "urn:asb:input:task_005_2",
+      "@type": "File",
+      "name": "Trained DNN regression model (checkpoint) for retention time prediction"
+    },
+    {
+      "@id": "urn:asb:input:task_005_3",
+      "@type": "File",
+      "name": "Bayesian meta-learning model for RT projection between chromatographic methods"
+    },
+    {
+      "@id": "urn:asb:input:task_005_4",
+      "@type": "File",
+      "name": "Calibration molecules (≥10) with known RTs in both reference and target chromatographic methods"
+    },
+    {
+      "@id": "urn:asb:output:task_005_0",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Ranked candidate list with RT probability scores (CSV or TSV table: candidate_id, molecular_formula, predicted_rt, rt_score, rank)",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_005"
+      }
+    },
+    {
+      "@id": "#action-task_005",
+      "@type": [
+        "CreateAction",
+        "prov:Activity",
+        "p-plan:Step"
+      ],
+      "description": "Combine DNN-predicted retention times with meta-learned chromatographic projections to generate RT-based likelihood scores for candidate metabolite annotations. Produce a ranked candidate list with RT probability scores for a query spectrum.",
+      "instrument": [
+        {
+          "@id": "urn:asb:tool:alvadesc"
+        }
+      ],
+      "name": "Extend DNN+meta-learned projections integration for probabilistic metabolite annotation scoring",
+      "object": [
+        {
+          "@id": "urn:asb:input:task_005_0"
+        },
+        {
+          "@id": "urn:asb:input:task_005_1"
+        },
+        {
+          "@id": "urn:asb:input:task_005_2"
+        },
+        {
+          "@id": "urn:asb:input:task_005_3"
+        },
+        {
+          "@id": "urn:asb:input:task_005_4"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "urn:asb:port:task_003/projected_rt_predictions"
+        }
+      ],
+      "repme:hasInputData": [
+        {
+          "@id": "urn:asb:input:task_005_0"
+        },
+        {
+          "@id": "urn:asb:input:task_005_1"
+        },
+        {
+          "@id": "urn:asb:input:task_005_2"
+        },
+        {
+          "@id": "urn:asb:input:task_005_3"
+        },
+        {
+          "@id": "urn:asb:input:task_005_4"
+        }
+      ],
+      "repme:hasOutputData": [
+        {
+          "@id": "urn:asb:output:task_005_0"
+        }
+      ],
+      "repme:hasResult": [
+        {
+          "@id": "urn:asb:result:result_009"
+        },
+        {
+          "@id": "urn:asb:result:result_010"
+        },
+        {
+          "@id": "urn:asb:result:result_012"
+        }
+      ],
+      "result": [
+        {
+          "@id": "urn:asb:output:task_005_0"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:claim:claim_001",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The CMM-RT code implements methods for accurate prediction of Retention Times for a given Chromatographic Method using machine learning."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 154,
+          "oa:start": 9
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_cmmrt/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The CMM-RT code implements methods for accurate prediction of Retention Times for a given Chromatographic Method using machine learning.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_002",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "State-of-the-art machine learning regressors were trained using 80,038 experimental RTs from the METLIN small molecule dataset."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 561,
+          "oa:start": 420
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_cmmrt/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "State-of-the-art machine learning regressors were trained using 80,038 experimental RTs from the METLIN small molecule dataset.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "retention time prediction for metabolomics",
+        "object": "80,038 experimental RTs",
+        "qualifier": "requires",
+        "relation": "trained on experimental retention times from METLIN dataset",
+        "subject": "machine learning regressors"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_003",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Both retained and unretained molecules were considered in the training dataset."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 618,
+          "oa:start": 563
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_cmmrt/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Both retained and unretained molecules were considered in the training dataset.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_004",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "5,666 molecular descriptors were generated with the alvaDesc software."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 785,
+          "oa:start": 622
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_cmmrt/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "5,666 molecular descriptors were generated with the alvaDesc software.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_005",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "2,214 fingerprints were generated with the alvaDesc software."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 785,
+          "oa:start": 622
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_cmmrt/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "2,214 fingerprints were generated with the alvaDesc software.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_006",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The fingerprints used were MACCS166, Extended Connectivity, and Path Fingerprints."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 615,
+          "oa:start": 536
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_cmmrt/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The fingerprints used were MACCS166, Extended Connectivity, and Path Fingerprints.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_007",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Models were trained using only the descriptors, only the fingerprints, and both types of features simultaneously."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 905,
+          "oa:start": 787
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_cmmrt/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Models were trained using only the descriptors, only the fingerprints, and both types of features simultaneously.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_008",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Fingerprints tend to perform better than descriptors or combined features for retention time prediction."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 964,
+          "oa:start": 907
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_cmmrt/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "Fingerprints tend to perform better than descriptors or combined features for retention time prediction.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "machine learning models for retention time prediction",
+        "object": "superior predictive performance",
+        "qualifier": "has_property",
+        "relation": "tend to perform better than descriptors alone or combined",
+        "subject": "fingerprints"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_009",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "A heavily regularized DNN trained with cosine annealing warm restarts and stochastic weight averaging achieved mean absolute error of 39.2±1.2 s."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1195,
+          "oa:start": 968
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_cmmrt/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "A heavily regularized DNN trained with cosine annealing warm restarts and stochastic weight averaging achieved mean absolute error of 39.2±1.2 s.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "retention time prediction modeling",
+        "object": "39.2±1.2 s",
+        "qualifier": "produces",
+        "relation": "achieves mean absolute error",
+        "subject": "heavily regularized DNN with cosine annealing and stochastic weight averaging"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_010",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "A heavily regularized DNN trained with cosine annealing warm restarts and stochastic weight averaging achieved median absolute error of 17.2 ± 0.9 s."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1195,
+          "oa:start": 968
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_cmmrt/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "A heavily regularized DNN trained with cosine annealing warm restarts and stochastic weight averaging achieved median absolute error of 17.2 ± 0.9 s.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "retention time prediction modeling",
+        "object": "17.2 ± 0.9 s",
+        "qualifier": "produces",
+        "relation": "achieves median absolute error",
+        "subject": "heavily regularized DNN with cosine annealing and stochastic weight averaging"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_011",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "A novel Bayesian meta-learning approach is proposed for RT projection between CMs."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1391,
+          "oa:start": 1199
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_cmmrt/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "A novel Bayesian meta-learning approach is proposed for RT projection between CMs.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_012",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The Bayesian meta-learning approach requires as few as 10 molecules for RT projection between chromatographic methods."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1391,
+          "oa:start": 1199
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_cmmrt/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The Bayesian meta-learning approach requires as few as 10 molecules for RT projection between chromatographic methods.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      },
+      "super_pattern": {
+        "context": "retention time projection between chromatographic methods",
+        "object": "as few as 10 molecules",
+        "qualifier": "requires",
+        "relation": "requires minimal calibration data",
+        "subject": "Bayesian meta-learning approach"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_013",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The meta-learning approach obtains competitive error rates compared with previous approaches."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1391,
+          "oa:start": 1310
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_cmmrt/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The meta-learning approach obtains competitive error rates compared with previous approaches.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_014",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The proposed DNN and meta-learned projections can be integrated into metabolite annotation workflows."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1500,
+          "oa:start": 1395
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_cmmrt/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_005"
+      },
+      "schema:name": "The proposed DNN and meta-learned projections can be integrated into metabolite annotation workflows.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:result:result_001",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The CMM-RT code implements methods for accurate prediction of Retention Times for a given Chromatographic Method using machine learning.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_001"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_002",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "State-of-the-art machine learning regressors were trained using 80,038 experimental RTs from the METLIN small molecule dataset.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_002"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_003",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Both retained and unretained molecules were considered in the training dataset.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_003"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_004",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "5,666 molecular descriptors were generated with the alvaDesc software.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_004"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_005",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "2,214 fingerprints were generated with the alvaDesc software.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_005"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_006",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The fingerprints used were MACCS166, Extended Connectivity, and Path Fingerprints.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_006"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_007",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Models were trained using only the descriptors, only the fingerprints, and both types of features simultaneously.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_007"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_008",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Fingerprints tend to perform better than descriptors or combined features for retention time prediction.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_008"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_009",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "A heavily regularized DNN trained with cosine annealing warm restarts and stochastic weight averaging achieved mean absolute error of 39.2±1.2 s. A heavily regularized DNN trained with cosine annealin",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_009"
+        },
+        {
+          "@id": "urn:asb:claim:claim_010"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_010",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "A novel Bayesian meta-learning approach is proposed for RT projection between CMs. The Bayesian meta-learning approach requires as few as 10 molecules for RT projection between chromatographic methods",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_011"
+        },
+        {
+          "@id": "urn:asb:claim:claim_012"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_011",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The meta-learning approach obtains competitive error rates compared with previous approaches.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_013"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_012",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The proposed DNN and meta-learned projections can be integrated into metabolite annotation workflows.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_014"
+        }
+      ]
+    },
+    {
+      "@id": "#env-task_005",
+      "@type": [
+        "repme:ComputationalEnvironment"
+      ],
+      "repme:computeTier": "light",
+      "repme:hasAlternative": [
+        "closed='alvaDesc' oss='RDKit' expected_divergence=''"
+      ],
+      "repme:requiresSoftware": [
+        "alvaDesc"
+      ]
+    },
+    {
+      "@id": "#agent-15-activity-task_005",
+      "@type": [
+        "prov:Activity"
+      ],
+      "prov:endedAtTime": "2026-06-15T12:53:48.742130+00:00",
+      "prov:qualifiedUsage": {
+        "@type": "prov:Usage",
+        "schema:name": "prompt_sha256",
+        "schema:value": "a23da61eec36f489"
+      },
+      "prov:wasAssociatedWith": {
+        "schema:name": "anthropic/claude-haiku-4-5-20251001"
+      },
+      "schema:name": "Agent 1.5 Claim Extractor"
+    },
+    {
+      "@id": "#computational-environment",
+      "@type": "repme:ComputationalEnvironment",
+      "repme:buildId": "A899588A2A674385829D8D86464DBF8D",
+      "repme:depsHash": "sha256:029a81c5ecba8cba0301a44071f97a928c55447fc2ef79df68b43e4ecdd157ba",
+      "repme:gitCommit": "ddf6c1becb15c939b16600b7655d44e2d2baa690",
+      "repme:platform": "darwin-25.5.0-arm64",
+      "repme:pythonVersion": "3.11.15",
+      "schema:dateCreated": "2026-06-15T12:49:28.260106Z",
+      "schema:hasPart": [
+        {
+          "@id": "#agent-config-agent1_entity"
+        },
+        {
+          "@id": "#agent-config-agent2a_outline"
+        },
+        {
+          "@id": "#agent-config-agent2b_card"
+        },
+        {
+          "@id": "#agent-config-agent3_critique"
+        },
+        {
+          "@id": "#agent-config-agent_classify"
+        }
+      ],
+      "schema:softwareVersion": "agentic-science-builder@0.1.0"
+    },
+    {
+      "@id": "#agent-config-agent1_entity",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v3",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent1_entity"
+    },
+    {
+      "@id": "#agent-config-agent2a_outline",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-sonnet-4-6",
+      "repme:promptVersion": "v2",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2a_outline"
+    },
+    {
+      "@id": "#agent-config-agent2b_card",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v4",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2b_card"
+    },
+    {
+      "@id": "#agent-config-agent3_critique",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent3_critique"
+    },
+    {
+      "@id": "#agent-config-agent_classify",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent_classify"
+    },
+    {
+      "@id": "urn:asb:metabolomics:unknown",
+      "@type": "Dataset",
+      "assay_type": null,
+      "instrument": null,
+      "name": "Metabolomics Study Metadata",
+      "profile": "metabolomics_lcms",
+      "reproducibility_score": 0.0
+    },
+    {
+      "@id": "artifact_provenance.json",
+      "@type": "File",
+      "name": "artifact_provenance.json",
+      "encodingFormat": "application/json"
+    },
+    {
+      "@id": "ledger/claims.jsonl",
+      "@type": "File",
+      "name": "ledger/claims.jsonl",
+      "encodingFormat": "application/jsonlines"
+    },
+    {
+      "@id": "ledger/results.jsonl",
+      "@type": "File",
+      "name": "ledger/results.jsonl",
+      "encodingFormat": "application/jsonlines"
+    }
+  ]
+}

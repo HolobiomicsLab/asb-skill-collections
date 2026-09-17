@@ -1,6 +1,7 @@
 ---
 name: feature-grouping-by-mass-defect
-description: Use when you have a feature list with m/z values from HRMS data and need to identify homologous PFAS series to prioritize suspect screening.
+description: Use when you have a feature list with m/z values from HRMS data and need
+  to identify homologous PFAS series to prioritize suspect screening.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -14,6 +15,8 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen

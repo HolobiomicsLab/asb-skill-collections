@@ -1,6 +1,8 @@
 ---
 name: missing-value-replacement-by-feature-minimum
-description: Use when after loading a feature table into memory when the table contains zero or missing values that represent true signal loss (not genuine absence), and you need to impute them before normalization, batch correction, or statistical analysis.
+description: Use when after loading a feature table into memory when the table contains
+  zero or missing values that represent true signal loss (not genuine absence), and
+  you need to impute them before normalization, batch correction, or statistical analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +15,8 @@ metadata:
   - PCPFM (PythonCentricPipelineForMetabolomics)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

@@ -1,6 +1,8 @@
 ---
 name: feature-group-fragment-classification
-description: Use when you have a detected LC-MS feature table (with m/z, retention time, and intensity columns) and need to identify which features are derivatives of the same parent molecule rather than distinct metabolites.
+description: Use when you have a detected LC-MS feature table (with m/z, retention
+  time, and intensity columns) and need to identify which features are derivatives
+  of the same parent molecule rather than distinct metabolites.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3647
@@ -12,12 +14,21 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: huaxuyu/masscube
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube
 evidence_spans:
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing.
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing.
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing
 - masscube is an integrated Python package
 claims: []
 provenance:
@@ -42,6 +53,7 @@ attribution:
 
 # feature-group-fragment-classification
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Annotate and group LC-MS features as isotopes, adducts, or in-source fragments by applying mass-shift detection logic and neutral-loss pattern matching. This skill produces a labeled feature table that disambiguates related peaks, enabling more accurate downstream metabolite identification and reduces false positives in nontargeted metabolomics.

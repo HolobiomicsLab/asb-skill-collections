@@ -1,6 +1,9 @@
 ---
 name: spectral-scan-generation-and-export
-description: Use when you have real LC-MS/MS data (mzML) from a complex sample (e.g., beer, metabolomics extract) and need to prototype or validate a new data-dependent acquisition (DDA) strategy—such as Top-N fragmentation—before deploying it on physical instrumentation.
+description: Use when you have real LC-MS/MS data (mzML) from a complex sample (e.g.,
+  beer, metabolomics extract) and need to prototype or validate a new data-dependent
+  acquisition (DDA) strategy—such as Top-N fragmentation—before deploying it on physical
+  instrumentation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,17 +18,22 @@ metadata:
   - Environment
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
 evidence_spans:
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible and modular framework designed to simulate fragmentation strategies'
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive and modular framework for the simulation of fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible
+  and modular framework designed to simulate fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive
+  and modular framework for the simulation of fragmentation strategies'
 - Existing mzML files can be converted into chemical lists using `ChemicalMixtureFromMZML`.
 - '`TopNController` – standard Top‑N data dependent acquisition.'
-- Mass Spectrometer – either an in silico model (`IndependentMassSpectrometer`) or a real instrument.
+- Mass Spectrometer – either an in silico model (`IndependentMassSpectrometer`) or
+  a real instrument.
 - Environment – orchestrates interaction between the mass spectrometer and the controller.
 claims: []
 provenance:

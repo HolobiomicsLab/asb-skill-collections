@@ -1,6 +1,7 @@
 ---
 name: technical-replicate-reproducibility-assessment
-description: Use when you have tandem MS data with technical replicates and need to remove features showing high variability between replicates.
+description: Use when you have tandem MS data with technical replicates and need to
+  remove features showing high variability between replicates.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +14,8 @@ metadata:
   - data.table
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr

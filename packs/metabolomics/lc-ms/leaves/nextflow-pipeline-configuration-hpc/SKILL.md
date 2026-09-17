@@ -1,6 +1,9 @@
 ---
 name: nextflow-pipeline-configuration-hpc
-description: Use when your analysis target is an HPC environment (e.g., Slurm-managed cluster, university research computing center) where Singularity is available but Docker is restricted or unavailable; your workflow is already packaged in Docker but needs portability to HPC;
+description: Use when your analysis target is an HPC environment (e.g., Slurm-managed
+  cluster, university research computing center) where Singularity is available but
+  Docker is restricted or unavailable; your workflow is already packaged in Docker
+  but needs portability to HPC;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -15,6 +18,8 @@ metadata:
   - Nextflow4MS-DIAL
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial

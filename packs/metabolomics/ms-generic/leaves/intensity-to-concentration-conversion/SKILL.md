@@ -1,6 +1,7 @@
 ---
 name: intensity-to-concentration-conversion
-description: Use when you have raw mass spectrometry intensity measurements from sample analyses and need absolute quantitative concentrations.
+description: Use when you have raw mass spectrometry intensity measurements from sample
+  analyses and need absolute quantitative concentrations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -12,11 +13,14 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
 evidence_spans:
-- '**QuantyFey** is a Shiny application for the **visualization, analysis, and quantification** of **mass spectrometry (MS) data**'
+- '**QuantyFey** is a Shiny application for the **visualization, analysis, and quantification**
+  of **mass spectrometry (MS) data**'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

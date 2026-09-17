@@ -1,6 +1,8 @@
 ---
 name: chromatogram-baseline-correction-preprocessing
-description: Use when you have raw or folded 2D-TIC chromatogram data (typically imported from NetCDF files into RGCxGC chromatogram objects) that exhibits baseline drift, chemical noise, or instrumental artifacts that would obscure true metabolite peaks.
+description: Use when you have raw or folded 2D-TIC chromatogram data (typically imported
+  from NetCDF files into RGCxGC chromatogram objects) that exhibits baseline drift,
+  chemical noise, or instrumental artifacts that would obscure true metabolite peaks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -12,13 +14,16 @@ metadata:
   - R
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
 - doi: 10.1371/journal.pntd.0006215
   title: ''
 evidence_spans:
-- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional gas chromatography data.
+- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional
+  gas chromatography data.
 - This is the vignette to explain the implementation of RGCxGC package.
 claims: []
 provenance:

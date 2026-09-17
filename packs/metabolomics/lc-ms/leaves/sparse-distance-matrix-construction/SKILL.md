@@ -1,6 +1,9 @@
 ---
 name: sparse-distance-matrix-construction
-description: Use when you have a large collection of MS/MS spectra (hundreds of thousands to millions) that need to be clustered, you have already constructed nearest neighbor indexes on low-dimensional spectrum vectors (via feature hashing), and you need to compute only the relevant pairwise distances between.
+description: Use when you have a large collection of MS/MS spectra (hundreds of thousands
+  to millions) that need to be clustered, you have already constructed nearest neighbor
+  indexes on low-dimensional spectrum vectors (via feature hashing), and you need
+  to compute only the relevant pairwise distances between.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3625
@@ -12,11 +15,14 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

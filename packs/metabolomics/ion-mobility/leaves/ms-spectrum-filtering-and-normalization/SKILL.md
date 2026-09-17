@@ -1,6 +1,8 @@
 ---
 name: ms-spectrum-filtering-and-normalization
-description: Use when you have raw or parsed tandem MS spectra (MGF, mzML, or in-memory Spectrum objects) and need to remove artifacts and normalize intensities prior to spectral matching, library searching, or downstream analysis.
+description: Use when you have raw or parsed tandem MS spectra (MGF, mzML, or in-memory
+  Spectrum objects) and need to remove artifacts and normalize intensities prior to
+  spectral matching, library searching, or downstream analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -20,16 +22,21 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
 - pymzML (version 2.5.2)
 - pyOpenMS (version 2.7.0)
 - import seaborn as sns
-- Spectrum processing in spectrum_utils has been optimized for computational efficiency using [NumPy](https://www.numpy.org/)
+- Spectrum processing in spectrum_utils has been optimized for computational efficiency
+  using [NumPy](https://www.numpy.org/)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

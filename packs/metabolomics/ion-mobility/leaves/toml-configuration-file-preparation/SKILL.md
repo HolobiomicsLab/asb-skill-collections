@@ -1,6 +1,7 @@
 ---
 name: toml-configuration-file-preparation
-description: Use when you have exported lipid identifications from MS-DIAL (version 4 or 5) and need to run LipoCLEAN quality filtering on that output.
+description: Use when you have exported lipid identifications from MS-DIAL (version
+  4 or 5) and need to run LipoCLEAN quality filtering on that output.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -12,6 +13,8 @@ metadata:
   - MS-DIAL
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c04040
   title: lipoclean

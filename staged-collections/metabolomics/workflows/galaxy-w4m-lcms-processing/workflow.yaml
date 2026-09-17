@@ -125,8 +125,6 @@ steps:
   inputs_from:
     import_raw:
     - rdata:rdata.msnbase.raw
-    parameter_optimisation:
-    - tabular:ipo-parameters
 - id: correspondence
   goal: group peaks across samples into features
   edam_operation: http://edamontology.org/operation_3632

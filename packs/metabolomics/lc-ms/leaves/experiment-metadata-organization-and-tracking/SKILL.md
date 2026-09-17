@@ -1,6 +1,8 @@
 ---
 name: experiment-metadata-organization-and-tracking
-description: Use when before initiating raw file conversion or feature extraction, when you have a heterogeneous collection of raw LC-MS files (.raw or .mzML) and sample information scattered across instrument logs, sequence files, or spreadsheets.
+description: Use when before initiating raw file conversion or feature extraction,
+  when you have a heterogeneous collection of raw LC-MS files (.raw or .mzML) and
+  sample information scattered across instrument logs, sequence files, or spreadsheets.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -16,6 +18,8 @@ metadata:
   - pcpfm preprocess
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

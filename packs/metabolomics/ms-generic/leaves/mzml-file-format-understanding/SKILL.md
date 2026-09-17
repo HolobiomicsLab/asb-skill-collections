@@ -1,6 +1,7 @@
 ---
 name: mzml-file-format-understanding
-description: Use when you have mass spectrometry raw data in mzML format (including compressed variants like mzML.
+description: Use when you have mass spectrometry raw data in mzML format (including
+  compressed variants like mzML.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -14,6 +15,8 @@ metadata:
   - numpy
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml

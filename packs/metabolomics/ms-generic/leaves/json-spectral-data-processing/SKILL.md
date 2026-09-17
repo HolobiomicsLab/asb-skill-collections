@@ -1,6 +1,9 @@
 ---
 name: json-spectral-data-processing
-description: Use when you have raw or semi-curated mass spectrometry spectral data in JSON, CSV, MSP, or MGF format from multiple open mass spectra libraries (OMSLs) and need to standardize field names, validate chemical identifiers (SMILES, InChI, InChIKey), remove duplicates, filter by quality criteria.
+description: Use when you have raw or semi-curated mass spectrometry spectral data
+  in JSON, CSV, MSP, or MGF format from multiple open mass spectra libraries (OMSLs)
+  and need to standardize field names, validate chemical identifiers (SMILES, InChI,
+  InChIKey), remove duplicates, filter by quality criteria.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -19,6 +22,13 @@ metadata:
   - NPclassifier
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
@@ -47,6 +57,7 @@ attribution:
 
 # JSON Spectral Data Processing
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Standardize and organize mass spectrometry spectral data from open libraries by loading FragHub JSON format spectra, applying quality filters, recalculating chemical identifiers, and deduplicating via SPLASH keys. This skill ensures data consistency, removes inconsistent records, and produces analysis-ready spectra compatible with MSdial, MZmine, and other metabolomics software.

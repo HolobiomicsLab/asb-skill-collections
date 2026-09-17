@@ -1,6 +1,9 @@
 ---
 name: metabolomic-feature-matching
-description: Use when you have two LC-MS feature tables (each with m/z, retention time, and intensity columns) from separate metabolomic experiments or replicates, and you need to establish which features in dataset A correspond to which features in dataset B to enable comparative or longitudinal analysis.
+description: Use when you have two LC-MS feature tables (each with m/z, retention
+  time, and intensity columns) from separate metabolomic experiments or replicates,
+  and you need to establish which features in dataset A correspond to which features
+  in dataset B to enable comparative or longitudinal analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -12,6 +15,8 @@ metadata:
   - M2S
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c03592
   title: m2s

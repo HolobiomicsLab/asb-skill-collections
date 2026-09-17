@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-data-visualization-pandas
-description: Use when when you have mass spectrometry data (mzML, Bruker .d, or CSV) loaded into a Pandas DataFrame with columns for m/z, retention time, ion mobility, or intensity values, and you need to render spectrum plots, chromatograms, mobilograms, or 2D peak maps.
+description: Use when when you have mass spectrometry data (mzML, Bruker .d, or CSV)
+  loaded into a Pandas DataFrame with columns for m/z, retention time, ion mobility,
+  or intensity values, and you need to render spectrum plots, chromatograms, mobilograms,
+  or 2D peak maps.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -18,6 +21,8 @@ metadata:
   - pyOpenMS
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz

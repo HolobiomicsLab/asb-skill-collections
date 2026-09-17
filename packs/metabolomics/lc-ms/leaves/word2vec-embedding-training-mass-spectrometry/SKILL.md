@@ -1,6 +1,8 @@
 ---
 name: word2vec-embedding-training-mass-spectrometry
-description: Use when you have a large collection of preprocessed MS/MS spectra (typically >10,000 spectra) with diverse chemical structures and you need to learn embeddings that capture fragmentation patterns and neutral loss relationships.
+description: Use when you have a large collection of preprocessed MS/MS spectra (typically
+  >10,000 spectra) with diverse chemical structures and you need to learn embeddings
+  that capture fragmentation patterns and neutral loss relationships.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -22,6 +24,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -29,11 +33,15 @@ derived_from:
   title: ''
 evidence_spans:
 - we introduce Spec2Vec, a novel spectral similarity score
-- spec2vec (https://github.com/iomega/spec2vec). Both packages are freely available and can be installed via conda
+- spec2vec (https://github.com/iomega/spec2vec). Both packages are freely available
+  and can be installed via conda
 - inspired by a natural language processing algorithm—Word2Vec
-- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31] (https://github.com/matchms/matchms)
+- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim
+  [37]
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms [31] (https://github.com/matchms/matchms)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

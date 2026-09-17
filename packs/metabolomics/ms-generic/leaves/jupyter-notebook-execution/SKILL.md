@@ -1,6 +1,9 @@
 ---
 name: jupyter-notebook-execution
-description: Use when when you have three coordinated mass spectrometry data tables (quantification, metadata, spectral) ready for integrated preprocessing and statistical analysis, and you need to generate a standardized JSON artifact for downstream interactive exploration rather than static tabular outputs.
+description: Use when when you have three coordinated mass spectrometry data tables
+  (quantification, metadata, spectral) ready for integrated preprocessing and statistical
+  analysis, and you need to generate a standardized JSON artifact for downstream interactive
+  exploration rather than static tabular outputs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -21,6 +24,8 @@ metadata:
   - metabolomics-ORA repository
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btae584
   title: msFeaST

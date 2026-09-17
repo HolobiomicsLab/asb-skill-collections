@@ -1,6 +1,9 @@
 ---
 name: ms1-scan-extraction-and-filtering
-description: Use when you have a Thermo Fisher Scientific .raw file from an Orbitrap instrument and need to programmatically retrieve MS1 spectral attributes (base-peak m/z, intensity, retention time) for downstream statistical analysis or quality control in R, rather than relying on external preprocessing.
+description: Use when you have a Thermo Fisher Scientific .raw file from an Orbitrap
+  instrument and need to programmatically retrieve MS1 spectral attributes (base-peak
+  m/z, intensity, retention time) for downstream statistical analysis or quality control
+  in R, rather than relying on external preprocessing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,6 +18,8 @@ metadata:
   - Bioconductor ExperimentHub
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -22,9 +27,12 @@ derived_from:
   title: ''
 evidence_spans:
 - The `rawrr` executable will run out of the box
-- '`R` functions requesting access to data stored in binary raw files (reader family functions listed in Table 1) invoke compiled `C#` wrapper methods'
-- Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
-- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
+- '`R` functions requesting access to data stored in binary raw files (reader family
+  functions listed in Table 1) invoke compiled `C#` wrapper methods'
+- Calling a wrapper method typically results in the execution of methods defined in
+  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
+- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher
+  Scientific
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

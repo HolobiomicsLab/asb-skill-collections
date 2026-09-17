@@ -1,6 +1,8 @@
 ---
 name: unique-compound-enumeration
-description: Use when you have a GC-MS results table with a Match.Factor column (representing identification confidence) and you need to understand how many distinct compounds survive at different quality cutoffs (e.g., ≥65, ≥80, ≥90).
+description: Use when you have a GC-MS results table with a Match.Factor column (representing
+  identification confidence) and you need to understand how many distinct compounds
+  survive at different quality cutoffs (e.g., ≥65, ≥80, ≥90).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,12 +14,16 @@ metadata:
   - uafR
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- any software or utility that generates the necessary information can be used with simple modifications
-- any software or utility that generates the necessary information can be used with simple modifications (e.g. changing the column names)
+- any software or utility that generates the necessary information can be used with
+  simple modifications
+- any software or utility that generates the necessary information can be used with
+  simple modifications (e.g. changing the column names)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

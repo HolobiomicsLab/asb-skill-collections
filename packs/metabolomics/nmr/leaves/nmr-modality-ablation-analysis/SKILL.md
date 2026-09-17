@@ -1,6 +1,8 @@
 ---
 name: nmr-modality-ablation-analysis
-description: Use when you have a trained multitask machine learning model for structure prediction, test set molecules with paired ¹H and ¹³C NMR spectra, and need to understand the marginal contribution of each NMR modality or justify multimodal input design.
+description: Use when you have a trained multitask machine learning model for structure
+  prediction, test set molecules with paired ¹H and ¹³C NMR spectra, and need to understand
+  the marginal contribution of each NMR modality or justify multimodal input design.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +15,8 @@ metadata:
   - NMR2Struct multitask framework
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct

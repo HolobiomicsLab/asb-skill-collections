@@ -1,8 +1,12 @@
 ---
 name: mandatory-field-verification
-description: Use when after generating mzPeak files from prototype implementations (Rust, Python, R, or .NET) or after format conversion, and before integrating files into a mass spectrometry data repository or sharing them with collaborators. Use it when specification compliance is a hard requirement (e.
+description: Use when after generating mzPeak files from prototype implementations
+  (Rust, Python, R, or .NET) or after format conversion, and before integrating files
+  into a mass spectrometry data repository or sharing them with collaborators. Use
+  it when specification compliance is a hard requirement (e.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3961
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +19,8 @@ metadata:
   - mzPeak-specification (HUPO-PSI)
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak

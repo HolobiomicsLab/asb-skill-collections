@@ -1,6 +1,9 @@
 ---
 name: feature-consolidation-across-batches
-description: Use when you have two or more CSV feature tables from separate metabolomic experiments (each containing mass, retention time, intensity, isotope, and adduct columns), and you need to align and merge them into a single feature-by-sample matrix where features from different experiments are matched if.
+description: Use when you have two or more CSV feature tables from separate metabolomic
+  experiments (each containing mass, retention time, intensity, isotope, and adduct
+  columns), and you need to align and merge them into a single feature-by-sample matrix
+  where features from different experiments are matched if.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -13,6 +16,8 @@ metadata:
   - R
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo

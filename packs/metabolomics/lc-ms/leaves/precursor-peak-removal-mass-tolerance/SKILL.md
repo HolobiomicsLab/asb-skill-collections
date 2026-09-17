@@ -1,6 +1,7 @@
 ---
 name: precursor-peak-removal-mass-tolerance
-description: Use when after loading an MsmsSpectrum object but before intensity filtering or spectral annotation.
+description: Use when after loading an MsmsSpectrum object but before intensity filtering
+  or spectral annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,6 +13,8 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils

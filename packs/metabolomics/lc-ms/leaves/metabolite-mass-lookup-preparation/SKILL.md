@@ -1,6 +1,7 @@
 ---
 name: metabolite-mass-lookup-preparation
-description: Use when when beginning an untargeted LC-MS annotation workflow, before attempting to match experimental m/z peaks to metabolite identities.
+description: Use when when beginning an untargeted LC-MS annotation workflow, before
+  attempting to match experimental m/z peaks to metabolite identities.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -15,14 +16,19 @@ metadata:
   - KEGG database
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
 evidence_spans:
-- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides tools for context-based annotation of untargeted LC-MS data.
+- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides
+  tools for context-based annotation of untargeted LC-MS data.
 - mWISE (metabolomics Wise Inference of Speck Entities) is an R package
-- The default table of adducts and fragments is built using information from CAMERA R package
-- The default table of adducts and fragments is built using information from CAMERA R package, H. Tong et al., and cliqueMS.
+- The default table of adducts and fragments is built using information from CAMERA
+  R package
+- The default table of adducts and fragments is built using information from CAMERA
+  R package, H. Tong et al., and cliqueMS.
 - information from CAMERA R package, H. Tong et al., and cliqueMS.
 claims: []
 provenance:

@@ -163,4 +163,4 @@ Execute the Scanpy pytest test suite using the Hatch environment to verify all t
 
 ---
 
-*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See [`artifact_provenance.json`](../../../capsules/scanpy/10_1186_s13059_017_1382_0__task_005/artifact_provenance.json) for what this release carries; it also lists the build artefacts the release does not promote.*

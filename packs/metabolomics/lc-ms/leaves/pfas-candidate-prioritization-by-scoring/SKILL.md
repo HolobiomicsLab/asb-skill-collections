@@ -1,6 +1,9 @@
 ---
 name: pfas-candidate-prioritization-by-scoring
-description: Use when you have a feature list (containing m/z, retention time, and molecular formula or neutral mass per feature) extracted from LC- or GC-HRMS data in mzML format with data-dependent acquisition, and you need to rank or flag features as likely PFAS compounds to reduce manual review burden in.
+description: Use when you have a feature list (containing m/z, retention time, and
+  molecular formula or neutral mass per feature) extracted from LC- or GC-HRMS data
+  in mzML format with data-dependent acquisition, and you need to rank or flag features
+  as likely PFAS compounds to reduce manual review burden in.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +17,8 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen

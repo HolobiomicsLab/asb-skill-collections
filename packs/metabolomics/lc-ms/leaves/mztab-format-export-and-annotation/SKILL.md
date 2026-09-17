@@ -1,6 +1,8 @@
 ---
 name: mztab-format-export-and-annotation
-description: Use when after Casanovo has generated ranked peptide sequence predictions from MS/MS spectra and you need to persist, share, or integrate the results into a proteomics data management or visualization pipeline.
+description: Use when after Casanovo has generated ranked peptide sequence predictions
+  from MS/MS spectra and you need to persist, share, or integrate the results into
+  a proteomics data management or visualization pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3765
@@ -16,14 +18,18 @@ metadata:
   - PDV (Proteomics Data Viewer)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-024-49731-x
   title: Casanovo
 - doi: 10.1093/bib/bbac542
   title: ''
 evidence_spans:
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing.
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing.
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing
 - Pytorch is installed automatically when installing Casanovo
 - Upgraded minimum Lightning version to 2.6.
 - Upgraded minimum DepthCharge version to 0.4.10.

@@ -1,6 +1,9 @@
 ---
 name: multi-database-structure-querying
-description: Use when after cleaning and clustering LC-MS features in MS-CleanR, when you need to assign putative compound identities to a feature set with MS/MS spectra, and when candidate compounds may exist across multiple specialized databases (e.g., natural products, pharmaceuticals, contaminants).
+description: Use when after cleaning and clustering LC-MS features in MS-CleanR, when
+  you need to assign putative compound identities to a feature set with MS/MS spectra,
+  and when candidate compounds may exist across multiple specialized databases (e.g.,
+  natural products, pharmaceuticals, contaminants).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3860
@@ -15,6 +18,8 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR

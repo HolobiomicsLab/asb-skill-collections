@@ -1,6 +1,9 @@
 ---
 name: tic-based-intensity-scaling
-description: Use when after feature detection when you have a metabolomics feature table with intensity values across multiple samples and observe evidence of inter-sample intensity bias (e.g., batch effects, variable ionization efficiency, or instrument drift).
+description: Use when after feature detection when you have a metabolomics feature
+  table with intensity values across multiple samples and observe evidence of inter-sample
+  intensity bias (e.g., batch effects, variable ionization efficiency, or instrument
+  drift).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +17,8 @@ metadata:
   - pycombat
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

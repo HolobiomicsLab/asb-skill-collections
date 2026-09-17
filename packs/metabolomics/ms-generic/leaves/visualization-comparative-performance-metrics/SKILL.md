@@ -1,6 +1,8 @@
 ---
 name: visualization-comparative-performance-metrics
-description: Use when you have execution-time data for the same set of plotting operations (e.g., chromatogram, spectrum, peakmap rendering) across two or more backend implementations (e.
+description: Use when you have execution-time data for the same set of plotting operations
+  (e.g., chromatogram, spectrum, peakmap rendering) across two or more backend implementations
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -14,6 +16,8 @@ metadata:
   - pyOpenMS-Viz
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz

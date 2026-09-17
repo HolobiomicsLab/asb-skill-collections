@@ -1,6 +1,8 @@
 ---
 name: negative-adduct-tokenization-in-mass-spectrometry
-description: Use when you have negative-mode MS/MS spectra with annotated molecular formulas and negative adducts (from repositories like MassIVE or MetaboLights), and your current formula inference model is restricted to positive mode only.
+description: Use when you have negative-mode MS/MS spectra with annotated molecular
+  formulas and negative adducts (from repositories like MassIVE or MetaboLights),
+  and your current formula inference model is restricted to positive mode only.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3648
@@ -15,6 +17,8 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf

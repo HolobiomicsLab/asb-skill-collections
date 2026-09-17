@@ -1,6 +1,9 @@
 ---
 name: graph-node-edge-attribute-assignment
-description: Use when you have statistically significant LC-MS features grouped into structural clusters (isotopologue groups, adduct groups, cross-assay links) and correlation cluster assignments from upstream MamsiStructSearch, and you need to create an interactive graph representation suitable for Cytoscape.
+description: Use when you have statistically significant LC-MS features grouped into
+  structural clusters (isotopologue groups, adduct groups, cross-assay links) and
+  correlation cluster assignments from upstream MamsiStructSearch, and you need to
+  create an interactive graph representation suitable for Cytoscape.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -17,6 +20,8 @@ metadata:
   - MamsiStructSearch
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi

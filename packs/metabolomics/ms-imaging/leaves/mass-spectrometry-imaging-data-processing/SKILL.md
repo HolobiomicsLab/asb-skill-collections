@@ -1,8 +1,12 @@
 ---
 name: mass-spectrometry-imaging-data-processing
-description: Use when you have raw or processed MSI data (in imzML or rMSIproc formats) and need to identify and annotate matrix-related peaks before statistical analysis or metabolite identification. Use it specifically when your MSI experiment employed a chemical matrix (e.
+description: Use when you have raw or processed MSI data (in imzML or rMSIproc formats)
+  and need to identify and annotate matrix-related peaks before statistical analysis
+  or metabolite identification. Use it specifically when your MSI experiment employed
+  a chemical matrix (e.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3929
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,11 +19,14 @@ metadata:
   - devtools
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
 evidence_spans:
-- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI data
+- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI
+  data
 - devtools::install_github("prafols/rMSI", ref = "0.8")
 - devtools::install_github("prafols/rMSIproc", ref = "0.2")
 - rMSIcleanup is an open-source R package

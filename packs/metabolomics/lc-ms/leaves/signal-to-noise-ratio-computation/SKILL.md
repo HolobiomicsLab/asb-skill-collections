@@ -1,6 +1,8 @@
 ---
 name: signal-to-noise-ratio-computation
-description: Use when after peak detection in nontargeted LC-MS workflows when you have a feature table with detected peaks and need to assign quality scores or filter low-confidence features.
+description: Use when after peak detection in nontargeted LC-MS workflows when you
+  have a feature table with detected peaks and need to assign quality scores or filter
+  low-confidence features.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,12 +15,21 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: huaxuyu/masscube
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube
 evidence_spans:
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing.
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing.
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing
 - masscube is an integrated Python package
 claims: []
 provenance:
@@ -43,6 +54,7 @@ attribution:
 
 # signal-to-noise-ratio-computation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Compute signal-to-noise ratio (SNR) as a per-feature quality metric in LC-MS data processing. SNR is a key component of MassCube's comprehensive feature quality evaluation module, used to assess the reliability of detected peaks by quantifying peak intensity relative to baseline noise.

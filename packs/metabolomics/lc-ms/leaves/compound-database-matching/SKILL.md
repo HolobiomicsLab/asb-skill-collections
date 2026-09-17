@@ -1,6 +1,7 @@
 ---
 name: compound-database-matching
-description: Use when you have MS2 .mzML spectral data from untargeted metabolomics and need to assign chemical identities to detected precursor ions.
+description: Use when you have MS2 .mzML spectral data from untargeted metabolomics
+  and need to assign chemical identities to detected precursor ions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3860
@@ -18,6 +19,8 @@ metadata:
   - RDKit
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-023-00695-y
   title: MAW

@@ -1,10 +1,14 @@
 # release.yml — triggered on tags matching <collection-slug>-v<N>
 # Steps:
-#   1. Validate the tagged collection passes all CI gates
-#   2. Call regen_catalogue.py and commit the updated catalogue.jsonld
-#   3. Upload the collection directory to Zenodo (fail-soft if ZENODO_TOKEN missing)
-#   4. Update CITATION.cff with the minted DOI
-#   5. Trigger mirror-to-hf.yml via workflow_dispatch
+#   1. Validate the tagged collection passes all CI gates (pytest)
+#   2. Run release_gate.py --strict on the tagged collection and keep the receipt.
+#      This is the last measurement before anything leaves the repository, and it
+#      blocks. promote-collection.yml runs the same gate on `collections/**` pull
+#      requests, which is a different population from "what a tag points at".
+#   3. Call regen_catalogue.py and commit the updated catalogue.jsonld
+#   4. Upload the collection directory to Zenodo (fail-soft if ZENODO_TOKEN missing)
+#   5. Update CITATION.cff with the minted DOI
+#   6. Trigger mirror-to-hf.yml via workflow_dispatch
 name: Release
 
 on:
@@ -65,6 +69,43 @@ jobs:
         run: |
           python -m pytest tests/ -v
           echo "All CI gates passed"
+
+      - name: Release gate (strict) on the tagged collection
+        # The last gate before anything leaves the repository. `promote-collection.yml`
+        # runs this on pull requests touching `collections/**`, which is not the same
+        # population as "what a tag points at": a tag can be cut from a commit whose
+        # PR touched only `scripts/` or `governance/`, and a tag can be re-run by
+        # `workflow_dispatch` against a ref that never went through promotion at all.
+        # Without this step the strict measurement is skipped on exactly the run that
+        # uploads the collection to Zenodo.
+        #
+        # Blocking on purpose. Under `--strict` a FAIL on a *soft* check blocks too,
+        # so a content defect the promotion PR left open stops the release rather than
+        # shipping with it. `governance/CONTENT_POLICY.md` describes a `degraded_release`
+        # override for soft gates; `release_gate.py` does not implement one, so today
+        # the only route past a soft FAIL is to fix it — which is the safe direction
+        # for a first release, and the gap is recorded rather than worked around here.
+        env:
+          COLLECTION_SLUG: ${{ steps.tag.outputs.slug }}
+          COLLECTION_VERSION: ${{ steps.tag.outputs.version }}
+        run: |
+          set -euo pipefail
+          dir="collections/${COLLECTION_SLUG}/v${COLLECTION_VERSION}"
+          test -f "${dir}/corpus.yaml" || {
+            echo "::error::${dir}/corpus.yaml missing — nothing to gate"; exit 1; }
+          python scripts/release_gate.py collections --catalogue-membership
+          python scripts/release_gate.py "${dir}" --strict --report "${dir}/gate_report.json"
+          echo "Strict release gate passed for ${dir}"
+
+      - name: Upload the gate receipt
+        # Keep the measurement even when the gate blocked — a failed release is
+        # exactly when the report is worth reading.
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gate-report-${{ steps.tag.outputs.tag }}
+          path: collections/${{ steps.tag.outputs.slug }}/v${{ steps.tag.outputs.version }}/gate_report.json
+          if-no-files-found: warn
 
       - name: Regenerate catalogue.jsonld
         run: |

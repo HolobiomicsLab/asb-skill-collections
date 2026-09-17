@@ -1,6 +1,9 @@
 ---
 name: fragment-ion-matching
-description: Use when you have two tandem mass spectra (query and reference) with precursor m/z and fragment ion peaks, and you need to identify which fragment ions correspond between them to assess spectral similarity, detect structural variants, or validate compound identifications.
+description: Use when you have two tandem mass spectra (query and reference) with
+  precursor m/z and fragment ion peaks, and you need to identify which fragment ions
+  correspond between them to assess spectral similarity, detect structural variants,
+  or validate compound identifications.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3645
@@ -12,11 +15,14 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
 evidence_spans:
-- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python library
+- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python
+  library
 - is a Python library for interrelating fragmentation spectra with significance estimation
 claims: []
 provenance:

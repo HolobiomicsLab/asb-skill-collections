@@ -1,6 +1,8 @@
 ---
 name: multimodal-tensor-construction-and-validation
-description: Use when when you have downloaded raw spectroscopic datasets from multiple sources (NMR, HSQC, COSY, IR files) and need to combine them into a single coherent training corpus where each molecule is represented by all four modalities.
+description: Use when when you have downloaded raw spectroscopic datasets from multiple
+  sources (NMR, HSQC, COSY, IR files) and need to combine them into a single coherent
+  training corpus where each molecule is represented by all four modalities.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -14,6 +16,8 @@ metadata:
   - Python
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/ange.202517611
   title: MMST

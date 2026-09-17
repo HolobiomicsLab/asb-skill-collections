@@ -1,6 +1,9 @@
 ---
 name: feature-table-subsetting
-description: 'Use when after loading an MS-DIAL feature table when you need to separate features into two disjoint groups: one meeting a quantitative threshold (e.g., m/z decimal values outside [4, 8], coefficient of variation below a cutoff, or mass defects within acceptable bounds) and one not meeting it.'
+description: 'Use when after loading an MS-DIAL feature table when you need to separate
+  features into two disjoint groups: one meeting a quantitative threshold (e.g., m/z
+  decimal values outside [4, 8], coefficient of variation below a cutoff, or mass
+  defects within acceptable bounds) and one not meeting it.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +18,8 @@ metadata:
   - OUKS
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -25,7 +30,9 @@ derived_from:
 evidence_spans:
 - The R package margheRita addresses the complete workflow
 - The R package margheRita
-- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
+- The R package margheRita addresses the complete workflow for metabolomic profiling
+  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
+  spectrometry (MS/MS)
 - The R package margheRita addresses the complete workflow for metabolomic profiling
 - R based open-source collection of scripts called :red_circle:*OUKS*
 - R ≥4.1.2

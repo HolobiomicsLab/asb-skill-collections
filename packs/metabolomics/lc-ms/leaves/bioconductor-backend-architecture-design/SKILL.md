@@ -1,6 +1,9 @@
 ---
 name: bioconductor-backend-architecture-design
-description: 'Use when you are building a new mass spectrometry data backend or storage layer and need to integrate it with the Spectra ecosystem. Triggers include: (1) you have a novel data source (raw files, databases, web APIs) that should be accessible through Spectra objects;'
+description: 'Use when you are building a new mass spectrometry data backend or storage
+  layer and need to integrate it with the Spectra ecosystem. Triggers include: (1)
+  you have a novel data source (raw files, databases, web APIs) that should be accessible
+  through Spectra objects;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3925
@@ -17,6 +20,8 @@ metadata:
   - MsBackendMsp
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra

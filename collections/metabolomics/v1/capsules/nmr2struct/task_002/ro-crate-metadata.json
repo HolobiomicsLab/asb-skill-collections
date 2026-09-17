@@ -1,0 +1,710 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "asbext": "https://w3id.org/asb/indicium-ext#",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "fabio": "http://purl.org/spar/fabio/",
+      "oa": "http://www.w3.org/ns/oa#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "p-plan": "http://purl.org/net/p-plan#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "repme": "https://w3id.org/reproduceme#",
+      "sepio": "http://purl.obolibrary.org/obo/SEPIO_"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": [
+        "Dataset",
+        "repme:ScientificWorkflow"
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ],
+      "dateCreated": "2026-06-15",
+      "description": "Reconstruct and evaluate a transformer-based fragment assembly module that assembles molecular fragments into candidate structures. Validate assembly accuracy on fragment-structure pairs derived from the deposited dataset.",
+      "hasPart": [
+        {
+          "@id": "evidence/source_snippets.md"
+        },
+        {
+          "@id": "inputs/dataset_folder_tree.txt"
+        },
+        {
+          "@id": "inputs/dataset_preview.md"
+        },
+        {
+          "@id": "evaluation/evaluation_strategy.md"
+        },
+        {
+          "@id": "evaluation/review_rubric.json"
+        },
+        {
+          "@id": "artifact_provenance.json"
+        },
+        {
+          "@id": "ledger/claims.jsonl"
+        },
+        {
+          "@id": "ledger/results.jsonl"
+        }
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "mentions": [
+        {
+          "@id": "#action-task_002"
+        },
+        {
+          "@id": "urn:asb:task:task_002"
+        },
+        {
+          "@id": "urn:asb:claim:claim_001"
+        },
+        {
+          "@id": "urn:asb:claim:claim_002"
+        },
+        {
+          "@id": "urn:asb:claim:claim_003"
+        },
+        {
+          "@id": "urn:asb:claim:claim_004"
+        },
+        {
+          "@id": "urn:asb:claim:claim_005"
+        },
+        {
+          "@id": "urn:asb:claim:claim_006"
+        },
+        {
+          "@id": "urn:asb:result:result_001"
+        },
+        {
+          "@id": "urn:asb:result:result_002"
+        },
+        {
+          "@id": "urn:asb:result:result_003"
+        },
+        {
+          "@id": "urn:asb:result:result_004"
+        },
+        {
+          "@id": "urn:asb:result:result_005"
+        },
+        {
+          "@id": "urn:asb:result:result_006"
+        },
+        {
+          "@id": "#env-task_002"
+        }
+      ],
+      "name": "Reconstruct the Transformer Fragment Assembler for combinatorial fragment-to-structure assembly",
+      "repme:hasComputationalEnvironment": {
+        "@id": "#computational-environment"
+      }
+    },
+    {
+      "@id": "evidence/source_snippets.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evidence/source_snippets.md"
+    },
+    {
+      "@id": "inputs/dataset_folder_tree.txt",
+      "@type": "File",
+      "encodingFormat": "text/plain",
+      "name": "inputs/dataset_folder_tree.txt"
+    },
+    {
+      "@id": "inputs/dataset_preview.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "inputs/dataset_preview.md"
+    },
+    {
+      "@id": "evaluation/evaluation_strategy.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evaluation/evaluation_strategy.md"
+    },
+    {
+      "@id": "evaluation/review_rubric.json",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "name": "evaluation/review_rubric.json"
+    },
+    {
+      "@id": "urn:asb:task:task_002",
+      "@type": [
+        "ScholarlyArticle",
+        "p-plan:Plan",
+        "http://purl.org/spar/fabio/ResearchPaper"
+      ],
+      "asbext:task_kind": "component_reconstruction",
+      "description": "Reconstruct and evaluate a transformer-based fragment assembly module that assembles molecular fragments into candidate structures. Validate assembly accuracy on fragment-structure pairs derived from the deposited dataset.",
+      "keywords": [
+        "fragment-assembly-transformer-architecture",
+        "molecular-structure-prediction-from-fragments",
+        "graph-neural-network-design-for-chemistry",
+        "fragment-canonicalization-and-matching",
+        "structure-accuracy-metric-computation"
+      ],
+      "name": "Reconstruct the Transformer Fragment Assembler for combinatorial fragment-to-structure assembly",
+      "prov:wasInfluencedBy": [
+        {
+          "@id": "urn:asb:task:task_001"
+        }
+      ],
+      "repme:hasResearcher": [
+        {
+          "@id": "urn:asb:researcher:hu-frank"
+        },
+        {
+          "@id": "urn:asb:researcher:chen-michael"
+        },
+        {
+          "@id": "urn:asb:researcher:rotskoff-grant"
+        },
+        {
+          "@id": "urn:asb:researcher:kanan-matthew"
+        },
+        {
+          "@id": "urn:asb:researcher:markland-thomas"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:researcher:hu-frank",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Frank Hu"
+    },
+    {
+      "@id": "urn:asb:researcher:chen-michael",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Michael S. Chen"
+    },
+    {
+      "@id": "urn:asb:researcher:rotskoff-grant",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Grant M. Rotskoff"
+    },
+    {
+      "@id": "urn:asb:researcher:kanan-matthew",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Matthew W. Kanan"
+    },
+    {
+      "@id": "urn:asb:researcher:markland-thomas",
+      "@type": [
+        "Person",
+        "repme:Researcher"
+      ],
+      "name": "Thomas E. Markland"
+    },
+    {
+      "@id": "urn:asb:tool:transformer-architecture",
+      "@type": "SoftwareApplication",
+      "name": "transformer architecture"
+    },
+    {
+      "@id": "urn:asb:input:task_002_0",
+      "@type": "File",
+      "name": "Deposited dataset containing molecular structures and fragmentation patterns"
+    },
+    {
+      "@id": "urn:asb:output:task_002_0",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Trained transformer fragment assembly model weights and configuration",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_002"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_002_1",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Fragment assembly accuracy metrics (exact match rate, partial correctness scores)",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_002"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_002_2",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Test set predictions and evaluation report",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_002"
+      }
+    },
+    {
+      "@id": "#action-task_002",
+      "@type": [
+        "CreateAction",
+        "prov:Activity",
+        "p-plan:Step"
+      ],
+      "description": "Reconstruct and evaluate a transformer-based fragment assembly module that assembles molecular fragments into candidate structures. Validate assembly accuracy on fragment-structure pairs derived from the deposited dataset.",
+      "instrument": [
+        {
+          "@id": "urn:asb:tool:transformer-architecture"
+        }
+      ],
+      "name": "Reconstruct the Transformer Fragment Assembler for combinatorial fragment-to-structure assembly",
+      "object": [
+        {
+          "@id": "urn:asb:input:task_002_0"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "urn:asb:port:task_001/accuracy_metrics"
+        }
+      ],
+      "repme:hasInputData": [
+        {
+          "@id": "urn:asb:input:task_002_0"
+        }
+      ],
+      "repme:hasOutputData": [
+        {
+          "@id": "urn:asb:output:task_002_0"
+        },
+        {
+          "@id": "urn:asb:output:task_002_1"
+        },
+        {
+          "@id": "urn:asb:output:task_002_2"
+        }
+      ],
+      "repme:hasResult": [
+        {
+          "@id": "urn:asb:result:result_004"
+        },
+        {
+          "@id": "urn:asb:result:result_005"
+        },
+        {
+          "@id": "urn:asb:result:result_006"
+        }
+      ],
+      "result": [
+        {
+          "@id": "urn:asb:output:task_002_0"
+        },
+        {
+          "@id": "urn:asb:output:task_002_1"
+        },
+        {
+          "@id": "urn:asb:output:task_002_2"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:claim:claim_001",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Rapid determination of molecular structures can greatly accelerate workflows across many chemical disciplines."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 461,
+          "oa:start": 347
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_nmr2struct/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Rapid determination of molecular structures can greatly accelerate workflows across many chemical disciplines.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_002",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000302"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "Elucidating structure using only one-dimensional NMR spectra remains an extremely challenging problem because of the combinatorial explosion of the number of possible molecules as the number of constituent atoms is increased."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 700,
+          "oa:start": 463
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_nmr2struct/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "Elucidating structure using only one-dimensional NMR spectra remains an extremely challenging problem because of the combinatorial explosion of the number of possible molecules as the number of consti",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_003",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "A multitask machine learning framework can predict molecular structure (formula and connectivity) from 1D ¹H and/or ¹³C NMR spectra."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 881,
+          "oa:start": 702
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_nmr2struct/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "A multitask machine learning framework can predict molecular structure (formula and connectivity) from 1D ¹H and/or ¹³C NMR spectra.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_004",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000361"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "A transformer architecture can be constructed to efficiently solve the task of assembling large numbers of molecular fragments into molecular structures."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1078,
+          "oa:start": 883
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_nmr2struct/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "A transformer architecture can be constructed to efficiently solve the task of assembling large numbers of molecular fragments into molecular structures.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_005",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000006"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "The framework demonstrates effectiveness on molecules with up to 19 heavy (non-hydrogen) atoms."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1320,
+          "oa:start": 1219
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_nmr2struct/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "The framework demonstrates effectiveness on molecules with up to 19 heavy (non-hydrogen) atoms.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:claim:claim_006",
+      "@type": [
+        "oa:Annotation"
+      ],
+      "evidence_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/ECO_0000034"
+      },
+      "oa:body": {
+        "@type": "oa:TextualBody",
+        "format": "text/plain",
+        "value": "For molecules with up to 19 heavy atoms, there are trillions of possible structures."
+      },
+      "oa:target": {
+        "@type": "oa:SpecificResource",
+        "oa:selector": {
+          "@type": "oa:TextPositionSelector",
+          "oa:end": 1424,
+          "oa:start": 1321
+        },
+        "oa:source": "urn:asb:build:asbb_pilot/coll_nmr2struct/synthesized_package"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "#agent-15-activity-task_002"
+      },
+      "schema:name": "For molecules with up to 19 heavy atoms, there are trillions of possible structures.",
+      "source_type_uri": {
+        "@id": "http://purl.obolibrary.org/obo/IAO_0000311"
+      }
+    },
+    {
+      "@id": "urn:asb:result:result_001",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Rapid determination of molecular structures can greatly accelerate workflows across many chemical disciplines.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_001"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_002",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "Elucidating structure using only one-dimensional NMR spectra remains an extremely challenging problem because of the combinatorial explosion of the number of possible molecules as the number of consti",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_002"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_003",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "A multitask machine learning framework can predict molecular structure (formula and connectivity) from 1D ¹H and/or ¹³C NMR spectra.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_003"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_004",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "A transformer architecture can be constructed to efficiently solve the task of assembling large numbers of molecular fragments into molecular structures.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_004"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_005",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "The framework demonstrates effectiveness on molecules with up to 19 heavy (non-hydrogen) atoms.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_005"
+        }
+      ]
+    },
+    {
+      "@id": "urn:asb:result:result_006",
+      "@type": [
+        "sepio:Assertion"
+      ],
+      "schema:name": "For molecules with up to 19 heavy atoms, there are trillions of possible structures.",
+      "sepio:is_about": [
+        {
+          "@id": "urn:asb:claim:claim_006"
+        }
+      ]
+    },
+    {
+      "@id": "#env-task_002",
+      "@type": [
+        "repme:ComputationalEnvironment"
+      ],
+      "repme:computeTier": "medium"
+    },
+    {
+      "@id": "#agent-15-activity-task_002",
+      "@type": [
+        "prov:Activity"
+      ],
+      "prov:endedAtTime": "2026-06-15T09:58:33.154279+00:00",
+      "prov:qualifiedUsage": {
+        "@type": "prov:Usage",
+        "schema:name": "prompt_sha256",
+        "schema:value": "400435c2b2ef5dbc"
+      },
+      "prov:wasAssociatedWith": {
+        "schema:name": "anthropic/claude-haiku-4-5-20251001"
+      },
+      "schema:name": "Agent 1.5 Claim Extractor"
+    },
+    {
+      "@id": "#computational-environment",
+      "@type": "repme:ComputationalEnvironment",
+      "repme:buildId": "B55E4F62AE1048D2B07FA5723753F413",
+      "repme:depsHash": "sha256:4fffb5d3623041b6cc88cfe92427807d779db4274f6693748bfcaa96b06c7f79",
+      "repme:gitCommit": "ddf6c1becb15c939b16600b7655d44e2d2baa690",
+      "repme:platform": "darwin-25.5.0-arm64",
+      "repme:pythonVersion": "3.11.15",
+      "schema:dateCreated": "2026-06-15T09:54:59.129562Z",
+      "schema:hasPart": [
+        {
+          "@id": "#agent-config-agent1_entity"
+        },
+        {
+          "@id": "#agent-config-agent2a_outline"
+        },
+        {
+          "@id": "#agent-config-agent2b_card"
+        },
+        {
+          "@id": "#agent-config-agent3_critique"
+        },
+        {
+          "@id": "#agent-config-agent_classify"
+        }
+      ],
+      "schema:softwareVersion": "agentic-science-builder@0.1.0"
+    },
+    {
+      "@id": "#agent-config-agent1_entity",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v3",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent1_entity"
+    },
+    {
+      "@id": "#agent-config-agent2a_outline",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-sonnet-4-6",
+      "repme:promptVersion": "v2",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2a_outline"
+    },
+    {
+      "@id": "#agent-config-agent2b_card",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v4",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2b_card"
+    },
+    {
+      "@id": "#agent-config-agent3_critique",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent3_critique"
+    },
+    {
+      "@id": "#agent-config-agent_classify",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent_classify"
+    },
+    {
+      "@id": "artifact_provenance.json",
+      "@type": "File",
+      "name": "artifact_provenance.json",
+      "encodingFormat": "application/json"
+    },
+    {
+      "@id": "ledger/claims.jsonl",
+      "@type": "File",
+      "name": "ledger/claims.jsonl",
+      "encodingFormat": "application/jsonlines"
+    },
+    {
+      "@id": "ledger/results.jsonl",
+      "@type": "File",
+      "name": "ledger/results.jsonl",
+      "encodingFormat": "application/jsonlines"
+    }
+  ]
+}

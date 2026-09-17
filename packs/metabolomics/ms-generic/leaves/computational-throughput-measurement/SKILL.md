@@ -1,6 +1,9 @@
 ---
 name: computational-throughput-measurement
-description: Use when when you need to compare the computational efficiency of different mass spectrometry libraries on identical data and processing pipelines, or when you want to establish baseline throughput for a library version and validate claims of performance improvement.
+description: Use when when you need to compare the computational efficiency of different
+  mass spectrometry libraries on identical data and processing pipelines, or when
+  you want to establish baseline throughput for a library version and validate claims
+  of performance improvement.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -21,6 +24,8 @@ metadata:
   - NumPy, matplotlib, seaborn
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils

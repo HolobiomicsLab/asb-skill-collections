@@ -1,6 +1,7 @@
 ---
 name: mzml-format-generation
-description: Use when after completing a virtual LC-MS/MS acquisition simulation using ViMMS (e.g., after calling env.
+description: Use when after completing a virtual LC-MS/MS acquisition simulation using
+  ViMMS (e.g., after calling env.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3650
@@ -13,14 +14,18 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
 evidence_spans:
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible and modular framework designed to simulate fragmentation strategies'
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive and modular framework for the simulation of fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible
+  and modular framework designed to simulate fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive
+  and modular framework for the simulation of fragmentation strategies'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

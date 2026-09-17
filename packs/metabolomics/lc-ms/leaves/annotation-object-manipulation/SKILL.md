@@ -1,6 +1,9 @@
 ---
 name: annotation-object-manipulation
-description: Use when after completing metabolite annotation of LC-MS AIF features using the annotateRC function, when you need to persist ranked candidate matches, inspect multiple candidate annotations per feature, visualize matched ions in ranked spectra, or export pseudo-MS/MS spectra for external analysis.
+description: Use when after completing metabolite annotation of LC-MS AIF features
+  using the annotateRC function, when you need to persist ranked candidate matches,
+  inspect multiple candidate annotations per feature, visualize matched ions in ranked
+  spectra, or export pseudo-MS/MS spectra for external analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3860
@@ -14,11 +17,14 @@ metadata:
   - xcms
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - To install this package, start R (version "4.5.0" or higher)
 claims: []
 provenance:

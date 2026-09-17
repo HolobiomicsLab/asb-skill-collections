@@ -1,6 +1,9 @@
 ---
 name: multidimensional-feature-detection-and-alignment
-description: Use when when you have acquired LC-IMS-MS/MS data (mzML or mzML.gz format) from multiple samples and need to detect features that exploit simultaneous separation in m/z, drift time, and retention time to improve detection sensitivity and reduce false positives.
+description: Use when when you have acquired LC-IMS-MS/MS data (mzML or mzML.gz format)
+  from multiple samples and need to detect features that exploit simultaneous separation
+  in m/z, drift time, and retention time to improve detection sensitivity and reduce
+  false positives.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -17,15 +20,19 @@ metadata:
   techniques:
   - direct-infusion-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
-- Functionality includes feature detection, feature alignment, collision cross section (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
+- Functionality includes feature detection, feature alignment, collision cross section
+  (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
 - import deimos
 - DEIMoS is a Python application programming interface
 - DEIMoS is a Python application programming interface and command-line tool
-- Use `conda <https://www.anaconda.com/download/>`_ to create a virtual environment with required dependencies.
+- Use `conda <https://www.anaconda.com/download/>`_ to create a virtual environment
+  with required dependencies.
 - 'Install DEIMoS using `pip <https://pypi.org/project/pip/>`_: ``pip install -e .``'
 claims: []
 provenance:

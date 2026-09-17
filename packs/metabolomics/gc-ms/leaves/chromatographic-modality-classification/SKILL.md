@@ -1,6 +1,9 @@
 ---
 name: chromatographic-modality-classification
-description: Use when when ingesting raw or vendor-format mass spectrometry data files of unknown or mixed acquisition modality, and you need to automatically determine whether the input originated from liquid chromatography (LC), gas chromatography (GC), ion mobility spectrometry (IMS), or MS imaging (e.
+description: Use when when ingesting raw or vendor-format mass spectrometry data files
+  of unknown or mixed acquisition modality, and you need to automatically determine
+  whether the input originated from liquid chromatography (LC), gas chromatography
+  (GC), ion mobility spectrometry (IMS), or MS imaging (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -15,6 +18,8 @@ metadata:
   - LC-MS
   - GC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3

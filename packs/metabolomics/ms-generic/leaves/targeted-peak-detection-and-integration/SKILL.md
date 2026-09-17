@@ -1,6 +1,8 @@
 ---
 name: targeted-peak-detection-and-integration
-description: Use when you have centroided LC–MS data in .mzML format, a validated table of target compounds with adjusted expected retention times (RT in minutes), and you need to extract peak areas and quality metrics across all sample runs.
+description: Use when you have centroided LC–MS data in .mzML format, a validated
+  table of target compounds with adjusted expected retention times (RT in minutes),
+  and you need to extract peak areas and quality metrics across all sample runs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -17,6 +19,8 @@ metadata:
   - MsExperiment
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis

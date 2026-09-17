@@ -1,6 +1,8 @@
 ---
 name: interactive-application-accessibility-testing
-description: Use when after instantiating a specXplore dashboard session layer with a loaded session data object from disk, before conducting visual exploration of LC-MS/MS spectral data.
+description: Use when after instantiating a specXplore dashboard session layer with
+  a loaded session data object from disk, before conducting visual exploration of
+  LC-MS/MS spectral data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +14,8 @@ metadata:
   - Jupyter notebooks
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore

@@ -1,6 +1,9 @@
 ---
 name: batch-effect-correction-qc-reference
-description: Use when your peak intensity matrix exhibits batch-to-batch variation (retention time drift, signal intensity fluctuation across injection sequences), you have QC samples injected at regular intervals throughout the analysis, and you want to preserve biological signal differences while removing.
+description: Use when your peak intensity matrix exhibits batch-to-batch variation
+  (retention time drift, signal intensity fluctuation across injection sequences),
+  you have QC samples injected at regular intervals throughout the analysis, and you
+  want to preserve biological signal differences while removing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -15,11 +18,14 @@ metadata:
   - SummarizedExperiment
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
 - github.com__yufree__mzrtsim
 claims: []
 provenance:

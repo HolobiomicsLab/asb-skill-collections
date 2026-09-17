@@ -1,6 +1,9 @@
 ---
 name: spectral-data-format-parsing-nmr-hsqc-cosy-ir
-description: Use when when you have downloaded raw spectral datasets from multiple spectroscopic modalities (NMR, HSQC, COSY, IR) in their native or proprietary formats and need to convert them into aligned, standardized tensors for multimodal machine learning.
+description: Use when when you have downloaded raw spectral datasets from multiple
+  spectroscopic modalities (NMR, HSQC, COSY, IR) in their native or proprietary formats
+  and need to convert them into aligned, standardized tensors for multimodal machine
+  learning.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3437
@@ -13,6 +16,8 @@ metadata:
   - Python
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/ange.202517611
   title: MMST

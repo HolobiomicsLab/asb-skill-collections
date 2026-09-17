@@ -1,6 +1,9 @@
 ---
 name: categorical-ion-status-aggregation
-description: Use when after running qc_summary() on a filtered mpactr object when you need to understand the distribution of ions across filter status categories (passed vs. failed filters) and want to visualize or report the count and percentage composition of each status group.
+description: Use when after running qc_summary() on a filtered mpactr object when
+  you need to understand the distribution of ions across filter status categories
+  (passed vs. failed filters) and want to visualize or report the count and percentage
+  composition of each status group.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -15,6 +18,8 @@ metadata:
   - ggplot2
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -22,7 +27,8 @@ derived_from:
   title: ''
 evidence_spans:
 - This table can be used for a variety of analyses that can be conducted in R
-- creating an interactive plot of input features and the filters they failed, if any, using `ggplot` and `plotly`
+- creating an interactive plot of input features and the filters they failed, if any,
+  using `ggplot` and `plotly`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

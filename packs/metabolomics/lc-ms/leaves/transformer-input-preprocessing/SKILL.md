@@ -1,6 +1,9 @@
 ---
 name: transformer-input-preprocessing
-description: Use when preparing chemical formulae (e.g., 'C6H12O6') as inputs to a transformer-based neural network for MS/MS spectrum scoring. Use it specifically when the transformer must rank multiple candidate formulae against an observed mass spectrum and element composition constraints are important;
+description: Use when preparing chemical formulae (e.g., 'C6H12O6') as inputs to a
+  transformer-based neural network for MS/MS spectrum scoring. Use it specifically
+  when the transformer must rank multiple candidate formulae against an observed mass
+  spectrum and element composition constraints are important;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,6 +15,8 @@ metadata:
   - SCARF
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf

@@ -157,4 +157,4 @@ Document the architectural split of the MS2Query workflow introduced in PR #72 t
 
 ---
 
-*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See the `ro-crate-metadata.json` in this capsule for full provenance.*
+*Card produced by **AgenticScienceBuilder (ASB)** — heuristic + LLM-assisted extraction from a research artifact. See [`artifact_provenance.json`](../../../capsules/ms2query/https___zenodo_org_badge_latestdoi_306595295_svg__task_001/artifact_provenance.json) for what this release carries; it also lists the build artefacts the release does not promote.*

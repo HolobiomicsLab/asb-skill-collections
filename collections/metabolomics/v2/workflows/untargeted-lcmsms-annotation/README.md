@@ -1,8 +1,12 @@
-# untargeted-lcmsms-annotation-workflow — STAGING
+# untargeted-lcmsms-annotation-workflow
 
-**Status:** STAGING ONLY — promote via `release_gate.py` after human review.
+**Status:** published as an **outline** — the structure is validated, the execution is not.
 **Kind:** composite-workflow (P1 canonical set).
 **Bound by:** perspicacite-semantic (text-embedding-3-large retrieval + EDAM-aware primary selection).
+
+> Automatic grading of `workflow.yaml` (`asb solve-workflow`, checkpoint mode) is **not part of
+> this release**: no released ASB version loads these files. Follow the stages yourself. The stage
+> structure is validated by `validate_workflows.py` through `release_gate.py`.
 
 ## Stages
 
@@ -14,4 +18,5 @@
 6. **taxonomy_propagate** (optional) — (optional) taxonomy-aware re-weighting / propagation of annotations  →  `taxonomic-weighting-in-annotation`, `metabolite-annotation-taxonomic-integration`, `metabolite-annotation-scoring`, `metabolite-annotation-network-architecture`
 7. **fusion** — consolidate networking + library + SIRIUS (+ taxonomy) into one master table  →  `feature-metadata-annotation`, `feature-network-construction-from-mass-spectrometry`, `sample-centric-metabolite-annotation`, `feature-table-consensus-aggregation`, `unannotated-feature-characterization`, `feature-table-integration-and-normalization`
 
-`derived_from_workflows` in the frontmatter is the eval-ablation set (SPEC §8).
+`derived_from_workflows` in the frontmatter is a provenance record — the ASB per-paper workflows
+whose structure corroborated this pipeline. No ablation experiment consuming it is released.

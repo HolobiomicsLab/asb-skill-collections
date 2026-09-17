@@ -1,6 +1,8 @@
 ---
 name: metabolomics-data-integration-with-metabolic-networks
-description: Use when you have measured intracellular metabolite concentrations (e.g., via LC–MS/MS) across multiple cell lines or samples and want to predict which metabolic reactions are substrate-limited versus transcriptionally regulated.
+description: Use when you have measured intracellular metabolite concentrations (e.g.,
+  via LC–MS/MS) across multiple cell lines or samples and want to predict which metabolic
+  reactions are substrate-limited versus transcriptionally regulated.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3805
@@ -13,6 +15,8 @@ metadata:
   - INTEGRATE pipeline (qLSLab/integrate)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE

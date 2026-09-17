@@ -1,6 +1,9 @@
 ---
 name: rippp-structure-database-matching
-description: 'Use when you have: (1) tandem MS/MS spectra in MGF, mzXML, mzML, or mzData format from LC-MS/MS analysis; (2) a set of predicted RiPP precursor peptides derived from genomic biosynthetic gene cluster mining (via antiSMASH, BOA, or raw FASTA);'
+description: 'Use when you have: (1) tandem MS/MS spectra in MGF, mzXML, mzML, or
+  mzData format from LC-MS/MS analysis; (2) a set of predicted RiPP precursor peptides
+  derived from genomic biosynthetic gene cluster mining (via antiSMASH, BOA, or raw
+  FASTA);'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3646
@@ -19,14 +22,21 @@ metadata:
   - ProteoWizard
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
 evidence_spans:
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel RiPPs
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally modified Peptides (RiPPs)
-- The latest version is available in the Natural Product Discovery toolkit (NPDtools) at https://github.com/ablab/npdtools
-- For presenting Spectral Network propagation graphs, MetaMiner also requires `matplotlib` and `networkx` Python libraries
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel RiPPs
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally
+  modified Peptides (RiPPs)
+- The latest version is available in the Natural Product Discovery toolkit (NPDtools)
+  at https://github.com/ablab/npdtools
+- For presenting Spectral Network propagation graphs, MetaMiner also requires `matplotlib`
+  and `networkx` Python libraries
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

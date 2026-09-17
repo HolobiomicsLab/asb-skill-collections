@@ -1,6 +1,9 @@
 ---
 name: feature-similarity-network-construction
-description: Use when you have a filtered MS-DIAL peak list (post-generic filtering, containing m/z, retention time, and peak intensity metrics) and need to identify groups of co-eluting or structurally similar features before extracting parental signals or annotating metabolites.
+description: Use when you have a filtered MS-DIAL peak list (post-generic filtering,
+  containing m/z, retention time, and peak intensity metrics) and need to identify
+  groups of co-eluting or structurally similar features before extracting parental
+  signals or annotating metabolites.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0360
@@ -12,6 +15,8 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR

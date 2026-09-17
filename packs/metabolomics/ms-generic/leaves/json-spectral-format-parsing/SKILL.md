@@ -1,6 +1,9 @@
 ---
 name: json-spectral-format-parsing
-description: Use when when you have raw mass spectrometry spectral data in JSON format from open mass spectra libraries (OMSLs) or other sources and need to validate structural completeness, check for required metadata fields (SMILES, InChI, InChIKey, precursor m/z, adduct), and separate spectra by acquisition.
+description: Use when when you have raw mass spectrometry spectral data in JSON format
+  from open mass spectra libraries (OMSLs) or other sources and need to validate structural
+  completeness, check for required metadata fields (SMILES, InChI, InChIKey, precursor
+  m/z, adduct), and separate spectra by acquisition.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +17,13 @@ metadata:
   - FragHub
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
@@ -42,6 +52,7 @@ attribution:
 
 # json-spectral-format-parsing
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Parse and validate mass spectrometry spectral data from JSON files conforming to ISO/IEC 20802-2:2016 and non-standard formats, extracting spectrum records with structural identifiers (SMILES, InChI, InChIKey), precursor m/z, adduct information, and peak lists. This skill enables standardized ingestion of spectral datasets into downstream processing pipelines.

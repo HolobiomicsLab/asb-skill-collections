@@ -1,6 +1,7 @@
 ---
 name: pseudo-ms-ms-spectra-ranking-and-curation
-description: Use when after executing annotateRC to match six or more lipidomics/metabolomics features against ion fragment databases (e.
+description: Use when after executing annotateRC to match six or more lipidomics/metabolomics
+  features against ion fragment databases (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,11 +15,14 @@ metadata:
   - xcms
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - To install this package, start R (version "4.5.0" or higher)
 claims: []
 provenance:

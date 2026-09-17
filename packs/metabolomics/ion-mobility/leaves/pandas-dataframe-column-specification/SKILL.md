@@ -1,6 +1,9 @@
 ---
 name: pandas-dataframe-column-specification
-description: Use when when you have mass spectrometry data in a Pandas DataFrame with column names that do not match pyOpenMS-viz's default expectations (e.g., 'm/z' vs 'mz' or 'retention_time' vs 'rt'), or when your data uses domain-specific column labels (e.g., 'mass_to_charge', 'scan_time', 'peak_intensity').
+description: Use when when you have mass spectrometry data in a Pandas DataFrame with
+  column names that do not match pyOpenMS-viz's default expectations (e.g., 'm/z'
+  vs 'mz' or 'retention_time' vs 'rt'), or when your data uses domain-specific column
+  labels (e.g., 'mass_to_charge', 'scan_time', 'peak_intensity').
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3500
@@ -16,12 +19,15 @@ metadata:
   - plotly
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
 evidence_spans:
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 - ms_data.plot(x="m/z", y="intensity", kind="spectrum")
 - conda create --name=pyopenms-viz python=3.12
 claims: []

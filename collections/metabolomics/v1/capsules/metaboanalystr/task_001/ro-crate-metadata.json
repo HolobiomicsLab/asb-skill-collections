@@ -1,0 +1,322 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "asbext": "https://w3id.org/asb/indicium-ext#",
+      "chebi": "http://purl.obolibrary.org/obo/CHEBI_",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "fabio": "http://purl.org/spar/fabio/",
+      "ms": "http://purl.obolibrary.org/obo/MS_",
+      "ncbitaxon": "http://purl.obolibrary.org/obo/NCBITaxon_",
+      "oa": "http://www.w3.org/ns/oa#",
+      "obi": "http://purl.obolibrary.org/obo/OBI_",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "p-plan": "http://purl.org/net/p-plan#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "repme": "https://w3id.org/reproduceme#",
+      "sepio": "http://purl.obolibrary.org/obo/SEPIO_",
+      "uberon": "http://purl.obolibrary.org/obo/UBERON_"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": [
+        "Dataset",
+        "repme:ScientificWorkflow"
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        }
+      ],
+      "dateCreated": "2026-06-16",
+      "description": "Implement the complete MetaboAnalystR 4.0 LC-MS workflow from raw spectral data ingestion through peak detection, alignment, and quantitative feature table generation using the xia-lab/MetaboAnalystR GitHub repository.",
+      "hasPart": [
+        {
+          "@id": "evidence/source_snippets.md"
+        },
+        {
+          "@id": "inputs/dataset_folder_tree.txt"
+        },
+        {
+          "@id": "inputs/dataset_preview.md"
+        },
+        {
+          "@id": "evaluation/evaluation_strategy.md"
+        },
+        {
+          "@id": "evaluation/review_rubric.json"
+        },
+        {
+          "@id": "artifact_provenance.json"
+        }
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "mentions": [
+        {
+          "@id": "#action-task_001"
+        },
+        {
+          "@id": "urn:asb:task:task_001"
+        },
+        {
+          "@id": "#env-task_001"
+        },
+        {
+          "@id": "http://edamontology.org/topic_3172"
+        }
+      ],
+      "name": "Reconstruct the unified LC-MS data processing pipeline in MetaboAnalystR 4.0",
+      "repme:hasComputationalEnvironment": {
+        "@id": "#computational-environment"
+      }
+    },
+    {
+      "@id": "evidence/source_snippets.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evidence/source_snippets.md"
+    },
+    {
+      "@id": "inputs/dataset_folder_tree.txt",
+      "@type": "File",
+      "encodingFormat": "text/plain",
+      "name": "inputs/dataset_folder_tree.txt"
+    },
+    {
+      "@id": "inputs/dataset_preview.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "inputs/dataset_preview.md"
+    },
+    {
+      "@id": "evaluation/evaluation_strategy.md",
+      "@type": "File",
+      "encodingFormat": "text/markdown",
+      "name": "evaluation/evaluation_strategy.md"
+    },
+    {
+      "@id": "evaluation/review_rubric.json",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "name": "evaluation/review_rubric.json"
+    },
+    {
+      "@id": "urn:asb:task:task_001",
+      "@type": [
+        "ScholarlyArticle",
+        "p-plan:Plan",
+        "http://purl.org/spar/fabio/SoftwarePaper"
+      ],
+      "asbext:task_kind": "component_reconstruction",
+      "description": "Implement the complete MetaboAnalystR 4.0 LC-MS workflow from raw spectral data ingestion through peak detection, alignment, and quantitative feature table generation using the xia-lab/MetaboAnalystR GitHub repository.",
+      "keywords": [
+        "spectral-peak-detection-and-deconvolution",
+        "retention-time-and-mz-based-alignment",
+        "feature-table-generation-from-aligned-spectra",
+        "metabolomics-data-quality-assessment",
+        "lcms-workflow-orchestration"
+      ],
+      "name": "Reconstruct the unified LC-MS data processing pipeline in MetaboAnalystR 4.0"
+    },
+    {
+      "@id": "urn:asb:tool:metaboanalystr",
+      "@type": "SoftwareApplication",
+      "name": "MetaboAnalystR",
+      "schema:url": "https://github.com/xia-lab/MetaboAnalystR"
+    },
+    {
+      "@id": "urn:asb:input:task_001_0",
+      "@type": "File",
+      "name": "xia-lab/MetaboAnalystR GitHub repository (source code and configuration)"
+    },
+    {
+      "@id": "urn:asb:input:task_001_1",
+      "@type": "File",
+      "name": "Raw LC-MS spectral data in mzML or mzXML format"
+    },
+    {
+      "@id": "urn:asb:output:task_001_0",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Quantitative feature table with m/z, retention time, and sample intensities",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "urn:asb:output:task_001_1",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "name": "Peak detection and alignment quality report including feature count and missing value summary",
+      "prov:wasGeneratedBy": {
+        "@id": "#action-task_001"
+      }
+    },
+    {
+      "@id": "#action-task_001",
+      "@type": [
+        "CreateAction",
+        "prov:Activity",
+        "p-plan:Step"
+      ],
+      "description": "Implement the complete MetaboAnalystR 4.0 LC-MS workflow from raw spectral data ingestion through peak detection, alignment, and quantitative feature table generation using the xia-lab/MetaboAnalystR GitHub repository.",
+      "instrument": [
+        {
+          "@id": "urn:asb:tool:metaboanalystr"
+        }
+      ],
+      "name": "Reconstruct the unified LC-MS data processing pipeline in MetaboAnalystR 4.0",
+      "object": [
+        {
+          "@id": "urn:asb:input:task_001_0"
+        },
+        {
+          "@id": "urn:asb:input:task_001_1"
+        }
+      ],
+      "repme:hasInputData": [
+        {
+          "@id": "urn:asb:input:task_001_0"
+        },
+        {
+          "@id": "urn:asb:input:task_001_1"
+        }
+      ],
+      "repme:hasOutputData": [
+        {
+          "@id": "urn:asb:output:task_001_0"
+        },
+        {
+          "@id": "urn:asb:output:task_001_1"
+        }
+      ],
+      "result": [
+        {
+          "@id": "urn:asb:output:task_001_0"
+        },
+        {
+          "@id": "urn:asb:output:task_001_1"
+        }
+      ]
+    },
+    {
+      "@id": "#env-task_001",
+      "@type": [
+        "repme:ComputationalEnvironment"
+      ],
+      "repme:computeTier": "medium"
+    },
+    {
+      "@id": "#computational-environment",
+      "@type": "repme:ComputationalEnvironment",
+      "repme:buildId": "8BB39684895B421EB4F0000AF1CF317A",
+      "repme:depsHash": null,
+      "repme:gitCommit": "8713018e077e78db4e0defb776d2c7f494485e53",
+      "repme:platform": "darwin-25.5.0-arm64",
+      "repme:pythonVersion": "3.11.15",
+      "schema:dateCreated": "2026-06-16T06:24:34.128834Z",
+      "schema:hasPart": [
+        {
+          "@id": "#agent-config-agent1_entity"
+        },
+        {
+          "@id": "#agent-config-agent2a_outline"
+        },
+        {
+          "@id": "#agent-config-agent2b_card"
+        },
+        {
+          "@id": "#agent-config-agent3_critique"
+        },
+        {
+          "@id": "#agent-config-agent_classify"
+        }
+      ],
+      "schema:softwareVersion": "agentic-science-builder@0.1.0"
+    },
+    {
+      "@id": "#agent-config-agent1_entity",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v3",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent1_entity"
+    },
+    {
+      "@id": "#agent-config-agent2a_outline",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-sonnet-4-6",
+      "repme:promptVersion": "v2",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2a_outline"
+    },
+    {
+      "@id": "#agent-config-agent2b_card",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v4",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent2b_card"
+    },
+    {
+      "@id": "#agent-config-agent3_critique",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent3_critique"
+    },
+    {
+      "@id": "#agent-config-agent_classify",
+      "@type": "schema:SoftwareApplication",
+      "repme:model": "anthropic/claude-haiku-4-5-20251001",
+      "repme:promptVersion": "v1",
+      "repme:seed": 1,
+      "repme:temperature": 1.0,
+      "schema:applicationCategory": "ai-agent",
+      "schema:name": "Agent agent_classify"
+    },
+    {
+      "@id": "urn:asb:metabolomics:unknown",
+      "@type": "Dataset",
+      "assay_type": "LC-MS",
+      "instrument": null,
+      "name": "Metabolomics Study Metadata",
+      "profile": "metabolomics_lcms",
+      "reproducibility_score": 0.226
+    },
+    {
+      "@id": "artifact_provenance.json",
+      "@type": "File",
+      "name": "artifact_provenance.json",
+      "encodingFormat": "application/json"
+    }
+  ]
+}

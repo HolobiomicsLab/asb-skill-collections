@@ -3,6 +3,7 @@ slug: sqlite
 evidence_spans:
 - It also parses some of the information out of the SQLite data base
 schema_version: 0.2.0
+entry_kind: software
 license_tier: unknown
 license: null
 license_detection: null

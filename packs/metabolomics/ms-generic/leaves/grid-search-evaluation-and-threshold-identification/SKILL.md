@@ -1,6 +1,9 @@
 ---
 name: grid-search-evaluation-and-threshold-identification
-description: Use when you have a fitted alignment model (e.g., metabCombiner object with pre-aligned feature pair candidates and RT spline mapping) and known shared compound identities (ground truth) from reference datasets, and you need to determine which combination of three or more continuous parameters (e.
+description: Use when you have a fitted alignment model (e.g., metabCombiner object
+  with pre-aligned feature pair candidates and RT spline mapping) and known shared
+  compound identities (ground truth) from reference datasets, and you need to determine
+  which combination of three or more continuous parameters (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,12 +16,16 @@ metadata:
   - mgcv
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

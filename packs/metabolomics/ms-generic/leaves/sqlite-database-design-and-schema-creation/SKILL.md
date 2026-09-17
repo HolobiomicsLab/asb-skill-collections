@@ -1,6 +1,8 @@
 ---
 name: sqlite-database-design-and-schema-creation
-description: Use when you have an mzML file and need to enable random-access spectrum retrieval by integer or string identifiers without holding the entire mzML in memory or decompressing indexed gzip files.
+description: Use when you have an mzML file and need to enable random-access spectrum
+  retrieval by integer or string identifiers without holding the entire mzML in memory
+  or decompressing indexed gzip files.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3703
@@ -15,6 +17,8 @@ metadata:
   - psf/black
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml

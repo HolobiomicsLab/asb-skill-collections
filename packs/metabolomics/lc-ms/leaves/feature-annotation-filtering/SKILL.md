@@ -1,6 +1,8 @@
 ---
 name: feature-annotation-filtering
-description: Use when you have a feature list with assigned molecular formulas and m/z values from non-target HRMS analysis, and you need to identify and rank potential PFAS compounds among thousands of detected features.
+description: Use when you have a feature list with assigned molecular formulas and
+  m/z values from non-target HRMS analysis, and you need to identify and rank potential
+  PFAS compounds among thousands of detected features.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +16,8 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen

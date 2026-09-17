@@ -1,6 +1,8 @@
 ---
 name: annotation-complexity-comparison
-description: Use when you have MS imaging or LC-MS data with pre-annotated m/z values that include multiple isomer or metabolite names per m/z (stored as semicolon-delimited or multi-record strings), and you want to measure whether a refinement step (e.
+description: Use when you have MS imaging or LC-MS data with pre-annotated m/z values
+  that include multiple isomer or metabolite names per m/z (stored as semicolon-delimited
+  or multi-record strings), and you want to measure whether a refinement step (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -17,6 +19,13 @@ metadata:
   - RefineLipids
   techniques:
   - LC-MS
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ''
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -53,6 +62,7 @@ attribution:
 
 # annotation-complexity-comparison
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Quantify and compare the reduction in annotation complexity (count of isomer/metabolite assignments per m/z) before and after applying lipid nomenclature simplification. This skill validates whether refinement strategies like RefineLipids successfully collapse redundant or over-specific lipid annotations into standardized categories.

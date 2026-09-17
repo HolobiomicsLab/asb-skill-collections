@@ -38,6 +38,7 @@ source_repos:
 - zmahnoor14/MAW
 - zquinlan/concise
 schema_version: 0.2.0
+entry_kind: software
 license_tier: open
 license: AGPL-3.0
 license_detection: github-api

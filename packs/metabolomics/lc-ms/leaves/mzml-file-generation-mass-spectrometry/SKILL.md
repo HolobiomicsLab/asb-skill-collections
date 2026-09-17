@@ -1,6 +1,8 @@
 ---
 name: mzml-file-generation-mass-spectrometry
-description: Use when after frequency-based denoising and sample-level aggregation of replicate MS/MS spectra, when you need to export denoised spectra to a standardized, vendor-independent format compatible with spectral matching pipelines.
+description: Use when after frequency-based denoising and sample-level aggregation
+  of replicate MS/MS spectra, when you need to export denoised spectra to a standardized,
+  vendor-independent format compatible with spectral matching pipelines.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3650
@@ -17,13 +19,19 @@ metadata:
   - MsBackendMzR
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
 evidence_spans:
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager", "knitr", "markdown"),
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager",
+  "knitr", "markdown"),
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim"
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

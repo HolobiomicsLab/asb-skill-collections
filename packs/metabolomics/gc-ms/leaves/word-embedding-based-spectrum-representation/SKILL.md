@@ -1,6 +1,8 @@
 ---
 name: word-embedding-based-spectrum-representation
-description: Use when when comparing large numbers of MS/MS spectra against spectral libraries or in molecular networking, particularly when molecules differ by multiple structural modifications and cosine-based scores produce excessive false positives.
+description: Use when when comparing large numbers of MS/MS spectra against spectral
+  libraries or in molecular networking, particularly when molecules differ by multiple
+  structural modifications and cosine-based scores produce excessive false positives.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -19,16 +21,22 @@ metadata:
   - Numpy, Scipy, Pandas
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
 evidence_spans:
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31] (https://github.com/matchms/matchms)
-- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms [31] (https://github.com/matchms/matchms)
+- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim
+  [37]
 - making extensive use of Numpy [24] and Numba [25]
 - by making extensive use of Numpy [24] and Numba [25], the library
-- Spec2Vec was optimised by making extensive use of Numpy [24] and Numba [25], the library matching was implemented using Pandas [40]
+- Spec2Vec was optimised by making extensive use of Numpy [24] and Numba [25], the
+  library matching was implemented using Pandas [40]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

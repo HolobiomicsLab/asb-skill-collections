@@ -1,6 +1,8 @@
 ---
 name: browser-security-policy-configuration
-description: Use when you need to run a web application locally (by opening index.html directly in the browser) and the application uses WebWorker or WebAssembly modules that fail to load with cross-origin policy or file-access errors.
+description: Use when you need to run a web application locally (by opening index.html
+  directly in the browser) and the application uses WebWorker or WebAssembly modules
+  that fail to load with cross-origin policy or file-access errors.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -13,8 +15,10 @@ metadata:
   - COLMARvista
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
-- doi: 10.1007/s10858-025-00465-y#sec2
+- doi: 10.1007/s10858-025-00465-y
   title: COLMARvista
 evidence_spans:
 - 'For Google Chrome: 1. Right-click the Google Chrome icon and select "Properties."'
@@ -26,15 +30,15 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_colmarvista_cq
-    doi: 10.1007/s10858-025-00465-y#sec2
+    doi: 10.1007/s10858-025-00465-y
     title: COLMARvista
   dedup_kept_from: coll_colmarvista_cq
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1007/s10858-025-00465-y#sec2
+  original_doi: 10.1007/s10858-025-00465-y
   all_source_dois:
-  - 10.1007/s10858-025-00465-y#sec2
+  - 10.1007/s10858-025-00465-y
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias

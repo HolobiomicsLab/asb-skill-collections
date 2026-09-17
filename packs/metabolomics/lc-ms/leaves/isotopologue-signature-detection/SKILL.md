@@ -1,6 +1,8 @@
 ---
 name: isotopologue-signature-detection
-description: Use when you have preprocessed, statistically significant LC-MS features (from multiple assays or a single assay) and need to group features that represent the same metabolite in different isotopic labeling states.
+description: Use when you have preprocessed, statistically significant LC-MS features
+  (from multiple assays or a single assay) and need to group features that represent
+  the same metabolite in different isotopic labeling states.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -18,6 +20,8 @@ metadata:
   - MAMSI (MamsiStructSearch)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi

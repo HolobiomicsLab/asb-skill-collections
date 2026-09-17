@@ -1,6 +1,8 @@
 ---
 name: adduct-mass-calculation-from-smiles
-description: Use when when you have a metabolite SMILES structure and need to predict which adduct ions will appear in a mass spectrum acquired with a chemical derivatizing matrix.
+description: Use when when you have a metabolite SMILES structure and need to predict
+  which adduct ions will appear in a mass spectrum acquired with a chemical derivatizing
+  matrix.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -12,6 +14,8 @@ metadata:
   - Met-ID
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid

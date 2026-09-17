@@ -1,6 +1,8 @@
 ---
 name: reference-peak-matching-and-fallback-logic
-description: Use when when performing m/z domain calibration on FT-ICR or high-resolution MS data and the initial calibration attempt finds fewer than 5 reference m/z matches within the standard PPM window (typically ±1–5 ppm).
+description: Use when when performing m/z domain calibration on FT-ICR or high-resolution
+  MS data and the initial calibration attempt finds fewer than 5 reference m/z matches
+  within the standard PPM window (typically ±1–5 ppm).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,12 +16,15 @@ metadata:
   - numpy
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np

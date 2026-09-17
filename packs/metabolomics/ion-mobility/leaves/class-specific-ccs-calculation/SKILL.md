@@ -1,6 +1,8 @@
 ---
 name: class-specific-ccs-calculation
-description: Use when when you have multi-omic TWIM-MS data (raw or processed arrival-time records) and have already assigned features or detected ion features to biomolecular classes (e.
+description: Use when when you have multi-omic TWIM-MS data (raw or processed arrival-time
+  records) and have already assigned features or detected ion features to biomolecular
+  classes (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3291
@@ -14,6 +16,8 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal

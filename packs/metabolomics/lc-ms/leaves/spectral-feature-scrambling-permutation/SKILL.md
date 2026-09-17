@@ -1,6 +1,8 @@
 ---
 name: spectral-feature-scrambling-permutation
-description: Use when when performing large-scale untargeted metabolomics annotations where you need to assess the false discovery rate of metabolite identifications but lack sufficient negative control samples or decoy compound databases.
+description: Use when when performing large-scale untargeted metabolomics annotations
+  where you need to assess the false discovery rate of metabolite identifications
+  but lack sufficient negative control samples or decoy compound databases.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,6 +17,8 @@ metadata:
   - Passatutto
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra

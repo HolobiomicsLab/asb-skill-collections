@@ -1,6 +1,8 @@
 ---
 name: molecular-structure-attribution
-description: Use when you have a trained GNN model predicting CCS values from molecular graphs and need to understand which structural features (node and edge attributes) are most influential for specific predictions or across a test set.
+description: Use when you have a trained GNN model predicting CCS values from molecular
+  graphs and need to understand which structural features (node and edge attributes)
+  are most influential for specific predictions or across a test set.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3945
@@ -16,6 +18,8 @@ metadata:
   - enveda/ccs-prediction
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs

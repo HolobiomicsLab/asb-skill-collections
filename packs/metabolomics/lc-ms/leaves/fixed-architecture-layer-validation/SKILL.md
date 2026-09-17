@@ -1,6 +1,9 @@
 ---
 name: fixed-architecture-layer-validation
-description: Use when after loading a specXplore session data object file from the hard drive and instantiating a dashboard session layer with it, validate that the architecture layer has initialized without errors and that the interactive dashboard is responsive to user input.
+description: Use when after loading a specXplore session data object file from the
+  hard drive and instantiating a dashboard session layer with it, validate that the
+  architecture layer has initialized without errors and that the interactive dashboard
+  is responsive to user input.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -13,6 +16,8 @@ metadata:
   - Jupyter notebooks
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore

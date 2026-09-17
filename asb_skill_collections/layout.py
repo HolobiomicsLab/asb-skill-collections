@@ -107,6 +107,28 @@ def slugs(collection_dir: str | os.PathLike) -> set[str]:
     return {p.parent.name for p in iter_skill_md(collection_dir)}
 
 
+def leaf_slugs(collection_dir: str | os.PathLike) -> set[str]:
+    """Slugs of the leaf corpus alone, excluding the advertised entry points.
+
+    Deliberately narrower than :func:`slugs`. That function enumerates
+    everything a validation sweep must cover, which in a router-shaped
+    collection includes the handful of entry points kept in ``skills/``. But a
+    collection's declared skill count and its ``skills_index.json`` both
+    describe the leaf corpus only, so reconciling either of them against the
+    wider sweep reports a mismatch on a tree where nothing is wrong.
+    """
+    leaves = leaf_dir(collection_dir)
+    if not leaves.is_dir():
+        return set()
+    return {
+        path.name
+        for path in leaves.iterdir()
+        if path.is_dir()
+        and not path.name.startswith("_")
+        and (path / "SKILL.md").is_file()
+    }
+
+
 def slug_dirs(collection_dir: str | os.PathLike) -> list[Path]:
     """Every skill directory, whether or not it yet holds a ``SKILL.md``.
 

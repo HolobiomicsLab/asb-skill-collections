@@ -1,6 +1,9 @@
 ---
 name: data-pipeline-module-design-and-integration
-description: Use when you have raw spectroscopic datasets from heterogeneous sources (multiple Zenodo repositories with different file formats and scales) that must be jointly normalized, deduplicated, and aligned by molecular identifier to feed a multimodal deep learning architecture.
+description: Use when you have raw spectroscopic datasets from heterogeneous sources
+  (multiple Zenodo repositories with different file formats and scales) that must
+  be jointly normalized, deduplicated, and aligned by molecular identifier to feed
+  a multimodal deep learning architecture.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -13,6 +16,8 @@ metadata:
   - Python
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/ange.202517611
   title: MMST

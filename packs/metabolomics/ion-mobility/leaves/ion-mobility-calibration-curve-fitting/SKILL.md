@@ -1,6 +1,8 @@
 ---
 name: ion-mobility-calibration-curve-fitting
-description: Use when you have TWIM-MS experimental data with arrival times and m/z values, and access to calibrant reference standards with known CCS values (typically loaded from a calibration template).
+description: Use when you have TWIM-MS experimental data with arrival times and m/z
+  values, and access to calibrant reference standards with known CCS values (typically
+  loaded from a calibration template).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -13,6 +15,8 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal

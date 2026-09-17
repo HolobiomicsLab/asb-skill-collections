@@ -1,6 +1,8 @@
 ---
 name: chromatographic-resolution-evaluation
-description: Use when when you have a feature table from LC-MS peak detection (e.g., output from MassCube's nontargeted peak segmentation step) and need to assess which features have adequate chromatographic separation from coeluting or nearby peaks.
+description: Use when when you have a feature table from LC-MS peak detection (e.g.,
+  output from MassCube's nontargeted peak segmentation step) and need to assess which
+  features have adequate chromatographic separation from coeluting or nearby peaks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -12,12 +14,21 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: huaxuyu/masscube
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube
 evidence_spans:
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing.
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing.
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing
 - masscube is an integrated Python package
 claims: []
 provenance:
@@ -42,6 +53,7 @@ attribution:
 
 # chromatographic-resolution-evaluation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Evaluation of chromatographic peak resolution as a component of LC-MS feature quality assessment, determining whether detected peaks are sufficiently resolved from neighboring signals to be reliably characterized. This skill is applied within MassCube's comprehensive feature quality module to flag poorly resolved features that may confound downstream annotation and quantification.

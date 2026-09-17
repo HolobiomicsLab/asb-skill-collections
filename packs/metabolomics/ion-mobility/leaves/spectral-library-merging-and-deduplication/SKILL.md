@@ -1,6 +1,9 @@
 ---
 name: spectral-library-merging-and-deduplication
-description: Use when when building a comprehensive reference spectral library for metabolomics or chemical identification, you have multiple source libraries in different formats (msp, mgf, NIST binary) and ionization modes (positive/negative MS/MS or EI) that need to be combined into a single.
+description: Use when when building a comprehensive reference spectral library for
+  metabolomics or chemical identification, you have multiple source libraries in different
+  formats (msp, mgf, NIST binary) and ionization modes (positive/negative MS/MS or
+  EI) that need to be combined into a single.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -17,6 +20,8 @@ metadata:
   - LC-MS
   - GC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler

@@ -1,6 +1,9 @@
 ---
 name: lcms-retention-time-alignment
-description: Use when when XCMS-aligned LC-MS data shows coefficient of variation (CV) above expected thresholds for known features, or when analyzing long-duration experiments (>1 week) or large cohorts (>100 samples) where global warping functions are known to fail due to compound-specific RT drift structures.
+description: Use when when XCMS-aligned LC-MS data shows coefficient of variation
+  (CV) above expected thresholds for known features, or when analyzing long-duration
+  experiments (>1 week) or large cohorts (>100 samples) where global warping functions
+  are known to fail due to compound-specific RT drift structures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -15,15 +18,20 @@ metadata:
   - xcms
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
 evidence_spans:
-- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an alignment algorithm
+- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an
+  alignment algorithm
 - '`ncGTW` is an R package developed as a plug-in of `xcms`'
 - ncGTW is an R package developed as a plug-in of xcms
-- This algorithm is improved from graphical time warping (GTW) [@gtw16], a popular dynamic time warping (DTW)
-- graphical time warping (GTW) [@gtw16], a popular dynamic time warping (DTW) based alignment method
+- This algorithm is improved from graphical time warping (GTW) [@gtw16], a popular
+  dynamic time warping (DTW)
+- graphical time warping (GTW) [@gtw16], a popular dynamic time warping (DTW) based
+  alignment method
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

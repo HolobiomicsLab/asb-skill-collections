@@ -1,6 +1,9 @@
 ---
 name: filter-status-data-structure-interpretation
-description: Use when after applying a sequence of mpactr filters (filter_mispicked_ions, filter_group, filter_cv, filter_insource_ions) to an LC-MS/MS peak table in Progenesis or MS-DIAL format, call qc_summary() to obtain a structured report of per-ion filtering outcomes and use this skill to understand.
+description: Use when after applying a sequence of mpactr filters (filter_mispicked_ions,
+  filter_group, filter_cv, filter_insource_ions) to an LC-MS/MS peak table in Progenesis
+  or MS-DIAL format, call qc_summary() to obtain a structured report of per-ion filtering
+  outcomes and use this skill to understand.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,6 +17,8 @@ metadata:
   - ggplot & plotly
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr

@@ -1,6 +1,8 @@
 ---
 name: peak-picking-algorithm-selection
-description: 'Use when at the entry point of SLAW processing when you have centroided mzML or netCDF LC-MS files and need to decide which peak-picking algorithm to use. Trigger this skill when: (1) raw LC-MS data must be converted into a feature matrix;'
+description: 'Use when at the entry point of SLAW processing when you have centroided
+  mzML or netCDF LC-MS files and need to decide which peak-picking algorithm to use.
+  Trigger this skill when: (1) raw LC-MS data must be converted into a feature matrix;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3634
@@ -14,11 +16,14 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
 evidence_spans:
-- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo, ADAP'
+- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo,
+  ADAP'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

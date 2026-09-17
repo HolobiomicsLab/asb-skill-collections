@@ -1,6 +1,8 @@
 ---
 name: r-package-api-usage
-description: Use when when you have metabolomics data (tab-delimited text or SummarizedExperiment object) and need to apply batch correction, outlier detection, internal standard recommendation, and quality filtering at scale or in non-interactive workflows.
+description: Use when when you have metabolomics data (tab-delimited text or SummarizedExperiment
+  object) and need to apply batch correction, outlier detection, internal standard
+  recommendation, and quality filtering at scale or in non-interactive workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,6 +17,8 @@ metadata:
   - mzQualityDashboard
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -23,8 +27,10 @@ evidence_spans:
 - knitr::rmarkdown, library(mzQuality)
 - mzQuality requires a specific format for the input data.
 - mzQuality requires a specific format for the input data
-- The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.
-- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data
+- The `buildExperiment` function will then take the data and create an experiment
+  object that can be used for analysis.
+- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store
+  the data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

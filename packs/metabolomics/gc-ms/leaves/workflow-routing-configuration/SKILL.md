@@ -1,6 +1,8 @@
 ---
 name: workflow-routing-configuration
-description: Use when when you have raw mass spectrometry data files from multiple acquisition modalities (LC-MS, GC-MS, ion mobility, or imaging) and need to automatically route each to the correct downstream analysis module without manual intervention.
+description: Use when when you have raw mass spectrometry data files from multiple
+  acquisition modalities (LC-MS, GC-MS, ion mobility, or imaging) and need to automatically
+  route each to the correct downstream analysis module without manual intervention.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -15,6 +17,8 @@ metadata:
   - LC-MS
   - GC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3

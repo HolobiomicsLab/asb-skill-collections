@@ -1,6 +1,8 @@
 ---
 name: precision-recall-curve-generation-and-interpretation
-description: Use when you have computed spectral similarity scores from multiple methods (e.g., MS2DeepScore, Spec2Vec, modified cosine) on the same set of spectrum pairs, have assigned ground-truth structural similarity labels (e.
+description: Use when you have computed spectral similarity scores from multiple methods
+  (e.g., MS2DeepScore, Spec2Vec, modified cosine) on the same set of spectrum pairs,
+  have assigned ground-truth structural similarity labels (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -16,6 +18,8 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -23,9 +27,13 @@ evidence_spans:
 - Our MS2DeepScore Python library offers two types of data generators
 - To estimate the uncertainty of a prediction we used Monte-Carlo Dropout ensembles
 - recently introduced unsupervised Spec2V
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities.
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities
-- Our MS2DeepScore Python library offers two types of data generators, one which iterates over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over all spectra and was used for
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities.
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities
+- Our MS2DeepScore Python library offers two types of data generators, one which iterates
+  over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over
+  all spectra and was used for
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

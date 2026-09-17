@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-feature-detection-validation
-description: Use when when you have processed LC-HRMS mzML files through a non-targeted preprocessing tool (e.g., XCMS, MZmine 2, MS-DIAL) and need to assess whether peak detection rates, isotopologue ratio fidelity, and alignment accuracy meet acceptable thresholds before downstream analysis.
+description: Use when when you have processed LC-HRMS mzML files through a non-targeted
+  preprocessing tool (e.g., XCMS, MZmine 2, MS-DIAL) and need to assess whether peak
+  detection rates, isotopologue ratio fidelity, and alignment accuracy meet acceptable
+  thresholds before downstream analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -18,12 +21,15 @@ metadata:
   - R (with mzRAPP library)
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
-- doi: 10.1093/bioinformatics/btab231/6214530
+- doi: 10.1093/bioinformatics/btab231
   title: mzRAPP
 evidence_spans:
 - 'You can now start mzRAPP using: library(mzRAPP); callmzRAPP()'
-- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing (NPP)
+- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing
+  (NPP)
 - Below we provided one more example for MZmine2
 - Download the XCMS- and MZmine 2-output files from [ucloud]
 - library(mzRAPP)
@@ -33,15 +39,15 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_mzrapp_cq
-    doi: 10.1093/bioinformatics/btab231/6214530
+    doi: 10.1093/bioinformatics/btab231
     title: mzRAPP
   dedup_kept_from: coll_mzrapp_cq
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1093/bioinformatics/btab231/6214530
+  original_doi: 10.1093/bioinformatics/btab231
   all_source_dois:
-  - 10.1093/bioinformatics/btab231/6214530
+  - 10.1093/bioinformatics/btab231
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias

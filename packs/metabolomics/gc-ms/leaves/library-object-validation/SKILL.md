@@ -1,6 +1,8 @@
 ---
 name: library-object-validation
-description: Use when after applying mspcompiler pipeline transformation steps (e.g., reorganize_mona, assign_smiles, assign_ri, read_multilibs, separate_polarity, complete_mgf) to confirm the operation succeeded without data loss or structural corruption.
+description: Use when after applying mspcompiler pipeline transformation steps (e.g.,
+  reorganize_mona, assign_smiles, assign_ri, read_multilibs, separate_polarity, complete_mgf)
+  to confirm the operation succeeded without data loss or structural corruption.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -15,6 +17,8 @@ metadata:
   - future.apply
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler

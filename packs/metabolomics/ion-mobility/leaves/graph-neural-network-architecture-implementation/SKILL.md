@@ -1,6 +1,7 @@
 ---
 name: graph-neural-network-architecture-implementation
-description: Use when you have a baseline GNN model trained on a molecular property prediction task (e.
+description: Use when you have a baseline GNN model trained on a molecular property
+  prediction task (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +15,8 @@ metadata:
   - enveda/ccs-prediction
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs

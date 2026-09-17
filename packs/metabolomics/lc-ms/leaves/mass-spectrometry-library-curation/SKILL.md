@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-library-curation
-description: Use when when preprocessing a public MS/MS spectral library (e.g., GNPS) for machine learning and you discover discrepancies between expected and observed compound counts after filtering by instrument type, or when a known instrument metadata issue (e.
+description: Use when when preprocessing a public MS/MS spectral library (e.g., GNPS)
+  for machine learning and you discover discrepancies between expected and observed
+  compound counts after filtering by instrument type, or when a known instrument metadata
+  issue (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +15,8 @@ metadata:
   - FIDDLE
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

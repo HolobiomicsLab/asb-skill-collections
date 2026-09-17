@@ -1,6 +1,8 @@
 ---
 name: sparse-matrix-computation
-description: Use when clustering large collections of high-resolution MS/MS spectra (thousands to millions) and you have already converted spectra to low-dimensional vectors via feature hashing.
+description: Use when clustering large collections of high-resolution MS/MS spectra
+  (thousands to millions) and you have already converted spectra to low-dimensional
+  vectors via feature hashing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -12,11 +14,14 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

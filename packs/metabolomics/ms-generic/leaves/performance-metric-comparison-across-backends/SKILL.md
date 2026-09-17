@@ -1,6 +1,9 @@
 ---
 name: performance-metric-comparison-across-backends
-description: Use when when you have access to a set of gallery or benchmark scripts executed across multiple plotting backends and need to quantify which backend delivers the fastest median execution time for specific mass spectrometry plot types (chromatogram, mobilogram, peakmap, peakmap-marginals, spectrum.
+description: Use when when you have access to a set of gallery or benchmark scripts
+  executed across multiple plotting backends and need to quantify which backend delivers
+  the fastest median execution time for specific mass spectrometry plot types (chromatogram,
+  mobilogram, peakmap, peakmap-marginals, spectrum.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -14,6 +17,8 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz

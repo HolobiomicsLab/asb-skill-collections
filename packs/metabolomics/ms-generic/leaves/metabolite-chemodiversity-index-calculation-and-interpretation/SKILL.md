@@ -1,6 +1,9 @@
 ---
 name: metabolite-chemodiversity-index-calculation-and-interpretation
-description: Use when you have peak-abundance data (after molecular formula assignment, peak filtering by m/z, isotope, ppm error, and sample presence thresholds) and you need to quantify and compare the molecular composition diversity across samples or conditions.
+description: Use when you have peak-abundance data (after molecular formula assignment,
+  peak filtering by m/z, isotope, ppm error, and sample presence thresholds) and you
+  need to quantify and compare the molecular composition diversity across samples
+  or conditions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -20,12 +23,15 @@ metadata:
   - FT-ICR MS
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
 - The MetaboDirect pipeline was developed in Python 3.8
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2
 - It requires the Python dependencies NumPy

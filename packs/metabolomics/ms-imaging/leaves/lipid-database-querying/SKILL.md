@@ -1,6 +1,8 @@
 ---
 name: lipid-database-querying
-description: Use when you have acquired full-scan mass spectrometry imaging data (e.g., from a mouse bladder or tissue section) with detected m/z features and want to assign chemical identities to those features by querying a structured lipid database.
+description: Use when you have acquired full-scan mass spectrometry imaging data (e.g.,
+  from a mouse bladder or tissue section) with detected m/z features and want to assign
+  chemical identities to those features by querying a structured lipid database.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3814
@@ -17,6 +19,13 @@ metadata:
   - RefineLipids
   techniques:
   - MS-imaging
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ''
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -50,6 +59,7 @@ attribution:
 
 # lipid-database-querying
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Match observed mass-to-charge ratios (m/z) from spatial metabolomics datasets against curated lipid structural databases (e.g., LipidMaps) using mass accuracy tolerance and adduct type constraints. This skill enables systematic identification of lipid species in untargeted MS imaging experiments.

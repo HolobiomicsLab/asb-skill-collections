@@ -1,6 +1,9 @@
 ---
 name: feature-intensity-recovery-across-samples
-description: Use when after sample alignment in untargeted LC-MS workflows, when the aligned feature table contains missing (NA or zero) intensity entries for features that are detected in some samples but fall below the instrument detection limit or are absent in others.
+description: Use when after sample alignment in untargeted LC-MS workflows, when the
+  aligned feature table contains missing (NA or zero) intensity entries for features
+  that are detected in some samples but fall below the instrument detection limit
+  or are absent in others.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3557
@@ -13,6 +16,8 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw

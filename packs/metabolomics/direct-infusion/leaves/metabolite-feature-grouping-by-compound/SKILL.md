@@ -1,6 +1,8 @@
 ---
 name: metabolite-feature-grouping-by-compound
-description: Use when after XCMS feature detection and retention time correction, when you have a feature table (CSV or XCMS object) with m/z and retention time values aligned across samples.
+description: Use when after XCMS feature detection and retention time correction,
+  when you have a feature table (CSV or XCMS object) with m/z and retention time values
+  aligned across samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -17,13 +19,16 @@ metadata:
   - Sirius
   techniques:
   - direct-infusion-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
 evidence_spans:
 - ramclustR function is built to use xcms data
 - RC <- ramclustR(xcmsObj = xset, ExpDes=experiment)
-- submitting this score matrix for heirarchical clustering, and then cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
+- submitting this score matrix for heirarchical clustering, and then cutting the resulting
+  dendrogram into neat chunks using the dynamicTreeCut package
 - cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
 claims: []
 provenance:

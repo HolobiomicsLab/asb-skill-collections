@@ -1,6 +1,9 @@
 ---
 name: spectral-to-structure-mapping-prediction
-description: Use when you have preprocessed 1D ¹H and/or ¹³C NMR spectra from an unknown organic compound with ≤19 heavy atoms, and you need to recover its molecular structure (both formula and connectivity) rapidly without access to 2D NMR experiments (HSQC, HMBC, COSY) or mass spectrometry.
+description: Use when you have preprocessed 1D ¹H and/or ¹³C NMR spectra from an unknown
+  organic compound with ≤19 heavy atoms, and you need to recover its molecular structure
+  (both formula and connectivity) rapidly without access to 2D NMR experiments (HSQC,
+  HMBC, COSY) or mass spectrometry.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,6 +16,8 @@ metadata:
   - transformer architecture
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct

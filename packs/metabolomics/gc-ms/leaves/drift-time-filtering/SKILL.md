@@ -1,6 +1,9 @@
 ---
 name: drift-time-filtering
-description: Use when you have loaded a raw GCIMS dataset and need to isolate the region of interest in drift time (typically 5–16 ms for small organic molecules) to exclude low-drift-time chemical noise, high-drift-time tail artifacts, or off-scale ion signals that would degrade subsequent alignment and peak.
+description: Use when you have loaded a raw GCIMS dataset and need to isolate the
+  region of interest in drift time (typically 5–16 ms for small organic molecules)
+  to exclude low-drift-time chemical noise, high-drift-time tail artifacts, or off-scale
+  ion signals that would degrade subsequent alignment and peak.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -14,6 +17,8 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS

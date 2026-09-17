@@ -1,6 +1,9 @@
 ---
 name: cross-language-interface-design
-description: Use when when you have domain-specific functionality (e.g., spectral similarity scoring, peak detection algorithms) implemented in one language (Python) but need to make it callable and composable within an R-based analytical pipeline (Spectra objects);
+description: Use when when you have domain-specific functionality (e.g., spectral
+  similarity scoring, peak detection algorithms) implemented in one language (Python)
+  but need to make it callable and composable within an R-based analytical pipeline
+  (Spectra objects);
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0224
@@ -16,12 +19,16 @@ metadata:
   - spectrum_utils
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
 evidence_spans:
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R.
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based
+  MS analysis in R
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based
+  MS analysis in R.
 - integration of Python MS packages into a [*Spectra*]-based MS analysis in R
 claims: []
 provenance:

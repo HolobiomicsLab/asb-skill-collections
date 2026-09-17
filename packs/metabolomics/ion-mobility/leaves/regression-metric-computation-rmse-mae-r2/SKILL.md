@@ -1,6 +1,9 @@
 ---
 name: regression-metric-computation-rmse-mae-r2
-description: 'Use when you have model predictions and ground-truth labels for a test set and need to assess how well the trained model generalizes to unseen data. Typical triggers: after executing inference on a held-out test partition, after cross-dataset evaluation (e.'
+description: 'Use when you have model predictions and ground-truth labels for a test
+  set and need to assess how well the trained model generalizes to unseen data. Typical
+  triggers: after executing inference on a held-out test partition, after cross-dataset
+  evaluation (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3659
@@ -13,6 +16,8 @@ metadata:
   - enveda/ccs-prediction
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs

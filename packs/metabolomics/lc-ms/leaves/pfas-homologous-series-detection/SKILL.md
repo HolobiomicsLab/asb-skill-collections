@@ -1,6 +1,8 @@
 ---
 name: pfas-homologous-series-detection
-description: Use when you have an m/z-resolved feature list from LC- or GC-HRMS analysis (either detected by pyOpenMS or provided as a custom Excel table) and need to prioritize potential PFAS compounds by identifying clusters of homologous structures.
+description: Use when you have an m/z-resolved feature list from LC- or GC-HRMS analysis
+  (either detected by pyOpenMS or provided as a custom Excel table) and need to prioritize
+  potential PFAS compounds by identifying clusters of homologous structures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -13,6 +15,8 @@ metadata:
   - pyOpenMS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen

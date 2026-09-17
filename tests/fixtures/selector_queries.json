@@ -1,0 +1,354 @@
+[
+  {
+    "id": "readme_untargeted_lcmsms_annotation",
+    "query": "untargeted LC-MS/MS annotation",
+    "collection": "metabolomics/v2",
+    "target": "workflows",
+    "technique": "LC-MS",
+    "expected_slugs": [
+      "untargeted-lcmsms-annotation"
+    ],
+    "source": {
+      "path": "README.md",
+      "line": 156,
+      "excerpt": "asbb search \"untargeted LC-MS/MS annotation\" --collection metabolomics --target workflows\nasbb get untargeted-lcmsms-annotation --collection metabolomics/v2 --target workflows"
+    },
+    "rationale": "The documented search example is followed immediately by a get command naming the expected workflow slug; the query is copied verbatim."
+  },
+  {
+    "id": "workflow_compound_class_annotation",
+    "query": "I want chemical-class-level annotations for untargeted LC-MS/MS features rather than exact structures.",
+    "collection": "metabolomics/v2",
+    "target": "workflows",
+    "technique": "LC-MS",
+    "expected_slugs": [
+      "compound-class-annotation"
+    ],
+    "source": {
+      "path": "collections/metabolomics/v2/workflows/compound-class-annotation/SKILL.md",
+      "line": 86,
+      "excerpt": "Use when you want chemical-class-level annotations for untargeted LC-MS/MS features rather than exact structures"
+    },
+    "rationale": "Minor normalization: the documented goal clause is changed from second-person “Use when you …” wording to a first-person query, and the procedural tail is omitted. The workflow directory and workflows index name the expected slug."
+  },
+  {
+    "id": "workflow_fbmn_annotation_propagation",
+    "query": "I have untargeted LC-MS/MS MS2 data and want to spread a handful of confident annotations across whole molecular families.",
+    "collection": "metabolomics/v2",
+    "target": "workflows",
+    "technique": "LC-MS",
+    "expected_slugs": [
+      "fbmn-annotation-propagation"
+    ],
+    "source": {
+      "path": "collections/metabolomics/v2/workflows/fbmn-annotation-propagation/SKILL.md",
+      "line": 93,
+      "excerpt": "Use when you have untargeted LC-MS/MS MS2 data and want to spread a handful of confident annotations across whole molecular families"
+    },
+    "rationale": "Minor normalization: the documented goal clause is changed from second-person “Use when you …” wording to a first-person query, and the procedural tail is omitted. The workflow directory and workflows index name the expected slug."
+  },
+  {
+    "id": "workflow_gcms_deconvolution_and_identification",
+    "query": "I have GC-MS data (mzML / CDF, typically EI) and want deconvolved, retention-index-validated compound identifications.",
+    "collection": "metabolomics/v2",
+    "target": "workflows",
+    "technique": "GC-MS",
+    "expected_slugs": [
+      "gcms-deconvolution-and-identification"
+    ],
+    "source": {
+      "path": "collections/metabolomics/v2/workflows/gcms-deconvolution-and-identification/SKILL.md",
+      "line": 76,
+      "excerpt": "Use when you have GC-MS data (mzML / CDF, typically EI) and want deconvolved, retention-index-validated compound identifications"
+    },
+    "rationale": "Minor normalization: the documented goal clause is changed from second-person “Use when you …” wording to a first-person query, and the procedural tail is omitted. The workflow directory and workflows index name the expected slug."
+  },
+  {
+    "id": "workflow_genome_scale_metabolic_flux_modeling",
+    "query": "I have a genome-scale constraint-based metabolic model (GEM, SBML/JSON) for one or more organisms and want predicted flux states grounded in my own omics data.",
+    "collection": "metabolomics/v2",
+    "target": "workflows",
+    "technique": "LC-MS",
+    "expected_slugs": [
+      "genome-scale-metabolic-flux-modeling"
+    ],
+    "source": {
+      "path": "collections/metabolomics/v2/workflows/genome-scale-metabolic-flux-modeling/SKILL.md",
+      "line": 80,
+      "excerpt": "Use when you have a genome-scale constraint-based metabolic model (GEM, SBML/JSON) for one or more organisms and want predicted flux states grounded in your own omics data"
+    },
+    "rationale": "Minor normalization: the documented goal clause is changed from second-person “Use when you …” wording to a first-person query, and the procedural tail is omitted. The workflow directory and workflows index name the expected slug."
+  },
+  {
+    "id": "workflow_gnn_spectral_property_prediction",
+    "query": "I want to train or apply a graph neural network over molecular graphs to predict a structure-dependent property — retention time, collision cross section (CCS), or an MS2 spectrum — and use that predicted property to filter or re-rank candidate structures for untargeted metabolomics annotation.",
+    "collection": "metabolomics/v2",
+    "target": "workflows",
+    "technique": null,
+    "expected_slugs": [
+      "gnn-spectral-property-prediction"
+    ],
+    "source": {
+      "path": "collections/metabolomics/v2/workflows/gnn-spectral-property-prediction/SKILL.md",
+      "line": 86,
+      "excerpt": "Use when you want to train or apply a graph neural network over molecular graphs to predict a structure-dependent property — retention time, collision cross section (CCS), or an MS2 spectrum — and use that predicted property to filter or re-rank candidate structures for untargeted metabolomics annotation"
+    },
+    "rationale": "Minor normalization: the documented goal clause is changed from second-person “Use when you …” wording to a first-person query, and the procedural tail is omitted. The workflow directory and workflows index name the expected slug. No technique filter is set because the workflow documents multiple techniques."
+  },
+  {
+    "id": "workflow_in_silico_biotransformation_prediction",
+    "query": "I have a parent structure (drug, natural product, xenobiotic) and untargeted LC-MS/MS data and want to find its biotransformation products.",
+    "collection": "metabolomics/v2",
+    "target": "workflows",
+    "technique": "LC-MS",
+    "expected_slugs": [
+      "in-silico-biotransformation-prediction"
+    ],
+    "source": {
+      "path": "collections/metabolomics/v2/workflows/in-silico-biotransformation-prediction/SKILL.md",
+      "line": 81,
+      "excerpt": "Use when you have a parent structure (drug, natural product, xenobiotic) and untargeted LC-MS/MS data and want to find its biotransformation products"
+    },
+    "rationale": "Minor normalization: the documented goal clause is changed from second-person “Use when you …” wording to a first-person query, and the procedural tail is omitted. The workflow directory and workflows index name the expected slug."
+  },
+  {
+    "id": "workflow_ion_mobility_4d_annotation",
+    "query": "I have ion-mobility LC-IMS-MS/MS data (e.g. timsTOF / PASEF) and want CCS-aware annotations.",
+    "collection": "metabolomics/v2",
+    "target": "workflows",
+    "technique": "ion-mobility-MS",
+    "expected_slugs": [
+      "ion-mobility-4d-annotation"
+    ],
+    "source": {
+      "path": "collections/metabolomics/v2/workflows/ion-mobility-4d-annotation/SKILL.md",
+      "line": 68,
+      "excerpt": "Use when you have ion-mobility LC-IMS-MS/MS data (e.g. timsTOF / PASEF) and want CCS-aware annotations"
+    },
+    "rationale": "Minor normalization: the documented goal clause is changed from second-person “Use when you …” wording to a first-person query, and the procedural tail is omitted. The workflow directory and workflows index name the expected slug."
+  },
+  {
+    "id": "workflow_lipidomics_lcms_annotation",
+    "query": "I have untargeted lipidomics LC-MS/MS data (mzML) and want a class- and species-level annotated lipid feature table.",
+    "collection": "metabolomics/v2",
+    "target": "workflows",
+    "technique": "LC-MS",
+    "expected_slugs": [
+      "lipidomics-lcms-annotation"
+    ],
+    "source": {
+      "path": "collections/metabolomics/v2/workflows/lipidomics-lcms-annotation/SKILL.md",
+      "line": 84,
+      "excerpt": "Use when you have untargeted lipidomics LC-MS/MS data (mzML) and want a class- and species-level annotated lipid feature table"
+    },
+    "rationale": "Minor normalization: the documented goal clause is changed from second-person “Use when you …” wording to a first-person query, and the procedural tail is omitted. The workflow directory and workflows index name the expected slug."
+  },
+  {
+    "id": "workflow_masst_repository_scale_search",
+    "query": "I have a spectrum or feature of interest and want to know where else it occurs across all public metabolomics data.",
+    "collection": "metabolomics/v2",
+    "target": "workflows",
+    "technique": "LC-MS",
+    "expected_slugs": [
+      "masst-repository-scale-search"
+    ],
+    "source": {
+      "path": "collections/metabolomics/v2/workflows/masst-repository-scale-search/SKILL.md",
+      "line": 79,
+      "excerpt": "Use when you have a spectrum or feature of interest and want to know where else it occurs across all public metabolomics data"
+    },
+    "rationale": "Minor normalization: the documented goal clause is changed from second-person “Use when you …” wording to a first-person query, and the procedural tail is omitted. The workflow directory and workflows index name the expected slug."
+  },
+  {
+    "id": "workflow_ms_imaging_spatial_metabolomics",
+    "query": "I have mass-spectrometry imaging data (imzML, e.g. MALDI/DESI) and want spatially-resolved metabolite annotations.",
+    "collection": "metabolomics/v2",
+    "target": "workflows",
+    "technique": "MS-imaging",
+    "expected_slugs": [
+      "ms-imaging-spatial-metabolomics"
+    ],
+    "source": {
+      "path": "collections/metabolomics/v2/workflows/ms-imaging-spatial-metabolomics/SKILL.md",
+      "line": 69,
+      "excerpt": "Use when you have mass-spectrometry imaging data (imzML, e.g. MALDI/DESI) and want spatially-resolved metabolite annotations"
+    },
+    "rationale": "Minor normalization: the documented goal clause is changed from second-person “Use when you …” wording to a first-person query, and the procedural tail is omitted. The workflow directory and workflows index name the expected slug."
+  },
+  {
+    "id": "workflow_ms2lda_substructure_discovery",
+    "query": "I want to discover shared substructures (Mass2Motifs) across a corpus of MS2 spectra via LDA topic modeling.",
+    "collection": "metabolomics/v2",
+    "target": "workflows",
+    "technique": "LC-MS",
+    "expected_slugs": [
+      "ms2lda-substructure-discovery"
+    ],
+    "source": {
+      "path": "collections/metabolomics/v2/workflows/ms2lda-substructure-discovery/SKILL.md",
+      "line": 82,
+      "excerpt": "Use when you want to discover shared substructures (Mass2Motifs) across a corpus of MS2 spectra via LDA topic modeling"
+    },
+    "rationale": "Minor normalization: the documented goal clause is changed from second-person “Use when you …” wording to a first-person query, and the procedural tail is omitted. The workflow directory and workflows index name the expected slug."
+  },
+  {
+    "id": "workflow_nmr_metabolomics_profiling",
+    "query": "I have NMR metabolomics data (1D/2D spectra or FIDs) and want a quantified, identified metabolite profile.",
+    "collection": "metabolomics/v2",
+    "target": "workflows",
+    "technique": "NMR",
+    "expected_slugs": [
+      "nmr-metabolomics-profiling"
+    ],
+    "source": {
+      "path": "collections/metabolomics/v2/workflows/nmr-metabolomics-profiling/SKILL.md",
+      "line": 64,
+      "excerpt": "Use when you have NMR metabolomics data (1D/2D spectra or FIDs) and want a quantified, identified metabolite profile"
+    },
+    "rationale": "Minor normalization: the documented goal clause is changed from second-person “Use when you …” wording to a first-person query, and the procedural tail is omitted. The workflow directory and workflows index name the expected slug."
+  },
+  {
+    "id": "workflow_paired_omics_bgc_metabolite_linking",
+    "query": "I have paired genomic and metabolomic data from the same microbial strains and want to link biosynthetic gene clusters (BGCs) to the metabolite features they plausibly encode.",
+    "collection": "metabolomics/v2",
+    "target": "workflows",
+    "technique": "LC-MS",
+    "expected_slugs": [
+      "paired-omics-bgc-metabolite-linking"
+    ],
+    "source": {
+      "path": "collections/metabolomics/v2/workflows/paired-omics-bgc-metabolite-linking/SKILL.md",
+      "line": 79,
+      "excerpt": "Use when you have paired genomic and metabolomic data from the same microbial strains and want to link biosynthetic gene clusters (BGCs) to the metabolite features they plausibly encode"
+    },
+    "rationale": "Minor normalization: the documented goal clause is changed from second-person “Use when you …” wording to a first-person query, and the procedural tail is omitted. The workflow directory and workflows index name the expected slug."
+  },
+  {
+    "id": "workflow_pathway_functional_analysis",
+    "query": "I have an LC-MS metabolomics feature list (m/z, optionally p-values/fold changes) and want biological interpretation without prior identification.",
+    "collection": "metabolomics/v2",
+    "target": "workflows",
+    "technique": "LC-MS",
+    "expected_slugs": [
+      "pathway-functional-analysis"
+    ],
+    "source": {
+      "path": "collections/metabolomics/v2/workflows/pathway-functional-analysis/SKILL.md",
+      "line": 75,
+      "excerpt": "Use when you have an LC-MS metabolomics feature list (m/z, optionally p-values/fold changes) and want biological interpretation without prior identification"
+    },
+    "rationale": "Minor normalization: the documented goal clause is changed from second-person “Use when you …” wording to a first-person query, and the procedural tail is omitted. The workflow directory and workflows index name the expected slug."
+  },
+  {
+    "id": "workflow_sirius_denovo_structure_elucidation",
+    "query": "I have MS/MS for unknown features (a SIRIUS-flavour mgf / .ms) and want de novo annotation without a spectral match.",
+    "collection": "metabolomics/v2",
+    "target": "workflows",
+    "technique": "LC-MS",
+    "expected_slugs": [
+      "sirius-denovo-structure-elucidation"
+    ],
+    "source": {
+      "path": "collections/metabolomics/v2/workflows/sirius-denovo-structure-elucidation/SKILL.md",
+      "line": 72,
+      "excerpt": "Use when you have MS/MS for unknown features (a SIRIUS-flavour mgf / .ms) and want de novo annotation without a spectral match"
+    },
+    "rationale": "Minor normalization: the documented goal clause is changed from second-person “Use when you …” wording to a first-person query, and the procedural tail is omitted. The workflow directory and workflows index name the expected slug."
+  },
+  {
+    "id": "workflow_spec2vec_ml_embedding_annotation",
+    "query": "I want to annotate untargeted MS2 spectra with a machine-learned spectral embedding instead of raw cosine scoring.",
+    "collection": "metabolomics/v2",
+    "target": "workflows",
+    "technique": null,
+    "expected_slugs": [
+      "spec2vec-ml-embedding-annotation"
+    ],
+    "source": {
+      "path": "collections/metabolomics/v2/workflows/spec2vec-ml-embedding-annotation/SKILL.md",
+      "line": 74,
+      "excerpt": "Use when you want to annotate untargeted MS2 spectra with a machine-learned spectral embedding instead of raw cosine scoring"
+    },
+    "rationale": "Minor normalization: the documented goal clause is changed from second-person “Use when you …” wording to a first-person query, and the procedural tail is omitted. The workflow directory and workflows index name the expected slug. No technique filter is set because the workflow documents multiple techniques."
+  },
+  {
+    "id": "workflow_stable_isotope_tracing_fluxomics",
+    "query": "I have LC-MS data from a stable-isotope (e.g. 13C / 15N) tracing experiment and want labelling / flux information.",
+    "collection": "metabolomics/v2",
+    "target": "workflows",
+    "technique": "LC-MS",
+    "expected_slugs": [
+      "stable-isotope-tracing-fluxomics"
+    ],
+    "source": {
+      "path": "collections/metabolomics/v2/workflows/stable-isotope-tracing-fluxomics/SKILL.md",
+      "line": 74,
+      "excerpt": "Use when you have LC-MS data from a stable-isotope (e.g. 13C / 15N) tracing experiment and want labelling / flux information"
+    },
+    "rationale": "Minor normalization: the documented goal clause is changed from second-person “Use when you …” wording to a first-person query, and the procedural tail is omitted. The workflow directory and workflows index name the expected slug."
+  },
+  {
+    "id": "workflow_statistics_and_biomarker_discovery",
+    "query": "I have a metabolomics feature/quant table and want a statistically rigorous comparison and candidate biomarkers.",
+    "collection": "metabolomics/v2",
+    "target": "workflows",
+    "technique": "LC-MS",
+    "expected_slugs": [
+      "statistics-and-biomarker-discovery"
+    ],
+    "source": {
+      "path": "collections/metabolomics/v2/workflows/statistics-and-biomarker-discovery/SKILL.md",
+      "line": 78,
+      "excerpt": "Use when you have a metabolomics feature/quant table and want a statistically rigorous comparison and candidate biomarkers"
+    },
+    "rationale": "Minor normalization: the documented goal clause is changed from second-person “Use when you …” wording to a first-person query, and the procedural tail is omitted. The workflow directory and workflows index name the expected slug."
+  },
+  {
+    "id": "workflow_suspect_screening_exposomics",
+    "query": "I have untargeted HRMS data and want to screen for a defined suspect list of environmental / exposure-relevant compounds.",
+    "collection": "metabolomics/v2",
+    "target": "workflows",
+    "technique": "LC-MS",
+    "expected_slugs": [
+      "suspect-screening-exposomics"
+    ],
+    "source": {
+      "path": "collections/metabolomics/v2/workflows/suspect-screening-exposomics/SKILL.md",
+      "line": 77,
+      "excerpt": "Use when you have untargeted HRMS data and want to screen for a defined suspect list of environmental / exposure-relevant compounds"
+    },
+    "rationale": "Minor normalization: the documented goal clause is changed from second-person “Use when you …” wording to a first-person query, and the procedural tail is omitted. The workflow directory and workflows index name the expected slug."
+  },
+  {
+    "id": "workflow_targeted_lcms_quantification",
+    "query": "I have targeted LC-MS data for a defined panel of analytes and want absolute or relative concentrations.",
+    "collection": "metabolomics/v2",
+    "target": "workflows",
+    "technique": "LC-MS",
+    "expected_slugs": [
+      "targeted-lcms-quantification"
+    ],
+    "source": {
+      "path": "collections/metabolomics/v2/workflows/targeted-lcms-quantification/SKILL.md",
+      "line": 73,
+      "excerpt": "Use when you have targeted LC-MS data for a defined panel of analytes and want absolute or relative concentrations"
+    },
+    "rationale": "Minor normalization: the documented goal clause is changed from second-person “Use when you …” wording to a first-person query, and the procedural tail is omitted. The workflow directory and workflows index name the expected slug."
+  },
+  {
+    "id": "workflow_untargeted_lcmsms_annotation",
+    "query": "I have untargeted LC-MS/MS data (mzML) and want an annotated feature table.",
+    "collection": "metabolomics/v2",
+    "target": "workflows",
+    "technique": "LC-MS",
+    "expected_slugs": [
+      "untargeted-lcmsms-annotation"
+    ],
+    "source": {
+      "path": "collections/metabolomics/v2/workflows/untargeted-lcmsms-annotation/SKILL.md",
+      "line": 128,
+      "excerpt": "Use when you have untargeted LC-MS/MS data (mzML) and want an annotated feature table"
+    },
+    "rationale": "Minor normalization: the documented goal clause is changed from second-person “Use when you …” wording to a first-person query, and the procedural tail is omitted. The workflow directory and workflows index name the expected slug."
+  }
+]

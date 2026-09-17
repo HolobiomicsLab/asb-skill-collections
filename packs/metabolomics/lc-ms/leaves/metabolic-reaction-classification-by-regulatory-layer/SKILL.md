@@ -1,6 +1,9 @@
 ---
 name: metabolic-reaction-classification-by-regulatory-layer
-description: Use when you have integrated transcriptomics, intracellular metabolomics, and extracellular flux ratio data from multiple cell lines or conditions, and need to determine whether observed differences in metabolic fluxes originate from gene expression changes, substrate availability changes, or both.
+description: Use when you have integrated transcriptomics, intracellular metabolomics,
+  and extracellular flux ratio data from multiple cell lines or conditions, and need
+  to determine whether observed differences in metabolic fluxes originate from gene
+  expression changes, substrate availability changes, or both.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -21,6 +24,8 @@ metadata:
   - Agilent 6550 iFunnel Q-TOF mass spectrometer with MassHunter ProFinder
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE

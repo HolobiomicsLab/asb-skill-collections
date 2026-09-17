@@ -1,6 +1,9 @@
 ---
 name: python-environment-pinning
-description: 'Use when when you have access to a research repository or README documenting a machine learning implementation (e.g., Keras/TensorFlow-based deep learning model) and need to reproduce the computational environment exactly. Triggers include: (1) README explicitly lists pinned versions (e.'
+description: 'Use when when you have access to a research repository or README documenting
+  a machine learning implementation (e.g., Keras/TensorFlow-based deep learning model)
+  and need to reproduce the computational environment exactly. Triggers include: (1)
+  README explicitly lists pinned versions (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -26,8 +29,10 @@ metadata:
   - Conda
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
-- doi: 10.1093/bioinformatics/btac032/6510930
+- doi: 10.1093/bioinformatics/btac032
   title: massNet
 evidence_spans:
 - Python(3.6.12)
@@ -42,15 +47,15 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_massnet_cq
-    doi: 10.1093/bioinformatics/btac032/6510930
+    doi: 10.1093/bioinformatics/btac032
     title: massNet
   dedup_kept_from: coll_massnet_cq
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1093/bioinformatics/btac032/6510930
+  original_doi: 10.1093/bioinformatics/btac032
   all_source_dois:
-  - 10.1093/bioinformatics/btac032/6510930
+  - 10.1093/bioinformatics/btac032
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias
@@ -59,6 +64,7 @@ attribution:
 
 # python-environment-pinning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract exact software dependency versions from project documentation and generate reproducible environment specifications (requirements.txt and environment.yml) to enable consistent reimplementation across platforms. This skill is essential when legacy implementations require specific version constraints to avoid API incompatibilities.

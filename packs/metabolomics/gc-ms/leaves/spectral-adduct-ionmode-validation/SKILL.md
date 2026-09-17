@@ -1,6 +1,7 @@
 ---
 name: spectral-adduct-ionmode-validation
-description: Use when when processing raw or aggregated mass spectra datasets (from .mgf, .msp, .json, or .
+description: Use when when processing raw or aggregated mass spectra datasets (from
+  .mgf, .msp, .json, or .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +15,13 @@ metadata:
   - FragHub
   techniques:
   - GC-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
@@ -42,6 +50,7 @@ attribution:
 
 # spectral-adduct-ionmode-validation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Validates and filters mass spectra by ensuring adduct annotations are consistent with ionization mode polarity (positive adducts only in positive-mode spectra, negative adducts only in negative-mode spectra), and removes spectra with missing or malformed adduct fields. This quality control step prevents downstream analysis errors from mismatched ionization chemistry.

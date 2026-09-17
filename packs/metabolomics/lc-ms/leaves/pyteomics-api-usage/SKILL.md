@@ -1,6 +1,9 @@
 ---
 name: pyteomics-api-usage
-description: Use when when you have polypeptide sequences and need to compute their monoisotopic or average mass, isotopic distribution patterns, or other physico-chemical properties; or when you need to parse and manipulate MS/LC-MS data, FASTA databases, or search engine output in a Python workflow.
+description: Use when when you have polypeptide sequences and need to compute their
+  monoisotopic or average mass, isotopic distribution patterns, or other physico-chemical
+  properties; or when you need to parse and manipulate MS/LC-MS data, FASTA databases,
+  or search engine output in a Python workflow.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0234
@@ -17,6 +20,8 @@ metadata:
   - SQLAlchemy
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics

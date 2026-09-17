@@ -1,6 +1,7 @@
 ---
 name: gc-column-polarity-specific-ri-filtering
-description: Use when you have a combined EI mass spectral library (MSP format) lacking experimental RI values, access to NIST ri.dat and USER.
+description: Use when you have a combined EI mass spectral library (MSP format) lacking
+  experimental RI values, access to NIST ri.dat and USER.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -19,6 +20,8 @@ metadata:
   - R statistical environment
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -28,7 +31,8 @@ evidence_spans:
 - library(future)
 - library(future.apply)
 - you can transformed it into a msp file by *Lib2NIST*
-- The total number of spectra that your NIST library have can be checked in the *MS Search* program
+- The total number of spectra that your NIST library have can be checked in the *MS
+  Search* program
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

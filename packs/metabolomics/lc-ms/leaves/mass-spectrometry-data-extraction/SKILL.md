@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-data-extraction
-description: Use when you have native Thermo Fisher RAW mass spectrometry files and need to extract scan-level metadata (retention time, total ion current, scan mode), MS1/MS2 peak lists with m/z and intensity arrays, or instrument/LC/MS method details for downstream computational analysis, QC, or cross-sample.
+description: Use when you have native Thermo Fisher RAW mass spectrometry files and
+  need to extract scan-level metadata (retention time, total ion current, scan mode),
+  MS1/MS2 peak lists with m/z and intensity arrays, or instrument/LC/MS method details
+  for downstream computational analysis, QC, or cross-sample.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -19,14 +22,19 @@ metadata:
   - ADAP
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.11.12.687968v1
   title: MetaXtract
 - doi: 10.1021/acs.analchem.1c02687
   title: ''
 evidence_spans:
-- MetaXtract is a hybrid tool for extracting, analysing, and visualising data from **Thermo Fisher RAW** mass spectrometry files.
-- Complete processing including peak picking, sample alignment, pick picking, grouping of isotopologues and adducts, gap-filling by data recursion, extraction of consolidated MS2 spectra and isotopic
+- MetaXtract is a hybrid tool for extracting, analysing, and visualising data from
+  **Thermo Fisher RAW** mass spectrometry files.
+- Complete processing including peak picking, sample alignment, pick picking, grouping
+  of isotopologues and adducts, gap-filling by data recursion, extraction of consolidated
+  MS2 spectra and isotopic
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

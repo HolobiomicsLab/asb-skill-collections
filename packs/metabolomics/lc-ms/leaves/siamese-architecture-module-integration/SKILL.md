@@ -1,6 +1,9 @@
 ---
 name: siamese-architecture-module-integration
-description: Use when when refactoring a mass-spectrometry formula-prediction codebase that has deprecated a monolithic scoring function (FDRNet) and requires a modular, symmetric Siamese design to independently embed spectrum and molecular-formula features before combining them.
+description: Use when when refactoring a mass-spectrometry formula-prediction codebase
+  that has deprecated a monolithic scoring function (FDRNet) and requires a modular,
+  symmetric Siamese design to independently embed spectrum and molecular-formula features
+  before combining them.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -13,6 +16,8 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

@@ -1,6 +1,9 @@
 ---
 name: mass-spectral-relationship-matching
-description: Use when after peak detection and feature table generation when you have a collection of m/z, retention time, and intensity values and need to identify which features are related variants (isotopes, adducts, or fragments) of the same parent compound.
+description: Use when after peak detection and feature table generation when you have
+  a collection of m/z, retention time, and intensity values and need to identify which
+  features are related variants (isotopes, adducts, or fragments) of the same parent
+  compound.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3648
@@ -12,12 +15,21 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: huaxuyu/masscube
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube
 evidence_spans:
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing.
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing.
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing
 - masscube is an integrated Python package
 claims: []
 provenance:
@@ -42,6 +54,7 @@ attribution:
 
 # mass-spectral-relationship-matching
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Annotate and group LC-MS features as isotopes, adducts, or in-source fragments by matching mass shifts and neutral loss patterns within retention time windows. This skill enables confident assignment of feature relationships that reflect the same underlying molecular entity.

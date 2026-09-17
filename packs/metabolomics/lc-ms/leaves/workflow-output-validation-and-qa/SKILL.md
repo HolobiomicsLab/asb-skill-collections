@@ -1,6 +1,7 @@
 ---
 name: workflow-output-validation-and-qa
-description: Use when after executing a Nextflow-based MS-DIAL workflow on .mzML LC-HRMS metabolomics data using Docker or Singularity container backends.
+description: Use when after executing a Nextflow-based MS-DIAL workflow on .mzML LC-HRMS
+  metabolomics data using Docker or Singularity container backends.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -15,6 +16,8 @@ metadata:
   - Singularity
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial

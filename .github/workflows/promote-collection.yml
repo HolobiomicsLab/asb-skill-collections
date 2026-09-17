@@ -5,13 +5,13 @@
 # FAIL here blocks the merge.
 #
 # Runs:
-#   - release_gate.py --strict over each collection (hard gates 1,2,5,6,8,10,12,15)
+#   - release_gate.py --strict over each collection (hard gates 2,5,6,8,10,15)
 #   - leaderboard consistency (scripts/validate_leaderboard.py)
 #   - COI presence check (full co-reviewer enforcement lives in verify-coi.yml,
 #     the single source; here we only fail the promotion if an attestation's COI
 #     probe errors, so a promotion never lands on an unverifiable attestation).
 #
-# Hard gates (2,5,6,8,10,12,15) are never overridable (§8); coi_override /
+# Hard gates (2,5,6,8,10,15) are never overridable (§8); coi_override /
 # degraded_release apply only to soft gates and are honoured by release_gate.py.
 
 name: Promote collection
@@ -52,6 +52,7 @@ jobs:
         run: |
           set -euo pipefail
           fail=0
+          python scripts/release_gate.py collections --catalogue-membership || fail=1
           shopt -s globstar nullglob
           dirs=(collections/*/v*)
           if [ ${#dirs[@]} -eq 0 ]; then

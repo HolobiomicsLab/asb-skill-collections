@@ -1,6 +1,7 @@
 ---
 name: type-safety-and-length-matching-validation
-description: Use when implementing data replacement methods (such as `[<-`, `$<-`, `mz<-`, `intensity<-`, `peaksData<-`) in a writable MsBackend subclass.
+description: Use when implementing data replacement methods (such as `[<-`, `$<-`,
+  `mz<-`, `intensity<-`, `peaksData<-`) in a writable MsBackend subclass.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,6 +14,8 @@ metadata:
   - Spectra
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra

@@ -1,6 +1,9 @@
 ---
 name: correlation-matrix-heatmap-visualization
-description: Use when after computing a correlation matrix (e.g., Pearson correlation across samples) on statistically significant LC-MS features, particularly when you need to inspect hierarchical dendrogram structure, validate cluster assignments from different flattening methods (constant-threshold vs..
+description: Use when after computing a correlation matrix (e.g., Pearson correlation
+  across samples) on statistically significant LC-MS features, particularly when you
+  need to inspect hierarchical dendrogram structure, validate cluster assignments
+  from different flattening methods (constant-threshold vs..
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -21,6 +24,8 @@ metadata:
   - MamsiStructSearch.get_correlation_clusters()
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi

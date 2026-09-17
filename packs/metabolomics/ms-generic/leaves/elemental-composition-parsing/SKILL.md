@@ -1,6 +1,9 @@
 ---
 name: elemental-composition-parsing
-description: Use when when you have FT-ICR MS peak data with assigned molecular formulas (e.g., from CoreMS, Formularity, or similar formula assignment tools) and need to compute thermodynamic indices (DBE, GFE, AImod, NOSC) or classify peaks by elemental composition.
+description: Use when when you have FT-ICR MS peak data with assigned molecular formulas
+  (e.g., from CoreMS, Formularity, or similar formula assignment tools) and need to
+  compute thermodynamic indices (DBE, GFE, AImod, NOSC) or classify peaks by elemental
+  composition.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3737
@@ -14,12 +17,16 @@ metadata:
   - Formularity
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - requires the Python dependencies NumPy [40], pandas [41, 42]
-- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39] and is available to install through the Python Package Index... It requires the Python dependencies NumPy
+- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39] and
+  is available to install through the Python Package Index... It requires the Python
+  dependencies NumPy
 - It requires the Python dependencies NumPy [40], pandas [41, 42]
 claims: []
 provenance:

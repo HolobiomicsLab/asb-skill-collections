@@ -1,6 +1,8 @@
 ---
 name: lc-ms-feature-quality-scoring
-description: Use when immediately after peak detection and feature table generation from LC-MS data, when you need to rank or filter features by confidence before annotation or statistical analysis.
+description: Use when immediately after peak detection and feature table generation
+  from LC-MS data, when you need to rank or filter features by confidence before annotation
+  or statistical analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,12 +14,21 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: huaxuyu/masscube
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube
 evidence_spans:
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing.
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing.
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing
 - masscube is an integrated Python package
 claims: []
 provenance:
@@ -42,6 +53,7 @@ attribution:
 
 # lc-ms-feature-quality-scoring
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Compute per-feature quality scores for LC-MS detected features by evaluating peak shape, chromatographic metrics, signal-to-noise ratio, and coherence of isotopes/adducts. This skill produces a quality-annotated feature table with diagnostic flags (pass/fail/warning) suitable for downstream filtering and confidence assessment.

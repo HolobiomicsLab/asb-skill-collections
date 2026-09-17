@@ -1,6 +1,9 @@
 ---
 name: spectral-clustering-density-based
-description: Use when you have computed a sparse pairwise distance matrix from MS/MS spectra (via nearest neighbor indexing) and need to partition spectra into homogeneous clusters—typically when clustering bottom-up proteomics data with the goal of grouping spectra from the same peptide sequence or when you.
+description: Use when you have computed a sparse pairwise distance matrix from MS/MS
+  spectra (via nearest neighbor indexing) and need to partition spectra into homogeneous
+  clusters—typically when clustering bottom-up proteomics data with the goal of grouping
+  spectra from the same peptide sequence or when you.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -15,11 +18,14 @@ metadata:
   - DBSCAN (sklearn.cluster or equivalent)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

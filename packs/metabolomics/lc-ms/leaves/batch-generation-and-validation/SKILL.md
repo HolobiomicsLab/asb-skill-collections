@@ -1,6 +1,9 @@
 ---
 name: batch-generation-and-validation
-description: Use when you have raw mzML files and a feature table (CSV) from LCMS data processed by tools like mzMine, and you need to create train/test/validation batches with specific matrix dimensions (120 × 2) and verified margin/peak signal separation before training or evaluating a neural network.
+description: Use when you have raw mzML files and a feature table (CSV) from LCMS
+  data processed by tools like mzMine, and you need to create train/test/validation
+  batches with specific matrix dimensions (120 × 2) and verified margin/peak signal
+  separation before training or evaluating a neural network.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -15,11 +18,14 @@ metadata:
   - pandas
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
 evidence_spans:
-- NeatMS provides the necessary functions to do that, all we will have to do is create a `Neural network handler` object
+- NeatMS provides the necessary functions to do that, all we will have to do is create
+  a `Neural network handler` object
 - Calling the method `get_threshold()` will compute and return the optimal threshold
 - After installation, you should be able to import NeatMS
 - Import the required libraries first

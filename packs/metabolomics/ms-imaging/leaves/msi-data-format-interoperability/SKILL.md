@@ -1,6 +1,9 @@
 ---
 name: msi-data-format-interoperability
-description: Use when your MSI data is stored in a Cardinal imaging experiment object (version 2.2+) that has already been peak-binned with peakBin(), and you want to run mass2adduct's massdiff() and adductMatch() pipeline without manually exporting to CSV;
+description: Use when your MSI data is stored in a Cardinal imaging experiment object
+  (version 2.2+) that has already been peak-binned with peakBin(), and you want to
+  run mass2adduct's massdiff() and adductMatch() pipeline without manually exporting
+  to CSV;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -13,11 +16,14 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - library(mass2adduct)
 claims: []
 provenance:

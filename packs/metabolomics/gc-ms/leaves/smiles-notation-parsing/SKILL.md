@@ -1,6 +1,9 @@
 ---
 name: smiles-notation-parsing
-description: Use when when processing downloaded mass spectral libraries (particularly MoNA EI or MS2 libraries) where SMILES information exists but is embedded in unstructured Comment fields rather than a dedicated SMILES field, or when assigning SMILES from external structure databases (SDF files) to library.
+description: Use when when processing downloaded mass spectral libraries (particularly
+  MoNA EI or MS2 libraries) where SMILES information exists but is embedded in unstructured
+  Comment fields rather than a dedicated SMILES field, or when assigning SMILES from
+  external structure databases (SDF files) to library.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0338
@@ -14,6 +17,8 @@ metadata:
   - ChemmineR
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler

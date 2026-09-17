@@ -3,40 +3,27 @@
   "task_id": "task_003",
   "paper_doi": "10.1021/acs.analchem.2c04632",
   "generated_at": "2026-06-15T13:42:59Z",
-  "artifacts": [
-    {
-      "path": "task_card.json",
-      "source": "card",
-      "kind": "card",
-      "external_refs": [
-        "doi:10.1021/acs.analchem.2c04632"
-      ]
-    },
-    {
-      "path": "metadata.json",
-      "source": "card",
-      "kind": "metadata",
-      "external_refs": [
-        "doi:10.1021/acs.analchem.2c04632"
-      ]
-    },
-    {
-      "path": "ro-crate-metadata.json",
-      "source": "ro_crate",
-      "kind": "ro_crate",
-      "external_refs": []
-    },
-    {
-      "path": "resources.json",
-      "source": "package_index",
-      "kind": "resources",
-      "external_refs": []
-    },
-    {
-      "path": "artifacts/artifact_references.json",
-      "source": "package_index",
-      "kind": "artifact_references",
-      "external_refs": []
-    }
-  ]
+  "artifacts": [],
+  "release": {
+    "profile": "slim",
+    "note": "This capsule is the slim subset promoted into the release. `artifacts` lists the build-recorded artefacts this capsule carries; `omitted_from_release` lists those it does not, and `contents` lists every file that is here.",
+    "contents": [
+      "artifact_provenance.json",
+      "evaluation/evaluation_strategy.md",
+      "evaluation/review_rubric.json",
+      "evidence/source_snippets.md",
+      "inputs/dataset_folder_tree.txt",
+      "inputs/dataset_preview.md",
+      "ledger/claims.jsonl",
+      "ledger/results.jsonl",
+      "ro-crate-metadata.json"
+    ],
+    "omitted_from_release": [
+      "task_card.json",
+      "metadata.json",
+      "ro-crate-metadata.json",
+      "resources.json",
+      "artifacts/artifact_references.json"
+    ]
+  }
 }

@@ -1,6 +1,8 @@
 ---
 name: java-build-artifact-validation
-description: Use when when you need to verify that a Java project's automated build pipeline (GitHub Actions workflow) executes without errors and generates distributable artifacts (e.g., .deb installers, portable binaries, or .jar files).
+description: Use when when you need to verify that a Java project's automated build
+  pipeline (GitHub Actions workflow) executes without errors and generates distributable
+  artifacts (e.g., .deb installers, portable binaries, or .jar files).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3552
@@ -13,6 +15,8 @@ metadata:
   - GitHub Actions
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3

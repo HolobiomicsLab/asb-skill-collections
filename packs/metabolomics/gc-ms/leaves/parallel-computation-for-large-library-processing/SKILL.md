@@ -1,6 +1,9 @@
 ---
 name: parallel-computation-for-large-library-processing
-description: Use when your input consists of multiple large MSP files (hundreds of megabytes) with associated structure folders containing hundreds of thousands of MOL or SDF files that require sequential processing steps (structure extraction, SMILES matching, RI assignment).
+description: Use when your input consists of multiple large MSP files (hundreds of
+  megabytes) with associated structure folders containing hundreds of thousands of
+  MOL or SDF files that require sequential processing steps (structure extraction,
+  SMILES matching, RI assignment).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -19,6 +22,8 @@ metadata:
   - RIKEN
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler

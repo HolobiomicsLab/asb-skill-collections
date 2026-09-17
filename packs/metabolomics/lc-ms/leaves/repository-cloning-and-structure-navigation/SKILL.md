@@ -1,6 +1,7 @@
 ---
 name: repository-cloning-and-structure-navigation
-description: Use when when starting a fresh ENPKG installation, you have a GitHub URL (e.g., https://github.com/enpkg/enpkg_full or https://github.
+description: Use when when starting a fresh ENPKG installation, you have a GitHub
+  URL (e.g., https://github.com/enpkg/enpkg_full or https://github.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3439
@@ -20,6 +21,8 @@ metadata:
   - enpkg_graph_builder
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acscentsci.3c00800
   title: enpkg

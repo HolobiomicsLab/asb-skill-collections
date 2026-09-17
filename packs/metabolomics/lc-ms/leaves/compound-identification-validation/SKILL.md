@@ -17,6 +17,8 @@ metadata:
   - pip
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01594
   title: CSU-MS2
@@ -50,6 +52,7 @@ attribution:
 
 # compound-identification-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate compound identifications by cross-modal retrieval of MS/MS spectra against a molecular structure library using contrastive spectral-structural embeddings. This skill enables ranking and confidence scoring of candidate structures matched to an unknown mass spectrum.

@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-feature-annotation
-description: Use when when you have peak-detected LC-MS/MS data (MGF files with MS1 and MS2 spectra, plus a feature abundance table from MZmine2) and need to assign chemical structures and molecular properties to individual MS1 features rather than relying on mass-to-charge alone.
+description: Use when when you have peak-detected LC-MS/MS data (MGF files with MS1
+  and MS2 spectra, plus a feature abundance table from MZmine2) and need to assign
+  chemical structures and molecular properties to individual MS1 features rather than
+  relying on mass-to-charge alone.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -16,11 +19,14 @@ metadata:
   - Classyfire
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
 evidence_spans:
-- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed comparison of untargeted metabolomic profiles.
+- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed
+  comparison of untargeted metabolomic profiles.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,9 @@
 ---
 name: chemical-similarity-clustering
-description: Use when you have untargeted LC-MS/MS metabolomic data (MS1 features with MS2 fragmentation spectra) preprocessed by MZmine2 into a feature table (BIOM format) and MGF file, and you want to construct a chemically-informed hierarchy of features for alpha/beta-diversity analysis or to group features.
+description: Use when you have untargeted LC-MS/MS metabolomic data (MS1 features
+  with MS2 fragmentation spectra) preprocessed by MZmine2 into a feature table (BIOM
+  format) and MGF file, and you want to construct a chemically-informed hierarchy
+  of features for alpha/beta-diversity analysis or to group features.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,11 +17,14 @@ metadata:
   - GNPS FBMN
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
 evidence_spans:
-- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed comparison of untargeted metabolomic profiles.
+- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed
+  comparison of untargeted metabolomic profiles.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

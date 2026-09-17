@@ -1,6 +1,8 @@
 ---
 name: mass-error-calculation-and-assessment
-description: Use when after peak picking and before or after molecular formula assignment on FT-ICR data, especially when calibrating on a specific field strength (e.g., 12 T or 15 T).
+description: Use when after peak picking and before or after molecular formula assignment
+  on FT-ICR data, especially when calibrating on a specific field strength (e.g.,
+  12 T or 15 T).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,12 +16,15 @@ metadata:
   - Bruker Solarix (ReadBrukerSolarix)
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development and data analysis of small molecules analysis.'
+- '**CoreMS** is a comprehensive mass spectrometry framework for software development
+  and data analysis of small molecules analysis.'
 - import pandas as pd
 - import numpy as np
 claims: []

@@ -1,6 +1,8 @@
 ---
 name: chemical-formula-tokenization
-description: Use when you have collections of chemical formulae (e.g., from SIRIUS decomposition or subformula labeling) derived from MS/MS spectra and need to feed them into a transformer encoder.
+description: Use when you have collections of chemical formulae (e.g., from SIRIUS
+  decomposition or subformula labeling) derived from MS/MS spectra and need to feed
+  them into a transformer encoder.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0392
@@ -20,6 +22,8 @@ metadata:
   - MIST-CF formula transformer
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s42256-023-00708-3
   title: MIST (chemical formula transformer)

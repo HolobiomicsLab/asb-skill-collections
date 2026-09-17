@@ -1,6 +1,9 @@
 ---
 name: metabolomics-npp-reliability-assessment
-description: Use when you have completed NPP runs from one or more metabolomics tools on a set of LC-HRMS mzML files AND you have reference information (target molecule list with molecular formula, main adduct, and RT boundaries) available for a subset of expected compounds in those files.
+description: Use when you have completed NPP runs from one or more metabolomics tools
+  on a set of LC-HRMS mzML files AND you have reference information (target molecule
+  list with molecular formula, main adduct, and RT boundaries) available for a subset
+  of expected compounds in those files.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -17,12 +20,15 @@ metadata:
   - MSconvert (ProteoWizard)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
-- doi: 10.1093/bioinformatics/btab231/6214530
+- doi: 10.1093/bioinformatics/btab231
   title: mzRAPP
 evidence_spans:
 - 'You can now start mzRAPP using: library(mzRAPP); callmzRAPP()'
-- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing (NPP)
+- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing
+  (NPP)
 - Below we provided one more example for MZmine2
 - Download the XCMS- and MZmine 2-output files from [ucloud]
 - library(mzRAPP)
@@ -32,15 +38,15 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_mzrapp_cq
-    doi: 10.1093/bioinformatics/btab231/6214530
+    doi: 10.1093/bioinformatics/btab231
     title: mzRAPP
   dedup_kept_from: coll_mzrapp_cq
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1093/bioinformatics/btab231/6214530
+  original_doi: 10.1093/bioinformatics/btab231
   all_source_dois:
-  - 10.1093/bioinformatics/btab231/6214530
+  - 10.1093/bioinformatics/btab231
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias

@@ -1,6 +1,8 @@
 ---
 name: quality-control-report-generation
-description: Use when after completing doAnalysis on an mzQuality SummarizedExperiment object with outlier detection, batch correction, and compound reliability filtering applied.
+description: Use when after completing doAnalysis on an mzQuality SummarizedExperiment
+  object with outlier detection, batch correction, and compound reliability filtering
+  applied.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -14,6 +16,8 @@ metadata:
   - mzQualityDashboard
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -22,8 +26,10 @@ evidence_spans:
 - knitr::rmarkdown, library(mzQuality)
 - mzQuality requires a specific format for the input data.
 - mzQuality requires a specific format for the input data
-- The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.
-- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data
+- The `buildExperiment` function will then take the data and create an experiment
+  object that can be used for analysis.
+- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store
+  the data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,9 @@
 ---
 name: xcms-output-replacement-workflow
-description: Use when xCMS has produced aligned LC-MS features but alignment quality is suspected to be poor—especially when analyzing hundreds of samples, data acquired over extended periods (>1 week), or when individual m/z bins show inconsistent RT shifts.
+description: Use when xCMS has produced aligned LC-MS features but alignment quality
+  is suspected to be poor—especially when analyzing hundreds of samples, data acquired
+  over extended periods (>1 week), or when individual m/z bins show inconsistent RT
+  shifts.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -13,12 +16,16 @@ metadata:
   - R
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
 evidence_spans:
-- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an alignment algorithm
-- '`ncGTW` is an R package developed as a plug-in of `xcms`, a popular LC-MS data analysis R package'
+- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an
+  alignment algorithm
+- '`ncGTW` is an R package developed as a plug-in of `xcms`, a popular LC-MS data
+  analysis R package'
 - '`ncGTW` is an R package developed as a plug-in of `xcms`'
 - ncGTW is an R package developed as a plug-in of xcms
 claims: []

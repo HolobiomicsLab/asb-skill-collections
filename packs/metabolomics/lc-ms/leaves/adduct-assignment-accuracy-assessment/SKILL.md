@@ -1,6 +1,9 @@
 ---
 name: adduct-assignment-accuracy-assessment
-description: Use when you have a trained formula ranking model (such as MIST-CF) and want to measure the specific performance gain from incorporating multiple positive-mode adduct types (e.g., [M+H]+, [M+Na]+, [M+K]+, [M+NH4]+) instead of restricting predictions to [M+H]+ only.
+description: Use when you have a trained formula ranking model (such as MIST-CF) and
+  want to measure the specific performance gain from incorporating multiple positive-mode
+  adduct types (e.g., [M+H]+, [M+Na]+, [M+K]+, [M+NH4]+) instead of restricting predictions
+  to [M+H]+ only.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -13,12 +16,15 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
 - an extension of MIST for annotating MS1 precursor masses from MS/MS data
-- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach
+- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum
+  using an end-to-end energy based modeling approach
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

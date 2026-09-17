@@ -1,6 +1,8 @@
 ---
 name: retention-time-mapping-spline-fitting
-description: Use when after anchor feature pairs (m/z and retention time values) have been selected from two disparately-acquired LC-MS datasets, and you need to correct for systematic retention time differences between the datasets.
+description: Use when after anchor feature pairs (m/z and retention time values) have
+  been selected from two disparately-acquired LC-MS datasets, and you need to correct
+  for systematic retention time differences between the datasets.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -13,13 +15,17 @@ metadata:
   - metabCombiner
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
 - a modified form of the `gam` function implemented in the *mgcv* R package
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
