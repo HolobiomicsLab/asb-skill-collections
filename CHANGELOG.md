@@ -51,6 +51,14 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   keeps its historical score/slug order unchanged. See `docs/selection.md`.
 
 ### Fixed
+- Make the release gate own and fully account for evidence-quote parsing,
+  including colon-bearing labels, multiline blocks and embedded quotes; apply
+  verbatim caps to every non-text-reuse-permissive DOI (licence tier, else
+  `access.source_reuse`, else the paper licence the v1 corpora record under
+  `access.license`) with normalized DOI identity; distinguish Git SSH and
+  R-slot syntax from real email addresses (a two-letter last label is always
+  an email); propagate the `unknown` licence tier without collapsing or
+  raising; and refresh the vendored `pii_config.py` of metabolomics v2.
 - Scope all 16,583 validation assertion IDs in the three v1 collections to
   their source paper, preserving each existing local suffix. The 82 indicium
   records now use `asbval:assertion/paper/<URL-escaped DOI>/<local suffix>`;

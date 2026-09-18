@@ -21,8 +21,8 @@ Checks implemented (mapped to the §5 checklist + §6 safety gates):
                                 (SKILL.md bodies, card text, evidence spans) for
                                 verbatim source spans over the per-span cap
                                 (substring/n-gram + a simple similarity ratio) and
-                                applies the cumulative cap (reuses promote.py caps
-                                + ``_EVIDENCE_VERBATIM_RE``).
+                                applies the cumulative cap (reuses promote.py caps;
+                                evidence parsing is gate-owned).
   3. PII / DUAL-USE (two-tier) — §6.  HARD FAIL on high-confidence clinical /
                                 personal identifiers + non-author emails inside
                                 verbatim quote spans; WARN + route-to-human for
@@ -52,11 +52,11 @@ Enforcement modes (CONTENT_POLICY.md §7):
 Dependencies: Python 3 stdlib + PyYAML.  numpy is optional and unused by the
 default code path (a hook is provided for a future embedding-similarity pass).
 
-Reuse: this script imports the canonical caps / tier sets / strip helper from
+Reuse: this script imports the canonical caps and tier sets from
 ``agentic_science_builder.release.promote`` when that package is importable, and
 falls back to vendored copies of the same constants (kept byte-for-byte in sync)
 when it is not — so the gate runs both inside an ASB checkout and standalone in
-CI on the asb-skill-collections repo.
+CI on the asb-skill-collections repo.  Body evidence parsing remains owned here.
 
 Usage:
     python scripts/release_gate.py collections/metabolomics/v1 \
@@ -108,7 +108,6 @@ from scripts.validate_workflows import validate_port_types
 try:  # pragma: no cover - exercised only inside an ASB checkout
     from agentic_science_builder.release.promote import (  # type: ignore
         _CUMULATIVE_CAP,
-        _EVIDENCE_VERBATIM_RE,
         _NON_OA_TIERS,
         _OA_TIERS,
         _PER_SPAN_CAP,
@@ -131,11 +130,28 @@ except Exception:  # noqa: BLE001 - any import failure → vendored fallback
     _PER_SPAN_CAP = 150
     _CUMULATIVE_CAP = 1500
     _TEXT_FIELD_CAP = 300
-    _EVIDENCE_VERBATIM_RE = re.compile(r'^(\s*-\s+\[[^\]]*\][^:]*?):\s*"[^"]*"\s*$')
     _PROMOTE_SOURCE = "vendored-fallback"
 
 
-from scripts.pii_config import PII_CONFIG, _is_notation_not_email
+# Body evidence syntax is release-gate input, so its parser is owned here rather
+# than inherited from promotion code with a narrower, single-line contract.
+_EVIDENCE_VERBATIM_RE = re.compile(
+    r'^(\s*-\s+\[[^\]]*\].*?):\s*"(?P<text>.*)"\s*$'
+)
+_EVIDENCE_VERBATIM_START_RE = re.compile(
+    r'^(\s*-\s+\[[^\]]*\].*?):\s*"(?P<text>.*)$'
+)
+_EVIDENCE_ITEM_RE = re.compile(r"^\s*-\s+\[")
+_EVIDENCE_PARSER_SOURCE = "scripts.release_gate (gate-owned)"
+_EVIDENCE_PARSER_STAT_KEYS = (
+    "one_line",
+    "multiline",
+    "embedded_quote",
+    "unterminated",
+)
+
+
+from scripts.pii_config import PII_CONFIG, _is_notation_not_email  # noqa: E402
 
 
 # --------------------------------------------------------------------------- #
@@ -144,7 +160,7 @@ from scripts.pii_config import PII_CONFIG, _is_notation_not_email
 _NGRAM_JACCARD_THRESHOLD = 0.30  # >0.30 3-gram Jaccard overlap → flag
 _SIMILARITY_RATIO_THRESHOLD = 0.92  # SequenceMatcher ratio proxy for cosine
 _GATE_REPORT_SCHEMA = "asbb-release-gate/1.1"
-_GATE_POLICY_VERSION = "asbb-content-gate/1.1"
+_GATE_POLICY_VERSION = "asbb-content-gate/1.2"
 _DIAGNOSTIC_SCOPE = "diagnostic run, not a release verification"
 
 
@@ -230,6 +246,15 @@ def _normalize_access_type(raw: str) -> str:
     if t == "green":
         t = "green-oa"
     return t
+
+
+def _norm_doi(raw: Any) -> str:
+    """Return the case-insensitive DOI identity used for gate comparisons."""
+    doi = str(raw or "").strip().lower()
+    for prefix in ("https://doi.org/", "http://doi.org/", "doi:"):
+        if doi.startswith(prefix):
+            return doi[len(prefix):].strip()
+    return doi
 
 
 # Canonical (post-normalization) view of the OA allowed set so membership is
@@ -323,41 +348,99 @@ def _iter_skill_md(collection_dir: Path) -> Iterable[Path]:
     return layout.iter_skill_md(collection_dir)
 
 
-def _collect_evidence_spans(fm: dict[str, Any], body: str) -> list[dict[str, Any]]:
-    """Pull verbatim quote spans out of a skill's frontmatter + body.
+def _new_evidence_parser_stats() -> dict[str, int]:
+    """Return zeroed counters for gate-owned body evidence parsing."""
+    return {key: 0 for key in _EVIDENCE_PARSER_STAT_KEYS}
 
-    Spans come from two places:
-      * structured ``evidence_spans`` / ``evidence`` lists in frontmatter
-        (each ``{text|quote, doi, section}``), and
-      * ``## Evidence`` body lines of the form ``- [section] paraphrase: "quote"``
-        matched by promote.py's ``_EVIDENCE_VERBATIM_RE`` (the verbatim part is
-        the double-quoted tail).
-    """
+
+def _record_body_evidence(
+    text: str, kind: str, spans: list[str], stats: dict[str, int]
+) -> None:
+    """Record one recognized body item and its overlapping parser traits."""
+    spans.append(text)
+    stats[kind] += 1
+    stats["embedded_quote"] += '"' in text
+
+
+def _parse_evidence_body(body: str) -> tuple[list[str], dict[str, int]]:
+    """Parse complete one-line and multiline body evidence items."""
+    spans: list[str] = []
+    stats = _new_evidence_parser_stats()
+    pending: list[str] | None = None
+    for line in body.splitlines():
+        if pending is not None and _EVIDENCE_ITEM_RE.match(line):
+            stats["unterminated"] += 1
+            pending = None
+        elif pending is not None:
+            closing_line = line.rstrip()
+            if closing_line.endswith('"'):
+                pending.append(closing_line[:-1])
+                _record_body_evidence("\n".join(pending), "multiline", spans, stats)
+                pending = None
+            else:
+                pending.append(line)
+            continue
+
+        complete = _EVIDENCE_VERBATIM_RE.match(line)
+        if complete:
+            _record_body_evidence(complete.group("text"), "one_line", spans, stats)
+            continue
+        start = _EVIDENCE_VERBATIM_START_RE.match(line)
+        if start:
+            pending = [start.group("text")]
+    stats["unterminated"] += pending is not None
+    return spans, stats
+
+
+def _collect_evidence_spans_with_stats(
+    fm: dict[str, Any], body: str
+) -> tuple[list[dict[str, Any]], dict[str, int]]:
+    """Collect frontmatter/body spans and return body parser statistics."""
     spans: list[dict[str, Any]] = []
 
     def _push(text: str, doi: str | None, section: str | None) -> None:
-        text = (text or "").strip()
-        if text:
-            spans.append({"text": text, "doi": doi or "", "section": section or ""})
+        normalized = (text or "").strip()
+        if normalized:
+            spans.append(
+                {"text": normalized, "doi": doi or "", "section": section or ""}
+            )
 
     for key in ("evidence_spans", "evidence"):
-        for sp in fm.get(key) or []:
-            if isinstance(sp, dict):
+        for span in fm.get(key) or []:
+            if isinstance(span, dict):
                 _push(
-                    sp.get("text") or sp.get("quote") or "",
-                    sp.get("doi"),
-                    sp.get("section"),
+                    span.get("text") or span.get("quote") or "",
+                    span.get("doi"),
+                    span.get("section"),
                 )
-            elif isinstance(sp, str):
-                _push(sp, None, None)
+            elif isinstance(span, str):
+                _push(span, None, None)
 
-    for line in body.splitlines():
-        mv = _EVIDENCE_VERBATIM_RE.match(line)
-        if mv:
-            qm = re.search(r':\s*"([^"]*)"\s*$', line)
-            if qm:
-                _push(qm.group(1), None, None)
+    body_spans, stats = _parse_evidence_body(body)
+    for text in body_spans:
+        _push(text, None, None)
+    return spans, stats
+
+
+def _collect_evidence_spans(fm: dict[str, Any], body: str) -> list[dict[str, Any]]:
+    """Pull verbatim quote spans from frontmatter and gate-parsed body items."""
+    spans, _ = _collect_evidence_spans_with_stats(fm, body)
     return spans
+
+
+def _new_evidence_coverage() -> dict[str, int]:
+    """Return file coverage plus gate-owned parser counters for a check."""
+    coverage = dict(inspected_files=0, files_without_spans=0, missing_files=0)
+    coverage.update({f"parser_{key}": 0 for key in _EVIDENCE_PARSER_STAT_KEYS})
+    return coverage
+
+
+def _add_evidence_parser_stats(
+    coverage: dict[str, int], stats: dict[str, int]
+) -> None:
+    """Accumulate one parsed file's body evidence counters into coverage."""
+    for key in _EVIDENCE_PARSER_STAT_KEYS:
+        coverage[f"parser_{key}"] += stats[key]
 
 
 def _skill_repo_url(fm: dict[str, Any]) -> str:
@@ -388,13 +471,15 @@ def _skill_dois(fm: dict[str, Any]) -> list[str]:
             dois.append(str(doi))
     if fm.get("doi"):
         dois.append(str(fm["doi"]))
-    # Stable-dedup.
+    # Stable-dedup by DOI identity while preserving the first raw spelling for
+    # reader-facing findings.
     seen: set[str] = set()
     out: list[str] = []
     for d in dois:
-        if d not in seen:
-            seen.add(d)
-            out.append(d)
+        identity = _norm_doi(d)
+        if identity and identity not in seen:
+            seen.add(identity)
+            out.append(d.strip())
     return out
 
 
@@ -419,10 +504,11 @@ def _build_email_allowlist(collection_meta: dict[str, Any]) -> tuple[set[str], r
 
     def _harvest(node: Any) -> None:
         if isinstance(node, str):
-            for m in email_re.findall(node):
-                if _is_notation_not_email(m):
+            for match in email_re.finditer(node):
+                email = match.group(0)
+                if _is_notation_not_email(email, match=match):
                     continue
-                exact.add(m.lower())
+                exact.add(email.lower())
         elif isinstance(node, dict):
             for v in node.values():
                 _harvest(v)
@@ -447,10 +533,56 @@ def _access_tier_from_corpus(corpus: dict[str, Any]) -> dict[str, str]:
     """Map DOI → normalized access tier from a corpus.yaml dict."""
     out: dict[str, str] = {}
     for p in corpus.get("papers") or []:
-        doi = (p or {}).get("doi") or ""
+        doi = _norm_doi((p or {}).get("doi"))
         tier = _normalize_access_type(((p or {}).get("access") or {}).get("type") or "")
         if doi:
             out[doi] = tier
+    return out
+
+
+_PERMISSIVE_TEXT_LICENCE_PREFIXES = ("cc-by", "cc0", "public-domain")
+
+
+def _paper_licence_is_permissive(licence: Any) -> bool | None:
+    """Read a paper-level licence string such as ``access.license`` of the v1 corpora.
+
+    Returns ``None`` when no licence is recorded so the caller can fail closed.
+    CC BY, CC BY-SA, CC0 and public-domain text may be reused; the NC and ND
+    variants may not, and a code licence (MIT, GPL) says nothing about the text.
+    """
+    text = re.sub(r"[\s_]+", "-", str(licence or "").strip().lower())
+    if not text:
+        return None
+    if not text.startswith(_PERMISSIVE_TEXT_LICENCE_PREFIXES):
+        return False
+    return not any(marker in text for marker in ("-nc", "-nd"))
+
+
+def _reuse_by_doi_from_corpus(corpus: dict[str, Any]) -> dict[str, bool]:
+    """Map DOI to whether its source text is permissively reusable under P2.
+
+    Precedence: ``license_tier`` (the tiered class-A corpora), then
+    ``access.source_reuse``, then the paper licence in ``access.license`` (the
+    released v1 corpora record ``cc-by`` there and carry no tier). A DOI with
+    none of the three fails closed and takes the strict caps.
+    """
+    out: dict[str, bool] = {}
+    for paper in corpus.get("papers") or []:
+        if not isinstance(paper, dict):
+            continue
+        doi = _norm_doi(paper.get("doi"))
+        if not doi:
+            continue
+        license_tier = str(paper.get("license_tier") or "").strip().lower()
+        if license_tier:
+            out[doi] = license_tier == "open"
+            continue
+        access = paper.get("access") if isinstance(paper.get("access"), dict) else {}
+        source_reuse = str(access.get("source_reuse") or "").strip().lower()
+        if source_reuse:
+            out[doi] = source_reuse == "permissive"
+            continue
+        out[doi] = bool(_paper_licence_is_permissive(access.get("license")))
     return out
 
 
@@ -537,33 +669,69 @@ def check_access_tier(corpus: dict[str, Any], require_open_access: bool = True) 
 # Check 2 — STRIP-VERBATIM / SIMILARITY.  Gates 5 / 6 (hard).                  #
 # --------------------------------------------------------------------------- #
 def check_strip_verbatim(
-    collection_dir: Path, access_by_doi: dict[str, str]
+    collection_dir: Path,
+    access_by_doi: dict[str, str],
+    reuse_by_doi: dict[str, bool] | None = None,
 ) -> CheckResult:
-    """Check extracted evidence spans against the existing caps and similarity rules."""
+    """Check evidence spans under access and P2 text-reuse cap regimes."""
+    normalized_access = {
+        _norm_doi(doi): tier
+        for doi, tier in access_by_doi.items()
+        if _norm_doi(doi)
+    }
+    normalized_reuse = (
+        {
+            _norm_doi(doi): bool(is_permissive)
+            for doi, is_permissive in reuse_by_doi.items()
+            if _norm_doi(doi)
+        }
+        if reuse_by_doi is not None
+        else None
+    )
     res = CheckResult(
         name="strip_verbatim_similarity",
         gates=[5, 6],
         hard_gate=True,
         scope="evidence spans",
-        coverage=dict(inspected_files=0, files_without_spans=0, missing_files=0),
-        summary=(
-            "OA papers exempt from caps (unlimited verbatim w/ attribution; "
-            f">{_TEXT_FIELD_CAP}-char spans → advisory WARN).  Non-OA and link-only "
-            f"(no reuse right established): per-span text cap {_TEXT_FIELD_CAP} chars, "
-            f"cumulative cap {_CUMULATIVE_CAP} chars/DOI.  "
-            "Near-verbatim similarity flagged for all."
-        ),
+        coverage=_new_evidence_coverage(),
+        summary="",
     )
     cumulative_by_doi: dict[str, int] = {}
     total_spans = 0
 
-    def _is_non_oa(doi: str) -> bool:
-        # Treat unknown / non-OA / link-only tiers (and any DOI absent from the
-        # corpus) as the strict-cap regime; OA papers permit fuller verbatim with
-        # attribution.  See _CAPPED_VERBATIM_TIERS for why link-only is in here.
-        return (
-            access_by_doi.get(doi, "unknown") in _CAPPED_VERBATIM_TIERS
-            or doi not in access_by_doi
+    def _has_strict_caps(doi: str) -> bool:
+        access_is_strict = (
+            normalized_access.get(doi, "unknown") in _CAPPED_VERBATIM_TIERS
+            or doi not in normalized_access
+        )
+        if normalized_reuse is None:
+            return access_is_strict
+        return access_is_strict or not normalized_reuse.get(doi, False)
+
+    policy_dois = set(normalized_access)
+    if normalized_reuse is not None:
+        policy_dois.update(normalized_reuse)
+    strict_dois = sum(_has_strict_caps(doi) for doi in policy_dois)
+    res.coverage["strict_regime_dois"] = strict_dois
+    res.coverage["permissive_regime_dois"] = len(policy_dois) - strict_dois
+    if normalized_reuse is None:
+        res.summary = (
+            "Legacy access-only caps: non-OA and link-only DOIs use strict caps; "
+            f"strict={strict_dois}, permissive={len(policy_dois) - strict_dois}. "
+            "P2 was not applied because reuse_by_doi was not provided."
+        )
+        res.add(
+            WARN,
+            "P2 was not applied: reuse_by_doi was not provided; using legacy "
+            "access-only cap behavior.",
+        )
+    else:
+        res.summary = (
+            "P2 strict caps apply when a DOI is non-OA or not text-reuse-"
+            f"permissive: per-span cap {_TEXT_FIELD_CAP} chars and cumulative cap "
+            f"{_CUMULATIVE_CAP} chars/DOI; strict={strict_dois}, "
+            f"permissive={len(policy_dois) - strict_dois}. Near-verbatim "
+            "similarity is checked for all spans."
         )
 
     for sk_md in _iter_skill_md(collection_dir):
@@ -577,16 +745,18 @@ def check_strip_verbatim(
         fm, body = _read_frontmatter(text)
         rel = str(sk_md.relative_to(collection_dir))
         skill_dois = _skill_dois(fm) or [""]
-        spans = _collect_evidence_spans(fm, body)
+        spans, parser_stats = _collect_evidence_spans_with_stats(fm, body)
+        _add_evidence_parser_stats(res.coverage, parser_stats)
         res.coverage["files_without_spans"] += not spans
         for span in spans:
             findings_start = len(res.details)
             total_spans += 1
             span_text = span["text"]
             span_len = len(span_text)
-            doi = span["doi"] or skill_dois[0]
+            raw_doi = str(span["doi"] or skill_dois[0])
+            doi = _norm_doi(raw_doi)
 
-            if not _is_non_oa(doi):
+            if not _has_strict_caps(doi):
                 # OPEN_ACCESS_POLICY.md "Per-paper access tier rules" /
                 # "Open-access": OA papers (any _OA_TIERS literal) pass
                 # through UNCHANGED — unlimited verbatim with attribution.  No
@@ -597,16 +767,16 @@ def check_strip_verbatim(
                     res.add(
                         WARN,
                         f"{rel}: OA verbatim span ({span_len} chars) exceeds the "
-                        f"{_TEXT_FIELD_CAP}-char snippet guidance for DOI '{doi}' "
+                        f"{_TEXT_FIELD_CAP}-char snippet guidance for DOI '{raw_doi}' "
                         "(OA = unlimited with attribution; advisory only).",
                         file=rel,
-                        doi=doi,
+                        doi=raw_doi,
                         span_len=span_len,
                         cap=_TEXT_FIELD_CAP,
                         span_preview=span_text[:80],
                     )
             else:
-                # Non-OA (hybrid / closed / paywalled / unknown): hard caps.
+                # Non-OA or non-text-reuse-permissive: hard caps.
                 # Per-span text-field cap is 300 (OPEN_ACCESS_POLICY.md
                 # "Hybrid / quotation" rules and TL;DR table;
                 # the 150-char _PER_SPAN_CAP applies to claim source_excerpts,
@@ -614,25 +784,25 @@ def check_strip_verbatim(
                 if span_len > _TEXT_FIELD_CAP:
                     res.add(
                         FAIL,
-                        f"{rel}: non-OA verbatim span ({span_len} chars) exceeds per-span "
-                        f"cap ({_TEXT_FIELD_CAP}) for DOI '{doi}'.",
+                        f"{rel}: strict-regime verbatim span ({span_len} chars) exceeds "
+                        f"per-span cap ({_TEXT_FIELD_CAP}) for DOI '{raw_doi}'.",
                         file=rel,
-                        doi=doi,
+                        doi=raw_doi,
                         span_len=span_len,
                         cap=_TEXT_FIELD_CAP,
                         span_preview=span_text[:80],
                     )
 
-                # Cumulative cap (per DOI) — non-OA only.
+                # Cumulative cap per normalized DOI identity.
                 running = cumulative_by_doi.get(doi, 0) + span_len
                 cumulative_by_doi[doi] = running
                 if running > _CUMULATIVE_CAP:
                     res.add(
                         FAIL,
-                        f"{rel}: cumulative verbatim for non-OA DOI '{doi}' reached {running} "
-                        f"chars (cap {_CUMULATIVE_CAP}).",
+                        f"{rel}: cumulative strict-regime verbatim for DOI '{raw_doi}' "
+                        f"reached {running} chars (cap {_CUMULATIVE_CAP}).",
                         file=rel,
-                        doi=doi,
+                        doi=raw_doi,
                         cumulative=running,
                         cap=_CUMULATIVE_CAP,
                     )
@@ -656,7 +826,7 @@ def check_strip_verbatim(
                         f"{rel}: span is near-verbatim (jaccard={jac:.2f}, ratio={ratio:.2f}) — "
                         "both §5.3 thresholds exceeded; rewrite required.",
                         file=rel,
-                        doi=doi,
+                        doi=raw_doi,
                         jaccard=round(jac, 3),
                         ratio=round(ratio, 3),
                     )
@@ -669,14 +839,14 @@ def check_strip_verbatim(
                         f"{rel}: span similarity above one §5.3 threshold "
                         f"(jaccard={jac:.2f}, ratio={ratio:.2f}) — curator review.",
                         file=rel,
-                        doi=doi,
+                        doi=raw_doi,
                         jaccard=round(jac, 3),
                         ratio=round(ratio, 3),
                     )
 
             res.record_item(findings_start)
 
-    res.summary = f"{res.summary}  ({total_spans} verbatim spans scanned)"
+    res.summary = f"{res.summary} ({total_spans} verbatim spans scanned)"
     return res.finish()
 
 
@@ -694,7 +864,7 @@ def check_pii_dual_use(
         ],  # §6 content-safety gate (no numeric §5 row; tracked as gate 6 content-safety)
         hard_gate=True,
         scope="evidence spans",
-        coverage=dict(inspected_files=0, files_without_spans=0, missing_files=0),
+        coverage=_new_evidence_coverage(),
         summary=(
             "Two-tier PII / dual-use scan of verbatim quote spans "
             f"(pii_config={PII_CONFIG['version']})."
@@ -723,7 +893,8 @@ def check_pii_dual_use(
         res.coverage["inspected_files"] += 1
         fm, body = _read_frontmatter(text)
         rel = str(sk_md.relative_to(collection_dir))
-        spans = _collect_evidence_spans(fm, body)
+        spans, parser_stats = _collect_evidence_spans_with_stats(fm, body)
+        _add_evidence_parser_stats(res.coverage, parser_stats)
         res.coverage["files_without_spans"] += not spans
         for span in spans:
             findings_start = len(res.details)
@@ -744,11 +915,12 @@ def check_pii_dual_use(
                     )
 
             # --- Emails: FAIL unless allowlisted ------------------------------
-            for em in email_re.findall(span_text):
+            for match in email_re.finditer(span_text):
+                em = match.group(0)
                 eml = em.lower()
                 # Skip scientific domain-notation false positives (e.g. Spec2Vec
                 # 'peak@xxx.xx' / 'loss@xxx.xx' word tokens) — not real emails.
-                if _is_notation_not_email(em):
+                if _is_notation_not_email(em, match=match):
                     continue
                 if eml in allow_exact:
                     continue
@@ -1352,14 +1524,19 @@ def _policy_snapshot() -> dict:
         "ngram_jaccard_threshold": _NGRAM_JACCARD_THRESHOLD,
         "similarity_ratio_threshold": _SIMILARITY_RATIO_THRESHOLD,
         "pii_config_version": PII_CONFIG["version"],
+        "evidence_parser_source": _EVIDENCE_PARSER_SOURCE,
+        "evidence_parser_pattern": _EVIDENCE_VERBATIM_RE.pattern,
+        "strict_verbatim_rule": "non-OA or non-text-reuse-permissive DOI",
         "require_open_access": True,
         "kb_sidecar_max_bytes": _KB_SIDECAR_MAX_BYTES,
         "collection_kb_max_bytes": _COLLECTION_KB_MAX_BYTES,
         "allowed_skill_files": sorted(_ALLOWED_SKILL_FILES),
     }
     policy["config_sha256"] = receipt.digest({
-        **policy, "pii": PII_CONFIG, "verbatim_pattern": _EVIDENCE_VERBATIM_RE.pattern,
-        "capped_tiers": sorted(_CAPPED_VERBATIM_TIERS), "promote_source": _PROMOTE_SOURCE,
+        **policy,
+        "pii": PII_CONFIG,
+        "capped_tiers": sorted(_CAPPED_VERBATIM_TIERS),
+        "promote_source": _PROMOTE_SOURCE,
     })
     sources = [Path(__file__), Path(receipt.__file__), Path(layout.__file__)]
     policy["implementation_sha256"] = receipt.digest([receipt.file_record(p, p.name) for p in sources])
@@ -1516,9 +1693,15 @@ def run_gate(
         access_by_doi = _access_tier_from_corpus(corpus)
     except (TypeError, AttributeError):
         access_by_doi = {}
+    try:
+        reuse_by_doi = _reuse_by_doi_from_corpus(corpus)
+    except (TypeError, AttributeError):
+        reuse_by_doi = {}
     checks = [
         _readable_check(check_access_tier, corpus),
-        _readable_check(check_strip_verbatim, collection_dir, access_by_doi),
+        _readable_check(
+            check_strip_verbatim, collection_dir, access_by_doi, reuse_by_doi
+        ),
         _readable_check(check_pii_dual_use, collection_dir, collection_meta),
         _readable_check(check_provenance, collection_dir),
         _readable_check(check_workflows, collection_dir),
@@ -1558,6 +1741,7 @@ def run_gate(
         "mode": mode,
         "strict": strict,
         "promote_logic_source": _PROMOTE_SOURCE,
+        "evidence_parser_source": _EVIDENCE_PARSER_SOURCE,
         "policy": _policy_snapshot(),
         "binding": binding,
         "inventory": inventory,
@@ -1625,6 +1809,7 @@ def _print_human_summary(report: dict[str, Any]) -> None:
     print(f"  collection : {report['collection_dir']}")
     print(f"  corpus     : {report['corpus_path']}")
     print(f"  reuse      : {report['promote_logic_source']}")
+    print(f"  parser     : {report['evidence_parser_source']}")
     print("  checks:")
     for c in report["checks"]:
         hard = " [hard-gate]" if c["hard_gate"] else ""
