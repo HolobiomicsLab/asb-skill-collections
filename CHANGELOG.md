@@ -51,6 +51,11 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   keeps its historical score/slug order unchanged. See `docs/selection.md`.
 
 ### Fixed
+- Make generated skill descriptions and routers carry their unit's own contract:
+  approved description openings are normalised without duplication, domain
+  wording comes from the collection slug (or stays neutral), and router apply /
+  grounding instructions describe sampled leaf metadata and only the grounding
+  assets that the unit ships, while the released v2 router remains byte-stable.
 - Scope all 16,583 validation assertion IDs in the three v1 collections to
   their source paper, preserving each existing local suffix. The 82 indicium
   records now use `asbval:assertion/paper/<URL-escaped DOI>/<local suffix>`;
