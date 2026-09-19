@@ -20,6 +20,8 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   trimming and router-shaped output tests.
 - Add the deterministic S4 corpus-record join and Decision 7 P1 access map,
   with duplicate and unmatched receipts plus fixture coverage.
+- Add the deterministic S5 index bootstrap and six-check candidate gate runner,
+  with stamped indexes, retained check output and fixture coverage.
 - Ship an RO-Crate with every released capsule and make `validate.yml` gate 8
   blocking. The 417 capsules of `metabolomics/v1`, `epigenomics/v1` and
   `transcriptomics/v1` now carry the `ro-crate-metadata.json` their build wrote,
