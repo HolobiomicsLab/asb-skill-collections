@@ -51,6 +51,9 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   keeps its historical score/slug order unchanged. See `docs/selection.md`.
 
 ### Fixed
+- Raise the content gate policy to 1.3: strict verbatim caps now use only known
+  paper-text licence evidence; tool-subject and unknown text licences follow
+  access-only caps, with the unknown class reported separately.
 - Make the release gate own and fully account for evidence-quote parsing,
   including colon-bearing labels, multiline blocks and embedded quotes; apply
   verbatim caps to every non-text-reuse-permissive DOI (licence tier, else

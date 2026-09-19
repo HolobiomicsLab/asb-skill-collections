@@ -160,7 +160,7 @@ from scripts.pii_config import PII_CONFIG, _is_notation_not_email  # noqa: E402
 _NGRAM_JACCARD_THRESHOLD = 0.30  # >0.30 3-gram Jaccard overlap → flag
 _SIMILARITY_RATIO_THRESHOLD = 0.92  # SequenceMatcher ratio proxy for cosine
 _GATE_REPORT_SCHEMA = "asbb-release-gate/1.1"
-_GATE_POLICY_VERSION = "asbb-content-gate/1.2"
+_GATE_POLICY_VERSION = "asbb-content-gate/1.3"
 _DIAGNOSTIC_SCOPE = "diagnostic run, not a release verification"
 
 
@@ -546,7 +546,7 @@ _PERMISSIVE_TEXT_LICENCE_PREFIXES = ("cc-by", "cc0", "public-domain")
 def _paper_licence_is_permissive(licence: Any) -> bool | None:
     """Read a paper-level licence string such as ``access.license`` of the v1 corpora.
 
-    Returns ``None`` when no licence is recorded so the caller can fail closed.
+    Returns ``None`` when no licence is recorded so the caller can preserve it as unknown.
     CC BY, CC BY-SA, CC0 and public-domain text may be reused; the NC and ND
     variants may not, and a code licence (MIT, GPL) says nothing about the text.
     """
@@ -559,12 +559,13 @@ def _paper_licence_is_permissive(licence: Any) -> bool | None:
 
 
 def _reuse_by_doi_from_corpus(corpus: dict[str, Any]) -> dict[str, bool]:
-    """Map DOI to whether its source text is permissively reusable under P2.
+    """Map only DOIs whose paper text reuse is known under P2 option (b).
 
-    Precedence: ``license_tier`` (the tiered class-A corpora), then
-    ``access.source_reuse``, then the paper licence in ``access.license`` (the
-    released v1 corpora record ``cc-by`` there and carry no tier). A DOI with
-    none of the three fails closed and takes the strict caps.
+    ``access.source_reuse`` is authoritative when present. Otherwise licence
+    fields describe paper text only when ``license_subject`` is ``paper``, or
+    in the pre-subject schema where both subject and tier are absent. For those
+    rows, a known tier precedes ``access.license``. Tool-subject and unresolved
+    paper licences stay absent so access alone determines their cap regime.
     """
     out: dict[str, bool] = {}
     for paper in corpus.get("papers") or []:
@@ -573,16 +574,27 @@ def _reuse_by_doi_from_corpus(corpus: dict[str, Any]) -> dict[str, bool]:
         doi = _norm_doi(paper.get("doi"))
         if not doi:
             continue
-        license_tier = str(paper.get("license_tier") or "").strip().lower()
-        if license_tier:
-            out[doi] = license_tier == "open"
-            continue
         access = paper.get("access") if isinstance(paper.get("access"), dict) else {}
         source_reuse = str(access.get("source_reuse") or "").strip().lower()
         if source_reuse:
             out[doi] = source_reuse == "permissive"
             continue
-        out[doi] = bool(_paper_licence_is_permissive(access.get("license")))
+        license_subject = str(paper.get("license_subject") or "").strip().lower()
+        license_tier = str(paper.get("license_tier") or "").strip().lower()
+        licence_describes_paper = license_subject == "paper" or (
+            not license_subject and not license_tier
+        )
+        if not licence_describes_paper:
+            continue
+        if license_tier == "open":
+            out[doi] = True
+            continue
+        if license_tier in {"noncommercial", "restricted"}:
+            out[doi] = False
+            continue
+        licence_is_permissive = _paper_licence_is_permissive(access.get("license"))
+        if licence_is_permissive is not None:
+            out[doi] = licence_is_permissive
     return out
 
 
@@ -699,25 +711,45 @@ def check_strip_verbatim(
     cumulative_by_doi: dict[str, int] = {}
     total_spans = 0
 
-    def _has_strict_caps(doi: str) -> bool:
-        access_is_strict = (
+    def _access_has_strict_caps(doi: str) -> bool:
+        # Same access rule as policy 1.1/1.2: non-OA and link-only access types
+        # take the strict caps, as does a DOI the corpus does not record.
+        return (
             normalized_access.get(doi, "unknown") in _CAPPED_VERBATIM_TIERS
             or doi not in normalized_access
         )
+
+    def _has_strict_caps(doi: str) -> bool:
         if normalized_reuse is None:
-            return access_is_strict
-        return access_is_strict or not normalized_reuse.get(doi, False)
+            return (
+                normalized_access.get(doi, "unknown") in _CAPPED_VERBATIM_TIERS
+                or doi not in normalized_access
+            )
+        text_licence_is_strict = (
+            doi in normalized_reuse and not normalized_reuse[doi]
+        )
+        return _access_has_strict_caps(doi) or text_licence_is_strict
 
     policy_dois = set(normalized_access)
     if normalized_reuse is not None:
         policy_dois.update(normalized_reuse)
     strict_dois = sum(_has_strict_caps(doi) for doi in policy_dois)
+    unknown_text_licence_dois = (
+        sum(
+            not _access_has_strict_caps(doi) and doi not in normalized_reuse
+            for doi in policy_dois
+        )
+        if normalized_reuse is not None
+        else 0
+    )
+    permissive_dois = len(policy_dois) - strict_dois
     res.coverage["strict_regime_dois"] = strict_dois
-    res.coverage["permissive_regime_dois"] = len(policy_dois) - strict_dois
+    res.coverage["permissive_regime_dois"] = permissive_dois
+    res.coverage["unknown_text_licence_dois"] = unknown_text_licence_dois
     if normalized_reuse is None:
         res.summary = (
             "Legacy access-only caps: non-OA and link-only DOIs use strict caps; "
-            f"strict={strict_dois}, permissive={len(policy_dois) - strict_dois}. "
+            f"strict={strict_dois}, permissive={permissive_dois}. "
             "P2 was not applied because reuse_by_doi was not provided."
         )
         res.add(
@@ -726,12 +758,17 @@ def check_strip_verbatim(
             "access-only cap behavior.",
         )
     else:
+        known_permissive_dois = permissive_dois - unknown_text_licence_dois
         res.summary = (
-            "P2 strict caps apply when a DOI is non-OA or not text-reuse-"
-            f"permissive: per-span cap {_TEXT_FIELD_CAP} chars and cumulative cap "
-            f"{_CUMULATIVE_CAP} chars/DOI; strict={strict_dois}, "
-            f"permissive={len(policy_dois) - strict_dois}. Near-verbatim "
-            "similarity is checked for all spans."
+            f"P2 classes: strict={strict_dois}, known text licence permissive="
+            f"{known_permissive_dois}, unknown text licence="
+            f"{unknown_text_licence_dois}; permissive regime={permissive_dois} "
+            "(includes known permissive and unknown text licence). Strict when "
+            "non-OA, or when the text licence is known and not permissive; "
+            "unknown text licence follows the access-only rule. "
+            f"Strict per-span cap {_TEXT_FIELD_CAP} chars and cumulative cap "
+            f"{_CUMULATIVE_CAP} chars/DOI; near-verbatim similarity is checked "
+            "for all spans."
         )
 
     for sk_md in _iter_skill_md(collection_dir):
@@ -1526,7 +1563,10 @@ def _policy_snapshot() -> dict:
         "pii_config_version": PII_CONFIG["version"],
         "evidence_parser_source": _EVIDENCE_PARSER_SOURCE,
         "evidence_parser_pattern": _EVIDENCE_VERBATIM_RE.pattern,
-        "strict_verbatim_rule": "non-OA or non-text-reuse-permissive DOI",
+        "strict_verbatim_rule": (
+            "strict when non-OA, or when the text licence is known and not "
+            "permissive; unknown text licence follows the access-only rule"
+        ),
         "require_open_access": True,
         "kb_sidecar_max_bytes": _KB_SIDECAR_MAX_BYTES,
         "collection_kb_max_bytes": _COLLECTION_KB_MAX_BYTES,
