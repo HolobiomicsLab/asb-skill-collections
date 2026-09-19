@@ -15,6 +15,7 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
 ## [Unreleased]
 
 ### Added
+- Add the deterministic S6 same-paper duplicate report and S4–S6 candidate assembly driver with pinned source, stage and output receipts.
 - Add the deterministic S3 cut-to-candidate collector, its release-creators
   source, and a public-safe three-output fixture with policy-aligned quote
   trimming and router-shaped output tests.
