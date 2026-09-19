@@ -18,6 +18,8 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
 - Add the deterministic S3 cut-to-candidate collector, its release-creators
   source, and a public-safe three-output fixture with policy-aligned quote
   trimming and router-shaped output tests.
+- Add the deterministic S4 corpus-record join and Decision 7 P1 access map,
+  with duplicate and unmatched receipts plus fixture coverage.
 - Ship an RO-Crate with every released capsule and make `validate.yml` gate 8
   blocking. The 417 capsules of `metabolomics/v1`, `epigenomics/v1` and
   `transcriptomics/v1` now carry the `ro-crate-metadata.json` their build wrote,
