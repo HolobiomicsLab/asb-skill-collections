@@ -1,0 +1,250 @@
+{
+  "count": 7,
+  "slugs": [
+    "cutadapt",
+    "dada2",
+    "deblur",
+    "phyloseq",
+    "qiime-2",
+    "tidyverse",
+    "vegan"
+  ],
+  "records": [
+    {
+      "slug": "cutadapt",
+      "name": "Cutadapt",
+      "canonical_url": null,
+      "install": null,
+      "related_skills": [
+        "amplicon-sequence-denoising-asv-inference",
+        "asv-exact-partial-miss-categorization",
+        "metabarcoding-benchmark-table-assembly",
+        "mock-community-reference-alignment-scoring",
+        "paired-end-read-primer-trimming",
+        "vsearch-otu-clustering-execution",
+        "amplicon-sequence-denoising",
+        "otu-clustering-pipeline-execution",
+        "mock-community-error-rate-quantification",
+        "low-abundance-variant-filtering",
+        "sequence-alignment-match-classification",
+        "qiime2-artifact-processing"
+      ],
+      "source_task_ids": [
+        "task_001",
+        "task_003"
+      ],
+      "source_paper_doi": "10.1002/ece3.6594",
+      "source_paper_title": "A total crapshoot? Evaluating bioinformatic decisions in animal diet metabarcoding analyses",
+      "evidence_spans": [
+        "trimmed with Cutadapt (Martin, 2011), retaining all paired‐end reads (not merged) with a minimum length of 175 bp",
+        "We used the QIIME 2 v2018.11 (Bolyen et al., 2019) environment to import raw reads and trimmed with Cutadapt (Martin, 2011)"
+      ],
+      "version_used": null,
+      "resolution_attempts": []
+    },
+    {
+      "slug": "dada2",
+      "name": "DADA2",
+      "canonical_url": null,
+      "install": null,
+      "related_skills": [
+        "amplicon-sequence-denoising-asv-inference",
+        "asv-exact-partial-miss-categorization",
+        "metabarcoding-benchmark-table-assembly",
+        "mock-community-reference-alignment-scoring",
+        "paired-end-read-primer-trimming",
+        "vsearch-otu-clustering-execution",
+        "amplicon-sequence-denoising",
+        "otu-clustering-pipeline-execution",
+        "mock-community-error-rate-quantification",
+        "low-abundance-variant-filtering",
+        "sequence-alignment-match-classification",
+        "qiime2-artifact-processing",
+        "amplicon-denoising-pipeline-execution",
+        "feature-table-low-abundance-filtering",
+        "hill-numbers-alpha-diversity-estimation",
+        "rarefaction-based-depth-standardization",
+        "kruskal-wallis-group-comparison",
+        "metabarcoding-diversity-figure-reproduction"
+      ],
+      "source_task_ids": [
+        "task_001",
+        "task_003",
+        "task_004"
+      ],
+      "source_paper_doi": "10.1002/ece3.6594",
+      "source_paper_title": "A total crapshoot? Evaluating bioinformatic decisions in animal diet metabarcoding analyses",
+      "evidence_spans": [
+        "whether denoising programs (DADA2, Deblur, and VSEARCH) produced different exact, partial, or poorly aligned (miss) ASVs",
+        "using one of three amplicon processing programs (hereafter termed denoising methods)"
+      ],
+      "version_used": null,
+      "resolution_attempts": []
+    },
+    {
+      "slug": "deblur",
+      "name": "Deblur",
+      "canonical_url": null,
+      "install": null,
+      "related_skills": [
+        "amplicon-sequence-denoising-asv-inference",
+        "asv-exact-partial-miss-categorization",
+        "metabarcoding-benchmark-table-assembly",
+        "mock-community-reference-alignment-scoring",
+        "paired-end-read-primer-trimming",
+        "vsearch-otu-clustering-execution",
+        "amplicon-sequence-denoising",
+        "otu-clustering-pipeline-execution",
+        "mock-community-error-rate-quantification",
+        "low-abundance-variant-filtering",
+        "sequence-alignment-match-classification",
+        "qiime2-artifact-processing",
+        "amplicon-denoising-pipeline-execution",
+        "feature-table-low-abundance-filtering",
+        "hill-numbers-alpha-diversity-estimation",
+        "rarefaction-based-depth-standardization",
+        "kruskal-wallis-group-comparison",
+        "metabarcoding-diversity-figure-reproduction"
+      ],
+      "source_task_ids": [
+        "task_001",
+        "task_003",
+        "task_004"
+      ],
+      "source_paper_doi": "10.1002/ece3.6594",
+      "source_paper_title": "A total crapshoot? Evaluating bioinformatic decisions in animal diet metabarcoding analyses",
+      "evidence_spans": [
+        "For the Deblur pipeline, we altered two parameters from their default: ‘‐‐p‐min‐reads 2’ and ‘‐‐p‐min‐size 1’",
+        "For the Deblur pipeline, we altered two parameters from their default"
+      ],
+      "version_used": null,
+      "resolution_attempts": []
+    },
+    {
+      "slug": "phyloseq",
+      "name": "Phyloseq",
+      "canonical_url": null,
+      "install": null,
+      "related_skills": [
+        "amplicon-denoising-pipeline-execution",
+        "feature-table-low-abundance-filtering",
+        "hill-numbers-alpha-diversity-estimation",
+        "kruskal-wallis-group-comparison",
+        "metabarcoding-diversity-figure-reproduction",
+        "rarefaction-based-depth-standardization"
+      ],
+      "source_task_ids": [
+        "task_004"
+      ],
+      "source_paper_doi": "10.1002/ece3.6594",
+      "source_paper_title": "A total crapshoot? Evaluating bioinformatic decisions in animal diet metabarcoding analyses",
+      "evidence_spans": [
+        "Phyloseq (McMurdie & Holmes, 2013), and Vegan (Oksanen et al., 2018) packages."
+      ],
+      "version_used": null,
+      "resolution_attempts": []
+    },
+    {
+      "slug": "qiime-2",
+      "name": "QIIME 2",
+      "canonical_url": null,
+      "install": null,
+      "related_skills": [
+        "amplicon-sequence-denoising-asv-inference",
+        "asv-exact-partial-miss-categorization",
+        "metabarcoding-benchmark-table-assembly",
+        "mock-community-reference-alignment-scoring",
+        "paired-end-read-primer-trimming",
+        "vsearch-otu-clustering-execution",
+        "amplicon-sequence-denoising",
+        "otu-clustering-pipeline-execution",
+        "mock-community-error-rate-quantification",
+        "low-abundance-variant-filtering",
+        "sequence-alignment-match-classification",
+        "qiime2-artifact-processing",
+        "amplicon-denoising-pipeline-execution",
+        "feature-table-low-abundance-filtering",
+        "hill-numbers-alpha-diversity-estimation",
+        "rarefaction-based-depth-standardization",
+        "kruskal-wallis-group-comparison",
+        "metabarcoding-diversity-figure-reproduction",
+        "coi-reference-database-curation",
+        "sequence-taxonomy-lca-consensus-assignment",
+        "vsearch-dereplication-and-clustering",
+        "fasta-header-taxonomy-parsing",
+        "qiime2-reference-import-formatting"
+      ],
+      "source_task_ids": [
+        "task_001",
+        "task_003",
+        "task_004",
+        "task_005"
+      ],
+      "source_paper_doi": "10.1002/ece3.6594",
+      "source_paper_title": "A total crapshoot? Evaluating bioinformatic decisions in animal diet metabarcoding analyses",
+      "evidence_spans": [
+        "We used the QIIME 2 v2018.11 (Bolyen et al., 2019) environment to import raw reads and trimmed with Cutadapt (Martin, 2011)",
+        "We used the QIIME 2 v2018.11 (Bolyen et al., 2019) environment to import raw reads and trimmed with Cutadapt (Martin, 2011)",
+        "We used the QIIME 2 v2018.11 (Bolyen et al., 2019) environment to import raw reads",
+        "The `boldCOI.derep.fasta` and `boldCOI.arth_derep.txt` files are imported into QIIME2:"
+      ],
+      "version_used": "2018.11",
+      "resolution_attempts": []
+    },
+    {
+      "slug": "tidyverse",
+      "name": "Tidyverse",
+      "canonical_url": null,
+      "install": null,
+      "related_skills": [
+        "biom-feature-table-export",
+        "feature-table-low-abundance-thresholding",
+        "library-specific-artifact-count-scaling",
+        "mock-community-abundance-filtering",
+        "unexpected-sequence-variant-removal",
+        "amplicon-denoising-pipeline-execution",
+        "feature-table-low-abundance-filtering",
+        "hill-numbers-alpha-diversity-estimation",
+        "rarefaction-based-depth-standardization",
+        "kruskal-wallis-group-comparison",
+        "metabarcoding-diversity-figure-reproduction"
+      ],
+      "source_task_ids": [
+        "task_002",
+        "task_004"
+      ],
+      "source_paper_doi": "10.1002/ece3.6594",
+      "source_paper_title": "A total crapshoot? Evaluating bioinformatic decisions in animal diet metabarcoding analyses",
+      "evidence_spans": [
+        "and processed with Tidyverse (Wickham, 2017)",
+        "imported with the QIIME2R package (Bisanz, 2018) and processed with Tidyverse (Wickham, 2017)"
+      ],
+      "version_used": null,
+      "resolution_attempts": []
+    },
+    {
+      "slug": "vegan",
+      "name": "Vegan",
+      "canonical_url": null,
+      "install": null,
+      "related_skills": [
+        "amplicon-denoising-pipeline-execution",
+        "feature-table-low-abundance-filtering",
+        "hill-numbers-alpha-diversity-estimation",
+        "kruskal-wallis-group-comparison",
+        "metabarcoding-diversity-figure-reproduction",
+        "rarefaction-based-depth-standardization"
+      ],
+      "source_task_ids": [
+        "task_004"
+      ],
+      "source_paper_doi": "10.1002/ece3.6594",
+      "source_paper_title": "A total crapshoot? Evaluating bioinformatic decisions in animal diet metabarcoding analyses",
+      "evidence_spans": [
+        "Phyloseq (McMurdie & Holmes, 2013), and Vegan (Oksanen et al., 2018) packages."
+      ],
+      "version_used": null,
+      "resolution_attempts": []
+    }
+  ]
+}

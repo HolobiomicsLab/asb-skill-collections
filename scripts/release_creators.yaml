@@ -1,0 +1,12 @@
+# Source: hub renderer CORE_CREATORS; owner decision 2026-09-19.
+creators:
+- family: Nothias
+  given: Louis-Félix
+  orcid: 0000-0001-6711-6719
+  affiliation: Holobiomics Lab, Institut de Chimie de Nice (ICN), CNRS UMR 7272 / Université Côte d'Azur
+- name: AgenticScienceBuilder AI framework (from the scientific literature)
+lead_curators:
+- family: Nothias
+  given: Louis-Félix
+  orcid: 0000-0001-6711-6719
+  affiliation: Holobiomics Lab, Institut de Chimie de Nice (ICN), CNRS UMR 7272 / Université Côte d'Azur

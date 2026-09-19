@@ -1,0 +1,24 @@
+{
+  "crossref": {
+    "doi": "10.1002/ece3.6594",
+    "title": "A total crapshoot? Evaluating bioinformatic decisions in animal diet metabarcoding analyses",
+    "authors": [
+      "O'Rourke, Devon R.",
+      "Bokulich, Nicholas A.",
+      "Jusino, Michelle A.",
+      "MacManes, Matthew D.",
+      "Foster, Jeffrey T."
+    ],
+    "journal": "Ecology and Evolution",
+    "year": 2020,
+    "license_url": "http://creativecommons.org/licenses/by/4.0/",
+    "type": "journal-article",
+    "subject": []
+  },
+  "unpaywall": {
+    "doi": "10.1002/ece3.6594",
+    "is_oa": true,
+    "oa_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/ece3.6594",
+    "license": "cc-by"
+  }
+}

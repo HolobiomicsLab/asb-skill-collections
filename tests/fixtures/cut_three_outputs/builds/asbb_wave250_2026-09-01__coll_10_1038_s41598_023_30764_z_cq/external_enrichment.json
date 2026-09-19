@@ -1,0 +1,28 @@
+{
+  "crossref": {
+    "doi": "10.1038/s41598-023-30764-z",
+    "title": "Determining the most accurate 16S rRNA hypervariable region for taxonomic identification from respiratory samples",
+    "authors": [
+      "López-Aladid, Ruben",
+      "Fernández-Barat, Laia",
+      "Alcaraz-Serrano, Victoria",
+      "Bueno-Freire, Leticia",
+      "Vázquez, Nil",
+      "Pastor-Ibáñez, Roque",
+      "Palomeque, Andrea",
+      "Oscanoa, Patricia",
+      "Torres, Antoni"
+    ],
+    "journal": "Scientific Reports",
+    "year": 2023,
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "type": "journal-article",
+    "subject": []
+  },
+  "unpaywall": {
+    "doi": "10.1038/s41598-023-30764-z",
+    "is_oa": true,
+    "oa_url": "https://www.nature.com/articles/s41598-023-30764-z.pdf",
+    "license": "cc-by"
+  }
+}

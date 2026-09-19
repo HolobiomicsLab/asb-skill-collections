@@ -1,0 +1,30 @@
+{
+  "canonical_member_id": "b4da862147ad46d2",
+  "canonical_selection": "first_in_sorted_source_path_order",
+  "canonical_slug": "amplicon-sequence-denoising",
+  "capsules": [
+    "asbb_wave250_2026-09-01__coll_10_1002_ece3_6594_cq",
+    "asbb_wave250_2026-09-01__coll_10_1038_s41598_023_30764_z_cq"
+  ],
+  "members": [
+    {
+      "capsule_id": "asbb_wave250_2026-09-01__coll_10_1002_ece3_6594_cq",
+      "member_id": "b4da862147ad46d2",
+      "original_slug": "amplicon-sequence-denoising",
+      "source_bundle": "asbb_wave250_2026-09-01__coll_10_1002_ece3_6594_cq/skills/amplicon-sequence-denoising",
+      "variant_path": "variants/amplicon-sequence-denoising--b4da862147ad46d2.json"
+    },
+    {
+      "capsule_id": "asbb_wave250_2026-09-01__coll_10_1038_s41598_023_30764_z_cq",
+      "member_id": "c91683cbe415cba2",
+      "original_slug": "16s-amplicon-sequence-denoising",
+      "source_bundle": "asbb_wave250_2026-09-01__coll_10_1038_s41598_023_30764_z_cq/skills/16s-amplicon-sequence-denoising",
+      "variant_path": "variants/16s-amplicon-sequence-denoising--c91683cbe415cba2.json"
+    }
+  ],
+  "merge_kind": "semantic_auto",
+  "merged_slugs": [
+    "16s-amplicon-sequence-denoising"
+  ],
+  "output_id": "amplicon-sequence-denoising"
+}

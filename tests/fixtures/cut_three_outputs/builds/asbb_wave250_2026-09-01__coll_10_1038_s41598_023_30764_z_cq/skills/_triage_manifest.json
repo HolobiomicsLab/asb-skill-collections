@@ -1,0 +1,34 @@
+{
+  "body_median_bytes": 6782,
+  "body_ratio_applied": true,
+  "body_ratio_floor": 0.5,
+  "body_ratio_skip_reason": null,
+  "min_claims": 3,
+  "n_critique": 0,
+  "n_degraded": 0,
+  "n_drift_total": 4,
+  "n_promoted": 1,
+  "n_thin": 0,
+  "n_validation_error": 0,
+  "n_with_drift": 1,
+  "rows": [
+    {
+      "body_bytes": 6782,
+      "body_ratio": 0.95,
+      "degraded_reasons": [],
+      "n_claims": 14,
+      "n_drift": 4,
+      "n_partial": 4,
+      "n_supported": 9,
+      "n_unsupported": 1,
+      "slug": "16s-amplicon-sequence-denoising",
+      "synthesis_status": "synthesized",
+      "triage_status": "promoted",
+      "validator_errored": false,
+      "yes_rate": 0.6428571428571429
+    }
+  ],
+  "synthesis_status_source": "artifact",
+  "total": 1,
+  "yes_rate_threshold": 0.6
+}
