@@ -16,6 +16,7 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
 
 ### Added
 - Add the deterministic S6 same-paper duplicate report and S4–S6 candidate assembly driver with pinned source, stage and output receipts.
+- Add the S8 local candidate landing command with verified-gate preconditions, candidate branches and non-release marketplace metadata.
 - Add the deterministic S3 cut-to-candidate collector, its release-creators
   source, and a public-safe three-output fixture with policy-aligned quote
   trimming and router-shaped output tests.
