@@ -62,6 +62,11 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   R-slot syntax from real email addresses (a two-letter last label is always
   an email); propagate the `unknown` licence tier without collapsing or
   raising; and refresh the vendored `pii_config.py` of metabolomics v2.
+- Make generated skill descriptions and routers carry their unit's own contract:
+  approved description openings are normalised without duplication, domain
+  wording comes from the collection slug (or stays neutral), and router apply /
+  grounding instructions describe sampled leaf metadata and only the grounding
+  assets that the unit ships, while the released v2 router remains byte-stable.
 - Scope all 16,583 validation assertion IDs in the three v1 collections to
   their source paper, preserving each existing local suffix. The 82 indicium
   records now use `asbval:assertion/paper/<URL-escaped DOI>/<local suffix>`;
