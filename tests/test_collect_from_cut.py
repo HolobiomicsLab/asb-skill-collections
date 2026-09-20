@@ -39,6 +39,7 @@ MAPPING_KEYS = {
     "merge_kind",
     "merged_aliases",
     "dois",
+    "doi_source",
     "description_rewritten",
     "evidence_trimmed",
 }
@@ -636,3 +637,168 @@ def test_repository_metadata_uses_only_the_first_declared_repo(tmp_path: Path) -
     candidate, _ = _collect(tmp_path / "run", fixture_copy)
     published, _ = _read_skill(candidate / "leaves" / source.parent.name / "SKILL.md")
     assert "repo_url" not in published["metadata"]
+
+
+def _args_with_builds(arguments: list[str], builds: Path) -> list[str]:
+    """Insert the optional build root immediately after the cut argument."""
+    cut_value = arguments.index("--cut") + 2
+    return [*arguments[:cut_value], "--builds", str(builds), *arguments[cut_value:]]
+
+
+def _symlink_build_tree(source: Path, destination: Path) -> None:
+    """Create a build root whose children are directory symlinks."""
+    destination.mkdir()
+    for build in sorted(source.iterdir()):
+        (destination / build.name).symlink_to(build, target_is_directory=True)
+
+
+def _remove_leaf_source_papers(fixture: Path, output_id: str) -> None:
+    """Give one copied cut leaf the DOI-less subwave-2 provenance shape."""
+    skill = fixture / "corpus" / "skills" / output_id / "skill.md"
+    frontmatter, body = _read_skill(skill)
+    frontmatter["provenance"].pop("source_papers")
+    _write_skill(skill, frontmatter, body)
+
+
+def _canonical_build(fixture: Path, output_id: str) -> Path:
+    """Resolve one output's canonical fixture build from its coverage record."""
+    coverage = _coverage_by_output(fixture)[output_id]
+    canonical = next(
+        member
+        for member in coverage["members"]
+        if member["member_id"] == coverage["canonical_member_id"]
+    )
+    build_name = Path(canonical["source_bundle"]).parts[0]
+    return fixture / "builds" / build_name
+
+
+def test_explicit_symlink_build_root_matches_implicit_collection(
+    tmp_path: Path,
+) -> None:
+    """Collect identical bytes through explicit per-build directory symlinks."""
+    fixture = tmp_path / "fixture"
+    shutil.copytree(FIXTURE, fixture)
+    linked_builds = tmp_path / "linked-builds"
+    _symlink_build_tree(fixture / "builds", linked_builds)
+    implicit_candidate = tmp_path / "implicit-candidate"
+    implicit_receipts = tmp_path / "implicit-receipts"
+    explicit_candidate = tmp_path / "explicit-candidate"
+    explicit_receipts = tmp_path / "explicit-receipts"
+
+    assert (
+        collector.main(_args(fixture, implicit_candidate, receipts=implicit_receipts))
+        == 0
+    )
+    explicit_args = _args_with_builds(
+        _args(fixture, explicit_candidate, receipts=explicit_receipts), linked_builds
+    )
+    assert collector.main(explicit_args) == 0
+
+    assert collector._tree_digest(_tree_bytes(explicit_candidate)) == (
+        collector._tree_digest(_tree_bytes(implicit_candidate))
+    )
+    implicit_receipt = json.loads(
+        (implicit_receipts / "collect_receipt.json").read_text(encoding="utf-8")
+    )
+    explicit_receipt = json.loads(
+        (explicit_receipts / "collect_receipt.json").read_text(encoding="utf-8")
+    )
+    assert implicit_receipt["builds_root"] is None
+    assert explicit_receipt["builds_root"] == str(linked_builds.resolve())
+
+
+def test_explicit_build_root_missing_member_writes_nothing(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    """Fail at the exact explicit path without falling back to cut-relative builds."""
+    fixture = tmp_path / "fixture"
+    shutil.copytree(FIXTURE, fixture)
+    linked_builds = tmp_path / "linked-builds"
+    linked_builds.mkdir()
+    sources = sorted((fixture / "builds").iterdir())
+    missing = linked_builds / sources[0].name
+    for build in sources[1:]:
+        (linked_builds / build.name).symlink_to(build, target_is_directory=True)
+    candidate = tmp_path / "candidate"
+    receipts = tmp_path / "receipts"
+
+    arguments = _args_with_builds(
+        _args(fixture, candidate, receipts=receipts), linked_builds
+    )
+    assert collector.main(arguments) == 1
+
+    assert str(missing) in capsys.readouterr().err
+    assert not candidate.exists()
+    assert not receipts.exists()
+
+
+def test_explicit_build_root_works_without_cut_relative_builds(tmp_path: Path) -> None:
+    """Use only the supplied build root when the cut parent has no build tree."""
+    fixture = tmp_path / "fixture"
+    shutil.copytree(FIXTURE, fixture)
+    moved_builds = tmp_path / "moved-builds"
+    (fixture / "builds").rename(moved_builds)
+    candidate = tmp_path / "candidate"
+    receipts = tmp_path / "receipts"
+
+    arguments = _args_with_builds(
+        _args(fixture, candidate, receipts=receipts), moved_builds
+    )
+    assert collector.main(arguments) == 0
+
+    assert candidate.is_dir()
+    receipt = json.loads(
+        (receipts / "collect_receipt.json").read_text(encoding="utf-8")
+    )
+    assert receipt["builds_root"] == str(moved_builds.resolve())
+
+
+def test_manifest_doi_is_stamped_when_leaf_provenance_has_none(tmp_path: Path) -> None:
+    """Stamp a canonical build DOI into a DOI-less copied leaf."""
+    fixture = tmp_path / "fixture"
+    shutil.copytree(FIXTURE, fixture)
+    output_id = "16s-amplicon-alignment-to-reference"
+    _remove_leaf_source_papers(fixture, output_id)
+    manifest = json.loads(
+        (_canonical_build(fixture, output_id) / "build_manifest.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    expected_doi = collector._normal_doi(
+        manifest["cli_invocation"]["flags_resolved"]["doi"]
+    )
+
+    candidate, receipts = _collect(tmp_path / "run", fixture)
+
+    mapping = json.loads((candidate / "mapping.json").read_text(encoding="utf-8"))
+    row = next(item for item in mapping["mappings"] if item["output_id"] == output_id)
+    receipt = json.loads(
+        (receipts / "collect_receipt.json").read_text(encoding="utf-8")
+    )
+    published, _ = _read_skill(candidate / "leaves" / output_id / "SKILL.md")
+    assert row["doi_source"] == "build_manifest"
+    assert row["dois"] == [expected_doi]
+    assert receipt["counts"]["manifest_doi_stamped"] == 1
+    assert published["provenance"]["source_papers"] == [{"doi": expected_doi}]
+
+
+def test_missing_leaf_and_manifest_doi_writes_nothing(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    """Keep the existing missing-DOI error when neither source carries one."""
+    fixture = tmp_path / "fixture"
+    shutil.copytree(FIXTURE, fixture)
+    output_id = "16s-amplicon-alignment-to-reference"
+    _remove_leaf_source_papers(fixture, output_id)
+    manifest_path = _canonical_build(fixture, output_id) / "build_manifest.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    manifest["cli_invocation"]["flags_resolved"].pop("doi")
+    manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    candidate = tmp_path / "candidate"
+    receipts = tmp_path / "receipts"
+
+    assert collector.main(_args(fixture, candidate, receipts=receipts)) == 1
+
+    assert f"cut leaf has no source DOI: {output_id}" in capsys.readouterr().err
+    assert not candidate.exists()
+    assert not receipts.exists()

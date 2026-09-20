@@ -373,3 +373,45 @@ def test_driver_validates_commit_pins_and_fresh_output_before_stages(
     assert result.returncode == 2, result.stdout
     assert marker.read_text(encoding="utf-8") == "keep\n"
     assert not receipts.exists()
+
+
+def test_driver_passes_builds_to_collect_immediately_after_cut(tmp_path: Path) -> None:
+    """Bind the collect stage to the same explicit build root as the join."""
+    fixture = _copy_fixture(tmp_path)
+    output = tmp_path / "candidate"
+    receipts = tmp_path / "receipts"
+
+    result = _run([*_arguments(fixture, output, receipts), "--dry-run"])
+
+    assert result.returncode == 0, result.stdout
+    plan = _last_json(result.stdout)
+    collect = next(
+        entry["command"] for entry in plan["commands"] if entry["stage"] == "collect"
+    )
+    cut_index = collect.index("--cut")
+    assert collect[cut_index : cut_index + 4] == [
+        "--cut",
+        str(fixture / "corpus"),
+        "--builds",
+        str(fixture / "builds"),
+    ]
+
+
+def test_driver_completes_with_directory_symlink_build_tree(tmp_path: Path) -> None:
+    """Run every stage from a root containing per-build directory symlinks."""
+    fixture = _copy_fixture(tmp_path)
+    source_builds = tmp_path / "source-builds"
+    (fixture / "builds").rename(source_builds)
+    (fixture / "builds").mkdir()
+    for build in sorted(source_builds.iterdir()):
+        (fixture / "builds" / build.name).symlink_to(build, target_is_directory=True)
+    output = tmp_path / "candidate"
+    receipts = tmp_path / "receipts"
+
+    result = _run(_arguments(fixture, output, receipts))
+
+    assert result.returncode == 0, result.stdout
+    gate_report = json.loads(
+        (receipts / "gate_report.json").read_text(encoding="utf-8")
+    )
+    assert gate_report["release_verified"] is True

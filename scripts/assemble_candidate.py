@@ -245,6 +245,8 @@ def _stage_commands(options: argparse.Namespace) -> list[Stage]:
                 *script("collect_from_cut.py"),
                 "--cut",
                 str(options.cut),
+                "--builds",
+                str(options.builds),
                 "--domain",
                 options.domain,
                 "--version",

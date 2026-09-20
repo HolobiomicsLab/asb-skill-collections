@@ -15,6 +15,7 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
 ## [Unreleased]
 
 ### Added
+- Add an optional explicit build root to the cut collector and pass the candidate driver's build root through to it.
 - Add the deterministic S6 same-paper duplicate report and S4–S6 candidate assembly driver with pinned source, stage and output receipts.
 - Add the S8 local candidate landing command with verified-gate preconditions, candidate branches and non-release marketplace metadata.
 - Let S8 append candidates to tracked marketplaces that already list released collection versions, with rollback-safe restoration.
@@ -61,6 +62,7 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   keeps its historical score/slug order unchanged. See `docs/selection.md`.
 
 ### Fixed
+- Recover missing leaf DOI provenance from the canonical build manifest without replacing DOI provenance already present in the leaf.
 - Raise the content gate policy to 1.3: strict verbatim caps now use only known
   paper-text licence evidence; tool-subject and unknown text licences follow
   access-only caps, with the unknown class reported separately.

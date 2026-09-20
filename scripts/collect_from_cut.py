@@ -405,8 +405,13 @@ def _github_url(value: Any) -> str | None:
     return None
 
 
-def _resolve_build(cut: Path, build_name: str) -> Path:
+def _resolve_build(cut: Path, build_name: str, builds_root: Path | None) -> Path:
     _validate_slug(build_name.replace("_", "-"), "build directory")
+    if builds_root is not None:
+        build = builds_root / build_name
+        if not build.is_dir():
+            raise CollectorError(f"required build directory is missing: {build}")
+        return build
     candidates = (cut.parent / "builds" / build_name, cut.parent / build_name)
     # Provisional views bind build directories through a read-only symlink tree.
     # Inputs may therefore be symlinks; only output paths are required to be
@@ -420,7 +425,10 @@ def _resolve_build(cut: Path, build_name: str) -> Path:
 
 
 def _load_builds(
-    cut: Path, coverages: dict[str, dict[str, Any]], digests: dict[str, str]
+    cut: Path,
+    coverages: dict[str, dict[str, Any]],
+    digests: dict[str, str],
+    builds_root: Path | None,
 ) -> dict[str, dict[str, Any]]:
     names: set[str] = set()
     for coverage in coverages.values():
@@ -433,7 +441,7 @@ def _load_builds(
             names.add(parts[0])
     builds: dict[str, dict[str, Any]] = {}
     for name in sorted(names):
-        root = _resolve_build(cut, name)
+        root = _resolve_build(cut, name, builds_root)
         manifest_path = root / "build_manifest.json"
         triage_path = root / layout.ADVERTISED_DIRNAME / "_triage_manifest.json"
         tools_path = root / "tools" / "_index.json"
@@ -487,6 +495,24 @@ def _leaf_dois(frontmatter: dict[str, Any]) -> list[str]:
     )
 
 
+def _resolve_leaf_dois(
+    frontmatter: dict[str, Any], manifest_flags: dict[str, Any]
+) -> tuple[list[str], str]:
+    """Use leaf DOI provenance, or stamp the canonical build manifest DOI."""
+    dois = _leaf_dois(frontmatter)
+    if dois:
+        return dois, "frontmatter"
+    raw_manifest_doi = manifest_flags.get("doi")
+    if not isinstance(raw_manifest_doi, str) or not raw_manifest_doi.strip():
+        return [], "frontmatter"
+    manifest_doi = _normal_doi(raw_manifest_doi)
+    provenance = frontmatter["provenance"]
+    if not manifest_doi or provenance.get("source_papers"):
+        return [], "frontmatter"
+    provenance["source_papers"] = [{"doi": manifest_doi}]
+    return [manifest_doi], "build_manifest"
+
+
 def _prepare_leaf(
     source: Path,
     coverage: dict[str, Any],
@@ -515,6 +541,8 @@ def _prepare_leaf(
     ]
     if len(canonical) != 1:
         raise CollectorError(f"coverage has no unique canonical member: {output_id}")
+    canonical_parts = Path(str(canonical[0]["source_bundle"])).parts
+    canonical_build = builds[canonical_parts[0]]
 
     tool_rows = frontmatter.get("tools") or []
     raw_repos = [
@@ -566,7 +594,7 @@ def _prepare_leaf(
         frontmatter.pop("merged_alias_records", None)
 
     rewritten = _rewrite_description(frontmatter, body, domain)
-    dois = _leaf_dois(frontmatter)
+    dois, doi_source = _resolve_leaf_dois(frontmatter, canonical_build["flags"])
     if not dois:
         raise CollectorError(f"cut leaf has no source DOI: {output_id}")
     body, trimmed = budget.trim_leaf(frontmatter, body, output_id, dois[0])
@@ -577,8 +605,6 @@ def _prepare_leaf(
 
     triage = _member_triage(canonical[0], builds)
     frontmatter.update(triage)
-    canonical_parts = Path(str(canonical[0]["source_bundle"])).parts
-    canonical_build = builds[canonical_parts[0]]
     for tool in tool_rows:
         if not isinstance(tool, dict) or not tool.get("name"):
             continue
@@ -595,6 +621,7 @@ def _prepare_leaf(
         "merge_kind": coverage.get("merge_kind") or "single",
         "merged_aliases": merged_aliases,
         "dois": dois,
+        "doi_source": doi_source,
         "description_rewritten": rewritten,
         "evidence_trimmed": trimmed,
     }
@@ -864,7 +891,7 @@ def _assemble(options: argparse.Namespace) -> tuple[dict[str, bytes], dict[str, 
             digests[f"corpus/skills/{source.name}/{name}"] = _sha256_bytes(
                 _read_bytes(path)
             )
-    builds = _load_builds(cut, coverages, digests)
+    builds = _load_builds(cut, coverages, digests, options.builds)
 
     creators_bytes = _read_bytes(options.creators)
     creators = yaml.safe_load(creators_bytes.decode("utf-8"))
@@ -960,6 +987,7 @@ def _assemble(options: argparse.Namespace) -> tuple[dict[str, bytes], dict[str, 
         "cut_id": cut_id,
         "domain": options.domain,
         "version": options.version,
+        "builds_root": str(options.builds) if options.builds is not None else None,
         "input_sha256": dict(sorted(digests.items())),
         "output_tree_sha256": _tree_digest(shaped),
         "counts": {
@@ -968,6 +996,9 @@ def _assemble(options: argparse.Namespace) -> tuple[dict[str, bytes], dict[str, 
             "workflows": 0,
             "builds": len(builds),
             "input_files": len(digests),
+            "manifest_doi_stamped": sum(
+                mapping["doi_source"] == "build_manifest" for mapping in mappings
+            ),
         },
         "router_index": "provisional skills_index.json derived from leaf frontmatter before router_shape.shape",
     }
@@ -1025,6 +1056,7 @@ def _write_receipts(destination: Path, receipts: dict[str, Any]) -> None:
 def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--cut", required=True, type=Path)
+    parser.add_argument("--builds", type=Path)
     parser.add_argument("--domain", required=True)
     parser.add_argument("--version", required=True)
     parser.add_argument("--out", required=True, type=Path)
@@ -1047,6 +1079,8 @@ def _validate_options(options: argparse.Namespace) -> None:
     if options.license != "CC-BY-4.0":
         raise CollectorError("Decision 7 requires CC-BY-4.0")
     options.cut = options.cut.resolve()
+    if options.builds is not None:
+        options.builds = options.builds.resolve()
     # Normalize spelling without following a final output symlink. Conflict
     # checks must see and reject that symlink instead of writing through it.
     options.out = Path(os.path.abspath(options.out))
