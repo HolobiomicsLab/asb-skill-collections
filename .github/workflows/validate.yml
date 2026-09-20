@@ -51,11 +51,31 @@ jobs:
           pip install rocrate || echo "WARNING: rocrate install failed"
           # indicium-adapters provides the verify-claims console script (Plan 1c)
           pip install indicium-adapters || echo "WARNING: indicium-adapters not yet available; gate 9 will warn-only"
+          # scripts/same_paper_pairs.py (S6) embeds every cut output with the
+          # pinned local model BAAI/bge-small-en-v1.5 (Decision 7 thresholds were
+          # calibrated on it). Its tests and the driver tests run the real script,
+          # so the runner needs sentence-transformers; the CPU torch wheel keeps
+          # the install small.
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install sentence-transformers
+
+      # The S6 tests set HF_HUB_OFFLINE=1, so the model must already be in the
+      # Hugging Face cache before the suite runs. Cached across runs by model name.
+      - name: Cache the S6 embedding model
+        id: hf-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface/hub
+          key: hf-hub-bge-small-en-v1.5
+
+      - name: Stage the S6 embedding model
+        if: steps.hf-cache.outputs.cache-hit != 'true'
+        run: python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('BAAI/bge-small-en-v1.5')"
 
       # -- Gate 0: Unit tests -------------------------------------------------
       # Until now the suite ran only inside release.yml, so a test could sit broken
-      # on main for weeks and nothing would say so. The suite is hermetic (pyyaml
-      # + pytest, no network).
+      # on main for weeks and nothing would say so. The suite makes no network
+      # call: the one model it loads is staged above and read offline.
       - name: Run test suite
         run: python -m pytest tests/ -q
 
