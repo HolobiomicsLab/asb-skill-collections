@@ -1,0 +1,113 @@
+{
+  "source": "rehearsal e9dd7e5b2cd9 evidence_trim_receipt.json unrecognized_quote_blocks (312 total)",
+  "samples": [
+    {
+      "leaf": "abess-best-subset-selection",
+      "doi": "10.1002/imt2.70011",
+      "body_line": 62,
+      "kind": "leaf",
+      "raw_block": "- [readme] abess support-size scan and top-5 extraction in the reference workflow: \"abess_fit <- abess(trainset[,-1], trainset$res,support.size=0:100)\nkey_gene <- extract(abess_fit, 5)[4][1]$support.vars\"",
+      "text": "abess_fit <- abess(trainset[,-1], trainset$res,support.size=0:100)\nkey_gene <- extract(abess_fit, 5)[4][1]$support.vars",
+      "sample_kind": "multiline"
+    },
+    {
+      "leaf": "abess-best-subset-selection",
+      "doi": "10.1002/imt2.70011",
+      "body_line": 64,
+      "kind": "leaf",
+      "raw_block": "- [methods] ABESS feature-selection step with NA-label removal in the article methods: \"Feature Selection using ABESS Algorithm\ntrainset <- trainset[!is.na(trainset$res),]\"",
+      "text": "Feature Selection using ABESS Algorithm\ntrainset <- trainset[!is.na(trainset$res),]",
+      "sample_kind": "multiline"
+    },
+    {
+      "leaf": "abess-best-subset-selection",
+      "doi": "10.1002/imt2.70011",
+      "body_line": 67,
+      "kind": "leaf",
+      "raw_block": "- [readme] Identical subsetting of validation and test cohorts to the selected pairs: \"validationset  <- validationset [,c(\"res\",key_gene )]\ntestset <- testset [,c(\"res\",key_gene )]\"",
+      "text": "validationset  <- validationset [,c(\"res\",key_gene )]\ntestset <- testset [,c(\"res\",key_gene )]",
+      "sample_kind": "multiline+embedded-quote"
+    },
+    {
+      "leaf": "abundant-rna-read-filtering-alignment",
+      "doi": "10.1038/s41592-025-02774-4",
+      "body_line": 65,
+      "kind": "leaf",
+      "raw_block": "- [methods] Two-round uniquely mapping workflow step: \"B(**mapping**\n  Two-round uniquely mapping)\"",
+      "text": "B(**mapping**\n  Two-round uniquely mapping)",
+      "sample_kind": "multiline"
+    },
+    {
+      "leaf": "ai-scenario-prompt-conditioning",
+      "doi": "10.1101/2025.11.24.690117",
+      "body_line": 63,
+      "kind": "leaf",
+      "raw_block": "- [intro] Checks that the simulated pathogenic variant is indeed present in the reads of the \"disease\" sample and absent from the \"normal\" sample: \"Checks that the simulated pathogenic variant is indeed present in the reads of the \"disease\" sample and absent from the \"normal\" sample\"",
+      "text": "Checks that the simulated pathogenic variant is indeed present in the reads of the \"disease\" sample and absent from the \"normal\" sample",
+      "sample_kind": "embedded-quote"
+    },
+    {
+      "leaf": "anndata-data-manipulation",
+      "doi": "10.1038/s43588-024-00721-5",
+      "body_line": 67,
+      "kind": "leaf",
+      "raw_block": "- [readme] per-cell scores attached to obs: \"adata.obs[\"var\"] = all_var.detach().numpy()\nadata.obs[\"conf\"] = all_conf.detach().numpy()\"",
+      "text": "adata.obs[\"var\"] = all_var.detach().numpy()\nadata.obs[\"conf\"] = all_conf.detach().numpy()",
+      "sample_kind": "multiline+embedded-quote"
+    },
+    {
+      "leaf": "anndata-object-construction",
+      "doi": "10.1186/s13059-021-02577-8",
+      "body_line": 66,
+      "kind": "leaf",
+      "raw_block": "- [methods] mu.read_snap ingestion example: \"atac = ac.read_snap(\"pbmc3k.snap\", matrix=\"bins\", bin_size=10000)\"",
+      "text": "atac = ac.read_snap(\"pbmc3k.snap\", matrix=\"bins\", bin_size=10000)",
+      "sample_kind": "embedded-quote"
+    },
+    {
+      "leaf": "anndata-table-construction",
+      "doi": "10.1101/2024.07.04.601829",
+      "body_line": 60,
+      "kind": "leaf",
+      "raw_block": "- [methods] Transcript allocation as two consecutive steps: \"transcript allocation  [section=methods; evidence='tb.allocate\n    tb.bin_counts']\"",
+      "text": "transcript allocation  [section=methods; evidence='tb.allocate\n    tb.bin_counts']",
+      "sample_kind": "multiline"
+    },
+    {
+      "leaf": "auc-comparison-across-datasets",
+      "doi": "10.1002/imt2.70011",
+      "body_line": 65,
+      "kind": "leaf",
+      "raw_block": "- [methods] qs qread: \"dat <- qread(\"ICI cohort gene pairs.qs\")\"",
+      "text": "dat <- qread(\"ICI cohort gene pairs.qs\")",
+      "sample_kind": "embedded-quote"
+    },
+    {
+      "leaf": "auc-comparison-across-datasets",
+      "doi": "10.1002/imt2.70011",
+      "body_line": 66,
+      "kind": "leaf",
+      "raw_block": "- [readme] risk scores calculation: \"#Obtaining the evaluation score of the test set\ntestres$riskscore<- predict(ga_fit ,testres)\"",
+      "text": "#Obtaining the evaluation score of the test set\ntestres$riskscore<- predict(ga_fit ,testres)",
+      "sample_kind": "multiline"
+    },
+    {
+      "leaf": "auroc-auprc-network-validation-metrics",
+      "doi": "10.1093/gigascience/giaf028",
+      "body_line": 67,
+      "kind": "leaf",
+      "raw_block": "- [readme] CLI invocation pattern for RWRtoolkit scripts: \"Rscript <LIBPATHS_DIRECTORY>/RWRtoolkit/scripts/run_loe.R \n    --data            <LIBPATHS_DIRECTORY>/RWRtoolkit/example_data/string_interactions.Rdata \\\"",
+      "text": "Rscript <LIBPATHS_DIRECTORY>/RWRtoolkit/scripts/run_loe.R \n    --data            <LIBPATHS_DIRECTORY>/RWRtoolkit/example_data/string_interactions.Rdata \\",
+      "sample_kind": "multiline"
+    },
+    {
+      "leaf": "average-similarity-matrix-aggregation",
+      "doi": "10.1093/bib/bbae411",
+      "body_line": 70,
+      "kind": "leaf",
+      "raw_block": "- [readme] eval flag semantics: \"If \"eval\" is set to TRUE, CHAI will evaluate the best_k for Spectral Clustering using silhouette score.\"",
+      "text": "If \"eval\" is set to TRUE, CHAI will evaluate the best_k for Spectral Clustering using silhouette score.",
+      "sample_kind": "embedded-quote"
+    }
+  ]
+}

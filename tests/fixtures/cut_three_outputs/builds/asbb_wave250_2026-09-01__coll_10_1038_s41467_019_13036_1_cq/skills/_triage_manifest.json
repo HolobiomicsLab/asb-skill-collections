@@ -1,0 +1,34 @@
+{
+  "body_median_bytes": 7459,
+  "body_ratio_applied": true,
+  "body_ratio_floor": 0.5,
+  "body_ratio_skip_reason": null,
+  "min_claims": 3,
+  "n_critique": 0,
+  "n_degraded": 0,
+  "n_drift_total": 1,
+  "n_promoted": 1,
+  "n_thin": 0,
+  "n_validation_error": 0,
+  "n_with_drift": 1,
+  "rows": [
+    {
+      "body_bytes": 7459,
+      "body_ratio": 0.9948,
+      "degraded_reasons": [],
+      "n_claims": 9,
+      "n_drift": 1,
+      "n_partial": 1,
+      "n_supported": 6,
+      "n_unsupported": 1,
+      "slug": "16s-amplicon-alignment-to-reference",
+      "synthesis_status": "synthesized",
+      "triage_status": "promoted",
+      "validator_errored": false,
+      "yes_rate": 0.6666666666666666
+    }
+  ],
+  "synthesis_status_source": "artifact",
+  "total": 1,
+  "yes_rate_threshold": 0.6
+}

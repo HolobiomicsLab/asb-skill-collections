@@ -15,6 +15,20 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
 ## [Unreleased]
 
 ### Added
+- Add an optional explicit build root to the cut collector and pass the candidate driver's build root through to it.
+- Add the deterministic S6 same-paper duplicate report and S4–S6 candidate assembly driver with pinned source, stage and output receipts.
+- Add the S8 local candidate landing command with verified-gate preconditions, candidate branches and non-release marketplace metadata.
+- Let S8 append candidates to tracked marketplaces that already list released collection versions, with rollback-safe restoration.
+- Add the deterministic S3 cut-to-candidate collector, its release-creators
+  source, and a public-safe three-output fixture with policy-aligned quote
+  trimming and router-shaped output tests.
+- Add the deterministic S4 corpus-record join and Decision 7 P1 access map,
+  with duplicate and unmatched receipts plus fixture coverage.
+- Add the deterministic S5 index bootstrap and six-check candidate gate runner,
+  with stamped indexes, retained check output and fixture coverage.
+- Add the data-driven release-surface check (`scripts/check_release_surface.py`,
+  rules in `scripts/release_surface_rules.yaml`: the sentences retracted on 2026-09-13 and
+  the metabolomics/v2 identifiers, P6) as the seventh candidate check of the gate runner.
 - Ship an RO-Crate with every released capsule and make `validate.yml` gate 8
   blocking. The 417 capsules of `metabolomics/v1`, `epigenomics/v1` and
   `transcriptomics/v1` now carry the `ro-crate-metadata.json` their build wrote,
@@ -51,6 +65,18 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   keeps its historical score/slug order unchanged. See `docs/selection.md`.
 
 ### Fixed
+- Recover missing leaf DOI provenance from the canonical build manifest without replacing DOI provenance already present in the leaf.
+- Raise the content gate policy to 1.3: strict verbatim caps now use only known
+  paper-text licence evidence; tool-subject and unknown text licences follow
+  access-only caps, with the unknown class reported separately.
+- Make the release gate own and fully account for evidence-quote parsing,
+  including colon-bearing labels, multiline blocks and embedded quotes; apply
+  verbatim caps to every non-text-reuse-permissive DOI (licence tier, else
+  `access.source_reuse`, else the paper licence the v1 corpora record under
+  `access.license`) with normalized DOI identity; distinguish Git SSH and
+  R-slot syntax from real email addresses (a two-letter last label is always
+  an email); propagate the `unknown` licence tier without collapsing or
+  raising; and refresh the vendored `pii_config.py` of metabolomics v2.
 - Make generated skill descriptions and routers carry their unit's own contract:
   approved description openings are normalised without duplication, domain
   wording comes from the collection slug (or stays neutral), and router apply /

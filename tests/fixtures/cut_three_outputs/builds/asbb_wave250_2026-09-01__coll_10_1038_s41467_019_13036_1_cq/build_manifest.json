@@ -1,0 +1,12 @@
+{
+  "schema_version": "0.2.0",
+  "build_id": "6B17623B0BDC4028B32F597B0E53D441",
+  "cli_invocation": {
+    "flags_resolved": {
+      "doi": "10.1038/s41467-019-13036-1",
+      "github_repo": [
+        "TheJacksonLaboratory/weinstock_full_length_16s"
+      ]
+    }
+  }
+}

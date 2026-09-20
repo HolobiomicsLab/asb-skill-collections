@@ -1,0 +1,20 @@
+{
+  "canonical_member_id": "18725dbbed09898c",
+  "canonical_selection": "first_in_sorted_source_path_order",
+  "canonical_slug": "16s-amplicon-alignment-to-reference",
+  "capsules": [
+    "asbb_wave250_2026-09-01__coll_10_1038_s41467_019_13036_1_cq"
+  ],
+  "members": [
+    {
+      "capsule_id": "asbb_wave250_2026-09-01__coll_10_1038_s41467_019_13036_1_cq",
+      "member_id": "18725dbbed09898c",
+      "original_slug": "16s-amplicon-alignment-to-reference",
+      "source_bundle": "asbb_wave250_2026-09-01__coll_10_1038_s41467_019_13036_1_cq/skills/16s-amplicon-alignment-to-reference",
+      "variant_path": "variants/16s-amplicon-alignment-to-reference--18725dbbed09898c.json"
+    }
+  ],
+  "merge_kind": "single",
+  "merged_slugs": [],
+  "output_id": "16s-amplicon-alignment-to-reference"
+}
