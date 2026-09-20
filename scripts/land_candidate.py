@@ -58,6 +58,7 @@ class RepositoryInput:
 
     root: Path
     fallback_identity: tuple[str, str] | None
+    marketplace: dict[str, Any] | None
 
 
 @dataclass(frozen=True)
@@ -292,6 +293,36 @@ def _ensure_absent_path(repo: Path, relative: str) -> None:
             )
 
 
+def _validate_marketplace(
+    repo: Path, relative: str, domain: str, collection_path: str
+) -> dict[str, Any] | None:
+    path = repo / relative
+    if not path.exists() and not path.is_symlink():
+        _ensure_absent_path(repo, relative)
+        return None
+    if not path.is_file() or path.is_symlink():
+        raise LandingError(f"{relative} must be a tracked regular file")
+    if _git(repo, "ls-files", "--error-unmatch", "--", relative).returncode:
+        raise LandingError(f"{relative} must be a tracked regular file")
+
+    marketplace = _read_json(path, relative)
+    if marketplace.get("schema_version") != "1.0":
+        raise LandingError(f"{relative} has invalid schema_version")
+    if marketplace.get("name") != f"asb-skills-{domain}":
+        raise LandingError(f"{relative} has invalid name")
+    plugins = marketplace.get("plugins")
+    if not isinstance(plugins, list):
+        raise LandingError(f"{relative} has invalid plugins")
+
+    source = f"./{collection_path}"
+    if any(
+        isinstance(plugin, dict) and plugin.get("source") == source
+        for plugin in plugins
+    ):
+        raise ConflictError(f"marketplace already lists {source}")
+    return marketplace
+
+
 def _paths_overlap(first: Path, second: Path) -> bool:
     return first == second or first in second.parents or second in first.parents
 
@@ -310,14 +341,18 @@ def _validate_repository(
         raise LandingError("repository must be checked out on main")
     if _git_output(repo, "status", "--porcelain", "--untracked-files=all"):
         raise LandingError("repository worktree is dirty")
-    for relative in paths:
+    collection_path, receipts_path, marketplace_path = paths
+    marketplace = _validate_marketplace(
+        repo, marketplace_path, options.domain, collection_path
+    )
+    for relative in (collection_path, receipts_path):
         _ensure_absent_path(repo, relative)
     zenodo = repo / ".zenodo.json"
     if not zenodo.is_file() or zenodo.is_symlink():
         raise LandingError("repository root .zenodo.json must be a regular file")
     if _git(repo, "ls-files", "--error-unmatch", "--", ".zenodo.json").returncode:
         raise LandingError("repository root .zenodo.json must be tracked")
-    return RepositoryInput(repo, _fallback_identity(options, repo))
+    return RepositoryInput(repo, _fallback_identity(options, repo), marketplace)
 
 
 def _validate_options(options: argparse.Namespace) -> None:
@@ -411,8 +446,14 @@ def _copy_files(files: tuple[tuple[Path, Path], ...], destination: Path) -> None
 def _write_marketplace(plan: LandingPlan) -> None:
     path = plan.repository.root / plan.marketplace_path
     path.parent.mkdir(parents=True, exist_ok=True)
+    marketplace = _marketplace(plan)
+    if plan.repository.marketplace is not None:
+        candidate = dict(marketplace["plugins"][0])
+        candidate["release"] = False
+        marketplace = dict(plan.repository.marketplace)
+        marketplace["plugins"] = [*marketplace["plugins"], candidate]
     path.write_text(
-        json.dumps(_marketplace(plan), indent=2, ensure_ascii=False) + "\n",
+        json.dumps(marketplace, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
 
@@ -454,11 +495,20 @@ def _rollback(plan: LandingPlan) -> str | None:
         if result.returncode:
             failures.append((result.stderr or result.stdout).strip())
     for relative in (plan.collection_path, plan.receipts_path, plan.marketplace_path):
+        tracked = _git(repo, "ls-files", "--error-unmatch", "--", relative)
+        if tracked.returncode == 0:
+            continue
+        if tracked.returncode != 1:
+            failures.append((tracked.stderr or tracked.stdout).strip())
+            continue
         path = repo / relative
-        if path.is_dir() and not path.is_symlink():
-            shutil.rmtree(path)
-        elif path.exists() or path.is_symlink():
-            path.unlink()
+        try:
+            if path.is_dir() and not path.is_symlink():
+                shutil.rmtree(path)
+            elif path.exists() or path.is_symlink():
+                path.unlink()
+        except OSError as exc:
+            failures.append(f"cannot remove untracked {relative}: {exc}")
     result = _git(repo, "branch", "-D", plan.branch)
     if result.returncode:
         failures.append((result.stderr or result.stdout).strip())
@@ -521,7 +571,7 @@ def _execute(plan: LandingPlan) -> dict[str, Any]:
 
 
 def _dry_run(plan: LandingPlan) -> dict[str, Any]:
-    return {
+    result = {
         "branch": plan.branch,
         "dry_run": True,
         "message": plan.message,
@@ -532,6 +582,9 @@ def _dry_run(plan: LandingPlan) -> dict[str, Any]:
             "zenodo": f"{plan.collection_path}/.zenodo.json",
         },
     }
+    if plan.repository.marketplace is not None:
+        result["marketplace"] = {"path": plan.marketplace_path, "mode": "merge"}
+    return result
 
 
 def main(argv: list[str] | None = None) -> int:

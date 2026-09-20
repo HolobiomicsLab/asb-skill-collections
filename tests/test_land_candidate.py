@@ -511,3 +511,270 @@ def test_missing_identity_requires_both_cli_author_fields_and_does_not_configure
         _git(repo, "config", "--local", "--get", "user.email", check=False).returncode
         == 1
     )
+
+
+V2_VERSION = "v2"
+V2_TITLE = "ASB Metabarcoding Skill Collection v2"
+V2_COLLECTION_PATH = f"collections/{DOMAIN}/{V2_VERSION}"
+V2_SUBJECT = f"feat(candidate): {DOMAIN} {V2_VERSION} candidate {CUT_ID}"
+REFERENCE_MARKETPLACE = REPO.parent / "reference" / "marketplace_transcriptomics.json"
+RELEASE_RECEIPTS_PATH = "receipts/split-2026-09-17"
+
+
+def _copy_v2_inputs(assembled: tuple[Path, Path], tmp_path: Path) -> tuple[Path, Path]:
+    """Derive valid v2 inputs by changing only landing-validated candidate facts."""
+    candidate, receipts = _copy_inputs(assembled, tmp_path)
+    descriptor_path = candidate / "collection.yaml"
+    descriptor = yaml.safe_load(descriptor_path.read_text(encoding="utf-8"))
+    descriptor.update(version=2, title=V2_TITLE)
+    descriptor_path.write_text(
+        yaml.safe_dump(descriptor, sort_keys=False), encoding="utf-8"
+    )
+
+    source_path = receipts / "source.json"
+    source = json.loads(source_path.read_text(encoding="utf-8"))
+    source.update(version=V2_VERSION, output_tree_sha256=_tree_digest(candidate))
+    source_path.write_text(json.dumps(source, indent=2) + "\n", encoding="utf-8")
+    return candidate, receipts
+
+
+def _released_marketplace_payload(*, name: str | None = None) -> dict:
+    """Adapt the real transcriptomics marketplace fixture to the test domain."""
+    payload = json.loads(REFERENCE_MARKETPLACE.read_text(encoding="utf-8"))
+    domain_title = DOMAIN.replace("-", " ").title()
+    payload["name"] = name or f"asb-skills-{DOMAIN}"
+    payload["description"] = payload["description"].replace("transcriptomics", DOMAIN)
+    plugin = payload["plugins"][0]
+    plugin["name"] = DOMAIN
+    plugin["source"] = f"./{COLLECTION_PATH}"
+    plugin["description"] = plugin["description"].replace(
+        "Transcriptomics", domain_title
+    )
+    plugin["keywords"] = [DOMAIN]
+    repository = f"https://github.com/HolobiomicsLab/asb-skills-{DOMAIN}"
+    plugin.update(homepage=repository, repository=repository)
+    return payload
+
+
+def _create_released_repo(
+    tmp_path: Path, *, marketplace_name: str | None = None
+) -> tuple[Path, str, bytes, bytes]:
+    """Create main with a tracked released v1 and its real marketplace shape."""
+    repo, _, zenodo = _create_repo(tmp_path)
+    marketplace_path = repo / MARKETPLACE_PATH
+    marketplace_path.parent.mkdir(parents=True)
+    marketplace_path.write_text(
+        json.dumps(
+            _released_marketplace_payload(name=marketplace_name),
+            indent=2,
+            ensure_ascii=False,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    collection = repo / COLLECTION_PATH / "collection.yaml"
+    collection.parent.mkdir(parents=True)
+    collection.write_text(
+        yaml.safe_dump(
+            {
+                "slug": DOMAIN,
+                "version": 1,
+                "title": TITLE,
+                "status": "released",
+            },
+            sort_keys=False,
+        ),
+        encoding="utf-8",
+    )
+    source = repo / RELEASE_RECEIPTS_PATH / "source.json"
+    source.parent.mkdir(parents=True)
+    source.write_text(
+        json.dumps(
+            {
+                "status": "complete",
+                "cut_id": "split-2026-09-17",
+                "domain": DOMAIN,
+                "version": VERSION,
+            },
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    _git(repo, "add", "--", MARKETPLACE_PATH, COLLECTION_PATH, RELEASE_RECEIPTS_PATH)
+    _git(repo, "commit", "-m", "feat: release fixture v1")
+    return (
+        repo,
+        _git(repo, "rev-parse", "HEAD").stdout.strip(),
+        zenodo,
+        marketplace_path.read_bytes(),
+    )
+
+
+def _v2_arguments(candidate: Path, receipts: Path, repo: Path) -> list[str]:
+    """Build the v2 CLI arguments shared by subprocess and in-process tests."""
+    return [
+        "--candidate",
+        str(candidate),
+        "--receipts",
+        str(receipts),
+        "--repo",
+        str(repo),
+        "--domain",
+        DOMAIN,
+        "--version",
+        V2_VERSION,
+        "--title",
+        V2_TITLE,
+    ]
+
+
+def _land_v2(
+    candidate: Path, receipts: Path, repo: Path, *, dry_run: bool = False
+) -> subprocess.CompletedProcess[str]:
+    """Invoke the landing command for a candidate derived as v2."""
+    command = [sys.executable, str(SCRIPT), *_v2_arguments(candidate, receipts, repo)]
+    if dry_run:
+        command.append("--dry-run")
+    return _run_process(command, repo.parent)
+
+
+def _load_landing_module(monkeypatch: pytest.MonkeyPatch) -> object:
+    """Load the landing script as an isolated module for failure injection."""
+    importlib_util = __import__("importlib.util", fromlist=["module_from_spec"])
+    module_name = "land_candidate_rollback_test"
+    spec = importlib_util.spec_from_file_location(module_name, SCRIPT)
+    assert spec is not None and spec.loader is not None
+    module = importlib_util.module_from_spec(spec)
+    monkeypatch.setitem(sys.modules, module_name, module)
+    spec.loader.exec_module(module)
+    return module
+
+
+def test_v2_lands_by_appending_to_tracked_released_marketplace(
+    assembled: tuple[Path, Path], tmp_path: Path
+) -> None:
+    """Append a v2 candidate without changing the released v1 entry or main."""
+    candidate, receipts = _copy_v2_inputs(assembled, tmp_path)
+    repo, initial, zenodo, original_bytes = _create_released_repo(tmp_path)
+    original = json.loads(original_bytes)
+
+    result = _land_v2(candidate, receipts, repo)
+
+    assert result.returncode == 0, result.stdout + result.stderr
+    assert _git(repo, "branch", "--show-current").stdout.strip() == BRANCH
+    assert _git(repo, "rev-parse", "main").stdout.strip() == initial
+    assert _git(repo, "status", "--porcelain").stdout == ""
+    landed = _tree_bytes(repo / V2_COLLECTION_PATH)
+    assert landed.pop(".zenodo.json") == zenodo
+    assert landed == _tree_bytes(candidate)
+    assert not (repo / ".zenodo.json").exists()
+
+    marketplace = json.loads((repo / MARKETPLACE_PATH).read_bytes())
+    assert list(marketplace) == list(original)
+    assert "release" not in marketplace
+    assert marketplace["plugins"][0] == original["plugins"][0]
+    assert list(marketplace["plugins"][0]) == list(original["plugins"][0])
+    assert len(marketplace["plugins"]) == 2
+    assert marketplace["plugins"][1]["source"] == f"./{V2_COLLECTION_PATH}"
+    assert marketplace["plugins"][1]["release"] is False
+
+
+def test_released_v1_marketplace_duplicate_exits_two_before_branch_creation(
+    assembled: tuple[Path, Path], tmp_path: Path
+) -> None:
+    """Classify the existing v1 marketplace entry as the first conflict."""
+    candidate, receipts = _copy_inputs(assembled, tmp_path)
+    repo, initial, _, _ = _create_released_repo(tmp_path)
+
+    result = _land(candidate, receipts, repo)
+
+    assert result.returncode == 2
+    assert f"marketplace already lists ./{COLLECTION_PATH}" in (
+        result.stderr + result.stdout
+    )
+    assert _branches(repo) == ["main"]
+    assert _git(repo, "rev-parse", "HEAD").stdout.strip() == initial
+    assert _git(repo, "status", "--porcelain").stdout == ""
+
+
+def test_wrong_existing_marketplace_name_is_refused_before_branch_creation(
+    assembled: tuple[Path, Path], tmp_path: Path
+) -> None:
+    """Reject a tracked marketplace owned by a different domain repository."""
+    candidate, receipts = _copy_v2_inputs(assembled, tmp_path)
+    repo, initial, _, _ = _create_released_repo(
+        tmp_path, marketplace_name="asb-skills-wrong-domain"
+    )
+
+    result = _land_v2(candidate, receipts, repo)
+
+    assert result.returncode == 1
+    assert "name" in (result.stderr + result.stdout)
+    assert _branches(repo) == ["main"]
+    assert _git(repo, "rev-parse", "HEAD").stdout.strip() == initial
+    assert _git(repo, "status", "--porcelain").stdout == ""
+
+
+def test_tracked_marketplace_is_restored_when_commit_fails(
+    assembled: tuple[Path, Path],
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+    capsys: pytest.CaptureFixture[str],
+) -> None:
+    """Restore tracked main content and remove the candidate branch on rollback."""
+    candidate, receipts = _copy_v2_inputs(assembled, tmp_path)
+    repo, initial, zenodo, marketplace_bytes = _create_released_repo(tmp_path)
+    module = _load_landing_module(monkeypatch)
+    commit_calls = 0
+
+    def fail_commit(_plan: object) -> None:
+        nonlocal commit_calls
+        commit_calls += 1
+        raise module.LandingError("forced commit failure")
+
+    monkeypatch.setattr(module, "_commit", fail_commit)
+    exit_code = module.main(_v2_arguments(candidate, receipts, repo))
+    captured = capsys.readouterr()
+
+    assert exit_code == 1
+    assert commit_calls == 1
+    assert "landing failed: forced commit failure" in captured.err
+    assert _git(repo, "branch", "--show-current").stdout.strip() == "main"
+    assert _git(repo, "rev-parse", "HEAD").stdout.strip() == initial
+    assert _branches(repo) == ["main"]
+    assert _git(repo, "status", "--porcelain").stdout == ""
+    assert (repo / MARKETPLACE_PATH).read_bytes() == marketplace_bytes
+    assert (repo / ".zenodo.json").read_bytes() == zenodo
+    assert not (repo / V2_COLLECTION_PATH).exists()
+
+
+def test_merge_dry_run_reports_marketplace_mode_without_writes(
+    assembled: tuple[Path, Path], tmp_path: Path
+) -> None:
+    """Expose merge mode in the plan while leaving the released repo untouched."""
+    candidate, receipts = _copy_v2_inputs(assembled, tmp_path)
+    repo, initial, zenodo, _ = _create_released_repo(tmp_path)
+    before = _tree_bytes(repo)
+
+    result = _land_v2(candidate, receipts, repo, dry_run=True)
+
+    assert result.returncode == 0, result.stdout + result.stderr
+    assert _json_output(result) == {
+        "branch": BRANCH,
+        "dry_run": True,
+        "marketplace": {"path": MARKETPLACE_PATH, "mode": "merge"},
+        "message": V2_SUBJECT,
+        "paths": {
+            "collection": V2_COLLECTION_PATH,
+            "marketplace": MARKETPLACE_PATH,
+            "receipts": RECEIPTS_PATH,
+            "zenodo": f"{V2_COLLECTION_PATH}/.zenodo.json",
+        },
+    }
+    assert _git(repo, "rev-parse", "HEAD").stdout.strip() == initial
+    assert _git(repo, "branch", "--show-current").stdout.strip() == "main"
+    assert _branches(repo) == ["main"]
+    assert _git(repo, "status", "--porcelain").stdout == ""
+    assert _tree_bytes(repo) == before
+    assert (repo / ".zenodo.json").read_bytes() == zenodo
