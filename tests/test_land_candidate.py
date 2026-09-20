@@ -517,7 +517,7 @@ V2_VERSION = "v2"
 V2_TITLE = "ASB Metabarcoding Skill Collection v2"
 V2_COLLECTION_PATH = f"collections/{DOMAIN}/{V2_VERSION}"
 V2_SUBJECT = f"feat(candidate): {DOMAIN} {V2_VERSION} candidate {CUT_ID}"
-REFERENCE_MARKETPLACE = REPO.parent / "reference" / "marketplace_transcriptomics.json"
+REFERENCE_MARKETPLACE = REPO / "tests" / "fixtures" / "marketplace_transcriptomics.json"
 RELEASE_RECEIPTS_PATH = "receipts/split-2026-09-17"
 
 
