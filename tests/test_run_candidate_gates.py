@@ -1,4 +1,4 @@
-"""Contract tests for the six-check candidate gate runner."""
+"""Contract tests for the seven-check candidate gate runner."""
 
 from __future__ import annotations
 
@@ -22,6 +22,7 @@ EXPECTED_CHECKS = {
     "check_license_tiers",
     "check_provenance_tiers",
     "check_tools_index",
+    "surface",
     "verify",
 }
 EXPECTED_LOGS = {f"{name}.txt" for name in EXPECTED_CHECKS}
@@ -123,8 +124,8 @@ def _plant_personal_email(candidate: Path) -> None:
     )
 
 
-def test_runner_executes_six_checks_and_verifies_receipt(tmp_path: Path) -> None:
-    """Keep all six zero exit codes and a verified strict gate receipt."""
+def test_runner_executes_seven_checks_and_verifies_receipt(tmp_path: Path) -> None:
+    """Keep all seven zero exit codes and a verified strict gate receipt."""
     candidate = _prepared_candidate(tmp_path)
     receipts = tmp_path / "gate-receipts"
 
@@ -141,6 +142,7 @@ def test_runner_executes_six_checks_and_verifies_receipt(tmp_path: Path) -> None
             "check_license_tiers": 0,
             "check_provenance_tiers": 0,
             "check_tools_index": 0,
+            "surface": 0,
             "verify": 0,
         },
     }
@@ -164,10 +166,33 @@ def test_runner_preserves_real_email_finding(tmp_path: Path) -> None:
     assert "non-author personal email" in gate_log
 
 
+def test_runner_preserves_surface_finding_and_runs_every_check(tmp_path: Path) -> None:
+    """Retain a foreign DOI finding without short-circuiting later checks."""
+    candidate = _prepared_candidate(tmp_path)
+    receipts = tmp_path / "gate-receipts"
+    readme = candidate / "README.md"
+    readme.write_text(
+        "Foreign release DOI: 10.5281/zenodo.20794027\n",
+        encoding="utf-8",
+    )
+
+    assert _run(candidate, receipts) == 1
+    checks = json.loads((receipts / "checks.json").read_text(encoding="utf-8"))
+    assert checks["checks"]["surface"] == 1
+    assert checks["exit_code"] == 1
+    assert all(
+        code == 0 for name, code in checks["checks"].items() if name != "surface"
+    )
+    assert set(checks["checks"]) == EXPECTED_CHECKS
+    surface_log = (receipts / "surface.txt").read_text(encoding="utf-8")
+    assert "README.md:" in surface_log
+    assert "metabolomics-v2-doi" in surface_log
+
+
 def test_runner_dry_run_prints_commands_and_writes_nothing(
     tmp_path: Path, capsys
 ) -> None:
-    """Print the exact six commands under the active interpreter without writes."""
+    """Print the exact seven commands under the active interpreter without writes."""
     candidate = _prepared_candidate(tmp_path)
     receipts = tmp_path / "gate-receipts"
     before = _tree_bytes(candidate)
@@ -177,5 +202,5 @@ def test_runner_dry_run_prints_commands_and_writes_nothing(
     assert not receipts.exists()
     plan = json.loads(capsys.readouterr().out.strip().splitlines()[-1])
     assert plan["dry_run"] is True
-    assert len(plan["commands"]) == 6
+    assert len(plan["commands"]) == 7
     assert all(command[0] == sys.executable for command in plan["commands"])

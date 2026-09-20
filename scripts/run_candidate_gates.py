@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the six candidate checks and retain their combined output receipts."""
+"""Run the seven candidate checks and retain their combined output receipts."""
 
 from __future__ import annotations
 
@@ -24,6 +24,7 @@ CHECK_SPECS = (
         "check_provenance_tiers.py",
     ),
     ("check_tools_index", "check_tools_index.txt", "check_tools_index.py"),
+    ("surface", "surface.txt", "check_release_surface.py"),
     ("verify", "verify.txt", "release_gate.py"),
 )
 
@@ -52,7 +53,7 @@ def _offline_environment() -> dict[str, str]:
 
 
 def _commands(candidate: Path, corpus: Path, receipts: Path) -> list[list[str]]:
-    """Return the exact six commands in their release order."""
+    """Return the exact seven commands in their release order."""
     gate_report = receipts / "gate_report.json"
     gate = [
         sys.executable,
@@ -121,7 +122,7 @@ def _parser() -> argparse.ArgumentParser:
 
 
 def _run(options: argparse.Namespace) -> int:
-    """Execute all six checks or print their dry-run plan."""
+    """Execute all seven checks or print their dry-run plan."""
     candidate = Path(os.path.abspath(options.candidate))
     corpus = Path(os.path.abspath(options.corpus))
     receipts = Path(os.path.abspath(options.receipts))

@@ -43,6 +43,7 @@ EXPECTED_RECEIPTS = {
     "same_paper.txt",
     "same_paper_pairs.json",
     "source.json",
+    "surface.txt",
     "verify.txt",
 }
 STAGE_SCRIPTS = {
@@ -50,6 +51,8 @@ STAGE_SCRIPTS = {
     "collect_from_cut.py",
     "bootstrap_indexes.py",
     "run_candidate_gates.py",
+    "check_release_surface.py",
+    "release_surface_rules.yaml",
     "same_paper_pairs.py",
 }
 
@@ -158,7 +161,7 @@ def _sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def test_driver_dry_run_prints_six_real_commands_and_writes_nothing(
+def test_driver_dry_run_prints_seven_check_pipeline_and_writes_nothing(
     tmp_path: Path,
 ) -> None:
     """Describe join, collect, copy, bootstrap, gates, and duplicate stages."""
@@ -244,6 +247,7 @@ def test_driver_builds_complete_candidate_and_second_run_is_identical(
             "check_license_tiers": 0,
             "check_provenance_tiers": 0,
             "check_tools_index": 0,
+            "surface": 0,
             "verify": 0,
         },
     }

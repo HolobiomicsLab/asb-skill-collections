@@ -37,6 +37,8 @@ STAGE_SCRIPT_NAMES = (
     "collect_from_cut.py",
     "bootstrap_indexes.py",
     "run_candidate_gates.py",
+    "check_release_surface.py",
+    "release_surface_rules.yaml",
     "same_paper_pairs.py",
 )
 EXPECTED_RECEIPTS = frozenset(
@@ -61,6 +63,7 @@ EXPECTED_RECEIPTS = frozenset(
         "same_paper.txt",
         "same_paper_pairs.json",
         "source.json",
+        "surface.txt",
         "verify.txt",
     }
 )
@@ -406,7 +409,7 @@ def _validate_fresh_destination(output: Path, receipts: Path) -> None:
 
 
 def _script_hashes() -> dict[str, str]:
-    """Digest the five stage scripts invoked by the driver."""
+    """Digest every direct stage implementation and configured rule input."""
     return {name: _sha256_file(SCRIPTS / name) for name in STAGE_SCRIPT_NAMES}
 
 

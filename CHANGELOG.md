@@ -26,6 +26,9 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   with duplicate and unmatched receipts plus fixture coverage.
 - Add the deterministic S5 index bootstrap and six-check candidate gate runner,
   with stamped indexes, retained check output and fixture coverage.
+- Add the data-driven release-surface check (`scripts/check_release_surface.py`,
+  rules in `scripts/release_surface_rules.yaml`: the sentences retracted on 2026-09-13 and
+  the metabolomics/v2 identifiers, P6) as the seventh candidate check of the gate runner.
 - Ship an RO-Crate with every released capsule and make `validate.yml` gate 8
   blocking. The 417 capsules of `metabolomics/v1`, `epigenomics/v1` and
   `transcriptomics/v1` now carry the `ro-crate-metadata.json` their build wrote,
