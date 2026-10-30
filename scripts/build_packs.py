@@ -74,16 +74,28 @@ DEFAULT_INDENT = {INDEX_FILENAME: 1, BUNDLE_FILENAME: 2}
 
 @dataclass(frozen=True)
 class PackSpec:
-    """One declared pack: where it lives and which technique tag selects it."""
+    """One pack: where it lives and what selects its members.
+
+    A pack declared in a map is selected by a technique tag. ``slugs`` selects
+    by an explicit list instead; ``asbb install --skills`` derives a selection
+    that way, through the same build as the declared packs.
+    """
 
     directory: Path
-    tag: str
-    map_path: Path
+    tag: str | None = None
+    map_path: Path | None = None
+    slugs: frozenset[str] | None = None
 
     @property
     def name(self) -> str:
         """The pack's directory name, as the map spells it."""
         return self.directory.name
+
+    def members(self, index: list[dict]) -> set[str]:
+        """The declared slug list when there is one, else ``tag ∈ techniques``."""
+        if self.slugs is not None:
+            return set(self.slugs)
+        return selected_slugs(index, self.tag)
 
 
 @dataclass(frozen=True)
@@ -384,7 +396,7 @@ def build_pack(
         bundle = json.loads((collection_dir / BUNDLE_FILENAME).read_text(encoding="utf-8"))
     corpus = _read_corpus(collection_dir) if corpus is None else corpus
 
-    wanted = selected_slugs(index, spec.tag)
+    wanted = spec.members(index)
     source_root = layout.leaf_dir(collection_dir)
     leaves = pack_leaf_dir(spec.directory, collection_dir)
     present = {path.name for path in leaves.iterdir() if path.is_dir()} if leaves.is_dir() else set()

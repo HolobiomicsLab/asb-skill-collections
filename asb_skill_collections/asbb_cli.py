@@ -1,14 +1,18 @@
 """asbb — utility CLI for asb-skill-collections.
 
 Subcommands:
-  search / get                — keyword-search skills/workflows/tools and print a
+  search / get                : keyword-search skills/workflows/tools and print a
                                 source file (offline, no API key; reads a local
                                 checkout). The thin programmatic surface, also
                                 exposed over MCP by asb_mcp_server.py.
-  verify / doctor             — registry utilities (Phase 1.7 stubs).
-  install / uninstall         — materialize packs into NON-Claude runtimes
-                                (Codex, Gemini, Copilot, Cursor, Cline,
-                                VS Code Copilot, or any dir via --dest).
+  verify / doctor             : registry utilities (Phase 1.7 stubs).
+  install / uninstall         : materialize packs, or a chosen set of skills
+                                (--skills / --skills-file / --query), into
+                                NON-Claude runtimes (Codex, Gemini, Copilot,
+                                Cursor, Cline, VS Code Copilot, or any dir
+                                via --dest).
+  fetch                       : download chosen skills from the published
+                                repository into a directory; no checkout.
 
 For Claude Code the canonical install path remains the plugin marketplace::
 
@@ -111,21 +115,40 @@ def _select_target(args):
     return get_target(args.runtime)
 
 
+LICENCE_TIERS_URL = (
+    "https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/"
+    "governance/LICENSE_TIERS.md"
+)
+SELECTION_FLAGS = ("skills", "skills_file", "query")
+
+
+def _print_tiers(tiers: dict) -> None:
+    """One line per skill with its licence tier, then where the tiers are defined."""
+    width = max(len(slug) for slug in tiers)
+    for slug, tier in tiers.items():
+        print(f"  {slug:<{width}}  {tier}")
+    print(f"licence tiers (open, noncommercial, restricted, unknown): {LICENCE_TIERS_URL}")
+
+
 def _cmd_install(args) -> int:
     from .asbb.targets import list_runtimes
     if getattr(args, "list_runtimes", False):
         print(list_runtimes())
         return 0
     from .asbb.repo import find_repo_root, resolve_pack, list_pack_slugs
-    from .asbb.installer import install
     from pathlib import Path
     if not args.runtime and not args.dest:
         print("error: one of --runtime or --dest is required", file=sys.stderr)
         return 1
+    selecting = any(getattr(args, flag, None) for flag in SELECTION_FLAGS)
+    if bool(args.pack) == selecting:
+        both = ", not both" if selecting else ""
+        print("error: name a pack, or select skills with --skills, --skills-file or "
+              f"--query{both}", file=sys.stderr)
+        return 1
     try:
         target = _select_target(args)
     except KeyError:
-        from .asbb.targets import list_runtimes
         print(f"error: unknown runtime {args.runtime!r}\n{list_runtimes()}",
               file=sys.stderr)
         return 1
@@ -134,6 +157,8 @@ def _cmd_install(args) -> int:
     except FileNotFoundError as e:
         print(f"error: {e}", file=sys.stderr)
         return 1
+    if selecting:
+        return _install_selection(args, repo, target)
     try:
         pack = resolve_pack(repo, args.pack)
     except KeyError:
@@ -147,15 +172,104 @@ def _cmd_install(args) -> int:
         # class of refusal into a message and exit 1, and so must this.
         print(f"error: {e}", file=sys.stderr)
         return 1
+    written = _run_install(pack, target, args)
+    if written is None:
+        return 1
+    print(f"{_verb(args)} {len(written)} skill(s) from {args.pack} -> {_where(target, args)}")
+    return 0
+
+
+def _verb(args) -> str:
+    return "would install" if args.dry_run else "installed"
+
+
+def _where(target, args):
     opts = _install_opts(args)
+    return opts.dest_override or target.dest(opts)
+
+
+def _run_install(pack, target, args):
+    """Install one pack-shaped unit; print a refusal and return None instead of raising."""
+    from .asbb.installer import install
     try:
-        written = install(pack, target, opts)
+        return install(pack, target, _install_opts(args))
     except (FileExistsError, ValueError) as e:
         print(f"error: {e}", file=sys.stderr)
+        return None
+
+
+def _selection(args, repo):
+    """Resolve the selection flags against one collection of the checkout."""
+    from pathlib import Path
+    from . import asb_skill_index as idx
+    from .asbb import subset
+    from .asbb.repo import list_pack_slugs
+    if not args.collection:
+        raise subset.SelectionError("a selection needs --collection <slug> or <slug>/vN")
+    collection_dir = idx.resolve_collection_dir(args.collection, repo)
+    if collection_dir is None:
+        raise subset.SelectionError(f"unknown collection {args.collection!r}")
+    requested = subset.parse_slugs(args.skills or [])
+    if args.skills_file:
+        requested += subset.read_slugs_file(Path(args.skills_file))
+    if args.query:
+        requested += subset.query_slugs(collection_dir, args.query, args.top)
+    rows = idx.load_rows(collection_dir, "skills")
+    slugs = subset.check_slugs(requested, rows)
+    name = args.name or subset.default_name(collection_dir, slugs)
+    subset.check_name(name, list_pack_slugs(repo))
+    tiers = {row["slug"]: row.get("license_tier") or "unrecorded"
+             for row in rows if row.get("slug") in slugs}
+    selection = subset.Selection(repo, collection_dir, name, tuple(slugs))
+    return selection, {slug: tiers[slug] for slug in slugs}
+
+
+def _install_selection(args, repo, target) -> int:
+    """`asbb install --skills/--skills-file/--query`: derive the subset, install it."""
+    import tempfile
+    from pathlib import Path
+    from . import asb_skill_index as idx
+    from .asbb import subset
+    try:
+        selection, tiers = _selection(args, repo)
+    except subset.SelectionError as e:
+        print(f"error: {e}", file=sys.stderr)
         return 1
-    where = opts.dest_override or target.dest(opts)
-    verb = "would install" if opts.dry_run else "installed"
-    print(f"{verb} {len(written)} skill(s) from {args.pack} -> {where}")
+    collection = idx.collection_id(selection.collection_dir)
+    print(f"selection {selection.name}: {len(tiers)} skill(s) from {collection}")
+    _print_tiers(tiers)
+    with tempfile.TemporaryDirectory(prefix="asbb-selection-") as stage:
+        try:
+            pack = subset.derive(selection, Path(stage))
+        except (OSError, ValueError) as e:
+            print(f"error: cannot derive the selection: {e}", file=sys.stderr)
+            return 1
+        written = _run_install(pack, target, args)
+    if written is None:
+        return 1
+    print(f"{_verb(args)} {selection.name} ({len(tiers)} skill(s), "
+          f"{len(written)} advertised entry(ies)) -> {_where(target, args)}")
+    place = f"--dest {args.dest}" if args.dest else f"--runtime {args.runtime}"
+    print(f"remove with: asbb uninstall {selection.name} {place}")
+    return 0
+
+
+def _cmd_fetch(args) -> int:
+    """`asbb fetch`: download chosen leaves from the published repository."""
+    from pathlib import Path
+    from .asbb import fetch
+    from .asbb.subset import parse_slugs
+    request = fetch.FetchRequest(args.collection, tuple(parse_slugs(args.slugs)), args.ref)
+    dest = Path(args.dest)
+    try:
+        provenance = fetch.fetch(request, dest)
+    except (fetch.FetchError, OSError, ValueError) as e:
+        print(f"error: {e}", file=sys.stderr)
+        return 1
+    tiers = provenance["license_tiers"]
+    print(f"fetched {len(tiers)} skill(s) from {args.collection} at {args.ref} -> {dest}")
+    _print_tiers(tiers)
+    print(f"provenance: {dest / fetch.PROVENANCE_FILE}")
     return 0
 
 
@@ -184,6 +298,7 @@ def _cmd_uninstall(args) -> int:
 
 
 def build_parser() -> argparse.ArgumentParser:
+    from .asbb.fetch import DEFAULT_REF
     parser = argparse.ArgumentParser(
         prog="asbb",
         description=(
@@ -195,7 +310,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--version", action="version", version=f"asbb {__version__}"
     )
-    sub = parser.add_subparsers(dest="command", metavar="{search,get,verify,doctor,install,uninstall}")
+    sub = parser.add_subparsers(dest="command", metavar="{search,get,verify,doctor,install,uninstall,fetch}")
 
     # asbb search <query> [--collection ...] [--target skills|workflows|tools]
     p_search = sub.add_parser("search", help="Keyword-search skills/workflows/tools (offline, no key).")
@@ -237,8 +352,23 @@ def build_parser() -> argparse.ArgumentParser:
 
     # asbb install <pack> --runtime ... | --dest DIR
     p_install = sub.add_parser(
-        "install", help="Install a pack into a non-Claude runtime.")
+        "install",
+        help="Install a pack, or a chosen set of skills, into a non-Claude runtime.")
     p_install.add_argument("pack", nargs="?", help="Marketplace pack slug.")
+    p_install.add_argument("--skills", action="append",
+                           help="Install these skills instead of a pack: slug[,slug...]."
+                                " Repeatable.")
+    p_install.add_argument("--skills-file", dest="skills_file",
+                           help="File with one skill slug per line; # starts a comment.")
+    p_install.add_argument("--query",
+                           help="Select the --top hits `asbb search` ranks for this text.")
+    p_install.add_argument("--top", type=int, default=10,
+                           help="How many --query hits to select (default 10).")
+    p_install.add_argument("--collection",
+                           help="Collection a selection is drawn from: slug or slug/vN.")
+    p_install.add_argument("--name",
+                           help="Name of the installed selection "
+                                "(default <collection>-subset-<8 hex of the slugs>).")
     p_install.add_argument("--runtime", help="Target runtime id (see --list-runtimes).")
     p_install.add_argument("--dest", help="Install into an arbitrary directory (copy).")
     p_install.add_argument("--repo", help="Path to an asb-skill-collections checkout.")
@@ -264,6 +394,16 @@ def build_parser() -> argparse.ArgumentParser:
     p_uninstall.add_argument("--repo", help=argparse.SUPPRESS)  # accepted for compat
     p_uninstall.add_argument("--home", help=argparse.SUPPRESS)
     p_uninstall.set_defaults(func=_cmd_uninstall)
+
+    # asbb fetch slug[,slug...] --collection slug/vN --dest DIR [--ref REF]
+    p_fetch = sub.add_parser(
+        "fetch", help="Download chosen skills from the published repository (no checkout).")
+    p_fetch.add_argument("slugs", nargs="+", help="Skill slugs: slug[,slug...].")
+    p_fetch.add_argument("--collection", required=True, help="Collection as slug/vN.")
+    p_fetch.add_argument("--dest", required=True, help="Directory to write the skills into.")
+    p_fetch.add_argument("--ref", default=DEFAULT_REF,
+                         help=f"Branch, tag or commit of the repository (default {DEFAULT_REF}).")
+    p_fetch.set_defaults(func=_cmd_fetch)
 
     return parser
 
