@@ -89,6 +89,11 @@ API_RELATIONS = frozenset({
 # and are not sent: the API does not accept isVersionOf, and Zenodo links the
 # versions of a record itself.
 LINEAGE_RELATIONS = frozenset({"isVersionOf", "hasVersion"})
+# Relations whose target is the published record to version from. isPreviousVersionOf
+# and hasVersion name a later or child record, so they are not read.
+SOURCE_RECORD_RELATIONS = frozenset({"isVersionOf", "isNewVersionOf"})
+# Metadata the API sets itself; never sent back from a draft.
+READ_ONLY_KEYS = frozenset({"doi", "prereserve_doi"})
 RECORD_ID_PATTERN = re.compile(r"zenodo[./](\d+)")
 
 
@@ -269,11 +274,26 @@ def metadata_payload(path: Path, publication_date: str):
     return {"metadata": metadata}, dropped
 
 
+def inherit_metadata(draft_metadata, payload):
+    """Return (payload, kept): the template laid over the metadata the draft inherited.
+
+    A new-version draft starts from the previous record's metadata, including keys
+    set in the web interface such as communities and language. Sending the template
+    alone would drop them, so they are kept and the template wins on every key it
+    has. Only keys the deposit API documents are carried; read-only ones are not.
+    `kept` lists the inherited keys the template does not carry.
+    """
+    sendable = API_METADATA_KEYS - READ_ONLY_KEYS
+    inherited = {key: value for key, value in (draft_metadata or {}).items() if key in sendable}
+    kept = sorted(set(inherited) - set(payload["metadata"]))
+    return {"metadata": {**inherited, **payload["metadata"]}}, kept
+
+
 def record_id_from(path: Path) -> str:
     """Return the Zenodo record id named by a lineage relation in the template, or ''."""
     metadata = json.loads(Path(path).read_text(encoding="utf-8"))
     for related in metadata.get("related_identifiers") or []:
-        if related.get("relation") in LINEAGE_RELATIONS | {"isNewVersionOf", "isPreviousVersionOf"}:
+        if related.get("relation") in SOURCE_RECORD_RELATIONS:
             match = RECORD_ID_PATTERN.search(str(related.get("identifier", "")))
             if match:
                 return match.group(1)
@@ -337,7 +357,7 @@ def run_archive(args) -> int:
 def run_draft(args) -> int:
     """Create the new-version draft and print its URL. Never publishes."""
     token = _token(args.sandbox)
-    host, record, payload, _, problems, archive = _prepare(args, Path(args.out_dir))
+    host, record, template, _, problems, archive = _prepare(args, Path(args.out_dir))
     if problems:
         raise ZenodoError("metadata rejected by the API: " + "; ".join(problems))
     base = f"{host}/api/deposit/depositions"
@@ -346,7 +366,10 @@ def run_draft(args) -> int:
     for stale in draft.get("files") or []:
         _call("inherited file delete", "DELETE", f"{base}/{draft['id']}/files/{stale['id']}", token)
     _call("archive upload", "PUT", f"{draft['links']['bucket']}/{archive.path.name}", token, archive.path)
+    payload, kept = inherit_metadata(draft.get("metadata"), template)
     _call("metadata update", "PUT", f"{base}/{draft['id']}", token, payload)
+    if kept:
+        print("inherited metadata not in the template, kept: " + ", ".join(kept))
     url = draft["links"].get("html") or f"{host}/deposit/{draft['id']}"
     print(f"draft {draft['id']} created, not published: {url}\n"
           f"uploaded {archive.path.name} sha256 {archive.sha256}")

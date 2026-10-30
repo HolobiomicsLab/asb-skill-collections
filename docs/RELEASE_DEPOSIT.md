@@ -56,7 +56,8 @@ Run from the repository root, on the commit that carries the release.
    ```
 
    Open the printed URL and check the title, creators, description, license,
-   version, related identifiers and the single uploaded file.
+   version, related identifiers, communities, language and the single uploaded
+   file.
 
 4. Make the real draft.
 
@@ -72,8 +73,9 @@ Run from the repository root, on the commit that carries the release.
    field, and click Publish. This mints the version DOI and cannot be undone.
    The concept DOI stays the same.
 
-6. Record the new version DOI in `CITATION.cff` and the catalogue in a pull
-   request.
+6. Record the new version DOI in the `doi:` field of
+   `collections/<domain>/<vN>/CITATION.cff` and in the collection entry of
+   `catalogue.jsonld`, in a pull request.
 
 ## What `draft` sends
 
@@ -83,7 +85,7 @@ Run from the repository root, on the commit that carries the release.
 | 2 | `GET` the `latest_draft` link from step 1 |
 | 3 | `DELETE /api/deposit/depositions/{draft}/files/{file}` for each inherited file |
 | 4 | `PUT {bucket}/{domain}-{vN}.zip` with the archive |
-| 5 | `PUT /api/deposit/depositions/{draft}` with `{"metadata": {...}}` |
+| 5 | `PUT /api/deposit/depositions/{draft}` with `{"metadata": {...}}`: the template over the metadata the draft inherited |
 
 Any non-2xx answer stops the run and names the step. A failed run leaves a draft
 on Zenodo. Zenodo allows one unpublished new version per record; running `draft`
@@ -105,6 +107,11 @@ These are the files `release.yml` bundles.
   is not specified bit for bit, so a different zlib build can give a different
   sha256 for the same tree. Compare hashes from one machine.
 
+`release.yml` differs: it keeps dotfiles (so its archive carries
+`.claude-plugin/plugin.json`), uploads `.cache/leafemb_v<N>.npz` as a second file
+`<domain>-v<N>-leafemb.npz` when present, and publishes when the repository
+variable `ZENODO_PUBLISH` is `true`. This tool does none of these.
+
 ## Metadata handling
 
 The template keeps the metadata at the top level of the file. The API wants it
@@ -117,6 +124,7 @@ under `metadata`; the tool wraps it.
 | `license` | required when `access_right` is `open` or `embargoed` |
 | `related_identifiers[].relation` | checked against the API vocabulary |
 | `isVersionOf` | not in the API vocabulary. The tool reads the record id from it and does not send it. Zenodo links the versions of a record itself |
+| Inherited metadata | the draft starts from the previous record. Keys it carries that the template lacks, such as `communities` and `language`, are kept and listed in the output. The template wins on every key it has. `doi` and `prereserve_doi` are never sent. `plan` makes no request and cannot show inherited keys |
 | `publication_date` | set to today (`--publication-date` overrides) when the template has none, so the draft does not keep the previous version's date |
 | `creators[].name` | the API documents the form `Family name, Given names`. Entity names such as a community or a lab are sent as written, not in that form |
 
@@ -130,7 +138,8 @@ per-collection release: the metadata template and the files live under
 `collections/<domain>/<vN>/`, and the snapshot is the whole repository.
 
 The release workflow (`.github/workflows/release.yml`) makes the same kind of
-draft from CI when `ZENODO_TOKEN` is set. It sends the template unchanged,
-including the `isVersionOf` relation that the API vocabulary does not list. That
-was not exercised against a live deposit here. Use the sandbox draft in step 3 to
-check it before relying on that path.
+draft from CI when `ZENODO_TOKEN` is set, and publishes it when `ZENODO_PUBLISH`
+is `true`. It sends the template unchanged, including the `isVersionOf` relation
+that the API vocabulary does not list. That was not exercised against a live
+deposit here. Use the sandbox draft in step 3 to check it before relying on that
+path.

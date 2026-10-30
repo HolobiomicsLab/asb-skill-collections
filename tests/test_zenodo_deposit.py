@@ -77,10 +77,11 @@ def tokens(monkeypatch):
 class FakeZenodo:
     """Records each request and answers like the deposit API, with overrides per call."""
 
-    def __init__(self, base, fail=None):
+    def __init__(self, base, fail=None, inherited=None):
         self.base = base
         self.calls = []
         self.fail = fail or {}
+        self.inherited = inherited or {}
 
     def __call__(self, method, url, token, body=None):
         self.calls.append((method, url, token, body))
@@ -93,6 +94,7 @@ class FakeZenodo:
         if method == "GET" and url == f"{dep}/{DRAFT_ID}":
             return 200, {
                 "id": DRAFT_ID,
+                "metadata": self.inherited,
                 "files": [{"id": "old-1"}, {"id": "old-2"}],
                 "links": {"bucket": f"{self.base}/api/files/bkt",
                           "html": f"{self.base}/deposit/{DRAFT_ID}"},
@@ -268,6 +270,39 @@ def test_draft_call_sequence_and_payloads(repo, monkeypatch, capsys):
     assert "not published" in out.out
 
 
+INHERITED = {
+    "title": "Previous title",
+    "communities": [{"identifier": "asb_skill_collections"}],
+    "language": "eng",
+    "doi": "10.5281/zenodo.1",
+    "prereserve_doi": {"doi": "10.5281/zenodo.2"},
+    "not_a_deposit_key": 1,
+}
+
+
+def test_draft_keeps_inherited_metadata_the_template_lacks(repo, monkeypatch, capsys):
+    fake = FakeZenodo(zenodo_deposit.ZENODO_URL, inherited=INHERITED)
+    code, out, fake = run_draft(repo, monkeypatch, capsys, fake=fake)
+    sent = fake.calls[-1][3]["metadata"]
+    assert code == 0
+    assert sent["communities"] == INHERITED["communities"]
+    assert sent["language"] == "eng"
+    assert sent["title"] == ZENODO_JSON["title"]
+    assert "communities, language" in out.out
+
+
+def test_draft_does_not_send_read_only_or_unknown_inherited_keys(repo, monkeypatch, capsys):
+    fake = FakeZenodo(zenodo_deposit.ZENODO_URL, inherited=INHERITED)
+    _, _, fake = run_draft(repo, monkeypatch, capsys, fake=fake)
+    sent = fake.calls[-1][3]["metadata"]
+    assert not {"doi", "prereserve_doi", "not_a_deposit_key"} & set(sent)
+
+
+def test_draft_without_inherited_metadata_sends_the_template_alone(repo, monkeypatch, capsys):
+    code, out, fake = run_draft(repo, monkeypatch, capsys)
+    assert code == 0 and "inherited metadata" not in out.out
+
+
 def test_draft_never_calls_a_publish_action(repo, monkeypatch, capsys):
     _, _, fake = run_draft(repo, monkeypatch, capsys)
     assert not any("publish" in url for _, url, _, _ in fake.calls)
@@ -356,6 +391,22 @@ def test_draft_without_a_record_id_fails_before_any_request(repo, monkeypatch, c
     code, out, fake = run_draft(repo, monkeypatch, capsys)
     assert code == 1 and fake.calls == []
     assert "--record-id" in out.err
+
+
+@pytest.mark.parametrize("relation", ["isPreviousVersionOf", "hasVersion"])
+def test_record_id_ignores_relations_that_name_a_later_or_child_record(repo, relation):
+    path = repo / "collections/dom/v1/.zenodo.json"
+    path.write_text(json.dumps({**ZENODO_JSON, "related_identifiers": [
+        {"relation": relation, "identifier": "10.5281/zenodo.123", "scheme": "doi"}]}))
+    assert zenodo_deposit.record_id_from(path) == ""
+
+
+@pytest.mark.parametrize("relation", ["isVersionOf", "isNewVersionOf"])
+def test_record_id_reads_the_relations_that_name_the_record_to_version(repo, relation):
+    path = repo / "collections/dom/v1/.zenodo.json"
+    path.write_text(json.dumps({**ZENODO_JSON, "related_identifiers": [
+        {"relation": relation, "identifier": "10.5281/zenodo.123", "scheme": "doi"}]}))
+    assert zenodo_deposit.record_id_from(path) == "123"
 
 
 def test_missing_zenodo_json_is_an_error(repo, monkeypatch, capsys):
