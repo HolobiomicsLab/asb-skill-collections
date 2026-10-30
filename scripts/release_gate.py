@@ -151,7 +151,11 @@ _EVIDENCE_PARSER_STAT_KEYS = (
 )
 
 
-from scripts.pii_config import PII_CONFIG, _is_notation_not_email  # noqa: E402
+from scripts.pii_config import (  # noqa: E402
+    PII_CONFIG,
+    _hard_fail_allowlisted,
+    _is_notation_not_email,
+)
 
 
 # --------------------------------------------------------------------------- #
@@ -942,6 +946,10 @@ def check_pii_dual_use(
             # --- Tier 1: clinical / personal identifiers → HARD FAIL ----------
             for label, pat in hard_patterns.items():
                 m = pat.search(span_text)
+                if m and _hard_fail_allowlisted(label, m.group(0)):
+                    # Documented example value or owner-read span
+                    # (pii_config ``hard_fail_allowlist_exact``): not a finding.
+                    continue
                 if m:
                     res.add(
                         FAIL,

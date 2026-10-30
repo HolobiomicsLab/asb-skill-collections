@@ -14,6 +14,19 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
 
 ## [Unreleased]
 
+### Fixed
+- Bind `nhs_number` to its label like the other clinical identifiers, treat a
+  bounded set of documented template e-mail local parts (`your@…`,
+  `firstname.lastname@…`) as notation, and add an exact, per-pattern allowlist
+  for documented example values (the two canonical SSN placeholders) and
+  owner-read spans (one de-identified public-dataset sample label, decision of
+  2026-10-29). The candidate gates of 2026-09-20 had stopped transcriptomics,
+  epigenomics, agentic-ai and proteomics on `pii_dual_use` for a Bloom-filter
+  bit budget, two benchmark-table cells, a README usage line and a paper's own
+  example record. `pii_config` moves to `2026-10-29.1`; the four domains re-run
+  through the strict gate with it pass (`release_verified: true`, cut ids
+  unchanged: `c0107b2c545e`, `576c19e25af0`, `d7359e4dd5f0`, `b5a519a80508`).
+
 ### Added
 - Add an optional explicit build root to the cut collector and pass the candidate driver's build root through to it.
 - Add the deterministic S6 same-paper duplicate report and S4–S6 candidate assembly driver with pinned source, stage and output receipts.

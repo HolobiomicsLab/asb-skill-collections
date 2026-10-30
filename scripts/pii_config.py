@@ -13,7 +13,7 @@ from typing import Any
 # records the version used and folds this dict into ``receipt_sha256``.       #
 # --------------------------------------------------------------------------- #
 PII_CONFIG: dict[str, Any] = {
-    "version": "2026-09-19.2",
+    "version": "2026-10-29.1",
     "source": "scripts/pii_config.py::PII_CONFIG",
     # Tier 1 — HARD FAIL when found inside a verbatim quote span.
     "hard_fail_patterns": {
@@ -23,7 +23,16 @@ PII_CONFIG: dict[str, Any] = {
         # sciences (see test_pii_evasion_hardening / test_pii_crossdomain).
         "mrn": r"\bM[.\s]?R[.\s]?N\b[:\s#.]*\d{5,12}\b",
         "medical_record": r"\bmedical\s+record\s+(?:no\.?|number|#)\s*[:#]?\s*\d{4,}\b",
-        "nhs_number": r"\b\d{3}[\s-]?\d{3}[\s-]?\d{4}\b",  # NHS 10-digit format
+        # `nhs_number` is LABEL-BOUND like its clinical siblings. The bare 10-digit
+        # form (`\d{3}[\s-]?\d{3}[\s-]?\d{4}`) fired on a Bloom-filter bit budget
+        # (`-b 1000000000`, PAC README) and on two adjacent benchmark-table cells
+        # (`223327 7644`, XTandem Parser) — measured 2026-09-20 on the transcriptomics
+        # and proteomics candidates. A real NHS number in a quote arrives with its
+        # label ("NHS number 943 476 5919", "NHS no. 9434765919", "NHS# …").
+        "nhs_number": (
+            r"\bNHS\s*(?:no\.?|number|num\.?|#|id)?\s*[:#]?\s*"
+            r"\d{3}[\s-]?\d{3}[\s-]?\d{4}\b"
+        ),
         "hospital_id": r"\b(?:hospital|patient)\s+ID[:\s#]*\w*\d{3,}\b",
         "account_number": r"\baccount\s+(?:no\.?|number|#)\s*[:#]?\s*\d{6,}\b",
         # `ssn` stays DASH-ONLY on purpose. A space-separated 3-2-4 run (`000 00 0000`)
@@ -44,6 +53,30 @@ PII_CONFIG: dict[str, Any] = {
             r"\bsubject\s+(?:id\s+)?\d{3,}\s+(?:showed|presented|exhibited|had)\b"
         ),
     },
+    # Exact-value allowlist for Tier-1 patterns, keyed by pattern label. A matched
+    # string equal (case-insensitively) to a key is NOT a finding. Every entry is a
+    # documented example value or an owner-read span, never a class of values —
+    # the same shape as ``email_allowlist_exact``. Measured 2026-09-20, decided by
+    # the owner 2026-10-29 (HUMAN_REVIEW_GATE.md, "Task 8 candidate gates").
+    "hard_fail_allowlist_exact": {
+        "ssn": {
+            # The canonical placeholder SSNs (SSA "Woolworth" card 078-05-1120 and
+            # the textbook 123-45-6789); the agentic-ai candidate quotes the latter
+            # from a privacy-benchmark paper's own example record
+            # (10.1109/access.2026.3704541).
+            "123-45-6789": "documented example value (textbook placeholder)",
+            "078-05-1120": "documented example value (SSA Woolworth card)",
+        },
+        "hospital_id": {
+            # De-identified sample label of a cited public dataset, quoted in a
+            # CC-BY paper (10.1093/bioinformatics/btad419, transcriptomics
+            # candidate b5a519a80508). Owner decision 2026-10-29: keep the leaf.
+            "patient id 11352": (
+                "de-identified public-dataset sample label quoted in a CC-BY paper "
+                "(DOI in the comment above); owner-read 2026-10-29"
+            ),
+        },
+    },
     # Email handling — a real email inside a quote is HARD FAIL unless the local
     # part / domain is on the author/affiliation allowlist (then it is allowed).
     "email_regex": r"\b[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}\b",
@@ -63,6 +96,19 @@ PII_CONFIG: dict[str, Any] = {
         "mz", "mass", "neutral", "adduct", "bin", "feature", "token", "word",
     ],
     "email_placeholder_domain_regex": r"^[xX]+(?:\.[xX]+)*$",
+    # Placeholder LOCAL PARTS: a usage line such as ``-m your@mail-adress.com``
+    # (Watchdog WMS README, measured 2026-09-20 on the epigenomics candidate) is a
+    # template the reader fills in, not a person's address. The domain check above
+    # cannot catch it (the domain is plausible), so the local part is checked
+    # against the bounded set of documented template names. Compared whole and
+    # case-insensitively. Generic words that real fixtures and real people use as
+    # local parts (``name``, ``user``, ``email``, ``you``) are deliberately NOT in
+    # the set (test_pii_context_exceptions treats ``name@lab.example.org`` as a
+    # real address); ``user1`` or ``jane.doe`` stay e-mails as well.
+    "email_placeholder_localparts": [
+        "your", "yourname", "your.name", "your.email", "youremail", "username",
+        "someone", "firstname.lastname", "first.last", "john.doe",
+    ],
     # Bounded last-label set used to keep R slot syntax distinct from email
     # domains.  Only the final label is checked, so multi-label public endings
     # such as ``ac.uk`` and ``edu.au`` remain email-like.  Any two-letter last
@@ -164,6 +210,25 @@ def _is_r_slot_access(local: str, domain: str) -> bool:
     return last_label not in email_like_labels
 
 
+def _is_placeholder_email(local: str) -> bool:
+    """True when the local part is one of the documented template names."""
+    return local.lower() in {
+        t.lower() for t in PII_CONFIG["email_placeholder_localparts"]
+    }
+
+
+def _hard_fail_allowlisted(label: str, matched: str) -> bool:
+    """True when ``matched`` is an exact, documented allowlist value for ``label``.
+
+    The allowlist holds example values and owner-read spans only
+    (``hard_fail_allowlist_exact``); comparison is whole-string and
+    case-insensitive, with surrounding whitespace ignored, so a different number
+    or a longer identifier never inherits the exemption.
+    """
+    allowed = PII_CONFIG["hard_fail_allowlist_exact"].get(label, {})
+    return matched.strip().lower() in {k.lower() for k in allowed}
+
+
 def _is_notation_not_email(
     em: str, match: re.Match[str] | None = None
 ) -> bool:
@@ -185,6 +250,8 @@ def _is_notation_not_email(
     if local.lower() in {t.lower() for t in PII_CONFIG["email_notation_localparts"]}:
         return True
     if re.fullmatch(PII_CONFIG["email_placeholder_domain_regex"], domain):
+        return True
+    if _is_placeholder_email(local):
         return True
     if _is_git_ssh_clone(em, local, match):
         return True
