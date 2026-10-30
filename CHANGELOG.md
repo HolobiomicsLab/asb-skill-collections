@@ -51,6 +51,17 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   keeps its historical score/slug order unchanged. See `docs/selection.md`.
 
 ### Fixed
+- Raise the content gate policy to 1.3: strict verbatim caps now use only known
+  paper-text licence evidence; tool-subject and unknown text licences follow
+  access-only caps, with the unknown class reported separately.
+- Make the release gate own and fully account for evidence-quote parsing,
+  including colon-bearing labels, multiline blocks and embedded quotes; apply
+  verbatim caps to every non-text-reuse-permissive DOI (licence tier, else
+  `access.source_reuse`, else the paper licence the v1 corpora record under
+  `access.license`) with normalized DOI identity; distinguish Git SSH and
+  R-slot syntax from real email addresses (a two-letter last label is always
+  an email); propagate the `unknown` licence tier without collapsing or
+  raising; and refresh the vendored `pii_config.py` of metabolomics v2.
 - Make generated skill descriptions and routers carry their unit's own contract:
   approved description openings are normalised without duplication, domain
   wording comes from the collection slug (or stays neutral), and router apply /

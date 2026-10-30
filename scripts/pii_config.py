@@ -13,7 +13,7 @@ from typing import Any
 # records the version used and folds this dict into ``receipt_sha256``.       #
 # --------------------------------------------------------------------------- #
 PII_CONFIG: dict[str, Any] = {
-    "version": "2026-09-13.1",
+    "version": "2026-09-19.2",
     "source": "scripts/pii_config.py::PII_CONFIG",
     # Tier 1 — HARD FAIL when found inside a verbatim quote span.
     "hard_fail_patterns": {
@@ -63,6 +63,22 @@ PII_CONFIG: dict[str, Any] = {
         "mz", "mass", "neutral", "adduct", "bin", "feature", "token", "word",
     ],
     "email_placeholder_domain_regex": r"^[xX]+(?:\.[xX]+)*$",
+    # Bounded last-label set used to keep R slot syntax distinct from email
+    # domains.  Only the final label is checked, so multi-label public endings
+    # such as ``ac.uk`` and ``edu.au`` remain email-like.  Any two-letter last
+    # label is email-like as well (every country-code top-level domain has two
+    # letters), so this list only needs the generic top-level domains.
+    "email_public_suffix_last_labels": [
+        "ai", "app", "au", "bio", "biz", "ca", "ch", "cn", "com", "de", "dev",
+        "edu", "email", "es", "eu", "fr", "gov", "health", "info", "int", "io",
+        "it", "jp", "mil", "net", "nl", "online", "org", "pro", "science", "se",
+        "site", "tech", "uk", "xyz",
+    ],
+    # Reserved DNS suffixes are deliberately email-like in examples and tests;
+    # they must still be redacted rather than mistaken for R slot notation.
+    "email_reserved_suffix_last_labels": [
+        "example", "invalid", "localhost", "test",
+    ],
     # Author / corresponding-author / institutional-role emails are allowlisted
     # (CONTENT_POLICY.md §6 Tier-1 exception).  Populated per-run from the
     # collection frontmatter (corresponding_author / curators / contact) and
@@ -124,16 +140,52 @@ PII_CONFIG: dict[str, Any] = {
 }
 
 
-def _is_notation_not_email(em: str) -> bool:
-    """True when an ``<x>@<y>`` token is scientific notation, not a real email.
+def _is_git_ssh_clone(
+    email: str, local: str, match: re.Match[str] | None
+) -> bool:
+    return bool(
+        local == "git"
+        and match is not None
+        and match.group(0) == email
+        and match.string[match.end():match.end() + 1] == ":"
+    )
+
+
+def _is_r_slot_access(local: str, domain: str) -> bool:
+    if "." not in domain:
+        return False
+    if not local or not (local[-1].isalnum() or local[-1] in "._"):
+        return False
+    last_label = domain.rsplit(".", 1)[-1].lower()
+    if len(last_label) == 2 and last_label.isalpha():
+        return False
+    email_like_labels = set(PII_CONFIG["email_public_suffix_last_labels"])
+    email_like_labels.update(PII_CONFIG["email_reserved_suffix_last_labels"])
+    return last_label not in email_like_labels
+
+
+def _is_notation_not_email(
+    em: str, match: re.Match[str] | None = None
+) -> bool:
+    """True when an email-shaped token belongs to a documented notation class.
 
     Guards against domain-notation false positives such as Spec2Vec / MS2DeepScore
     ``peak@<m/z>`` / ``loss@<m/z>`` word tokens (the 2-decimal m/z placeholder
-    ``xxx.xx`` parses as a ``domain.tld``).  See ``PII_CONFIG`` notes.
+    ``xxx.xx`` parses as a ``domain.tld``).  Two context classes are also benign:
+    ``git_ssh_clone`` requires the exact ``git`` local part and a colon immediately
+    after the match; ``r_slot_access`` requires an identifier character immediately
+    before ``@`` and a domain last label that is neither two letters (a country
+    code) nor in the bounded generic public-suffix set.
+
+    ``match`` is optional for backward compatibility.  Context-aware callers pass
+    the exact ``re.finditer`` match so its full source string and end offset are
+    available; without it, the SSH-only exception fails closed.
     """
     local, _, domain = em.partition("@")
     if local.lower() in {t.lower() for t in PII_CONFIG["email_notation_localparts"]}:
         return True
     if re.fullmatch(PII_CONFIG["email_placeholder_domain_regex"], domain):
         return True
-    return False
+    if _is_git_ssh_clone(em, local, match):
+        return True
+    return _is_r_slot_access(local, domain)

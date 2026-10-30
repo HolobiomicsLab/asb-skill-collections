@@ -13,5 +13,12 @@
 {"id": "clean_method", "category": "benign", "should_flag": false, "text": "Chromatographic gradients improved separation of coeluting analytes."}
 {"id": "clean_stats", "category": "benign", "should_flag": false, "text": "Normalization reduced batch variance across the full sample set."}
 {"id": "clean_mz", "category": "benign", "should_flag": false, "text": "The measured m/z 415.2201 matched the predicted molecular formula."}
+{"id": "git_ssh_clone", "category": "benign_context", "should_flag": false, "text": "The benchmark setup used git clone git@github.com:aitgon/vtam_benchmark.git before analysis."}
+{"id": "r_slot_meta_data", "category": "benign_context", "should_flag": false, "text": "The R workflow read seurat_obj@meta.data before filtering."}
+{"id": "r_slot_nested_access", "category": "benign_context", "should_flag": false, "text": "The R workflow read sce@int_colData$x before filtering."}
+{"id": "git_address_without_clone_colon", "category": "hard_fail_context_negative", "should_flag": true, "text": "The maintainer address git@github.com appeared in the record."}
+{"id": "r_like_public_suffix_email", "category": "hard_fail_context_negative", "should_flag": true, "text": "The R-like record contained the address name@lab.example.org for follow-up."}
 {"id": "obfuscated_mrn", "category": "hard_fail_evasion", "should_flag": true, "text": "The code M.R.N 4820193 was printed on the label.", "note": "dotted MRN evades \\bMRN\\b — a known-gap probe"}
 {"id": "spaced_ssn", "category": "hard_fail_evasion", "should_flag": true, "text": "The field held 000 00 0000 without dashes.", "note": "space-separated SSN evades the dash pattern — a known-gap probe"}
+{"id": "r_like_cctld_email", "category": "hard_fail_context_negative", "should_flag": true, "text": "The R-like record assigned owner <- name@ulb.ac.be for follow-up."}
+{"id": "r_like_generic_tld_email", "category": "hard_fail_context_negative", "should_flag": true, "text": "The R-like record assigned owner <- name@lab.bio for follow-up."}
