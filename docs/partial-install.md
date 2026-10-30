@@ -17,9 +17,15 @@ install as one advertised router over `leaves/`, with `skills_index.json` and
 `kb_bundle.json` filtered to their members, the offline search script and the
 grounding helper. Fetch skips all of that and downloads leaf files only.
 
+Selections and fetch need a router-shaped collection with a root
+`skills_index.json` and `leaves/`; today that is `metabolomics/v2` only.
+
 All figures on this page were measured on 2026-10-30 from a checkout of `main`
 at `e80767838` plus this change, with `HOME` pointed at a temporary directory.
 Outputs below show that directory as `$HOME`.
+Byte totals include the install receipt `.asbb-unit.json`, which records the
+destination path, so they vary by a few tens of bytes with the length of
+`$HOME`.
 
 ## Sizes
 
@@ -27,7 +33,7 @@ Installed into the `agents` runtime (`$HOME/.agents/skills`):
 
 | Install | Leaves | Files written | Bytes written | On disk (`du -sk`) |
 |---|---:|---:|---:|---:|
-| Full collection, `metabolomics` | 5,859 | 6,870 | 61,255,269 | 73,480 KiB |
+| Full collection, `metabolomics` | 5,859 | 6,870 | 61,255,784 | 73,476 KiB |
 | Technique pack, `metabolomics-lc-ms` | 2,617 | 2,627 | 25,568,608 | 29,752 KiB |
 | Selection of 10 skills | 10 | 20 | 145,501 | 188 KiB |
 | Fetch of the same 10 skills | 10 | 11 | 90,271 | 112 KiB |
@@ -143,6 +149,10 @@ untargeted-metabolomics-annotation
 ms2-spectrum-consolidation  # consolidate before matching
 ```
 
+In a fresh destination (two selections cannot share one, see
+[One router per destination](#one-router-per-destination) below), or after
+`asbb uninstall metabolomics-subset-349bfa1b --runtime agents`:
+
 ```bash
 python3 -m asb_skill_collections.asbb_cli install --skills-file my-skills.txt --collection metabolomics/v2 --name my-annotation-set --runtime agents
 ```
@@ -180,9 +190,9 @@ Nothing is written when a selection is refused, and the command exits 1.
 | a pack name and a selection together | `error: name a pack, or select skills with --skills, --skills-file or --query, not both` |
 | `--name` taken by a marketplace pack | `error: selection name 'metabolomics-lc-ms' is a marketplace pack; choose another` |
 
-The installer code documents no limit on the number of skills a runtime
-accepts, so a selection of any size installs. Only the router is advertised to
-the host, whatever the selection holds.
+A selection of every skill in the collection (5,859) installs as one
+advertised router over 5,859 leaves; only the router is advertised to the host,
+whatever the selection holds.
 
 ### One router per destination
 
@@ -237,11 +247,13 @@ Every fetch reads the whole `skills_index.json` (5,430,046 bytes on `main`
 today), so the download is about 5.5 MB whether you ask for one skill or ten.
 
 Fetch refuses, before writing anything, a slug the remote index does not list,
-a collection not written as `<slug>/vN`, and a destination that already holds
-`PROVENANCE.json` or a directory of the same name as a requested skill:
+a collection not written as `<slug>/vN`, a ref that is not a plain branch, tag
+or commit name (such as `x/../main`), and a destination that already holds
+`PROVENANCE.json` or a directory of the same name as a requested skill. Running
+the fetch command above a second time gives:
 
 ```text
-error: fetched already holds PROVENANCE.json, ms2-spectrum-consolidation; fetch into a new or empty directory
+error: asb-skills already holds PROVENANCE.json, untargeted-metabolomics-annotation, ms2-spectrum-consolidation; fetch into a new or empty directory
 ```
 
 ### Getting the `asbb` command

@@ -92,8 +92,9 @@ def test_fetch_reads_the_index_then_only_the_requested_leaves(tmp_path):
         (_request(), "the selection is empty"),
         (_request("../escape"), "not a skill slug: ../escape"),
         (_request("stellar-photometry", collection="astronomy"), "must be <slug>/v<N>"),
+        (_request("stellar-photometry", ref="x/../main"), "not a git ref"),
     ),
-    ids=("unknown-slugs", "empty", "path-in-slug", "unversioned-collection"),
+    ids=("unknown-slugs", "empty", "path-in-slug", "unversioned-collection", "dot-segment-ref"),
 )
 def test_a_request_that_cannot_be_served_writes_nothing(tmp_path, request_, message):
     host = FakeHost()

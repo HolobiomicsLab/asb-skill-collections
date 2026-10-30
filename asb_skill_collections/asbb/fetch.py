@@ -35,6 +35,8 @@ USER_AGENT = "asbb-fetch"
 COLLECTION_PATTERN = re.compile(r"[a-z0-9][a-z0-9_-]*/v[0-9]+")
 #: A leaf directory name: one path segment, never ``.`` or ``..``.
 SLUG_PATTERN = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]*")
+#: A branch, tag or commit: slash-separated segments, none starting with ``.``.
+REF_PATTERN = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]*(?:/[A-Za-z0-9][A-Za-z0-9._-]*)*")
 
 
 class FetchError(RuntimeError):
@@ -78,6 +80,14 @@ def leaf_path(collection: str, slug: str) -> str:
 
 
 def _check_request(request: FetchRequest) -> None:
+    """Refuse a request whose parts could leave the repository's raw-file tree.
+
+    The ref is checked as strictly as the slugs: the raw host resolves ``..``
+    in a URL path, so a ref such as ``x/../main`` or ``../../<owner>/<repo>/main``
+    would read another tree while PROVENANCE.json still names this repository.
+    """
+    if not REF_PATTERN.fullmatch(request.ref) or ".." in request.ref:
+        raise FetchError(f"not a git ref: {request.ref!r}")
     if not COLLECTION_PATTERN.fullmatch(request.collection):
         raise FetchError(
             f"collection {request.collection!r} must be <slug>/v<N>, e.g. metabolomics/v2"
