@@ -291,8 +291,12 @@ layer** (full end-to-end traceability) will be released later.
 If you use this collection, cite **both** the collection and the **original
 paper** behind each skill you use (`attribution.original_doi`).
 
-- **Collection authors** (Zenodo, see [`CITATION.cff`](collections/metabolomics/v2/CITATION.cff)):
-  **AgenticScienceBuilder Community**, Louis-Félix Nothias, HolobiomicsLab.cnrs.fr, MetaboLinkAI.net.
+- **Collection authors** from the next versioned release on (root [`CITATION.cff`](CITATION.cff)):
+  Louis-Félix Nothias; AgenticScienceBuilder AI framework (from the scientific literature).
+  Curators join through the [contribution loop](governance/CONTRIBUTION_LOOP.md) and the
+  [call for curators](docs/CURATION_CALL.md). The v2 deposit
+  ([`CITATION.cff`](collections/metabolomics/v2/CITATION.cff)) lists AgenticScienceBuilder Community,
+  Louis-Félix Nothias, HolobiomicsLab.cnrs.fr and MetaboLinkAI.net.
 - **Per-skill roles** (in each `SKILL.md` `attribution:` block): `generator`
   (the ASB pipeline) · `curators` (who modify/validate — none yet) · `promoter`
   (suggests use — Louis-Félix Nothias) · `sponsor` (paid the API cost — CNRS &

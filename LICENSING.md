@@ -15,6 +15,11 @@ This covers the `SKILL.md` bodies + frontmatter, `tools/*.yaml`, the JSON indexe
 and the collection metadata — i.e. the curated, evidence-grounded knowledge. Each
 `SKILL.md`, `collection.yaml`, and `CITATION.cff` carries `license: CC-BY-4.0`.
 
+Collection content © 2026 Louis-Félix Nothias and the ASB skill collections contributors,
+licensed CC-BY-4.0. Cite the collection (`CITATION.cff`) and the source paper of each
+skill (`attribution.original_doi`). The creators of a version (`.zenodo.json`,
+`CITATION.cff`) are the authorship record; this line is the copyright record.
+
 You are free to share and adapt this content for any purpose, including
 commercially, **provided you give appropriate credit** — cite the collection
 (see `CITATION.cff`) **and** the original source paper of each skill

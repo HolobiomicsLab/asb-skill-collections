@@ -19,7 +19,7 @@ import yaml
 from asb_skill_collections import layout
 from scripts.license_tier import ack_required
 
-_ORDER = {"open": 0, "noncommercial": 1, "restricted": 2}
+_ORDER = {"open": 0, "unknown": 1, "noncommercial": 2, "restricted": 3}
 
 
 def detect_indent(text: str, default: int = 2) -> int:

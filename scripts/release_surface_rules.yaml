@@ -1,0 +1,27 @@
+# Source: retraction commits 19c8710ad, 050fe9ebf, and 7478bf21c; decision P6.
+# Entries are added only from a recorded retraction and are never removed.
+retracted_phrases:
+  - id: gradable-by-solver
+    text: "is gradable by `asb solve-workflow`"
+  - id: gradable-workflow
+    text: "a gradable `workflow.yaml`"
+  - id: eval-ablation-set
+    text: "is the eval-ablation set"
+  - id: staging-only
+    text: "STAGING ONLY"
+  - id: promote-via-gate
+    text: "promote via `release_gate.py`"
+  - id: staged-not-released
+    text: "are **staged** (not yet released)"
+  - id: staged-set
+    text: "this staged set"
+  - id: staging-heading
+    text: "— STAGING"
+
+foreign_identifiers:
+  - id: metabolomics-v2-iri
+    text: "https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2"
+    lineage_exception: false
+  - id: metabolomics-v2-doi
+    text: "10.5281/zenodo.20794027"
+    lineage_exception: true

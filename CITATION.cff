@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: If you use the tooling, cite this repository; if you use a collection, cite the collection (CITATION.cff
+  of its domain repository) and the source paper of each skill you use.
+title: 'ASB skill collections: registry and tooling'
+type: software
+license:
+- Apache-2.0
+- CC-BY-4.0
+repository-code: https://github.com/HolobiomicsLab/asb-skill-collections
+url: https://github.com/HolobiomicsLab/asb-skill-collections
+abstract: 'Registry, release tooling and governance of the AgenticScienceBuilder (ASB) skill collections:
+  the release gate, the collectors, the catalogue and the community contribution loop. The collections
+  themselves live in one repository per domain (https://github.com/HolobiomicsLab/asb-skills-<domain>).
+  Code under Apache-2.0; registry content under CC-BY-4.0 (LICENSING.md).'
+keywords:
+- scientific agents
+- agent skills
+- skill collections
+- release tooling
+- EDAM
+- AgenticScienceBuilder
+authors:
+- family-names: Nothias
+  given-names: Louis-Félix
+  orcid: https://orcid.org/0000-0001-6711-6719
+  affiliation: Holobiomics Lab, Institut de Chimie de Nice (ICN), CNRS UMR 7272 / Université Côte d'Azur
+- name: AgenticScienceBuilder AI framework (from the scientific literature)
+references:
+- type: software
+  title: AgenticScienceBuilder
+  repository-code: https://github.com/HolobiomicsLab/AgenticScienceBuilder
+  authors:
+  - family-names: Nothias
+    given-names: Louis-Félix
+    orcid: https://orcid.org/0000-0001-6711-6719
+  - name: AgenticScienceBuilder contributors
+  license: Apache-2.0

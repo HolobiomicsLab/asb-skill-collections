@@ -1,0 +1,10 @@
+[
+  "Cutadapt",
+  "DADA2",
+  "Deblur",
+  "FastQC",
+  "Phyloseq",
+  "QIIME 2",
+  "Tidyverse",
+  "Vegan"
+]
