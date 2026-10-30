@@ -1,0 +1,62 @@
+schema: asb-corpus/1.0
+collection: metabarcoding
+version: 1
+summary:
+  total: 3
+  included: 3
+  hold: 0
+papers:
+- name: asbb_wave250_2026-09-01__coll_10_1002_ece3_6594_cq
+  doi: 10.1002/ece3.6594
+  title: A total crapshoot? Evaluating bioinformatic decisions in animal diet metabarcoding analyses
+  category: metabarcoding
+  repo_url: https://github.com/devonorourke/tidybug
+  status: included
+  wave: asbb_wave250_2026-09-01
+  access:
+    type: gold-oa
+    license: CC-BY-4.0
+    is_oa: true
+    oa_status_raw: gold
+    source_reuse: restricted
+    verified_on: '2026-09-18'
+    verified_via: unpaywall_oa_locations
+  license_subject: paper
+  license_tier: open
+  license_detection: unpaywall
+- name: asbb_wave250_2026-09-01__coll_10_1038_s41467_019_13036_1_cq
+  doi: 10.1038/s41467-019-13036-1
+  title: Evaluation of 16S rRNA gene sequencing for species and strain-level microbiome analysis
+  category: metabarcoding
+  repo_url: https://github.com/TheJacksonLaboratory/weinstock_full_length_16s
+  status: included
+  wave: asbb_wave250_2026-09-01
+  access:
+    type: gold-oa
+    license: CC-BY-4.0
+    is_oa: true
+    oa_status_raw: gold
+    source_reuse: permissive
+    verified_on: '2026-09-18'
+    verified_via: unpaywall_oa_locations
+  license_subject: paper
+  license_tier: open
+  license_detection: unpaywall
+- name: asbb_wave250_2026-09-01__coll_10_1038_s41598_023_30764_z_cq
+  doi: 10.1038/s41598-023-30764-z
+  title: Determining the most accurate 16S rRNA hypervariable region for taxonomic identification from respiratory samples
+  category: metabarcoding
+  repo_url: https://github.com/ruben-aladid/-Hypervariable-regions-of-16S-rRNA-with-the-highest-resolving-power-for-taxonomic-identification
+  status: included
+  wave: asbb_wave250_2026-09-01
+  access:
+    type: gold-oa
+    license: CC-BY-4.0
+    is_oa: true
+    oa_status_raw: gold
+    source_reuse: permissive
+    verified_on: '2026-09-18'
+    verified_via: unpaywall_oa_locations
+  license_subject: paper
+  license_tier: open
+  license_detection: unpaywall

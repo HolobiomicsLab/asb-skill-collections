@@ -63,7 +63,16 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install -e ".[test]"
+        run: |
+          # CPU torch first, so the sentence-transformers pin in the test extra
+          # does not pull the CUDA wheel.
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -e ".[test]"
+
+      # The S6 tests load BAAI/bge-small-en-v1.5 offline (HF_HUB_OFFLINE=1), so
+      # the model is staged into the Hugging Face cache before the suite runs.
+      - name: Stage the S6 embedding model
+        run: python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('BAAI/bge-small-en-v1.5')"
 
       - name: Run CI validation gates
         run: |

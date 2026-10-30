@@ -1,0 +1,102 @@
+{
+  "count": 3,
+  "slugs": [
+    "deblur",
+    "fastqc",
+    "qiime-2"
+  ],
+  "records": [
+    {
+      "slug": "deblur",
+      "name": "Deblur",
+      "canonical_url": null,
+      "install": null,
+      "related_skills": [
+        "amplicon-read-quality-filtering",
+        "asv-denoising-count-summary",
+        "microbiome-sequence-count-tabulation",
+        "reported-results-reproduction-from-publication",
+        "taxonomic-assignment-genus-collapsing",
+        "roc-curve-classifier-benchmarking",
+        "mock-community-taxa-comparison",
+        "genus-level-asv-taxonomic-classification",
+        "auc-confidence-interval-estimation",
+        "microbiome-mock-control-validation",
+        "16s-amplicon-sequence-denoising",
+        "fastq-quality-filtering-and-trimming",
+        "chimera-detection-in-16s-reads",
+        "asv-feature-table-generation",
+        "paired-end-amplicon-read-preprocessing"
+      ],
+      "source_task_ids": [
+        "task_001",
+        "task_005",
+        "task_006"
+      ],
+      "source_paper_doi": "10.1038/s41598-023-30764-z",
+      "source_paper_title": "Determining the most accurate 16S rRNA hypervariable region for taxonomic identification from respiratory samples",
+      "evidence_spans": [
+        "Sequence denoising was performed with the Deblur pipeline, which is intended for paired-end data, and the non-redundant reads were deleted",
+        "Sequence denoising was performed with the Deblur pipeline, which is intended for paired-end data, and the non-redundant reads were deleted.",
+        "Sequence denoising was performed with the Deblur pipeline, which is intended for paired-end data"
+      ],
+      "version_used": null,
+      "resolution_attempts": []
+    },
+    {
+      "slug": "fastqc",
+      "name": "FastQC",
+      "canonical_url": null,
+      "install": null,
+      "related_skills": [
+        "amplicon-read-quality-filtering",
+        "asv-denoising-count-summary",
+        "microbiome-sequence-count-tabulation",
+        "reported-results-reproduction-from-publication",
+        "taxonomic-assignment-genus-collapsing",
+        "16s-amplicon-sequence-denoising",
+        "fastq-quality-filtering-and-trimming",
+        "chimera-detection-in-16s-reads",
+        "asv-feature-table-generation",
+        "paired-end-amplicon-read-preprocessing"
+      ],
+      "source_task_ids": [
+        "task_001",
+        "task_006"
+      ],
+      "source_paper_doi": "10.1038/s41598-023-30764-z",
+      "source_paper_title": "Determining the most accurate 16S rRNA hypervariable region for taxonomic identification from respiratory samples",
+      "evidence_spans": [
+        "FastQC was used to obtain quality sequences with Q30 and to observe the number of reads per sample",
+        "FastQC Version 0.11.9 assessed quality and the filtering of raw reads",
+        "FastQC Version 0.11.9 assessed quality and the filtering of raw reads with a cut-off score of up to 30"
+      ],
+      "version_used": "0.11.9",
+      "resolution_attempts": []
+    },
+    {
+      "slug": "qiime-2",
+      "name": "QIIME 2",
+      "canonical_url": null,
+      "install": null,
+      "related_skills": [
+        "16s-amplicon-sequence-denoising",
+        "asv-feature-table-generation",
+        "chimera-detection-in-16s-reads",
+        "fastq-quality-filtering-and-trimming",
+        "paired-end-amplicon-read-preprocessing"
+      ],
+      "source_task_ids": [
+        "task_006"
+      ],
+      "source_paper_doi": "10.1038/s41598-023-30764-z",
+      "source_paper_title": "Determining the most accurate 16S rRNA hypervariable region for taxonomic identification from respiratory samples",
+      "evidence_spans": [
+        "The non-chimeric 16S rRNA database from QIIME 2 was used to identify chimeras in the reads",
+        "Taxonomic assignments were obtained using the Greengenes database and collapsed at the genus level, as implemented in the QIIME 2 software."
+      ],
+      "version_used": null,
+      "resolution_attempts": []
+    }
+  ]
+}

@@ -57,6 +57,9 @@ test = [
     "pytest>=8.0",
     "pytest-cov",
     "responses>=0.25",
+    # scripts/same_paper_pairs.py (S6) and the driver tests that run it.
+    "numpy>=1.26",
+    "sentence-transformers>=3.0",
 ]
 
 [tool.hatch.build.targets.wheel]
