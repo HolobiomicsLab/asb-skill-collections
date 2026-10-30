@@ -19,7 +19,7 @@ skills and indexes are plain Markdown + JSON. Each capability adds dependencies:
 | Install in Claude Code | Claude Code with plugin support |
 | Search the indexes (examples below) | [`jq`](https://jqlang.github.io/jq/) (optional; any JSON reader works) |
 | Run the helper scripts (`collect`, `release_gate`, `regen_catalogue`) | **Python ≥ 3.8** + **PyYAML** (`pip install pyyaml`) |
-| Ground via the **Perspicacité KB** (`perspicacite_kb_bind.py prepare`/`query`) | **Python ≥ 3.8** (stdlib only — no pip installs) **and** a running **Perspicacité** instance reachable at `PERSPICACITE_BASE` (default `http://127.0.0.1:8000`). Perspicacité can use whatever embedding + LLM provider you configure (OpenAI, Anthropic, OpenRouter, local, …); the specific models are **not** prescribed — only that Perspicacité is running. *(HolobiomicsLab literature-RAG engine; public availability TBD.)* |
+| Ground via the **Perspicacité KB** (`perspicacite_kb_bind.py prepare`/`query`) | **Python ≥ 3.8** (stdlib only — no pip installs) **and** a running **Perspicacité** instance reachable at `PERSPICACITE_BASE` (default `http://127.0.0.1:8000`). Perspicacité can use whatever embedding + LLM provider you configure (OpenAI, Anthropic, OpenRouter, local, …); the specific models are **not** prescribed — only that Perspicacité is running. *(HolobiomicsLab literature-RAG engine, public at [Perspicacite-AI](https://github.com/HolobiomicsLab/Perspicacite-AI).)* |
 | Ground via the **serverless `local` mode** (`perspicacite_kb_bind.py local`) | **Python ≥ 3.8** (stdlib only) **+ `git` + network**. **No Perspicacité, no server** — clones the skill's source repo(s) and best-effort fetches the open-access paper, which you then read directly. |
 | **Run a given skill's tool** | the libraries that skill lists in its frontmatter `tools` (see below) |
 
@@ -191,6 +191,9 @@ metabolomics/v2    5859 skills    +workflows
 ```
 
 ### Pending verification
+
+Dates and the measurements of 2026-10-30 for each surface are in
+[docs/STATUS.md](../../../docs/STATUS.md).
 
 - The public GitHub transport for Claude Code was not exercised: the verified
   route added the same marketplace from a local checkout, while this environment
@@ -438,13 +441,13 @@ Every `SKILL.md` carries an `attribution:` block (collection-level mirror in
 | `curators` | person(s) who later **modify / validate** the skill (empty at v0.2.0 — none yet) |
 | `promoter` | person who **suggests using** the skill — Louis-Félix Nothias |
 | `sponsor` | who **paid the API cost** of generation — CNRS & Université Côte d'Azur |
-| `zenodo_doi` | the collection's Zenodo deposition DOI (TODO until minted) |
+| `zenodo_doi` | the collection's Zenodo version DOI (`10.5281/zenodo.20794027`, the `metabolomics-v0.1.0` deposit) |
 
 The collection's **Zenodo authors** (see `CITATION.cff`) are, by policy,
 **AgenticScienceBuilder Community** first, then for this collection
 **Louis-Félix Nothias**, **HolobiomicsLab.cnrs.fr**, **MetaboLinkAI.net**.
 
-> Cite both: the **collection** (CITATION.cff / Zenodo DOI once minted) **and**
+> Cite both: the **collection** (CITATION.cff / Zenodo DOI) **and**
 > the **original paper** (`original_doi`) behind whichever skill you use.
 
 ## How it was generated
@@ -460,7 +463,8 @@ per-build in `build_manifest.json`). The raw ASB capsules + benchmark layer
 > content-negotiate (`Accept: application/ld+json` gets the raw JSON-LD, a browser the
 > GitHub view); a collection IRI redirects to its directory. Targets follow `main`,
 > not a release tag. The Zenodo DOI is minted:
-> [`10.5281/zenodo.20794027`](https://doi.org/10.5281/zenodo.20794027) (`metabolomics-v0.1.0`).
+> [`10.5281/zenodo.20794027`](https://doi.org/10.5281/zenodo.20794027) (`metabolomics-v0.1.0`); the concept DOI
+> for all versions is [`10.5281/zenodo.20794026`](https://doi.org/10.5281/zenodo.20794026).
 
 ## Provenance & policy
 

@@ -25,7 +25,6 @@ classifiers = [
 [project.urls]
 Homepage = "https://holobiomicslab.github.io/asb-skill-collections/"
 Repository = "https://github.com/HolobiomicsLab/asb-skill-collections"
-Pipeline = "https://github.com/HolobiomicsLab/AgenticScienceBuilder"
 
 [project.scripts]
 # Thin programmatic surface: `asbb search/get` (offline retrieval over a checkout)

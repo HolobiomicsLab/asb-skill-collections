@@ -10,7 +10,7 @@ repository-code: https://github.com/HolobiomicsLab/asb-skill-collections
 url: https://github.com/HolobiomicsLab/asb-skill-collections
 abstract: 'Registry, release tooling and governance of the AgenticScienceBuilder (ASB) skill collections:
   the release gate, the collectors, the catalogue and the community contribution loop. The collections
-  themselves live in one repository per domain (https://github.com/HolobiomicsLab/asb-skills-<domain>).
+  themselves live in one repository per domain (asb-skills-<domain>, private until each domain''s release).
   Code under Apache-2.0; registry content under CC-BY-4.0 (LICENSING.md).'
 keywords:
 - scientific agents
@@ -28,7 +28,6 @@ authors:
 references:
 - type: software
   title: AgenticScienceBuilder
-  repository-code: https://github.com/HolobiomicsLab/AgenticScienceBuilder
   authors:
   - family-names: Nothias
     given-names: Louis-Félix

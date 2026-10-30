@@ -2,7 +2,7 @@
 
 **ASB Metabolomics Skill Collection v2** (`metabolomics-v0.2.0`) — 5,859
 evidence-grounded skills across 909 software-tool records, distilled from 566
-peer-reviewed method papers by the [AgenticScienceBuilder](https://github.com/HolobiomicsLab/AgenticScienceBuilder)
+peer-reviewed method papers by the AgenticScienceBuilder
 (ASB) pipeline. This page describes **what is in the collection** and **how it
 was selected**. For the exact build command and models, see
 [PROVENANCE.md](PROVENANCE.md); for usage, [USAGE.md](USAGE.md).
