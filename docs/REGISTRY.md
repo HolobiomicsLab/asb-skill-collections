@@ -240,6 +240,8 @@ for col in catalogue.get("collections", []):
 
 **Why one concept per collection:** Simplifies citation, enables "latest version" resolution, and keeps the DOI tree flat (no matrix explosion from multi-LLM variants).
 
+A maintainer can prepare the same new-version draft by hand with `scripts/zenodo_deposit.py`; see [RELEASE_DEPOSIT.md](RELEASE_DEPOSIT.md).
+
 ---
 
 ## 3. Collection Filesystem Structure
