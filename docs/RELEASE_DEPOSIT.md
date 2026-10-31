@@ -3,9 +3,11 @@
 Maintainer procedure. It prepares a new version of an existing Zenodo record up
 to a draft. Publishing is a manual step in the Zenodo web interface.
 
-Tool: `scripts/zenodo_deposit.py` (standard library only). Tests:
-`tests/test_zenodo_deposit.py`. The tool never calls the publish action of the
-API, and has no flag that does.
+Tool: `scripts/zenodo_deposit.py` (standard library and PyYAML, a dependency
+of the package). Tests: `tests/test_zenodo_deposit.py`,
+`tests/test_zenodo_deposit_bundle.py` and
+`tests/test_zenodo_deposit_creators.py`. The tool never calls the publish
+action of the API, and has no flag that does.
 
 ## Order of a release
 
@@ -58,7 +60,10 @@ Run from the repository root, on the commit that carries the release.
    ```
 
    Check the target host, the record id, the metadata and the file list. The
-   command exits 1 and prints `rejected by the API:` for each problem.
+   command exits 1 and prints `rejected by the API:` for each problem, and
+   `refused:` when the template's creators differ from
+   `scripts/release_creators.yaml`. `draft` stops on the same conditions
+   before any request.
 
 3. Make a sandbox draft first. The sandbox has no copy of the production record.
    Create and publish a small test record in the sandbox by hand, then pass its
@@ -149,6 +154,7 @@ under `metadata`; the tool wraps it.
 | Inherited metadata | the draft starts from the previous record. Keys it carries that the template lacks, such as `communities` and `language`, are kept and listed in the output. The template wins on every key it has. `doi` and `prereserve_doi` are never sent. `plan` makes no request and cannot show inherited keys |
 | `publication_date` | set to today (`--publication-date` overrides) when the template has none, so the draft does not keep the previous version's date |
 | `creators[].name` | the API documents the form `Family name, Given names`. Entity names such as a community or a lab are sent as written, not in that form |
+| `creators` | must equal `scripts/release_creators.yaml`, in order: a person entry as `Family, Given` with its bare ORCID iD and affiliation when listed, an entity entry by its name. A difference is refused by `plan` and `draft` |
 
 ## Alternative: GitHub-Zenodo integration
 
