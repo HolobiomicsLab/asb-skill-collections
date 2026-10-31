@@ -62,7 +62,7 @@ jobs:
 
       - name: Post PR comment with proposal check result
         if: always()
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         env:
           # Pass untrusted check output via env (not inline interpolation) so a
           # PR-controlled proposal path/content cannot break out of the JS body.
