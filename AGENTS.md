@@ -4,15 +4,16 @@ Instructions for coding/research agents (Claude Code, OpenAI Codex, GitHub
 Copilot, or any SKILL-aware agent) to **install and use** the ASB Metabolomics
 Skill Collection. The public release is the **metabolomics** collection at
 `collections/metabolomics/v2/` (5,859 evidence-grounded skills over 909
-software tools for computational LC-MS/MS; tag `metabolomics-v0.2.0`).
+software tools for computational LC-MS/MS; release `metabolomics-v0.2.0`, preliminary).
 
 > Full human guide: [`collections/metabolomics/v2/USAGE.md`](collections/metabolomics/v2/USAGE.md).
+> Which install routes were verified, and when: [`docs/STATUS.md`](docs/STATUS.md).
 
 ## Requirements
 
 - **Browse / search / read skills:** nothing — plain Markdown + JSON.
 - **Helper scripts** (`collect`, `release_gate`, `regen_catalogue`): Python ≥ 3.8 + PyYAML (`pip install -r scripts/requirements.txt`).
-- **Grounding binder** (`perspicacite_kb_bind.py`, bundled at `bin/` in every plugin/pack): Python ≥ 3.8 (stdlib only). The **`kb`** backend needs a running **Perspicacité** at `PERSPICACITE_BASE` (default `http://127.0.0.1:8000`; any embedding + LLM provider — models not prescribed; *HolobiomicsLab literature-RAG engine, public availability TBD*). The **`local`** backend needs only **`git` + network** — no server.
+- **Grounding binder** (`perspicacite_kb_bind.py`, bundled at `bin/` in every plugin/pack): Python ≥ 3.8 (stdlib only). The **`kb`** backend needs a running **Perspicacité** at `PERSPICACITE_BASE` (default `http://127.0.0.1:8000`; any embedding + LLM provider — models not prescribed; *HolobiomicsLab literature-RAG engine, public at [Perspicacite-AI](https://github.com/HolobiomicsLab/Perspicacite-AI)*). The **`local`** backend needs only **`git` + network** — no server.
 - **Running a given skill's tool:** install what that skill's frontmatter `tools:` lists (R/Bioconductor, Python pkgs, or standalone tools like SIRIUS/MZmine) — see `USAGE.md` §0 and `tools_index.json`.
 
 ---
@@ -54,15 +55,14 @@ The collection is self-describing, IDE-agnostic Markdown + JSON. Point your agen
 at `collections/metabolomics/v2/` and use the machine indexes below. No runtime,
 no build step.
 
-### Chat assistants via the web UI (Claude · ChatGPT · Mistral)
+### Chat assistants via the web UI (Claude · ChatGPT · Mistral): experimental, not verified end to end
 
 For end users without a CLI: upload `skills_index.json` + `tools_index.json` and
 your chosen `leaves/<slug>/SKILL.md` files as the assistant's **knowledge**
 (Claude *Projects*, ChatGPT *Custom GPT / Project*, Mistral *Agent / Library*),
 then paste a short routing instruction. Don't upload all 5,859 skills — upload
-the indexes plus the few skills you need. Full steps:
-[`collections/metabolomics/v2/USAGE.md`](collections/metabolomics/v2/USAGE.md) →
-"Chat assistants via the web UI".
+the indexes plus the few skills you need. This route was not exercised for the
+release; see [`docs/STATUS.md`](docs/STATUS.md#web-ui).
 
 ---
 

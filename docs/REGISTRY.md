@@ -4,7 +4,7 @@
 
 ## Overview
 
-The ASB-Skill-Collections registry is the **public installation front door** for scientific-agent skills, tools, benchmarks, and capsules produced by the [AgenticScienceBuilder](https://github.com/HolobiomicsLab/AgenticScienceBuilder) pipeline. This document specifies the three layers of the registry:
+The ASB-Skill-Collections registry is the **public installation front door** for scientific-agent skills, tools, benchmarks, and capsules produced by the AgenticScienceBuilder pipeline (a private repository today; it follows). This document specifies the three layers of the registry:
 
 1. **Claude Code plugin marketplace** (`.claude-plugin/marketplace.json`) — the install surface, the user-facing UX
 2. **Semantic catalogue** (`catalogue.jsonld`) — the authoritative registry, machine-queryable, linked-data native

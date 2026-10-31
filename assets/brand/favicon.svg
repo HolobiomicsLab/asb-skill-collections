@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-labelledby="favicon-title favicon-desc">
+  <title id="favicon-title">AgenticScienceBuilder</title>
+  <desc id="favicon-desc">Simplified crane mark for small sizes.</desc>
+  <style>
+    .n { fill: #00284b; }
+    .ns { stroke: #00284b; }
+    .o { fill: #e06c0a; }
+    @media (prefers-color-scheme: dark) {
+      .n { fill: #fbf7ef; }
+      .ns { stroke: #fbf7ef; }
+      .o { fill: #f5923a; }
+    }
+  </style>
+  <path class="n" d="M6 8H10V26H6ZM3 4H27Q28 4 28 5V7Q28 8 27 8H3Q2 8 2 7V5Q2 4 3 4ZM5 4L8 1L11 4Z"/>
+  <rect class="n" x="4" y="26" width="8" height="4" rx="1"/>
+  <g class="ns" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 1.5L18 4"/>
+    <path d="M23 8V12"/>
+    <path d="M19 17L23 13L27 17"/>
+  </g>
+  <circle class="n" cx="23" cy="13" r="2"/>
+  <rect class="o" x="16" y="18" width="14" height="6" rx="1"/>
+  <rect class="n" x="16" y="26" width="14" height="2" rx="0.5"/>
+</svg>

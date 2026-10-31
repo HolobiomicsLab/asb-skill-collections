@@ -1,0 +1,12 @@
+{
+  "schema_version": "0.2.0",
+  "build_id": "F07ABF4059B84531A8D90CB7C98297CA",
+  "cli_invocation": {
+    "flags_resolved": {
+      "doi": "10.1038/s41598-023-30764-z",
+      "github_repo": [
+        "ruben-aladid/-Hypervariable-regions-of-16S-rRNA-with-the-highest-resolving-power-for-taxonomic-identification"
+      ]
+    }
+  }
+}

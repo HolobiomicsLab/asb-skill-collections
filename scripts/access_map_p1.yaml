@@ -1,0 +1,18 @@
+# Decision 7 P1, owner decision 2026-09-18, hub docs/asbb/DECISIONS.md
+allowed_types:
+  - gold-oa
+  - green-oa
+  - open-access
+  - link-only
+mapping:
+  gold:
+    permissive: gold-oa
+    otherwise: open-access
+  green: green-oa
+  hybrid:
+    cc: open-access
+    otherwise: link-only
+  bronze: link-only
+  closed: link-only
+  unknown: link-only
+  otherwise: link-only

@@ -1,0 +1,49 @@
+{
+  "body_median_bytes": 9478.5,
+  "body_ratio_applied": true,
+  "body_ratio_floor": 0.5,
+  "body_ratio_skip_reason": null,
+  "min_claims": 3,
+  "n_critique": 0,
+  "n_degraded": 0,
+  "n_drift_total": 0,
+  "n_promoted": 2,
+  "n_thin": 0,
+  "n_validation_error": 0,
+  "n_with_drift": 0,
+  "rows": [
+    {
+      "body_bytes": 9434,
+      "body_ratio": 1.1208,
+      "degraded_reasons": [],
+      "n_claims": 10,
+      "n_drift": 0,
+      "n_partial": 0,
+      "n_supported": 9,
+      "n_unsupported": 1,
+      "slug": "amplicon-sequence-denoising",
+      "synthesis_status": "synthesized",
+      "triage_status": "promoted",
+      "validator_errored": false,
+      "yes_rate": 0.9
+    },
+    {
+      "body_bytes": 9523,
+      "body_ratio": 1.1314,
+      "degraded_reasons": [],
+      "n_claims": 10,
+      "n_drift": 0,
+      "n_partial": 3,
+      "n_supported": 7,
+      "n_unsupported": 0,
+      "slug": "kruskal-wallis-group-comparison",
+      "synthesis_status": "synthesized",
+      "triage_status": "promoted",
+      "validator_errored": false,
+      "yes_rate": 0.7
+    }
+  ],
+  "synthesis_status_source": "artifact",
+  "total": 2,
+  "yes_rate_threshold": 0.6
+}

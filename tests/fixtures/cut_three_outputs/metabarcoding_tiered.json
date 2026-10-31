@@ -1,0 +1,65 @@
+[
+  {
+    "name": "10_1002_ece3_6594",
+    "display": "10.1002/ece3.6594",
+    "domain": "metabarcoding",
+    "repo": "devonorourke/tidybug",
+    "doi": "10.1002/ece3.6594",
+    "title": null,
+    "publication_url": null,
+    "access": {
+      "type": "gold",
+      "license": "cc-by",
+      "source_reuse": "permissive",
+      "is_oa": true,
+      "genre": "journal-article",
+      "title": "A total crapshoot? Evaluating bioinformatic decisions in animal diet metabarcoding analyses",
+      "journal": "Ecology and Evolution",
+      "year": 2020,
+      "resolved": true
+    },
+    "tier": "B"
+  },
+  {
+    "name": "10_1038_s41467_019_13036_1",
+    "display": "10.1038/s41467-019-13036-1",
+    "domain": "metabarcoding",
+    "repo": "TheJacksonLaboratory/weinstock_full_length_16s",
+    "doi": "10.1038/s41467-019-13036-1",
+    "title": null,
+    "publication_url": null,
+    "access": {
+      "type": "gold",
+      "license": "cc-by",
+      "source_reuse": "permissive",
+      "is_oa": true,
+      "genre": "journal-article",
+      "title": "Evaluation of 16S rRNA gene sequencing for species and strain-level microbiome analysis",
+      "journal": "Nature Communications",
+      "year": 2019,
+      "resolved": true
+    },
+    "tier": "B"
+  },
+  {
+    "name": "10_1038_s41598_023_30764_z",
+    "display": "10.1038/s41598-023-30764-z",
+    "domain": "metabarcoding",
+    "repo": "ruben-aladid/-Hypervariable-regions-of-16S-rRNA-with-the-highest-resolving-power-for-taxonomic-identification",
+    "doi": "10.1038/s41598-023-30764-z",
+    "title": null,
+    "publication_url": null,
+    "access": {
+      "type": "gold",
+      "license": "cc-by",
+      "source_reuse": "permissive",
+      "is_oa": true,
+      "genre": "journal-article",
+      "title": "Determining the most accurate 16S rRNA hypervariable region for taxonomic identification from respiratory samples",
+      "journal": "Scientific Reports",
+      "year": 2023,
+      "resolved": true
+    },
+    "tier": "B"
+  }
+]

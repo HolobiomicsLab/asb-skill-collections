@@ -1,0 +1,12 @@
+{
+  "schema_version": "0.2.0",
+  "build_id": "565BB3F091B44851B459970930DBCF8B",
+  "cli_invocation": {
+    "flags_resolved": {
+      "doi": "10.1002/ece3.6594",
+      "github_repo": [
+        "devonorourke/tidybug"
+      ]
+    }
+  }
+}

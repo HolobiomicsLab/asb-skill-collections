@@ -1,0 +1,31 @@
+{
+  "crossref": {
+    "doi": "10.1038/s41467-019-13036-1",
+    "title": "Evaluation of 16S rRNA gene sequencing for species and strain-level microbiome analysis",
+    "authors": [
+      "Johnson, Jethro S.",
+      "Spakowicz, Daniel J.",
+      "Hong, Bo-Young",
+      "Petersen, Lauren M.",
+      "Demkowicz, Patrick",
+      "Chen, Lei",
+      "Leopold, Shana R.",
+      "Hanson, Blake M.",
+      "Agresta, Hanako O.",
+      "Gerstein, Mark",
+      "Sodergren, Erica",
+      "Weinstock, George M."
+    ],
+    "journal": "Nature Communications",
+    "year": 2019,
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "type": "journal-article",
+    "subject": []
+  },
+  "unpaywall": {
+    "doi": "10.1038/s41467-019-13036-1",
+    "is_oa": true,
+    "oa_url": "https://www.nature.com/articles/s41467-019-13036-1.pdf",
+    "license": "cc-by"
+  }
+}
