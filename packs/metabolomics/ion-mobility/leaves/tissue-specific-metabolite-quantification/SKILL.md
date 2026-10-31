@@ -23,9 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
-evidence_spans:
-- collection of Python scripts
-- All functions are implemented in jupyter notebook
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

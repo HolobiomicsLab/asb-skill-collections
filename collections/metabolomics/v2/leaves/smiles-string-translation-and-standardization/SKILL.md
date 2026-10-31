@@ -23,10 +23,6 @@ derived_from:
   title: lotus
 - doi: 10.1007/s00044-016-1764-y
   title: ''
-evidence_spans:
-- standardizing.R, 1_integrating.R, 1_cleaningOriginal.R, 4_cleaningTaxonomy.R, 5_addingOTL.R
-- 1_integrating.R
-- 221[[smiles.py]], 260[[3_cleaningAndEnriching/sanitizing.py]]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

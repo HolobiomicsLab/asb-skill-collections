@@ -48,13 +48,6 @@ derived_from:
   title: ''
 - doi: 10.3389/fpls.2019.01329
   title: ''
-evidence_spans:
-- MSMetaEnhancer is a tool used for `.msp` files annotation
-- 'Converter Builder: Automatically discovers and instantiates available converters'
-- 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'
-- An open-source analysis software for untargeted metabolism data (openNAU) was constructed
-- The `generateTPs` function is used to obtain TPs for a particular set of parents.
-- componTP <- generateComponents(algorithm = "tp",
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

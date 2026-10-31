@@ -1,8 +1,8 @@
 ---
 name: metfrag-settings-injection
-description: Use when when deploying the ipbhalle/metfragweb container and you need
-  to configure MetFrag parameters such as ChemSpider tokens, proxy settings for web
-  services (MoNA, KEGG, MetaCyc), or local database connections (PubChem via MySQL/PostgreSQL)
+description: Use when deploying the ipbhalle/metfragweb container and you need to
+  configure MetFrag parameters such as ChemSpider tokens, proxy settings for web services
+  (MoNA, KEGG, MetaCyc), or local database connections (PubChem via MySQL/PostgreSQL)
   without modifying the container image itself.
 license: CC-BY-4.0
 metadata:
@@ -17,8 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
-evidence_spans:
-- https://hub.docker.com/r/ipbhalle/metfragweb
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

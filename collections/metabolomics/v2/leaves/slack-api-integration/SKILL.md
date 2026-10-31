@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c00786
   title: Rapid QC-MS
-evidence_spans:
-- '**Realtime updates on QC fails** in the form of Slack or email notifications'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

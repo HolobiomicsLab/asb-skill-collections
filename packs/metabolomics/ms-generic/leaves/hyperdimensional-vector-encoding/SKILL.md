@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00612
   title: HyperSpec
-evidence_spans:
-- HyperSpec requires `Python 3.8+` with `CUDA` environment
-- HyperSpec requires `Python 3.8+` with `CUDA` environment.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

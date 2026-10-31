@@ -1,6 +1,6 @@
 ---
 name: self-contained-pipeline-construction
-description: Use when when you have metabolomics datasets (loaded as SummarizedExperiment
+description: Use when you have metabolomics datasets (loaded as SummarizedExperiment
   objects) and need to apply a sequence of data-processing and analytical steps (e.
 license: CC-BY-4.0
 metadata:
@@ -18,11 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btab741
   title: maplet
-evidence_spans:
-- maplet is an R package
-- The toolbox builds upon the bioconductor package SummarizedExperiment (SE)
-- maplet is designed to work with a pipe operator - either the popular %>% operator
-  from the magrittr package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

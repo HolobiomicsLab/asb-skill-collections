@@ -1,6 +1,6 @@
 ---
 name: fragment-mass-tolerance-calibration
-description: 'Use when when implementing fragment ion annotation in proteomics workflows
+description: 'Use when implementing fragment ion annotation in proteomics workflows
   and needing to determine whether neutral loss annotation (e.g., H2O: -18.010565,
   NH3: -17.026549) should be enabled to maximize peak interpretation.'
 license: CC-BY-4.0
@@ -22,9 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
-evidence_spans:
-- spectrum_utils is a Python package
-- spectrum = sus.MsmsSpectrum.from_usi(usi)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

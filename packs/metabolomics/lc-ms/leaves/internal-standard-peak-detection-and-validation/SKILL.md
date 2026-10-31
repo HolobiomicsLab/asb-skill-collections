@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c00786
   title: Rapid QC-MS
-evidence_spans:
-- and MS-DIAL
-- '[MS-DIAL](http://prime.psc.riken'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

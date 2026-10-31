@@ -1,9 +1,9 @@
 ---
 name: mass-spectrometry-mass-accuracy-and-precision-tuning
-description: Use when when extracting and validating chromatographic peaks for target
-  molecules from centroided mzML files, particularly when working with multiple isotopologues
+description: Use when extracting and validating chromatographic peaks for target molecules
+  from centroided mzML files, particularly when working with multiple isotopologues
   and adducts where mass tolerance directly affects whether predicted isotopologues
-  are correctly grouped and detected as part of the.
+  are correctly grouped and detected as part of the same.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -22,13 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btab231
   title: mzRAPP
-evidence_spans:
-- 'You can now start mzRAPP using: library(mzRAPP); callmzRAPP()'
-- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing
-  (NPP)
-- mzRAPP extracts and validates chromatographic peaks for which boundaries are provided
-  for all (enviPat predicted) isotopologues
-- library(mzRAPP)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

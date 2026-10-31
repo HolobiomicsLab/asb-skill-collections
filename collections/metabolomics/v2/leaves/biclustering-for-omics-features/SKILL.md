@@ -21,14 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
-evidence_spans:
-- Weighted correlation network analysis (WGCNA) of microbial features was performed
-  using the WGCNA library in R
-- compared the microbial modules in the IBD (PRISM) dataset identified by MiMeNet
-  to those identified by the Weighted Correlation Network Analysis (WGCNA)
-- using Seaborn's clustermap function in Python
-- using Cytoscape
-- using Python's sci-kit-learn package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

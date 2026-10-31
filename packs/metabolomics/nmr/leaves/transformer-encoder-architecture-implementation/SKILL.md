@@ -1,8 +1,8 @@
 ---
 name: transformer-encoder-architecture-implementation
-description: Use when when processing sequential spectroscopic data (1H NMR spectra)
-  where both local chemical shift patterns and global spectral dependencies are needed
-  for compound classification.
+description: Use when processing sequential spectroscopic data (1H NMR spectra) where
+  both local chemical shift patterns and global spectral dependencies are needed for
+  compound classification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1016/j.microc.2025.115372
   title: FlavorFormer
-evidence_spans:
-- Python 3.13.2 and Pytorch (version 2.7.0+cu118)
-- Install [Anaconda](https://www.anaconda.com/).
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

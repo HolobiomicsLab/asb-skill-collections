@@ -1,8 +1,8 @@
 ---
 name: installation-validation-reporting
-description: Use when when deploying a new Python package in a reproducible analysis
-  environment or continuous integration pipeline, and you need to confirm that all
-  required core modules (e.g., pyteomics.mass, pyteomics.pepxml, pyteomics.mzid, pyteomics.tandem,
+description: Use when deploying a new Python package in a reproducible analysis environment
+  or continuous integration pipeline, and you need to confirm that all required core
+  modules (e.g., pyteomics.mass, pyteomics.pepxml, pyteomics.mzid, pyteomics.tandem,
   pyteomics.
 license: CC-BY-4.0
 metadata:
@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
-evidence_spans:
-- The main way to obtain Pyteomics is via `pip Python package manager
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

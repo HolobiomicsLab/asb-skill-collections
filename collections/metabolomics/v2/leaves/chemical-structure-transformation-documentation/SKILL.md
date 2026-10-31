@@ -1,6 +1,6 @@
 ---
 name: chemical-structure-transformation-documentation
-description: Use when when you have access to source code or algorithmic documentation
+description: Use when you have access to source code or algorithmic documentation
   of a metabolite generation pipeline (such as MAGMa's job subproject) and need to
   understand, validate, or reconstruct the transformations that convert a parent compound
   into enumerated metabolite candidates.
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
-evidence_spans:
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'.
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

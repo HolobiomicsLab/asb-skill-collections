@@ -1,6 +1,6 @@
 ---
 name: record-filtering-by-field-value
-description: Use when when you have a table of JSON records and need to select a subset
+description: Use when you have a table of JSON records and need to select a subset
   matching a specific condition—for example, filtering records where 'status=active'
   before building a string value, or filtering 'experiment_type=MS' before constructing
   a matrix of dictionary objects.
@@ -22,10 +22,6 @@ derived_from:
   title: messes
 - doi: 10.3390/metabo11030163
   title: ''
-evidence_spans:
-- MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_
-  (`jsonschema <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -26,13 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
-evidence_spans:
-- Perform a LOWESS (Locally Weighted Scatterplot Smoothing) regression to obtain a
-  function to describe the relationship of the RT values
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
-  preprocessing
-- Trackable and scalable Python program for high-resolution metabolomics data processing.
-- scipy.signal module for LOWESS fitting via the regression function
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

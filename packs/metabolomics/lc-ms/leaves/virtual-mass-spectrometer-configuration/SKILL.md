@@ -1,8 +1,8 @@
 ---
 name: virtual-mass-spectrometer-configuration
-description: Use when when you have generated or extracted a chemical mixture (via
-  DatabaseFormulaSampler, ChemicalMixtureCreator, or ChemicalMixtureFromMZML) and
-  need to establish a virtual instrument to simulate scan acquisition.
+description: Use when you have generated or extracted a chemical mixture (via DatabaseFormulaSampler,
+  ChemicalMixtureCreator, or ChemicalMixtureFromMZML) and need to establish a virtual
+  instrument to simulate scan acquisition.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -26,16 +26,6 @@ derived_from:
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
-evidence_spans:
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible
-  and modular framework designed to simulate fragmentation strategies'
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive
-  and modular framework for the simulation of fragmentation strategies'
-- Existing mzML files can be converted into chemical lists using `ChemicalMixtureFromMZML`.
-- '`TopNController` – standard Top‑N data dependent acquisition.'
-- Mass Spectrometer – either an in silico model (`IndependentMassSpectrometer`) or
-  a real instrument.
-- Environment – orchestrates interaction between the mass spectrometer and the controller.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,8 @@
 ---
 name: ms1-feature-ranking-and-extraction
-description: Use when when you have raw LC-MS data files and need to identify which
-  compounds were actually detected at high abundance during a gradient run, prior
-  to evaluating whether the gradient provided good separation across the chemical
-  space.
+description: Use when you have raw LC-MS data files and need to identify which compounds
+  were actually detected at high abundance during a gradient run, prior to evaluating
+  whether the gradient provided good separation across the chemical space.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3645
@@ -27,10 +26,6 @@ derived_from:
   title: BAGO
 - doi: 10.1002/9780470508183
   title: ''
-evidence_spans:
-- Download and install Python 3.8 or later from `python.org`
-- model.computeNextGradient()
-- A Jupyter Notebook is provided to help you get started with the LC gradient optimization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

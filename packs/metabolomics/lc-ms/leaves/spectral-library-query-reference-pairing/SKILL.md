@@ -1,9 +1,9 @@
 ---
 name: spectral-library-query-reference-pairing
-description: Use when when evaluating a trained spectral embedding model on publicly
-  available datasets (GNPS, MoNA, MTBLS1572, MassBank, or MassSpecGym) and you need
-  to report averaged performance metrics with standard deviation to demonstrate robustness
-  and reproducibility.
+description: Use when evaluating a trained spectral embedding model on publicly available
+  datasets (GNPS, MoNA, MTBLS1572, MassBank, or MassSpecGym) and you need to report
+  averaged performance metrics with standard deviation to demonstrate robustness and
+  reproducibility.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -26,9 +26,6 @@ derived_from:
   title: SpecEmbedding
 - doi: 10.6084/m9.figshare.28876751.v2
   title: ''
-evidence_spans:
-- Python：3.12
-- PyTorch：2.6.0 + CUDA 12.4
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

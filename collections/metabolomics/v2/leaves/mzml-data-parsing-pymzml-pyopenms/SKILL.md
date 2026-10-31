@@ -22,13 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
-evidence_spans:
-- pyOpenMS-Viz is a Python library that provides a simple interface for extending
-  the plotting capabilities of Pandas DataFrames
-- '.mzML ----- .. toctree:: :maxdepth: 1 pyopenms pymzml'
-- pyopenms ... pymzml ... pyteomics
-- '.d -- .. toctree:: :maxdepth: 1 alphatims'
-- alphatims
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

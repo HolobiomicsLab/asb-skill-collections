@@ -1,7 +1,7 @@
 ---
 name: spectral-quality-assurance-proteomics
-description: Use when when you have extracted a raw Orbitrap scan from a .raw file
-  and need to verify that the instrument operated within expected parameters and that
+description: Use when you have extracted a raw Orbitrap scan from a .raw file and
+  need to verify that the instrument operated within expected parameters and that
   observed peptide fragment ions rise substantially above noise—i.
 license: CC-BY-4.0
 metadata:
@@ -23,13 +23,6 @@ derived_from:
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
-evidence_spans:
-- rawrr::readSpectrum
-- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime,
-  in the `r BiocStyle::Biocpkg('rawrr')` executable file
-- The extracted information is written to a temporary location on the harddrive, read
-  back into memory and parsed into `R` objects using RawFileReader API
-- 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
-evidence_spans:
-- Integrating this capability with a convolutional neural network, we build an end-to-end
-  model
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

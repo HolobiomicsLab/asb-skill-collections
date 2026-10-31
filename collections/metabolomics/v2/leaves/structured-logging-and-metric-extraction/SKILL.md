@@ -1,7 +1,7 @@
 ---
 name: structured-logging-and-metric-extraction
-description: Use when when executing a multi-converter annotation workflow on mass
-  spectra metadata (.
+description: Use when executing a multi-converter annotation workflow on mass spectra
+  metadata (.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -23,10 +23,6 @@ metadata:
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer
-evidence_spans:
-- MSMetaEnhancer is a tool used for `.msp` files annotation
-- 'Converter Builder: Automatically discovers and instantiates available converters'
-- 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

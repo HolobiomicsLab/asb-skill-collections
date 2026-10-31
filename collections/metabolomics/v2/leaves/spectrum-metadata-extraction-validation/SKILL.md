@@ -1,8 +1,7 @@
 ---
 name: spectrum-metadata-extraction-validation
-description: Use when when ingesting heterogeneous MS spectral data from multiple
-  open-access libraries (OMS libraries) where metadata completeness and correctness
-  are uncertain.
+description: Use when ingesting heterogeneous MS spectral data from multiple open-access
+  libraries (OMS libraries) where metadata completeness and correctness are uncertain.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -27,8 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
-evidence_spans:
-- Python-3.12
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

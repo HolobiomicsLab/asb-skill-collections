@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
-evidence_spans:
-- Two augmented images are propagated through a pair of ResNet18-based encoders
-- Two augmented images are propagated through a pair of ResNet18-based encoders that
-  shared parameters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

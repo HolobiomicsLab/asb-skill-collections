@@ -1,9 +1,9 @@
 ---
 name: spectrum-fingerprint-contrastive-learning
-description: Use when when you have paired tandem MS spectra and corresponding molecular
+description: Use when you have paired tandem MS spectra and corresponding molecular
   structures (SMILES or fingerprints), and you want to build a retrieval system for
   metabolite structure annotation that can rank candidate structures for novel spectra
-  by embedding similarity rather than spectral matching.
+  by embedding similarity rather than spectral matching scores.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s42256-023-00708-3
   title: MIST (chemical formula transformer)
-evidence_spans:
-- and, when trained in a contrastive learning framework, enable embedding and structure
-  annotation by database lookup.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

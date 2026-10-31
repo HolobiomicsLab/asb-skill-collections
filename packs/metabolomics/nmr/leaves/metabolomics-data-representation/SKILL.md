@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
-evidence_spans:
-- pipenv --python 2.7
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -18,9 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
-evidence_spans:
-- docker run
-- latest official tomcat docker container
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

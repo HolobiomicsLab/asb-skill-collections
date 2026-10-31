@@ -18,13 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2020.12.21.423723
   title: hRUV
-evidence_spans:
-- '`hRUV` is a package for normalisation of multiple batches of metabolomics data'
-- '`hRUV` is a package for normalisation of multiple batches of metabolomics data
-  in a hierarchical strategy'
-- Install the R package from GitHub using the `devtools` package
-- we will load the hRUV package and other packages required for the demonstration...
-  library(dplyr)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -17,8 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
-evidence_spans:
-- import sqlite3 import os from pymzml import spec
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

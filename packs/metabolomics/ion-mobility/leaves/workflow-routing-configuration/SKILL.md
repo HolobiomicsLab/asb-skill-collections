@@ -1,8 +1,8 @@
 ---
 name: workflow-routing-configuration
-description: Use when when you have raw mass spectrometry data files from multiple
-  acquisition modalities (LC-MS, GC-MS, ion mobility, or imaging) and need to automatically
-  route each to the correct downstream analysis module without manual intervention.
+description: Use when you have raw mass spectrometry data files from multiple acquisition
+  modalities (LC-MS, GC-MS, ion mobility, or imaging) and need to automatically route
+  each to the correct downstream analysis module without manual intervention.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
-evidence_spans:
-- mzmine is an open-source software for mass spectrometry data processing
-- JDK version-25-blue
-- JavaFX version-24
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

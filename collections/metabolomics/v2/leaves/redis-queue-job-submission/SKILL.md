@@ -18,11 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
-evidence_spans:
-- Task Queue | **RQ (Redis Queue)** | Lightweight, Python-native, simpler than Celery
-- Redis queue is purely additive and only activates in online Docker deployments
-- No code changes required for offline mode. The detection happens automatically
-- as well as deployment with docker-compose.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

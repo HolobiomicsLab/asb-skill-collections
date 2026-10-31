@@ -1,7 +1,7 @@
 ---
 name: module-refactoring-and-legacy-code-removal
-description: Use when when a major version release (e.g., v1.x → v2.0.0) deprecates
-  a core neural module class, and new equivalent modules must be designed and integrated
+description: Use when a major version release (e.g., v1.x → v2.0.0) deprecates a core
+  neural module class, and new equivalent modules must be designed and integrated
   without breaking downstream prediction pipelines. Triggered by breaking changes
   in CHANGELOG or deprecation warnings in model initialization.
 license: CC-BY-4.0
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
-evidence_spans:
-- FIDDLE is a deep learning method for predicting molecular formulas from MS/MS spectra
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

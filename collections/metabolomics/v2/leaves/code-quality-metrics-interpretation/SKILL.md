@@ -17,8 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query
-evidence_spans:
-- MS2Query - Reliable and fast MS/MS spectral-based analogue search
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

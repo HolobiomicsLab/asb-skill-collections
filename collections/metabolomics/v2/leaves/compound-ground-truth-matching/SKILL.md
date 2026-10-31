@@ -1,9 +1,9 @@
 ---
 name: compound-ground-truth-matching
-description: Use when when you have pre-computed embeddings for query and reference
-  MS/MS spectra, computed their cosine similarity matrix, and need to measure retrieval
+description: Use when you have pre-computed embeddings for query and reference MS/MS
+  spectra, computed their cosine similarity matrix, and need to measure retrieval
   success by verifying whether the correct compound (identified by SMILES string)
-  appears in the top-1, top-5, or top-10 ranked candidates from.
+  appears in the top-1, top-5, or top-10 ranked candidates from a.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -26,10 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding
-evidence_spans:
-- Python：3.12
-- PyTorch：2.6.0 + CUDA 12.4
-- 该装饰器来自 numba
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

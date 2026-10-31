@@ -18,11 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btaf354
   title: JESTR
-evidence_spans:
-- This repository contains the python code to train and test the JESTR model
-- Please set up the environment as per this file using [conda](http://docs.condi.ioen/latest/)/[pip]
-- Please set up the environment as per this file using [conda]
-- The model was trained and tested on GPU nVidia A100 with CUDA 11.8
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,8 @@
 ---
 name: physicochemical-descriptor-extraction
-description: Use when when you have validated RDKit molecule objects derived from
-  PubChem or HMDB molecule IDs and need to generate quantitative chemical property
-  representations as one modality in a multimodal feature tensor for neural network
-  training.
+description: Use when you have validated RDKit molecule objects derived from PubChem
+  or HMDB molecule IDs and need to generate quantitative chemical property representations
+  as one modality in a multimodal feature tensor for neural network training.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3625
@@ -22,11 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1007/s10489-022-04351-0
   title: Mass Spectrum Transformer
-evidence_spans:
-- RDKit == 2020.03.4
-- numpy == 1.19.1
-- implicit in data.csv loading requirement
-- scikit-learn == 0.23.2
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

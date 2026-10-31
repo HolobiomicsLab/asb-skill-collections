@@ -1,9 +1,9 @@
 ---
 name: ion-image-augmentation-contrastive-learning
-description: Use when when you have preprocessed mass spectrometry ion images (single-channel
+description: Use when you have preprocessed mass spectrometry ion images (single-channel
   2D arrays or multi-channel spectral images) and need to train a self-supervised
   encoder to learn low-dimensional representations for downstream tasks such as co-localized
-  ion discovery (COL mode) or isotope ion.
+  ion discovery (COL mode) or isotope ion clustering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3562
@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
-evidence_spans:
-- Two augmented images are propagated through a pair of ResNet18-based encoders
-- Two augmented images are propagated through a pair of ResNet18-based encoders that
-  shared parameters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

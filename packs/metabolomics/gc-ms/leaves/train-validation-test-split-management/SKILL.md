@@ -1,9 +1,9 @@
 ---
 name: train-validation-test-split-management
-description: Use when when you have a complete dataset of labeled examples (e.g.,
-  100,000 augmented spectra, chromatograms, or synthetic samples) and need to train
-  a supervised model (such as a Transformer) while preserving a held-out test set
-  to measure generalization performance without bias.
+description: Use when you have a complete dataset of labeled examples (e.g., 100,000
+  augmented spectra, chromatograms, or synthetic samples) and need to train a supervised
+  model (such as a Transformer) while preserving a held-out test set to measure generalization
+  performance without bias.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3437
@@ -24,11 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c05772
   title: GCMSFormer
-evidence_spans:
-- '[pytorch](https://pytorch.org/)'
-- '[python3](https://www.python.org/)'
-- We recommend to use [conda](https://conda.io/docs/user-guide/install/download.html)
-- We recommend to use [conda](https://conda.io/docs/user-guide/install/download.html).
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

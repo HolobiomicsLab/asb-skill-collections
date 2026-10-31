@@ -1,7 +1,7 @@
 ---
 name: chromatographic-peak-resolution
-description: Use when when you have loaded raw GC-MS data in netCDF or mzML format
-  and visual or statistical inspection reveals overlapping chromatographic peaks (i.e.,
+description: Use when you have loaded raw GC-MS data in netCDF or mzML format and
+  visual or statistical inspection reveals overlapping chromatographic peaks (i.e.,
   multiple m/z ions co-eluting at the same retention time window).
 license: CC-BY-4.0
 metadata:
@@ -18,7 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41587-020-0700-3
   title: mshub
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

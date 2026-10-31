@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jnatprod.7b00737
   title: Bioactivity-Based Molecular Networking
-evidence_spans:
-- open bioinformatic tools, such [MZmine2](http://mzmine.github.io/)
-- '[Optimus](https://github.com/MolecularCartography/Optimus) (using OpenMS)'
-- or [Optimus](https://github.com/MolecularCartography/Optimus) (using OpenMS)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

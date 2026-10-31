@@ -17,9 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1016/j.cmpb.2025.108672
   title: MInfer
-evidence_spans:
-- MInfer is an R package designed for analyzing metabolomics data
-- MInfer is an R package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

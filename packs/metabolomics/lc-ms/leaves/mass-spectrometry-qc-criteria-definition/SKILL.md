@@ -1,9 +1,9 @@
 ---
 name: mass-spectrometry-qc-criteria-definition
-description: 'Use when when setting up a new LC-MS QC workflow or modifying existing
-  QC rules: you have access to internal standards and target analytes, know their
-  expected retention times and m/z values, and need to establish pass/fail boundaries
-  for sample acceptance before or concurrent with instrument runs.'
+description: 'Use when setting up a new LC-MS QC workflow or modifying existing QC
+  rules: you have access to internal standards and target analytes, know their expected
+  retention times and m/z values, and need to establish pass/fail boundaries for sample
+  acceptance before or concurrent with instrument runs.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3437
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c00786
   title: Rapid QC-MS
-evidence_spans:
-- and MS-DIAL
-- '[MS-DIAL](http://prime.psc.riken'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

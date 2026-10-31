@@ -22,8 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2025.09.22.677919v1
   title: DIMPLE
-evidence_spans:
-- cdf files and available Matlab workspaces are provided
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

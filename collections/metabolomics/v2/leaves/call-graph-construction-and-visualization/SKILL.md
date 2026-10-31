@@ -1,9 +1,9 @@
 ---
 name: call-graph-construction-and-visualization
-description: Use when when you need to understand the computational structure of a
-  modular scientific application (especially one with multiple subprojects or plug-in
-  architectures) and static code inspection alone does not reveal algorithm entry
-  points, parameter propagation, or intermediate data.
+description: Use when you need to understand the computational structure of a modular
+  scientific application (especially one with multiple subprojects or plug-in architectures)
+  and static code inspection alone does not reveal algorithm entry points, parameter
+  propagation, or intermediate data transformations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0570
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
-evidence_spans:
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'.
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

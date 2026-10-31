@@ -20,10 +20,6 @@ derived_from:
   title: messes
 - doi: 10.3390/metabo11030163
   title: ''
-evidence_spans:
-- MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-  that facilitates the conversion of tabular data into other formats
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -23,7 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1038/nprot.2017.122
   title: 3D molecular cartography (Optimus / 'ili)
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

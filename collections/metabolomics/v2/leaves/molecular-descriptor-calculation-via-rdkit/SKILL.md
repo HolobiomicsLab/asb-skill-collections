@@ -1,6 +1,6 @@
 ---
 name: molecular-descriptor-calculation-via-rdkit
-description: Use when when you have a set of SMILES strings representing small molecules
+description: Use when you have a set of SMILES strings representing small molecules
   and need to generate a unified descriptor feature matrix for downstream machine
   learning (e.g., retention time prediction, property regression).
 license: CC-BY-4.0
@@ -20,12 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c05859
   title: Graphormer-RT
-evidence_spans:
-- from rdkit import Chem
-- from rdkit import Chem from rdkit.Chem import Descriptors
-- import mordred from mordred import Calculator, descriptors
-- import numpy as np
-- import pandas as pd
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

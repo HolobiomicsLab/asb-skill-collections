@@ -1,9 +1,9 @@
 ---
 name: peak-property-dictionary-construction
-description: Use when when you have identified the set of analytes (peptides, nucleosides,
+description: Use when you have identified the set of analytes (peptides, nucleosides,
   or other biomolecules) you wish to simulate in silico, and you need to prepare their
   chemical properties (m/z, intensity, retention time) in a machine-readable format
-  before applying fragmentation and noise injection.
+  before applying fragmentation and noise injection models.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.3390/genes12030396
   title: SMITER
-evidence_spans:
-- SMITER (Synthetic mzML writer) is a python-based command-line tool designed to simulate
-  LC-MS/MS runs.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

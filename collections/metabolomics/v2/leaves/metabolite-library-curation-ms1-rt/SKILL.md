@@ -1,6 +1,6 @@
 ---
 name: metabolite-library-curation-ms1-rt
-description: Use when when you have processed authentic standards with LC-MS in positive
+description: Use when you have processed authentic standards with LC-MS in positive
   and negative ESI modes, converted results to .mzML format, and need to build a validated
   in-house reference library with MS1 m/z and RT measurements for use in untargeted
   metabolomics compound identification workflows.
@@ -24,11 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00548
   title: metScribeR
-evidence_spans:
-- This package provides an automated workflow for processing in-house metabolite library
-  standards data
-- This package... can be launched using a function exported by this package
-- can be launched using a function exported by this package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

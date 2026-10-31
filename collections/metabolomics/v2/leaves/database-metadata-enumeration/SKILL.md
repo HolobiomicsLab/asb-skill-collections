@@ -1,9 +1,9 @@
 ---
 name: database-metadata-enumeration
-description: Use when when you have downloaded a curated structure-organism dataset
-  (such as LOTUS) and need to verify the reported counts of unique entities (source
-  databases, organisms, structures, and their pairs) to confirm dataset integrity,
-  assess data coverage, or reproduce published statistics in a.
+description: Use when you have downloaded a curated structure-organism dataset (such
+  as LOTUS) and need to verify the reported counts of unique entities (source databases,
+  organisms, structures, and their pairs) to confirm dataset integrity, assess data
+  coverage, or reproduce published statistics in a methods.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -22,11 +22,6 @@ derived_from:
   title: lotus
 - doi: 10.1007/s00044-016-1764-y
   title: ''
-evidence_spans:
-- standardizing.R, 1_integrating.R, 1_cleaningOriginal.R, 4_cleaningTaxonomy.R, 5_addingOTL.R
-- 1_integrating.R
-- 221[[smiles.py]], 260[[3_cleaningAndEnriching/sanitizing.py]], 280[[3_cleaningAndEnriching/stereocounting.py]]
-- R - Python 3 - Java >= 17
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

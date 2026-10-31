@@ -1,8 +1,8 @@
 ---
 name: package-version-pinning-and-lock-files
-description: Use when when a multi-language analysis pipeline (R + Python) has been
-  validated and you need to document the exact dependency tree so that other researchers
-  or systems can recreate the same computational environment.
+description: Use when a multi-language analysis pipeline (R + Python) has been validated
+  and you need to document the exact dependency tree so that other researchers or
+  systems can recreate the same computational environment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3546
@@ -23,13 +23,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo13080944
   title: SERDA
-evidence_spans:
-- R version 3.6.3 (2020-02-29)
-- packageVersion("reticulate") [1] ‘1.19’
-- packageVersion("keras") [1] ‘2.7.0’
-- packageVersion("pROC") [1] ‘1.17.0.1’
-- packageVersion("caret") [1] ‘6.0.86’
-- 'numpy_version: 1.18.1'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

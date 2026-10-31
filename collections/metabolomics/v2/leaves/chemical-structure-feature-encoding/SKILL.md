@@ -1,7 +1,7 @@
 ---
 name: chemical-structure-feature-encoding
-description: Use when when you have a set of molecules with known chemical structures
-  and need to prepare them for classification or prediction tasks.
+description: Use when you have a set of molecules with known chemical structures and
+  need to prepare them for classification or prediction tasks.
 license: CC-BY-4.0
 metadata:
   grounding_tier: link-only
@@ -16,9 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
-evidence_spans:
-- BitterPredict is a classifier which predicts whether a compound is bitter or not,
-  based on its chemical structure.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

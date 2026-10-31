@@ -1,9 +1,9 @@
 ---
 name: msms-spectral-database-retrieval
-description: Use when when you have a target compound (modified or unmodified) and
-  need to obtain its experimental MS/MS spectrum and metadata to serve as a known
-  reference for ModiFinder analysis, or when benchmarking evaluation methods like
-  average_distance scoring.
+description: Use when you have a target compound (modified or unmodified) and need
+  to obtain its experimental MS/MS spectrum and metadata to serve as a known reference
+  for ModiFinder analysis, or when benchmarking evaluation methods like average_distance
+  scoring.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3860
@@ -22,13 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.4c00061
   title: ModiFinder
-evidence_spans:
-- mf = ModiFinder(known_compound, modified_compound, mz_tolerance=0.01, ppm_tolerance=40)
-- mf = ModiFinder(known_compound, modified_compound, helpers=helpers_array, **args)
-- ModiFinder requires Python 3.9 or above.
-- ModiFinder requires Python 3.9 or above
-- eval_engine = BasicEvaluationEngine(default_method="is_max")
-- eval_engine = BasicEvaluationEngine(default_method="average_distance")
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

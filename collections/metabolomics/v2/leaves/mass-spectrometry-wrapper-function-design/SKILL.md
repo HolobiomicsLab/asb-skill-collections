@@ -1,7 +1,7 @@
 ---
 name: mass-spectrometry-wrapper-function-design
-description: Use when when you have a Spectra-based MS analysis workflow in R but
-  need access to specialized spectral similarity, filtering, or normalization algorithms
+description: Use when you have a Spectra-based MS analysis workflow in R but need
+  access to specialized spectral similarity, filtering, or normalization algorithms
   available only in Python libraries.
 license: CC-BY-4.0
 metadata:
@@ -23,11 +23,6 @@ metadata:
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
-evidence_spans:
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based
-  MS analysis in R
-- MS analysis in R. By wrapping Python functionality into R functions, *SpectriPy*
-  allows a seamless integration of Python libraries into R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: installation-troubleshooting
-description: Use when when setting up matchms for the first time in a new environment,
+description: Use when setting up matchms for the first time in a new environment,
   after upgrading Python or conda, when switching between package managers (pip vs
   conda), or when distributing matchms to end users to confirm functionality across
   supported installation channels.
@@ -22,12 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
-evidence_spans:
-- Matchms offers an array of tools for metadata cleaning and validation
-- Matchms is a versatile open-source Python package developed for importing, processing,
-  cleaning, and comparing mass spectrometry data
-- Verify new release is on [PyPi](https://pypi.org/project/matchms/#history)
-- Wait until new release is also on Bioconda (https://anaconda.org/bioconda/matchms)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

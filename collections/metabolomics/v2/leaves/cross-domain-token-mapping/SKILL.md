@@ -1,6 +1,9 @@
 ---
 name: cross-domain-token-mapping
-description: Use when when building a unified sequence model (e.
+description: Use when building a unified sequence model (e.g., BART, transformer)
+  that must process both mass spectrometry data and molecular structures as parallel
+  modalities, and you need to ensure that spectral tokens and structural tokens can
+  be embedded and decoded from a single shared latent space.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -16,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.48550/arxiv.2510.20615
   title: MS-BART
-evidence_spans:
-- MS-BART is the first to leverage language model for mass spectra structure elucidation
-  by introducing a unified vocabulary
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -24,9 +24,6 @@ derived_from:
   title: FBMN-STATS
 - doi: 10.1021/acs.analchem.5c03225
   title: ''
-evidence_spans:
-- To easily install and run Jupyter Notebook in R
-- SMART written in R and R GUI has been developed as user-friendly software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

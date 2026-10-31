@@ -22,15 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btv146
   title: Cardinal
-evidence_spans:
-- library(Cardinal)
-- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of
-  the new low-level signal processing functions'
-- Parallel processing support via the *BiocParallel* package for all pre-processing
-  methods
-- Parallel processing support via the *BiocParallel* package for all pre-processing
-  methods and any statistical analysis methods with a `BPPARAM` option
-- 'Once installed, Cardinal can be loaded with library(): library(Cardinal)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

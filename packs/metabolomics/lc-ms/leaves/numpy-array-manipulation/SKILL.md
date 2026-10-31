@@ -1,6 +1,6 @@
 ---
 name: numpy-array-manipulation
-description: Use when when you have raw MS/MS peak lists that need to be loaded, analyzed
+description: Use when you have raw MS/MS peak lists that need to be loaded, analyzed
   for intensity frequency patterns, or filtered based on noise characteristics.
 license: CC-BY-4.0
 metadata:
@@ -21,11 +21,6 @@ derived_from:
   title: Spectral Denoising
 - doi: 10.1038/s41592-023-02012-9
   title: ''
-evidence_spans:
-- Spectral denoising requires ``Python >= 3.8`` installed on your system
-- import spectral_denoising as sd
-- peak = np.array([[69.071, 7.917962], [86.066, 1.021589], [86.0969, 100.0]], dtype=np.float32)
-- numpy==2.1.1
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

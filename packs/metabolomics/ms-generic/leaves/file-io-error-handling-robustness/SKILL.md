@@ -1,6 +1,6 @@
 ---
 name: file-io-error-handling-robustness
-description: Use when when designing or integrating a file parser for mass spectrometry
+description: Use when designing or integrating a file parser for mass spectrometry
   formats (.raw Thermo RAW format, .mzml XML-based format) in a metabolomics processing
   pipeline, or when reading legacy or heterogeneous instrument output where file integrity
   cannot be guaranteed.
@@ -22,9 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btaf290
   title: Eclipse
-evidence_spans:
-- They are written in Python and C
-- pip install bmxp
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

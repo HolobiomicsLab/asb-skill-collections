@@ -1,6 +1,6 @@
 ---
 name: pathway-level-statistical-inference
-description: Use when when you have genotype data (variants grouped by pathway annotation)
+description: Use when you have genotype data (variants grouped by pathway annotation)
   and quantitative or binary phenotype data, and you want to test whether a pathway
   as a whole is associated with the phenotype, rather than testing individual variants.
 license: CC-BY-4.0
@@ -17,8 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2021.04.23.440821v1
   title: PaIRKAT
-evidence_spans:
-- github.com/CharlieCarpenter/PaIRKAT
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

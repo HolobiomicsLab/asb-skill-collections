@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-024-02171-3
   title: MEISTER
-evidence_spans:
-- github.com/richardxie1119/MEISTER
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

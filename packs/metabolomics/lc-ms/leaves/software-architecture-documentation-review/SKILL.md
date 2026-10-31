@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
-evidence_spans:
-- mzmine is an open-source software for mass spectrometry data processing
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

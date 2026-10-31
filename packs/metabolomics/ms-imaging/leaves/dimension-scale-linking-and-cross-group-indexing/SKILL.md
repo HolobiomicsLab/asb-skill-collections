@@ -1,7 +1,7 @@
 ---
 name: dimension-scale-linking-and-cross-group-indexing
-description: Use when when exporting quantified MSI data as HDF5 containers following
-  the Cardinal::HDF5 layout convention, and you need to establish bidirectional indexing
+description: Use when exporting quantified MSI data as HDF5 containers following the
+  Cardinal::HDF5 layout convention, and you need to establish bidirectional indexing
   between intensity data (feature-by-pixel matrix) and metadata groups (featureData,
   pixelData).
 license: CC-BY-4.0
@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2025.10.15.682422v1
   title: LipidQMap
-evidence_spans:
-- LipidQMap writes MSI exports as HDF5 containers
-- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org)
-  conventions.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -18,7 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

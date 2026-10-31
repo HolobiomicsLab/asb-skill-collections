@@ -1,8 +1,8 @@
 ---
 name: intensity-normalization-and-scaling
-description: Use when when working with raw or filtered MsmsSpectrum objects where
-  peak intensities span a wide dynamic range and need to be normalized for downstream
-  spectrum comparison, database matching, or publication-quality visualization.
+description: Use when working with raw or filtered MsmsSpectrum objects where peak
+  intensities span a wide dynamic range and need to be normalized for downstream spectrum
+  comparison, database matching, or publication-quality visualization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
-evidence_spans:
-- spectrum_utils is a Python package
-- spectrum = sus.MsmsSpectrum.from_usi(usi)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

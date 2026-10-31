@@ -1,6 +1,6 @@
 ---
 name: unit-test-design-for-data-structure-classes
-description: Use when when implementing a new data structure class that extends standard
+description: Use when implementing a new data structure class that extends standard
   Python collections (e.g., collections.UserDict) and must support multiple initialization
   modes, operator overloading (__add__, __sub__), custom string formatting (__str__,
   __repr__), and validation logic.
@@ -18,7 +18,6 @@ derived_from:
   title: mzapy
 - doi: 10.1021/acs.jproteome.2c00313
   title: ''
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,8 +1,8 @@
 ---
 name: hierarchical-database-indexing
-description: Use when when you have a large combinatorial chemical space (e.g., all
-  regioisomeric positions of lipid double bonds across carbon counts and saturation
-  levels) and need to query it repeatedly against experimental mass spectrometry spectra.
+description: Use when you have a large combinatorial chemical space (e.g., all regioisomeric
+  positions of lipid double bonds across carbon counts and saturation levels) and
+  need to query it repeatedly against experimental mass spectrometry spectra.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0226
@@ -21,12 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-59683-5
   title: LipidIN
-evidence_spans:
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
-  peak alignment, matching and identification'
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
-  peak alignment, matching and identification.'
-- 'CAMERA: an'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

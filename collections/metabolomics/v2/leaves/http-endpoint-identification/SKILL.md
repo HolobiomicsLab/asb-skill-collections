@@ -1,9 +1,9 @@
 ---
 name: http-endpoint-identification
-description: Use when when you have source code access to a webservice component (such
+description: Use when you have source code access to a webservice component (such
   as the MAGMa joblauncher) and need to enumerate all exposed HTTP endpoints, their
   methods (GET, POST, etc.), URL patterns, parameter names, request/response payload
-  structures, and authentication requirements in order to.
+  structures, and authentication requirements in order to build.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -18,9 +18,6 @@ metadata:
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
-evidence_spans:
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'.
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

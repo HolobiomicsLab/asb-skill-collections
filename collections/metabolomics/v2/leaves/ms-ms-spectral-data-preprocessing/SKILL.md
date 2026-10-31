@@ -1,8 +1,8 @@
 ---
 name: ms-ms-spectral-data-preprocessing
-description: Use when when you have MS/MS spectral data (raw or intermediate format)
-  that must be fed into the Mass2SMILES Docker container or similar deep learning
-  models for MS/MS-to-structure inference.
+description: Use when you have MS/MS spectral data (raw or intermediate format) that
+  must be fed into the Mass2SMILES Docker container or similar deep learning models
+  for MS/MS-to-structure inference.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3647
@@ -23,8 +23,6 @@ derived_from:
   title: Mass2SMILES
 - doi: 10.5281/zenodo.14778327
   title: ''
-evidence_spans:
-- open-source Python based deep learning approach
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

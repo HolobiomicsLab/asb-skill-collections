@@ -1,6 +1,6 @@
 ---
 name: spectra-variable-and-peak-data-storage
-description: Use when when building a new mass spectrometry data backend for the Spectra
+description: Use when building a new mass spectrometry data backend for the Spectra
   package that must store and serve multiple spectra with their associated m/z and
   intensity peaks. Use this when you need a backend that combines efficient metadata
   lookup (via data.
@@ -23,12 +23,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
-evidence_spans:
-- library(Spectra) library(IRanges)
-- The *Spectra* package defines an efficient infrastructure for storing and handling
-  mass spectrometry spectra
-- '`DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)'
-- DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

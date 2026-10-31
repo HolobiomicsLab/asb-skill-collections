@@ -17,12 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2025.08.28.672951v2
   title: EnrichMET
-evidence_spans:
-- simplifies pathway enrichment analysis by allowing the complete workflow to be executed
-  through a single R function call
-- integrates fgsea for fast MetSEA, igraph for topology-based metrics
-- pathway to metabolite mappings are obtained from the KEGG resource using the KEGGREST
-  package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

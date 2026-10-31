@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.48550/arxiv.2510.20615
   title: MS-BART
-evidence_spans:
-- MS-BART is the first to leverage language model for mass spectra structure elucidation
-  by introducing a unified vocabulary
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

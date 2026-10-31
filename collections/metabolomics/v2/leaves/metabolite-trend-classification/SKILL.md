@@ -1,8 +1,8 @@
 ---
 name: metabolite-trend-classification
-description: Use when when you have compiled p-values and fold-changes from multiple
-  metabolomics studies and need to assign a single trend label (up/down/none) to each
-  metabolite for meta-analysis or cross-study comparison.
+description: Use when you have compiled p-values and fold-changes from multiple metabolomics
+  studies and need to assign a single trend label (up/down/none) to each metabolite
+  for meta-analysis or cross-study comparison.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -23,11 +23,6 @@ derived_from:
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
-evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted
-  meta-analysis in R
-- This vignette illustrates `Amanida` R package, which contains a collection of functions
-  for computing a weighted meta-analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

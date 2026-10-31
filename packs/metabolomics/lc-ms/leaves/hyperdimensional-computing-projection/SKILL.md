@@ -1,6 +1,6 @@
 ---
 name: hyperdimensional-computing-projection
-description: Use when when clustering large-scale mass spectrometry datasets (millions
+description: Use when clustering large-scale mass spectrometry datasets (millions
   of MS/MS spectra in MGF format) where runtime is a bottleneck and you have access
   to NVIDIA GPU resources (GTX 3090 for large datasets like PXD000561, or GTX 1080Ti
   for smaller datasets).
@@ -21,11 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00612
   title: HyperSpec
-evidence_spans:
-- HyperSpec requires `Python 3.8+` with `CUDA` environment
-- HyperSpec requires `Python 3.8+` with `CUDA` environment.
-- github.com__wh-xu__Hyper-Spec
-- github.com/wh-xu/Hyper-Spec
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

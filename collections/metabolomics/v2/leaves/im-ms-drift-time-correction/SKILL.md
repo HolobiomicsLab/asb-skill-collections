@@ -1,7 +1,7 @@
 ---
 name: im-ms-drift-time-correction
-description: Use when when you have IM-MS lipidomics data acquired on samples spiked
-  with U13C-labeled internal standards (fully labeled yeast extract) and need to quantify
+description: Use when you have IM-MS lipidomics data acquired on samples spiked with
+  U13C-labeled internal standards (fully labeled yeast extract) and need to quantify
   systematic CCS bias and apply lipid class-specific bias correction to all measured
   CCS values, particularly when multiple lipids per lipid.
 license: CC-BY-4.0
@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c01253
   title: mobilipid
-evidence_spans:
-- Our tool enhances CCS quality control by providing a R Markdown that integrates
-  into IM-MS lipidomics workflows
-- providing a R Markdown that integrates into IM-MS lipidomics workflows
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -22,9 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-63536-6
   title: MetDNA3
-evidence_spans:
-- '`MrnAnnoAlgo3` is the core algorithm module of **MetDNA3**, designed to annotate
-  metabolites'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

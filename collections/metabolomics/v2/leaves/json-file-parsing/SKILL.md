@@ -1,6 +1,6 @@
 ---
 name: json-file-parsing
-description: Use when when you have JSON-formatted curation data organized in a directory
+description: Use when you have JSON-formatted curation data organized in a directory
   structure (e.g., the MIBiG `data` directory) and need to extract a specific nested
   field (e.g., `cluster.status`) across all entries to build an index, summary table,
   or quality report.
@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1093/nar/gkac1049
   title: MIBiG 3.0
-evidence_spans:
-- MIBiG curation data in JSON format
-- entry status is now tracked via the `cluster.status` field
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

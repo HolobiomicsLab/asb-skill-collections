@@ -1,6 +1,6 @@
 ---
 name: jvm-dependency-resolution
-description: Use when when you have obtained source code for a Maven-based Java project
+description: Use when you have obtained source code for a Maven-based Java project
   and need to determine whether your local build environment can successfully compile
   it, or when preparing to reproduce a published CI/CD build workflow from a GitHub
   Actions or similar pipeline configuration.
@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
-evidence_spans:
-- git clone https://github.com/ipb-halle/MetFragRelaunched.git
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,8 +1,8 @@
 ---
 name: spectral-library-metadata-reorganization
-description: Use when when ingesting mass spectral libraries (EI or MS2) where SMILES
-  information is embedded in the Comment field rather than in a dedicated SMILES metadata
-  field—particularly common in MoNA GC-MS and LC-MS/MS exports.
+description: Use when ingesting mass spectral libraries (EI or MS2) where SMILES information
+  is embedded in the Comment field rather than in a dedicated SMILES metadata field—particularly
+  common in MoNA GC-MS and LC-MS/MS exports.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
-evidence_spans:
-- library(mspcompiler)
-- Read the msp file into R.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

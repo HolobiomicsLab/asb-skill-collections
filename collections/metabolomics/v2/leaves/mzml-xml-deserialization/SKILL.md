@@ -23,9 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btaf290
   title: Eclipse
-evidence_spans:
-- They are written in Python and C
-- pip install bmxp
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,7 +1,7 @@
 ---
 name: molecular-graph-feature-representation
-description: Use when when you have molecular structures (as SMILES, SDF, or graph
-  adjacency) and need to predict continuous properties (e.
+description: Use when you have molecular structures (as SMILES, SDF, or graph adjacency)
+  and need to predict continuous properties (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3704
@@ -17,9 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
-evidence_spans:
-- extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations
-  for Property Prediction]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

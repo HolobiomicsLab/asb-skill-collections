@@ -1,7 +1,7 @@
 ---
 name: status-value-parsing
-description: Use when when a project README or documentation embeds badge endpoints
-  that report real-time status (e.g., Travis CI build, Landscape.
+description: Use when a project README or documentation embeds badge endpoints that
+  report real-time status (e.g., Travis CI build, Landscape.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -22,9 +22,6 @@ derived_from:
   title: magma
 - doi: 10.5281/zenodo.1043226
   title: ''
-evidence_spans:
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'.
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

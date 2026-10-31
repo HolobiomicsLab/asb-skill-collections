@@ -1,9 +1,9 @@
 ---
 name: api-query-routing-conditional-per-database
-description: Use when when you have a chemical structure query (as a SMILES string
-  or molecular identifier) and need to search across multiple external chemical repositories
-  simultaneously, but only some repositories are relevant for your specific compound
-  class (e.
+description: Use when you have a chemical structure query (as a SMILES string or molecular
+  identifier) and need to search across multiple external chemical repositories simultaneously,
+  but only some repositories are relevant for your specific compound class (e.g.,
+  natural products, synthetic drugs, peptides).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3282
@@ -26,10 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-021-00530-2
   title: MassSpecBlocks
-evidence_spans:
-- find structures on other chemical projects like ChEBI
-- find structures on other chemical projects like NP Atlas
-- Backend is written in PHP with Symfony framework
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

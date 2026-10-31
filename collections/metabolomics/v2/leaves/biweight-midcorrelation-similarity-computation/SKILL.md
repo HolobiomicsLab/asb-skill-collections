@@ -22,14 +22,6 @@ derived_from:
   title: MetaboDiff
 - doi: 10.1158/0008-5472.can-14-1490
   title: ''
-evidence_spans:
-- '`MetaboDiff` is available for all operating systems and can be installed via Github'
-- met = knn_impute(met,cutoff=0.4)
-- install.packages("WGCNA")
-- The core concept of the so called "weighted" correlation analysis by Langfelder
-  and Horvarth
-- The `MetaboDiff` R package requires R version 4.0.2 or higher.
-- The `MetaboDiff` R package requires R version 4.0.2 or higher
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,7 +1,7 @@
 ---
 name: metabolomics-data-import-and-parsing
-description: Use when when you have metabolomics comparison results from one or more
-  studies in tabular format (spreadsheet or text file) with columns for compound name/identifier,
+description: Use when you have metabolomics comparison results from one or more studies
+  in tabular format (spreadsheet or text file) with columns for compound name/identifier,
   statistical p-value, relative fold-change (including negative values indicating
   down-regulation), study sample size (N), and.
 license: CC-BY-4.0
@@ -25,12 +25,6 @@ derived_from:
   title: ''
 - doi: 10.1093/bioinformatics/btac059
   title: ''
-evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted
-  meta-analysis in R
-- This vignette illustrates `Amanida` R package, which contains a collection of functions
-  for computing a weighted meta-analysis
-- library(metaboprep)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

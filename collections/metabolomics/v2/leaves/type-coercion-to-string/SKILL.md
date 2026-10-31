@@ -1,6 +1,6 @@
 ---
 name: type-coercion-to-string
-description: Use when when converting intermediate JSON records to output dictionaries
+description: Use when converting intermediate JSON records to output dictionaries
   via matrix directives and all field values must be serialized as strings for downstream
   format compatibility (e.g., mwTab format or other repository-specific formats that
   expect string-typed metadata fields).
@@ -20,8 +20,6 @@ derived_from:
   title: messes
 - doi: 10.3390/metabo11030163
   title: ''
-evidence_spans:
-- MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

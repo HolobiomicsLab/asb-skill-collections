@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5b03628
   title: geoRge
-evidence_spans:
-- library(geoRge)
-- hits <- database_query(geoRgeR = s2, adducts = negative, db = db)
-- This is an R Markdown document
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

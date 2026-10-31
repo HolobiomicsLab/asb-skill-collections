@@ -18,9 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
-evidence_spans:
-- '**QuantyFey** is a Shiny application for the **visualization, analysis, and quantification**
-  of **mass spectrometry (MS) data**'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: lc-ms-data-calibration
-description: Use when when you have paired LC-MS measurements from labeled and unlabeled
+description: Use when you have paired LC-MS measurements from labeled and unlabeled
   samples of the same analytes, and you need to isolate the true isotopic labeling
   contribution by removing confounding signal from naturally occurring isotopes and
   tracer isotopic impurity.
@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-019-2669-9
   title: ElemCor
-evidence_spans:
-- ElemCor is a software tool to correct LC-MS data in isotope labeling experiments.
-- ElemCor is a software tool to correct LC-MS data in isotope labeling experiments
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

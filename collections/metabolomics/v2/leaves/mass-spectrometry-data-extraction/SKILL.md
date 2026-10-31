@@ -29,12 +29,6 @@ derived_from:
   title: MetaXtract
 - doi: 10.1021/acs.analchem.1c02687
   title: ''
-evidence_spans:
-- MetaXtract is a hybrid tool for extracting, analysing, and visualising data from
-  **Thermo Fisher RAW** mass spectrometry files.
-- Complete processing including peak picking, sample alignment, pick picking, grouping
-  of isotopologues and adducts, gap-filling by data recursion, extraction of consolidated
-  MS2 spectra and isotopic
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

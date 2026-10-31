@@ -1,7 +1,7 @@
 ---
 name: metabolomics-feature-preprocessing
-description: Use when when you have raw profile LC-MS data in .mzML format and need
-  to prepare regions of interest (ROI) as input for a CNN-Transformer peak detection
+description: Use when you have raw profile LC-MS data in .mzML format and need to
+  prepare regions of interest (ROI) as input for a CNN-Transformer peak detection
   network.
 license: CC-BY-4.0
 metadata:
@@ -23,8 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c04531
   title: QuanFormer
-evidence_spans:
-- written in Python (v3.8.1)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

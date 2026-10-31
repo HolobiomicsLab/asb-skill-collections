@@ -23,12 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
-evidence_spans:
-- Pyteomics is a collection of lightweight and handy tools for Python
-- Pyteomics supports recent versions of Python 3.
-- pip install pyteomics
-- numpy
-- numpy <https://numpy.org/>
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

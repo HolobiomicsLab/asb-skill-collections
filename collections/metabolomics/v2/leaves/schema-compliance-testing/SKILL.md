@@ -1,9 +1,9 @@
 ---
 name: schema-compliance-testing
-description: Use when when uploading or ingesting a new paired omics project JSON
-  document into the Pairing Omics Data Platform, or when programmatically submitting
-  projects via the OpenAPI interface. Apply this skill before persisting the document
-  to disk or indexing it for search.
+description: Use when uploading or ingesting a new paired omics project JSON document
+  into the Pairing Omics Data Platform, or when programmatically submitting projects
+  via the OpenAPI interface. Apply this skill before persisting the document to disk
+  or indexing it for search.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41589-020-00724-z
   title: pairedomicsdatapla
-evidence_spans:
-- make sure the existing tests still work by running ``npm run test`` in `api/` and/or
-  `app/` directory
-- pull request (https://help.github.com/articles/about-pull-requests/)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

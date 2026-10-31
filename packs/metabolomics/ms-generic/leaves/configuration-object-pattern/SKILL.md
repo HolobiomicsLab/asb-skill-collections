@@ -1,6 +1,6 @@
 ---
 name: configuration-object-pattern
-description: Use when when designing a library that needs to support multiple plotting
+description: Use when designing a library that needs to support multiple plotting
   backends (e.g., matplotlib, bokeh, plotly) and you want to avoid reimplementing
   parameter validation, storage, and dispatch logic for each backend.
 license: CC-BY-4.0
@@ -22,7 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

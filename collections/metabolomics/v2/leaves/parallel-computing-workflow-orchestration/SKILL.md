@@ -1,7 +1,7 @@
 ---
 name: parallel-computing-workflow-orchestration
-description: Use when when compiling EI or MS/MS spectral libraries from multiple
-  gigabyte-scale sources (e.
+description: Use when compiling EI or MS/MS spectral libraries from multiple gigabyte-scale
+  sources (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -24,13 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
-evidence_spans:
-- library(mspcompiler)
-- Read the msp file into R.
-- library(future)
-- library(future.apply)
-- library(parallel)
-- you can transformed it into a msp file by *Lib2NIST*
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

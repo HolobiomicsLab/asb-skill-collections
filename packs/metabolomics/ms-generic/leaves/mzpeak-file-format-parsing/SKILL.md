@@ -1,7 +1,7 @@
 ---
 name: mzpeak-file-format-parsing
-description: Use when when you have mass spectrometry data stored in mzPeak format
-  (ZIP archive containing Parquet files) and need to read spectrum metadata, chromatogram
+description: Use when you have mass spectrometry data stored in mzPeak format (ZIP
+  archive containing Parquet files) and need to read spectrum metadata, chromatogram
   metadata, and signal data (m/z and intensity arrays) for analysis. Use this skill
   if your input is an .
 license: CC-BY-4.0
@@ -24,9 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
-evidence_spans:
-- complete re-implementation for _reading_ mzPeak files using [`pyarrow`]
-- There is also an R implementation in `R/`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

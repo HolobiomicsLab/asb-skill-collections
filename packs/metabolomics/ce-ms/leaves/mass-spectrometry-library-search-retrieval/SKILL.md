@@ -1,6 +1,6 @@
 ---
 name: mass-spectrometry-library-search-retrieval
-description: Use when when you have an unknown MSMS spectrum (precursor m/z and fragment
+description: Use when you have an unknown MSMS spectrum (precursor m/z and fragment
   ions) and need to discover structurally related compounds from a spectral library.
 license: CC-BY-4.0
 metadata:
@@ -20,7 +20,6 @@ derived_from:
   title: Neutral-loss similarity
 - doi: 10.1016/1044-0305
   title: ''
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

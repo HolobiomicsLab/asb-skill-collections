@@ -1,7 +1,7 @@
 ---
 name: cnn-transformer-hybrid-architecture-design
-description: Use when when you need to detect and classify peaks in LC-MS regions
-  of interest (ROIs) and simultaneously localize their boundaries for area integration.
+description: Use when you need to detect and classify peaks in LC-MS regions of interest
+  (ROIs) and simultaneously localize their boundaries for area integration.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c04531
   title: QuanFormer
-evidence_spans:
-- written in Python (v3.8.1)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

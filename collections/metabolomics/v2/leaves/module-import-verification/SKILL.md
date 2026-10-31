@@ -19,13 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
-evidence_spans:
-- The main way to obtain Pyteomics is via `pip Python package manager
-- h5py <https://www.h5py.org/> and optionally hdf5plugin
-- h5py and optionally hdf5plugin <https://hdf5plugin.readthedocs.io/en/latest/>
-- '- `sqlalchemy <https://www.sqlalchemy.org/>`_ (used by :py:mod:`pyteomics.mass.unimod`);'
-- '- `psims <https://mobiusklein.github.io/psims/docs/build/html/>`_ (used py :py:mod:`pyteomics.proforma`)'
-- 'using `conda <https://docs.conda.io/projects/conda/en/latest/index.html>`_::'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

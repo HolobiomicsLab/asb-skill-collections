@@ -18,9 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe
-evidence_spans:
-- We utilize [pytest](https://docs.pytest.org/en/stable/) and have defined useful
-  fixtures for use in the tests.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

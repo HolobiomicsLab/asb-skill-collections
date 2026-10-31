@@ -24,10 +24,6 @@ metadata:
 derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo
-evidence_spans:
-- conda create --name memo python=3.8
-- pip install numpy
-- conda install -c conda-forge scikit-bio
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

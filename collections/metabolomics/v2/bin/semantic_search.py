@@ -418,6 +418,7 @@ def search(collection, target, query, technique=None, k=10,
 
 # Wrapper imports follow the verbatim module, including its future import.
 import argparse  # noqa: E402
+import sys  # noqa: E402
 import urllib.request  # noqa: E402
 import urllib.error  # noqa: E402
 
@@ -460,12 +461,24 @@ def _cache_for(collection: Path) -> Path | None:
     return None
 
 
+class SemanticUnavailable(RuntimeError):
+    """Semantic ranking cannot run here; the message says why, in one line."""
+
+
 def semantic_search(collection, rows, query, technique, k, max_tools):
-    import numpy as np
+    try:
+        import numpy as np
+    except ImportError:
+        raise SemanticUnavailable("numpy is not installed") from None
     cache = _cache_for(collection)
+    if cache is None:
+        raise SemanticUnavailable(
+            "no leaf embedding cache (set ASB_LEAF_EMB_CACHE or place "
+            f".cache/leafemb_{collection.name}.npz under the collection)"
+        )
     key = os.environ.get("OPENAI_API_KEY")
-    if not (cache and key):
-        return None  # caller falls back
+    if not key:
+        raise SemanticUnavailable("OPENAI_API_KEY is not set, so the query cannot be embedded")
     z = np.load(cache, allow_pickle=True)
     emb, slugs = z["emb"], list(z["slug"])
     body = json.dumps({"model": EMB_MODEL, "input": query}).encode()
@@ -474,8 +487,10 @@ def semantic_search(collection, rows, query, technique, k, max_tools):
     try:
         with urllib.request.urlopen(req, timeout=60) as r:
             q = np.array(json.load(r)["data"][0]["embedding"], dtype="float32")
-    except (urllib.error.URLError, KeyError):
-        return None
+    except (urllib.error.URLError, KeyError) as exc:
+        raise SemanticUnavailable(
+            f"the query embedding request failed ({exc.__class__.__name__})"
+        ) from None
     q /= (np.linalg.norm(q) + 1e-9)
     scores = emb @ q
     by_slug = {x["slug"]: x for x in rows if "slug" in x}
@@ -493,8 +508,13 @@ def semantic_search(collection, rows, query, technique, k, max_tools):
     return out
 
 
-def main(argv: list[str] | None = None):
-    """Use the shared offline selector in keyword mode or after semantic fallback."""
+def main(argv: list[str] | None = None) -> int:
+    """Use the shared offline selector in keyword mode or after semantic fallback.
+
+    ``--mode semantic`` never falls back: when semantic ranking cannot run it
+    exits 2 with the reason on stderr. ``--mode auto`` falls back to the keyword
+    selector and says why on stderr; the ``mode`` field reports which ran.
+    """
     ap = argparse.ArgumentParser()
     ap.add_argument("--query", required=True)
     ap.add_argument("--collection", required=True)
@@ -516,10 +536,22 @@ def main(argv: list[str] | None = None):
     if mode in ("auto", "semantic"):
         try:
             res = semantic_search(coll, rows, a.query, a.technique, a.k, max_tools)
-        except Exception:
-            res = None
+            reason = "the semantic backend returned no result"
+        except SemanticUnavailable as exc:
+            res, reason = None, str(exc)
+        except Exception as exc:
+            res, reason = None, f"the semantic backend failed ({exc.__class__.__name__})"
         if res is not None:
             mode = "semantic"
+        elif a.mode == "semantic":
+            print(f"semantic_search.py: --mode semantic cannot run: {reason}.", file=sys.stderr)
+            return 2
+        else:
+            print(
+                f"semantic_search.py: semantic ranking unavailable ({reason}); "
+                "falling back to the keyword selector.",
+                file=sys.stderr,
+            )
     if res is None:
         res = keyword_search(
             rows, a.query, a.technique, a.k, max_tools,
@@ -528,7 +560,8 @@ def main(argv: list[str] | None = None):
         )
         mode = "keyword"
     print(json.dumps({"mode": mode, "target": a.target, "results": res}, indent=2))
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

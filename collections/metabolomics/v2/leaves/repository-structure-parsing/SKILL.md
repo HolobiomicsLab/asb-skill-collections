@@ -1,7 +1,6 @@
 ---
 name: repository-structure-parsing
-description: Use when when you encounter a multi-module scientific software project
-  (e.
+description: Use when you encounter a multi-module scientific software project (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -22,9 +21,6 @@ derived_from:
   title: magma
 - doi: 10.1093/bioinformatics/btz765
   title: ''
-evidence_spans:
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'.
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

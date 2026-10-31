@@ -1,9 +1,9 @@
 ---
 name: dependency-version-management
-description: Use when when you need to document or reproduce a Python-based research
-  application (or any package-dependent workflow) and discover that the original publication
-  or repository specifies dependencies without versions, or when you want to verify
-  that a documented set of pinned versions can be.
+description: Use when you need to document or reproduce a Python-based research application
+  (or any package-dependent workflow) and discover that the original publication or
+  repository specifies dependencies without versions, or when you want to verify that
+  a documented set of pinned versions can be.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -24,11 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1002/nbm.70131
   title: ROIAL-NMR
-evidence_spans:
-- XlsxWriter 3.2.2
-- pandas 2.2.3
-- PyQt5 5.15.11
-- openpyxl 3.1.5
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

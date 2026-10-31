@@ -1,8 +1,8 @@
 ---
 name: molecular-structure-file-parsing
-description: Use when when you have received or downloaded an SDF-formatted compound
-  database file and need to verify that it is valid, uncorrupted, and contains the
-  expected number of distinct molecular records before using it in metabolomics, cheminformatics,
+description: Use when you have received or downloaded an SDF-formatted compound database
+  file and need to verify that it is valid, uncorrupted, and contains the expected
+  number of distinct molecular records before using it in metabolomics, cheminformatics,
   or toxicology workflows.
 license: CC-BY-4.0
 metadata:
@@ -17,8 +17,6 @@ metadata:
 derived_from:
 - doi: 10.3389/fchem.2022.908572
   title: DNA adduct database
-evidence_spans:
-- compound database in SDF format
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

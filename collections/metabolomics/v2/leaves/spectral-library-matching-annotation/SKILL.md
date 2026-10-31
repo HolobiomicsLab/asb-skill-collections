@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1016/j.enceco.2025.07.022
   title: MSThunder
-evidence_spans:
-- MSThunder provide a deep learning-based nontargeted analytical framework for the
-  accurate and rapid identification of unknown organic pollutants in water
-- A case file named “Pesticides” can be run in the Windows environment
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

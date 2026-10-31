@@ -1,6 +1,6 @@
 ---
 name: r-environment-dependency-specification
-description: Use when when developing or reproducing an R-based analysis that integrates
+description: Use when developing or reproducing an R-based analysis that integrates
   Python dependencies (e.g., via reticulate), particularly in contexts where deep
   learning (keras) or complex machine-learning frameworks (caret) depend on specific
   numpy versions or Python minor releases.
@@ -24,13 +24,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo13080944
   title: SERDA
-evidence_spans:
-- R version 3.6.3 (2020-02-29)
-- packageVersion("reticulate") [1] ‘1.19’
-- packageVersion("keras") [1] ‘2.7.0’
-- packageVersion("pROC") [1] ‘1.17.0.1’
-- packageVersion("caret") [1] ‘6.0.86’
-- 'numpy_version: 1.18.1'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

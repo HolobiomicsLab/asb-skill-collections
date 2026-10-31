@@ -28,13 +28,6 @@ derived_from:
   title: mamsi
 - doi: 10.1371/journal.pcbi.1011814
   title: ''
-evidence_spans:
-- 'Dependencies: networkx'
-- 'Dependencies: pyvis'
-- 'Dependencies: matplotlib'
-- import pandas as pd
-- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry
-  datasets.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

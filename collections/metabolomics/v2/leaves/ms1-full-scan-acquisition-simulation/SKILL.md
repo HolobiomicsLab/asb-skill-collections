@@ -1,6 +1,6 @@
 ---
 name: ms1-full-scan-acquisition-simulation
-description: Use when when you need to prototype, test, or benchmark MS1-only acquisition
+description: Use when you need to prototype, test, or benchmark MS1-only acquisition
   strategies on a defined set of metabolites (e.
 license: CC-BY-4.0
 metadata:
@@ -22,9 +22,6 @@ derived_from:
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
-evidence_spans:
-- ViMMS is compatible with Python 3+
-- ViMMS dependencies are managed with [Poetry](https://python-poetry.org/)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

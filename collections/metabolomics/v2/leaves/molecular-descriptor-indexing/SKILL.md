@@ -1,9 +1,9 @@
 ---
 name: molecular-descriptor-indexing
-description: Use when when you have a collection of molecular structures (SMILES or
-  SDF format) and need to generate a queryable database of collision cross section
-  values for high-throughput mass spectrometry workflows, or when you want to organize
-  pre-computed CCS predictions with conformer metadata into a.
+description: Use when you have a collection of molecular structures (SMILES or SDF
+  format) and need to generate a queryable database of collision cross section values
+  for high-throughput mass spectrometry workflows, or when you want to organize pre-computed
+  CCS predictions with conformer metadata into a.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -29,13 +29,6 @@ metadata:
 derived_from:
 - doi: 10.1002/cem.70040
   title: PACCS
-evidence_spans:
-- '[python3](https://www.python.org/)'
-- '[pandas](https://pandas.pydata.org/)'
-- '[NumPy](https://numpy.org/)'
-- '[RDKit](https://rdkit.org/)'
-- '[PyTorch](https://pytorch.org/)'
-- '[PyG](https://pytorch-geometric.readthedocs.io/en/latest/)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

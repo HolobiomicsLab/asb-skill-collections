@@ -1,9 +1,9 @@
 ---
 name: metabolomic-feature-imputation
-description: Use when when a preprocessed metabolomic feature table (e.g., MS-Dial
-  output) retains features and samples that passed filtering for missingness thresholds
-  and m/z validity, but still contain scattered missing values (NA). This skill is
-  appropriate after sample-level filtering (e.
+description: Use when a preprocessed metabolomic feature table (e.g., MS-Dial output)
+  retains features and samples that passed filtering for missingness thresholds and
+  m/z validity, but still contain scattered missing values (NA). This skill is appropriate
+  after sample-level filtering (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3662
@@ -24,13 +24,6 @@ derived_from:
   title: MargheRita
 - doi: 10.1101/2024.06.20.599545
   title: ''
-evidence_spans:
-- The R package margheRita addresses the complete workflow for metabolomic profiling
-  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
-  spectrometry (MS/MS)
-- The R package margheRita addresses the complete workflow for metabolomic profiling
-- The R package margheRita addresses the complete workflow
-- The R package margheRita
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

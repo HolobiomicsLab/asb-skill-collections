@@ -1,8 +1,8 @@
 ---
 name: untargeted-lc-ms-data-preprocessing
-description: Use when when you have raw untargeted LC-MS metabolomics data and need
-  to detect low-quality or mis-integrated peaks in an XCMS-processed xcmsSet object
-  before performing metabolite annotation, statistical analysis, or biomarker discovery.
+description: Use when you have raw untargeted LC-MS metabolomics data and need to
+  detect low-quality or mis-integrated peaks in an XCMS-processed xcmsSet object before
+  performing metabolite annotation, statistical analysis, or biomarker discovery.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -23,14 +23,6 @@ derived_from:
   title: MetaClean
 - doi: 10.1186/1471-2105-15-s11-s5
   title: ''
-evidence_spans:
-- MetaClean is a package for building classifiers to identify low quality integrations
-  in untargeted metabolomics data.
-- '`MetaClean` provides 8 classification algorithms (implemented with the R package
-  `caret`) for building a predictive model.'
-- getEvalObj is called to extract the relevant data from the three objects provided
-  by ther user and store them in an object of class evalObj
-- It is an R package and can be easily incorporated
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

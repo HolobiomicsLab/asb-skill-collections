@@ -1,8 +1,8 @@
 ---
 name: sdf-compound-structure-parsing
-description: Use when when you have fragment records (experimental or predicted) with
-  compound identifiers or cross-reference fields that need to be validated against
-  a reference compound database in SDF format.
+description: Use when you have fragment records (experimental or predicted) with compound
+  identifiers or cross-reference fields that need to be validated against a reference
+  compound database in SDF format.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -16,8 +16,6 @@ metadata:
 derived_from:
 - doi: 10.3389/fchem.2022.908572
   title: DNA adduct database
-evidence_spans:
-- SDF format
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

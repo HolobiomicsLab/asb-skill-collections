@@ -1,6 +1,6 @@
 ---
 name: r6-object-method-invocation
-description: Use when when working with large metabolomics peak tables (e.
+description: Use when working with large metabolomics peak tables (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -20,8 +20,6 @@ derived_from:
   title: mpactr
 - doi: 10.1021/acs.analchem.2c04632
   title: ''
-evidence_spans:
-- This table can be used for a variety of analyses that can be conducted in R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

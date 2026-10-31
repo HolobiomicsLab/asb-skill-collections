@@ -22,8 +22,6 @@ derived_from:
   title: mzapy
 - doi: 10.1021/acs.jproteome.2c00313
   title: ''
-evidence_spans:
-- A Python package that provides an interface to unprocessed MS data in the MZA format.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

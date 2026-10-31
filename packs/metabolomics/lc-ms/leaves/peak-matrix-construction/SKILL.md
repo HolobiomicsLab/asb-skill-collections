@@ -1,7 +1,7 @@
 ---
 name: peak-matrix-construction
-description: Use when when you have raw mzML files and a corresponding feature table
-  (CSV format, e.g., from mzmine) and need to generate peak matrices with fixed dimensions
+description: Use when you have raw mzML files and a corresponding feature table (CSV
+  format, e.g., from mzmine) and need to generate peak matrices with fixed dimensions
   (e.g., 2 × 120) that encode margin vs. peak signal regions for training a neural
   network classifier to filter false positive LCMS peaks.
 license: CC-BY-4.0
@@ -23,14 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
-evidence_spans:
-- NeatMS provides the necessary functions to do that, all we will have to do is create
-  a `Neural network handler` object
-- Calling the method `get_threshold()` will compute and return the optimal threshold
-- After installation, you should be able to import NeatMS
-- Import the required libraries first
-- import numpy as np
-- import pandas as pd
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

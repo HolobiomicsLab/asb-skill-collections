@@ -1,6 +1,6 @@
 ---
 name: missing-data-simulation-in-omics
-description: Use when when comparing the robustness of multiple pathway ranking methods
+description: Use when comparing the robustness of multiple pathway ranking methods
   (e.g., PLAGE, ORA, GSEA) on metabolomics or other omics data, and you need to establish
   which method is least sensitive to peak dropout, instrumental noise, or annotation
   uncertainty.
@@ -23,7 +23,6 @@ derived_from:
   title: pals
 - doi: 10.1186/1471-2105-6-225
   title: ''
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

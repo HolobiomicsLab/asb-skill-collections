@@ -1,6 +1,6 @@
 ---
 name: code-artifact-inspection
-description: Use when use when the workflow requires code_artifact_inspection.
+description: Use when the workflow requires code_artifact_inspection.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -12,7 +12,6 @@ metadata:
 derived_from:
 - doi: 10.3389/fmolb.2022.952149
   title: TurboPutative
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

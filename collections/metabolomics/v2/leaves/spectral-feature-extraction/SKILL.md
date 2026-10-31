@@ -31,9 +31,6 @@ derived_from:
   title: MetFID
 - doi: 10.1101/2025.11.12.688047v1
   title: ''
-evidence_spans:
-- No usage/docs found.
-- 'python_version: 3.11.7'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

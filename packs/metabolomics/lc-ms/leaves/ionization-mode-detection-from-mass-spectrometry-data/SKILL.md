@@ -1,7 +1,7 @@
 ---
 name: ionization-mode-detection-from-mass-spectrometry-data
-description: Use when when you have raw LC-MS data in mzML format (converted from
-  .raw or acquired directly in that format) and need to invoke Asari for feature extraction,
+description: Use when you have raw LC-MS data in mzML format (converted from .raw
+  or acquired directly in that format) and need to invoke Asari for feature extraction,
   but the ionization mode is not explicitly specified in your experimental metadata
   or pipeline configuration.
 license: CC-BY-4.0
@@ -22,9 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
-evidence_spans:
-- pcpfm asari -i ./my_experiment
-- Python-Centric Pipeline for Metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

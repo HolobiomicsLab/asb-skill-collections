@@ -1,6 +1,6 @@
 ---
 name: library-analogue-search-branching
-description: Use when when you need to reconstruct or validate the control-flow architecture
+description: Use when you need to reconstruct or validate the control-flow architecture
   of a spectral search system that must handle both exact-match library lookups and
   analogue discovery in a single pass, particularly when the system uses pre-computed
   embeddings for efficiency and machine learning for.
@@ -23,8 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query
-evidence_spans:
-- MS2Query - Reliable and fast MS/MS spectral-based analogue search
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: correlation-network-construction-omics
-description: Use when when you have a feature abundance table (rows=features, columns=samples)
+description: Use when you have a feature abundance table (rows=features, columns=samples)
   with >10,000 features from microbiome, metabolomics, transcriptomics, or multi-omics
   data and need to identify correlated or co-occurring features for network-based
-  analysis, module detection, or cross-omics.
+  analysis, module detection, or cross-omics integration.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3463
@@ -21,12 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
-evidence_spans:
-- MetaNet, a high-performance R package that unifies network construction, visualization,
-  and analysis across diverse omics layers.
-- MetaNet, a high-performance R package that unifies network construction, visualization,
-  and analysis across diverse omics layers
-- MetaNet, a high-performance R package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

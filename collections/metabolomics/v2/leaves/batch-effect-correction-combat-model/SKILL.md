@@ -20,12 +20,6 @@ derived_from:
   title: Dbnorm
 - doi: 10.1007/s12561-013-9081-1
   title: ''
-evidence_spans:
-- dbnorm (V-0.2.2) A package for drift across batches normalization and visualization
-- ComBat(parametric and non-parametric)-model [PMID:16632515] from sva package [PMID:22257669]
-- dbnorm contains R functions which allow visualization and removal of technical heterogeneity
-- '*dbnorm* contains R functions which allow visualization and removal of technical
-  heterogeneity'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

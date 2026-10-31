@@ -1,6 +1,6 @@
 ---
 name: unit-test-design-for-scoring-metrics
-description: Use when when implementing new scoring components (inchikey score, neighbourhood
+description: Use when implementing new scoring components (inchikey score, neighbourhood
   score, or similar structural/spectral similarity metrics) that are integrated into
   an MS/MS candidate re-ranking pipeline.
 license: CC-BY-4.0
@@ -20,12 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query
-evidence_spans:
-- you want to make some kind of change to the code base
-- MS2Query - Reliable and fast MS/MS spectral-based analogue search
-- fork the repository to your own Github profile and create your own feature branch
-  off of the latest master commit
-- use the search functionality [here](https://github.com/iomega/ms2query/issues)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

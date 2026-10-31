@@ -1,6 +1,6 @@
 ---
 name: ci-cd-pipeline-reproducibility-verification
-description: Use when when a repository displays a GitHub Actions workflow badge (e.
+description: Use when a repository displays a GitHub Actions workflow badge (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -15,9 +15,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
-evidence_spans:
-- Clone the Met-ID repository
-- Powered by RDKit
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

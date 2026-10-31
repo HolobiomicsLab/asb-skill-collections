@@ -27,11 +27,6 @@ derived_from:
   title: MZA
 - doi: 10.1021/acs.jproteome.5c00435
   title: ''
-evidence_spans:
-- MZA is a stand-alone and self-contained command-line executable which converts multidimensional
-  mass spectrometry (MS) data
-- using generic HDF5 libraries available (e.g., h5py and rhdf5)
-- There is also an R implementation in `R/`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

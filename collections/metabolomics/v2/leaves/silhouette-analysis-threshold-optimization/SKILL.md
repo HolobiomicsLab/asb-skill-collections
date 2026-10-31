@@ -1,6 +1,6 @@
 ---
 name: silhouette-analysis-threshold-optimization
-description: Use when when you have a pre-computed hierarchical dendrogram from structural
+description: Use when you have a pre-computed hierarchical dendrogram from structural
   clustering (e.g., of LC-MS features based on m/z and retention time) and want to
   compare or validate the cluster assignments produced by a fixed constant-threshold
   method.
@@ -27,13 +27,6 @@ derived_from:
   title: mamsi
 - doi: 10.1371/journal.pcbi.1011814
   title: ''
-evidence_spans:
-- MAMSI is a Python framework
-- import pandas as pd
-- import numpy as np
-- scipy
-- 'Dependencies: scipy'
-- from sklearn.model_selection import train_test_split
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

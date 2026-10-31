@@ -25,16 +25,6 @@ derived_from:
   title: MetaClean
 - doi: 10.1186/1471-2105-15-s11-s5
   title: ''
-evidence_spans:
-- MetaClean is a package for building classifiers to identify low quality integrations
-  in untargeted metabolomics data.
-- '`MetaClean` provides 8 classification algorithms (implemented with the R package
-  `caret`) for building a predictive model.'
-- getEvalObj is called to extract the relevant data from the three objects provided
-  by ther user and store them in an object of class evalObj
-- It is an R package and can be easily incorporated
-- MetaClean provides 8 classification algorithms (implemented with the R package caret)
-- devtools::install_github("KelseyChetnik/MetaCleanData")
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

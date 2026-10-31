@@ -1,9 +1,9 @@
 ---
 name: docker-container-volume-mounting
-description: 'Use when when you have vendor raw mass spectrometry files on the host
-  machine that need to be processed by a containerized tool (e.g., AirdPro), and the
-  container must read input from and write output to specific host paths. Typical
-  trigger: you have a .'
+description: 'Use when you have vendor raw mass spectrometry files on the host machine
+  that need to be processed by a containerized tool (e.g., AirdPro), and the container
+  must read input from and write output to specific host paths. Typical trigger: you
+  have a .'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -24,13 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
-evidence_spans:
-- AirdPro V6 is now available at 2024.4
-- based on pwiz_bindings_cli.dll from the ProteoWizard project
-- pwiz_bindings_cli.dll from the ProteoWizard project
-- based on pwiz_bindings_cli.dll from the ProteoWizard project.
-- Docker Desktop for Mac (version 20.10+)
-- this project enables AirdPro to run on macOS through Docker + Wine technology.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

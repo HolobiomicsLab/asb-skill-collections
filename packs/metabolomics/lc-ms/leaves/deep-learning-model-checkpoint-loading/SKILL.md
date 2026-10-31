@@ -1,9 +1,9 @@
 ---
 name: deep-learning-model-checkpoint-loading
-description: Use when when you have MS/MS spectra from GNPS or other libraries and
-  need to apply a pre-trained FIDDLE model (TCN formula predictor or Siamese rescore
-  architecture) without training from scratch. Use this skill before running inference
-  on new samples or benchmarks.
+description: Use when you have MS/MS spectra from GNPS or other libraries and need
+  to apply a pre-trained FIDDLE model (TCN formula predictor or Siamese rescore architecture)
+  without training from scratch. Use this skill before running inference on new samples
+  or benchmarks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -22,8 +22,6 @@ derived_from:
   title: fiddle
 - doi: 10.5281/zenodo.19181279
   title: ''
-evidence_spans:
-- 'CLI and Python API: [msfiddle](https://github.com/josiehong/msfiddle)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

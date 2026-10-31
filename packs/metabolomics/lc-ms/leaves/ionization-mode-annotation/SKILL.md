@@ -1,8 +1,8 @@
 ---
 name: ionization-mode-annotation
-description: Use when when converting MS/MS spectra from .msp format library files
-  (e.g., MassBank) into a custom fragment library for metabolite annotation, and the
-  source spectra are tagged with ionization mode information (positive or negative).
+description: Use when converting MS/MS spectra from .msp format library files (e.g.,
+  MassBank) into a custom fragment library for metabolite annotation, and the source
+  spectra are tagged with ionization mode information (positive or negative).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
-evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
-  All-ion fragmentation (AIF) datasets
-- To install this package, start R (version "4.5.0" or higher)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

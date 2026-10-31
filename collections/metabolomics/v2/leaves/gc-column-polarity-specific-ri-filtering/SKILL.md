@@ -25,14 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
-evidence_spans:
-- library(mspcompiler)
-- Read the msp file into R.
-- library(future)
-- library(future.apply)
-- you can transformed it into a msp file by *Lib2NIST*
-- The total number of spectra that your NIST library have can be checked in the *MS
-  Search* program
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

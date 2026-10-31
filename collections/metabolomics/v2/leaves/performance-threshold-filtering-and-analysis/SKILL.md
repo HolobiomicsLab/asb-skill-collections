@@ -1,6 +1,6 @@
 ---
 name: performance-threshold-filtering-and-analysis
-description: Use when when a trained model produces probabilistic or ensemble predictions
+description: Use when a trained model produces probabilistic or ensemble predictions
   and you need to achieve a specific target accuracy metric (e.g., RMSE ≤ 0.1) or
   minimize error on a test set, but the unfiltered model does not meet that target.
 license: CC-BY-4.0
@@ -23,18 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
-evidence_spans:
-- Our MS2DeepScore Python library offers two types of data generators
-- To estimate the uncertainty of a prediction we used Monte-Carlo Dropout ensembles
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
-  (2048 bits) to compute structural similarities.
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
-  (2048 bits) to compute structural similarities
-- Our MS2DeepScore Python library offers two types of data generators, one which iterates
-  over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over
-  all spectra and was used for
-- Using the t-SNE [28] implementation from scikit-learn [29] we computed two-dimensional
-  coordinates
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

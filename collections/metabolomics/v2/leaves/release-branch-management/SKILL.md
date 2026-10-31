@@ -19,7 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41587-021-01045-9
   title: cosmic
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

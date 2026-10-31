@@ -1,6 +1,6 @@
 ---
 name: spectrum-tokenization-for-nlp
-description: Use when when you have raw mass spectra from experimental libraries (e.
+description: Use when you have raw mass spectra from experimental libraries (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -18,9 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-023-39279-7
   title: FastEI
-evidence_spans:
-- conda install -c conda-forge gensim
-- Anaconda for Python 3.7
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,7 +1,9 @@
 ---
 name: smiles-parsing-validation
-description: Use when when you have a dataset of molecular structures encoded as SMILES
-  strings that will be processed downstream (e.
+description: Use when you have a dataset of molecular structures encoded as SMILES
+  strings that will be processed downstream (e.g., by biotransformation rule engines,
+  molecular networking, or structure annotation pipelines) and you need to filter
+  out malformed or chemically invalid entries before proceeding.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -18,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c01565
   title: bam
-evidence_spans:
-- standard library for parsing and manipulating SMILES and chemical structures
-- HassounLab/BAM
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

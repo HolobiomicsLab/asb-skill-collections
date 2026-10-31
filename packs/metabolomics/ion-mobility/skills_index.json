@@ -137,7 +137,7 @@
  {
   "slug": "api-adapter-layer-design",
   "name": "api-adapter-layer-design",
-  "description": "Use when when you have multiple mass spectrometry data formats (mzML, mzXML, or others) that must be ingested into a single format-agnostic processing engine (e.g., mspack compression), and you need to avoid replicating the core logic for each format.",
+  "description": "Use when you have multiple mass spectrometry data formats (mzML, mzXML, or others) that must be ingested into a single format-agnostic processing engine (e.g., mspack compression), and you need to avoid replicating the core logic for each format.",
   "edam_operation": "http://edamontology.org/operation_3434",
   "edam_topics": [
    "http://edamontology.org/topic_3520"
@@ -191,7 +191,7 @@
  {
   "slug": "arrival-time-to-ccs-conversion",
   "name": "arrival-time-to-ccs-conversion",
-  "description": "Use when when you have raw TWIM-MS arrival-time data and need to transform it into absolute CCS values for downstream biomolecular class assignment or comparative analysis.",
+  "description": "Use when you have raw TWIM-MS arrival-time data and need to transform it into absolute CCS values for downstream biomolecular class assignment or comparative analysis.",
   "edam_operation": "http://edamontology.org/operation_3633",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -221,7 +221,7 @@
  {
   "slug": "arrival-time-to-drift-time-conversion",
   "name": "arrival-time-to-drift-time-conversion",
-  "description": "Use when when processing raw TWIM-MS experimental data that contains arrival time measurements but you need drift times for CCS calibration or class-specific CCS calculations.",
+  "description": "Use when processing raw TWIM-MS experimental data that contains arrival time measurements but you need drift times for CCS calibration or class-specific CCS calculations.",
   "edam_operation": "http://edamontology.org/operation_3443",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -387,7 +387,7 @@
  {
   "slug": "autoencoder-encoder-decoder-design",
   "name": "autoencoder-encoder-decoder-design",
-  "description": "Use when when working with imaging mass spectrometry (IMS) datasets where you need to extract latent low-dimensional peak features from high-dimensional peak intensity data while preserving spatial adjacency information.",
+  "description": "Use when working with imaging mass spectrometry (IMS) datasets where you need to extract latent low-dimensional peak features from high-dimensional peak intensity data while preserving spatial adjacency information.",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -840,7 +840,7 @@
  {
   "slug": "ccs-library-format-parsing",
   "name": "ccs-library-format-parsing",
-  "description": "Use when when you have received or cloned a CCS reference library (such as the DTCCSN2 library for U13C labeled lipids) bundled with lipidomics software and need to verify its integrity, understand its lipid class composition, or extract metadata before using it for CCS bias calculation or.",
+  "description": "Use when you have received or cloned a CCS reference library (such as the DTCCSN2 library for U13C labeled lipids) bundled with lipidomics software and need to verify its integrity, understand its lipid class composition, or extract metadata before using it for CCS bias calculation or correction.",
   "edam_operation": "http://edamontology.org/operation_2409",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -1060,7 +1060,7 @@
  {
   "slug": "chemical-class-novelty-detection",
   "name": "chemical-class-novelty-detection",
-  "description": "Use when when you have CANOPUS chemical class predictions for your samples and need to identify which extracts contain chemical classes absent from the literature for their species or genus.",
+  "description": "Use when you have CANOPUS chemical class predictions for your samples and need to identify which extracts contain chemical classes absent from the literature for their species or genus.",
   "edam_operation": "http://edamontology.org/operation_3961",
   "edam_topics": [
    "http://edamontology.org/topic_3407",
@@ -1108,7 +1108,7 @@
  {
   "slug": "chemical-structure-descriptor-computation",
   "name": "chemical-structure-descriptor-computation",
-  "description": "Use when when you have a set of molecular structures (N-Me derived unsaturated sterol lipids or structurally similar organic molecules with C=C bonds) represented as SMILES or molecular geometry files, and you need to train or apply a machine-learning model to predict an instrument-dependent.",
+  "description": "Use when you have a set of molecular structures (N-Me derived unsaturated sterol lipids or structurally similar organic molecules with C=C bonds) represented as SMILES or molecular geometry files, and you need to train or apply a machine-learning model to predict an instrument-dependent property (e.",
   "edam_operation": "http://edamontology.org/operation_0337",
   "edam_topics": [
    "http://edamontology.org/topic_0602",
@@ -1142,7 +1142,7 @@
  {
   "slug": "chromatogram-peak-boundary-detection",
   "name": "chromatogram-peak-boundary-detection",
-  "description": "Use when when you have loaded a TransitionGroup (extracted ion chromatogram or mobilogram from DIA-MS data) and need to identify precise peak boundaries and apex positions for feature extraction.",
+  "description": "Use when you have loaded a TransitionGroup (extracted ion chromatogram or mobilogram from DIA-MS data) and need to identify precise peak boundaries and apex positions for feature extraction.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -1234,7 +1234,7 @@
  {
   "slug": "chromatographic-modality-classification",
   "name": "chromatographic-modality-classification",
-  "description": "Use when when ingesting raw or vendor-format mass spectrometry data files of unknown or mixed acquisition modality, and you need to automatically determine whether the input originated from liquid chromatography (LC), gas chromatography (GC), ion mobility spectrometry (IMS), or MS imaging (e.",
+  "description": "Use when ingesting raw or vendor-format mass spectrometry data files of unknown or mixed acquisition modality, and you need to automatically determine whether the input originated from liquid chromatography (LC), gas chromatography (GC), ion mobility spectrometry (IMS), or MS imaging (e.",
   "edam_operation": "http://edamontology.org/operation_3763",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -1349,7 +1349,7 @@
  {
   "slug": "class-specific-ccs-calculation",
   "name": "class-specific-ccs-calculation",
-  "description": "Use when when you have multi-omic TWIM-MS data (raw or processed arrival-time records) and have already assigned features or detected ion features to biomolecular classes (e.",
+  "description": "Use when you have multi-omic TWIM-MS data (raw or processed arrival-time records) and have already assigned features or detected ion features to biomolecular classes (e.",
   "edam_operation": "http://edamontology.org/operation_3291",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -1408,7 +1408,7 @@
  {
   "slug": "cli-application-invocation-with-file-io-management",
   "name": "cli-application-invocation-with-file-io-management",
-  "description": "Use when when you have vendor mass spectrometry raw files (e.g., .raw format) that must be converted to an open format (Aird) using a Windows .",
+  "description": "Use when you have vendor mass spectrometry raw files (e.g., .raw format) that must be converted to an open format (Aird) using a Windows .",
   "edam_operation": "http://edamontology.org/operation_3650",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -1508,7 +1508,7 @@
  {
   "slug": "cnn-transformer-hybrid-architecture-design",
   "name": "cnn-transformer-hybrid-architecture-design",
-  "description": "Use when when you need to detect and classify peaks in LC-MS regions of interest (ROIs) and simultaneously localize their boundaries for area integration.",
+  "description": "Use when you need to detect and classify peaks in LC-MS regions of interest (ROIs) and simultaneously localize their boundaries for area integration.",
   "edam_operation": "http://edamontology.org/operation_3767",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -1537,7 +1537,7 @@
  {
   "slug": "collision-cross-section-bias-estimation",
   "name": "collision-cross-section-bias-estimation",
-  "description": "Use when when you have IM-MS lipidomics data spiked with U13C labeled lipid internal standards (e.g., fully labeled yeast extract) and want to assess whether measured CCS values deviate systematically from expected values in the DTCCS_N2 reference library.",
+  "description": "Use when you have IM-MS lipidomics data spiked with U13C labeled lipid internal standards (e.g., fully labeled yeast extract) and want to assess whether measured CCS values deviate systematically from expected values in the DTCCS_N2 reference library.",
   "edam_operation": "http://edamontology.org/operation_3629",
   "edam_topics": [
    "http://edamontology.org/topic_0153",
@@ -1662,7 +1662,7 @@
  {
   "slug": "collision-cross-section-calibration-ccs",
   "name": "collision-cross-section-calibration-ccs",
-  "description": "Use when when you have acquired ion mobility–mass spectrometry data (drift time and m/z dimensions) and need to convert observed drift times into calibrated CCS values.",
+  "description": "Use when you have acquired ion mobility–mass spectrometry data (drift time and m/z dimensions) and need to convert observed drift times into calibrated CCS values.",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -1733,7 +1733,7 @@
  {
   "slug": "collision-cross-section-matching-and-annotation",
   "name": "collision-cross-section-matching-and-annotation",
-  "description": "Use when when you have LC-IM-MS/MS data with measured collision cross section (CCS) values and m/z assignments, and you need to disambiguate sterol isomers (particularly N-Me derived unsaturated sterols) by matching against a curated database of predicted CCS values and MS/MS fragmentation patterns.",
+  "description": "Use when you have LC-IM-MS/MS data with measured collision cross section (CCS) values and m/z assignments, and you need to disambiguate sterol isomers (particularly N-Me derived unsaturated sterols) by matching against a curated database of predicted CCS values and MS/MS fragmentation patterns.",
   "edam_operation": "http://edamontology.org/operation_3631",
   "edam_topics": [
    "http://edamontology.org/topic_3375",
@@ -1902,7 +1902,7 @@
  {
   "slug": "collision-energy-optimization-for-fragmentation",
   "name": "collision-energy-optimization-for-fragmentation",
-  "description": "Use when when you have N-Me derivatized unsaturated sterol lipid structures (as SMILES or molecular formula) and need to predict MS/MS fragmentation patterns with collision-energy-dependent m/z values and intensities for downstream CCS prediction or LC-IM-MS/MS library matching.",
+  "description": "Use when you have N-Me derivatized unsaturated sterol lipid structures (as SMILES or molecular formula) and need to predict MS/MS fragmentation patterns with collision-energy-dependent m/z values and intensities for downstream CCS prediction or LC-IM-MS/MS library matching.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -2015,7 +2015,7 @@
  {
   "slug": "comparative-omics-report-generation",
   "name": "comparative-omics-report-generation",
-  "description": "Use when when you have feature lists (in CSV format) from two or more different MS acquisition methods (e.g., LC-MS vs. LC-IMS-MS), different processing software (e.",
+  "description": "Use when you have feature lists (in CSV format) from two or more different MS acquisition methods (e.g., LC-MS vs. LC-IMS-MS), different processing software (e.",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_3375",
@@ -2253,7 +2253,7 @@
  {
   "slug": "conformer-generation-rdkit",
   "name": "conformer-generation-rdkit",
-  "description": "Use when when you have ionized adduct structures (SMILES or MOL format) from an ionization-state determination step and need to create an ensemble of relaxed 3D geometries for each molecule prior to expensive conformation filtering (e.g., ASE-ANI or quantum methods).",
+  "description": "Use when you have ionized adduct structures (SMILES or MOL format) from an ionization-state determination step and need to create an ensemble of relaxed 3D geometries for each molecule prior to expensive conformation filtering (e.g., ASE-ANI or quantum methods).",
   "edam_operation": "http://edamontology.org/operation_0482",
   "edam_topics": [
    "http://edamontology.org/topic_3314",
@@ -2325,7 +2325,7 @@
  {
   "slug": "control-flow-diagram-synthesis",
   "name": "control-flow-diagram-synthesis",
-  "description": "Use when when you need to understand how a multi-instrument mass spectrometry platform (such as mzmine) selectively routes data to different processing pipelines based on declared input type (LC, GC, IMS, or MS Imaging).",
+  "description": "Use when you need to understand how a multi-instrument mass spectrometry platform (such as mzmine) selectively routes data to different processing pipelines based on declared input type (LC, GC, IMS, or MS Imaging).",
   "edam_operation": "http://edamontology.org/operation_3096",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -2623,7 +2623,7 @@
  {
   "slug": "deep-learning-signal-inference-with-onnx",
   "name": "deep-learning-signal-inference-with-onnx",
-  "description": "Use when when you have a TransitionGroup structure containing normalized intensity traces (1D signal data from chromatograms or mobilograms) and you want to automatically detect peak regions with high precision by leveraging a conformer-based deep learning model.",
+  "description": "Use when you have a TransitionGroup structure containing normalized intensity traces (1D signal data from chromatograms or mobilograms) and you want to automatically detect peak regions with high precision by leveraging a conformer-based deep learning model.",
   "edam_operation": "http://edamontology.org/operation_3215",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -2728,7 +2728,7 @@
  {
   "slug": "distance-clustering-in-high-dimensions",
   "name": "distance-clustering-in-high-dimensions",
-  "description": "Use when when you have detected feature tables from two or more LC-IMS-MS/MS samples and need to establish correspondence between features across samples (i.e., which features in sample A match which features in sample B).",
+  "description": "Use when you have detected feature tables from two or more LC-IMS-MS/MS samples and need to establish correspondence between features across samples (i.e., which features in sample A match which features in sample B).",
   "edam_operation": "http://edamontology.org/operation_3432",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -2763,7 +2763,7 @@
  {
   "slug": "distance-geometry-embedding",
   "name": "distance-geometry-embedding",
-  "description": "Use when when you have ionized adduct structures (in SMILES or MOL format) from an upstream ionization-state determination step and need to produce multiple low-energy 3D conformations for collision cross section prediction, metabolite annotation, or structure-property modeling.",
+  "description": "Use when you have ionized adduct structures (in SMILES or MOL format) from an upstream ionization-state determination step and need to produce multiple low-energy 3D conformations for collision cross section prediction, metabolite annotation, or structure-property modeling.",
   "edam_operation": "http://edamontology.org/operation_0338",
   "edam_topics": [
    "http://edamontology.org/topic_3314",
@@ -3000,7 +3000,7 @@
  {
   "slug": "feature-ablation-analysis",
   "name": "feature-ablation-analysis",
-  "description": "Use when when you have a trained GNN model for molecular property prediction (e.g., collision cross section) and need to identify which graph structural features—atomic properties, bond types, or higher-order graph descriptors—are driving the model's predictions.",
+  "description": "Use when you have a trained GNN model for molecular property prediction (e.g., collision cross section) and need to identify which graph structural features—atomic properties, bond types, or higher-order graph descriptors—are driving the model's predictions.",
   "edam_operation": "http://edamontology.org/operation_3927",
   "edam_topics": [
    "http://edamontology.org/topic_0602",
@@ -3107,7 +3107,7 @@
  {
   "slug": "file-format-conversion-validation",
   "name": "file-format-conversion-validation",
-  "description": "Use when when you have raw mzML or mzXML mass spectrometry data files that need to be archived or transmitted with minimal storage footprint, and you must verify that the decompressed output exactly reproduces the original input at the byte level.",
+  "description": "Use when you have raw mzML or mzXML mass spectrometry data files that need to be archived or transmitted with minimal storage footprint, and you must verify that the decompressed output exactly reproduces the original input at the byte level.",
   "edam_operation": "http://edamontology.org/operation_3434",
   "edam_topics": [
    "http://edamontology.org/topic_0943",
@@ -3231,7 +3231,7 @@
  {
   "slug": "format-agnostic-data-ingestion",
   "name": "format-agnostic-data-ingestion",
-  "description": "Use when when you have mass spectrometry data in multiple formats (mzML, mzXML) that must be fed into a compression, analysis, or transformation pipeline that operates on a single canonical spectral data model.",
+  "description": "Use when you have mass spectrometry data in multiple formats (mzML, mzXML) that must be fed into a compression, analysis, or transformation pipeline that operates on a single canonical spectral data model.",
   "edam_operation": "http://edamontology.org/operation_3434",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -3288,7 +3288,7 @@
  {
   "slug": "fragment-ion-difference-counting",
   "name": "fragment-ion-difference-counting",
-  "description": "Use when when preparing tandem MS/MS data for spectral alignment and similarity comparison, particularly when you have loaded raw fragmentation spectra and need to extract and quantify mass difference patterns that capture the fragmentation process.",
+  "description": "Use when preparing tandem MS/MS data for spectral alignment and similarity comparison, particularly when you have loaded raw fragmentation spectra and need to extract and quantify mass difference patterns that capture the fragmentation process.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -3349,7 +3349,7 @@
  {
   "slug": "fragmentation-pattern-spectral-matching",
   "name": "fragmentation-pattern-spectral-matching",
-  "description": "Use when when you have detected m/z values from LC-IM-MS/MS that match a candidate CCS prediction database but require structural confirmation. Apply this skill to disambiguate isomers (e.",
+  "description": "Use when you have detected m/z values from LC-IM-MS/MS that match a candidate CCS prediction database but require structural confirmation. Apply this skill to disambiguate isomers (e.",
   "edam_operation": "http://edamontology.org/operation_3647",
   "edam_topics": [
    "http://edamontology.org/topic_0153",
@@ -3493,7 +3493,7 @@
  {
   "slug": "generic-hdf5-library-api-usage",
   "name": "generic-hdf5-library-api-usage",
-  "description": "Use when when you have converted multidimensional MS data to MZA HDF5 format and need to programmatically read spectra, metadata, and ion mobility or mass-to-charge arrays in Python or R without vendor-specific dependencies.",
+  "description": "Use when you have converted multidimensional MS data to MZA HDF5 format and need to programmatically read spectra, metadata, and ion mobility or mass-to-charge arrays in Python or R without vendor-specific dependencies.",
   "edam_operation": "http://edamontology.org/operation_3436",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -3664,7 +3664,7 @@
  {
   "slug": "graph-neural-network-implementation",
   "name": "graph-neural-network-implementation",
-  "description": "Use when when your input includes molecular structures (SMILES, conformers) and you need to predict a continuous property (e.g., CCS, binding affinity, solubility) that depends on molecular connectivity and spatial relationships.",
+  "description": "Use when your input includes molecular structures (SMILES, conformers) and you need to predict a continuous property (e.g., CCS, binding affinity, solubility) that depends on molecular connectivity and spatial relationships.",
   "edam_operation": "http://edamontology.org/operation_3927",
   "edam_topics": [
    "http://edamontology.org/topic_3314",
@@ -3743,7 +3743,7 @@
  {
   "slug": "graph-neural-network-model-loading",
   "name": "graph-neural-network-model-loading",
-  "description": "Use when when you need to evaluate GNN performance on collision cross section prediction using the enveda/ccs-prediction repository, either by loading an existing pre-trained model checkpoint or by retraining from scratch using deposited datasets and published hyperparameters.",
+  "description": "Use when you need to evaluate GNN performance on collision cross section prediction using the enveda/ccs-prediction repository, either by loading an existing pre-trained model checkpoint or by retraining from scratch using deposited datasets and published hyperparameters.",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_0154",
@@ -3882,7 +3882,7 @@
  {
   "slug": "hdf5-file-structure-traversal",
   "name": "hdf5-file-structure-traversal",
-  "description": "Use when when you have converted multidimensional mass spectrometry data (or other complex data) into MZA HDF5 format and need to understand the file hierarchy, validate the conversion output, extract metadata tables and array structure, or access spectra across different programming environments.",
+  "description": "Use when you have converted multidimensional mass spectrometry data (or other complex data) into MZA HDF5 format and need to understand the file hierarchy, validate the conversion output, extract metadata tables and array structure, or access spectra across different programming environments.",
   "edam_operation": "http://edamontology.org/operation_3763",
   "edam_topics": [
    "http://edamontology.org/topic_0091",
@@ -4061,7 +4061,7 @@
  {
   "slug": "hierarchical-dataset-metadata-extraction",
   "name": "hierarchical-dataset-metadata-extraction",
-  "description": "Use when when you have received an MZA-format HDF5 file (or other hierarchical HDF5-based scientific data) and need to understand its internal structure before downstream processing, share it across programming languages (Python, R), or document its schema for reproducibility.",
+  "description": "Use when you have received an MZA-format HDF5 file (or other hierarchical HDF5-based scientific data) and need to understand its internal structure before downstream processing, share it across programming languages (Python, R), or document its schema for reproducibility.",
   "edam_operation": "http://edamontology.org/operation_3443",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -4129,7 +4129,7 @@
  {
   "slug": "im-ms-drift-time-correction",
   "name": "im-ms-drift-time-correction",
-  "description": "Use when when you have IM-MS lipidomics data acquired on samples spiked with U13C-labeled internal standards (fully labeled yeast extract) and need to quantify systematic CCS bias and apply lipid class-specific bias correction to all measured CCS values, particularly when multiple lipids per lipid.",
+  "description": "Use when you have IM-MS lipidomics data acquired on samples spiked with U13C-labeled internal standards (fully labeled yeast extract) and need to quantify systematic CCS bias and apply lipid class-specific bias correction to all measured CCS values, particularly when multiple lipids per lipid.",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -4220,7 +4220,7 @@
  {
   "slug": "imms-data-format-conversion",
   "name": "imms-data-format-conversion",
-  "description": "Use when when you have raw Agilent MassHunter (.d) or UIMF IM-MS data files from drift tube (DT) or structure for lossless ion manipulations (SLIM) instruments and need to ingest them into a preprocessing pipeline that requires standardized in-memory or intermediate representations for.",
+  "description": "Use when you have raw Agilent MassHunter (.d) or UIMF IM-MS data files from drift tube (DT) or structure for lossless ion manipulations (SLIM) instruments and need to ingest them into a preprocessing pipeline that requires standardized in-memory or intermediate representations for multidimensional.",
   "edam_operation": "http://edamontology.org/operation_3434",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -4411,7 +4411,7 @@
  {
   "slug": "instrument-metadata-parsing",
   "name": "instrument-metadata-parsing",
-  "description": "Use when when you have raw or semi-processed mass spectrometry data files in mixed formats (e.g., vendor-native .raw, .d, .",
+  "description": "Use when you have raw or semi-processed mass spectrometry data files in mixed formats (e.g., vendor-native .raw, .d, .",
   "edam_operation": "http://edamontology.org/operation_3357",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -4442,7 +4442,7 @@
  {
   "slug": "intensity-color-representation",
   "name": "intensity-color-representation",
-  "description": "Use when when visualizing 2D peak maps (x=m/z, y=retention time or ion mobility, z=intensity) using pyOpenMS-viz with any plotting backend (matplotlib, bokeh, plotly).",
+  "description": "Use when visualizing 2D peak maps (x=m/z, y=retention time or ion mobility, z=intensity) using pyOpenMS-viz with any plotting backend (matplotlib, bokeh, plotly).",
   "edam_operation": "http://edamontology.org/operation_3441",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -4525,7 +4525,7 @@
  {
   "slug": "interactive-mass-spectrometry-plot-generation-and-annotation",
   "name": "interactive-mass-spectrometry-plot-generation-and-annotation",
-  "description": "Use when when you have extracted ion chromatograms (XICs), ion mobilograms (IMs), or mass spectra from diaPASEF or other DIA workflows and need to visualize them interactively to inspect peak boundaries, compare MS1 vs MS2 traces, validate feature identifications, or communicate results.",
+  "description": "Use when you have extracted ion chromatograms (XICs), ion mobilograms (IMs), or mass spectra from diaPASEF or other DIA workflows and need to visualize them interactively to inspect peak boundaries, compare MS1 vs MS2 traces, validate feature identifications, or communicate results.",
   "edam_operation": "http://edamontology.org/operation_3937",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -4577,7 +4577,7 @@
  {
   "slug": "interactive-plot-rendering-bokeh",
   "name": "interactive-plot-rendering-bokeh",
-  "description": "Use when when you have mass spectrometry data in a Pandas DataFrame with columns for m/z, retention time (or ion mobility), and intensity, and you want to generate interactive (rather than static) visualizations for exploratory analysis, interactive drill-down, or deployment in web applications or.",
+  "description": "Use when you have mass spectrometry data in a Pandas DataFrame with columns for m/z, retention time (or ion mobility), and intensity, and you want to generate interactive (rather than static) visualizations for exploratory analysis, interactive drill-down, or deployment in web applications or.",
   "edam_operation": "http://edamontology.org/operation_3441",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -4906,7 +4906,7 @@
  {
   "slug": "ion-mobility-calibration-validation",
   "name": "ion-mobility-calibration-validation",
-  "description": "Use when when you have positive- or negative-mode ion mobility spectrometry data with tunemix reference standards (known m/z, drift times, and CCS values) and need to verify that the calibration model accurately captures the relationship between drift time, reference m/z, and collision cross.",
+  "description": "Use when you have positive- or negative-mode ion mobility spectrometry data with tunemix reference standards (known m/z, drift times, and CCS values) and need to verify that the calibration model accurately captures the relationship between drift time, reference m/z, and collision cross section.",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -5005,7 +5005,7 @@
  {
   "slug": "ion-mobility-dimension-detection",
   "name": "ion-mobility-dimension-detection",
-  "description": "Use when when processing raw mass spectrometry data files of unknown or mixed provenance, and you need to automatically route IMS inputs to their corresponding analysis pipeline.",
+  "description": "Use when processing raw mass spectrometry data files of unknown or mixed provenance, and you need to automatically route IMS inputs to their corresponding analysis pipeline.",
   "edam_operation": "http://edamontology.org/operation_3823",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -5036,7 +5036,7 @@
  {
   "slug": "ion-mobility-dimension-interpolation",
   "name": "ion-mobility-dimension-interpolation",
-  "description": "Use when when processing raw IM-MS data (Agilent MassHunter .",
+  "description": "Use when processing raw IM-MS data (Agilent MassHunter .",
   "edam_operation": "http://edamontology.org/operation_3195",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -5231,7 +5231,7 @@
  {
   "slug": "ion-mobility-mass-spectrometry-data-preprocessing",
   "name": "ion-mobility-mass-spectrometry-data-preprocessing",
-  "description": "Use when when you have raw IM-MS data from drift tube (DT) or SLIM instruments in Agilent MassHunter (.",
+  "description": "Use when you have raw IM-MS data from drift tube (DT) or SLIM instruments in Agilent MassHunter (.",
   "edam_operation": "http://edamontology.org/operation_3695",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -5295,7 +5295,7 @@
  {
   "slug": "ion-mobility-mobilogram-visualization",
   "name": "ion-mobility-mobilogram-visualization",
-  "description": "Use when when you have mass spectrometry data with ion mobility (drift time or 1/K₀) measurements as a continuous dimension and want to visualize intensity distributions across the ion mobility axis.",
+  "description": "Use when you have mass spectrometry data with ion mobility (drift time or 1/K₀) measurements as a continuous dimension and want to visualize intensity distributions across the ion mobility axis.",
   "edam_operation": "http://edamontology.org/operation_3441",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -5338,7 +5338,7 @@
  {
   "slug": "ion-mobility-peak-picking",
   "name": "ion-mobility-peak-picking",
-  "description": "Use when when you have extracted ion mobilograms from DIA-MS experiments and need to automatically identify peak boundaries and apex positions in the ion mobility dimension.",
+  "description": "Use when you have extracted ion mobilograms from DIA-MS experiments and need to automatically identify peak boundaries and apex positions in the ion mobility dimension.",
   "edam_operation": "http://edamontology.org/operation_3215",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -5534,7 +5534,7 @@
  {
   "slug": "ionisation-method-hardware-correspondence",
   "name": "ionisation-method-hardware-correspondence",
-  "description": "Use when when evaluating whether a mass spectrometry analysis platform (such as mzmine) has comprehensive module support across multiple ionisation and separation techniques (LC, GC, IMS, MALDI MS imaging), or when planning a multi-technique MS study and needing to confirm that all intended.",
+  "description": "Use when evaluating whether a mass spectrometry analysis platform (such as mzmine) has comprehensive module support across multiple ionisation and separation techniques (LC, GC, IMS, MALDI MS imaging), or when planning a multi-technique MS study and needing to confirm that all intended ionisation.",
   "edam_operation": "http://edamontology.org/operation_3631",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -5563,7 +5563,7 @@
  {
   "slug": "ionization-state-prediction",
   "name": "ionization-state-prediction",
-  "description": "Use when when you have SMILES strings representing neutral organic molecules and need to enumerate the likely protonated (e.g., [M+H]+) and deprotonated (e.",
+  "description": "Use when you have SMILES strings representing neutral organic molecules and need to enumerate the likely protonated (e.g., [M+H]+) and deprotonated (e.g., [M−H]−) forms for downstream computational analysis such as CCS prediction, conformation generation, or quantum mechanical property calculation.",
   "edam_operation": "http://edamontology.org/operation_3802",
   "edam_topics": [
    "http://edamontology.org/topic_0154",
@@ -5768,7 +5768,7 @@
  {
   "slug": "java-source-code-inspection",
   "name": "java-source-code-inspection",
-  "description": "Use when when you need to understand how a Java application routes input data to processing modules based on declared data types, conditionally branches on instrument or format types (e.",
+  "description": "Use when you need to understand how a Java application routes input data to processing modules based on declared data types, conditionally branches on instrument or format types (e.",
   "edam_operation": "http://edamontology.org/operation_3096",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -5809,7 +5809,7 @@
  {
   "slug": "jupyter-notebook-development-python",
   "name": "jupyter-notebook-development-python",
-  "description": "Use when when building reproducible Python-based computational workflows that must serve both beginner and expert users; when the analysis requires interactive parameter tuning, file upload capability, or real-time result visualization;",
+  "description": "Use when building reproducible Python-based computational workflows that must serve both beginner and expert users; when the analysis requires interactive parameter tuning, file upload capability, or real-time result visualization;",
   "edam_operation": "http://edamontology.org/operation_3927",
   "edam_topics": [
    "http://edamontology.org/topic_0091",
@@ -6052,7 +6052,7 @@
  {
   "slug": "lipid-class-coverage-assessment",
   "name": "lipid-class-coverage-assessment",
-  "description": "Use when when you have acquired a CCS reference library (such as DTCCSN2 for U13C labeled lipids) and need to verify that it contains the expected lipid classes, CCS values are physically plausible for ion mobility data, and coverage matches the library's advertised documentation before using it.",
+  "description": "Use when you have acquired a CCS reference library (such as DTCCSN2 for U13C labeled lipids) and need to verify that it contains the expected lipid classes, CCS values are physically plausible for ion mobility data, and coverage matches the library's advertised documentation before using it for.",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_0153",
@@ -6259,7 +6259,7 @@
  {
   "slug": "lossless-compression-decompression",
   "name": "lossless-compression-decompression",
-  "description": "Use when when you have raw mzML or mzXML mass spectrometry files with uncompressed numeric arrays (not pre-compressed with zlib or msnumpress) and need to reduce file size for archival or transfer while guaranteeing that decompressed data is byte-identical to the original.",
+  "description": "Use when you have raw mzML or mzXML mass spectrometry files with uncompressed numeric arrays (not pre-compressed with zlib or msnumpress) and need to reduce file size for archival or transfer while guaranteeing that decompressed data is byte-identical to the original.",
   "edam_operation": "http://edamontology.org/operation_3434",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -6319,7 +6319,7 @@
  {
   "slug": "m-z-tolerance-window-matching",
   "name": "m-z-tolerance-window-matching",
-  "description": "Use when when you have detected features with m/z, drift time, and retention time dimensions and need to associate peaks into isotopic groups (e.g., monoisotopes with C13 substitutions) or align features across multiple LC-IMS-MS/MS samples.",
+  "description": "Use when you have detected features with m/z, drift time, and retention time dimensions and need to associate peaks into isotopic groups (e.g., monoisotopes with C13 substitutions) or align features across multiple LC-IMS-MS/MS samples.",
   "edam_operation": "http://edamontology.org/operation_3629",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -6354,7 +6354,7 @@
  {
   "slug": "machine-learning-based-conformation-filtering",
   "name": "machine-learning-based-conformation-filtering",
-  "description": "Use when when you have generated multiple 3D conformations for a molecule or set of ionized adducts (e.g., via RDKit) and need to retain only the most energetically favorable structures before expensive quantum calculations.",
+  "description": "Use when you have generated multiple 3D conformations for a molecule or set of ionized adducts (e.g., via RDKit) and need to retain only the most energetically favorable structures before expensive quantum calculations.",
   "edam_operation": "http://edamontology.org/operation_3891",
   "edam_topics": [
    "http://edamontology.org/topic_0154",
@@ -6709,7 +6709,7 @@
  {
   "slug": "mass-spectrometry-data-table-formatting",
   "name": "mass-spectrometry-data-table-formatting",
-  "description": "Use when when you have raw or processed TWIM-MS data (arrival time and m/z values) from a mass spectrometry instrument and need to organize it into a feature table before biomolecular class assignment or CCS calculations.",
+  "description": "Use when you have raw or processed TWIM-MS data (arrival time and m/z values) from a mass spectrometry instrument and need to organize it into a feature table before biomolecular class assignment or CCS calculations.",
   "edam_operation": "http://edamontology.org/operation_3937",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -6739,7 +6739,7 @@
  {
   "slug": "mass-spectrometry-data-visualization-pandas",
   "name": "mass-spectrometry-data-visualization-pandas",
-  "description": "Use when when you have mass spectrometry data (mzML, Bruker .d, or CSV) loaded into a Pandas DataFrame with columns for m/z, retention time, ion mobility, or intensity values, and you need to render spectrum plots, chromatograms, mobilograms, or 2D peak maps.",
+  "description": "Use when you have mass spectrometry data (mzML, Bruker .d, or CSV) loaded into a Pandas DataFrame with columns for m/z, retention time, ion mobility, or intensity values, and you need to render spectrum plots, chromatograms, mobilograms, or 2D peak maps.",
   "edam_operation": "http://edamontology.org/operation_3441",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -6782,7 +6782,7 @@
  {
   "slug": "mass-spectrometry-drift-time-processing",
   "name": "mass-spectrometry-drift-time-processing",
-  "description": "Use when when you have raw ion mobility-mass spectrometry data (drift times, m/z values, and frame metadata) from DTIMS-MS, TWIMS-MS, or SLIM-based instruments and need to compute CCS values for structural characterization or database matching.",
+  "description": "Use when you have raw ion mobility-mass spectrometry data (drift times, m/z values, and frame metadata) from DTIMS-MS, TWIMS-MS, or SLIM-based instruments and need to compute CCS values for structural characterization or database matching.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -7178,7 +7178,7 @@
  {
   "slug": "mass-spectrometry-raw-data-preprocessing",
   "name": "mass-spectrometry-raw-data-preprocessing",
-  "description": "Use when when you have raw DIA mass spectrometry data files (.raw, .d, .",
+  "description": "Use when you have raw DIA mass spectrometry data files (.raw, .d, .",
   "edam_operation": "http://edamontology.org/operation_3436",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -7276,7 +7276,7 @@
  {
   "slug": "mass-spectrometry-screening-workflows",
   "name": "mass-spectrometry-screening-workflows",
-  "description": "Use when when you have high-resolution LC-MS or GC-MS data from environmental samples and need to simultaneously screen for both known suspect chemicals and their transformation products, rather than targeting single compounds.",
+  "description": "Use when you have high-resolution LC-MS or GC-MS data from environmental samples and need to simultaneously screen for both known suspect chemicals and their transformation products, rather than targeting single compounds.",
   "edam_operation": "http://edamontology.org/operation_3802",
   "edam_topics": [
    "http://edamontology.org/topic_0593",
@@ -7390,7 +7390,7 @@
  {
   "slug": "mass-spectrometry-workflow-orchestration-snakemake",
   "name": "mass-spectrometry-workflow-orchestration-snakemake",
-  "description": "Use when when you have a collection of mzML.gz files from a multidimensional MS instrument (e.",
+  "description": "Use when you have a collection of mzML.gz files from a multidimensional MS instrument (e.",
   "edam_operation": "http://edamontology.org/operation_3637",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -7427,7 +7427,7 @@
  {
   "slug": "mass-spectrum-m-z-alignment",
   "name": "mass-spectrum-m-z-alignment",
-  "description": "Use when when working with multidimensional MS data (LC–IM–MS/MS) converted to MZA format where spectra are stored in jagged arrays with m/z values distributed across individual HDF5 datasets per scan, and you need to ensure m/z consistency for downstream peak detection, isotope analysis, or.",
+  "description": "Use when working with multidimensional MS data (LC–IM–MS/MS) converted to MZA format where spectra are stored in jagged arrays with m/z values distributed across individual HDF5 datasets per scan, and you need to ensure m/z consistency for downstream peak detection, isotope analysis, or cross-scan.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -7468,7 +7468,7 @@
  {
   "slug": "mass-spectrum-visualization",
   "name": "mass-spectrum-visualization",
-  "description": "Use when when you have extracted m/z and intensity arrays from an MZA file (or similar HDF5-backed MS data structure) and need to visually inspect a single MS1 or MS2 spectrum, verify peak characteristics, or diagnose data quality issues before downstream analysis (peak fitting, isotope pattern.",
+  "description": "Use when you have extracted m/z and intensity arrays from an MZA file (or similar HDF5-backed MS data structure) and need to visually inspect a single MS1 or MS2 spectrum, verify peak characteristics, or diagnose data quality issues before downstream analysis (peak fitting, isotope pattern.",
   "edam_operation": "http://edamontology.org/operation_3441",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -7507,7 +7507,7 @@
  {
   "slug": "mass-tolerance-parameter-calibration",
   "name": "mass-tolerance-parameter-calibration",
-  "description": "Use when when converting raw line-scan mass spectrometry imaging data (Agilent .d, Bruker .tsf/.baf/.tdf, Thermo .raw, or .mzML formats) and must decide which m/z values from a reference mass list correspond to peaks in the raw spectra.",
+  "description": "Use when converting raw line-scan mass spectrometry imaging data (Agilent .d, Bruker .tsf/.baf/.tdf, Thermo .raw, or .mzML formats) and must decide which m/z values from a reference mass list correspond to peaks in the raw spectra.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -7543,7 +7543,7 @@
  {
   "slug": "matplotlib-bokeh-plotly-backend-switching",
   "name": "matplotlib-bokeh-plotly-backend-switching",
-  "description": "Use when when you have mass spectrometry data (chromatograms, spectra, mobilograms, or peak maps) in a Pandas DataFrame and need to generate the same visualization in multiple formats—e.",
+  "description": "Use when you have mass spectrometry data (chromatograms, spectra, mobilograms, or peak maps) in a Pandas DataFrame and need to generate the same visualization in multiple formats—e.",
   "edam_operation": "http://edamontology.org/operation_3441",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -7653,7 +7653,7 @@
  {
   "slug": "metabolite-taxonomy-database-lookup",
   "name": "metabolite-taxonomy-database-lookup",
-  "description": "Use when when you have MS/MS-annotated features from a natural extract (via SIRIUS, CANOPUS, or ISDB) and need to compute the Literature Component or Class Component of a priority rank—i.",
+  "description": "Use when you have MS/MS-annotated features from a natural extract (via SIRIUS, CANOPUS, or ISDB) and need to compute the Literature Component or Class Component of a priority rank—i.",
   "edam_operation": "http://edamontology.org/operation_3280",
   "edam_topics": [
    "http://edamontology.org/topic_0602",
@@ -7922,7 +7922,7 @@
  {
   "slug": "module-dispatch-architecture-analysis",
   "name": "module-dispatch-architecture-analysis",
-  "description": "Use when when you need to understand how a multi-instrument mass spectrometry platform (like mzmine) decides which processing module receives a given dataset based on its declared data type (LC vs. GC vs. IMS vs. MS imaging).",
+  "description": "Use when you need to understand how a multi-instrument mass spectrometry platform (like mzmine) decides which processing module receives a given dataset based on its declared data type (LC vs. GC vs. IMS vs. MS imaging).",
   "edam_operation": "http://edamontology.org/operation_3439",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -8072,7 +8072,7 @@
  {
   "slug": "molecular-database-loading-and-parsing",
   "name": "molecular-database-loading-and-parsing",
-  "description": "Use when when setting up a ViMMS chemical sampling environment and you need to restrict the chemical search space to a specific m/z range (e.g., 100–1000) and MS level (e.g., MS1 only) before generating virtual LC-MS/MS data.",
+  "description": "Use when setting up a ViMMS chemical sampling environment and you need to restrict the chemical search space to a specific m/z range (e.g., 100–1000) and MS level (e.g., MS1 only) before generating virtual LC-MS/MS data.",
   "edam_operation": "http://edamontology.org/operation_3695",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -8144,7 +8144,7 @@
  {
   "slug": "molecular-descriptor-graph-representation",
   "name": "molecular-descriptor-graph-representation",
-  "description": "Use when when you need to train or evaluate a graph neural network for molecular property prediction (collision cross section, ion mobility, or related descriptors) and have access to SMILES strings and/or 3D conformer coordinates.",
+  "description": "Use when you need to train or evaluate a graph neural network for molecular property prediction (collision cross section, ion mobility, or related descriptors) and have access to SMILES strings and/or 3D conformer coordinates.",
   "edam_operation": "http://edamontology.org/operation_0337",
   "edam_topics": [
    "http://edamontology.org/topic_3373",
@@ -8178,7 +8178,7 @@
  {
   "slug": "molecular-descriptor-indexing",
   "name": "molecular-descriptor-indexing",
-  "description": "Use when when you have a collection of molecular structures (SMILES or SDF format) and need to generate a queryable database of collision cross section values for high-throughput mass spectrometry workflows, or when you want to organize pre-computed CCS predictions with conformer metadata into a.",
+  "description": "Use when you have a collection of molecular structures (SMILES or SDF format) and need to generate a queryable database of collision cross section values for high-throughput mass spectrometry workflows, or when you want to organize pre-computed CCS predictions with conformer metadata into a.",
   "edam_operation": "http://edamontology.org/operation_3778",
   "edam_topics": [
    "http://edamontology.org/topic_0154",
@@ -8467,7 +8467,7 @@
  {
   "slug": "ms-data-format-identification",
   "name": "ms-data-format-identification",
-  "description": "Use when when receiving raw MS data files of unknown or mixed acquisition modalities and needing to route each to its corresponding analysis pipeline. Specifically, apply this skill when: (1) input files arrive without documented instrument type or chromatographic/mobility dimensionality;",
+  "description": "Use when receiving raw MS data files of unknown or mixed acquisition modalities and needing to route each to its corresponding analysis pipeline. Specifically, apply this skill when: (1) input files arrive without documented instrument type or chromatographic/mobility dimensionality;",
   "edam_operation": "http://edamontology.org/operation_3443",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -8498,7 +8498,7 @@
  {
   "slug": "ms-instrument-type-classification",
   "name": "ms-instrument-type-classification",
-  "description": "Use when when evaluating or designing a mass spectrometry data analysis platform, and you need to verify that every supported separation/ionisation technique (LC, GC, IMS, MS Imaging) is covered by at least one processing module.",
+  "description": "Use when evaluating or designing a mass spectrometry data analysis platform, and you need to verify that every supported separation/ionisation technique (LC, GC, IMS, MS Imaging) is covered by at least one processing module.",
   "edam_operation": "http://edamontology.org/operation_3443",
   "edam_topics": [
    "http://edamontology.org/topic_3370",
@@ -8527,7 +8527,7 @@
  {
   "slug": "ms-ms-fragment-assignment-and-annotation",
   "name": "ms-ms-fragment-assignment-and-annotation",
-  "description": "Use when when you have predicted MS/MS fragments from quantum chemistry calculations on N-Me derived unsaturated sterol structures and need to map each fragment to its precursor lipid, calculate exact m/z values, estimate relative intensities, and produce a machine-readable reference table for.",
+  "description": "Use when you have predicted MS/MS fragments from quantum chemistry calculations on N-Me derived unsaturated sterol structures and need to map each fragment to its precursor lipid, calculate exact m/z values, estimate relative intensities, and produce a machine-readable reference table for spectral.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -8652,7 +8652,7 @@
  {
   "slug": "ms1-feature-ranking-and-extraction",
   "name": "ms1-feature-ranking-and-extraction",
-  "description": "Use when when you have raw LC-MS data files and need to identify which compounds were actually detected at high abundance during a gradient run, prior to evaluating whether the gradient provided good separation across the chemical space.",
+  "description": "Use when you have raw LC-MS data files and need to identify which compounds were actually detected at high abundance during a gradient run, prior to evaluating whether the gradient provided good separation across the chemical space.",
   "edam_operation": "http://edamontology.org/operation_3645",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -8803,7 +8803,7 @@
  {
   "slug": "multi-backend-visualization-abstraction",
   "name": "multi-backend-visualization-abstraction",
-  "description": "Use when when building a mass spectrometry visualization library that must support multiple plotting backends (matplotlib for static output, bokeh and plotly for interactive exploration) with a uniform DataFrame-based API, and where different plot kinds (spectrum, chromatogram, mobilogram, peakmap).",
+  "description": "Use when building a mass spectrometry visualization library that must support multiple plotting backends (matplotlib for static output, bokeh and plotly for interactive exploration) with a uniform DataFrame-based API, and where different plot kinds (spectrum, chromatogram, mobilogram, peakmap).",
   "edam_operation": "http://edamontology.org/operation_3441",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -8968,7 +8968,7 @@
  {
   "slug": "multi-panel-spectra-comparison",
   "name": "multi-panel-spectra-comparison",
-  "description": "Use when when you need to visually compare two or more spectra (MS1, MS2, or extracted ion chromatograms) across different retention times, m/z ranges, or ion mobility bins in a single figure. Apply this skill after extracting spectra arrays from MZA files (e.",
+  "description": "Use when you need to visually compare two or more spectra (MS1, MS2, or extracted ion chromatograms) across different retention times, m/z ranges, or ion mobility bins in a single figure. Apply this skill after extracting spectra arrays from MZA files (e.",
   "edam_operation": "http://edamontology.org/operation_3441",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -9007,7 +9007,7 @@
  {
   "slug": "multi-sample-cohort-assessment",
   "name": "multi-sample-cohort-assessment",
-  "description": "Use when when you have MS1 mass spectrometry data from multiple samples (a cohort) acquired across an instrument run or batch, and you need to identify which samples deviate from cohort norms or which ion targets show anomalous behavior.",
+  "description": "Use when you have MS1 mass spectrometry data from multiple samples (a cohort) acquired across an instrument run or batch, and you need to identify which samples deviate from cohort norms or which ion targets show anomalous behavior.",
   "edam_operation": "http://edamontology.org/operation_3933",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -9109,7 +9109,7 @@
  {
   "slug": "multidimensional-feature-detection-and-alignment",
   "name": "multidimensional-feature-detection-and-alignment",
-  "description": "Use when when you have acquired LC-IMS-MS/MS data (mzML or mzML.gz format) from multiple samples and need to detect features that exploit simultaneous separation in m/z, drift time, and retention time to improve detection sensitivity and reduce false positives.",
+  "description": "Use when you have acquired LC-IMS-MS/MS data (mzML or mzML.gz format) from multiple samples and need to detect features that exploit simultaneous separation in m/z, drift time, and retention time to improve detection sensitivity and reduce false positives.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -9369,7 +9369,7 @@
  {
   "slug": "mzml-mzxml-spectrum-reading",
   "name": "mzml-mzxml-spectrum-reading",
-  "description": "Use when when you have raw mzML or mzXML files containing uncompressed m/z and intensity arrays and need to load spectra into a uniform data contract before compression, cross-format comparison, or algorithmic processing.",
+  "description": "Use when you have raw mzML or mzXML files containing uncompressed m/z and intensity arrays and need to load spectra into a uniform data contract before compression, cross-format comparison, or algorithmic processing.",
   "edam_operation": "http://edamontology.org/operation_3357",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -9443,7 +9443,7 @@
  {
   "slug": "noise-level-parameter-tuning",
   "name": "noise-level-parameter-tuning",
-  "description": "Use when when you have an aligned GCIMS dataset and need to configure the findPeaks function with CWT algorithm to detect peaks across retention time and drift time dimensions.",
+  "description": "Use when you have an aligned GCIMS dataset and need to configure the findPeaks function with CWT algorithm to detect peaks across retention time and drift time dimensions.",
   "edam_operation": "http://edamontology.org/operation_3627",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -9502,7 +9502,7 @@
  {
   "slug": "open-source-mass-spectrometry-file-format-interoperability",
   "name": "open-source-mass-spectrometry-file-format-interoperability",
-  "description": "Use when when working with Bruker .d/.baf mass spectrometry imaging data and needing to feed it into MSIGen or other open-source MSI processing pipelines.",
+  "description": "Use when working with Bruker .d/.baf mass spectrometry imaging data and needing to feed it into MSIGen or other open-source MSI processing pipelines.",
   "edam_operation": "http://edamontology.org/operation_3434",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -9543,7 +9543,7 @@
  {
   "slug": "pandas-dataframe-column-specification",
   "name": "pandas-dataframe-column-specification",
-  "description": "Use when when you have mass spectrometry data in a Pandas DataFrame with column names that do not match pyOpenMS-viz's default expectations (e.g., 'm/z' vs 'mz' or 'retention_time' vs 'rt'), or when your data uses domain-specific column labels (e.g., 'mass_to_charge', 'scan_time', 'peak_intensity').",
+  "description": "Use when you have mass spectrometry data in a Pandas DataFrame with column names that do not match pyOpenMS-viz's default expectations (e.g., 'm/z' vs 'mz' or 'retention_time' vs 'rt'), or when your data uses domain-specific column labels (e.g., 'mass_to_charge', 'scan_time', 'peak_intensity').",
   "edam_operation": "http://edamontology.org/operation_3500",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -9701,7 +9701,7 @@
  {
   "slug": "peak-detection-cwt-optimization",
   "name": "peak-detection-cwt-optimization",
-  "description": "Use when when you have a pre-aligned GCIMSDataset and need to systematically identify and annotate chromatographic peaks across multiple samples.",
+  "description": "Use when you have a pre-aligned GCIMSDataset and need to systematically identify and annotate chromatographic peaks across multiple samples.",
   "edam_operation": "http://edamontology.org/operation_3630",
   "edam_topics": [
    "http://edamontology.org/topic_0625",
@@ -9755,7 +9755,7 @@
  {
   "slug": "peak-map-rendering-retention-time-mz-intensity",
   "name": "peak-map-rendering-retention-time-mz-intensity",
-  "description": "Use when when you have loaded mass spectrometry data (from mzML or Bruker .",
+  "description": "Use when you have loaded mass spectrometry data (from mzML or Bruker .",
   "edam_operation": "http://edamontology.org/operation_0564",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -9841,7 +9841,7 @@
  {
   "slug": "peptide-sequence-to-spectrum-conversion",
   "name": "peptide-sequence-to-spectrum-conversion",
-  "description": "Use when when you have a peptide sequence and need to predict its fragmentation pattern under specific isotopic labeling conditions (e.g., natural 13C abundance at 1%, or enriched 13C at arbitrary levels).",
+  "description": "Use when you have a peptide sequence and need to predict its fragmentation pattern under specific isotopic labeling conditions (e.g., natural 13C abundance at 1%, or enriched 13C at arbitrary levels).",
   "edam_operation": "http://edamontology.org/operation_3631",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -10115,7 +10115,7 @@
  {
   "slug": "ppm-mass-accuracy-filtering",
   "name": "ppm-mass-accuracy-filtering",
-  "description": "Use when when processing imzML/ibd Imaging Mass Spectrometry datasets and you need to extract ion density maps for specific analytes or isotopes. Apply this skill after importing the .imzML metadata and .",
+  "description": "Use when processing imzML/ibd Imaging Mass Spectrometry datasets and you need to extract ion density maps for specific analytes or isotopes. Apply this skill after importing the .imzML metadata and .ibd binary files, viewing the total ion chromatogram (TIC), and deciding which m/z values to image.",
   "edam_operation": "http://edamontology.org/operation_3630",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -10443,7 +10443,7 @@
  {
   "slug": "pytorch-or-tensorflow-model-definition",
   "name": "pytorch-or-tensorflow-model-definition",
-  "description": "Use when when you have molecular structure inputs (SMILES strings, molecular graphs, or feature vectors) and need to predict a continuous molecular property (e.g., CCS values, retention time, ionization efficiency).",
+  "description": "Use when you have molecular structure inputs (SMILES strings, molecular graphs, or feature vectors) and need to predict a continuous molecular property (e.g., CCS values, retention time, ionization efficiency).",
   "edam_operation": "http://edamontology.org/operation_3363",
   "edam_topics": [
    "http://edamontology.org/topic_3298",
@@ -10591,7 +10591,7 @@
  {
   "slug": "quantum-chemistry-based-fragmentation-prediction",
   "name": "quantum-chemistry-based-fragmentation-prediction",
-  "description": "Use when when you have SMILES strings or molecular formulae for N-Me derivatized unsaturated sterol lipids and need to generate theoretical MS/MS spectra (predicted fragment m/z values and intensities) to compare against experimental LC-IM-MS/MS data before performing CCS prediction or downstream.",
+  "description": "Use when you have SMILES strings or molecular formulae for N-Me derivatized unsaturated sterol lipids and need to generate theoretical MS/MS spectra (predicted fragment m/z values and intensities) to compare against experimental LC-IM-MS/MS data before performing CCS prediction or downstream lipid.",
   "edam_operation": "http://edamontology.org/operation_3637",
   "edam_topics": [
    "http://edamontology.org/topic_3375",
@@ -10624,7 +10624,7 @@
  {
   "slug": "quantum-chemistry-structure-preparation",
   "name": "quantum-chemistry-structure-preparation",
-  "description": "Use when when you have a collection of N-Me derived unsaturated sterol lipid identifiers or structures and need to generate predicted collision cross section (CCS) values for LC-IM-MS/MS analysis.",
+  "description": "Use when you have a collection of N-Me derived unsaturated sterol lipid identifiers or structures and need to generate predicted collision cross section (CCS) values for LC-IM-MS/MS analysis.",
   "edam_operation": "http://edamontology.org/operation_0335",
   "edam_topics": [
    "http://edamontology.org/topic_3314",
@@ -10716,7 +10716,7 @@
  {
   "slug": "reactant-ion-peak-exclusion",
   "name": "reactant-ion-peak-exclusion",
-  "description": "Use when when performing peak detection on Gas Chromatography–Ion Mobility Spectrometry samples where the Reactant Ion Peak (a high-intensity background signal from the ion source) would otherwise be misidentified as an analyte peak, causing false positives in the peak list.",
+  "description": "Use when performing peak detection on Gas Chromatography–Ion Mobility Spectrometry samples where the Reactant Ion Peak (a high-intensity background signal from the ion source) would otherwise be misidentified as an analyte peak, causing false positives in the peak list.",
   "edam_operation": "http://edamontology.org/operation_3215",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -10778,7 +10778,7 @@
  {
   "slug": "reference-library-alignment",
   "name": "reference-library-alignment",
-  "description": "Use when when you have IM-MS lipidomics data with measured CCS values from samples spiked with U13C labeled internal standards, and you need to assess systematic CCS bias or enable CCS correction by comparing measured lipids against known library entries with validated CCS values.",
+  "description": "Use when you have IM-MS lipidomics data with measured CCS values from samples spiked with U13C labeled internal standards, and you need to assess systematic CCS bias or enable CCS correction by comparing measured lipids against known library entries with validated CCS values.",
   "edam_operation": "http://edamontology.org/operation_3957",
   "edam_topics": [
    "http://edamontology.org/topic_0153",
@@ -11040,7 +11040,7 @@
  {
   "slug": "retention-time-mz-coordinate-mapping",
   "name": "retention-time-mz-coordinate-mapping",
-  "description": "Use when when you have mass-spectrometry data in tabular form (Pandas DataFrame) with columns for m/z, retention time or ion mobility, and intensity, and you need to visualize the 2D distribution of peaks to assess peak separation, detect co-elution, or examine chromatographic and mass resolution.",
+  "description": "Use when you have mass-spectrometry data in tabular form (Pandas DataFrame) with columns for m/z, retention time or ion mobility, and intensity, and you need to visualize the 2D distribution of peaks to assess peak separation, detect co-elution, or examine chromatographic and mass resolution.",
   "edam_operation": "http://edamontology.org/operation_3628",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -11110,7 +11110,7 @@
  {
   "slug": "sample-membership-tracking",
   "name": "sample-membership-tracking",
-  "description": "Use when when aligning detected features across multiple LC-IMS-MS/MS samples and you need to identify which input samples contributed to each consensus feature cluster, especially to filter out spurious or low-confidence alignments, validate clustering completeness, or perform sample-specific.",
+  "description": "Use when aligning detected features across multiple LC-IMS-MS/MS samples and you need to identify which input samples contributed to each consensus feature cluster, especially to filter out spurious or low-confidence alignments, validate clustering completeness, or perform sample-specific.",
   "edam_operation": "http://edamontology.org/operation_3938",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -11177,7 +11177,7 @@
  {
   "slug": "saturation-threshold-configuration",
   "name": "saturation-threshold-configuration",
-  "description": "Use when when executing peak integration on preprocessed GC-IMS data (after alignment and baseline correction) and you need to decide whether to include or exclude peaks that exhibit saturation artifacts from the RIP signal. Set a threshold (e.g., 0.",
+  "description": "Use when executing peak integration on preprocessed GC-IMS data (after alignment and baseline correction) and you need to decide whether to include or exclude peaks that exhibit saturation artifacts from the RIP signal. Set a threshold (e.g., 0.",
   "edam_operation": "http://edamontology.org/operation_3215",
   "edam_topics": [
    "http://edamontology.org/topic_3520"
@@ -11231,7 +11231,7 @@
  {
   "slug": "search-result-integration-with-raw-mass-spectrometry-data",
   "name": "search-result-integration-with-raw-mass-spectrometry-data",
-  "description": "Use when when you have completed a DIA-MS proteomics search (e.",
+  "description": "Use when you have completed a DIA-MS proteomics search (e.",
   "edam_operation": "http://edamontology.org/operation_3634",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -11283,7 +11283,7 @@
  {
   "slug": "separation-technique-workflow-alignment",
   "name": "separation-technique-workflow-alignment",
-  "description": "Use when when evaluating whether an MS data processing platform (such as mzmine) supports the full range of separation/ionization techniques your laboratory uses, or when assessing whether gaps exist in the software architecture that would require external pre- or post-processing for specific.",
+  "description": "Use when evaluating whether an MS data processing platform (such as mzmine) supports the full range of separation/ionization techniques your laboratory uses, or when assessing whether gaps exist in the software architecture that would require external pre- or post-processing for specific.",
   "edam_operation": "",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -11489,7 +11489,7 @@
  {
   "slug": "small-molecule-3d-structure-preparation",
   "name": "small-molecule-3d-structure-preparation",
-  "description": "Use when when you have ionized adduct structures (SMILES or MOL format) from a prior ionization-state determination step and need to create multiple low-energy 3D conformations before filtering with machine-learning potentials (ASE-ANI) or quantum calculations.",
+  "description": "Use when you have ionized adduct structures (SMILES or MOL format) from a prior ionization-state determination step and need to create multiple low-energy 3D conformations before filtering with machine-learning potentials (ASE-ANI) or quantum calculations.",
   "edam_operation": "http://edamontology.org/operation_0432",
   "edam_topics": [
    "http://edamontology.org/topic_3314",
@@ -11521,7 +11521,7 @@
  {
   "slug": "smiles-adduct-form-enumeration",
   "name": "smiles-adduct-form-enumeration",
-  "description": "Use when when you have SMILES structures of small organic molecules and need to predict CCS values for metabolite annotation in untargeted mass spectrometry workflows. Specifically, apply this skill when the same chemical entity may appear in multiple ionization states (e.",
+  "description": "Use when you have SMILES structures of small organic molecules and need to predict CCS values for metabolite annotation in untargeted mass spectrometry workflows. Specifically, apply this skill when the same chemical entity may appear in multiple ionization states (e.",
   "edam_operation": "http://edamontology.org/operation_3802",
   "edam_topics": [
    "http://edamontology.org/topic_0602",
@@ -11551,7 +11551,7 @@
  {
   "slug": "smiles-canonicalization-rdkit",
   "name": "smiles-canonicalization-rdkit",
-  "description": "Use when when processing raw SMILES strings from external databases or user input that may contain non-canonical tautomeric forms, variable stereochemical notation, or redundant representations of the same chemical structure.",
+  "description": "Use when processing raw SMILES strings from external databases or user input that may contain non-canonical tautomeric forms, variable stereochemical notation, or redundant representations of the same chemical structure.",
   "edam_operation": "http://edamontology.org/operation_3929",
   "edam_topics": [
    "http://edamontology.org/topic_0154",
@@ -11691,7 +11691,7 @@
  {
   "slug": "spatial-feature-embedding",
   "name": "spatial-feature-embedding",
-  "description": "Use when when analyzing imaging mass spectrometry datasets where you need to reduce high-dimensional peak intensity features while preserving spatial structure, and when automatic peak picking and marker ion identification are required.",
+  "description": "Use when analyzing imaging mass spectrometry datasets where you need to reduce high-dimensional peak intensity features while preserving spatial structure, and when automatic peak picking and marker ion identification are required.",
   "edam_operation": "http://edamontology.org/operation_3434",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -11757,7 +11757,7 @@
  {
   "slug": "spectral-database-matching",
   "name": "spectral-database-matching",
-  "description": "Use when when you have MS2 .mzML format data files from untargeted metabolomics or proteomics experiments and need to perform an initial annotation step by matching experimental spectra against known reference libraries (GNPS, HMDB, MassBank) with a defined precursor mass tolerance (e.g., 15 ppm).",
+  "description": "Use when you have MS2 .mzML format data files from untargeted metabolomics or proteomics experiments and need to perform an initial annotation step by matching experimental spectra against known reference libraries (GNPS, HMDB, MassBank) with a defined precursor mass tolerance (e.g., 15 ppm).",
   "edam_operation": "http://edamontology.org/operation_3767",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -11905,7 +11905,7 @@
  {
   "slug": "spectral-library-merging-and-deduplication",
   "name": "spectral-library-merging-and-deduplication",
-  "description": "Use when when building a comprehensive reference spectral library for metabolomics or chemical identification, you have multiple source libraries in different formats (msp, mgf, NIST binary) and ionization modes (positive/negative MS/MS or EI) that need to be combined into a single.",
+  "description": "Use when building a comprehensive reference spectral library for metabolomics or chemical identification, you have multiple source libraries in different formats (msp, mgf, NIST binary) and ionization modes (positive/negative MS/MS or EI) that need to be combined into a single, MS-DIAL-compatible.",
   "edam_operation": "http://edamontology.org/operation_3933",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -12014,7 +12014,7 @@
  {
   "slug": "spectral-peak-binning-preprocessing",
   "name": "spectral-peak-binning-preprocessing",
-  "description": "Use when when you have raw high-resolution tandem mass spectra (mzML, mzXML, or MGF format) that you intend to cluster or compare at scale, and you need to convert continuous m/z and intensity measurements into discrete bins suitable for feature hashing or similarity searching.",
+  "description": "Use when you have raw high-resolution tandem mass spectra (mzML, mzXML, or MGF format) that you intend to cluster or compare at scale, and you need to convert continuous m/z and intensity measurements into discrete bins suitable for feature hashing or similarity searching.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -12177,7 +12177,7 @@
  {
   "slug": "spectrum-preprocessing-binning-normalization",
   "name": "spectrum-preprocessing-binning-normalization",
-  "description": "Use when when preparing raw MS/MS spectra for input to a Siamese neural network trained to predict structural similarity scores (Tanimoto).",
+  "description": "Use when preparing raw MS/MS spectra for input to a Siamese neural network trained to predict structural similarity scores (Tanimoto).",
   "edam_operation": "http://edamontology.org/operation_3215",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -12314,7 +12314,7 @@
  {
   "slug": "sterol-structure-representation-and-curation",
   "name": "sterol-structure-representation-and-curation",
-  "description": "Use when when you have a collection of N-Me derivatized unsaturated sterol structures from tissue samples or standards that must be fed into MS/MS fragmentation prediction or collision cross section (CCS) prediction workflows.",
+  "description": "Use when you have a collection of N-Me derivatized unsaturated sterol structures from tissue samples or standards that must be fed into MS/MS fragmentation prediction or collision cross section (CCS) prediction workflows.",
   "edam_operation": "http://edamontology.org/operation_3280",
   "edam_topics": [
    "http://edamontology.org/topic_3375",
@@ -12372,7 +12372,7 @@
  {
   "slug": "tandem-mass-spectrometry-mirror-plot-construction",
   "name": "tandem-mass-spectrometry-mirror-plot-construction",
-  "description": "Use when when you have raw LC-MS or LC-IMS-MS data in instrument format (Agilent .d, Thermo .raw, Bruker .",
+  "description": "Use when you have raw LC-MS or LC-IMS-MS data in instrument format (Agilent .d, Thermo .raw, Bruker .",
   "edam_operation": "http://edamontology.org/operation_3634",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -12478,7 +12478,7 @@
  {
   "slug": "targeted-dia-data-extraction-from-raw-spectra",
   "name": "targeted-dia-data-extraction-from-raw-spectra",
-  "description": "Use when when you have raw diaPASEF mzML files, a transition list with target analytes (protein, peptide, charge state), and search results (DIA-NN, OpenSwath output) containing feature metadata (retention time, ion mobility, m/z coordinates), and you need to isolate and visualize signal for.",
+  "description": "Use when you have raw diaPASEF mzML files, a transition list with target analytes (protein, peptide, charge state), and search results (DIA-NN, OpenSwath output) containing feature metadata (retention time, ion mobility, m/z coordinates), and you need to isolate and visualize signal for specific.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -12739,7 +12739,7 @@
  {
   "slug": "transition-group-feature-extraction",
   "name": "transition-group-feature-extraction",
-  "description": "Use when when you have loaded a TransitionGroup (extracted ion chromatogram or mobilogram from DIA mass spectrometry data) and need to identify precise peak boundaries, apex retention/drift time, and intensity values for quantitative feature detection.",
+  "description": "Use when you have loaded a TransitionGroup (extracted ion chromatogram or mobilogram from DIA mass spectrometry data) and need to identify precise peak boundaries, apex retention/drift time, and intensity values for quantitative feature detection.",
   "edam_operation": "http://edamontology.org/operation_3215",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -13063,7 +13063,7 @@
  {
   "slug": "workflow-orchestration-and-parallelization",
   "name": "workflow-orchestration-and-parallelization",
-  "description": "Use when when you have a multi-step computational chemistry or molecular modeling pipeline (3+ sequential or parallel stages) that must process many molecules, each requiring repeated tool invocations with different parameters, and you need reproducibility, fault tolerance, and the ability to.",
+  "description": "Use when you have a multi-step computational chemistry or molecular modeling pipeline (3+ sequential or parallel stages) that must process many molecules, each requiring repeated tool invocations with different parameters, and you need reproducibility, fault tolerance, and the ability to.",
   "edam_operation": "http://edamontology.org/operation_3501",
   "edam_topics": [
    "http://edamontology.org/topic_3314",
@@ -13097,7 +13097,7 @@
  {
   "slug": "workflow-routing-configuration",
   "name": "workflow-routing-configuration",
-  "description": "Use when when you have raw mass spectrometry data files from multiple acquisition modalities (LC-MS, GC-MS, ion mobility, or imaging) and need to automatically route each to the correct downstream analysis module without manual intervention.",
+  "description": "Use when you have raw mass spectrometry data files from multiple acquisition modalities (LC-MS, GC-MS, ion mobility, or imaging) and need to automatically route each to the correct downstream analysis module without manual intervention.",
   "edam_operation": "http://edamontology.org/operation_3937",
   "edam_topics": [
    "http://edamontology.org/topic_3520",

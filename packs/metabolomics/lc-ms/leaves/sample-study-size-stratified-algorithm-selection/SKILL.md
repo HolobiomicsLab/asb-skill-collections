@@ -1,6 +1,6 @@
 ---
 name: sample-study-size-stratified-algorithm-selection
-description: Use when when beginning mass alignment in a multi-sample LC-MS metabolomics
+description: Use when beginning mass alignment in a multi-sample LC-MS metabolomics
   study, before constructing the MassGrid.
 license: CC-BY-4.0
 metadata:
@@ -21,12 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
-evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
-  preprocessing
-- Trackable and scalable Python program for high-resolution metabolomics data processing.
-- See [MassGrid.build_grid_sample_wise](MassGrid.build_grid_sample_wise), [MassGrid.add_sample](MassGrid.add_sample).
-  See [MassGrid.build_grid_by_centroiding](MassGrid.build_grid_by_centroiding),
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

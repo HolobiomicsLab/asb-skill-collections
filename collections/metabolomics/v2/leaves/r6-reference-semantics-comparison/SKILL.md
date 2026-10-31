@@ -22,8 +22,6 @@ derived_from:
   title: mpactr
 - doi: 10.1021/acs.analchem.2c04632
   title: ''
-evidence_spans:
-- This table can be used for a variety of analyses that can be conducted in R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

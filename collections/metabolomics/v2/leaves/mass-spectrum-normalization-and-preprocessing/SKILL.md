@@ -21,9 +21,6 @@ derived_from:
   title: ChemEcho
 - doi: 10.1145/2939672.2939778
   title: ''
-evidence_spans:
-- The Mass Query Language (MassQL) is a domain specific language used to describe
-  fragmentation patterns
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

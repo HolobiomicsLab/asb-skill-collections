@@ -1,9 +1,8 @@
 ---
 name: aligned-feature-matrix-construction
-description: Use when when you have extracted feature tables from multiple breath
-  samples (mzML/mzXML files) using feature extraction, and you need to identify which
-  features are the same across samples to enable downstream statistical or comparative
-  analysis.
+description: Use when you have extracted feature tables from multiple breath samples
+  (mzML/mzXML files) using feature extraction, and you need to identify which features
+  are the same across samples to enable downstream statistical or comparative analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -21,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.4c00152
   title: BreathXplorer
-evidence_spans:
-- '[![PyPI](https://img.shields.io/pypi/pyversions/breathXplorer)]'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

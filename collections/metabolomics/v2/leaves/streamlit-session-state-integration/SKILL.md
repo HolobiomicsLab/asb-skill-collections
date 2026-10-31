@@ -1,8 +1,7 @@
 ---
 name: streamlit-session-state-integration
-description: Use when when building a Streamlit web application that must coordinate
-  stateful workflow execution across multiple reruns triggered by user interactions
-  (e.
+description: Use when building a Streamlit web application that must coordinate stateful
+  workflow execution across multiple reruns triggered by user interactions (e.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -17,10 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
-evidence_spans:
-- OpenMS Streamlit Template's **online mode only**
-- No code changes required for offline mode. The detection happens automatically
-- as well as deployment with docker-compose.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

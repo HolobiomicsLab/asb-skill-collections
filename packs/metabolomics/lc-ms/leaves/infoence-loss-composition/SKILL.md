@@ -1,7 +1,7 @@
 ---
 name: infoence-loss-composition
-description: Use when when training embeddings from MS/MS spectra data where you need
-  both discriminative power (to distinguish similar spectra) and reconstruction accuracy
+description: Use when training embeddings from MS/MS spectra data where you need both
+  discriminative power (to distinguish similar spectra) and reconstruction accuracy
   (to preserve peak and metadata information).
 license: CC-BY-4.0
 metadata:
@@ -20,7 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c00260
   title: CLERMS
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -24,14 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
-evidence_spans:
-- spectrum_utils is a Python package
-- spectrum = sus.MsmsSpectrum.from_usi(usi)
-- import matplotlib.pyplot as plt
-- fig, ax = plt.subplots(figsize=(12, 6))
-- Modifications are defined by controlled vocabularies (CVs), including [Unimod](https://www.unimod.org/)
-- fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma)
-  specification
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

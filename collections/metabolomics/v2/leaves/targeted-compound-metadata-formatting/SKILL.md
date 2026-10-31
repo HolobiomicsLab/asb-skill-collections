@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
-evidence_spans:
-- Targeted peak integration of LC-MS data using TARDIS
-- rmarkdown::html_document
-- Quick start for targeted peak integration of LC-MS data using TARDIS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

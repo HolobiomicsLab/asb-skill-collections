@@ -1,7 +1,7 @@
 ---
 name: gc-ms-spectral-similarity-clustering
-description: Use when when you have deconvolved GC-MS spectra (post-deconvolution
-  output compatible with GNPS_GC input specification) and need to group them by chemical
+description: Use when you have deconvolved GC-MS spectra (post-deconvolution output
+  compatible with GNPS_GC input specification) and need to group them by chemical
   similarity to construct a molecular network.
 license: CC-BY-4.0
 metadata:
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41587-020-0700-3
   title: mshub
-evidence_spans:
-- bittremieux/GNPS_GC
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

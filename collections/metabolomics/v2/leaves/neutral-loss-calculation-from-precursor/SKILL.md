@@ -1,9 +1,9 @@
 ---
 name: neutral-loss-calculation-from-precursor
-description: Use when when converting MS/MS spectra into spectral documents for Spec2Vec
+description: Use when converting MS/MS spectra into spectral documents for Spec2Vec
   embedding, and you want to capture chemical relationships implicit in the fragmentation
   pattern (e.g., loss of water, ammonia, or CO2) that may correlate with structural
-  similarity. Use this when the neutral loss range (5.
+  similarity. Use this when the neutral loss range (5.0–200.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -33,17 +33,6 @@ derived_from:
   title: Spec2Vec
 - doi: 10.3389/fbinf.2022.842964
   title: ''
-evidence_spans:
-- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim
-  [37]
-- the implementations for the cosine score and the modified cosine score used can
-  be found in the Python package matchms
-- the implementations for the cosine score and the modified cosine score used can
-  be found in the Python package matchms [31] (https://github.com/matchms/matchms)
-- making extensive use of Numpy [24] and Numba [25]
-- by making extensive use of Numpy [24] and Numba [25], the library
-- Spec2Vec was optimised by making extensive use of Numpy [24] and Numba [25], the
-  library matching was implemented using Pandas [40]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

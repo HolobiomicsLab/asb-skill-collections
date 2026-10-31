@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-021-23953-9
   title: iimn
-evidence_spans:
-- mzmine is an open-source software for mass spectrometry data processing
-- JDK version-25-blue
-- JavaFX version-24
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -17,10 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
-evidence_spans:
-- In order to make pymzML accept other kinds of mzML data (e.g databases), one can
-  implement an own wrapper
-- from pymzml import spec
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: candidate-psm-cardinality-control
-description: Use when when rescoring PSMs from a search engine with MS²Rescore and
-  you need to (1) constrain computational cost by reducing the number of candidates
-  fed to feature generators and rescoring engines, (2) control false discovery rate
-  correctly by removing lower-ranking PSMs before final statistical.
+description: Use when rescoring PSMs from a search engine with MS²Rescore and you
+  need to (1) constrain computational cost by reducing the number of candidates fed
+  to feature generators and rescoring engines, (2) control false discovery rate correctly
+  by removing lower-ranking PSMs before final statistical.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1002/pmic.202300336
   title: MS2Rescore (immunopeptidome rescoring)
-evidence_spans:
-- MS²Rescore is a tool for rescoring peptide-spectrum matches
-- Accepted ProForma modification labels in :py:mod:`psm_utils`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

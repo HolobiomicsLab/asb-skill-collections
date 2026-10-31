@@ -1,6 +1,6 @@
 ---
 name: training-dataset-assembly
-description: Use when when you have a large list of SMILES strings but lack corresponding
+description: Use when you have a large list of SMILES strings but lack corresponding
   experimental mass spectra, and you need to generate 30,000+ training pairs to train
   a deep learning model for molecular structure prediction.
 license: CC-BY-4.0
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s42256-025-01140-5
   title: MSGo
-evidence_spans:
-- 'Python: 3.7'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

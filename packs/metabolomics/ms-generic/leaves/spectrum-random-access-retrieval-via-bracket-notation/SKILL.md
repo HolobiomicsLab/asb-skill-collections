@@ -1,9 +1,9 @@
 ---
 name: spectrum-random-access-retrieval-via-bracket-notation
-description: Use when when you need to retrieve specific spectra from mzML files by
-  custom identifier (integer or string) rather than sequential iteration, especially
-  when the mzML file uses non-standard index formatting that requires a regex pattern
-  to parse spectrum IDs and file offsets.
+description: Use when you need to retrieve specific spectra from mzML files by custom
+  identifier (integer or string) rather than sequential iteration, especially when
+  the mzML file uses non-standard index formatting that requires a regex pattern to
+  parse spectrum IDs and file offsets.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -20,7 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,7 +1,7 @@
 ---
 name: adduct-mass-offset-assignment
-description: Use when when you have an LC-MS feature table with m/z and retention
-  time columns and need to identify which observed ions correspond to the same neutral
+description: Use when you have an LC-MS feature table with m/z and retention time
+  columns and need to identify which observed ions correspond to the same neutral
   compound under different ionization conditions and isotopic enrichment.
 license: CC-BY-4.0
 metadata:
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu
-evidence_spans:
-- Khipu uses our package mass2chem for search functions
-- Khipu is developed as an open source Python 3 package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

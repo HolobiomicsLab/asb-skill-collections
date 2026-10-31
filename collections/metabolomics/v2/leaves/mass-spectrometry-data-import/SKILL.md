@@ -1,7 +1,7 @@
 ---
 name: mass-spectrometry-data-import
-description: Use when when beginning a new mass spectrometry analysis workflow with
-  raw spectral data files in mzML, mzXML, msp, MGF, or JSON format.
+description: Use when beginning a new mass spectrometry analysis workflow with raw
+  spectral data files in mzML, mzXML, msp, MGF, or JSON format.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -24,12 +24,6 @@ derived_from:
   title: matchms
 - doi: 10.1021/acs.analchem.5c03225
   title: ''
-evidence_spans:
-- Matchms offers an array of tools for metadata cleaning and validation
-- Matchms is a versatile open-source Python package developed for importing, processing,
-  cleaning, and comparing mass spectrometry data
-- make sure the existing tests still work by running ``pytest``
-- SMART written in R and R GUI has been developed as user-friendly software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

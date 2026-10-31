@@ -21,11 +21,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
-evidence_spans:
-- To access our interactive Web application PALS Viewer, please visit [https://pals.glasgowcompbio.org/app/]
-- Molecular Families from GNPS
-- This includes in particular *Molecular Families* from [GNPS](http://gnps.ucsd.edu/)
-- Mass2Motifs from MS2LDA
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

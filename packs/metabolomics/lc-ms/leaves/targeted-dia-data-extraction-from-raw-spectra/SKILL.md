@@ -1,9 +1,9 @@
 ---
 name: targeted-dia-data-extraction-from-raw-spectra
-description: Use when when you have raw diaPASEF mzML files, a transition list with
-  target analytes (protein, peptide, charge state), and search results (DIA-NN, OpenSwath
+description: Use when you have raw diaPASEF mzML files, a transition list with target
+  analytes (protein, peptide, charge state), and search results (DIA-NN, OpenSwath
   output) containing feature metadata (retention time, ion mobility, m/z coordinates),
-  and you need to isolate and visualize signal for.
+  and you need to isolate and visualize signal for specific.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -27,14 +27,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash
-evidence_spans:
-- MassDash is a modular and flexible python package that has a streamlit graphical
-  user interface (GUI)
-- ':mod:`massdash.loaders`: Classes for loading data'
-- MzMLDataLoader
-- InteractiveTwoDimensionPlotter
-- MRMTransitionGroupPicker
-- pyMRMTransitionGroupPicker
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

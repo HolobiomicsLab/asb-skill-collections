@@ -24,14 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
-evidence_spans:
-- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural
-  language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
-- ms2lda_runfull.py
-- Configure the Python environment (set `PYTHONPATH`, activate conda, etc.)
-- configure the Python environment (set `PYTHONPATH`, activate conda, etc.)
-- These steps assume you have [Conda](http://conda.io/) installed.
-- You can install MS2LDA using pip, Conda, or Poet
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

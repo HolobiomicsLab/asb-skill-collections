@@ -1,9 +1,9 @@
 ---
 name: spectral-fragmentation-motif-analysis
-description: Use when when you have metabolomics intensity data with metabolites grouped
+description: Use when you have metabolomics intensity data with metabolites grouped
   by fragmentation spectral similarity (Molecular Families or Mass2Motifs) and need
   to rank or score these groups by their differential activity across experimental
-  conditions, especially when traditional pathway databases.
+  conditions, especially when traditional pathway databases are.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3646
@@ -25,9 +25,6 @@ derived_from:
   title: pals
 - doi: 10.1186/1471-2105-6-225
   title: ''
-evidence_spans:
-- Molecular Families from GNPS
-- Mass2Motifs from MS2LDA
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -29,11 +29,6 @@ derived_from:
   title: pals
 - doi: 10.1186/1471-2105-6-225
   title: ''
-evidence_spans:
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
-  database queries of pathways, decomposes activity levels in pathways
-- we introduce PALS (Pathway Activity Level Scoring), a complete tool that performs
-  database queries of pathways, decomposes activity levels in pathways
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

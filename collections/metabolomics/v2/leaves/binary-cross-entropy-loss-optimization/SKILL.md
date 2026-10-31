@@ -1,8 +1,8 @@
 ---
 name: binary-cross-entropy-loss-optimization
-description: Use when when you have a pretrained spectrum encoder (TCN) and need to
-  train a formula rescoring module that ranks candidate molecular formulas against
-  MS/MS spectra.
+description: Use when you have a pretrained spectrum encoder (TCN) and need to train
+  a formula rescoring module that ranks candidate molecular formulas against MS/MS
+  spectra.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
-evidence_spans:
-- FIDDLE is a deep learning method for predicting molecular formulas from MS/MS spectra
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

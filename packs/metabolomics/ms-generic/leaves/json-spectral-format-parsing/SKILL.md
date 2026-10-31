@@ -1,9 +1,9 @@
 ---
 name: json-spectral-format-parsing
-description: Use when when you have raw mass spectrometry spectral data in JSON format
+description: Use when you have raw mass spectrometry spectral data in JSON format
   from open mass spectra libraries (OMSLs) or other sources and need to validate structural
   completeness, check for required metadata fields (SMILES, InChI, InChIKey, precursor
-  m/z, adduct), and separate spectra by acquisition.
+  m/z, adduct), and separate spectra by acquisition type.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -27,8 +27,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
-evidence_spans:
-- Python-3.12
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

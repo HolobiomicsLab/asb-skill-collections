@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioadv/vbag111
   title: AnnoMe
-evidence_spans:
-- This is a package for the classification of MS/MS spectra of novel compounds
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

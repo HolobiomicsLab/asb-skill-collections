@@ -1,9 +1,9 @@
 ---
 name: notebook-execution-and-reproducibility
-description: Use when when you have access to a peer-reviewed manuscript with an accompanying
+description: Use when you have access to a peer-reviewed manuscript with an accompanying
   interactive notebook and public data repository, and you need to verify that the
   published figures can be regenerated from the original data through the documented
-  processing pipeline, or when you want to reuse the.
+  processing pipeline, or when you want to reuse the exact.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-021-01198-0
   title: SpaceM
-evidence_spans:
-- we [present interactively using Google Collab](https://colab.research.google.com/drive/1CKdHDUkGIpAcBzrSfuCodMF_l2xbVAKT?usp=sharing)
-- We support `python3`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

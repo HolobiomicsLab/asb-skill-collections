@@ -1,6 +1,6 @@
 ---
 name: metabolite-generation-logic-mapping
-description: Use when when you have access to the MAGMa source code and need to understand
+description: Use when you have access to the MAGMa source code and need to understand
   or audit how in silico metabolite candidates are enumerated from parent structures.
 license: CC-BY-4.0
 metadata:
@@ -17,9 +17,6 @@ metadata:
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
-evidence_spans:
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'.
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

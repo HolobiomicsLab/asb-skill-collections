@@ -1,7 +1,7 @@
 ---
 name: evolutionary-pattern-encoding-in-molecules
-description: Use when when building or fine-tuning a molecular representation model
-  intended for natural product mining, taxonomy classification, or bioactivity prediction,
+description: Use when building or fine-tuning a molecular representation model intended
+  for natural product mining, taxonomy classification, or bioactivity prediction,
   and you have access to natural product SMILES data with scaffold and side-chain
   structural annotations.
 license: CC-BY-4.0
@@ -23,8 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
-evidence_spans:
-- Fork the repository
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

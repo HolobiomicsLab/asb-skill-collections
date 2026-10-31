@@ -1,8 +1,8 @@
 ---
 name: json-response-serialization
-description: Use when when a backend service receives structured prediction results
-  from an external API (e.g., nmrshiftdb peak predictions) and must return them to
-  a client application via HTTP POST response.
+description: Use when a backend service receives structured prediction results from
+  an external API (e.g., nmrshiftdb peak predictions) and must return them to a client
+  application via HTTP POST response.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -21,13 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-020-00481-0
   title: ChemSpectra
-evidence_spans:
-- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run
-- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run --host=0.0.0.0
-  --port=3007
-- Use the file pyproject.toml to determine the version of Python required.
-- curl xxx.xxx.xxx.xxx:3007/ping
-- gunicorn -w 4 -b 0.0.0.0:3007 server:app --daemon
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

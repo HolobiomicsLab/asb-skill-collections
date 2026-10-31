@@ -1,6 +1,6 @@
 ---
 name: file-format-specification-compliance
-description: Use when when preparing metabolomics data (feature tables, sample metadata)
+description: Use when preparing metabolomics data (feature tables, sample metadata)
   for ingestion into a SECIMTools standalone tool, or when validating that a tool
   has produced outputs in the correct format and location. Apply this skill when format
   ambiguity exists (e.
@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-018-2134-1
   title: SECIMTools
-evidence_spans:
-- can be run in a standalone mode or via Galaxy Genomics Framework
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -31,12 +31,6 @@ metadata:
 derived_from:
 - doi: 10.1007/s00216-023-04715-6
   title: AriumMS
-evidence_spans:
-- functions (ROIpeaks, MSroiaug) developed by Romà Tauler, Eva Gorrochategui and Joaquim
-  Jaumot
-- 'Required toolboxes for the app version: Bioinformatic Toolbox, Statistics And Machine
-  Learning Toolbox, Wavelet Toolbox, Image Processing Toolbox, Signal Processing Toolbox,
-  Parallel Computing'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

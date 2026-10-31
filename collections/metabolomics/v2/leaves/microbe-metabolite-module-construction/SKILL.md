@@ -1,7 +1,7 @@
 ---
 name: microbe-metabolite-module-construction
-description: Use when when you have trained multi-layer perceptron neural network
-  models on paired microbiome-metabolome data (from ≥10-fold cross-validation iterations)
+description: Use when you have trained multi-layer perceptron neural network models
+  on paired microbiome-metabolome data (from ≥10-fold cross-validation iterations)
   and need to identify functional modules—groups of microbes and metabolites with
   co-varying or synergistic relationships—for systems-level.
 license: CC-BY-4.0
@@ -23,14 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
-evidence_spans:
-- Weighted correlation network analysis (WGCNA) of microbial features was performed
-  using the WGCNA library in R
-- compared the microbial modules in the IBD (PRISM) dataset identified by MiMeNet
-  to those identified by the Weighted Correlation Network Analysis (WGCNA)
-- using Seaborn's clustermap function in Python
-- using Cytoscape
-- using Python's sci-kit-learn package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: nextflow-workflow-orchestration
-description: Use when when you need to coordinate multiple bioinformatics tools (quality
+description: Use when you need to coordinate multiple bioinformatics tools (quality
   control, alignment, quantification, normalization, batch correction) across diverse
   compute environments (HPC, cloud, local) while ensuring reproducibility and parameter
   traceability.
@@ -30,15 +30,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator
-evidence_spans:
-- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger,
-  limma, sva'
-- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger,
-  limma, sva, ggplot2, ComplexHeatmap'
-- 'R packages: DESeq2, edger, RankProd, ggplot2 ComplexHeatmap'
-- The pipeline is built using [Nextflow](https://www.nextflow.io) version 23.04.2.5870
-- The pipeline is built using [Nextflow](https://www.nextflow.io) version 23.04.2.5870
-  (IMPORTANT), a workflow tool to run tasks across multiple compute infrastructures
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

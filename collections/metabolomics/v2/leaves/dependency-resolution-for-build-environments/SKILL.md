@@ -1,6 +1,6 @@
 ---
 name: dependency-resolution-for-build-environments
-description: Use when when preparing to build LipidSpace or similar desktop/CLI applications
+description: Use when preparing to build LipidSpace or similar desktop/CLI applications
   from source across multiple target platforms (Windows 10, Ubuntu 22.04, macOS 12+
   ARM64), or when encountering build failures due to missing headers, libraries, or
   incompatible tool versions.
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c02449
   title: LipidSpace
-evidence_spans:
-- LipidSpace is a stand-alone tool to analyze and compare lipidomes
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

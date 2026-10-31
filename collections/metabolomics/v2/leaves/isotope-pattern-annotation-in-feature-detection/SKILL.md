@@ -1,7 +1,7 @@
 ---
 name: isotope-pattern-annotation-in-feature-detection
-description: Use when when performing feature detection on centroided DDA mzML files
-  from LC- or GC-HRMS and you need to confirm the elemental composition or differentiate
+description: Use when performing feature detection on centroided DDA mzML files from
+  LC- or GC-HRMS and you need to confirm the elemental composition or differentiate
   between candidate features—particularly for PFAS screening where isotopic signatures
   (chlorine, bromine, fluorine) are diagnostic.
 license: CC-BY-4.0
@@ -23,13 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
-evidence_spans:
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
-  in MS raw data
-- pyOpenMS (Python interface to the C++ OpenMS library)
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
-  in MS raw data.
-- PFΔScreen is an open-source Python based non-target screening software tool
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

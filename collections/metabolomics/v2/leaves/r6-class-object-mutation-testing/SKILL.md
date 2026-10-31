@@ -1,6 +1,6 @@
 ---
 name: r6-class-object-mutation-testing
-description: Use when when applying a series of mpactr filter functions (filter_mispicked_ions,
+description: Use when applying a series of mpactr filter functions (filter_mispicked_ions,
   filter_group, filter_cv, filter_insource_ions) with copy_object=FALSE to confirm
   that the original peak table object is mutated as intended, not silently copied.
 license: CC-BY-4.0
@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.2c04632
   title: MPACT
-evidence_spans:
-- To import these data into R, use the mpactr function
-- We will be using multiple libraries for data analysis and visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

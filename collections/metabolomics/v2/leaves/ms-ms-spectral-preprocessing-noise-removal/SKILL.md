@@ -1,7 +1,7 @@
 ---
 name: ms-ms-spectral-preprocessing-noise-removal
-description: Use when when you have raw MS/MS spectra (from NIST, MassBank, or local
-  acquisition) and plan to compute spectral similarity for compound identification.
+description: Use when you have raw MS/MS spectra (from NIST, MassBank, or local acquisition)
+  and plan to compute spectral similarity for compound identification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -21,11 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-021-01331-z
   title: Spectral entropy
-evidence_spans:
-- These are all integrated into the [MSEntropy package
-- These are all integrated into the MSEntropy package (https://github.com/YuanyueLi/MSEntropy)
-- This repository contains the original source code for the paper
-- '.. automodule:: spectral_similarity :members:'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

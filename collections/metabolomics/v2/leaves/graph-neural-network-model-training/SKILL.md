@@ -1,8 +1,8 @@
 ---
 name: graph-neural-network-model-training
-description: Use when when you have a molecular dataset (e.g., SMRT retention-time
-  pairs) that you want to model as node-and-edge graphs, a PyTorch + PyG architecture
-  already instantiated, and need to perform supervised training with checkpoint persistence
+description: Use when you have a molecular dataset (e.g., SMRT retention-time pairs)
+  that you want to model as node-and-edge graphs, a PyTorch + PyG architecture already
+  instantiated, and need to perform supervised training with checkpoint persistence
   and per-epoch metric logging.
 license: CC-BY-4.0
 metadata:
@@ -29,13 +29,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jcim.4c02179
   title: ABCoRT
-evidence_spans:
-- '**Python**'
-- '**PyG**'
-- '**RDKit**'
-- '- **RDKit**'
-- '**NumPy**'
-- '**Pandas**'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: msms-spectrum-object-instantiation
-description: Use when when you have successfully resolved a USI string to extract
-  raw spectrum data from an online proteomics/metabolomics repository (PRIDE, MassIVE,
-  etc.) and need to construct a spectrum object that exposes spectrum data as Python
-  attributes and methods for downstream processing (filtering.
+description: Use when you have successfully resolved a USI string to extract raw spectrum
+  data from an online proteomics/metabolomics repository (PRIDE, MassIVE, etc.) and
+  need to construct a spectrum object that exposes spectrum data as Python attributes
+  and methods for downstream processing (filtering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -20,11 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
-evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing
-  and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing
-  and visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

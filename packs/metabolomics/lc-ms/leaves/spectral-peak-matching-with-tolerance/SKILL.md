@@ -1,9 +1,9 @@
 ---
 name: spectral-peak-matching-with-tolerance
-description: Use when when comparing a query MS/MS spectrum (e.g., from an unknown
-  metabolite) against a library spectrum to establish correspondence between peaks.
-  Use this skill before calculating similarity scores (cosine, entropy, Bhattacharyya)
-  or when applying penalty factors to unmatched peaks.
+description: Use when comparing a query MS/MS spectrum (e.g., from an unknown metabolite)
+  against a library spectrum to establish correspondence between peaks. Use this skill
+  before calculating similarity scores (cosine, entropy, Bhattacharyya) or when applying
+  penalty factors to unmatched peaks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -21,7 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c02047
   title: Reverse Spectral Search
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

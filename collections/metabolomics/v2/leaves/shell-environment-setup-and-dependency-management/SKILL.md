@@ -1,8 +1,8 @@
 ---
 name: shell-environment-setup-and-dependency-management
-description: Use when when you need to verify that a GitHub Actions workflow (e.g.,
-  main.yml) executes successfully on your local machine, reproduce a reported passing
-  or failing CI build status, or debug why a workflow badge reports success/failure.
+description: Use when you need to verify that a GitHub Actions workflow (e.g., main.yml)
+  executes successfully on your local machine, reproduce a reported passing or failing
+  CI build status, or debug why a workflow badge reports success/failure.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -18,9 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
-evidence_spans:
-- Clone the Met-ID repository
-- Powered by RDKit
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

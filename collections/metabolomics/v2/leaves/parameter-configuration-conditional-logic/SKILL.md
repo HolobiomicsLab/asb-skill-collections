@@ -17,9 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1007/s00216-021-03392-7
   title: FluoroMatch 2.0
-evidence_spans:
-- 'put Modular.r into two directories (replace existing code): `LipidMatch-4.2\Flow\LipidMatch_Distribution`'
-- put Modular.r into two directories
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,7 +1,7 @@
 ---
 name: source-code-inspection-for-preprocessing-steps
-description: Use when when you need to verify that a specific data transformation
-  (e.g., precursor m/z zeroing, feature scaling, or field masking) is applied consistently
+description: Use when you need to verify that a specific data transformation (e.g.,
+  precursor m/z zeroing, feature scaling, or field masking) is applied consistently
   across multiple execution workflows (training, evaluation, inference) in a codebase.
 license: CC-BY-4.0
 metadata:
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
-evidence_spans:
-- 'CLI and Python API: [msfiddle](https://github.com/josiehong/msfiddle)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

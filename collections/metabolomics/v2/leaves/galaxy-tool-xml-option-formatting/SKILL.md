@@ -1,9 +1,9 @@
 ---
 name: galaxy-tool-xml-option-formatting
-description: Use when when integrating a multi-backend metadata enrichment package
-  (like MSMetaEnhancer) into Galaxy, and you need to expose all supported conversion
-  options—such as SMILES, InChI, or CAS number conversions across multiple web services
-  (CIR, CTS, PubChem, IDSM, BridgeDb) and compute backends.
+description: Use when integrating a multi-backend metadata enrichment package (like
+  MSMetaEnhancer) into Galaxy, and you need to expose all supported conversion options—such
+  as SMILES, InChI, or CAS number conversions across multiple web services (CIR, CTS,
+  PubChem, IDSM, BridgeDb) and compute backends.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -27,13 +27,6 @@ metadata:
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer
-evidence_spans:
-- '**MSMetaEnhancer** is a tool used for `.msp` files annotation'
-- '`MSMetaEnhancer/libs/converters/web/` named after your service'
-- 'Converter Builder: Automatically discovers and instantiates available converters'
-- 'MSMetaEnhancer: A Python package for mass spectra metadata annotation'
-- Create a new Python file in `MSMetaEnhancer/libs/converters/web/`
-- make sure the existing tests still work by running ``pytest``
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

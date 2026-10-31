@@ -1,6 +1,6 @@
 ---
 name: lc-ms-gradient-encoding-vector-representation
-description: Use when when you have a set of candidate LC gradients (parameter combinations)
+description: Use when you have a set of candidate LC gradients (parameter combinations)
   that you wish to evaluate with a Gaussian process model, or when you need to convert
   raw gradient specifications into a standardized numerical format for Bayesian optimization
   acquisition function computation.
@@ -25,14 +25,6 @@ derived_from:
   title: BAGO
 - doi: 10.1002/9780470508183
   title: ''
-evidence_spans:
-- BAGO is a Bayesian optimization strategy for LC gradient optimization for MS-based
-  small molecule analysis
-- A :class:`ms1Spectrum` object (supported by :mod:`bago`)
-- A :class:`MSExperiment` object (supported by :mod:`pyopenms`)
-- a :class:`sklearn.preprocessing.StandardScaler` object used to scale the data
-- a :class:`sklearn.gaussian_process.GaussianProcessRegressor` object
-- Download and install Python 3.8 or later from `python.org`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

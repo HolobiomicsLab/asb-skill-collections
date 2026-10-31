@@ -1,6 +1,6 @@
 ---
 name: sample-missingness-filtering
-description: Use when when you have loaded (un)targeted metabolite data into a Metaboprep
+description: Use when you have loaded (un)targeted metabolite data into a Metaboprep
   object and need to exclude samples with excessive missing values before quality
   control or statistical analysis. This is typically applied early in the QC pipeline
   when sample-level data completeness is a concern (e.
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btac059
   title: Metaboprep
-evidence_spans:
-- library(metaboprep)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

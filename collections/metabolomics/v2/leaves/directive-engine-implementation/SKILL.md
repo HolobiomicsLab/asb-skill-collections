@@ -1,9 +1,9 @@
 ---
 name: directive-engine-implementation
-description: Use when when you have intermediate JSON data that must be selectively
-  transformed or enriched according to declarative conversion rules—for example, when
-  extracting experimental metadata from tabular spreadsheets, you need to map certain
-  fields to computed or filtered values, apply conditional.
+description: Use when you have intermediate JSON data that must be selectively transformed
+  or enriched according to declarative conversion rules—for example, when extracting
+  experimental metadata from tabular spreadsheets, you need to map certain fields
+  to computed or filtered values, apply conditional logic.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -21,10 +21,6 @@ derived_from:
   title: messes
 - doi: 10.3390/metabo11030163
   title: ''
-evidence_spans:
-- MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema
-  <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

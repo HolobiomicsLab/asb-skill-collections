@@ -1,6 +1,6 @@
 ---
 name: ion-mobility-dimension-interpolation
-description: Use when when processing raw IM-MS data (Agilent MassHunter .
+description: Use when processing raw IM-MS data (Agilent MassHunter .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3195
@@ -20,14 +20,6 @@ derived_from:
   title: PNNL PreProcessor
 - doi: 10.1021/acs.jproteome.1c00425
   title: ''
-evidence_spans:
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
-  spectrometry data files
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
-  spectrometry data files (MS-files) from drift tube (DT) and structure for lossless
-  ion manipulations (SLIM) IM-MS
-- Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files)
-- Agilent MassHunter (.d) and UIMF mass spectrometry data files
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

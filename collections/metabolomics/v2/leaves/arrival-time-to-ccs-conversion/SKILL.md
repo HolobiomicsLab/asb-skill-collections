@@ -1,6 +1,6 @@
 ---
 name: arrival-time-to-ccs-conversion
-description: Use when when you have raw TWIM-MS arrival-time data and need to transform
+description: Use when you have raw TWIM-MS arrival-time data and need to transform
   it into absolute CCS values for downstream biomolecular class assignment or comparative
   analysis.
 license: CC-BY-4.0
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
-evidence_spans:
-- MOCCal, or Multi-Omic CCS Calibrator, is a Python application
-- HinesLab/MOCCal
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

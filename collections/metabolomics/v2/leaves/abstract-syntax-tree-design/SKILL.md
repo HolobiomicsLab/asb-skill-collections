@@ -1,7 +1,7 @@
 ---
 name: abstract-syntax-tree-design
-description: Use when when you have a domain-specific query language (such as MassQL
-  for mass spectrometry) and need to convert query strings into structured representations
+description: Use when you have a domain-specific query language (such as MassQL for
+  mass spectrometry) and need to convert query strings into structured representations
   that preserve domain constraints (e.g., mass tolerance, scan type, intensity thresholds).
 license: CC-BY-4.0
 metadata:
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-025-02785-1
   title: MassQL
-evidence_spans:
-- It is inspired by SQL, but it attempts to bake in assumptions of mass spectrometry
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,8 +1,8 @@
 ---
 name: lipid-adduct-pairing-by-neutral-mass
-description: Use when when processing mass spectrometry imaging data with multiple
-  adduct forms of the same lipid species, and you need to correct one adduct form
-  (e.g. [M+H]+) for isotopic interference from a co-occurring adduct (e.g. [M+Na]+).
+description: Use when processing mass spectrometry imaging data with multiple adduct
+  forms of the same lipid species, and you need to correct one adduct form (e.g. [M+H]+)
+  for isotopic interference from a co-occurring adduct (e.g. [M+Na]+).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -19,10 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2025.10.15.682422v1
   title: LipidQMap
-evidence_spans:
-- LipidQMap writes MSI exports as HDF5 containers
-- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org)
-  conventions.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

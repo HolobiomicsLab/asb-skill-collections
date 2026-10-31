@@ -1,9 +1,9 @@
 ---
 name: polymorphic-class-dispatch-in-python
-description: Use when when you have multiple file format variants (compressed indexed
-  gzip, standard gzip, SQLite database, uncompressed mzML) that all need to be read
-  via a unified interface, and you want to avoid a long chain of conditional logic
-  in client code.
+description: Use when you have multiple file format variants (compressed indexed gzip,
+  standard gzip, SQLite database, uncompressed mzML) that all need to be read via
+  a unified interface, and you want to avoid a long chain of conditional logic in
+  client code.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
-evidence_spans:
-- import sqlite3 import os from pymzml import spec
-- import sqlite3
-- import xml.etree.ElementTree as et
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

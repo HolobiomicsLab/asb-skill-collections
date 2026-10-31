@@ -1,6 +1,6 @@
 ---
 name: multiprocessing-process-spawning-and-pid-management
-description: 'Use when when deploying a Streamlit workflow app in offline mode (online_deployment:
+description: 'Use when deploying a Streamlit workflow app in offline mode (online_deployment:
   false) or when Redis is unavailable in online mode, and you need to launch workflows
   as independent background processes while maintaining the ability to track, recover,
   or cancel them later by their PID.'
@@ -17,10 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
-evidence_spans:
-- '| **Local** (`online_deployment: false`) | None | `multiprocessing.Process`'
-- No code changes required for offline mode. The detection happens automatically
-- as well as deployment with docker-compose.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

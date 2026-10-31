@@ -27,10 +27,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-021-00530-2
   title: MassSpecBlocks
-evidence_spans:
-- find structures on other chemical projects like ChEBI
-- find structures on other chemical projects like NP Atlas
-- Backend is written in PHP with Symfony framework
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

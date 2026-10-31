@@ -1,7 +1,7 @@
 ---
 name: development-environment-setup
-description: Use when when you have cloned a Python package repository and need to
-  prepare a working environment for development, debugging, or contribution. Specifically
+description: Use when you have cloned a Python package repository and need to prepare
+  a working environment for development, debugging, or contribution. Specifically
   when the package declares dev dependencies in setup.py or pyproject.toml and maintains
   a pytest test suite in a tests/ directory.
 license: CC-BY-4.0
@@ -19,11 +19,6 @@ metadata:
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni
-evidence_spans:
-- pip install -e .[dev]
-- biosynfoni
-- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic
-  research
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

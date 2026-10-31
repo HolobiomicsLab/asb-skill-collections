@@ -1,7 +1,7 @@
 ---
 name: cheminformatics-table-generation
-description: Use when when you have standardized molecular structures (SMILES or SDF
-  format) and need to compute molecular fingerprint bits and chemical property descriptors
+description: Use when you have standardized molecular structures (SMILES or SDF format)
+  and need to compute molecular fingerprint bits and chemical property descriptors
   for downstream retention time prediction, molecular classification, or machine-learning-based
   identification tasks.
 license: CC-BY-4.0
@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-023-02143-z
   title: RepoRT (retention-time repository)
-evidence_spans:
-- molecular fingerprints and chemical descriptors are calculated using rcdk
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

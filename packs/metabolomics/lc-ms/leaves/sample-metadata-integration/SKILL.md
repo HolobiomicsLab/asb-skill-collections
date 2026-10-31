@@ -1,9 +1,9 @@
 ---
 name: sample-metadata-integration
-description: Use when when you have LC-MS peak table data in Excel format (e.g., from
-  MS-DIAL peak picking) with separate compartments for sample information, feature
-  properties, and intensity values, and you need to construct a structured R object
-  that enforces consistency between sample metadata (e.
+description: Use when you have LC-MS peak table data in Excel format (e.g., from MS-DIAL
+  peak picking) with separate compartments for sample information, feature properties,
+  and intensity values, and you need to construct a structured R object that enforces
+  consistency between sample metadata (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3925
@@ -25,14 +25,6 @@ derived_from:
   title: notame
 - doi: 10.1093/bioinformatics/btr597
   title: ''
-evidence_spans:
-- This package can be used to analyze preprocessed LC-MS data in non-targeted metabolomics
-- library(notame)
-- reads them to R, conducts additional preprocessing and statistical analyses
-- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package
-  by Bioconductor'
-- '```MetaboSet``` objects are the primary data structure of this package. ```MetaboSet```
-  is built upon the ```ExpressionSet``` class'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

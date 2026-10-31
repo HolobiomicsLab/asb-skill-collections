@@ -1,9 +1,8 @@
 ---
 name: instrument-metadata-classification
-description: Use when when preprocessing a heterogeneous spectral library (e.g., GNPS
-  public library) that contains spectra from multiple instrument types, and you need
-  to partition data by a single instrument class to train or evaluate a formula-prediction
-  model.
+description: Use when preprocessing a heterogeneous spectral library (e.g., GNPS public
+  library) that contains spectra from multiple instrument types, and you need to partition
+  data by a single instrument class to train or evaluate a formula-prediction model.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -20,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
-evidence_spans:
-- 'CLI and Python API: [msfiddle](https://github.com/josiehong/msfiddle)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

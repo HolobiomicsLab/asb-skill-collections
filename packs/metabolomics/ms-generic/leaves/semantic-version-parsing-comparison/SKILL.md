@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.0c05022
   title: DaDIA
-evidence_spans:
-- R Version 4.0 or above
-- XCMS Development Version 3.11.4 or above
-- metaMS Version 1.25.1
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

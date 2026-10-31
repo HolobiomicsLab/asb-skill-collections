@@ -32,12 +32,6 @@ derived_from:
   title: ''
 - doi: 10.1186/s12859-023-05149-8
   title: ''
-evidence_spans:
-- biosynfoni
-- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic
-  research
-- pip install -e .[dev]
-- Final candidate selection is done in Python using RDKit and PubChemPy
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

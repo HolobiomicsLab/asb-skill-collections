@@ -1,8 +1,8 @@
 ---
 name: fragment-level-spectrum-prediction
-description: Use when when you have a molecular structure (SMILES, InChI, or chemical
-  formula) and need to predict its tandem mass spectrum for structural elucidation
-  or mass spectrometry validation.
+description: Use when you have a molecular structure (SMILES, InChI, or chemical formula)
+  and need to predict its tandem mass spectrum for structural elucidation or mass
+  spectrometry validation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -23,9 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c04654
   title: ICEBERG / fragmentation graph generation
-evidence_spans:
-- github.com__samgoldman97__ms-pred
-- You can run ICEBERG structural elucidation easily at http://iceberg-ms.mit.edu/
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

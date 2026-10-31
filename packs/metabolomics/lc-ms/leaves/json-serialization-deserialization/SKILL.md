@@ -1,6 +1,6 @@
 ---
 name: json-serialization-deserialization
-description: Use when when you have completed a computational step (e.g., corpus feature
+description: Use when you have completed a computational step (e.g., corpus feature
   extraction or gensim LDA inference) and need to persist the result for later retrieval,
   pass it to a separate process (e.g., Celery task), or load it into a database.
 license: CC-BY-4.0
@@ -22,8 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
-evidence_spans:
-- pipenv --python 2.7
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

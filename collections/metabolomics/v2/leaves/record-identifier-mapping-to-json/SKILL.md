@@ -1,6 +1,6 @@
 ---
 name: record-identifier-mapping-to-json
-description: 'Use when when you have a tagged tabular file (Excel or CSV) with columns
+description: 'Use when you have a tagged tabular file (Excel or CSV) with columns
   marked using export tag syntax (e.g., #study.id, #subject.id, #.'
 license: CC-BY-4.0
 metadata:
@@ -19,8 +19,6 @@ derived_from:
   title: messes
 - doi: 10.3390/metabo11030163
   title: ''
-evidence_spans:
-- MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

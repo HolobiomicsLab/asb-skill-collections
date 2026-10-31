@@ -1,7 +1,7 @@
 ---
 name: mass-spectrum-visualization
-description: Use when when you have extracted m/z and intensity arrays from an MZA
-  file (or similar HDF5-backed MS data structure) and need to visually inspect a single
+description: Use when you have extracted m/z and intensity arrays from an MZA file
+  (or similar HDF5-backed MS data structure) and need to visually inspect a single
   MS1 or MS2 spectrum, verify peak characteristics, or diagnose data quality issues
   before downstream analysis (peak fitting, isotope pattern.
 license: CC-BY-4.0
@@ -25,9 +25,6 @@ derived_from:
   title: mzapy
 - doi: 10.1021/acs.jproteome.2c00313
   title: ''
-evidence_spans:
-- '* ``numpy``'
-- Dependencies ------------------------------ * ``numpy``
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

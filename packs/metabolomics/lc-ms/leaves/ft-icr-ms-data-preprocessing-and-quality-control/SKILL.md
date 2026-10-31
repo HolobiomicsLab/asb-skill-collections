@@ -1,6 +1,9 @@
 ---
 name: ft-icr-ms-data-preprocessing-and-quality-control
-description: Use when when you have raw or processed FT-ICR MS peak-abundance .
+description: Use when you have raw or processed FT-ICR MS peak-abundance .csv files
+  with assigned molecular formulas (m/z values, elemental composition, measured abundance
+  across samples) and need to remove noise, isotopic artifacts, and low-confidence
+  assignments before multivariate or chemodiversity analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -26,14 +29,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
-evidence_spans:
-- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
-  (e.g., chemodiversity analysis, multivariate statistics)
-- The MetaboDirect pipeline was developed in Python 3.8
-- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2
-- It requires the Python dependencies NumPy
-- It requires the Python dependencies NumPy [40], pandas
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

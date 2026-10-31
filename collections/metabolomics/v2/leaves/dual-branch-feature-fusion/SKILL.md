@@ -1,8 +1,8 @@
 ---
 name: dual-branch-feature-fusion
-description: Use when when you have molecular input data available in two or more
-  distinct formats (e.g., RDKit-extracted fingerprints AND torch_geometric Graph objects
-  representing molecular topology) and your prediction target (e.
+description: Use when you have molecular input data available in two or more distinct
+  formats (e.g., RDKit-extracted fingerprints AND torch_geometric Graph objects representing
+  molecular topology) and your prediction target (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -29,12 +29,6 @@ derived_from:
   title: RT-Transformer
 - doi: 10.1038/s41467-019-13680-7
   title: ''
-evidence_spans:
-- Python 3.9
-- torch
-- torch-scatter
-- torch-sparse
-- torch-cluster
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

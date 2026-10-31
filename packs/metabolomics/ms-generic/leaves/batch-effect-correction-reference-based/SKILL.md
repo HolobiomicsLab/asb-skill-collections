@@ -1,7 +1,7 @@
 ---
 name: batch-effect-correction-reference-based
-description: Use when when you have log-transformed metabolite abundance data from
-  multiple batches (e.
+description: Use when you have log-transformed metabolite abundance data from multiple
+  batches (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.2c05748
   title: CordBat
-evidence_spans:
-- fit <- CordBat( X = X_mat, batch = batch_vec, group = group_vec, ref.batch = "Ref",
-  grouping = FALSE, print.detail = FALSE )
-- '%\VignetteEngine{knitr::rmarkdown}'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

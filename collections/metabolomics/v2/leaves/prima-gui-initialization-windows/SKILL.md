@@ -17,8 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1002/cpz1.70009
   title: LipidOne 2.0
-evidence_spans:
-- Graphical User Interface, developed by using Perl Prima
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

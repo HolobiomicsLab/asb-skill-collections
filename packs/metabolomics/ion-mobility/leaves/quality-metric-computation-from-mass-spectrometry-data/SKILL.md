@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-024-54871-1
   title: iDIA-QC
-evidence_spans:
-- uses msConvert for file conversion to extracted precursor ion chromatogram (PIC)
-- iDIA-QC is a Python Graphical User Interface (GUI)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

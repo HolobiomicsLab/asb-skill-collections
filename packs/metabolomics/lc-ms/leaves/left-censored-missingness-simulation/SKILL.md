@@ -1,8 +1,8 @@
 ---
 name: left-censored-missingness-simulation
-description: Use when when you have a complete metabolomics abundance table (e.g.,
-  targeted LC/MS or untargeted GC/MS counts) and need to generate synthetic left-censored
-  missingness for evaluating imputation algorithm performance.
+description: Use when you have a complete metabolomics abundance table (e.g., targeted
+  LC/MS or untargeted GC/MS counts) and need to generate synthetic left-censored missingness
+  for evaluating imputation algorithm performance.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -27,9 +27,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp
-evidence_spans:
-- '**GSimp.R** contains the core functions for GSimp'
-- GSimp.R contains the core functions for GSimp
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

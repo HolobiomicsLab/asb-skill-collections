@@ -2,7 +2,7 @@
  {
   "slug": "2d-nmr-pulse-sequence-implementation",
   "name": "2d-nmr-pulse-sequence-implementation",
-  "description": "Use when when you need to generate 2D metabolomic NMR spectra (COSY for homonuclear or HSQC/HMQC for heteronuclear correlations) from parsed metabolite concentration and spin-system J-coupling data, and you want to simulate realistic peak patterns including indirect-dimension evolution and phase.",
+  "description": "Use when you need to generate 2D metabolomic NMR spectra (COSY for homonuclear or HSQC/HMQC for heteronuclear correlations) from parsed metabolite concentration and spin-system J-coupling data, and you want to simulate realistic peak patterns including indirect-dimension evolution and phase.",
   "edam_operation": "http://edamontology.org/operation_3625",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -90,7 +90,7 @@
  {
   "slug": "algorithm-parameter-comparison-analysis",
   "name": "algorithm-parameter-comparison-analysis",
-  "description": "Use when when you need to evaluate how a specific algorithm parameter (such as SearchMolecularFormulas first_hit mode) affects the quantity and quality of molecular formula assignments on a given spectrum or dataset.",
+  "description": "Use when you need to evaluate how a specific algorithm parameter (such as SearchMolecularFormulas first_hit mode) affects the quantity and quality of molecular formula assignments on a given spectrum or dataset.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -330,7 +330,7 @@
  {
   "slug": "bioassay-activity-data-integration",
   "name": "bioassay-activity-data-integration",
-  "description": "Use when when you have (1) a molecular network graph from GNPS with node identifiers and edges, (2) LC-MS/MS features quantified across fractions in a feature table, and (3) bioassay measurements (e.",
+  "description": "Use when you have (1) a molecular network graph from GNPS with node identifiers and edges, (2) LC-MS/MS features quantified across fractions in a feature table, and (3) bioassay measurements (e.",
   "edam_operation": "http://edamontology.org/operation_3634",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -395,7 +395,7 @@
  {
   "slug": "block-layout-analysis-for-io-optimization",
   "name": "block-layout-analysis-for-io-optimization",
-  "description": "Use when when preparing NMR datasets for processing in NMRFx and the Dataset.createDataFile() method must choose among competing storage backends.",
+  "description": "Use when preparing NMR datasets for processing in NMRFx and the Dataset.createDataFile() method must choose among competing storage backends.",
   "edam_operation": "",
   "edam_topics": [],
   "tools": [
@@ -417,7 +417,7 @@
  {
   "slug": "blood-sample-processing-parameter-extraction",
   "name": "blood-sample-processing-parameter-extraction",
-  "description": "Use when when you have peripheral blood sample cohorts (plasma/serum) with multiple timestamps (e.",
+  "description": "Use when you have peripheral blood sample cohorts (plasma/serum) with multiple timestamps (e.",
   "edam_operation": "http://edamontology.org/operation_3096",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -661,7 +661,7 @@
  {
   "slug": "chemical-shift-annotation",
   "name": "chemical-shift-annotation",
-  "description": "Use when when you have preprocessed 1H NMR spectral data with unidentified peaks and need to determine metabolite identity by exploiting the correlation structure of NMR signals.",
+  "description": "Use when you have preprocessed 1H NMR spectral data with unidentified peaks and need to determine metabolite identity by exploiting the correlation structure of NMR signals.",
   "edam_operation": "http://edamontology.org/operation_3214",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -745,7 +745,7 @@
  {
   "slug": "chemical-shift-reference-matching",
   "name": "chemical-shift-reference-matching",
-  "description": "Use when when preparing an input spectral peak list for NMRformer or similar Transformer-based peak assignment models, and you have observed peaks whose chemical shifts do not align with known metabolite signatures.",
+  "description": "Use when preparing an input spectral peak list for NMRformer or similar Transformer-based peak assignment models, and you have observed peaks whose chemical shifts do not align with known metabolite signatures.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_0593",
@@ -926,7 +926,7 @@
  {
   "slug": "cohort-stratified-metabolic-performance-analysis",
   "name": "cohort-stratified-metabolic-performance-analysis",
-  "description": "Use when when you have uploaded a pre-analytical data table containing sample metadata, processing delay annotations (pre- and post-centrifugation times), and paired NMR metabolomic measurements for a plasma or serum cohort, and you need to determine how processing delays impact metabolite.",
+  "description": "Use when you have uploaded a pre-analytical data table containing sample metadata, processing delay annotations (pre- and post-centrifugation times), and paired NMR metabolomic measurements for a plasma or serum cohort, and you need to determine how processing delays impact metabolite stability.",
   "edam_operation": "http://edamontology.org/operation_3745",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -955,7 +955,7 @@
  {
   "slug": "column-name-variant-matching",
   "name": "column-name-variant-matching",
-  "description": "Use when when processing mwTab metabolomics data files with variable column naming conventions (e.",
+  "description": "Use when processing mwTab metabolomics data files with variable column naming conventions (e.",
   "edam_operation": "http://edamontology.org/operation_3096",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -986,7 +986,7 @@
  {
   "slug": "command-line-interface-invocation",
   "name": "command-line-interface-invocation",
-  "description": "Use when when you have installed a Python package and need to verify that its command-line entry point is accessible, or when you need to discover available commands and options for NMR data processing workflows without consulting external documentation.",
+  "description": "Use when you have installed a Python package and need to verify that its command-line entry point is accessible, or when you need to discover available commands and options for NMR data processing workflows without consulting external documentation.",
   "edam_operation": "",
   "edam_topics": [],
   "tools": [
@@ -1158,7 +1158,7 @@
  {
   "slug": "conditional-allocation-design-patterns",
   "name": "conditional-allocation-design-patterns",
-  "description": "Use when when designing a dataset storage layer that must handle variable dataset sizes, block layouts, and platform-specific constraints (e.g., Windows vs. non-Windows). Specifically: (1) you have parsed dataset metadata including cache-file flags, total point counts, and block configuration;",
+  "description": "Use when designing a dataset storage layer that must handle variable dataset sizes, block layouts, and platform-specific constraints (e.g., Windows vs. non-Windows). Specifically: (1) you have parsed dataset metadata including cache-file flags, total point counts, and block configuration;",
   "edam_operation": "",
   "edam_topics": [],
   "tools": [
@@ -1180,7 +1180,7 @@
  {
   "slug": "confounder-adjustment-epidemiological-analysis",
   "name": "confounder-adjustment-epidemiological-analysis",
-  "description": "Use when when testing associations between metabolic features (from NMR or MS) and a phenotype of interest (e.g., BMI, disease status) in a cohort where age, gender, or clinical confounders are known to correlate with both the metabolite and phenotype.",
+  "description": "Use when testing associations between metabolic features (from NMR or MS) and a phenotype of interest (e.g., BMI, disease status) in a cohort where age, gender, or clinical confounders are known to correlate with both the metabolite and phenotype.",
   "edam_operation": "http://edamontology.org/operation_3799",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -1311,7 +1311,7 @@
  {
   "slug": "cumulative-distribution-visualization",
   "name": "cumulative-distribution-visualization",
-  "description": "Use when when you have per-feature quality metrics (such as CV values from NMR or MS reproducibility analysis) and need to: (1) confirm that a specified proportion of features meet regulatory thresholds (e.g., 99% < 0.30, 92% < 0.15 for CV);",
+  "description": "Use when you have per-feature quality metrics (such as CV values from NMR or MS reproducibility analysis) and need to: (1) confirm that a specified proportion of features meet regulatory thresholds (e.g., 99% < 0.30, 92% < 0.15 for CV);",
   "edam_operation": "http://edamontology.org/operation_3695",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -1453,7 +1453,7 @@
  {
   "slug": "deep-learning-spectral-language-model",
   "name": "deep-learning-spectral-language-model",
-  "description": "Use when when you have an unknown compound's mass spectrum (m/z peaks and intensities in .mgf or equivalent format with mandatory PRECURSOR_MZ and IONMODE tags) and need to identify structurally related metabolites from a reference database.",
+  "description": "Use when you have an unknown compound's mass spectrum (m/z peaks and intensities in .mgf or equivalent format with mandatory PRECURSOR_MZ and IONMODE tags) and need to identify structurally related metabolites from a reference database.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_0625",
@@ -1479,7 +1479,7 @@
  {
   "slug": "dependency-version-management",
   "name": "dependency-version-management",
-  "description": "Use when when you need to document or reproduce a Python-based research application (or any package-dependent workflow) and discover that the original publication or repository specifies dependencies without versions, or when you want to verify that a documented set of pinned versions can be.",
+  "description": "Use when you need to document or reproduce a Python-based research application (or any package-dependent workflow) and discover that the original publication or repository specifies dependencies without versions, or when you want to verify that a documented set of pinned versions can be.",
   "edam_operation": "http://edamontology.org/operation_0004",
   "edam_topics": [
    "http://edamontology.org/topic_0769"
@@ -1515,7 +1515,7 @@
  {
   "slug": "diffusion-model-inference",
   "name": "diffusion-model-inference",
-  "description": "Use when when you have multi-modal spectroscopic data (IR, Raman, UV-Vis, mass spectra, or NMR) and need to recover the underlying molecular structure without relying on finite spectral libraries or autoregressive SMILES generation.",
+  "description": "Use when you have multi-modal spectroscopic data (IR, Raman, UV-Vis, mass spectra, or NMR) and need to recover the underlying molecular structure without relying on finite spectral libraries or autoregressive SMILES generation.",
   "edam_operation": "http://edamontology.org/operation_3680",
   "edam_topics": [
    "http://edamontology.org/topic_0154",
@@ -1619,7 +1619,7 @@
  {
   "slug": "endianness-detection-and-handling",
   "name": "endianness-detection-and-handling",
-  "description": "Use when when reading a binary file format with a magic integer or fixed checksum field at a known offset, and endianness is not explicitly declared in file metadata or header comments.",
+  "description": "Use when reading a binary file format with a magic integer or fixed checksum field at a known offset, and endianness is not explicitly declared in file metadata or header comments.",
   "edam_operation": "http://edamontology.org/operation_3763",
   "edam_topics": [
    "http://edamontology.org/topic_3307",
@@ -1644,7 +1644,7 @@
  {
   "slug": "entrypoint-verification",
   "name": "entrypoint-verification",
-  "description": "Use when when you have obtained a Python package from a repository (e.g., via git clone) and need to confirm that the documented Python version constraint and pinned dependency versions are sufficient to execute the package's main entry point (typically main.py or a console script).",
+  "description": "Use when you have obtained a Python package from a repository (e.g., via git clone) and need to confirm that the documented Python version constraint and pinned dependency versions are sufficient to execute the package's main entry point (typically main.py or a console script).",
   "edam_operation": "http://edamontology.org/operation_0004",
   "edam_topics": [
    "http://edamontology.org/topic_0091"
@@ -1767,7 +1767,7 @@
  {
   "slug": "file-api-endpoint-implementation",
   "name": "file-api-endpoint-implementation",
-  "description": "Use when when you need to construct a POST endpoint that ingests raw spectral data files from multiple vendor formats (jcamp, RAW, mzML) and must standardize them for downstream processing.",
+  "description": "Use when you need to construct a POST endpoint that ingests raw spectral data files from multiple vendor formats (jcamp, RAW, mzML) and must standardize them for downstream processing.",
   "edam_operation": "http://edamontology.org/operation_3357",
   "edam_topics": [
    "http://edamontology.org/topic_0593",
@@ -1826,7 +1826,7 @@
  {
   "slug": "form-encoded-request-handling",
   "name": "form-encoded-request-handling",
-  "description": "Use when when a web service must accept spectroscopic measurements (NMR peaks, IR/MS metadata) submitted as form-encoded POST parameters from a client, and those parameters need to be validated, reformatted into an external API query format, or passed to a downstream predictor service.",
+  "description": "Use when a web service must accept spectroscopic measurements (NMR peaks, IR/MS metadata) submitted as form-encoded POST parameters from a client, and those parameters need to be validated, reformatted into an external API query format, or passed to a downstream predictor service.",
   "edam_operation": "http://edamontology.org/operation_0004",
   "edam_topics": [
    "http://edamontology.org/topic_0593",
@@ -1862,7 +1862,7 @@
  {
   "slug": "fragment-assembly-transformer-architecture",
   "name": "fragment-assembly-transformer-architecture",
-  "description": "Use when when you have 1D NMR spectra (1H and/or 13C) of an unknown compound with up to ~19 heavy atoms and need to predict both molecular formula and connectivity without manual structure hypothesis generation.",
+  "description": "Use when you have 1D NMR spectra (1H and/or 13C) of an unknown compound with up to ~19 heavy atoms and need to predict both molecular formula and connectivity without manual structure hypothesis generation.",
   "edam_operation": "http://edamontology.org/operation_3803",
   "edam_topics": [
    "http://edamontology.org/topic_3324",
@@ -1892,7 +1892,7 @@
  {
   "slug": "fragment-ion-theoretical-mass-calculation",
   "name": "fragment-ion-theoretical-mass-calculation",
-  "description": "Use when when building a comprehensive lipid fragment ion library covering all chain composition and positional isomer variants (e.g., 168.6 million entries).",
+  "description": "Use when building a comprehensive lipid fragment ion library covering all chain composition and positional isomer variants (e.g., 168.6 million entries).",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_0153",
@@ -1920,7 +1920,7 @@
  {
   "slug": "fragment-to-structure-assembly",
   "name": "fragment-to-structure-assembly",
-  "description": "Use when when you have spectroscopic measurements (1D ¹H or ¹³C NMR) that have been decomposed into predicted substructures or fragments, and you need to reconstruct the full molecular formula and connectivity graph.",
+  "description": "Use when you have spectroscopic measurements (1D ¹H or ¹³C NMR) that have been decomposed into predicted substructures or fragments, and you need to reconstruct the full molecular formula and connectivity graph.",
   "edam_operation": "http://edamontology.org/operation_3802",
   "edam_topics": [
    "http://edamontology.org/topic_0154",
@@ -2026,7 +2026,7 @@
  {
   "slug": "graph-based-molecular-representation",
   "name": "graph-based-molecular-representation",
-  "description": "Use when when you have 1D NMR spectra (¹H and/or ¹³C) as input and need to predict complete molecular structure (both molecular formula and bond connectivity) for molecules with up to 19 heavy atoms.",
+  "description": "Use when you have 1D NMR spectra (¹H and/or ¹³C) as input and need to predict complete molecular structure (both molecular formula and bond connectivity) for molecules with up to 19 heavy atoms.",
   "edam_operation": "http://edamontology.org/operation_0337",
   "edam_topics": [
    "http://edamontology.org/topic_0154",
@@ -2154,7 +2154,7 @@
  {
   "slug": "http-api-endpoint-design",
   "name": "http-api-endpoint-design",
-  "description": "Use when when you need to expose a multi-step spectral processing workflow (parse → extract → render → annotate → compress) as a web service endpoint that accepts jcamp/RAW/mzML spectral files and must return coordinated output artifacts (modified JCAMP files, peak tables, and PNG images) in a.",
+  "description": "Use when you need to expose a multi-step spectral processing workflow (parse → extract → render → annotate → compress) as a web service endpoint that accepts jcamp/RAW/mzML spectral files and must return coordinated output artifacts (modified JCAMP files, peak tables, and PNG images) in a single.",
   "edam_operation": "http://edamontology.org/operation_3761",
   "edam_topics": [
    "http://edamontology.org/topic_0081",
@@ -2189,7 +2189,7 @@
  {
   "slug": "http-api-integration-with-external-services",
   "name": "http-api-integration-with-external-services",
-  "description": "Use when when your application needs to enrich or predict spectral properties (NMR peaks, molecular structure) by querying external databases, and you have peak data (chemical shift, multiplicity, integration) that must be transformed into a remote service's query format, validated, and the.",
+  "description": "Use when your application needs to enrich or predict spectral properties (NMR peaks, molecular structure) by querying external databases, and you have peak data (chemical shift, multiplicity, integration) that must be transformed into a remote service's query format, validated, and the response.",
   "edam_operation": "http://edamontology.org/operation_3436",
   "edam_topics": [
    "http://edamontology.org/topic_0593",
@@ -2280,7 +2280,7 @@
  {
   "slug": "in-silico-fragment-m-z-calculation",
   "name": "in-silico-fragment-m-z-calculation",
-  "description": "Use when when you have experimental UHPLC-HRMS/MS or direct infusion MS/MS data and need to identify lipid species by comparing observed fragment m/z values against a library of simulated fragments. Apply this skill when your lipid library is incomplete or specialized (e.",
+  "description": "Use when you have experimental UHPLC-HRMS/MS or direct infusion MS/MS data and need to identify lipid species by comparing observed fragment m/z values against a library of simulated fragments. Apply this skill when your lipid library is incomplete or specialized (e.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_0153",
@@ -2427,7 +2427,7 @@
  {
   "slug": "isotopic-impurity-accounting",
   "name": "isotopic-impurity-accounting",
-  "description": "Use when when analyzing LC-MS data from stable isotope labeling experiments where measured isotopologue abundances are contaminated by naturally occurring isotopes and tracer isotopic impurity, and you have access to unlabeled sample reference measurements to empirically model these confounding.",
+  "description": "Use when analyzing LC-MS data from stable isotope labeling experiments where measured isotopologue abundances are contaminated by naturally occurring isotopes and tracer isotopic impurity, and you have access to unlabeled sample reference measurements to empirically model these confounding.",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -2511,7 +2511,7 @@
  {
   "slug": "json-payload-construction-for-nmr-spectra",
   "name": "json-payload-construction-for-nmr-spectra",
-  "description": "Use when when you have NMR peak assignments (1H and 13C chemical shift values) and need to submit them to the /api/smart3/search endpoint for automated structure classification. Use this skill before making API calls to ensure peak data conforms to the expected JSON schema.",
+  "description": "Use when you have NMR peak assignments (1H and 13C chemical shift values) and need to submit them to the /api/smart3/search endpoint for automated structure classification. Use this skill before making API calls to ensure peak data conforms to the expected JSON schema.",
   "edam_operation": "http://edamontology.org/operation_3763",
   "edam_topics": [
    "http://edamontology.org/topic_0593"
@@ -2537,7 +2537,7 @@
  {
   "slug": "json-response-serialization",
   "name": "json-response-serialization",
-  "description": "Use when when a backend service receives structured prediction results from an external API (e.g., nmrshiftdb peak predictions) and must return them to a client application via HTTP POST response.",
+  "description": "Use when a backend service receives structured prediction results from an external API (e.g., nmrshiftdb peak predictions) and must return them to a client application via HTTP POST response.",
   "edam_operation": "http://edamontology.org/operation_3763",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -2610,7 +2610,7 @@
  {
   "slug": "linear-score-calculation-from-coefficients",
   "name": "linear-score-calculation-from-coefficients",
-  "description": "Use when when you have 1H-NMR metabolite measurements from Nightingale Health assayed on a new cohort and wish to compute risk scores (e.g., all-cause mortality, cardiovascular event, type 2 diabetes) using published metabolic biomarker weights from a reference study.",
+  "description": "Use when you have 1H-NMR metabolite measurements from Nightingale Health assayed on a new cohort and wish to compute risk scores (e.g., all-cause mortality, cardiovascular event, type 2 diabetes) using published metabolic biomarker weights from a reference study.",
   "edam_operation": "http://edamontology.org/operation_3799",
   "edam_topics": [
    "http://edamontology.org/topic_0769",
@@ -2941,7 +2941,7 @@
  {
   "slug": "metabolic-parameter-visualization",
   "name": "metabolic-parameter-visualization",
-  "description": "Use when when you have paired NMR metabolite measurements and corresponding processing metadata (pre-centrifugation delay, post-centrifugation delay, sample type, cohort) for a blood sample cohort and need to determine which metabolites remain stable across the expected or observed delay range, or.",
+  "description": "Use when you have paired NMR metabolite measurements and corresponding processing metadata (pre-centrifugation delay, post-centrifugation delay, sample type, cohort) for a blood sample cohort and need to determine which metabolites remain stable across the expected or observed delay range, or to.",
   "edam_operation": "http://edamontology.org/operation_0337",
   "edam_topics": [
    "http://edamontology.org/topic_0769",
@@ -2968,7 +2968,7 @@
  {
   "slug": "metabolite-concentration-to-spectrum-mapping",
   "name": "metabolite-concentration-to-spectrum-mapping",
-  "description": "Use when when you have a list of known metabolite concentrations and their corresponding J-coupling constants (spin systems) and need to generate realistic 1D 1H NMR spectra or 2D correlation spectra (COSY, HSQC, HMQC) for simulation, validation, or educational purposes, without access to actual.",
+  "description": "Use when you have a list of known metabolite concentrations and their corresponding J-coupling constants (spin systems) and need to generate realistic 1D 1H NMR spectra or 2D correlation spectra (COSY, HSQC, HMQC) for simulation, validation, or educational purposes, without access to actual.",
   "edam_operation": "http://edamontology.org/operation_3441",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -3074,7 +3074,7 @@
  {
   "slug": "metabolite-identification-from-transformation-rules",
   "name": "metabolite-identification-from-transformation-rules",
-  "description": "Use when when you have a small-molecule structure (SMILES, MOL, or SDF format) and need to identify probable metabolites or degradation products in a specific biological compartment (e.g., soil/aquatic microbiota, mammalian liver, or gut microbiota).",
+  "description": "Use when you have a small-molecule structure (SMILES, MOL, or SDF format) and need to identify probable metabolites or degradation products in a specific biological compartment (e.g., soil/aquatic microbiota, mammalian liver, or gut microbiota).",
   "edam_operation": "http://edamontology.org/operation_3803",
   "edam_topics": [
    "http://edamontology.org/topic_0602",
@@ -3223,7 +3223,7 @@
  {
   "slug": "metabolite-prediction-pathway-selection",
   "name": "metabolite-prediction-pathway-selection",
-  "description": "Use when when you have a small-molecule structure (SMILES, MOL, or SDF format) and need to predict its metabolic fate across one or more biological systems.",
+  "description": "Use when you have a small-molecule structure (SMILES, MOL, or SDF format) and need to predict its metabolic fate across one or more biological systems.",
   "edam_operation": "http://edamontology.org/operation_3938",
   "edam_topics": [
    "http://edamontology.org/topic_3375",
@@ -3318,7 +3318,7 @@
  {
   "slug": "metabolite-signal-drift-detection",
   "name": "metabolite-signal-drift-detection",
-  "description": "Use when when you have multi-batch metabolomics data (SummarizedExperiment object with raw or log-transformed assays) and need to assess whether specific metabolites exhibit systematic signal drift across experimental run order or strong batch effects that would justify hierarchical normalisation.",
+  "description": "Use when you have multi-batch metabolomics data (SummarizedExperiment object with raw or log-transformed assays) and need to assess whether specific metabolites exhibit systematic signal drift across experimental run order or strong batch effects that would justify hierarchical normalisation.",
   "edam_operation": "http://edamontology.org/operation_3432",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -3710,7 +3710,7 @@
  {
   "slug": "microbiome-metabolome-data-preprocessing",
   "name": "microbiome-metabolome-data-preprocessing",
-  "description": "Use when when starting with raw paired microbiome (16S rRNA, metagenomic taxonomic or functional features) and metabolome (LC-MS/MS, NMR) count tables from the same biospecimens, and planning to train prediction models or co-abundance networks.",
+  "description": "Use when starting with raw paired microbiome (16S rRNA, metagenomic taxonomic or functional features) and metabolome (LC-MS/MS, NMR) count tables from the same biospecimens, and planning to train prediction models or co-abundance networks.",
   "edam_operation": "http://edamontology.org/operation_3434",
   "edam_topics": [
    "http://edamontology.org/topic_3174",
@@ -3831,7 +3831,7 @@
  {
   "slug": "modality-contribution-quantification",
   "name": "modality-contribution-quantification",
-  "description": "Use when when you have a trained multitask model that accepts multiple input modalities (e.g., 1D NMR spectra in different nuclei or complementary analytical techniques) and you need to understand their relative importance for the downstream prediction task (e.g., molecular structure elucidation).",
+  "description": "Use when you have a trained multitask model that accepts multiple input modalities (e.g., 1D NMR spectra in different nuclei or complementary analytical techniques) and you need to understand their relative importance for the downstream prediction task (e.g., molecular structure elucidation).",
   "edam_operation": "http://edamontology.org/operation_3927",
   "edam_topics": [
    "http://edamontology.org/topic_3474",
@@ -3892,7 +3892,7 @@
  {
   "slug": "model-metadata-extraction",
   "name": "model-metadata-extraction",
-  "description": "Use when when you need to programmatically interface with a TensorFlow Serving model instance and must discover or validate the expected input names (e.",
+  "description": "Use when you need to programmatically interface with a TensorFlow Serving model instance and must discover or validate the expected input names (e.",
   "edam_operation": "",
   "edam_topics": [],
   "tools": [
@@ -3915,7 +3915,7 @@
  {
   "slug": "model-metadata-schema-inspection",
   "name": "model-metadata-schema-inspection",
-  "description": "Use when when preparing to send peak data (1H and 13C NMR measurements) to a machine learning classification endpoint and you need to verify the current model's input/output names and schema, especially before implementing or updating code that constructs JSON payloads for the /api/smart3/search.",
+  "description": "Use when preparing to send peak data (1H and 13C NMR measurements) to a machine learning classification endpoint and you need to verify the current model's input/output names and schema, especially before implementing or updating code that constructs JSON payloads for the /api/smart3/search.",
   "edam_operation": "",
   "edam_topics": [],
   "tools": [
@@ -4056,7 +4056,7 @@
  {
   "slug": "molecular-fragment-assembly-from-transformer-predictions",
   "name": "molecular-fragment-assembly-from-transformer-predictions",
-  "description": "Use when when you have encoded spectral features (from a CNN featurizer applied to 1D 1H and/or 13C NMR spectra) and a set of candidate molecular fragments predicted for a molecule with ≤19 heavy atoms, and you need to determine the correct connectivity and assembly order to recover the.",
+  "description": "Use when you have encoded spectral features (from a CNN featurizer applied to 1D 1H and/or 13C NMR spectra) and a set of candidate molecular fragments predicted for a molecule with ≤19 heavy atoms, and you need to determine the correct connectivity and assembly order to recover the ground-truth.",
   "edam_operation": "http://edamontology.org/operation_0362",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -4120,7 +4120,7 @@
  {
   "slug": "molecular-graph-encoder-decoder-training",
   "name": "molecular-graph-encoder-decoder-training",
-  "description": "Use when when you have a training dataset of NMR spectra-derived molecular fragments encoded as token sequences, and you need to predict both the molecular formula and complete bond connectivity of unknown molecules.",
+  "description": "Use when you have a training dataset of NMR spectra-derived molecular fragments encoded as token sequences, and you need to predict both the molecular formula and complete bond connectivity of unknown molecules.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -4348,7 +4348,7 @@
  {
   "slug": "molecular-structure-prediction-validation",
   "name": "molecular-structure-prediction-validation",
-  "description": "Use when when you have executed the MultiModalSpectralTransformer architecture on a set of multi-modal spectroscopic inputs (NMR, HSQC, COSY, IR) and obtained predicted molecular structures, and you need to assess prediction accuracy and structural correctness against ground-truth or reference.",
+  "description": "Use when you have executed the MultiModalSpectralTransformer architecture on a set of multi-modal spectroscopic inputs (NMR, HSQC, COSY, IR) and obtained predicted molecular structures, and you need to assess prediction accuracy and structural correctness against ground-truth or reference.",
   "edam_operation": "http://edamontology.org/operation_3937",
   "edam_topics": [
    "http://edamontology.org/topic_3314",
@@ -4502,7 +4502,7 @@
  {
   "slug": "multimodal-tensor-construction-and-validation",
   "name": "multimodal-tensor-construction-and-validation",
-  "description": "Use when when you have downloaded raw spectroscopic datasets from multiple sources (NMR, HSQC, COSY, IR files) and need to combine them into a single coherent training corpus where each molecule is represented by all four modalities.",
+  "description": "Use when you have downloaded raw spectroscopic datasets from multiple sources (NMR, HSQC, COSY, IR files) and need to combine them into a single coherent training corpus where each molecule is represented by all four modalities.",
   "edam_operation": "http://edamontology.org/operation_0335",
   "edam_topics": [
    "http://edamontology.org/topic_0611",
@@ -4804,7 +4804,7 @@
  {
   "slug": "nmr-inadequate-spectra-acquisition-and-preprocessing",
   "name": "nmr-inadequate-spectra-acquisition-and-preprocessing",
-  "description": "Use when when you have raw INADEQUATE NMR spectral data (e.g., from a query sample or library) and need to extract peak coordinates and intensities as a first step toward identifying metabolite peak networks or comparing against a metabolite database.",
+  "description": "Use when you have raw INADEQUATE NMR spectral data (e.g., from a query sample or library) and need to extract peak coordinates and intensities as a first step toward identifying metabolite peak networks or comparing against a metabolite database.",
   "edam_operation": "http://edamontology.org/operation_3215",
   "edam_topics": [
    "http://edamontology.org/topic_3370",
@@ -4952,7 +4952,7 @@
  {
   "slug": "nmr-peak-deconvolution",
   "name": "nmr-peak-deconvolution",
-  "description": "Use when when you have raw or processed 1D NMR spectra (FID or frequency-domain format) and need to extract individual peak identities and quantitative parameters in tabular form.",
+  "description": "Use when you have raw or processed 1D NMR spectra (FID or frequency-domain format) and need to extract individual peak identities and quantitative parameters in tabular form.",
   "edam_operation": "http://edamontology.org/operation_3214",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -5105,7 +5105,7 @@
  {
   "slug": "nmr-spectra-deep-learning-encoding",
   "name": "nmr-spectra-deep-learning-encoding",
-  "description": "Use when when you have preprocessed 1H NMR spectral data from flavor mixtures or similar compound identification tasks, and you need to identify which compounds are present.",
+  "description": "Use when you have preprocessed 1H NMR spectral data from flavor mixtures or similar compound identification tasks, and you need to identify which compounds are present.",
   "edam_operation": "http://edamontology.org/operation_3801",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -5135,7 +5135,7 @@
  {
   "slug": "nmr-spectra-preprocessing",
   "name": "nmr-spectra-preprocessing",
-  "description": "Use when when you have raw 1D NMR spectroscopic data (urine, worm, or other biological samples) in a format supported by NMRBox/NMRPipe and need to generate peak tables with automatic phasing, baseline correction, and spectral deconvolution without manual intervention.",
+  "description": "Use when you have raw 1D NMR spectroscopic data (urine, worm, or other biological samples) in a format supported by NMRBox/NMRPipe and need to generate peak tables with automatic phasing, baseline correction, and spectral deconvolution without manual intervention.",
   "edam_operation": "http://edamontology.org/operation_3214",
   "edam_topics": [
    "http://edamontology.org/topic_0593",
@@ -5164,7 +5164,7 @@
  {
   "slug": "nmr-spectra-preprocessing-and-feature-extraction",
   "name": "nmr-spectra-preprocessing-and-feature-extraction",
-  "description": "Use when when you have raw or lightly processed 1D NMR spectra (¹H and/or ¹³C) from unknown organic compounds and need to extract latent spectral features prior to structure elucidation.",
+  "description": "Use when you have raw or lightly processed 1D NMR spectra (¹H and/or ¹³C) from unknown organic compounds and need to extract latent spectral features prior to structure elucidation.",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -5248,7 +5248,7 @@
  {
   "slug": "nmr-spectral-feature-extraction",
   "name": "nmr-spectral-feature-extraction",
-  "description": "Use when when you have raw or preprocessed 1H NMR spectral tensors from flavor or chemical mixtures and need to generate high-level feature representations that capture both fine-grained local patterns (e.g., peak multiplet structure, coupling constants) and global spectral context (e.",
+  "description": "Use when you have raw or preprocessed 1H NMR spectral tensors from flavor or chemical mixtures and need to generate high-level feature representations that capture both fine-grained local patterns (e.g., peak multiplet structure, coupling constants) and global spectral context (e.",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_3382",
@@ -5278,7 +5278,7 @@
  {
   "slug": "nmr-spectral-preprocessing-and-phasing",
   "name": "nmr-spectral-preprocessing-and-phasing",
-  "description": "Use when when working with raw 1H NMR FID data acquired on instruments like Bruker Avance spectrometers that require baseline correction, phase adjustment, and signal alignment before metabolite identification or statistical association testing can proceed reliably.",
+  "description": "Use when working with raw 1H NMR FID data acquired on instruments like Bruker Avance spectrometers that require baseline correction, phase adjustment, and signal alignment before metabolite identification or statistical association testing can proceed reliably.",
   "edam_operation": "http://edamontology.org/operation_3215",
   "edam_topics": [
    "http://edamontology.org/topic_0593",
@@ -5379,7 +5379,7 @@
  {
   "slug": "nmr-spectrum-normalization",
   "name": "nmr-spectrum-normalization",
-  "description": "Use when when preparing library compound spectra and observed mixture spectra for mcfNMR analysis, normalize both spectra to cumulative distribution functions (CDFs) scaled by total intensity.",
+  "description": "Use when preparing library compound spectra and observed mixture spectra for mcfNMR analysis, normalize both spectra to cumulative distribution functions (CDFs) scaled by total intensity.",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_3370",
@@ -5547,7 +5547,7 @@
  {
   "slug": "nmr-spectrum-tiling-format-interpretation",
   "name": "nmr-spectrum-tiling-format-interpretation",
-  "description": "Use when when loading or creating an NMR spectral dataset (Dataset.createDataFile) and the system must decide between multiple storage backends (SubMatrixFile, BigMappedMatrixFile, MappedSubMatrixFile, MappedMatrixFile). Triggers include: (1) dataset metadata specifies a cache-file flag;",
+  "description": "Use when loading or creating an NMR spectral dataset (Dataset.createDataFile) and the system must decide between multiple storage backends (SubMatrixFile, BigMappedMatrixFile, MappedSubMatrixFile, MappedMatrixFile). Triggers include: (1) dataset metadata specifies a cache-file flag;",
   "edam_operation": "",
   "edam_topics": [],
   "tools": [
@@ -5599,7 +5599,7 @@
  {
   "slug": "nmr-spin-system-simulation",
   "name": "nmr-spin-system-simulation",
-  "description": "Use when when you have known metabolite concentrations and their spin-system coupling constants (J-values) and need to generate synthetic ¹H NMR spectra for method validation, metabolite library construction, or as a training dataset.",
+  "description": "Use when you have known metabolite concentrations and their spin-system coupling constants (J-values) and need to generate synthetic ¹H NMR spectra for method validation, metabolite library construction, or as a training dataset.",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -5651,7 +5651,7 @@
  {
   "slug": "nmrbox-environment-management",
   "name": "nmrbox-environment-management",
-  "description": "Use when when you need to deploy SAND for 1D NMR spectrum deconvolution on a new machine or cluster, or when testing code changes before merging into production.",
+  "description": "Use when you need to deploy SAND for 1D NMR spectrum deconvolution on a new machine or cluster, or when testing code changes before merging into production. Apply this skill if you are starting fresh with SAND_V7 on NMRBox, or if you need to validate updates against a test NMRBox server environment.",
   "edam_operation": "",
   "edam_topics": [],
   "tools": [
@@ -5703,7 +5703,7 @@
  {
   "slug": "optimal-transport-scoring",
   "name": "optimal-transport-scoring",
-  "description": "Use when when you have an observed NMR mixture spectrum and one or more candidate reconstructed spectra (each formed by combining single-compound reference spectra from a library), and you need a scalar similarity score to rank or select the approximation.",
+  "description": "Use when you have an observed NMR mixture spectrum and one or more candidate reconstructed spectra (each formed by combining single-compound reference spectra from a library), and you need a scalar similarity score to rank or select the approximation.",
   "edam_operation": "http://edamontology.org/operation_3629",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -6097,7 +6097,7 @@
  {
   "slug": "pre-analytical-delay-stratification",
   "name": "pre-analytical-delay-stratification",
-  "description": "Use when when you have NMR metabolite measurements paired with documented pre-centrifugation and post-centrifugation delay times, and need to assess how processing delays affect metabolic parameter stability within a plasma or serum sample cohort.",
+  "description": "Use when you have NMR metabolite measurements paired with documented pre-centrifugation and post-centrifugation delay times, and need to assess how processing delays affect metabolic parameter stability within a plasma or serum sample cohort.",
   "edam_operation": "http://edamontology.org/operation_3438",
   "edam_topics": [
    "http://edamontology.org/topic_0091",
@@ -6152,7 +6152,7 @@
  {
   "slug": "python-deep-learning-model-loading-and-execution",
   "name": "python-deep-learning-model-loading-and-execution",
-  "description": "Use when when you have a pre-trained deep learning model checkpoint (saved in PyTorch format) and new 1D 1H NMR spectral data in CSV and peak-list TXT formats, and you need to generate peak-to-metabolite assignments or other structured outputs from that model without modification of model weights.",
+  "description": "Use when you have a pre-trained deep learning model checkpoint (saved in PyTorch format) and new 1D 1H NMR spectral data in CSV and peak-list TXT formats, and you need to generate peak-to-metabolite assignments or other structured outputs from that model without modification of model weights.",
   "edam_operation": "http://edamontology.org/operation_3445",
   "edam_topics": [
    "http://edamontology.org/topic_0625",
@@ -6186,7 +6186,7 @@
  {
   "slug": "python-environment-setup",
   "name": "python-environment-setup",
-  "description": "Use when when you have cloned a scientific Python repository (e.g., ROIAL-NMR) and need to verify that the documented dependencies can be installed and the main entrypoint is invokable without errors. Use this skill before attempting to run the application's core analysis workflows.",
+  "description": "Use when you have cloned a scientific Python repository (e.g., ROIAL-NMR) and need to verify that the documented dependencies can be installed and the main entrypoint is invokable without errors. Use this skill before attempting to run the application's core analysis workflows.",
   "edam_operation": "http://edamontology.org/operation_0227",
   "edam_topics": [
    "http://edamontology.org/topic_0769"
@@ -6221,7 +6221,7 @@
  {
   "slug": "pytorch-module-composition",
   "name": "pytorch-module-composition",
-  "description": "Use when when you need to extract both local spatial patterns and global long-range dependencies from sequential or spectral data (e.g., 1H NMR spectra), and neither CNNs nor Transformers alone are sufficient.",
+  "description": "Use when you need to extract both local spatial patterns and global long-range dependencies from sequential or spectral data (e.g., 1H NMR spectra), and neither CNNs nor Transformers alone are sufficient.",
   "edam_operation": "http://edamontology.org/operation_3927",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -6461,7 +6461,7 @@
  {
   "slug": "repository-cloning-and-setup",
   "name": "repository-cloning-and-setup",
-  "description": "Use when when you need to deploy a containerized scientific tool (e.g., CloMet) for the first time on a local machine or CI/CD environment, and the project provides a Dockerfile and GitHub repository.",
+  "description": "Use when you need to deploy a containerized scientific tool (e.g., CloMet) for the first time on a local machine or CI/CD environment, and the project provides a Dockerfile and GitHub repository.",
   "edam_operation": "http://edamontology.org/operation_3778",
   "edam_topics": [
    "http://edamontology.org/topic_3407"
@@ -6544,7 +6544,7 @@
  {
   "slug": "signal-to-noise-ratio-assessment",
   "name": "signal-to-noise-ratio-assessment",
-  "description": "Use when when preparing a 1D 1H NMR spectral peak list for input to the NMRformer metabolite identification model, and you have access to peak intensity measurements and noise level estimates.",
+  "description": "Use when preparing a 1D 1H NMR spectral peak list for input to the NMRformer metabolite identification model, and you have access to peak intensity measurements and noise level estimates.",
   "edam_operation": "http://edamontology.org/operation_3695",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -6642,7 +6642,7 @@
  {
   "slug": "spatial-overlap-analysis-imaging",
   "name": "spatial-overlap-analysis-imaging",
-  "description": "Use when when annotating matrix-related peaks in MSI datasets where candidate peaks have identical or near-identical m/z values (isobaric ions), or when multiple peaks exhibit overlapping spatial distributions across the tissue image that could confound downstream annotation filtering.",
+  "description": "Use when annotating matrix-related peaks in MSI datasets where candidate peaks have identical or near-identical m/z values (isobaric ions), or when multiple peaks exhibit overlapping spatial distributions across the tissue image that could confound downstream annotation filtering.",
   "edam_operation": "http://edamontology.org/operation_3645",
   "edam_topics": [
    "http://edamontology.org/topic_3370",
@@ -6791,7 +6791,7 @@
  {
   "slug": "spectral-data-format-parsing-nmr-hsqc-cosy-ir",
   "name": "spectral-data-format-parsing-nmr-hsqc-cosy-ir",
-  "description": "Use when when you have downloaded raw spectral datasets from multiple spectroscopic modalities (NMR, HSQC, COSY, IR) in their native or proprietary formats and need to convert them into aligned, standardized tensors for multimodal machine learning.",
+  "description": "Use when you have downloaded raw spectral datasets from multiple spectroscopic modalities (NMR, HSQC, COSY, IR) in their native or proprietary formats and need to convert them into aligned, standardized tensors for multimodal machine learning.",
   "edam_operation": "http://edamontology.org/operation_3437",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -6824,7 +6824,7 @@
  {
   "slug": "spectral-database-matching",
   "name": "spectral-database-matching",
-  "description": "Use when when you have MS2 .mzML format data files from untargeted metabolomics or proteomics experiments and need to perform an initial annotation step by matching experimental spectra against known reference libraries (GNPS, HMDB, MassBank) with a defined precursor mass tolerance (e.g., 15 ppm).",
+  "description": "Use when you have MS2 .mzML format data files from untargeted metabolomics or proteomics experiments and need to perform an initial annotation step by matching experimental spectra against known reference libraries (GNPS, HMDB, MassBank) with a defined precursor mass tolerance (e.g., 15 ppm).",
   "edam_operation": "http://edamontology.org/operation_3767",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -6956,7 +6956,7 @@
  {
   "slug": "spectral-image-rendering",
   "name": "spectral-image-rendering",
-  "description": "Use when when you have parsed and validated spectral data (jcamp, RAW, or mzML format) from NMR/IR/MS instruments and need to create visual representations with peak annotations for inspection, annotation, or publication.",
+  "description": "Use when you have parsed and validated spectral data (jcamp, RAW, or mzML format) from NMR/IR/MS instruments and need to create visual representations with peak annotations for inspection, annotation, or publication.",
   "edam_operation": "http://edamontology.org/operation_3441",
   "edam_topics": [
    "http://edamontology.org/topic_3500",
@@ -7175,7 +7175,7 @@
  {
   "slug": "spectral-peak-data-validation-and-parsing",
   "name": "spectral-peak-data-validation-and-parsing",
-  "description": "Use when when you have received POST requests containing peaks data as form parameters (chemical shift, multiplicity, integration values) and need to accept, validate, and normalize those values before formatting them into a query compatible with an external NMR prediction service such as.",
+  "description": "Use when you have received POST requests containing peaks data as form parameters (chemical shift, multiplicity, integration values) and need to accept, validate, and normalize those values before formatting them into a query compatible with an external NMR prediction service such as nmrshiftdb.",
   "edam_operation": "http://edamontology.org/operation_3763",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -7386,7 +7386,7 @@
  {
   "slug": "spectral-roi-boundary-definition",
   "name": "spectral-roi-boundary-definition",
-  "description": "Use when when you have identified a spectral window of interest in a 1H NMR spectrum from a complex biological sample (serum, urine, CSF, tissue, saliva, or sweat) and need to systematically retrieve all metabolites from HMDB whose reference proton NMR chemical shifts fall within that window.",
+  "description": "Use when you have identified a spectral window of interest in a 1H NMR spectrum from a complex biological sample (serum, urine, CSF, tissue, saliva, or sweat) and need to systematically retrieve all metabolites from HMDB whose reference proton NMR chemical shifts fall within that window.",
   "edam_operation": "http://edamontology.org/operation_3680",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -7559,7 +7559,7 @@
  {
   "slug": "spectroscopic-data-preprocessing",
   "name": "spectroscopic-data-preprocessing",
-  "description": "Use when when you have raw spectroscopic measurements in heterogeneous formats (IR, Raman, UV-Vis, mass spectra, or NMR) and need to feed them into a spectrum-conditioned diffusion model for de novo molecular structure elucidation.",
+  "description": "Use when you have raw spectroscopic measurements in heterogeneous formats (IR, Raman, UV-Vis, mass spectra, or NMR) and need to feed them into a spectrum-conditioned diffusion model for de novo molecular structure elucidation.",
   "edam_operation": "http://edamontology.org/operation_3565",
   "edam_topics": [
    "http://edamontology.org/topic_0593",
@@ -7647,7 +7647,7 @@
  {
   "slug": "structural-similarity-scoring-metabolites",
   "name": "structural-similarity-scoring-metabolites",
-  "description": "Use when when you have paired MS/MS spectra from unknown metabolites and a reference database of known metabolites, and you want to rank candidate structures for unknown compounds by their predicted structural similarity rather than exact spectral matching.",
+  "description": "Use when you have paired MS/MS spectra from unknown metabolites and a reference database of known metabolites, and you want to rank candidate structures for unknown compounds by their predicted structural similarity rather than exact spectral matching.",
   "edam_operation": "http://edamontology.org/operation_0004",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -7837,7 +7837,7 @@
  {
   "slug": "summarized-experiment-subsetting",
   "name": "summarized-experiment-subsetting",
-  "description": "Use when when you have a SummarizedExperiment containing metabolomic abundances and a corresponding vector of quality metrics (e.g., coefficient of variation computed across QC samples), and you need to filter to retain only features meeting a reproducibility threshold (e.g., CV ≤ 0.",
+  "description": "Use when you have a SummarizedExperiment containing metabolomic abundances and a corresponding vector of quality metrics (e.g., coefficient of variation computed across QC samples), and you need to filter to retain only features meeting a reproducibility threshold (e.g., CV ≤ 0.",
   "edam_operation": "http://edamontology.org/operation_3695",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -7898,7 +7898,7 @@
  {
   "slug": "tabular-data-transformation-with-pandas",
   "name": "tabular-data-transformation-with-pandas",
-  "description": "Use when when converting mwTab-formatted metabolomics files (containing MS/NMR tabular data blocks) to JSON, or when you need to extract, manipulate, and re-serialize tabular sections from mwTab files while maintaining column structure and type information.",
+  "description": "Use when converting mwTab-formatted metabolomics files (containing MS/NMR tabular data blocks) to JSON, or when you need to extract, manipulate, and re-serialize tabular sections from mwTab files while maintaining column structure and type information.",
   "edam_operation": "http://edamontology.org/operation_3695",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -8079,7 +8079,7 @@
  {
   "slug": "transformer-based-fragment-assembly",
   "name": "transformer-based-fragment-assembly",
-  "description": "Use when when you have CNN-encoded spectral features (¹H and/or ¹³C NMR) and a set of predicted or candidate molecular fragments, and you need to determine which fragments are present and how they connect to form a valid molecular structure.",
+  "description": "Use when you have CNN-encoded spectral features (¹H and/or ¹³C NMR) and a set of predicted or candidate molecular fragments, and you need to determine which fragments are present and how they connect to form a valid molecular structure.",
   "edam_operation": "http://edamontology.org/operation_3802",
   "edam_topics": [
    "http://edamontology.org/topic_0593",
@@ -8139,7 +8139,7 @@
  {
   "slug": "transformer-encoder-architecture-implementation",
   "name": "transformer-encoder-architecture-implementation",
-  "description": "Use when when processing sequential spectroscopic data (1H NMR spectra) where both local chemical shift patterns and global spectral dependencies are needed for compound classification.",
+  "description": "Use when processing sequential spectroscopic data (1H NMR spectra) where both local chemical shift patterns and global spectral dependencies are needed for compound classification.",
   "edam_operation": "http://edamontology.org/operation_3891",
   "edam_topics": [
    "http://edamontology.org/topic_0218",
@@ -8284,7 +8284,7 @@
  {
   "slug": "validation-error-categorization",
   "name": "validation-error-categorization",
-  "description": "Use when when a parsed mwTab file (MS or NMR experimental data) must be assessed for conformance to its corresponding JSON schema specification. Apply this skill after loading the mwTab file using the mwtab parser but before quality assurance sign-off or deposition to the Metabolomics Workbench.",
+  "description": "Use when a parsed mwTab file (MS or NMR experimental data) must be assessed for conformance to its corresponding JSON schema specification. Apply this skill after loading the mwTab file using the mwtab parser but before quality assurance sign-off or deposition to the Metabolomics Workbench.",
   "edam_operation": "http://edamontology.org/operation_3364",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -8350,7 +8350,7 @@
  {
   "slug": "wasserstein-distance-computation",
   "name": "wasserstein-distance-computation",
-  "description": "Use when when you have both an observed NMR mixture spectrum and a candidate reconstructed spectrum (each represented as intensity distributions across chemical shift bins), and you need a scalar similarity metric to evaluate how closely the reconstruction matches the observed data.",
+  "description": "Use when you have both an observed NMR mixture spectrum and a candidate reconstructed spectrum (each represented as intensity distributions across chemical shift bins), and you need a scalar similarity metric to evaluate how closely the reconstruction matches the observed data.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -8440,7 +8440,7 @@
  {
   "slug": "weighted-loss-function-optimization",
   "name": "weighted-loss-function-optimization",
-  "description": "Use when when training a dual-encoder architecture (bi-encoder + cross-encoder) on NMR spectral data where independent encoding and joint pair processing produce competing or imbalanced gradient signals.",
+  "description": "Use when training a dual-encoder architecture (bi-encoder + cross-encoder) on NMR spectral data where independent encoding and joint pair processing produce competing or imbalanced gradient signals.",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_3172",

@@ -24,10 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btad088
   title: DBDIpy
-evidence_spans:
-- DBDIpy is an open-source Python library for the curation and interpretation of dielectric
-  barrier discharge ionisation mass spectrometric datasets
-- DBDIpy is an open-source Python library
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

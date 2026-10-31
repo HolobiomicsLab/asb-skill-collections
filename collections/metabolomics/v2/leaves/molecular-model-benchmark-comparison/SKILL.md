@@ -1,9 +1,9 @@
 ---
 name: molecular-model-benchmark-comparison
-description: Use when when you have (1) a candidate foundation model or pre-trained
-  weights for natural products (e.g., NaFM), (2) one or more baseline models pre-trained
-  on synthetic molecules (e.g., ChemBERTa, MolBERT), (3) a held-out test set from
-  a downstream task (e.
+description: Use when you have (1) a candidate foundation model or pre-trained weights
+  for natural products (e.g., NaFM), (2) one or more baseline models pre-trained on
+  synthetic molecules (e.g., ChemBERTa, MolBERT), (3) a held-out test set from a downstream
+  task (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -22,7 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

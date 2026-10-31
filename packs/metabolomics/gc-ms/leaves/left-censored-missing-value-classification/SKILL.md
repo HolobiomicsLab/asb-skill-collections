@@ -29,9 +29,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp
-evidence_spans:
-- '**GSimp.R** contains the core functions for GSimp'
-- GSimp.R contains the core functions for GSimp
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,7 +1,7 @@
 ---
 name: nmr-spectra-preprocessing
-description: Use when when you have raw 1D NMR spectroscopic data (urine, worm, or
-  other biological samples) in a format supported by NMRBox/NMRPipe and need to generate
+description: Use when you have raw 1D NMR spectroscopic data (urine, worm, or other
+  biological samples) in a format supported by NMRBox/NMRPipe and need to generate
   peak tables with automatic phasing, baseline correction, and spectral deconvolution
   without manual intervention.
 license: CC-BY-4.0
@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c03078
   title: SAND
-evidence_spans:
-- Any user is welcome to make new modificaitons on the SAND code, particularly its
-  version for NMRBox
-- interface to NMRPipe (pipe_scripts/)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -24,13 +24,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo9070144
   title: molnetenhancer
-evidence_spans:
-- pyMolNetEnhancer is a python module integrating chemical class and substructure
-  information
-- pyMolNetEnhancer is a python module
-- Global Natural Products Social Molecular Networking (GNPS)
-- mass spectral molecular networks created through the Global Natural Products Social
-  Molecular Networking (GNPS) platform
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

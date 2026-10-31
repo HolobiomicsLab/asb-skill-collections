@@ -30,13 +30,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.est.5c08558
   title: CMDN
-evidence_spans:
-- tidyverse
-- CluMSID
-- CluMSIDdata
-- grid
-- OrgMassSpecR
-- pheatmap
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

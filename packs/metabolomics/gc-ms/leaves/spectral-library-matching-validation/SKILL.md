@@ -23,13 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
-evidence_spans:
-- any software or utility that generates the necessary information can be used with
-  simple modifications
-- any software or utility that generates the necessary information can be used with
-  simple modifications (e.g. changing the column names)
-- mzExacto() collects the same information for a set of query chemicals and uses it
-  to precisely search the advanced dictionary for samples that have those chemicals
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

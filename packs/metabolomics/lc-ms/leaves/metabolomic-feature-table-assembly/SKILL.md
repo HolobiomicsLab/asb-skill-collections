@@ -1,6 +1,6 @@
 ---
 name: metabolomic-feature-table-assembly
-description: Use when when you have LC-MS data (mzML or netCDF format) and a pre-defined
+description: Use when you have LC-MS data (mzML or netCDF format) and a pre-defined
   list of target metabolites (m/z, retention time, and identifiers) that you wish
   to extract and quantify across multiple samples, rather than performing untargeted
   feature discovery.
@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo12030212
   title: JPA
-evidence_spans:
-- JPA is a comprehensive and integrated metabolomics data processing software.
-- JPA is a comprehensive and integrated metabolomics data processing software
-- '''JPA'' is written in R and its source code is publicly available'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

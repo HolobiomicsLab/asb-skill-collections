@@ -1,8 +1,8 @@
 ---
 name: pathway-metabolite-mapping-integration
-description: Use when when you have metabolite-level summary statistics (p-values,
-  log2 fold changes) from differential analysis and need to test whether specific
-  metabolic pathways are significantly enriched in your dataset.
+description: Use when you have metabolite-level summary statistics (p-values, log2
+  fold changes) from differential analysis and need to test whether specific metabolic
+  pathways are significantly enriched in your dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -24,12 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2025.08.28.672951v2
   title: EnrichMET
-evidence_spans:
-- simplifies pathway enrichment analysis by allowing the complete workflow to be executed
-  through a single R function call
-- enrichmet integrates fgsea for fast MetSEA
-- library(readr)
-- library(readxl)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

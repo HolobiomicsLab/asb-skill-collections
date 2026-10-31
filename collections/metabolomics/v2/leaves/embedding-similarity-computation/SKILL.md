@@ -1,7 +1,7 @@
 ---
 name: embedding-similarity-computation
-description: Use when when you have pre-computed embeddings (from MSBERT, Spec2Vec,
-  or other deep learning models) for a query spectrum dataset and a reference library,
+description: Use when you have pre-computed embeddings (from MSBERT, Spec2Vec, or
+  other deep learning models) for a query spectrum dataset and a reference library,
   and need to measure how well the embedding space ranks correct library matches.
 license: CC-BY-4.0
 metadata:
@@ -24,9 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c02426
   title: MSBERT
-evidence_spans:
-- '[Anaconda](https://www.anaconda.com) for Python 3.12'
-- Install [Git](https://git-scm.com/downloads)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

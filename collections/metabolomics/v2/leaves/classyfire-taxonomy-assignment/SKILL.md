@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-023-02143-z
   title: RepoRT (retention-time repository)
-evidence_spans:
-- Classification of molecules is performed using ClassyFire
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

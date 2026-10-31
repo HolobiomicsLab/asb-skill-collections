@@ -1,6 +1,6 @@
 ---
 name: pathway-rank-stability-assessment
-description: Use when when you have completed a PALS pathway analysis on a clean metabolomics
+description: Use when you have completed a PALS pathway analysis on a clean metabolomics
   peak intensity matrix and pathway annotation set, and you need to verify that the
   ranked pathway discoveries are not artifacts of favorable data quality.
 license: CC-BY-4.0
@@ -25,11 +25,6 @@ derived_from:
   title: pals
 - doi: 10.1186/1471-2105-6-225
   title: ''
-evidence_spans:
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
-  database queries of pathways, decomposes activity levels in pathways
-- we introduce PALS (Pathway Activity Level Scoring), a complete tool that performs
-  database queries of pathways, decomposes activity levels in pathways
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

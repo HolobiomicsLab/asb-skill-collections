@@ -1,8 +1,8 @@
 ---
 name: file-format-validation-proteomics
-description: Use when when raw MS files are uploaded to MSConnect via the Raw File
-  Uploader and must be verified for compatibility with downstream processing tools
-  (e.g., Proteomics_Data_Processor) before routing to the processing queue.
+description: Use when raw MS files are uploaded to MSConnect via the Raw File Uploader
+  and must be verified for compatibility with downstream processing tools (e.g., Proteomics_Data_Processor)
+  before routing to the processing queue.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -26,11 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00854
   title: MSConnect
-evidence_spans:
-- The platform is built with Python, Django, JavaScript, and HTML
-- works with [Raw file uploader]
-- works with [Raw file uploader](https://github.com/RTKlab-BYU/Raw_File_Uploader)
-- works with [Processor](https://github.com/RTKlab-BYU/Proteomics_Data_Processor)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

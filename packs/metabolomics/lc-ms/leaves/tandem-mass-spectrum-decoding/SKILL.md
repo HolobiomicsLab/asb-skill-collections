@@ -1,6 +1,6 @@
 ---
 name: tandem-mass-spectrum-decoding
-description: Use when when you have raw predictions from a trained fragment generation
+description: Use when you have raw predictions from a trained fragment generation
   or intensity prediction neural network model and need to convert those predictions
   into a standard spectrum file format (m/z–intensity pairs) for comparison against
   experimental spectra or for structural elucidation workflows.
@@ -22,9 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c04654
   title: ICEBERG / fragmentation graph generation
-evidence_spans:
-- github.com__samgoldman97__ms-pred
-- You can run ICEBERG structural elucidation easily at http://iceberg-ms.mit.edu/
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

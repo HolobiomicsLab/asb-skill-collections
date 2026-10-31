@@ -1,8 +1,8 @@
 ---
 name: java-source-code-inspection
-description: Use when when you need to understand how a Java application routes input
-  data to processing modules based on declared data types, conditionally branches
-  on instrument or format types (e.
+description: Use when you need to understand how a Java application routes input data
+  to processing modules based on declared data types, conditionally branches on instrument
+  or format types (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-021-23953-9
   title: iimn
-evidence_spans:
-- mzmine is an open-source software for mass spectrometry data processing
-- JDK version-25-blue
-- JavaFX version-24
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

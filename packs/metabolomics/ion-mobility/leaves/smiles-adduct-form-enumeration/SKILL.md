@@ -1,7 +1,7 @@
 ---
 name: smiles-adduct-form-enumeration
-description: Use when when you have SMILES structures of small organic molecules and
-  need to predict CCS values for metabolite annotation in untargeted mass spectrometry
+description: Use when you have SMILES structures of small organic molecules and need
+  to predict CCS values for metabolite annotation in untargeted mass spectrometry
   workflows. Specifically, apply this skill when the same chemical entity may appear
   in multiple ionization states (e.
 license: CC-BY-4.0
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS
-evidence_spans:
-- 'Dimorphite-DL: For ionization state determination'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

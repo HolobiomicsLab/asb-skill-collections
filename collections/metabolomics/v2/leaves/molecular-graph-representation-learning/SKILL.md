@@ -1,7 +1,7 @@
 ---
 name: molecular-graph-representation-learning
-description: Use when when you have molecular structures (SMILES or chemical graphs)
-  from a database like PubChem and need to predict molecular properties (e.
+description: Use when you have molecular structures (SMILES or chemical graphs) from
+  a database like PubChem and need to predict molecular properties (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s42256-024-00816-8
   title: ICEBERG
-evidence_spans:
-- By inputting the chemical formula and your experimental spectrum, the WebUI will
-  rank it against all candidates from PubChem.
-- the WebUI will rank it against all candidates from PubChem
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

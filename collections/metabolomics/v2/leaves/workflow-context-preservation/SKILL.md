@@ -1,9 +1,8 @@
 ---
 name: workflow-context-preservation
-description: 'Use when when submitting OpenMS workflows to RQ (Redis Queue) in online
-  Docker mode, you need to preserve the job ID and execution context for recovery
-  after container restarts or worker failures. Apply this skill if: (1) you are using
-  QueueManager.'
+description: 'Use when submitting OpenMS workflows to RQ (Redis Queue) in online Docker
+  mode, you need to preserve the job ID and execution context for recovery after container
+  restarts or worker failures. Apply this skill if: (1) you are using QueueManager.'
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -18,9 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
-evidence_spans:
-- No code changes required for offline mode. The detection happens automatically
-- as well as deployment with docker-compose.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -25,11 +25,6 @@ derived_from:
   title: ReDU
 - doi: 10.1186/2047-217x-2-16
   title: ''
-evidence_spans:
-- a free GNPS account is required to analyze data
-- free GNPS account is required to analyze data
-- ReDU only interacts with MassIVE
-- data uploaded to MassIVE as a public dataset
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

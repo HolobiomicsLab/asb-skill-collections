@@ -17,9 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
-evidence_spans:
-- cd Classifier/models_folder/models sh ./get_models.sh
-- Make sure you have python installed
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

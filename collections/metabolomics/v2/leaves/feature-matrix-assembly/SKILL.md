@@ -1,8 +1,8 @@
 ---
 name: feature-matrix-assembly
-description: Use when when you have a set of chemical structures (SMILES, SDF, mol,
-  mol2, or hin files) and need to convert them into a tabular feature representation
-  for retention time prediction, metabolite annotation, or other quantitative structure–property
+description: Use when you have a set of chemical structures (SMILES, SDF, mol, mol2,
+  or hin files) and need to convert them into a tabular feature representation for
+  retention time prediction, metabolite annotation, or other quantitative structure–property
   modeling tasks.
 license: CC-BY-4.0
 metadata:
@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
-evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
-  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

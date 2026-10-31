@@ -1,8 +1,8 @@
 ---
 name: duplicate-record-detection-and-deduplication
-description: Use when when merging metabolomic data from multiple studies, you have
-  compound identifiers in heterogeneous formats (chemical names, InChI, InChIKey,
-  SMILES) and need to detect whether the same compound appears under different representations.
+description: Use when merging metabolomic data from multiple studies, you have compound
+  identifiers in heterogeneous formats (chemical names, InChI, InChIKey, SMILES) and
+  need to detect whether the same compound appears under different representations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -21,12 +21,6 @@ derived_from:
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
-evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted
-  meta-analysis in R
-- the package will retrieve the PubChem ID from the ID using `webchem`
-- This vignette illustrates `Amanida` R package, which contains a collection of functions
-  for computing a weighted meta-analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

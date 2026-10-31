@@ -1,6 +1,6 @@
 ---
 name: container-runtime-verification
-description: Use when when deploying a containerized application (e.g., ipbhalle/metfragweb)
+description: Use when deploying a containerized application (e.g., ipbhalle/metfragweb)
   with injected configuration files via Docker volume mounts, and you need to confirm
   that the container accepted the mounted file and applied its settings before proceeding
   with downstream analysis or services.
@@ -16,8 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
-evidence_spans:
-- https://hub.docker.com/r/ipbhalle/metfragweb
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

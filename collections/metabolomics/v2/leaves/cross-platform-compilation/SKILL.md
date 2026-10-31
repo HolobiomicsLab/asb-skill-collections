@@ -1,9 +1,9 @@
 ---
 name: cross-platform-compilation
-description: Use when when releasing a new version of a tool, onboarding to a new
-  development platform, or validating that a tool meets its documented platform support
-  claims (e.g., Windows 10, Ubuntu 22.04, macOS 12+ ARM64). Apply this skill before
-  publishing binaries or claiming multi-platform support.
+description: Use when releasing a new version of a tool, onboarding to a new development
+  platform, or validating that a tool meets its documented platform support claims
+  (e.g., Windows 10, Ubuntu 22.04, macOS 12+ ARM64). Apply this skill before publishing
+  binaries or claiming multi-platform support.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c02449
   title: LipidSpace
-evidence_spans:
-- LipidSpace is a stand-alone tool to analyze and compare lipidomes
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

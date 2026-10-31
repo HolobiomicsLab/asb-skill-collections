@@ -1,8 +1,8 @@
 ---
 name: fragmentation-pattern-annotation
-description: Use when when you have an experimental MS/MS spectrum (query spectrum
-  as m/z–intensity pairs) and need to identify the compound by comparing its fragmentation
-  pattern to a spectral library.
+description: Use when you have an experimental MS/MS spectrum (query spectrum as m/z–intensity
+  pairs) and need to identify the compound by comparing its fragmentation pattern
+  to a spectral library.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3860
@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.2c04343
   title: MeRgeION
-evidence_spans:
-- search and annotate an unknown spectrum in their local database or public databases
-  (i.e. drug structures in GNPS, MASSBANK and DrugBANK)
-- github.com__daniellyz__meRgeION2
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

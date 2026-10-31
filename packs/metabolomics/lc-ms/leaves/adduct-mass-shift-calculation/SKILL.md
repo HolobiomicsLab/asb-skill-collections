@@ -1,8 +1,8 @@
 ---
 name: adduct-mass-shift-calculation
-description: Use when when you have a list of observed m/z values from LC/MS feature
-  detection and need to identify candidate metabolites by testing whether those m/z
-  values correspond to known database compounds in specific ionization forms.
+description: Use when you have a list of observed m/z values from LC/MS feature detection
+  and need to identify candidate metabolites by testing whether those m/z values correspond
+  to known database compounds in specific ionization forms.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -26,13 +26,6 @@ derived_from:
   title: geoRge
 - doi: 10.1007/s11306-020-01717-8
   title: ''
-evidence_spans:
-- library(geoRge)
-- hits <- database_query(geoRgeR = s2, adducts = negative, db = db)
-- This is an R Markdown document
-- Welcome to the info page on MetaboShiny
-- Welcome to the info page on MetaboShiny! We are currently on BioRXiv
-- Through R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

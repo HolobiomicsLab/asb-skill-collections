@@ -1,6 +1,6 @@
 ---
 name: isotope-pattern-spectral-matching
-description: Use when when you have LC/MS feature data with observed m/z and intensity
+description: Use when you have LC/MS feature data with observed m/z and intensity
   values across multiple peaks (monoisotopic and isotopologues) and need to narrow
   candidate annotations from a metabolite database.
 license: CC-BY-4.0
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btad455
   title: ipaPy2
-evidence_spans:
-- Python implementation of the Integrated Probabilistic Annotation (IPA)
-- github.com__francescodc87__ipaPy2
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

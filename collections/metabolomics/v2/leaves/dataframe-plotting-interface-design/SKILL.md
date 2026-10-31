@@ -1,7 +1,7 @@
 ---
 name: dataframe-plotting-interface-design
-description: 'Use when when building a scientific visualization library that must
-  support multiple plotting backends and needs to avoid backend-specific code duplication.
+description: 'Use when building a scientific visualization library that must support
+  multiple plotting backends and needs to avoid backend-specific code duplication.
   Specifically: (1) your domain (e.'
 license: CC-BY-4.0
 metadata:
@@ -22,7 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

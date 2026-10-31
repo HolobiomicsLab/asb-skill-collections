@@ -1,9 +1,9 @@
 ---
 name: python-conda-environment-management
-description: Use when when setting up a multi-language data analysis pipeline that
-  requires both R and Python components to coexist with exact version constraints,
-  especially when deep learning (keras) and machine learning (caret, pROC) packages
-  must share a common Python backend.
+description: Use when setting up a multi-language data analysis pipeline that requires
+  both R and Python components to coexist with exact version constraints, especially
+  when deep learning (keras) and machine learning (caret, pROC) packages must share
+  a common Python backend.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -23,13 +23,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo13080944
   title: SERDA
-evidence_spans:
-- R version 3.6.3 (2020-02-29)
-- packageVersion("reticulate") [1] ‘1.19’
-- packageVersion("keras") [1] ‘2.7.0’
-- packageVersion("pROC") [1] ‘1.17.0.1’
-- packageVersion("caret") [1] ‘6.0.86’
-- 'version: 3.6.10 |Anaconda, Inc.| (default, May 7 2020, 19:46:08)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

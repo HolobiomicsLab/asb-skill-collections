@@ -1,7 +1,7 @@
 ---
 name: mass-spectrum-similarity-scoring
-description: Use when when you have a query MS/MS spectrum (m/z and intensity pairs)
-  that you need to match against a library of reference spectra, and you want to identify
+description: Use when you have a query MS/MS spectrum (m/z and intensity pairs) that
+  you need to match against a library of reference spectra, and you want to identify
   the -matching library entry while accounting for unmatched peaks that may indicate
   spectral contamination or chimerism.
 license: CC-BY-4.0
@@ -22,7 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c02047
   title: Reverse Spectral Search
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

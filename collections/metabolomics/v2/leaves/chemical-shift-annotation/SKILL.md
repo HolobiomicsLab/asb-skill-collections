@@ -1,6 +1,6 @@
 ---
 name: chemical-shift-annotation
-description: Use when when you have preprocessed 1H NMR spectral data with unidentified
+description: Use when you have preprocessed 1H NMR spectral data with unidentified
   peaks and need to determine metabolite identity by exploiting the correlation structure
   of NMR signals.
 license: CC-BY-4.0
@@ -22,11 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btx477
   title: MWASTools
-evidence_spans:
-- Assuming that R (>=3.3) and Bioconductor have been correctly installed
-- Here, we present a package to perform MWAS using univariate hypothesis testing
-- '"MWASTools" is an R package designed to provide an integrated and user-friendly
-  pipeline'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

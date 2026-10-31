@@ -31,17 +31,6 @@ derived_from:
   title: Spec2Vec
 - doi: 10.5281/zenodo.3978054
   title: ''
-evidence_spans:
-- we introduce Spec2Vec, a novel spectral similarity score
-- spec2vec (https://github.com/iomega/spec2vec). Both packages are freely available
-  and can be installed via conda
-- inspired by a natural language processing algorithm—Word2Vec
-- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim
-  [37]
-- the implementations for the cosine score and the modified cosine score used can
-  be found in the Python package matchms
-- the implementations for the cosine score and the modified cosine score used can
-  be found in the Python package matchms [31] (https://github.com/matchms/matchms)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

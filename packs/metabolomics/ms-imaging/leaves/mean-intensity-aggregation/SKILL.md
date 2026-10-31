@@ -19,10 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c01513
   title: MSI-Explorer
-evidence_spans:
-- The MSI-Explorer napari plugin is a powerful tool designed for targeted biochemical
-  annotations in MSI data.
-- '[![Python Version](https://img.shields.io/pypi/pyversions/MSI-Explorer.svg?color=green)](https://python.org)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

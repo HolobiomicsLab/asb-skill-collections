@@ -1,8 +1,8 @@
 ---
 name: molecular-fragment-prediction
-description: Use when when you have an experimental tandem mass spectrum (m/z peaks
-  and intensities) and a chemical formula, and need to identify the true molecular
-  structure from a candidate library (e.g., PubChem).
+description: Use when you have an experimental tandem mass spectrum (m/z peaks and
+  intensities) and a chemical formula, and need to identify the true molecular structure
+  from a candidate library (e.g., PubChem).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c04654
   title: ICEBERG / fragmentation graph generation
-evidence_spans:
-- You can run ICEBERG structural elucidation easily at http://iceberg-ms.mit.edu/
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

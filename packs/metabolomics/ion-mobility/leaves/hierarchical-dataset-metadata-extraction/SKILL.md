@@ -1,6 +1,6 @@
 ---
 name: hierarchical-dataset-metadata-extraction
-description: Use when when you have received an MZA-format HDF5 file (or other hierarchical
+description: Use when you have received an MZA-format HDF5 file (or other hierarchical
   HDF5-based scientific data) and need to understand its internal structure before
   downstream processing, share it across programming languages (Python, R), or document
   its schema for reproducibility.
@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00313
   title: MZA
-evidence_spans:
-- MZA is a stand-alone and self-contained command-line executable which converts multidimensional
-  mass spectrometry (MS) data
-- using generic HDF5 libraries available (e.g., h5py and rhdf5)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

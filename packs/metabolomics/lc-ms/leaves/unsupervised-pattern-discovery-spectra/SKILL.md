@@ -1,8 +1,8 @@
 ---
 name: unsupervised-pattern-discovery-spectra
-description: Use when when you have preprocessed mass spectral data (normalized peak
-  intensities or binned m/z representations) and need to discover latent spectral
-  patterns to enhance neural network predictors without labeled spectral classes.
+description: Use when you have preprocessed mass spectral data (normalized peak intensities
+  or binned m/z representations) and need to discover latent spectral patterns to
+  enhance neural network predictors without labeled spectral classes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2945
@@ -22,8 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btae490
   title: ESP
-evidence_spans:
-- spectral topic labels obtained using LDA (Latent Dirichlet Allocation)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

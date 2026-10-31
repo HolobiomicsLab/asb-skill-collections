@@ -1,9 +1,9 @@
 ---
 name: container-image-selection-and-mounting
-description: Use when when deploying a Nextflow workflow across multiple execution
-  environments (local machines, HPC clusters) where tool versions, dependencies, or
-  OS configurations may differ. Choose this skill specifically when you need to process
-  LC-HRMS .mzML or .
+description: Use when deploying a Nextflow workflow across multiple execution environments
+  (local machines, HPC clusters) where tool versions, dependencies, or OS configurations
+  may differ. Choose this skill specifically when you need to process LC-HRMS .mzML
+  or .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3233
@@ -23,8 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
-evidence_spans:
-- containerized workflow MS-DIAL -> MSFLO
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

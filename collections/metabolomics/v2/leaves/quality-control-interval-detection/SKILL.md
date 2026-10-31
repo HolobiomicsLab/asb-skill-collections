@@ -1,6 +1,6 @@
 ---
 name: quality-control-interval-detection
-description: Use when when you have Sciex Multiquant TXT export files containing injection
+description: Use when you have Sciex Multiquant TXT export files containing injection
   sequences from metabolomics or lipidomics studies where pooled QC samples were deliberately
   injected at regular intervals to monitor analytical quality.
 license: CC-BY-4.0
@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
-evidence_spans:
-- codecov.io/gh/ricoderks/QComics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

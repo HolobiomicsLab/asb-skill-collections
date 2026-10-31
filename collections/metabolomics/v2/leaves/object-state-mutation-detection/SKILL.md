@@ -1,8 +1,8 @@
 ---
 name: object-state-mutation-detection
-description: Use when when calling filter functions (e.g., filter_mispicked_ions(),
-  filter_group(), filter_cv()) on R6-based metabolomics data objects in the mpactr
-  package and you need to verify whether the original object's state is preserved.
+description: Use when calling filter functions (e.g., filter_mispicked_ions(), filter_group(),
+  filter_cv()) on R6-based metabolomics data objects in the mpactr package and you
+  need to verify whether the original object's state is preserved.
 license: CC-BY-4.0
 metadata:
   edam_topics:
@@ -21,8 +21,6 @@ derived_from:
   title: mpactr
 - doi: 10.1021/acs.analchem.2c04632
   title: ''
-evidence_spans:
-- This table can be used for a variety of analyses that can be conducted in R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

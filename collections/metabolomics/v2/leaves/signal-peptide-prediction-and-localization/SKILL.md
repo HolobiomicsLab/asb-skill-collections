@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator
-evidence_spans:
-- Functional annotation | CPAT, signalP, pfam
-- Find motif | fimo
-- Isoforms | Genome wide isoform analysis | IsoformSwitchAnalyzer
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

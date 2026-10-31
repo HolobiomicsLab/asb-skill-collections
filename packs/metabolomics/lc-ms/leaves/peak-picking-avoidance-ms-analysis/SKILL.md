@@ -24,10 +24,6 @@ derived_from:
   title: NPFimg
 - doi: 10.1021/acs.analchem.1c03163
   title: ''
-evidence_spans:
-- Comparison with the widely used XCMS shows the excellent reliability of NPFimg
-- Comparison with the widely used XCMS shows the excellent reliability of NPFimg,
-  in that it has lower error rates of signal acquisition and marker identification.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

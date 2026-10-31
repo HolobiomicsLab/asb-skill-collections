@@ -30,15 +30,6 @@ derived_from:
   title: ''
 - doi: 10.1101/2025.08.28.672951v2
   title: ''
-evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted
-  meta-analysis in R
-- the package will retrieve the PubChem ID from the ID using `webchem`
-- This vignette illustrates `Amanida` R package, which contains a collection of functions
-  for computing a weighted meta-analysis
-- simplifies pathway enrichment analysis by allowing the complete workflow to be executed
-  through a single R function call
-- curated KEGG data for enrichment using Fisher's Exact Test
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

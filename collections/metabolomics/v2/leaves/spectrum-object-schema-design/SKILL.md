@@ -1,9 +1,8 @@
 ---
 name: spectrum-object-schema-design
-description: Use when when building a mass spectrometry data import pipeline that
-  must ingest spectra from multiple file formats and produce a unified, queryable
-  representation suitable for metadata validation, peak filtering, and similarity
-  comparisons.
+description: Use when building a mass spectrometry data import pipeline that must
+  ingest spectra from multiple file formats and produce a unified, queryable representation
+  suitable for metadata validation, peak filtering, and similarity comparisons.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -21,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
-evidence_spans:
-- Matchms is a versatile open-source Python package developed for importing, processing,
-  cleaning, and comparing mass spectrometry data
-- make sure the existing tests still work by running ``pytest``
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

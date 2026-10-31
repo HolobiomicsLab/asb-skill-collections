@@ -1,7 +1,7 @@
 ---
 name: comparative-statistical-testing-across-methods
-description: Use when when you have applied multiple pathway analysis methods to the
-  same metabolomics peak intensity dataset and need to determine which method produces
+description: Use when you have applied multiple pathway analysis methods to the same
+  metabolomics peak intensity dataset and need to determine which method produces
   more stable pathway activity scores under realistic perturbation conditions (noise
   and missing peaks).
 license: CC-BY-4.0
@@ -21,7 +21,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

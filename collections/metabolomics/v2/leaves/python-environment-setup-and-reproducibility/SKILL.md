@@ -1,8 +1,8 @@
 ---
 name: python-environment-setup-and-reproducibility
-description: Use when when you need to execute a multi-backend visualization library
-  (e.g., pyOpenMS-Viz with matplotlib, Bokeh, and Plotly) and must measure or validate
-  execution times, memory usage, and output consistency across runs or team members.
+description: Use when you need to execute a multi-backend visualization library (e.g.,
+  pyOpenMS-Viz with matplotlib, Bokeh, and Plotly) and must measure or validate execution
+  times, memory usage, and output consistency across runs or team members.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -22,9 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
-evidence_spans:
-- conda create --name=pyopenms-viz python=3.12
-- pyOpenMS-Viz is a Python library
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

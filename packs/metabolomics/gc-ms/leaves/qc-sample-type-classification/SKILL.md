@@ -1,6 +1,6 @@
 ---
 name: qc-sample-type-classification
-description: Use when when constructing a sample list from an Excel template for LC/GC-MS
+description: Use when constructing a sample list from an Excel template for LC/GC-MS
   analysis, you must classify each QC sample by type before proceeding to plate layout
   and randomization steps.
 license: CC-BY-4.0
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2023.02.26.530140v1.article-info
   title: InjectionDesign
-evidence_spans:
-- LC/GC-MS-based Multi-Omics Injection-Plate Design Web Service
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

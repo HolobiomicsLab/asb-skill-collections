@@ -1,8 +1,9 @@
 ---
 name: adduct-formation-prediction-for-metabolites
-description: Use when when you have unidentified LC/MS features (m/z, retention time,
-  intensity) and need to disambiguate which metabolites they represent by accounting
-  for the fact that observed m/z values may correspond to different adduct forms (e.
+description: Use when you have unidentified LC/MS features (m/z, retention time, intensity)
+  and need to disambiguate which metabolites they represent by accounting for the
+  fact that observed m/z values may correspond to different adduct forms (e.g., [M+H]+,
+  [M+Na]+, [M-H]−) rather than the neutral mass alone.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -20,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btad455
   title: ipaPy2
-evidence_spans:
-- Python implementation of the Integrated Probabilistic Annotation (IPA)
-- github.com__francescodc87__ipaPy2
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

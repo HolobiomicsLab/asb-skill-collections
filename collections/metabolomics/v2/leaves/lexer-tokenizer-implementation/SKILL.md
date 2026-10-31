@@ -1,8 +1,8 @@
 ---
 name: lexer-tokenizer-implementation
-description: Use when when you need to parse a domain-specific query language (like
-  MassQL) into an abstract syntax tree (AST), and the query strings must be decomposed
-  into discrete lexical units before syntactic analysis.
+description: Use when you need to parse a domain-specific query language (like MassQL)
+  into an abstract syntax tree (AST), and the query strings must be decomposed into
+  discrete lexical units before syntactic analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-025-02785-1
   title: MassQL
-evidence_spans:
-- It is inspired by SQL, but it attempts to bake in assumptions of mass spectrometry
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe
-evidence_spans:
-- MINE-Database, also referred to as Pickaxe, is a python library allows you to efficiently
-  create reaction networks
-- Pickaxe supports running through a command line interface
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

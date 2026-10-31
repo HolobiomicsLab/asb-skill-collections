@@ -15,7 +15,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c07078
   title: qc4metabolomics
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

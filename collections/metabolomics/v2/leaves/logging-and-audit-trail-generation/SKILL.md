@@ -1,6 +1,6 @@
 ---
 name: logging-and-audit-trail-generation
-description: Use when when implementing a metadata annotation pipeline for mass spectra
+description: Use when implementing a metadata annotation pipeline for mass spectra
   that fetches values from multiple external services (e.
 license: CC-BY-4.0
 metadata:
@@ -22,13 +22,6 @@ metadata:
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer
-evidence_spans:
-- '**MSMetaEnhancer** is a tool used for `.msp` files annotation'
-- '`MSMetaEnhancer/libs/converters/web/` named after your service'
-- 'MSMetaEnhancer: A Python package for mass spectra metadata annotation'
-- Create a new Python file in `MSMetaEnhancer/libs/converters/web/`
-- make sure the existing tests still work by running ``pytest``
-- 'fetched from the following services: [CIR](https://cactus.nci.nih.gov/chemical/structure_documentation)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -24,12 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
-evidence_spans:
-- Python-Centric Pipeline for Metabolomics
-- The Python-Centric Pipeline for Metabolomics
-- convert Thermo .raw to mzML (ThermoRawFileParser)
-- process mzML data to feature tables (Asari)
-- pre-annotation to group featues to empirical compounds (khipu)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

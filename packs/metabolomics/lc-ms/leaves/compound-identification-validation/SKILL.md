@@ -1,6 +1,9 @@
 ---
 name: compound-identification-validation
-description: Use when when you have an unknown MS/MS spectrum (in .
+description: Use when you have an unknown MS/MS spectrum (in .mgf format with precursor
+  m/z and fragment peaks) and a reference library of candidate molecular structures
+  (SMILES or SDF format), and need to identify the most likely compound(s) by computing
+  similarity between the spectrum's learned embedding and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -22,13 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c01594
   title: CSU-MS2
-evidence_spans:
-- '- [rdkit](https://rdkit.org/)'
-- '- [pytorch](https://pytorch.org/)'
-- '- [PyTorch Geometric](https://pytorch-geometric.readthedocs.io/en/latest/)'
-- '- [matchms](https://matchms.readthedocs.io/en/latest/)'
-- '- [python3](https://www.python.org/)'
-- We recommend to use [conda](https://conda.io/docs/user-guide/install/download.html)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: natural-product-structural-representation
-description: Use when when you need to represent natural product molecules as numerical
+description: Use when you need to represent natural product molecules as numerical
   feature vectors for downstream machine learning (e.g., biosynthetic class prediction),
   comparative analysis, or when standard chemical fingerprints (e.
 license: CC-BY-4.0
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni
-evidence_spans:
-- pip install -e .[dev]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

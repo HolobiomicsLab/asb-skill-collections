@@ -1,7 +1,7 @@
 ---
 name: blockwise-data-parsing-and-indexing
-description: Use when when you need random access into a large text or XML file that
-  you want to keep compressed, where the file has natural logical divisions (chapters,
+description: Use when you need random access into a large text or XML file that you
+  want to keep compressed, where the file has natural logical divisions (chapters,
   spectra, records) that can be written independently.
 license: CC-BY-4.0
 metadata:
@@ -22,8 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
-evidence_spans:
-- import xml.etree.ElementTree as et
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: feature-quantification-analysis
-description: Use when when you have loaded search result files from one or more DIA-MS
+description: Use when you have loaded search result files from one or more DIA-MS
   analysis tools and need to assess the quantitative performance of identified features.
 license: CC-BY-4.0
 metadata:
@@ -22,11 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash
-evidence_spans:
-- streamlit graphical user interface (GUI)
-- ResultsLoader
-- OSWDataAccess
-- InteractivePlotter
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

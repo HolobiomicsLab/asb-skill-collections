@@ -1,8 +1,8 @@
 ---
 name: file-format-detection-by-extension
-description: Use when when building a file I/O abstraction layer that must support
-  multiple serialization formats (e.g., uncompressed mzML, gzip-compressed mzML, indexed
-  gzip mzML, or SQLite-backed mzML) and route each to its correct handler class without
+description: Use when building a file I/O abstraction layer that must support multiple
+  serialization formats (e.g., uncompressed mzML, gzip-compressed mzML, indexed gzip
+  mzML, or SQLite-backed mzML) and route each to its correct handler class without
   exposing format logic to downstream consumers.
 license: CC-BY-4.0
 metadata:
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
-evidence_spans:
-- import sqlite3
-- import xml.etree.ElementTree as et
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

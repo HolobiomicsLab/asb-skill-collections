@@ -31,14 +31,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
-evidence_spans:
-- library(mspcompiler)
-- library(future)
-- library(future.apply)
-- you can transformed it into a msp file by *Lib2NIST*
-- MS-DIAL friendly msp file
-- both positive and negative modes are in a single file as well. Therefore, we need
-  to separated the polarity
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

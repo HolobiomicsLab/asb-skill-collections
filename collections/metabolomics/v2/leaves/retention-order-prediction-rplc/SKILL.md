@@ -1,6 +1,6 @@
 ---
 name: retention-order-prediction-rplc
-description: Use when when you have a set of small molecules (as SMILES or structures)
+description: Use when you have a set of small molecules (as SMILES or structures)
   that need to be identified or ranked by their elution order in RPLC systems with
   acidic pH (~2.7), and you want to assess model confidence in retention predictions.
 license: CC-BY-4.0
@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-025-00968-8
   title: ROASMI
-evidence_spans:
-- ROASMI is a Retention Order model to Assist Small Molecule Identification
-- Four initial ROASMI models (ROASMI_1 - ROASMI_5)
-- variance of the retention order predictions
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

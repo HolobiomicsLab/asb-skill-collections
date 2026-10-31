@@ -1,6 +1,6 @@
 ---
 name: build-system-monitoring
-description: Use when when you need to capture a snapshot of a research software project's
+description: Use when you need to capture a snapshot of a research software project's
   health metrics from multiple CI/CD and repository services (Travis CI, Landscape.
 license: CC-BY-4.0
 metadata:
@@ -24,9 +24,6 @@ derived_from:
   title: ''
 - doi: 10.5281/zenodo.1043226
   title: ''
-evidence_spans:
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'.
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

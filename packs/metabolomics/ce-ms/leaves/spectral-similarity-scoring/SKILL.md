@@ -1,6 +1,6 @@
 ---
 name: spectral-similarity-scoring
-description: Use when when you have extracted low-resolution mass spectra from individual
+description: Use when you have extracted low-resolution mass spectra from individual
   chromatographic peaks in GC-MS data and need to match them against a spectral library
   (e.g., PNNLMetV20191015.MSL) to identify the unknown compound.
 license: CC-BY-4.0
@@ -53,14 +53,6 @@ derived_from:
   title: ''
 - doi: 10.1038/s41467-022-30118-9
   title: ''
-evidence_spans:
-- from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
-  import MSParameters']
-- import pandas as pd
-- pandas [section=results; evidence='import pandas as pd']
-- import numpy as np
-- numpy [section=results; evidence='import numpy as np']
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

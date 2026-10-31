@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41587-020-0700-3
   title: mshub
-evidence_spans:
-- bittremieux/GNPS_GC
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

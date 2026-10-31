@@ -1,7 +1,7 @@
 ---
 name: notification-payload-formatting
-description: Use when when a QC check fails during an LC-MS instrument run and you
-  need to alert users in real time.
+description: Use when a QC check fails during an LC-MS instrument run and you need
+  to alert users in real time.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -18,7 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c00786
   title: Rapid QC-MS
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

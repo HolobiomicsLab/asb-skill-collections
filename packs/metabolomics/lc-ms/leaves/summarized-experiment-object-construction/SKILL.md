@@ -1,9 +1,9 @@
 ---
 name: summarized-experiment-object-construction
-description: Use when when you have imported a tab-delimited metabolomics file (via
-  readData or similar) containing columns for compound identifiers, sample/aliquot
-  names, peak areas (primary assay), internal standard areas (secondary assay), and
-  sample type classifications, and you need to organize these into.
+description: Use when you have imported a tab-delimited metabolomics file (via readData
+  or similar) containing columns for compound identifiers, sample/aliquot names, peak
+  areas (primary assay), internal standard areas (secondary assay), and sample type
+  classifications, and you need to organize these into a.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
-evidence_spans:
-- library(mzQuality)
-- mzQuality requires a specific format for the input data.
-- mzQuality is a user-friendly R package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

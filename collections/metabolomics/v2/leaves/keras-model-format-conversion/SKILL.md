@@ -18,9 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jacs.9b13786
   title: CSCS / deep CNN natural-product annotation
-evidence_spans:
-- Make sure you have python installed
-- convert the keras models into HDF5 TF2 models
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

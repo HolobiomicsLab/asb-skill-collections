@@ -26,13 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jcim.4c02179
   title: ABCoRT
-evidence_spans:
-- '**Python**'
-- '**PyG**'
-- '**RDKit**'
-- '- **RDKit**'
-- '**NumPy**'
-- '**Pandas**'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

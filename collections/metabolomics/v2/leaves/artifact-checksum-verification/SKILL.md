@@ -1,6 +1,6 @@
 ---
 name: artifact-checksum-verification
-description: Use when when reproducing a prior software release (especially one generated
+description: Use when reproducing a prior software release (especially one generated
   by automated versioning tools like Semantic Release), you need to confirm that the
   artifacts produced in your environment match the original release byte-for-byte.
 license: CC-BY-4.0
@@ -16,7 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c07078
   title: qc4metabolomics
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

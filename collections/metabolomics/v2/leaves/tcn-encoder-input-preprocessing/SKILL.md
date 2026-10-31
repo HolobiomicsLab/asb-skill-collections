@@ -1,6 +1,6 @@
 ---
 name: tcn-encoder-input-preprocessing
-description: Use when when reproducing or auditing FIDDLE's formula prediction pipeline,
+description: Use when reproducing or auditing FIDDLE's formula prediction pipeline,
   or when implementing the TCN encoder in your own codebase and need to confirm that
   the precursor m/z (env[:, 0]) has been removed from the feature vector to avoid
   leakage of mass information into the model's learned.
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
-evidence_spans:
-- 'CLI and Python API: [msfiddle](https://github.com/josiehong/msfiddle)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

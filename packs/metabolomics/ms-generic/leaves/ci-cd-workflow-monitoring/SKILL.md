@@ -1,8 +1,8 @@
 ---
 name: ci-cd-workflow-monitoring
-description: Use when when you need to verify that a continuous integration pipeline
-  for a scientific software project (e.g., mzmine) completes successfully, produces
-  expected build artifacts, or fails in a reproducible manner.
+description: Use when you need to verify that a continuous integration pipeline for
+  a scientific software project (e.g., mzmine) completes successfully, produces expected
+  build artifacts, or fails in a reproducible manner.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3552
@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
-evidence_spans:
-- mzmine is an open-source software for mass spectrometry data processing
-- JDK version-25-blue
-- JavaFX version-24
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

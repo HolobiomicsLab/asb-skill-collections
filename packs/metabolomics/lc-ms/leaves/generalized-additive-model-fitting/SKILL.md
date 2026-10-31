@@ -1,7 +1,7 @@
 ---
 name: generalized-additive-model-fitting
-description: Use when when a feature table from LC-MS metabolomic profiling contains
-  QC (quality control) sample annotations and exhibits systematic signal drift correlated
+description: Use when a feature table from LC-MS metabolomic profiling contains QC
+  (quality control) sample annotations and exhibits systematic signal drift correlated
   with run order or batch number.
 license: CC-BY-4.0
 metadata:
@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.1c00392
   title: Omics Untargeted Key Script
-evidence_spans:
-- New QC-GAM method (MetCorR) with associated scripts were introduced.
-- R based open-source collection of scripts called :red_circle:*OUKS*
-- R ≥4.1.2
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

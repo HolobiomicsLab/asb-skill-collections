@@ -1,7 +1,7 @@
 ---
 name: java-maven-build-orchestration
-description: Use when when you have access to a Java project with a Maven pom.xml
-  defining multiple interdependent modules (e.
+description: Use when you have access to a Java project with a Maven pom.xml defining
+  multiple interdependent modules (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -19,10 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
-evidence_spans:
-- Java 21
-- Apache Maven 3.8
-- git clone https://github.com/ipb-halle/MetFragRelaunched.git
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

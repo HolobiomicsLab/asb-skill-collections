@@ -1,9 +1,9 @@
 ---
 name: technical-specification-tabulation
-description: Use when when you need to verify whether a specific mass spectrometry
-  instrument platform (vendor and model), acquisition mode (e.g., targeted, ddMS2-topN,
-  AIF, direct infusion, imaging), or file format is compatible with a lipidomics or
-  proteomics software tool;
+description: Use when you need to verify whether a specific mass spectrometry instrument
+  platform (vendor and model), acquisition mode (e.g., targeted, ddMS2-topN, AIF,
+  direct infusion, imaging), or file format is compatible with a lipidomics or proteomics
+  software tool;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -23,8 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch
-evidence_spans:
-- tested and validated using Q-Exactive orbitrap UHPLC-HRMS/MS data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

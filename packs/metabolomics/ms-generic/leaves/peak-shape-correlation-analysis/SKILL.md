@@ -1,9 +1,9 @@
 ---
 name: peak-shape-correlation-analysis
-description: Use when when extracting benchmark peaks from mzML files for multiple
-  isotopologues of target molecules, after initial m/z and retention-time matching,
-  to validate that detected isotopologue peaks exhibit consistent peak shape and expected
-  abundance ratios before including them in a reliability.
+description: Use when extracting benchmark peaks from mzML files for multiple isotopologues
+  of target molecules, after initial m/z and retention-time matching, to validate
+  that detected isotopologue peaks exhibit consistent peak shape and expected abundance
+  ratios before including them in a reliability.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -21,13 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btab231
   title: mzRAPP
-evidence_spans:
-- 'You can now start mzRAPP using: library(mzRAPP); callmzRAPP()'
-- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing
-  (NPP)
-- library(mzRAPP)
-- mzRAPP extracts and validates chromatographic peaks for which boundaries are provided
-  for all (enviPat predicted) isotopologues
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

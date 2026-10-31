@@ -1,6 +1,6 @@
 ---
 name: spectrum-preprocessing-for-similarity-analysis
-description: Use when when you have raw MS/MS spectra with residual noise or low-intensity
+description: Use when you have raw MS/MS spectra with residual noise or low-intensity
   peaks and plan to calculate spectral entropy, entropy similarity, or perform spectral
   library matching.
 license: CC-BY-4.0
@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-021-01331-z
   title: Spectral entropy
-evidence_spans:
-- '.. automodule:: spectral_similarity :members:'
-- These are all integrated into the [MSEntropy package
-- These are all integrated into the MSEntropy package (https://github.com/YuanyueLi/MSEntropy)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

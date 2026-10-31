@@ -35,16 +35,6 @@ derived_from:
   title: ''
 - doi: 10.1038/s41467-020-15960-z
   title: ''
-evidence_spans:
-- ADViSELipidomics can normalize the data matrix, providing absolute values of concentration
-  per lipid and sample
-- ADViSELipidomics is a novel Shiny app for the preprocessing, analysis, and visualization
-  of lipidomics data.
-- outputs from LipidSearch and LIQUID for lipid identification and quantification
-- parsing lipid species (using LIPID MAPS classification)
-- _No usage/docs found._
-- streamline various tasks such as data parsing, matching, statistical analysis, and
-  visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

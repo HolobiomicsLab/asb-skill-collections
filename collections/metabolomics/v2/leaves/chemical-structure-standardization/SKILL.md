@@ -1,7 +1,7 @@
 ---
 name: chemical-structure-standardization
-description: Use when when you have raw molecular structures in SMILES or SDF format
-  that must be prepared as input to a descriptor-based classifier (e.g., BitterPredict).
+description: Use when you have raw molecular structures in SMILES or SDF format that
+  must be prepared as input to a descriptor-based classifier (e.g., BitterPredict).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0338
@@ -26,11 +26,6 @@ derived_from:
   title: ''
 - doi: 10.1038/s41592-023-02143-z
   title: ''
-evidence_spans:
-- BitterPredict is a classifier which predicts whether a compound is bitter or not,
-  based on its chemical structure.
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'.
-- structures are standardized using the PubChem standardization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

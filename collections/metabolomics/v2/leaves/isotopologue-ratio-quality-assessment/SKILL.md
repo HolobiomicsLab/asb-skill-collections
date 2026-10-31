@@ -21,14 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btab231
   title: mzRAPP
-evidence_spans:
-- 'You can now start mzRAPP using: library(mzRAPP); callmzRAPP()'
-- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing
-  (NPP)
-- You can then assess the performance of NPP runs we have performed via XCMS
-- Download the XCMS- and MZmine 2-output files from [ucloud]
-- library(mzRAPP)
-- Below we provided one more example for MZmine2
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

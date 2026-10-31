@@ -1,8 +1,8 @@
 ---
 name: nmds-ordination-distance-metric-selection
-description: Use when when you have normalized peak intensity matrices from FT-ICR
-  MS data or other high-resolution metabolomics experiments and need to visualize
-  sample relationships and assess whether categorical grouping factors (e.
+description: Use when you have normalized peak intensity matrices from FT-ICR MS data
+  or other high-resolution metabolomics experiments and need to visualize sample relationships
+  and assess whether categorical grouping factors (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3697
@@ -21,15 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
-evidence_spans:
-- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
-  (e.g., chemodiversity analysis, multivariate statistics)
-- distances (depending on the selected normalization method) using the "vegdist" function
-  for the vegan package and then used to perform a permutational analysis of variance
-  (PERMANOVA)
-- The MetaboDirect pipeline was developed in Python 3.8
-- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

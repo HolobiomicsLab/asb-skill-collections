@@ -1,8 +1,8 @@
 ---
 name: computational-efficiency-single-pass-vs-repeated-detection
-description: 'Use when when processing aligned LC-MS data across multiple samples
-  where the computational bottleneck is repeated peak-detection algorithm calls (one
-  per sample per m/z value). Typical scenario: >10 samples with >1000 m/z values each,
+description: 'Use when processing aligned LC-MS data across multiple samples where
+  the computational bottleneck is repeated peak-detection algorithm calls (one per
+  sample per m/z value). Typical scenario: >10 samples with >1000 m/z values each,
   where N individual find_peaks invocations dominate runtime.'
 license: CC-BY-4.0
 metadata:
@@ -27,10 +27,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
-evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
-  preprocessing
-- Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

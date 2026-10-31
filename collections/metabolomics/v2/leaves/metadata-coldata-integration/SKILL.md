@@ -1,9 +1,9 @@
 ---
 name: metadata-coldata-integration
-description: Use when when you have generated a feature abundance matrix from mzrtsim()
+description: Use when you have generated a feature abundance matrix from mzrtsim()
   peak list simulation with known sample-level attributes (condition assignments,
   batch labels, sample identifiers) and need to package this into a SummarizedExperiment
-  object for Bioconductor-compatible analysis pipelines.
+  object for Bioconductor-compatible analysis pipelines that.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -21,12 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
-evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
-  BiocManager::install("mzrtsim")
-- For seamless integration with Bioconductor workflows, use `mzrtsim_se()` which wraps
-  the simulation in a `SummarizedExperiment`
-- github.com__yufree__mzrtsim
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

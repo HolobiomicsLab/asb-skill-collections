@@ -28,10 +28,6 @@ derived_from:
   title: mwtab Python Library for RESTful Access
 - doi: 10.1021/acs.analchem.5c03225
   title: ''
-evidence_spans:
-- The ``mwtab`` package is a Python library
-- jsonschema_ for validating functionality of ``mwTab`` files based on ``JSON`` schema
-- SMART written in R and R GUI has been developed as user-friendly software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

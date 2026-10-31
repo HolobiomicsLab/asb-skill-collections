@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1515/jib-2025-0047
   title: GetFeatistics
-evidence_spans:
-- R (version ≥ 4.3.1)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

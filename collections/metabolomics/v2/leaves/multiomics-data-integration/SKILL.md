@@ -1,8 +1,8 @@
 ---
 name: multiomics-data-integration
-description: Use when when you have matched multiomics measurements across the same
-  samples or cell lines (transcriptomics, proteomics, metabolomics, epigenomics, etc.)
-  and need to train predictive models that learn regulatory relationships across biomolecular
+description: Use when you have matched multiomics measurements across the same samples
+  or cell lines (transcriptomics, proteomics, metabolomics, epigenomics, etc.) and
+  need to train predictive models that learn regulatory relationships across biomolecular
   classes.
 license: CC-BY-4.0
 metadata:
@@ -20,7 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2024.08.17.608400v2
   title: Recon8D
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

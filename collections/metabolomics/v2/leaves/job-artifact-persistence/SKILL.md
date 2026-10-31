@@ -1,7 +1,7 @@
 ---
 name: job-artifact-persistence
-description: Use when when deploying OpenMS workflows in online mode via RQ (Redis
-  Queue) in a Docker container where the Streamlit frontend may restart or rerun without
+description: Use when deploying OpenMS workflows in online mode via RQ (Redis Queue)
+  in a Docker container where the Streamlit frontend may restart or rerun without
   losing track of submitted jobs.
 license: CC-BY-4.0
 metadata:
@@ -17,9 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
-evidence_spans:
-- No code changes required for offline mode. The detection happens automatically
-- as well as deployment with docker-compose.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

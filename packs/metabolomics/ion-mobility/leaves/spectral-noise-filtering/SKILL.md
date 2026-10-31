@@ -22,11 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA
-evidence_spans:
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
-  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
-  R package'
-- light-weight R package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -25,13 +25,6 @@ metadata:
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer
-evidence_spans:
-- '**MSMetaEnhancer** is a tool used for `.msp` files annotation'
-- '`MSMetaEnhancer/libs/converters/web/` named after your service'
-- 'MSMetaEnhancer: A Python package for mass spectra metadata annotation'
-- Create a new Python file in `MSMetaEnhancer/libs/converters/web/`
-- 'fetched from the following services: [CIR](https://cactus.nci.nih.gov/chemical/structure_documentation)'
-- __all__ = ['IDSM', 'CTS', 'CIR', 'PubChem', 'BridgeDb', 'MyService']
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

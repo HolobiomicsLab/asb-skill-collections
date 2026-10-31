@@ -1,9 +1,9 @@
 ---
 name: spectral-molecular-family-linking
-description: Use when when you have pre-processed genomic data (GCFs from AntiSMASH/BigScape
+description: Use when you have pre-processed genomic data (GCFs from AntiSMASH/BigScape
   clustering) and metabolomic data (spectra and molecular families from GNPS molecular
   networking) and need to systematically score and rank putative relationships between
-  biosynthetic gene clusters and their.
+  biosynthetic gene clusters and their corresponding.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -24,11 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s40168-022-01444-3
   title: NPClassScore
-evidence_spans:
-- It provides the tools [`GNPSDownloader`][nplinker.metabolomics.gnps.GNPSDownloader]
-  and [`GNPSExtractor`][nplinker.metabolomics.gnps.GNPSExtractor]
-- '[![github repo badge](https://img.shields.io/badge/github-nplinker-000.svg?color=blue)](https://github.com/NPLinker/nplinker)'
-- Python version ≥3.11
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

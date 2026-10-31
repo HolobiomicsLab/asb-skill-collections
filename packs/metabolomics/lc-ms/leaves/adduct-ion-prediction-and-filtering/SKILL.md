@@ -1,9 +1,9 @@
 ---
 name: adduct-ion-prediction-and-filtering
-description: 'Use when when annotating m/z features against a metabolite database
-  (HMDB, Lipidmaps, etc.) and the sample preparation, ionization method, or polarity
-  mode favors specific adduct species. For example: negative-mode LC-MS or MS imaging
-  will preferentially generate M-H and halide adducts (M+Cl);'
+description: 'Use when annotating m/z features against a metabolite database (HMDB,
+  Lipidmaps, etc.) and the sample preparation, ionization method, or polarity mode
+  favors specific adduct species. For example: negative-mode LC-MS or MS imaging will
+  preferentially generate M-H and halide adducts (M+Cl);'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -31,10 +31,6 @@ derived_from:
   title: SpaMTP
 - doi: 10.1101/2024.10.14.618269
   title: ''
-evidence_spans:
-- Install SpaMTP if not previously installed devtools::install_github("GenomicsMachineLearning/SpaMTP")
-- For plotting + DE plots
-- '## Install and Import *R* Libraries'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
-evidence_spans:
-- library(MsDataHub)
-- '`r Biocpkg("xcms")` uses functionality from the *MassSpecWavelet* package to identify
-  such peaks'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

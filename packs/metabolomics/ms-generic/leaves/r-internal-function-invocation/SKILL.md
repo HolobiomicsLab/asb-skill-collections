@@ -1,7 +1,7 @@
 ---
 name: r-internal-function-invocation
-description: Use when when you need to verify or retrieve package-internal metadata
-  about compiled .NET assembly location and version before processing raw mass spectrometry
+description: Use when you need to verify or retrieve package-internal metadata about
+  compiled .NET assembly location and version before processing raw mass spectrometry
   files, or when testing the R↔C# dispatch mechanism in isolation without loading
   actual Orbitrap .raw data files.
 license: CC-BY-4.0
@@ -22,10 +22,6 @@ derived_from:
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
-evidence_spans:
-- The extracted information is written to a temporary location on the harddrive, read
-  back into memory and parsed into `R` objects using RawFileReader API
-- 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

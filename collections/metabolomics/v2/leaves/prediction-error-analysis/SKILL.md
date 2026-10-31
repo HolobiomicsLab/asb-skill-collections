@@ -1,7 +1,7 @@
 ---
 name: prediction-error-analysis
-description: Use when when you have trained multiple machine learning regressors on
-  the same prediction task (e.
+description: Use when you have trained multiple machine learning regressors on the
+  same prediction task (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -16,9 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
-evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
-  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

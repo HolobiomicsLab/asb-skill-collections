@@ -1,7 +1,7 @@
 ---
 name: spectral-search-performance-evaluation
-description: Use when when you have implemented or obtained a spectral library search
-  tool (e.
+description: Use when you have implemented or obtained a spectral library search tool
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0362
@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-023-02012-9
   title: Flash entropy search
-evidence_spans:
-- a standalone software with a Graphical User Interface (GUI) named Entropy Search
-- we provide a Python implementation of the algorithm in the `MSEntropy` repository
-- Python implementation of the algorithm
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

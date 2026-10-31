@@ -29,13 +29,6 @@ derived_from:
   title: ICEBERG
 - doi: 10.1038/s41467-025-63915-z
   title: ''
-evidence_spans:
-- _No usage/docs found._
-- By inputting the chemical formula and your experimental spectrum, the WebUI will
-  rank it against all candidates from PubChem.
-- the WebUI will rank it against all candidates from PubChem
-- spatialMETA is a method for integrating spatial multi-omics data
-- spatialmeta.pp.calculate_qc_metrics_sm
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

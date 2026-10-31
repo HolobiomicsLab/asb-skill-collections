@@ -31,11 +31,6 @@ derived_from:
   title: biosynfoni
 - doi: 10.1371/journal.pcbi.1009105
   title: ''
-evidence_spans:
-- biosynfoni
-- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic
-  research
-- pip install -e .[dev]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

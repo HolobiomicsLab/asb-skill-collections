@@ -1,6 +1,6 @@
 ---
 name: spectral-database-matching
-description: Use when when you have MS2 .mzML format data files from untargeted metabolomics
+description: Use when you have MS2 .mzML format data files from untargeted metabolomics
   or proteomics experiments and need to perform an initial annotation step by matching
   experimental spectra against known reference libraries (GNPS, HMDB, MassBank) with
   a defined precursor mass tolerance (e.g., 15 ppm).
@@ -25,10 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-023-00695-y
   title: MAW
-evidence_spans:
-- performs spectral database dereplication using R Package
-- spectral database dereplication using R Package Spectra
-- workflow takes MS2 .mzML format data files as an input in R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

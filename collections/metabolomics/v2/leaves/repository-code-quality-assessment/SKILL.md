@@ -16,7 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41589-019-0400-9
   title: BiG-SCAPE biosynthetic diversity
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

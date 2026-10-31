@@ -1,8 +1,8 @@
 ---
 name: clustering-metrics-computation
-description: Use when when you have executed multiple clustering tools on the same
-  tandem-MS dataset and need to quantitatively compare their performance using normalized,
-  comparable metrics rather than raw cluster assignments alone.
+description: Use when you have executed multiple clustering tools on the same tandem-MS
+  dataset and need to quantitatively compare their performance using normalized, comparable
+  metrics rather than raw cluster assignments alone.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -22,7 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00881
   title: MS-RT
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

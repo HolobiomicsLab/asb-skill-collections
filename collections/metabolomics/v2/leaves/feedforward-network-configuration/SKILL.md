@@ -1,8 +1,8 @@
 ---
 name: feedforward-network-configuration
-description: Use when when implementing multiple spectrum predictor baseline models
-  (NEIMS, MassFormer, etc.) and you need to isolate the impact of encoder architecture
-  on predictive performance.
+description: Use when implementing multiple spectrum predictor baseline models (NEIMS,
+  MassFormer, etc.) and you need to isolate the impact of encoder architecture on
+  predictive performance.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -20,7 +20,6 @@ derived_from:
   title: ICEBERG / fragmentation graph generation
 - doi: 10.1021/acscentsci.9b00085
   title: ''
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

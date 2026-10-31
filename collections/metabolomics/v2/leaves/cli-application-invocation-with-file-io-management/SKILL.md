@@ -1,7 +1,7 @@
 ---
 name: cli-application-invocation-with-file-io-management
-description: Use when when you have vendor mass spectrometry raw files (e.g., .raw
-  format) that must be converted to an open format (Aird) using a Windows .
+description: Use when you have vendor mass spectrometry raw files (e.g., .raw format)
+  that must be converted to an open format (Aird) using a Windows .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3650
@@ -23,10 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
-evidence_spans:
-- AirdPro V5 is now available at 2023.7
-- AirdPro V6 is now available at 2024.4
-- pwiz_bindings_cli.dll from the ProteoWizard project
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

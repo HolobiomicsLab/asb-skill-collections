@@ -1,6 +1,6 @@
 ---
 name: chromatographic-data-structure-abstraction
-description: Use when when ingesting raw mass spectrometry data from multiple instrument
+description: Use when ingesting raw mass spectrometry data from multiple instrument
   vendors or file formats into a metabolomics processing pipeline, and you need to
   expose spectral and chromatographic metadata through a single, consistent interface
   regardless of the source format's internal structure.
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btaf290
   title: Eclipse
-evidence_spans:
-- They are written in Python and C
-- pip install bmxp
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

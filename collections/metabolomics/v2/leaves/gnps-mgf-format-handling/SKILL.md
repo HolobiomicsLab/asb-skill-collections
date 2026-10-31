@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2023.07.06.547963v1
   title: Mass2SMILES
-evidence_spans:
-- open-source Python based deep learning approach
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

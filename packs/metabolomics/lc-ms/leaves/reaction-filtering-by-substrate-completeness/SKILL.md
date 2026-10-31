@@ -22,9 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
-evidence_spans:
-- Data analysis and isotopic natural abundance correction were performed with MassHunter
-  ProFinder (Agilent)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

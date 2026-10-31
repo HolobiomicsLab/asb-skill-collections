@@ -22,11 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
-evidence_spans:
-- convert Thermo .raw to mzML (ThermoRawFileParser)
-- Batch correction is performed using pycombat.
-- Python-Centric Pipeline for Metabolomics
-- The Python-Centric Pipeline for Metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

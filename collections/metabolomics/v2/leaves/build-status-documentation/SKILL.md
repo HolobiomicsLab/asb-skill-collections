@@ -1,6 +1,6 @@
 ---
 name: build-status-documentation
-description: Use when when you need to validate that a development build release workflow
+description: Use when you need to validate that a development build release workflow
   (such as dev_build_release.yml for a mass spectrometry data processing project)
   executes without failure and generates artifacts for downstream testing or distribution.
 license: CC-BY-4.0
@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
-evidence_spans:
-- mzmine is an open-source software for mass spectrometry data processing
-- JDK version-25-blue
-- JavaFX version-24
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

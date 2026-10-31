@@ -1,7 +1,7 @@
 ---
 name: false-positive-negative-detection-in-pattern-matching
-description: Use when when reconstructing or validating the ColumnFinder component
-  in mwtab, you need to assess whether the combined NameMatcher.dict_match and ValueMatcher.series_match
+description: Use when reconstructing or validating the ColumnFinder component in mwtab,
+  you need to assess whether the combined NameMatcher.dict_match and ValueMatcher.series_match
   operations are correctly populating database-ID columns. Apply this skill after
   defining NameMatcher patterns (e.
 license: CC-BY-4.0
@@ -23,8 +23,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo11030163
   title: mwtab Python Library for RESTful Access
-evidence_spans:
-- The ``mwtab`` package is a Python library
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

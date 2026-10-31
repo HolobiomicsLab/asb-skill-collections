@@ -1,8 +1,8 @@
 ---
 name: lc-ms-dataset-acquisition-and-curation
-description: Use when when beginning an untargeted LC-MS metabolomics study and need
-  to assemble a cohort of mzML files for processing; particularly when establishing
-  performance baselines across sample counts (10, 50, 100+ samples), validating reproducibility,
+description: Use when beginning an untargeted LC-MS metabolomics study and need to
+  assemble a cohort of mzML files for processing; particularly when establishing performance
+  baselines across sample counts (10, 50, 100+ samples), validating reproducibility,
   or preparing data for publication.
 license: CC-BY-4.0
 metadata:
@@ -24,11 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
-evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
-  preprocessing
-- Trackable and scalable Python program for high-resolution metabolomics data processing.
-- The default method uses `pymzml` to parse mzML files.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

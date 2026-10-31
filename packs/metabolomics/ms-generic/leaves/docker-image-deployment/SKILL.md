@@ -1,6 +1,6 @@
 ---
 name: docker-image-deployment
-description: Use when when you have a containerized scientific tool available on Docker
+description: Use when you have a containerized scientific tool available on Docker
   Hub (e.
 license: CC-BY-4.0
 metadata:
@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
-evidence_spans:
-- docker run -it --rm -p 8888:8080 ipbhalle/metfragweb
-- This container packages the MetFrag (https://github.com/ipb-halle/MetFragRelaunched)
-  webapp
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

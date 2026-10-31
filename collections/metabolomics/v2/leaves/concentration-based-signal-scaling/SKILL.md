@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1007/s11306-020-01717-8
   title: MetaboShiny
-evidence_spans:
-- Welcome to the info page on MetaboShiny
-- Welcome to the info page on MetaboShiny! We are currently on BioRXiv
-- Through R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

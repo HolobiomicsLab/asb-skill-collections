@@ -23,9 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1093/nar/gkac408
   title: BioTransformer 3.0
-evidence_spans:
-- BioTransformer's environmental microbial degradation module uses data from the EAWAG's
-  Biodegradation and Biocatalysis Database
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

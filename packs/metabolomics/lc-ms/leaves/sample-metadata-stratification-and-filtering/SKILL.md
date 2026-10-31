@@ -1,8 +1,8 @@
 ---
 name: sample-metadata-stratification-and-filtering
-description: Use when when you have retrieved a large, heterogeneous collection of
-  tandem MS files from ReDU or MassIVE and need to isolate a subset sharing specific
-  sample characteristics (e.
+description: Use when you have retrieved a large, heterogeneous collection of tandem
+  MS files from ReDU or MassIVE and need to isolate a subset sharing specific sample
+  characteristics (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -23,10 +23,6 @@ derived_from:
   title: ReDU
 - doi: 10.1186/2047-217x-2-16
   title: ''
-evidence_spans:
-- Validation of the ReDU sample information template using the drag-and-drop validator
-- ReDU only interacts with MassIVE
-- data uploaded to MassIVE as a public dataset
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -18,10 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
-evidence_spans:
-- utilizing packages such as ReactiveExtensions and ReactiveProperty
-- The .NET class libraries adhere at least to the specifications of .NET Standard
-  2.0
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

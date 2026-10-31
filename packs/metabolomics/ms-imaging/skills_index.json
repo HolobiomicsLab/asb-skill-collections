@@ -30,7 +30,7 @@
  {
   "slug": "adduct-ion-mass-calculation",
   "name": "adduct-ion-mass-calculation",
-  "description": "Use when when you have derivatized metabolite structures (SMILES or mol format) and need to predict their ionization products in MS imaging, particularly when the derivatizing matrix produces non-standard adducts (e.",
+  "description": "Use when you have derivatized metabolite structures (SMILES or mol format) and need to predict their ionization products in MS imaging, particularly when the derivatizing matrix produces non-standard adducts (e.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -58,7 +58,7 @@
  {
   "slug": "adduct-ion-parent-ion-pairing-analysis",
   "name": "adduct-ion-parent-ion-pairing-analysis",
-  "description": "Use when when you have binned mass spectrometry imaging peaks and want to understand which detected mass-to-charge ratios represent the same metabolite in different ionization states (parent vs. adduct form).",
+  "description": "Use when you have binned mass spectrometry imaging peaks and want to understand which detected mass-to-charge ratios represent the same metabolite in different ionization states (parent vs. adduct form).",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -90,7 +90,7 @@
  {
   "slug": "adduct-ion-prediction-and-filtering",
   "name": "adduct-ion-prediction-and-filtering",
-  "description": "Use when when annotating m/z features against a metabolite database (HMDB, Lipidmaps, etc.) and the sample preparation, ionization method, or polarity mode favors specific adduct species. For example: negative-mode LC-MS or MS imaging will preferentially generate M-H and halide adducts (M+Cl);",
+  "description": "Use when annotating m/z features against a metabolite database (HMDB, Lipidmaps, etc.) and the sample preparation, ionization method, or polarity mode favors specific adduct species. For example: negative-mode LC-MS or MS imaging will preferentially generate M-H and halide adducts (M+Cl);",
   "edam_operation": "http://edamontology.org/operation_3629",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -126,7 +126,7 @@
  {
   "slug": "adduct-mass-calculation-from-smiles",
   "name": "adduct-mass-calculation-from-smiles",
-  "description": "Use when when you have a metabolite SMILES structure and need to predict which adduct ions will appear in a mass spectrum acquired with a chemical derivatizing matrix.",
+  "description": "Use when you have a metabolite SMILES structure and need to predict which adduct ions will appear in a mass spectrum acquired with a chemical derivatizing matrix.",
   "edam_operation": "http://edamontology.org/operation_3629",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -210,7 +210,7 @@
  {
   "slug": "anndata-object-initialization-and-structuring",
   "name": "anndata-object-initialization-and-structuring",
-  "description": "Use when when you have imzML and accompanying ibd (ion binary data) files from spatial metabolomics experiments and need to load them into a unified AnnData object representation for integration with spatial transcriptomics or other spatial multi-omics data.",
+  "description": "Use when you have imzML and accompanying ibd (ion binary data) files from spatial metabolomics experiments and need to load them into a unified AnnData object representation for integration with spatial transcriptomics or other spatial multi-omics data.",
   "edam_operation": "http://edamontology.org/operation_3357",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -300,7 +300,7 @@
  {
   "slug": "autoencoder-encoder-decoder-design",
   "name": "autoencoder-encoder-decoder-design",
-  "description": "Use when when working with imaging mass spectrometry (IMS) datasets where you need to extract latent low-dimensional peak features from high-dimensional peak intensity data while preserving spatial adjacency information.",
+  "description": "Use when working with imaging mass spectrometry (IMS) datasets where you need to extract latent low-dimensional peak features from high-dimensional peak intensity data while preserving spatial adjacency information.",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -333,7 +333,7 @@
  {
   "slug": "batch-file-processing-orchestration",
   "name": "batch-file-processing-orchestration",
-  "description": "Use when when you have multiple CDF imaging files (e.g., from mass spectrometry imaging scans of biological samples) that need to be read into a single Matlab workspace with consistent structure and metadata (spectral intensity, m/z arrays, spatial coordinates).",
+  "description": "Use when you have multiple CDF imaging files (e.g., from mass spectrometry imaging scans of biological samples) that need to be read into a single Matlab workspace with consistent structure and metadata (spectral intensity, m/z arrays, spatial coordinates).",
   "edam_operation": "http://edamontology.org/operation_3443",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -423,7 +423,7 @@
  {
   "slug": "bioinformatic-object-conversion",
   "name": "bioinformatic-object-conversion",
-  "description": "Use when when you have processed Cardinal MSI data (normalized peak intensities, optional SSC segmentation results) and need to transition to Seurat-based workflows for differential expression, pathway analysis, or integration with spatial transcriptomics data.",
+  "description": "Use when you have processed Cardinal MSI data (normalized peak intensities, optional SSC segmentation results) and need to transition to Seurat-based workflows for differential expression, pathway analysis, or integration with spatial transcriptomics data.",
   "edam_operation": "http://edamontology.org/operation_3443",
   "edam_topics": [
    "http://edamontology.org/topic_0091",
@@ -489,7 +489,7 @@
  {
   "slug": "bonferroni-multiple-testing-correction",
   "name": "bonferroni-multiple-testing-correction",
-  "description": "Use when when you have performed many pairwise correlation tests between candidate parent and adduct ion intensity pairs in MSI data and need to identify statistically significant relationships while controlling for multiple-comparison bias.",
+  "description": "Use when you have performed many pairwise correlation tests between candidate parent and adduct ion intensity pairs in MSI data and need to identify statistically significant relationships while controlling for multiple-comparison bias.",
   "edam_operation": "http://edamontology.org/operation_3799",
   "edam_topics": [
    "http://edamontology.org/topic_0091",
@@ -651,7 +651,7 @@
  {
   "slug": "cardinal-object-structure-understanding",
   "name": "cardinal-object-structure-understanding",
-  "description": "Use when when you have loaded a raw or processed Cardinal MSImagingExperiment object from MS imaging data and need to (1) extract spectral intensities and m/z feature information for conversion to other formats (e.g., Seurat), (2) verify that normalization or spatial segmentation (e.",
+  "description": "Use when you have loaded a raw or processed Cardinal MSImagingExperiment object from MS imaging data and need to (1) extract spectral intensities and m/z feature information for conversion to other formats (e.g., Seurat), (2) verify that normalization or spatial segmentation (e.",
   "edam_operation": "http://edamontology.org/operation_3357",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -721,7 +721,7 @@
  {
   "slug": "cdf-file-format-parsing",
   "name": "cdf-file-format-parsing",
-  "description": "Use when when you have multiple CDF files from mass spectrometry imaging experiments (e.g., root tissue MALDI-MS data) that need to be ingested into Matlab for linear imaging analysis. Trigger: presence of .",
+  "description": "Use when you have multiple CDF files from mass spectrometry imaging experiments (e.g., root tissue MALDI-MS data) that need to be ingested into Matlab for linear imaging analysis. Trigger: presence of .",
   "edam_operation": "http://edamontology.org/operation_3434",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -774,7 +774,7 @@
  {
   "slug": "chemical-annotation-confidence-assessment",
   "name": "chemical-annotation-confidence-assessment",
-  "description": "Use when when you have received chemical annotations from GNPS spectral library matching workflow and need to assess their reliability before downstream analysis (e.g., chemical explorer visualization, sample filtering, or comparative metabolomics).",
+  "description": "Use when you have received chemical annotations from GNPS spectral library matching workflow and need to assess their reliability before downstream analysis (e.g., chemical explorer visualization, sample filtering, or comparative metabolomics).",
   "edam_operation": "http://edamontology.org/operation_3860",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -809,7 +809,7 @@
  {
   "slug": "chemical-database-query-and-matching",
   "name": "chemical-database-query-and-matching",
-  "description": "Use when when you have mass-to-charge (m/z) values from mass spectrometry imaging or other MS experiments and need to assign molecular formulae with high precision, especially in spatially-resolved metabolomics where traditional LC-MS annotation methods are insufficient.",
+  "description": "Use when you have mass-to-charge (m/z) values from mass spectrometry imaging or other MS experiments and need to assign molecular formulae with high precision, especially in spatially-resolved metabolomics where traditional LC-MS annotation methods are insufficient.",
   "edam_operation": "http://edamontology.org/operation_3282",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -968,7 +968,7 @@
  {
   "slug": "col-mode-augmentation-pipeline-implementation",
   "name": "col-mode-augmentation-pipeline-implementation",
-  "description": "Use when when you have preprocessed mass spectrometry imaging (MSI) ion images and need to generate augmented image pairs for contrastive learning in co-localized ion discovery tasks.",
+  "description": "Use when you have preprocessed mass spectrometry imaging (MSI) ion images and need to generate augmented image pairs for contrastive learning in co-localized ion discovery tasks.",
   "edam_operation": "http://edamontology.org/operation_3434",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -1169,7 +1169,7 @@
  {
   "slug": "conditional-dispatch-logic-implementation",
   "name": "conditional-dispatch-logic-implementation",
-  "description": "Use when when accepting a file path as input in an MSI data processing pipeline and you need to determine which data reader module to instantiate before calling get_image_data() or load_pixels(). This arises when building a multi-vendor instrument workflow (e.",
+  "description": "Use when accepting a file path as input in an MSI data processing pipeline and you need to determine which data reader module to instantiate before calling get_image_data() or load_pixels(). This arises when building a multi-vendor instrument workflow (e.",
   "edam_operation": "http://edamontology.org/operation_3763",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -1236,7 +1236,7 @@
  {
   "slug": "contrastive-learning-encoder-design",
   "name": "contrastive-learning-encoder-design",
-  "description": "Use when when you have mass spectrometry ion image data and need to learn meaningful low-dimensional representations through self-supervised contrastive learning.",
+  "description": "Use when you have mass spectrometry ion image data and need to learn meaningful low-dimensional representations through self-supervised contrastive learning.",
   "edam_operation": "http://edamontology.org/operation_3891",
   "edam_topics": [
    "http://edamontology.org/topic_3674",
@@ -1269,7 +1269,7 @@
  {
   "slug": "contrastive-learning-loss-implementation",
   "name": "contrastive-learning-loss-implementation",
-  "description": "Use when when you have paired augmented ion images processed through ResNet18 encoders producing 512-dimensional representation vectors, and you need to learn meaningful low-dimensional representations without labeled data by enforcing that augmentations of the same image remain similar while.",
+  "description": "Use when you have paired augmented ion images processed through ResNet18 encoders producing 512-dimensional representation vectors, and you need to learn meaningful low-dimensional representations without labeled data by enforcing that augmentations of the same image remain similar while different.",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -1365,7 +1365,7 @@
  {
   "slug": "coordinate-system-normalization-1based-indexing",
   "name": "coordinate-system-normalization-1based-indexing",
-  "description": "Use when when exporting quantified ion images and pixel metadata from LipidQMap to HDF5 format for use in downstream Cardinal or other MSI analysis workflows.",
+  "description": "Use when exporting quantified ion images and pixel metadata from LipidQMap to HDF5 format for use in downstream Cardinal or other MSI analysis workflows.",
   "edam_operation": "http://edamontology.org/operation_3443",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -1423,7 +1423,7 @@
  {
   "slug": "cross-domain-metadata-integration",
   "name": "cross-domain-metadata-integration",
-  "description": "Use when when you have conducted batch MS/MS searches across one or more domain-specific MASST tools and need to combine their hit scores, metadata annotations, and taxonomic lineages into a single coherent result set for comparative analysis or publication.",
+  "description": "Use when you have conducted batch MS/MS searches across one or more domain-specific MASST tools and need to combine their hit scores, metadata annotations, and taxonomic lineages into a single coherent result set for comparative analysis or publication.",
   "edam_operation": "http://edamontology.org/operation_3933",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -1534,7 +1534,7 @@
  {
   "slug": "deep-learning-model-implementation-in-pytorch-or-tensorflow",
   "name": "deep-learning-model-implementation-in-pytorch-or-tensorflow",
-  "description": "Use when when you need to construct a dual-branch neural network encoder that processes two augmented versions of the same input (e.g., ion images in COL or ISO mode) and must enforce weight sharing between branches to reduce parameters while maintaining separate output representations.",
+  "description": "Use when you need to construct a dual-branch neural network encoder that processes two augmented versions of the same input (e.g., ion images in COL or ISO mode) and must enforce weight sharing between branches to reduce parameters while maintaining separate output representations.",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_3474",
@@ -1593,7 +1593,7 @@
  {
   "slug": "derivatization-chemistry-enumeration",
   "name": "derivatization-chemistry-enumeration",
-  "description": "Use when when performing metabolite identification in mass spectrometry imaging and the metabolites have been chemically derivatized with a known derivatizing matrix (such as FMP-10) that produces ions other than the standard [M+H]+ in positive mode or [M-H]− in negative mode.",
+  "description": "Use when performing metabolite identification in mass spectrometry imaging and the metabolites have been chemically derivatized with a known derivatizing matrix (such as FMP-10) that produces ions other than the standard [M+H]+ in positive mode or [M-H]− in negative mode.",
   "edam_operation": "http://edamontology.org/operation_3802",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -1650,7 +1650,7 @@
  {
   "slug": "derivatizing-matrix-ionization-rule-application",
   "name": "derivatizing-matrix-ionization-rule-application",
-  "description": "Use when when working with mass spectrometry imaging data from metabolites treated with derivatizing matrices (e.",
+  "description": "Use when working with mass spectrometry imaging data from metabolites treated with derivatizing matrices (e.",
   "edam_operation": "http://edamontology.org/operation_3800",
   "edam_topics": [
    "http://edamontology.org/topic_3370",
@@ -1678,7 +1678,7 @@
  {
   "slug": "dimension-scale-linking-and-cross-group-indexing",
   "name": "dimension-scale-linking-and-cross-group-indexing",
-  "description": "Use when when exporting quantified MSI data as HDF5 containers following the Cardinal::HDF5 layout convention, and you need to establish bidirectional indexing between intensity data (feature-by-pixel matrix) and metadata groups (featureData, pixelData).",
+  "description": "Use when exporting quantified MSI data as HDF5 containers following the Cardinal::HDF5 layout convention, and you need to establish bidirectional indexing between intensity data (feature-by-pixel matrix) and metadata groups (featureData, pixelData).",
   "edam_operation": "http://edamontology.org/operation_3443",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -1708,7 +1708,7 @@
  {
   "slug": "dimple-pipeline-execution",
   "name": "dimple-pipeline-execution",
-  "description": "Use when when you have deposited mass spectrometry imaging data in NetCDF (CDF) format paired with MATLAB workspace files (.",
+  "description": "Use when you have deposited mass spectrometry imaging data in NetCDF (CDF) format paired with MATLAB workspace files (.",
   "edam_operation": "http://edamontology.org/operation_3215",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -1734,7 +1734,7 @@
  {
   "slug": "domain-context-to-application-routing",
   "name": "domain-context-to-application-routing",
-  "description": "Use when when a user submits one or more MS/MS spectra and has declared or implied a domain context (microbial, plant, tissue, microbiome, food, or metadata aggregation), and the search must be executed against the appropriate domain-curated spectral library.",
+  "description": "Use when a user submits one or more MS/MS spectra and has declared or implied a domain context (microbial, plant, tissue, microbiome, food, or metadata aggregation), and the search must be executed against the appropriate domain-curated spectral library.",
   "edam_operation": "http://edamontology.org/operation_3763",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -1845,7 +1845,7 @@
  {
   "slug": "environment-dependency-management",
   "name": "environment-dependency-management",
-  "description": "Use when when deploying Galaxy-M or similar multi-component metabolomics platforms that depend on heterogeneous runtime environments (Python, R, MATLAB, WINE) across multiple operating systems (Ubuntu 14.",
+  "description": "Use when deploying Galaxy-M or similar multi-component metabolomics platforms that depend on heterogeneous runtime environments (Python, R, MATLAB, WINE) across multiple operating systems (Ubuntu 14.",
   "edam_operation": "http://edamontology.org/operation_0338",
   "edam_topics": [
    "http://edamontology.org/topic_0091",
@@ -1919,7 +1919,7 @@
  {
   "slug": "euclidean-distance-computation-for-spatial-alignment",
   "name": "euclidean-distance-computation-for-spatial-alignment",
-  "description": "Use when when you have preprocessed ST and SM AnnData objects with spatial coordinates and need to establish one-to-one spot correspondence between the two modalities prior to joint analysis.",
+  "description": "Use when you have preprocessed ST and SM AnnData objects with spatial coordinates and need to establish one-to-one spot correspondence between the two modalities prior to joint analysis.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3673",
@@ -1947,7 +1947,7 @@
  {
   "slug": "experimental-design-metadata-integration",
   "name": "experimental-design-metadata-integration",
-  "description": "Use when when you have LC-MS raw data and need to process it through a feature detection and quantification pipeline in KNIME, but lack a structured mapping between sample identifiers, experimental conditions, and the raw LC-MS runs.",
+  "description": "Use when you have LC-MS raw data and need to process it through a feature detection and quantification pipeline in KNIME, but lack a structured mapping between sample identifiers, experimental conditions, and the raw LC-MS runs.",
   "edam_operation": "http://edamontology.org/operation_3891",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -2099,7 +2099,7 @@
  {
   "slug": "file-format-detection-and-routing",
   "name": "file-format-detection-and-routing",
-  "description": "Use when when you receive a mass spectrometry imaging dataset in unknown or mixed vendor formats and need to apply format-specific preprocessing before generating ion images.",
+  "description": "Use when you receive a mass spectrometry imaging dataset in unknown or mixed vendor formats and need to apply format-specific preprocessing before generating ion images.",
   "edam_operation": "http://edamontology.org/operation_3763",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -2193,7 +2193,7 @@
  {
   "slug": "git-repository-cloning-and-version-control",
   "name": "git-repository-cloning-and-version-control",
-  "description": "Use when when you need to reproduce a computational workflow described in a GitHub repository, validate CI/CD pipeline definitions (e.g., GitHub Actions workflows), inspect source code structure, or execute local versions of automated tests.",
+  "description": "Use when you need to reproduce a computational workflow described in a GitHub repository, validate CI/CD pipeline definitions (e.g., GitHub Actions workflows), inspect source code structure, or execute local versions of automated tests.",
   "edam_operation": "http://edamontology.org/operation_0226",
   "edam_topics": [
    "http://edamontology.org/topic_0091"
@@ -2250,7 +2250,7 @@
  {
   "slug": "group-wise-chemical-enrichment-calculation",
   "name": "group-wise-chemical-enrichment-calculation",
-  "description": "Use when when comparing GNPS chemical annotations across two or more groups of samples (defined by ReDU sample-information categories such as sample type, extraction method, or ionization source) where the groups contain different numbers of files.",
+  "description": "Use when comparing GNPS chemical annotations across two or more groups of samples (defined by ReDU sample-information categories such as sample type, extraction method, or ionization source) where the groups contain different numbers of files.",
   "edam_operation": "http://edamontology.org/operation_3695",
   "edam_topics": [
    "http://edamontology.org/topic_0625",
@@ -2343,7 +2343,7 @@
  {
   "slug": "hdf5-file-structure-specification",
   "name": "hdf5-file-structure-specification",
-  "description": "Use when when exporting quantified MSI data (feature-by-pixel intensity matrices with associated ion m/z, lipid annotations, and pixel spatial coordinates) from LipidQMap and you need to produce a standards-compliant HDF5 container that can be read by Cardinal and other MSI analysis tools.",
+  "description": "Use when exporting quantified MSI data (feature-by-pixel intensity matrices with associated ion m/z, lipid annotations, and pixel spatial coordinates) from LipidQMap and you need to produce a standards-compliant HDF5 container that can be read by Cardinal and other MSI analysis tools.",
   "edam_operation": "http://edamontology.org/operation_3439",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -2372,7 +2372,7 @@
  {
   "slug": "high-dimensional-signal-enhancement",
   "name": "high-dimensional-signal-enhancement",
-  "description": "Use when when you have raw or preprocessed mass spectrometry imaging (MSI) data with limited spatial resolution, high noise, or incomplete molecular coverage, and you want to enhance signal fidelity to support multiscale tissue–single-cell mapping or brain biochemical profiling.",
+  "description": "Use when you have raw or preprocessed mass spectrometry imaging (MSI) data with limited spatial resolution, high noise, or incomplete molecular coverage, and you want to enhance signal fidelity to support multiscale tissue–single-cell mapping or brain biochemical profiling.",
   "edam_operation": "http://edamontology.org/operation_3443",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -2456,7 +2456,7 @@
  {
   "slug": "image-intensity-jittering",
   "name": "image-intensity-jittering",
-  "description": "Use when when preparing ion images (single-channel 2D arrays or multi-channel spectral images) from mass spectrometry imaging for contrastive learning in DeepION's COL or ISO modes.",
+  "description": "Use when preparing ion images (single-channel 2D arrays or multi-channel spectral images) from mass spectrometry imaging for contrastive learning in DeepION's COL or ISO modes.",
   "edam_operation": "http://edamontology.org/operation_3443",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -2707,7 +2707,7 @@
  {
   "slug": "imzml-file-loading-and-import",
   "name": "imzml-file-loading-and-import",
-  "description": "Use when when you have one or more imzML files containing mass spectrometry imaging data and need to import them into LipidQMap for ion image extraction, isotopic correction, and quantitative analysis.",
+  "description": "Use when you have one or more imzML files containing mass spectrometry imaging data and need to import them into LipidQMap for ion image extraction, isotopic correction, and quantitative analysis.",
   "edam_operation": "http://edamontology.org/operation_3357",
   "edam_topics": [
    "http://edamontology.org/topic_0625",
@@ -2887,7 +2887,7 @@
  {
   "slug": "interactive-spectral-visualization-emperor",
   "name": "interactive-spectral-visualization-emperor",
-  "description": "Use when when you have computed PCA coordinates from chemical annotation matrices (e.",
+  "description": "Use when you have computed PCA coordinates from chemical annotation matrices (e.",
   "edam_operation": "http://edamontology.org/operation_3441",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -3019,7 +3019,7 @@
  {
   "slug": "ion-image-augmentation-contrastive-learning",
   "name": "ion-image-augmentation-contrastive-learning",
-  "description": "Use when when you have preprocessed mass spectrometry ion images (single-channel 2D arrays or multi-channel spectral images) and need to train a self-supervised encoder to learn low-dimensional representations for downstream tasks such as co-localized ion discovery (COL mode) or isotope ion.",
+  "description": "Use when you have preprocessed mass spectrometry ion images (single-channel 2D arrays or multi-channel spectral images) and need to train a self-supervised encoder to learn low-dimensional representations for downstream tasks such as co-localized ion discovery (COL mode) or isotope ion clustering.",
   "edam_operation": "http://edamontology.org/operation_3562",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -3051,7 +3051,7 @@
  {
   "slug": "ion-image-augmentation-design",
   "name": "ion-image-augmentation-design",
-  "description": "Use when when preparing ion image data from mass spectrometry imaging for contrastive self-supervised representation learning, and you need to generate augmented image pairs that reflect either co-localization relationships between different molecular ions (COL mode) or isotopic relationships.",
+  "description": "Use when preparing ion image data from mass spectrometry imaging for contrastive self-supervised representation learning, and you need to generate augmented image pairs that reflect either co-localization relationships between different molecular ions (COL mode) or isotopic relationships within.",
   "edam_operation": "http://edamontology.org/operation_3799",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -3152,7 +3152,7 @@
  {
   "slug": "ion-image-quantification-workflow",
   "name": "ion-image-quantification-workflow",
-  "description": "Use when when you have imzML mass spectrometry imaging data files and need to convert raw ion image intensities into quantitative lipid abundance (pmol/mm²) using known internal standards.",
+  "description": "Use when you have imzML mass spectrometry imaging data files and need to convert raw ion image intensities into quantitative lipid abundance (pmol/mm²) using known internal standards.",
   "edam_operation": "http://edamontology.org/operation_3627",
   "edam_topics": [
    "http://edamontology.org/topic_0769",
@@ -3344,7 +3344,7 @@
  {
   "slug": "java-build-artifact-validation",
   "name": "java-build-artifact-validation",
-  "description": "Use when when you need to verify that a Java project's automated build pipeline (GitHub Actions workflow) executes without errors and generates distributable artifacts (e.g., .deb installers, portable binaries, or .jar files).",
+  "description": "Use when you need to verify that a Java project's automated build pipeline (GitHub Actions workflow) executes without errors and generates distributable artifacts (e.g., .deb installers, portable binaries, or .jar files).",
   "edam_operation": "http://edamontology.org/operation_3552",
   "edam_topics": [
    "http://edamontology.org/topic_0091"
@@ -3416,7 +3416,7 @@
  {
   "slug": "knn-nearest-neighbor-matching-for-spot-correspondence",
   "name": "knn-nearest-neighbor-matching-for-spot-correspondence",
-  "description": "Use when when integrating two spatial omics modalities (ST and SM) measured on the same tissue sample but at different spatial resolutions or spot coordinates.",
+  "description": "Use when integrating two spatial omics modalities (ST and SM) measured on the same tissue sample but at different spatial resolutions or spot coordinates.",
   "edam_operation": "http://edamontology.org/operation_3933",
   "edam_topics": [
    "http://edamontology.org/topic_3674",
@@ -3539,7 +3539,7 @@
  {
   "slug": "lipid-adduct-pairing-by-neutral-mass",
   "name": "lipid-adduct-pairing-by-neutral-mass",
-  "description": "Use when when processing mass spectrometry imaging data with multiple adduct forms of the same lipid species, and you need to correct one adduct form (e.g. [M+H]+) for isotopic interference from a co-occurring adduct (e.g. [M+Na]+).",
+  "description": "Use when processing mass spectrometry imaging data with multiple adduct forms of the same lipid species, and you need to correct one adduct form (e.g. [M+H]+) for isotopic interference from a co-occurring adduct (e.g. [M+Na]+).",
   "edam_operation": "http://edamontology.org/operation_3629",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -3771,7 +3771,7 @@
  {
   "slug": "m-z-array-processing",
   "name": "m-z-array-processing",
-  "description": "Use when when you have imported MSI data (imzML or vendor format) loaded into the napari plugin environment and need to organize raw spectral m/z and intensity arrays prior to mean intensity calculation, ROI analysis, or database annotation.",
+  "description": "Use when you have imported MSI data (imzML or vendor format) loaded into the napari plugin environment and need to organize raw spectral m/z and intensity arrays prior to mean intensity calculation, ROI analysis, or database annotation.",
   "edam_operation": "http://edamontology.org/operation_3444",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -3800,7 +3800,7 @@
  {
   "slug": "m-z-metabolite-annotation-mapping",
   "name": "m-z-metabolite-annotation-mapping",
-  "description": "Use when when you have a spatial metabolomics or LC-MS dataset with detected m/z features (as a feature matrix or SpaMTP Seurat object) and need to assign metabolite identities. Specifically: you have observed m/z values, you know the ionization polarity and expected adduct form (e.",
+  "description": "Use when you have a spatial metabolomics or LC-MS dataset with detected m/z features (as a feature matrix or SpaMTP Seurat object) and need to assign metabolite identities. Specifically: you have observed m/z values, you know the ionization polarity and expected adduct form (e.",
   "edam_operation": "http://edamontology.org/operation_3860",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -3964,7 +3964,7 @@
  {
   "slug": "mass-accuracy-ppm-filtering",
   "name": "mass-accuracy-ppm-filtering",
-  "description": "Use when when you have a set of candidate molecular formulae for a measured m/z value and need to rank them by how closely their theoretical m/z matches the observed value.",
+  "description": "Use when you have a set of candidate molecular formulae for a measured m/z value and need to rank them by how closely their theoretical m/z matches the observed value.",
   "edam_operation": "http://edamontology.org/operation_3674",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -4054,7 +4054,7 @@
  {
   "slug": "mass-error-tolerance-filtering",
   "name": "mass-error-tolerance-filtering",
-  "description": "Use when when annotating full-scan MS or MS imaging data against a metabolite database (e.g., LipidMaps, HMDB) and you need to control the stringency of m/z matching. Use this filter to balance annotation sensitivity against specificity: tighter ppm tolerances (e.",
+  "description": "Use when annotating full-scan MS or MS imaging data against a metabolite database (e.g., LipidMaps, HMDB) and you need to control the stringency of m/z matching. Use this filter to balance annotation sensitivity against specificity: tighter ppm tolerances (e.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3370",
@@ -4392,7 +4392,7 @@
  {
   "slug": "mass-spectrometry-imaging-data-interpretation",
   "name": "mass-spectrometry-imaging-data-interpretation",
-  "description": "Use when when you have preprocessed MALDI-MSI data (in msimat format) and want to determine whether abundant peaks are actually molecular adducts of simpler parent ions rather than distinct metabolites.",
+  "description": "Use when you have preprocessed MALDI-MSI data (in msimat format) and want to determine whether abundant peaks are actually molecular adducts of simpler parent ions rather than distinct metabolites.",
   "edam_operation": "http://edamontology.org/operation_3801",
   "edam_topics": [
    "http://edamontology.org/topic_3370",
@@ -4612,7 +4612,7 @@
  {
   "slug": "mass-spectrometry-ion-formula-assignment",
   "name": "mass-spectrometry-ion-formula-assignment",
-  "description": "Use when when you have a metabolite structure (SMILES or molecular graph) and need to predict its ionization behavior in a mass spectrometry experiment using a specific derivatizing matrix or ionization mode. Use this skill when the expected ions are non-standard (i.",
+  "description": "Use when you have a metabolite structure (SMILES or molecular graph) and need to predict its ionization behavior in a mass spectrometry experiment using a specific derivatizing matrix or ionization mode. Use this skill when the expected ions are non-standard (i.",
   "edam_operation": "http://edamontology.org/operation_3629",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -4828,7 +4828,7 @@
  {
   "slug": "mass-spectrum-preprocessing-and-normalization",
   "name": "mass-spectrum-preprocessing-and-normalization",
-  "description": "Use when when you have raw MS/MS spectra in MGF or mzML/mzXML formats and need to feed them into Casanovo or similar transformer-based de novo sequencing models.",
+  "description": "Use when you have raw MS/MS spectra in MGF or mzML/mzXML formats and need to feed them into Casanovo or similar transformer-based de novo sequencing models.",
   "edam_operation": "http://edamontology.org/operation_3214",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -4867,7 +4867,7 @@
  {
   "slug": "mass-tolerance-parameter-calibration",
   "name": "mass-tolerance-parameter-calibration",
-  "description": "Use when when converting raw line-scan mass spectrometry imaging data (Agilent .d, Bruker .tsf/.baf/.tdf, Thermo .raw, or .mzML formats) and must decide which m/z values from a reference mass list correspond to peaks in the raw spectra.",
+  "description": "Use when converting raw line-scan mass spectrometry imaging data (Agilent .d, Bruker .tsf/.baf/.tdf, Thermo .raw, or .mzML formats) and must decide which m/z values from a reference mass list correspond to peaks in the raw spectra.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -4931,7 +4931,7 @@
  {
   "slug": "matlab-workspace-initialization",
   "name": "matlab-workspace-initialization",
-  "description": "Use when when you have mass spectrometry imaging root datasets paired with accompanying .mat workspace files (as in the B73 and Oaxacan Green genotypes from Sama et al.",
+  "description": "Use when you have mass spectrometry imaging root datasets paired with accompanying .mat workspace files (as in the B73 and Oaxacan Green genotypes from Sama et al.",
   "edam_operation": "http://edamontology.org/operation_3432",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -5046,7 +5046,7 @@
  {
   "slug": "metabolic-network-edge-construction",
   "name": "metabolic-network-edge-construction",
-  "description": "Use when when building a comprehensive chemical knowledge base for mass spectrometry formula assignment, particularly when you need to link chemical formulae across heterogeneous repositories (HMDB, ChEMBL, PubChem) and connect them through known metabolic transformations to improve annotation.",
+  "description": "Use when building a comprehensive chemical knowledge base for mass spectrometry formula assignment, particularly when you need to link chemical formulae across heterogeneous repositories (HMDB, ChEMBL, PubChem) and connect them through known metabolic transformations to improve annotation.",
   "edam_operation": "http://edamontology.org/operation_3439",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -5485,7 +5485,7 @@
  {
   "slug": "molecular-structure-transformation",
   "name": "molecular-structure-transformation",
-  "description": "Use when when you have native metabolite structures (SMILES or mol format) and need to predict adduct ions for a mass spectrometry imaging experiment that uses a derivatizing matrix known to produce ions other than common [M+H]+ (positive mode) or [M-H]- (negative mode).",
+  "description": "Use when you have native metabolite structures (SMILES or mol format) and need to predict adduct ions for a mass spectrometry imaging experiment that uses a derivatizing matrix known to produce ions other than common [M+H]+ (positive mode) or [M-H]- (negative mode).",
   "edam_operation": "http://edamontology.org/operation_0335",
   "edam_topics": [
    "http://edamontology.org/topic_0154",
@@ -5513,7 +5513,7 @@
  {
   "slug": "molecular-weight-prediction-with-modifications",
   "name": "molecular-weight-prediction-with-modifications",
-  "description": "Use when when you have metabolite structures (as SMILES strings) and need to predict their observable m/z ions under non-standard ionization conditions imposed by a derivatizing matrix reagent (such as FMP-10).",
+  "description": "Use when you have metabolite structures (as SMILES strings) and need to predict their observable m/z ions under non-standard ionization conditions imposed by a derivatizing matrix reagent (such as FMP-10).",
   "edam_operation": "http://edamontology.org/operation_0004",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -5728,7 +5728,7 @@
  {
   "slug": "msi-data-processing-speed-measurement",
   "name": "msi-data-processing-speed-measurement",
-  "description": "Use when when you need to validate that MSI software (e.g., LipidQMap) achieves documented processing speeds on your target hardware, or when you need to establish a performance baseline before deploying the software for high-throughput imaging studies.",
+  "description": "Use when you need to validate that MSI software (e.g., LipidQMap) achieves documented processing speeds on your target hardware, or when you need to establish a performance baseline before deploying the software for high-throughput imaging studies.",
   "edam_operation": "http://edamontology.org/operation_3763",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -5784,7 +5784,7 @@
  {
   "slug": "msi-data-visualization-and-spatial-analysis",
   "name": "msi-data-visualization-and-spatial-analysis",
-  "description": "Use when when you have imzML-format MSI data and need to identify biochemical species in specific tissue regions or anatomical structures.",
+  "description": "Use when you have imzML-format MSI data and need to identify biochemical species in specific tissue regions or anatomical structures.",
   "edam_operation": "http://edamontology.org/operation_3214",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -5849,7 +5849,7 @@
  {
   "slug": "msi-imaging-experiment-class-manipulation",
   "name": "msi-imaging-experiment-class-manipulation",
-  "description": "Use when when loading mass spectrometry imaging data from imzML or Analyze 7.",
+  "description": "Use when loading mass spectrometry imaging data from imzML or Analyze 7.",
   "edam_operation": "http://edamontology.org/operation_3434",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -6134,7 +6134,7 @@
  {
   "slug": "msimagingarray-object-manipulation",
   "name": "msimagingarray-object-manipulation",
-  "description": "Use when when you have loaded mass spectrometry imaging data into a MSImagingArrays object in Cardinal 3.6 and need to explore the effects of multiple preprocessing steps (e.",
+  "description": "Use when you have loaded mass spectrometry imaging data into a MSImagingArrays object in Cardinal 3.6 and need to explore the effects of multiple preprocessing steps (e.",
   "edam_operation": "http://edamontology.org/operation_3214",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -6292,7 +6292,7 @@
  {
   "slug": "multimodal-spot-correspondence-mapping",
   "name": "multimodal-spot-correspondence-mapping",
-  "description": "Use when when you have paired spatial transcriptome and metabolome datasets in h5ad format with spatial coordinate matrices (obsm['spatial']) and you need to establish spot-level correspondence across modalities for downstream integration or co-analysis.",
+  "description": "Use when you have paired spatial transcriptome and metabolome datasets in h5ad format with spatial coordinate matrices (obsm['spatial']) and you need to establish spot-level correspondence across modalities for downstream integration or co-analysis.",
   "edam_operation": "http://edamontology.org/operation_3432",
   "edam_topics": [
    "http://edamontology.org/topic_0080",
@@ -6319,7 +6319,7 @@
  {
   "slug": "multiple-linear-regression-model-application",
   "name": "multiple-linear-regression-model-application",
-  "description": "Use when when you have an observed m/z value from mass spectrometry imaging and need to annotate it with a ranked list of candidate chemical formulae. Apply this skill when the KnownSet database (2.",
+  "description": "Use when you have an observed m/z value from mass spectrometry imaging and need to annotate it with a ranked list of candidate chemical formulae. Apply this skill when the KnownSet database (2.",
   "edam_operation": "http://edamontology.org/operation_3860",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -6350,7 +6350,7 @@
  {
   "slug": "multiple-testing-correction-bonferroni",
   "name": "multiple-testing-correction-bonferroni",
-  "description": "Use when when you have computed raw p-values for multiple independent statistical tests (e.g., Pearson correlation tests across all pairwise ion combinations in MSI data) and need to report which results remain significant after accounting for multiple comparisons.",
+  "description": "Use when you have computed raw p-values for multiple independent statistical tests (e.g., Pearson correlation tests across all pairwise ion combinations in MSI data) and need to report which results remain significant after accounting for multiple comparisons.",
   "edam_operation": "http://edamontology.org/operation_3799",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -6414,7 +6414,7 @@
  {
   "slug": "natural-isotope-abundance-calculation",
   "name": "natural-isotope-abundance-calculation",
-  "description": "Use when when processing mass spectrometry imaging (MSI) data in positive ion mode where both [M+H]+ and [M+Na]+ adducts are present for the same lipid species, and you observe intensity overlap in [M+H]+ ion images caused by the isotopic fine structure of [M+Na]+ adducts.",
+  "description": "Use when processing mass spectrometry imaging (MSI) data in positive ion mode where both [M+H]+ and [M+Na]+ adducts are present for the same lipid species, and you observe intensity overlap in [M+H]+ ion images caused by the isotopic fine structure of [M+Na]+ adducts.",
   "edam_operation": "http://edamontology.org/operation_3629",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -6442,7 +6442,7 @@
  {
   "slug": "network-based-metabolite-identification",
   "name": "network-based-metabolite-identification",
-  "description": "Use when when you have m/z values from spatially-resolved mass spectrometry imaging (MSI) and need to predict their molecular formulae with high precision.",
+  "description": "Use when you have m/z values from spatially-resolved mass spectrometry imaging (MSI) and need to predict their molecular formulae with high precision.",
   "edam_operation": "http://edamontology.org/operation_3860",
   "edam_topics": [
    "http://edamontology.org/topic_0769",
@@ -6473,7 +6473,7 @@
  {
   "slug": "neural-network-hyperparameter-optimization",
   "name": "neural-network-hyperparameter-optimization",
-  "description": "Use when when you have preprocessed joint ST/SM AnnData objects (output from joint_adata_sm_st and normalize_total_joint_adata_sm_st) and need to fit a ConditionalVAESTSM model to unify spatial transcriptomics and spatial metabolomics data to a common resolution.",
+  "description": "Use when you have preprocessed joint ST/SM AnnData objects (output from joint_adata_sm_st and normalize_total_joint_adata_sm_st) and need to fit a ConditionalVAESTSM model to unify spatial transcriptomics and spatial metabolomics data to a common resolution.",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_3673",
@@ -6501,7 +6501,7 @@
  {
   "slug": "neural-network-projection-module-design",
   "name": "neural-network-projection-module-design",
-  "description": "Use when when you have 512-dimensional (or other fixed-size) representation vectors output from paired encoders processing augmented versions of the same input (e.",
+  "description": "Use when you have 512-dimensional (or other fixed-size) representation vectors output from paired encoders processing augmented versions of the same input (e.",
   "edam_operation": "http://edamontology.org/operation_3891",
   "edam_topics": [
    "http://edamontology.org/topic_0091",
@@ -6592,7 +6592,7 @@
  {
   "slug": "notebook-execution-and-reproducibility",
   "name": "notebook-execution-and-reproducibility",
-  "description": "Use when when you have access to a peer-reviewed manuscript with an accompanying interactive notebook and public data repository, and you need to verify that the published figures can be regenerated from the original data through the documented processing pipeline, or when you want to reuse the.",
+  "description": "Use when you have access to a peer-reviewed manuscript with an accompanying interactive notebook and public data repository, and you need to verify that the published figures can be regenerated from the original data through the documented processing pipeline, or when you want to reuse the exact.",
   "edam_operation": "http://edamontology.org/operation_3443",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -6620,7 +6620,7 @@
  {
   "slug": "open-source-mass-spectrometry-file-format-interoperability",
   "name": "open-source-mass-spectrometry-file-format-interoperability",
-  "description": "Use when when working with Bruker .d/.baf mass spectrometry imaging data and needing to feed it into MSIGen or other open-source MSI processing pipelines.",
+  "description": "Use when working with Bruker .d/.baf mass spectrometry imaging data and needing to feed it into MSIGen or other open-source MSI processing pipelines.",
   "edam_operation": "http://edamontology.org/operation_3434",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -6661,7 +6661,7 @@
  {
   "slug": "overlapping-ion-detection",
   "name": "overlapping-ion-detection",
-  "description": "Use when when annotating matrix-related ions in MSI datasets where two or more ions share identical or near-identical m/z values (isobaric ions) or exhibit overlapping spatial distributions across imaging pixels.",
+  "description": "Use when annotating matrix-related ions in MSI datasets where two or more ions share identical or near-identical m/z values (isobaric ions) or exhibit overlapping spatial distributions across imaging pixels.",
   "edam_operation": "http://edamontology.org/operation_3629",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -6754,7 +6754,7 @@
  {
   "slug": "parameter-sharing-in-siamese-networks",
   "name": "parameter-sharing-in-siamese-networks",
-  "description": "Use when when processing paired augmented versions of the same input (e.g., two augmented ion images in COL or ISO mode) and you need to learn meaningful low-dimensional representations via contrastive loss.",
+  "description": "Use when processing paired augmented versions of the same input (e.g., two augmented ion images in COL or ISO mode) and you need to learn meaningful low-dimensional representations via contrastive loss.",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_3500",
@@ -6908,7 +6908,7 @@
  {
   "slug": "per-root-metabolite-profiling",
   "name": "per-root-metabolite-profiling",
-  "description": "Use when when you have deposited mass spectrometry imaging datasets for plant roots in CDF format paired with pre-computed Matlab workspaces, and you need to reproduce per-root linear-axis metabolite profiling outputs to validate reported genotype-level results (e.",
+  "description": "Use when you have deposited mass spectrometry imaging datasets for plant roots in CDF format paired with pre-computed Matlab workspaces, and you need to reproduce per-root linear-axis metabolite profiling outputs to validate reported genotype-level results (e.",
   "edam_operation": "http://edamontology.org/operation_3431",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -7008,7 +7008,7 @@
  {
   "slug": "poisson-noise-generation",
   "name": "poisson-noise-generation",
-  "description": "Use when when preparing augmented variants of ion images (single-channel 2D arrays or multi-channel spectral images) for contrastive learning in mass spectrometry imaging tasks.",
+  "description": "Use when preparing augmented variants of ion images (single-channel 2D arrays or multi-channel spectral images) for contrastive learning in mass spectrometry imaging tasks.",
   "edam_operation": "http://edamontology.org/operation_3443",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -7105,7 +7105,7 @@
  {
   "slug": "ppm-mass-accuracy-filtering",
   "name": "ppm-mass-accuracy-filtering",
-  "description": "Use when when processing imzML/ibd Imaging Mass Spectrometry datasets and you need to extract ion density maps for specific analytes or isotopes. Apply this skill after importing the .imzML metadata and .",
+  "description": "Use when processing imzML/ibd Imaging Mass Spectrometry datasets and you need to extract ion density maps for specific analytes or isotopes. Apply this skill after importing the .imzML metadata and .ibd binary files, viewing the total ion chromatogram (TIC), and deciding which m/z values to image.",
   "edam_operation": "http://edamontology.org/operation_3630",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -7168,7 +7168,7 @@
  {
   "slug": "probabilistic-classification-network-construction",
   "name": "probabilistic-classification-network-construction",
-  "description": "Use when when you have raw mass spectrometry imaging data tensors and need to build a trainable deep-learning classifier that outputs class probabilities (tumor vs. non-tumor) without preprocessing or manual peak detection.",
+  "description": "Use when you have raw mass spectrometry imaging data tensors and need to build a trainable deep-learning classifier that outputs class probabilities (tumor vs. non-tumor) without preprocessing or manual peak detection.",
   "edam_operation": "http://edamontology.org/operation_3927",
   "edam_topics": [
    "http://edamontology.org/topic_3383",
@@ -7212,7 +7212,7 @@
  {
   "slug": "python-environment-pinning",
   "name": "python-environment-pinning",
-  "description": "Use when when you have access to a research repository or README documenting a machine learning implementation (e.g., Keras/TensorFlow-based deep learning model) and need to reproduce the computational environment exactly. Triggers include: (1) README explicitly lists pinned versions (e.",
+  "description": "Use when you have access to a research repository or README documenting a machine learning implementation (e.g., Keras/TensorFlow-based deep learning model) and need to reproduce the computational environment exactly. Triggers include: (1) README explicitly lists pinned versions (e.g., 'Python 3.6.",
   "edam_operation": "http://edamontology.org/operation_3096",
   "edam_topics": [
    "http://edamontology.org/topic_0769",
@@ -7265,7 +7265,7 @@
  {
   "slug": "queued-spectrum-preview-generation",
   "name": "queued-spectrum-preview-generation",
-  "description": "Use when when you have queued one or more spectral processing operations (e.g., smooth(), normalize(), reduceBaseline()) on an MSImagingArrays object and need to inspect the effect on representative spectra before processing the full dataset.",
+  "description": "Use when you have queued one or more spectral processing operations (e.g., smooth(), normalize(), reduceBaseline()) on an MSImagingArrays object and need to inspect the effect on representative spectra before processing the full dataset.",
   "edam_operation": "http://edamontology.org/operation_3214",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -7359,7 +7359,7 @@
  {
   "slug": "raw-spectral-data-input-handling-without-peak-picking",
   "name": "raw-spectral-data-input-handling-without-peak-picking",
-  "description": "Use when when you have raw mass spectrometry imaging data (full m/z profiles with intensity arrays) and want to classify spatial regions (e.",
+  "description": "Use when you have raw mass spectrometry imaging data (full m/z profiles with intensity arrays) and want to classify spatial regions (e.",
   "edam_operation": "http://edamontology.org/operation_3443",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -7436,7 +7436,7 @@
  {
   "slug": "reconstruction-algorithm-implementation",
   "name": "reconstruction-algorithm-implementation",
-  "description": "Use when when you have raw or preprocessed mass spectrometry data (feature matrices or transient files) acquired at lower mass resolution or with signal degradation, and you possess high-resolution reference MSI data or simulated ground truth to train a reconstruction model.",
+  "description": "Use when you have raw or preprocessed mass spectrometry data (feature matrices or transient files) acquired at lower mass resolution or with signal degradation, and you possess high-resolution reference MSI data or simulated ground truth to train a reconstruction model.",
   "edam_operation": "http://edamontology.org/operation_3443",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -7676,7 +7676,7 @@
  {
   "slug": "roi-definition-and-extraction",
   "name": "roi-definition-and-extraction",
-  "description": "Use when when you have loaded imzML MSI data into napari and need to focus analysis on a specific anatomical or morphological region rather than the entire image.",
+  "description": "Use when you have loaded imzML MSI data into napari and need to focus analysis on a specific anatomical or morphological region rather than the entire image.",
   "edam_operation": "http://edamontology.org/operation_3215",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -7764,7 +7764,7 @@
  {
   "slug": "scan-filter-file-organization",
   "name": "scan-filter-file-organization",
-  "description": "Use when when converting mzML files to imzML format and the source mzML contains multiple scan filters (e.g., different MS/MS isolation windows, ionization modes, or mass ranges acquired in a single imaging experiment).",
+  "description": "Use when converting mzML files to imzML format and the source mzML contains multiple scan filters (e.g., different MS/MS isolation windows, ionization modes, or mass ranges acquired in a single imaging experiment).",
   "edam_operation": "http://edamontology.org/operation_3945",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -7963,7 +7963,7 @@
  {
   "slug": "smiles-molecular-parsing",
   "name": "smiles-molecular-parsing",
-  "description": "Use when when you have a list of candidate metabolite identifiers in SMILES or mol format and need to programmatically apply chemical transformations (e.g., derivatization reactions), compute molecular weights, or enumerate adduct ions for mass spectrometry matching.",
+  "description": "Use when you have a list of candidate metabolite identifiers in SMILES or mol format and need to programmatically apply chemical transformations (e.g., derivatization reactions), compute molecular weights, or enumerate adduct ions for mass spectrometry matching.",
   "edam_operation": "http://edamontology.org/operation_3927",
   "edam_topics": [
    "http://edamontology.org/topic_0154",
@@ -8023,7 +8023,7 @@
  {
   "slug": "software-plugin-development",
   "name": "software-plugin-development",
-  "description": "Use when when you have a scientific software tool (e.g., Met-ID) that is architected to support plugins or configuration-driven modules, and you need to register and apply a novel reagent, derivatizing matrix, or analytical method (e.",
+  "description": "Use when you have a scientific software tool (e.g., Met-ID) that is architected to support plugins or configuration-driven modules, and you need to register and apply a novel reagent, derivatizing matrix, or analytical method (e.",
   "edam_operation": "http://edamontology.org/operation_3096",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -8113,7 +8113,7 @@
  {
   "slug": "spatial-coordinate-registration-across-modalities",
   "name": "spatial-coordinate-registration-across-modalities",
-  "description": "Use when when you have preprocessed spatial transcriptomics (ST) and spatial metabolomics (SM) datasets in AnnData format with spatial coordinates, and need to align them to a common resolution before joint downstream analysis.",
+  "description": "Use when you have preprocessed spatial transcriptomics (ST) and spatial metabolomics (SM) datasets in AnnData format with spatial coordinates, and need to align them to a common resolution before joint downstream analysis.",
   "edam_operation": "http://edamontology.org/operation_3352",
   "edam_topics": [
    "http://edamontology.org/topic_3173",
@@ -8207,7 +8207,7 @@
  {
   "slug": "spatial-distribution-pattern-analysis",
   "name": "spatial-distribution-pattern-analysis",
-  "description": "Use when when you have loaded MSI peak data with associated m/z values and need to disambiguate matrix ions from analyte ions. Apply this skill when chemical formula alone is insufficient (e.g., overlapping or isobaric peaks exist) and you have pixel-level spatial intensity maps for each ion.",
+  "description": "Use when you have loaded MSI peak data with associated m/z values and need to disambiguate matrix ions from analyte ions. Apply this skill when chemical formula alone is insufficient (e.g., overlapping or isobaric peaks exist) and you have pixel-level spatial intensity maps for each ion.",
   "edam_operation": "http://edamontology.org/operation_3441",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -8239,7 +8239,7 @@
  {
   "slug": "spatial-feature-embedding",
   "name": "spatial-feature-embedding",
-  "description": "Use when when analyzing imaging mass spectrometry datasets where you need to reduce high-dimensional peak intensity features while preserving spatial structure, and when automatic peak picking and marker ion identification are required.",
+  "description": "Use when analyzing imaging mass spectrometry datasets where you need to reduce high-dimensional peak intensity features while preserving spatial structure, and when automatic peak picking and marker ion identification are required.",
   "edam_operation": "http://edamontology.org/operation_3434",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -8340,7 +8340,7 @@
  {
   "slug": "spatial-metabolomics-integration",
   "name": "spatial-metabolomics-integration",
-  "description": "Use when when you have paired spatial metabolomics and spatial transcriptomics measurements from the same tissue samples and need to identify how metabolite distributions relate to gene expression patterns at aligned spatial coordinates.",
+  "description": "Use when you have paired spatial metabolomics and spatial transcriptomics measurements from the same tissue samples and need to identify how metabolite distributions relate to gene expression patterns at aligned spatial coordinates.",
   "edam_operation": "http://edamontology.org/operation_3799",
   "edam_topics": [
    "http://edamontology.org/topic_3391",
@@ -8368,7 +8368,7 @@
  {
   "slug": "spatial-overlap-analysis-imaging",
   "name": "spatial-overlap-analysis-imaging",
-  "description": "Use when when annotating matrix-related peaks in MSI datasets where candidate peaks have identical or near-identical m/z values (isobaric ions), or when multiple peaks exhibit overlapping spatial distributions across the tissue image that could confound downstream annotation filtering.",
+  "description": "Use when annotating matrix-related peaks in MSI datasets where candidate peaks have identical or near-identical m/z values (isobaric ions), or when multiple peaks exhibit overlapping spatial distributions across the tissue image that could confound downstream annotation filtering.",
   "edam_operation": "http://edamontology.org/operation_3645",
   "edam_topics": [
    "http://edamontology.org/topic_3370",
@@ -8500,7 +8500,7 @@
  {
   "slug": "spatial-spot-coordinate-registration",
   "name": "spatial-spot-coordinate-registration",
-  "description": "Use when when you have paired spatial transcriptome and metabolome datasets with spot-based coordinates that need to be aligned for multi-modal integration.",
+  "description": "Use when you have paired spatial transcriptome and metabolome datasets with spot-based coordinates that need to be aligned for multi-modal integration.",
   "edam_operation": "http://edamontology.org/operation_3432",
   "edam_topics": [
    "http://edamontology.org/topic_3674",
@@ -8733,7 +8733,7 @@
  {
   "slug": "spectral-image-filtering",
   "name": "spectral-image-filtering",
-  "description": "Use when when generating augmented variants of single-channel or multi-channel ion images for contrastive learning in mass spectrometry imaging analysis.",
+  "description": "Use when generating augmented variants of single-channel or multi-channel ion images for contrastive learning in mass spectrometry imaging analysis.",
   "edam_operation": "http://edamontology.org/operation_3564",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -8800,7 +8800,7 @@
  {
   "slug": "spectral-library-matching-and-scoring",
   "name": "spectral-library-matching-and-scoring",
-  "description": "Use when when you have extracted a mean or ROI spectrum from MSI data (via centroid or profile mode conversion) and need to identify the biochemical composition by comparing against curated reference libraries such as LIPID MAPS, HMDB, or a custom metabolite database.",
+  "description": "Use when you have extracted a mean or ROI spectrum from MSI data (via centroid or profile mode conversion) and need to identify the biochemical composition by comparing against curated reference libraries such as LIPID MAPS, HMDB, or a custom metabolite database.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -8960,7 +8960,7 @@
  {
   "slug": "spectral-search-result-aggregation",
   "name": "spectral-search-result-aggregation",
-  "description": "Use when when you have executed batch searches of MS/MS spectra against multiple domain-specific MASST indices and need to consolidate results across domains (e.",
+  "description": "Use when you have executed batch searches of MS/MS spectra against multiple domain-specific MASST indices and need to consolidate results across domains (e.",
   "edam_operation": "http://edamontology.org/operation_3627",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -8999,7 +8999,7 @@
  {
   "slug": "spectrum-peak-counting-and-reporting",
   "name": "spectrum-peak-counting-and-reporting",
-  "description": "Use when when you need to quantify and compare the filtering efficacy of mutually exclusive noise-threshold methods on the same input mass spectrum, or when validating that a selected noise-filtering strategy retains an expected number of peaks for downstream molecular formula assignment.",
+  "description": "Use when you need to quantify and compare the filtering efficacy of mutually exclusive noise-threshold methods on the same input mass spectrum, or when validating that a selected noise-filtering strategy retains an expected number of peaks for downstream molecular formula assignment.",
   "edam_operation": "http://edamontology.org/operation_3215",
   "edam_topics": [
    "http://edamontology.org/topic_3370",

@@ -26,8 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.9b05765
   title: Retip
-evidence_spans:
-- github.com__oloBion__Retip
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

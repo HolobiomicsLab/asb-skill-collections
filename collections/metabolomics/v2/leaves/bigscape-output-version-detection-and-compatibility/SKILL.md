@@ -1,9 +1,9 @@
 ---
 name: bigscape-output-version-detection-and-compatibility
-description: 'Use when when preparing NPLinker input data and the BigScape directory
-  exists but its format is unknown or mixed (e.g., migrated workflows, third-party
-  data, or legacy archives). Specifically: if local mode and BigScape directory is
-  missing, generate it;'
+description: 'Use when preparing NPLinker input data and the BigScape directory exists
+  but its format is unknown or mixed (e.g., migrated workflows, third-party data,
+  or legacy archives). Specifically: if local mode and BigScape directory is missing,
+  generate it;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -22,12 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
-evidence_spans:
-- NPLinker is a python framework for data mining microbial natural products
-- GNPSDownloader, GNPSExtractor
-- Python version ≥3.11
-- NPLinker can run BigScape automatically if the `bigscape` directory does not exist
-- mibig directory contains the MIBiG metadata
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

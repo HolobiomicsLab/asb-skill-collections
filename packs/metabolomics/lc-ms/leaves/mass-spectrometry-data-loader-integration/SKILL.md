@@ -24,7 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.5c00237
   title: MMSA
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

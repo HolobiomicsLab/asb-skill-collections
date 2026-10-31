@@ -16,8 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1093/nar/gkz882
   title: MIBiG 2.0
-evidence_spans:
-- github.com/mibig-secmet/mibig-json
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,7 +1,7 @@
 ---
 name: chemo-informatics-workflow-reconstruction
-description: Use when when you have access to the source code of a chemo-informatics
-  tool (e.
+description: Use when you have access to the source code of a chemo-informatics tool
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -17,9 +17,6 @@ metadata:
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
-evidence_spans:
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'.
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

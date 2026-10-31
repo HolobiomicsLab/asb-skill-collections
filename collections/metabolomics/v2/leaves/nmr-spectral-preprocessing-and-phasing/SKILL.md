@@ -1,7 +1,7 @@
 ---
 name: nmr-spectral-preprocessing-and-phasing
-description: Use when when working with raw 1H NMR FID data acquired on instruments
-  like Bruker Avance spectrometers that require baseline correction, phase adjustment,
+description: Use when working with raw 1H NMR FID data acquired on instruments like
+  Bruker Avance spectrometers that require baseline correction, phase adjustment,
   and signal alignment before metabolite identification or statistical association
   testing can proceed reliably.
 license: CC-BY-4.0
@@ -24,11 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btx477
   title: MWASTools
-evidence_spans:
-- Assuming that R (>=3.3) and Bioconductor have been correctly installed
-- Here, we present a package to perform MWAS using univariate hypothesis testing
-- '"MWASTools" is an R package designed to provide an integrated and user-friendly
-  pipeline'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -17,8 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2021.04.23.440821v1
   title: PaIRKAT
-evidence_spans:
-- Scripts for PaIRKAT functions with example work flow
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,8 +1,8 @@
 ---
 name: ms-instrument-type-classification
-description: Use when when evaluating or designing a mass spectrometry data analysis
-  platform, and you need to verify that every supported separation/ionisation technique
-  (LC, GC, IMS, MS Imaging) is covered by at least one processing module.
+description: Use when evaluating or designing a mass spectrometry data analysis platform,
+  and you need to verify that every supported separation/ionisation technique (LC,
+  GC, IMS, MS Imaging) is covered by at least one processing module.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
-evidence_spans:
-- mzmine is an open-source software for mass spectrometry data processing
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

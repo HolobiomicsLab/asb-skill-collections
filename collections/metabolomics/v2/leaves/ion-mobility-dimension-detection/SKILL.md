@@ -1,7 +1,7 @@
 ---
 name: ion-mobility-dimension-detection
-description: Use when when processing raw mass spectrometry data files of unknown
-  or mixed provenance, and you need to automatically route IMS inputs to their corresponding
+description: Use when processing raw mass spectrometry data files of unknown or mixed
+  provenance, and you need to automatically route IMS inputs to their corresponding
   analysis pipeline.
 license: CC-BY-4.0
 metadata:
@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
-evidence_spans:
-- mzmine is an open-source software for mass spectrometry data processing
-- JDK version-25-blue
-- JavaFX version-24
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

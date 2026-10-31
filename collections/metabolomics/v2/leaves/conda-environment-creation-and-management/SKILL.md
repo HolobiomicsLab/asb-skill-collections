@@ -1,7 +1,7 @@
 ---
 name: conda-environment-creation-and-management
-description: Use when when setting up a new computational workflow (e.g., ENPKG) that
-  depends on pinned versions of Python packages and system libraries, or when collaborating
+description: Use when setting up a new computational workflow (e.g., ENPKG) that depends
+  on pinned versions of Python packages and system libraries, or when collaborating
   across machines where package availability or versions may differ.
 license: CC-BY-4.0
 metadata:
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acscentsci.3c00800
   title: enpkg
-evidence_spans:
-- Welcome to the ENPKG Full Workflow!
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

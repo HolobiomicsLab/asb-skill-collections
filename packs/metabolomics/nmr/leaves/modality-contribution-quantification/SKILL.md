@@ -1,7 +1,7 @@
 ---
 name: modality-contribution-quantification
-description: Use when when you have a trained multitask model that accepts multiple
-  input modalities (e.g., 1D NMR spectra in different nuclei or complementary analytical
+description: Use when you have a trained multitask model that accepts multiple input
+  modalities (e.g., 1D NMR spectra in different nuclei or complementary analytical
   techniques) and you need to understand their relative importance for the downstream
   prediction task (e.g., molecular structure elucidation).
 license: CC-BY-4.0
@@ -20,7 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

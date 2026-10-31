@@ -1,7 +1,7 @@
 ---
 name: ftms-mass-calibration-workflow
-description: Use when when you have a processed Bruker Solarix FT-ICR mass spectrum
-  object (from ReadBrukerSolarix) and a reference peak list file (SRFA.
+description: Use when you have a processed Bruker Solarix FT-ICR mass spectrum object
+  (from ReadBrukerSolarix) and a reference peak list file (SRFA.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -20,12 +20,6 @@ metadata:
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
-evidence_spans:
-- from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development
-  and data analysis of small molecules analysis.'
-- import numpy as np
-- import pandas as pd
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

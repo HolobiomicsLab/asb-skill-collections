@@ -23,14 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator
-evidence_spans:
-- Genes, miRNA, isoforms | SRA download | SRA toolkit
-- Genes, miRNA, isoforms | Quality control | FastQC, trimgalore
-- Genes, miRNA, isoforms | Align and Assembly | Salmon, samtools, STAR, Hisat2, StringTie2
-- It then employs [salmon](../modules/nf-core/salmon) in order to obtain quantification
-  files
-- It uses Docker/Singularity containers making installation trivial and results highly
-  reproducible.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

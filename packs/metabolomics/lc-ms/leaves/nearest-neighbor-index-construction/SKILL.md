@@ -1,6 +1,6 @@
 ---
 name: nearest-neighbor-index-construction
-description: Use when when you have millions of high-resolution MS/MS spectra converted
+description: Use when you have millions of high-resolution MS/MS spectra converted
   to low-dimensional vectors (via feature hashing) and need to compute a sparse pairwise
   distance matrix for downstream density-based clustering.
 license: CC-BY-4.0
@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
-evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
-  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

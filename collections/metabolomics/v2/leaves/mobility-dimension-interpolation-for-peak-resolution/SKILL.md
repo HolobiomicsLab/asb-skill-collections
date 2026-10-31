@@ -23,17 +23,6 @@ derived_from:
   title: PNNL PreProcessor
 - doi: 10.1021/acs.jproteome.1c00425
   title: ''
-evidence_spans:
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
-  spectrometry data files
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
-  spectrometry data files (MS-files) from drift tube (DT) and structure for lossless
-  ion manipulations (SLIM) IM-MS
-- Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files)
-- Agilent MassHunter (.d) and UIMF mass spectrometry data files
-- .NET Framework 4.7.2 or later (included with Windows 10 update 1803 and later releases
-- Microsoft Visual C++ Runtime x64 (may already be installed, if the program doesn't
-  work then you can download vcredist_x64.exe
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

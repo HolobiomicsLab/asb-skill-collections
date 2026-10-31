@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c02697
   title: EISA-EXPOSOME
-evidence_spans:
-- We provide a Rshiny program for EISA-EXPOSOME
-- We provide a Rshiny program for EISA-EXPOSOME, which runs with the interface shown
-  below
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

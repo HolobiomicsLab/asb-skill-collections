@@ -1,9 +1,8 @@
 ---
 name: software-plugin-development
-description: Use when when you have a scientific software tool (e.g., Met-ID) that
-  is architected to support plugins or configuration-driven modules, and you need
-  to register and apply a novel reagent, derivatizing matrix, or analytical method
-  (e.
+description: Use when you have a scientific software tool (e.g., Met-ID) that is architected
+  to support plugins or configuration-driven modules, and you need to register and
+  apply a novel reagent, derivatizing matrix, or analytical method (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -20,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
-evidence_spans:
-- Powered by RDKit
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

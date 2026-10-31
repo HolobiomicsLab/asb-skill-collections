@@ -1,8 +1,8 @@
 ---
 name: metabolite-stoichiometry-computation
-description: Use when when you have quantified intracellular metabolite abundances
-  (LC-MS normalized values) for multiple cell lines or samples, a metabolic network
-  model with reaction stoichiometry, and you need to predict how substrate availability
+description: Use when you have quantified intracellular metabolite abundances (LC-MS
+  normalized values) for multiple cell lines or samples, a metabolic network model
+  with reaction stoichiometry, and you need to predict how substrate availability
   translates into metabolic flux differences.
 license: CC-BY-4.0
 metadata:
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
-evidence_spans:
-- Data analysis and isotopic natural abundance correction were performed with MassHunter
-  ProFinder (Agilent)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

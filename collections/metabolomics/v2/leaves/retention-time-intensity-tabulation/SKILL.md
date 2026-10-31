@@ -1,7 +1,7 @@
 ---
 name: retention-time-intensity-tabulation
-description: Use when when you have a resolved mzML or mzXML spectrum file and need
-  to visualize or analyze the temporal intensity profile of a specific analyte (defined
+description: Use when you have a resolved mzML or mzXML spectrum file and need to
+  visualize or analyze the temporal intensity profile of a specific analyte (defined
   by its m/z value).
 license: CC-BY-4.0
 metadata:
@@ -20,7 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-021-01339-5
   title: GNPS Dashboard
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

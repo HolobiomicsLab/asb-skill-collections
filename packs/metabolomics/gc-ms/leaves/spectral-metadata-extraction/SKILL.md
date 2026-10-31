@@ -30,18 +30,6 @@ derived_from:
   title: ''
 - doi: 10.1021/acs.analchem.9b04884
   title: ''
-evidence_spans:
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R
-  users for conducting library searches against electron ionization mass spectral
-  databases.
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R
-  users
-- enhance the capabilities of R users for conducting library searches
-- SMART written in R and R GUI has been developed as user-friendly software
-- spectrum_utils is a Python package for efficient mass spectrometry data processing
-  and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing
-  and visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

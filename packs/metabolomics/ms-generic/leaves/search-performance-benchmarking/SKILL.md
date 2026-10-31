@@ -1,7 +1,7 @@
 ---
 name: search-performance-benchmarking
-description: Use when when you have two or more implementations of a spectral search
-  tool (e.g., MASST vs. MASST+) and need to quantify whether claimed performance improvements
+description: Use when you have two or more implementations of a spectral search tool
+  (e.g., MASST vs. MASST+) and need to quantify whether claimed performance improvements
   (e.g., '100-fold speedup') are reproducible.
 license: CC-BY-4.0
 metadata:
@@ -20,11 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41587-023-01985-4
   title: MASST
-evidence_spans:
-- MASST+ is publicly available as a web service on GNPS
-- Like MASST, MASST+ is publicly available as a web service on GNPS.
-- MASST+ is an improvement on GNPS Mass Spectrometry Search Tool (MASST)
-- MASST+ is an improvement on GNPS Mass Spectrometry Search Tool
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

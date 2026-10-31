@@ -1,6 +1,6 @@
 ---
 name: marker-feature-identification-chromatography-ms
-description: Use when when processing raw chromatography–mass spectrometry data (GC–MS
+description: Use when processing raw chromatography–mass spectrometry data (GC–MS
   or LC–MS) as a 2D m/z vs retention time map and you need to identify and visualize
   marker features for analyte discrimination without relying on conventional peak
   picking.
@@ -24,14 +24,6 @@ derived_from:
   title: NPFimg
 - doi: 10.1021/acs.analchem.1c03163
   title: ''
-evidence_spans:
-- Comparison with the widely used XCMS shows the excellent reliability of NPFimg
-- Comparison with the widely used XCMS shows the excellent reliability of NPFimg,
-  in that it has lower error rates of signal acquisition and marker identification.
-- github.com__poomcj__NPFimg
-- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker
-  features of analytes in chromatography–mass spectrometry (MS) data by combining
-  image processing and
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

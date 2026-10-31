@@ -1,6 +1,6 @@
 ---
 name: gpu-accelerated-neural-network-training
-description: Use when when you have a trainable neural network model (e.g., MSNovelist),
+description: Use when you have a trainable neural network model (e.g., MSNovelist),
   labeled training data with known input/output pairs, GPU resource availability on
   a compute cluster, and need to optimize model weights via backpropagation.
 license: CC-BY-4.0
@@ -21,11 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-022-01486-3
   title: MSNovelist
-evidence_spans:
-- singularity build $SCRATCH_PATH/MSNovelist-image/msnovelist.sif docker://stravsm/msnovelist6
-- 'run_train.sh: run MSNovelist Singularity container and start `train.sh`'
-- 'train.py: train one fold of the model'
-- aws s3 cp --recursive s3://sirius-novelist/dataset-s6-202311 data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

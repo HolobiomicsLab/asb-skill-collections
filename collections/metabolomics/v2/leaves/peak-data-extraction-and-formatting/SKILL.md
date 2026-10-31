@@ -1,6 +1,9 @@
 ---
 name: peak-data-extraction-and-formatting
-description: Use when when you have initialized an MsBackend subclass (e.
+description: Use when you have initialized an MsBackend subclass (e.g., MsBackendTest,
+  MsBackendMemory) containing spectral peak data stored as NumericList or matrix objects
+  and need to retrieve, subset, or reformat m/z and intensity values for processing,
+  visualization, or comparison within a Spectra workflow.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -20,11 +23,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
-evidence_spans:
-- return the **full** spectra data within a backend as a `DataFrame` object (defined
-  in the `r Biocpkg("S4Vectors")`
-- library(Spectra) library(IRanges)
-- library(Spectra)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -24,11 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
-evidence_spans:
-- several R packages are utilized in the background processes, including ggfortify,
-  ggplot2, igraph
-- several R packages are utilized in the background processes, including ggplot2,
-  igraph, MASS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

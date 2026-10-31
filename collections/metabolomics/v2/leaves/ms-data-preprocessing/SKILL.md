@@ -22,11 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1007/s00216-023-04715-6
   title: AriumMS
-evidence_spans:
-- For MS Data conversion to .mzXML or .mzML file format use msconvert, distributed
-  with the ProteoWizard Project
-- msconvert, distributed with the ProteoWizard Project
-- msconvert, distributed with the ProteoWizard Project http://proteowizard.sourceforge.net/download.html
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: tima-entry-point-validation
-description: Use when when you have obtained or are considering use of the tima Docker
+description: Use when you have obtained or are considering use of the tima Docker
   image (adafede/tima-r) and need to confirm that the containerized environment is
   operational before proceeding with metabolite annotation workflows. This is a smoke
   test to catch environment or registry issues early.
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.3389/fpls.2019.01329
   title: tima
-evidence_spans:
-- The initial work is available at <https://doi.org/10.3389/fpls.2019.01329>
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

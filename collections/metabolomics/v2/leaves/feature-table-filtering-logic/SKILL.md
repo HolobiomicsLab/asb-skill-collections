@@ -1,7 +1,7 @@
 ---
 name: feature-table-filtering-logic
-description: Use when when you have a quantitative feature table (peak intensities
-  across samples) and need to isolate molecular features that show differential abundance
+description: Use when you have a quantitative feature table (peak intensities across
+  samples) and need to isolate molecular features that show differential abundance
   between defined sample groups within a specified fold-change range.
 license: CC-BY-4.0
 metadata:
@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-024-50111-8
   title: FERMO
-evidence_spans:
-- No discussion section present in document
-- See our organization-level document on [CONTRIBUTING]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

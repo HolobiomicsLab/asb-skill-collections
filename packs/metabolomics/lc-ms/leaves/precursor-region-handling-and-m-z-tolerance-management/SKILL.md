@@ -1,7 +1,7 @@
 ---
 name: precursor-region-handling-and-m-z-tolerance-management
-description: Use when when computing entropy_similarity() between experimental (noisy
-  or denoised) MS/MS spectra and reference library spectra, if the precursor m/z value
+description: Use when computing entropy_similarity() between experimental (noisy or
+  denoised) MS/MS spectra and reference library spectra, if the precursor m/z value
   is known and available.
 license: CC-BY-4.0
 metadata:
@@ -25,13 +25,6 @@ derived_from:
   title: Spectral Denoising
 - doi: 10.1038/s41592-023-02012-9
   title: ''
-evidence_spans:
-- Spectral denoising requires ``Python >= 3.8`` installed on your system
-- import spectral_denoising as sd
-- pandas==2.2.3
-- '- ``pandas==2.2.3``'
-- rdkit==2024.3.5
-- smiles = 'O=c1nc[nH]c2nc[nH]c12'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

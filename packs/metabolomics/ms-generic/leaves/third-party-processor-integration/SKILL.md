@@ -1,9 +1,9 @@
 ---
 name: third-party-processor-integration
-description: Use when when you have raw MS files (e.g., .raw, vendor-specific formats)
+description: Use when you have raw MS files (e.g., .raw, vendor-specific formats)
   stored in a centralized repository and need to invoke a third-party proteomics analysis
   tool—such as a mass spectrometry feature detector or quantification engine—without
-  manually managing file transfers or output.
+  manually managing file transfers or output consolidation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -24,9 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00854
   title: MSConnect
-evidence_spans:
-- The platform is built with Python, Django, JavaScript, and HTML
-- works with [Processor](https://github.com/RTKlab-BYU/Proteomics_Data_Processor)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

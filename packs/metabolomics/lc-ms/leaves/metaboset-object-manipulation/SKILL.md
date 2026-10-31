@@ -1,6 +1,6 @@
 ---
 name: metaboset-object-manipulation
-description: Use when when you have read LC-MS peak table data from Excel (or equivalent)
+description: Use when you have read LC-MS peak table data from Excel (or equivalent)
   into R and need to organize it into a structured object that tracks feature abundances,
   sample information (injection order, QC status), and feature metadata (mass, retention
   time, Feature_ID) simultaneously.
@@ -26,14 +26,6 @@ derived_from:
   title: notame
 - doi: 10.1093/bioinformatics/btr597
   title: ''
-evidence_spans:
-- This package can be used to analyze preprocessed LC-MS data in non-targeted metabolomics
-- library(notame)
-- reads them to R, conducts additional preprocessing and statistical analyses
-- The implementation we use (from the missForest package) can be parallelized
-- Load the libraries (doParallel is used for parallel processing)
-- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package
-  by Bioconductor'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,8 +1,8 @@
 ---
 name: deep-learning-architecture-design-for-sequence-data
-description: Use when when you have raw co-fractionation/mass-spectrometry elution
-  profiles (normalized intensity vectors across fractions) paired with labeled protein
-  interaction ground truth, and you want to avoid hand-crafted features (e.
+description: Use when you have raw co-fractionation/mass-spectrometry elution profiles
+  (normalized intensity vectors across fractions) paired with labeled protein interaction
+  ground truth, and you want to avoid hand-crafted features (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -20,7 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bib/bbad229
   title: SPIFFED
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

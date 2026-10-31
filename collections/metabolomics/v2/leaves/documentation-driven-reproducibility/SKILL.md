@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo15010028
   title: DisCo P-ad
-evidence_spans:
-- example R and MATLAB codes (for one data sub-sample scenario) used for the simulation
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

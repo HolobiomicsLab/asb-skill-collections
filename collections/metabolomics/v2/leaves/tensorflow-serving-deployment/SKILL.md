@@ -24,11 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jacs.9b13786
   title: CSCS / deep CNN natural-product annotation
-evidence_spans:
-- Make sure you have python installed
-- tensorflow version 2.3.0 installed to convert the keras models into HDF5 TF2 models
-- 'We pass through tensorflow serving at this url: ```/model/metadata```'
-- We pass through tensorflow serving at this url
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

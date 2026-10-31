@@ -46,8 +46,8 @@ the inputs).
 
 Usage:
     python scripts/collect_metabolomics_collection.py \
-        --builds-root /Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot \
-        --corpus /Users/nothiasl/git/asb-corpus-metabolomics/batch_metabolomics_v0.json \
+        --builds-root <builds-root> \
+        --corpus <batch_metabolomics_v0.json> \
         --repo-root . \
         [--clean] [--dry-run]
 """
@@ -92,7 +92,8 @@ COLLECTION_DESCRIPTION = (
     "Curated, evidence-grounded skills and software-tool records for "
     "computational metabolomics and adjacent mass-spectrometry / NMR / "
     "multi-omics analysis, assembled by the AgenticScienceBuilder pipeline "
-    "from 17 peer-reviewed method papers. Each skill is deduplicated across "
+    "from 17 method papers (journal articles or preprints) and their code. "
+    "Each skill is deduplicated across "
     "papers, anchored to verbatim evidence spans, and annotated with EDAM "
     "operation/topic IRIs for retrieval."
 )
@@ -304,17 +305,42 @@ def _description_contexts(domain_label: str | None) -> tuple[str, str]:
     return "in the workflow it documents", "in the analysis it documents"
 
 
+#: A leading "when", "use when" or "if/when" clause opener. A source that opens
+#: with one loses it before "Use when" is added, or the description reads
+#: "Use when when ...".
+_LEADING_WHEN_RE = re.compile(r"^(?:use\s+)?(?:if\s*/\s*when|when)\b[\s,:]*", re.IGNORECASE)
+
+
+def _strip_leading_when(text: str) -> str:
+    """Drop one leading when-clause opener ("When", "Use when", "If/when")."""
+    return _LEADING_WHEN_RE.sub("", text, count=1)
+
+
+def _use_when(text: str, bridge: str) -> str:
+    """Give ``text`` one canonical opening, never a doubled "Use when"."""
+    canonical = _canonicalize_description_opening(text)
+    if canonical is not None:
+        if not canonical.startswith("Use when"):
+            return canonical
+        rest = canonical[len("Use when"):].strip()
+        return f"Use when {_strip_leading_when(rest)}".strip()
+    stripped = _strip_leading_when(text)
+    if stripped != text:
+        bridge = ""
+    if not stripped:
+        return ""
+    return f"Use when {bridge}{stripped[0].lower()}{stripped[1:]}"
+
+
 def _description_from_sources(when_to_use: str, fallback_desc: str) -> str:
     """Choose the richest source and give it one canonical opening."""
     core = _strip_trailing_marketing(_collapse_ws(when_to_use))
     if core:
-        canonical = _canonicalize_description_opening(core)
-        return canonical or f"Use when {core[0].lower()}{core[1:]}"
+        return _use_when(core, "")
     fallback = _strip_trailing_marketing(_collapse_ws(fallback_desc))
     if not fallback:
         return ""
-    canonical = _canonicalize_description_opening(fallback)
-    return canonical or f"Use when you need to {fallback[0].lower()}{fallback[1:]}"
+    return _use_when(fallback, "you need to ")
 
 
 def _pad_description(description: str, pretty_name: str, context: str) -> str:
@@ -397,7 +423,6 @@ def discover_build_dirs(builds_root: pathlib.Path) -> list[pathlib.Path]:
 def _skill_richness(rec: dict) -> tuple:
     """Sort key: larger == richer. Used to pick the canonical dup."""
     return (
-        len(rec.get("evidence_spans", [])),
         len(rec.get("tools", [])),
         len(rec.get("edam_topics", [])),
         1 if rec.get("edam_operation") else 0,
@@ -477,14 +502,11 @@ def extract_skill(
             # keep build-local DOIs too, but corpus DOI stays first/authoritative
             dois.append(p["doi"])
 
-    evidence_spans: list[str] = []
-    tools_in_skill = tools_doc.get("tools") if isinstance(tools_doc, dict) else None
-    for t in tools_in_skill or []:
-        for span in (t.get("evidence_spans") or [])[:2]:
-            span = _collapse_ws(span)
-            if span and span not in evidence_spans:
-                evidence_spans.append(span)
-    evidence_spans = evidence_spans[:6]
+    # No frontmatter evidence_spans: the only spans a build dir offers per skill
+    # are its tools' (tools.json), and copying the first of each tool's into
+    # every leaf naming that tool grounded unrelated leaves with one sentence
+    # (561 spans were each shared by more than ten v2 leaves). A leaf's own
+    # verbatim evidence is in its body, which is kept whole below.
 
     skill_md_body = ""
     try:
@@ -504,7 +526,6 @@ def extract_skill(
         "primary_doi": paper_doi or (dois[0] if dois else ""),
         "primary_title": paper_title,
         "repo_url": repo_url,
-        "evidence_spans": evidence_spans,
         "skill_md_body": skill_md_body,
         "source_build": build_name,
         "kb_notes": kb.get("notes") if isinstance(kb, dict) else None,
@@ -611,7 +632,6 @@ def render_skill_md(rec: dict, domain_label: str | None = None) -> str:
             "tools": rec["tools"],
         },
         "derived_from": derived_from,
-        "evidence_spans": rec["evidence_spans"],
         "claims": [],
         "provenance": {
             "collection": COLLECTION_IRI,
@@ -703,7 +723,214 @@ def render_collection_yaml(
     return _yaml_dump(data)
 
 
-def render_citation_cff(source_dois: list[str], released_at: str) -> str:
+# ---------------------------------------------------------------------------
+# CITATION.cff references: CFF 1.2.0 requires type, title and authors on each
+# ---------------------------------------------------------------------------
+
+#: Crossref work types -> CFF 1.2.0 reference types; anything else is "generic".
+CROSSREF_CFF_TYPES = {
+    "journal-article": "article",
+    "posted-content": "article",
+    "proceedings-article": "conference-paper",
+    "book": "book",
+    "monograph": "book",
+    "edited-book": "edited-work",
+    "reference-book": "book",
+    "dataset": "data",
+    "report": "report",
+    "dissertation": "thesis",
+    "standard": "standard",
+}
+#: DataCite resourceTypeGeneral -> CFF 1.2.0 reference types.
+DATACITE_CFF_TYPES = {
+    "JournalArticle": "article",
+    "Preprint": "article",
+    "Text": "article",
+    "ConferencePaper": "conference-paper",
+    "Software": "software",
+    "Dataset": "data",
+    "Report": "report",
+    "Dissertation": "thesis",
+    "Book": "book",
+}
+CROSSREF_WORKS = "https://api.crossref.org/works/"
+DATACITE_DOIS = "https://api.datacite.org/dois/"
+REFERENCE_USER_AGENT = (
+    "asb-skill-collections/collect_metabolomics_collection "
+    "(+https://github.com/HolobiomicsLab/asb-skill-collections)"
+)
+#: Seconds between two metadata requests, to stay well inside both APIs' limits.
+REFERENCE_REQUEST_INTERVAL = 0.25
+
+
+def _clean_text(value) -> str:
+    """One line of text from a metadata field that may hold markup or a list."""
+    if isinstance(value, list):
+        value = value[0] if value else ""
+    text = re.sub(r"<[^>]+>", "", str(value or ""))
+    return _collapse_ws(text)
+
+
+def _cff_person(given: str, family: str, name: str) -> dict | None:
+    """A CFF person (family/given names) or entity (name); None when nameless."""
+    given, family, name = _clean_text(given), _clean_text(family), _clean_text(name)
+    if family:
+        person = {"family-names": family}
+        if given:
+            person["given-names"] = given
+        return person
+    if name:
+        return {"name": name}
+    return None
+
+
+def _complete_reference(kind: str, title: str, authors: list, doi: str,
+                        year, journal: str) -> dict | None:
+    """Assemble one CFF reference, or None when title or authors are missing.
+
+    CFF requires the authors of a reference to be unique items, so a second
+    entry identical to an earlier one (two co-authors who share a name and
+    carry nothing else) is written once.
+    """
+    unique: list[dict] = []
+    for author in authors:
+        if author and author not in unique:
+            unique.append(author)
+    authors = unique
+    if not title or not authors:
+        return None
+    reference = {"type": kind, "title": title, "authors": authors, "doi": doi}
+    if isinstance(year, int):
+        reference["year"] = year
+    if journal and kind == "article":
+        reference["journal"] = journal
+    return reference
+
+
+def reference_from_crossref(doi: str, work: dict) -> dict | None:
+    """A complete CFF reference from a Crossref ``/works`` message, else None."""
+    authors = [
+        _cff_person(a.get("given", ""), a.get("family", ""), a.get("name", ""))
+        for a in work.get("author") or []
+        if isinstance(a, dict)
+    ]
+    issued = (work.get("issued") or work.get("published") or {}).get("date-parts") or [[]]
+    year = issued[0][0] if issued and issued[0] and isinstance(issued[0][0], int) else None
+    return _complete_reference(
+        CROSSREF_CFF_TYPES.get(str(work.get("type") or ""), "generic"),
+        _clean_text(work.get("title")),
+        authors,
+        doi,
+        year,
+        _clean_text(work.get("container-title")),
+    )
+
+
+def reference_from_datacite(doi: str, attributes: dict) -> dict | None:
+    """A complete CFF reference from DataCite ``/dois`` attributes, else None."""
+    authors = [
+        _cff_person(c.get("givenName", ""), c.get("familyName", ""), c.get("name", ""))
+        if c.get("nameType") != "Organizational"
+        else _cff_person("", "", c.get("name", ""))
+        for c in attributes.get("creators") or []
+        if isinstance(c, dict)
+    ]
+    titles = [t.get("title") for t in attributes.get("titles") or [] if isinstance(t, dict)]
+    general = str((attributes.get("types") or {}).get("resourceTypeGeneral") or "")
+    year = attributes.get("publicationYear")
+    return _complete_reference(
+        DATACITE_CFF_TYPES.get(general, "generic"),
+        _clean_text(titles),
+        authors,
+        doi,
+        int(year) if str(year or "").isdigit() else None,
+        "",
+    )
+
+
+def _get_json(url: str, opener) -> dict | None:
+    """GET one JSON document; None on a 404, other HTTP errors propagate."""
+    import urllib.error
+    import urllib.request
+
+    request = urllib.request.Request(
+        url, headers={"User-Agent": REFERENCE_USER_AGENT, "Accept": "application/json"}
+    )
+    try:
+        with opener(request, timeout=30) as response:
+            return json.load(response)
+    except urllib.error.HTTPError as exc:
+        if exc.code == 404:
+            return None
+        raise
+
+
+def fetch_citation_reference(doi: str, opener=None) -> dict | None:
+    """Look a DOI up in Crossref, then in DataCite (arXiv, Zenodo); read only."""
+    import urllib.parse
+    import urllib.request
+
+    opener = opener or urllib.request.urlopen
+    quoted = urllib.parse.quote(doi, safe="")
+    work = _get_json(CROSSREF_WORKS + quoted, opener)
+    if work is not None:
+        return reference_from_crossref(doi, work.get("message") or {})
+    record = _get_json(DATACITE_DOIS + quoted, opener)
+    if record is not None:
+        return reference_from_datacite(doi, (record.get("data") or {}).get("attributes") or {})
+    return None
+
+
+def fetch_citation_references(dois: list[str], opener=None, pause=None) -> dict[str, dict]:
+    """Complete references for the DOIs both registries describe, keyed by lowercase DOI."""
+    import time
+
+    pause = REFERENCE_REQUEST_INTERVAL if pause is None else pause
+    found: dict[str, dict] = {}
+    for number, doi in enumerate(dois):
+        if number and pause:
+            time.sleep(pause)
+        reference = fetch_citation_reference(doi, opener)
+        if reference is not None:
+            found[doi.lower()] = reference
+    return found
+
+
+def existing_citation_references(citation: pathlib.Path) -> dict[str, dict]:
+    """The complete references an earlier CITATION.cff already carries, by lowercase DOI."""
+    try:
+        payload = yaml.safe_load(citation.read_text(encoding="utf-8")) or {}
+    except (OSError, yaml.YAMLError):
+        return {}
+    out = {}
+    for reference in payload.get("references") or []:
+        if not isinstance(reference, dict) or not reference.get("doi"):
+            continue
+        complete = _complete_reference(
+            str(reference.get("type") or "generic"),
+            str(reference.get("title") or ""),
+            list(reference.get("authors") or []),
+            str(reference["doi"]),
+            None,
+            "",
+        )
+        if complete is not None:
+            out[str(reference["doi"]).lower()] = reference
+    return out
+
+
+def citation_references(source_dois: list[str], references: dict[str, dict]) -> list[dict]:
+    """The CFF references for the source DOIs that have a complete record, in DOI order.
+
+    A DOI without a title and at least one author is left out rather than
+    written as ``{type, doi}``, which fails CFF 1.2.0 validation.
+    """
+    return [references[d.lower()] for d in source_dois if d.lower() in references]
+
+
+def render_citation_cff(
+    source_dois: list[str], released_at: str, references: dict[str, dict] | None = None
+) -> str:
     cff = {
         "cff-version": "1.2.0",
         "message": "If you use this collection, please cite it as below.",
@@ -734,10 +961,10 @@ def render_citation_cff(source_dois: list[str], released_at: str) -> str:
             "skills",
             "EDAM",
         ],
-        "references": [
-            {"type": "article", "doi": doi} for doi in source_dois
-        ],
     }
+    complete = citation_references(source_dois, references or {})
+    if complete:
+        cff["references"] = complete
     return _yaml_dump(cff)
 
 
@@ -752,6 +979,7 @@ def assemble(
     clean: bool,
     dry_run: bool,
     exclude_dois: set[str] | None = None,
+    fetch_references: bool = False,
 ) -> dict:
     corpus_index = load_corpus_index(corpus_path)
     build_dirs = discover_build_dirs(builds_root)
@@ -818,20 +1046,16 @@ def assemble(
                     canonical = rec
                 else:
                     canonical = existing
-                # union of DOIs, tools, evidence, edam_topics
+                # union of DOIs, tools, edam_topics
                 for d in rec["dois"]:
                     if d and d not in canonical["dois"]:
                         canonical["dois"].append(d)
                 for t in rec["tools"]:
                     if t and t not in canonical["tools"]:
                         canonical["tools"].append(t)
-                for e in rec["evidence_spans"]:
-                    if e and e not in canonical["evidence_spans"]:
-                        canonical["evidence_spans"].append(e)
                 for t in rec["edam_topics"]:
                     if t and t not in canonical["edam_topics"]:
                         canonical["edam_topics"].append(t)
-                canonical["evidence_spans"] = canonical["evidence_spans"][:6]
 
         # ---- tools ----
         for trec in extract_tools(bdir, paper_doi, paper_title, repo_url):
@@ -926,8 +1150,24 @@ def assemble(
             ),
             encoding="utf-8",
         )
-        (release_dir / "CITATION.cff").write_text(
-            render_citation_cff(source_dois_sorted, released_at), encoding="utf-8"
+        # References an earlier CITATION.cff already completed are reused, so a
+        # re-run needs no network; --fetch-citation-references looks up the rest.
+        citation = release_dir / "CITATION.cff"
+        references = existing_citation_references(citation)
+        if fetch_references:
+            missing = [d for d in source_dois_sorted if d.lower() not in references]
+            references.update(fetch_citation_references(missing))
+        uncited = [d for d in source_dois_sorted if d.lower() not in references]
+        if uncited:
+            sys.stderr.write(
+                f"NOTE: {len(uncited)} source DOIs have no title and author record and "
+                "are left out of CITATION.cff references"
+                + ("" if fetch_references else " (pass --fetch-citation-references)")
+                + ".\n"
+            )
+        citation.write_text(
+            render_citation_cff(source_dois_sorted, released_at, references),
+            encoding="utf-8",
         )
 
     return {
@@ -966,12 +1206,12 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--builds-root",
-        default="/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot",
+        required=True,
         help="Directory containing the 17 ASB build dirs (spec2vec_grounded + coll_*).",
     )
     parser.add_argument(
         "--corpus",
-        default="/Users/nothiasl/git/asb-corpus-metabolomics/batch_metabolomics_v0.json",
+        required=True,
         help="batch_metabolomics_v0.json (source-tool -> DOI/repo authority).",
     )
     parser.add_argument(
@@ -997,6 +1237,14 @@ def main() -> None:
         metavar="DOI",
         help="Hold a paper's build out of this release (non-OA / restricted reuse "
         "per OPEN_ACCESS_POLICY.md).  Repeatable.",
+    )
+    parser.add_argument(
+        "--fetch-citation-references",
+        action="store_true",
+        help="Look up, in Crossref then DataCite (read-only GET), the title and "
+        "authors of every source DOI the existing CITATION.cff does not already "
+        "reference. Without it, DOIs with no such record are left out of "
+        "CITATION.cff references.",
     )
     # Domain parametrization — defaults reproduce the metabolomics collection;
     # override to assemble epigenomics / transcriptomics / any domain.
@@ -1048,6 +1296,7 @@ def main() -> None:
         clean=args.clean,
         dry_run=args.dry_run,
         exclude_dois=set(args.exclude_doi),
+        fetch_references=args.fetch_citation_references,
     )
 
     # ---- log summary ----

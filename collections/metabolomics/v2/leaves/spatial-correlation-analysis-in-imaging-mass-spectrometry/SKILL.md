@@ -25,10 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
-evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS
-  data
-- library(mass2adduct)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

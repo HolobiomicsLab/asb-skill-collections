@@ -1,9 +1,8 @@
 ---
 name: dda-mode-metabolomics-data-processing
-description: Use when when you have LC-MS/MS data collected in DDA mode and suspect
-  that MS/MS spectra contain chimeric (multiply-charged or co-fragmented) ion signals
-  that will degrade downstream spectral matching, library searching, or metabolite
-  identification.
+description: Use when you have LC-MS/MS data collected in DDA mode and suspect that
+  MS/MS spectra contain chimeric (multiply-charged or co-fragmented) ion signals that
+  will degrade downstream spectral matching, library searching, or metabolite identification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -22,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c00736
   title: DNMS2Purifier
-evidence_spans:
-- The program is written in R (ver 4.2.1).
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

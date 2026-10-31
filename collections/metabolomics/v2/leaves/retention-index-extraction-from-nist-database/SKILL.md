@@ -23,10 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
-evidence_spans:
-- library(mspcompiler)
-- NIST is the most commonly used **commercial** EI library
-- The NIST MS2 library can be treated as the same as the NIST EI library
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

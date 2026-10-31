@@ -30,10 +30,6 @@ derived_from:
   title: Eclipse
 - doi: 10.1101/2020.11.20.391912
   title: ''
-evidence_spans:
-- pip install bmxp
-- They are written in Python and C
-- MetENP
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: file-format-conversion-troubleshooting
-description: Use when when integrating MSConvert into an automated LC-MS QC workflow
-  and you need to confirm that vendor acquisition files are properly converted to
-  mzML format with intact spectral metadata. Apply this skill after each MSConvert
-  invocation or when QC results appear incomplete or anomalous (e.
+description: Use when integrating MSConvert into an automated LC-MS QC workflow and
+  you need to confirm that vendor acquisition files are properly converted to mzML
+  format with intact spectral metadata. Apply this skill after each MSConvert invocation
+  or when QC results appear incomplete or anomalous (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -21,7 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c00786
   title: Rapid QC-MS
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

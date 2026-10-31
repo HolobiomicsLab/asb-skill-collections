@@ -22,9 +22,6 @@ derived_from:
   title: RT-Transformer
 - doi: 10.1038/s41467-019-13680-7
   title: ''
-evidence_spans:
-- torch
-- Python 3.9
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

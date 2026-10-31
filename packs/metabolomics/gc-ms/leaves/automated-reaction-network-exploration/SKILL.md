@@ -1,8 +1,8 @@
 ---
 name: automated-reaction-network-exploration
-description: Use when when you have a molecular geometry (XYZ format) and need to
-  predict electron ionization (EI) mass spectrum fragmentation patterns by exhaustively
-  sampling conformational space and reaction intermediates.
+description: Use when you have a molecular geometry (XYZ format) and need to predict
+  electron ionization (EI) mass spectrum fragmentation patterns by exhaustively sampling
+  conformational space and reaction intermediates.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2426
@@ -23,13 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.5c00234
   title: QCxMS2
-evidence_spans:
-- Program package for the quantum mechanical calculation of EI mass spectra using
-  automated reaction network exploration
-- '**xtb** (version > 6.7.1 - bleeding edge version)'
-- '**orca** (version >= 6.0.0)'
-- '**molbar** (version >= 1.1.3)'
-- '**geodesic_interpolate** (version'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

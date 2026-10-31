@@ -23,12 +23,6 @@ derived_from:
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
-evidence_spans:
-- a flexible and modular framework designed to simulate fragmentation strategies in
-  tandem mass spectrometry-based metabolomics
-- a flexible and modular framework designed to simulate fragmentation strategies
-- ViMMS is compatible with Python 3+
-- ViMMS dependencies are managed with [Poetry](https://python-poetry.org/)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

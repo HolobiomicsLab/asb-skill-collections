@@ -21,7 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-022-04833-5
   title: mzBucket
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

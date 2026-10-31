@@ -1,6 +1,6 @@
 ---
 name: euclidean-distance-computation-for-spatial-alignment
-description: Use when when you have preprocessed ST and SM AnnData objects with spatial
+description: Use when you have preprocessed ST and SM AnnData objects with spatial
   coordinates and need to establish one-to-one spot correspondence between the two
   modalities prior to joint analysis.
 license: CC-BY-4.0
@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-63915-z
   title: SpatialMETA
-evidence_spans:
-- spatialMETA is a method for integrating spatial multi-omics data
-- spatialmeta.pp.calculate_qc_metrics_sm
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

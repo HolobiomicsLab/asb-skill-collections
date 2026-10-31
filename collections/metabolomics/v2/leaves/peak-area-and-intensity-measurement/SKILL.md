@@ -1,9 +1,9 @@
 ---
 name: peak-area-and-intensity-measurement
-description: Use when when you have vendor-format GC-CI-MS or LC-MS data from stable
-  isotope labeling experiments, a target list of compounds with known monoisotopic
-  m/z, retention time, and elemental formula, and you need per-isotopologue area and
-  intensity values for quantification or downstream statistical.
+description: Use when you have vendor-format GC-CI-MS or LC-MS data from stable isotope
+  labeling experiments, a target list of compounds with known monoisotopic m/z, retention
+  time, and elemental formula, and you need per-isotopologue area and intensity values
+  for quantification or downstream statistical.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -23,14 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.0c02998
   title: isoSCAN
-evidence_spans:
-- To Install from R console
-- 'To Install from R console: ```` install.packages("devtools", dependencies=TRUE)
-  library(devtools)'
-- install_github("jcapelladesto/isoSCAN") library(isoSCAN)
-- install_github("jcapelladesto/isoSCAN")
-- isoSCAN uses `mzR` package in order to read MS files
-- isoSCAN makes use of __enviPat__ package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

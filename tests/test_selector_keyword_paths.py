@@ -58,15 +58,15 @@ def test_explicit_keyword_mode_uses_the_shared_results(
         assert "mzmine2" in expected[0]["matched_fields"]["member_tools"]
 
 
-@pytest.mark.parametrize("mode", ["auto", "semantic"])
 def test_unavailable_semantic_result_has_an_explicit_keyword_fallback(
-    semantic_module, mode, monkeypatch, capsys
+    semantic_module, monkeypatch, capsys
 ):
+    """Only --mode auto falls back; --mode semantic exits 2 (test_semantic_search_modes)."""
     monkeypatch.setattr(semantic_module, "semantic_search", lambda *args: None)
-    semantic_module.main([
+    assert semantic_module.main([
         "--collection", str(COLLECTION), "--query", "untargeted annotation",
-        "--target", "skills", "--mode", mode, "--k", "3",
-    ])
+        "--target", "skills", "--mode", "auto", "--k", "3",
+    ]) == 0
     actual = json.loads(capsys.readouterr().out)
     expected = idx.search(
         "metabolomics/v2", "skills", "untargeted annotation", k=3, root=ROOT,

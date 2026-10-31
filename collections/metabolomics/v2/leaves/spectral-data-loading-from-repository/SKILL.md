@@ -1,6 +1,6 @@
 ---
 name: spectral-data-loading-from-repository
-description: Use when when you need to retrieve a specific MS/MS spectrum from a public
+description: Use when you need to retrieve a specific MS/MS spectrum from a public
   proteomics repository (PRIDE, MassIVE, PeptideAtlas) by its USI string for annotation,
   visualization, or comparative analysis, rather than working with locally stored
   mzML/mzXML files or already-loaded spectrum objects.
@@ -21,11 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
-evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing
-  and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing
-  and visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,7 +1,7 @@
 ---
 name: dataset-train-test-split-validation
-description: Use when when preparing MS/MS spectra for deep learning model training
-  on a specific instrument type (e.g., Orbitrap, Q-TOF), and you need to verify that
+description: Use when preparing MS/MS spectra for deep learning model training on
+  a specific instrument type (e.g., Orbitrap, Q-TOF), and you need to verify that
   configuration-driven filtering (e.g., adding 'ftms' to an instrument allowlist)
   produces training and test sets of the expected size (e.
 license: CC-BY-4.0
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
-evidence_spans:
-- FIDDLE is a deep learning method for predicting molecular formulas from MS/MS spectra
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

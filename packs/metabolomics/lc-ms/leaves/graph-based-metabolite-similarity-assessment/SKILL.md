@@ -24,10 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-025-01051-y
   title: minems2
-evidence_spans:
-- 'package: "`r BiocStyle::pkg_ver(''mineMS2'')`"'
-- '%\VignetteDepends{igraph}'
-- vignette title and package context indicate R-based package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

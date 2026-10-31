@@ -1,9 +1,9 @@
 ---
 name: summarized-experiment-object-manipulation
-description: Use when when working with metabolomics, proteomics, or other high-throughput
+description: Use when working with metabolomics, proteomics, or other high-throughput
   replicate experiments stored in Bioconductor SummarizedExperiment format (rows =
   features/metabolites, columns = samples/replicates), and you need to inspect raw
-  feature dimensions, assess data completeness, or apply.
+  feature dimensions, assess data completeness, or apply row-wise.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -22,12 +22,6 @@ derived_from:
   title: marr
 - doi: 10.1080/01621459.2017.1397521
   title: ''
-evidence_spans:
-- 'marr: An R/Bioconductor package for Maximum Rank Reproducibility'
-- The R-package **marr** can be installed from GitHub using the R package [devtools]
-- The **msprepCOPD** data in the **marr** package was pre-processed using the MSPrep
-  software
-- '`marr`: An R/Bioconductor package for Maximum Rank Reproducibility'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

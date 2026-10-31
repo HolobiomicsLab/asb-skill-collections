@@ -1,7 +1,7 @@
 ---
 name: spectral-library-matching-and-scoring
-description: Use when when you have extracted a mean or ROI spectrum from MSI data
-  (via centroid or profile mode conversion) and need to identify the biochemical composition
+description: Use when you have extracted a mean or ROI spectrum from MSI data (via
+  centroid or profile mode conversion) and need to identify the biochemical composition
   by comparing against curated reference libraries such as LIPID MAPS, HMDB, or a
   custom metabolite database.
 license: CC-BY-4.0
@@ -34,11 +34,6 @@ derived_from:
   title: ''
 - doi: 10.5281/zenodo.3378723
   title: ''
-evidence_spans:
-- The MSI-Explorer napari plugin is a powerful tool designed for targeted biochemical
-  annotations in MSI data.
-- '[![Python Version](https://img.shields.io/pypi/pyversions/MSI-Explorer.svg?color=green)](https://python.org)'
-- The initial work is available at <https://doi.org/10.3389/fpls.2019.01329>
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,8 @@
 ---
 name: ground-truth-intensity-calculation
-description: Use when when generating synthetic LC/GC-MS .mzML files with companion
-  ground-truth peak tables for method validation, you need to calculate the absolute
-  maximum intensity that each simulated peak would exhibit in the raw mass spectrometry
-  matrix.
+description: Use when generating synthetic LC/GC-MS .mzML files with companion ground-truth
+  peak tables for method validation, you need to calculate the absolute maximum intensity
+  that each simulated peak would exhibit in the raw mass spectrometry matrix.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -22,11 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
-evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
-  BiocManager::install("mzrtsim")
-- The underlying engine handles binary data encoding via the `base64enc` package
-- github.com__yufree__mzrtsim
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: black-formatter-check-mode-execution
-description: Use when when you need to audit whether Python source files in a repository
+description: Use when you need to audit whether Python source files in a repository
   conform to black formatting standards before accepting contributions, merging code,
   or running CI/CD pipelines.
 license: CC-BY-4.0
@@ -16,8 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41589-019-0400-9
   title: BiG-SCAPE biosynthetic diversity
-evidence_spans:
-- We use black for auto formatting
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

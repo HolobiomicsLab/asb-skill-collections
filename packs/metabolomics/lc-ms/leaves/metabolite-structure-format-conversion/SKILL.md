@@ -1,9 +1,9 @@
 ---
 name: metabolite-structure-format-conversion
-description: Use when when importing candidate metabolite structures from public chemical
+description: Use when importing candidate metabolite structures from public chemical
   databases (PubChem, ChEBI, etc.) for use in MAGMa-based annotation workflows, or
   when integrating external structure datasets that may use divergent molecular representation
-  formats or contain non-standard chemical.
+  formats or contain non-standard chemical notations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
-evidence_spans:
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

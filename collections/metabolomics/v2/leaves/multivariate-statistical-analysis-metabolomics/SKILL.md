@@ -1,9 +1,9 @@
 ---
 name: multivariate-statistical-analysis-metabolomics
-description: Use when when you have preprocessed non-targeted LC-MS/MS feature tables
-  (post-merging, cleanup, blank removal, and batch correction) and seek to uncover
-  multivariate patterns across samples, discriminate between experimental groups,
-  or reduce dimensionality of high-dimensional metabolomic data.
+description: Use when you have preprocessed non-targeted LC-MS/MS feature tables (post-merging,
+  cleanup, blank removal, and batch correction) and seek to uncover multivariate patterns
+  across samples, discriminate between experimental groups, or reduce dimensionality
+  of high-dimensional metabolomic data before.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3935
@@ -22,8 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41596-024-01046-3
   title: FBMN-STATS
-evidence_spans:
-- To easily install and run Jupyter Notebook in R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

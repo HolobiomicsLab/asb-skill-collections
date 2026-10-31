@@ -1,7 +1,7 @@
 ---
 name: nearest-neighbor-candidate-retrieval
-description: Use when when you have a large spectral library (thousands to millions
-  of spectra represented as high-dimensional vectors) and need to search unknown query
+description: Use when you have a large spectral library (thousands to millions of
+  spectra represented as high-dimensional vectors) and need to search unknown query
   spectra against it, particularly under open modification search scenarios where
   all possible mass shifts must be considered.
 license: CC-BY-4.0
@@ -20,11 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo
-evidence_spans:
-- ANN-SoLo (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is
-  a spectral library search engine
-- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary)
-  is a spectral library search engine'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

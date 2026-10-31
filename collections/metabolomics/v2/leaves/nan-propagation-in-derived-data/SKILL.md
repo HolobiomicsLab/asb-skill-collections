@@ -1,8 +1,8 @@
 ---
 name: nan-propagation-in-derived-data
-description: Use when when constructing derived elemental ratio images via Calculator
-  formula evaluation in pew², and input element channels contain NaN pixels (from
-  thresholding, signal dropout, or instrumental noise).
+description: Use when constructing derived elemental ratio images via Calculator formula
+  evaluation in pew², and input element channels contain NaN pixels (from thresholding,
+  signal dropout, or instrumental noise).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -20,13 +20,6 @@ derived_from:
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
-evidence_spans:
-- The built in `Calculator` can perform simple calculations on image data by entering
-  the desired formula into the `Formula` text box
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
-  defined threshold
-- '|pewpew| is an open-source LA-ICP-MS data import and processing application'
-- based on the python library pewlib_
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

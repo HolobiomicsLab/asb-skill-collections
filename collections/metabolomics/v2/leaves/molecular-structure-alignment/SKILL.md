@@ -1,6 +1,6 @@
 ---
 name: molecular-structure-alignment
-description: Use when when you have two or more lipid structures represented as labeled
+description: Use when you have two or more lipid structures represented as labeled
   molecular graphs and need to compute pairwise structural distances to cluster lipidomes,
   identify similar lipid species, or rank lipids by structural relatedness.
 license: CC-BY-4.0
@@ -17,8 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c02449
   title: LipidSpace
-evidence_spans:
-- LipidSpace is a stand-alone tool to analyze and compare lipidomes
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

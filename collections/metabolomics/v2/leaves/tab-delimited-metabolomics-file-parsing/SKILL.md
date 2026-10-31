@@ -1,8 +1,8 @@
 ---
 name: tab-delimited-metabolomics-file-parsing
-description: Use when when you have raw metabolomics measurements in tab-delimited
-  text format (e.g., from Sciex OS exports) and need to load them into R for quality
-  control analysis.
+description: Use when you have raw metabolomics measurements in tab-delimited text
+  format (e.g., from Sciex OS exports) and need to load them into R for quality control
+  analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
-evidence_spans:
-- library(mzQuality)
-- mzQuality requires a specific format for the input data.
-- mzQuality is a user-friendly R package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

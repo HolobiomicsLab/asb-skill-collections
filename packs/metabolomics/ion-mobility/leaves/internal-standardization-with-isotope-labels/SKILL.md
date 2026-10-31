@@ -18,10 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c01253
   title: mobilipid
-evidence_spans:
-- Our tool enhances CCS quality control by providing a R Markdown that integrates
-  into IM-MS lipidomics workflows
-- providing a R Markdown that integrates into IM-MS lipidomics workflows
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

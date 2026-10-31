@@ -1,8 +1,8 @@
 ---
 name: biotransformation-rule-application
-description: Use when when you have a small-molecule structure (SMILES, MOL, or SDF
-  format) and need to predict its fate in soil or aquatic environments through microbial
-  degradation pathways.
+description: Use when you have a small-molecule structure (SMILES, MOL, or SDF format)
+  and need to predict its fate in soil or aquatic environments through microbial degradation
+  pathways.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -23,9 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1093/nar/gkac408
   title: BioTransformer 3.0
-evidence_spans:
-- This is version 3.0.0 of BioTransformer. BioTransformer is a software tool that
-  predicts small molecule metabolism
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s42004-023-00932-3
   title: Spec2Mol
-evidence_spans:
-- The implementation of the Spec2Mol architecture is based on the Pytorch library.
-- Processing of the chemical data is based on the [RDKit](https://www.rdkit.org/)
-  software.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

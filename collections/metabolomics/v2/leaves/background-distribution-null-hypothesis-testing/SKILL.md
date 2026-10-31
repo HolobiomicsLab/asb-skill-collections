@@ -1,9 +1,9 @@
 ---
 name: background-distribution-null-hypothesis-testing
-description: Use when when predicting one data modality (e.g., metabolite abundances)
-  from another (e.g., microbiome composition) and you need to distinguish genuine
-  microbe–metabolite associations from false positives driven by data compositionality,
-  sample size artifacts, or confounding variation.
+description: Use when predicting one data modality (e.g., metabolite abundances) from
+  another (e.g., microbiome composition) and you need to distinguish genuine microbe–metabolite
+  associations from false positives driven by data compositionality, sample size artifacts,
+  or confounding variation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -20,11 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
-evidence_spans:
-- An MLPNN model is composed of multiple fully connected hidden layers composed of
-  perceptrons
-- MiMeNet is an integrative MLPNN, which trains models to accurately predict the metabolome
-  based on a microbiome
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -22,17 +22,6 @@ derived_from:
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
-evidence_spans:
-- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining
-  the hierarchical relationship between them
-- Finally, we present NPLinker, a software framework to link genomic and metabolomic
-  data
-- After downloading the strain assemblies and metabolomics data, the genomes were
-  run through antiSMASH v5.0.0 for BGC detection
-- and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
-- BiG-SCAPE clusters the BGCs separately by product type
-- antiSMASH to score the correspondence between the MIBiG entries and the detected
-  BGCs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

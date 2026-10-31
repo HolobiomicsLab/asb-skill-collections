@@ -1,8 +1,8 @@
 ---
 name: constraint-based-model-output-integration
-description: Use when when you have (1) transcriptomics data and a metabolic network
-  model with GPR rules to compute RAS scores; (2) constraint-based model predictions
-  (RPS from optGpSampler or similar) quantifying how gene expression differences translate
+description: Use when you have (1) transcriptomics data and a metabolic network model
+  with GPR rules to compute RAS scores; (2) constraint-based model predictions (RPS
+  from optGpSampler or similar) quantifying how gene expression differences translate
   to flux differences;
 license: CC-BY-4.0
 metadata:
@@ -24,8 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
-evidence_spans:
-- using constraint-based stoichiometric metabolic models as a scaffold
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

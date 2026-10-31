@@ -1,7 +1,7 @@
 ---
 name: chromatographic-alignment-tuning
-description: Use when when processing a cohort of centroided mzML LC-MS files with
-  high sample-to-sample retention time and m/z drift, and you need reproducible alignment
+description: Use when processing a cohort of centroided mzML LC-MS files with high
+  sample-to-sample retention time and m/z drift, and you need reproducible alignment
   of detected peaks across all samples before gap-filling and feature consolidation.
 license: CC-BY-4.0
 metadata:
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
-evidence_spans:
-- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo,
-  ADAP'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

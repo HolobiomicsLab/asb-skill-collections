@@ -23,11 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
-evidence_spans:
-- An MLPNN model is composed of multiple fully connected hidden layers composed of
-  perceptrons
-- MiMeNet is an integrative MLPNN, which trains models to accurately predict the metabolome
-  based on a microbiome
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

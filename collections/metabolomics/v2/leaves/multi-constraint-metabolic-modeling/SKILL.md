@@ -25,15 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
-evidence_spans:
-- using constraint-based stoichiometric metabolic models as a scaffold
-- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy
-  [72], and we sampled a million steady state solutions
-- In this work, we exploited the implementation of optGpSampler algorithm [71] available
-  in COBRApy [72], and we sampled a million steady state solutions
-- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy
-  [72]
-- the implementation of optGpSampler algorithm [71] available in COBRApy [72]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

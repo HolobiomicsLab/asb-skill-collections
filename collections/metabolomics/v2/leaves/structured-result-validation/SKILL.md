@@ -17,8 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41587-021-01045-9
   title: cosmic
-evidence_spans:
-- The SIRIUS web services (CSI:FingerID, CANOPUS, MSNovelist and others)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

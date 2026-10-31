@@ -1,7 +1,7 @@
 ---
 name: spectrum-data-loading
-description: Use when when you have a USI (e.g., mzspec:MTBLS1124:QC07.mzML) pointing
-  to a public mzML or related spectrum file in MetaboLights, MassIVE, or GNPS repositories,
+description: Use when you have a USI (e.g., mzspec:MTBLS1124:QC07.mzML) pointing to
+  a public mzML or related spectrum file in MetaboLights, MassIVE, or GNPS repositories,
   and need to load the spectrum data for interactive visualization, quality control
   assessment, or downstream analysis.
 license: CC-BY-4.0
@@ -22,7 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-021-01339-5
   title: GNPS Dashboard
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

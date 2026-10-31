@@ -1,8 +1,9 @@
 ---
 name: rest-api-endpoint-querying
-description: Use when when you need to verify that a deployed model service (such
-  as TensorFlow Serving) is running and exposing the correct input and output layer
-  names before sending classification requests.
+description: Use when you need to verify that a deployed model service (such as TensorFlow
+  Serving) is running and exposing the correct input and output layer names before
+  sending classification requests. Apply this skill after starting a containerized
+  service and before attempting to call inference endpoints.
 license: CC-BY-4.0
 metadata:
   edam_topics:
@@ -27,9 +28,6 @@ derived_from:
   title: ''
 - doi: 10.1021/acs.jnatprod.1c00399
   title: ''
-evidence_spans:
-- Make sure you have python installed
-- We pass through tensorflow serving at this url
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

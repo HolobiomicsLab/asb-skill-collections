@@ -1,6 +1,6 @@
 ---
 name: fingerprint-vector-loading-and-parsing
-description: Use when when you have deposited or archived biosynfoni fingerprint vectors
+description: Use when you have deposited or archived biosynfoni fingerprint vectors
   (such as from Zenodo 10.5281/zenodo.14822624) and need to ingest them into a Python
   workflow to compute distributional statistics, bit-frequency profiles, sparsity
   metrics, or pairwise similarity coefficients.
@@ -21,11 +21,6 @@ derived_from:
   title: biosynfoni
 - doi: 10.5281/zenodo.14822624
   title: ''
-evidence_spans:
-- biosynfoni
-- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic
-  research
-- pip install -e .[dev]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

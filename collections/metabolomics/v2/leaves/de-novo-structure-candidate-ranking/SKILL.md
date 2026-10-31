@@ -1,6 +1,6 @@
 ---
 name: de-novo-structure-candidate-ranking
-description: Use when when you have high-resolution LC-MS/MS data for an unknown metabolite
+description: Use when you have high-resolution LC-MS/MS data for an unknown metabolite
   or small molecule, have computed or measured the molecular ion mass and fragmentation
   spectrum, and require de-novo structure generation because the compound is absent
   from spectral libraries or structure databases.
@@ -22,8 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41587-021-01045-9
   title: cosmic
-evidence_spans:
-- The SIRIUS web services (CSI:FingerID, CANOPUS, MSNovelist and others)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

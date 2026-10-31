@@ -1,9 +1,9 @@
 ---
 name: sample-metadata-annotation-for-lcms
-description: Use when when you have loaded centroided .mzML files into a Spectra object
+description: Use when you have loaded centroided .mzML files into a Spectra object
   and plan to use TARDIS (tardisPeaks) with an MsExperiment object rather than file
   paths, and you need TARDIS to distinguish QC runs from sample runs for separate
-  quality metric calculation, polarity filtering, and.
+  quality metric calculation, polarity filtering, and screening-mode.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -24,14 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
-evidence_spans:
-- It makes use of an established retention time correction algorithm from the `xcms`
-  package
-- loads MS data as `Spectra` objects so it's easily integrated with other tools
-- Alternatively, instead of using file paths as input for TARDIS, the user can also
-  use an `MsExperiment` object
-- R package for *TArgeted Raw Data Integration In Spectrometry*
-- knitr::include_graphics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

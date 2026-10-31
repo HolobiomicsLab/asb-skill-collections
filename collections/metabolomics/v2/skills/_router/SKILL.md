@@ -33,7 +33,7 @@ This is the default entry point for the ASB Metabolomics collection (v2): **5,85
 evidence-grounded skills**, **21 composite workflows** and **909 software-tool records** for computational
 metabolomics — predominantly LC-MS/MS, but also LC-MS, GC-MS, mass-spectrometry
 imaging, ion mobility, lipidomics, and some NMR / multi-omics — each derived from
-a peer-reviewed method paper and its public code repository.
+a method paper (journal article or preprint) and its public code repository.
 
 You (the agent) use this router in three steps: **search → apply → (optionally) ground**.
 
@@ -54,8 +54,13 @@ skill you need.
 
 ## 1. Search — find the right skill
 
+Every path in the commands below is relative to the collection root: the
+directory that holds this router's `skills/` folder, `bin/` and the indexes (in
+Claude Code, the installed plugin's `${CLAUDE_PLUGIN_ROOT}`). Write the root out
+in full, quoted, so the commands run from any working directory.
+
 ```bash
-python bin/search_skills.py --query "<the user's task>" -k 10
+python "<collection root>/bin/search_skills.py" --query "<the user's task>" -k 10
 ```
 
 Standard library only — no network, no API key. It prints a handful of
@@ -78,7 +83,7 @@ untargeted LC-MS/MS run"*, *"lipidomics from mzML to a feature table"* — a
 composite workflow already chains the right leaves in the right order:
 
 ```bash
-python bin/search_skills.py --target workflows --query "<the user's task>" -k 5
+python "<collection root>/bin/search_skills.py" --target workflows --query "<the user's task>" -k 5
 ```
 
 Each hit prints its stages and the path to `workflows/<slug>/SKILL.md`. Read
@@ -90,9 +95,10 @@ search when no workflow covers the request.
 `bin/semantic_search.py` ranks by meaning rather than keyword overlap, using
 `text-embedding-3-large` when an embedding backend is available (set
 `OPENAI_API_KEY`, and point `ASB_LEAF_EMB_CACHE` at the leaf embedding cache or
-drop it at `.cache/leafemb_v2.npz`). It falls back to a keyword search when no
-backend is configured, and the `mode` field in its output says which ran. It
-takes the same `--target skills|workflows`.
+drop it at `.cache/leafemb_v2.npz`). With the default `--mode auto` it falls
+back to a keyword search when no backend is available and says why on stderr;
+the `mode` field in its output says which ran. `--mode semantic` never falls
+back: it exits 2 with the reason. It takes the same `--target skills|workflows`.
 
 Three machine indexes back both scripts, and are worth querying directly with
 `jq` when you need a field they do not print:
@@ -110,12 +116,12 @@ Three machine indexes back both scripts, and are worth querying directly with
 
 Then read that skill's `leaves/<slug>/SKILL.md` and follow it.
 
-## 2. Apply — use the skill
+## 2. Apply
 
-The skill body carries the procedure; its frontmatter carries `tools` (what to
-install/invoke), `derived_from` (source paper DOIs), and `evidence_spans`
-(verbatim anchors from the paper/repo). Use the tool records in
-`tools_index.json` for canonical install URLs.
+Read the chosen `leaves/<slug>/SKILL.md`. Its frontmatter carries `metadata.tools` (what
+to install or invoke) and `derived_from` (source paper DOIs). Find
+verbatim evidence lines in the body, then follow the procedure.
+Use the tool records in `tools_index.json` for canonical install URLs.
 
 ## 3. Ground (recommended) — verify against the source via Perspicacité
 
@@ -123,13 +129,13 @@ Before trusting a parameter, claim, or default, **ground the skill against the
 paper it was built from**. The mapping skill → source DOI(s) → KB is precomputed
 in **`kb_bundle.json`** (each skill's `kb_slugs` are the SAME `asb-paper-<doi>`
 KBs the collection was assembled against). A running Perspicacité instance plus
-`scripts/perspicacite_kb_bind.py` makes this one command:
+`bin/perspicacite_kb_bind.py` makes this one command:
 
 ```bash
 # auto-create + ingest the skill's KB (paper full text + supplementary info),
 # then ask a grounded, cited question against it:
-python scripts/perspicacite_kb_bind.py query \
-  --collection collections/metabolomics/v2 \
+python "<collection root>/bin/perspicacite_kb_bind.py" query \
+  --collection "<collection root>" \
   --skill <slug> \
   --question "<what you need to verify>"
 ```
@@ -183,7 +189,8 @@ selection.
 
 ## Provenance
 
-Each skill is grounded (`derived_from` DOIs + `evidence_spans`), license-tagged
+Each skill is grounded (`derived_from` DOIs + verbatim evidence lines in its
+body), license-tagged
 (CC-BY-4.0), and EDAM-annotated. Non-open-access sources and ungrounded skills
 were held out at release. See `corpus.yaml` for the per-paper access basis
 (`repo-oa`: the redistributable source repository was cloned at build time) and

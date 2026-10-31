@@ -1,7 +1,7 @@
 ---
 name: filter-threshold-parameterization
-description: Use when when expanding a compound set through multi-generation Pickaxe
-  runs, use this skill if you want to retain compounds based on a similarity or property
+description: Use when expanding a compound set through multi-generation Pickaxe runs,
+  use this skill if you want to retain compounds based on a similarity or property
   metric (e.
 license: CC-BY-4.0
 metadata:
@@ -19,7 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

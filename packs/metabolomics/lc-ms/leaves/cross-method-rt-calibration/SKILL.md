@@ -1,9 +1,9 @@
 ---
 name: cross-method-rt-calibration
-description: Use when when you have predicted retention times from a DNN model trained
+description: Use when you have predicted retention times from a DNN model trained
   on one chromatographic method (CM) and need to rank or filter metabolite candidates
   on a different chromatographic method, but have only a small set of calibration
-  molecules (≥10) with known RTs on both source and target.
+  molecules (≥10) with known RTs on both source and target methods.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -22,9 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
-evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
-  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

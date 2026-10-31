@@ -1,6 +1,6 @@
 ---
 name: reconstruction-algorithm-implementation
-description: Use when when you have raw or preprocessed mass spectrometry data (feature
+description: Use when you have raw or preprocessed mass spectrometry data (feature
   matrices or transient files) acquired at lower mass resolution or with signal degradation,
   and you possess high-resolution reference MSI data or simulated ground truth to
   train a reconstruction model.
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-024-02171-3
   title: MEISTER
-evidence_spans:
-- github.com/richardxie1119/MEISTER
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

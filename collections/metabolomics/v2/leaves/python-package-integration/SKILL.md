@@ -1,9 +1,9 @@
 ---
 name: python-package-integration
-description: Use when when you have LC-MS/MS data in MZmine-generated MGF and CSV
-  files (for positive and/or negative ionization modes) and need to apply a sequence
-  of deduplication, annotation, and dereplication steps defined in a MolNotator YAML
-  configuration file to predict actual molecules and build.
+description: Use when you have LC-MS/MS data in MZmine-generated MGF and CSV files
+  (for positive and/or negative ionization modes) and need to apply a sequence of
+  deduplication, annotation, and dereplication steps defined in a MolNotator YAML
+  configuration file to predict actual molecules and build molecular.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -22,11 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2021.12.21.473622v1
   title: MolNotator
-evidence_spans:
-- MolNotator is a Python package
-- from MolNotator.duplicate_filter import duplicate_filter
-- from MolNotator.sample_slicer import sample_slicer
-- import yaml
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

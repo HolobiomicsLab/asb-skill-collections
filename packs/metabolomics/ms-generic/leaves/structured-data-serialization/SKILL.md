@@ -1,6 +1,6 @@
 ---
 name: structured-data-serialization
-description: Use when when you have mwTab-formatted Mass Spectrometry or Nuclear Magnetic
+description: Use when you have mwTab-formatted Mass Spectrometry or Nuclear Magnetic
   Resonance experimental data from the Metabolomics Workbench that must be converted
   to JSON for API integration, data sharing across systems, or validation against
   a defined JSON schema.
@@ -24,9 +24,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo11030163
   title: mwtab Python Library for RESTful Access
-evidence_spans:
-- The ``mwtab`` package is a Python library
-- jsonschema_ for validating functionality of ``mwTab`` files based on ``JSON`` schema
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

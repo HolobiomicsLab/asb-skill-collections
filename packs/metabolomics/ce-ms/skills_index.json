@@ -38,7 +38,7 @@
  {
   "slug": "adduct-ion-parent-ion-pairing-analysis",
   "name": "adduct-ion-parent-ion-pairing-analysis",
-  "description": "Use when when you have binned mass spectrometry imaging peaks and want to understand which detected mass-to-charge ratios represent the same metabolite in different ionization states (parent vs. adduct form).",
+  "description": "Use when you have binned mass spectrometry imaging peaks and want to understand which detected mass-to-charge ratios represent the same metabolite in different ionization states (parent vs. adduct form).",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -113,7 +113,7 @@
  {
   "slug": "approximate-nearest-neighbor-index-construction",
   "name": "approximate-nearest-neighbor-index-construction",
-  "description": "Use when when you have a large collection of reference MS/MS spectra (spectral library) and need to search unknown query spectra against it rapidly, particularly for open modification searching where the modification mass is unknown and candidate space is large.",
+  "description": "Use when you have a large collection of reference MS/MS spectra (spectral library) and need to search unknown query spectra against it rapidly, particularly for open modification searching where the modification mass is unknown and candidate space is large.",
   "edam_operation": "http://edamontology.org/operation_3945",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -233,7 +233,7 @@
  {
   "slug": "candidate-spectrum-retrieval-and-ranking",
   "name": "candidate-spectrum-retrieval-and-ranking",
-  "description": "Use when when you have a large reference MS/MS spectral library (>10k spectra) and need to perform open modification searches on query spectra without exhaustively comparing against every library entry.",
+  "description": "Use when you have a large reference MS/MS spectral library (>10k spectra) and need to perform open modification searches on query spectra without exhaustively comparing against every library entry.",
   "edam_operation": "http://edamontology.org/operation_3645",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -296,7 +296,7 @@
  {
   "slug": "ce-ms-eof-marker-identification",
   "name": "ce-ms-eof-marker-identification",
-  "description": "Use when when processing CE-MS test files and you need to identify and extract the migration time of the EOF marker (e.g., Paracetamol) to normalize compound migration times across runs.",
+  "description": "Use when processing CE-MS test files and you need to identify and extract the migration time of the EOF marker (e.g., Paracetamol) to normalize compound migration times across runs.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -332,7 +332,7 @@
  {
   "slug": "ce-ms-migration-time-measurement",
   "name": "ce-ms-migration-time-measurement",
-  "description": "Use when when processing raw CE-MS data and need to establish a baseline migration time scale before transforming to effective mobility.",
+  "description": "Use when processing raw CE-MS data and need to establish a baseline migration time scale before transforming to effective mobility.",
   "edam_operation": "http://edamontology.org/operation_3633",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -402,7 +402,7 @@
  {
   "slug": "chemical-annotation-confidence-assessment",
   "name": "chemical-annotation-confidence-assessment",
-  "description": "Use when when you have received chemical annotations from GNPS spectral library matching workflow and need to assess their reliability before downstream analysis (e.g., chemical explorer visualization, sample filtering, or comparative metabolomics).",
+  "description": "Use when you have received chemical annotations from GNPS spectral library matching workflow and need to assess their reliability before downstream analysis (e.g., chemical explorer visualization, sample filtering, or comparative metabolomics).",
   "edam_operation": "http://edamontology.org/operation_3860",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -470,7 +470,7 @@
  {
   "slug": "compound-ground-truth-matching",
   "name": "compound-ground-truth-matching",
-  "description": "Use when when you have pre-computed embeddings for query and reference MS/MS spectra, computed their cosine similarity matrix, and need to measure retrieval success by verifying whether the correct compound (identified by SMILES string) appears in the top-1, top-5, or top-10 ranked candidates from.",
+  "description": "Use when you have pre-computed embeddings for query and reference MS/MS spectra, computed their cosine similarity matrix, and need to measure retrieval success by verifying whether the correct compound (identified by SMILES string) appears in the top-1, top-5, or top-10 ranked candidates from a.",
   "edam_operation": "http://edamontology.org/operation_3802",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -589,7 +589,7 @@
  {
   "slug": "cosine-similarity-computation",
   "name": "cosine-similarity-computation",
-  "description": "Use when when comparing two MS/MS spectra (query and reference) to quantify their spectral resemblance for compound identification or molecular networking, particularly when you need a simple, symmetric measure that is insensitive to precursor mass differences and does not require peak alignment.",
+  "description": "Use when comparing two MS/MS spectra (query and reference) to quantify their spectral resemblance for compound identification or molecular networking, particularly when you need a simple, symmetric measure that is insensitive to precursor mass differences and does not require peak alignment across.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -652,7 +652,7 @@
  {
   "slug": "cosine-similarity-ranking-metrics",
   "name": "cosine-similarity-ranking-metrics",
-  "description": "Use when when you have pre-computed spectral embeddings (vectors) for both query spectra and a reference library, and you need to measure retrieval performance by ranking reference compounds by similarity to each query.",
+  "description": "Use when you have pre-computed spectral embeddings (vectors) for both query spectra and a reference library, and you need to measure retrieval performance by ranking reference compounds by similarity to each query.",
   "edam_operation": "http://edamontology.org/operation_3800",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -764,7 +764,7 @@
  {
   "slug": "effective-mobility-calibration-single-marker",
   "name": "effective-mobility-calibration-single-marker",
-  "description": "Use when when you have CE-MS data with migration times that vary between runs due to electroosmotic flow drift, but you possess a reliable internal standard with a known effective mobility value.",
+  "description": "Use when you have CE-MS data with migration times that vary between runs due to electroosmotic flow drift, but you possess a reliable internal standard with a known effective mobility value.",
   "edam_operation": "http://edamontology.org/operation_3633",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -931,7 +931,7 @@
  {
   "slug": "floating-point-numerical-accuracy-assessment",
   "name": "floating-point-numerical-accuracy-assessment",
-  "description": "Use when when implementing or validating a lossy numeric codec for mass-spectrometry data (e.g., MSNumpressCoder in OpenMS). Specifically: after implementing both encoder and decoder, before shipping to production, or when comparing alternative compression schemes.",
+  "description": "Use when implementing or validating a lossy numeric codec for mass-spectrometry data (e.g., MSNumpressCoder in OpenMS). Specifically: after implementing both encoder and decoder, before shipping to production, or when comparing alternative compression schemes.",
   "edam_operation": "http://edamontology.org/operation_3564",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -1049,7 +1049,7 @@
  {
   "slug": "group-wise-chemical-enrichment-calculation",
   "name": "group-wise-chemical-enrichment-calculation",
-  "description": "Use when when comparing GNPS chemical annotations across two or more groups of samples (defined by ReDU sample-information categories such as sample type, extraction method, or ionization source) where the groups contain different numbers of files.",
+  "description": "Use when comparing GNPS chemical annotations across two or more groups of samples (defined by ReDU sample-information categories such as sample type, extraction method, or ionization source) where the groups contain different numbers of files.",
   "edam_operation": "http://edamontology.org/operation_3695",
   "edam_topics": [
    "http://edamontology.org/topic_0625",
@@ -1083,7 +1083,7 @@
  {
   "slug": "high-dimensional-signal-enhancement",
   "name": "high-dimensional-signal-enhancement",
-  "description": "Use when when you have raw or preprocessed mass spectrometry imaging (MSI) data with limited spatial resolution, high noise, or incomplete molecular coverage, and you want to enhance signal fidelity to support multiscale tissue–single-cell mapping or brain biochemical profiling.",
+  "description": "Use when you have raw or preprocessed mass spectrometry imaging (MSI) data with limited spatial resolution, high noise, or incomplete molecular coverage, and you want to enhance signal fidelity to support multiscale tissue–single-cell mapping or brain biochemical profiling.",
   "edam_operation": "http://edamontology.org/operation_3443",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -1111,7 +1111,7 @@
  {
   "slug": "interactive-spectral-visualization-emperor",
   "name": "interactive-spectral-visualization-emperor",
-  "description": "Use when when you have computed PCA coordinates from chemical annotation matrices (e.",
+  "description": "Use when you have computed PCA coordinates from chemical annotation matrices (e.",
   "edam_operation": "http://edamontology.org/operation_3441",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -1304,7 +1304,7 @@
  {
   "slug": "mass-spectrometry-fragmentation-pattern-modeling",
   "name": "mass-spectrometry-fragmentation-pattern-modeling",
-  "description": "Use when when building a re-usable spectral reference library for lipidomics workflows where you need to match experimental MS/MS spectra against a comprehensive theoretical fragmentation model.",
+  "description": "Use when building a re-usable spectral reference library for lipidomics workflows where you need to match experimental MS/MS spectra against a comprehensive theoretical fragmentation model.",
   "edam_operation": "http://edamontology.org/operation_3633",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -1334,7 +1334,7 @@
  {
   "slug": "mass-spectrometry-library-search-retrieval",
   "name": "mass-spectrometry-library-search-retrieval",
-  "description": "Use when when you have an unknown MSMS spectrum (precursor m/z and fragment ions) and need to discover structurally related compounds from a spectral library.",
+  "description": "Use when you have an unknown MSMS spectrum (precursor m/z and fragment ions) and need to discover structurally related compounds from a spectral library.",
   "edam_operation": "http://edamontology.org/operation_3945",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -1393,7 +1393,7 @@
  {
   "slug": "mass-spectrum-peak-normalization",
   "name": "mass-spectrum-peak-normalization",
-  "description": "Use when when comparing two or more MSMS spectra using intensity-weighted similarity measures (cosine similarity, modified cosine, or neutral loss similarity), and the spectra have been acquired under different instrumental conditions, ionization efficiencies, or detector gains that produce.",
+  "description": "Use when comparing two or more MSMS spectra using intensity-weighted similarity measures (cosine similarity, modified cosine, or neutral loss similarity), and the spectra have been acquired under different instrumental conditions, ionization efficiencies, or detector gains that produce different.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -1501,7 +1501,7 @@
  {
   "slug": "metabolic-network-graph-construction",
   "name": "metabolic-network-graph-construction",
-  "description": "Use when when you have an untargeted metabolomics feature table (m/z values, retention times, intensities) and aim to predict functional pathway activity without explicit metabolite identification.",
+  "description": "Use when you have an untargeted metabolomics feature table (m/z values, retention times, intensities) and aim to predict functional pathway activity without explicit metabolite identification.",
   "edam_operation": "http://edamontology.org/operation_3439",
   "edam_topics": [
    "http://edamontology.org/topic_0602",
@@ -1628,7 +1628,7 @@
  {
   "slug": "metabolomics-peak-detection-configuration",
   "name": "metabolomics-peak-detection-configuration",
-  "description": "Use when when preparing to process raw LC-HRMS metabolomics data (.mzML or .abf files) with MS-DIAL within a Nextflow pipeline, before executing peak detection and chromatogram alignment.",
+  "description": "Use when preparing to process raw LC-HRMS metabolomics data (.mzML or .abf files) with MS-DIAL within a Nextflow pipeline, before executing peak detection and chromatogram alignment.",
   "edam_operation": "http://edamontology.org/operation_3215",
   "edam_topics": [
    "http://edamontology.org/topic_0639",
@@ -2175,7 +2175,7 @@
  {
   "slug": "ms2-spectrum-extraction-and-consensus-building",
   "name": "ms2-spectrum-extraction-and-consensus-building",
-  "description": "Use when when you have DDA LC-MS/MS data (mzML format) with identified chromatographic peaks at a specific m/z (e.g., 304.1131) and multiple MS2 spectra fragmented from that precursor, and you need to produce a single high-confidence MS2 spectrum for comparison against reference databases (e.",
+  "description": "Use when you have DDA LC-MS/MS data (mzML format) with identified chromatographic peaks at a specific m/z (e.g., 304.1131) and multiple MS2 spectra fragmented from that precursor, and you need to produce a single high-confidence MS2 spectrum for comparison against reference databases (e.",
   "edam_operation": "http://edamontology.org/operation_3803",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -2427,7 +2427,7 @@
  {
   "slug": "normalization-for-unequal-group-sizes",
   "name": "normalization-for-unequal-group-sizes",
-  "description": "Use when when tabulating chemical annotation enrichment (e.g., GNPS spectral library matches) across sample groups stratified by metadata category (e.g., sample type, extraction method, ionization source), and the groups contain different numbers of files or samples.",
+  "description": "Use when tabulating chemical annotation enrichment (e.g., GNPS spectral library matches) across sample groups stratified by metadata category (e.g., sample type, extraction method, ionization source), and the groups contain different numbers of files or samples.",
   "edam_operation": "http://edamontology.org/operation_3695",
   "edam_topics": [
    "http://edamontology.org/topic_0091",
@@ -2533,7 +2533,7 @@
  {
   "slug": "open-source-mass-spectrometry-file-format-interoperability",
   "name": "open-source-mass-spectrometry-file-format-interoperability",
-  "description": "Use when when working with Bruker .d/.baf mass spectrometry imaging data and needing to feed it into MSIGen or other open-source MSI processing pipelines.",
+  "description": "Use when working with Bruker .d/.baf mass spectrometry imaging data and needing to feed it into MSIGen or other open-source MSI processing pipelines.",
   "edam_operation": "http://edamontology.org/operation_3434",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -2658,7 +2658,7 @@
  {
   "slug": "peak-detection-and-boundary-identification",
   "name": "peak-detection-and-boundary-identification",
-  "description": "Use when when you have CE-MS raw data (mzML or netCDF format) with extracted ion traces for target compounds and need to identify peak boundaries and extract quantitative peak properties (retention time on µeff scale, peak intensity, peak area) within a specified mobility window.",
+  "description": "Use when you have CE-MS raw data (mzML or netCDF format) with extracted ion traces for target compounds and need to identify peak boundaries and extract quantitative peak properties (retention time on µeff scale, peak intensity, peak area) within a specified mobility window.",
   "edam_operation": "http://edamontology.org/operation_3215",
   "edam_topics": [
    "http://edamontology.org/topic_3370",
@@ -2723,7 +2723,7 @@
  {
   "slug": "peak-picking-parameter-configuration",
   "name": "peak-picking-parameter-configuration",
-  "description": "Use when when reconstructing a metabolite fragment library entry from raw MS/MS spectral data (e.g., from MassBank or local acquisition), you need to define peak-picking thresholds to separate true fragment ions from baseline noise and assign occurrence scores.",
+  "description": "Use when reconstructing a metabolite fragment library entry from raw MS/MS spectral data (e.g., from MassBank or local acquisition), you need to define peak-picking thresholds to separate true fragment ions from baseline noise and assign occurrence scores.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -2985,7 +2985,7 @@
  {
   "slug": "reconstruction-algorithm-implementation",
   "name": "reconstruction-algorithm-implementation",
-  "description": "Use when when you have raw or preprocessed mass spectrometry data (feature matrices or transient files) acquired at lower mass resolution or with signal degradation, and you possess high-resolution reference MSI data or simulated ground truth to train a reconstruction model.",
+  "description": "Use when you have raw or preprocessed mass spectrometry data (feature matrices or transient files) acquired at lower mass resolution or with signal degradation, and you possess high-resolution reference MSI data or simulated ground truth to train a reconstruction model.",
   "edam_operation": "http://edamontology.org/operation_3443",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -3012,7 +3012,7 @@
  {
   "slug": "recursive-propagation-algorithm-development",
   "name": "recursive-propagation-algorithm-development",
-  "description": "Use when when you have constructed a two-layer metabolite annotation network (knowledge-driven and data-driven) and need to propagate initial seed annotations (e.",
+  "description": "Use when you have constructed a two-layer metabolite annotation network (knowledge-driven and data-driven) and need to propagate initial seed annotations (e.",
   "edam_operation": "http://edamontology.org/operation_3927",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -3037,7 +3037,7 @@
  {
   "slug": "retention-time-based-ion-association",
   "name": "retention-time-based-ion-association",
-  "description": "Use when when processing Data Dependent Acquisition (DDA) raw mass spectrometry data (mzML or mzXML format) and you need to deconvolute fragmentation spectra by matching precursor ions to their corresponding fragment ions.",
+  "description": "Use when processing Data Dependent Acquisition (DDA) raw mass spectrometry data (mzML or mzXML format) and you need to deconvolute fragmentation spectra by matching precursor ions to their corresponding fragment ions.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -3097,7 +3097,7 @@
  {
   "slug": "retrieval-metric-hit-k-calculation",
   "name": "retrieval-metric-hit-k-calculation",
-  "description": "Use when when you have generated embeddings for query and reference MS/MS spectra, computed a cosine similarity matrix between them, and need to evaluate how often the correct compound appears in the top-1, top-5, or top-10 retrieved candidates.",
+  "description": "Use when you have generated embeddings for query and reference MS/MS spectra, computed a cosine similarity matrix between them, and need to evaluate how often the correct compound appears in the top-1, top-5, or top-10 retrieved candidates.",
   "edam_operation": "http://edamontology.org/operation_3814",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -3181,7 +3181,7 @@
  {
   "slug": "sample-information-metadata-parsing",
   "name": "sample-information-metadata-parsing",
-  "description": "Use when when you have a validated ReDU sample-information metadata file (gnps_metadata.",
+  "description": "Use when you have a validated ReDU sample-information metadata file (gnps_metadata.",
   "edam_operation": "http://edamontology.org/operation_3436",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -3431,7 +3431,7 @@
  {
   "slug": "spectral-database-matching",
   "name": "spectral-database-matching",
-  "description": "Use when when you have MS2 .mzML format data files from untargeted metabolomics or proteomics experiments and need to perform an initial annotation step by matching experimental spectra against known reference libraries (GNPS, HMDB, MassBank) with a defined precursor mass tolerance (e.g., 15 ppm).",
+  "description": "Use when you have MS2 .mzML format data files from untargeted metabolomics or proteomics experiments and need to perform an initial annotation step by matching experimental spectra against known reference libraries (GNPS, HMDB, MassBank) with a defined precursor mass tolerance (e.g., 15 ppm).",
   "edam_operation": "http://edamontology.org/operation_3767",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -3536,7 +3536,7 @@
  {
   "slug": "spectral-neutral-loss-transformation",
   "name": "spectral-neutral-loss-transformation",
-  "description": "Use when when comparing two or more MSMS spectra and you need to emphasize structural relationships revealed by neutral losses (mass differences between precursor and fragment ions) rather than absolute m/z values.",
+  "description": "Use when comparing two or more MSMS spectra and you need to emphasize structural relationships revealed by neutral losses (mass differences between precursor and fragment ions) rather than absolute m/z values.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -3562,7 +3562,7 @@
  {
   "slug": "spectral-retrieval-ranking-task",
   "name": "spectral-retrieval-ranking-task",
-  "description": "Use when when you have pre-computed dense embeddings for query spectra (unknown compounds) and reference spectra (spectral library), and you need to rank library entries by similarity to each query for compound identification or structural similarity retrieval.",
+  "description": "Use when you have pre-computed dense embeddings for query spectra (unknown compounds) and reference spectra (spectral library), and you need to rank library entries by similarity to each query for compound identification or structural similarity retrieval.",
   "edam_operation": "http://edamontology.org/operation_3767",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -3641,7 +3641,7 @@
  {
   "slug": "spectral-similarity-scoring",
   "name": "spectral-similarity-scoring",
-  "description": "Use when when you have extracted low-resolution mass spectra from individual chromatographic peaks in GC-MS data and need to match them against a spectral library (e.g., PNNLMetV20191015.MSL) to identify the unknown compound.",
+  "description": "Use when you have extracted low-resolution mass spectra from individual chromatographic peaks in GC-MS data and need to match them against a spectral library (e.g., PNNLMetV20191015.MSL) to identify the unknown compound.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3370",
@@ -3712,7 +3712,7 @@
  {
   "slug": "spectral-similarity-scoring-and-reference-matching",
   "name": "spectral-similarity-scoring-and-reference-matching",
-  "description": "Use when when you have extracted MS2 spectra from DDA chromatographic peaks and need to identify the originating compound by comparing against reference MS2 spectra (e.g., from Metlin or GNPS).",
+  "description": "Use when you have extracted MS2 spectra from DDA chromatographic peaks and need to identify the originating compound by comparing against reference MS2 spectra (e.g., from Metlin or GNPS).",
   "edam_operation": "http://edamontology.org/operation_3633",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -3787,7 +3787,7 @@
  {
   "slug": "tabular-results-aggregation-and-comparison",
   "name": "tabular-results-aggregation-and-comparison",
-  "description": "Use when when you have chemical annotations (GNPS matches) distributed across multiple sample groups (e.g., by sample type, extraction method, ionization source) with unequal numbers of files per group, and you need to compare enrichment fairly without group-size bias.",
+  "description": "Use when you have chemical annotations (GNPS matches) distributed across multiple sample groups (e.g., by sample type, extraction method, ionization source) with unequal numbers of files per group, and you need to compare enrichment fairly without group-size bias.",
   "edam_operation": "http://edamontology.org/operation_3695",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -3855,7 +3855,7 @@
  {
   "slug": "unit-test-fixture-design-and-execution",
   "name": "unit-test-fixture-design-and-execution",
-  "description": "Use when when implementing or modifying a numerical compression/decompression component (e.g., Numpress for mass-spectrometry m/z and intensity arrays) and you need to verify that round-trip encoding and decoding preserves numerical fidelity.",
+  "description": "Use when implementing or modifying a numerical compression/decompression component (e.g., Numpress for mass-spectrometry m/z and intensity arrays) and you need to verify that round-trip encoding and decoding preserves numerical fidelity.",
   "edam_operation": "http://edamontology.org/operation_0234",
   "edam_topics": [
    "http://edamontology.org/topic_0091",
@@ -4010,7 +4010,7 @@
  {
   "slug": "xic-marker-annotation",
   "name": "xic-marker-annotation",
-  "description": "Use when when you have a resolved spectrum file (mzML, mzXML) and need to visualize where MS2 precursor scans occur on an XIC display.",
+  "description": "Use when you have a resolved spectrum file (mzML, mzXML) and need to visualize where MS2 precursor scans occur on an XIC display.",
   "edam_operation": "http://edamontology.org/operation_3694",
   "edam_topics": [
    "http://edamontology.org/topic_0121",

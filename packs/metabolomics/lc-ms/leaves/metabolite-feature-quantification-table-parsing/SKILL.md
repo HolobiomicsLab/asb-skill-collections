@@ -1,7 +1,7 @@
 ---
 name: metabolite-feature-quantification-table-parsing
-description: Use when when you have completed feature detection in MZmine3 or similar
-  tools and produced a feature quantification table (rows = features, columns = samples
+description: Use when you have completed feature detection in MZmine3 or similar tools
+  and produced a feature quantification table (rows = features, columns = samples
   with intensity values), and you possess a separate sample metadata file (sample
   identifiers, treatment groups, batch information).
 license: CC-BY-4.0
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41596-024-01046-3
   title: FBMN-STATS
-evidence_spans:
-- To easily install and run Jupyter Notebook in R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

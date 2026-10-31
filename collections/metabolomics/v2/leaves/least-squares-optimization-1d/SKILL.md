@@ -1,6 +1,6 @@
 ---
 name: least-squares-optimization-1d
-description: Use when when you have a 1D signal array (e.g., extracted ion chromatogram,
+description: Use when you have a 1D signal array (e.g., extracted ion chromatogram,
   arrival time distribution, or MS1 spectrum intensity profile) and need to identify
   and quantify overlapping or adjacent peaks with precise position, height, and width
   estimates.
@@ -26,11 +26,6 @@ derived_from:
   title: mzapy
 - doi: 10.1021/acs.jproteome.2c00313
   title: ''
-evidence_spans:
-- Dependencies ------------------------------ * ``scipy``
-- '* ``scipy``'
-- '* ``numpy``'
-- Dependencies ------------------------------ * ``numpy``
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

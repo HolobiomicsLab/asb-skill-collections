@@ -25,10 +25,6 @@ derived_from:
   title: IsoFusion
 - doi: 10.1021/acs.est.3c04764
   title: ''
-evidence_spans:
-- github.com__xfcui__IsoFusion
-- Scannotation is an automated and user-friendly suspect screening tool for the rapid
-  pre-annotation of LC-HRMS datasets.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

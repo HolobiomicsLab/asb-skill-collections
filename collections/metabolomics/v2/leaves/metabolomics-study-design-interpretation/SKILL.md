@@ -1,8 +1,8 @@
 ---
 name: metabolomics-study-design-interpretation
-description: Use when when you have received Sciex Multiquant TXT export files from
-  a completed metabolomics or lipidomics analytical run and need to verify that QC
-  pool samples were injected at the designed regular intervals throughout the sequence(s).
+description: Use when you have received Sciex Multiquant TXT export files from a completed
+  metabolomics or lipidomics analytical run and need to verify that QC pool samples
+  were injected at the designed regular intervals throughout the sequence(s).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
-evidence_spans:
-- codecov.io/gh/ricoderks/QComics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

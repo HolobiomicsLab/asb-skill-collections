@@ -23,11 +23,6 @@ derived_from:
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
-evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted
-  meta-analysis in R
-- This vignette illustrates `Amanida` R package, which contains a collection of functions
-  for computing a weighted meta-analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

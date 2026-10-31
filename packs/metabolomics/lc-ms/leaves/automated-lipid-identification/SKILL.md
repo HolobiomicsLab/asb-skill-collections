@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c00520
   title: LipidA-IDER
-evidence_spans:
-- $ python LipidAIDER_GUI.py
-- 'Step 0: Install git (if you have not done so before)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

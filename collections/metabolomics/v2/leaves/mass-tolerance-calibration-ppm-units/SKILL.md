@@ -1,6 +1,6 @@
 ---
 name: mass-tolerance-calibration-ppm-units
-description: Use when when linking statistically significant LC-MS features into structural
+description: Use when linking statistically significant LC-MS features into structural
   clusters based on adduct signatures and cross-assay references (e.g., [M+H]+/[M-H]−),
   and you need to specify the maximum allowed deviation (in ppm) between observed
   m/z values and calculated neutral masses.
@@ -29,13 +29,6 @@ derived_from:
   title: mamsi
 - doi: 10.1371/journal.pcbi.1011814
   title: ''
-evidence_spans:
-- MAMSI is a Python framework
-- import pandas as pd
-- import numpy as np
-- scipy
-- 'Dependencies: scipy'
-- from sklearn.model_selection import train_test_split
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

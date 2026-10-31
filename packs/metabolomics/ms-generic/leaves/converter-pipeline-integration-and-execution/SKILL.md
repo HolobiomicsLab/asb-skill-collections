@@ -1,6 +1,6 @@
 ---
 name: converter-pipeline-integration-and-execution
-description: Use when when you have a .msp mass spectra file with incomplete or missing
+description: Use when you have a .msp mass spectra file with incomplete or missing
   chemical metadata fields (SMILES, InChI, CAS number, formula, InChIKey, IUPAC name)
   and need to populate those fields by querying multiple external chemical identifier
   services and local cheminformatics tools in parallel.
@@ -27,10 +27,6 @@ metadata:
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer
-evidence_spans:
-- MSMetaEnhancer is a tool used for `.msp` files annotation
-- 'Converter Builder: Automatically discovers and instantiates available converters'
-- 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

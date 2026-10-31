@@ -1,7 +1,7 @@
 ---
 name: cross-member-metabolic-dependency-resolution
-description: Use when when you have consensus metabolic reconstructions for multiple
-  community members (e.
+description: Use when you have consensus metabolic reconstructions for multiple community
+  members (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3660
@@ -16,8 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
-evidence_spans:
-- community-dependent gap-filling using COMMIT for communites sampled from
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

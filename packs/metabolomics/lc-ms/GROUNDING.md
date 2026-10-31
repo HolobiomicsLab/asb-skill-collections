@@ -1,6 +1,6 @@
 # Grounding — lc-ms
 
-Every skill here is distilled from one peer-reviewed paper (`derived_from` DOI in its SKILL.md frontmatter). Grounding is **optional** — skills work without it.
+Every skill here is derived from a method paper (journal article or preprint) and its code (`derived_from` DOI in its SKILL.md frontmatter). Grounding is **optional** — skills work without it.
 
 Two backends (KB-primary, local fallback):
 

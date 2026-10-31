@@ -22,8 +22,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo11030163
   title: mwtab Python Library for RESTful Access
-evidence_spans:
-- The ``mwtab`` package is a Python library
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

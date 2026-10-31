@@ -1,8 +1,8 @@
 ---
 name: numeric-list-slot-management
-description: Use when when extending the MsBackend virtual class to create a custom
-  backend for mass spectrometry data, and you need to store peak m/z and intensity
-  values as variable-length numeric vectors indexed by spectrum.
+description: Use when extending the MsBackend virtual class to create a custom backend
+  for mass spectrometry data, and you need to store peak m/z and intensity values
+  as variable-length numeric vectors indexed by spectrum.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
-evidence_spans:
-- library(Spectra) library(IRanges)
-- '`DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)'
-- DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

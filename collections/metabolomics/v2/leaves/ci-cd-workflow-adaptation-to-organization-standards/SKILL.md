@@ -1,6 +1,6 @@
 ---
 name: ci-cd-workflow-adaptation-to-organization-standards
-description: Use when when a Python package is being relocated to a new GitHub organization
+description: Use when a Python package is being relocated to a new GitHub organization
   (e.
 license: CC-BY-4.0
 metadata:
@@ -17,7 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1003123
   title: mummichog
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

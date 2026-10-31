@@ -1,9 +1,9 @@
 ---
 name: python-object-serialization-deserialization
-description: Use when when you have completed spectral data preprocessing in Jupyter
-  notebooks and generated a specXplore session data object saved to disk, use this
-  skill to restore that object into a live specXplore dashboard session instance for
-  interactive LC-MS/MS spectral data exploration, without.
+description: Use when you have completed spectral data preprocessing in Jupyter notebooks
+  and generated a specXplore session data object saved to disk, use this skill to
+  restore that object into a live specXplore dashboard session instance for interactive
+  LC-MS/MS spectral data exploration, without re-running.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3945
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore
-evidence_spans:
-- SpecXplore is a python dashboard tool for adjustable LC-MS/MS spectral data exploration
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

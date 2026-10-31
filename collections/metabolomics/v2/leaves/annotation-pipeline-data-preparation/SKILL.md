@@ -1,6 +1,6 @@
 ---
 name: annotation-pipeline-data-preparation
-description: Use when when you have raw PubChem compound records or other public chemical
+description: Use when you have raw PubChem compound records or other public chemical
   structure databases and need to supply candidate metabolite structures to a mass
   spectrometry annotation workflow like MAGMa.
 license: CC-BY-4.0
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
-evidence_spans:
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -22,13 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.3c00512
   title: PMart
-evidence_spans:
-- Shiny GUI implementation of the pmartR R package.
-- Shiny GUI implementation of the pmartR R package
-- Remove orca in favor of Kaleido
-- the bulk of the functionality of the package to be available to the user without
-  the need for familiarity with R or the package itself
-- '#### Docker Containers'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

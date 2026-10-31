@@ -1,9 +1,9 @@
 ---
 name: tensor-preprocessing-normalization
-description: Use when when you have raw MS/MS spectral data in the form of intensity
-  arrays indexed by m/z values and need to feed them into the Spec2Mol encoder neural
-  network. Apply this skill before encoder inference to ensure spectral inputs conform
-  to the encoder's expected dimensionality and value ranges.
+description: Use when you have raw MS/MS spectral data in the form of intensity arrays
+  indexed by m/z values and need to feed them into the Spec2Mol encoder neural network.
+  Apply this skill before encoder inference to ensure spectral inputs conform to the
+  encoder's expected dimensionality and value ranges.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s42004-023-00932-3
   title: Spec2Mol
-evidence_spans:
-- Processing of the chemical data is based on the [RDKit](https://www.rdkit.org/)
-  software.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

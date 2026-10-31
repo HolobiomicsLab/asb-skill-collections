@@ -1,7 +1,7 @@
 ---
 name: mass-spectrometry-data-table-formatting
-description: Use when when you have raw or processed TWIM-MS data (arrival time and
-  m/z values) from a mass spectrometry instrument and need to organize it into a feature
+description: Use when you have raw or processed TWIM-MS data (arrival time and m/z
+  values) from a mass spectrometry instrument and need to organize it into a feature
   table before biomolecular class assignment or CCS calculations.
 license: CC-BY-4.0
 metadata:
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
-evidence_spans:
-- MOCCal, or Multi-Omic CCS Calibrator, is a Python application
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

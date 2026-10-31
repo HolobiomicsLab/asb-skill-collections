@@ -1,6 +1,6 @@
 ---
 name: numerical-method-scheme-analysis
-description: Use when when correcting LC-MS isotope labeling data and existing numerical
+description: Use when correcting LC-MS isotope labeling data and existing numerical
   schemes (e.
 license: CC-BY-4.0
 metadata:
@@ -18,9 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-019-2669-9
   title: ElemCor
-evidence_spans:
-- ElemCor is a software tool to correct LC-MS data in isotope labeling experiments.
-- ElemCor is a software tool to correct LC-MS data in isotope labeling experiments
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

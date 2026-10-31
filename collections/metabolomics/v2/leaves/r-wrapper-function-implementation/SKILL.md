@@ -1,6 +1,6 @@
 ---
 name: r-wrapper-function-implementation
-description: Use when when you have multiple imputation methods with different function
+description: Use when you have multiple imputation methods with different function
   signatures and parameter conventions that need to be applied to the same input data
   matrix, and you want to allow users or downstream code to switch between methods
   via a single method argument without rewriting calling code.
@@ -26,9 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp
-evidence_spans:
-- '**GSimp.R** contains the core functions for GSimp'
-- GSimp.R contains the core functions for GSimp
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

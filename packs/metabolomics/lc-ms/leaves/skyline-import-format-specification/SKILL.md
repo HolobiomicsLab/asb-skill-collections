@@ -19,11 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-020-15960-z
   title: LipidCreator
-evidence_spans:
-- LipidCreator is a plugin for Skyline supporting targeted workflow development in
-  lipidomics
-- LipidCreator is a plugin for [Skyline](https://skyline.ms/project/home/software/Skyline/begin.view)
-  supporting targeted workflow development in lipidomics.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

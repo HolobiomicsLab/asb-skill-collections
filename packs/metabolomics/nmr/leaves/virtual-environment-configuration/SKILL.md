@@ -21,11 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1002/nbm.70131
   title: ROIAL-NMR
-evidence_spans:
-- XlsxWriter 3.2.2
-- pandas 2.2.3
-- PyQt5 5.15.11
-- openpyxl 3.1.5
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

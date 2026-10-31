@@ -27,11 +27,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41538-022-00137-3
   title: foodMASST
-evidence_spans:
-- The code for the different standalone web applications, which allow users to search
-  one spectrum at a time, can be found in GNPS_MASST
-- Aggregated search outputs can be generated and visualized using metadataMASST
-- microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

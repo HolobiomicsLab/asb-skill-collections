@@ -1,6 +1,6 @@
 ---
 name: r-bioconductor-summarizedexperiment-manipulation
-description: Use when when converting raw metabolomics data (tab-delimited text files,
+description: Use when converting raw metabolomics data (tab-delimited text files,
   Sciex OS exports) into a structured object for batch processing, or when you need
   to organize compound-level measurements (assays), sample metadata (colData), and
   feature annotations (rowData) in a single container that.
@@ -23,14 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
-evidence_spans:
-- library(mzQuality)
-- mzQuality requires a specific format for the input data.
-- mzQuality is a user-friendly R package
-- The `buildExperiment` function will then take the data and create an experiment
-  object that can be used for analysis.
-- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store
-  the data.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: usi-string-parsing
-description: Use when when you have a USI string (e.g., mzspec:GNPS:TASK-d93bdbb5cdda40e48975e6e18a45c3ce-f.mwang87/data/Yao_Streptomyces/roseosporus/0518_s_BuOH.
+description: Use when you have a USI string (e.g., mzspec:GNPS:TASK-d93bdbb5cdda40e48975e6e18a45c3ce-f.mwang87/data/Yao_Streptomyces/roseosporus/0518_s_BuOH.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3281
@@ -16,7 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-021-01339-5
   title: GNPS Dashboard
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

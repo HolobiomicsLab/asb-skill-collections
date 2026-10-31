@@ -1,6 +1,6 @@
 ---
 name: cosine-distance-scoring
-description: Use when when you have preprocessed mass spectra (peak-filtered, metadata-cleaned)
+description: Use when you have preprocessed mass spectra (peak-filtered, metadata-cleaned)
   in supported formats (mzML, mzXML, msp, MGF, JSON) and need to compare all or many
   pairs of spectra to identify similar compounds, search spectral libraries, or build
   a similarity network for spectral clustering or.
@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
-evidence_spans:
-- Matchms offers an array of tools for metadata cleaning and validation
-- Matchms is a versatile open-source Python package developed for importing, processing,
-  cleaning, and comparing mass spectrometry data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: in-silico-fragment-m-z-calculation
-description: Use when when you have experimental UHPLC-HRMS/MS or direct infusion
-  MS/MS data and need to identify lipid species by comparing observed fragment m/z
-  values against a library of simulated fragments. Apply this skill when your lipid
-  library is incomplete or specialized (e.
+description: Use when you have experimental UHPLC-HRMS/MS or direct infusion MS/MS
+  data and need to identify lipid species by comparing observed fragment m/z values
+  against a library of simulated fragments. Apply this skill when your lipid library
+  is incomplete or specialized (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -25,12 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch
-evidence_spans:
-- LipidMatch identifications are obtained by matching experimental fragment m/z values
-  with simulated library m/z values
-- LipidMatch can be used with various peak picking software (for example MZmine, XCMS,
-  MS-DIAL, and Compound Discoverer)
-- for example MZmine, XCMS, MS-DIAL, and Compound Discoverer
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

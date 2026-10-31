@@ -1,8 +1,8 @@
 ---
 name: flat-file-parsing-and-loading
-description: Use when when you have published LOTUS flat files (TSV or compressed
-  TSV.GZ) containing structure-organism pairs and need to enumerate unique structures,
-  group by organism prevalence, or validate record counts against gold-standard benchmarks.
+description: Use when you have published LOTUS flat files (TSV or compressed TSV.GZ)
+  containing structure-organism pairs and need to enumerate unique structures, group
+  by organism prevalence, or validate record counts against gold-standard benchmarks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -22,11 +22,6 @@ derived_from:
   title: lotus
 - doi: 10.1007/s00044-016-1764-y
   title: ''
-evidence_spans:
-- standardizing.R, 1_integrating.R, 1_cleaningOriginal.R, 4_cleaningTaxonomy.R, 5_addingOTL.R
-- 1_integrating.R
-- 221[[smiles.py]], 260[[3_cleaningAndEnriching/sanitizing.py]], 280[[3_cleaningAndEnriching/stereocounting.py]]
-- R - Python 3 - Java >= 17
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

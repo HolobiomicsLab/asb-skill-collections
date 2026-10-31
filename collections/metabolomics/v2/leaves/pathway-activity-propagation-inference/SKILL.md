@@ -1,7 +1,7 @@
 ---
 name: pathway-activity-propagation-inference
-description: Use when when you have an untargeted metabolomics feature table (m/z
-  values, retention times, intensity measurements, and p-values from statistical testing)
+description: Use when you have an untargeted metabolomics feature table (m/z values,
+  retention times, intensity measurements, and p-values from statistical testing)
   and want to predict which metabolic pathways are active, but metabolite identification
   is incomplete, unreliable, or computationally expensive.
 license: CC-BY-4.0
@@ -24,9 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1003123
   title: mummichog
-evidence_spans:
-- Mummichog is a Python program for analyzing data from high throughput, untargeted
-  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

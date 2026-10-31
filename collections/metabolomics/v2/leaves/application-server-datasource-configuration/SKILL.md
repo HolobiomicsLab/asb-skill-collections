@@ -1,6 +1,6 @@
 ---
 name: application-server-datasource-configuration
-description: Use when when deploying a Java web application (such as CEU Mass Mediator)
+description: Use when deploying a Java web application (such as CEU Mass Mediator)
   that requires access to a database managed outside the application server, and you
   have obtained database credentials from the maintainers.
 license: CC-BY-4.0
@@ -14,8 +14,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00720
   title: CEU Mass Mediator 3.0
-evidence_spans:
-- 'The next library is needed in the app server: javax.faces-2.2.12.jar'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

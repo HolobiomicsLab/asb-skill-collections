@@ -1,8 +1,8 @@
 ---
 name: byte-level-serialization-validation
-description: Use when when you have implemented a binary file format encoder (such
-  as igzip header construction) and need to verify that the binary output is correct
-  before deploying it to read or write real files.
+description: Use when you have implemented a binary file format encoder (such as igzip
+  header construction) and need to verify that the binary output is correct before
+  deploying it to read or write real files.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -17,7 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

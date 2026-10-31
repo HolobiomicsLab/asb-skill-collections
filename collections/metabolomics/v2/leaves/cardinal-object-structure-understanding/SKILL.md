@@ -1,6 +1,6 @@
 ---
 name: cardinal-object-structure-understanding
-description: Use when when you have loaded a raw or processed Cardinal MSImagingExperiment
+description: Use when you have loaded a raw or processed Cardinal MSImagingExperiment
   object from MS imaging data and need to (1) extract spectral intensities and m/z
   feature information for conversion to other formats (e.g., Seurat), (2) verify that
   normalization or spatial segmentation (e.
@@ -29,11 +29,6 @@ derived_from:
   title: SpaMTP
 - doi: 10.1101/2024.10.14.618269
   title: ''
-evidence_spans:
-- Install SpaMTP if not previously installed devtools::install_github("GenomicsMachineLearning/SpaMTP")
-- library(Cardinal)
-- For plotting + DE plots
-- '## Install and Import *R* Libraries'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,8 +1,8 @@
 ---
 name: species-authentication-classification-evaluation
-description: Use when when you have high-throughput mass spectrometry data (DI-MS,
-  ASAP-MS, LDI-MS, or other ambient ionization formats) from unknown biological samples
-  and need to determine their species identity against a curated reference database.
+description: Use when you have high-throughput mass spectrometry data (DI-MS, ASAP-MS,
+  LDI-MS, or other ambient ionization formats) from unknown biological samples and
+  need to determine their species identity against a curated reference database.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass
-evidence_spans:
-- We have developed a versatile software platform, RapidMass.
-- We have developed a versatile software platform, RapidMass
-- supports data from multiple instruments, including DI-MS and ASAP-MS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

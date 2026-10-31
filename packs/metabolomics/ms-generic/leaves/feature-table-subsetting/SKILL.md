@@ -27,15 +27,6 @@ derived_from:
   title: ''
 - doi: 10.1021/acs.jproteome.1c00392
   title: ''
-evidence_spans:
-- The R package margheRita addresses the complete workflow
-- The R package margheRita
-- The R package margheRita addresses the complete workflow for metabolomic profiling
-  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
-  spectrometry (MS/MS)
-- The R package margheRita addresses the complete workflow for metabolomic profiling
-- R based open-source collection of scripts called :red_circle:*OUKS*
-- R ≥4.1.2
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

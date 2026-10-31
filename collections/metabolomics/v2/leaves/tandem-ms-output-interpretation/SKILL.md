@@ -23,7 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s42256-024-00816-8
   title: ICEBERG
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

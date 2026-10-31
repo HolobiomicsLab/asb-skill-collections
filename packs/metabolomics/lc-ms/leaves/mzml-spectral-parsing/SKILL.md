@@ -1,8 +1,8 @@
 ---
 name: mzml-spectral-parsing
-description: Use when when beginning a metabolomics annotation workflow with raw MS2
-  spectral data in .mzML format. This step is necessary when you have vendor-converted
-  or standard .
+description: Use when beginning a metabolomics annotation workflow with raw MS2 spectral
+  data in .mzML format. This step is necessary when you have vendor-converted or standard
+  .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -21,12 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-023-00695-y
   title: MAW
-evidence_spans:
-- performs spectral database dereplication using R Package
-- spectral database dereplication using R Package Spectra
-- compound database dereplication using SIRIUS OR MetFrag
-- compound database dereplication using SIRIUS
-- workflow takes MS2 .mzML format data files as an input in R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

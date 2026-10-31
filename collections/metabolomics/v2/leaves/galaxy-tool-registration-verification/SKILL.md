@@ -21,11 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13742-016-0115-8
   title: Galaxy-M
-evidence_spans:
-- Metabolomics Tools for [Galaxy](http://galaxyproject.org/)
-- '[Python (version 2.7)](https://www.python.org/download/releases/2.7/)'
-- '[R programming language (version 3.0.1, x86 64bit)](http://cran.r-project.org/bin/windows/base/)'
-- '[MATLAB Compiler Runtime (MCR) (version 8.3)]'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

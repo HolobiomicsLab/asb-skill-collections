@@ -1,6 +1,6 @@
 ---
 name: abstract-method-subclassing-filter-base
-description: Use when when you need to apply domain-specific filtering logic to compounds
+description: Use when you need to apply domain-specific filtering logic to compounds
   during Pickaxe expansion—for example, retaining only compounds within a Tanimoto
   similarity threshold to known targets, or compounds matching experimentally detected
   masses.
@@ -19,7 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

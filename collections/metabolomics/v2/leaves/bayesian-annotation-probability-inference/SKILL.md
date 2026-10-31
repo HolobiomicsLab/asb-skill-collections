@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btad455
   title: ipaPy2
-evidence_spans:
-- Python implementation of the Integrated Probabilistic Annotation (IPA)
-- github.com__francescodc87__ipaPy2
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

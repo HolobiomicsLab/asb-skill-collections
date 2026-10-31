@@ -1,6 +1,6 @@
 ---
 name: spectral-neutral-loss-transformation
-description: Use when when comparing two or more MSMS spectra and you need to emphasize
+description: Use when comparing two or more MSMS spectra and you need to emphasize
   structural relationships revealed by neutral losses (mass differences between precursor
   and fragment ions) rather than absolute m/z values.
 license: CC-BY-4.0
@@ -22,8 +22,6 @@ derived_from:
   title: Neutral-loss similarity
 - doi: 10.1016/1044-0305
   title: ''
-evidence_spans:
-- github.com__bittremieux__cosine_neutral_loss
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -21,11 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS
-evidence_spans:
-- 'QUICK: For quantum calculations'
-- Snakemake workflow manager for predicting collisional cross sections
-- This repository contains a Snakemake workflow manager for predicting collisional
-  cross sections (CCS)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

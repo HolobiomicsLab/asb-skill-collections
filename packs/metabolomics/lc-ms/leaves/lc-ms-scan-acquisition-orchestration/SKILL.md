@@ -1,9 +1,8 @@
 ---
 name: lc-ms-scan-acquisition-orchestration
-description: Use when when you have a curated list of chemical compounds (real or
-  virtual), a defined fragmentation strategy (e.g., Top-N, exclusion lists), and need
-  to simulate how that strategy will acquire MS1 and MS2 scans over a defined retention-time
-  window.
+description: Use when you have a curated list of chemical compounds (real or virtual),
+  a defined fragmentation strategy (e.g., Top-N, exclusion lists), and need to simulate
+  how that strategy will acquire MS1 and MS2 scans over a defined retention-time window.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -28,8 +27,6 @@ derived_from:
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
-evidence_spans:
-- ViMMS is compatible with Python 3+
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,9 @@
 ---
 name: arrow-tabular-data-reading
-description: Use when when you have Parquet-encoded tabular data (e.
+description: Use when you have Parquet-encoded tabular data (e.g., mzPeak spectrum
+  metadata or chromatogram signal tables) that needs to be loaded into R or Python
+  for downstream analysis, and you want to leverage Arrow's zero-copy, columnar memory
+  layout and lazy evaluation to handle large files efficiently.
 license: CC-BY-4.0
 metadata:
   grounding_tier: link-only
@@ -22,9 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
-evidence_spans:
-- complete re-implementation using the [`arrow`] for _reading_ only
-- There is also an R implementation in `R/`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

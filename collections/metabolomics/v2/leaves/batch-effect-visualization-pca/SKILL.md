@@ -22,11 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.2c05748
   title: CordBat
-evidence_spans:
-- pca_res <- prcomp(cordbat_example[, metabolite_cols], scale. = TRUE)
-- fit <- CordBat( X = X_mat, batch = batch_vec, group = group_vec, ref.batch = "Ref",
-  grouping = FALSE, print.detail = FALSE )
-- '%\VignetteEngine{knitr::rmarkdown}'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

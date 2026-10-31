@@ -23,10 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.2c04343
   title: MeRgeION
-evidence_spans:
-- search and annotate an unknown spectrum in their local database or public databases
-  (i.e. drug structures in GNPS, MASSBANK and DrugBANK)
-- github.com__daniellyz__meRgeION2
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

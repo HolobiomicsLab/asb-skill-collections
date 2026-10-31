@@ -1,6 +1,6 @@
 ---
 name: tandem-ms-feature-table-import-and-parsing
-description: Use when when you have raw feature tables exported from a tandem LC-MS/MS
+description: Use when you have raw feature tables exported from a tandem LC-MS/MS
   preprocessing tool (e.g., Progenesis QI, MS-DIAL, Bruker Metaboscape) and need to
   combine them with sample metadata (group assignments, replicate structure) before
   applying feature filtering or quality control workflows.
@@ -24,9 +24,6 @@ derived_from:
   title: mpactr
 - doi: 10.1021/acs.analchem.2c04632
   title: ''
-evidence_spans:
-- This table can be used for a variety of analyses that can be conducted in R
-- library(data.table)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

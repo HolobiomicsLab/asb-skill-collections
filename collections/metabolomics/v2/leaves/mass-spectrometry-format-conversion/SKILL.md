@@ -1,9 +1,9 @@
 ---
 name: mass-spectrometry-format-conversion
-description: Use when when you have mass spectrometry spectra in one of the six supported
+description: Use when you have mass spectrometry spectra in one of the six supported
   formats (mzML, mzXML, msp, metabolomics-USI, MGF, JSON) and need to convert them
   to a different format for compatibility with downstream tools, or when importing
-  raw spectra into matchms for the first time and need to.
+  raw spectra into matchms for the first time and need to ensure.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -29,10 +29,6 @@ derived_from:
   title: matchms
 - doi: 10.1021/acs.jproteome.5c00435
   title: ''
-evidence_spans:
-- Matchms is a versatile open-source Python package developed for importing, processing,
-  cleaning, and comparing mass spectrometry data
-- make sure the existing tests still work by running ``pytest``
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

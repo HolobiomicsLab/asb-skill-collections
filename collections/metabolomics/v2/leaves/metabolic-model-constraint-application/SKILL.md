@@ -1,6 +1,6 @@
 ---
 name: metabolic-model-constraint-application
-description: Use when when you have a generic constraint-based metabolic model, RNA-seq
+description: Use when you have a generic constraint-based metabolic model, RNA-seq
   expression data with GPR associations for reactions, experimentally measured nutrient
   uptake/secretion rates (from YSI bioanalyzer or similar), and intracellular/extracellular
   metabolomics data, and you need to generate.
@@ -27,17 +27,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
-evidence_spans:
-- we set flux boundaries as a function of gene expression as done, among others, by
-  eFlux [36] and TRFBA
-- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability
-  Analysis, as in scFBA
-- We used relative gene-expression values as in GX-FBA
-- using constraint-based stoichiometric metabolic models as a scaffold
-- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy
-  [72], and we sampled a million steady state solutions
-- In this work, we exploited the implementation of optGpSampler algorithm [71] available
-  in COBRApy [72], and we sampled a million steady state solutions
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

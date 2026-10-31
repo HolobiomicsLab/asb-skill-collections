@@ -24,11 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
-evidence_spans:
-- integrates seamlessly with various plotting library backends (matpotlib, bokeh and
-  plotly)
-- 'Extension: PLOTLY'
-- pyopenms ... pymzml ... pyteomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

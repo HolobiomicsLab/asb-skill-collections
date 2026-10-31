@@ -1,9 +1,9 @@
 ---
 name: response-status-code-interpretation
-description: Use when when you need to confirm that a documented web service endpoint
-  is deployed and accessible before using it for analysis, or when troubleshooting
-  tool availability in a bioinformatics pipeline. Apply this skill after obtaining
-  a service URL (e.
+description: Use when you need to confirm that a documented web service endpoint is
+  deployed and accessible before using it for analysis, or when troubleshooting tool
+  availability in a bioinformatics pipeline. Apply this skill after obtaining a service
+  URL (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -16,8 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-021-23986-0
   title: moldiscovery
-evidence_spans:
-- To test molDiscovery for academic users, please visit
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

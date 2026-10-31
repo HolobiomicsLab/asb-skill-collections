@@ -1,9 +1,9 @@
 ---
 name: neural-network-hyperparameter-optimization
-description: Use when when you have preprocessed joint ST/SM AnnData objects (output
-  from joint_adata_sm_st and normalize_total_joint_adata_sm_st) and need to fit a
-  ConditionalVAESTSM model to unify spatial transcriptomics and spatial metabolomics
-  data to a common resolution.
+description: Use when you have preprocessed joint ST/SM AnnData objects (output from
+  joint_adata_sm_st and normalize_total_joint_adata_sm_st) and need to fit a ConditionalVAESTSM
+  model to unify spatial transcriptomics and spatial metabolomics data to a common
+  resolution.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-63915-z
   title: SpatialMETA
-evidence_spans:
-- spatialMETA is a method for integrating spatial multi-omics data
-- spatialmeta.pp.calculate_qc_metrics_sm
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

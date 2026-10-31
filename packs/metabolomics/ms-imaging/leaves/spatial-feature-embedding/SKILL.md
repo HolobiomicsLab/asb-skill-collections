@@ -1,8 +1,8 @@
 ---
 name: spatial-feature-embedding
-description: Use when when analyzing imaging mass spectrometry datasets where you
-  need to reduce high-dimensional peak intensity features while preserving spatial
-  structure, and when automatic peak picking and marker ion identification are required.
+description: Use when analyzing imaging mass spectrometry datasets where you need
+  to reduce high-dimensional peak intensity features while preserving spatial structure,
+  and when automatic peak picking and marker ion identification are required.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -23,11 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART
-evidence_spans:
-- scanpy
-- STAGATE
-- pandas
-- h5py
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

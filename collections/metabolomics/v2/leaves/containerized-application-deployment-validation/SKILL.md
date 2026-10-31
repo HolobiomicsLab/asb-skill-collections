@@ -1,6 +1,6 @@
 ---
 name: containerized-application-deployment-validation
-description: Use when when deploying containerized versions of a multi-variant application
+description: Use when deploying containerized versions of a multi-variant application
   (e.g., CLI, development, Linux, and Windows flavors) and you need to verify that
   each built image meets documented size constraints before registry push or production
   release.
@@ -17,8 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
-evidence_spans:
-- AirdPro V5 is now available at 2023.7
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

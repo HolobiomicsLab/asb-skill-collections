@@ -1,7 +1,7 @@
 ---
 name: spectral-structural-similarity-computation
-description: Use when when you have pre-trained embedding vectors (e.g., from MSBERT)
-  for a collection of mass spectra and need to establish which spectra are chemically
+description: Use when you have pre-trained embedding vectors (e.g., from MSBERT) for
+  a collection of mass spectra and need to establish which spectra are chemically
   similar for validation, clustering, or library matching.
 license: CC-BY-4.0
 metadata:
@@ -24,9 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c02426
   title: MSBERT
-evidence_spans:
-- '[Anaconda](https://www.anaconda.com) for Python 3.12'
-- Install [Git](https://git-scm.com/downloads)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

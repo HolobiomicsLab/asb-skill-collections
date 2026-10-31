@@ -24,14 +24,6 @@ derived_from:
   title: notame
 - doi: 10.1093/bioinformatics/btr597
   title: ''
-evidence_spans:
-- This package can be used to analyze preprocessed LC-MS data in non-targeted metabolomics
-- library(notame)
-- reads them to R, conducts additional preprocessing and statistical analyses
-- The implementation we use (from the missForest package) can be parallelized
-- Load the libraries (doParallel is used for parallel processing)
-- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package
-  by Bioconductor'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

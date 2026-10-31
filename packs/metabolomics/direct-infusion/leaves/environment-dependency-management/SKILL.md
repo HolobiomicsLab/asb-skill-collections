@@ -1,8 +1,8 @@
 ---
 name: environment-dependency-management
-description: Use when when deploying Galaxy-M or similar multi-component metabolomics
-  platforms that depend on heterogeneous runtime environments (Python, R, MATLAB,
-  WINE) across multiple operating systems (Ubuntu 14.
+description: Use when deploying Galaxy-M or similar multi-component metabolomics platforms
+  that depend on heterogeneous runtime environments (Python, R, MATLAB, WINE) across
+  multiple operating systems (Ubuntu 14.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0338
@@ -30,10 +30,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13742-016-0115-8
   title: Galaxy-M
-evidence_spans:
-- '[Python (version 2.7)](https://www.python.org/download/releases/2.7/)'
-- '[R programming language (version 3.0.1, x86 64bit)](http://cran.r-project.org/bin/windows/base/)'
-- '[MATLAB Compiler Runtime (MCR) (version 8.3)]'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

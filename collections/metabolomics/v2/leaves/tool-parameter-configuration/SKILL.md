@@ -15,8 +15,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-018-2134-1
   title: SECIMTools
-evidence_spans:
-- can be run in a standalone mode or via Galaxy Genomics Framework
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

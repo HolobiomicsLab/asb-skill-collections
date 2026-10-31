@@ -1,6 +1,6 @@
 ---
 name: linear-regression-model-fitting
-description: Use when when you have a targeted metabolomics dataset with known concentration
+description: Use when you have a targeted metabolomics dataset with known concentration
   values for calibration ('curve') and quality control ('qc') samples, peak area intensities
   for those samples, and you need to establish and validate a concentration-prediction
   model before applying it to unknown samples.
@@ -36,15 +36,6 @@ derived_from:
   title: ''
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
-evidence_spans:
-- R (version ≥ 4.3.1)
-- devtools::install_github("FrigerioGianfranco/GetFeatistics", dependencies = TRUE)
-- The **GetFeatistics** (GF) package provides several functions useful for the elaboration
-  of metabolomics data
-- linear models with mixed effects (random and fixed), using the _lmer_ function from
-  the lme4 package
-- TOBIT linear models, using the _tobit_ function of the AER package
-- Khipu is developed as an open source Python 3 package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

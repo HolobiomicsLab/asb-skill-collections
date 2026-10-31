@@ -231,7 +231,7 @@
  {
   "slug": "automated-feature-extraction-from-spectra",
   "name": "automated-feature-extraction-from-spectra",
-  "description": "Use when when you have raw or processed direct-infusion MS (DI-MS) or ASAP-MS spectra as mz/intensity pairs and need to rapidly identify salient peaks for species authentication, sample scoring, or comparative profiling without manual inspection.",
+  "description": "Use when you have raw or processed direct-infusion MS (DI-MS) or ASAP-MS spectra as mz/intensity pairs and need to rapidly identify salient peaks for species authentication, sample scoring, or comparative profiling without manual inspection.",
   "edam_operation": "http://edamontology.org/operation_3629",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -459,7 +459,7 @@
  {
   "slug": "dimension-scale-linking-and-cross-group-indexing",
   "name": "dimension-scale-linking-and-cross-group-indexing",
-  "description": "Use when when exporting quantified MSI data as HDF5 containers following the Cardinal::HDF5 layout convention, and you need to establish bidirectional indexing between intensity data (feature-by-pixel matrix) and metadata groups (featureData, pixelData).",
+  "description": "Use when exporting quantified MSI data as HDF5 containers following the Cardinal::HDF5 layout convention, and you need to establish bidirectional indexing between intensity data (feature-by-pixel matrix) and metadata groups (featureData, pixelData).",
   "edam_operation": "http://edamontology.org/operation_3443",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -565,7 +565,7 @@
  {
   "slug": "environment-dependency-management",
   "name": "environment-dependency-management",
-  "description": "Use when when deploying Galaxy-M or similar multi-component metabolomics platforms that depend on heterogeneous runtime environments (Python, R, MATLAB, WINE) across multiple operating systems (Ubuntu 14.",
+  "description": "Use when deploying Galaxy-M or similar multi-component metabolomics platforms that depend on heterogeneous runtime environments (Python, R, MATLAB, WINE) across multiple operating systems (Ubuntu 14.",
   "edam_operation": "http://edamontology.org/operation_0338",
   "edam_topics": [
    "http://edamontology.org/topic_0091",
@@ -605,7 +605,7 @@
  {
   "slug": "experimental-design-metadata-integration",
   "name": "experimental-design-metadata-integration",
-  "description": "Use when when you have LC-MS raw data and need to process it through a feature detection and quantification pipeline in KNIME, but lack a structured mapping between sample identifiers, experimental conditions, and the raw LC-MS runs.",
+  "description": "Use when you have LC-MS raw data and need to process it through a feature detection and quantification pipeline in KNIME, but lack a structured mapping between sample identifiers, experimental conditions, and the raw LC-MS runs.",
   "edam_operation": "http://edamontology.org/operation_3891",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -832,7 +832,7 @@
  {
   "slug": "gradient-performance-encoding",
   "name": "gradient-performance-encoding",
-  "description": "Use when when you have extracted retention times from the top detected MS1 features in a LC-MS run and need to evaluate whether the gradient spreads those compounds efficiently across the available chromatographic time window—particularly during iterative gradient optimization where you need a.",
+  "description": "Use when you have extracted retention times from the top detected MS1 features in a LC-MS run and need to evaluate whether the gradient spreads those compounds efficiently across the available chromatographic time window—particularly during iterative gradient optimization where you need a fast.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -905,7 +905,7 @@
  {
   "slug": "in-silico-fragment-m-z-calculation",
   "name": "in-silico-fragment-m-z-calculation",
-  "description": "Use when when you have experimental UHPLC-HRMS/MS or direct infusion MS/MS data and need to identify lipid species by comparing observed fragment m/z values against a library of simulated fragments. Apply this skill when your lipid library is incomplete or specialized (e.",
+  "description": "Use when you have experimental UHPLC-HRMS/MS or direct infusion MS/MS data and need to identify lipid species by comparing observed fragment m/z values against a library of simulated fragments. Apply this skill when your lipid library is incomplete or specialized (e.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_0153",
@@ -983,7 +983,7 @@
  {
   "slug": "instrument-platform-compatibility-mapping",
   "name": "instrument-platform-compatibility-mapping",
-  "description": "Use when when adopting a mass spectrometry data processing tool (e.g., LipidMatch) and needing to verify whether your specific instrument platform (vendor + model) and acquisition mode combination (targeted, ddMS2-topN, AIF, direct infusion, imaging) have been formally validated.",
+  "description": "Use when adopting a mass spectrometry data processing tool (e.g., LipidMatch) and needing to verify whether your specific instrument platform (vendor + model) and acquisition mode combination (targeted, ddMS2-topN, AIF, direct infusion, imaging) have been formally validated.",
   "edam_operation": "http://edamontology.org/operation_3443",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -1020,7 +1020,7 @@
  {
   "slug": "ion-image-quantification-workflow",
   "name": "ion-image-quantification-workflow",
-  "description": "Use when when you have imzML mass spectrometry imaging data files and need to convert raw ion image intensities into quantitative lipid abundance (pmol/mm²) using known internal standards.",
+  "description": "Use when you have imzML mass spectrometry imaging data files and need to convert raw ion image intensities into quantitative lipid abundance (pmol/mm²) using known internal standards.",
   "edam_operation": "http://edamontology.org/operation_3627",
   "edam_topics": [
    "http://edamontology.org/topic_0769",
@@ -1083,7 +1083,7 @@
  {
   "slug": "lc-ms-dataset-acquisition-and-curation",
   "name": "lc-ms-dataset-acquisition-and-curation",
-  "description": "Use when when beginning an untargeted LC-MS metabolomics study and need to assemble a cohort of mzML files for processing; particularly when establishing performance baselines across sample counts (10, 50, 100+ samples), validating reproducibility, or preparing data for publication.",
+  "description": "Use when beginning an untargeted LC-MS metabolomics study and need to assemble a cohort of mzML files for processing; particularly when establishing performance baselines across sample counts (10, 50, 100+ samples), validating reproducibility, or preparing data for publication.",
   "edam_operation": "http://edamontology.org/operation_3945",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -1293,7 +1293,7 @@
  {
   "slug": "marker-feature-identification-and-validation",
   "name": "marker-feature-identification-and-validation",
-  "description": "Use when when processing GC–MS or LC–MS data as m/z vs retention time chromatograms and you need to identify biomarker or chemical marker features without conventional peak picking, particularly when false positive detection rates from peak detection algorithms are problematic.",
+  "description": "Use when processing GC–MS or LC–MS data as m/z vs retention time chromatograms and you need to identify biomarker or chemical marker features without conventional peak picking, particularly when false positive detection rates from peak detection algorithms are problematic.",
   "edam_operation": "http://edamontology.org/operation_3647",
   "edam_topics": [
    "http://edamontology.org/topic_0091",
@@ -1534,7 +1534,7 @@
  {
   "slug": "mass-spectrometry-feature-similarity-modeling",
   "name": "mass-spectrometry-feature-similarity-modeling",
-  "description": "Use when when you have an untargeted metabolomics dataset with MS2 fragmentation spectra and need to annotate metabolites beyond what reference databases alone provide.",
+  "description": "Use when you have an untargeted metabolomics dataset with MS2 fragmentation spectra and need to annotate metabolites beyond what reference databases alone provide.",
   "edam_operation": "http://edamontology.org/operation_3346",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -1622,7 +1622,7 @@
  {
   "slug": "mass-spectrometry-peak-identification-and-extraction",
   "name": "mass-spectrometry-peak-identification-and-extraction",
-  "description": "Use when when you have raw mass spectrometry data from direct-infusion (DI-MS) or ambient surface analysis probe (ASAP-MS) instruments and need to identify which m/z peaks are biologically or chemically informative for sample classification, rather than processing the entire spectrum including.",
+  "description": "Use when you have raw mass spectrometry data from direct-infusion (DI-MS) or ambient surface analysis probe (ASAP-MS) instruments and need to identify which m/z peaks are biologically or chemically informative for sample classification, rather than processing the entire spectrum including noise.",
   "edam_operation": "http://edamontology.org/operation_3215",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -1764,7 +1764,7 @@
  {
   "slug": "mass-track-construction-from-centroided-spectra",
   "name": "mass-track-construction-from-centroided-spectra",
-  "description": "Use when when you have centroided mzML files from LC-MS metabolomics and need to construct high-mass-resolution mass tracks for each sample before alignment. Apply this skill at the start of an untargeted metabolomics workflow, before building a cross-sample MassGrid.",
+  "description": "Use when you have centroided mzML files from LC-MS metabolomics and need to construct high-mass-resolution mass tracks for each sample before alignment. Apply this skill at the start of an untargeted metabolomics workflow, before building a cross-sample MassGrid.",
   "edam_operation": "http://edamontology.org/operation_3214",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -1814,7 +1814,7 @@
  {
   "slug": "mass-track-extraction-and-binning",
   "name": "mass-track-extraction-and-binning",
-  "description": "Use when when you have centroid mzML files from LC-MS metabolomics acquisition and need to construct sample-level mass tracks before cross-sample alignment. Specifically: you are starting fresh with vendor-converted or pre-processed mzML input;",
+  "description": "Use when you have centroid mzML files from LC-MS metabolomics acquisition and need to construct sample-level mass tracks before cross-sample alignment. Specifically: you are starting fresh with vendor-converted or pre-processed mzML input; you have not yet built a unified m/z grid across samples;",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -2004,7 +2004,7 @@
  {
   "slug": "metabolomics-feature-preprocessing",
   "name": "metabolomics-feature-preprocessing",
-  "description": "Use when when you have raw profile LC-MS data in .mzML format and need to prepare regions of interest (ROI) as input for a CNN-Transformer peak detection network.",
+  "description": "Use when you have raw profile LC-MS data in .mzML format and need to prepare regions of interest (ROI) as input for a CNN-Transformer peak detection network.",
   "edam_operation": "http://edamontology.org/operation_3215",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -2154,7 +2154,7 @@
  {
   "slug": "ms-ms-raw-data-loading",
   "name": "ms-ms-raw-data-loading",
-  "description": "Use when when you have raw LC-MS/MS instrument output files (e.g., .mzML, .",
+  "description": "Use when you have raw LC-MS/MS instrument output files (e.g., .mzML, .",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -2296,7 +2296,7 @@
  {
   "slug": "multi-sample-cohort-assessment",
   "name": "multi-sample-cohort-assessment",
-  "description": "Use when when you have MS1 mass spectrometry data from multiple samples (a cohort) acquired across an instrument run or batch, and you need to identify which samples deviate from cohort norms or which ion targets show anomalous behavior.",
+  "description": "Use when you have MS1 mass spectrometry data from multiple samples (a cohort) acquired across an instrument run or batch, and you need to identify which samples deviate from cohort norms or which ion targets show anomalous behavior.",
   "edam_operation": "http://edamontology.org/operation_3933",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -2329,7 +2329,7 @@
  {
   "slug": "multidimensional-feature-detection-and-alignment",
   "name": "multidimensional-feature-detection-and-alignment",
-  "description": "Use when when you have acquired LC-IMS-MS/MS data (mzML or mzML.gz format) from multiple samples and need to detect features that exploit simultaneous separation in m/z, drift time, and retention time to improve detection sensitivity and reduce false positives.",
+  "description": "Use when you have acquired LC-IMS-MS/MS data (mzML or mzML.gz format) from multiple samples and need to detect features that exploit simultaneous separation in m/z, drift time, and retention time to improve detection sensitivity and reduce false positives.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -2399,7 +2399,7 @@
  {
   "slug": "mz-retention-time-tolerance-parameter-configuration",
   "name": "mz-retention-time-tolerance-parameter-configuration",
-  "description": "Use when when invoking Asari to process centroid mzML files for the first time in a PCPFM experiment, or when RT and m/z accuracy characteristics of your LC-MS instrument differ from the pipeline defaults (e.",
+  "description": "Use when invoking Asari to process centroid mzML files for the first time in a PCPFM experiment, or when RT and m/z accuracy characteristics of your LC-MS instrument differ from the pipeline defaults (e.g., instruments with lower mass resolution, longer RT drift, or non-standard chromatography).",
   "edam_operation": "http://edamontology.org/operation_3767",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -2534,7 +2534,7 @@
  {
   "slug": "peak-detection-and-mass-alignment",
   "name": "peak-detection-and-mass-alignment",
-  "description": "Use when when you have raw LC-MS/MS data files (.mzML, .raw, or vendor formats) from multiple samples and need to identify reproducible molecular features across the cohort before annotation or statistical analysis.",
+  "description": "Use when you have raw LC-MS/MS data files (.mzML, .raw, or vendor formats) from multiple samples and need to identify reproducible molecular features across the cohort before annotation or statistical analysis.",
   "edam_operation": "http://edamontology.org/operation_3215",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -2620,7 +2620,7 @@
  {
   "slug": "plant-species-authentication-via-mass-spectrometry",
   "name": "plant-species-authentication-via-mass-spectrometry",
-  "description": "Use when when you have mass spectrometry raw data (DI-MS or ASAP-MS format) from plant samples that are easily confused due to morphological similarity, or when you need to verify or authenticate the species identity of a plant material against a reference database.",
+  "description": "Use when you have mass spectrometry raw data (DI-MS or ASAP-MS format) from plant samples that are easily confused due to morphological similarity, or when you need to verify or authenticate the species identity of a plant material against a reference database.",
   "edam_operation": "http://edamontology.org/operation_3767",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -2808,7 +2808,7 @@
  {
   "slug": "sample-group-injection-aggregation",
   "name": "sample-group-injection-aggregation",
-  "description": "Use when when you have picked and annotated MS1 features from replicate injections of the same sample and need to produce a unified feature matrix indexed by sample (not injection).",
+  "description": "Use when you have picked and annotated MS1 features from replicate injections of the same sample and need to produce a unified feature matrix indexed by sample (not injection).",
   "edam_operation": "http://edamontology.org/operation_3674",
   "edam_topics": [
    "http://edamontology.org/topic_0091",
@@ -2842,7 +2842,7 @@
  {
   "slug": "siamese-neural-network-architecture-design",
   "name": "siamese-neural-network-architecture-design",
-  "description": "Use when when you have pairs of mass spectrometry spectra and need to predict their molecular structural similarity as a scalar Tanimoto score in the range [0, 1].",
+  "description": "Use when you have pairs of mass spectrometry spectra and need to predict their molecular structural similarity as a scalar Tanimoto score in the range [0, 1].",
   "edam_operation": "http://edamontology.org/operation_3432",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -2941,7 +2941,7 @@
  {
   "slug": "species-authentication-classification-evaluation",
   "name": "species-authentication-classification-evaluation",
-  "description": "Use when when you have high-throughput mass spectrometry data (DI-MS, ASAP-MS, LDI-MS, or other ambient ionization formats) from unknown biological samples and need to determine their species identity against a curated reference database.",
+  "description": "Use when you have high-throughput mass spectrometry data (DI-MS, ASAP-MS, LDI-MS, or other ambient ionization formats) from unknown biological samples and need to determine their species identity against a curated reference database.",
   "edam_operation": "http://edamontology.org/operation_3767",
   "edam_topics": [
    "http://edamontology.org/topic_0625",
@@ -3151,7 +3151,7 @@
  {
   "slug": "tandem-mass-spectrometry-mirror-plot-construction",
   "name": "tandem-mass-spectrometry-mirror-plot-construction",
-  "description": "Use when when you have raw LC-MS or LC-IMS-MS data in instrument format (Agilent .d, Thermo .raw, Bruker .",
+  "description": "Use when you have raw LC-MS or LC-IMS-MS data in instrument format (Agilent .d, Thermo .raw, Bruker .",
   "edam_operation": "http://edamontology.org/operation_3634",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -3255,7 +3255,7 @@
  {
   "slug": "technical-specification-tabulation",
   "name": "technical-specification-tabulation",
-  "description": "Use when when you need to verify whether a specific mass spectrometry instrument platform (vendor and model), acquisition mode (e.g., targeted, ddMS2-topN, AIF, direct infusion, imaging), or file format is compatible with a lipidomics or proteomics software tool;",
+  "description": "Use when you need to verify whether a specific mass spectrometry instrument platform (vendor and model), acquisition mode (e.g., targeted, ddMS2-topN, AIF, direct infusion, imaging), or file format is compatible with a lipidomics or proteomics software tool;",
   "edam_operation": "http://edamontology.org/operation_3763",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -3292,7 +3292,7 @@
  {
   "slug": "transformation-network-topology-analysis",
   "name": "transformation-network-topology-analysis",
-  "description": "Use when when you have pre-processed FT-ICR MS peak lists with assigned molecular formulas and wish to move beyond univariate chemical composition analysis to understand metabolic transformation pathways and hub metabolites.",
+  "description": "Use when you have pre-processed FT-ICR MS peak lists with assigned molecular formulas and wish to move beyond univariate chemical composition analysis to understand metabolic transformation pathways and hub metabolites.",
   "edam_operation": "http://edamontology.org/operation_3441",
   "edam_topics": [
    "http://edamontology.org/topic_3172",

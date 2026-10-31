@@ -23,13 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
-evidence_spans:
-- NPLinker is a python framework for data mining microbial natural products
-- GNPSDownloader, GNPSExtractor
-- Python version ≥3.11
-- NPLinker requires GNPS molecular networking data as input
-- NPLinker requires GNPS molecular networking data as input. It currently accepts
-  data from both GNPS1 (https://gnps.ucsd.edu) and GNPS2 (https://gnps2.org) workflows.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

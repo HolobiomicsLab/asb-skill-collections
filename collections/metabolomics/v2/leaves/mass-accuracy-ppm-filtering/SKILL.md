@@ -1,6 +1,6 @@
 ---
 name: mass-accuracy-ppm-filtering
-description: Use when when you have a set of candidate molecular formulae for a measured
+description: Use when you have a set of candidate molecular formulae for a measured
   m/z value and need to rank them by how closely their theoretical m/z matches the
   observed value.
 license: CC-BY-4.0
@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART
-evidence_spans:
-- we present SMART, an open-source platform designed for precise formula assignment
-  in mass spectrometry imaging
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,8 +1,8 @@
 ---
 name: over-representation-analysis-workflow
-description: Use when when you need to reproduce published ORA simulation results,
-  validate pathway enrichment findings from a metabolomics study, or examine pitfalls
-  and practices in Over-representation Analysis methodology.
+description: Use when you need to reproduce published ORA simulation results, validate
+  pathway enrichment findings from a metabolomics study, or examine pitfalls and practices
+  in Over-representation Analysis methodology.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -18,7 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

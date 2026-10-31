@@ -1,6 +1,6 @@
 ---
 name: conditional-execution-dispatch-routing
-description: Use when when you have a Streamlit workflow application that must support
+description: Use when you have a Streamlit workflow application that must support
   both offline (local machine, Windows installer) and online (Docker, cloud) deployment
   modes, and you need to decide at runtime whether to queue jobs remotely via Redis
   or spawn local processes.
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
-evidence_spans:
-- No code changes required for offline mode. The detection happens automatically
-- as well as deployment with docker-compose.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: post-translational-modification-detection
-description: Use when when you have tandem mass spectrometry data (LC-MS/MS in MGF,
-  mzML, mzXML, or mzData format) paired with either genome sequences or precursor
-  peptide predictions, and you want to confirm the presence and identity of modified
-  ribosomally synthesized and post-translationally modified.
+description: Use when you have tandem mass spectrometry data (LC-MS/MS in MGF, mzML,
+  mzXML, or mzData format) paired with either genome sequences or precursor peptide
+  predictions, and you want to confirm the presence and identity of modified ribosomally
+  synthesized and post-translationally modified peptides.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -28,20 +28,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
-evidence_spans:
-- The latest version is available in the Natural Product Discovery toolkit (NPDtools)
-  at https://github.com/ablab/npdtools
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
-  spectra) and genomic data to identify novel RiPPs
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
-  spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally
-  modified Peptides (RiPPs)
-- matches tandem mass spectra against the constructed post-translationally modified
-  RiPPs structure database using Dereplicator
-- MetaMiner natively supports MGF, mzXML, mzData and uses msconvert utility from the
-  ProteoWizard package to convert spectra in other formats to MGF
-- uses msconvert utility from the ProteoWizard package to convert spectra in other
-  formats to MGF
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

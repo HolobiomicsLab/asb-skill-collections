@@ -1,7 +1,7 @@
 ---
 name: multi-class-performance-metric-computation
-description: Use when when evaluating a taxonomy classification model on held-out
-  natural product data where multiple classes exist (e.
+description: Use when evaluating a taxonomy classification model on held-out natural
+  product data where multiple classes exist (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -17,7 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -26,7 +26,6 @@ derived_from:
   title: GNPS Dashboard
 - doi: 10.1021/acs.analchem.4c00786
   title: ''
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

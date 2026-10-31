@@ -26,11 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.1c01309
   title: EVA
-evidence_spans:
-- EVA now has a python version that can be easily installed and used on Mac, PC, and
-  Linux systems. Please check out pyEVA
-- EVA now has a python version that can be easily installed and used on Mac, PC, and
-  Linux systems
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

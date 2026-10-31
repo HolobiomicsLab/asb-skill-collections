@@ -1,9 +1,9 @@
 ---
 name: nested-json-path-resolution
-description: Use when when applying str directives during JSON-to-JSON conversion
-  and the source value is not a direct field but is nested within a table structure—specifically
+description: Use when applying str directives during JSON-to-JSON conversion and the
+  source value is not a direct field but is nested within a table structure—specifically
   when you need to reference a specific record by record_id, or traverse a sequence
-  of field names (table → fields → nested value) to.
+  of field names (table → fields → nested value) to locate.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -21,10 +21,6 @@ derived_from:
   title: messes
 - doi: 10.3390/metabo11030163
   title: ''
-evidence_spans:
-- MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_
-  (`jsonschema <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
-evidence_spans:
-- The goal of the `QComics` package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

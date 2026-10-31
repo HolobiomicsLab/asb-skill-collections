@@ -1,9 +1,8 @@
 ---
 name: chemical-annotation-confidence-assessment
-description: Use when when you have received chemical annotations from GNPS spectral
-  library matching workflow and need to assess their reliability before downstream
-  analysis (e.g., chemical explorer visualization, sample filtering, or comparative
-  metabolomics).
+description: Use when you have received chemical annotations from GNPS spectral library
+  matching workflow and need to assess their reliability before downstream analysis
+  (e.g., chemical explorer visualization, sample filtering, or comparative metabolomics).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3860
@@ -26,9 +25,6 @@ derived_from:
   title: ReDU
 - doi: 10.1186/2047-217x-2-16
   title: ''
-evidence_spans:
-- ReDU only interacts with MassIVE
-- data uploaded to MassIVE as a public dataset
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

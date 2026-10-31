@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00650
   title: MODE
-evidence_spans:
-- github.com__pmartR__MODE_ShinyApp
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

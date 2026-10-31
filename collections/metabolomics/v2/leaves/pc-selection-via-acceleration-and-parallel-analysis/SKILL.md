@@ -1,6 +1,6 @@
 ---
 name: pc-selection-via-acceleration-and-parallel-analysis
-description: Use when when preparing metabolomic or multivariate count data for outlier
+description: Use when preparing metabolomic or multivariate count data for outlier
   detection in PC space, or when you need to reduce dimensionality while retaining
   only statistically significant components.
 license: CC-BY-4.0
@@ -18,9 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btac059
   title: Metaboprep
-evidence_spans:
-- library(metaboprep)
-- library(ggplot2)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

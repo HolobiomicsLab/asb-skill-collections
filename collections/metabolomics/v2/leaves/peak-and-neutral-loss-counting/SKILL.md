@@ -1,9 +1,9 @@
 ---
 name: peak-and-neutral-loss-counting
-description: Use when when you have matchms-processed MS2 spectra from multiple samples
+description: Use when you have matchms-processed MS2 spectra from multiple samples
   and need to create comparable sample-level signatures for cross-sample analysis,
   particularly when samples are chemodiverse, have poor feature overlap, or exhibit
-  strong retention time shifts across LC methods or MS.
+  strong retention time shifts across LC methods or MS technologies.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -23,13 +23,6 @@ metadata:
 derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo
-evidence_spans:
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
-  spectra
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
-  spectra and converting them into documents.
-- pip install numpy
-- conda create --name memo python=3.8
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

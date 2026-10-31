@@ -24,15 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
-evidence_spans:
-- A Snakemake configuration file in `YAML <http://yaml.org/>`_ format is required.
-- Functionality includes feature detection, feature alignment, collision cross section
-  (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
-- import deimos
-- DEIMoS is a Python application programming interface
-- DEIMoS is a Python application programming interface and command-line tool
-- Use `conda <https://www.anaconda.com/download/>`_ to create a virtual environment
-  with required dependencies.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

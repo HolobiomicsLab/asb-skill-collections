@@ -1,7 +1,7 @@
 ---
 name: python-package-installation-development-mode
-description: Use when when you have cloned a Python package repository locally and
-  need to test code changes, run the package's test suite, or contribute to development
+description: Use when you have cloned a Python package repository locally and need
+  to test code changes, run the package's test suite, or contribute to development
   without reinstalling the package after each modification.
 license: CC-BY-4.0
 metadata:
@@ -18,9 +18,6 @@ metadata:
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni
-evidence_spans:
-- PyPI - Python Version
-- pip install -e .[dev]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

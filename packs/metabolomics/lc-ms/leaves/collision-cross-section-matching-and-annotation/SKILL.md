@@ -1,9 +1,9 @@
 ---
 name: collision-cross-section-matching-and-annotation
-description: Use when when you have LC-IM-MS/MS data with measured collision cross
-  section (CCS) values and m/z assignments, and you need to disambiguate sterol isomers
-  (particularly N-Me derived unsaturated sterols) by matching against a curated database
-  of predicted CCS values and MS/MS fragmentation patterns.
+description: Use when you have LC-IM-MS/MS data with measured collision cross section
+  (CCS) values and m/z assignments, and you need to disambiguate sterol isomers (particularly
+  N-Me derived unsaturated sterols) by matching against a curated database of predicted
+  CCS values and MS/MS fragmentation patterns.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -22,9 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
-evidence_spans:
-- collection of Python scripts
-- All functions are implemented in jupyter notebook
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

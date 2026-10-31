@@ -23,15 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
-evidence_spans:
-- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an
-  alignment algorithm
-- '`ncGTW` is an R package developed as a plug-in of `xcms`'
-- ncGTW is an R package developed as a plug-in of xcms
-- This algorithm is improved from graphical time warping (GTW) [@gtw16], a popular
-  dynamic time warping (DTW)
-- graphical time warping (GTW) [@gtw16], a popular dynamic time warping (DTW) based
-  alignment method
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

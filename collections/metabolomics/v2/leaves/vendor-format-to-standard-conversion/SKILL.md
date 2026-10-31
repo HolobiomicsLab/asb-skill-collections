@@ -1,8 +1,8 @@
 ---
 name: vendor-format-to-standard-conversion
-description: Use when when ingesting raw LC-MS/MS output from a mass spectrometry
-  instrument and you need to prepare it for metabolite identification, fragmentation
-  tree computation, or molecular formula annotation.
+description: Use when ingesting raw LC-MS/MS output from a mass spectrometry instrument
+  and you need to prepare it for metabolite identification, fragmentation tree computation,
+  or molecular formula annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -19,7 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41587-021-01045-9
   title: cosmic
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

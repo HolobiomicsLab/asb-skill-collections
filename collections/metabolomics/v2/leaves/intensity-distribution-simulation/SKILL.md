@@ -1,6 +1,6 @@
 ---
 name: intensity-distribution-simulation
-description: Use when when you need to create synthetic noisy MS/MS spectra from clean
+description: Use when you need to create synthetic noisy MS/MS spectra from clean
   baseline spectra to validate denoising algorithms, compare denoising performance
   across noise levels, or generate ground-truth test datasets where the true signal
   and noise composition are known and controllable.
@@ -24,11 +24,6 @@ derived_from:
   title: Spectral Denoising
 - doi: 10.1038/s41592-023-02012-9
   title: ''
-evidence_spans:
-- Spectral denoising requires ``Python >= 3.8`` installed on your system
-- import spectral_denoising as sd
-- scipy==1.14.1
-- '- ``scipy==1.14.1``'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

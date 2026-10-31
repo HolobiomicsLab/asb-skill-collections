@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c03078
   title: SAND
-evidence_spans:
-- Any user is welcome to make new modificaitons on the SAND code, particularly its
-  version for NMRBox
-- interface to NMRPipe (pipe_scripts/)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

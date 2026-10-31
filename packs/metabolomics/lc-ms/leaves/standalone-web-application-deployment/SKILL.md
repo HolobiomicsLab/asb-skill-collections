@@ -24,9 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41538-022-00137-3
   title: foodMASST
-evidence_spans:
-- microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST
-- Aggregated search outputs can be generated and visualized using metadataMASST
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

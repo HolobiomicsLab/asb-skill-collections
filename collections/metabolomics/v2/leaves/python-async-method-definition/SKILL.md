@@ -1,6 +1,6 @@
 ---
 name: python-async-method-definition
-description: Use when when extending MSMetaEnhancer with a new local chemical transformation
+description: Use when extending MSMetaEnhancer with a new local chemical transformation
   (e.g., SMILES to InChI) that should execute non-blockingly within an asynchronous
   annotation workflow.
 license: CC-BY-4.0
@@ -20,13 +20,6 @@ metadata:
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer
-evidence_spans:
-- MSMetaEnhancer is a tool used for `.msp` files annotation
-- 'Converter Builder: Automatically discovers and instantiates available converters'
-- make sure the existing tests still work by running ``pytest``
-- A Python package for mass spectra metadata annotation
-- Create a new Python file in `MSMetaEnhancer/libs/converters/web/` named after your
-  service
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

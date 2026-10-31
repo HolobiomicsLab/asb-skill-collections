@@ -1,6 +1,6 @@
 ---
 name: tensor-encoding-deep-learning
-description: Use when when you have validated SMILES strings or RDKit molecule objects
+description: Use when you have validated SMILES strings or RDKit molecule objects
   representing chemical structures and need to feed them into a pre-trained deep learning
   model (such as PS2MS, NEIMS, or DeepEI) that expects fixed-size numerical tensor
   inputs.
@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c05019
   title: ps2ms
-evidence_spans:
-- jhhung/PS2MS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

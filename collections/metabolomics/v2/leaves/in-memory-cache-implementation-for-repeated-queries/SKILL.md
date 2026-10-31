@@ -1,9 +1,8 @@
 ---
 name: in-memory-cache-implementation-for-repeated-queries
-description: Use when when deploying a high-throughput molecular classification API
-  (e.g., /classify endpoint) where the same SMILES strings are expected to be queried
-  repeatedly across multiple users or time windows, and response latency is a performance
-  constraint.
+description: Use when deploying a high-throughput molecular classification API (e.g.,
+  /classify endpoint) where the same SMILES strings are expected to be queried repeatedly
+  across multiple users or time windows, and response latency is a performance constraint.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0362
@@ -20,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
-evidence_spans:
-- Make sure you have python installed
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

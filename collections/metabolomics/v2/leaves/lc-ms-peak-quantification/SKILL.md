@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c04531
   title: QuanFormer
-evidence_spans:
-- written in Python (v3.8.1)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

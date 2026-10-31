@@ -17,11 +17,6 @@ derived_from:
   title: lotus
 - doi: 10.1007/s00044-016-1764-y
   title: ''
-evidence_spans:
-- db/../standardizing.R, common.R
-- 1_integrating.R
-- Python scripts for data parsing and transformation
-- 221[[smiles.py]]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -23,11 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART
-evidence_spans:
-- scanpy
-- STAGATE
-- pandas
-- h5py
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

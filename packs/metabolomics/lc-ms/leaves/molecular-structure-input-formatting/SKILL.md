@@ -1,6 +1,6 @@
 ---
 name: molecular-structure-input-formatting
-description: Use when when you have a molecular structure in any representation (drawn
+description: Use when you have a molecular structure in any representation (drawn
   structure, PDB file, common name) and need to input it into mass spectrum prediction
   tools like ICEBERG or SCARF, or when screening candidates from chemical databases
   like PubChem.
@@ -22,12 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s42256-024-00816-8
   title: ICEBERG
-evidence_spans:
-- github.com__samgoldman97__ms-pred
-- You can run ICEBERG structural elucidation easily at http://iceberg-ms.mit.edu/
-- By inputting the chemical formula and your experimental spectrum, the WebUI will
-  rank it against all candidates from PubChem.
-- the WebUI will rank it against all candidates from PubChem
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

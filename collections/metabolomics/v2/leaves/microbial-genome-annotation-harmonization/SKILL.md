@@ -19,9 +19,6 @@ derived_from:
   title: COMMIT
 - doi: 10.5281/zenodo.363932874
   title: ''
-evidence_spans:
-- community-dependent gap-filling using COMMIT for communites sampled from Arabidopsis
-  thaliana
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

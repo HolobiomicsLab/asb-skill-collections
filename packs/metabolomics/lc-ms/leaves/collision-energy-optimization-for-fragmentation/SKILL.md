@@ -1,6 +1,6 @@
 ---
 name: collision-energy-optimization-for-fragmentation
-description: Use when when you have N-Me derivatized unsaturated sterol lipid structures
+description: Use when you have N-Me derivatized unsaturated sterol lipid structures
   (as SMILES or molecular formula) and need to predict MS/MS fragmentation patterns
   with collision-energy-dependent m/z values and intensities for downstream CCS prediction
   or LC-IM-MS/MS library matching.
@@ -23,9 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
-evidence_spans:
-- collection of Python scripts
-- All functions are implemented in jupyter notebook
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

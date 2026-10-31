@@ -22,9 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1101/812370
   title: AutoTuner parameter selection
-evidence_spans:
-- knitr::rmarkdown
-- library(Autotuner)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

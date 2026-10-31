@@ -17,8 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/bty080
   title: ChemDistiller
-evidence_spans:
-- ChemDistiller supports Python 2 and 3 (64-bit version recommended)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,7 +1,7 @@
 ---
 name: unit-testing-conditional-branches
-description: Use when when implementing or refactoring a FileInterface._open method
-  or similar polymorphic dispatcher that conditionally instantiates different handler
+description: Use when implementing or refactoring a FileInterface._open method or
+  similar polymorphic dispatcher that conditionally instantiates different handler
   classes based on file extension (e.g., .gz, .db) or format metadata (e.g., indexed
   gzip detection).
 license: CC-BY-4.0
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
-evidence_spans:
-- import sqlite3
-- import xml.etree.ElementTree as et
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

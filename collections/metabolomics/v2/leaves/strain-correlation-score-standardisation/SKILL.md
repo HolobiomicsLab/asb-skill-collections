@@ -24,16 +24,6 @@ derived_from:
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
-evidence_spans:
-- after downloading the strain assemblies and metabolomics data, the genomes were
-  run through antiSMASH v5.0.0 for BGC detection
-- genomes were run through antiSMASH v5.0.0 for BGC detection
-- and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
-- BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
-- the metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
-  and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
-- we use library MS2 spectra from the public, community-driven GNPS knowledge base
-  [33] as a training set for the IOKR model
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

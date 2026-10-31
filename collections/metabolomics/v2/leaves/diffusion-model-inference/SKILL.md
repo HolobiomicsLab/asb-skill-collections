@@ -1,6 +1,6 @@
 ---
 name: diffusion-model-inference
-description: Use when when you have multi-modal spectroscopic data (IR, Raman, UV-Vis,
+description: Use when you have multi-modal spectroscopic data (IR, Raman, UV-Vis,
   mass spectra, or NMR) and need to recover the underlying molecular structure without
   relying on finite spectral libraries or autoregressive SMILES generation.
 license: CC-BY-4.0
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.48550/arxiv.2507.06853
   title: DiffSpectra
-evidence_spans:
-- github.com/AzureLeon1/DiffSpectra
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

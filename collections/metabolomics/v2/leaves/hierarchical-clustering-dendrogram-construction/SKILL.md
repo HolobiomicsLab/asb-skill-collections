@@ -1,9 +1,9 @@
 ---
 name: hierarchical-clustering-dendrogram-construction
-description: 'Use when when you have a Metaboprep object after quality control filtering
+description: 'Use when you have a Metaboprep object after quality control filtering
   and need to visualize metabolite correlation structure to: (1) identify clusters
   of co-regulated features that may represent the same biological pathway or measurement
-  artifact, (2) set tree-cutting height thresholds for.'
+  artifact, (2) set tree-cutting height thresholds for feature.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btac059
   title: Metaboprep
-evidence_spans:
-- library(metaboprep)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

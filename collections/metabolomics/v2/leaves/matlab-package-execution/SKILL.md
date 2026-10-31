@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.1c03592
   title: m2s
-evidence_spans:
-- Matlab package to match untargeted metabolomic features
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: formula-stratified-sampling
-description: 'Use when when preparing MS/MS spectral training data where: (1) the
-  initial TCN train/test split contains imbalanced positive and negative examples,
-  (2) certain molecular formulas are over-represented in the positive class, (3) you
-  are training a Siamese architecture rescore model that requires.'
+description: 'Use when preparing MS/MS spectral training data where: (1) the initial
+  TCN train/test split contains imbalanced positive and negative examples, (2) certain
+  molecular formulas are over-represented in the positive class, (3) you are training
+  a Siamese architecture rescore model that requires.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
-evidence_spans:
-- FIDDLE is a deep learning method for predicting molecular formulas from MS/MS spectra
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

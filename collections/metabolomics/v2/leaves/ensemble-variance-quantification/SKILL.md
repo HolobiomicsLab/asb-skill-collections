@@ -1,6 +1,6 @@
 ---
 name: ensemble-variance-quantification
-description: Use when when you have retention order predictions from multiple independently
+description: Use when you have retention order predictions from multiple independently
   trained models (e.g., ROASMI_1 through ROASMI_5) for the same set of compounds and
   need to estimate prediction confidence or identify compounds with high model disagreement.
 license: CC-BY-4.0
@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-025-00968-8
   title: ROASMI
-evidence_spans:
-- Four initial ROASMI models (ROASMI_1 - ROASMI_5)
-- variance of the retention order predictions
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

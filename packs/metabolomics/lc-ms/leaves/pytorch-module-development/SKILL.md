@@ -1,7 +1,7 @@
 ---
 name: pytorch-module-development
-description: Use when when constructing a composite loss function for contrastive
-  learning on structured data (e.
+description: Use when constructing a composite loss function for contrastive learning
+  on structured data (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -18,7 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c00260
   title: CLERMS
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

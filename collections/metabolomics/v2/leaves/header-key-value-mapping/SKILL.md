@@ -1,6 +1,6 @@
 ---
 name: header-key-value-mapping
-description: Use when when you have JSON table records (arrays of field-indexed objects)
+description: Use when you have JSON table records (arrays of field-indexed objects)
   and need to restructure them into dictionaries where specific table columns are
   mapped to new key names, and you want to control which columns appear in the output
   and under what names.
@@ -21,10 +21,6 @@ derived_from:
   title: messes
 - doi: 10.3390/metabo11030163
   title: ''
-evidence_spans:
-- MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_
-  (`jsonschema <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: ms-ms-fragment-assignment-and-annotation
-description: Use when when you have predicted MS/MS fragments from quantum chemistry
-  calculations on N-Me derived unsaturated sterol structures and need to map each
-  fragment to its precursor lipid, calculate exact m/z values, estimate relative intensities,
-  and produce a machine-readable reference table for.
+description: Use when you have predicted MS/MS fragments from quantum chemistry calculations
+  on N-Me derived unsaturated sterol structures and need to map each fragment to its
+  precursor lipid, calculate exact m/z values, estimate relative intensities, and
+  produce a machine-readable reference table for spectral.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -23,9 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
-evidence_spans:
-- collection of Python scripts
-- All functions are implemented in jupyter notebook
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -16,7 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

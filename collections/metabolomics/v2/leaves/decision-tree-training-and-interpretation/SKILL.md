@@ -24,10 +24,6 @@ derived_from:
   title: ChemEcho
 - doi: 10.1145/2939672.2939778
   title: ''
-evidence_spans:
-- github.com__biorack__chemecho
-- Using ChemEcho vectors, we can train decision trees which are able to be directly
-  converted to MassQL
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

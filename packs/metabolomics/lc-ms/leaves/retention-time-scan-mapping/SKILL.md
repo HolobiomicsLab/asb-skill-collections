@@ -1,9 +1,8 @@
 ---
 name: retention-time-scan-mapping
-description: Use when when you have loaded an LC-MS spectrum file (mzML, mzXML, or
-  equivalent) into the GNPS LCMS Visualization Dashboard and need to annotate extracted
-  ion chromatograms with the precise retention time or scan ID positions where MS2
-  events occurred.
+description: Use when you have loaded an LC-MS spectrum file (mzML, mzXML, or equivalent)
+  into the GNPS LCMS Visualization Dashboard and need to annotate extracted ion chromatograms
+  with the precise retention time or scan ID positions where MS2 events occurred.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -19,7 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-021-01339-5
   title: GNPS Dashboard
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

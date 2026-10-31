@@ -1,9 +1,9 @@
 ---
 name: gcf-mf-hierarchical-aggregation
-description: Use when when you have predicted BGC-spectrum IOKR scores or other pairwise
+description: Use when you have predicted BGC-spectrum IOKR scores or other pairwise
   linking scores, and need to rank genomic clusters (GCFs from BiG-SCAPE) against
   metabolomic clusters (MFs from MS/MS spectra grouping), particularly in NPLinker
-  workflows where one GCF may contain multiple BGCs and one MF.
+  workflows where one GCF may contain multiple BGCs and one MF may.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -23,13 +23,6 @@ derived_from:
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
-evidence_spans:
-- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining
-  the hierarchical relationship between them
-- Finally, we present NPLinker, a software framework to link genomic and metabolomic
-  data
-- and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
-- BiG-SCAPE clusters the BGCs separately by product type
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,7 +1,7 @@
 ---
 name: blood-sample-processing-parameter-extraction
-description: Use when when you have peripheral blood sample cohorts (plasma/serum)
-  with multiple timestamps (e.
+description: Use when you have peripheral blood sample cohorts (plasma/serum) with
+  multiple timestamps (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c04938
   title: PRIMA-Panel
-evidence_spans:
-- Pre-Analytical Investigator for NMR-based Metabolomics (PRIMA-Panel)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-019-0375-2
   title: BioTransformer 1.0
-evidence_spans:
-- This is version 3.0.0 of BioTransformer. BioTransformer is a software tool that
-  predicts small molecule metabolism
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

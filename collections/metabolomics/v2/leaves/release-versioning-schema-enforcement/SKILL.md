@@ -1,9 +1,8 @@
 ---
 name: release-versioning-schema-enforcement
-description: Use when when preparing a release branch for a Maven-based project (like
-  NMRFx) and you need to verify that all pom.xml files in the repository tree declare
-  identical version strings before applying release branch naming conventions (e.g.,
-  'release/X.Y.Z').
+description: Use when preparing a release branch for a Maven-based project (like NMRFx)
+  and you need to verify that all pom.xml files in the repository tree declare identical
+  version strings before applying release branch naming conventions (e.g., 'release/X.Y.Z').
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -15,9 +14,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s42004-025-01812-8
   title: NMRFx
-evidence_spans:
-- github.com__nanalysis__nmrfx
-- github.com/nanalysis/nmrfx
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

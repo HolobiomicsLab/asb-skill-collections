@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
-evidence_spans:
-- 'using `conda <https://docs.conda.io/projects/conda/en/latest/index.html>`_::'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

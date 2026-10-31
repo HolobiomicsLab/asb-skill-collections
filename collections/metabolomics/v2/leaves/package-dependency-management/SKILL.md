@@ -24,13 +24,6 @@ derived_from:
   title: biosynfoni
 - doi: 10.1002/rcm.9153
   title: ''
-evidence_spans:
-- pip install -e .[dev]
-- biosynfoni
-- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic
-  research
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
-  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

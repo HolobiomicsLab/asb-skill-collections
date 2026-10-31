@@ -1,9 +1,9 @@
 ---
 name: command-line-pipeline-execution-and-runtime-benchmarking
-description: Use when when you have peak-abundance .csv files and assigned molecular
-  formula data from FT-ICR MS preprocessing, and you need to verify that a published
-  pipeline's runtime claims (e.g., '<1 min for 40 samples', '~2 min for 120 samples')
-  hold true on your own datasets or reference datasets.
+description: Use when you have peak-abundance .csv files and assigned molecular formula
+  data from FT-ICR MS preprocessing, and you need to verify that a published pipeline's
+  runtime claims (e.g., '<1 min for 40 samples', '~2 min for 120 samples') hold true
+  on your own datasets or reference datasets.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -27,14 +27,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
-evidence_spans:
-- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
-  (e.g., chemodiversity analysis, multivariate statistics)
-- The MetaboDirect pipeline was developed in Python 3.8
-- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2
-- It requires the Python dependencies NumPy
-- It requires the Python dependencies NumPy [40], pandas
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

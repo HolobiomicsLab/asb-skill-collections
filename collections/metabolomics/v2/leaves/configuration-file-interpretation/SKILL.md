@@ -1,6 +1,6 @@
 ---
 name: configuration-file-interpretation
-description: Use when when you have PSM files from proteomics search engines (MaxQuant,
+description: Use when you have PSM files from proteomics search engines (MaxQuant,
   MSGFPlus, Sage, etc.) that use non-standard modification notation (e.g., 'ox', '+57.02146',
   or mass-shift labels) and need to resccore peptide identifications with MS²Rescore.
 license: CC-BY-4.0
@@ -22,9 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1002/pmic.202300336
   title: MS2Rescore (immunopeptidome rescoring)
-evidence_spans:
-- Accepted ProForma modification labels in :py:mod:`psm_utils`
-- MS²Rescore is a tool for rescoring peptide-spectrum matches
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

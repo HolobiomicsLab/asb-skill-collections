@@ -1,7 +1,7 @@
 ---
 name: configuration-file-modification
-description: Use when when you need to expand or contract a mass spectrometry dataset
-  by adding or removing allowed instrument types (e.
+description: Use when you need to expand or contract a mass spectrometry dataset by
+  adding or removing allowed instrument types (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
-evidence_spans:
-- FIDDLE is a deep learning method for predicting molecular formulas from MS/MS spectra
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

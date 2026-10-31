@@ -1,7 +1,7 @@
 ---
 name: structural-level-pathway-topology-modeling
-description: Use when when you need to compare metabolic network architecture between
-  two organisms and want to analyze their topological properties (e.g., network connectivity,
+description: Use when you need to compare metabolic network architecture between two
+  organisms and want to analyze their topological properties (e.g., network connectivity,
   reaction ordering, pathway structure) separately from functional annotations.
 license: CC-BY-4.0
 metadata:
@@ -18,12 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pone.0246962
   title: MetNet
-evidence_spans:
-- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic
-  network of two organisms selected in KEGG
-- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic
-  network
-- MetNet is a Java tool
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

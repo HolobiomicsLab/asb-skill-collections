@@ -1,6 +1,6 @@
 ---
 name: url-validation-and-accessibility-verification
-description: Use when when compiling or maintaining a catalog of web-accessible scientific
+description: Use when compiling or maintaining a catalog of web-accessible scientific
   tools (e.
 license: CC-BY-4.0
 metadata:
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst
-evidence_spans:
-- microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST
-- Aggregated search outputs can be generated and visualized using metadataMASST
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

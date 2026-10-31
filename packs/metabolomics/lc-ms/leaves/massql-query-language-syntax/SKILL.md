@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1002/rcm.10132
   title: MassQLab
-evidence_spans:
-- MassQLab applies a series of queries (written in the language of MassQL)
-- github.com__JohnsonDylan__MassQLab
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

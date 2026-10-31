@@ -23,9 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA
-evidence_spans:
-- '[![R >3.5](https://img.shields.io/badge/R-%3E3.5-success.svg)](https://www.r-project.org/)'
-- '![installed with devtools](https://img.shields.io/badge/installed%20with-devtools-blueviolet.svg)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

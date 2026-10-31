@@ -22,12 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btx477
   title: MWASTools
-evidence_spans:
-- metabolite assignment using Statistical Total Correlation Spectroscopy (STOCSY)
-- Assuming that R (>=3.3) and Bioconductor have been correctly installed
-- Here, we present a package to perform MWAS using univariate hypothesis testing
-- '"MWASTools" is an R package designed to provide an integrated and user-friendly
-  pipeline'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

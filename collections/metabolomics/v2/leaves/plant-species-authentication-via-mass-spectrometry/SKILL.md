@@ -1,6 +1,6 @@
 ---
 name: plant-species-authentication-via-mass-spectrometry
-description: Use when when you have mass spectrometry raw data (DI-MS or ASAP-MS format)
+description: Use when you have mass spectrometry raw data (DI-MS or ASAP-MS format)
   from plant samples that are easily confused due to morphological similarity, or
   when you need to verify or authenticate the species identity of a plant material
   against a reference database.
@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass
-evidence_spans:
-- We have developed a versatile software platform, RapidMass.
-- We have developed a versatile software platform, RapidMass
-- supports data from multiple instruments, including DI-MS and ASAP-MS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

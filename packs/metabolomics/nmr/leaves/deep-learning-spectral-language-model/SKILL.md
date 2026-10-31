@@ -1,7 +1,7 @@
 ---
 name: deep-learning-spectral-language-model
-description: Use when when you have an unknown compound's mass spectrum (m/z peaks
-  and intensities in .mgf or equivalent format with mandatory PRECURSOR_MZ and IONMODE
+description: Use when you have an unknown compound's mass spectrum (m/z peaks and
+  intensities in .mgf or equivalent format with mandatory PRECURSOR_MZ and IONMODE
   tags) and need to identify structurally related metabolites from a reference database.
 license: CC-BY-4.0
 metadata:
@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2024.05.30.596727v2
   title: DeepMASS
-evidence_spans:
-- DeepMASS2 is a cross-platform GUI software tool, which enables deep-learning based
-  metabolite annotation
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

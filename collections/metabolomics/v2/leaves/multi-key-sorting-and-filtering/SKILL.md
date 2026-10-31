@@ -1,7 +1,7 @@
 ---
 name: multi-key-sorting-and-filtering
-description: Use when when converting tabular data to JSON via the matrix directive,
-  you need to exclude records that fail domain-specific validation (e.g., only retain
+description: Use when converting tabular data to JSON via the matrix directive, you
+  need to exclude records that fail domain-specific validation (e.g., only retain
   records where a 'test' condition evaluates to true) and/or reorder the output list
   by one or more fields in ascending or descending order.
 license: CC-BY-4.0
@@ -21,10 +21,6 @@ derived_from:
   title: messes
 - doi: 10.3390/metabo11030163
   title: ''
-evidence_spans:
-- MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema
-  <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

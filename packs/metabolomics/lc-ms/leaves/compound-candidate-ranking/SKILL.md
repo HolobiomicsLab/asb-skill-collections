@@ -22,8 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-023-00695-y
   title: MAW
-evidence_spans:
-- Final candidate selection is done in Python using RDKit and PubChemPy
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -18,11 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c03966
   title: PyINETA
-evidence_spans:
-- This is the documentation for the PyINETA package version 2.0.0.
-- '.. automodule:: pyineta.finding :members:'
-- pyINETA is a Python package
-- python run_pyineta.py <options>
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

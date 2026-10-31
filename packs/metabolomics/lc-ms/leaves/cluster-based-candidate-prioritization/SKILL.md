@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
-evidence_spans:
-- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides
-  tools for context-based annotation of untargeted LC-MS data.
-- mWISE (metabolomics Wise Inference of Speck Entities) is an R package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

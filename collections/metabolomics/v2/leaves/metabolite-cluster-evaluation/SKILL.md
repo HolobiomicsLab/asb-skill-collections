@@ -23,10 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
-evidence_spans:
-- ramclustR function is built to use xcms data
-- RC <- ramclustR(xcmsObj = xset, ExpDes=experiment)
-- We have adapted the 'findMain' function from the 'InterpretMSSpectrum' CRAN package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

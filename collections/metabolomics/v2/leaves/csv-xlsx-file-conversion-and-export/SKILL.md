@@ -1,6 +1,6 @@
 ---
 name: csv-xlsx-file-conversion-and-export
-description: Use when when you have validated mass spectrometry transition data (precursor
+description: Use when you have validated mass spectrometry transition data (precursor
   m/z, product m/z, intensity, retention time, and compound identifiers) formatted
   in one tabular format (CSV or XLSX) and need to convert it to the other format for
   ingestion into EISA-EXPOSOME or long-term archival.
@@ -19,10 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c02697
   title: EISA-EXPOSOME
-evidence_spans:
-- We provide a Rshiny program for EISA-EXPOSOME
-- We provide a Rshiny program for EISA-EXPOSOME, which runs with the interface shown
-  below
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

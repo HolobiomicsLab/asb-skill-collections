@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass
-evidence_spans:
-- We have developed a versatile software platform, RapidMass.
-- We have developed a versatile software platform, RapidMass
-- supports data from multiple instruments, including DI-MS and ASAP-MS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

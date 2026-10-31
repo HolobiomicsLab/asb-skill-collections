@@ -22,12 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator
-evidence_spans:
-- Genes, miRNA, isoforms | SRA download | SRA toolkit
-- Genes, miRNA, isoforms | Quality control | FastQC, trimgalore
-- It then performs quality control with [FASTQC](../modules/nf-core/fastqc)
-- It uses Docker/Singularity containers making installation trivial and results highly
-  reproducible.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

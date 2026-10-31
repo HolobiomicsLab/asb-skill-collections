@@ -1,6 +1,6 @@
 ---
 name: chromatographic-modality-classification
-description: Use when when ingesting raw or vendor-format mass spectrometry data files
+description: Use when ingesting raw or vendor-format mass spectrometry data files
   of unknown or mixed acquisition modality, and you need to automatically determine
   whether the input originated from liquid chromatography (LC), gas chromatography
   (GC), ion mobility spectrometry (IMS), or MS imaging (e.
@@ -23,10 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
-evidence_spans:
-- mzmine is an open-source software for mass spectrometry data processing
-- JDK version-25-blue
-- JavaFX version-24
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

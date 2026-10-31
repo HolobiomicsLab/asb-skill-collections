@@ -25,15 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-020-00481-0
   title: ChemSpectra
-evidence_spans:
-- Use the file pyproject.toml to determine the version of Python required.
-- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run
-- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run --host=0.0.0.0
-  --port=3007
-- docker pull proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses
-- docker run --detach --name msconvert_docker --rm -it -e WINEDEBUG=-all -v ./chem_spectra/tmp:/data
-  proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses bash
-- git clone https://github.com/ComPlat/chem-spectra-app.git
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

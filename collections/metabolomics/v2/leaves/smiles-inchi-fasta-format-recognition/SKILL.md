@@ -1,7 +1,7 @@
 ---
 name: smiles-inchi-fasta-format-recognition
-description: Use when when you have a mixed batch of chemical structure queries in
-  unknown or variable formats (e.
+description: Use when you have a mixed batch of chemical structure queries in unknown
+  or variable formats (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -23,8 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-016-0174-y
   title: ClassyFire
-evidence_spans:
-- in order to use the commands below in a Ruby console
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: qc-sample-classification-labeling
-description: Use when when loading multiple LC-MS runs (mzML files) into an MsExperiment
+description: Use when loading multiple LC-MS runs (mzML files) into an MsExperiment
   object and the injection sequence contains an interleaved or documented pattern
   of QC and sample runs (e.g., two QC, four sample, two QC, four sample, two QC).
 license: CC-BY-4.0
@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
-evidence_spans:
-- loads MS data as `Spectra` objects so it's easily integrated with other tools
-- rmarkdown::html_document
-- Quick start for targeted peak integration of LC-MS data using TARDIS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

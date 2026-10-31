@@ -1,8 +1,8 @@
 ---
 name: graph-neural-network-architecture-assembly
-description: 'Use when when you have: (1) a collection of molecules represented as
-  molecular graphs (nodes=atoms, edges=bonds with chirality/order attributes); (2)
-  structured metadata describing experimental conditions (e.'
+description: 'Use when you have: (1) a collection of molecules represented as molecular
+  graphs (nodes=atoms, edges=bonds with chirality/order attributes); (2) structured
+  metadata describing experimental conditions (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c05859
   title: Graphormer-RT
-evidence_spans:
-- Graphormer-RT is an extension to the Graphormer package, with documentation, and
-  the original code on Github
-- import dgl
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

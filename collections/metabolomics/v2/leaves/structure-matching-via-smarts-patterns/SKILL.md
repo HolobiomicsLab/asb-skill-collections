@@ -1,6 +1,6 @@
 ---
 name: structure-matching-via-smarts-patterns
-description: Use when when you need to identify compounds matching specific structural
+description: Use when you need to identify compounds matching specific structural
   motifs or apply reaction transformation rules to a set of molecules.
 license: CC-BY-4.0
 metadata:
@@ -19,7 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

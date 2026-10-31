@@ -1,7 +1,7 @@
 ---
 name: quantum-chemistry-structure-preparation
-description: Use when when you have a collection of N-Me derived unsaturated sterol
-  lipid identifiers or structures and need to generate predicted collision cross section
+description: Use when you have a collection of N-Me derived unsaturated sterol lipid
+  identifiers or structures and need to generate predicted collision cross section
   (CCS) values for LC-IM-MS/MS analysis.
 license: CC-BY-4.0
 metadata:
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
-evidence_spans:
-- collection of Python scripts
-- All functions are implemented in jupyter notebook
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

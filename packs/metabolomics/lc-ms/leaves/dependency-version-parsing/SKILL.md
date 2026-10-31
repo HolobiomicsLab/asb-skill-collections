@@ -24,12 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.5c00234
   title: QCxMS2
-evidence_spans:
-- Program package for the quantum mechanical calculation of EI mass spectra using
-  automated reaction network exploration
-- '**xtb** (version > 6.7.1 - bleeding edge version)'
-- '**molbar** (version >= 1.1.3)'
-- '**geodesic_interpolate** (version'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

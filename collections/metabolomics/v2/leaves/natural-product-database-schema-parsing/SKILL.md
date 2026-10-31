@@ -1,7 +1,7 @@
 ---
 name: natural-product-database-schema-parsing
-description: Use when when ingesting raw data from multiple external natural-product
-  databases with different formats, field naming conventions, and data structures.
+description: Use when ingesting raw data from multiple external natural-product databases
+  with different formats, field naming conventions, and data structures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -21,12 +21,6 @@ derived_from:
   title: lotus
 - doi: 10.1007/s00044-016-1764-y
   title: ''
-evidence_spans:
-- db/../standardizing.R, common.R
-- 1_integrating.R
-- Python scripts for data parsing and transformation
-- 221[[smiles.py]]
-- Please make sure to have [Make](https://www.gnu.org/software/make) installed.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

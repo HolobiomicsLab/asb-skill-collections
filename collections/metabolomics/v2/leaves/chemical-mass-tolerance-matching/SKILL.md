@@ -1,9 +1,9 @@
 ---
 name: chemical-mass-tolerance-matching
-description: Use when when you have a metabolomics peak list (m/z values with optional
+description: Use when you have a metabolomics peak list (m/z values with optional
   retention times) from LC-MS or GC-MS and want to filter a computationally expanded
   chemical library to only compounds whose calculated masses (accounting for ionization
-  adducts) fall within a defined tolerance of observed.
+  adducts) fall within a defined tolerance of observed peaks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -24,7 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

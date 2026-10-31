@@ -1,8 +1,8 @@
 ---
 name: peak-detection-and-mass-alignment
-description: Use when when you have raw LC-MS/MS data files (.mzML, .raw, or vendor
-  formats) from multiple samples and need to identify reproducible molecular features
-  across the cohort before annotation or statistical analysis.
+description: Use when you have raw LC-MS/MS data files (.mzML, .raw, or vendor formats)
+  from multiple samples and need to identify reproducible molecular features across
+  the cohort before annotation or statistical analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jnatprod.7b00737
   title: Bioactivity-Based Molecular Networking
-evidence_spans:
-- open bioinformatic tools, such [MZmine2](http://mzmine.github.io/)
-- '[Optimus](https://github.com/MolecularCartography/Optimus) (using OpenMS)'
-- or [Optimus](https://github.com/MolecularCartography/Optimus) (using OpenMS)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

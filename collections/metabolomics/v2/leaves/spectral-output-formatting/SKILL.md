@@ -22,9 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c04654
   title: ICEBERG / fragmentation graph generation
-evidence_spans:
-- github.com__samgoldman97__ms-pred
-- You can run ICEBERG structural elucidation easily at http://iceberg-ms.mit.edu/
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

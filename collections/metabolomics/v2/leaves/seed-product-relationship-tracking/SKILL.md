@@ -1,9 +1,8 @@
 ---
 name: seed-product-relationship-tracking
-description: Use when when applying biotransformation rules to seed metabolites to
-  generate candidates, you need to record which rule produced each candidate and link
-  it back to its parent seed structure. This is essential for downstream validation
-  (e.
+description: Use when applying biotransformation rules to seed metabolites to generate
+  candidates, you need to record which rule produced each candidate and link it back
+  to its parent seed structure. This is essential for downstream validation (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -19,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c01565
   title: bam
-evidence_spans:
-- No usage/docs found.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

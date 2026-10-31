@@ -1,9 +1,9 @@
 ---
 name: backend-performance-benchmarking
-description: Use when when you have execution time data for visualization scripts
-  across multiple backends (matplotlib, Bokeh, Plotly) and need to determine which
-  backend offers the fastest median performance for specific mass spectrometry plot
-  types (chromatogram, mobilogram, peakmap, peakmap-marginals.
+description: Use when you have execution time data for visualization scripts across
+  multiple backends (matplotlib, Bokeh, Plotly) and need to determine which backend
+  offers the fastest median performance for specific mass spectrometry plot types
+  (chromatogram, mobilogram, peakmap, peakmap-marginals, spectrum.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -21,7 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

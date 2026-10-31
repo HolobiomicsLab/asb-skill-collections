@@ -1,9 +1,9 @@
 ---
 name: configuration-driven-batch-processing
-description: Use when when processing multiple PSM files from search engines (e.g.,
-  MaxQuant, MSGFPlus, Mascot) that omit fixed modifications from their output, or
-  when PSM and spectrum files use inconsistent ID schemes, decoy naming conventions,
-  or modification notations.
+description: Use when processing multiple PSM files from search engines (e.g., MaxQuant,
+  MSGFPlus, Mascot) that omit fixed modifications from their output, or when PSM and
+  spectrum files use inconsistent ID schemes, decoy naming conventions, or modification
+  notations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -24,9 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1002/pmic.202300336
   title: MS2Rescore (immunopeptidome rescoring)
-evidence_spans:
-- MS²Rescore is a tool for rescoring peptide-spectrum matches
-- Accepted ProForma modification labels in :py:mod:`psm_utils`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

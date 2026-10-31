@@ -1,7 +1,7 @@
 ---
 name: uml-diagram-generation
-description: Use when when you have access to a modular object-oriented codebase and
-  need to map its class hierarchy, composition relationships, and extension mechanisms
+description: Use when you have access to a modular object-oriented codebase and need
+  to map its class hierarchy, composition relationships, and extension mechanisms
   (abstract classes, interfaces, factory patterns) in order to guide developers toward
   specific modules to improve or extend.
 license: CC-BY-4.0
@@ -18,7 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00602
   title: CloMet
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

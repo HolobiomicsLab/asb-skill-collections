@@ -1,6 +1,6 @@
 ---
 name: ion-mobility-mass-spectrometry-data-preprocessing
-description: Use when when you have raw IM-MS data from drift tube (DT) or SLIM instruments
+description: Use when you have raw IM-MS data from drift tube (DT) or SLIM instruments
   in Agilent MassHunter (.
 license: CC-BY-4.0
 metadata:
@@ -25,14 +25,6 @@ derived_from:
   title: PNNL PreProcessor
 - doi: 10.1021/acs.jproteome.1c00425
   title: ''
-evidence_spans:
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
-  spectrometry data files
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
-  spectrometry data files (MS-files) from drift tube (DT) and structure for lossless
-  ion manipulations (SLIM) IM-MS
-- Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files)
-- Agilent MassHunter (.d) and UIMF mass spectrometry data files
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

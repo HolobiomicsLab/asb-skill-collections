@@ -1,6 +1,6 @@
 ---
 name: nmr-peak-deconvolution
-description: Use when when you have raw or processed 1D NMR spectra (FID or frequency-domain
+description: Use when you have raw or processed 1D NMR spectra (FID or frequency-domain
   format) and need to extract individual peak identities and quantitative parameters
   in tabular form.
 license: CC-BY-4.0
@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c03078
   title: SAND
-evidence_spans:
-- Any user is welcome to make new modificaitons on the SAND code, particularly its
-  version for NMRBox
-- interface to NMRPipe (pipe_scripts/)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

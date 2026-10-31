@@ -1,7 +1,7 @@
 ---
 name: noise-smoothing-chromatographic-signals
-description: Use when when you have raw LC-HRMS profile-mode data (rt × mz intensity
-  matrices) and need to detect chromatographic peaks using gradient-descent or local-maxima
+description: Use when you have raw LC-HRMS profile-mode data (rt × mz intensity matrices)
+  and need to detect chromatographic peaks using gradient-descent or local-maxima
   algorithms.
 license: CC-BY-4.0
 metadata:
@@ -25,8 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot
-evidence_spans:
-- PeakBot is a python package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -29,13 +29,6 @@ derived_from:
   title: matchms
 - doi: 10.1021/acs.analchem.5c02655
   title: ''
-evidence_spans:
-- Matchms offers an array of tools for metadata cleaning and validation
-- Matchms is a versatile open-source Python package developed for importing, processing,
-  cleaning, and comparing mass spectrometry data
-- make sure the existing tests still work by running ``pytest``
-- Python：3.12
-- PyTorch：2.6.0 + CUDA 12.4
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

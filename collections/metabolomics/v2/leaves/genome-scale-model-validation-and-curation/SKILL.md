@@ -17,8 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
-evidence_spans:
-- community-dependent gap-filling using COMMIT for communites sampled from
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

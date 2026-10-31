@@ -16,8 +16,6 @@ metadata:
 derived_from:
 - doi: 10.21147/j.issn.1000-9604.2023.05.11
   title: OpenNAU
-evidence_spans:
-- An open-source analysis software for untargeted metabolism data (openNAU) was constructed
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

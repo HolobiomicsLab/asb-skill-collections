@@ -1,8 +1,8 @@
 ---
 name: scan-filter-file-organization
-description: Use when when converting mzML files to imzML format and the source mzML
-  contains multiple scan filters (e.g., different MS/MS isolation windows, ionization
-  modes, or mass ranges acquired in a single imaging experiment).
+description: Use when converting mzML files to imzML format and the source mzML contains
+  multiple scan filters (e.g., different MS/MS isolation windows, ionization modes,
+  or mass ranges acquired in a single imaging experiment).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3945
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c06520
   title: imzML Writer
-evidence_spans:
-- import os import imzml_writer.utils as iw_utils
-- iw_utils.mzML_to_imzML_convert(PATH=mzML_path)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

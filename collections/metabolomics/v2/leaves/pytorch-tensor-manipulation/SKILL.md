@@ -1,6 +1,6 @@
 ---
 name: pytorch-tensor-manipulation
-description: Use when when you have parsed molecular graph representations (atom nodes,
+description: Use when you have parsed molecular graph representations (atom nodes,
   bond edges, feature vectors) from SMILES or molecular structure files and need to
   prepare them for forward passes through a pre-trained GNN encoder in PyTorch.
 license: CC-BY-4.0
@@ -17,8 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c03177
   title: retention_time_gnn
-evidence_spans:
-- Pytorch implementation of the model described in the paper
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

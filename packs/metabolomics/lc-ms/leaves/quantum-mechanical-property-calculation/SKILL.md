@@ -1,9 +1,9 @@
 ---
 name: quantum-mechanical-property-calculation
-description: Use when when you have interpolated or optimized molecular geometries
-  (from geodesic_interpolate or CREST conformer ensembles) and need to compute ab
-  initio electronic energies, orbital properties, or transition state characteristics
-  to populate a fragmentation reaction network or validate.
+description: Use when you have interpolated or optimized molecular geometries (from
+  geodesic_interpolate or CREST conformer ensembles) and need to compute ab initio
+  electronic energies, orbital properties, or transition state characteristics to
+  populate a fragmentation reaction network or validate energetic.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0321
@@ -24,13 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.5c00234
   title: QCxMS2
-evidence_spans:
-- Program package for the quantum mechanical calculation of EI mass spectra using
-  automated reaction network exploration
-- '**xtb** (version > 6.7.1 - bleeding edge version)'
-- '**orca** (version >= 6.0.0)'
-- '**molbar** (version >= 1.1.3)'
-- '**geodesic_interpolate** (version'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

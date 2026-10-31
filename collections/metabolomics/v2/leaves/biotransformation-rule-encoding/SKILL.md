@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c01565
   title: bam
-evidence_spans:
-- standard library for parsing and manipulating SMILES and chemical structures
-- HassounLab/BAM
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

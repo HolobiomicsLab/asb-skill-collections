@@ -1,7 +1,7 @@
 ---
 name: feature-table-matrix-assembly
-description: Use when when you need to generate a realistic LC/GC-MS feature table
-  (peak intensity matrix) with controlled, quantifiable condition effects (e.g., differential
+description: Use when you need to generate a realistic LC/GC-MS feature table (peak
+  intensity matrix) with controlled, quantifiable condition effects (e.g., differential
   metabolite abundance across disease states) and batch effects (e.g., instrument
   drift, sample processing day).
 license: CC-BY-4.0
@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
-evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
-  BiocManager::install("mzrtsim")
-- github.com__yufree__mzrtsim
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

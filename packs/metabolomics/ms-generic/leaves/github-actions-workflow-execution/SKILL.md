@@ -17,9 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1002/jms.1777
   title: MassBank
-evidence_spans:
-- uses GitHub Actions to validate the content of all records
-- uses GitHub Actions to validate the content of all records with the [Validator]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

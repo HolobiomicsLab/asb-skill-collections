@@ -21,11 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1007/s10858-025-00465-y
   title: COLMARvista
-evidence_spans:
-- 'For Google Chrome: 1. Right-click the Google Chrome icon and select "Properties."'
-- 'For Mozilla Firefox: 1. Enter about:config in the browser''s address bar.'
-- 'For Safari: 1. Open Safari settings and go to the "Advanced" tab.'
-- This program uses WebWorker and WebAssembly, which cannot be loaded automatically
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

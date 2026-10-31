@@ -1,6 +1,6 @@
 ---
 name: yaml-configuration-handling
-description: Use when when initializing a MolNotator project with user-defined parameters
+description: Use when initializing a MolNotator project with user-defined parameters
   for ionization modes, adduct tables, database selections, output directories, and
   tool-specific thresholds.
 license: CC-BY-4.0
@@ -19,10 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2021.12.21.473622v1
   title: MolNotator
-evidence_spans:
-- from MolNotator.duplicate_filter import duplicate_filter
-- from MolNotator.sample_slicer import sample_slicer
-- import yaml
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

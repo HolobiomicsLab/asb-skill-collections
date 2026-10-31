@@ -22,11 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
-evidence_spans:
-- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included
-  cleaning compound names
-- Our MS2DeepScore Python library offers two types of data generators
-- Our MS2DeepScore Python library
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

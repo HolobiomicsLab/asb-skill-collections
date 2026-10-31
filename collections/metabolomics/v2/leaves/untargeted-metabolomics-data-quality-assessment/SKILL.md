@@ -23,8 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.1c00392
   title: Omics Untargeted Key Script
-evidence_spans:
-- '[![](https://img.shields.io/badge/R≥4.1.2-5fb9ed.svg?style=flat&logo=r&logoColor=white?)](https://cran.r-project.org/index.html)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

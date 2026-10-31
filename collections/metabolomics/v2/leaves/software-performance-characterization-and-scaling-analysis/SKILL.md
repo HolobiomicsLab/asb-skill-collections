@@ -1,7 +1,7 @@
 ---
 name: software-performance-characterization-and-scaling-analysis
-description: Use when when a tool claims to be 'scalable' or 'performance-conscious'
-  but lacks published performance benchmarks, or when you need to confirm that runtime
+description: Use when a tool claims to be 'scalable' or 'performance-conscious' but
+  lacks published performance benchmarks, or when you need to confirm that runtime
   and memory scale linearly (or predictably) with sample count before deploying the
   tool on large LC-MS datasets (e.g., >100 samples).
 license: CC-BY-4.0
@@ -23,11 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
-evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
-  preprocessing
-- Trackable and scalable Python program for high-resolution metabolomics data processing.
-- The default method uses `pymzml` to parse mzML files.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

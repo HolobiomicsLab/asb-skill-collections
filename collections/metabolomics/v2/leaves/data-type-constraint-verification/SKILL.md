@@ -1,9 +1,9 @@
 ---
 name: data-type-constraint-verification
-description: Use when when ingesting or updating MassBank records in plain-text or
-  structured format, and you need to verify that metadata fields (accession, name,
-  formula, mass, spectrum peaks) comply with type definitions, presence requirements,
-  and allowed value ranges.
+description: Use when ingesting or updating MassBank records in plain-text or structured
+  format, and you need to verify that metadata fields (accession, name, formula, mass,
+  spectrum peaks) comply with type definitions, presence requirements, and allowed
+  value ranges.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -20,7 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1002/jms.1777
   title: MassBank
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

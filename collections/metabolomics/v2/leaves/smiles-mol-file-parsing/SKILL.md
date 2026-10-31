@@ -1,7 +1,7 @@
 ---
 name: smiles-mol-file-parsing
-description: Use when when you have molecular structures encoded as SMILES strings
-  or MOL files from an in-house database or spectroscopy repository, and need to convert
+description: Use when you have molecular structures encoded as SMILES strings or MOL
+  files from an in-house database or spectroscopy repository, and need to convert
   them into node-edge graph representations with explicit atom features (atomic number,
   degree, formal charge, hybridization) and bond features.
 license: CC-BY-4.0
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.0c04071
   title: GNN-RT
-evidence_spans:
-- Anaconda for python 3.6
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

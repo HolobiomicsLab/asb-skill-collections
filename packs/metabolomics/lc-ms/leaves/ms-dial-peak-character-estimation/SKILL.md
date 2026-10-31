@@ -21,11 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
-evidence_spans:
-- Needs MS-DIAL (v4.00 or higher)
-- Needs MS-DIAL (v4.00 or higher) ... MS-CleanR use as input MS-DIAL peak list processed
-  in data dependent analysis (DDA) or data independent analysis (DIA)
-- MS-CleanR use as input MS-DIAL peak list processed in data dependent analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

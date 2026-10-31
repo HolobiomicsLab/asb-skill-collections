@@ -16,10 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
-evidence_spans:
-- extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations
-  for Property Prediction]
-- The `chemprop-IR` architecture is an extension of `chemprop`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

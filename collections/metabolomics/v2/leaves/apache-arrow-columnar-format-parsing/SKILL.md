@@ -25,10 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
-evidence_spans:
-- R implementation in `R/`, which is also a complete re-implementation using the [`arrow`](https://arrow.apache.org/docs/r/)
-  for _reading_ only
-- There is also an R implementation in `R/`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

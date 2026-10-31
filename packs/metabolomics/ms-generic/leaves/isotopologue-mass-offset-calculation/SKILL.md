@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
-evidence_spans:
-- is a Python application programming interface and command-line tool
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: sterol-structure-representation-and-curation
-description: Use when when you have a collection of N-Me derivatized unsaturated sterol
+description: Use when you have a collection of N-Me derivatized unsaturated sterol
   structures from tissue samples or standards that must be fed into MS/MS fragmentation
   prediction or collision cross section (CCS) prediction workflows.
 license: CC-BY-4.0
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
-evidence_spans:
-- collection of Python scripts
-- All functions are implemented in jupyter notebook
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

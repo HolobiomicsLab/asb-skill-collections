@@ -25,8 +25,6 @@ derived_from:
   title: CCS Predictor 2.0
 - doi: 10.1101/2022.08.09.503345
   title: ''
-evidence_spans:
-- The current version of CCSP 2.0 requires Sklearn V1.0.2 or later
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

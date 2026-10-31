@@ -1,8 +1,8 @@
 ---
 name: mgf-metadata-completion-from-smiles
-description: Use when when processing MGF-format MS2 spectral libraries (e.g., GNPS)
-  that contain SMILES but lack the Molecular Formula field, and you need to prepare
-  the library for MS-DIAL import or polarity-based separation workflows.
+description: Use when processing MGF-format MS2 spectral libraries (e.g., GNPS) that
+  contain SMILES but lack the Molecular Formula field, and you need to prepare the
+  library for MS-DIAL import or polarity-based separation workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -25,13 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
-evidence_spans:
-- library(mspcompiler)
-- library(future)
-- library(future.apply)
-- The MS-DIAL developers have compiled an EI library with Kovat RI included
-- The RIKEN MS2 libraries can be download from the MS-DIAL homepage
-- The MassBank of North America (MoNA) has an EI library available
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

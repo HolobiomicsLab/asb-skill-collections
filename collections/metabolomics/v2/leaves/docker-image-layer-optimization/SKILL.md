@@ -20,13 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
-evidence_spans:
-- Docker Desktop for Mac (version 20.10+)
-- this project enables AirdPro to run on macOS through Docker + Wine technology.
-- Docker Engine or Docker Desktop
-- AirdPro is written in C#
-- pwiz_bindings_cli.dll from the ProteoWizard project
-- based on pwiz_bindings_cli.dll from the ProteoWizard project.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

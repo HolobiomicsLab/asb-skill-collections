@@ -37,16 +37,6 @@ derived_from:
   title: ''
 - doi: 10.1016/1044-0305
   title: ''
-evidence_spans:
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
-  sequencing.
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
-  sequencing
-- Pytorch is installed automatically when installing Casanovo
-- Upgraded minimum Lightning version to 2.6.
-- an extension of MIST for annotating MS1 precursor masses from MS/MS data
-- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum
-  using an end-to-end energy based modeling approach
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -23,11 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c06520
   title: imzML Writer
-evidence_spans:
-- On PC, download the latest msconvert release from ProteoWizard
-- 'On PC, this can be installed normally from Proteowizard: https://proteowizard.sourceforge.io/download.html'
-- import os import imzml_writer.utils as iw_utils
-- iw_utils.mzML_to_imzML_convert(PATH=mzML_path)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

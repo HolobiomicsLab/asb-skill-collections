@@ -24,12 +24,6 @@ derived_from:
   title: RT-Transformer
 - doi: 10.1038/s41467-019-13680-7
   title: ''
-evidence_spans:
-- Python 3.9
-- torch
-- torch-scatter
-- torch-sparse
-- torch-cluster
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

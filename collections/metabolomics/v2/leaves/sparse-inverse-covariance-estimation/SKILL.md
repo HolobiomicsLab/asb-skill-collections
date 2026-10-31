@@ -1,9 +1,9 @@
 ---
 name: sparse-inverse-covariance-estimation
-description: Use when when you have a feature matrix (samples × features) and need
-  to infer sparse conditional dependencies among features—particularly when the number
-  of features is comparable to or exceeds sample size, and you want to identify which
-  features are directly related after accounting for all.
+description: Use when you have a feature matrix (samples × features) and need to infer
+  sparse conditional dependencies among features—particularly when the number of features
+  is comparable to or exceeds sample size, and you want to identify which features
+  are directly related after accounting for all others.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.3389/fnins.2024.1520982
   title: MetaboLINK/ PCA-GLASSO
-evidence_spans:
-- A python package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -22,13 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.1c01644
   title: ISFrag
-evidence_spans:
-- ISFrag is an R package for identifying and annotating in-source fragments in LCMS
-  metabolite feature table.
-- ISFrag is an R package for identifying and annotating in-source fragments in LCMS
-  metabolite feature table
-- To install ISFrag package R version 4.0.0 or above is required
-- we recommend using RStudio to complete the installation and usage of ISFrag
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

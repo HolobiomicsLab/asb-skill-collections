@@ -1,9 +1,9 @@
 ---
 name: group-specification-and-subsetting
-description: Use when when implementing a fold-change filter or similar feature-level
-  metric that requires comparison across sample groups, and the analysis goal requires
-  including or excluding specific groups (e.g., comparing only treated vs. control
-  samples, or excluding low-quality replicates).
+description: Use when implementing a fold-change filter or similar feature-level metric
+  that requires comparison across sample groups, and the analysis goal requires including
+  or excluding specific groups (e.g., comparing only treated vs. control samples,
+  or excluding low-quality replicates).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -18,9 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-024-50111-8
   title: FERMO
-evidence_spans:
-- No discussion section present in document
-- See our organization-level document on [CONTRIBUTING]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: spectra-variable-core-population
-description: Use when when implementing a custom MsBackend and the spectraData() method
+description: Use when implementing a custom MsBackend and the spectraData() method
   needs to return all core spectra variables (e.g., centroided, polarity, collisionEnergy)
   regardless of which variables were explicitly stored during backend initialization.
 license: CC-BY-4.0
@@ -19,13 +19,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
-evidence_spans:
-- The *Spectra* package defines an efficient infrastructure for storing and handling
-  mass spectrometry spectra
-- return the **full** spectra data within a backend as a `DataFrame` object (defined
-  in the `r Biocpkg("S4Vectors")`
-- library(Spectra) library(IRanges)
-- library(Spectra)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

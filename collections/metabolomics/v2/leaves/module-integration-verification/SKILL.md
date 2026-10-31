@@ -18,9 +18,6 @@ derived_from:
   title: FERMO
 - doi: 10.5281/zenodo.7565700
   title: ''
-evidence_spans:
-- No discussion section present in document
-- See our organization-level document on [CONTRIBUTING]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,7 +1,7 @@
 ---
 name: jupyter-notebook-development-python
-description: Use when when building reproducible Python-based computational workflows
-  that must serve both beginner and expert users; when the analysis requires interactive
+description: Use when building reproducible Python-based computational workflows that
+  must serve both beginner and expert users; when the analysis requires interactive
   parameter tuning, file upload capability, or real-time result visualization;
 license: CC-BY-4.0
 metadata:
@@ -25,10 +25,6 @@ derived_from:
   title: CCS Predictor 2.0
 - doi: 10.1101/2022.08.09.503345
   title: ''
-evidence_spans:
-- CCSP 2.0 is written in Python
-- CCSP 2.0 is written in Python and packaged into two notebook forms
-- a Jupyter Lab compatible notebook with a Tk interface
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

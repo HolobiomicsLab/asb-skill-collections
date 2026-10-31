@@ -1,8 +1,7 @@
 ---
 name: metabolomics-workbench-api-integration
-description: Use when when you need to analyze a publicly archived lipidomics study
-  (identified by study_id like ST001111) and want to bypass manual data download and
-  format conversion.
+description: Use when you need to analyze a publicly archived lipidomics study (identified
+  by study_id like ST001111) and want to bypass manual data download and format conversion.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3761
@@ -18,14 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
-evidence_spans:
-- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object
-  using `lipidr` function `fetch_mw_study()`
-- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr`
-  provides an easy way to re-analyze and visualize these datasets.'
-- Through integration with Metabolomics Workbench API, `lipidr` allows users, to quickly
-  explore public lipidomics experiments.
-- Data Mining and Analysis of Lipidomics Datasets in R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

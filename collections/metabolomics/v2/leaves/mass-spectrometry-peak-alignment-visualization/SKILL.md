@@ -1,7 +1,7 @@
 ---
 name: mass-spectrometry-peak-alignment-visualization
-description: Use when when you have aligned peak data from molecular networking (with
-  m/z, intensity, retention time, and alignment quality metrics across multiple spectra)
+description: Use when you have aligned peak data from molecular networking (with m/z,
+  intensity, retention time, and alignment quality metrics across multiple spectra)
   and need to interactively explore peak alignments under multiple filtering criteria
   (intensity thresholds, alignment score cutoffs, peak.
 license: CC-BY-4.0
@@ -24,9 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.5c00237
   title: MMSA
-evidence_spans:
-- interactive visualization
-- interactive visualization and analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

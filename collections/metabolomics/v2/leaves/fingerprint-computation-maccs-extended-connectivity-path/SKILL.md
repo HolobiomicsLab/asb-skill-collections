@@ -1,9 +1,9 @@
 ---
 name: fingerprint-computation-maccs-extended-connectivity-path
-description: Use when when you have a set of chemical compounds (as SMILES, mol, SDF,
-  mol2, or hin files) and need to convert their structural information into numerical
-  fingerprint vectors for training machine learning regressors on experimental retention
-  time data or other molecular property prediction tasks.
+description: Use when you have a set of chemical compounds (as SMILES, mol, SDF, mol2,
+  or hin files) and need to convert their structural information into numerical fingerprint
+  vectors for training machine learning regressors on experimental retention time
+  data or other molecular property prediction tasks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0292
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
-evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
-  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

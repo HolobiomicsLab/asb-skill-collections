@@ -1,8 +1,8 @@
 ---
 name: lcms-feature-extraction
-description: Use when when you have raw LC-MS chromatographic data (mzML or vendor
-  format) and need to identify and characterize all detectable peaks across the full
-  retention time range for untargeted metabolomics or discovery workflows.
+description: Use when you have raw LC-MS chromatographic data (mzML or vendor format)
+  and need to identify and characterize all detectable peaks across the full retention
+  time range for untargeted metabolomics or discovery workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -24,12 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube
-evidence_spans:
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry
-  (LC-MS) data processing.
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry
-  (LC-MS) data processing
-- masscube is an integrated Python package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

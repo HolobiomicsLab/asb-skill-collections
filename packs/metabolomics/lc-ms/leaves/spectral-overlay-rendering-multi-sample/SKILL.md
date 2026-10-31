@@ -1,6 +1,6 @@
 ---
 name: spectral-overlay-rendering-multi-sample
-description: Use when when you have aligned peak-alignment data from a preceding molecular
+description: Use when you have aligned peak-alignment data from a preceding molecular
   networking task (structured as a table with peak intensity, m/z, retention time,
   and alignment quality metrics) and need to visualize and interactively filter peaks
   across multiple spectra to support comparative mass.
@@ -23,9 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.5c00237
   title: MMSA
-evidence_spans:
-- interactive visualization
-- interactive visualization and analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

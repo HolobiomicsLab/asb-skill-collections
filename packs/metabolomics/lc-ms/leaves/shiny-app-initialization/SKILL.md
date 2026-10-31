@@ -22,13 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00548
   title: metScribeR
-evidence_spans:
-- The process is implemented in a Shiny app, which can be launched using a function
-  exported by this package
-- This package... can be launched using a function exported by this package
-- can be launched using a function exported by this package
-- This package provides an automated workflow for processing in-house metabolite library
-  standards data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

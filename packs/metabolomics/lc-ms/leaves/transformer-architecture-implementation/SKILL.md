@@ -1,8 +1,8 @@
 ---
 name: transformer-architecture-implementation
-description: Use when when building a neural network to map between mass spectrometry
-  spectra and molecular properties (e.g., fingerprints, SMILES, or fragment ions)
-  where sequential or spectral feature dependencies must be captured.
+description: Use when building a neural network to map between mass spectrometry spectra
+  and molecular properties (e.g., fingerprints, SMILES, or fragment ions) where sequential
+  or spectral feature dependencies must be captured.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-024-00804-5
   title: idslmint
-evidence_spans:
-- Powered by RDKit
-- Python versions badge
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

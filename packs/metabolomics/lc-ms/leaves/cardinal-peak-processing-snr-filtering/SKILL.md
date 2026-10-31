@@ -1,7 +1,7 @@
 ---
 name: cardinal-peak-processing-snr-filtering
-description: Use when when you have loaded an unprocessed Cardinal object from MS
-  imaging data (e.g., from Zenodo or native formats) containing thousands of m/z features
+description: Use when you have loaded an unprocessed Cardinal object from MS imaging
+  data (e.g., from Zenodo or native formats) containing thousands of m/z features
   across many spectra, and you need to produce a curated peak list with known expected
   peak count (e.g., 687 cleaned peaks from PIGII_206).
 license: CC-BY-4.0
@@ -30,12 +30,6 @@ derived_from:
   title: SpaMTP
 - doi: 10.1101/2024.10.14.618269
   title: ''
-evidence_spans:
-- library(Cardinal)
-- Install SpaMTP if not previously installed devtools::install_github("GenomicsMachineLearning/SpaMTP")
-- library(dplyr)
-- For plotting + DE plots
-- '## Install and Import *R* Libraries'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

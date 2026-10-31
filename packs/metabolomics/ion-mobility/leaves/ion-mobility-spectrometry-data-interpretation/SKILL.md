@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btab429
   title: AutoCCS
-evidence_spans:
-- github.com__PNNL-Comp-Mass-Spec__AutoCCS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

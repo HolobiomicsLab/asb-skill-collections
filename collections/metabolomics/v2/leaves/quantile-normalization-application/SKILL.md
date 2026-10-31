@@ -20,12 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.0c02998
   title: isoSCAN
-evidence_spans:
-- install_github("jcapelladesto/isoSCAN") library(isoSCAN)
-- install_github("jcapelladesto/isoSCAN")
-- To Install from R console
-- 'To Install from R console: ```` install.packages("devtools", dependencies=TRUE)
-  library(devtools)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

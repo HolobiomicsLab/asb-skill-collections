@@ -25,14 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash
-evidence_spans:
-- MassDash is a modular and flexible python package that has a streamlit graphical
-  user interface (GUI)
-- ':mod:`massdash.loaders`: Classes for loading data'
-- MzMLDataLoader
-- InteractiveTwoDimensionPlotter
-- MRMTransitionGroupPicker
-- pyMRMTransitionGroupPicker
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

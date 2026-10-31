@@ -28,13 +28,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
-evidence_spans:
-- library(mspcompiler)
-- library(future)
-- library(future.apply)
-- The MS-DIAL developers have compiled an EI library with Kovat RI included
-- The RIKEN MS2 libraries can be download from the MS-DIAL homepage
-- The MassBank of North America (MoNA) has an EI library available
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

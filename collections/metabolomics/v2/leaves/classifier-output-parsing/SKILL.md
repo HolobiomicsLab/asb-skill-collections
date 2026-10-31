@@ -18,9 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
-evidence_spans:
-- BitterPredict.m gets as input CSV or EXCEL files with required descriptors of molecules,
-  and calucautes a predictions if each molecule is bitter or not
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,7 +1,7 @@
 ---
 name: hex-dump-parsing-and-verification
-description: Use when when implementing or reverse-engineering a custom binary file
-  format (e.
+description: Use when implementing or reverse-engineering a custom binary file format
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -13,7 +13,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

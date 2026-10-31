@@ -1,8 +1,8 @@
 ---
 name: compression-and-serialization-of-large-tabular-datasets
-description: Use when when consolidating multiple cleaned and validated data sources
-  (organism, structure, reference subgraphs) into a single denormalized table containing
-  hundreds of thousands of rows and many columns, and the result must be stored, archived,
+description: Use when consolidating multiple cleaned and validated data sources (organism,
+  structure, reference subgraphs) into a single denormalized table containing hundreds
+  of thousands of rows and many columns, and the result must be stored, archived,
   or transmitted with minimal storage overhead while.
 license: CC-BY-4.0
 metadata:
@@ -22,9 +22,6 @@ derived_from:
   title: lotus
 - doi: 10.1007/s00044-016-1764-y
   title: ''
-evidence_spans:
-- db/../standardizing.R, common.R
-- 1_integrating.R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

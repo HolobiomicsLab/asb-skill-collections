@@ -25,9 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2020.11.20.391912
   title: MetENP
-evidence_spans:
-- MetENP
-- enrichment statistics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

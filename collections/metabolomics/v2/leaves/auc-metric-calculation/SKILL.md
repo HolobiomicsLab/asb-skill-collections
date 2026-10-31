@@ -1,9 +1,9 @@
 ---
 name: auc-metric-calculation
-description: Use when when you have computed true positive rate (TPR) and false positive
+description: Use when you have computed true positive rate (TPR) and false positive
   rate (FPR) values across classification probability thresholds from predicted probabilities
   and true labels, and need to generate a single aggregate performance metric for
-  model comparison or reporting in omics.
+  model comparison or reporting in omics classification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -17,8 +17,6 @@ metadata:
 derived_from:
 - doi: 10.3389/fgene.2022.957317
   title: GraphBio
-evidence_spans:
-- GraphBio---A modular and scalable R Shiny dashboard
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

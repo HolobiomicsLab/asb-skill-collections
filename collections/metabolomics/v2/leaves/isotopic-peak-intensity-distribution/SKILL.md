@@ -1,8 +1,8 @@
 ---
 name: isotopic-peak-intensity-distribution
-description: Use when when you have one or more peptide sequences (as strings) and
-  need to predict their isotopic distribution pattern for MS instrument simulation,
-  peak deconvolution, or validation of observed isotopic envelopes.
+description: Use when you have one or more peptide sequences (as strings) and need
+  to predict their isotopic distribution pattern for MS instrument simulation, peak
+  deconvolution, or validation of observed isotopic envelopes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -23,13 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
-evidence_spans:
-- Pyteomics is a collection of lightweight and handy tools for Python
-- Pyteomics supports recent versions of Python 3.
-- pip install pyteomics
-- conda install -c bioconda pyteomics
-- numpy
-- numpy <https://numpy.org/>
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

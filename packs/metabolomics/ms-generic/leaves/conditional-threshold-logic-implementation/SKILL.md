@@ -1,6 +1,6 @@
 ---
 name: conditional-threshold-logic-implementation
-description: 'Use when when visualizing numeric columns with unknown or highly variable
+description: 'Use when visualizing numeric columns with unknown or highly variable
   ranges, and the visualization quality depends on parameter selection tied to data
   statistics. Specifically: after loading a numeric column (e.'
 license: CC-BY-4.0
@@ -17,7 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.5c00151
   title: Punc’data
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

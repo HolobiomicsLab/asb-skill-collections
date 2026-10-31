@@ -1,6 +1,6 @@
 ---
 name: mass-spectrometry-spectral-embedding-learning
-description: Use when when you have preprocessed MS/MS spectral pairs (peak intensities
+description: Use when you have preprocessed MS/MS spectral pairs (peak intensities
   and m/z values) and need to predict molecular structural similarity scores, or when
   you want to project spectra into a learned chemical embedding space for visualization
   (e.g., via UMAP) or downstream similarity searches.
@@ -22,9 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2024.03.25.586580v5
   title: MS2DeepScore 2.0
-evidence_spans:
-- '`ms2deepscore` provides a Siamese neural network that is trained to predict molecular
-  structural similarities'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
-evidence_spans:
-- all selected features are exported to MS-FINDER program for in silico-based annotation
-  using hydrogen rearrangement rules (HRR) scoring system
-- MS-CleanR use as input MS-DIAL peak list processed in data dependent analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

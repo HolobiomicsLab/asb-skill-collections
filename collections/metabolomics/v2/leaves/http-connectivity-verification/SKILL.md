@@ -16,8 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-021-23986-0
   title: moldiscovery
-evidence_spans:
-- To test molDiscovery for academic users, please visit
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

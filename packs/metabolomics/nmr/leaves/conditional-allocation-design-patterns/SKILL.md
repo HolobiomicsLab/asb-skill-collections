@@ -1,6 +1,6 @@
 ---
 name: conditional-allocation-design-patterns
-description: 'Use when when designing a dataset storage layer that must handle variable
+description: 'Use when designing a dataset storage layer that must handle variable
   dataset sizes, block layouts, and platform-specific constraints (e.g., Windows vs.
   non-Windows). Specifically: (1) you have parsed dataset metadata including cache-file
   flags, total point counts, and block configuration;'
@@ -16,9 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s42004-025-01812-8
   title: NMRFx
-evidence_spans:
-- github.com__nanalysis__nmrfx
-- github.com/nanalysis/nmrfx
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: software-component-identification
-description: Use when when you need to understand the modular structure of a multi-component
+description: Use when you need to understand the modular structure of a multi-component
   research software project—particularly when integrating, documenting, or extending
   a system whose architecture is not immediately obvious from high-level descriptions.
 license: CC-BY-4.0
@@ -13,9 +13,6 @@ metadata:
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
-evidence_spans:
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'.
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: basepeak-intensity-identification
-description: Use when when you have Thermo Fisher Scientific .raw files from an Orbitrap
+description: Use when you have Thermo Fisher Scientific .raw files from an Orbitrap
   instrument and need to identify the m/z value and corresponding intensity of the
   most abundant ion in each MS1 scan for quality control, method optimization, or
   feature extraction in a modular R-based proteomics pipeline.
@@ -24,14 +24,6 @@ derived_from:
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
-evidence_spans:
-- The `rawrr` executable will run out of the box
-- '`R` functions requesting access to data stored in binary raw files (reader family
-  functions listed in Table 1) invoke compiled `C#` wrapper methods'
-- Calling a wrapper method typically results in the execution of methods defined in
-  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
-- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher
-  Scientific
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

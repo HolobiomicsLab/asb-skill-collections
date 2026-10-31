@@ -22,8 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btae584
   title: msFeaST
-evidence_spans:
-- github.com__kevinmildau__msFeaST
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

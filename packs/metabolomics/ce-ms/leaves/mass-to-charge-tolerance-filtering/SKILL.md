@@ -23,14 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
-evidence_spans:
-- there is no implementation in R that performs effective mobility transformation
-  of CE-MS(/MS) data
-- Description and usage of MobilityTransformR
-- compute Procaine's effective mobility using mobilityTransform
-- The CE-MS test data are from the `r BiocStyle::Biocpkg("msdata")` package
-- The transformation is performed using functionality from the packages `r BiocStyle::Biocpkg("MetaboCoreUtils")`
-- The transformation is performed using functionality from the packages `r BiocStyle::Biocpkg("xcms")`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

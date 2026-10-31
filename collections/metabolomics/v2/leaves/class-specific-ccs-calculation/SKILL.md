@@ -1,6 +1,6 @@
 ---
 name: class-specific-ccs-calculation
-description: Use when when you have multi-omic TWIM-MS data (raw or processed arrival-time
+description: Use when you have multi-omic TWIM-MS data (raw or processed arrival-time
   records) and have already assigned features or detected ion features to biomolecular
   classes (e.
 license: CC-BY-4.0
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
-evidence_spans:
-- MOCCal, or Multi-Omic CCS Calibrator, is a Python application
-- HinesLab/MOCCal
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

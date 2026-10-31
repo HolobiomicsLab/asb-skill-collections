@@ -1,9 +1,9 @@
 ---
 name: semantic-versioning-validation
-description: Use when when you need to confirm that a generated or retrieved release
-  artifact from a version control system (e.g., git tag v1.0.0) produces byte-for-byte
-  or functionally equivalent outputs to the official release published on a platform
-  (e.g., GitHub Releases) on a specific date.
+description: Use when you need to confirm that a generated or retrieved release artifact
+  from a version control system (e.g., git tag v1.0.0) produces byte-for-byte or functionally
+  equivalent outputs to the official release published on a platform (e.g., GitHub
+  Releases) on a specific date.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -14,8 +14,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c07078
   title: qc4metabolomics
-evidence_spans:
-- Semantic Release
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

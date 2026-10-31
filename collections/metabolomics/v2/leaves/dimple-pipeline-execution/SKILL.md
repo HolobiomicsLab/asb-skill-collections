@@ -1,6 +1,6 @@
 ---
 name: dimple-pipeline-execution
-description: Use when when you have deposited mass spectrometry imaging data in NetCDF
+description: Use when you have deposited mass spectrometry imaging data in NetCDF
   (CDF) format paired with MATLAB workspace files (.
 license: CC-BY-4.0
 metadata:
@@ -18,7 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2025.09.22.677919v1
   title: DIMPLE
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

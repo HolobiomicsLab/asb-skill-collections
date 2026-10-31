@@ -1,8 +1,8 @@
 ---
 name: deep-learning-model-loading-and-prediction
-description: Use when when you have preprocessed MS/MS spectral data (normalized peak
-  intensities and m/z values) and need to convert each spectrum into a learned molecular
-  embedding vector for downstream matching against a reference database.
+description: Use when you have preprocessed MS/MS spectral data (normalized peak intensities
+  and m/z values) and need to convert each spectrum into a learned molecular embedding
+  vector for downstream matching against a reference database.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2025.02.07.637102v1
   title: ChemEmbed
-evidence_spans:
-- perform predictions using a trained Convolutional Neural Network (CNN) model
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

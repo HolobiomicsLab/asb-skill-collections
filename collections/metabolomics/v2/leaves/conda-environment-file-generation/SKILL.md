@@ -1,7 +1,7 @@
 ---
 name: conda-environment-file-generation
-description: Use when when you have identified all software dependencies and their
-  exact pinned versions from project documentation (README, setup files, or supplementary
+description: Use when you have identified all software dependencies and their exact
+  pinned versions from project documentation (README, setup files, or supplementary
   materials) and need to create portable environment specifications for a scientific
   implementation.
 license: CC-BY-4.0
@@ -30,13 +30,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btac032
   title: massNet
-evidence_spans:
-- numpy(1.15.4)
-- sklearn(0.23.2)
-- scipy(1.0.0)
-- seaborn (0.9.0)
-- Pandas(1.1.1.)
-- h5py(2.7.1)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

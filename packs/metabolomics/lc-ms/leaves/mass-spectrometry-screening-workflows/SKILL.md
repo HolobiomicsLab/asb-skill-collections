@@ -1,6 +1,6 @@
 ---
 name: mass-spectrometry-screening-workflows
-description: Use when when you have high-resolution LC-MS or GC-MS data from environmental
+description: Use when you have high-resolution LC-MS or GC-MS data from environmental
   samples and need to simultaneously screen for both known suspect chemicals and their
   transformation products, rather than targeting single compounds.
 license: CC-BY-4.0
@@ -31,9 +31,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-020-00477-w
   title: patRoon
-evidence_spans:
-- The `generateTPs` function is used to obtain TPs for a particular set of parents.
-- componTP <- generateComponents(algorithm = "tp",
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

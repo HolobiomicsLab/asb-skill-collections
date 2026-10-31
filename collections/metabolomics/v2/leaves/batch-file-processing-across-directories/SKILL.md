@@ -1,9 +1,9 @@
 ---
 name: batch-file-processing-across-directories
-description: Use when when you need to systematically extract a specific field or
-  set of fields from multiple files scattered across nested directories—for example,
-  to reconstruct an index of entry statuses from thousands of JSON annotation records,
-  or to audit a repository's content without manually visiting.
+description: Use when you need to systematically extract a specific field or set of
+  fields from multiple files scattered across nested directories—for example, to reconstruct
+  an index of entry statuses from thousands of JSON annotation records, or to audit
+  a repository's content without manually visiting each.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1093/nar/gkac1049
   title: MIBiG 3.0
-evidence_spans:
-- entry status is now tracked via the `cluster.status` field
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

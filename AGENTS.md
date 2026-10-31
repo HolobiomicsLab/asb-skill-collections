@@ -96,10 +96,10 @@ jq -r '.[] | select(.description | test("library match";"i")) | .slug' \
   collections/metabolomics/v2/skills_index.json
 ```
 
-**2. Apply** — read `leaves/<slug>/SKILL.md`. Its body is the procedure; its
-frontmatter lists `tools` (install/invoke targets), `derived_from` (source DOIs),
-and `evidence_spans` (verbatim anchors). Use `tools_index.json` for canonical
-install URLs.
+**2. Apply** — read `leaves/<slug>/SKILL.md`. Its body is the procedure, with
+the verbatim evidence lines from the source; its frontmatter lists
+`metadata.tools` (install/invoke targets) and `derived_from` (source DOIs). Use
+`tools_index.json` for canonical install URLs.
 
 **3. Ground (recommended)** — before trusting a parameter, threshold, or claim,
 verify it against the source paper/repo. The skill → source map (`asb-paper-<doi>`
@@ -143,7 +143,7 @@ enforces the `noncommercial` acknowledgment gate and routes tier logic; see
 ## Notes
 
 - License **CC-BY-4.0**; every skill is `derived_from` a source DOI with verbatim
-  `evidence_spans`, EDAM-annotated, and passed the release gate
+  evidence lines in its body, EDAM-annotated, and passed the release gate
   (`collections/metabolomics/v2/gate_report.json`).
 - The public release is **metabolomics only**. Other domains under `collections/`
   are staged/internal and not part of this release.

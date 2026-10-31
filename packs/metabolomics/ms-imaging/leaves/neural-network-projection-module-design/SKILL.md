@@ -1,6 +1,6 @@
 ---
 name: neural-network-projection-module-design
-description: Use when when you have 512-dimensional (or other fixed-size) representation
+description: Use when you have 512-dimensional (or other fixed-size) representation
   vectors output from paired encoders processing augmented versions of the same input
   (e.
 license: CC-BY-4.0
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
-evidence_spans:
-- Two augmented images are propagated through a pair of ResNet18-based encoders
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

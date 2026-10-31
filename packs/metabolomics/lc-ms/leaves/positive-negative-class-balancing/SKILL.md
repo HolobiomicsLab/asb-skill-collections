@@ -1,7 +1,7 @@
 ---
 name: positive-negative-class-balancing
-description: Use when when training a formula rescoring model on MS/MS spectra where
-  positive examples (correct molecular formulas) are unevenly distributed across molecular
+description: Use when training a formula rescoring model on MS/MS spectra where positive
+  examples (correct molecular formulas) are unevenly distributed across molecular
   formula groups or vastly outnumbered by negative examples (incorrect candidates),
   resulting in class imbalance that degrades model.
 license: CC-BY-4.0
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
-evidence_spans:
-- FIDDLE is a deep learning method for predicting molecular formulas from MS/MS spectra
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

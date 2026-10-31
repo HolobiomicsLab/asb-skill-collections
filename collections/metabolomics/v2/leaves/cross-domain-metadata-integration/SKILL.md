@@ -1,9 +1,8 @@
 ---
 name: cross-domain-metadata-integration
-description: Use when when you have conducted batch MS/MS searches across one or more
-  domain-specific MASST tools and need to combine their hit scores, metadata annotations,
-  and taxonomic lineages into a single coherent result set for comparative analysis
-  or publication.
+description: Use when you have conducted batch MS/MS searches across one or more domain-specific
+  MASST tools and need to combine their hit scores, metadata annotations, and taxonomic
+  lineages into a single coherent result set for comparative analysis or publication.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -28,9 +27,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst
-evidence_spans:
-- Aggregated search outputs can be generated and visualized using metadataMASST
-- microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -23,14 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
-evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
-  All-ion fragmentation (AIF) datasets
-- start R (version "4.5.0" or higher)
-- An example of feature annotation using LC-MS AIF chromatograms processed using xcms
-  and RamClustR packages
-- An example of feature annotation using LC-MS AIF chromatograms processed using xcms
-  and RamClustR packages is illustrated here.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

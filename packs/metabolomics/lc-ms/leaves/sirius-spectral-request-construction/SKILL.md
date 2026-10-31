@@ -1,6 +1,6 @@
 ---
 name: sirius-spectral-request-construction
-description: Use when when you have processed LC-MS/MS data with precursor m/z, ionization
+description: Use when you have processed LC-MS/MS data with precursor m/z, ionization
   mode, collision energy (if available), and fragment peak lists (m/z and intensity
   pairs), and need to query CSI:FingerID for molecular fingerprint predictions as
   part of an automated metabolite identification workflow.
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41587-021-01045-9
   title: cosmic
-evidence_spans:
-- The SIRIUS web services (CSI:FingerID, CANOPUS, MSNovelist and others)
-- SIRIUS is a java-based software framework for the analysis of LC-MS/MS data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

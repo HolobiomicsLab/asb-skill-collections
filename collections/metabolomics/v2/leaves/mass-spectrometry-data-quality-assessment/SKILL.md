@@ -1,9 +1,9 @@
 ---
 name: mass-spectrometry-data-quality-assessment
-description: Use when when raw mass spectrometry spectral data has been imported into
-  matchms from common file formats (mzML, mzXML, msp, MGF, JSON) and you need to assess
-  whether metadata fields are correctly normalized, validated against schema requirements,
-  and peaks are appropriately filtered before.
+description: Use when raw mass spectrometry spectral data has been imported into matchms
+  from common file formats (mzML, mzXML, msp, MGF, JSON) and you need to assess whether
+  metadata fields are correctly normalized, validated against schema requirements,
+  and peaks are appropriately filtered before proceeding.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -26,12 +26,6 @@ derived_from:
   title: matchms
 - doi: 10.1021/acs.analchem.1c04758
   title: ''
-evidence_spans:
-- Matchms is a versatile open-source Python package developed for importing, processing,
-  cleaning, and comparing mass spectrometry data
-- matchms is a versatile open-source Python package
-- make sure the existing tests still work by running ``pytest``
-- github.com/HuanLab/Paramounter
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: distance-geometry-embedding
-description: Use when when you have ionized adduct structures (in SMILES or MOL format)
+description: Use when you have ionized adduct structures (in SMILES or MOL format)
   from an upstream ionization-state determination step and need to produce multiple
   low-energy 3D conformations for collision cross section prediction, metabolite annotation,
   or structure-property modeling.
@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS
-evidence_spans:
-- Snakemake workflow manager for predicting collisional cross sections
-- This repository contains a Snakemake workflow manager for predicting collisional
-  cross sections (CCS)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -19,10 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1007/s11306-021-01841-z
   title: IonFlow
-evidence_spans:
-- based on the modification of R package
-- Galaxy tool for processing and analysis
-- github.com__wanchanglin__ionflow
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

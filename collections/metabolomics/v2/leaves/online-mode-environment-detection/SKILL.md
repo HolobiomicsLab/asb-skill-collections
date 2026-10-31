@@ -1,6 +1,6 @@
 ---
 name: online-mode-environment-detection
-description: Use when when deploying an OpenMS streamlit application that must support
+description: Use when deploying an OpenMS streamlit application that must support
   both local development (offline mode with multiprocessing) and production cloud/HPC
   environments (online mode with Redis + RQ task queue), and you need to transparently
   route workflow job submissions to the correct backend.
@@ -18,9 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
-evidence_spans:
-- No code changes required for offline mode. The detection happens automatically
-- as well as deployment with docker-compose.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

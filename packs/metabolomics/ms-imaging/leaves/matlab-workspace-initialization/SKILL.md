@@ -1,8 +1,8 @@
 ---
 name: matlab-workspace-initialization
-description: Use when when you have mass spectrometry imaging root datasets paired
-  with accompanying .mat workspace files (as in the B73 and Oaxacan Green genotypes
-  from Sama et al.
+description: Use when you have mass spectrometry imaging root datasets paired with
+  accompanying .mat workspace files (as in the B73 and Oaxacan Green genotypes from
+  Sama et al.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -19,7 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2025.09.22.677919v1
   title: DIMPLE
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

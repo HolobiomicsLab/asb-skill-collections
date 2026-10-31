@@ -1,6 +1,6 @@
 ---
 name: unit-test-design-for-cheminformatics
-description: Use when when implementing a new ComputeConverter subclass for MSMetaEnhancer
+description: Use when implementing a new ComputeConverter subclass for MSMetaEnhancer
   that performs local chemical structure conversions using RDKit (e.g., SMILES to
   InChI, canonical SMILES generation).
 license: CC-BY-4.0
@@ -18,10 +18,6 @@ metadata:
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer
-evidence_spans:
-- MSMetaEnhancer is a tool used for `.msp` files annotation
-- 'Converter Builder: Automatically discovers and instantiates available converters'
-- make sure the existing tests still work by running ``pytest``
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

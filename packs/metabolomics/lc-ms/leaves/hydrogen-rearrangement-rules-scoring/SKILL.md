@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
-evidence_spans:
-- MS-CleanR use as input MS-DIAL peak list processed in data dependent analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

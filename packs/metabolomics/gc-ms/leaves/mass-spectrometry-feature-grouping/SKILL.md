@@ -37,13 +37,6 @@ derived_from:
   title: ''
 - doi: 10.1021/ac051437y
   title: ''
-evidence_spans:
-- The `generateTPs` function is used to obtain TPs for a particular set of parents.
-- componTP <- generateComponents(algorithm = "tp",
-- PFΔScreen is an open-source Python based non-target screening software tool
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
-  package with additional functionality being implemented
-- VignetteDepends{xcms,BiocStyle,faahKO,pheatmap,MsFeatures}
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

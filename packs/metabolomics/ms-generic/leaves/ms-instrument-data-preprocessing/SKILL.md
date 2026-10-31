@@ -18,7 +18,6 @@ metadata:
 derived_from:
 - doi: 10.26599/bdma.2024.9020059
   title: IsoFusion
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: bounding-box-regression-prediction
-description: Use when when you have a trained CNN binary classifier for peak detection
+description: Use when you have a trained CNN binary classifier for peak detection
   on rt×mz LC-HRMS images and need to additionally output precise bounding-box coordinates
   (left, right, top, bottom) and peak-center pixel positions for each detected peak
   to enable accurate feature quantitation or visual.
@@ -26,8 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot
-evidence_spans:
-- PeakBot is a python package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

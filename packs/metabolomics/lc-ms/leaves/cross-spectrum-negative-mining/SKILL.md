@@ -1,6 +1,6 @@
 ---
 name: cross-spectrum-negative-mining
-description: Use when when training a Siamese architecture rescore model for MS/MS-based
+description: Use when training a Siamese architecture rescore model for MS/MS-based
   molecular formula prediction and you have an imbalanced training set with far fewer
   negative than positive spectrum pairs.
 license: CC-BY-4.0
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
-evidence_spans:
-- FIDDLE is a deep learning method for predicting molecular formulas from MS/MS spectra
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

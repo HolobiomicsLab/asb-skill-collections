@@ -1,8 +1,9 @@
 ---
 name: java-application-build-verification
-description: Use when when you need to confirm that a Java project's GitHub Actions
-  workflow (e.g., 'dev_build_release.yml') has completed successfully and generated
-  usable build artifacts;
+description: Use when you need to confirm that a Java project's GitHub Actions workflow
+  (e.g., 'dev_build_release.yml') has completed successfully and generated usable
+  build artifacts; typically after code is pushed to a development or release branch,
+  or when assessing the health of a project's CI/CD pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3222
@@ -18,10 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-021-23953-9
   title: iimn
-evidence_spans:
-- mzmine is an open-source software for mass spectrometry data processing
-- JDK version-25-blue
-- JavaFX version-24
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

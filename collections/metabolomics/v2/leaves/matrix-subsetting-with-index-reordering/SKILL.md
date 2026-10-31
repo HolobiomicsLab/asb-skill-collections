@@ -1,6 +1,6 @@
 ---
 name: matrix-subsetting-with-index-reordering
-description: Use when when you need to subset a backend containing multiple MS spectra
+description: Use when you need to subset a backend containing multiple MS spectra
   to a user-defined subset (e.
 license: CC-BY-4.0
 metadata:
@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
-evidence_spans:
-- '`DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)'
-- DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)
-- library(Spectra) library(IRanges)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

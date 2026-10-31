@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-023-02012-9
   title: Flash entropy search
-evidence_spans:
-- we provide a Python implementation of the algorithm in the `MSEntropy` repository
-- Python implementation of the algorithm
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

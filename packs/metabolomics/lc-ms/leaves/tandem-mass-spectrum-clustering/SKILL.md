@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
-evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
-  efficient processing of millions of MS/MS spectra.
-- pip install falcon-ms spectrum-utils==0.3.5
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

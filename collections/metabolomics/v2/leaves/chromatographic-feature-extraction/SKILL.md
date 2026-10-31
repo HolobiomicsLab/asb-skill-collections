@@ -23,11 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
-evidence_spans:
-- PFΔScreen is an open-source Python based non-target screening software tool
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
-  in MS raw data
-- pyOpenMS (Python interface to the C++ OpenMS library)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

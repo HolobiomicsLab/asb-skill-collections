@@ -1,7 +1,7 @@
 ---
 name: neural-network-encoder-implementation
-description: Use when when you need to benchmark multiple encoder types (e.g., FFN
-  vs. GNN) on the same predictive task and require evidence that performance differences
+description: Use when you need to benchmark multiple encoder types (e.g., FFN vs.
+  GNN) on the same predictive task and require evidence that performance differences
   reflect genuine architectural trade-offs rather than suboptimal tuning.
 license: CC-BY-4.0
 metadata:
@@ -23,7 +23,6 @@ derived_from:
   title: ICEBERG / fragmentation graph generation
 - doi: 10.1021/acscentsci.9b00085
   title: ''
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

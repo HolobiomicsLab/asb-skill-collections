@@ -1,8 +1,8 @@
 ---
 name: chemical-structure-featurization
-description: Use when when you have molecular structures (SMILES, SDF, or molecular
-  graphs) and need to train a spectrum prediction or molecular property model, and
-  you want to learn task-specific representations rather than use fixed descriptors.
+description: Use when you have molecular structures (SMILES, SDF, or molecular graphs)
+  and need to train a spectrum prediction or molecular property model, and you want
+  to learn task-specific representations rather than use fixed descriptors.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3680
@@ -23,11 +23,6 @@ derived_from:
   title: ICEBERG
 - doi: 10.1021/acs.analchem.3c05019
   title: ''
-evidence_spans:
-- By inputting the chemical formula and your experimental spectrum, the WebUI will
-  rank it against all candidates from PubChem.
-- the WebUI will rank it against all candidates from PubChem
-- jhhung/PS2MS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

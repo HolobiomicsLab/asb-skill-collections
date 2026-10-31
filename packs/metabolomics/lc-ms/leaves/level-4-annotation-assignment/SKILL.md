@@ -23,13 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
-evidence_spans:
-- we recommend that you download the JMS-compliant versions of the HMDB and LMSD using
-  the `download extras` command
-- perform MS1 annotation using an authentic compound library, a public database (e.g.
-  HMDB, LIPID MAP), or custom database
-- pre-annotation to group featues to empirical compounds (khipu)
-- Python-Centric Pipeline for Metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

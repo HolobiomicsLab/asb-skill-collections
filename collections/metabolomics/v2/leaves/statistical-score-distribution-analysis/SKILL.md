@@ -1,6 +1,6 @@
 ---
 name: statistical-score-distribution-analysis
-description: Use when when you have run the same mass spectrum through molecular formula
+description: Use when you have run the same mass spectrum through molecular formula
   assignment under different parameter settings (e.
 license: CC-BY-4.0
 metadata:
@@ -19,14 +19,6 @@ metadata:
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
-evidence_spans:
-- from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
-  import MSParameters']
-- import pandas as pd
-- pandas [section=results; evidence='import pandas as pd']
-- import numpy as np
-- numpy [section=results; evidence='import numpy as np']
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,8 +1,8 @@
 ---
 name: fragment-to-structure-assembly
-description: Use when when you have spectroscopic measurements (1D ¹H or ¹³C NMR)
-  that have been decomposed into predicted substructures or fragments, and you need
-  to reconstruct the full molecular formula and connectivity graph.
+description: Use when you have spectroscopic measurements (1D ¹H or ¹³C NMR) that
+  have been decomposed into predicted substructures or fragments, and you need to
+  reconstruct the full molecular formula and connectivity graph.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
-evidence_spans:
-- transformer architecture
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

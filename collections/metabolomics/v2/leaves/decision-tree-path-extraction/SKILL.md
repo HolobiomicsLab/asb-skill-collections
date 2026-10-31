@@ -22,7 +22,6 @@ derived_from:
   title: ChemEcho
 - doi: 10.1145/2939672.2939778
   title: ''
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

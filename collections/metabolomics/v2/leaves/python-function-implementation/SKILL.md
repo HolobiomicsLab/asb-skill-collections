@@ -1,6 +1,6 @@
 ---
 name: python-function-implementation
-description: Use when when you have classification predictions and ground-truth labels
+description: Use when you have classification predictions and ground-truth labels
   and need to generate a confusion matrix visualization with flexible normalization
   (by row, column, or all elements) and styling options for publication or diagnostic
   review.
@@ -23,11 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2024.03.25.586580v5
   title: MS2DeepScore 2.0
-evidence_spans:
-- '`ms2deepscore` provides a Siamese neural network that is trained to predict molecular
-  structural similarities'
-- make sure the existing tests still work by running ``python setup.py test``
-- use the search functionality [here](https://github.com/matchms/ms2deepscore/issues)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

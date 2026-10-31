@@ -1,7 +1,7 @@
 ---
 name: confidence-score-extraction-from-neural-networks
-description: Use when when you have a trained deep learning model (e.g., PS2MS) and
-  an evaluation dataset of compounds, and you need to assess how prediction confidence
+description: Use when you have a trained deep learning model (e.g., PS2MS) and an
+  evaluation dataset of compounds, and you need to assess how prediction confidence
   varies across structural novelty classes (e.g., training-similar vs. structurally
   novel NPS analogues).
 license: CC-BY-4.0
@@ -22,8 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c05019
   title: ps2ms
-evidence_spans:
-- prediction confidence scores vary across
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

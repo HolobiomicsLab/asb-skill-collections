@@ -1,8 +1,8 @@
 ---
 name: xml-parsing-and-element-tree-serialization
-description: Use when when spectrum or chromatogram data is stored as serialized XML
-  strings in a database or file system and must be converted into pymzML Spectrum
-  or Chromatogram objects for programmatic access.
+description: Use when spectrum or chromatogram data is stored as serialized XML strings
+  in a database or file system and must be converted into pymzML Spectrum or Chromatogram
+  objects for programmatic access.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
-evidence_spans:
-- import sqlite3
-- import xml.etree.ElementTree as et
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

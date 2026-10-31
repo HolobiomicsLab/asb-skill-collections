@@ -24,13 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
-evidence_spans:
-- The *xcms* R package provides functionality to efficiently preprocess LC-MS (as
-  well as GC-MS and LC-MS/MS) data.
-- The *xcms* R package provides functionality to efficiently preprocess LC-MS (as
-  well as GC-MS and LC-MS/MS) data
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
-  package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

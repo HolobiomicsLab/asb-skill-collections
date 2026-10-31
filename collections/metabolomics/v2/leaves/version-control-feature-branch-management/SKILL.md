@@ -1,8 +1,8 @@
 ---
 name: version-control-feature-branch-management
-description: Use when when you have modifications to propose for a shared codebase
-  (e.g., bug fixes, new features, or documentation updates) and need to integrate
-  them without disrupting the main development branch.
+description: Use when you have modifications to propose for a shared codebase (e.g.,
+  bug fixes, new features, or documentation updates) and need to integrate them without
+  disrupting the main development branch.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query
-evidence_spans:
-- MS2Query - Reliable and fast MS/MS spectral-based analogue search
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

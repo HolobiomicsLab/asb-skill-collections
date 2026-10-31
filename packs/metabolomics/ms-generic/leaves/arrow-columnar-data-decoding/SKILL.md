@@ -1,6 +1,6 @@
 ---
 name: arrow-columnar-data-decoding
-description: Use when when reading mzPeak files or other Parquet-backed mass spectrometry
+description: Use when reading mzPeak files or other Parquet-backed mass spectrometry
   archives where spectral m/z and intensity arrays are stored in columnar layouts
   (point or chunked format) and you need to reconstruct them into Python NumPy arrays,
   pandas DataFrames, or equivalent in-memory structures for.
@@ -23,8 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
-evidence_spans:
-- complete re-implementation for _reading_ mzPeak files using [`pyarrow`]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: phase-i-phase-ii-transformation-rules
-description: Use when when you have a parent drug's raw chemical formula and need
-  to predict its likely metabolite formulas for subsequent mass spectrometry matching,
-  especially in high-resolution MS workflows where exact mass matching requires known
-  candidate formulas.
+description: Use when you have a parent drug's raw chemical formula and need to predict
+  its likely metabolite formulas for subsequent mass spectrometry matching, especially
+  in high-resolution MS workflows where exact mass matching requires known candidate
+  formulas.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.0c02281
   title: MetIDfyR
-evidence_spans:
-- open-source, cross-platform and versatile R script
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

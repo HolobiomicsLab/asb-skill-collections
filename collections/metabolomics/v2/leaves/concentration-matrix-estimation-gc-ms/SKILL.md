@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c05772
   title: GCMSFormer
-evidence_spans:
-- '[pytorch](https://pytorch.org/)'
-- '[python3](https://www.python.org/)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

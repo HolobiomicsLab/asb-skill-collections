@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-021-01198-0
   title: SpaceM
-evidence_spans:
-- we [present interactively using Google Collab](https://colab.research.google.com/drive/1CKdHDUkGIpAcBzrSfuCodMF_l2xbVAKT?usp=sharing)
-- We support `python3`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,7 +1,7 @@
 ---
 name: transient-window-function-application
-description: Use when when processing raw FT-ICR transient files (Bruker Solarix .d
-  format or equivalent) intended for high-resolution mass spectral analysis.
+description: Use when processing raw FT-ICR transient files (Bruker Solarix .d format
+  or equivalent) intended for high-resolution mass spectral analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3557
@@ -20,12 +20,6 @@ metadata:
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
-evidence_spans:
-- from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development
-  and data analysis of small molecules analysis.'
-- import numpy as np
-- from matplotlib import pyplot
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

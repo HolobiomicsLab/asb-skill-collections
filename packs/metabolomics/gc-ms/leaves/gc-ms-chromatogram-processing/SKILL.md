@@ -1,8 +1,8 @@
 ---
 name: gc-ms-chromatogram-processing
-description: Use when when working with raw GC-MS data in NetCDF (ANDI) format that
-  requires peak detection, baseline removal, and retention time alignment before spectral
-  matching against reference libraries such as PNNLMetV20191015.MSL.
+description: Use when working with raw GC-MS data in NetCDF (ANDI) format that requires
+  peak detection, baseline removal, and retention time alignment before spectral matching
+  against reference libraries such as PNNLMetV20191015.MSL.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -22,14 +22,6 @@ metadata:
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
-evidence_spans:
-- from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
-  import MSParameters']
-- import pandas as pd
-- pandas [section=results; evidence='import pandas as pd']
-- import numpy as np
-- numpy [section=results; evidence='import numpy as np']
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

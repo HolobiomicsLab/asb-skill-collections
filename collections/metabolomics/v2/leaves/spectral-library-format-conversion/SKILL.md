@@ -1,8 +1,8 @@
 ---
 name: spectral-library-format-conversion
-description: Use when when you have mass spectral libraries from multiple sources
-  (NIST, MoNA, RIKEN, GNPS) in disparate formats (MSP, MGF, MOL folder structures)
-  or with misaligned metadata (e.
+description: Use when you have mass spectral libraries from multiple sources (NIST,
+  MoNA, RIKEN, GNPS) in disparate formats (MSP, MGF, MOL folder structures) or with
+  misaligned metadata (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -28,13 +28,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
-evidence_spans:
-- library(mspcompiler)
-- The MassBank of North America (MoNA) has an EI library available
-- The MoNA MS2 libraries can be downloaded from https://mona.fiehnlab.ucdavis.edu/downloads
-- library(future)
-- library(future.apply)
-- The MS-DIAL developers have compiled an EI library with Kovat RI included
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: runtime-comparison-analysis
-description: Use when when a new version or variant of a tool claims performance improvements
+description: Use when a new version or variant of a tool claims performance improvements
   over a prior version (e.g., MASST+ vs. MASST), and you need empirical evidence that
   the claimed speedup (e.g., ~100-fold reduction in search time) is real, reproducible,
   and quantifiable.
@@ -20,11 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41587-023-01985-4
   title: MASST
-evidence_spans:
-- MASST+ is an improvement on GNPS Mass Spectrometry Search Tool (MASST)
-- MASST+ is an improvement on GNPS Mass Spectrometry Search Tool
-- MASST+ is publicly available as a web service on GNPS
-- Like MASST, MASST+ is publicly available as a web service on GNPS.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

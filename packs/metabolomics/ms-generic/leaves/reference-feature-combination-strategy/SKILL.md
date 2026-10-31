@@ -1,6 +1,6 @@
 ---
 name: reference-feature-combination-strategy
-description: Use when when you have isolated, high-confidence reference chromatographic
+description: Use when you have isolated, high-confidence reference chromatographic
   peaks (ground-truth) from reference LC-HRMS chromatograms that have been matched
   across multiple samples, and you need to train a CNN model to detect peaks in new
   chromatograms but lack sufficient labelled instances.
@@ -28,8 +28,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot
-evidence_spans:
-- PeakBot is a python package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

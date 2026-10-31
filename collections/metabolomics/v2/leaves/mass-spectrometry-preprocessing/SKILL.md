@@ -1,6 +1,6 @@
 ---
 name: mass-spectrometry-preprocessing
-description: Use when when you have raw mass-spectrometry data (precursor m/z, ionization
+description: Use when you have raw mass-spectrometry data (precursor m/z, ionization
   mode, and fragment m/z–intensity pairs) that must be fed into a CNN model for metabolite
   annotation via compound fingerprint prediction.
 license: CC-BY-4.0
@@ -22,8 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1007/s11306-020-01726-7
   title: MetFID
-evidence_spans:
-- No usage/docs found.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

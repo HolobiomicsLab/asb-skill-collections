@@ -1,7 +1,7 @@
 ---
 name: github-actions-api-integration
-description: Use when when you need to verify that a GitHub Actions workflow (such
-  as a development build or release pipeline) executes without fatal errors and produces
+description: Use when you need to verify that a GitHub Actions workflow (such as a
+  development build or release pipeline) executes without fatal errors and produces
   expected artifacts. Use this skill when the workflow is already configured in a
   repository (e.g., a .yml file in .
 license: CC-BY-4.0
@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-021-23953-9
   title: iimn
-evidence_spans:
-- mzmine is an open-source software for mass spectrometry data processing
-- JDK version-25-blue
-- JavaFX version-24
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

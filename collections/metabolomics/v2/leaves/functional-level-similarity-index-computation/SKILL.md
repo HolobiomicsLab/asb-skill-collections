@@ -1,8 +1,8 @@
 ---
 name: functional-level-similarity-index-computation
-description: Use when when you have two metabolic networks (e.g., from KEGG) and need
-  to measure similarity not by network topology but by the metabolic functions and
-  pathway annotations each organism possesses. Use this skill when your research question
+description: Use when you have two metabolic networks (e.g., from KEGG) and need to
+  measure similarity not by network topology but by the metabolic functions and pathway
+  annotations each organism possesses. Use this skill when your research question
   focuses on functional overlap—e.
 license: CC-BY-4.0
 metadata:
@@ -19,12 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pone.0246962
   title: MetNet
-evidence_spans:
-- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic
-  network of two organisms selected in KEGG
-- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic
-  network
-- MetNet is a Java tool
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

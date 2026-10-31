@@ -1,8 +1,8 @@
 ---
 name: simulation-result-reproduction
-description: Use when when you have access to a study's source repository containing
-  executable simulation code in a Jupyter notebook, and you need to validate that
-  the reported ORA results can be regenerated from the provided Python implementation.
+description: Use when you have access to a study's source repository containing executable
+  simulation code in a Jupyter notebook, and you need to validate that the reported
+  ORA results can be regenerated from the provided Python implementation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3562
@@ -19,7 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

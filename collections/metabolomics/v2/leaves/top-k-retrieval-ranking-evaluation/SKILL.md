@@ -1,7 +1,7 @@
 ---
 name: top-k-retrieval-ranking-evaluation
-description: Use when when you have deployed a trained embedding or similarity model
-  on a test set of tandem mass spectra and need to measure its ability to rank correct
+description: Use when you have deployed a trained embedding or similarity model on
+  a test set of tandem mass spectra and need to measure its ability to rank correct
   library compounds near the top of retrieved candidates.
 license: CC-BY-4.0
 metadata:
@@ -24,9 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c02426
   title: MSBERT
-evidence_spans:
-- '[Anaconda](https://www.anaconda.com) for Python 3.12'
-- Install [Git](https://git-scm.com/downloads)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

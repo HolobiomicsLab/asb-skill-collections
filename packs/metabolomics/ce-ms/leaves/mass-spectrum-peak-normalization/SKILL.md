@@ -1,9 +1,9 @@
 ---
 name: mass-spectrum-peak-normalization
-description: Use when when comparing two or more MSMS spectra using intensity-weighted
+description: Use when comparing two or more MSMS spectra using intensity-weighted
   similarity measures (cosine similarity, modified cosine, or neutral loss similarity),
   and the spectra have been acquired under different instrumental conditions, ionization
-  efficiencies, or detector gains that produce.
+  efficiencies, or detector gains that produce different.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -22,7 +22,6 @@ derived_from:
   title: Neutral-loss similarity
 - doi: 10.1016/1044-0305
   title: ''
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

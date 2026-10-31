@@ -22,12 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c03207
   title: Aerith
-evidence_spans:
-- Aerith is an R package that provides interfaces to read and write mass spectrum
-  scans, calculate the theoretical isotopic peak envelope
-- Aerith is an R package that provides interfaces to read and write mass spectrum
-  scans
-- Aerith is an R package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

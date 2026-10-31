@@ -1,8 +1,8 @@
 ---
 name: saturation-threshold-configuration
-description: Use when when executing peak integration on preprocessed GC-IMS data
-  (after alignment and baseline correction) and you need to decide whether to include
-  or exclude peaks that exhibit saturation artifacts from the RIP signal. Set a threshold
+description: Use when executing peak integration on preprocessed GC-IMS data (after
+  alignment and baseline correction) and you need to decide whether to include or
+  exclude peaks that exhibit saturation artifacts from the RIP signal. Set a threshold
   (e.g., 0.
 license: CC-BY-4.0
 metadata:
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
-evidence_spans:
-- library(ggplot2) library(cowplot) library(GCIMS)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

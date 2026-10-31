@@ -1,7 +1,7 @@
 ---
 name: annotation-table-construction
-description: Use when when you have access to multiple public metabolomics databases
-  and need to build a unified reference table for metabolite annotation in untargeted
+description: Use when you have access to multiple public metabolomics databases and
+  need to build a unified reference table for metabolite annotation in untargeted
   mass spectrometry analysis.
 license: CC-BY-4.0
 metadata:
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.21147/j.issn.1000-9604.2023.05.11
   title: OpenNAU
-evidence_spans:
-- An open-source analysis software for untargeted metabolism data (openNAU) was constructed
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

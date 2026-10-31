@@ -1,6 +1,6 @@
 ---
 name: fold-change-calculation-across-groups
-description: Use when when you have a quantified peak table (LC-MS feature intensities)
+description: Use when you have a quantified peak table (LC-MS feature intensities)
   with sample metadata assigning samples to discrete groups (e.
 license: CC-BY-4.0
 metadata:
@@ -18,9 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-024-50111-8
   title: FERMO
-evidence_spans:
-- No discussion section present in document
-- See our organization-level document on [CONTRIBUTING]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

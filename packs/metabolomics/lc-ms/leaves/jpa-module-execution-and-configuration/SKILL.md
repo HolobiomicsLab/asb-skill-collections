@@ -1,9 +1,8 @@
 ---
 name: jpa-module-execution-and-configuration
-description: Use when when you have raw LC-MS data in mzXML format (or vendor formats
-  convertible via MS-Convert) and need to extract metabolic features as the first
-  major step of untargeted metabolomics analysis. Choose MS1 peak picking for DDA/full-scan
-  data;
+description: Use when you have raw LC-MS data in mzXML format (or vendor formats convertible
+  via MS-Convert) and need to extract metabolic features as the first major step of
+  untargeted metabolomics analysis. Choose MS1 peak picking for DDA/full-scan data;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -23,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo12030212
   title: JPA
-evidence_spans:
-- JPA is a comprehensive and integrated metabolomics data processing software.
-- JPA is a comprehensive and integrated metabolomics data processing software
-- '''JPA'' is written in R and its source code is publicly available'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

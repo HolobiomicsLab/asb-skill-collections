@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
-evidence_spans:
-- Matchms is a versatile open-source Python package developed for importing, processing,
-  cleaning, and comparing mass spectrometry data
-- make sure the existing tests still work by running ``pytest``
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,8 +1,8 @@
 ---
 name: database-repository-retrieval
-description: Use when when you need to obtain a specific curated database (e.g., DNA
-  adduct compounds) that is published in a GitLab or GitHub repository and available
-  in structured formats (SDF, Excel, Word).
+description: Use when you need to obtain a specific curated database (e.g., DNA adduct
+  compounds) that is published in a GitLab or GitHub repository and available in structured
+  formats (SDF, Excel, Word).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2422
@@ -17,8 +17,6 @@ metadata:
 derived_from:
 - doi: 10.3389/fchem.2022.908572
   title: DNA adduct database
-evidence_spans:
-- compound database in SDF format
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

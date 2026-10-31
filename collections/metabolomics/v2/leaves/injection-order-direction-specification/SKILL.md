@@ -1,8 +1,8 @@
 ---
 name: injection-order-direction-specification
-description: Use when when configuring a multi-well plate design (96-well, 384-well,
-  or other format) in InjectionDesign for LC/GC-MS analysis and you need to specify
-  whether analytical samples and QC controls should be injected row-by-row or column-by-column.
+description: Use when configuring a multi-well plate design (96-well, 384-well, or
+  other format) in InjectionDesign for LC/GC-MS analysis and you need to specify whether
+  analytical samples and QC controls should be injected row-by-row or column-by-column.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2023.02.26.530140v1.article-info
   title: InjectionDesign
-evidence_spans:
-- LC/GC-MS-based Multi-Omics Injection-Plate Design Web Service
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

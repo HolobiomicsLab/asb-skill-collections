@@ -1,6 +1,6 @@
 ---
 name: missing-data-mechanism-assessment
-description: Use when when you have a filtered metabolite abundance matrix with remaining
+description: Use when you have a filtered metabolite abundance matrix with remaining
   missing values after feature-level filtering (e.g., removal of metabolites with
   >80% missingness), and you need to decide whether missingness is concentrated in
   specific features or sample pairs, or distributed randomly.
@@ -21,10 +21,6 @@ derived_from:
   title: marr
 - doi: 10.1080/01621459.2017.1397521
   title: ''
-evidence_spans:
-- 'marr: An R/Bioconductor package for Maximum Rank Reproducibility'
-- The R-package **marr** can be installed from GitHub using the R package [devtools]
-- '`marr`: An R/Bioconductor package for Maximum Rank Reproducibility'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

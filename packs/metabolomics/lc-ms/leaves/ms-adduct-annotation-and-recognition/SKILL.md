@@ -1,6 +1,6 @@
 ---
 name: ms-adduct-annotation-and-recognition
-description: Use when when processing LC-MS peak tables from isotope tracing experiments
+description: Use when processing LC-MS peak tables from isotope tracing experiments
   where multiple ionization adducts ([M+H]+, [M+Na]+, [M+NH4]+, etc.) and in-source
   fragments have generated redundant features at different m/z values that represent
   the same underlying metabolite.
@@ -29,12 +29,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2021.12.05.471237v2
   title: isopair
-evidence_spans:
-- To install the **IsoPairFinder** package, you can use the following command in R
-- if (!require(devtools))
-- if (!require(BiocManager))
-- required_pkgs <- c("dplyr","tidyr","readr", "stringr", "tibble", "purrr",
-- devtools::install_github("DoddLab/IsoPairFinder")
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

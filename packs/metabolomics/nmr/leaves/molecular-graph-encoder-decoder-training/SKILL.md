@@ -1,6 +1,6 @@
 ---
 name: molecular-graph-encoder-decoder-training
-description: Use when when you have a training dataset of NMR spectra-derived molecular
+description: Use when you have a training dataset of NMR spectra-derived molecular
   fragments encoded as token sequences, and you need to predict both the molecular
   formula and complete bond connectivity of unknown molecules.
 license: CC-BY-4.0
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
-evidence_spans:
-- transformer architecture
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

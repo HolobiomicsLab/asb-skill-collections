@@ -30,15 +30,6 @@ derived_from:
   title: EnrichMET
 - doi: 10.1128/mra.00129-19
   title: ''
-evidence_spans:
-- simplifies pathway enrichment analysis by allowing the complete workflow to be executed
-  through a single R function call
-- enrichmet integrates fgsea for fast MetSEA
-- library(readr)
-- library(readxl)
-- Omu is an R package that enables rapid analysis of Metabolomics data sets
-- Omu supports two univariate statistical models, t test and anova, using the functions
-  ```omu_summary``` and ```anova_function``` respectively
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

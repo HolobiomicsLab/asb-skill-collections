@@ -1,7 +1,7 @@
 ---
 name: matplotlib-figure-customization
-description: 'Use when when rendering spectrum data (m/z vs. intensity arrays) from
-  MZA files and need to control visual presentation: applying m/z range windows, setting
+description: 'Use when rendering spectrum data (m/z vs. intensity arrays) from MZA
+  files and need to control visual presentation: applying m/z range windows, setting
   line colors and labels for legend identification, sizing the figure, or choosing
   between interactive display versus file export.'
 license: CC-BY-4.0
@@ -23,10 +23,6 @@ derived_from:
   title: mzapy
 - doi: 10.1021/acs.jproteome.2c00313
   title: ''
-evidence_spans:
-- Dependencies ------------------------------ * ``matplotlib``
-- '* ``numpy``'
-- Dependencies ------------------------------ * ``numpy``
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

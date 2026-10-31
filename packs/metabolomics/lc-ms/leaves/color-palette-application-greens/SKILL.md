@@ -1,9 +1,9 @@
 ---
 name: color-palette-application-greens
-description: Use when when rendering a treemap of qc_summary() output showing ion
-  counts and percentages by filter status (passed/failed), and you need a perceptually
-  uniform, colorblind-friendly palette that clearly distinguishes filter categories
-  while using sequential intensity to reinforce the magnitude of.
+description: Use when rendering a treemap of qc_summary() output showing ion counts
+  and percentages by filter status (passed/failed), and you need a perceptually uniform,
+  colorblind-friendly palette that clearly distinguishes filter categories while using
+  sequential intensity to reinforce the magnitude of ion.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0573
@@ -27,10 +27,6 @@ derived_from:
   title: mpactr
 - doi: 10.1021/acs.analchem.2c04632
   title: ''
-evidence_spans:
-- This table can be used for a variety of analyses that can be conducted in R
-- creating an interactive plot of input features and the filters they failed, if any,
-  using `ggplot` and `plotly`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

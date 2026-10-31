@@ -1,9 +1,9 @@
 ---
 name: spectrum-metadata-handling
-description: Use when when you have a USI (Universal Spectrum Identifier) string referencing
+description: Use when you have a USI (Universal Spectrum Identifier) string referencing
   a spectrum in a public metabolomics repository (GNPS Molecular Networking, GNPS
   Spectral Libraries, MassBank, MetaboLights, Metabolomics Workbench, MS2LDA, or ProteoXchange)
-  and need to extract its raw spectral data.
+  and need to extract its raw spectral data (peak.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -24,11 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2020.05.09.086066
   title: Metabolomics Spectrum Resolver
-evidence_spans:
-- GNPS Molecular Networking Clustered Spectra
-- MassBank Library Spectra
-- MetaboLights Dataset Spectra
-- Metabolomics Workbench Dataset Spectra
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

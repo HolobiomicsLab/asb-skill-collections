@@ -1,8 +1,8 @@
 ---
 name: nmr-spectra-deep-learning-encoding
-description: Use when when you have preprocessed 1H NMR spectral data from flavor
-  mixtures or similar compound identification tasks, and you need to identify which
-  compounds are present.
+description: Use when you have preprocessed 1H NMR spectral data from flavor mixtures
+  or similar compound identification tasks, and you need to identify which compounds
+  are present.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1016/j.microc.2025.115372
   title: FlavorFormer
-evidence_spans:
-- Python 3.13.2 and Pytorch (version 2.7.0+cu118)
-- Install [Anaconda](https://www.anaconda.com/).
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

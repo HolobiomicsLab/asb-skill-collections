@@ -20,7 +20,6 @@ derived_from:
   title: XCMS
 - doi: 10.5281/zenodo.18494293
   title: ''
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
