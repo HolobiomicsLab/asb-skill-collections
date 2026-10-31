@@ -209,10 +209,11 @@ with `--dest DIR`, or uninstall the first.
 
 ## Fetch without a checkout
 
-`asbb fetch` downloads chosen leaves straight from GitHub. It reads the
-collection's `skills_index.json` at the requested ref to check the slugs and
-read their licence tiers, then fetches each
-`collections/<slug>/vN/leaves/<skill>/SKILL.md` from
+`asbb fetch` downloads chosen leaves straight from GitHub. It resolves the
+requested ref to a commit once, through the GitHub commits API, reads the
+collection's `skills_index.json` at that commit to check the slugs and read
+their licence tiers, then fetches each
+`collections/<slug>/vN/leaves/<skill>/SKILL.md` at the same commit from
 `raw.githubusercontent.com`.
 
 ```bash
@@ -234,8 +235,10 @@ asb-skills/untargeted-metabolomics-annotation/SKILL.md
 ```
 
 `--ref` takes a branch, tag or commit (default `main`). `PROVENANCE.json`
-records the repository, the ref, the collection, the date, the slugs, each
-skill's licence tier, and the URL and SHA-256 of every file written. The leaves
+records the repository, the ref, the commit it resolved to, the collection, the
+date, the slugs, each skill's licence tier, and the URL and SHA-256 of every
+file written. The URLs name the commit, so they keep serving the same bytes
+after the branch moves. The leaves
 are byte-identical to the checkout: all 10 leaves of the selection above,
 fetched from `main`, matched `collections/metabolomics/v2/leaves/` exactly.
 

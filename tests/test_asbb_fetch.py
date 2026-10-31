@@ -1,9 +1,9 @@
 """`asbb fetch`: chosen leaves from the published repository, no checkout.
 
-Every case runs on a fake transport that serves a miniature index and leaves
-and records the URLs asked for. One live case, opt-in through
-``ASBB_NETWORK_TESTS=1``, fetches a real leaf from ``main`` and compares it with
-this checkout's copy.
+Every case runs on a fake transport that resolves the ref to a commit, serves a
+miniature index and leaves at that commit, and records the URLs asked for. One
+live case, opt-in through ``ASBB_NETWORK_TESTS=1``, fetches a real leaf from
+``main`` and compares it with this checkout's copy.
 """
 
 from __future__ import annotations
@@ -24,23 +24,28 @@ REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent
 COLLECTION = "astronomy/v3"
 TIERS = {"stellar-photometry": "open", "radio-interferometry": "noncommercial"}
 LEAVES = {slug: f"---\nname: {slug}\n---\n\n# {slug}\n".encode() for slug in TIERS}
+#: The commit the fake commits API resolves every known ref to.
+COMMIT = "0123abc" + "9" * 33
 
 
 class FakeHost:
-    """Serves the miniature collection at one ref; any other URL is a 404."""
+    """Resolves one ref to COMMIT and serves the collection there; else a 404."""
 
-    def __init__(self, ref="main", missing=()):
-        base = f"{fetch.RAW_HOST}/{fetch.REPOSITORY}/{ref}/collections/{COLLECTION}"
+    def __init__(self, ref="main", missing=(), commit=COMMIT):
+        base = f"{fetch.RAW_HOST}/{fetch.REPOSITORY}/{commit}/collections/{COLLECTION}"
         index = [{"slug": slug, "license_tier": tier} for slug, tier in TIERS.items()]
-        self.files = {f"{base}/skills_index.json": json.dumps(index).encode()}
+        self.files = {fetch.commit_url(ref): commit.encode()}
+        self.files[f"{base}/skills_index.json"] = json.dumps(index).encode()
         self.files.update({
             f"{base}/leaves/{slug}/SKILL.md": body
             for slug, body in LEAVES.items() if slug not in missing
         })
         self.seen = []
+        self.accepted = {}
 
-    def __call__(self, url):
+    def __call__(self, url, accept=None):
         self.seen.append(url)
+        self.accepted[url] = accept
         if url not in self.files:
             raise fetch.FetchError(f"{url}: HTTP 404")
         return self.files[url]
@@ -77,8 +82,9 @@ def test_fetch_reads_the_index_then_only_the_requested_leaves(tmp_path):
 
     fetch.fetch(_request("radio-interferometry", ref="0123abc"), tmp_path / "out", host)
 
-    base = f"https://raw.githubusercontent.com/HolobiomicsLab/asb-skill-collections/0123abc/collections/{COLLECTION}"
+    base = f"https://raw.githubusercontent.com/HolobiomicsLab/asb-skill-collections/{COMMIT}/collections/{COLLECTION}"
     assert host.seen == [
+        "https://api.github.com/repos/HolobiomicsLab/asb-skill-collections/commits/0123abc",
         f"{base}/skills_index.json",
         f"{base}/leaves/radio-interferometry/SKILL.md",
     ]
@@ -166,3 +172,5 @@ def test_a_live_fetch_from_main_matches_the_checkout(tmp_path):
     fetched = (tmp_path / slug / "SKILL.md").read_bytes()
     assert fetched == (collection_dir / "leaves" / slug / "SKILL.md").read_bytes()
     assert provenance["license_tiers"][slug] == rows[0]["license_tier"]
+    assert provenance["ref"] == "main"
+    assert re.fullmatch(r"[0-9a-f]{40}", provenance["commit"])
