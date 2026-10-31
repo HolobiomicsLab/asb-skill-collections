@@ -27,13 +27,15 @@ threshold named on the release and on the paper.
 
 ## What counts as a contribution
 
-Each is one pull request or one form, reviewed by a maintainer with a conflict-of-interest
+Each is one pull request or one issue, reviewed by a maintainer with a conflict-of-interest
 check (`governance/COI_POLICY.md`).
 
 1. **Expert review of a skill.** Read a skill and its source paper; accept it, edit it or
-   reject it, with a one-line reason. The form is
-   `python scripts/expert_review_form.py --collection <slug> --skill <name>`; it writes the
-   attestation `collections/<slug>/v<N>/reviews/<doi>.yaml`.
+   reject it, with a one-line reason. Copy `templates/attestation.yaml.template` to
+   `collections/<slug>/v<N>/reviews/<paper-doi-slug>.yaml`, put the verdict and its reason in
+   `summary`, and open a pull request (`.github/CONTRIBUTING.md`, "How to contribute a
+   review"). To ask for a paper to be reviewed without reviewing it yourself, open an issue
+   from the request-paper-review template (`.github/ISSUE_TEMPLATE/request-paper-review.md`).
 2. **Correction.** A wrong default, a missing step, an outdated tool, a better procedure:
    an improvement report (`scripts/make_improvement_report.py`, anonymised) followed by a
    pull request.
@@ -87,6 +89,6 @@ author; it grows only through the steps above. Opting out at any time:
 | 2026-09-19 | draft call and publication metadata prepared |
 | 2026-10-06 | five candidates remain private; public call not yet confirmed |
 | 2026-10-29 | cut moved from 2026-10-31 to 2026-12-15 (owner decision; nobody had been invited by the first date) |
-| 2026-12-15 | authorship cut for the first releases; confirm that reviewers have sufficient access and time before announcing |
 | November 2026 | proposed first tags and Zenodo deposits, subject to release readiness and authorisation |
+| 2026-12-15 | authorship cut for the first releases; confirm that reviewers have sufficient access and time before announcing |
 | 2027 | proposed subsequent versions; schedule to be confirmed |
