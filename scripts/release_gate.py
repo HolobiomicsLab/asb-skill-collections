@@ -794,7 +794,8 @@ def check_strip_verbatim(
             text = sk_md.read_text(encoding="utf-8")
         except (OSError, UnicodeError) as exc:
             res.coverage["missing_files"] += 1
-            res.add(UNCHECKABLE, f"{sk_md}: unreadable ({exc}).", file=str(sk_md))
+            rel = str(sk_md.relative_to(collection_dir))
+            res.add(UNCHECKABLE, f"{rel}: unreadable ({exc}).", file=rel)
             continue
         res.coverage["inspected_files"] += 1
         fm, body = _read_frontmatter(text)
@@ -943,7 +944,8 @@ def check_pii_dual_use(
             text = sk_md.read_text(encoding="utf-8")
         except (OSError, UnicodeError) as exc:
             res.coverage["missing_files"] += 1
-            res.add(UNCHECKABLE, f"{sk_md}: unreadable ({exc}).", file=str(sk_md))
+            rel = str(sk_md.relative_to(collection_dir))
+            res.add(UNCHECKABLE, f"{rel}: unreadable ({exc}).", file=rel)
             continue
         res.coverage["inspected_files"] += 1
         fm, body = _read_frontmatter(text)
@@ -1640,6 +1642,11 @@ def check_peer_review_claim(collection_dir: Path, corpus: dict[str, Any]) -> Che
     method paper, while corpora include bioRxiv, arXiv and ChemRxiv preprints and
     Zenodo deposits. The check reads the manifests, top-level documents and
     advertised skills; the leaf corpus quotes papers and is not a claim.
+
+    Any line naming "peer-reviewed" fails, negated or qualified forms such as
+    "not peer-reviewed" included, so text over such a corpus describes its
+    sources without the word. The repository marketplace file sits outside the
+    collection directory and is not read here.
     """
     res = CheckResult(
         name="peer_review_claim",
