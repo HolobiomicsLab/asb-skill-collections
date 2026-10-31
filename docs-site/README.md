@@ -81,7 +81,7 @@ The index is a single JSON object with the shape:
 `collection_status` says which collections are released (served by the plugin
 marketplace) and which are staged, with the rule `scripts/regen_catalogue.py`
 applies to `catalogue.jsonld`; the search page labels results from staged
-collections. `search_text` is the concatenated searchable text — all other fields are for
+collections. `search_text` is the concatenated searchable text; all other fields are for
 display. The lunr index itself is built client-side from this JSON on page
 load (a few hundred ms for the current corpus).
 
