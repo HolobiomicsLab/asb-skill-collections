@@ -75,6 +75,27 @@ def test_a_ref_that_does_not_resolve_writes_nothing(tmp_path, answer, message):
     assert host.seen == [fetch.commit_url("main")]
 
 
+def test_a_full_commit_ref_needs_no_api_call(tmp_path):
+    host = FakeHost(ref=COMMIT)
+    del host.files[fetch.commit_url(COMMIT)]
+
+    provenance = fetch.fetch(_request(*TIERS, ref=COMMIT), tmp_path / "out", host)
+
+    assert (provenance["ref"], provenance["commit"]) == (COMMIT, COMMIT)
+    assert not any(url.startswith(fetch.API_HOST) for url in host.seen)
+
+
+@pytest.mark.parametrize("status", (403, 429))
+def test_a_rate_limited_resolve_names_the_limit(tmp_path, status):
+    def limited(url, accept=None):
+        raise fetch.FetchError(f"{url}: HTTP {status}")
+
+    dest = tmp_path / "out"
+    with pytest.raises(fetch.FetchError, match="60 requests an hour"):
+        fetch.fetch(_request(*TIERS), dest, limited)
+    assert not dest.exists()
+
+
 def test_the_cli_writes_the_commit_into_provenance(tmp_path, monkeypatch):
     monkeypatch.setattr(fetch, "_request", FakeHost(ref="v0.2.0"))
     dest = tmp_path / "out"

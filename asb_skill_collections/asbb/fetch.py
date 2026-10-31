@@ -90,13 +90,23 @@ def resolve_commit(ref: str, transport) -> str:
 
     A branch moves, so a fetch recorded against ``main`` alone cannot be
     repeated. Every file is read at the commit returned here, and both the ref
-    and the commit are recorded.
+    and the commit are recorded. A ref that is already a full commit id names
+    itself and is returned without a call, so a pinned fetch does not depend
+    on the API's rate limit.
     """
+    if COMMIT_PATTERN.fullmatch(ref):
+        return ref
     url = commit_url(ref)
     try:
         body = transport(url, accept=SHA_MEDIA_TYPE)
     except FetchError as exc:
-        raise FetchError(f"cannot resolve ref {ref!r} to a commit: {exc}") from exc
+        hint = ""
+        if str(exc).endswith(("HTTP 403", "HTTP 429")):
+            hint = (
+                " (the unauthenticated GitHub API allows 60 requests an hour"
+                " per address; retry later, or pass --ref <full commit id>)"
+            )
+        raise FetchError(f"cannot resolve ref {ref!r} to a commit: {exc}{hint}") from exc
     commit = body.decode("ascii", errors="replace").strip()
     if not COMMIT_PATTERN.fullmatch(commit):
         raise FetchError(f"{url}: expected a commit id, got {commit[:80]!r}")
