@@ -4,7 +4,8 @@ release.yml, career-stats-regen.yml and tier-update.yml pushed their commits
 straight to main, which a branch rule requiring a pull request and the validate
 check would refuse. They now call this script, which commits the given paths on
 top of HEAD without moving it, points a bot/ branch at that commit and opens a
-pull request into main through gh.
+pull request into main through gh. The commit is built in a separate index, so
+a change staged by an earlier step does not ride along.
 
 Each test runs the script in a throwaway clone whose origin is a local bare
 repository, with a stand-in for gh that records its arguments.
@@ -101,6 +102,35 @@ def test_changes_go_to_a_bot_branch_and_a_pull_request_into_main(clone):
     assert calls[0].startswith("pr list --head bot/catalogue-dom-v1 --base main")
     assert calls[1].startswith("pr create --base main --head bot/catalogue-dom-v1 --title chore: regen")
     assert "Release workflow" in calls[1]
+
+
+def test_a_change_staged_by_an_earlier_step_stays_out_of_the_bot_commit(clone):
+    work, origin, log = clone
+    head_before = _git(work, "rev-parse", "HEAD")
+    (work / "other.txt").write_text("staged elsewhere\n")
+    _git(work, "add", "other.txt")
+    (work / "catalogue.jsonld").write_text('{"v": 2}\n')
+
+    result = _run(work, log, "bot/catalogue-dom-v1", "chore: regen", "catalogue.jsonld")
+
+    assert result.returncode == 0, result.stderr
+    pushed = _remote_head(origin, "refs/heads/bot/catalogue-dom-v1")
+    changed = _git(work, "diff", "--name-only", head_before, pushed).splitlines()
+    assert changed == ["catalogue.jsonld"]
+    assert _git(work, "diff", "--cached", "--name-only") == "other.txt"
+
+
+def test_only_a_staged_change_elsewhere_proposes_nothing(clone):
+    work, origin, log = clone
+    (work / "other.txt").write_text("staged elsewhere\n")
+    _git(work, "add", "other.txt")
+
+    result = _run(work, log, "bot/catalogue-dom-v1", "chore: regen", "catalogue.jsonld")
+
+    assert result.returncode == 0, result.stderr
+    assert "No changes to propose" in result.stdout
+    assert _remote_head(origin, "refs/heads/bot/catalogue-dom-v1") == ""
+    assert _gh_calls(log) == []
 
 
 def test_an_open_pull_request_gets_the_new_commit_and_no_second_one(clone):

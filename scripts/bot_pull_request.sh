@@ -50,13 +50,19 @@ if [ "${#paths[@]}" -eq 0 ]; then
   exit 0
 fi
 
+# Build the tree in a separate index seeded from HEAD, so only the given paths
+# enter the commit, whatever an earlier step staged in the real index.
+index_dir="$(mktemp -d)"
+trap 'rm -rf "${index_dir}"' EXIT
+export GIT_INDEX_FILE="${index_dir}/index"
+git read-tree HEAD
 git add -- "${paths[@]}"
 if git diff --cached --quiet; then
   echo "No changes to propose in: ${paths[*]}"
   exit 0
 fi
 commit="$(git commit-tree "$(git write-tree)" -p HEAD -m "${title}")"
-git reset -q -- "${paths[@]}"
+unset GIT_INDEX_FILE
 seen="$(git ls-remote origin "refs/heads/${branch}" | cut -f1)"
 git push --force-with-lease="refs/heads/${branch}:${seen}" origin "${commit}:refs/heads/${branch}"
 
