@@ -11,7 +11,8 @@ Usage:
         --corpus collections/metabolomics/v2/corpus.yaml \\
         --create --limit 5 --out governance/license_clarification/wave.yaml
 
-    python3 -m scripts.license_clarification_issues verify
+    python3 -m scripts.license_clarification_issues verify            # read-only
+    python3 -m scripts.license_clarification_issues verify --write    # record
 """
 from __future__ import annotations
 
@@ -426,22 +427,26 @@ def _default_repo_license(owner: str, repo: str) -> str | None:
     return spdx
 
 
-def verify_deployments(
+def verify_ledger(
     ledger_path: pathlib.Path = LEDGER_PATH,
     _issue_state: Callable | None = None,
     _repo_license: Callable | None = None,
     today: str | None = None,
-) -> dict:
-    """Check each deployment and update status/license_after in the ledger.
+    write: bool = False,
+) -> tuple[dict, list[dict]]:
+    """Check each deployment's live state; write the ledger only when *write*.
 
     Args:
         ledger_path: Path to deployments.yaml.
         _issue_state: Injected fn(issue_url) -> {"state": str, "comments": int}.
         _repo_license: Injected fn(owner, repo) -> spdx_id | None.
         today: ISO date string for last_checked (default: today).
+        write: Write the updated status, license_after and last_checked back to
+            *ledger_path*. Off by default, so a check is read-only unless asked.
 
     Returns:
-        Summary dict mapping status -> count.
+        (summary, rows): summary maps status -> count; rows hold one dict per
+        deployment with repo, issue_url, status_before, status, license_after.
     """
     if _issue_state is None:
         _issue_state = _default_issue_state
@@ -454,7 +459,9 @@ def verify_deployments(
     deployments = ledger.get("deployments", [])
 
     summary: dict[str, int] = {}
+    rows: list[dict] = []
     for d in deployments:
+        status_before = d.get("status")
         d["last_checked"] = today
         repo_slug = d.get("repo", "")
         owner, _, repo = repo_slug.partition("/")
@@ -478,12 +485,40 @@ def verify_deployments(
             # else keep existing status (open or whatever it was)
 
         summary[d["status"]] = summary.get(d["status"], 0) + 1
+        rows.append({
+            "repo": repo_slug,
+            "issue_url": d.get("issue_url"),
+            "status_before": status_before,
+            "status": d["status"],
+            "license_after": d.get("license_after"),
+        })
 
-    # Write back
-    ledger_path.parent.mkdir(parents=True, exist_ok=True)
-    ledger_path.write_text(
-        yaml.safe_dump(ledger, sort_keys=False, allow_unicode=True),
-        encoding="utf-8",
+    if write:
+        ledger_path.parent.mkdir(parents=True, exist_ok=True)
+        ledger_path.write_text(
+            yaml.safe_dump(ledger, sort_keys=False, allow_unicode=True),
+            encoding="utf-8",
+        )
+    return summary, rows
+
+
+def verify_deployments(
+    ledger_path: pathlib.Path = LEDGER_PATH,
+    _issue_state: Callable | None = None,
+    _repo_license: Callable | None = None,
+    today: str | None = None,
+) -> dict:
+    """Check each deployment and write the updated ledger back to *ledger_path*.
+
+    The writing form of verify_ledger(), kept for existing callers. Returns the
+    summary dict mapping status -> count.
+    """
+    summary, _ = verify_ledger(
+        ledger_path=ledger_path,
+        _issue_state=_issue_state,
+        _repo_license=_repo_license,
+        today=today,
+        write=True,
     )
     return summary
 
@@ -492,35 +527,73 @@ def verify_deployments(
 # main
 # ---------------------------------------------------------------------------
 
+def _verify_command(args) -> int:
+    ledger_path = pathlib.Path(args.ledger)
+    summary, rows = verify_ledger(ledger_path=ledger_path, write=args.write)
+
+    print("Per-issue state:")
+    for r in rows:
+        change = (
+            r["status"] if r["status"] == r["status_before"]
+            else f"{r['status_before']} -> {r['status']}"
+        )
+        print(f"  {r['repo']}  {change}  license_after={r['license_after']}  {r['issue_url']}")
+
+    print("\nVerify summary:")
+    for status, count in sorted(summary.items()):
+        print(f"  {status}: {count}")
+
+    notable = [r for r in rows if r["status"] in ("license-added", "responded")]
+    if notable:
+        print("\nNotable updates:")
+        for r in notable:
+            print(f"  {r['repo']}  status={r['status']}  license_after={r['license_after']}")
+
+    if args.write:
+        print(f"\nLedger written to {ledger_path}")
+    else:
+        print(f"\nDry run: {ledger_path} not written. Pass --write to record this check.")
+    return 0
+
+
 def main(argv=None) -> int:
     import argparse
 
-    # Dispatch to verify subcommand before full argparse
-    _argv = argv if argv is not None else sys.argv[1:]
-    if _argv and _argv[0] == "verify":
-        summary = verify_deployments()
-        print("Verify summary:")
-        for status, count in sorted(summary.items()):
-            print(f"  {status}: {count}")
-        newly_notable = [
-            d for d in load_ledger().get("deployments", [])
-            if d.get("status") in ("license-added", "responded")
-        ]
-        if newly_notable:
-            print("\nNotable updates:")
-            for d in newly_notable:
-                print(f"  {d['repo']}  status={d['status']}  license_after={d.get('license_after')}")
-        return 0
-
-    ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--corpus", required=True, help="Path to corpus.yaml")
+    ap = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
+    ap.add_argument("--corpus", help="Path to corpus.yaml (required unless a subcommand is given)")
     ap.add_argument("--create", action="store_true", default=False,
                     help="Actually file issues (default: dry-run)")
     ap.add_argument("--limit", type=int, default=None, metavar="N",
                     help="Cap the number of issues to process")
     ap.add_argument("--out", default="governance/license_clarification/wave.yaml",
                     help="Write plan as YAML to this path")
-    args = ap.parse_args(_argv)
+
+    sub = ap.add_subparsers(dest="command", metavar="{verify}")
+    vp = sub.add_parser(
+        "verify",
+        help="Check the live state of every filed issue in the ledger",
+        description=(
+            "Query GitHub for each deployment in the ledger (repository licence, "
+            "issue state, comment count) and print the per-issue state. Read-only "
+            "unless --write is given."
+        ),
+    )
+    vp.add_argument("--ledger", default=str(LEDGER_PATH),
+                    help=f"Deployments ledger (default: {LEDGER_PATH})")
+    mode = vp.add_mutually_exclusive_group()
+    mode.add_argument("--dry-run", action="store_true",
+                      help="Print the per-issue state without writing the ledger (the default)")
+    mode.add_argument("--write", action="store_true",
+                      help="Write status, license_after and last_checked back to the ledger")
+
+    args = ap.parse_args(argv if argv is not None else sys.argv[1:])
+
+    if args.command == "verify":
+        return _verify_command(args)
+    if not args.corpus:
+        ap.error("--corpus is required")
 
     if args.create:
         print("⚠️  --create is set: issues WILL be filed. Ctrl-C to abort.")
