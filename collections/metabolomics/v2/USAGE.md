@@ -271,9 +271,11 @@ available through `--selector package` (or `ASB_SELECTOR_RULE=package` for
 `asbb`) for one release and is deprecated.
 
 `bin/semantic_search.py` ranks by **meaning** (`text-embedding-3-large`, the model
-Perspicacité uses) when an embedding cache is present, and falls back to a keyword
-index search otherwise — so it always works offline (the `mode` field in the output
-says which ran). Two things switch semantic mode on:
+Perspicacité uses) when an embedding cache is present. With the default
+`--mode auto` it falls back to a keyword index search otherwise and says why on
+stderr, so it always works offline (the `mode` field in the output says which
+ran); `--mode semantic` exits 2 with the reason instead of falling back. Two
+things switch semantic mode on:
 
 1. **The cache** — a `.npz` of precomputed leaf embeddings. Either:
    - **Download it** from the collection's Zenodo record (file

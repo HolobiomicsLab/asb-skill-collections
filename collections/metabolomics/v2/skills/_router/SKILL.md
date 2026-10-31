@@ -95,9 +95,10 @@ search when no workflow covers the request.
 `bin/semantic_search.py` ranks by meaning rather than keyword overlap, using
 `text-embedding-3-large` when an embedding backend is available (set
 `OPENAI_API_KEY`, and point `ASB_LEAF_EMB_CACHE` at the leaf embedding cache or
-drop it at `.cache/leafemb_v2.npz`). It falls back to a keyword search when no
-backend is configured, and the `mode` field in its output says which ran. It
-takes the same `--target skills|workflows`.
+drop it at `.cache/leafemb_v2.npz`). With the default `--mode auto` it falls
+back to a keyword search when no backend is available and says why on stderr;
+the `mode` field in its output says which ran. `--mode semantic` never falls
+back: it exits 2 with the reason. It takes the same `--target skills|workflows`.
 
 Three machine indexes back both scripts, and are worth querying directly with
 `jq` when you need a field they do not print:
