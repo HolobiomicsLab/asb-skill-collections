@@ -207,8 +207,11 @@ frontmatter) that answers *what may I do with the underlying tool?*
 | `restricted` | licence established and it constrains reuse; **check it before commercial use or redistribution** |
 | `unknown` | no tool-level licence evidence; describing and using are unaffected; **never redistribute** the tool's code |
 
-Discovery defaults to `open` skills; the `asb-metabolomics` meta-skill enforces the
-`noncommercial` acknowledgement ([LICENSE_TIERS.md](governance/LICENSE_TIERS.md)). Code is
+The search tools do not filter by tier. The router tells the agent to prefer `open`
+skills when no tier is requested, and to get confirmation of a permitted (academic or
+noncommercial) use before applying a `noncommercial` one; the `asb-metabolomics`
+meta-skill carries the same acknowledgement step
+([LICENSE_TIERS.md](governance/LICENSE_TIERS.md)). Code is
 under [Apache-2.0](LICENSE), collection content under CC-BY-4.0; verbatim quotations
 (`evidence_spans`) are minimal and attributed, and a rights holder may request removal
 ([LICENSING.md](LICENSING.md)). Other policies are in [governance/](governance), starting
