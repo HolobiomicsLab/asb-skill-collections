@@ -703,7 +703,214 @@ def render_collection_yaml(
     return _yaml_dump(data)
 
 
-def render_citation_cff(source_dois: list[str], released_at: str) -> str:
+# ---------------------------------------------------------------------------
+# CITATION.cff references: CFF 1.2.0 requires type, title and authors on each
+# ---------------------------------------------------------------------------
+
+#: Crossref work types -> CFF 1.2.0 reference types; anything else is "generic".
+CROSSREF_CFF_TYPES = {
+    "journal-article": "article",
+    "posted-content": "article",
+    "proceedings-article": "conference-paper",
+    "book": "book",
+    "monograph": "book",
+    "edited-book": "edited-work",
+    "reference-book": "book",
+    "dataset": "data",
+    "report": "report",
+    "dissertation": "thesis",
+    "standard": "standard",
+}
+#: DataCite resourceTypeGeneral -> CFF 1.2.0 reference types.
+DATACITE_CFF_TYPES = {
+    "JournalArticle": "article",
+    "Preprint": "article",
+    "Text": "article",
+    "ConferencePaper": "conference-paper",
+    "Software": "software",
+    "Dataset": "data",
+    "Report": "report",
+    "Dissertation": "thesis",
+    "Book": "book",
+}
+CROSSREF_WORKS = "https://api.crossref.org/works/"
+DATACITE_DOIS = "https://api.datacite.org/dois/"
+REFERENCE_USER_AGENT = (
+    "asb-skill-collections/collect_metabolomics_collection "
+    "(+https://github.com/HolobiomicsLab/asb-skill-collections)"
+)
+#: Seconds between two metadata requests, to stay well inside both APIs' limits.
+REFERENCE_REQUEST_INTERVAL = 0.25
+
+
+def _clean_text(value) -> str:
+    """One line of text from a metadata field that may hold markup or a list."""
+    if isinstance(value, list):
+        value = value[0] if value else ""
+    text = re.sub(r"<[^>]+>", "", str(value or ""))
+    return _collapse_ws(text)
+
+
+def _cff_person(given: str, family: str, name: str) -> dict | None:
+    """A CFF person (family/given names) or entity (name); None when nameless."""
+    given, family, name = _clean_text(given), _clean_text(family), _clean_text(name)
+    if family:
+        person = {"family-names": family}
+        if given:
+            person["given-names"] = given
+        return person
+    if name:
+        return {"name": name}
+    return None
+
+
+def _complete_reference(kind: str, title: str, authors: list, doi: str,
+                        year, journal: str) -> dict | None:
+    """Assemble one CFF reference, or None when title or authors are missing.
+
+    CFF requires the authors of a reference to be unique items, so a second
+    entry identical to an earlier one (two co-authors who share a name and
+    carry nothing else) is written once.
+    """
+    unique: list[dict] = []
+    for author in authors:
+        if author and author not in unique:
+            unique.append(author)
+    authors = unique
+    if not title or not authors:
+        return None
+    reference = {"type": kind, "title": title, "authors": authors, "doi": doi}
+    if isinstance(year, int):
+        reference["year"] = year
+    if journal and kind == "article":
+        reference["journal"] = journal
+    return reference
+
+
+def reference_from_crossref(doi: str, work: dict) -> dict | None:
+    """A complete CFF reference from a Crossref ``/works`` message, else None."""
+    authors = [
+        _cff_person(a.get("given", ""), a.get("family", ""), a.get("name", ""))
+        for a in work.get("author") or []
+        if isinstance(a, dict)
+    ]
+    issued = (work.get("issued") or work.get("published") or {}).get("date-parts") or [[]]
+    year = issued[0][0] if issued and issued[0] and isinstance(issued[0][0], int) else None
+    return _complete_reference(
+        CROSSREF_CFF_TYPES.get(str(work.get("type") or ""), "generic"),
+        _clean_text(work.get("title")),
+        authors,
+        doi,
+        year,
+        _clean_text(work.get("container-title")),
+    )
+
+
+def reference_from_datacite(doi: str, attributes: dict) -> dict | None:
+    """A complete CFF reference from DataCite ``/dois`` attributes, else None."""
+    authors = [
+        _cff_person(c.get("givenName", ""), c.get("familyName", ""), c.get("name", ""))
+        if c.get("nameType") != "Organizational"
+        else _cff_person("", "", c.get("name", ""))
+        for c in attributes.get("creators") or []
+        if isinstance(c, dict)
+    ]
+    titles = [t.get("title") for t in attributes.get("titles") or [] if isinstance(t, dict)]
+    general = str((attributes.get("types") or {}).get("resourceTypeGeneral") or "")
+    year = attributes.get("publicationYear")
+    return _complete_reference(
+        DATACITE_CFF_TYPES.get(general, "generic"),
+        _clean_text(titles),
+        authors,
+        doi,
+        int(year) if str(year or "").isdigit() else None,
+        "",
+    )
+
+
+def _get_json(url: str, opener) -> dict | None:
+    """GET one JSON document; None on a 404, other HTTP errors propagate."""
+    import urllib.error
+    import urllib.request
+
+    request = urllib.request.Request(
+        url, headers={"User-Agent": REFERENCE_USER_AGENT, "Accept": "application/json"}
+    )
+    try:
+        with opener(request, timeout=30) as response:
+            return json.load(response)
+    except urllib.error.HTTPError as exc:
+        if exc.code == 404:
+            return None
+        raise
+
+
+def fetch_citation_reference(doi: str, opener=None) -> dict | None:
+    """Look a DOI up in Crossref, then in DataCite (arXiv, Zenodo); read only."""
+    import urllib.parse
+    import urllib.request
+
+    opener = opener or urllib.request.urlopen
+    quoted = urllib.parse.quote(doi, safe="")
+    work = _get_json(CROSSREF_WORKS + quoted, opener)
+    if work is not None:
+        return reference_from_crossref(doi, work.get("message") or {})
+    record = _get_json(DATACITE_DOIS + quoted, opener)
+    if record is not None:
+        return reference_from_datacite(doi, (record.get("data") or {}).get("attributes") or {})
+    return None
+
+
+def fetch_citation_references(dois: list[str], opener=None, pause=None) -> dict[str, dict]:
+    """Complete references for the DOIs both registries describe, keyed by lowercase DOI."""
+    import time
+
+    pause = REFERENCE_REQUEST_INTERVAL if pause is None else pause
+    found: dict[str, dict] = {}
+    for number, doi in enumerate(dois):
+        if number and pause:
+            time.sleep(pause)
+        reference = fetch_citation_reference(doi, opener)
+        if reference is not None:
+            found[doi.lower()] = reference
+    return found
+
+
+def existing_citation_references(citation: pathlib.Path) -> dict[str, dict]:
+    """The complete references an earlier CITATION.cff already carries, by lowercase DOI."""
+    try:
+        payload = yaml.safe_load(citation.read_text(encoding="utf-8")) or {}
+    except (OSError, yaml.YAMLError):
+        return {}
+    out = {}
+    for reference in payload.get("references") or []:
+        if not isinstance(reference, dict) or not reference.get("doi"):
+            continue
+        complete = _complete_reference(
+            str(reference.get("type") or "generic"),
+            str(reference.get("title") or ""),
+            list(reference.get("authors") or []),
+            str(reference["doi"]),
+            None,
+            "",
+        )
+        if complete is not None:
+            out[str(reference["doi"]).lower()] = reference
+    return out
+
+
+def citation_references(source_dois: list[str], references: dict[str, dict]) -> list[dict]:
+    """The CFF references for the source DOIs that have a complete record, in DOI order.
+
+    A DOI without a title and at least one author is left out rather than
+    written as ``{type, doi}``, which fails CFF 1.2.0 validation.
+    """
+    return [references[d.lower()] for d in source_dois if d.lower() in references]
+
+
+def render_citation_cff(
+    source_dois: list[str], released_at: str, references: dict[str, dict] | None = None
+) -> str:
     cff = {
         "cff-version": "1.2.0",
         "message": "If you use this collection, please cite it as below.",
@@ -734,10 +941,10 @@ def render_citation_cff(source_dois: list[str], released_at: str) -> str:
             "skills",
             "EDAM",
         ],
-        "references": [
-            {"type": "article", "doi": doi} for doi in source_dois
-        ],
     }
+    complete = citation_references(source_dois, references or {})
+    if complete:
+        cff["references"] = complete
     return _yaml_dump(cff)
 
 
@@ -752,6 +959,7 @@ def assemble(
     clean: bool,
     dry_run: bool,
     exclude_dois: set[str] | None = None,
+    fetch_references: bool = False,
 ) -> dict:
     corpus_index = load_corpus_index(corpus_path)
     build_dirs = discover_build_dirs(builds_root)
@@ -926,8 +1134,24 @@ def assemble(
             ),
             encoding="utf-8",
         )
-        (release_dir / "CITATION.cff").write_text(
-            render_citation_cff(source_dois_sorted, released_at), encoding="utf-8"
+        # References an earlier CITATION.cff already completed are reused, so a
+        # re-run needs no network; --fetch-citation-references looks up the rest.
+        citation = release_dir / "CITATION.cff"
+        references = existing_citation_references(citation)
+        if fetch_references:
+            missing = [d for d in source_dois_sorted if d.lower() not in references]
+            references.update(fetch_citation_references(missing))
+        uncited = [d for d in source_dois_sorted if d.lower() not in references]
+        if uncited:
+            sys.stderr.write(
+                f"NOTE: {len(uncited)} source DOIs have no title and author record and "
+                "are left out of CITATION.cff references"
+                + ("" if fetch_references else " (pass --fetch-citation-references)")
+                + ".\n"
+            )
+        citation.write_text(
+            render_citation_cff(source_dois_sorted, released_at, references),
+            encoding="utf-8",
         )
 
     return {
@@ -998,6 +1222,14 @@ def main() -> None:
         help="Hold a paper's build out of this release (non-OA / restricted reuse "
         "per OPEN_ACCESS_POLICY.md).  Repeatable.",
     )
+    parser.add_argument(
+        "--fetch-citation-references",
+        action="store_true",
+        help="Look up, in Crossref then DataCite (read-only GET), the title and "
+        "authors of every source DOI the existing CITATION.cff does not already "
+        "reference. Without it, DOIs with no such record are left out of "
+        "CITATION.cff references.",
+    )
     # Domain parametrization — defaults reproduce the metabolomics collection;
     # override to assemble epigenomics / transcriptomics / any domain.
     parser.add_argument("--collection-slug", default=COLLECTION_SLUG,
@@ -1048,6 +1280,7 @@ def main() -> None:
         clean=args.clean,
         dry_run=args.dry_run,
         exclude_dois=set(args.exclude_doi),
+        fetch_references=args.fetch_citation_references,
     )
 
     # ---- log summary ----
