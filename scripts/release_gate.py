@@ -47,6 +47,10 @@ Checks implemented (mapped to the §5 checklist + §6 safety gates):
                                 (10.1101, 10.48550, 10.26434, 10.5281) is never
                                 described as peer-reviewed in the manifests,
                                 top-level documents or advertised skills.
+  8. LEAF TEXT FLOOR         - No leaf description starts "Use when when", and
+                                no frontmatter evidence span is shared by more
+                                than ten leaves; the share of leaves with no
+                                span is reported.
 
 Enforcement modes (CONTENT_POLICY.md §7):
   * default (advisory, staged-collections PRs): WARNs and FAILs are reported but
@@ -75,6 +79,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import sys
@@ -1661,6 +1666,110 @@ def check_peer_review_claim(collection_dir: Path, corpus: dict[str, Any]) -> Che
     return res.finish()
 
 
+_DOUBLED_USE_WHEN_RE = re.compile(r"^\s*use\s+when\s+when\b", re.IGNORECASE)
+_MAX_LEAVES_PER_SPAN = 10
+_FLOOR_EXAMPLES = 20
+
+
+def check_leaf_text_floor(collection_dir: Path) -> CheckResult:
+    """Leaf descriptions and frontmatter evidence spans meet a minimum floor.
+
+    Two generator faults reached a release unseen: descriptions that read "Use
+    when when ..." (a "When ..." source sentence given a second "Use when"
+    prefix) and frontmatter ``evidence_spans`` copied from tool mentions, so
+    that one sentence such as an import line grounded dozens of unrelated
+    leaves. A description starting "Use when when" fails, and so does any
+    frontmatter evidence span (``evidence_spans`` or ``evidence``) shared by
+    more than ten leaves. Verbatim evidence lines in leaf bodies are quotes the
+    collector takes from the leaf's own paper, which several leaves of one
+    paper may share, and are not counted. The share of leaves with no
+    frontmatter span, and with no evidence of either kind, is reported, not
+    judged.
+    """
+    res = CheckResult(
+        name="leaf_text_floor",
+        scope="leaf skills",
+        required=False,
+        summary=(
+            "No leaf description reads 'Use when when'; no frontmatter evidence "
+            f"span is shared by more than {_MAX_LEAVES_PER_SPAN} leaves."
+        ),
+    )
+    root = Path(collection_dir)
+    doubled: list[str] = []
+    leaves_by_span: dict[str, set[str]] = {}
+    without_spans = 0
+    without_evidence = 0
+    leaves = 0
+    for sk_md in _iter_skill_md(root):
+        leaf = sk_md.parent.relative_to(root).as_posix()
+        try:
+            fm, body = _read_frontmatter(sk_md.read_text(encoding="utf-8"))
+        except (OSError, UnicodeError) as exc:
+            res.counts["missing"] += 1
+            res.add(UNCHECKABLE, f"{leaf}: unreadable ({exc}).", file=leaf)
+            continue
+        leaves += 1
+        if _DOUBLED_USE_WHEN_RE.match(str(fm.get("description") or "")):
+            doubled.append(leaf)
+        spans = {" ".join(span["text"].split()) for span in _collect_evidence_spans(fm, "")}
+        without_spans += not spans
+        without_evidence += not spans and not _parse_evidence_body(body)[0]
+        for text in spans:
+            leaves_by_span.setdefault(text, set()).add(leaf)
+    shared = sorted(
+        (
+            (len(owners), text, sorted(owners))
+            for text, owners in leaves_by_span.items()
+            if len(owners) > _MAX_LEAVES_PER_SPAN
+        ),
+        key=lambda row: (-row[0], row[1]),
+    )
+    res.counts["checked"] = leaves
+    res.counts["failed"] = len(
+        set(doubled) | {owner for _, _, owners in shared for owner in owners}
+    )
+    if doubled:
+        res.add(
+            FAIL,
+            f"{len(doubled)} leaf descriptions start with 'Use when when'.",
+            count=len(doubled),
+            examples=sorted(doubled)[:_FLOOR_EXAMPLES],
+        )
+    if shared:
+        res.add(
+            FAIL,
+            f"{len(shared)} frontmatter evidence spans are each shared by more than "
+            f"{_MAX_LEAVES_PER_SPAN} leaves (the most shared by {shared[0][0]}); "
+            "a span repeated across unrelated leaves grounds none of them.",
+            count=len(shared),
+            examples=[
+                {
+                    "leaves": count,
+                    "characters": len(text),
+                    "sha256": hashlib.sha256(text.encode("utf-8")).hexdigest(),
+                    "first_leaves": owners[:3],
+                }
+                for count, text, owners in shared[:_FLOOR_EXAMPLES]
+            ],
+        )
+    res.coverage = {
+        "leaves": leaves,
+        "leaves_without_evidence_spans": without_spans,
+        "leaves_without_any_evidence": without_evidence,
+    }
+
+    def share(count: int) -> str:
+        return f"{100 * count / leaves if leaves else 0.0:.1f} %"
+
+    res.summary = (
+        f"{res.summary}  ({without_spans} of {leaves} leaves, {share(without_spans)}, "
+        f"carry no frontmatter evidence span; {without_evidence}, "
+        f"{share(without_evidence)}, carry no evidence of either kind)"
+    )
+    return res.finish()
+
+
 def check_unit_closure(collection_dir: Path) -> CheckResult:
     """Check pack index closure and helpers in the collection and its packs."""
     res = CheckResult(
@@ -1718,6 +1827,7 @@ def _policy_snapshot() -> dict:
         "collection_kb_max_bytes": _COLLECTION_KB_MAX_BYTES,
         "allowed_skill_files": sorted(_ALLOWED_SKILL_FILES),
         "not_peer_reviewed_doi_prefixes": list(_NOT_PEER_REVIEWED_DOI_PREFIXES),
+        "max_leaves_per_evidence_span": _MAX_LEAVES_PER_SPAN,
     }
     policy["config_sha256"] = receipt.digest({
         **policy,
@@ -1896,6 +2006,7 @@ def run_gate(
         _readable_check(check_skill_frontmatter, collection_dir),
         _readable_check(check_unit_closure, collection_dir),
         _readable_check(check_peer_review_claim, collection_dir, corpus),
+        _readable_check(check_leaf_text_floor, collection_dir),
         _check_gate_inputs(collection_dir, resolved_corpus),
         binding_check,
     ]
