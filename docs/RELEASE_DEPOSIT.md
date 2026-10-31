@@ -7,6 +7,20 @@ Tool: `scripts/zenodo_deposit.py` (standard library only). Tests:
 `tests/test_zenodo_deposit.py`. The tool never calls the publish action of the
 API, and has no flag that does.
 
+## Order of a release
+
+1. The Zenodo version is made with this tool and published by hand (procedure
+   below).
+2. Its version DOI is recorded in a pull request.
+3. The release tag `<domain>-v<release version>` is pushed after that pull
+   request is merged.
+
+The tag runs `.github/workflows/release.yml`. Its Zenodo step runs only when
+the repository variable `ZENODO_UPLOAD` is `true`, and the variable is unset by
+default, so the tag run makes no Zenodo request. Zenodo keeps one unpublished
+new version per record: a draft made by the workflow would collide with the
+draft made here. Use one deposit path per release.
+
 ## Prerequisites
 
 | Item | Value |
@@ -77,6 +91,10 @@ Run from the repository root, on the commit that carries the release.
    `collections/<domain>/<vN>/CITATION.cff` and in the collection entry of
    `catalogue.jsonld`, in a pull request.
 
+7. Once that pull request is merged, push the release tag on the merged
+   commit. With `ZENODO_UPLOAD` unset, `release.yml` runs the tests and the
+   strict release gate and makes no Zenodo request.
+
 ## What `draft` sends
 
 | Step | Request |
@@ -107,10 +125,11 @@ These are the files `release.yml` bundles.
   is not specified bit for bit, so a different zlib build can give a different
   sha256 for the same tree. Compare hashes from one machine.
 
-`release.yml` differs: it keeps dotfiles (so its archive carries
-`.claude-plugin/plugin.json`), uploads `.cache/leafemb_v<N>.npz` as a second file
-`<domain>-v<N>-leafemb.npz` when present, and publishes when the repository
-variable `ZENODO_PUBLISH` is `true`. This tool does none of these.
+When its Zenodo step is on (`ZENODO_UPLOAD` is `true`), `release.yml` differs:
+it keeps dotfiles (so its archive carries `.claude-plugin/plugin.json`), uploads
+`.cache/leafemb_v<N>.npz` as a second file `<domain>-v<N>-leafemb.npz` when
+present, and publishes when the repository variable `ZENODO_PUBLISH` is `true`.
+This tool does none of these.
 
 ## Metadata handling
 
@@ -138,8 +157,10 @@ per-collection release: the metadata template and the files live under
 `collections/<domain>/<vN>/`, and the snapshot is the whole repository.
 
 The release workflow (`.github/workflows/release.yml`) makes the same kind of
-draft from CI when `ZENODO_TOKEN` is set, and publishes it when `ZENODO_PUBLISH`
-is `true`. It sends the template unchanged, including the `isVersionOf` relation
+draft from CI only when the repository variable `ZENODO_UPLOAD` is `true` and
+`ZENODO_TOKEN` is set, and publishes it when `ZENODO_PUBLISH` is `true`.
+`ZENODO_UPLOAD` is unset by default. The step sends the template unchanged,
+including the `isVersionOf` relation
 that the API vocabulary does not list. That was not exercised against a live
 deposit here. Use the sandbox draft in step 3 to check it before relying on that
 path.

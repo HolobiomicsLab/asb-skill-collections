@@ -5,6 +5,11 @@
   `metabolomics-v0.2.0`) used to build and publish the Python package to PyPI.
   The build and publish jobs now run only on a manual dispatch or on a release
   whose tag starts with `v` and contains no `-v`.
+* release.yml: a collection tag made a production Zenodo draft whenever the
+  ZENODO_TOKEN secret was set, which collides with the draft of
+  scripts/zenodo_deposit.py (Zenodo keeps one unpublished version per record).
+  The upload step now runs only when the repository variable ZENODO_UPLOAD is
+  `true`.
 
 The `if:` conditions are evaluated by `evaluate`, a small reader of the GitHub
 Actions expression syntax these workflows use: string literals, context paths,
@@ -181,6 +186,32 @@ def jobs_that_run(name: str, context: dict) -> set[str]:
     return {job_id for job_id in jobs if runs(job_id)}
 
 
+class _AnyOutput(dict):
+    """Outputs of a step that ran: every output reads as set."""
+
+    def get(self, key, default=None):
+        return "set"
+
+
+def steps_that_run(name: str, job_id: str, context: dict) -> list[dict]:
+    """Steps of one job that run for this context, in order; a step that ran sets its outputs."""
+    context = {**context, "steps": {}}
+    ran = []
+    for step in _workflow(name)["jobs"][job_id]["steps"]:
+        if evaluate(step.get("if"), context):
+            ran.append(step)
+            if step.get("id"):
+                context["steps"][step["id"]] = {"outputs": _AnyOutput()}
+        elif step.get("id"):
+            context["steps"][step["id"]] = {"outputs": {}}
+    return ran
+
+
+def tag_push(tag: str, variables: dict | None = None) -> dict:
+    return {"github": {"event_name": "push", "ref_name": tag, "ref": f"refs/tags/{tag}"},
+            "vars": variables or {}, "inputs": {}}
+
+
 def release_event(tag: str) -> dict:
     return {"github": {"event_name": "release", "ref_name": tag,
                        "event": {"release": {"tag_name": tag}}}}
@@ -242,3 +273,41 @@ def test_releasing_pypi_doc_names_the_tag_guard():
     text = (ROOT / "docs" / "RELEASING_PYPI.md").read_text()
     assert "contains no `-v`" in text
     assert "metabolomics-v0.2.0" in text
+
+
+# --- GAP-057: release.yml makes no Zenodo draft unless ZENODO_UPLOAD is true --
+
+
+def _names(steps: list[dict]) -> list[str]:
+    return [step.get("name", "") for step in steps]
+
+
+@pytest.mark.parametrize("variables", [{}, {"ZENODO_UPLOAD": ""}, {"ZENODO_UPLOAD": "false"},
+                                       {"ZENODO_UPLOAD": "1"}, {"ZENODO_PUBLISH": "true"}])
+def test_a_collection_tag_run_makes_no_zenodo_call_unless_zenodo_upload_is_true(variables):
+    ran = steps_that_run("release.yml", "release", tag_push("metabolomics-v0.2.0", variables))
+    assert any("Release gate" in name for name in _names(ran))
+    for step in ran:
+        text = yaml.safe_dump(step)
+        assert "zenodo.org" not in text, step.get("name")
+        assert "ZENODO_TOKEN" not in text, step.get("name")
+    assert not any("CITATION.cff" in name for name in _names(ran))
+
+
+def test_zenodo_upload_true_turns_the_upload_step_on():
+    ran = steps_that_run("release.yml", "release",
+                         tag_push("metabolomics-v0.2.0", {"ZENODO_UPLOAD": "true"}))
+    assert "zenodo" in [step.get("id") for step in ran]
+
+
+def test_the_zenodo_step_condition_names_the_variable():
+    steps = _workflow("release.yml")["jobs"]["release"]["steps"]
+    (zenodo,) = [step for step in steps if step.get("id") == "zenodo"]
+    assert zenodo["if"] == "vars.ZENODO_UPLOAD == 'true'"
+
+
+def test_release_deposit_doc_states_the_order_and_the_variable():
+    text = (ROOT / "docs" / "RELEASE_DEPOSIT.md").read_text()
+    assert "## Order of a release" in text
+    assert "`ZENODO_UPLOAD`" in text
+    assert "published by hand" in text

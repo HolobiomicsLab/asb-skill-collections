@@ -6,7 +6,8 @@
 #      blocks. promote-collection.yml runs the same gate on `collections/**` pull
 #      requests, which is a different population from "what a tag points at".
 #   3. Call regen_catalogue.py and commit the updated catalogue.jsonld
-#   4. Upload the collection directory to Zenodo (fail-soft if ZENODO_TOKEN missing)
+#   4. Upload the collection directory to Zenodo, only when the repository
+#      variable ZENODO_UPLOAD is `true` (unset by default; see the step)
 #   5. Update CITATION.cff with the minted DOI
 #   6. Trigger mirror-to-hf.yml via workflow_dispatch
 name: Release
@@ -160,7 +161,15 @@ jobs:
           fi
           echo "::notice::Co-author proposal is ADVISORY. Inject reviewed authors with select_release_coauthors.py --apply (CITATION.cff / .zenodo.json) in a PR before tagging."
 
-      - name: Upload to Zenodo (fail-soft if token missing)
+      - name: Upload to Zenodo (only when ZENODO_UPLOAD is true)
+        # Off unless the repository variable ZENODO_UPLOAD is `true`. Zenodo keeps
+        # one unpublished new version per record, so a draft made here collides
+        # with the draft of scripts/zenodo_deposit.py, the documented deposit
+        # path: the version is published by hand first, its DOI recorded in a
+        # pull request, then the tag is pushed (docs/RELEASE_DEPOSIT.md). With
+        # the variable unset, a tag run makes no Zenodo request, and the
+        # CITATION.cff step below is skipped since no DOI is output.
+        if: vars.ZENODO_UPLOAD == 'true'
         id: zenodo
         env:
           ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
