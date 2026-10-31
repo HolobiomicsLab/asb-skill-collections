@@ -313,11 +313,12 @@ therefore nothing for a collection tag to pin. The steps below are kept for **v1
 ship, and one of them has to change first:
 
 1. **Before tagging**, check the indicium version pinned in the release/profile.
-   - Lookup: `agenticsciencebuilder_dev/docs/asbb/RELEASE.yaml` — **this file does not exist**; treat
-     the lookup as unavailable rather than assuming it carries `indicium_version`.
+   - Lookup: the release record kept with the ASB specification (private repository, to be
+     published). It cannot be read from this repository; treat the lookup as unavailable rather than
+     assuming it carries `indicium_version`.
    - Or read the pinned version in the AgenticScienceBuilder codebase.
 
-2. **Pin a commit SHA, not a tag.** `~/git/indicium` has **zero tags**, and its two version strings
+2. **Pin a commit SHA, not a tag.** indicium (measured 2026-09-13) has **zero tags**, and its two version strings
    disagree — `pyproject.toml` says `2.0.0`, the installed distribution reports `1.12.0`. "The tag
    (e.g. `v1.11.0`)" is unproducible; a SHA identifies the schema exactly and is available today.
 
@@ -592,7 +593,7 @@ pytest tests/ -v
 - **Contributing guide:** `CONTRIBUTING.md`
 - **Maintainers guide:** `MAINTAINERS.md`
 - **COI policy:** `COI_POLICY.md`
-- **ASB specification:** `/Users/nothiasl/git/agenticsciencebuilder_dev/docs/asbb/SPEC.md`
+- **ASB specification:** private repository, to be published
 - **Zenodo API docs:** https://developers.zenodo.org/
 - **HuggingFace API docs:** https://huggingface.co/docs/hub/api
 

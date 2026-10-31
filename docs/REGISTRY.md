@@ -731,8 +731,8 @@ The promotion step is manual (move the directory), not automated. This allows:
 
 ## 9. References
 
-- **§Specification:** `/Users/nothiasl/git/agenticsciencebuilder_dev/docs/asbb/SPEC.md` § 6–7 (Distribution & Installation)
-- **§Implementation Plan:** `/Users/nothiasl/git/agenticsciencebuilder_dev/docs/asbb/PLAN.md` § Phase 0–1
+- **§Specification:** the ASB specification (private repository, to be published), § 6–7 (Distribution & Installation)
+- **§Implementation Plan:** the ASB implementation plan (private repository, to be published), § Phase 0–1
 - **§Release gate:** `POLICY-content.md` (authored Phase 0.1)
 - **§Content policies:** `governance/COI_POLICY.md`, `.github/CONTRIBUTING.md`, `LICENSING.md`
 - **§Linked data:** `catalogue.jsonld` context, w3id.org namespaces, indicium `uri-scheme.md`
