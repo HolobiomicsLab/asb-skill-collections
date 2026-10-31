@@ -376,15 +376,15 @@ def test_tier_update_opens_one_bot_branch_per_push():
 RELEASE_WORKFLOWS = ("publish-pypi.yml", "release.yml", "pages.yml",
                      "career-stats-regen.yml", "tier-update.yml")
 PINS = {
-    "actions/checkout": "v6",
-    "actions/setup-python": "v6",
+    "actions/checkout": "v7",
+    "actions/setup-python": "v7",
     "actions/upload-artifact": "v7",
     "actions/download-artifact": "v8",
     "actions/upload-pages-artifact": "v5",
     "actions/deploy-pages": "v5",
     "pypa/gh-action-pypi-publish": "release/v1",
     "actions/configure-pages": "v6",
-    "actions/github-script": "v8",
+    "actions/github-script": "v9",
     "astral-sh/setup-uv": "v7",
 }
 
