@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -61,7 +61,7 @@ jobs:
           echo "Releasing tag=${TAG} -> slug=${SLUG} collection dir v${COLL_VERSION}"
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -113,7 +113,7 @@ jobs:
         # Keep the measurement even when the gate blocked — a failed release is
         # exactly when the report is worth reading.
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: gate-report-${{ steps.tag.outputs.tag }}
           path: collections/${{ steps.tag.outputs.slug }}/v${{ steps.tag.outputs.version }}/gate_report.json

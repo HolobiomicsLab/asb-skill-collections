@@ -16,6 +16,9 @@
   straight to main. They now open a pull request from a bot branch through
   scripts/bot_pull_request.sh (tested in tests/test_bot_pull_request.py), and
   no workflow line that runs git push names main.
+* The five workflows above pinned actions that run on the deprecated Node 20.
+  They now pin the Node 24 majors, and .github/dependabot.yml proposes the
+  remaining updates weekly.
 
 The `if:` conditions are evaluated by `evaluate`, a small reader of the GitHub
 Actions expression syntax these workflows use: string literals, context paths,
@@ -366,3 +369,39 @@ def test_tier_update_opens_one_bot_branch_per_push():
     # tier_update.py increments counters in place: a branch shared across runs
     # would drop the increments of a pull request not merged yet.
     assert 'bot_pull_request.sh "bot/tier-update-${GITHUB_SHA::12}"' in _run_text("tier-update.yml")
+
+
+# --- GAP-140: Node 24 action pins and Dependabot -------------------------------
+
+RELEASE_WORKFLOWS = ("publish-pypi.yml", "release.yml", "pages.yml",
+                     "career-stats-regen.yml", "tier-update.yml")
+PINS = {
+    "actions/checkout": "v6",
+    "actions/setup-python": "v6",
+    "actions/upload-artifact": "v7",
+    "actions/download-artifact": "v8",
+    "actions/upload-pages-artifact": "v5",
+    "actions/deploy-pages": "v5",
+    "pypa/gh-action-pypi-publish": "release/v1",
+}
+
+
+def _uses(name: str) -> list[str]:
+    jobs = _workflow(name)["jobs"]
+    return [step["uses"] for job in jobs.values() for step in job.get("steps", []) if "uses" in step]
+
+
+@pytest.mark.parametrize("name", RELEASE_WORKFLOWS)
+def test_release_workflows_pin_the_node24_majors(name):
+    pinned = [use for use in _uses(name) if use.partition("@")[0] in PINS]
+    assert pinned, name
+    for use in pinned:
+        action, _, ref = use.partition("@")
+        assert ref == PINS[action], f"{name}: {use}"
+
+
+def test_dependabot_proposes_action_updates_weekly():
+    config = yaml.safe_load((ROOT / ".github" / "dependabot.yml").read_text())
+    assert config["version"] == 2
+    assert {"package-ecosystem": "github-actions", "directory": "/",
+            "schedule": {"interval": "weekly"}} in config["updates"]
