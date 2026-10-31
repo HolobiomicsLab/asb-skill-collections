@@ -233,7 +233,7 @@ for col in catalogue.get("collections", []):
 **One Zenodo concept-DOI per collection-release** (locked decision 2026-06-14):
 
 - A **collection-release** is a tagged commit matching `<slug>-v<N>` (e.g., `metabolomics-v1`)
-- On tag, `release.yml` creates a **new Zenodo deposition**, uploads `collections/<slug>/v<N>/`, and mints a **versioned DOI** (e.g., `10.5281/zenodo.1234567`)
+- Before the tag, the maintainer makes a **new version** of the Zenodo record with `scripts/zenodo_deposit.py`, uploads `collections/<slug>/v<N>/`, and publishes it by hand, which mints a **versioned DOI** (e.g., `10.5281/zenodo.1234567`); `release.yml` deposits only when the repository variable `ZENODO_UPLOAD` is `true` (`docs/RELEASE_DEPOSIT.md`)
 - The **concept-DOI** (e.g., `10.5281/zenodo.1234566`) links all versions; the README badge points to the concept
 - Every version's DOI is stored in `CITATION.cff` and the catalogue
 - Indicium exports (claims, SSSOM, PROV, etc.) are attached as **FILES inside the Zenodo deposition**, not separate DOIs

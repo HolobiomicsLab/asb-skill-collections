@@ -74,8 +74,9 @@ job summary — **advisory only**. A maintainer reviews it and injects the agree
 authors via `select_release_coauthors.py --apply` (into `CITATION.cff` +
 `.zenodo.json`, deduped by ORCID) in a normal PR before tagging.
 
-The tagged release then mints a **new version DOI under the stable concept DOI**
-(`release.yml` → Zenodo `newversion`), citing those co-authors. The loop restarts.
+The release then mints a **new version DOI under the stable concept DOI**
+(`scripts/zenodo_deposit.py` → Zenodo `newversion`, published by hand before the
+tag; `docs/RELEASE_DEPOSIT.md`), citing those co-authors. The loop restarts.
 
 ## Design notes
 
