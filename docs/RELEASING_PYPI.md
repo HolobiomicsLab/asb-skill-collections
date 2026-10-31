@@ -3,9 +3,10 @@
 > **Dormant for v0 — do not run this.** Design decision 5 keeps the distribution
 > off PyPI for v0, because the CLI without the corpus it reads is not a working
 > install (see the README's `asbb` section). `publish-pypi.yml` fires only on a
-> published GitHub Release or a manual dispatch, so nothing here happens by
-> accident. This document is the procedure for **v1**, kept current so it is not
-> reconstructed from memory under time pressure.
+> published GitHub Release or a manual dispatch, and on a release it builds and
+> publishes only for a package tag (see "Which releases publish" below), so
+> nothing here happens by accident. This document is the procedure for **v1**,
+> kept current so it is not reconstructed from memory under time pressure.
 
 This is the **Python distribution** release (the `asbb` CLI + the `asb-mcp`
 server). It is separate from a *collection* release (`release.yml` → Zenodo /
@@ -49,8 +50,11 @@ even before the project exists on PyPI ("pending publisher").
 3. Repeat at <https://test.pypi.org/manage/account/publishing/> with
    **Environment name:** `testpypi` (for the dry-run path).
 4. In the GitHub repo → **Settings → Environments**, create environments named
-   `pypi` and `testpypi` (optionally add required reviewers on `pypi` so a human
-   approves each real release).
+   `pypi` and `testpypi`. On `pypi`, add a required reviewer, so a human
+   approves each real release, and a deployment tag rule `v*`, so only a
+   package tag can deploy to it. With that rule, a manual dispatch with
+   `target=pypi` runs on the tag:
+   `gh workflow run publish-pypi.yml --ref v0.2.0 -f target=pypi`.
 
 That's it — no `PYPI_TOKEN` secret is ever added to the repo.
 
@@ -87,6 +91,13 @@ gh run watch
 ```
 > Note: `v0.2.0` is the **package** tag. It will NOT trigger the collection
 > release (`release.yml` only matches `<slug>-v<N>`, e.g. `metabolomics-v0.2.0`).
+
+#### Which releases publish
+A published GitHub Release fires `publish-pypi.yml` whatever its tag. The
+`build` and `publish-pypi` jobs run only when the release tag starts with `v`
+and contains no `-v`, so `v0.2.0` publishes, while a GitHub Release of a
+collection tag such as `metabolomics-v0.2.0` runs the workflow with every job
+skipped. A manual dispatch is not filtered by tag.
 
 ### Path B — from your computer
 ```bash
