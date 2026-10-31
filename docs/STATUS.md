@@ -84,13 +84,14 @@ Measured 2026-10-30, reachability:
 - `marketplace.json` lists 9 plugins (`metabolomics` and 8 packs), all at version 0.1.0.
 
 Measured 2026-10-30, install at CLI level: verified at CLI level with Claude Code
-2.1.304, in-session load not exercised. Two runs, each with `HOME` and
-`CLAUDE_CONFIG_DIR` set to scratch directories; no model session was run.
+2.1.304, in-session load not exercised. Each run set `HOME` and
+`CLAUDE_CONFIG_DIR` to scratch directories; no model session was run.
 
 - `claude plugin marketplace add HolobiomicsLab/asb-skill-collections` exited 0
-  in 19.5 s and in 20.8 s. The clone went over SSH. With SSH given no identity,
-  as for a user without a key, Claude Code printed
-  `SSH clone failed, retrying with HTTPS` and succeeded in 26.2 s.
+  in two runs, in 19.5 s and in 20.8 s; the 20.8 s run recorded that the clone
+  went over SSH. In a further run with SSH given no identity, as for a user
+  without a key, Claude Code printed `SSH clone failed, retrying with HTTPS` and
+  succeeded in 26.2 s.
 - `claude plugin install metabolomics@asb-skill-collections` exited 0 in 2.5 s
   and in 3.9 s, at `e80767838`. The plugin cache held 6,866 files.
 - Disk cost: the marketplace keeps a shallow clone of this repository, 286 MB

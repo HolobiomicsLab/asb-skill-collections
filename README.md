@@ -81,7 +81,7 @@ in a virtual environment):
 ```bash
 git clone https://github.com/HolobiomicsLab/asb-skill-collections
 cd asb-skill-collections
-uv venv -p 3.12 && source .venv/bin/activate && uv pip install pyyaml
+uv venv -p 3.12 --allow-existing && source .venv/bin/activate && uv pip install pyyaml
 python3 -m asb_skill_collections.asbb_cli install metabolomics --runtime agents   # ~/.agents/skills (Codex, Copilot CLI, Gemini CLI)
 python3 -m asb_skill_collections.asbb_cli install --list-runtimes                 # agents (verified), codex, copilot, gemini, claude, cursor, cline, vscode-copilot, --dest DIR (experimental)
 ```
@@ -102,17 +102,17 @@ Install the whole collection, a technique pack, a selection of skills
 without a checkout (`asbb fetch`). Commands, outputs and refusals:
 [docs/partial-install.md](docs/partial-install.md).
 
-| Install | Technique tag | Leaves | On disk |
+| Install | Technique tag | Leaves | On disk (`du`) |
 |---|---|---:|---:|
-| `metabolomics`, the full collection | all | 5,859 | 72 MB |
-| `metabolomics-lc-ms` | `LC-MS` | 2,617 | 29 MB |
-| `metabolomics-ms-generic` | `mass-spectrometry` | 804 | 8.5 MB |
-| `metabolomics-ion-mobility` | `ion-mobility-MS` | 385 | 4.3 MB |
-| `metabolomics-gc-ms` | `GC-MS` | 367 | 4.0 MB |
-| `metabolomics-ms-imaging` | `MS-imaging` | 291 | 3.2 MB |
-| `metabolomics-nmr` | `NMR` | 276 | 2.9 MB |
-| `metabolomics-ce-ms` | `CE-MS` | 113 | 1.4 MB |
-| `metabolomics-direct-infusion` | `direct-infusion-MS` | 97 | 1.1 MB |
+| `metabolomics`, the full collection | all | 5,859 | 72 MiB |
+| `metabolomics-lc-ms` | `LC-MS` | 2,617 | 29 MiB |
+| `metabolomics-ms-generic` | `mass-spectrometry` | 804 | 8.5 MiB |
+| `metabolomics-ion-mobility` | `ion-mobility-MS` | 385 | 4.3 MiB |
+| `metabolomics-gc-ms` | `GC-MS` | 367 | 4.0 MiB |
+| `metabolomics-ms-imaging` | `MS-imaging` | 291 | 3.2 MiB |
+| `metabolomics-nmr` | `NMR` | 276 | 2.9 MiB |
+| `metabolomics-ce-ms` | `CE-MS` | 113 | 1.4 MiB |
+| `metabolomics-direct-infusion` | `direct-infusion-MS` | 97 | 1.1 MiB |
 | a selection, `asbb install --skills a,b,c --collection metabolomics/v2 --runtime agents` | chosen slugs | 10 in the example | 188 KiB |
 | a fetch, `asbb fetch a,b --collection metabolomics/v2 --dest DIR` | chosen slugs | 10 in the example | 112 KiB |
 
@@ -122,7 +122,9 @@ repository, or `python3 -m asb_skill_collections.asbb_cli install <name> --runti
 Their sizes are `du -sk` of the built unit in this repository on 2026-10-31; the
 selection and fetch rows are the 10-skill example of
 [docs/partial-install.md](docs/partial-install.md#sizes), and a fetch also
-downloads the 5.5 MB `skills_index.json`.
+downloads the 5.2 MiB (5,430,046 bytes) `skills_index.json`. `du` counts allocated
+blocks, so the full collection that takes 72 MiB here is the 61 MB of file content
+that docs/partial-install.md reports.
 
 Packs overlap: a skill tagged with several techniques is in several packs, so
 install the full collection or a few packs, not both. The 1,520 technique-agnostic
@@ -251,7 +253,8 @@ frontmatter) that answers *what may I do with the underlying tool?*
 The search tools do not filter by tier. The router tells the agent to prefer `open`
 skills when no tier is requested, and to get confirmation of a permitted (academic or
 noncommercial) use before applying a `noncommercial` one; the `asb-metabolomics`
-meta-skill carries the same acknowledgement step
+meta-skill carries the same acknowledgement step. A technique pack's router carries the
+`noncommercial` confirmation inline but no `open`-first default
 ([LICENSE_TIERS.md](governance/LICENSE_TIERS.md)). Code is
 under [Apache-2.0](LICENSE), collection content under CC-BY-4.0; verbatim quotations
 (`evidence_spans`) are minimal and attributed, and a rights holder may request removal
