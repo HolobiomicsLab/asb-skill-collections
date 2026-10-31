@@ -28,20 +28,25 @@ collection was assembled against.
 
 Examples
 --------
+Paths are relative to the collection root: the directory that holds
+``kb_bundle.json`` and this script's ``bin/`` folder (in Claude Code, the
+installed plugin's ``${CLAUDE_PLUGIN_ROOT}``). Write the root out in full, so
+the commands run from any working directory:
+
     # Prepare the KB(s) for one skill (create + ingest if missing):
-    python scripts/perspicacite_kb_bind.py prepare \
-        --collection collections/metabolomics/v2\
+    python "<collection root>/bin/perspicacite_kb_bind.py" prepare \
+        --collection "<collection root>" \
         --skill metabolomic-data-preprocessing-optimization
 
     # Ask a grounded question against a skill's KB:
-    python scripts/perspicacite_kb_bind.py query \
-        --collection collections/metabolomics/v2 \
+    python "<collection root>/bin/perspicacite_kb_bind.py" query \
+        --collection "<collection root>" \
         --skill metabolomic-data-preprocessing-optimization \
         --question "What normalization methods does the tool evaluate?"
 
     # Resolve grounding for a skill without touching Perspicacité (offline):
-    python scripts/perspicacite_kb_bind.py resolve \
-        --collection collections/metabolomics/v2 --skill <slug>
+    python "<collection root>/bin/perspicacite_kb_bind.py" resolve \
+        --collection "<collection root>" --skill <slug>
 """
 from __future__ import annotations
 

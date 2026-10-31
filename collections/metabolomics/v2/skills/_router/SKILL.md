@@ -54,8 +54,13 @@ skill you need.
 
 ## 1. Search — find the right skill
 
+Every path in the commands below is relative to the collection root: the
+directory that holds this router's `skills/` folder, `bin/` and the indexes (in
+Claude Code, the installed plugin's `${CLAUDE_PLUGIN_ROOT}`). Write the root out
+in full, quoted, so the commands run from any working directory.
+
 ```bash
-python bin/search_skills.py --query "<the user's task>" -k 10
+python "<collection root>/bin/search_skills.py" --query "<the user's task>" -k 10
 ```
 
 Standard library only — no network, no API key. It prints a handful of
@@ -78,7 +83,7 @@ untargeted LC-MS/MS run"*, *"lipidomics from mzML to a feature table"* — a
 composite workflow already chains the right leaves in the right order:
 
 ```bash
-python bin/search_skills.py --target workflows --query "<the user's task>" -k 5
+python "<collection root>/bin/search_skills.py" --target workflows --query "<the user's task>" -k 5
 ```
 
 Each hit prints its stages and the path to `workflows/<slug>/SKILL.md`. Read
@@ -123,13 +128,13 @@ Before trusting a parameter, claim, or default, **ground the skill against the
 paper it was built from**. The mapping skill → source DOI(s) → KB is precomputed
 in **`kb_bundle.json`** (each skill's `kb_slugs` are the SAME `asb-paper-<doi>`
 KBs the collection was assembled against). A running Perspicacité instance plus
-`scripts/perspicacite_kb_bind.py` makes this one command:
+`bin/perspicacite_kb_bind.py` makes this one command:
 
 ```bash
 # auto-create + ingest the skill's KB (paper full text + supplementary info),
 # then ask a grounded, cited question against it:
-python scripts/perspicacite_kb_bind.py query \
-  --collection collections/metabolomics/v2 \
+python "<collection root>/bin/perspicacite_kb_bind.py" query \
+  --collection "<collection root>" \
   --skill <slug> \
   --question "<what you need to verify>"
 ```
