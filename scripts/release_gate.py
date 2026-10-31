@@ -43,6 +43,10 @@ Checks implemented (mapped to the §5 checklist + §6 safety gates):
   6. SKILL FRONTMATTER       - gate 10.  Every SKILL.md, routing scaffolds
                                 included, opens with YAML frontmatter that
                                 parses to a mapping (FAIL, not fail-soft).
+  7. PEER-REVIEW CLAIM       - A corpus with preprint or deposit DOIs
+                                (10.1101, 10.48550, 10.26434, 10.5281) is never
+                                described as peer-reviewed in the manifests,
+                                top-level documents or advertised skills.
 
 Enforcement modes (CONTENT_POLICY.md §7):
   * default (advisory, staged-collections PRs): WARNs and FAILs are reported but
@@ -1579,6 +1583,83 @@ def check_skill_frontmatter(collection_dir: Path) -> CheckResult:
     return res.finish()
 
 
+# DOI prefixes of records that are not journal articles: bioRxiv/medRxiv,
+# arXiv, ChemRxiv preprints and Zenodo deposits.
+_NOT_PEER_REVIEWED_DOI_PREFIXES = ("10.1101/", "10.48550/", "10.26434/", "10.5281/")
+_PEER_REVIEW_CLAIM_RE = re.compile(r"\bpeer[-\s]?reviewed\b", re.IGNORECASE)
+
+
+def _claim_surfaces(collection_dir: Path) -> list[Path]:
+    """The files a collection advertises itself with, not its leaf corpus."""
+    root = Path(collection_dir)
+    surfaces = [
+        root / ".claude-plugin" / "plugin.json",
+        root / "collection.yaml",
+        root / "CITATION.cff",
+        root / ".zenodo.json",
+        *sorted(root.glob("*.md")),
+    ]
+    advertised = root / layout.ADVERTISED_DIRNAME
+    if layout.is_router_shaped(root) and advertised.is_dir():
+        surfaces.extend(sorted(advertised.rglob("SKILL.md")))
+    return [path for path in surfaces if path.is_file() and not path.is_symlink()]
+
+
+def check_peer_review_claim(collection_dir: Path, corpus: dict[str, Any]) -> CheckResult:
+    """A collection whose corpus holds preprints or deposits never says peer-reviewed.
+
+    The generators once described every skill as derived from a peer-reviewed
+    method paper, while corpora include bioRxiv, arXiv and ChemRxiv preprints and
+    Zenodo deposits. The check reads the manifests, top-level documents and
+    advertised skills; the leaf corpus quotes papers and is not a claim.
+    """
+    res = CheckResult(
+        name="peer_review_claim",
+        scope="advertised text files",
+        required=False,
+        summary=(
+            "No advertised file says peer-reviewed when the corpus holds preprint "
+            "or deposit DOIs (10.1101, 10.48550, 10.26434, 10.5281)."
+        ),
+    )
+    not_reviewed = sorted(
+        {
+            doi
+            for paper in corpus.get("papers") or []
+            if isinstance(paper, dict)
+            and paper.get("status", "included") == "included"
+            and (doi := _norm_doi(paper.get("doi"))).startswith(
+                _NOT_PEER_REVIEWED_DOI_PREFIXES
+            )
+        }
+    )
+    res.coverage["not_peer_reviewed_dois"] = len(not_reviewed)
+    if not not_reviewed:
+        return res.finish()
+    root = Path(collection_dir)
+    for path in _claim_surfaces(root):
+        findings_start = len(res.details)
+        rel = path.relative_to(root).as_posix()
+        try:
+            lines = path.read_text(encoding="utf-8").splitlines()
+        except (OSError, UnicodeError) as exc:
+            res.counts["missing"] += 1
+            res.add(UNCHECKABLE, f"{rel}: unreadable ({exc}).", file=rel)
+            continue
+        claims = [n for n, line in enumerate(lines, 1) if _PEER_REVIEW_CLAIM_RE.search(line)]
+        if claims:
+            res.add(
+                FAIL,
+                f"{rel}: says peer-reviewed (line {', '.join(map(str, claims))}) but "
+                f"{len(not_reviewed)} corpus DOIs are preprints or deposits "
+                f"(e.g. {not_reviewed[0]}).",
+                file=rel,
+                lines=claims,
+            )
+        res.record_item(findings_start)
+    return res.finish()
+
+
 def check_unit_closure(collection_dir: Path) -> CheckResult:
     """Check pack index closure and helpers in the collection and its packs."""
     res = CheckResult(
@@ -1635,6 +1716,7 @@ def _policy_snapshot() -> dict:
         "kb_sidecar_max_bytes": _KB_SIDECAR_MAX_BYTES,
         "collection_kb_max_bytes": _COLLECTION_KB_MAX_BYTES,
         "allowed_skill_files": sorted(_ALLOWED_SKILL_FILES),
+        "not_peer_reviewed_doi_prefixes": list(_NOT_PEER_REVIEWED_DOI_PREFIXES),
     }
     policy["config_sha256"] = receipt.digest({
         **policy,
@@ -1812,6 +1894,7 @@ def run_gate(
         _readable_check(check_layout, collection_dir),
         _readable_check(check_skill_frontmatter, collection_dir),
         _readable_check(check_unit_closure, collection_dir),
+        _readable_check(check_peer_review_claim, collection_dir, corpus),
         _check_gate_inputs(collection_dir, resolved_corpus),
         binding_check,
     ]
