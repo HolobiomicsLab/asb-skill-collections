@@ -15,7 +15,7 @@ from pathlib import Path
 import pytest
 import yaml
 
-from scripts import land_candidate, release_gate, router_shape
+from scripts import build_grounding_bundle, land_candidate, release_gate, router_shape
 
 
 PEER_REVIEWED = (
@@ -147,6 +147,18 @@ def test_generated_router_and_marketplace_make_no_peer_review_claim(
     assert _check(unit).status == release_gate.PASS
     assert "peer-reviewed" not in router_shape.ROUTER_TEMPLATE
     assert "peer-reviewed" not in Path(land_candidate.__file__).read_text("utf-8")
+
+
+def test_generated_grounding_doc_makes_no_peer_review_claim(tmp_path: Path) -> None:
+    unit = _collection(tmp_path, ["10.1101/2023.01.01.522000"], NEUTRAL)
+    (unit / "GROUNDING.md").write_text(
+        build_grounding_bundle.render_grounding_doc(unit.name), encoding="utf-8"
+    )
+
+    assert "method paper (journal article or preprint) and its code" in (
+        unit / "GROUNDING.md"
+    ).read_text(encoding="utf-8")
+    assert _check(unit).status == release_gate.PASS
 
 
 def test_the_prefixes_come_from_governance_data() -> None:
