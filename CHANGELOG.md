@@ -55,6 +55,35 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   gate 8 holds each capsule to `crate_problems`, failing on any problem and on
   finding no released capsule rather than passing over zero files. The crates add
   23 MB uncompressed, 1.9 MB compressed.
+- Let `asbb install` take a selection of skills in place of a pack name (#70):
+  `--skills slug[,slug...]`, `--skills-file` (one slug per line) or
+  `--query TEXT --top N`, which reuses the offline selector of `asbb search`.
+  The pack build derives the selection with a slug list as membership and
+  installs it as a managed unit named by `--name` or
+  `<collection>-subset-<8 hex digits>`; uninstall and `--dry-run` work as for
+  packs. Measured on 2026-10-31 with `HOME` in a temporary directory, a 10-skill
+  selection writes 20 files and 145,561 bytes (the install receipt records the
+  destination path, so the total varies with the length of `HOME`).
+  `docs/partial-install.md` gives the full collection (6,870 files) and the
+  lc-ms pack (2,627 files) measured the same way. `build_packs --check` still
+  reports 0 of the 8 declared packs differing.
+- Add `asbb fetch`, which downloads chosen leaves from GitHub at a ref without a
+  checkout, checks them against the remote `skills_index.json`, prints each
+  licence tier and writes `PROVENANCE.json` with the URL and SHA-256 of every
+  file; a ref with a `..` segment is refused before any network read (#70).
+  Tests: 15 in `tests/test_asbb_subset.py`, 12 in `tests/test_asbb_fetch.py`
+  and one more in `tests/test_build_packs.py`.
+- Add `scripts/zenodo_deposit.py` (#69). It builds a deterministic release zip
+  of a collection, prints the deposit plan offline and creates a new-version
+  draft on Zenodo that keeps the metadata the draft inherits. It never calls the
+  publish action; publishing stays a manual step. Tokens are read from
+  `ZENODO_TOKEN` or `ZENODO_SANDBOX_TOKEN` and never printed.
+  `docs/RELEASE_DEPOSIT.md` gives the procedure; 36 tests in
+  `tests/test_zenodo_deposit.py`.
+- Add `assets/brand/`: the ASB logo in nine files (light and dark logo, mark,
+  wordmark, favicon, collections lockup, a 512 px PNG) with `BRAND.md` (#68).
+- Add `docs/STATUS.md`, which keeps the verification caveats of the previous
+  README grouped by surface with their last-verified dates (#68).
 
 ### Changed
 - Make CI gate 1 (LinkML) blocking once its schema is resolvable. It now
@@ -76,6 +105,13 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   51.2% to 12.6% and from 47.2% to 7.7% respectively. `package` stays available
   for one release via `--selector package` / `ASB_SELECTOR_RULE=package` and
   keeps its historical score/slug order unchanged. See `docs/selection.md`.
+- Restructure the README (395 to 235 lines) around install, use, contents,
+  citation and governance (#68). Private companion repositories are named
+  without links, and links to the private AgenticScienceBuilder repository are
+  removed from the README, `docs/REGISTRY.md`, the metabolomics v2 `ABOUT.md`
+  and `.zenodo.json`, `CITATION.cff` and `pyproject.toml`.
+  `scripts/check_advertised_counts.py` reports 139 advertised count claims
+  matching the on-disk census.
 
 ### Fixed
 - Recover missing leaf DOI provenance from the canonical build manifest without replacing DOI provenance already present in the leaf.
