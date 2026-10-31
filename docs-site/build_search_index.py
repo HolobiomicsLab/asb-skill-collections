@@ -360,8 +360,10 @@ def index_tools() -> list[dict]:
 def collection_statuses(labels: list[str]) -> dict[str, str]:
     """Map each '<slug>/v<N>' label to "released" or "staged", as the catalogue does.
 
-    A label is released only when the marketplace serves collections/<label>;
-    anything else, staged-collections/ included, is staged.
+    The status follows the label, not the tree: a label is released when the
+    marketplace serves collections/<label>, and staged otherwise. A
+    staged-collections/<label> tree that shares its label with a released
+    collection is therefore reported as released.
     """
     released = released_collection_dirs(REPO_ROOT)
     return {label: collection_status(f"collections/{label}", released) for label in labels}

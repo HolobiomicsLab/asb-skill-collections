@@ -30,7 +30,7 @@ before building the issue body (same rules as the Python CLI).
 ## Search index
 
 `search.html` performs client-side full-text search via
-[lunr.js](https://lunrjs.org/) (2.3.9, vendored as `vendor/lunr-2.3.9.js`)
+[lunr.js](https://lunrjs.com/) (2.3.9, vendored as `vendor/lunr-2.3.9.js`)
 against a pre-built index at `docs-site/search_index.json`. The index is
 checked into the repo so the site works offline / on Pages without any CI
 step.

@@ -107,7 +107,7 @@ actual `plugins[].name` and `plugins[].source` fields):
 | `plugins[].released_at` | string (ISO 8601) | N | Release timestamp (UTC with Z suffix) |
 | `plugins[].lead_curator` | object | N | Lead curator contact info (name, ORCID, GitHub handle) |
 
-**Regeneration:** Marketplace.json is NOT automatically regenerated; it is **manually curated** alongside catalogue.jsonld. The `regen_catalogue.py` script handles catalogue.jsonld only. A maintainer updates marketplace.json when a collection is ready to be advertised for public install.
+**Regeneration:** Marketplace.json is NOT automatically regenerated; it is **manually curated** alongside catalogue.jsonld. The `regen_catalogue.py` script handles catalogue.jsonld only. A maintainer updates marketplace.json when a collection is ready to be advertised for public install. Because each catalogue entry's `status` and the search index's `collection_status` follow marketplace.json, an edit to marketplace.json is followed in the same commit by `python scripts/regen_catalogue.py` and `python docs-site/build_search_index.py`; otherwise the consistency tests in `validate.yml` and `release.yml` fail.
 
 ### 1.3 Non-OA exclusion rule
 
@@ -255,7 +255,7 @@ A maintainer can prepare the same new-version draft by hand with `scripts/zenodo
 
 ```
 asb-skill-collections/
-├── collections/                  # Released, tagged collections
+├── collections/                  # Versioned collections (released when the marketplace serves them)
 │   ├── metabolomics/
 │   │   └── v1/
 │   │       ├── collection.yaml            # collection metadata + skills/tools lists
