@@ -1,0 +1,22 @@
+# DOI prefixes whose records the release gate treats as not peer reviewed when
+# it checks a collection's advertised files for a "peer-reviewed" claim
+# (scripts/release_gate.py, check peer_review_claim). A collection whose
+# included corpus holds a DOI under one of these prefixes may not describe
+# itself as peer-reviewed.
+#
+# A prefix identifies a registrant, not a work type: 10.1101 also covers Cold
+# Spring Harbor journals. The list only withholds a claim and never admits or
+# excludes source text, so a journal article under one of these prefixes costs
+# the collection the word "peer-reviewed" and nothing else. Pre-print status
+# for licensing is read from the DOI registries (scripts/preprint_license.py),
+# never from this list.
+#
+# Changing this list changes the gate policy (policy.config_sha256 in every
+# gate receipt), so a receipt written before the change no longer verifies.
+version: 1
+
+not_peer_reviewed_doi_prefixes:
+  - "10.1101/"   # bioRxiv and medRxiv
+  - "10.48550/"  # arXiv
+  - "10.26434/"  # ChemRxiv
+  - "10.5281/"   # Zenodo deposits

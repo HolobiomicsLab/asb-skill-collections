@@ -7,8 +7,10 @@ Three subcommands, in the order a maintainer runs them:
            sha256 and size. The zip is deterministic: sorted entries, fixed
            timestamps and modes, no bytecode caches, no dotfiles except
            .zenodo.json.
-  plan     print what a deposit would send (target host, metadata, files) and
-           any metadata key the deposit API would reject. No network.
+  plan     print what a deposit would send (target host, metadata, files),
+           any metadata key the deposit API would reject, and a refusal when
+           the template's creators differ from scripts/release_creators.yaml.
+           No network.
   draft    create a NEW VERSION draft of an existing Zenodo record, replace its
            inherited files with the archive, and set the metadata.
 
@@ -37,11 +39,16 @@ import zipfile
 from dataclasses import dataclass
 from pathlib import Path
 
+import yaml
+
 ZENODO_URL = "https://zenodo.org"
 SANDBOX_URL = "https://sandbox.zenodo.org"
 TOKEN_ENV = "ZENODO_TOKEN"
 SANDBOX_TOKEN_ENV = "ZENODO_SANDBOX_TOKEN"
 METADATA_FILE = ".zenodo.json"
+# The release creators list (owner decision 2026-09-19); the collector writes
+# CITATION.cff authors from it, and the template's creators must equal it.
+CREATORS_FILE = "scripts/release_creators.yaml"
 DEFAULT_OUT_DIR = Path("dist") / "zenodo"
 ZIP_EPOCH = (1980, 1, 1, 0, 0, 0)
 ERROR_BODY_LIMIT = 300
@@ -53,6 +60,15 @@ BUNDLED_FILES = (
     ("scripts/perspicacite_kb_bind.py", "scripts/perspicacite_kb_bind.py"),
     ("scripts/requirements.txt", "scripts/requirements.txt"),
     ("AGENTS.md", "AGENTS.md"),
+)
+# License texts the archive must carry, at their repository paths: LICENSING.md
+# says which license covers which layer, LICENSE is the Apache-2.0 text it points
+# to, and LICENSE_TIERS.md defines the per-skill license tiers. A missing one
+# stops the build. The release workflow bundles the same files.
+LICENSE_FILES = (
+    "LICENSING.md",
+    "LICENSE",
+    "governance/LICENSE_TIERS.md",
 )
 
 # Deposition metadata keys of the Zenodo REST API, copied from
@@ -95,6 +111,7 @@ SOURCE_RECORD_RELATIONS = frozenset({"isVersionOf", "isNewVersionOf"})
 # Metadata the API sets itself; never sent back from a draft.
 READ_ONLY_KEYS = frozenset({"doi", "prereserve_doi"})
 RECORD_ID_PATTERN = re.compile(r"zenodo[./](\d+)")
+ORCID_PATTERN = re.compile(r"\d{4}-\d{4}-\d{4}-\d{3}[\dX]")
 
 
 class ZenodoError(RuntimeError):
@@ -195,6 +212,10 @@ def _archive_members(repo_root: Path, domain: str, version: str):
     for source, target in BUNDLED_FILES:
         if (repo_root / source).is_file():
             members[f"{prefix}/{target}"] = repo_root / source
+    for relative in LICENSE_FILES:
+        if not (repo_root / relative).is_file():
+            raise ZenodoError(f"license text not found: {relative}")
+        members[f"{prefix}/{relative}"] = repo_root / relative
     return sorted(members.items())
 
 
@@ -255,6 +276,65 @@ def _vocabulary_problems(metadata: dict) -> list[str]:
     return problems
 
 
+def _zenodo_creator(entry) -> dict:
+    """Convert one release_creators.yaml entry to the deposit API's creator form."""
+    if not isinstance(entry, dict):
+        raise ZenodoError(f"{CREATORS_FILE}: a creator entry is not a mapping: {entry!r}")
+    if entry.get("name"):
+        return {"name": entry["name"]}
+    if not (entry.get("family") and entry.get("given")):
+        raise ZenodoError(f"{CREATORS_FILE}: a person entry needs family and given: {entry!r}")
+    creator = {"name": f"{entry['family']}, {entry['given']}"}
+    if entry.get("orcid"):
+        creator["orcid"] = str(entry["orcid"]).rstrip("/").rsplit("/", 1)[-1]
+    if entry.get("affiliation"):
+        creator["affiliation"] = entry["affiliation"]
+    return creator
+
+
+def expected_creators(repo_root: Path) -> list[dict]:
+    """Return the creators of scripts/release_creators.yaml as deposit API creators, in order.
+
+    A person becomes `Family, Given` with a bare ORCID iD and the affiliation
+    when given; an entity keeps its name.
+    """
+    path = Path(repo_root) / CREATORS_FILE
+    try:
+        listed = yaml.safe_load(path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        raise ZenodoError(f"{CREATORS_FILE} not found under {repo_root}") from None
+    if not isinstance(listed, dict) or not isinstance(listed.get("creators"), list):
+        raise ZenodoError(f"{CREATORS_FILE} must define a creators list")
+    return [_zenodo_creator(entry) for entry in listed["creators"]]
+
+
+def _is_added_coauthor(creator) -> bool:
+    """True for a person entry of the form scripts/select_release_coauthors.py appends."""
+    return (isinstance(creator, dict)
+            and set(creator) <= {"name", "orcid", "affiliation"}
+            and bool(str(creator.get("name") or "").strip())
+            and bool(ORCID_PATTERN.fullmatch(str(creator.get("orcid") or ""))))
+
+
+def creator_problems(metadata: dict, expected: list[dict]) -> list[str]:
+    """Return a refusal when the template's creators do not start with the release list.
+
+    The release list must come first, unchanged and in order. Further entries
+    are accepted only as persons with a bare ORCID iD, the co-authors that
+    scripts/select_release_coauthors.py --apply appends, each ORCID iD once.
+    """
+    found = metadata.get("creators") or []
+    head, rest = found[:len(expected)], found[len(expected):]
+    orcids = [c.get("orcid") for c in found if isinstance(c, dict) and c.get("orcid")]
+    if (head == expected and all(_is_added_coauthor(c) for c in rest)
+            and len(orcids) == len(set(orcids))):
+        return []
+    return [f"creators differ from {CREATORS_FILE}: the template has "
+            f"{json.dumps(found, ensure_ascii=False)}, the release list gives "
+            f"{json.dumps(expected, ensure_ascii=False)}; only persons with an "
+            "ORCID iD may follow the release list"]
+
+
 def metadata_payload(path: Path, publication_date: str):
     """Read a flat .zenodo.json and return ({"metadata": ...}, dropped lineage relations).
 
@@ -313,17 +393,22 @@ def _host(sandbox):
 
 
 def _prepare(args, out_dir: Path):
-    """Return (host, record id, payload, dropped relations, problems, archive)."""
+    """Return (host, record id, payload, dropped relations, problems, archive, refusals).
+
+    `problems` are reasons the deposit API would reject the metadata;
+    `refusals` are reasons this tool will not deposit it.
+    """
     repo_root = Path(args.repo_root).resolve()
     template = _collection_dir(repo_root, args.domain, args.version) / METADATA_FILE
     payload, dropped = metadata_payload(template, args.publication_date)
     problems = validate_metadata(payload["metadata"])
+    refusals = creator_problems(payload["metadata"], expected_creators(repo_root))
     record = _resolve_record_id(args, template)
     archive = build_archive(repo_root, args.domain, args.version, out_dir)
-    return _host(args.sandbox), record, payload, dropped, problems, archive
+    return _host(args.sandbox), record, payload, dropped, problems, archive, refusals
 
 
-def _describe(host, record, payload, dropped, problems, archive) -> str:
+def _describe(host, record, payload, dropped, problems, archive, refusals) -> str:
     lines = [
         f"target: {host}",
         f"action: new version of record {record}",
@@ -334,15 +419,16 @@ def _describe(host, record, payload, dropped, problems, archive) -> str:
     ]
     lines += [f"relation {name} read from the template and not sent" for name in dropped]
     lines += [f"rejected by the API: {problem}" for problem in problems]
+    lines += [f"refused: {refusal}" for refusal in refusals]
     return "\n".join(lines)
 
 
 def run_plan(args) -> int:
-    """Print the deposit plan without any request; exit 1 when the metadata is rejected."""
+    """Print the deposit plan without any request; exit 1 when the metadata is rejected or refused."""
     with tempfile.TemporaryDirectory() as scratch:
         prepared = _prepare(args, Path(scratch))
         print(_describe(*prepared))
-    return 1 if prepared[4] else 0
+    return 1 if prepared[4] or prepared[6] else 0
 
 
 def run_archive(args) -> int:
@@ -357,9 +443,11 @@ def run_archive(args) -> int:
 def run_draft(args) -> int:
     """Create the new-version draft and print its URL. Never publishes."""
     token = _token(args.sandbox)
-    host, record, template, _, problems, archive = _prepare(args, Path(args.out_dir))
+    host, record, template, _, problems, archive, refusals = _prepare(args, Path(args.out_dir))
     if problems:
         raise ZenodoError("metadata rejected by the API: " + "; ".join(problems))
+    if refusals:
+        raise ZenodoError("; ".join(refusals))
     base = f"{host}/api/deposit/depositions"
     created = _call("newversion", "POST", f"{base}/{record}/actions/newversion", token)
     draft = _call("draft fetch", "GET", created["links"]["latest_draft"], token)

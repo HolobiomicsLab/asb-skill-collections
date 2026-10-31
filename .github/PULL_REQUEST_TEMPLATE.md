@@ -23,7 +23,7 @@
 - [ ] If `is_coauthor: true`: `co_reviewer` block is present and co-reviewer has posted a sign-off comment
 
 ### For new collections
-- [ ] `collection.yaml` validates closed against `SkillCollection` in `asb-schema` >= 0.3.0 — gate 1 blocks once that package is installable, and says it did not run until then
+- [ ] `collection.yaml` validates closed against `SkillCollection` in `asb-schema` >= 0.3.0, installed from PyPI (gate 1 blocks otherwise)
 - [ ] `curator-criteria.yaml` is filled in for the domain
 - [ ] `CITATION.cff` includes all contributors
 - [ ] Every released capsule ships an RO-Crate 1.1 that describes exactly what it holds (gate 8 blocks otherwise)

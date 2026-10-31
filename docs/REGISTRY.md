@@ -233,7 +233,7 @@ for col in catalogue.get("collections", []):
 **One Zenodo concept-DOI per collection-release** (locked decision 2026-06-14):
 
 - A **collection-release** is a tagged commit matching `<slug>-v<N>` (e.g., `metabolomics-v1`)
-- On tag, `release.yml` creates a **new Zenodo deposition**, uploads `collections/<slug>/v<N>/`, and mints a **versioned DOI** (e.g., `10.5281/zenodo.1234567`)
+- Before the tag, the maintainer makes a **new version** of the Zenodo record with `scripts/zenodo_deposit.py`, uploads `collections/<slug>/v<N>/`, and publishes it by hand, which mints a **versioned DOI** (e.g., `10.5281/zenodo.1234567`); `release.yml` deposits only when the repository variable `ZENODO_UPLOAD` is `true` (`docs/RELEASE_DEPOSIT.md`)
 - The **concept-DOI** (e.g., `10.5281/zenodo.1234566`) links all versions; the README badge points to the concept
 - Every version's DOI is stored in `CITATION.cff` and the catalogue
 - Indicium exports (claims, SSSOM, PROV, etc.) are attached as **FILES inside the Zenodo deposition**, not separate DOIs
@@ -518,7 +518,8 @@ separate top-level command, still present, and still a stub.
 > 2026-09-13, when all of the stubs stopped printing on stdout and exiting 0. A
 > command that answers *is this consistent?* — and a health check most of all — must
 > not report success having looked at nothing, because no caller can tell that from a
-> healthy answer. Neither command's `--help` says it is a stub. Whether they follow
+> healthy answer. `asbb --help`, `asbb verify --help` and `asbb doctor --help` mark
+> both as not implemented. Whether they follow
 > `registry` out of the CLI is a separate owner decision; see
 > `governance/CONTENT_POLICY.md` §7.1.
 
@@ -541,13 +542,14 @@ follows.
 | `collection.yaml` schema compliance | Nothing. `layout_packaging` checks the on-disk layout and `unit_closure` that every declared member resolves, and `--catalogue-membership` checks that the catalogue's advertised members exist — none of them validates `collection.yaml` against a schema. `validate.yml` gate 1 validates every manifest closed against `SkillCollection` in `asb-schema` >= 0.3.0 and fails the job when one does not validate. That package is not on PyPI yet, so in CI the step still says it did not run. It used to call `linkml-validate --schema asb_skill_bundle.yaml`, a file that exists nowhere here, so every run failed behind `continue-on-error`; and `asb-schema` 0.2 did not declare seven keys the manifests carry (ten for `metabolomics/v2`). 0.3.0 declares them, and the four manifests validate against it locally. |
 | All `derived_from` DOIs resolve | `provenance_doi_license` checks that each leaf carries a source DOI **or** a repository URL, plus a licence tag. Nothing in this repository resolves a DOI over the network. |
 | RO-Crate metadata validity | `validate.yml` gate 8, blocking, since 2026-09-14. Every released capsule ships the crate its build wrote, pruned at promotion to what the capsule holds (`scripts/release_capsule_truth.py`), and the gate holds each to `crate_problems`: RO-Crate 1.1 context and descriptor, a root `Dataset`, every held file described and listed in `hasPart`, no entity naming a file the capsule does not hold, no absolute filesystem path. The build crates also claim Workflow Run Profile 0.5 but lack its `mainEntity`; the release copy drops that claim rather than ship one nothing checks. `release_gate.py` itself still has no RO-Crate check, and no manifest declares `ro_crate_path`: the crates are per capsule, not per collection. |
-| SKILL.md frontmatter discipline (description length, no marketing terms) | `python scripts/lint_skill_descriptions.py` — a separate script, not part of the gate. |
+| SKILL.md frontmatter discipline (description length, no marketing terms) | `python scripts/lint_skill_descriptions.py`, a separate script, not part of the gate, checks length and wording. The gate's `skill_frontmatter` check fails any SKILL.md, the router included, whose frontmatter is missing, unclosed, unparsable or not a mapping, and `leaf_text_floor` fails leaf descriptions that start "Use when when". |
 | Open-access source tags (if `--require-open-access`) | `access_tier_oa`, which runs unconditionally; `release_gate.py` has no `--require-open-access` flag. |
 
-A strict receipt records thirteen checks: the eight content checks
+A strict receipt records sixteen checks: the eleven content checks
 `access_tier_oa`, `catalogue_membership`, `composite_workflows`,
-`layout_packaging`, `pii_dual_use`, `provenance_doi_license`,
-`strip_verbatim_similarity` and `unit_closure`, and the five that bind the
+`layout_packaging`, `leaf_text_floor`, `peer_review_claim`, `pii_dual_use`,
+`provenance_doi_license`, `skill_frontmatter`, `strip_verbatim_similarity`
+and `unit_closure`, and the five that bind the
 receipt to what it measured — `collection_inventory`, `cut_manifest`,
 `gate_input_files`, `target_binding` and `target_stability`.
 

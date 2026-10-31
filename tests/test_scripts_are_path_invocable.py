@@ -15,6 +15,7 @@ exporting PYTHONPATH.
 
 from __future__ import annotations
 
+import json
 import os
 import pathlib
 import re
@@ -100,6 +101,11 @@ def test_the_release_gate_runs_by_path_without_pythonpath(tmp_path):
     `<collection_dir>/gate_report.json`, which is tracked, so the default left
     every `pytest` run with a timestamp-only diff in the working tree and a real
     change could hide in the noise.
+
+    What is proven is the run, not the verdict: the gate ends with a report
+    whose exit code is the process's. The verdict on this legacy tree belongs
+    to the gate's own tests (it fails leaf_text_floor until regenerated), and
+    an uncaught error also exits 1, so the exit code alone proves nothing.
     """
     report = tmp_path / "gate_report.json"
     proc = subprocess.run(
@@ -107,8 +113,11 @@ def test_the_release_gate_runs_by_path_without_pythonpath(tmp_path):
          "--strict", "--report", str(report)],
         cwd=REPO, env=_clean_env(), capture_output=True, text=True,
     )
-    assert proc.returncode == 0, proc.stderr.strip()[-600:] or proc.stdout.strip()[-600:]
+    assert "Traceback" not in proc.stderr, proc.stderr.strip()[-600:]
     assert report.is_file(), "the gate did not honour --report"
+    written = json.loads(report.read_text(encoding="utf-8"))
+    assert written["exit_code"] == proc.returncode, proc.stdout.strip()[-600:]
+    assert proc.returncode in (0, 1), proc.stdout.strip()[-600:]
 
 
 def test_running_the_gate_leaves_the_tracked_tree_clean():

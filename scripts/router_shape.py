@@ -23,6 +23,8 @@ import re
 import shutil
 from pathlib import Path
 
+import yaml
+
 # Invoked by path (`python scripts/x.py`), only `scripts/` lands on sys.path, so
 # the repo root has to be added before the sibling package can be imported.
 if __package__ in (None, ""):
@@ -71,23 +73,16 @@ GROUND_FROM_DOIS = """## 3. Ground (recommended)
 Before trusting a parameter, threshold or default, verify it against the
 source-paper DOIs of the leaf{source_pointer}.{guide}"""
 
+# The frontmatter is rendered by `router_frontmatter` with yaml.safe_dump, never
+# by string formatting: a description holds free text such as "ASB Genomics: 3246
+# skills", and an unquoted ": " makes the whole frontmatter unparsable.
 ROUTER_TEMPLATE = """---
-name: {router_name}
-description: {description}
-license: CC-BY-4.0
-metadata:
-  skills_count: {count}
-  leaf_dir: leaves
-  retrieval: bin/search_skills.py
-  indexes:
-  - skills_index.json
-schema_version: 0.2.0
----
+{frontmatter}---
 
 # {title} — router
 
-Entry point for **{count:,} evidence-grounded skills**, each distilled from a
-peer-reviewed method paper and its public code repository.
+Entry point for **{count:,} evidence-grounded skills**, each derived from a
+method paper (journal article or preprint) and its code.
 
 ## How this unit is laid out
 
@@ -294,6 +289,27 @@ def _refresh_router_sections(body: str, contract: dict) -> str:
     return rendered
 
 
+def router_frontmatter(router_name: str, description: str, count: int) -> str:
+    """Render the router frontmatter as YAML that parses back to its values."""
+    return yaml.safe_dump(
+        {
+            "name": router_name,
+            "description": description,
+            "license": "CC-BY-4.0",
+            "metadata": {
+                "skills_count": count,
+                "leaf_dir": layout.LEAF_DIRNAME,
+                "retrieval": "bin/search_skills.py",
+                "indexes": ["skills_index.json"],
+            },
+            "schema_version": "0.2.0",
+        },
+        sort_keys=False,
+        allow_unicode=True,
+        width=1000,
+    )
+
+
 def write_router(unit: Path, count: int) -> None:
     """Write the single advertised entry-point skill."""
     contract = unit_contract(unit)
@@ -307,13 +323,15 @@ def write_router(unit: Path, count: int) -> None:
     meta = json.loads((unit / ".claude-plugin" / "plugin.json").read_text())
     name, description = meta["name"], meta["description"]
     title = description.split(".")[0].strip() or name
+    frontmatter = router_frontmatter(
+        f"{name}-router",
+        f"Use when a task needs a skill from {title} — search this unit's "
+        f"{count:,} evidence-grounded skills, then apply and optionally "
+        f"ground the one that fits.",
+        count,
+    )
     body = ROUTER_TEMPLATE.format(
-        router_name=f"{name}-router",
-        description=(
-            f"Use when a task needs a skill from {title} — search this unit's "
-            f"{count:,} evidence-grounded skills, then apply and optionally "
-            f"ground the one that fits."
-        ),
+        frontmatter=frontmatter,
         title=title,
         count=count,
         apply_section=contract["apply_section"],

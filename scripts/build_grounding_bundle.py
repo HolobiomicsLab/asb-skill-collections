@@ -117,8 +117,9 @@ def render_ground_command():
 def render_grounding_doc(unit_name):
     return (
         f"# Grounding — {unit_name}\n\n"
-        "Every skill here is distilled from one peer-reviewed paper (`derived_from` DOI in its "
-        "SKILL.md frontmatter). Grounding is **optional** — skills work without it.\n\n"
+        "Every skill here is derived from a method paper (journal article or preprint) and its "
+        "code (`derived_from` DOI in its SKILL.md frontmatter). Grounding is **optional** — "
+        "skills work without it.\n\n"
         "Two backends (KB-primary, local fallback):\n\n"
         "- **kb (Perspicacité):** RAG over full text + SI, persistent, citable. Needs a server at "
         "`PERSPICACITE_BASE` (default http://127.0.0.1:8000). First use auto-creates + ingests the "

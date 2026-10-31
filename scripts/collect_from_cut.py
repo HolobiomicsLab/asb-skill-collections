@@ -24,6 +24,7 @@ if __package__ in (None, ""):
 
 from scripts import collect_metabolomics_collection as description_writer
 from scripts import release_gate, router_shape, skill_index
+from scripts.recorded_path import recorded_path
 from asb_skill_collections import layout
 
 
@@ -33,6 +34,15 @@ DOI_CAP = release_gate._CUMULATIVE_CAP
 _SLUG_RE = re.compile(r"^[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$")
 _VERSION_RE = re.compile(r"^v([1-9][0-9]*)$")
 _SECTION_RE = re.compile(r"(?m)^## (?P<name>[^\n]+)\s*\n(?P<body>.*?)(?=^## |\Z)", re.S)
+# The single source of a domain's display name. The collection title built from
+# it is written to collection.yaml, plugin.json and CITATION.cff here, and
+# land_candidate.py copies collection.yaml's title into .zenodo.json and the
+# marketplace entry. A slug not listed is title-cased, which is only right
+# when no word in it is an acronym or a hyphenated term.
+DISPLAY_NAMES = {
+    "agentic-ai": "Agentic AI",
+    "multi-omics": "Multi-Omics",
+}
 
 
 class CollectorError(RuntimeError):
@@ -95,6 +105,16 @@ def _stable_unique(values: list[Any]) -> list[Any]:
         if value not in result:
             result.append(value)
     return result
+
+
+def display_name(domain: str) -> str:
+    """Return the display name of a domain slug."""
+    return DISPLAY_NAMES.get(domain) or domain.replace("-", " ").title()
+
+
+def collection_title(domain: str, version: str) -> str:
+    """Return the one title every metadata file of a collection carries."""
+    return f"ASB {display_name(domain)} Skill Collection {version}"
 
 
 def _validate_slug(value: str, label: str = "slug") -> str:
@@ -203,7 +223,13 @@ class QuoteBudget:
         return access_is_strict or reuse_is_strict
 
     def retain(self, text: str, context: dict[str, Any]) -> str:
-        """Return allowed text and receipt every shortening or removal."""
+        """Return allowed text and receipt every shortening or removal.
+
+        The receipt identifies each span by its location, lengths and the
+        SHA-256 of its UTF-8 text, never by the text itself: a removed span was
+        removed because its licence does not allow it to be republished, and a
+        receipt that quoted it would republish it.
+        """
         original = text.strip()
         if not self.applied:
             return original
@@ -220,9 +246,10 @@ class QuoteBudget:
             self.dropped.append(
                 {
                     **record,
-                    "text": original,
-                    "kept_text": kept,
-                    "dropped_text": original[len(kept) :],
+                    "characters": len(original),
+                    "kept_characters": len(kept),
+                    "dropped_characters": len(original) - len(kept),
+                    "sha256": _sha256_bytes(original.encode("utf-8")),
                     "reason": reason,
                 }
             )
@@ -231,8 +258,8 @@ class QuoteBudget:
             self.kept.append(
                 {
                     **record,
-                    "text": kept,
                     "characters": len(kept),
+                    "sha256": _sha256_bytes(kept.encode("utf-8")),
                     "capped": strict,
                 }
             )
@@ -764,8 +791,8 @@ def _documents(
     )
     people = copy.deepcopy(creators["creators"])
     lead_curators = copy.deepcopy(creators["lead_curators"])
-    title_domain = options.domain.replace("-", " ").title()
-    title = f"ASB {title_domain} Skill Collection {options.version}"
+    title_domain = display_name(options.domain)
+    title = collection_title(options.domain, options.version)
     iri = (
         "https://w3id.org/holobiomicslab/asb-skill/collection/"
         f"{options.domain}/{options.version}"
@@ -965,6 +992,7 @@ def _assemble(options: argparse.Namespace) -> tuple[dict[str, bytes], dict[str, 
             "text_field_cap": SPAN_CAP,
             "cumulative_cap": DOI_CAP,
             "order": "sorted leaves, frontmatter then gate-parsed body; sorted tools after leaves",
+            "span_identity": "characters and sha256 of the UTF-8 span; the receipt holds no span text",
             "policy_source": "scripts.release_gate",
             "strict_dois": [doi for doi in policy_dois if budget.strict(doi)],
             "characters_by_doi": dict(sorted(budget.used.items())),
@@ -987,7 +1015,9 @@ def _assemble(options: argparse.Namespace) -> tuple[dict[str, bytes], dict[str, 
         "cut_id": cut_id,
         "domain": options.domain,
         "version": options.version,
-        "builds_root": str(options.builds) if options.builds is not None else None,
+        "builds_root": (
+            recorded_path(options.builds) if options.builds is not None else None
+        ),
         "input_sha256": dict(sorted(digests.items())),
         "output_tree_sha256": _tree_digest(shaped),
         "counts": {

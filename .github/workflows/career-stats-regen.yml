@@ -1,5 +1,6 @@
 # career-stats-regen.yml — rebuilds leaderboard/ files on push to main when reviews
-# or contributors.jsonld change.
+# or contributors.jsonld change, and proposes them to main in a pull request from
+# the bot branch bot/career-stats (nothing here pushes to main).
 name: Career Stats Regen
 
 on:
@@ -11,19 +12,20 @@ on:
       - "contributors.jsonld"
 
 permissions:
-  contents: write
+  contents: write        # push the bot branch
+  pull-requests: write   # open the pull request
 
 jobs:
   regen:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -35,14 +37,13 @@ jobs:
           python scripts/regen_career_stats.py --repo-root .
           echo "Career stats rebuilt"
 
-      - name: Commit updated leaderboard files
+      - name: Propose the updated leaderboard files in a pull request
+        # The regeneration is complete on every run, so one fixed bot branch
+        # carries the latest one and a single pull request from it stays open.
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add leaderboard/
-          if git diff --cached --quiet; then
-            echo "No leaderboard changes to commit"
-          else
-            git commit -m "chore: regen leaderboard stats [skip ci]"
-            git push origin HEAD:main
-          fi
+          bash scripts/bot_pull_request.sh bot/career-stats \
+            "chore: regen leaderboard stats" leaderboard/

@@ -8,6 +8,11 @@ version = "0.2.0"
 description = "CLI + MCP skill-provider and CI helpers for the ASB (AgenticScienceBuilder) skill collections"
 readme = "README.md"
 license = { text = "Apache-2.0" }
+# As in CITATION.cff.
+authors = [
+    { name = "Louis-Félix Nothias" },
+    { name = "AgenticScienceBuilder AI framework (from the scientific literature)" },
+]
 requires-python = ">=3.12"
 keywords = ["scientific-agents", "agent-skills", "metabolomics", "EDAM", "MCP", "AgenticScienceBuilder", "asb"]
 dependencies = [
@@ -28,15 +33,16 @@ Repository = "https://github.com/HolobiomicsLab/asb-skill-collections"
 
 [project.scripts]
 # Thin programmatic surface: `asbb search/get` (offline retrieval over a checkout)
-# + verify/doctor + install for non-Claude runtimes. For Claude Code the
-# canonical collection install is `/plugin install`.
+# + install for non-Claude runtimes. verify and doctor are stubs that exit 1.
+# For Claude Code the canonical collection install is `/plugin install`.
 asbb = "asb_skill_collections.asbb_cli:main"
 # MCP skill-server (needs the [mcp] extra). Any MCP agent can search/fetch skills.
 asb-mcp = "asb_skill_collections.asb_mcp_server:main"
 
 [project.optional-dependencies]
 mcp = [
-    "mcp>=1.2",
+    # mcp 2.x renamed FastMCP to MCPServer; asb-mcp imports FastMCP.
+    "mcp>=1.2,<2",
 ]
 hf = [
     "huggingface_hub>=0.23",

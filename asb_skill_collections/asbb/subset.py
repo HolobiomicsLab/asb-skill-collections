@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import hashlib
 import importlib
+import inspect
 import json
 import re
 import sys
@@ -34,6 +35,10 @@ UNVERSIONED = "unversioned"
 
 class SelectionError(ValueError):
     """A selection that cannot be installed: empty, unknown slugs or a bad name."""
+
+
+class CheckoutMismatch(RuntimeError):
+    """The checkout's pack build predates selections; nothing has been derived."""
 
 
 @dataclass(frozen=True)
@@ -119,6 +124,13 @@ def check_name(name: str, reserved: list[str]) -> None:
         raise SelectionError(f"selection name {name!r} is a marketplace pack; choose another")
 
 
+def _predates(repo: Path) -> CheckoutMismatch:
+    return CheckoutMismatch(
+        f"checkout at {Path(repo).resolve()} predates selection support; "
+        "update it (git pull) or use a matching release"
+    )
+
+
 def _checkout_script(repo: Path, module: str):
     """Import ``scripts.<module>`` from the checkout the selection is drawn from.
 
@@ -129,7 +141,29 @@ def _checkout_script(repo: Path, module: str):
     root = str(Path(repo).resolve())
     if root not in sys.path:
         sys.path.insert(0, root)
-    return importlib.import_module(f"scripts.{module}")
+    try:
+        return importlib.import_module(f"scripts.{module}")
+    except ModuleNotFoundError as exc:
+        if exc.name in ("scripts", f"scripts.{module}"):
+            raise _predates(repo) from exc
+        raise
+
+
+def check_checkout(build_packs, repo: Path) -> None:
+    """Refuse a checkout whose ``build_packs.PackSpec`` cannot select by slug.
+
+    The package and the checkout are versioned apart: a package newer than the
+    checkout it is pointed at (an older clone, an archived release) would call
+    ``PackSpec(slugs=...)`` on a class that takes no such argument and stop
+    with a TypeError. The signature is the contract, so it is what is checked.
+    """
+    spec = getattr(build_packs, "PackSpec", None)
+    try:
+        parameters = inspect.signature(spec).parameters if spec is not None else {}
+    except (TypeError, ValueError):
+        parameters = {}
+    if "slugs" not in parameters:
+        raise _predates(repo)
 
 
 def _write_descriptor(selection: Selection, unit: Path) -> dict:
@@ -160,6 +194,7 @@ def derive(selection: Selection, stage: Path) -> PackRef:
     packs; only the membership differs.
     """
     build_packs = _checkout_script(selection.repo, "build_packs")
+    check_checkout(build_packs, selection.repo)
     grounding = _checkout_script(selection.repo, "build_grounding_bundle")
     router_shape = _checkout_script(selection.repo, "router_shape")
     unit = Path(stage) / selection.name

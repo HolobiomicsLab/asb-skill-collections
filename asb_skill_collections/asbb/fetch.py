@@ -1,12 +1,15 @@
 """Download chosen skills from the published repository, without a checkout.
 
-Each leaf is read from the raw file host at a named ref, together with the
-collection's ``skills_index.json``, which validates the request and supplies
-each skill's licence tier. Files land under ``<dest>/<slug>/`` beside a
-``PROVENANCE.json`` that records where they came from and their SHA-256.
+The named ref is resolved once to a commit through the GitHub commits API, and
+every file is then read from the raw file host at that commit: the leaves,
+together with the collection's ``skills_index.json``, which validates the
+request and supplies each skill's licence tier. Files land under
+``<dest>/<slug>/`` beside a ``PROVENANCE.json`` that records the ref, the commit
+it resolved to, where each file came from and its SHA-256.
 
-Every network read goes through :func:`_request`. Tests pass a transport in its
-place, so nothing else in this module touches the network.
+Every network read goes through :func:`_request`, called as
+``transport(url)`` or ``transport(url, accept=...)``. Tests pass a transport in
+its place, so nothing else in this module touches the network.
 """
 
 from __future__ import annotations
@@ -26,6 +29,11 @@ from ..layout import LEAF_DIRNAME
 REPOSITORY = "HolobiomicsLab/asb-skill-collections"
 REPOSITORY_URL = f"https://github.com/{REPOSITORY}"
 RAW_HOST = "https://raw.githubusercontent.com"
+API_HOST = "https://api.github.com"
+#: Asks the commits API for the bare commit id instead of a JSON document.
+SHA_MEDIA_TYPE = "application/vnd.github.sha"
+#: A full commit id: SHA-1, or SHA-256 for a repository that uses it.
+COMMIT_PATTERN = re.compile(r"[0-9a-f]{40}|[0-9a-f]{64}")
 DEFAULT_REF = "main"
 PROVENANCE_FILE = "PROVENANCE.json"
 PROVENANCE_SCHEMA = "asbb-fetch/1"
@@ -52,9 +60,12 @@ class FetchRequest:
     ref: str = DEFAULT_REF
 
 
-def _request(url: str) -> bytes:
+def _request(url: str, accept: str | None = None) -> bytes:
     """GET one URL and return its body. The only network call in this module."""
-    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    headers = {"User-Agent": USER_AGENT}
+    if accept:
+        headers["Accept"] = accept
+    request = urllib.request.Request(url, headers=headers)
     try:
         with urllib.request.urlopen(request, timeout=TIMEOUT_SECONDS) as response:
             return response.read()
@@ -67,6 +78,39 @@ def _request(url: str) -> bytes:
 def raw_url(ref: str, path: str) -> str:
     """The raw-file URL of one repository path at one ref."""
     return f"{RAW_HOST}/{REPOSITORY}/{urllib.parse.quote(ref, safe='/')}/{path}"
+
+
+def commit_url(ref: str) -> str:
+    """The commits API URL that resolves one ref of the repository."""
+    return f"{API_HOST}/repos/{REPOSITORY}/commits/{urllib.parse.quote(ref, safe='/')}"
+
+
+def resolve_commit(ref: str, transport) -> str:
+    """Return the commit ``ref`` names now, asked once of the commits API.
+
+    A branch moves, so a fetch recorded against ``main`` alone cannot be
+    repeated. Every file is read at the commit returned here, and both the ref
+    and the commit are recorded. A ref that is already a full commit id names
+    itself and is returned without a call, so a pinned fetch does not depend
+    on the API's rate limit.
+    """
+    if COMMIT_PATTERN.fullmatch(ref):
+        return ref
+    url = commit_url(ref)
+    try:
+        body = transport(url, accept=SHA_MEDIA_TYPE)
+    except FetchError as exc:
+        hint = ""
+        if str(exc).endswith(("HTTP 403", "HTTP 429")):
+            hint = (
+                " (the unauthenticated GitHub API allows 60 requests an hour"
+                " per address; retry later, or pass --ref <full commit id>)"
+            )
+        raise FetchError(f"cannot resolve ref {ref!r} to a commit: {exc}{hint}") from exc
+    commit = body.decode("ascii", errors="replace").strip()
+    if not COMMIT_PATTERN.fullmatch(commit):
+        raise FetchError(f"{url}: expected a commit id, got {commit[:80]!r}")
+    return commit
 
 
 def leaf_path(collection: str, slug: str) -> str:
@@ -108,9 +152,9 @@ def _check_destination(request: FetchRequest, dest: Path) -> None:
         )
 
 
-def _license_tiers(request: FetchRequest, transport) -> dict[str, str]:
-    """Read the remote index, refuse unknown slugs, return each slug's tier."""
-    url = raw_url(request.ref, f"collections/{request.collection}/skills_index.json")
+def _license_tiers(request: FetchRequest, commit: str, transport) -> dict[str, str]:
+    """Read the remote index at ``commit``, refuse unknown slugs, return each tier."""
+    url = raw_url(commit, f"collections/{request.collection}/skills_index.json")
     rows = json.loads(transport(url))
     if not isinstance(rows, list):
         raise FetchError(f"{url}: expected a JSON list of skill rows")
@@ -124,11 +168,12 @@ def _license_tiers(request: FetchRequest, transport) -> dict[str, str]:
     return {slug: tiers[slug] or "unrecorded" for slug in request.slugs}
 
 
-def _provenance(request: FetchRequest, tiers: dict, files: dict) -> dict:
+def _provenance(request: FetchRequest, commit: str, tiers: dict, files: dict) -> dict:
     return {
         "schema": PROVENANCE_SCHEMA,
         "repository": REPOSITORY_URL,
         "ref": request.ref,
+        "commit": commit,
         "collection": request.collection,
         "date": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "slugs": list(request.slugs),
@@ -151,15 +196,16 @@ def fetch(request: FetchRequest, dest: Path, transport=None) -> dict:
     dest = Path(dest)
     _check_request(request)
     _check_destination(request, dest)
-    tiers = _license_tiers(request, transport)
+    commit = resolve_commit(request.ref, transport)
+    tiers = _license_tiers(request, commit, transport)
     files = {}
     for slug in request.slugs:
-        url = raw_url(request.ref, leaf_path(request.collection, slug))
+        url = raw_url(commit, leaf_path(request.collection, slug))
         files[f"{slug}/SKILL.md"] = (url, transport(url))
     for rel, (_, body) in files.items():
         (dest / rel).parent.mkdir(parents=True, exist_ok=True)
         (dest / rel).write_bytes(body)
-    provenance = _provenance(request, tiers, files)
+    provenance = _provenance(request, commit, tiers, files)
     (dest / PROVENANCE_FILE).write_text(
         json.dumps(provenance, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )

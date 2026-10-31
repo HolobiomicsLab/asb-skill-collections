@@ -130,7 +130,7 @@ selection metabolomics-subset-349bfa1b: 10 skill(s) from metabolomics/v2
   ms2-spectrum-consolidation                   open
 licence tiers (open, noncommercial, restricted, unknown): https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/governance/LICENSE_TIERS.md
 would copy complete unit to $HOME/.agents/skills/.asbb-units/e50488b958510ec68ffe32a6c9f14e90fe5dad33f13e80f3d86e3410aa695a54
-would write $HOME/.agents/skills/_router
+would write $HOME/.agents/skills/metabolomics-subset-349bfa1b-router
 would install metabolomics-subset-349bfa1b (10 skill(s), 1 advertised entry(ies)) -> $HOME/.agents/skills
 remove with: asbb uninstall metabolomics-subset-349bfa1b --runtime agents
 ```
@@ -149,8 +149,8 @@ untargeted-metabolomics-annotation
 ms2-spectrum-consolidation  # consolidate before matching
 ```
 
-In a fresh destination (two selections cannot share one, see
-[One router per destination](#one-router-per-destination) below), or after
+Beside the first selection (see
+[One router per unit](#one-router-per-unit) below), or after
 `asbb uninstall metabolomics-subset-349bfa1b --runtime agents`:
 
 ```bash
@@ -181,7 +181,8 @@ The router and the snapshot are removed, and the record leaves
 
 ### What is refused
 
-Nothing is written when a selection is refused, and the command exits 1.
+Nothing is written when a selection is refused. The command exits 1, or 2 for
+a checkout older than the package (see [Getting the asbb command](#getting-the-asbb-command)).
 
 | Case | Message |
 |---|---|
@@ -194,25 +195,25 @@ A selection of every skill in the collection (5,859) installs as one
 advertised router over 5,859 leaves; only the router is advertised to the host,
 whatever the selection holds.
 
-### One router per destination
+### One router per unit
 
-Every pack and every selection advertises its router as `_router`. Two of them
-cannot share one destination: with `metabolomics-lc-ms` already installed in
-`$HOME/.agents/skills`, installing a selection there is refused with
-
-```text
-error: $HOME/.agents/skills/_router exists and is not owned by this pack; use --force to overwrite
-```
-
-The same refusal applies between two packs. Install the second one elsewhere
-with `--dest DIR`, or uninstall the first.
+Every pack and every selection ships its router in `skills/_router/`, and the
+installer writes it under the router's frontmatter name, `<unit>-router`:
+`metabolomics-collection-router` for the collection, `metabolomics-nmr-router`
+for a pack, `metabolomics-subset-349bfa1b-router` for the selection above. Two
+units therefore share one destination: with `metabolomics-nmr` installed in
+`$HOME/.agents/skills`, a selection installs beside it, and uninstalling either
+leaves the other in place. A path that is already taken and not owned by the
+unit being installed is still refused, with
+`error: <path> exists and is not owned by this pack; use --force to overwrite`.
 
 ## Fetch without a checkout
 
-`asbb fetch` downloads chosen leaves straight from GitHub. It reads the
-collection's `skills_index.json` at the requested ref to check the slugs and
-read their licence tiers, then fetches each
-`collections/<slug>/vN/leaves/<skill>/SKILL.md` from
+`asbb fetch` downloads chosen leaves straight from GitHub. It resolves the
+requested ref to a commit once, through the GitHub commits API, reads the
+collection's `skills_index.json` at that commit to check the slugs and read
+their licence tiers, then fetches each
+`collections/<slug>/vN/leaves/<skill>/SKILL.md` at the same commit from
 `raw.githubusercontent.com`.
 
 ```bash
@@ -234,8 +235,10 @@ asb-skills/untargeted-metabolomics-annotation/SKILL.md
 ```
 
 `--ref` takes a branch, tag or commit (default `main`). `PROVENANCE.json`
-records the repository, the ref, the collection, the date, the slugs, each
-skill's licence tier, and the URL and SHA-256 of every file written. The leaves
+records the repository, the ref, the commit it resolved to, the collection, the
+date, the slugs, each skill's licence tier, and the URL and SHA-256 of every
+file written. The URLs name the commit, so they keep serving the same bytes
+after the branch moves. The leaves
 are byte-identical to the checkout: all 10 leaves of the selection above,
 fetched from `main`, matched `collections/metabolomics/v2/leaves/` exactly.
 
@@ -248,7 +251,9 @@ today), so the download is about 5.5 MB whether you ask for one skill or ten.
 
 Fetch refuses, before writing anything, a slug the remote index does not list,
 a collection not written as `<slug>/vN`, a ref that is not a plain branch, tag
-or commit name (such as `x/../main`), and a destination that already holds
+or commit name (such as `x/../main`), a ref the GitHub commits API does not
+resolve to a commit (a full commit id is used as given, with no API call), and
+a destination that already holds
 `PROVENANCE.json` or a directory of the same name as a requested skill. Running
 the fetch command above a second time gives:
 
@@ -271,7 +276,10 @@ environment, run from a directory that is not a checkout. There the package
 resolved to the environment's `site-packages`, and the wheel held the
 `asb_skill_collections` package only, not the corpus and not `scripts/`.
 `install` with a selection still needs a checkout: from a package install, pass
-it with `--repo`.
+it with `--repo`. The selection is derived by that checkout's
+`scripts/build_packs.py`, so a checkout older than the installed package is
+refused with exit 2 and `error: checkout at <path> predates selection support;
+update it (git pull) or use a matching release`.
 
 ## Licence tiers
 

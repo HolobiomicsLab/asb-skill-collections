@@ -21,7 +21,7 @@ sys.path.insert(0, str(REPO_ROOT))
 
 from asb_skill_collections.asbb import manifest, subset  # noqa: E402
 from asb_skill_collections.asbb_cli import main  # noqa: E402
-from scripts import build_packs  # noqa: E402
+from scripts import build_grounding_bundle, build_packs  # noqa: E402
 from scripts.stamp_skill_license import stamp_skill  # noqa: E402
 
 DOMAIN = "astronomy"
@@ -127,8 +127,9 @@ def test_a_selection_installs_a_pack_shaped_unit(repo, tmp_path):
     assert sorted(bundle["skills"]) == chosen
     assert (unit / "bin" / "search_skills.py").is_file()
     assert (unit / "bin" / "perspicacite_kb_bind.py").is_file()
-    assert record["entries"] == ["_router"]
-    router = (home / ".agents" / "skills" / "_router" / "SKILL.md").read_text(encoding="utf-8")
+    assert record["entries"] == [f"{name}-router"]
+    router = (home / ".agents" / "skills" / f"{name}-router" / "SKILL.md").read_text(
+        encoding="utf-8")
     assert f"name: {name}-router" in router
     assert "**2 evidence-grounded skills**" in router
 
@@ -233,8 +234,10 @@ def test_a_dry_run_prints_the_writes_and_writes_nothing(repo, tmp_path, capsys):
     assert _install(repo, home, "--skills", "stellar-photometry", "--dry-run") == 0
 
     out = capsys.readouterr().out
+    name = subset.default_name(repo / "collections" / DOMAIN / f"v{VERSION}",
+                               ["stellar-photometry"])
     assert "would copy complete unit to" in out
-    assert f"would write {home.resolve() / '.agents' / 'skills' / '_router'}" in out
+    assert f"would write {home.resolve() / '.agents' / 'skills' / f'{name}-router'}" in out
     assert not (home / ".agents").exists()
     assert manifest.load(home) == {}
 
@@ -247,7 +250,7 @@ def test_uninstall_removes_a_selection(repo, tmp_path):
 
     assert main(["uninstall", name, "--runtime", "agents", "--home", str(home)]) == 0
 
-    assert not (home / ".agents" / "skills" / "_router").exists()
+    assert not (home / ".agents" / "skills" / f"{name}-router").exists()
     assert not unit.exists()
     assert manifest.load(home) == {}
 
@@ -256,7 +259,9 @@ def test_a_selection_of_a_packs_members_derives_that_pack(tmp_path):
     """On the shipped tree: the subset route and the pack build agree.
 
     The smallest declared pack keeps this quick; any pack would do. Only the two
-    files that name the unit differ: its plugin.json and its router.
+    files that name the unit differ: its plugin.json and its router. GROUNDING.md
+    is compared with the current generator instead of the shipped tree: the
+    shipped packs keep the earlier peer-review wording until they are rebuilt.
     """
     declared = []
     for pack_map in build_packs.discover_maps(REPO_ROOT):
@@ -274,8 +279,12 @@ def test_a_selection_of_a_packs_members_derives_that_pack(tmp_path):
 
     assert files(derived) == files(spec.directory)
     naming = {".claude-plugin/plugin.json", "skills/_router/SKILL.md"}
+    regenerated = {"GROUNDING.md"}
     differing = sorted(
-        rel for rel in files(derived) - naming
+        rel for rel in files(derived) - naming - regenerated
         if (derived / rel).read_bytes() != (spec.directory / rel).read_bytes()
     )
     assert differing == []
+    assert (derived / "GROUNDING.md").read_text(encoding="utf-8") == (
+        build_grounding_bundle.render_grounding_doc(derived.name)
+    )

@@ -41,6 +41,8 @@ except (ImportError, PackageNotFoundError):  # running from a checkout
     __version__ = "0.0.0+source"
 
 _TO_BUILD = "(Phase 1.7 stub — not yet implemented)"
+#: What `--help` says of the two stubs, so no reader plans around them.
+_STUB_HELP = "(not implemented; use scripts/release_gate.py --strict)"
 
 
 def _cmd_verify(args: argparse.Namespace) -> int:
@@ -241,6 +243,9 @@ def _install_selection(args, repo, target) -> int:
     with tempfile.TemporaryDirectory(prefix="asbb-selection-") as stage:
         try:
             pack = subset.derive(selection, Path(stage))
+        except subset.CheckoutMismatch as e:
+            print(f"error: {e}", file=sys.stderr)
+            return 2
         except (OSError, ValueError) as e:
             print(f"error: cannot derive the selection: {e}", file=sys.stderr)
             return 1
@@ -302,9 +307,10 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="asbb",
         description=(
-            "asb-skill-collections CLI: verify/doctor utilities + "
-            "install/uninstall for non-Claude runtimes "
-            "(for Claude Code, use /plugin install)."
+            "asb-skill-collections CLI: offline search and get, install and "
+            "uninstall for non-Claude runtimes (for Claude Code, use /plugin "
+            "install), and fetch without a checkout. verify and doctor are not "
+            "implemented; use scripts/release_gate.py --strict."
         ),
     )
     parser.add_argument(
@@ -334,7 +340,12 @@ def build_parser() -> argparse.ArgumentParser:
 
     # asbb verify [target]
     p_verify = sub.add_parser(
-        "verify", help="Validate a collection / catalogue / marketplace."
+        "verify",
+        help=f"Validate a collection / catalogue / marketplace {_STUB_HELP}.",
+        description=(
+            "Not implemented: prints a notice and exits 1 without checking "
+            "anything. Use scripts/release_gate.py --strict instead."
+        ),
     )
     p_verify.add_argument(
         "target",
@@ -346,7 +357,13 @@ def build_parser() -> argparse.ArgumentParser:
 
     # asbb doctor
     p_doctor = sub.add_parser(
-        "doctor", help="Health check: DOI resolution, KB reachability, manifests."
+        "doctor",
+        help=f"Health check: DOI resolution, KB reachability, manifests {_STUB_HELP}.",
+        description=(
+            "Not implemented: prints a notice and exits 1 without checking "
+            "anything. scripts/release_gate.py --strict runs the local checks; "
+            "no asbb command checks DOI resolution or KB reachability."
+        ),
     )
     p_doctor.set_defaults(func=_cmd_doctor)
 

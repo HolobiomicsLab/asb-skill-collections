@@ -63,12 +63,15 @@ def test_a_worktree_checkout_is_an_anchor_too(tmp_path):
     assert report["collection_dir"] == "collections/synthetic/v1"
 
 
-def test_outside_a_checkout_the_path_is_recorded_as_given(tmp_path):
+def test_outside_a_checkout_only_the_final_component_is_recorded(tmp_path):
+    """Candidates are assembled in scratch directories that no checkout holds."""
     collection = _write_collection(tmp_path / "loose")
 
     report = release_gate.run_gate(collection, None, True)
 
-    assert report["collection_dir"] == str(collection.resolve())
+    assert report["collection_dir"] == "loose"
+    assert report["corpus_path"] == "corpus.yaml"
+    assert not ABSOLUTE.search(json.dumps(report))
 
 
 def test_the_verification_still_passes_on_a_relative_receipt(tmp_path):
@@ -89,3 +92,30 @@ def test_no_shipped_receipt_carries_an_absolute_path():
         if hits:
             offenders[str(path.relative_to(ROOT))] = len(hits)
     assert not offenders, f"receipts carry absolute paths: {offenders}"
+
+
+def test_an_unreadable_leaf_is_named_relative_to_the_collection(tmp_path):
+    checkout = tmp_path / "checkout"
+    (checkout / ".git").mkdir(parents=True)
+    collection = _write_collection(checkout / "collections" / "synthetic" / "v1")
+    broken = collection / "leaves" / "broken-operation" / "SKILL.md"
+    broken.parent.mkdir(parents=True)
+    broken.write_bytes(b"---\nname: broken\n---\n\xff\xfe not UTF-8\n")
+
+    release_gate.main([str(collection), "--strict", "--quiet"])
+    text = (collection / "gate_report.json").read_text()
+    report = json.loads(text)
+    unreadable = [
+        detail
+        for check in report["checks"]
+        if check["name"] in {"strip_verbatim_similarity", "pii_dual_use"}
+        for detail in check["details"]
+        if "unreadable" in detail.get("message", "")
+    ]
+
+    assert len(unreadable) == 2
+    assert {detail["file"] for detail in unreadable} == {
+        "leaves/broken-operation/SKILL.md"
+    }
+    assert str(tmp_path.resolve()) not in text
+    assert str(tmp_path) not in text

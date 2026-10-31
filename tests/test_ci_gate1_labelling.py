@@ -17,6 +17,10 @@ declare.
 job when one does not validate. When the schema cannot be resolved, or resolves
 to a version older than 0.3.0, it still says it did not run and exits 0.
 
+`asb-schema` 0.3.0 is on PyPI, so the workflow comments and the PR template say
+the gate blocks and installs the schema from there. They used to call it
+WARN-ONLY until a package that was already published could be installed.
+
 The static tests pin the step's text. The behavioural tests run the step's own
 script with a stand-in `linkml-validate` on PATH, so they need neither linkml nor
 asb-schema and cannot pass vacuously when either is absent.
@@ -106,9 +110,42 @@ def test_header_describes_gate1_as_it_now_behaves():
     header = VALIDATE.read_text().split("name: Validate", 1)[0]
     start = header.index("#   1.")
     entry = header[start:header.index("#   2.", start)]
-    assert "BLOCKING once resolvable" in entry
-    assert "WARN-ONLY until" in entry
+    assert "BLOCKING" in entry
+    assert "WARN-ONLY" not in entry
+    assert "from PyPI" in entry
+    assert "not yet on PyPI" not in entry
     assert "0.3.0" in entry
+
+
+def test_gate1_comment_and_pr_template_say_it_blocks():
+    comment = _gate1_section().split("run: |", 1)[0]
+    assert "BLOCKING" in comment and "from PyPI" in comment
+    assert "Until that package is installable" not in comment
+    template = (ROOT / ".github" / "PULL_REQUEST_TEMPLATE.md").read_text()
+    line = next(row for row in template.splitlines() if "SkillCollection" in row)
+    assert "gate 1 blocks" in line
+    assert "once that package is installable" not in line
+
+
+def _prose(comment: str) -> str:
+    """A YAML comment block as one line of prose."""
+    return re.sub(r"\s*\n\s*#\s*", " ", comment)
+
+
+def test_every_did_not_run_cause_is_named_where_gate1_is_called_blocking():
+    """BLOCKING is unqualified there, so every way the step exits 0 unchecked is named.
+
+    The step has three: linkml absent, schema unresolved or too old, and no
+    manifest at all.
+    """
+    header = VALIDATE.read_text().split("name: Validate", 1)[0]
+    start = header.index("#   1.")
+    entry = _prose(header[start:header.index("#   2.", start)])
+    comment = _prose(_gate1_section().split("run: |", 1)[0])
+    for text in (entry, comment):
+        assert "linkml-validate" in text and "linkml-runtime" in text, text
+        assert "older than 0.3.0" in text, text
+        assert "no collection.yaml exists" in text, text
 
 
 def test_the_schema_gate1_needs_is_not_in_this_repository():

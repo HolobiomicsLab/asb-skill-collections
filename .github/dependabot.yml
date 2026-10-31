@@ -1,0 +1,8 @@
+# Keeps the action pins of .github/workflows current: Dependabot opens a pull
+# request each week for every action with a newer major or minor release.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

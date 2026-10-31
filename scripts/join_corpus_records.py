@@ -26,6 +26,7 @@ from typing import Any
 import yaml
 
 from scripts import license_tier, release_gate
+from scripts.recorded_path import recorded_path
 
 
 SCHEMA = "asb-corpus/1.0"
@@ -550,9 +551,9 @@ def main(argv: list[str] | None = None) -> int:
         json.dumps(
             {
                 "status": "dry-run" if arguments.dry_run else "ok",
-                "outputs": states,
+                "outputs": {recorded_path(path): state for path, state in states.items()},
                 "summary": corpus["summary"],
-                "receipt": str(receipt_path),
+                "receipt": recorded_path(receipt_path),
             },
             indent=2,
             sort_keys=True,

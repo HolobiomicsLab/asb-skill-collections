@@ -3,9 +3,25 @@
 Maintainer procedure. It prepares a new version of an existing Zenodo record up
 to a draft. Publishing is a manual step in the Zenodo web interface.
 
-Tool: `scripts/zenodo_deposit.py` (standard library only). Tests:
-`tests/test_zenodo_deposit.py`. The tool never calls the publish action of the
-API, and has no flag that does.
+Tool: `scripts/zenodo_deposit.py` (standard library and PyYAML, a dependency
+of the package). Tests: `tests/test_zenodo_deposit.py`,
+`tests/test_zenodo_deposit_bundle.py` and
+`tests/test_zenodo_deposit_creators.py`. The tool never calls the publish
+action of the API, and has no flag that does.
+
+## Order of a release
+
+1. The Zenodo version is made with this tool and published by hand (procedure
+   below).
+2. Its version DOI is recorded in a pull request.
+3. The release tag `<domain>-v<release version>` is pushed after that pull
+   request is merged.
+
+The tag runs `.github/workflows/release.yml`. Its Zenodo step runs only when
+the repository variable `ZENODO_UPLOAD` is `true`, and the variable is unset by
+default, so the tag run makes no Zenodo request. Zenodo keeps one unpublished
+new version per record: a draft made by the workflow would collide with the
+draft made here. Use one deposit path per release.
 
 ## Prerequisites
 
@@ -44,7 +60,10 @@ Run from the repository root, on the commit that carries the release.
    ```
 
    Check the target host, the record id, the metadata and the file list. The
-   command exits 1 and prints `rejected by the API:` for each problem.
+   command exits 1 and prints `rejected by the API:` for each problem, and
+   `refused:` when the template's creators do not start with
+   `scripts/release_creators.yaml` (see Metadata handling). `draft` stops on the same conditions
+   before any request.
 
 3. Make a sandbox draft first. The sandbox has no copy of the production record.
    Create and publish a small test record in the sandbox by hand, then pass its
@@ -75,7 +94,15 @@ Run from the repository root, on the commit that carries the release.
 
 6. Record the new version DOI in the `doi:` field of
    `collections/<domain>/<vN>/CITATION.cff` and in the collection entry of
-   `catalogue.jsonld`, in a pull request.
+   `catalogue.jsonld`, in a pull request. `CITATION.cff` is bound by the
+   collection's gate receipt, so regenerate the receipt in the same pull
+   request with `python scripts/release_gate.py collections/<domain>/<vN> --strict`,
+   in an environment where the AgenticScienceBuilder package is not importable
+   (see the receipt job of `validate.yml`); otherwise that job fails.
+
+7. Once that pull request is merged, push the release tag on the merged
+   commit. With `ZENODO_UPLOAD` unset, `release.yml` runs the tests and the
+   strict release gate and makes no Zenodo request.
 
 ## What `draft` sends
 
@@ -95,8 +122,11 @@ again reuses it and replaces its files. Discard a draft in the web interface.
 
 The archive holds `collections/<domain>/<vN>/` under the prefix `<domain>/<vN>/`,
 plus three files bundled so the deposit runs grounding on its own:
-`scripts/perspicacite_kb_bind.py`, `scripts/requirements.txt` and `AGENTS.md`.
-These are the files `release.yml` bundles.
+`scripts/perspicacite_kb_bind.py`, `scripts/requirements.txt` and `AGENTS.md`,
+and the license texts at their repository paths: `LICENSING.md` (which license
+covers which layer), `LICENSE` (the Apache-2.0 text) and
+`governance/LICENSE_TIERS.md` (the per-skill license tiers). A missing license
+text stops the build. These are the files `release.yml` bundles.
 
 - Entries are sorted by name. Timestamps are fixed to 1980-01-01. File modes are
   `0755` for files with the user execute bit and `0644` otherwise.
@@ -107,10 +137,11 @@ These are the files `release.yml` bundles.
   is not specified bit for bit, so a different zlib build can give a different
   sha256 for the same tree. Compare hashes from one machine.
 
-`release.yml` differs: it keeps dotfiles (so its archive carries
-`.claude-plugin/plugin.json`), uploads `.cache/leafemb_v<N>.npz` as a second file
-`<domain>-v<N>-leafemb.npz` when present, and publishes when the repository
-variable `ZENODO_PUBLISH` is `true`. This tool does none of these.
+When its Zenodo step is on (`ZENODO_UPLOAD` is `true`), `release.yml` differs:
+it keeps dotfiles (so its archive carries `.claude-plugin/plugin.json`), uploads
+`.cache/leafemb_v<N>.npz` as a second file `<domain>-v<N>-leafemb.npz` when
+present, and publishes when the repository variable `ZENODO_PUBLISH` is `true`.
+This tool does none of these.
 
 ## Metadata handling
 
@@ -127,6 +158,7 @@ under `metadata`; the tool wraps it.
 | Inherited metadata | the draft starts from the previous record. Keys it carries that the template lacks, such as `communities` and `language`, are kept and listed in the output. The template wins on every key it has. `doi` and `prereserve_doi` are never sent. `plan` makes no request and cannot show inherited keys |
 | `publication_date` | set to today (`--publication-date` overrides) when the template has none, so the draft does not keep the previous version's date |
 | `creators[].name` | the API documents the form `Family name, Given names`. Entity names such as a community or a lab are sent as written, not in that form |
+| `creators` | must start with `scripts/release_creators.yaml`, unchanged and in order: a person entry as `Family, Given` with its bare ORCID iD and affiliation when listed, an entity entry by its name. Entries after the list are accepted only as persons with a bare ORCID iD, each iD once: the co-authors that `scripts/select_release_coauthors.py --apply` appends (see `docs/CURATION_CALL.md`). Any other difference is refused by `plan` and `draft` |
 
 ## Alternative: GitHub-Zenodo integration
 
@@ -138,8 +170,13 @@ per-collection release: the metadata template and the files live under
 `collections/<domain>/<vN>/`, and the snapshot is the whole repository.
 
 The release workflow (`.github/workflows/release.yml`) makes the same kind of
-draft from CI when `ZENODO_TOKEN` is set, and publishes it when `ZENODO_PUBLISH`
-is `true`. It sends the template unchanged, including the `isVersionOf` relation
+draft from CI only when the repository variable `ZENODO_UPLOAD` is `true` and
+`ZENODO_TOKEN` is set, and publishes it when `ZENODO_PUBLISH` is `true`.
+`ZENODO_UPLOAD` is unset by default. Before its first request the step stops
+when a license text is missing or when the creators of a checked-in
+`.zenodo.json` do not start with `scripts/release_creators.yaml`, by the rule
+of `plan` and `draft`. It then sends the template unchanged,
+including the `isVersionOf` relation
 that the API vocabulary does not list. That was not exercised against a live
 deposit here. Use the sandbox draft in step 3 to check it before relying on that
 path.

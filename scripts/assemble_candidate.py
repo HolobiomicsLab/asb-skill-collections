@@ -21,6 +21,7 @@ if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from asb_skill_collections import layout
+from scripts.recorded_path import recorded_path
 
 
 REPO = Path(__file__).resolve().parent.parent
@@ -178,7 +179,7 @@ def _is_within(path: Path, parent: Path) -> bool:
 
 def _validate_options(options: argparse.Namespace) -> None:
     """Validate and normalize every non-receipt driver input."""
-    options.view_label = str(options.cut)
+    options.view_label = recorded_path(options.cut)
     for name in ("asb_commit", "tooling_commit", "corpus_commit"):
         _validate_commit(getattr(options, name), name.replace("_", "-"))
     if not DOMAIN_RE.fullmatch(options.domain):

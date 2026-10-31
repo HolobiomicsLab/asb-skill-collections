@@ -40,6 +40,18 @@ Checks implemented (mapped to the §5 checklist + §6 safety gates):
                                 every ``collection.yaml`` reconciles its counts
                                 and advertised members with the leaf/tool files
                                 and any indexes the collection ships.
+  6. SKILL FRONTMATTER       - gate 10.  Every SKILL.md, routing scaffolds
+                                included, opens with YAML frontmatter that
+                                parses to a mapping (FAIL, not fail-soft).
+  7. PEER-REVIEW CLAIM       - A corpus with preprint or deposit DOIs (the
+                                prefixes in governance/peer_review_claim.yaml)
+                                is never described as peer-reviewed in the
+                                manifests, top-level documents or advertised
+                                skills.
+  8. LEAF TEXT FLOOR         - No leaf description starts "Use when when", and
+                                no frontmatter evidence span is shared by more
+                                than ten leaves; the share of leaves with no
+                                span is reported.
 
 Enforcement modes (CONTENT_POLICY.md §7):
   * default (advisory, staged-collections PRs): WARNs and FAILs are reported but
@@ -68,6 +80,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import sys
@@ -88,6 +101,7 @@ if __package__ in (None, ""):
 from asb_skill_collections import layout
 from scripts import unit_closure
 from scripts import release_receipt as receipt
+from scripts.recorded_path import recorded_path
 
 try:
     import yaml
@@ -164,7 +178,7 @@ from scripts.pii_config import (  # noqa: E402
 _NGRAM_JACCARD_THRESHOLD = 0.30  # >0.30 3-gram Jaccard overlap → flag
 _SIMILARITY_RATIO_THRESHOLD = 0.92  # SequenceMatcher ratio proxy for cosine
 _GATE_REPORT_SCHEMA = "asbb-release-gate/1.1"
-_GATE_POLICY_VERSION = "asbb-content-gate/1.3"
+_GATE_POLICY_VERSION = "asbb-content-gate/1.4"
 _DIAGNOSTIC_SCOPE = "diagnostic run, not a release verification"
 
 
@@ -780,7 +794,8 @@ def check_strip_verbatim(
             text = sk_md.read_text(encoding="utf-8")
         except (OSError, UnicodeError) as exc:
             res.coverage["missing_files"] += 1
-            res.add(UNCHECKABLE, f"{sk_md}: unreadable ({exc}).", file=str(sk_md))
+            rel = str(sk_md.relative_to(collection_dir))
+            res.add(UNCHECKABLE, f"{rel}: unreadable ({exc}).", file=rel)
             continue
         res.coverage["inspected_files"] += 1
         fm, body = _read_frontmatter(text)
@@ -929,7 +944,8 @@ def check_pii_dual_use(
             text = sk_md.read_text(encoding="utf-8")
         except (OSError, UnicodeError) as exc:
             res.coverage["missing_files"] += 1
-            res.add(UNCHECKABLE, f"{sk_md}: unreadable ({exc}).", file=str(sk_md))
+            rel = str(sk_md.relative_to(collection_dir))
+            res.add(UNCHECKABLE, f"{rel}: unreadable ({exc}).", file=rel)
             continue
         res.coverage["inspected_files"] += 1
         fm, body = _read_frontmatter(text)
@@ -1523,6 +1539,268 @@ def check_layout(
     return res
 
 
+def _frontmatter_error(text: str) -> str | None:
+    """Why a SKILL.md frontmatter block is unusable, or None when it parses."""
+    if not text.startswith("---"):
+        return "no YAML frontmatter block"
+    m = re.match(r"^---\n(.*?)\n---\n?(.*)\Z", text, re.DOTALL)
+    if not m:
+        return "the frontmatter block is not closed by a --- line"
+    try:
+        value = yaml.safe_load(m.group(1))
+    except yaml.YAMLError as exc:
+        problem = getattr(exc, "problem", None) or type(exc).__name__
+        mark = getattr(exc, "problem_mark", None)
+        where = f" (frontmatter line {mark.line + 1})" if mark is not None else ""
+        return f"the frontmatter does not parse as YAML: {problem}{where}"
+    if not isinstance(value, dict):
+        return "the frontmatter is not a YAML mapping"
+    return None
+
+
+def check_skill_frontmatter(collection_dir: Path) -> CheckResult:
+    """Every SKILL.md, routing scaffolds included, opens with parsable frontmatter.
+
+    A plugin host reads each advertised skill's name and description from this
+    block. ``_read_frontmatter`` stays fail-soft for the content checks, so an
+    unparsable block reads there as an empty mapping: a router whose description
+    held an unquoted ": " passed every other check while no host could load it.
+    Routing scaffolds in ``_``-prefixed directories are checked here even though
+    the provenance and verbatim checks skip them.
+    """
+    res = CheckResult(
+        name="skill_frontmatter",
+        gates=[10],
+        hard_gate=True,
+        scope="SKILL.md files",
+        required=False,
+        summary="Every SKILL.md, routing scaffolds included, has YAML frontmatter that parses to a mapping.",
+    )
+    root = Path(collection_dir)
+    for sk_md in layout.iter_skill_md(root, include_infrastructure=True):
+        findings_start = len(res.details)
+        rel = sk_md.relative_to(root).as_posix()
+        try:
+            error = _frontmatter_error(sk_md.read_text(encoding="utf-8"))
+        except (OSError, UnicodeError) as exc:
+            res.counts["missing"] += 1
+            res.add(UNCHECKABLE, f"{rel}: unreadable ({exc}).", file=rel)
+            continue
+        if error:
+            res.add(FAIL, f"{rel}: {error}.", file=rel)
+        res.record_item(findings_start)
+    return res.finish()
+
+
+_PEER_REVIEW_CLAIM_CONFIG = (
+    Path(__file__).resolve().parent.parent / "governance" / "peer_review_claim.yaml"
+)
+
+
+def _load_not_peer_reviewed_prefixes(path: Path = _PEER_REVIEW_CLAIM_CONFIG) -> tuple[str, ...]:
+    """DOI prefixes of records that are not journal articles, from governance data.
+
+    The list lives in governance/peer_review_claim.yaml, beside the other
+    registry maps, so that no DOI literal sits in general code.
+    """
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    prefixes = data.get("not_peer_reviewed_doi_prefixes") if isinstance(data, dict) else None
+    if not prefixes or not all(
+        isinstance(prefix, str) and prefix.endswith("/") for prefix in prefixes
+    ):
+        raise ValueError(
+            f"{path.name}: not_peer_reviewed_doi_prefixes must be a non-empty list "
+            "of DOI prefixes ending in '/'"
+        )
+    return tuple(prefix.lower() for prefix in prefixes)
+
+
+_NOT_PEER_REVIEWED_DOI_PREFIXES = _load_not_peer_reviewed_prefixes()
+_PEER_REVIEW_CLAIM_RE = re.compile(r"\bpeer[-\s]?reviewed\b", re.IGNORECASE)
+
+
+def _claim_surfaces(collection_dir: Path) -> list[Path]:
+    """The files a collection advertises itself with, not its leaf corpus."""
+    root = Path(collection_dir)
+    surfaces = [
+        root / ".claude-plugin" / "plugin.json",
+        root / "collection.yaml",
+        root / "CITATION.cff",
+        root / ".zenodo.json",
+        *sorted(root.glob("*.md")),
+    ]
+    advertised = root / layout.ADVERTISED_DIRNAME
+    if layout.is_router_shaped(root) and advertised.is_dir():
+        surfaces.extend(sorted(advertised.rglob("SKILL.md")))
+    return [path for path in surfaces if path.is_file() and not path.is_symlink()]
+
+
+def check_peer_review_claim(collection_dir: Path, corpus: dict[str, Any]) -> CheckResult:
+    """A collection whose corpus holds preprints or deposits never says peer-reviewed.
+
+    The generators once described every skill as derived from a peer-reviewed
+    method paper, while corpora include bioRxiv, arXiv and ChemRxiv preprints and
+    Zenodo deposits. The check reads the manifests, top-level documents and
+    advertised skills; the leaf corpus quotes papers and is not a claim.
+
+    Any line naming "peer-reviewed" fails, negated or qualified forms such as
+    "not peer-reviewed" included, so text over such a corpus describes its
+    sources without the word. The repository marketplace file sits outside the
+    collection directory and is not read here.
+    """
+    res = CheckResult(
+        name="peer_review_claim",
+        scope="advertised text files",
+        required=False,
+        summary=(
+            "No advertised file says peer-reviewed when the corpus holds preprint "
+            "or deposit DOIs ("
+            + ", ".join(prefix.rstrip("/") for prefix in _NOT_PEER_REVIEWED_DOI_PREFIXES)
+            + ")."
+        ),
+    )
+    not_reviewed = sorted(
+        {
+            doi
+            for paper in corpus.get("papers") or []
+            if isinstance(paper, dict)
+            and paper.get("status", "included") == "included"
+            and (doi := _norm_doi(paper.get("doi"))).startswith(
+                _NOT_PEER_REVIEWED_DOI_PREFIXES
+            )
+        }
+    )
+    res.coverage["not_peer_reviewed_dois"] = len(not_reviewed)
+    if not not_reviewed:
+        return res.finish()
+    root = Path(collection_dir)
+    for path in _claim_surfaces(root):
+        findings_start = len(res.details)
+        rel = path.relative_to(root).as_posix()
+        try:
+            lines = path.read_text(encoding="utf-8").splitlines()
+        except (OSError, UnicodeError) as exc:
+            res.counts["missing"] += 1
+            res.add(UNCHECKABLE, f"{rel}: unreadable ({exc}).", file=rel)
+            continue
+        claims = [n for n, line in enumerate(lines, 1) if _PEER_REVIEW_CLAIM_RE.search(line)]
+        if claims:
+            res.add(
+                FAIL,
+                f"{rel}: says peer-reviewed (line {', '.join(map(str, claims))}) but "
+                f"{len(not_reviewed)} corpus DOIs are preprints or deposits "
+                f"(e.g. {not_reviewed[0]}).",
+                file=rel,
+                lines=claims,
+            )
+        res.record_item(findings_start)
+    return res.finish()
+
+
+_DOUBLED_USE_WHEN_RE = re.compile(r"^\s*use\s+when\s+when(?:ning)?\b", re.IGNORECASE)
+_MAX_LEAVES_PER_SPAN = 10
+_FLOOR_EXAMPLES = 20
+
+
+def check_leaf_text_floor(collection_dir: Path) -> CheckResult:
+    """Leaf descriptions and frontmatter evidence spans meet a minimum floor.
+
+    Two generator faults reached a release unseen: descriptions that read "Use
+    when when ..." (a "When ..." source sentence given a second "Use when"
+    prefix, or its glued form "Use when whenning ...") and frontmatter ``evidence_spans`` copied from tool mentions, so
+    that one sentence such as an import line grounded dozens of unrelated
+    leaves. A description starting "Use when when" fails, and so does any
+    frontmatter evidence span (``evidence_spans`` or ``evidence``) shared by
+    more than ten leaves. Verbatim evidence lines in leaf bodies are quotes the
+    collector takes from the leaf's own paper, which several leaves of one
+    paper may share, and are not counted. The share of leaves with no
+    frontmatter span, and with no evidence of either kind, is reported, not
+    judged.
+    """
+    res = CheckResult(
+        name="leaf_text_floor",
+        scope="leaf skills",
+        required=False,
+        summary=(
+            "No leaf description reads 'Use when when'; no frontmatter evidence "
+            f"span is shared by more than {_MAX_LEAVES_PER_SPAN} leaves."
+        ),
+    )
+    root = Path(collection_dir)
+    doubled: list[str] = []
+    leaves_by_span: dict[str, set[str]] = {}
+    without_spans = 0
+    without_evidence = 0
+    leaves = 0
+    for sk_md in _iter_skill_md(root):
+        leaf = sk_md.parent.relative_to(root).as_posix()
+        try:
+            fm, body = _read_frontmatter(sk_md.read_text(encoding="utf-8"))
+        except (OSError, UnicodeError) as exc:
+            res.counts["missing"] += 1
+            res.add(UNCHECKABLE, f"{leaf}: unreadable ({exc}).", file=leaf)
+            continue
+        leaves += 1
+        if _DOUBLED_USE_WHEN_RE.match(str(fm.get("description") or "")):
+            doubled.append(leaf)
+        spans = {" ".join(span["text"].split()) for span in _collect_evidence_spans(fm, "")}
+        without_spans += not spans
+        without_evidence += not spans and not _parse_evidence_body(body)[0]
+        for text in spans:
+            leaves_by_span.setdefault(text, set()).add(leaf)
+    shared = sorted(
+        (
+            (len(owners), text, sorted(owners))
+            for text, owners in leaves_by_span.items()
+            if len(owners) > _MAX_LEAVES_PER_SPAN
+        ),
+        key=lambda row: (-row[0], row[1]),
+    )
+    res.counts["checked"] = leaves
+    res.counts["failed"] = len(
+        set(doubled) | {owner for _, _, owners in shared for owner in owners}
+    )
+    if doubled:
+        res.add(
+            FAIL,
+            f"{len(doubled)} leaf descriptions start with 'Use when when'.",
+            count=len(doubled),
+            examples=sorted(doubled)[:_FLOOR_EXAMPLES],
+        )
+    if shared:
+        res.add(
+            FAIL,
+            f"{len(shared)} frontmatter evidence spans are each shared by more than "
+            f"{_MAX_LEAVES_PER_SPAN} leaves (the most shared by {shared[0][0]}); "
+            "a span repeated across unrelated leaves grounds none of them.",
+            count=len(shared),
+            examples=[
+                {
+                    "leaves": count,
+                    "characters": len(text),
+                    "sha256": hashlib.sha256(text.encode("utf-8")).hexdigest(),
+                    "first_leaves": owners[:3],
+                }
+                for count, text, owners in shared[:_FLOOR_EXAMPLES]
+            ],
+        )
+    res.coverage = {
+        "leaves": leaves,
+        "leaves_without_evidence_spans": without_spans,
+        "leaves_without_any_evidence": without_evidence,
+    }
+
+    def share(count: int) -> str:
+        return f"{100 * count / leaves if leaves else 0.0:.1f} %"
+
+    res.summary = (
+        f"{res.summary}  ({without_spans} of {leaves} leaves, {share(without_spans)}, "
+        f"carry no frontmatter evidence span; {without_evidence}, "
+        f"{share(without_evidence)}, carry no evidence of either kind)"
+    )
+    return res.finish()
+
+
 def check_unit_closure(collection_dir: Path) -> CheckResult:
     """Check pack index closure and helpers in the collection and its packs."""
     res = CheckResult(
@@ -1579,6 +1857,8 @@ def _policy_snapshot() -> dict:
         "kb_sidecar_max_bytes": _KB_SIDECAR_MAX_BYTES,
         "collection_kb_max_bytes": _COLLECTION_KB_MAX_BYTES,
         "allowed_skill_files": sorted(_ALLOWED_SKILL_FILES),
+        "not_peer_reviewed_doi_prefixes": list(_NOT_PEER_REVIEWED_DOI_PREFIXES),
+        "max_leaves_per_evidence_span": _MAX_LEAVES_PER_SPAN,
     }
     policy["config_sha256"] = receipt.digest({
         **policy,
@@ -1754,7 +2034,10 @@ def run_gate(
         _readable_check(check_provenance, collection_dir),
         _readable_check(check_workflows, collection_dir),
         _readable_check(check_layout, collection_dir),
+        _readable_check(check_skill_frontmatter, collection_dir),
         _readable_check(check_unit_closure, collection_dir),
+        _readable_check(check_peer_review_claim, collection_dir, corpus),
+        _readable_check(check_leaf_text_floor, collection_dir),
         _check_gate_inputs(collection_dir, resolved_corpus),
         binding_check,
     ]
@@ -1906,13 +2189,10 @@ def _recorded_path(path: Path) -> str:
 
     The receipt ships inside the collection, so an absolute path would publish
     the directory layout of whichever machine ran the gate. Outside a git
-    checkout there is no stable anchor, and the path is recorded as given.
+    checkout there is no stable anchor, and only the final component is
+    recorded (``scripts/recorded_path.py``).
     """
-    path = Path(path).resolve()
-    for anchor in (path, *path.parents):
-        if (anchor / ".git").exists():
-            return path.relative_to(anchor).as_posix() or "."
-    return str(path)
+    return recorded_path(path)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -1995,7 +2275,7 @@ def main(argv: list[str] | None = None) -> int:
 
     if not args.quiet:
         _print_human_summary(report)
-        print(f"  report     : {report_path}")
+        print(f"  report     : {_recorded_path(report_path)}")
 
     return int(report["exit_code"])
 

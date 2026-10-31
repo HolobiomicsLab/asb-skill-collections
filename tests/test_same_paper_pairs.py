@@ -126,7 +126,8 @@ def test_duplicate_pair_is_reported_once_per_shared_run_and_is_deterministic(
         "embed_view": "name_tools",
         "pair_scope": "same_run_full_pairwise",
     }
-    assert report["view"] == str(cut.resolve())
+    # Outside a git checkout a receipt records the final component only.
+    assert report["view"] == cut.resolve().name
     assert report["input_digests"] == {
         "coverage_summary_sha256": hashlib.sha256(
             (cut / "skills" / "coverage_summary.json").read_bytes()

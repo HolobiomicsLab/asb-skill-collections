@@ -1,6 +1,8 @@
 # tier-update.yml — Runs on merge to main when review attestations land.
 # Increments per-collection review counters in contributors.jsonld and
 # re-evaluates the contributor's tier per the collection's curator-criteria.yaml.
+# The updated contributors.jsonld goes to main in a pull request from a bot
+# branch; nothing here pushes to main.
 #
 # Spec ref: §9.6 (Automation flows — tier_update.yml)
 # Driver: scripts/tier_update.py
@@ -15,19 +17,20 @@ on:
       - 'collections/**/reviews/*.yml'
 
 permissions:
-  contents: write
+  contents: write        # push the bot branch
+  pull-requests: write   # open the pull request
 
 jobs:
   tier-update:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 2  # need before/after to diff this push
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.12'
 
@@ -77,14 +80,17 @@ jobs:
               --criteria "$criteria_file"
           done < /tmp/new_review_files.txt
 
-      - name: Commit and push contributors.jsonld
+      - name: Propose contributors.jsonld in a pull request
         if: steps.changed.outputs.count != '0'
+        # One bot branch per push: tier_update.py increments counters in place,
+        # so a branch rewritten by a later run would drop the increments of a
+        # pull request not merged yet. Two open pull requests that touch the same
+        # contributor conflict, and a maintainer resolves the conflict.
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          if ! git diff --quiet contributors.jsonld; then
-            git config user.name "asb-skill-collections-bot"
-            git config user.email "bot@holobiomicslab.cnrs.fr"
-            git add contributors.jsonld
-            git commit -m "chore(tier): auto-update contributor tiers after review merge" \
-              -m "Driver: scripts/tier_update.py · Spec §9.6"
-            git push origin main
-          fi
+          git config user.name "asb-skill-collections-bot"
+          git config user.email "bot@holobiomicslab.cnrs.fr"
+          bash scripts/bot_pull_request.sh "bot/tier-update-${GITHUB_SHA::12}" \
+            "chore(tier): auto-update contributor tiers after review merge" \
+            contributors.jsonld

@@ -10,18 +10,24 @@ This runbook documents the complete **linear release pipeline** for ASB-Skill-Co
 
 **Normal release flow (45–90 min human time, all automation):**
 
+The version DOI is minted before the tag: deposit and publish by hand with
+`scripts/zenodo_deposit.py`, record the DOI in a pull request, then tag the
+merged commit (`docs/RELEASE_DEPOSIT.md`, "Order of a release").
+
 ```
 [1. Human] Draft collection in staged-collections/
    ↓
 [2. Contrib PR] → validate.yml gates → Lead maintainer merge
    ↓
+[2b. Human] Zenodo deposit by hand, DOI recorded in a PR (RELEASE_DEPOSIT.md)
+   ↓
 [3. Human] Tag release: git tag <slug>-v<N> && git push origin <slug>-v<N>
    ↓
 [4. Auto] release.yml triggers on tag
    ├─ pytest: validate collection passes all CI gates
-   ├─ regen_catalogue.py: regenerate catalogue.jsonld
-   ├─ Upload to Zenodo (fail-soft if ZENODO_TOKEN missing)
-   ├─ Update CITATION.cff with minted DOI
+   ├─ regen_catalogue.py: catalogue.jsonld proposed to main in a bot PR
+   ├─ Upload to Zenodo: only when the variable ZENODO_UPLOAD is true (off by default)
+   ├─ Update CITATION.cff: only when that upload published a DOI, in a bot PR
    └─ workflow_dispatch: trigger mirror-to-hf.yml
    ↓
 [5. Auto] mirror-to-hf.yml (explicit dispatch from release.yml)
@@ -135,31 +141,33 @@ python scripts/regen_catalogue.py --repo-root . --output catalogue.jsonld
 
 **Output:** `catalogue.jsonld` (machine-readable index of all released collections, skills, tools, benchmarks).
 
-**Commit behavior:** If catalogue.jsonld changed, github-actions[bot] commits and pushes to `main`.
+**Commit behavior:** If catalogue.jsonld changed, `scripts/bot_pull_request.sh` commits it on the branch `bot/catalogue-<tag>` and opens a pull request into `main` (fail-soft). Nothing in CI pushes to `main`. The pull request needs the repository setting that lets GitHub Actions create pull requests; opened with the workflow's token, it starts no checks until it is closed and reopened.
 
 ---
 
-### Stage 5: Zenodo deposit (Automated via release.yml, fail-soft)
+### Stage 5: Zenodo deposit (opt-in via release.yml, off by default)
 
-**Responsibility:** GitHub Actions (Zenodo API).
+**Responsibility:** the maintainer, with `scripts/zenodo_deposit.py`, before the tag (`docs/RELEASE_DEPOSIT.md`). The release.yml step below is an alternative path that runs only when the repository variable `ZENODO_UPLOAD` is `true`. Zenodo keeps one unpublished new version per record, so the two paths must not both run for one release.
 
-**Secret required:** `ZENODO_TOKEN` (GitHub secret, scope: create & publish depositions).
+**Secret required for the opt-in step:** `ZENODO_TOKEN` (GitHub secret, scope: create & publish depositions).
 
 **Behavior:**
 ```
-IF ZENODO_TOKEN not set:
-  → Log warning and skip (fail-soft; does not block release)
-  → Set output.doi = "" (empty)
+IF ZENODO_UPLOAD is not true:
+  → Step skipped: no Zenodo request, no DOI output; Stage 6 is skipped
 
-ELSE (token is set):
-  → Create new Zenodo deposition
-  → Zip collections/<slug>/v<N>/ → <slug>-v<N>.zip
+ELSE IF ZENODO_TOKEN not set:
+  → Log and skip; set output.doi = "" (empty)
+
+ELSE:
+  → Stop before any request if a license text is missing or the
+    .zenodo.json creators do not start with scripts/release_creators.yaml
+  → Create a new version draft of the concept record (or a new deposition)
+  → Zip collections/<slug>/v<N>/ with the bundled files → <slug>-v<N>.zip
   → Upload zip to bucket
-  → Extract metadata from CITATION.cff (title, authors, ORCID)
-  → Set metadata: upload_type=dataset, license=apache-2.0, keywords=[agentic-ai, slug, ...]
-  → Publish deposition
-  → Extract DOI from response
-  → Write doi=10.5281/zenodo.XXXXXXX to $GITHUB_OUTPUT
+  → Set metadata from .zenodo.json (else derived from CITATION.cff)
+  → Publish only when the variable ZENODO_PUBLISH is true; otherwise leave a draft
+  → Write doi=<minted DOI, or empty for a draft> to $GITHUB_OUTPUT
 ```
 
 **Zenodo topology (v0, LOCKED):**
@@ -199,7 +207,7 @@ python << 'EOF'
 EOF
 ```
 
-**Commit behavior:** If CITATION.cff changed, github-actions[bot] commits and pushes to `main`.
+**Commit behavior:** If CITATION.cff changed, `scripts/bot_pull_request.sh` commits it on the branch `bot/citation-doi-<tag>` and opens a pull request into `main`. Nothing in CI pushes to `main`. In the default flow this stage does not run: the DOI is recorded by hand before the tag (`docs/RELEASE_DEPOSIT.md`, step 6).
 
 **Output:** Both root-level and collection-level CITATION.cff files now carry the versioned DOI.
 
@@ -452,9 +460,9 @@ python scripts/regen_catalogue.py --repo-root . --output catalogue.jsonld
     │ release.yml    │   (only workflow on the tag)
     │ (auto)         │
     ├─ pytest gates
-    ├─ regen_catalogue.jsonld
-    ├─ Zenodo upload (fail-soft, ONE concept-DOI)
-    ├─ Update CITATION.cff
+    ├─ regen_catalogue.jsonld (bot PR)
+    ├─ Zenodo upload (only if ZENODO_UPLOAD)
+    ├─ Update CITATION.cff (bot PR)
     └─ workflow_dispatch ──────────► ┌───────────────────────────────┐
     └────────────────┘               │ mirror-to-hf.yml              │
                                      │ (dispatch-only, no tag trigger)│
@@ -499,7 +507,9 @@ pytest tests/ -v
 
 ### Zenodo upload is skipped
 
-**Symptom:** release.yml step "Upload to Zenodo (fail-soft if token missing)" succeeds with message "ZENODO_TOKEN not set — skipping Zenodo upload".
+**Symptom:** release.yml step "Upload to Zenodo (only when ZENODO_UPLOAD is true)" is skipped, or succeeds with a message saying that ZENODO_TOKEN is not set.
+
+A skipped step is the default: deposit with `scripts/zenodo_deposit.py` (`docs/RELEASE_DEPOSIT.md`). The steps below apply only when the release.yml path was chosen and `ZENODO_UPLOAD` is `true`.
 
 **Diagnosis:** `ZENODO_TOKEN` is not set in GitHub secrets.
 
