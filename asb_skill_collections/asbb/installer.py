@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import os
 import json
+import re
 import shutil
 import sys
 import tempfile
@@ -27,6 +28,30 @@ from .units import (
     inventory,
     unit_relative,
 )
+
+
+#: An Agent Skills name: lower-case letters and digits joined by single hyphens.
+ENTRY_NAME_PATTERN = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*")
+ENTRY_NAME_MAX = 64
+
+
+def _entry_name(fm: dict, directory: str) -> str:
+    """Return the name an advertised skill is installed under.
+
+    Skill hosts expect a skill's directory to carry its frontmatter name. Every
+    pack ships its router in ``skills/_router/``, a directory name that is
+    neither the router's name nor unique across packs, so a valid frontmatter
+    name wins. The source directory is left as it is; the directory name is
+    the fallback for a skill whose frontmatter has no usable name.
+    """
+    name = fm.get("name")
+    if (
+        isinstance(name, str)
+        and len(name) <= ENTRY_NAME_MAX
+        and ENTRY_NAME_PATTERN.fullmatch(name)
+    ):
+        return name
+    return directory
 
 
 def _remove_existing(path: Path) -> None:
@@ -179,11 +204,12 @@ def _plan_entries(pack, target, root, unit, assets):
     planned = {}
     shipped = {rel for rel, _ in assets}
     for directory in iter_skill_dirs(pack):
-        name = directory.name
-        if f"skills/{name}/SKILL.md" not in shipped:
+        if f"skills/{directory.name}/SKILL.md" not in shipped:
             raise ValueError(
-                f"advertised entry is excluded from the source snapshot: {name}"
+                f"advertised entry is excluded from the source snapshot: {directory.name}"
             )
+        fm, body = parse_skill_md(directory / "SKILL.md")
+        name = _entry_name(fm, directory.name)
         rel = name if target.kind == "skill" else target.filename(name)
         if rel in (UNITS_DIR, ENTRIES_DIR):
             raise ValueError(f"entry name is reserved for installer state: {rel}")
@@ -197,11 +223,10 @@ def _plan_entries(pack, target, root, unit, assets):
                 f"entry {name} resolves to {rel}, which overlaps the destination "
                 f"{clash} already planned for this install"
             )
-        fm, body = parse_skill_md(directory / "SKILL.md")
         entry_file = _resolve(root, rel)
         if target.kind == "skill":
             entry_file = entry_file / "SKILL.md"
-        body = bind_body(body, unit, f"skills/{name}/SKILL.md", entry_file)
+        body = bind_body(body, unit, f"skills/{directory.name}/SKILL.md", entry_file)
         planned[rel] = (
             f"---\n{yaml.safe_dump(fm, sort_keys=False)}---\n\n{body}"
             if target.kind == "skill"
@@ -430,6 +455,16 @@ def install(pack: PackRef, target: Target, opts: InstallOpts) -> list[str]:
         pack=pack.slug,
         runtime=target.id,
     )
+    if previous and (previous.get("dest_root"), previous.get("unit")) == (
+        str(root),
+        unit_rel,
+    ):
+        # The same snapshot advertised under other names: an install made
+        # before entries took their frontmatter name. Retire those names now,
+        # while the unit still holds the copies they are validated against;
+        # once it is rewritten they would be left behind as orphans.
+        renamed = [rel for rel in previous.get("entries", ()) if rel not in planned]
+        _clean_entries(previous, pack.slug, target.id, renamed, opts.home)
     _materialise_unit(unit, assets, planned, target, previous, identity, moved)
     owners = _place_entries(root, unit, planned, target, opts)
     retained = _clean_previous(

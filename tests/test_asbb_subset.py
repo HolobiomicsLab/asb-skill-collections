@@ -127,8 +127,9 @@ def test_a_selection_installs_a_pack_shaped_unit(repo, tmp_path):
     assert sorted(bundle["skills"]) == chosen
     assert (unit / "bin" / "search_skills.py").is_file()
     assert (unit / "bin" / "perspicacite_kb_bind.py").is_file()
-    assert record["entries"] == ["_router"]
-    router = (home / ".agents" / "skills" / "_router" / "SKILL.md").read_text(encoding="utf-8")
+    assert record["entries"] == [f"{name}-router"]
+    router = (home / ".agents" / "skills" / f"{name}-router" / "SKILL.md").read_text(
+        encoding="utf-8")
     assert f"name: {name}-router" in router
     assert "**2 evidence-grounded skills**" in router
 
@@ -233,8 +234,10 @@ def test_a_dry_run_prints_the_writes_and_writes_nothing(repo, tmp_path, capsys):
     assert _install(repo, home, "--skills", "stellar-photometry", "--dry-run") == 0
 
     out = capsys.readouterr().out
+    name = subset.default_name(repo / "collections" / DOMAIN / f"v{VERSION}",
+                               ["stellar-photometry"])
     assert "would copy complete unit to" in out
-    assert f"would write {home.resolve() / '.agents' / 'skills' / '_router'}" in out
+    assert f"would write {home.resolve() / '.agents' / 'skills' / f'{name}-router'}" in out
     assert not (home / ".agents").exists()
     assert manifest.load(home) == {}
 
@@ -247,7 +250,7 @@ def test_uninstall_removes_a_selection(repo, tmp_path):
 
     assert main(["uninstall", name, "--runtime", "agents", "--home", str(home)]) == 0
 
-    assert not (home / ".agents" / "skills" / "_router").exists()
+    assert not (home / ".agents" / "skills" / f"{name}-router").exists()
     assert not unit.exists()
     assert manifest.load(home) == {}
 
