@@ -234,6 +234,33 @@ def test_membership_is_exactly_the_declared_technique_tag():
     assert build_packs.selected_slugs(index, "infrared") == set()
 
 
+def test_a_declared_slug_list_selects_exactly_those_leaves(tmp_path):
+    """A selection is a pack whose membership is a slug list, not a tag.
+
+    Same build, same byte copies and same filtered indexes; only the rule that
+    picks the members changes, and the techniques play no part in it.
+    """
+    root = tmp_path / "repository"
+    collection = _collection(
+        root, {"a": ["optical"], "b": ["radio"], "c": ["optical"], "d": []}
+    )
+    unit = tmp_path / "selection"
+    spec = build_packs.PackSpec(unit, slugs=frozenset({"b", "d"}))
+
+    build = build_packs.build_pack(spec, collection)
+
+    assert build.selected == 2
+    assert sorted(path.name for path in (unit / "leaves").iterdir()) == ["b", "d"]
+    for slug in ("b", "d"):
+        assert (unit / "leaves" / slug / "SKILL.md").read_bytes() == (
+            collection / "leaves" / slug / "SKILL.md"
+        ).read_bytes()
+    index = json.loads((unit / "skills_index.json").read_text(encoding="utf-8"))
+    assert [row["slug"] for row in index] == ["b", "d"]
+    bundle = json.loads((unit / "kb_bundle.json").read_text(encoding="utf-8"))
+    assert sorted(bundle["skills"]) == ["b", "d"]
+
+
 def test_the_tag_is_matched_whole_and_is_not_the_directory_name(tmp_path):
     """`ms-generic` selects `mass-spectrometry`: the tag is declared, not derived."""
     root = tmp_path / "repository"

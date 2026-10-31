@@ -474,3 +474,17 @@ held out at release. `corpus.yaml` records the per-paper access basis
 (`repo-oa` — the redistributable source repository was cloned at build time);
 `gate_report.json` records the passing release-gate verdict (access-tier,
 strip-verbatim, provenance, PII/dual-use).
+
+## Installing part of the collection
+
+A task rarely needs the whole corpus. Three routes take less of it:
+
+- a technique pack, such as `metabolomics-lc-ms`, installs the leaves of one
+  technique;
+- `asbb install --skills`, `--skills-file` or `--query` installs a chosen set
+  of leaves as a unit of its own, with its own router and filtered indexes;
+- `asbb fetch` downloads chosen `SKILL.md` files from GitHub into a directory,
+  with a provenance record, and does not read a checkout.
+
+Commands, measured sizes, refusals and the licence-tier reminder are in
+[`docs/partial-install.md`](../../../docs/partial-install.md).
