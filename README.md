@@ -73,8 +73,7 @@ plugin without that clone
 Per-technique packs such as `metabolomics-lc-ms` are lighter subsets
 ([packs/metabolomics](packs/metabolomics/README.md)): `metabolomics-lc-ms` was
 installed the same way at CLI level (29 MB plugin cache), and the other seven
-packs were built but not installed. Packs overlap, so install the full plugin or
-a few packs, not both.
+packs were built but not installed.
 
 **Other agent runtimes** (`asbb` CLI from a checkout; Python 3.12 or later and PyYAML,
 in a virtual environment):
@@ -96,9 +95,40 @@ commands, outputs, `uninstall`). Any other agent can read the Markdown and JSON 
 `collections/metabolomics/v2/` directly ([AGENTS.md](AGENTS.md)). Not on PyPI in v0: an index
 install would fetch the CLI without the corpus it reads. Verified routes and dates: [docs/STATUS.md](docs/STATUS.md).
 
-**Part of the collection.** Install a technique pack, a selection of skills
+### Choose what to install
+
+Install the whole collection, a technique pack, a selection of skills
 (`asbb install --skills`, `--skills-file` or `--query`), or fetch chosen skills
-without a checkout (`asbb fetch`): [docs/partial-install.md](docs/partial-install.md).
+without a checkout (`asbb fetch`). Commands, outputs and refusals:
+[docs/partial-install.md](docs/partial-install.md).
+
+| Install | Technique tag | Leaves | On disk |
+|---|---|---:|---:|
+| `metabolomics`, the full collection | all | 5,859 | 72 MB |
+| `metabolomics-lc-ms` | `LC-MS` | 2,617 | 29 MB |
+| `metabolomics-ms-generic` | `mass-spectrometry` | 804 | 8.5 MB |
+| `metabolomics-ion-mobility` | `ion-mobility-MS` | 385 | 4.3 MB |
+| `metabolomics-gc-ms` | `GC-MS` | 367 | 4.0 MB |
+| `metabolomics-ms-imaging` | `MS-imaging` | 291 | 3.2 MB |
+| `metabolomics-nmr` | `NMR` | 276 | 2.9 MB |
+| `metabolomics-ce-ms` | `CE-MS` | 113 | 1.4 MB |
+| `metabolomics-direct-infusion` | `direct-infusion-MS` | 97 | 1.1 MB |
+| a selection, `asbb install --skills a,b,c --collection metabolomics/v2 --runtime agents` | chosen slugs | 10 in the example | 188 KiB |
+| a fetch, `asbb fetch a,b --collection metabolomics/v2 --dest DIR` | chosen slugs | 10 in the example | 112 KiB |
+
+The first nine rows install by name: `/plugin install <name>@asb-skill-collections`
+in Claude Code, where the public marketplace also keeps its 286 MB clone of this
+repository, or `python3 -m asb_skill_collections.asbb_cli install <name> --runtime agents`.
+Their sizes are `du -sk` of the built unit in this repository on 2026-10-31; the
+selection and fetch rows are the 10-skill example of
+[docs/partial-install.md](docs/partial-install.md#sizes), and a fetch also
+downloads the 5.5 MB `skills_index.json`.
+
+Packs overlap: a skill tagged with several techniques is in several packs, so
+install the full collection or a few packs, not both. The 1,520 technique-agnostic
+skills (statistics, pathway and generic data-handling procedures) carry no
+technique tag and are in no pack; they come with the full collection, a selection
+or a fetch.
 
 ## Use: search, apply, ground
 
