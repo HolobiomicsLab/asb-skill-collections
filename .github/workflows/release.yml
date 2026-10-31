@@ -248,7 +248,13 @@ jobs:
 
           # Zip the collection directory + bundle the Perspicacité grounding
           # binder (+ deps + agent guide) so the deposit is self-contained:
-          # users can run the KB grounding from the archive alone.
+          # users can run the KB grounding from the archive alone. The license
+          # texts are required, as in scripts/zenodo_deposit.py.
+          license_files = ["LICENSING.md", "LICENSE", "governance/LICENSE_TIERS.md"]
+          missing = [p for p in license_files if not pathlib.Path(p).is_file()]
+          if missing:
+            print(f"License texts not found: {missing}", file=sys.stderr)
+            sys.exit(1)
           with tempfile.NamedTemporaryFile(suffix=".zip", delete=False) as tf:
             zip_path = tf.name
           arc_root = f"{slug}/v{version}"
@@ -260,6 +266,9 @@ jobs:
               ("scripts/perspicacite_kb_bind.py", f"{arc_root}/scripts/perspicacite_kb_bind.py"),
               ("scripts/requirements.txt",        f"{arc_root}/scripts/requirements.txt"),
               ("AGENTS.md",                        f"{arc_root}/AGENTS.md"),
+              ("LICENSING.md",                     f"{arc_root}/LICENSING.md"),
+              ("LICENSE",                          f"{arc_root}/LICENSE"),
+              ("governance/LICENSE_TIERS.md",      f"{arc_root}/governance/LICENSE_TIERS.md"),
             ]:
               p = pathlib.Path(src)
               if p.is_file():

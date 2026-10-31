@@ -60,6 +60,10 @@ def make_repo(root: Path, zenodo_json=None) -> Path:
     (root / "scripts" / "perspicacite_kb_bind.py").write_text("bind\n")
     (root / "scripts" / "requirements.txt").write_text("reqs\n")
     (root / "AGENTS.md").write_text("agents\n")
+    (root / "LICENSING.md").write_text("licensing\n")
+    (root / "LICENSE").write_text("apache\n")
+    (root / "governance").mkdir()
+    (root / "governance" / "LICENSE_TIERS.md").write_text("tiers\n")
     return root
 
 

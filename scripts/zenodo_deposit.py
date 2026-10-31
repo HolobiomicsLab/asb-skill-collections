@@ -54,6 +54,15 @@ BUNDLED_FILES = (
     ("scripts/requirements.txt", "scripts/requirements.txt"),
     ("AGENTS.md", "AGENTS.md"),
 )
+# License texts the archive must carry, at their repository paths: LICENSING.md
+# says which license covers which layer, LICENSE is the Apache-2.0 text it points
+# to, and LICENSE_TIERS.md defines the per-skill license tiers. A missing one
+# stops the build. The release workflow bundles the same files.
+LICENSE_FILES = (
+    "LICENSING.md",
+    "LICENSE",
+    "governance/LICENSE_TIERS.md",
+)
 
 # Deposition metadata keys of the Zenodo REST API, copied from
 # https://developers.zenodo.org (section "Deposit metadata").
@@ -195,6 +204,10 @@ def _archive_members(repo_root: Path, domain: str, version: str):
     for source, target in BUNDLED_FILES:
         if (repo_root / source).is_file():
             members[f"{prefix}/{target}"] = repo_root / source
+    for relative in LICENSE_FILES:
+        if not (repo_root / relative).is_file():
+            raise ZenodoError(f"license text not found: {relative}")
+        members[f"{prefix}/{relative}"] = repo_root / relative
     return sorted(members.items())
 
 

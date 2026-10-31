@@ -113,8 +113,11 @@ again reuses it and replaces its files. Discard a draft in the web interface.
 
 The archive holds `collections/<domain>/<vN>/` under the prefix `<domain>/<vN>/`,
 plus three files bundled so the deposit runs grounding on its own:
-`scripts/perspicacite_kb_bind.py`, `scripts/requirements.txt` and `AGENTS.md`.
-These are the files `release.yml` bundles.
+`scripts/perspicacite_kb_bind.py`, `scripts/requirements.txt` and `AGENTS.md`,
+and the license texts at their repository paths: `LICENSING.md` (which license
+covers which layer), `LICENSE` (the Apache-2.0 text) and
+`governance/LICENSE_TIERS.md` (the per-skill license tiers). A missing license
+text stops the build. These are the files `release.yml` bundles.
 
 - Entries are sorted by name. Timestamps are fixed to 1980-01-01. File modes are
   `0755` for files with the user execute bit and `0644` otherwise.
