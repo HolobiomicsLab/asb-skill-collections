@@ -429,7 +429,7 @@ jobs:
         # Gated OFF by default — the HuggingFace mirror is not live yet. Set the
         # repo variable ENABLE_HF_MIRROR=true to opt in.
         if: vars.ENABLE_HF_MIRROR == 'true'
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             await github.rest.actions.createWorkflowDispatch({

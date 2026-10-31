@@ -383,6 +383,9 @@ PINS = {
     "actions/upload-pages-artifact": "v5",
     "actions/deploy-pages": "v5",
     "pypa/gh-action-pypi-publish": "release/v1",
+    "actions/configure-pages": "v6",
+    "actions/github-script": "v8",
+    "astral-sh/setup-uv": "v7",
 }
 
 
