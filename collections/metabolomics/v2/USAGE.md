@@ -49,8 +49,9 @@ jq '.[] | select(.slug=="<slug>") | .tools' skills_index.json
 
 The release perimeter verified here is deliberately narrow: a managed local
 installation, Claude Code's local-checkout marketplace route and the checkout
-CLI. Other adapters are listed under pending verification rather than presented
-as working instructions.
+CLI. The public GitHub marketplace route was later verified at CLI level only
+(see below). Other adapters are listed under pending verification rather than
+presented as working instructions.
 
 The complete managed snapshot behaviour below was exercised on
 `int/collections-release-2026-09-13` at `777671bc3`. Source revision
@@ -59,13 +60,17 @@ do not use that pre-fix behaviour as the release experience.
 
 ### Managed, source-independent installation
 
-Start from an existing checkout with Python 3.12 or later and PyYAML available.
-From the repository root, install the full metabolomics domain into the shared
-skill-native location:
+Start from an existing checkout with Python 3.12 or later and PyYAML in a
+virtual environment. From the repository root, install the full metabolomics
+domain into the shared skill-native location:
 
 ```bash
+uv venv -p 3.12 --allow-existing && source .venv/bin/activate && uv pip install pyyaml
 python3 -m asb_skill_collections.asbb_cli install metabolomics --runtime agents
 ```
+
+Without uv, `python3.12 -m venv .venv && . .venv/bin/activate && python -m pip install pyyaml`
+prepares the same environment.
 
 The clean temporary-HOME rehearsal returned:
 
@@ -174,6 +179,7 @@ This route needs Python, PyYAML and the checkout; it intentionally does not
 survive removal of that checkout. From the repository root:
 
 ```bash
+uv venv -p 3.12 --allow-existing && source .venv/bin/activate && uv pip install pyyaml
 python3 -m asb_skill_collections.asbb_cli search "untargeted LC-MS/MS annotation" --collection metabolomics --target workflows --k 1
 python3 -m asb_skill_collections.asbb_cli get untargeted-lcmsms-annotation --collection metabolomics/v2 --target workflows | sed -n '1,24p'
 python3 -m asb_skill_collections.asbb_cli search --list-collections
@@ -190,15 +196,20 @@ check printed:
 metabolomics/v2    5859 skills    +workflows
 ```
 
-### Pending verification
+### Verified at CLI level only
 
 Dates and the measurements of 2026-10-30 for each surface are in
-[docs/STATUS.md](../../../docs/STATUS.md).
+[docs/STATUS.md](https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/docs/STATUS.md).
 
-- The public GitHub transport for Claude Code was not exercised: the verified
-  route added the same marketplace from a local checkout, while this environment
-  had no usable DNS. It is therefore pending rather than inferred from the local
-  result.
+- The public GitHub transport for Claude Code
+  (`/plugin marketplace add HolobiomicsLab/asb-skill-collections`) was verified
+  at CLI level on 2026-10-30 with Claude Code 2.1.304: add and install exited 0.
+  Loading the skills in a live session was not exercised. The marketplace keeps
+  a 286 MB clone of the repository beside the 72 MB plugin cache, 358 MB in all;
+  the local-checkout route above writes the plugin cache only.
+
+### Pending verification
+
 - The MCP server was successfully exercised by the pinned release audit, but a
   fresh rehearsal here could not install the optional `mcp` dependency because
   PyPI name resolution failed. Invoking the server without that dependency
@@ -217,7 +228,7 @@ Dates and the measurements of 2026-10-30 for each surface are in
 
 For the selector actually shared by the router, checkout CLI and MCP surface,
 including score explanations, tie handling, measured limits and executed
-examples, see [How offline skill selection works](../../../docs/selection.md).
+examples, see [How offline skill selection works](https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/docs/selection.md).
 
 The shared selector is the normal route. If you inspect the JSON indexes
 manually, the following is a useful narrowing order; it is not the selector's
@@ -265,7 +276,7 @@ For offline retrieval, the collection-level `bin/search_skills.py`,
 `bin/semantic_search.py --mode keyword`, `asbb search` and MCP use one versioned
 selector. Add `--json` to the router command for the same result dictionaries,
 including matched fields, filters and qualified collection/target/slug. See
-[the selector contract and measured comparison](../../../docs/selection.md).
+[the selector contract and measured comparison](https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/docs/selection.md).
 The router rule is the measured default; the previous package rule remains
 available through `--selector package` (or `ASB_SELECTOR_RULE=package` for
 `asbb`) for one release and is deprecated.
@@ -420,9 +431,13 @@ the underlying tool?*
 | `restricted` | Licence established and it constrains reuse — **check it before commercial use or redistribution** |
 | `unknown` | No tool-level licence evidence — describing and using are unaffected; **never redistribute** the tool's code |
 
-Discovery defaults to `open` skills; the `asb-metabolomics` meta-skill enforces
-the `noncommercial` acknowledgment gate. Non-open skills carry a one-line banner
-in their body. Full policy: [`governance/LICENSE_TIERS.md`](../../../governance/LICENSE_TIERS.md).
+The search tools do not filter by tier. The collection router tells the agent to
+prefer `open` skills when no tier is requested, and to get confirmation of a
+permitted (academic or noncommercial) use before applying a `noncommercial` one;
+the `asb-metabolomics` meta-skill carries the same acknowledgment gate. A technique
+pack's router carries the `noncommercial` confirmation inline but no `open`-first
+default. Non-open skills carry a one-line banner
+in their body. Full policy: [`governance/LICENSE_TIERS.md`](https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/governance/LICENSE_TIERS.md).
 
 ```bash
 # list only open-tier skills
@@ -489,4 +504,4 @@ A task rarely needs the whole corpus. Three routes take less of it:
   with a provenance record, and does not read a checkout.
 
 Commands, measured sizes, refusals and the licence-tier reminder are in
-[`docs/partial-install.md`](../../../docs/partial-install.md).
+[`docs/partial-install.md`](https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/docs/partial-install.md).
