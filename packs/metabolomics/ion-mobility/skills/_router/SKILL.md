@@ -13,8 +13,8 @@ schema_version: 0.2.0
 
 # ASB Metabolomics — ion-mobility-MS — router
 
-Entry point for **385 evidence-grounded skills**, each distilled from a
-peer-reviewed method paper and its public code repository.
+Entry point for **385 evidence-grounded skills**, each derived from a
+method paper (journal article or preprint) and its code.
 
 ## How this unit is laid out
 

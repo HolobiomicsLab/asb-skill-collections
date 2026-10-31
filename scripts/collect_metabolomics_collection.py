@@ -92,7 +92,8 @@ COLLECTION_DESCRIPTION = (
     "Curated, evidence-grounded skills and software-tool records for "
     "computational metabolomics and adjacent mass-spectrometry / NMR / "
     "multi-omics analysis, assembled by the AgenticScienceBuilder pipeline "
-    "from 17 peer-reviewed method papers. Each skill is deduplicated across "
+    "from 17 method papers (journal articles or preprints) and their code. "
+    "Each skill is deduplicated across "
     "papers, anchored to verbatim evidence spans, and annotated with EDAM "
     "operation/topic IRIs for retrieval."
 )
