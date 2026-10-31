@@ -43,10 +43,11 @@ Checks implemented (mapped to the §5 checklist + §6 safety gates):
   6. SKILL FRONTMATTER       - gate 10.  Every SKILL.md, routing scaffolds
                                 included, opens with YAML frontmatter that
                                 parses to a mapping (FAIL, not fail-soft).
-  7. PEER-REVIEW CLAIM       - A corpus with preprint or deposit DOIs
-                                (10.1101, 10.48550, 10.26434, 10.5281) is never
-                                described as peer-reviewed in the manifests,
-                                top-level documents or advertised skills.
+  7. PEER-REVIEW CLAIM       - A corpus with preprint or deposit DOIs (the
+                                prefixes in governance/peer_review_claim.yaml)
+                                is never described as peer-reviewed in the
+                                manifests, top-level documents or advertised
+                                skills.
   8. LEAF TEXT FLOOR         - No leaf description starts "Use when when", and
                                 no frontmatter evidence span is shared by more
                                 than ten leaves; the share of leaves with no
@@ -1589,9 +1590,30 @@ def check_skill_frontmatter(collection_dir: Path) -> CheckResult:
     return res.finish()
 
 
-# DOI prefixes of records that are not journal articles: bioRxiv/medRxiv,
-# arXiv, ChemRxiv preprints and Zenodo deposits.
-_NOT_PEER_REVIEWED_DOI_PREFIXES = ("10.1101/", "10.48550/", "10.26434/", "10.5281/")
+_PEER_REVIEW_CLAIM_CONFIG = (
+    Path(__file__).resolve().parent.parent / "governance" / "peer_review_claim.yaml"
+)
+
+
+def _load_not_peer_reviewed_prefixes(path: Path = _PEER_REVIEW_CLAIM_CONFIG) -> tuple[str, ...]:
+    """DOI prefixes of records that are not journal articles, from governance data.
+
+    The list lives in governance/peer_review_claim.yaml, beside the other
+    registry maps, so that no DOI literal sits in general code.
+    """
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    prefixes = data.get("not_peer_reviewed_doi_prefixes") if isinstance(data, dict) else None
+    if not prefixes or not all(
+        isinstance(prefix, str) and prefix.endswith("/") for prefix in prefixes
+    ):
+        raise ValueError(
+            f"{path.name}: not_peer_reviewed_doi_prefixes must be a non-empty list "
+            "of DOI prefixes ending in '/'"
+        )
+    return tuple(prefix.lower() for prefix in prefixes)
+
+
+_NOT_PEER_REVIEWED_DOI_PREFIXES = _load_not_peer_reviewed_prefixes()
 _PEER_REVIEW_CLAIM_RE = re.compile(r"\bpeer[-\s]?reviewed\b", re.IGNORECASE)
 
 
@@ -1625,7 +1647,9 @@ def check_peer_review_claim(collection_dir: Path, corpus: dict[str, Any]) -> Che
         required=False,
         summary=(
             "No advertised file says peer-reviewed when the corpus holds preprint "
-            "or deposit DOIs (10.1101, 10.48550, 10.26434, 10.5281)."
+            "or deposit DOIs ("
+            + ", ".join(prefix.rstrip("/") for prefix in _NOT_PEER_REVIEWED_DOI_PREFIXES)
+            + ")."
         ),
     )
     not_reviewed = sorted(

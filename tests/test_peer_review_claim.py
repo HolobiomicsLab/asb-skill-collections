@@ -147,3 +147,30 @@ def test_generated_router_and_marketplace_make_no_peer_review_claim(
     assert _check(unit).status == release_gate.PASS
     assert "peer-reviewed" not in router_shape.ROUTER_TEMPLATE
     assert "peer-reviewed" not in Path(land_candidate.__file__).read_text("utf-8")
+
+
+def test_the_prefixes_come_from_governance_data() -> None:
+    """The list is data, recorded in the gate policy, not a literal in the gate."""
+    data = yaml.safe_load(
+        (Path(release_gate.__file__).resolve().parent.parent / "governance"
+         / "peer_review_claim.yaml").read_text(encoding="utf-8")
+    )
+
+    assert release_gate._NOT_PEER_REVIEWED_DOI_PREFIXES == tuple(
+        data["not_peer_reviewed_doi_prefixes"]
+    )
+    assert release_gate._policy_snapshot()["not_peer_reviewed_doi_prefixes"] == (
+        data["not_peer_reviewed_doi_prefixes"]
+    )
+
+
+@pytest.mark.parametrize(
+    "payload",
+    [{}, {"not_peer_reviewed_doi_prefixes": []}, {"not_peer_reviewed_doi_prefixes": ["10.1101"]}],
+)
+def test_a_malformed_prefix_list_is_refused(tmp_path: Path, payload: dict) -> None:
+    path = tmp_path / "peer_review_claim.yaml"
+    path.write_text(yaml.safe_dump(payload), encoding="utf-8")
+
+    with pytest.raises(ValueError, match="not_peer_reviewed_doi_prefixes"):
+        release_gate._load_not_peer_reviewed_prefixes(path)
