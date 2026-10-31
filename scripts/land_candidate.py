@@ -21,6 +21,7 @@ DOMAIN_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 VERSION_PATTERN = re.compile(r"^v([1-9][0-9]*)$")
 CUT_PATTERN = re.compile(r"^[0-9a-f]{12}$")
 COMMIT_PATTERN = re.compile(r"^[0-9a-fA-F]{7,40}$")
+ZENODO_VERSION_PATTERN = re.compile(r"^(v?)[0-9]+((?:\.[0-9]+)*)$")
 OWNER = {
     "name": "Holobiomics Lab",
     "url": "https://github.com/HolobiomicsLab",
@@ -59,6 +60,7 @@ class RepositoryInput:
     root: Path
     fallback_identity: tuple[str, str] | None
     marketplace: dict[str, Any] | None
+    zenodo: dict[str, Any]
 
 
 @dataclass(frozen=True)
@@ -320,6 +322,18 @@ def _validate_marketplace(
         for plugin in plugins
     ):
         raise ConflictError(f"marketplace already lists {source}")
+    # Two plugins under one name fail `claude plugin validate`, and
+    # `<domain>@asb-skills-<domain>` no longer says which one installs. Whether
+    # the older entry is renamed or dropped is a release decision, not this
+    # script's.
+    if any(
+        isinstance(plugin, dict) and plugin.get("name") == domain
+        for plugin in plugins
+    ):
+        raise ConflictError(
+            f"marketplace already lists a plugin named {domain!r}; rename or "
+            "remove that entry before landing another under the same name"
+        )
     return marketplace
 
 
@@ -352,7 +366,10 @@ def _validate_repository(
         raise LandingError("repository root .zenodo.json must be a regular file")
     if _git(repo, "ls-files", "--error-unmatch", "--", ".zenodo.json").returncode:
         raise LandingError("repository root .zenodo.json must be tracked")
-    return RepositoryInput(repo, _fallback_identity(options, repo), marketplace)
+    zenodo_payload = _read_json(zenodo, ".zenodo.json")
+    return RepositoryInput(
+        repo, _fallback_identity(options, repo), marketplace, zenodo_payload
+    )
 
 
 def _validate_options(options: argparse.Namespace) -> None:
@@ -437,6 +454,30 @@ def _marketplace(plan: LandingPlan) -> dict[str, Any]:
     }
 
 
+def _zenodo_bytes(plan: LandingPlan) -> bytes:
+    """Rewrite the repository Zenodo metadata for the collection being landed.
+
+    The root file keeps describing the repository, so it is rewritten in place
+    rather than moved into the collection: moving it left the repository with
+    no root .zenodo.json and the collection with the previous version's title
+    and version. The title is collection.yaml's. The version keeps the file's
+    own format and takes the collection generation as its first number; a
+    version in another format, or none, is left as it is.
+    """
+    payload = json.loads(json.dumps(plan.repository.zenodo))
+    metadata = payload.get("metadata")
+    target = metadata if isinstance(metadata, dict) else payload
+    descriptor = plan.inputs.descriptor
+    target["title"] = descriptor["title"]
+    version = target.get("version")
+    match = (
+        ZENODO_VERSION_PATTERN.fullmatch(version) if isinstance(version, str) else None
+    )
+    if match:
+        target["version"] = f"{match.group(1)}{descriptor['version']}{match.group(2)}"
+    return (json.dumps(payload, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+
+
 def _copy_files(files: tuple[tuple[Path, Path], ...], destination: Path) -> None:
     for relative, source in files:
         target = destination / relative
@@ -518,10 +559,7 @@ def _rollback(plan: LandingPlan) -> str | None:
 
 def _execute(plan: LandingPlan) -> dict[str, Any]:
     repo = plan.repository.root
-    moves_zenodo = all(
-        relative.as_posix() != ".zenodo.json"
-        for relative, _ in plan.inputs.candidate_files
-    )
+    writes_zenodo = _writes_zenodo(plan)
     checkout = _git(repo, "checkout", "-b", plan.branch, "main")
     if checkout.returncode:
         if (
@@ -538,14 +576,12 @@ def _execute(plan: LandingPlan) -> dict[str, Any]:
         _copy_files(plan.inputs.candidate_files, repo / plan.collection_path)
         _copy_files(plan.inputs.receipt_files, repo / plan.receipts_path)
         _write_marketplace(plan)
-        if moves_zenodo:
-            _run_git_write(
-                repo,
-                "mv",
-                "--",
-                ".zenodo.json",
-                f"{plan.collection_path}/.zenodo.json",
-            )
+        root_zenodo_changed = False
+        if writes_zenodo:
+            zenodo = _zenodo_bytes(plan)
+            (repo / plan.collection_path / ".zenodo.json").write_bytes(zenodo)
+            root_zenodo_changed = (repo / ".zenodo.json").read_bytes() != zenodo
+            (repo / ".zenodo.json").write_bytes(zenodo)
         _run_git_write(
             repo,
             "add",
@@ -553,6 +589,7 @@ def _execute(plan: LandingPlan) -> dict[str, Any]:
             plan.collection_path,
             plan.receipts_path,
             plan.marketplace_path,
+            *((".zenodo.json",) if writes_zenodo else ()),
         )
         _commit(plan)
         if _git_output(repo, "status", "--porcelain", "--untracked-files=all"):
@@ -562,13 +599,22 @@ def _execute(plan: LandingPlan) -> dict[str, Any]:
             len(plan.inputs.candidate_files)
             + len(plan.inputs.receipt_files)
             + 1
-            + moves_zenodo
+            + writes_zenodo
+            + root_zenodo_changed
         )
         return {"branch": plan.branch, "commit": commit, "files": file_count}
     except (LandingError, OSError) as exc:
         rollback_error = _rollback(plan)
         suffix = f"; rollback failed: {rollback_error}" if rollback_error else ""
         raise LandingError(f"landing failed: {exc}{suffix}") from exc
+
+
+def _writes_zenodo(plan: LandingPlan) -> bool:
+    """Whether the landing writes Zenodo metadata (the candidate ships none)."""
+    return all(
+        relative.as_posix() != ".zenodo.json"
+        for relative, _ in plan.inputs.candidate_files
+    )
 
 
 def _dry_run(plan: LandingPlan) -> dict[str, Any]:
@@ -583,6 +629,8 @@ def _dry_run(plan: LandingPlan) -> dict[str, Any]:
             "zenodo": f"{plan.collection_path}/.zenodo.json",
         },
     }
+    if _writes_zenodo(plan):
+        result["paths"]["zenodo_root"] = ".zenodo.json"
     if plan.repository.marketplace is not None:
         result["marketplace"] = {"path": plan.marketplace_path, "mode": "merge"}
     return result
