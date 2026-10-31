@@ -26,12 +26,6 @@ TEXT_SUFFIXES = {".md", ".py", ".sh", ".yaml", ".yml", ".json", ".txt", ".html",
 
 LOCAL_PATH = re.compile(r"/Users/[A-Za-z0-9._-]+/|/home/[A-Za-z0-9._-]+/|~/git/")
 
-# Files whose local defaults are removed by a separate change. The collector's
-# --builds-root and --corpus become required arguments with no default there;
-# remove the entry once that change is merged.
-PENDING = {"scripts/collect_metabolomics_collection.py"}
-
-
 def tracked_text_files() -> list[str]:
     out = subprocess.run(
         ["git", "ls-files", "--", *SCANNED],
@@ -78,8 +72,6 @@ def test_docs_and_scripts_carry_no_local_path():
     assert any(f.startswith("docs/") for f in files), "no tracked file under docs/"
     offenders = []
     for rel in files:
-        if rel in PENDING:
-            continue
         text = (REPO / rel).read_text(encoding="utf-8", errors="replace")
         offenders.extend(f"{rel}:{n}: {hit}" for n, hit in local_paths(text))
     assert not offenders, (

@@ -46,8 +46,8 @@ the inputs).
 
 Usage:
     python scripts/collect_metabolomics_collection.py \
-        --builds-root /Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot \
-        --corpus /Users/nothiasl/git/asb-corpus-metabolomics/batch_metabolomics_v0.json \
+        --builds-root <builds-root> \
+        --corpus <batch_metabolomics_v0.json> \
         --repo-root . \
         [--clean] [--dry-run]
 """
@@ -1206,12 +1206,12 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--builds-root",
-        default="/Users/nothiasl/git/AgenticScienceBuilder/outputs/asbb_pilot",
+        required=True,
         help="Directory containing the 17 ASB build dirs (spec2vec_grounded + coll_*).",
     )
     parser.add_argument(
         "--corpus",
-        default="/Users/nothiasl/git/asb-corpus-metabolomics/batch_metabolomics_v0.json",
+        required=True,
         help="batch_metabolomics_v0.json (source-tool -> DOI/repo authority).",
     )
     parser.add_argument(
