@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import pathlib
 import shutil
@@ -126,6 +127,11 @@ def _tree_bytes(root: Path) -> dict[str, bytes]:
 def _normal_doi(value: object) -> str:
     """Normalize DOI identity with the release gate's policy function."""
     return release_gate._norm_doi(value)
+
+
+def _sha256_text(text: str) -> str:
+    """Identify one evidence span the way the trim receipt does."""
+    return hashlib.sha256(text.strip().encode("utf-8")).hexdigest()
 
 
 def _skill_evidence(path: Path) -> list[tuple[str, str]]:
@@ -423,17 +429,19 @@ def test_evidence_policy_trims_strict_doi_and_preserves_permissive_text(
         (row["kind"] for row in trim["kept"]), key={"leaf": 0, "tool": 1}.get
     )
     assert any(row["kind"] == "tool" for row in kept + strict_dropped)
-    assert all(len(row["text"]) <= EVIDENCE_SPAN_CAP for row in kept)
-    assert sum(len(row["text"]) for row in kept) <= EVIDENCE_DOI_CAP
+    assert all(row["characters"] <= EVIDENCE_SPAN_CAP for row in kept)
+    assert sum(row["characters"] for row in kept) <= EVIDENCE_DOI_CAP
     for row in kept:
         if row["kind"] == "leaf":
             leaf = candidate / "leaves" / row["leaf"] / "SKILL.md"
-            assert row["text"] in [text for _, text in _skill_evidence(leaf)]
+            published = [text for _, text in _skill_evidence(leaf)]
         else:
-            assert row["text"] in output_tools[row["tool"]]
+            published = output_tools[row["tool"]]
+        assert row["sha256"] in {_sha256_text(text) for text in published}
+        assert row["characters"] in {len(text) for text in published}
 
     dropped = {
-        (row["kind"], row.get("leaf") or row.get("tool"), row["text"])
+        (row["kind"], row.get("leaf") or row.get("tool"), row["sha256"])
         for row in strict_dropped
     }
     for output_id in _coverage_by_output():
@@ -442,10 +450,10 @@ def test_evidence_policy_trims_strict_doi_and_preserves_permissive_text(
         published = {text for _, text in _skill_evidence(published_path)}
         for doi, text in _skill_evidence(source_path):
             if doi == strict_doi and text not in published:
-                assert ("leaf", output_id, text) in dropped
+                assert ("leaf", output_id, _sha256_text(text)) in dropped
     for tool_slug, text in _original_tool_evidence(FIXTURE, strict_doi):
         if text not in output_tools.get(tool_slug, []):
-            assert ("tool", tool_slug, text) in dropped
+            assert ("tool", tool_slug, _sha256_text(text)) in dropped
 
     corpus = yaml.safe_load((FIXTURE / "corpus.yaml").read_text(encoding="utf-8"))
     permissive = {

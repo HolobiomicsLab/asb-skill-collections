@@ -203,7 +203,13 @@ class QuoteBudget:
         return access_is_strict or reuse_is_strict
 
     def retain(self, text: str, context: dict[str, Any]) -> str:
-        """Return allowed text and receipt every shortening or removal."""
+        """Return allowed text and receipt every shortening or removal.
+
+        The receipt identifies each span by its location, lengths and the
+        SHA-256 of its UTF-8 text, never by the text itself: a removed span was
+        removed because its licence does not allow it to be republished, and a
+        receipt that quoted it would republish it.
+        """
         original = text.strip()
         if not self.applied:
             return original
@@ -220,9 +226,10 @@ class QuoteBudget:
             self.dropped.append(
                 {
                     **record,
-                    "text": original,
-                    "kept_text": kept,
-                    "dropped_text": original[len(kept) :],
+                    "characters": len(original),
+                    "kept_characters": len(kept),
+                    "dropped_characters": len(original) - len(kept),
+                    "sha256": _sha256_bytes(original.encode("utf-8")),
                     "reason": reason,
                 }
             )
@@ -231,8 +238,8 @@ class QuoteBudget:
             self.kept.append(
                 {
                     **record,
-                    "text": kept,
                     "characters": len(kept),
+                    "sha256": _sha256_bytes(kept.encode("utf-8")),
                     "capped": strict,
                 }
             )
@@ -965,6 +972,7 @@ def _assemble(options: argparse.Namespace) -> tuple[dict[str, bytes], dict[str, 
             "text_field_cap": SPAN_CAP,
             "cumulative_cap": DOI_CAP,
             "order": "sorted leaves, frontmatter then gate-parsed body; sorted tools after leaves",
+            "span_identity": "characters and sha256 of the UTF-8 span; the receipt holds no span text",
             "policy_source": "scripts.release_gate",
             "strict_dois": [doi for doi in policy_dois if budget.strict(doi)],
             "characters_by_doi": dict(sorted(budget.used.items())),
