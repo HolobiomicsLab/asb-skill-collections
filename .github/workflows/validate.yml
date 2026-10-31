@@ -76,7 +76,7 @@ jobs:
       # Hugging Face cache before the suite runs. Cached across runs by model name.
       - name: Cache the S6 embedding model
         id: hf-cache
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ~/.cache/huggingface/hub
           key: hf-hub-bge-small-en-v1.5
