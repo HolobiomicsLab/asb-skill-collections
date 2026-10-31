@@ -91,6 +91,10 @@ commands, outputs, `uninstall`). Any other agent can read the Markdown and JSON 
 `collections/metabolomics/v2/` directly ([AGENTS.md](AGENTS.md)). Not on PyPI in v0: an index
 install would fetch the CLI without the corpus it reads. Verified routes and dates: [docs/STATUS.md](docs/STATUS.md).
 
+**Part of the collection.** Install a technique pack, a selection of skills
+(`asbb install --skills`, `--skills-file` or `--query`), or fetch chosen skills
+without a checkout (`asbb fetch`): [docs/partial-install.md](docs/partial-install.md).
+
 ## Use: search, apply, ground
 
 **Search** a checkout offline, with no API key:
@@ -144,6 +148,7 @@ In Claude Code, run `/ground` on the skill in play; elsewhere, call the bundled
 | `skills_index.json`, `tools_index.json` | machine search indexes (EDAM IRI, tool name, keyword) |
 | `kb_bundle.json` | skill to source-paper KB slugs and `repo_urls` (the grounding map) |
 | `bin/perspicacite_kb_bind.py`, `commands/ground.md`, `GROUNDING.md` | packaged grounding: the binder, the `/ground` command and a how-to |
+| `commands/*.md` | the four plugin commands: `/ground`; `/propose-skill`, which stages a community skill proposal; `/synthesize-meta-skill`, which stages a workflow super-skill proposal; `/claim-skill`, run by a maintainer to turn a tool author's claim into a proposal that credits the author |
 | `collection.yaml`, `corpus.yaml` | collection record; per-paper access basis (`repo-oa`) |
 | `CITATION.cff`, `PROVENANCE.md`, `gate_report.json` | citation, how it was generated, release-gate verdict |
 
