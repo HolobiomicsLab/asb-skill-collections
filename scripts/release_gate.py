@@ -40,6 +40,9 @@ Checks implemented (mapped to the §5 checklist + §6 safety gates):
                                 every ``collection.yaml`` reconciles its counts
                                 and advertised members with the leaf/tool files
                                 and any indexes the collection ships.
+  6. SKILL FRONTMATTER       - gate 10.  Every SKILL.md, routing scaffolds
+                                included, opens with YAML frontmatter that
+                                parses to a mapping (FAIL, not fail-soft).
 
 Enforcement modes (CONTENT_POLICY.md §7):
   * default (advisory, staged-collections PRs): WARNs and FAILs are reported but
@@ -164,7 +167,7 @@ from scripts.pii_config import (  # noqa: E402
 _NGRAM_JACCARD_THRESHOLD = 0.30  # >0.30 3-gram Jaccard overlap → flag
 _SIMILARITY_RATIO_THRESHOLD = 0.92  # SequenceMatcher ratio proxy for cosine
 _GATE_REPORT_SCHEMA = "asbb-release-gate/1.1"
-_GATE_POLICY_VERSION = "asbb-content-gate/1.3"
+_GATE_POLICY_VERSION = "asbb-content-gate/1.4"
 _DIAGNOSTIC_SCOPE = "diagnostic run, not a release verification"
 
 
@@ -1523,6 +1526,59 @@ def check_layout(
     return res
 
 
+def _frontmatter_error(text: str) -> str | None:
+    """Why a SKILL.md frontmatter block is unusable, or None when it parses."""
+    if not text.startswith("---"):
+        return "no YAML frontmatter block"
+    m = re.match(r"^---\n(.*?)\n---\n?(.*)\Z", text, re.DOTALL)
+    if not m:
+        return "the frontmatter block is not closed by a --- line"
+    try:
+        value = yaml.safe_load(m.group(1))
+    except yaml.YAMLError as exc:
+        problem = getattr(exc, "problem", None) or type(exc).__name__
+        mark = getattr(exc, "problem_mark", None)
+        where = f" (frontmatter line {mark.line + 1})" if mark is not None else ""
+        return f"the frontmatter does not parse as YAML: {problem}{where}"
+    if not isinstance(value, dict):
+        return "the frontmatter is not a YAML mapping"
+    return None
+
+
+def check_skill_frontmatter(collection_dir: Path) -> CheckResult:
+    """Every SKILL.md, routing scaffolds included, opens with parsable frontmatter.
+
+    A plugin host reads each advertised skill's name and description from this
+    block. ``_read_frontmatter`` stays fail-soft for the content checks, so an
+    unparsable block reads there as an empty mapping: a router whose description
+    held an unquoted ": " passed every other check while no host could load it.
+    Routing scaffolds in ``_``-prefixed directories are checked here even though
+    the provenance and verbatim checks skip them.
+    """
+    res = CheckResult(
+        name="skill_frontmatter",
+        gates=[10],
+        hard_gate=True,
+        scope="SKILL.md files",
+        required=False,
+        summary="Every SKILL.md, routing scaffolds included, has YAML frontmatter that parses to a mapping.",
+    )
+    root = Path(collection_dir)
+    for sk_md in layout.iter_skill_md(root, include_infrastructure=True):
+        findings_start = len(res.details)
+        rel = sk_md.relative_to(root).as_posix()
+        try:
+            error = _frontmatter_error(sk_md.read_text(encoding="utf-8"))
+        except (OSError, UnicodeError) as exc:
+            res.counts["missing"] += 1
+            res.add(UNCHECKABLE, f"{rel}: unreadable ({exc}).", file=rel)
+            continue
+        if error:
+            res.add(FAIL, f"{rel}: {error}.", file=rel)
+        res.record_item(findings_start)
+    return res.finish()
+
+
 def check_unit_closure(collection_dir: Path) -> CheckResult:
     """Check pack index closure and helpers in the collection and its packs."""
     res = CheckResult(
@@ -1754,6 +1810,7 @@ def run_gate(
         _readable_check(check_provenance, collection_dir),
         _readable_check(check_workflows, collection_dir),
         _readable_check(check_layout, collection_dir),
+        _readable_check(check_skill_frontmatter, collection_dir),
         _readable_check(check_unit_closure, collection_dir),
         _check_gate_inputs(collection_dir, resolved_corpus),
         binding_check,
