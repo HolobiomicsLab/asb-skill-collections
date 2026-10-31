@@ -1,7 +1,10 @@
 # docs-site/
 
 Static GitHub Pages site for the ASB Skill Collections project. Pure HTML +
-vanilla JS + CDN-loaded libraries. No build step, no npm, no backend.
+vanilla JS. No build step, no npm, no backend. Pages load no script, style or
+font from another host: lunr.js is vendored under `vendor/` (MIT, licence in
+`vendor/LICENSE-lunr.txt`) and the stylesheet uses locally installed or system
+fonts.
 
 ## Pages
 
@@ -27,7 +30,7 @@ before building the issue body (same rules as the Python CLI).
 ## Search index
 
 `search.html` performs client-side full-text search via
-[lunr.js](https://lunrjs.org/) (loaded from CDN, pinned to `lunr@2.3.9`)
+[lunr.js](https://lunrjs.org/) (2.3.9, vendored as `vendor/lunr-2.3.9.js`)
 against a pre-built index at `docs-site/search_index.json`. The index is
 checked into the repo so the site works offline / on Pages without any CI
 step.

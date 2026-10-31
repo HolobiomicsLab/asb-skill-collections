@@ -3,7 +3,7 @@
  * Loads docs-site/search_index.json, builds three lunr indices (papers,
  * skills, tools), and renders grouped, debounced live results.
  *
- * No backend. No build step. CDN-loaded lunr from search.html.
+ * No backend. No build step. lunr is served from docs-site/vendor/ (see search.html).
  */
 
 const RAW_BASE = "https://raw.githubusercontent.com/HolobiomicsLab/asb-skill-collections/main";
@@ -327,7 +327,7 @@ function onInput() {
     return;
   }
   if (typeof lunr !== "function") {
-    hintEl.innerHTML = `<span class="error">lunr.js failed to load from CDN.</span>`;
+    hintEl.innerHTML = `<span class="error">lunr.js failed to load.</span>`;
     return;
   }
   IDX = buildLunrIndices(DATA);

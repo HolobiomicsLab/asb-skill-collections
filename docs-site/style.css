@@ -56,8 +56,9 @@
   --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 }
 
-/* Load IBM Plex from Google Fonts (lab-website default). */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap');
+/* No web font is fetched: IBM Plex is used when installed on the reader's
+   machine, the system stack otherwise. Loading fonts from a third-party host
+   would send every visitor's address to that host. */
 
 *, *::before, *::after { box-sizing: border-box; }
 

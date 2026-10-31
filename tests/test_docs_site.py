@@ -126,3 +126,55 @@ def test_every_link_on_the_page_resolves(page):
     files, dirs = _tracked()
     broken = broken_refs(page, files, dirs)
     assert not broken, "links that do not resolve:\n  " + "\n  ".join(broken)
+
+
+# --------------------------------------------------------------------------- #
+# Third-party loads: a page fetches no font, script or style from another host #
+# --------------------------------------------------------------------------- #
+# Opening a page must not send the visitor's address to a font or script CDN.
+# Navigation links (<a href>) are not loads; the JSON data the pages fetch at
+# run time from this repository is not covered here.
+LOADING_TAGS = {"script", "link", "img", "iframe", "source", "embed", "object"}
+CSS_REMOTE = re.compile(r"@import\s+url\(\s*['\"]?(?:https?:)?//|url\(\s*['\"]?(?:https?:)?//", re.I)
+FONT_HOSTS = re.compile(r"fonts\.googleapis\.com|fonts\.gstatic\.com")
+
+
+def remote_loads(page: pathlib.Path) -> list[str]:
+    hits = []
+    for line, tag, ref in page_refs(page):
+        parts = urlsplit(ref)
+        if tag in LOADING_TAGS and (parts.scheme in ("http", "https") or ref.startswith("//")):
+            hits.append(f"{page.name}:{line} <{tag}> {ref}")
+    return hits
+
+
+def test_remote_load_check_reports_a_cdn_script(tmp_path):
+    page = tmp_path / "x.html"
+    page.write_text(
+        '<script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script>'
+        '<script src="vendor/lunr-2.3.9.js"></script><a href="https://lunrjs.com/">lunr</a>'
+    )
+    assert remote_loads(page) == ["x.html:1 <script> https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"]
+
+
+@pytest.mark.parametrize("page", PAGES, ids=[p.name for p in PAGES])
+def test_page_loads_nothing_from_another_host(page):
+    assert not remote_loads(page)
+
+
+def test_stylesheets_import_nothing_remote():
+    for css in sorted(SITE.rglob("*.css")):
+        text = css.read_text(encoding="utf-8")
+        assert not CSS_REMOTE.search(text), css.name
+
+
+def test_no_font_cdn_anywhere_in_the_site():
+    tracked = subprocess.run(
+        ["git", "ls-files", "--", "docs-site"], cwd=REPO, capture_output=True, text=True, check=True
+    ).stdout.splitlines()
+    hits = [
+        path for path in tracked
+        if path.endswith((".html", ".css", ".js", ".md"))
+        and FONT_HOSTS.search((REPO / path).read_text(encoding="utf-8"))
+    ]
+    assert not hits, hits
