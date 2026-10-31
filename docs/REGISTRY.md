@@ -153,12 +153,14 @@ A collection is publicly advertised **if and only if:**
     "tools_count": {"@id": "asb:toolsCount", "@type": "xsd:integer"},
     "generated_at": {"@id": "asb:generatedAt", "@type": "xsd:dateTime"},
     "released_at": {"@id": "asb:releasedAt", "@type": "xsd:dateTime"},
-    "slug": "asb:slug"
+    "slug": "asb:slug",
+    "leaf_dir": "asb:leafDir",
+    "status": "asb:status"
   },
   "@type": "asb:SkillCollectionRegistry",
   "@id": "https://w3id.org/holobiomicslab/asb-skill/registry",
   "name": "ASB Skill Collection Registry",
-  "description": "Auto-generated registry of all released ASB Skill Collections.",
+  "description": "Auto-generated registry of the ASB Skill Collections in this repository. Each entry's status says whether it is released or staged.",
   "generated_at": "2026-06-14T10:30:45Z",
   "collections": [
     {
@@ -179,7 +181,8 @@ A collection is publicly advertised **if and only if:**
           "name": "Curator Name",
           "orcid": "https://orcid.org/0000-0000-0000-0000"
         }
-      ]
+      ],
+      "status": "released"
     }
   ]
 }
@@ -196,6 +199,8 @@ A collection is publicly advertised **if and only if:**
 **Publication:** Committed to the repo, served by GitHub Pages and Zenodo (as part of collection releases; see §2.4)
 
 **Determinism:** Collections are sorted alphabetically by slug + version; timestamps use UTC ISO 8601 (Z suffix); no non-deterministic ordering
+
+**Release status:** `status` is `released` when `.claude-plugin/marketplace.json` serves the collection directory and `staged` otherwise. `doi` is written only once it is minted (`10.<registrant>/<suffix>`); a placeholder in `collection.yaml` such as `TODO-zenodo` is left out of the catalogue.
 
 ### 2.3 Querying the catalogue
 

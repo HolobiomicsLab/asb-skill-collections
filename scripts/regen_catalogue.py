@@ -3,7 +3,12 @@ Regenerate catalogue.jsonld at the repo root by walking collections/ directory.
 
 JSON-LD schema: @type SkillCollectionRegistry (LinkML class from asb-schema).
 Each collection entry carries: @id (w3id IRI), title, version, slug, domain_topics
-(EDAM IRIs), doi, released_at, skills_count, tools_count, lead_curators[].
+(EDAM IRIs), doi, released_at, skills_count, tools_count, lead_curators[], status.
+
+`status` is "released" when the plugin marketplace (.claude-plugin/marketplace.json)
+serves the collection directory, and "staged" otherwise. `doi` is written only
+when it is a minted DOI (10.<registrant>/<suffix>); a placeholder such as
+"TODO-zenodo" is left out.
 
 Output is deterministic: collections sorted alphabetically by slug; timestamps
 are UTC ISO 8601 with Z suffix.
@@ -16,6 +21,7 @@ from __future__ import annotations
 import argparse
 import json
 import pathlib
+import re
 import sys
 from datetime import datetime, timezone
 
@@ -46,9 +52,40 @@ CATALOGUE_CONTEXT = {
     "released_at": {"@id": "asb:releasedAt", "@type": "xsd:dateTime"},
     "slug": "asb:slug",
     "leaf_dir": "asb:leafDir",
+    "status": "asb:status",
 }
 
 REGISTRY_ID = "https://w3id.org/holobiomicslab/asb-skill/registry"
+
+MARKETPLACE = pathlib.Path(".claude-plugin") / "marketplace.json"
+RELEASED = "released"
+STAGED = "staged"
+
+_MINTED_DOI = re.compile(r"^10\.\d{4,9}/\S+$")
+
+
+def is_minted_doi(doi: object) -> bool:
+    """True for a bare DOI (10.<registrant>/<suffix>), False for a placeholder or URL."""
+    return isinstance(doi, str) and bool(_MINTED_DOI.match(doi.strip()))
+
+
+def released_collection_dirs(repo_root: pathlib.Path) -> set[str]:
+    """Repo-relative directories the plugin marketplace serves, e.g. collections/x/v2."""
+    path = repo_root / MARKETPLACE
+    if not path.is_file():
+        return set()
+    plugins = json.loads(path.read_text(encoding="utf-8")).get("plugins") or []
+    out: set[str] = set()
+    for plugin in plugins:
+        source = plugin.get("source") if isinstance(plugin, dict) else None
+        if isinstance(source, str):
+            out.add(pathlib.PurePosixPath(source.strip()).as_posix().removeprefix("./").rstrip("/"))
+    return out
+
+
+def collection_status(rel_dir: str, released_dirs: set[str]) -> str:
+    """Return "released" when the marketplace serves rel_dir, "staged" otherwise."""
+    return RELEASED if rel_dir in released_dirs else STAGED
 
 
 def _load_collection_yaml(path: pathlib.Path) -> dict:
@@ -60,7 +97,9 @@ def _load_collection_yaml(path: pathlib.Path) -> dict:
     return data
 
 
-def _collection_entry(col_yaml: dict, collection_dir: pathlib.Path) -> dict:
+def _collection_entry(
+    col_yaml: dict, collection_dir: pathlib.Path, status: str | None = None
+) -> dict:
     """Convert a collection.yaml dict to a catalogue entry dict."""
     entry: dict = {}
 
@@ -87,8 +126,8 @@ def _collection_entry(col_yaml: dict, collection_dir: pathlib.Path) -> dict:
     entry["domain_topics"] = list(domain_topics)
 
     doi = col_yaml.get("doi")
-    if doi:
-        entry["doi"] = doi
+    if is_minted_doi(doi):
+        entry["doi"] = doi.strip()
 
     released_at = col_yaml.get("released_at")
     if released_at:
@@ -96,6 +135,9 @@ def _collection_entry(col_yaml: dict, collection_dir: pathlib.Path) -> dict:
 
     lead_curators = col_yaml.get("lead_curators") or []
     entry["lead_curators"] = list(lead_curators)
+
+    if status is not None:
+        entry["status"] = status
 
     return entry
 
@@ -112,13 +154,16 @@ def build_catalogue(repo_root: pathlib.Path) -> dict:
     """
     collections_dir = repo_root / "collections"
     entries: list[dict] = []
+    released_dirs = released_collection_dirs(repo_root)
 
     if collections_dir.exists():
         # Walk all collection.yaml files: collections/<slug>/v<N>/collection.yaml
         for col_yaml_path in sorted(collections_dir.glob("**/collection.yaml")):
             try:
                 col_data = _load_collection_yaml(col_yaml_path)
-                entry = _collection_entry(col_data, col_yaml_path.parent)
+                rel_dir = col_yaml_path.parent.relative_to(repo_root).as_posix()
+                status = collection_status(rel_dir, released_dirs)
+                entry = _collection_entry(col_data, col_yaml_path.parent, status)
                 entries.append(entry)
             except Exception as exc:
                 print(
@@ -137,7 +182,8 @@ def build_catalogue(repo_root: pathlib.Path) -> dict:
         "@id": REGISTRY_ID,
         "name": "ASB Skill Collection Registry",
         "description": (
-            "Auto-generated registry of all released ASB Skill Collections."
+            "Auto-generated registry of the ASB Skill Collections in this "
+            "repository. Each entry's status says whether it is released or staged."
         ),
         "generated_at": now_utc,
         "collections": entries,
