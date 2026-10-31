@@ -111,6 +111,7 @@ SOURCE_RECORD_RELATIONS = frozenset({"isVersionOf", "isNewVersionOf"})
 # Metadata the API sets itself; never sent back from a draft.
 READ_ONLY_KEYS = frozenset({"doi", "prereserve_doi"})
 RECORD_ID_PATTERN = re.compile(r"zenodo[./](\d+)")
+ORCID_PATTERN = re.compile(r"\d{4}-\d{4}-\d{4}-\d{3}[\dX]")
 
 
 class ZenodoError(RuntimeError):
@@ -307,14 +308,31 @@ def expected_creators(repo_root: Path) -> list[dict]:
     return [_zenodo_creator(entry) for entry in listed["creators"]]
 
 
+def _is_added_coauthor(creator) -> bool:
+    """True for a person entry of the form scripts/select_release_coauthors.py appends."""
+    return (isinstance(creator, dict)
+            and set(creator) <= {"name", "orcid", "affiliation"}
+            and bool(str(creator.get("name") or "").strip())
+            and bool(ORCID_PATTERN.fullmatch(str(creator.get("orcid") or ""))))
+
+
 def creator_problems(metadata: dict, expected: list[dict]) -> list[str]:
-    """Return a refusal when the template's creators differ from the release list."""
+    """Return a refusal when the template's creators do not start with the release list.
+
+    The release list must come first, unchanged and in order. Further entries
+    are accepted only as persons with a bare ORCID iD, the co-authors that
+    scripts/select_release_coauthors.py --apply appends, each ORCID iD once.
+    """
     found = metadata.get("creators") or []
-    if found == expected:
+    head, rest = found[:len(expected)], found[len(expected):]
+    orcids = [c.get("orcid") for c in found if isinstance(c, dict) and c.get("orcid")]
+    if (head == expected and all(_is_added_coauthor(c) for c in rest)
+            and len(orcids) == len(set(orcids))):
         return []
     return [f"creators differ from {CREATORS_FILE}: the template has "
             f"{json.dumps(found, ensure_ascii=False)}, the release list gives "
-            f"{json.dumps(expected, ensure_ascii=False)}"]
+            f"{json.dumps(expected, ensure_ascii=False)}; only persons with an "
+            "ORCID iD may follow the release list"]
 
 
 def metadata_payload(path: Path, publication_date: str):

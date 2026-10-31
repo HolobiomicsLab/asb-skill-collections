@@ -1,15 +1,17 @@
-"""The Zenodo template's creators must equal scripts/release_creators.yaml.
+"""The Zenodo template's creators must start with scripts/release_creators.yaml.
 
 The metabolomics v2 template listed four creators, while the release creators
 list, the source the collector and the README follow, names two. `plan` and
 `draft` now convert that list to Zenodo creators and refuse a template whose
-creators differ in content or order, before any request.
+leading creators differ in content or order, before any request. Entries after
+the list are accepted only as persons with an ORCID iD, the co-authors that
+scripts/select_release_coauthors.py --apply appends.
 """
 import json
 
 import pytest
 
-from scripts import zenodo_deposit
+from scripts import select_release_coauthors, zenodo_deposit
 from tests.test_zenodo_deposit import DATE, ZENODO_JSON, FakeZenodo, make_repo
 
 
@@ -101,3 +103,30 @@ def test_the_repository_creators_list_converts():
     root = zenodo_deposit.Path(__file__).resolve().parent.parent
     creators = zenodo_deposit.expected_creators(root)
     assert creators and all(creator.get("name") for creator in creators)
+
+
+def test_coauthors_appended_by_select_release_coauthors_pass_the_plan(repo, capsys):
+    template = repo / "collections/dom/v1/.zenodo.json"
+    added = select_release_coauthors._apply_zenodo(
+        template, [{"name": "Ada Example", "orcid": "0000-0002-1825-0097"}])
+    assert added == 1
+    assert json.loads(template.read_text())["creators"][-1] == {
+        "name": "Example, Ada", "orcid": "0000-0002-1825-0097"}
+    assert _plan(repo) == 0
+    assert "refused" not in capsys.readouterr().out
+
+
+@pytest.mark.parametrize("creators", [
+    [{"name": "Example, Ada", "orcid": "0000-0002-1825-0097"},
+     {"name": "Doe, Jane", "orcid": "0000-0000-0000-0000"}],
+    [{"name": "Doe, Jane", "orcid": "0000-0000-0000-0000"},
+     {"name": "Example, Ada", "orcid": "0000-0000-0000-0000"}],
+    [{"name": "Doe, Jane", "orcid": "0000-0000-0000-0000"},
+     {"name": "Example, Ada", "orcid": "https://orcid.org/0000-0002-1825-0097"}],
+    [{"name": "Doe, Jane", "orcid": "0000-0000-0000-0000"},
+     {"name": "Example, Ada", "orcid": "0000-0002-1825-0097", "type": "Other"}],
+], ids=["coauthor-first", "duplicate-orcid", "orcid-url", "extra-key"])
+def test_entries_after_the_list_must_be_distinct_orcid_persons(repo, capsys, creators):
+    _write_template_creators(repo, creators)
+    assert _plan(repo) == 1
+    assert "refused: creators differ" in capsys.readouterr().out

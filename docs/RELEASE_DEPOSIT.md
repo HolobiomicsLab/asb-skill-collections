@@ -154,7 +154,7 @@ under `metadata`; the tool wraps it.
 | Inherited metadata | the draft starts from the previous record. Keys it carries that the template lacks, such as `communities` and `language`, are kept and listed in the output. The template wins on every key it has. `doi` and `prereserve_doi` are never sent. `plan` makes no request and cannot show inherited keys |
 | `publication_date` | set to today (`--publication-date` overrides) when the template has none, so the draft does not keep the previous version's date |
 | `creators[].name` | the API documents the form `Family name, Given names`. Entity names such as a community or a lab are sent as written, not in that form |
-| `creators` | must equal `scripts/release_creators.yaml`, in order: a person entry as `Family, Given` with its bare ORCID iD and affiliation when listed, an entity entry by its name. A difference is refused by `plan` and `draft` |
+| `creators` | must start with `scripts/release_creators.yaml`, unchanged and in order: a person entry as `Family, Given` with its bare ORCID iD and affiliation when listed, an entity entry by its name. Entries after the list are accepted only as persons with a bare ORCID iD, each iD once: the co-authors that `scripts/select_release_coauthors.py --apply` appends (see `docs/CURATION_CALL.md`). Any other difference is refused by `plan` and `draft` |
 
 ## Alternative: GitHub-Zenodo integration
 
