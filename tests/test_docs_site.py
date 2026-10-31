@@ -11,6 +11,12 @@ from __future__ import annotations
 import importlib.util
 import json
 import pathlib
+import re
+import subprocess
+from html.parser import HTMLParser
+from urllib.parse import urlsplit
+
+import pytest
 
 from scripts.regen_catalogue import collection_status, released_collection_dirs
 
@@ -46,3 +52,77 @@ def test_committed_search_index_labels_every_collection():
     assert set(status) == set(index["collections"])
     for label, value in status.items():
         assert value == collection_status(f"collections/{label}", released), label
+
+
+# --------------------------------------------------------------------------- #
+# Links: every href and src in a page resolves                                #
+# --------------------------------------------------------------------------- #
+REPO_URL = "https://github.com/HolobiomicsLab/asb-skill-collections"
+REPO_PATH = re.compile(re.escape(REPO_URL) + r"/(blob|tree)/main/([^?#]+)")
+PAGES = sorted(SITE.glob("*.html"))
+
+
+class _Refs(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.refs: list[tuple[int, str, str]] = []
+
+    def handle_starttag(self, tag, attrs):
+        for name, value in attrs:
+            if name in ("href", "src") and value is not None:
+                self.refs.append((self.getpos()[0], tag, value.strip()))
+
+
+def page_refs(page: pathlib.Path) -> list[tuple[int, str, str]]:
+    parser = _Refs()
+    parser.feed(page.read_text(encoding="utf-8"))
+    return parser.refs
+
+
+def _tracked() -> tuple[set[str], set[str]]:
+    out = subprocess.run(["git", "ls-files"], cwd=REPO, capture_output=True, text=True, check=True)
+    files = set(out.stdout.splitlines())
+    dirs = {str(parent) for f in files for parent in pathlib.PurePosixPath(f).parents}
+    return files, dirs
+
+
+def broken_refs(page: pathlib.Path, files: set[str], dirs: set[str]) -> list[str]:
+    """Each repository link must name a tracked path; each relative link a file in docs-site/."""
+    broken = []
+    for line, _tag, ref in page_refs(page):
+        where = f"{page.name}:{line} {ref}"
+        match = REPO_PATH.match(ref)
+        if match:
+            kind, path = match.group(1), match.group(2).rstrip("/")
+            if not (path in files or (kind == "tree" and path in dirs)):
+                broken.append(where)
+            continue
+        parts = urlsplit(ref)
+        if parts.scheme or parts.netloc or ref.startswith(("#", "mailto:", "javascript:")):
+            continue
+        target = (page.parent / (parts.path or page.name)).resolve()
+        if target.is_dir():
+            target = target / "index.html"
+        if SITE.resolve() not in target.parents or not target.is_file():
+            broken.append(where)
+    return broken
+
+
+def test_link_guard_reports_a_moved_file(tmp_path):
+    page = tmp_path / "x.html"
+    page.write_text(
+        f'<a href="{REPO_URL}/blob/main/OPEN_ACCESS_POLICY.md">a</a>'
+        f'<a href="{REPO_URL}/blob/main/governance/OPEN_ACCESS_POLICY.md">b</a>'
+        f'<a href="{REPO_URL}/tree/main/governance">c</a>'
+    )
+    files = {"governance/OPEN_ACCESS_POLICY.md"}
+    assert broken_refs(page, files, {"governance"}) == [
+        f"x.html:1 {REPO_URL}/blob/main/OPEN_ACCESS_POLICY.md"
+    ]
+
+
+@pytest.mark.parametrize("page", PAGES, ids=[p.name for p in PAGES])
+def test_every_link_on_the_page_resolves(page):
+    files, dirs = _tracked()
+    broken = broken_refs(page, files, dirs)
+    assert not broken, "links that do not resolve:\n  " + "\n  ".join(broken)
