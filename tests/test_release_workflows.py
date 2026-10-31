@@ -10,6 +10,8 @@
   scripts/zenodo_deposit.py (Zenodo keeps one unpublished version per record).
   The upload step now runs only when the repository variable ZENODO_UPLOAD is
   `true`.
+* pages.yml: deployed only on a push to main touching the site paths, so
+  enabling Pages deployed nothing until such a push. It can now be dispatched.
 
 The `if:` conditions are evaluated by `evaluate`, a small reader of the GitHub
 Actions expression syntax these workflows use: string literals, context paths,
@@ -311,3 +313,18 @@ def test_release_deposit_doc_states_the_order_and_the_variable():
     assert "## Order of a release" in text
     assert "`ZENODO_UPLOAD`" in text
     assert "published by hand" in text
+
+
+# --- GAP-078: pages.yml can be dispatched --------------------------------------
+
+
+def _triggers(name: str) -> dict:
+    workflow = _workflow(name)
+    # YAML 1.1 reads the bare key `on` as the boolean true.
+    return workflow.get("on", workflow.get(True)) or {}
+
+
+def test_pages_can_be_dispatched_and_still_deploys_on_site_pushes():
+    triggers = _triggers("pages.yml")
+    assert "workflow_dispatch" in triggers
+    assert "docs-site/**" in triggers["push"]["paths"]

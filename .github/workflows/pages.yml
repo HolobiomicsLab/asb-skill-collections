@@ -1,4 +1,7 @@
 # pages.yml — deploy docs-site/ to GitHub Pages on push to main.
+# workflow_dispatch runs the first deployment once Pages is enabled with the
+# "GitHub Actions" source; a push that touches none of the paths below deploys
+# nothing.
 name: GitHub Pages
 
 on:
@@ -9,6 +12,7 @@ on:
       - "docs-site/**"
       - "catalogue.jsonld"
       - "leaderboard/**"
+  workflow_dispatch:
 
 permissions:
   contents: read
