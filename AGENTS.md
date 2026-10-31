@@ -27,6 +27,12 @@ software tools for computational LC-MS/MS; release `metabolomics-v0.2.0`, prelim
 /plugin install metabolomics@asb-skill-collections
 ```
 
+Verified at CLI level on 2026-10-30 with Claude Code 2.1.304; loading the skills
+in a live session was not exercised. The marketplace keeps a 286 MB clone of this
+repository beside the 72 MB plugin cache. From a local checkout,
+`claude plugin marketplace add "$PWD"` installs the same plugin without the
+clone ([`docs/STATUS.md`](docs/STATUS.md#claude-code-public-marketplace)).
+
 The entry point is `skills/_router/SKILL.md` — the only leaf-facing skill a host
 advertises. The corpus ships beside it as data at
 `collections/metabolomics/v2/leaves/<slug>/SKILL.md` and is read on demand, so

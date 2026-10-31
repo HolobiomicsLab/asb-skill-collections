@@ -54,20 +54,27 @@ lipidomics, some NMR, and multi-omics, statistics and pathway tools.
 
 ## Install
 
-**Claude Code** (plugin marketplace). The verified route adds the marketplace from a
-local checkout: from the checkout root, `claude plugin marketplace add "$PWD"` then
-`claude plugin install metabolomics@asb-skill-collections`
-([USAGE §1](collections/metabolomics/v2/USAGE.md#claude-code-verified-local-marketplace-route)).
-The public GitHub transport below is pending verification. Per-technique packs such as
-`metabolomics-lc-ms` are lighter subsets, experimental and not verified end to end
-([packs/metabolomics](packs/metabolomics/README.md)); packs overlap, so install the full
-plugin or a few packs, not both.
+**Claude Code** (plugin marketplace, public GitHub route):
 
 ```bash
-# public transport: pending verification
 /plugin marketplace add HolobiomicsLab/asb-skill-collections
 /plugin install metabolomics@asb-skill-collections
 ```
+
+This route was verified at CLI level on 2026-10-30 with Claude Code 2.1.304:
+`claude plugin marketplace add HolobiomicsLab/asb-skill-collections` and
+`claude plugin install metabolomics@asb-skill-collections` both exited 0. Loading
+the skills in a live session was not exercised. The marketplace keeps a clone of
+this repository (286 MB) beside the plugin cache (72 MB), about 358 MB on disk.
+From a local checkout, `claude plugin marketplace add "$PWD"` then
+`claude plugin install metabolomics@asb-skill-collections` installs the same
+plugin without that clone
+([USAGE §1](collections/metabolomics/v2/USAGE.md#claude-code-verified-local-marketplace-route)).
+Per-technique packs such as `metabolomics-lc-ms` are lighter subsets
+([packs/metabolomics](packs/metabolomics/README.md)): `metabolomics-lc-ms` was
+installed the same way at CLI level (29 MB plugin cache), and the other seven
+packs were built but not installed. Packs overlap, so install the full plugin or
+a few packs, not both.
 
 **Other agent runtimes** (`asbb` CLI from a checkout; Python 3.12 or later and PyYAML):
 
@@ -224,7 +231,8 @@ with [MAINTAINERS.md](governance/MAINTAINERS.md) and [COI_POLICY.md](governance/
 ## Status
 
 - Verified for this release: the full `metabolomics` collection as a managed install, Claude Code from a local-checkout marketplace, and the checkout CLI.
-- Pending or experimental: the public marketplace transport, packs, the web UI, runtime adapters other than `agents`, the MCP server. Not yet published: PyPI, the documentation site, the HuggingFace mirror, the benchmark and the capsules.
+- Verified at CLI level on 2026-10-30 (Claude Code 2.1.304), in-session load not exercised: Claude Code from the public GitHub marketplace (about 358 MB on disk) and the `metabolomics-lc-ms` pack.
+- Pending or experimental: the other seven packs, the web UI, runtime adapters other than `agents`, the MCP server. Not yet published: PyPI, the documentation site, the HuggingFace mirror, the benchmark and the capsules.
 - The `w3id.org/holobiomicslab/` and `w3id.org/asb` identifiers resolve. Dates, measurements and detail per surface: [docs/STATUS.md](docs/STATUS.md).
 
 ## Acknowledgements
