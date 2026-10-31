@@ -24,11 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s40168-022-01444-3
   title: NPClassScore
-evidence_spans:
-- It provides the tools [`GNPSDownloader`][nplinker.metabolomics.gnps.GNPSDownloader]
-  and [`GNPSExtractor`][nplinker.metabolomics.gnps.GNPSExtractor]
-- '[![github repo badge](https://img.shields.io/badge/github-nplinker-000.svg?color=blue)](https://github.com/NPLinker/nplinker)'
-- Python version ≥3.11
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

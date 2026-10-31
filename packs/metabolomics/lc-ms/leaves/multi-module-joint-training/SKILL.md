@@ -1,6 +1,6 @@
 ---
 name: multi-module-joint-training
-description: Use when when you have a pretrained encoder that captures domain knowledge
+description: Use when you have a pretrained encoder that captures domain knowledge
   (e.g., spectral feature extraction) and need to train task-specific decoder or scoring
   modules on top of it without degrading the encoder's learned representations.
 license: CC-BY-4.0
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
-evidence_spans:
-- FIDDLE is a deep learning method for predicting molecular formulas from MS/MS spectra
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

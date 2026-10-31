@@ -1,8 +1,9 @@
 ---
 name: test-result-parsing-and-reporting
-description: Use when when you need to validate that a package's periodic integration
-  test suite (distinct from unit tests) passes as expected, or when you must collect
-  and communicate structured evidence of test outcomes across multiple test cases.
+description: Use when you need to validate that a package's periodic integration test
+  suite (distinct from unit tests) passes as expected, or when you must collect and
+  communicate structured evidence of test outcomes across multiple test cases. Apply
+  this skill after executing a CI workflow such as test-package.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -18,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-025-02785-1
   title: MassQL
-evidence_spans:
-- The Mass Spec Query Language (MassQL) is a domain specific language meant to be
-  a succinct way to express a query in a mass spectrometry centric fashion.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

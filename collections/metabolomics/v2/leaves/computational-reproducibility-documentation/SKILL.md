@@ -1,8 +1,8 @@
 ---
 name: computational-reproducibility-documentation
-description: Use when when releasing or archiving a computational workflow (e.g.,
-  an R or Python-based normalization pipeline) and you need to ensure that future
-  users or reviewers can re-run the analysis in an identical computational environment.
+description: Use when releasing or archiving a computational workflow (e.g., an R
+  or Python-based normalization pipeline) and you need to ensure that future users
+  or reviewers can re-run the analysis in an identical computational environment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3961
@@ -23,13 +23,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo13080944
   title: SERDA
-evidence_spans:
-- R version 3.6.3 (2020-02-29)
-- packageVersion("reticulate") [1] ‘1.19’
-- packageVersion("keras") [1] ‘2.7.0’
-- packageVersion("pROC") [1] ‘1.17.0.1’
-- packageVersion("caret") [1] ‘6.0.86’
-- 'numpy_version: 1.18.1'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: byte-offset-seek-operations
-description: 'Use when when you have an indexed gzip-compressed mzML file and need
-  to retrieve individual spectra or chromatograms by index without sequential file
-  reading or full decompression. Typical scenario: you want spectrum[42] from a 10
-  GB indexed mzML.gz file and need sub-second access time.'
+description: 'Use when you have an indexed gzip-compressed mzML file and need to retrieve
+  individual spectra or chromatograms by index without sequential file reading or
+  full decompression. Typical scenario: you want spectrum[42] from a 10 GB indexed
+  mzML.gz file and need sub-second access time.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
-evidence_spans:
-- import xml.etree.ElementTree as et
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

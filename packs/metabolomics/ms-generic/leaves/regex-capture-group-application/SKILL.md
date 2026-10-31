@@ -1,6 +1,6 @@
 ---
 name: regex-capture-group-application
-description: Use when when you have PSM files (output from search engines like MaxQuant,
+description: Use when you have PSM files (output from search engines like MaxQuant,
   MSGFPlus, or Sage) and spectrum files in mzML or MGF format with non-trivial or
   inconsistent naming schemes, and you need to establish which PSMs correspond to
   which spectra.
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1002/pmic.202300336
   title: MS2Rescore (immunopeptidome rescoring)
-evidence_spans:
-- MS²Rescore is a tool for rescoring peptide-spectrum matches
-- Accepted ProForma modification labels in :py:mod:`psm_utils`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

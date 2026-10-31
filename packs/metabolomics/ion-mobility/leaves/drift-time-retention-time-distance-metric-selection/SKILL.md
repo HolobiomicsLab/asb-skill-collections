@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
-evidence_spans:
-- library(ggplot2) library(cowplot) library(GCIMS)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

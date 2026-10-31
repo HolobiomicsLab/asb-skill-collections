@@ -1,9 +1,9 @@
 ---
 name: metabolomic-spectral-annotation-and-molecular-family-clustering
-description: Use when when you have raw or GNPS-processed MS2 spectral data from microbial
+description: Use when you have raw or GNPS-processed MS2 spectral data from microbial
   strains and need to organize spectra into molecular families (grouped by spectral
   similarity) while preserving strain provenance, as a prerequisite for linking metabolomic
-  families to gene cluster families (GCFs) via.
+  families to gene cluster families (GCFs) via strain.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -25,14 +25,6 @@ derived_from:
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
-evidence_spans:
-- after downloading the strain assemblies and metabolomics data, the genomes were
-  run through antiSMASH v5.0.0 for BGC detection
-- genomes were run through antiSMASH v5.0.0 for BGC detection
-- and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
-- BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
-- NPLinker, a software framework to link genomic and metabolomic data
-- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

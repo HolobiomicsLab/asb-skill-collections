@@ -39,9 +39,9 @@ specific. Each hit prints the exact path to read.
 
 ## 2. Apply
 
-Read the chosen `leaves/<slug>/SKILL.md`. Its frontmatter carries `tools` (what
-to install or invoke), `derived_from` (source paper DOIs) and `evidence_spans`
-(verbatim anchors from the paper or repo). Follow the body.
+Read the chosen `leaves/<slug>/SKILL.md`. Its frontmatter carries `metadata.tools` (what
+to install or invoke) and `derived_from` (source paper DOIs). Find
+verbatim evidence lines in the body, then follow the procedure.
 
 ## 3. Ground (recommended)
 

@@ -1,6 +1,6 @@
 ---
 name: natural-isotope-abundance-calculation
-description: Use when when processing mass spectrometry imaging (MSI) data in positive
+description: Use when processing mass spectrometry imaging (MSI) data in positive
   ion mode where both [M+H]+ and [M+Na]+ adducts are present for the same lipid species,
   and you observe intensity overlap in [M+H]+ ion images caused by the isotopic fine
   structure of [M+Na]+ adducts.
@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2025.10.15.682422v1
   title: LipidQMap
-evidence_spans:
-- LipidQMap writes MSI exports as HDF5 containers
-- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org)
-  conventions.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: container-orchestration-verification
-description: Use when when a software tool is distributed as a Docker image and you
-  need to confirm it is available on a registry (e.g., Docker Hub), that the image
-  pulls without corruption, and that the application's entry point (help command,
-  version output, or interactive shell) is accessible and responsive.
+description: Use when a software tool is distributed as a Docker image and you need
+  to confirm it is available on a registry (e.g., Docker Hub), that the image pulls
+  without corruption, and that the application's entry point (help command, version
+  output, or interactive shell) is accessible and responsive.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.3389/fpls.2019.01329
   title: tima
-evidence_spans:
-- The initial work is available at <https://doi.org/10.3389/fpls.2019.01329>
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

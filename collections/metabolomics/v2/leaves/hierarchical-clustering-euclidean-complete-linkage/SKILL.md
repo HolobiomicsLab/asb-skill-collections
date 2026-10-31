@@ -24,18 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
-evidence_spans:
-- linkage using Seaborn’s clustermap function in
-- cluster microbes (rows) and metabolites (columns) separately based on the Euclidean
-  distance and complete linkage
-- for each fixed k, ranged from 2 to 20, a k-clustering of the rows using each normalized
-  S was generated. Then a consensus matrix M(k) was calculated as the mean connectivity
-  matrix across all
-- using Python's sci-kit-learn package
-- Networks showing microbe and metabolite modules and the interactions between them
-  were constructed using Cytoscape
-- Networks showing the modules and the interactions between them were constructed
-  using Cytoscape
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

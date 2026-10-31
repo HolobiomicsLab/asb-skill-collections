@@ -1,9 +1,9 @@
 ---
 name: spectral-noise-synthesis-poisson-distribution
-description: Use when when you have clean, baseline MS/MS spectra and need to create
-  test datasets with known noise characteristics to benchmark denoising algorithms,
-  compare denoising search performance, or validate that electronic and chemical noise
-  removal functions correctly identify and remove injected.
+description: Use when you have clean, baseline MS/MS spectra and need to create test
+  datasets with known noise characteristics to benchmark denoising algorithms, compare
+  denoising search performance, or validate that electronic and chemical noise removal
+  functions correctly identify and remove injected noise.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -25,11 +25,6 @@ derived_from:
   title: Spectral Denoising
 - doi: 10.1038/s41592-023-02012-9
   title: ''
-evidence_spans:
-- Spectral denoising requires ``Python >= 3.8`` installed on your system
-- import spectral_denoising as sd
-- scipy==1.14.1
-- '- ``scipy==1.14.1``'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

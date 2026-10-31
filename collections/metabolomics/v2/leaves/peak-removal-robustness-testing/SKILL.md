@@ -1,6 +1,6 @@
 ---
 name: peak-removal-robustness-testing
-description: Use when when validating a metabolomics pathway analysis method (particularly
+description: Use when validating a metabolomics pathway analysis method (particularly
   decomposition-based approaches like PLAGE) against data quality degradation, or
   when comparing robustness across methods (PLAGE vs. ORA vs. GSEA).
 license: CC-BY-4.0
@@ -21,7 +21,6 @@ derived_from:
   title: pals
 - doi: 10.1186/1471-2105-6-225
   title: ''
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

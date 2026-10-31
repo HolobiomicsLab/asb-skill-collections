@@ -1,6 +1,6 @@
 ---
 name: in-silico-spectrum-metadata-curation
-description: Use when when processing collections of in-silico mass spectra from OMSLs
+description: Use when processing collections of in-silico mass spectra from OMSLs
   (Open Mass Spectra Libraries) where the adduct field is absent, null, or not explicitly
   specified in the source file;
 license: CC-BY-4.0
@@ -25,8 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
-evidence_spans:
-- Python-3.12
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

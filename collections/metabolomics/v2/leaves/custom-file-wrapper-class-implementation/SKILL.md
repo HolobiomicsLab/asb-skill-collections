@@ -1,7 +1,7 @@
 ---
 name: custom-file-wrapper-class-implementation
-description: Use when when you have mass spectrometry data stored in a database or
-  non-mzML file format and need to integrate it into the pymzML pipeline without converting
+description: Use when you have mass spectrometry data stored in a database or non-mzML
+  file format and need to integrate it into the pymzML pipeline without converting
   to mzML. Use this skill when FileInterface does not natively recognize your file
   extension and you want to avoid data conversion overhead.
 license: CC-BY-4.0
@@ -22,9 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
-evidence_spans:
-- import sqlite3
-- import xml.etree.ElementTree as et
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

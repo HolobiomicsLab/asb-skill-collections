@@ -1,6 +1,6 @@
 ---
 name: mass-spectrometry-data-structure-decoding
-description: Use when when you have a mzPeak file (uncompressed ZIP archive containing
+description: Use when you have a mzPeak file (uncompressed ZIP archive containing
   Parquet tables) and need to access decoded spectral data arrays (m/z, intensity),
   spectrum metadata (scan descriptors, precursors), or chromatogram data in a form
   suitable for Python/R analysis pipelines.
@@ -25,9 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
-evidence_spans:
-- There is also an R implementation in `R/`
-- complete re-implementation for _reading_ mzPeak files using [`pyarrow`]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

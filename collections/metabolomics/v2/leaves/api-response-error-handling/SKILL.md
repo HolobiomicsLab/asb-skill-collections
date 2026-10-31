@@ -1,8 +1,9 @@
 ---
 name: api-response-error-handling
-description: Use when when building asynchronous metadata enrichment workflows that
-  call multiple external APIs (CIR, CTS, PubChem, IDSM, BridgeDb) to annotate mass
-  spectra .
+description: Use when building asynchronous metadata enrichment workflows that call
+  multiple external APIs (CIR, CTS, PubChem, IDSM, BridgeDb) to annotate mass spectra
+  .msp files, and you need to prevent a single API failure or rate limit from halting
+  the entire annotation process or corrupting output files.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -23,13 +24,6 @@ metadata:
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer
-evidence_spans:
-- '**MSMetaEnhancer** is a tool used for `.msp` files annotation'
-- '`MSMetaEnhancer/libs/converters/web/` named after your service'
-- 'MSMetaEnhancer: A Python package for mass spectra metadata annotation'
-- Create a new Python file in `MSMetaEnhancer/libs/converters/web/`
-- make sure the existing tests still work by running ``pytest``
-- 'fetched from the following services: [CIR](https://cactus.nci.nih.gov/chemical/structure_documentation)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

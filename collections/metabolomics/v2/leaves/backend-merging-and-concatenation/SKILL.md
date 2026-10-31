@@ -1,9 +1,9 @@
 ---
 name: backend-merging-and-concatenation
-description: Use when when you have two or more MsBackend objects (e.g., multiple
-  MsBackendMemory, MsBackendDataFrame, or MsBackendMzR instances) containing distinct
-  sets of MS spectra and you need to consolidate them into a single backend for downstream
-  analysis, parallel processing, or export.
+description: Use when you have two or more MsBackend objects (e.g., multiple MsBackendMemory,
+  MsBackendDataFrame, or MsBackendMzR instances) containing distinct sets of MS spectra
+  and you need to consolidate them into a single backend for downstream analysis,
+  parallel processing, or export.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3364
@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
-evidence_spans:
-- '`DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)'
-- DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)
-- library(Spectra) library(IRanges)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

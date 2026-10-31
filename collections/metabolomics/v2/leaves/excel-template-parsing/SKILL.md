@@ -1,9 +1,9 @@
 ---
 name: excel-template-parsing
-description: Use when when you have an Excel file downloaded from InjectionDesign's
-  template or conforming to its schema, and you need to extract sample identifiers,
-  classification dimensions (up to three), and QC type labels (Blank QC, Solvent QC,
-  Pooled QC, Long-Term Reference QC, or custom) into a structured.
+description: Use when you have an Excel file downloaded from InjectionDesign's template
+  or conforming to its schema, and you need to extract sample identifiers, classification
+  dimensions (up to three), and QC type labels (Blank QC, Solvent QC, Pooled QC, Long-Term
+  Reference QC, or custom) into a structured.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2023.02.26.530140v1.article-info
   title: InjectionDesign
-evidence_spans:
-- LC/GC-MS-based Multi-Omics Injection-Plate Design Web Service
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

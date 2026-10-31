@@ -23,9 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
-evidence_spans:
-- '[![Nextflow](https://img.shields.io/badge/nextflow-%E2%89%A522.10.0-brightgreen.svg)](https://www.nextflow.io/)'
-- nextflow4ms-dial
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

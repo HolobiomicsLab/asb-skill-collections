@@ -1,7 +1,7 @@
 ---
 name: spectral-database-query-execution
-description: Use when when you have an unknown mass spectrum (query spectrum) and
-  need to search it against a reference database of billions of spectra to find matching
+description: Use when you have an unknown mass spectrum (query spectrum) and need
+  to search it against a reference database of billions of spectra to find matching
   or structurally related compounds.
 license: CC-BY-4.0
 metadata:
@@ -22,11 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41587-023-01985-4
   title: MASST
-evidence_spans:
-- MASST+ is an improvement on GNPS Mass Spectrometry Search Tool (MASST)
-- MASST+ is an improvement on GNPS Mass Spectrometry Search Tool
-- MASST+ is publicly available as a web service on GNPS
-- Like MASST, MASST+ is publicly available as a web service on GNPS.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

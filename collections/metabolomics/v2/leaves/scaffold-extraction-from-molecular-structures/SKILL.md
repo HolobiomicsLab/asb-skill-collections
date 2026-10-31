@@ -1,7 +1,7 @@
 ---
 name: scaffold-extraction-from-molecular-structures
-description: 'Use when when pre-training or fine-tuning a molecular representation
-  model on natural products and you need to encode scaffold-derived evolutionary patterns
+description: 'Use when pre-training or fine-tuning a molecular representation model
+  on natural products and you need to encode scaffold-derived evolutionary patterns
   as a distinct learning signal. Trigger: input is SMILES strings or molecular graphs
   from natural product databases (e.'
 license: CC-BY-4.0
@@ -23,9 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
-evidence_spans:
-- Fork the repository
-- Our method integrates contrastive learning with masked graph modeling
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

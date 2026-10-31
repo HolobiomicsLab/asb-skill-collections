@@ -1,6 +1,6 @@
 ---
 name: singular-value-decomposition-pathway-analysis
-description: Use when when you have a peak intensity matrix (rows = metabolite features,
+description: Use when you have a peak intensity matrix (rows = metabolite features,
   columns = samples) with corresponding compound annotations (peak ID → KEGG/ChEBI
   ID mapping), and you need to rank pathways or metabolite set groupings (KEGG pathways,
   Reactome pathways, GNPS Molecular Families, MS2LDA.
@@ -24,15 +24,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
-evidence_spans:
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
-  database queries of pathways
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
-  database queries of pathways,
-- To access our interactive Web application PALS Viewer, please visit [https://pals.glasgowcompbio.org/app/]
-- Molecular Families from GNPS
-- This includes in particular *Molecular Families* from [GNPS](http://gnps.ucsd.edu/)
-- Mass2Motifs from MS2LDA
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

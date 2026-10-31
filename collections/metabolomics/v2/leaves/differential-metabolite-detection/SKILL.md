@@ -24,9 +24,6 @@ derived_from:
   title: MultiABLER
 - doi: 10.1021/acs.analchem.9b01842
   title: ''
-evidence_spans:
-- MultiABLER is a set of R functions
-- MultiABLER is a set of R functions forms a seamless workflow
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

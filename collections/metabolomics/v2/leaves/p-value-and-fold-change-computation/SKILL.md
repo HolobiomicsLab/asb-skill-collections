@@ -16,9 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2025.08.28.672951v2
   title: EnrichMET
-evidence_spans:
-- simplifies pathway enrichment analysis by allowing the complete workflow to be executed
-  through a single R function call
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

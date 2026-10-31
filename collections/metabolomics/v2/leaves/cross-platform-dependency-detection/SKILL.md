@@ -1,7 +1,7 @@
 ---
 name: cross-platform-dependency-detection
-description: Use when when developing a standalone scientific application that relies
-  on external binaries or libraries and must run on a specific operating system (e.g.,
+description: Use when developing a standalone scientific application that relies on
+  external binaries or libraries and must run on a specific operating system (e.g.,
   Microsoft Windows 64-bit). Use this skill to verify Gnuplot 5.4.
 license: CC-BY-4.0
 metadata:
@@ -17,7 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1002/cpz1.70009
   title: LipidOne 2.0
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

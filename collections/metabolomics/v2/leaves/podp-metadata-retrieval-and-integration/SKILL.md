@@ -1,9 +1,9 @@
 ---
 name: podp-metadata-retrieval-and-integration
-description: Use when when running NPLinker in PODP mode (as opposed to local mode),
-  you need to fetch and validate project metadata from PODP, orchestrate downloads
-  of GNPS molecular networking data, AntiSMASH BGC predictions, BigScape clustering
-  results, and MIBiG reference metadata, then organize them into.
+description: Use when running NPLinker in PODP mode (as opposed to local mode), you
+  need to fetch and validate project metadata from PODP, orchestrate downloads of
+  GNPS molecular networking data, AntiSMASH BGC predictions, BigScape clustering results,
+  and MIBiG reference metadata, then organize them into the.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -26,11 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
-evidence_spans:
-- NPLinker is a python framework for data mining microbial natural products
-- GNPSDownloader, GNPSExtractor
-- Python version ≥3.11
-- mibig directory contains the MIBiG metadata
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

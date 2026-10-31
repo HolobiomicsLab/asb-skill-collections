@@ -1,6 +1,6 @@
 ---
 name: batch-name-reconciliation
-description: Use when when you have a metadata table with taxonomic annotations (species,
+description: Use when you have a metadata table with taxonomic annotations (species,
   genus, family columns) that may contain outdated, misspelled, or non-canonical taxon
   names, and you need to integrate these samples into a natural products analysis
   pipeline that requires standardized taxonomy (e.
@@ -21,9 +21,6 @@ derived_from:
   title: Inventa
 - doi: 10.1038/s41467-021-23953-9
   title: ''
-evidence_spans:
-- The taxonomy should be cleaned to uptoday recognized names, you can use the Open
-  Tree of Life
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

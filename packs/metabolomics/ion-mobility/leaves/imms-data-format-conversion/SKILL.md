@@ -1,9 +1,9 @@
 ---
 name: imms-data-format-conversion
-description: Use when when you have raw Agilent MassHunter (.d) or UIMF IM-MS data
-  files from drift tube (DT) or structure for lossless ion manipulations (SLIM) instruments
+description: Use when you have raw Agilent MassHunter (.d) or UIMF IM-MS data files
+  from drift tube (DT) or structure for lossless ion manipulations (SLIM) instruments
   and need to ingest them into a preprocessing pipeline that requires standardized
-  in-memory or intermediate representations for.
+  in-memory or intermediate representations for multidimensional.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -23,14 +23,6 @@ derived_from:
   title: PNNL PreProcessor
 - doi: 10.1021/acs.jproteome.1c00425
   title: ''
-evidence_spans:
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
-  spectrometry data files
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
-  spectrometry data files (MS-files) from drift tube (DT) and structure for lossless
-  ion manipulations (SLIM) IM-MS
-- Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files)
-- Agilent MassHunter (.d) and UIMF mass spectrometry data files
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

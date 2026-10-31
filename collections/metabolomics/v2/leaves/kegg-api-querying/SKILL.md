@@ -19,10 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
-evidence_spans:
-- which retrieves data from the KEGG API using the function ```keggGet``` from the
-  package KEGGREST
-- Omu is an R package that enables rapid analysis of Metabolomics data sets
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

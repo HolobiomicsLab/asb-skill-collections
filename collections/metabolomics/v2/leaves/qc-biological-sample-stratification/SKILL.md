@@ -23,10 +23,6 @@ derived_from:
   title: Metanorm
 - doi: 10.1021/acs.analchem.5c06841
   title: ''
-evidence_spans:
-- The R package implements three (new) robust normalization methods
-- Metanorm supports robust metabolomics data normalization across scales and experimental
-  designs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

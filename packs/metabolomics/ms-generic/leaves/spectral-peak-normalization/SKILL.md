@@ -1,9 +1,9 @@
 ---
 name: spectral-peak-normalization
-description: Use when when preparing query spectra and library spectra for similarity-based
+description: Use when preparing query spectra and library spectra for similarity-based
   matching via dot product scoring, particularly in open modification spectral library
   searches where you need to match modified query spectra to unmodified library counterparts
-  without the results being biased by.
+  without the results being biased by differences.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo
-evidence_spans:
-- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary)
-  is a spectral library search engine'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

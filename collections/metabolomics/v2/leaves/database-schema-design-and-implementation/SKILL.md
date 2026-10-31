@@ -1,7 +1,7 @@
 ---
 name: database-schema-design-and-implementation
-description: Use when when you have an mzML file that you want to store persistently
-  in a queryable format for repeated access, or when memory constraints prevent loading
+description: Use when you have an mzML file that you want to store persistently in
+  a queryable format for repeated access, or when memory constraints prevent loading
   entire mzML files into memory;
 license: CC-BY-4.0
 metadata:
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
-evidence_spans:
-- import sqlite3
-- import xml.etree.ElementTree as et
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

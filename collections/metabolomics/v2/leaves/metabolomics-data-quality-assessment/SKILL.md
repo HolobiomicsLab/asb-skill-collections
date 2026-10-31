@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-024-48009-6
   title: metaboanalystr
-evidence_spans:
-- 'MetaboAnalystR 4.0: a unified LC-MS workflow for global metabolomics'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

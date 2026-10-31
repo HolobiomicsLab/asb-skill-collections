@@ -1,6 +1,6 @@
 ---
 name: docker-network-creation
-description: Use when when deploying a multi-container application stack using docker-compose
+description: Use when deploying a multi-container application stack using docker-compose
   where containers need reliable hostname-based service discovery and isolation from
   the host network.
 license: CC-BY-4.0
@@ -17,10 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jacs.9b13786
   title: CSCS / deep CNN natural-product annotation
-evidence_spans:
-- you need docker and docker-compose
-- To bring everything up, you need docker and docker-compose.
-- Make sure you have python installed
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

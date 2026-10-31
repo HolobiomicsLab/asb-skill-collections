@@ -1,8 +1,8 @@
 ---
 name: descriptor-table-assembly
-description: Use when when you have calculated molecular descriptors from validated
-  chemical structures and need to prepare them for BitterPredict.m classification.
-  Use this skill after descriptor calculation is complete and before invoking BitterPredict.m
+description: Use when you have calculated molecular descriptors from validated chemical
+  structures and need to prepare them for BitterPredict.m classification. Use this
+  skill after descriptor calculation is complete and before invoking BitterPredict.m
   for bitter/non-bitter predictions.
 license: CC-BY-4.0
 metadata:
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
-evidence_spans:
-- BitterPredict is a classifier which predicts whether a compound is bitter or not,
-  based on its chemical structure.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

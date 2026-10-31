@@ -24,10 +24,6 @@ derived_from:
   title: BAGO
 - doi: 10.1002/9780470508183
   title: ''
-evidence_spans:
-- Download and install Python 3.8 or later from `python.org`
-- model.computeNextGradient()
-- A Jupyter Notebook is provided to help you get started with the LC gradient optimization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

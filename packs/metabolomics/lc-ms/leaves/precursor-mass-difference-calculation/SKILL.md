@@ -1,6 +1,6 @@
 ---
 name: precursor-mass-difference-calculation
-description: Use when when comparing two MS/MS spectra using modified cosine similarity
+description: Use when comparing two MS/MS spectra using modified cosine similarity
   and the precursor m/z values differ, indicating potential neutral losses, adduct
   variations, or analogs with different substituents.
 license: CC-BY-4.0
@@ -21,7 +21,6 @@ derived_from:
   title: Neutral-loss similarity
 - doi: 10.1016/1044-0305
   title: ''
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

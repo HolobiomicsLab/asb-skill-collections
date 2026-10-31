@@ -1,6 +1,6 @@
 ---
 name: peak-map-rendering-retention-time-mz-intensity
-description: Use when when you have loaded mass spectrometry data (from mzML or Bruker
+description: Use when you have loaded mass spectrometry data (from mzML or Bruker
   .
 license: CC-BY-4.0
 metadata:
@@ -26,8 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
-evidence_spans:
-- pyopenms ... pymzml ... pyteomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

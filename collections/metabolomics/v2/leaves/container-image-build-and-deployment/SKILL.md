@@ -18,7 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00602
   title: CloMet
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

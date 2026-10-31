@@ -1,6 +1,6 @@
 ---
 name: singular-value-decomposition-metabolomics
-description: Use when when you have a log2-normalized, zero-mean, unit-variance intensity
+description: Use when you have a log2-normalized, zero-mean, unit-variance intensity
   matrix (rows=metabolites, columns=samples) and a curated metabolite set database
   (e.
 license: CC-BY-4.0
@@ -26,7 +26,6 @@ derived_from:
   title: pals
 - doi: 10.1186/1471-2105-6-225
   title: ''
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

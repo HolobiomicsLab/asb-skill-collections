@@ -1,6 +1,6 @@
 ---
 name: identifier-mapping-implementation
-description: Use when when you have lipid names or abbreviations sourced from multiple
+description: Use when you have lipid names or abbreviations sourced from multiple
   databases (HMDB, LIPID MAPS, LipidHome, RefMet, SwissLipids) or software tools (LipidSearch,
   MS-DIAL, MZmine2, LipidBlast, etc.) and need to normalize them into a single canonical
   representation to enable data integration.
@@ -20,11 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2020.04.09.033894
   title: LipidLynxX
-evidence_spans:
-- The LipidLynxX project is aimed to provide a unified identifier for major lipids
-- LipidLynxX source code use [code style Black](https://github.com/psf/black) for
-  all python codes
-- JSON configurations are formatted by Visual Studio Code / PyCharm editor
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

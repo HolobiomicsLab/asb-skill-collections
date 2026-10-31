@@ -1,6 +1,6 @@
 ---
 name: datatype-validation-helper-methods
-description: Use when when implementing a custom MsBackend subclass and need to verify
+description: Use when implementing a custom MsBackend subclass and need to verify
   that spectra variables (e.g., precursor m/z, retention time, MS level) conform to
   expected data types before exposing them to Spectra objects.
 license: CC-BY-4.0
@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
-evidence_spans:
-- '`DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)'
-- DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)
-- library(Spectra) library(IRanges)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

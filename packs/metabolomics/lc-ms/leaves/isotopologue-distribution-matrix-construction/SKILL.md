@@ -1,9 +1,9 @@
 ---
 name: isotopologue-distribution-matrix-construction
-description: Use when when you have measured fractional abundances of isotopologues
-  (FAM) from LC-MS in an isotope labeling experiment and need to correct them to obtain
+description: Use when you have measured fractional abundances of isotopologues (FAM)
+  from LC-MS in an isotope labeling experiment and need to correct them to obtain
   true mass distribution vectors (MDV) that reflect only the labeling contribution,
-  accounting for background from naturally occurring isotopes.
+  accounting for background from naturally occurring isotopes and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-019-2669-9
   title: ElemCor
-evidence_spans:
-- ElemCor is a software tool to correct LC-MS data in isotope labeling experiments.
-- ElemCor is a software tool to correct LC-MS data in isotope labeling experiments
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

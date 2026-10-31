@@ -22,8 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c04040
   title: lipoclean
-evidence_spans:
-- LipoCLEAN is a command line tool
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

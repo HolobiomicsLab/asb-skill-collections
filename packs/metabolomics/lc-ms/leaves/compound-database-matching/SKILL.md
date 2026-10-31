@@ -24,12 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-023-00695-y
   title: MAW
-evidence_spans:
-- performs spectral database dereplication using R Package
-- spectral database dereplication using R Package Spectra
-- compound database dereplication using SIRIUS OR MetFrag
-- compound database dereplication using SIRIUS
-- workflow takes MS2 .mzML format data files as an input in R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

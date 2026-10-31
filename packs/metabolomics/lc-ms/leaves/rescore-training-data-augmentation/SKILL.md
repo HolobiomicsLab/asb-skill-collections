@@ -1,6 +1,6 @@
 ---
 name: rescore-training-data-augmentation
-description: Use when when you have TCN-predicted candidate formulas with ranked scores
+description: Use when you have TCN-predicted candidate formulas with ranked scores
   and need to train a Siamese rescore model to re-rank those candidates.
 license: CC-BY-4.0
 metadata:
@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
-evidence_spans:
-- 'CLI and Python API: [msfiddle](https://github.com/josiehong/msfiddle)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

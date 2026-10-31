@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00618
   title: lcmsWorld
-evidence_spans:
-- lcmsWorld is a 3d viewer for LC-MS data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: calibration-curve-validation
-description: Use when when you have loaded standard compound MS intensity measurements
+description: Use when you have loaded standard compound MS intensity measurements
   with known concentrations and need to select between linear or quadratic regression
   models before applying the calibration to unknown samples.
 license: CC-BY-4.0
@@ -17,9 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
-evidence_spans:
-- '**QuantyFey** is a Shiny application for the **visualization, analysis, and quantification**
-  of **mass spectrometry (MS) data**'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

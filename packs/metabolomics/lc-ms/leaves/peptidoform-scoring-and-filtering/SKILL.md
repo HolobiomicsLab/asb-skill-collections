@@ -25,15 +25,6 @@ derived_from:
   title: Casanovo
 - doi: 10.1093/bib/bbac542
   title: ''
-evidence_spans:
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
-  sequencing.
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
-  sequencing
-- Pytorch is installed automatically when installing Casanovo
-- Upgraded minimum Lightning version to 2.6.
-- Upgraded minimum DepthCharge version to 0.4.10.
-- Install the latest version of the NVIDIA drivers using the official CUDA Toolkit
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

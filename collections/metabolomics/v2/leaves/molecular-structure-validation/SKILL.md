@@ -17,7 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jcim.8b00035
   title: CypReact
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

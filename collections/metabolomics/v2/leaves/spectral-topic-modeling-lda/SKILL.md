@@ -1,6 +1,6 @@
 ---
 name: spectral-topic-modeling-lda
-description: Use when when you have a collection of normalized mass spectrometry spectra
+description: Use when you have a collection of normalized mass spectrometry spectra
   (peak intensities or binned m/z representations) and seek to enrich neural network
   training signals for metabolite identification by discovering latent spectral patterns.
 license: CC-BY-4.0
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btae490
   title: ESP
-evidence_spans:
-- spectral topic labels obtained using LDA (Latent Dirichlet Allocation)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

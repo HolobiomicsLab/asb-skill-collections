@@ -1,9 +1,9 @@
 ---
 name: dependency-installation-and-configuration
-description: Use when when setting up a fresh clone of the ENPKG workflow repository
-  or when onboarding to a new machine. Use this skill before attempting to run any
-  workflow stages (data organization, taxonomical enhancement, MN generation, SIRIUS
-  annotation, or graph building).
+description: Use when setting up a fresh clone of the ENPKG workflow repository or
+  when onboarding to a new machine. Use this skill before attempting to run any workflow
+  stages (data organization, taxonomical enhancement, MN generation, SIRIUS annotation,
+  or graph building).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -20,7 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acscentsci.3c00800
   title: enpkg
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

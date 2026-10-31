@@ -1,8 +1,8 @@
 ---
 name: multi-service-integration-testing
-description: Use when when building or modifying an asynchronous annotation pipeline
-  that dispatches metadata enrichment requests to multiple heterogeneous web services
-  and must verify that each service's HTTP calls succeed, response parsing is correct,
+description: Use when building or modifying an asynchronous annotation pipeline that
+  dispatches metadata enrichment requests to multiple heterogeneous web services and
+  must verify that each service's HTTP calls succeed, response parsing is correct,
   and enriched fields are correctly merged into the output.
 license: CC-BY-4.0
 metadata:
@@ -24,10 +24,6 @@ metadata:
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer
-evidence_spans:
-- MSMetaEnhancer is a tool used for `.msp` files annotation
-- 'Converter Builder: Automatically discovers and instantiates available converters'
-- 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: descriptor-subgroup-partitioning
-description: Use when when you have a trained BitterPredict classifier, a dataset
-  of molecules with computed descriptors and known bitter/not-bitter labels, and want
-  to understand which descriptor categories (e.g., molecular weight, lipophilicity,
-  topological, pharmacophoric) drive prediction decisions.
+description: Use when you have a trained BitterPredict classifier, a dataset of molecules
+  with computed descriptors and known bitter/not-bitter labels, and want to understand
+  which descriptor categories (e.g., molecular weight, lipophilicity, topological,
+  pharmacophoric) drive prediction decisions.
 license: CC-BY-4.0
 metadata:
   grounding_tier: link-only
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
-evidence_spans:
-- BitterPredict is a classifier which predicts whether a compound is bitter or not,
-  based on its chemical structure.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

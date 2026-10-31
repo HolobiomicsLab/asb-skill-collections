@@ -1,6 +1,6 @@
 ---
 name: mass-spectrometry-polarity-filtering
-description: Use when when processing centroided .mzML LC–MS runs with a multi-polarity
+description: Use when processing centroided .mzML LC–MS runs with a multi-polarity
   target list (i.e., some targets ionize in positive mode, others in negative mode,
   or both) and you need to detect peaks and extract ion chromatograms without manually
   subsetting the raw data by polarity beforehand.
@@ -25,14 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
-evidence_spans:
-- R package for *TArgeted Raw Data Integration In Spectrometry*
-- loads MS data as `Spectra` objects so it's easily integrated with other tools
-- It makes use of an established retention time correction algorithm from the `xcms`
-  package
-- Alternatively, instead of using file paths as input for TARDIS, the user can also
-  use an `MsExperiment` object
-- knitr::include_graphics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

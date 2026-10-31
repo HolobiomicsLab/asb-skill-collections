@@ -27,11 +27,6 @@ derived_from:
   title: MolNotator
 - doi: 10.1073/pnas.1608041113
   title: ''
-evidence_spans:
-- from MolNotator.duplicate_filter import duplicate_filter
-- from MolNotator.sample_slicer import sample_slicer
-- import yaml
-- pipenv --python 2.7
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

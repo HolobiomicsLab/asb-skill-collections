@@ -1,8 +1,8 @@
 ---
 name: kegg-data-retrieval-and-parsing
-description: Use when when you have selected one or more organisms to analyze and
-  need to extract their complete metabolic reaction and metabolite data from KEGG
-  in order to build a network representation.
+description: Use when you have selected one or more organisms to analyze and need
+  to extract their complete metabolic reaction and metabolite data from KEGG in order
+  to build a network representation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3283
@@ -19,14 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pone.0246962
   title: MetNet
-evidence_spans:
-- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic
-  network of two organisms selected in KEGG
-- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic
-  network
-- their metabolic data are retrieved from KEGG and the corresponding networks of metabolic
-  functions are built
-- MetNet is a Java tool
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

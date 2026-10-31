@@ -1,6 +1,6 @@
 ---
 name: table-consolidation-and-denormalization
-description: Use when when you have cleaned, normalized organism, structure, and reference
+description: Use when you have cleaned, normalized organism, structure, and reference
   tables from separate cleaning pipelines (e.g., after 2_curating stage) and must
   integrate them into a single queryable table while maintaining referential integrity
   and generating lookup dictionaries.
@@ -21,9 +21,6 @@ derived_from:
   title: lotus
 - doi: 10.1007/s00044-016-1764-y
   title: ''
-evidence_spans:
-- db/../standardizing.R, common.R
-- 1_integrating.R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

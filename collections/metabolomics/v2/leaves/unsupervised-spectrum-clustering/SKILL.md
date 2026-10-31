@@ -1,6 +1,6 @@
 ---
 name: unsupervised-spectrum-clustering
-description: Use when when you have high-dimensional embedding vectors from pretrained
+description: Use when you have high-dimensional embedding vectors from pretrained
   models (e.g., MSBERT) and need to verify that the learned representation space groups
   spectra by chemical similarity without labeled training data.
 license: CC-BY-4.0
@@ -25,9 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c02426
   title: MSBERT
-evidence_spans:
-- '[Anaconda](https://www.anaconda.com) for Python 3.12'
-- Install [Git](https://git-scm.com/downloads)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

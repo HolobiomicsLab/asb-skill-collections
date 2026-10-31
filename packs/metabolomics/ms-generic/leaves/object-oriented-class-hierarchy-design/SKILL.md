@@ -1,9 +1,9 @@
 ---
 name: object-oriented-class-hierarchy-design
-description: Use when when you need to create a plotting or visualization framework
-  that must support multiple plot kinds (spectrum, chromatogram, mobilogram, peakmap)
-  each backed by multiple rendering engines (matplotlib, bokeh, plotly), and you want
-  to avoid combinatorial explosion of concrete classes while.
+description: Use when you need to create a plotting or visualization framework that
+  must support multiple plot kinds (spectrum, chromatogram, mobilogram, peakmap) each
+  backed by multiple rendering engines (matplotlib, bokeh, plotly), and you want to
+  avoid combinatorial explosion of concrete classes while.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0570
@@ -24,14 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
-evidence_spans:
-- ms_data.plot(x="m/z", y="intensity", kind="spectrum")
-- conda create --name=pyopenms-viz python=3.12
-- Multiple backends supported including matplotlib, bokeh, and plotly
-- Rendering is typically slower than the BOKEH backend
-- Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
-  pandas dataframes
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -20,11 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe
-evidence_spans:
-- MINE-Database requires the use of rdkit, which currently is unavailable to install
-  on pip
-- Default filters are created using [RDKit](https://rdkit.org/docs/api-docs.html),
-  a python library providing a collection of cheminformatic tools.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

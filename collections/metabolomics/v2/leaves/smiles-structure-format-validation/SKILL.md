@@ -1,9 +1,9 @@
 ---
 name: smiles-structure-format-validation
-description: Use when when you have raw molecular structures in SMILES or .sdf format
-  and need to feed them into CypReact for CYP isoform prediction. Apply this skill
-  before invoking the CypReact command-line tool to avoid runtime failures due to
-  malformed input.
+description: Use when you have raw molecular structures in SMILES or .sdf format and
+  need to feed them into CypReact for CYP isoform prediction. Apply this skill before
+  invoking the CypReact command-line tool to avoid runtime failures due to malformed
+  input.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3961
@@ -17,7 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jcim.8b00035
   title: CypReact
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: r-graphics-customization
-description: Use when when you have completed a comprehensive ranking of preprocessing
+description: Use when you have completed a comprehensive ranking of preprocessing
   workflows (e.
 license: CC-BY-4.0
 metadata:
@@ -18,9 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA
-evidence_spans:
-- '[![R >3.5](https://img.shields.io/badge/R-%3E3.5-success.svg)](https://www.r-project.org/)'
-- Run norvisualization on the overall ranking CSV
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

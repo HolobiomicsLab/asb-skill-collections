@@ -1,9 +1,9 @@
 ---
 name: biosynformatic-descriptor-computation
-description: Use when when you have a natural product structure (as a molecule object,
+description: Use when you have a natural product structure (as a molecule object,
   SMILES string, or InChI string) and need to generate a biosynformatic descriptor
   for downstream machine learning tasks such as biosynthetic class prediction, structure-activity
-  correlation, or natural product database.
+  correlation, or natural product database annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0564
@@ -22,8 +22,6 @@ metadata:
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni
-evidence_spans:
-- pip install -e .[dev]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

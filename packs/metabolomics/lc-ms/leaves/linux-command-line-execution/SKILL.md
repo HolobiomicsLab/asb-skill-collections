@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1016/j.enceco.2025.07.022
   title: MSThunder
-evidence_spans:
-- MSThunder provide a deep learning-based nontargeted analytical framework for the
-  accurate and rapid identification of unknown organic pollutants in water
-- available through our experiments conducted on an Ubuntu 20.04 environment
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

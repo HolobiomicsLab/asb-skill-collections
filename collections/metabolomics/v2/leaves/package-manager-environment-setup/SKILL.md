@@ -1,9 +1,9 @@
 ---
 name: package-manager-environment-setup
-description: Use when when you need to establish a working installation of a Python
-  package in a fresh or isolated environment, particularly when the package is available
-  through multiple distribution channels (PyPI, Bioconda, AUR) and you want to verify
-  that the installation is complete and functional before.
+description: Use when you need to establish a working installation of a Python package
+  in a fresh or isolated environment, particularly when the package is available through
+  multiple distribution channels (PyPI, Bioconda, AUR) and you want to verify that
+  the installation is complete and functional before.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
-evidence_spans:
-- 'using `conda <https://docs.conda.io/projects/conda/en/latest/index.html>`_::'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: tabular-results-aggregation-and-comparison
-description: Use when when you have chemical annotations (GNPS matches) distributed
-  across multiple sample groups (e.g., by sample type, extraction method, ionization
-  source) with unequal numbers of files per group, and you need to compare enrichment
-  fairly without group-size bias.
+description: Use when you have chemical annotations (GNPS matches) distributed across
+  multiple sample groups (e.g., by sample type, extraction method, ionization source)
+  with unequal numbers of files per group, and you need to compare enrichment fairly
+  without group-size bias.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -24,10 +24,6 @@ derived_from:
   title: ReDU
 - doi: 10.1186/2047-217x-2-16
   title: ''
-evidence_spans:
-- ReDU only interacts with MassIVE
-- data uploaded to MassIVE as a public dataset
-- Validation of the ReDU sample information template using the drag-and-drop validator
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -23,9 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00313
   title: MZA
-evidence_spans:
-- MZA is a stand-alone and self-contained command-line executable which converts multidimensional
-  mass spectrometry (MS) data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

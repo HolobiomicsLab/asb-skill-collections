@@ -1,6 +1,6 @@
 ---
 name: gene-identifier-format-standardization
-description: Use when when you have differential expression results from genes, miRNAs,
+description: Use when you have differential expression results from genes, miRNAs,
   proteins, or lipids with heterogeneous identifier formats (raw gene names, Ensembl
   accessions, RefSeq IDs, or gene symbols) and need to perform pathway enrichment
   analysis.
@@ -23,11 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator
-evidence_spans:
-- Pathway enrichment analysis | Clusterprofiler, Biotranslator
-- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger,
-  limma, sva, ggplot2, ComplexHeatmap'
-- 'R packages: DESeq2, edger, RankProd, ggplot2 ComplexHeatmap'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

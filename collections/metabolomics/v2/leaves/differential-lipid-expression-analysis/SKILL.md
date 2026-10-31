@@ -1,9 +1,9 @@
 ---
 name: differential-lipid-expression-analysis
-description: Use when when you have a LipidomicsExperiment object with logged and
-  normalized Area measurements, sample grouping metadata (e.g., SampleType, Stage,
-  Race), and a research question about whether specific lipid molecules or classes
-  differ significantly between two or more sample groups.
+description: Use when you have a LipidomicsExperiment object with logged and normalized
+  Area measurements, sample grouping metadata (e.g., SampleType, Stage, Race), and
+  a research question about whether specific lipid molecules or classes differ significantly
+  between two or more sample groups.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3668
@@ -20,13 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
-evidence_spans:
-- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object
-  using `lipidr` function `fetch_mw_study()`
-- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr`
-  provides an easy way to re-analyze and visualize these datasets.'
-- This step of the workflow requires the `limma` package to be installed.
-- Data Mining and Analysis of Lipidomics Datasets in R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

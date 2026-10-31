@@ -1,8 +1,8 @@
 ---
 name: json-directive-application
-description: Use when when you have extracted intermediate JSON conforming to the
-  Experiment Description Specification and need to restructure, filter, sort, or aggregate
-  records (e.
+description: Use when you have extracted intermediate JSON conforming to the Experiment
+  Description Specification and need to restructure, filter, sort, or aggregate records
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -20,10 +20,6 @@ derived_from:
   title: messes
 - doi: 10.3390/metabo11030163
   title: ''
-evidence_spans:
-- MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema
-  <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

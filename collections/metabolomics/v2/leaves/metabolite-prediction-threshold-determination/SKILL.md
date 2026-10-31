@@ -24,20 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
-evidence_spans:
-- MiMeNet (Microbiome-Metabolome Network), a multi-layer perceptron (MLPNN)
-- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome
-  abundance features (green) are used to train a neural network to predict metabolite
-  abundance features (blue).
-- An MLPNN model is composed of multiple fully connected hidden layers composed of
-  perceptrons
-- Canonical correlation analysis models were implemented using Python's scikit-learn
-  package.
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
-  function.
-- In MiMeNet, φ is set as the rectified linear unit (ReLU). We selected this activation
-  function since previous studies have shown that it is resilient to the problems
-  of exploding and vanishing
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,8 +1,8 @@
 ---
 name: hdf5-format-support-validation
-description: Use when when you need to work with mzMLb (HDF5-based) proteomics data
-  in pyteomics and want to confirm that the required h5py and hdf5plugin libraries
-  are installed and accessible, or when troubleshooting ImportError or missing format
+description: Use when you need to work with mzMLb (HDF5-based) proteomics data in
+  pyteomics and want to confirm that the required h5py and hdf5plugin libraries are
+  installed and accessible, or when troubleshooting ImportError or missing format
   handler issues related to mzMLb modules.
 license: CC-BY-4.0
 metadata:
@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
-evidence_spans:
-- The main way to obtain Pyteomics is via `pip Python package manager
-- h5py <https://www.h5py.org/> and optionally hdf5plugin
-- h5py and optionally hdf5plugin <https://hdf5plugin.readthedocs.io/en/latest/>
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

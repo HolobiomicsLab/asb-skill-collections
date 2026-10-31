@@ -31,21 +31,6 @@ derived_from:
   title: dereplicator
 - doi: 10.1021/acs.analchem.4c05062
   title: ''
-evidence_spans:
-- The latest version is available in the Natural Product Discovery toolkit (NPDtools)
-  at https://github.com/ablab/npdtools
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
-  spectra) and genomic data to identify novel RiPPs
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
-  spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally
-  modified Peptides (RiPPs)
-- 'MetaMiner uses either raw nucleotide sequences or specific genome mining tools''
-  output: raw nucleotide sequences `.fasta` format or *antiSMASH*''s `.final.gbk`
-  or `.gbk` file'
-- matches tandem mass spectra against the constructed post-translationally modified
-  RiPPs structure database using Dereplicator
-- MetaMiner natively supports MGF, mzXML, mzData and uses msconvert utility from the
-  ProteoWizard package to convert spectra in other formats to MGF
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,8 +1,8 @@
 ---
 name: sequential-and-random-access-file-interface-patterns
-description: Use when when you need to support custom data storage backends (e.g.,
-  SQLite, HDF5, or proprietary databases) for mzML-equivalent spectra, but the pymzML
-  parser expects only standard file formats (mzML, mzML.gz, indexed gzip).
+description: Use when you need to support custom data storage backends (e.g., SQLite,
+  HDF5, or proprietary databases) for mzML-equivalent spectra, but the pymzML parser
+  expects only standard file formats (mzML, mzML.gz, indexed gzip).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -22,9 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
-evidence_spans:
-- import sqlite3
-- import xml.etree.ElementTree as et
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

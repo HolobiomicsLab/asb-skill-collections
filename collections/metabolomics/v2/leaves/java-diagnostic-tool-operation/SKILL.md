@@ -1,9 +1,9 @@
 ---
 name: java-diagnostic-tool-operation
-description: Use when when you have deployed a JVM application in a Docker container
-  with JAVA_OPTS heap size parameters and need to verify that the maximum and initial
-  heap sizes are correctly configured before running memory-intensive workflows like
-  metabolite fragmentation analysis.
+description: Use when you have deployed a JVM application in a Docker container with
+  JAVA_OPTS heap size parameters and need to verify that the maximum and initial heap
+  sizes are correctly configured before running memory-intensive workflows like metabolite
+  fragmentation analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
-evidence_spans:
-- Java 21
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

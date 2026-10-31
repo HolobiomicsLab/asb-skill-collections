@@ -1,6 +1,6 @@
 ---
 name: weighted-loss-function-optimization
-description: Use when when training a dual-encoder architecture (bi-encoder + cross-encoder)
+description: Use when training a dual-encoder architecture (bi-encoder + cross-encoder)
   on NMR spectral data where independent encoding and joint pair processing produce
   competing or imbalanced gradient signals.
 license: CC-BY-4.0
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1016/j.microc.2025.115372
   title: FlavorFormer
-evidence_spans:
-- Python 3.13.2 and Pytorch (version 2.7.0+cu118)
-- Install [Anaconda](https://www.anaconda.com/).
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

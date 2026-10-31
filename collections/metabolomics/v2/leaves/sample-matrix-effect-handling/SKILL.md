@@ -17,10 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1016/j.cca.2024.117858
   title: ALISTER
-evidence_spans:
-- ALISTER is a web-app containing scientific information on pre-analytical blood sample
-  stability in metabolomics and lipidomics
-- '[![](https://img.shields.io/badge/Shiny-shinyapps.io-blue?style=flat&labelColor=white&logo=RStudio&logoColor=blue)]'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

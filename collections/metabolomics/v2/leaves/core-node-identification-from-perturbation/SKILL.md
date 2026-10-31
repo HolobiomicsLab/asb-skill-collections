@@ -16,8 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c04131
   title: FNICM
-evidence_spans:
-- FNICM is a tool to identify core nodes from significantly perturbed subnetwork.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

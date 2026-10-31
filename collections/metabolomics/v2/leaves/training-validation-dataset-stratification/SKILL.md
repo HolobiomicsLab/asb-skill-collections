@@ -1,6 +1,6 @@
 ---
 name: training-validation-dataset-stratification
-description: Use when when you have a complete labelled MS/MS spectral dataset annotated
+description: Use when you have a complete labelled MS/MS spectral dataset annotated
   as 'relevant' (compounds of interest from reference standards) or 'other' (reference
   standards or non-target compounds from repositories), and you need to train and
   evaluate an AnnoMe binary classifier without data leakage.
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioadv/vbag111
   title: AnnoMe
-evidence_spans:
-- This is a package for the classification of MS/MS spectra of novel compounds
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

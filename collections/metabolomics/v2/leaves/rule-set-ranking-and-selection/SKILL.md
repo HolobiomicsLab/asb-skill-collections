@@ -1,6 +1,6 @@
 ---
 name: rule-set-ranking-and-selection
-description: Use when when you have a large set of generalized reaction rules (e.
+description: Use when you have a large set of generalized reaction rules (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -16,7 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

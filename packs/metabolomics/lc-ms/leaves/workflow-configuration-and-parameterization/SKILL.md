@@ -1,7 +1,7 @@
 ---
 name: workflow-configuration-and-parameterization
-description: Use when when preparing to execute the Nextflow4MS-DIAL workflow on raw
-  LC-HRMS metabolomics data (.mzML or .
+description: Use when preparing to execute the Nextflow4MS-DIAL workflow on raw LC-HRMS
+  metabolomics data (.mzML or .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -23,8 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
-evidence_spans:
-- containerized workflow MS-DIAL -> MSFLO
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

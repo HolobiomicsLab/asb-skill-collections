@@ -1,7 +1,7 @@
 ---
 name: lipid-identifier-normalization
-description: Use when when you have a list of lipids identified by different database
-  identifiers (e.
+description: Use when you have a list of lipids identified by different database identifiers
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -25,10 +25,6 @@ derived_from:
   title: EnrichMET
 - doi: 10.5281/zenodo.17819145
   title: ''
-evidence_spans:
-- simplifies pathway enrichment analysis by allowing the complete workflow to be executed
-  through a single R function call
-- library(readr)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

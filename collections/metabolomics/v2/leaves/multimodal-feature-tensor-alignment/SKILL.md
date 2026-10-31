@@ -1,9 +1,9 @@
 ---
 name: multimodal-feature-tensor-alignment
-description: Use when when you have molecule IDs converted to multiple independent
-  feature modalities (graph-based node/edge tensors from RDKit, Morgan fingerprints,
-  and computed physicochemical descriptors) and need to combine them into a single
-  structured tensor representation for multimodal model training.
+description: Use when you have molecule IDs converted to multiple independent feature
+  modalities (graph-based node/edge tensors from RDKit, Morgan fingerprints, and computed
+  physicochemical descriptors) and need to combine them into a single structured tensor
+  representation for multimodal model training.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3366
@@ -22,11 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1007/s10489-022-04351-0
   title: Mass Spectrum Transformer
-evidence_spans:
-- RDKit == 2020.03.4
-- numpy == 1.19.1
-- implicit in data.csv loading requirement
-- scikit-learn == 0.23.2
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

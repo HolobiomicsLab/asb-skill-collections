@@ -1,6 +1,6 @@
 ---
 name: spectral-fragment-identifier-matching
-description: Use when when you have downloaded fragment records from separate experimental
+description: Use when you have downloaded fragment records from separate experimental
   and predicted online databases and need to verify that each fragment can be traced
   back to a valid compound entry in a reference compound database (e.g., SDF-format
   DNA adduct compound collection).
@@ -19,7 +19,6 @@ metadata:
 derived_from:
 - doi: 10.3389/fchem.2022.908572
   title: DNA adduct database
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

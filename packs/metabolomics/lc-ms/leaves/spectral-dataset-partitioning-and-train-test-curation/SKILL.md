@@ -1,8 +1,8 @@
 ---
 name: spectral-dataset-partitioning-and-train-test-curation
-description: Use when when you have a pre-cleaned spectral library (e.g., GNPS, MoNA,
-  or MTBLS1572) with an existing training/test boundary established by prior work
-  (e.g., MSBERT), and you need to report model performance with uncertainty quantification
+description: Use when you have a pre-cleaned spectral library (e.g., GNPS, MoNA, or
+  MTBLS1572) with an existing training/test boundary established by prior work (e.g.,
+  MSBERT), and you need to report model performance with uncertainty quantification
   across multiple random partitions.
 license: CC-BY-4.0
 metadata:
@@ -27,9 +27,6 @@ derived_from:
   title: SpecEmbedding
 - doi: 10.6084/m9.figshare.28876751.v2
   title: ''
-evidence_spans:
-- Python：3.12
-- PyTorch：2.6.0 + CUDA 12.4
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -22,9 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
-evidence_spans:
-- an extension of MIST for annotating MS1 precursor masses from MS/MS data
-- Utilizing sinusoidal formula embeddings as developed in our previous work SCARF
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

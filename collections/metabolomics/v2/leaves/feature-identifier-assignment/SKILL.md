@@ -22,14 +22,6 @@ derived_from:
   title: notame
 - doi: 10.1093/bioinformatics/btr597
   title: ''
-evidence_spans:
-- This package can be used to analyze preprocessed LC-MS data in non-targeted metabolomics
-- library(notame)
-- reads them to R, conducts additional preprocessing and statistical analyses
-- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package
-  by Bioconductor'
-- '```MetaboSet``` objects are the primary data structure of this package. ```MetaboSet```
-  is built upon the ```ExpressionSet``` class'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

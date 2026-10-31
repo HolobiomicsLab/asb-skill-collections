@@ -1,6 +1,6 @@
 ---
 name: ms-spectra-dataset-preprocessing
-description: Use when when you have a raw or partially processed MS/MS spectra collection
+description: Use when you have a raw or partially processed MS/MS spectra collection
   (e.g., GNPS-sourced Orbitrap or Q-TOF spectra in MGF format) and need to (1) restrict
   to a specific instrument type (e.
 license: CC-BY-4.0
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
-evidence_spans:
-- FIDDLE is a deep learning method for predicting molecular formulas from MS/MS spectra
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -29,11 +29,6 @@ derived_from:
   title: nextflow4msdial
 - doi: 10.1038/s41586-023-06906-8
   title: ''
-evidence_spans:
-- '[![Nextflow](https://img.shields.io/badge/nextflow-%E2%89%A522.10.0-brightgreen.svg)](https://www.nextflow.io/)'
-- containerized workflow MS-DIAL -> MSFLO
-- To learn NextFlow checkout this documentation
-- 'To learn NextFlow checkout this documentation: https://www.nextflow.io/docs/latest/index.html'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

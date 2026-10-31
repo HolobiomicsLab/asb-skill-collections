@@ -1,6 +1,6 @@
 ---
 name: custom-code-execution-in-data-pipeline
-description: Use when when standard conversion directives (headers, collate, fields_to_headers,
+description: Use when standard conversion directives (headers, collate, fields_to_headers,
   exclusion_headers, values_to_str, sort_by, test) cannot express the required transformation
   logic, or when domain-specific aggregation, conditional logic, or value derivation
   must be applied to records after field.
@@ -21,10 +21,6 @@ derived_from:
   title: messes
 - doi: 10.3390/metabo11030163
   title: ''
-evidence_spans:
-- MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema
-  <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

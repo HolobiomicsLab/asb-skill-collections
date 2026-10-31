@@ -1,9 +1,9 @@
 ---
 name: systematic-mass-calibration-and-drift-correction
-description: Use when when processing multiple LC-MS samples in a cohort study and
-  MassGrid construction reveals that anchor mass tracks (13C/12C isotope or Na/H adduct
-  pairs) in non-reference samples deviate systematically from the reference sample's
-  m/z values by >1 ppm.
+description: Use when processing multiple LC-MS samples in a cohort study and MassGrid
+  construction reveals that anchor mass tracks (13C/12C isotope or Na/H adduct pairs)
+  in non-reference samples deviate systematically from the reference sample's m/z
+  values by >1 ppm.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -24,13 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
-evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
-  preprocessing
-- Trackable and scalable Python program for high-resolution metabolomics data processing.
-- The default method uses `pymzml` to parse mzML files.
-- nearest neighbor (NN) clustering is performed to establish the number of mass tracks.
-  The NN clustering assigns each data point to its nearest 'peak mz value'.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

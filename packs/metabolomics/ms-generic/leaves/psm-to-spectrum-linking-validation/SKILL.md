@@ -1,8 +1,8 @@
 ---
 name: psm-to-spectrum-linking-validation
-description: Use when when you have PSM files from a proteomics search engine (e.g.,
-  MaxQuant, MSGFPlus, Mascot) and corresponding spectrum files (mzML or MGF format)
-  that need to be linked before rescoring.
+description: Use when you have PSM files from a proteomics search engine (e.g., MaxQuant,
+  MSGFPlus, Mascot) and corresponding spectrum files (mzML or MGF format) that need
+  to be linked before rescoring.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1002/pmic.202300336
   title: MS2Rescore (immunopeptidome rescoring)
-evidence_spans:
-- MS²Rescore is a tool for rescoring peptide-spectrum matches
-- Accepted ProForma modification labels in :py:mod:`psm_utils`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: embedding-vector-generation
-description: Use when when you have tokenized mass spectra (peak-mass and peak-intensity
+description: Use when you have tokenized mass spectra (peak-mass and peak-intensity
   pairs from experimental or in-silico libraries such as NIST 2017 or MassBank) and
   need to perform rapid similarity searches or spectrum matching at scale.
 license: CC-BY-4.0
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-023-39279-7
   title: FastEI
-evidence_spans:
-- conda install -c conda-forge gensim
-- Anaconda for Python 3.7
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

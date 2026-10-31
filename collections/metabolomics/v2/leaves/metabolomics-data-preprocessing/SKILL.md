@@ -25,14 +25,6 @@ derived_from:
   title: IDSL.CSA
 - doi: 10.1093/gigascience/giaa162
   title: ''
-evidence_spans:
-- The **Composite Spectra Analysis (IDSL.CSA)** R package for the analysis of mass
-  spectrometry data
-- The **Composite Spectra Analysis (IDSL.CSA)** R package
-- The new Lilikoi v2.0 R package has implemented a deep-learning method for classification,
-  in addition to popular machine learning methods.
-- Lilikoi v2.0 is a modern, comprehensive package to enable metabolomics analysis
-  in R programming environment.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

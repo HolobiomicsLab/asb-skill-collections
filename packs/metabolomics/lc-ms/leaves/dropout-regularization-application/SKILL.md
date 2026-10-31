@@ -1,9 +1,9 @@
 ---
 name: dropout-regularization-application
-description: Use when when training a deep neural network on mass spectrometry spectral
+description: Use when training a deep neural network on mass spectrometry spectral
   data where overfitting is a risk (especially with data augmentation applied), and
   when you need both regularization during training AND uncertainty quantification
-  at inference time via multiple forward passes with dropout.
+  at inference time via multiple forward passes with dropout enabled.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2426
@@ -24,11 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
-evidence_spans:
-- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included
-  cleaning compound names
-- Our MS2DeepScore Python library offers two types of data generators
-- Our MS2DeepScore Python library
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

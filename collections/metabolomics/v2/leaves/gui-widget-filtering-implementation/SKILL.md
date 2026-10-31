@@ -18,12 +18,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo12080684
   title: MAVEN2
-evidence_spans:
-- git clone --recursive [redacted-email]:eugenemel/maven.git maven
-- qmake -r build.pro
-- make -j4
-- 'Maven GUI: Metabolomics Analysis and Visualization Engine'
-- Install the qt5 package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

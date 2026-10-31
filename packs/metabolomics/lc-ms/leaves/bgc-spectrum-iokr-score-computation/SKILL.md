@@ -1,7 +1,7 @@
 ---
 name: bgc-spectrum-iokr-score-computation
-description: Use when when you have a collection of microbial genomes with predicted
-  BGCs (via antiSMASH), a set of MS/MS spectra (e.g. from GNPS), and you want to score
+description: Use when you have a collection of microbial genomes with predicted BGCs
+  (via antiSMASH), a set of MS/MS spectra (e.g. from GNPS), and you want to score
   potential BGC-spectrum associations based on the presence of conserved molecular
   substructures inferred from the BGC's closest MIBiG homolog.
 license: CC-BY-4.0
@@ -27,15 +27,6 @@ derived_from:
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
-evidence_spans:
-- In principle, IOKR works by first learning a mapping from the space of spectra to
-  the space of molecular fingerprints
-- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining
-  the hierarchical relationship between them
-- Finally, we present NPLinker, a software framework to link genomic and metabolomic
-  data
-- and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
-- BiG-SCAPE clusters the BGCs separately by product type
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,7 +1,7 @@
 ---
 name: candidate-match-retrieval
-description: Use when when you have a query MS/MS spectrum (m/z and intensity pairs)
-  and need to find potential structural analogues or exact matches in a large spectral
+description: Use when you have a query MS/MS spectrum (m/z and intensity pairs) and
+  need to find potential structural analogues or exact matches in a large spectral
   library. Apply this skill after preprocessing your spectra (e.
 license: CC-BY-4.0
 metadata:
@@ -22,8 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query
-evidence_spans:
-- MS2Query - Reliable and fast MS/MS spectral-based analogue search
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

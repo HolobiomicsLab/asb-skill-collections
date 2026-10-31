@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
-evidence_spans:
-- grouping of isotopologues and adducts
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -18,7 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2024.05.13.593988v1
   title: plantMASST
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -14,8 +14,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00720
   title: CEU Mass Mediator 3.0
-evidence_spans:
-- 'The next library is needed in the app server: javax.faces-2.2.12.jar'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

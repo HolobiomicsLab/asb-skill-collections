@@ -1,6 +1,6 @@
 ---
 name: nmr-spectra-preprocessing-and-feature-extraction
-description: Use when when you have raw or lightly processed 1D NMR spectra (¹H and/or
+description: Use when you have raw or lightly processed 1D NMR spectra (¹H and/or
   ¹³C) from unknown organic compounds and need to extract latent spectral features
   prior to structure elucidation.
 license: CC-BY-4.0
@@ -19,7 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: rank-performance-metric-computation
-description: Use when when you have predictions from one or more metabolite annotation
+description: Use when you have predictions from one or more metabolite annotation
   models (MLP baseline, GNN, or ESP ensemble) and need to quantify ranking performance
   on ESI/LC-MS test spectra.
 license: CC-BY-4.0
@@ -22,8 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btae490
   title: ESP
-evidence_spans:
-- github.com/HassounLab/ESP
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

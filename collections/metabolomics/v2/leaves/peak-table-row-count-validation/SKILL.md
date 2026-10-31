@@ -1,6 +1,6 @@
 ---
 name: peak-table-row-count-validation
-description: Use when when using mpactr filter functions (e.g., filter_mispicked_ions,
+description: Use when using mpactr filter functions (e.g., filter_mispicked_ions,
   filter_group, filter_cv) with R6 reference semantics and uncertain whether the copy_object
   parameter controls deep copying or in-place modification.
 license: CC-BY-4.0
@@ -22,9 +22,6 @@ derived_from:
   title: mpactr
 - doi: 10.1021/acs.analchem.2c04632
   title: ''
-evidence_spans:
-- This table can be used for a variety of analyses that can be conducted in R
-- library(data.table)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

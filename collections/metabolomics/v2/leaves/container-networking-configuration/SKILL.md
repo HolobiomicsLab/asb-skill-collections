@@ -1,7 +1,7 @@
 ---
 name: container-networking-configuration
-description: Use when when deploying a multi-component research application (e.g.,
-  MAGMa's four subproject services) as containerized microservices that need to communicate
+description: Use when deploying a multi-component research application (e.g., MAGMa's
+  four subproject services) as containerized microservices that need to communicate
   internally—specifically when you have identified service interdependencies (e.
 license: CC-BY-4.0
 metadata:
@@ -17,9 +17,6 @@ metadata:
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
-evidence_spans:
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'.
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

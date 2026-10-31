@@ -1,7 +1,7 @@
 ---
 name: cnn-architecture-design-for-spectral-data
-description: Use when when you have mass-spectrometry data (m/z and intensity pairs
-  or spectral matrices) paired with ground-truth molecular fingerprints or InChIKeys,
+description: Use when you have mass-spectrometry data (m/z and intensity pairs or
+  spectral matrices) paired with ground-truth molecular fingerprints or InChIKeys,
   and you need to learn a non-linear mapping from spectral patterns to structural
   fingerprints for downstream metabolite ranking or annotation.
 license: CC-BY-4.0
@@ -25,8 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1007/s11306-020-01726-7
   title: MetFID
-evidence_spans:
-- No usage/docs found.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

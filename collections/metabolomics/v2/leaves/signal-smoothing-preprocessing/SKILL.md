@@ -1,6 +1,6 @@
 ---
 name: signal-smoothing-preprocessing
-description: Use when when working with raw LC-HRMS profile-mode data containing noisy
+description: Use when working with raw LC-HRMS profile-mode data containing noisy
   chromatographic signals, apply this skill before peak detection. Smoothing is particularly
   needed when the signal-to-noise ratio is low or when gradient-based peak detection
   would be compromised by high-frequency noise.
@@ -25,8 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot
-evidence_spans:
-- PeakBot is a python package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

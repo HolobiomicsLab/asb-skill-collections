@@ -1,7 +1,7 @@
 ---
 name: tanimoto-similarity-scoring
-description: Use when when running iterative reaction network expansion (Pickaxe)
-  and you need to reduce the combinatorial explosion of generated compounds by prioritizing
+description: Use when running iterative reaction network expansion (Pickaxe) and you
+  need to reduce the combinatorial explosion of generated compounds by prioritizing
   those structurally similar to a reference set (e.g., known metabolites, drug targets,
   or desired scaffolds).
 license: CC-BY-4.0
@@ -19,7 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

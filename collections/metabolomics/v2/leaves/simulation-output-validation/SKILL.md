@@ -23,8 +23,6 @@ derived_from:
   title: DisCo P-ad
 - doi: 10.1371/journal.pcbi.1009105
   title: ''
-evidence_spans:
-- example R and MATLAB codes (for one data sub-sample scenario) used for the simulation
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

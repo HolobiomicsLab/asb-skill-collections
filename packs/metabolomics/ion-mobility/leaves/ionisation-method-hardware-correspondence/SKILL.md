@@ -1,9 +1,9 @@
 ---
 name: ionisation-method-hardware-correspondence
-description: Use when when evaluating whether a mass spectrometry analysis platform
-  (such as mzmine) has comprehensive module support across multiple ionisation and
-  separation techniques (LC, GC, IMS, MALDI MS imaging), or when planning a multi-technique
-  MS study and needing to confirm that all intended.
+description: Use when evaluating whether a mass spectrometry analysis platform (such
+  as mzmine) has comprehensive module support across multiple ionisation and separation
+  techniques (LC, GC, IMS, MALDI MS imaging), or when planning a multi-technique MS
+  study and needing to confirm that all intended ionisation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
-evidence_spans:
-- mzmine is an open-source software for mass spectrometry data processing
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

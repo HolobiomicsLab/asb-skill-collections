@@ -1,7 +1,7 @@
 ---
 name: m-z-value-ordering-enforcement
-description: Use when when implementing or modifying data replacement methods (e.g.,
-  `mz<-`, `peaksData<-`) in a writable MsBackend subclass, or when accepting user-supplied
+description: Use when implementing or modifying data replacement methods (e.g., `mz<-`,
+  `peaksData<-`) in a writable MsBackend subclass, or when accepting user-supplied
   m/z vectors destined for storage in a Spectra backend.
 license: CC-BY-4.0
 metadata:
@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
-evidence_spans:
-- library(Spectra) library(IRanges)
-- '`DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)'
-- DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

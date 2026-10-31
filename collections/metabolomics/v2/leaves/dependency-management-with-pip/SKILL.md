@@ -1,9 +1,9 @@
 ---
 name: dependency-management-with-pip
-description: Use when when you have cloned a Python package repository and need to
-  verify that the package and its test suite can be installed and executed locally,
-  or when preparing to contribute code changes that must pass the project's test suite
-  before submission.
+description: Use when you have cloned a Python package repository and need to verify
+  that the package and its test suite can be installed and executed locally, or when
+  preparing to contribute code changes that must pass the project's test suite before
+  submission.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -18,9 +18,6 @@ metadata:
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni
-evidence_spans:
-- pip install -e .[dev]
-- pytest tests/
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

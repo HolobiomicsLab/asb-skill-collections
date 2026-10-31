@@ -1,9 +1,9 @@
 ---
 name: m-z-metabolite-annotation-mapping
-description: 'Use when when you have a spatial metabolomics or LC-MS dataset with
-  detected m/z features (as a feature matrix or SpaMTP Seurat object) and need to
-  assign metabolite identities. Specifically: you have observed m/z values, you know
-  the ionization polarity and expected adduct form (e.'
+description: 'Use when you have a spatial metabolomics or LC-MS dataset with detected
+  m/z features (as a feature matrix or SpaMTP Seurat object) and need to assign metabolite
+  identities. Specifically: you have observed m/z values, you know the ionization
+  polarity and expected adduct form (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3860
@@ -33,10 +33,6 @@ derived_from:
   title: SpaMTP
 - doi: 10.1101/2024.10.14.618269
   title: ''
-evidence_spans:
-- Install SpaMTP if not previously installed devtools::install_github("GenomicsMachineLearning/SpaMTP")
-- For plotting + DE plots
-- '## Install and Import *R* Libraries'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: nmr-spin-system-simulation
-description: Use when when you have known metabolite concentrations and their spin-system
+description: Use when you have known metabolite concentrations and their spin-system
   coupling constants (J-values) and need to generate synthetic ¹H NMR spectra for
   method validation, metabolite library construction, or as a training dataset.
 license: CC-BY-4.0
@@ -18,7 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btaf045
   title: MetAssimulo 2.0
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

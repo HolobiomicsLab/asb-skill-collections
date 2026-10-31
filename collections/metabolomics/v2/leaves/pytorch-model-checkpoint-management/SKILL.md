@@ -23,9 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.0c04071
   title: GNN-RT
-evidence_spans:
-- conda install pytorch
-- Anaconda for python 3.6
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

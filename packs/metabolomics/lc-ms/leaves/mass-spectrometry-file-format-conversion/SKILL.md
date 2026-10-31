@@ -32,14 +32,6 @@ derived_from:
   title: ''
 - doi: 10.1021/acs.analchem.2c04518
   title: ''
-evidence_spans:
-- For MS Data conversion to .mzXML or .mzML file format use msconvert, distributed
-  with the ProteoWizard Project
-- msconvert, distributed with the ProteoWizard Project
-- msconvert, distributed with the ProteoWizard Project http://proteowizard.sourceforge.net/download.html
-- github.com__xfcui__IsoFusion
-- Excalibur compatible precursor list (for DDA analysis via orbitrap)
-- https://github.com/98104781/LSG/releases/tag/v1.3.0
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,8 +1,8 @@
 ---
 name: multi-panel-spectra-comparison
-description: Use when when you need to visually compare two or more spectra (MS1,
-  MS2, or extracted ion chromatograms) across different retention times, m/z ranges,
-  or ion mobility bins in a single figure. Apply this skill after extracting spectra
+description: Use when you need to visually compare two or more spectra (MS1, MS2,
+  or extracted ion chromatograms) across different retention times, m/z ranges, or
+  ion mobility bins in a single figure. Apply this skill after extracting spectra
   arrays from MZA files (e.
 license: CC-BY-4.0
 metadata:
@@ -25,9 +25,6 @@ derived_from:
   title: mzapy
 - doi: 10.1021/acs.jproteome.2c00313
   title: ''
-evidence_spans:
-- '* ``numpy``'
-- Dependencies ------------------------------ * ``numpy``
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

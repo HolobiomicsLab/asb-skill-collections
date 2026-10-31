@@ -25,10 +25,6 @@ derived_from:
   title: marr
 - doi: 10.1080/01621459.2017.1397521
   title: ''
-evidence_spans:
-- 'marr: An R/Bioconductor package for Maximum Rank Reproducibility'
-- The R-package **marr** can be installed from GitHub using the R package [devtools]
-- '`marr`: An R/Bioconductor package for Maximum Rank Reproducibility'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

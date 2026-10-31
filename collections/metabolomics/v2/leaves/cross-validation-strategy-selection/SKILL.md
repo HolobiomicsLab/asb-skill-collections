@@ -1,9 +1,9 @@
 ---
 name: cross-validation-strategy-selection
-description: Use when when preparing to train supervised binary classification models
-  (logistic regression, random forest, XGBoost) on metabolomics datasets in MeTEor,
-  you must first decide between stratified k-fold cross-validation (suitable for larger,
-  balanced cohorts) and leave-one-out cross-validation.
+description: Use when preparing to train supervised binary classification models (logistic
+  regression, random forest, XGBoost) on metabolomics datasets in MeTEor, you must
+  first decide between stratified k-fold cross-validation (suitable for larger, balanced
+  cohorts) and leave-one-out cross-validation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3957
@@ -20,11 +20,6 @@ derived_from:
   title: MeTEor
 - doi: 10.1007/978-3-319-47656-8_6
   title: ''
-evidence_spans:
-- library(MeTEor)
-- 'You can perform binary classification using three different algorithms: logistic
-  regression (LR), random forest (RF), and XGBoost (XGB).'
-- library(tidyverse) library(VIM) library(laeken) library(MeTEor)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

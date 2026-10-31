@@ -1,6 +1,6 @@
 ---
 name: domain-specific-language-parsing
-description: 'Use when when you have SQL-inspired query strings that encode domain-specific
+description: 'Use when you have SQL-inspired query strings that encode domain-specific
   assumptions and need to validate, transform, or execute them against data repositories.
   Specifically: input is human-readable DSL text containing mass spectrometry-specific
   clauses (e.'
@@ -22,8 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-025-02785-1
   title: MassQL
-evidence_spans:
-- It is inspired by SQL, but it attempts to bake in assumptions of mass spectrometry
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

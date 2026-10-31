@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.1c00392
   title: Omics Untargeted Key Script
-evidence_spans:
-- New QC-GAM method (MetCorR) with associated scripts were introduced.
-- R based open-source collection of scripts called :red_circle:*OUKS*
-- R ≥4.1.2
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

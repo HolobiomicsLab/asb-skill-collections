@@ -1,6 +1,6 @@
 ---
 name: python-binding-generation-with-nanobind
-description: Use when when you have a C++ library (such as OpenMS) with nanobind binding
+description: Use when you have a C++ library (such as OpenMS) with nanobind binding
   specifications in a designated bindings directory and need to create a Python module
   that exposes C++ classes, functions, and data types to Python code.
 license: CC-BY-4.0
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
-evidence_spans:
-- nanobind binding files are in `src/pyOpenMS/bindings/`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

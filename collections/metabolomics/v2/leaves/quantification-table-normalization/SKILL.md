@@ -27,10 +27,6 @@ derived_from:
   title: msFeaST
 - doi: 10.1016/j.aca.2025.344571
   title: ''
-evidence_spans:
-- github.com__kevinmildau__msFeaST
-- '**QuantyFey** is a Shiny application for the **visualization, analysis, and quantification**
-  of **mass spectrometry (MS) data**'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

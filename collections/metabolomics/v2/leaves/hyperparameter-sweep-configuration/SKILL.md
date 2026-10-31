@@ -1,6 +1,6 @@
 ---
 name: hyperparameter-sweep-configuration
-description: Use when when implementing multiple competing model architectures (e.
+description: Use when implementing multiple competing model architectures (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3664
@@ -24,7 +24,6 @@ derived_from:
   title: ''
 - doi: 10.1101/2023.03.15.532823v1
   title: ''
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

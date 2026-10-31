@@ -1,6 +1,6 @@
 ---
 name: mass-range-constraint-application
-description: Use when when generating a virtual chemical mixture for LC-MS/MS simulation,
+description: Use when generating a virtual chemical mixture for LC-MS/MS simulation,
   or when sampling molecular formulas from a metabolite database (such as HMDB), you
   need to restrict the sample to a specific m/z window that matches your instrument's
   acquisition range or your analytical focus.
@@ -23,8 +23,6 @@ derived_from:
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
-evidence_spans:
-- ViMMS is compatible with Python 3+
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: metabolite-ms-ms-annotation
-description: Use when when you have SWATH-MS raw data (mzML or vendor format) containing
+description: Use when you have SWATH-MS raw data (mzML or vendor format) containing
   multiplexed MS/MS spectra from multiple co-eluting precursor ions and need to separate
   these spectra into individual, annotatable component spectra for metabolite identification.
 license: CC-BY-4.0
@@ -24,8 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.9b02655
   title: DecoMetDIA
-evidence_spans:
-- DecoMetDIA was developed to process SWATH-MS based data for metabolomics.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

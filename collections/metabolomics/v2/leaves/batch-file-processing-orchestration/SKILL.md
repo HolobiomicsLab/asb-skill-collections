@@ -1,6 +1,6 @@
 ---
 name: batch-file-processing-orchestration
-description: Use when when you have multiple CDF imaging files (e.g., from mass spectrometry
+description: Use when you have multiple CDF imaging files (e.g., from mass spectrometry
   imaging scans of biological samples) that need to be read into a single Matlab workspace
   with consistent structure and metadata (spectral intensity, m/z arrays, spatial
   coordinates).
@@ -21,7 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2025.09.22.677919v1
   title: DIMPLE
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

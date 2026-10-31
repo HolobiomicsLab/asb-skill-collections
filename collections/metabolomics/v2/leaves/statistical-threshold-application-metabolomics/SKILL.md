@@ -1,8 +1,8 @@
 ---
 name: statistical-threshold-application-metabolomics
-description: Use when when you have completed a weighted meta-analysis of metabolomic
-  studies using amanida and need to isolate robust, reproducible metabolite signals
-  from the combined results.
+description: Use when you have completed a weighted meta-analysis of metabolomic studies
+  using amanida and need to isolate robust, reproducible metabolite signals from the
+  combined results.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -21,11 +21,6 @@ derived_from:
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
-evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted
-  meta-analysis in R
-- This vignette illustrates `Amanida` R package, which contains a collection of functions
-  for computing a weighted meta-analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

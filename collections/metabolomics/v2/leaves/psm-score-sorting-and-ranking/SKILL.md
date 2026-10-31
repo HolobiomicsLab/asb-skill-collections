@@ -1,7 +1,7 @@
 ---
 name: psm-score-sorting-and-ranking
-description: Use when when you have grouped PSMs by spectrum identifier and need to
-  (1) establish input candidate PSMs for rescoring by selecting top-ranked PSMs based
+description: Use when you have grouped PSMs by spectrum identifier and need to (1)
+  establish input candidate PSMs for rescoring by selecting top-ranked PSMs based
   on search engine score, or (2) re-rank PSMs after rescoring completes to select
   final output PSMs for FDR calculation and result writing.
 license: CC-BY-4.0
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1002/pmic.202300336
   title: MS2Rescore (immunopeptidome rescoring)
-evidence_spans:
-- MS²Rescore is a tool for rescoring peptide-spectrum matches
-- Accepted ProForma modification labels in :py:mod:`psm_utils`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

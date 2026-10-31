@@ -1,6 +1,6 @@
 ---
 name: metabolite-missingness-threshold-filtering
-description: Use when when you have a metabolite measurement matrix with missing values
+description: Use when you have a metabolite measurement matrix with missing values
   across samples and need to decide which metabolites to retain before applying k-nearest
   neighbor imputation.
 license: CC-BY-4.0
@@ -20,11 +20,6 @@ derived_from:
   title: MetaboDiff
 - doi: 10.1158/0008-5472.can-14-1490
   title: ''
-evidence_spans:
-- The `MetaboDiff` R package requires R version 4.0.2 or higher.
-- The `MetaboDiff` R package requires R version 4.0.2 or higher
-- '`MetaboDiff` is available for all operating systems and can be installed via Github'
-- met = knn_impute(met,cutoff=0.4)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

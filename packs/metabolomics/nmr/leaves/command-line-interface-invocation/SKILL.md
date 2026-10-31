@@ -1,7 +1,7 @@
 ---
 name: command-line-interface-invocation
-description: Use when when you have installed a Python package and need to verify
-  that its command-line entry point is accessible, or when you need to discover available
+description: Use when you have installed a Python package and need to verify that
+  its command-line entry point is accessible, or when you need to discover available
   commands and options for NMR data processing workflows without consulting external
   documentation.
 license: CC-BY-4.0
@@ -17,8 +17,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo15010048
   title: MetaboLabPy
-evidence_spans:
-- github.com__ludwigc__metabolabpy
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

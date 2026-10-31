@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.2c04343
   title: MeRgeION
-evidence_spans:
-- github.com__daniellyz__meRgeION2
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

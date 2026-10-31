@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
-evidence_spans:
-- containerized workflow MS-DIAL -> MSFLO
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

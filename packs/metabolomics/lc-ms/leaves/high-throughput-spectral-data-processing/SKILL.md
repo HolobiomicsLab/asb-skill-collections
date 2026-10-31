@@ -1,6 +1,6 @@
 ---
 name: high-throughput-spectral-data-processing
-description: Use when when you have MGF-formatted mass spectrometry peak files (typically
+description: Use when you have MGF-formatted mass spectrometry peak files (typically
   from proteomics experiments) numbering in the millions of spectra that require grouping
   into similar MS/MS clusters, and runtime must be kept under 15 minutes rather than
   hours.
@@ -21,11 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00612
   title: HyperSpec
-evidence_spans:
-- HyperSpec requires `Python 3.8+` with `CUDA` environment
-- HyperSpec requires `Python 3.8+` with `CUDA` environment.
-- github.com__wh-xu__Hyper-Spec
-- github.com/wh-xu/Hyper-Spec
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

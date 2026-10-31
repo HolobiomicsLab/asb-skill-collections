@@ -32,16 +32,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
-evidence_spans:
-- Molecular transformation networks for each sample (mass difference network-based
-  approach) are generated in this step
-- The MetaboDirect pipeline consists of 6 major steps/categories (Fig. 1)
-- The MetaboDirect pipeline was developed in Python 3.8 [38]
-- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- requires the Python dependencies NumPy [40], pandas [41, 42]
-- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39] and
-  is available to install through the Python Package Index... It requires the Python
-  dependencies NumPy
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

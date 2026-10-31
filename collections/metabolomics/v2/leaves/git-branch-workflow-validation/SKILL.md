@@ -1,6 +1,6 @@
 ---
 name: git-branch-workflow-validation
-description: Use when when preparing to create a release branch in a Maven-based multi-module
+description: Use when preparing to create a release branch in a Maven-based multi-module
   project (e.g., NMRFx), use this skill to verify that all pom.xml files in the repository
   tree declare identical version strings. This is a prerequisite for safe release-branch
   naming (e.g., release/X.Y.
@@ -14,9 +14,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s42004-025-01812-8
   title: NMRFx
-evidence_spans:
-- github.com__nanalysis__nmrfx
-- github.com/nanalysis/nmrfx
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

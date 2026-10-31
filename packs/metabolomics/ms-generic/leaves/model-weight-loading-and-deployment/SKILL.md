@@ -23,9 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s42256-025-01140-5
   title: MSGo
-evidence_spans:
-- 'Python: 3.7'
-- 'Torch: 1.7.1'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

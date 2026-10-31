@@ -1,6 +1,6 @@
 ---
 name: cross-domain-metadata-harmonization
-description: Use when when you have submitted the same MS/MS spectrum query to multiple
+description: Use when you have submitted the same MS/MS spectrum query to multiple
   domain-specific MASST tools and need to compare matches, combine ranked results,
   or generate cross-domain summary statistics.
 license: CC-BY-4.0
@@ -27,9 +27,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41538-022-00137-3
   title: foodMASST
-evidence_spans:
-- Aggregated search outputs can be generated and visualized using metadataMASST
-- microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

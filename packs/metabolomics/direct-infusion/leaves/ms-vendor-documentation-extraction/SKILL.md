@@ -24,8 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch
-evidence_spans:
-- tested and validated using Q-Exactive orbitrap UHPLC-HRMS/MS data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

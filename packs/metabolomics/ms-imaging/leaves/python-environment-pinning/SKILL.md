@@ -1,9 +1,9 @@
 ---
 name: python-environment-pinning
-description: 'Use when when you have access to a research repository or README documenting
+description: 'Use when you have access to a research repository or README documenting
   a machine learning implementation (e.g., Keras/TensorFlow-based deep learning model)
   and need to reproduce the computational environment exactly. Triggers include: (1)
-  README explicitly lists pinned versions (e.'
+  README explicitly lists pinned versions (e.g., ''Python 3.6.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -34,13 +34,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btac032
   title: massNet
-evidence_spans:
-- Python(3.6.12)
-- 1- Python(3.6.12)
-- numpy(1.15.4)
-- sklearn(0.23.2)
-- scipy(1.0.0)
-- seaborn (0.9.0)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

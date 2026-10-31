@@ -1,6 +1,6 @@
 ---
 name: module-dispatch-architecture-analysis
-description: Use when when you need to understand how a multi-instrument mass spectrometry
+description: Use when you need to understand how a multi-instrument mass spectrometry
   platform (like mzmine) decides which processing module receives a given dataset
   based on its declared data type (LC vs. GC vs. IMS vs. MS imaging).
 license: CC-BY-4.0
@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-021-23953-9
   title: iimn
-evidence_spans:
-- mzmine is an open-source software for mass spectrometry data processing
-- JDK version-25-blue
-- JavaFX version-24
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

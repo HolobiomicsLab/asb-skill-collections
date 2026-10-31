@@ -1,9 +1,9 @@
 ---
 name: adduct-mass-calculation-and-matching
-description: Use when when you have a list of target molecules with known molecular
-  formulas and need to extract and validate their peaks from centroided mzML files,
-  or when assessing whether detected peaks in a mass spectrometry run correspond to
-  expected adducts of known metabolites.
+description: Use when you have a list of target molecules with known molecular formulas
+  and need to extract and validate their peaks from centroided mzML files, or when
+  assessing whether detected peaks in a mass spectrometry run correspond to expected
+  adducts of known metabolites.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -22,13 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btab231
   title: mzRAPP
-evidence_spans:
-- 'You can now start mzRAPP using: library(mzRAPP); callmzRAPP()'
-- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing
-  (NPP)
-- mzRAPP extracts and validates chromatographic peaks for which boundaries are provided
-  for all (enviPat predicted) isotopologues
-- library(mzRAPP)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

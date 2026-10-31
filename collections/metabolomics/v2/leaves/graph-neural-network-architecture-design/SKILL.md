@@ -37,13 +37,6 @@ derived_from:
   title: ''
 - doi: 10.1021/acs.analchem.4c06210
   title: ''
-evidence_spans:
-- Python 3.9
-- torch
-- torch-scatter
-- torch-sparse
-- torch-cluster
-- scanpy
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

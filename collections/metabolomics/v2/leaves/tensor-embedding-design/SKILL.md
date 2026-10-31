@@ -1,6 +1,9 @@
 ---
 name: tensor-embedding-design
-description: Use when when you need to represent discrete chemical formulae (e.
+description: Use when you need to represent discrete chemical formulae (e.g., 'C6H12O6',
+  'C2H5OH') as continuous input vectors for neural network architectures such as transformers
+  or energy-based models, and you want embeddings that preserve compositional structure
+  and scale predictably with formula complexity.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0292
@@ -15,7 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

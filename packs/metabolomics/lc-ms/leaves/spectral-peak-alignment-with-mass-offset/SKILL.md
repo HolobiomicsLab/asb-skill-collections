@@ -1,9 +1,9 @@
 ---
 name: spectral-peak-alignment-with-mass-offset
-description: Use when when comparing two MS/MS spectra where the precursor m/z values
-  differ (indicating potential mass modifications, adducts, or related compounds),
-  and you want to detect structurally conserved fragmentation patterns that would
-  be missed by direct m/z matching.
+description: Use when comparing two MS/MS spectra where the precursor m/z values differ
+  (indicating potential mass modifications, adducts, or related compounds), and you
+  want to detect structurally conserved fragmentation patterns that would be missed
+  by direct m/z matching.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3646
@@ -22,7 +22,6 @@ derived_from:
   title: Neutral-loss similarity
 - doi: 10.1016/1044-0305
   title: ''
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

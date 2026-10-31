@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btad078
   title: ChemWalker
-evidence_spans:
-- ChemWalker is a python package
-- using [random walk](https://github.com/jinhongjung/pyrwr)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

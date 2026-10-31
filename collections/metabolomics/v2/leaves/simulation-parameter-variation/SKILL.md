@@ -1,6 +1,6 @@
 ---
 name: simulation-parameter-variation
-description: Use when when you have a computational simulation framework (e.
+description: Use when you have a computational simulation framework (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -16,7 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

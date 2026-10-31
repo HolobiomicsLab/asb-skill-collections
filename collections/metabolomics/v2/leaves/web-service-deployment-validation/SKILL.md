@@ -1,8 +1,8 @@
 ---
 name: web-service-deployment-validation
-description: Use when when you need to confirm that a publicly hosted academic web
-  service (such as molDiscovery) is live and responding at a documented endpoint URL,
-  or when troubleshooting access issues reported by end users.
+description: Use when you need to confirm that a publicly hosted academic web service
+  (such as molDiscovery) is live and responding at a documented endpoint URL, or when
+  troubleshooting access issues reported by end users.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -16,8 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-021-23986-0
   title: moldiscovery
-evidence_spans:
-- To test molDiscovery for academic users, please visit
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

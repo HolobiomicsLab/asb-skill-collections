@@ -1,6 +1,6 @@
 ---
 name: parameter-flag-toggling-for-software-modes
-description: Use when when integrating edited Modular.r scripts into the LipidMatch-4.2
+description: Use when integrating edited Modular.r scripts into the LipidMatch-4.2
   distribution and you need to switch between Modular mode (standalone R execution
   with manual or CSV inputs) and Flow mode (integrated pipeline execution).
 license: CC-BY-4.0
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1007/s00216-021-03392-7
   title: FluoroMatch 2.0
-evidence_spans:
-- put Modular.r into two directories
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

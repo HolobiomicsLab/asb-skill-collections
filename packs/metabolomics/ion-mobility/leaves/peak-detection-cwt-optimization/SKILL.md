@@ -1,6 +1,6 @@
 ---
 name: peak-detection-cwt-optimization
-description: Use when when you have a pre-aligned GCIMSDataset and need to systematically
+description: Use when you have a pre-aligned GCIMSDataset and need to systematically
   identify and annotate chromatographic peaks across multiple samples.
 license: CC-BY-4.0
 metadata:
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
-evidence_spans:
-- library(ggplot2) library(cowplot) library(GCIMS)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

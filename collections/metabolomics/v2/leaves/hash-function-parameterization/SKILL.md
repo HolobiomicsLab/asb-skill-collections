@@ -1,6 +1,6 @@
 ---
 name: hash-function-parameterization
-description: Use when when you have normalized or vectorized mass spectrometry spectral
+description: Use when you have normalized or vectorized mass spectrometry spectral
   data (m/z and intensity pairs converted to feature vectors) and need to construct
   an LSH index for fast nearest-neighbor retrieval of similar spectra.
 license: CC-BY-4.0
@@ -19,7 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-022-04833-5
   title: mzBucket
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

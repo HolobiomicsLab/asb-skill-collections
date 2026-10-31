@@ -23,11 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
-evidence_spans:
-- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI
-  data
-- rMSIcleanup is an open-source R package
-- devtools::install_github("prafols/rMSI", ref = "0.8")
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

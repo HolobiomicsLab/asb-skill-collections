@@ -18,11 +18,6 @@ metadata:
 derived_from:
 - doi: 10.3390/genes12030396
   title: SMITER
-evidence_spans:
-- https://pypi.python.org/pypi
-- SMITER (Synthetic mzML writer) is a python-based command-line tool
-- SMITER (Synthetic mzML writer) is a python-based command-line tool designed to simulate
-  LC-MS/MS runs.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

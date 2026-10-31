@@ -1,9 +1,9 @@
 ---
 name: chemical-fragmentation-event-tracking
-description: Use when when running a ViMMS Environment simulation with save_eval flag
-  enabled and you need to correlate fragmentation events in the output mzML file back
-  to their originating chemical compounds for downstream evaluation, optimization,
-  or validation of acquisition strategies.
+description: Use when running a ViMMS Environment simulation with save_eval flag enabled
+  and you need to correlate fragmentation events in the output mzML file back to their
+  originating chemical compounds for downstream evaluation, optimization, or validation
+  of acquisition strategies.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -23,11 +23,6 @@ derived_from:
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
-evidence_spans:
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible
-  and modular framework designed to simulate fragmentation strategies'
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive
-  and modular framework for the simulation of fragmentation strategies'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-020-00477-w
   title: patRoon
-evidence_spans:
-- The `generateTPs` function is used to obtain TPs for a particular set of parents.
-- componTP <- generateComponents(algorithm = "tp",
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

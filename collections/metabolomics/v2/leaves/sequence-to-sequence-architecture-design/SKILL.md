@@ -1,7 +1,7 @@
 ---
 name: sequence-to-sequence-architecture-design
-description: Use when when you have encoder-produced fixed-size embeddings and need
-  to generate variable-length discrete sequences (e.g., SMILES tokens, protein sequences,
+description: Use when you have encoder-produced fixed-size embeddings and need to
+  generate variable-length discrete sequences (e.g., SMILES tokens, protein sequences,
   chemical formulas) as outputs.
 license: CC-BY-4.0
 metadata:
@@ -17,9 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s42004-023-00932-3
   title: Spec2Mol
-evidence_spans:
-- Processing of the chemical data is based on the [RDKit](https://www.rdkit.org/)
-  software.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,8 +1,8 @@
 ---
 name: docker-container-environment-variable-configuration
-description: Use when when deploying a Java application in a Docker container and
-  you need to adjust JVM heap memory settings (maximum and initial heap size) without
-  modifying the container image.
+description: Use when deploying a Java application in a Docker container and you need
+  to adjust JVM heap memory settings (maximum and initial heap size) without modifying
+  the container image.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
-evidence_spans:
-- docker run
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

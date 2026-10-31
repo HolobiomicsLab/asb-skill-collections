@@ -1,6 +1,6 @@
 ---
 name: metabolomic-feature-statistical-hypothesis-testing
-description: Use when when you have a normalized and batch-corrected feature abundance
+description: Use when you have a normalized and batch-corrected feature abundance
   matrix from non-targeted LC-MS/MS metabolomics (e.
 license: CC-BY-4.0
 metadata:
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41596-024-01046-3
   title: FBMN-STATS
-evidence_spans:
-- To easily install and run Jupyter Notebook in R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

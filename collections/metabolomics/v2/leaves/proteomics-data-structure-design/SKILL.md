@@ -1,8 +1,8 @@
 ---
 name: proteomics-data-structure-design
-description: Use when when building a mass-spectrometry analysis pipeline that must
-  support multiple vendor and open formats (mzML, mzXML, Thermo, Agilent, Bruker,
-  etc.) and you need to shield downstream tools from format-specific parsing logic.
+description: Use when building a mass-spectrometry analysis pipeline that must support
+  multiple vendor and open formats (mzML, mzXML, Thermo, Agilent, Bruker, etc.) and
+  you need to shield downstream tools from format-specific parsing logic.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -19,10 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.9b00640
   title: Skyline (small molecules)
-evidence_spans:
-- The ProteoWizard Library and Tools are a set of modular and extensible open-source,
-  cross-platform tools and software libraries
-- github.com__ProteoWizard__pwiz
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

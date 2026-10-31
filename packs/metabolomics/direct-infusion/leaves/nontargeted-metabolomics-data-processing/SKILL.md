@@ -27,12 +27,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube
-evidence_spans:
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry
-  (LC-MS) data processing.
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry
-  (LC-MS) data processing
-- masscube is an integrated Python package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

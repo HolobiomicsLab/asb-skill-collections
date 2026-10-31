@@ -29,10 +29,6 @@ derived_from:
   title: ''
 - doi: 10.1038/s41592-019-0344-8
   title: ''
-evidence_spans:
-- '[![r-universe badge](https://taxonomicallyinformedannotation.r-universe.dev/tima/badges/version?&color=blue&style=classic.png)]'
-- '[![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white.png)]'
-- '[![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white.png)](https://hub.docker.com/r/adafede/tima-r/)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

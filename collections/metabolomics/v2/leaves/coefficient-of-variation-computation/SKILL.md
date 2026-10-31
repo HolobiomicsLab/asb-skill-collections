@@ -25,15 +25,6 @@ derived_from:
   title: MWASTools
 - doi: 10.1093/bioinformatics/btaa037
   title: ''
-evidence_spans:
-- Assuming that R (>=3.3) and Bioconductor have been correctly installed
-- Here, we present a package to perform MWAS using univariate hypothesis testing
-- '"MWASTools" is an R package designed to provide an integrated and user-friendly
-  pipeline'
-- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an
-  alignment algorithm
-- '`ncGTW` is an R package developed as a plug-in of `xcms`'
-- ncGTW is an R package developed as a plug-in of xcms
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

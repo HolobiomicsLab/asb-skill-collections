@@ -1,7 +1,7 @@
 ---
 name: molecular-graph-representation-handling
-description: Use when when you have molecular structure data (SMILES or molecular
-  IDs) from chemistry databases (e.g., PubChem, HMDB) and need to feed it into a neural
+description: Use when you have molecular structure data (SMILES or molecular IDs)
+  from chemistry databases (e.g., PubChem, HMDB) and need to feed it into a neural
   network architecture like TransG-Net that expects multimodal inputs combining graph-structured
   molecular topology with learned embeddings.
 license: CC-BY-4.0
@@ -27,13 +27,6 @@ metadata:
 derived_from:
 - doi: 10.1007/s10489-022-04351-0
   title: Mass Spectrum Transformer
-evidence_spans:
-- RDKit == 2020.03.4
-- torch >= 1.4.0
-- numpy == 1.19.1
-- scikit-learn == 0.23.2
-- cuda >= 9.0
-- cudnn >= 7.0
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

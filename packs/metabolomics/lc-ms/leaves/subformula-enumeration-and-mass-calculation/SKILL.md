@@ -1,8 +1,8 @@
 ---
 name: subformula-enumeration-and-mass-calculation
-description: 'Use when when performing chemical denoising of MS/MS spectra: after
-  modifying a master formula based on SMILES and adduct information, enumerate all
-  possible subformulas to establish the set of chemically valid neutral losses.'
+description: 'Use when performing chemical denoising of MS/MS spectra: after modifying
+  a master formula based on SMILES and adduct information, enumerate all possible
+  subformulas to establish the set of chemically valid neutral losses.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -29,13 +29,6 @@ derived_from:
   title: Spectral Denoising
 - doi: 10.1038/s41592-023-02012-9
   title: ''
-evidence_spans:
-- Spectral denoising requires ``Python >= 3.8`` installed on your system
-- import spectral_denoising as sd
-- rdkit==2024.3.5
-- smiles = 'O=c1nc[nH]c2nc[nH]c12'
-- chemparse==0.3.1
-- '- ``chemparse==0.3.1``'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

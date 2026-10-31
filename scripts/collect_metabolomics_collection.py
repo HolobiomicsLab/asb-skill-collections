@@ -304,17 +304,42 @@ def _description_contexts(domain_label: str | None) -> tuple[str, str]:
     return "in the workflow it documents", "in the analysis it documents"
 
 
+#: A leading "when", "use when" or "if/when" clause opener. A source that opens
+#: with one loses it before "Use when" is added, or the description reads
+#: "Use when when ...".
+_LEADING_WHEN_RE = re.compile(r"^(?:use\s+)?(?:if\s*/\s*when|when)\b[\s,:]*", re.IGNORECASE)
+
+
+def _strip_leading_when(text: str) -> str:
+    """Drop one leading when-clause opener ("When", "Use when", "If/when")."""
+    return _LEADING_WHEN_RE.sub("", text, count=1)
+
+
+def _use_when(text: str, bridge: str) -> str:
+    """Give ``text`` one canonical opening, never a doubled "Use when"."""
+    canonical = _canonicalize_description_opening(text)
+    if canonical is not None:
+        if not canonical.startswith("Use when"):
+            return canonical
+        rest = canonical[len("Use when"):].strip()
+        return f"Use when {_strip_leading_when(rest)}".strip()
+    stripped = _strip_leading_when(text)
+    if stripped != text:
+        bridge = ""
+    if not stripped:
+        return ""
+    return f"Use when {bridge}{stripped[0].lower()}{stripped[1:]}"
+
+
 def _description_from_sources(when_to_use: str, fallback_desc: str) -> str:
     """Choose the richest source and give it one canonical opening."""
     core = _strip_trailing_marketing(_collapse_ws(when_to_use))
     if core:
-        canonical = _canonicalize_description_opening(core)
-        return canonical or f"Use when {core[0].lower()}{core[1:]}"
+        return _use_when(core, "")
     fallback = _strip_trailing_marketing(_collapse_ws(fallback_desc))
     if not fallback:
         return ""
-    canonical = _canonicalize_description_opening(fallback)
-    return canonical or f"Use when you need to {fallback[0].lower()}{fallback[1:]}"
+    return _use_when(fallback, "you need to ")
 
 
 def _pad_description(description: str, pretty_name: str, context: str) -> str:
@@ -397,7 +422,6 @@ def discover_build_dirs(builds_root: pathlib.Path) -> list[pathlib.Path]:
 def _skill_richness(rec: dict) -> tuple:
     """Sort key: larger == richer. Used to pick the canonical dup."""
     return (
-        len(rec.get("evidence_spans", [])),
         len(rec.get("tools", [])),
         len(rec.get("edam_topics", [])),
         1 if rec.get("edam_operation") else 0,
@@ -477,14 +501,11 @@ def extract_skill(
             # keep build-local DOIs too, but corpus DOI stays first/authoritative
             dois.append(p["doi"])
 
-    evidence_spans: list[str] = []
-    tools_in_skill = tools_doc.get("tools") if isinstance(tools_doc, dict) else None
-    for t in tools_in_skill or []:
-        for span in (t.get("evidence_spans") or [])[:2]:
-            span = _collapse_ws(span)
-            if span and span not in evidence_spans:
-                evidence_spans.append(span)
-    evidence_spans = evidence_spans[:6]
+    # No frontmatter evidence_spans: the only spans a build dir offers per skill
+    # are its tools' (tools.json), and copying the first of each tool's into
+    # every leaf naming that tool grounded unrelated leaves with one sentence
+    # (561 spans were each shared by more than ten v2 leaves). A leaf's own
+    # verbatim evidence is in its body, which is kept whole below.
 
     skill_md_body = ""
     try:
@@ -504,7 +525,6 @@ def extract_skill(
         "primary_doi": paper_doi or (dois[0] if dois else ""),
         "primary_title": paper_title,
         "repo_url": repo_url,
-        "evidence_spans": evidence_spans,
         "skill_md_body": skill_md_body,
         "source_build": build_name,
         "kb_notes": kb.get("notes") if isinstance(kb, dict) else None,
@@ -611,7 +631,6 @@ def render_skill_md(rec: dict, domain_label: str | None = None) -> str:
             "tools": rec["tools"],
         },
         "derived_from": derived_from,
-        "evidence_spans": rec["evidence_spans"],
         "claims": [],
         "provenance": {
             "collection": COLLECTION_IRI,
@@ -1026,20 +1045,16 @@ def assemble(
                     canonical = rec
                 else:
                     canonical = existing
-                # union of DOIs, tools, evidence, edam_topics
+                # union of DOIs, tools, edam_topics
                 for d in rec["dois"]:
                     if d and d not in canonical["dois"]:
                         canonical["dois"].append(d)
                 for t in rec["tools"]:
                     if t and t not in canonical["tools"]:
                         canonical["tools"].append(t)
-                for e in rec["evidence_spans"]:
-                    if e and e not in canonical["evidence_spans"]:
-                        canonical["evidence_spans"].append(e)
                 for t in rec["edam_topics"]:
                     if t and t not in canonical["edam_topics"]:
                         canonical["edam_topics"].append(t)
-                canonical["evidence_spans"] = canonical["evidence_spans"][:6]
 
         # ---- tools ----
         for trec in extract_tools(bdir, paper_doi, paper_title, repo_url):

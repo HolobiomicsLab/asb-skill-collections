@@ -1,7 +1,7 @@
 ---
 name: optional-dependency-extra-specifier-usage
-description: Use when when a Python package provides optional support for specialized
-  data formats or functionality (e.
+description: Use when a Python package provides optional support for specialized data
+  formats or functionality (e.
 license: CC-BY-4.0
 metadata:
   edam_topics:
@@ -16,10 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
-evidence_spans:
-- The main way to obtain Pyteomics is via `pip Python package manager
-- h5py <https://www.h5py.org/> and optionally hdf5plugin
-- h5py and optionally hdf5plugin <https://hdf5plugin.readthedocs.io/en/latest/>
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

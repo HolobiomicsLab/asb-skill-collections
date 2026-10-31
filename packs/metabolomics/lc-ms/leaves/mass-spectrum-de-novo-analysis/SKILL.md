@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
-evidence_spans:
-- MIST-CF ranks chemical formula and adduct assignments
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

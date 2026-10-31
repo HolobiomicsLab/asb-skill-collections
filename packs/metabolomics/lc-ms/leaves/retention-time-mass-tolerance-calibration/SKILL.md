@@ -28,10 +28,6 @@ derived_from:
   title: LargeMetabo
 - doi: 10.1021/acs.analchem.2c04343
   title: ''
-evidence_spans:
-- Dependent on R (>= 3.5.0)
-- install_github("LargeMetabo/LargeMetabo", force = TRUE, build_vignettes = TRUE)
-- github.com__daniellyz__meRgeION2
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

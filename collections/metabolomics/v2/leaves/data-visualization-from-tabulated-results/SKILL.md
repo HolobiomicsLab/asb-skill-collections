@@ -21,7 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1002/rcm.10132
   title: MassQLab
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

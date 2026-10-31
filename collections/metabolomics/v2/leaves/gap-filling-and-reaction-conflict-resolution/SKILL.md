@@ -1,7 +1,7 @@
 ---
 name: gap-filling-and-reaction-conflict-resolution
-description: Use when when merging multiple draft metabolic models (in JSON, XML,
-  or SBML format) from community members or assembly variants and you encounter conflicting
+description: Use when merging multiple draft metabolic models (in JSON, XML, or SBML
+  format) from community members or assembly variants and you encounter conflicting
   reaction annotations, missing metabolic pathways, or incomplete gap-filling decisions
   that require arbitration across inputs.
 license: CC-BY-4.0
@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
-evidence_spans:
-- community-dependent gap-filling using COMMIT for communites sampled from
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

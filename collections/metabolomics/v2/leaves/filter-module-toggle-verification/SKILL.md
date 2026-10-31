@@ -16,9 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jcim.1c00144
   title: CyProduct
-evidence_spans:
-- there is a class called BioTransformerAPI in the jar file
-- Please download the CyProduct.jar to run the tool
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: hplc-column-parameter-normalization
-description: Use when when you have raw HPLC column specifications from RepoRT or
-  similar metadata repositories and need to prepare them as input features for machine
-  learning models. Apply this skill before featurizing molecular structures or training
-  graph transformers for retention time prediction.
+description: Use when you have raw HPLC column specifications from RepoRT or similar
+  metadata repositories and need to prepare them as input features for machine learning
+  models. Apply this skill before featurizing molecular structures or training graph
+  transformers for retention time prediction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c05859
   title: Graphormer-RT
-evidence_spans:
-- import numpy as np
-- import pandas as pd
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

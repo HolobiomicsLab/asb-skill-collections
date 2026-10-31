@@ -1,8 +1,8 @@
 ---
 name: resource-capacity-calculation
-description: Use when when configuring an OpenMS Streamlit application for online
-  deployment with Redis and RQ worker processes, you need to determine how many worker
-  processes can safely run in parallel within a Docker container's memory constraint.
+description: Use when configuring an OpenMS Streamlit application for online deployment
+  with Redis and RQ worker processes, you need to determine how many worker processes
+  can safely run in parallel within a Docker container's memory constraint.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -17,7 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: spectral-file-format-conversion
-description: Use when when you have a GNPS molecular networking job archive (downloaded
+description: Use when you have a GNPS molecular networking job archive (downloaded
   as a .zip or compressed archive) and need to prepare metabolomics spectra and molecular
   family data for NPLinker integration.
 license: CC-BY-4.0
@@ -21,11 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s40168-022-01444-3
   title: NPClassScore
-evidence_spans:
-- It provides the tools [`GNPSDownloader`][nplinker.metabolomics.gnps.GNPSDownloader]
-  and [`GNPSExtractor`][nplinker.metabolomics.gnps.GNPSExtractor]
-- '[![github repo badge](https://img.shields.io/badge/github-nplinker-000.svg?color=blue)](https://github.com/NPLinker/nplinker)'
-- Python version ≥3.11
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

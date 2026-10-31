@@ -1,6 +1,6 @@
 ---
 name: github-repository-operations
-description: Use when when you need to verify that a software package (such as MassQL)
+description: Use when you need to verify that a software package (such as MassQL)
   passes its periodic integration test suite as indicated by CI workflow badges in
   the project documentation, or when you must reproduce pass/fail results for package-testing
   workflows distinct from unit tests to establish.
@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-025-02785-1
   title: MassQL
-evidence_spans:
-- The Mass Spec Query Language (MassQL) is a domain specific language meant to be
-  a succinct way to express a query in a mass spectrometry centric fashion.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

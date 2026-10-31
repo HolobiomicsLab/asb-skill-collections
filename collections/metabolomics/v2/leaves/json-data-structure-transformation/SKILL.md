@@ -1,6 +1,6 @@
 ---
 name: json-data-structure-transformation
-description: Use when when you have intermediate JSON data in the Experiment Description
+description: Use when you have intermediate JSON data in the Experiment Description
   Specification schema and need to convert it to a different JSON structure or a repository-specific
   format (e.g., mwTab for Metabolomics Workbench submission).
 license: CC-BY-4.0
@@ -20,10 +20,6 @@ derived_from:
   title: messes
 - doi: 10.3390/metabo11030163
   title: ''
-evidence_spans:
-- MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_
-  (`jsonschema <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

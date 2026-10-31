@@ -1,9 +1,9 @@
 ---
 name: metabolism-prediction-result-aggregation
-description: Use when when you have run CypReact predictions on a molecular dataset
-  against multiple CYP isoforms (e.g., 1A2, 2A6, 2B6) and need to consolidate the
-  per-isoform output files into a single combined result file for cross-isoform comparison,
-  visualization, or downstream metabolite identification.
+description: Use when you have run CypReact predictions on a molecular dataset against
+  multiple CYP isoforms (e.g., 1A2, 2A6, 2B6) and need to consolidate the per-isoform
+  output files into a single combined result file for cross-isoform comparison, visualization,
+  or downstream metabolite identification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -17,7 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jcim.8b00035
   title: CypReact
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

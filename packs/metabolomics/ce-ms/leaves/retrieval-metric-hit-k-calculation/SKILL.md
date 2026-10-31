@@ -1,6 +1,6 @@
 ---
 name: retrieval-metric-hit-k-calculation
-description: Use when when you have generated embeddings for query and reference MS/MS
+description: Use when you have generated embeddings for query and reference MS/MS
   spectra, computed a cosine similarity matrix between them, and need to evaluate
   how often the correct compound appears in the top-1, top-5, or top-10 retrieved
   candidates.
@@ -26,10 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding
-evidence_spans:
-- Python：3.12
-- PyTorch：2.6.0 + CUDA 12.4
-- 该装饰器来自 numba
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

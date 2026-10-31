@@ -24,13 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btac032
   title: massNet
-evidence_spans:
-- Keras (2.2.0)
-- Tensorflow(1.8.0)
-- 2- Keras (2.2.0) with a Tensorflow(1.8.0) backend.
-- numpy(1.15.4)
-- 'Packages: numpy(1.15.4)'
-- h5py(2.7.1)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: cross-reference-publication-linking
-description: Use when when cataloging a suite of related bioinformatics tools or web
-  applications (particularly in domains like metabolomics, microbiology, or systems
-  biology) and you need to establish the authoritative peer-reviewed or preprint publication
-  for each tool, verify publication URLs are live, and.
+description: Use when cataloging a suite of related bioinformatics tools or web applications
+  (particularly in domains like metabolomics, microbiology, or systems biology) and
+  you need to establish the authoritative peer-reviewed or preprint publication for
+  each tool, verify publication URLs are live, and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -27,9 +27,6 @@ derived_from:
   title: microbemasst
 - doi: 10.1101/2024.05.13.593988v1
   title: ''
-evidence_spans:
-- microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST
-- Aggregated search outputs can be generated and visualized using metadataMASST
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

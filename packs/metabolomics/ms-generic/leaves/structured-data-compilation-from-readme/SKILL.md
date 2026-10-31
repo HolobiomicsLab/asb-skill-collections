@@ -1,6 +1,6 @@
 ---
 name: structured-data-compilation-from-readme
-description: Use when when a scientific software repository documents multiple standalone
+description: Use when a scientific software repository documents multiple standalone
   tools, web applications, or resources with associated metadata (URLs, publications,
   taxonomic coverage) in its README, and you need to create a machine-readable inventory
   for downstream indexing, validation, or reuse.
@@ -26,9 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst
-evidence_spans:
-- microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST
-- Aggregated search outputs can be generated and visualized using metadataMASST
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -20,13 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr
-evidence_spans:
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R
-  users for conducting library searches against electron ionization mass spectral
-  databases.
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R
-  users
-- enhance the capabilities of R users for conducting library searches
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

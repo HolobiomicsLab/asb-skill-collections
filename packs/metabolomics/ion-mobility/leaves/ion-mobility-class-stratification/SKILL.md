@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
-evidence_spans:
-- MOCCal, or Multi-Omic CCS Calibrator, is a Python application
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

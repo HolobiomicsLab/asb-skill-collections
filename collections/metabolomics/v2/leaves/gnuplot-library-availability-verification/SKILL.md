@@ -1,9 +1,9 @@
 ---
 name: gnuplot-library-availability-verification
-description: Use when when deploying a Perl-based GUI application (such as LipidOne)
-  on Microsoft Windows that depends on Gnuplot for visualization, and you need to
-  ensure the application will not crash during dataset loading or plotting operations
-  due to missing or inaccessible Gnuplot binaries.
+description: Use when deploying a Perl-based GUI application (such as LipidOne) on
+  Microsoft Windows that depends on Gnuplot for visualization, and you need to ensure
+  the application will not crash during dataset loading or plotting operations due
+  to missing or inaccessible Gnuplot binaries.
 license: CC-BY-4.0
 metadata:
   edam_topics:
@@ -17,8 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1002/cpz1.70009
   title: LipidOne 2.0
-evidence_spans:
-- https://sourceforge.net/projects/gnuplot/files/gnuplot/5.4.2/
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

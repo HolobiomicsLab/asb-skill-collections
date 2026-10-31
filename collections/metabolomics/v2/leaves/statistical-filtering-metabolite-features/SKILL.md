@@ -1,8 +1,8 @@
 ---
 name: statistical-filtering-metabolite-features
-description: Use when when you have peak area tables (unlabeled C12 and labeled C13)
-  from LC-MS metabolomics with sample metadata indicating case and control groups,
-  and you need to distinguish true metabolic changes from instrumental noise or batch
+description: Use when you have peak area tables (unlabeled C12 and labeled C13) from
+  LC-MS metabolomics with sample metadata indicating case and control groups, and
+  you need to distinguish true metabolic changes from instrumental noise or batch
   artifacts before attempting isotopic pairing.
 license: CC-BY-4.0
 metadata:
@@ -30,12 +30,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2021.12.05.471237v2
   title: isopair
-evidence_spans:
-- To install the **IsoPairFinder** package, you can use the following command in R
-- if (!require(devtools))
-- if (!require(BiocManager))
-- required_pkgs <- c("dplyr","tidyr","readr", "stringr", "tibble", "purrr",
-- devtools::install_github("DoddLab/IsoPairFinder")
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

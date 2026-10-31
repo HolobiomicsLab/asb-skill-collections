@@ -1,6 +1,6 @@
 ---
 name: cross-validation-parameter-tuning
-description: Use when when building Cox-PH or Cox-nnet survival models from expression
+description: Use when building Cox-PH or Cox-nnet survival models from expression
   or metabolomic feature matrices paired with event/time vectors, and you need to
   select optimal regularization strength (alpha), cross-validation fold count (nfold),
   risk stratification method, and optimization strategy before.
@@ -21,13 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1093/gigascience/giaa162
   title: Lilikoi V2.0
-evidence_spans:
-- The new Lilikoi v2.0 R package has implemented a deep-learning method for classification,
-  in addition to popular machine learning methods.
-- Lilikoi v2.0 is a modern, comprehensive package to enable metabolomics analysis
-  in R programming environment.
-- the deep-learning based Cox-nnet model
-- prognosis prediction, implemented by Cox-PH model
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

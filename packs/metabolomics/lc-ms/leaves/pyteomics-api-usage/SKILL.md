@@ -1,9 +1,9 @@
 ---
 name: pyteomics-api-usage
-description: Use when when you have polypeptide sequences and need to compute their
-  monoisotopic or average mass, isotopic distribution patterns, or other physico-chemical
-  properties; or when you need to parse and manipulate MS/LC-MS data, FASTA databases,
-  or search engine output in a Python workflow.
+description: Use when you have polypeptide sequences and need to compute their monoisotopic
+  or average mass, isotopic distribution patterns, or other physico-chemical properties;
+  or when you need to parse and manipulate MS/LC-MS data, FASTA databases, or search
+  engine output in a Python workflow.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0234
@@ -25,12 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
-evidence_spans:
-- Pyteomics is a collection of lightweight and handy tools for Python
-- Pyteomics supports recent versions of Python 3.
-- pip install pyteomics
-- numpy
-- numpy <https://numpy.org/>
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

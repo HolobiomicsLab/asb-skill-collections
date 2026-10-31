@@ -1,7 +1,7 @@
 ---
 name: reference-semantics-verification
-description: Use when when applying sequential filters to a large metabolomics peak
-  table (e.g., mispicked ions, group, CV, or in-source filters) and you need to confirm
+description: Use when applying sequential filters to a large metabolomics peak table
+  (e.g., mispicked ions, group, CV, or in-source filters) and you need to confirm
   that setting copy_object=FALSE actually modifies the input object in-place rather
   than creating a hidden copy.
 license: CC-BY-4.0
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.2c04632
   title: MPACT
-evidence_spans:
-- To import these data into R, use the mpactr function
-- We will be using multiple libraries for data analysis and visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

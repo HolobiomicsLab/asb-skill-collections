@@ -26,8 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btae490
   title: ESP
-evidence_spans:
-- github.com/HassounLab/ESP
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

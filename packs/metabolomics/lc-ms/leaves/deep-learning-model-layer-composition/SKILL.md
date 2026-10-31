@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2024.03.25.586580v5
   title: MS2DeepScore 2.0
-evidence_spans:
-- '`ms2deepscore` provides a Siamese neural network that is trained to predict molecular
-  structural similarities'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

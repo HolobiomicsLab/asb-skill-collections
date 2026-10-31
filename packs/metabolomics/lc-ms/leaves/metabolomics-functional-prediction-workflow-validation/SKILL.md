@@ -22,7 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1003123
   title: mummichog
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: dynamic-method-signature-introspection
-description: Use when when building an automated converter discovery and job enumeration
+description: Use when building an automated converter discovery and job enumeration
   system where converter classes are dynamically loaded from package directories and
   you need to extract and validate their internal conversion method signatures without
-  prior knowledge of which converters will be available.
+  prior knowledge of which converters will be available at.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -18,10 +18,6 @@ metadata:
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer
-evidence_spans:
-- make sure the existing tests still work by running ``pytest``
-- MSMetaEnhancer is a tool used for `.msp` files annotation
-- 'Converter Builder: Automatically discovers and instantiates available converters'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

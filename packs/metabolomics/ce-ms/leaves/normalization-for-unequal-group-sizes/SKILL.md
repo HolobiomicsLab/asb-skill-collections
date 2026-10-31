@@ -1,6 +1,6 @@
 ---
 name: normalization-for-unequal-group-sizes
-description: Use when when tabulating chemical annotation enrichment (e.g., GNPS spectral
+description: Use when tabulating chemical annotation enrichment (e.g., GNPS spectral
   library matches) across sample groups stratified by metadata category (e.g., sample
   type, extraction method, ionization source), and the groups contain different numbers
   of files or samples.
@@ -24,10 +24,6 @@ derived_from:
   title: ReDU
 - doi: 10.1186/2047-217x-2-16
   title: ''
-evidence_spans:
-- ReDU only interacts with MassIVE
-- data uploaded to MassIVE as a public dataset
-- Validation of the ReDU sample information template using the drag-and-drop validator
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

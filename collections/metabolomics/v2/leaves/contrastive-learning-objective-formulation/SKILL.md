@@ -1,9 +1,9 @@
 ---
 name: contrastive-learning-objective-formulation
-description: Use when when pre-training a graph neural network on a domain-specific
-  molecular corpus (natural products vs. synthetic molecules) where you need to capture
-  both evolutionary relationships encoded in molecular scaffolds and diverse structural
-  variations in side-chains, and when supervised learning.
+description: Use when pre-training a graph neural network on a domain-specific molecular
+  corpus (natural products vs. synthetic molecules) where you need to capture both
+  evolutionary relationships encoded in molecular scaffolds and diverse structural
+  variations in side-chains, and when supervised learning on.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -24,9 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
-evidence_spans:
-- Fork the repository
-- Our method integrates contrastive learning with masked graph modeling
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

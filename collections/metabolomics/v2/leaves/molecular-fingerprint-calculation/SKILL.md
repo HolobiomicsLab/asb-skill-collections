@@ -17,8 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-023-02143-z
   title: RepoRT (retention-time repository)
-evidence_spans:
-- molecular fingerprints and chemical descriptors are calculated using rcdk
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

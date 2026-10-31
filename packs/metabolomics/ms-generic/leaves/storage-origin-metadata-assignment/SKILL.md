@@ -1,6 +1,6 @@
 ---
 name: storage-origin-metadata-assignment
-description: Use when when implementing or initializing an MsBackend subclass to handle
+description: Use when implementing or initializing an MsBackend subclass to handle
   mass spectrometry data, you must assign dataStorage and dataOrigin variables after
   loading m/z and intensity values.
 license: CC-BY-4.0
@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
-evidence_spans:
-- '`DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)'
-- DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)
-- library(Spectra) library(IRanges)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

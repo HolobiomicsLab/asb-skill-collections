@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-024-00804-5
   title: idslmint
-evidence_spans:
-- Powered by RDKit
-- Python versions badge
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

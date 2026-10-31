@@ -40,14 +40,6 @@ derived_from:
   title: ''
 - doi: 10.1021/acs.jnatprod.1c00399
   title: ''
-evidence_spans:
-- On PC, download the latest msconvert release from ProteoWizard
-- 'On PC, this can be installed normally from Proteowizard: https://proteowizard.sourceforge.io/download.html'
-- On Mac, download Docker and open up the GUI dashboard. The first time you go to
-  convert raw files, it will prompt you to download the docker image for msconvert
-- On Mac, you can still run msconvert via a docker image. First, install Docker
-- import os import imzml_writer.utils as iw_utils
-- iw_utils.mzML_to_imzML_convert(PATH=mzML_path)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

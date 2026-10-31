@@ -1,8 +1,8 @@
 ---
 name: pytorch-distributed-training-execution
-description: Use when when you have a pre-trained GNN model checkpoint and need to
-  apply transfer learning to a new chromatography or molecular property prediction
-  dataset (e.g., Eawag_XBridgeC18_364.xlsx) by fine-tuning the model weights on domain-specific
+description: Use when you have a pre-trained GNN model checkpoint and need to apply
+  transfer learning to a new chromatography or molecular property prediction dataset
+  (e.g., Eawag_XBridgeC18_364.xlsx) by fine-tuning the model weights on domain-specific
   examples without retraining from scratch.
 license: CC-BY-4.0
 metadata:
@@ -28,13 +28,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jcim.4c02179
   title: ABCoRT
-evidence_spans:
-- '**Python**'
-- '**Pytorch**'
-- '- **Pytorch**'
-- '**PyG**'
-- '**RDKit**'
-- '- **RDKit**'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

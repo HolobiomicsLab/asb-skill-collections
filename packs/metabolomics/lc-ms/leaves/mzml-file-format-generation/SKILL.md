@@ -1,8 +1,8 @@
 ---
 name: mzml-file-format-generation
-description: Use when when you need to generate reproducible synthetic LC/GC-MS raw
-  data files with known ground-truth peak properties (m/z, retention time, intensity)
-  for benchmarking peak detection, feature extraction, normalization, or batch correction
+description: Use when you need to generate reproducible synthetic LC/GC-MS raw data
+  files with known ground-truth peak properties (m/z, retention time, intensity) for
+  benchmarking peak detection, feature extraction, normalization, or batch correction
   algorithms;
 license: CC-BY-4.0
 metadata:
@@ -26,11 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
-evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
-  BiocManager::install("mzrtsim")
-- The underlying engine handles binary data encoding via the `base64enc` package
-- github.com__yufree__mzrtsim
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

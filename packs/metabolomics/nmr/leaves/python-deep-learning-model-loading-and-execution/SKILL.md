@@ -1,6 +1,6 @@
 ---
 name: python-deep-learning-model-loading-and-execution
-description: Use when when you have a pre-trained deep learning model checkpoint (saved
+description: Use when you have a pre-trained deep learning model checkpoint (saved
   in PyTorch format) and new 1D 1H NMR spectral data in CSV and peak-list TXT formats,
   and you need to generate peak-to-metabolite assignments or other structured outputs
   from that model without modification of model weights.
@@ -24,12 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c05632
   title: NMRformer
-evidence_spans:
-- python 3.9.13
-- torch 1.10.0+cu113
-- pip install numpy==1.26.4
-- pip install pandas==1.5.1
-- pip install scipy
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

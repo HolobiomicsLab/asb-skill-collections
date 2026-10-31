@@ -1,6 +1,6 @@
 ---
 name: ms-spectral-similarity-calculation
-description: Use when when comparing two or more MS/MS spectra for compound identification,
+description: Use when comparing two or more MS/MS spectra for compound identification,
   library matching, or spectral validation. Triggered when raw spectral data requires
   quantitative similarity assessment before database lookup, or when validating that
   two spectra originate from the same chemical compound.
@@ -24,11 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-021-01331-z
   title: Spectral entropy
-evidence_spans:
-- '.. automodule:: spectral_similarity :members:'
-- These are all integrated into the [MSEntropy package
-- These are all integrated into the MSEntropy package (https://github.com/YuanyueLi/MSEntropy)
-- This repository contains the original source code for the paper
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

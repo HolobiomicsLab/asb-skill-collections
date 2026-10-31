@@ -1,7 +1,7 @@
 ---
 name: chemical-similarity-metric-aggregation
-description: Use when when you have an unknown metabolite compound with mass spectral
-  data, have retrieved candidate structures from a molecular structure database (PubChem,
+description: Use when you have an unknown metabolite compound with mass spectral data,
+  have retrieved candidate structures from a molecular structure database (PubChem,
   HMDB), and have obtained predictions of structurally related metabolites from a
   deep-learning semantic similarity model (e.g., DeepMASS2).
 license: CC-BY-4.0
@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2024.05.30.596727v2
   title: DeepMASS
-evidence_spans:
-- DeepMASS2 is a cross-platform GUI software tool, which enables deep-learning based
-  metabolite annotation
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

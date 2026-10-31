@@ -1,7 +1,7 @@
 ---
 name: mzml-mzxml-spectrum-reading
-description: Use when when you have raw mzML or mzXML files containing uncompressed
-  m/z and intensity arrays and need to load spectra into a uniform data contract before
+description: Use when you have raw mzML or mzXML files containing uncompressed m/z
+  and intensity arrays and need to load spectra into a uniform data contract before
   compression, cross-format comparison, or algorithmic processing.
 license: CC-BY-4.0
 metadata:
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btab636
   title: mspack
-evidence_spans:
-- mspack is a C++ program for lossless and lossy mass spectrometry data compression
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

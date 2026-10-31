@@ -23,7 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-025-02813-0
   title: MSnLib
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: resolver-url-construction
-description: Use when when you have a USI string (comprising dataset identifier, spectrum
+description: Use when you have a USI string (comprising dataset identifier, spectrum
   index, and optional library reference) and need to generate a stable, machine-readable
   link that resolves to interactive spectrum visualization or programmatic access.
 license: CC-BY-4.0
@@ -23,7 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2020.05.09.086066
   title: Metabolomics Spectrum Resolver
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

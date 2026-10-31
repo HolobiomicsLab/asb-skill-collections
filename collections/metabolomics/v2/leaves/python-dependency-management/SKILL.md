@@ -1,7 +1,7 @@
 ---
 name: python-dependency-management
-description: Use when when initializing a new Python project environment, reproducing
-  a published analysis, or building documentation that requires external dependencies.
+description: Use when initializing a new Python project environment, reproducing a
+  published analysis, or building documentation that requires external dependencies.
   Specifically apply this skill when you have a requirements.txt file listing pinned
   versions and need to ensure all downstream tools (e.
 license: CC-BY-4.0
@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41587-025-02663-3
   title: DreaMS
-evidence_spans:
-- pip install -r requirements.txt
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

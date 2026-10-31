@@ -1,6 +1,6 @@
 ---
 name: release-artifact-generation
-description: Use when when a software project has reached a stable milestone (v-tagged
+description: Use when a software project has reached a stable milestone (v-tagged
   commit) and you need to produce official distribution artifacts with verified version
   metadata, checksums, and release documentation that can be validated against a published
   GitHub release record.
@@ -14,8 +14,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c07078
   title: qc4metabolomics
-evidence_spans:
-- Semantic Release
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

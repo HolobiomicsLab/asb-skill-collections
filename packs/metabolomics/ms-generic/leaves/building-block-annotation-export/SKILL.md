@@ -26,10 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-021-00530-2
   title: MassSpecBlocks
-evidence_spans:
-- Backend is written in PHP with Symfony framework
-- Application is developed for Mysql 8 /MariaDB 10
-- export format for open source program CycloBranch from Jiří Novák
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

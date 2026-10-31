@@ -1,7 +1,7 @@
 ---
 name: workflow-build-system-usage
-description: 'Use when when you have a Nextflow workflow repository with a Makefile,
-  and you need to execute the workflow for local testing or validation. Triggers include:
+description: 'Use when you have a Nextflow workflow repository with a Makefile, and
+  you need to execute the workflow for local testing or validation. Triggers include:
   (1) first-time setup of a downloaded workflow; (2) regression testing after code
   changes;'
 license: CC-BY-4.0
@@ -19,7 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41586-023-06906-8
   title: Reverse metabolomics
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: model-layer-name-validation
-description: Use when when deploying a TensorFlow Serving instance for the NP Classifier
+description: Use when deploying a TensorFlow Serving instance for the NP Classifier
   or any model-agnostic service where client code hardcodes layer names; before running
   inference pipelines; after model updates or configuration changes to catch layer
   name drift early.
@@ -16,8 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jacs.9b13786
   title: CSCS / deep CNN natural-product annotation
-evidence_spans:
-- Make sure you have python installed
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

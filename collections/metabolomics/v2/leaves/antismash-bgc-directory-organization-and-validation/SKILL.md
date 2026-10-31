@@ -1,8 +1,8 @@
 ---
 name: antismash-bgc-directory-organization-and-validation
-description: Use when when preparing genomic data for NPLinker analysis and you have
-  AntiSMASH BGC predictions that need to be validated and organized into NPLinker's
-  standardized directory layout.
+description: Use when preparing genomic data for NPLinker analysis and you have AntiSMASH
+  BGC predictions that need to be validated and organized into NPLinker's standardized
+  directory layout.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -21,12 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
-evidence_spans:
-- NPLinker is a python framework for data mining microbial natural products
-- GNPSDownloader, GNPSExtractor
-- Python version ≥3.11
-- antismash directory contains a collection of AntiSMASH BGC data
-- mibig directory contains the MIBiG metadata
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

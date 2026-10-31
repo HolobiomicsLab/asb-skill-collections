@@ -1,7 +1,7 @@
 ---
 name: graph-based-identity-transfer
-description: Use when when you have spectral library matches (seed identities with
-  high confidence scores) mapped to initial candidate structures from in silico fragmentation,
+description: Use when you have spectral library matches (seed identities with high
+  confidence scores) mapped to initial candidate structures from in silico fragmentation,
   and you want to propagate those identities to related structures in the fragmentation
   candidate graph to improve annotation coverage.
 license: CC-BY-4.0
@@ -22,9 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btad078
   title: ChemWalker
-evidence_spans:
-- ChemWalker is a python package
-- using [random walk](https://github.com/jinhongjung/pyrwr)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: spectral-peak-embedding-encoding
-description: Use when when you have variable-length MS/MS peak lists (m/z and intensity
+description: Use when you have variable-length MS/MS peak lists (m/z and intensity
   arrays) that must be fed into a transformer-based model for spectra analysis, and
   you need deterministic, normalized embeddings that preserve peak frequency information
   across multiple scales.
@@ -21,7 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c00260
   title: CLERMS
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

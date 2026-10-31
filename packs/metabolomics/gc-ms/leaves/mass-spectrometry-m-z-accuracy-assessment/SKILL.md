@@ -1,8 +1,8 @@
 ---
 name: mass-spectrometry-m-z-accuracy-assessment
-description: Use when when you have detected peaks in a direct injection FTICR-MS
-  mzML file (or similar high-resolution MS format) and need to assess whether m/z
-  measurements are accurate and consistent across the m/z range.
+description: Use when you have detected peaks in a direct injection FTICR-MS mzML
+  file (or similar high-resolution MS format) and need to assess whether m/z measurements
+  are accurate and consistent across the m/z range.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -20,7 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: python-environment-configuration
-description: Use when when you have installed a Python package (e.g., via pip or conda)
+description: Use when you have installed a Python package (e.g., via pip or conda)
   and need to confirm that the installation succeeded and all expected submodules
   can be imported.
 license: CC-BY-4.0
@@ -17,10 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
-evidence_spans:
-- Pyteomics supports recent versions of Python 3
-- Pyteomics supports recent versions of Python 3.
-- The main way to obtain Pyteomics is via `pip Python package manager
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

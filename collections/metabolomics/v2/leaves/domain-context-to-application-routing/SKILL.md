@@ -1,7 +1,7 @@
 ---
 name: domain-context-to-application-routing
-description: Use when when a user submits one or more MS/MS spectra and has declared
-  or implied a domain context (microbial, plant, tissue, microbiome, food, or metadata
+description: Use when a user submits one or more MS/MS spectra and has declared or
+  implied a domain context (microbial, plant, tissue, microbiome, food, or metadata
   aggregation), and the search must be executed against the appropriate domain-curated
   spectral library.
 license: CC-BY-4.0
@@ -27,9 +27,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst
-evidence_spans:
-- microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST
-- Aggregated search outputs can be generated and visualized using metadataMASST
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

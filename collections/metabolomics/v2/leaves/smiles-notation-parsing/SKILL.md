@@ -1,6 +1,6 @@
 ---
 name: smiles-notation-parsing
-description: Use when when processing downloaded mass spectral libraries (particularly
+description: Use when processing downloaded mass spectral libraries (particularly
   MoNA EI or MS2 libraries) where SMILES information exists but is embedded in unstructured
   Comment fields rather than a dedicated SMILES field, or when assigning SMILES from
   external structure databases (SDF files) to library.
@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
-evidence_spans:
-- library(mspcompiler)
-- The MassBank of North America (MoNA) has an EI library available
-- The MoNA MS2 libraries can be downloaded from https://mona.fiehnlab.ucdavis.edu/downloads
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

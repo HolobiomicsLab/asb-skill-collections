@@ -1,8 +1,8 @@
 ---
 name: model-comparison-evaluation
-description: Use when when you have multiple candidate spectrum prediction models
-  (e.g., FFN vs. GNN encoders, NEIMS vs. MassFormer vs. ICEBERG) and need to determine
-  which performs better on a shared task like tandem mass spectrum prediction.
+description: Use when you have multiple candidate spectrum prediction models (e.g.,
+  FFN vs. GNN encoders, NEIMS vs. MassFormer vs. ICEBERG) and need to determine which
+  performs better on a shared task like tandem mass spectrum prediction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -31,7 +31,6 @@ derived_from:
   title: ''
 - doi: 10.1101/2023.03.15.532823v1
   title: ''
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -27,10 +27,6 @@ derived_from:
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
-evidence_spans:
-- follows the hypergeometric distribution as previously stated
-- NPLinker, a Python module to accelerate and support the process of automatically
-  linking GCFs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

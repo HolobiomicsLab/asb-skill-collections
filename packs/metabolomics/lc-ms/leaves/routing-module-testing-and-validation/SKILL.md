@@ -1,6 +1,6 @@
 ---
 name: routing-module-testing-and-validation
-description: Use when when you have implemented conditional routing logic in the GNPS_MASST
+description: Use when you have implemented conditional routing logic in the GNPS_MASST
   codebase and need to verify that spectrum submissions with explicit domain-context
   selections (e.
 license: CC-BY-4.0
@@ -25,9 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst
-evidence_spans:
-- microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST
-- Aggregated search outputs can be generated and visualized using metadataMASST
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

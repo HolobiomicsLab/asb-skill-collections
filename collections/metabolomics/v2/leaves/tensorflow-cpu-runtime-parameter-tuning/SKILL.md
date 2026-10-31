@@ -23,12 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2023.07.06.547963v1
   title: Mass2SMILES
-evidence_spans:
-- open-source Python based deep learning approach
-- cddd does not seem to work on newer cuda drivers, therefore it is build using tensorflow
-  cpu
-- this Mass2SMILES model container is using GPU, the cddd does not seem to work on
-  newer cuda drivers, therefore it is build using tensorflow cpu
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

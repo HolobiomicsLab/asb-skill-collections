@@ -1,8 +1,8 @@
 ---
 name: functional-trait-diversity-analysis
-description: Use when when you have abundance-normalized FT-ICR MS peak data with
-  assigned molecular formulas and need to distinguish between richness (total number
-  of distinct metabolites) and functional diversity (diversity in metabolic potential).
+description: Use when you have abundance-normalized FT-ICR MS peak data with assigned
+  molecular formulas and need to distinguish between richness (total number of distinct
+  metabolites) and functional diversity (diversity in metabolic potential).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -20,14 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
-evidence_spans:
-- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
-  (e.g., chemodiversity analysis, multivariate statistics)
-- diversity metrics using functions from the R packages vegan [63]
-- diversity metrics using functions from the R packages vegan
-- diversity metrics using functions from the R packages vegan [63] and SYNCSA [64]
-- diversity metrics using functions from the R packages vegan [63] and SYNCSA
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -25,15 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash
-evidence_spans:
-- 'Chromatogram Loaders: Raw data stores chromatograms, this allows for faster loading
-  however since extraction has already been performed by the upstream analysis tool.
-  This includes SqMassLoader'
-- InteractivePlotter
-- MRMTransitionGroupPicker
-- pyMRMTransitionGroupPicker
-- FeatureMap
-- ResultsLoader
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

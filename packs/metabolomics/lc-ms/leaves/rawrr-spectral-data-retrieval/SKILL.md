@@ -26,19 +26,6 @@ derived_from:
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
-evidence_spans:
-- Our `.NET 8.0` [@dotnet] precompiled wrapper methods are bundled, including the
-  runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file and shipped with
-  the released `R` package.
-- R` functions requesting access to data stored in binary raw files (reader family
-  functions listed in Table 1) invoke compiled `C#` wrapper methods
-- Calling a wrapper method typically results in the execution of methods defined in
-  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific.
-- invoke compiled `C#` wrapper methods using a system call. Calling a wrapper method
-  typically results in the execution of methods defined in the `RawFileReader` dynamic
-  link library provided by Thermo
-- Our implementation consists of two language layers, the top `R` layer and the hidden
-  `C#` layer.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

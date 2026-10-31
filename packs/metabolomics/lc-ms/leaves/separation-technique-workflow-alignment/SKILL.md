@@ -1,9 +1,9 @@
 ---
 name: separation-technique-workflow-alignment
-description: Use when when evaluating whether an MS data processing platform (such
-  as mzmine) supports the full range of separation/ionization techniques your laboratory
-  uses, or when assessing whether gaps exist in the software architecture that would
-  require external pre- or post-processing for specific.
+description: Use when evaluating whether an MS data processing platform (such as mzmine)
+  supports the full range of separation/ionization techniques your laboratory uses,
+  or when assessing whether gaps exist in the software architecture that would require
+  external pre- or post-processing for specific.
 license: CC-BY-4.0
 metadata:
   edam_topics:
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
-evidence_spans:
-- mzmine is an open-source software for mass spectrometry data processing
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

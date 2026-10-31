@@ -1,7 +1,7 @@
 ---
 name: baseline-comparison-analysis
-description: Use when when you have trained a candidate model (e.g., an ensemble,
-  a new architecture) and need to demonstrate its advantage over published or reference
+description: Use when you have trained a candidate model (e.g., an ensemble, a new
+  architecture) and need to demonstrate its advantage over published or reference
   implementations on the same test data.
 license: CC-BY-4.0
 metadata:
@@ -23,8 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btae490
   title: ESP
-evidence_spans:
-- github.com/HassounLab/ESP
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,7 +1,7 @@
 ---
 name: smiles-sdf-molecule-format-handling
-description: Use when when you have molecular structures in SMILES or SDF format that
-  need to be passed to CyProduct for metabolite prediction, or when you need to switch
+description: Use when you have molecular structures in SMILES or SDF format that need
+  to be passed to CyProduct for metabolite prediction, or when you need to switch
   between string-based and file-based molecular representations for compatibility
   with different CYP450 enzyme prediction workflows.
 license: CC-BY-4.0
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jcim.1c00144
   title: CyProduct
-evidence_spans:
-- there is a class called BioTransformerAPI in the jar file
-- Please download the CyProduct.jar to run the tool
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

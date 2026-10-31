@@ -1,9 +1,9 @@
 ---
 name: ms-ms-spectrum-tokenization-and-representation
-description: Use when when you have raw MS/MS spectra in MSP format (or similar) with
-  m/z–intensity peak pairs and need to prepare them for neural embedding models that
-  require fixed-size discrete token inputs. Applies before generating dense spectral
-  embeddings for retrieval or similarity scoring tasks.
+description: Use when you have raw MS/MS spectra in MSP format (or similar) with m/z–intensity
+  peak pairs and need to prepare them for neural embedding models that require fixed-size
+  discrete token inputs. Applies before generating dense spectral embeddings for retrieval
+  or similarity scoring tasks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3628
@@ -25,10 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding
-evidence_spans:
-- Python：3.12
-- PyTorch：2.6.0 + CUDA 12.4
-- 该装饰器来自 numba
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

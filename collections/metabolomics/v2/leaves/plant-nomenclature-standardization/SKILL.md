@@ -1,9 +1,9 @@
 ---
 name: plant-nomenclature-standardization
-description: Use when when your metadata table contains species, genus, or family
-  names that may be outdated, synonymous, or non-canonical, and you need to integrate
-  them with the Literature Component (which requires standardized taxon identifiers)
-  or cross-reference with external databases like Lotus Database.
+description: Use when your metadata table contains species, genus, or family names
+  that may be outdated, synonymous, or non-canonical, and you need to integrate them
+  with the Literature Component (which requires standardized taxon identifiers) or
+  cross-reference with external databases like Lotus Database.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -22,9 +22,6 @@ derived_from:
   title: Inventa
 - doi: 10.1038/s41467-021-23953-9
   title: ''
-evidence_spans:
-- The taxonomy should be cleaned to uptoday recognized names, you can use the Open
-  Tree of Life
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

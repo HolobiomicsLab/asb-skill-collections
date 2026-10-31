@@ -1,8 +1,8 @@
 ---
 name: consensus-scoring-meta-analysis
-description: Use when when you have harmonized metabolite data from multiple studies
-  with identifier, fold-change direction, and trend classification columns available,
-  but lack standard deviations or variance estimates needed for quantitative meta-analysis.
+description: Use when you have harmonized metabolite data from multiple studies with
+  identifier, fold-change direction, and trend classification columns available, but
+  lack standard deviations or variance estimates needed for quantitative meta-analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -22,11 +22,6 @@ derived_from:
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
-evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted
-  meta-analysis in R
-- This vignette illustrates `Amanida` R package, which contains a collection of functions
-  for computing a weighted meta-analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

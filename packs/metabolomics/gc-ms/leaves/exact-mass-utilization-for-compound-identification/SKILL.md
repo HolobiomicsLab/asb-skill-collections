@@ -23,14 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
-evidence_spans:
-- Modern programming languages allow even complex workflows to be automated
-- Modern programming languages allow even complex workflows to be automated.
-- The first step in the process is to convert the raw input to a format that downstream
-  functions can work with. `spreadOut()` prepares the read in .CSV for intelligent
-  ***sorting*** (using retention
-- '`mzExacto()` collects the same information for a set of query chemicals and uses
-  it to precisely search the advanced dictionary for samples that have those chemicals.'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

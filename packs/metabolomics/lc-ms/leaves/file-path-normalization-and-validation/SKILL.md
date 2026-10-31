@@ -1,6 +1,6 @@
 ---
 name: file-path-normalization-and-validation
-description: Use when when preparing to read Thermo Fisher Scientific .raw files using
+description: Use when preparing to read Thermo Fisher Scientific .raw files using
   rawrr functions (readFileHeader, readSpectrum, readChromatogram, readIndex), or
   when retrieving cached assembly paths for the wrapped RawFileReader dependency.
 license: CC-BY-4.0
@@ -22,11 +22,6 @@ derived_from:
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
-evidence_spans:
-- Calling a wrapper method typically results in the execution of methods defined in
-  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
-- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher
-  Scientific
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

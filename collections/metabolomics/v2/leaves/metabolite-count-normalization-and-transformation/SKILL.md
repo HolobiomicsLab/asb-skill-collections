@@ -19,12 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
-evidence_spans:
-- Omu is an R package that enables rapid analysis of Metabolomics data sets
-- Omu supports two univariate statistical models, t test and anova, using the functions
-  ```omu_summary``` and ```anova_function``` respectively
-- To assign hierarchical class data, use the ```assign_hierarchy``` function and pick
-  the correct identifier, either "KEGG", "KO_Number", "Prokaryote", or "Eukaryote"
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

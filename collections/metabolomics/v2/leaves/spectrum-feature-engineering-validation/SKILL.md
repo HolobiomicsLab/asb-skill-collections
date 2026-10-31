@@ -1,6 +1,6 @@
 ---
 name: spectrum-feature-engineering-validation
-description: Use when when implementing or auditing a deep learning pipeline for MS/MS-based
+description: Use when implementing or auditing a deep learning pipeline for MS/MS-based
   molecular formula prediction, verify that precursor m/z values in the input feature
   array are zeroed before they reach the spectrum encoder (e.g., TCN).
 license: CC-BY-4.0
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
-evidence_spans:
-- 'CLI and Python API: [msfiddle](https://github.com/josiehong/msfiddle)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

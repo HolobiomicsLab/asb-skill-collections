@@ -1,8 +1,8 @@
 ---
 name: chromatographic-peak-extraction-and-retention-time-filtering
-description: Use when when you have LC-MS/MS raw data (mzML or netCDF format) and
-  need to isolate a specific compound's signal based on its known or suspected m/z
-  value and retention time range.
+description: Use when you have LC-MS/MS raw data (mzML or netCDF format) and need
+  to isolate a specific compound's signal based on its known or suspected m/z value
+  and retention time range.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -23,11 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
-evidence_spans:
-- library(MsBackendMgf)
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
-  package with additional functionality being implemented
-- VignetteDepends{xcms,BiocStyle,faahKO,pheatmap,MsFeatures}
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

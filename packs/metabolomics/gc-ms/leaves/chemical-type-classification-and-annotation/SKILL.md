@@ -20,16 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
-evidence_spans:
-- To perform the chemical structure matches and summarize atomic features, uafR taps
-  into an amazing set of cheminformatics packages -- [ChemmineR]
-- uafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html),
-  [fmcsR]
-- uafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html),
-  [fmcsR](https://bioconductor.org/packages/release/bioc
-- '[fmcsR](https://bioconductor.org/packages/release/bioc/html/fmcsR.html), [webchem](https://cran.r-project.org/web/packages/webchem/index.html)'
-- Modern programming languages allow even complex workflows to be automated
-- Modern programming languages allow even complex workflows to be automated.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

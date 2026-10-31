@@ -1,8 +1,8 @@
 ---
 name: numerical-equivalence-verification
-description: Use when when you have reimplemented an algorithm in a new package or
-  optimized an existing algorithm and need to verify that the new version produces
-  the same numerical results as the original or reference implementation.
+description: Use when you have reimplemented an algorithm in a new package or optimized
+  an existing algorithm and need to verify that the new version produces the same
+  numerical results as the original or reference implementation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-021-01331-z
   title: Spectral entropy
-evidence_spans:
-- These are all integrated into the [MSEntropy package
-- These are all integrated into the MSEntropy package (https://github.com/YuanyueLi/MSEntropy)
-- This repository contains the original source code for the paper
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: ms-ms-similarity-metric-comparison
-description: Use when when you have MS/MS spectra from both query compounds and a
-  reference library and need to decide which similarity metric will maximize identification
+description: Use when you have MS/MS spectra from both query compounds and a reference
+  library and need to decide which similarity metric will maximize identification
   accuracy (true positive rank, precision@k) or when benchmarking a new compound identification
-  workflow against a known-good reference.
+  workflow against a known-good reference dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3945
@@ -26,9 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-021-01331-z
   title: Spectral entropy
-evidence_spans:
-- This repository contains the original source code for the paper
-- '.. automodule:: spectral_similarity :members:'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

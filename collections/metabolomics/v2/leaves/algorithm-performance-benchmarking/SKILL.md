@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-021-01331-z
   title: Spectral entropy
-evidence_spans:
-- These are all integrated into the [MSEntropy package
-- These are all integrated into the MSEntropy package (https://github.com/YuanyueLi/MSEntropy)
-- This repository contains the original source code for the paper
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

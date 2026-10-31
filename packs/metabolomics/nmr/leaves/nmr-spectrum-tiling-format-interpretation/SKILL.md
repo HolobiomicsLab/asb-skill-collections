@@ -1,6 +1,6 @@
 ---
 name: nmr-spectrum-tiling-format-interpretation
-description: 'Use when when loading or creating an NMR spectral dataset (Dataset.createDataFile)
+description: 'Use when loading or creating an NMR spectral dataset (Dataset.createDataFile)
   and the system must decide between multiple storage backends (SubMatrixFile, BigMappedMatrixFile,
   MappedSubMatrixFile, MappedMatrixFile). Triggers include: (1) dataset metadata specifies
   a cache-file flag;'
@@ -16,9 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s42004-025-01812-8
   title: NMRFx
-evidence_spans:
-- github.com__nanalysis__nmrfx
-- github.com/nanalysis/nmrfx
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: molecular-fingerprint-representation-learning
-description: Use when when you have labeled mass-spectrometry spectral data (precursor
+description: Use when you have labeled mass-spectrometry spectral data (precursor
   m/z and fragment m/z–intensity pairs) paired with known molecular structures (as
   InChIKeys or SMILES), and need to perform metabolite annotation by ranking candidate
   compounds based on spectral similarity.
@@ -26,8 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1007/s11306-020-01726-7
   title: MetFID
-evidence_spans:
-- No usage/docs found.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

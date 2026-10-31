@@ -1,6 +1,6 @@
 ---
 name: parameter-conditional-execution
-description: Use when when a post-processing step (such as dereplication) risks removing
+description: Use when a post-processing step (such as dereplication) risks removing
   true positive signals due to overly strict thresholds, and you need the option to
   retain raw or unfiltered output without code branching.
 license: CC-BY-4.0
@@ -19,7 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.1c04758
   title: Paramounter
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

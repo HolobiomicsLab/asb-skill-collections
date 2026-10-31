@@ -1,9 +1,9 @@
 ---
 name: metabolic-regulation-classification-scheme
-description: Use when when you have computed Reaction Activity Scores (RAS) from transcriptomics
+description: Use when you have computed Reaction Activity Scores (RAS) from transcriptomics
   and GPR rules, Reaction Presence Scores (RPS) from RAS normalized flux predictions,
   and Flux Fold-change Distributions (FFD) from metabolomic data and mass-action constraints
-  across multiple sample pairs, and you.
+  across multiple sample pairs, and you need.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -22,8 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
-evidence_spans:
-- using constraint-based stoichiometric metabolic models as a scaffold
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

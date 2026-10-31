@@ -1,8 +1,8 @@
 ---
 name: molecular-embedding-generation
-description: Use when when you have molecular structures (SMILES or explicit graph
-  representations) and need fixed-size vector representations to feed into a prediction
-  head or transfer learning task.
+description: Use when you have molecular structures (SMILES or explicit graph representations)
+  and need fixed-size vector representations to feed into a prediction head or transfer
+  learning task.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2238
@@ -19,7 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c03177
   title: retention_time_gnn
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

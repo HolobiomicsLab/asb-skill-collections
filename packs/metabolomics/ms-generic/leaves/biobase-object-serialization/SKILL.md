@@ -1,8 +1,8 @@
 ---
 name: biobase-object-serialization
-description: Use when when you have raw peak table data from mass spectrometry or
-  other metabolomic instruments in either a standardized tabular format or one of
-  12 common software tool outputs (e.
+description: Use when you have raw peak table data from mass spectrometry or other
+  metabolomic instruments in either a standardized tabular format or one of 12 common
+  software tool outputs (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -23,10 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA
-evidence_spans:
-- '[![R >3.5](https://img.shields.io/badge/R-%3E3.5-success.svg)](https://www.r-project.org/)'
-- BiocManager::install("Biobase")
-- '![installed with devtools](https://img.shields.io/badge/installed%20with-devtools-blueviolet.svg)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

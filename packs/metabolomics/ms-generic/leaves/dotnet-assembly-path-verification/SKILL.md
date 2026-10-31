@@ -1,6 +1,6 @@
 ---
 name: dotnet-assembly-path-verification
-description: Use when when you have just loaded the rawrr R package and need to confirm
+description: Use when you have just loaded the rawrr R package and need to confirm
   that the bundled .NET 8.0 assembly (rawrr.exe) is present and functional before
   performing any mass spectrometry data extraction operations.
 license: CC-BY-4.0
@@ -18,10 +18,6 @@ derived_from:
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
-evidence_spans:
-- The extracted information is written to a temporary location on the harddrive, read
-  back into memory and parsed into `R` objects using RawFileReader API
-- 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

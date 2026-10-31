@@ -24,13 +24,6 @@ metadata:
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
-evidence_spans:
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based
-  MS analysis in R
-- integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based
-  MS analysis in R
-- MS analysis in R. By wrapping Python functionality into R functions, *SpectriPy*
-  allows a seamless integration of Python libraries into R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

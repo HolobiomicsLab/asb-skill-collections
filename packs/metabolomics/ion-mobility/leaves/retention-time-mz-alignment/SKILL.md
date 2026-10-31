@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2025.01.26.634927v3
   title: mzLearn
-evidence_spans:
-- mzEmbed, a framework for developing pre-trained generative models and fine-tuning
-  them for specific tasks for untargeted metabolomics datasets
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

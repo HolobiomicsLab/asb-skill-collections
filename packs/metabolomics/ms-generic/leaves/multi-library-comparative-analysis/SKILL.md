@@ -27,13 +27,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
-evidence_spans:
-- pymzML](https://github.com/pymzml/pymzML/) (version 2.5.2)
-- pyOpenMS](https://pyopenms.readthedocs.io/) (version 2.7.0)
-- spectrum_utils is a Python package
-- spectrum = sus.MsmsSpectrum.from_usi(usi)
-- import pyteomics.mgf
-- import matplotlib.pyplot as plt
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

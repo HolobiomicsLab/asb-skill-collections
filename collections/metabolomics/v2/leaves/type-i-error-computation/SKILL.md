@@ -1,9 +1,9 @@
 ---
 name: type-i-error-computation
-description: Use when when you need to verify that reported Type I error rates from
-  a statistical method (here, PaIRKAT) can be independently reproduced, or when you
-  require baseline false positive rate estimates across multiple simulation conditions
-  (sample sizes, effect configurations, significance.
+description: Use when you need to verify that reported Type I error rates from a statistical
+  method (here, PaIRKAT) can be independently reproduced, or when you require baseline
+  false positive rate estimates across multiple simulation conditions (sample sizes,
+  effect configurations, significance thresholds) to.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2021.04.23.440821v1
   title: PaIRKAT
-evidence_spans:
-- Scripts for PaIRKAT functions with example work flow
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

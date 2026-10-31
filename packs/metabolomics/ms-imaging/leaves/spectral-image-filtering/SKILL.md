@@ -1,6 +1,6 @@
 ---
 name: spectral-image-filtering
-description: Use when when generating augmented variants of single-channel or multi-channel
+description: Use when generating augmented variants of single-channel or multi-channel
   ion images for contrastive learning in mass spectrometry imaging analysis.
 license: CC-BY-4.0
 metadata:
@@ -18,10 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
-evidence_spans:
-- Two augmented images are propagated through a pair of ResNet18-based encoders
-- Two augmented images are propagated through a pair of ResNet18-based encoders that
-  shared parameters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
-evidence_spans:
-- library(mzQuality)
-- mzQuality requires a specific format for the input data.
-- mzQuality is a user-friendly R package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

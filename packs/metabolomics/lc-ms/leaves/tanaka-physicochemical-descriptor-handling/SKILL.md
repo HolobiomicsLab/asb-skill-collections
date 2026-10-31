@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c05859
   title: Graphormer-RT
-evidence_spans:
-- import numpy as np
-- import pandas as pd
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

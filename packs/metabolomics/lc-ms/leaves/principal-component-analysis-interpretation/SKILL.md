@@ -1,9 +1,9 @@
 ---
 name: principal-component-analysis-interpretation
-description: Use when when you have normalized MS1 ion intensity features from multiple
+description: Use when you have normalized MS1 ion intensity features from multiple
   samples and need to assess overall data quality, detect systematic batch effects
   or instrumental drift, or identify which samples deviate significantly from the
-  cohort norm in an omics-agnostic manner (metabolomics.
+  cohort norm in an omics-agnostic manner (metabolomics, lipidomics.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3935
@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.4c00146
   title: PeakQC
-evidence_spans:
-- IonToolPack is a software suite housing tools for mass spectrometry data
-- IonToolPack is a software suite housing tools for mass spectrometry data.
-- 'PeakQC: Automated quality control pipeline by PCA analysis on MS1 data'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

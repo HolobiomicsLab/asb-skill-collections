@@ -1,6 +1,6 @@
 ---
 name: spectral-data-input-handling-mgf-format
-description: Use when when you have raw MS/MS mass spectrometry data and need to submit
+description: Use when you have raw MS/MS mass spectrometry data and need to submit
   it to the Mass2SMILES Docker inference container for structure and functional group
   prediction.
 license: CC-BY-4.0
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2023.07.06.547963v1
   title: Mass2SMILES
-evidence_spans:
-- open-source Python based deep learning approach
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

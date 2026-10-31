@@ -1,7 +1,7 @@
 ---
 name: duplicate-spectrum-detection-splash
-description: Use when when processing large collections of mass spectra from multiple
-  Open Mass Spectra Libraries (OMSLs) or databases that may contain redundant spectral
+description: Use when processing large collections of mass spectra from multiple Open
+  Mass Spectra Libraries (OMSLs) or databases that may contain redundant spectral
   records with identical m/z–intensity peak patterns but potentially different metadata
   annotations.
 license: CC-BY-4.0
@@ -26,8 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
-evidence_spans:
-- Python-3.12
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

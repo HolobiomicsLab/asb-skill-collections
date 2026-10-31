@@ -1,6 +1,6 @@
 ---
 name: missing-data-mechanism-specification
-description: Use when when you have a metabolomics abundance table with missing values
+description: Use when you have a metabolomics abundance table with missing values
   and need to decide which imputation method to apply, or when designing a simulation
   to evaluate imputation performance.
 license: CC-BY-4.0
@@ -29,9 +29,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp
-evidence_spans:
-- '**GSimp.R** contains the core functions for GSimp'
-- GSimp.R contains the core functions for GSimp
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

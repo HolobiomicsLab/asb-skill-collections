@@ -1,9 +1,9 @@
 ---
 name: dataset-integrity-assessment
-description: Use when when you have downloaded a released version of a structured
-  dataset (e.g., LOTUS from Zenodo) and need to confirm it matches the documented
-  headline statistics before downstream analysis, or when auditing data integrity
-  after ingestion into a processing pipeline.
+description: Use when you have downloaded a released version of a structured dataset
+  (e.g., LOTUS from Zenodo) and need to confirm it matches the documented headline
+  statistics before downstream analysis, or when auditing data integrity after ingestion
+  into a processing pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -20,11 +20,6 @@ derived_from:
   title: lotus
 - doi: 10.1007/s00044-016-1764-y
   title: ''
-evidence_spans:
-- standardizing.R, 1_integrating.R, 1_cleaningOriginal.R, 4_cleaningTaxonomy.R, 5_addingOTL.R
-- 1_integrating.R
-- 221[[smiles.py]], 260[[3_cleaningAndEnriching/sanitizing.py]], 280[[3_cleaningAndEnriching/stereocounting.py]]
-- R - Python 3 - Java >= 17
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

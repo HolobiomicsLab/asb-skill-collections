@@ -1,9 +1,9 @@
 ---
 name: smiles-string-parsing-and-validation
-description: Use when when you have SMILES strings as input to a molecular machine
-  learning pipeline (e.g., retention time prediction, spectral prediction) and need
-  to convert them into structured molecular representations before calculating descriptors
-  or constructing molecular graphs.
+description: Use when you have SMILES strings as input to a molecular machine learning
+  pipeline (e.g., retention time prediction, spectral prediction) and need to convert
+  them into structured molecular representations before calculating descriptors or
+  constructing molecular graphs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3660
@@ -37,13 +37,6 @@ derived_from:
   title: ''
 - doi: 10.1186/s12859-023-05149-8
   title: ''
-evidence_spans:
-- import mordred from mordred import Calculator, descriptors
-- import numpy as np
-- import pandas as pd
-- library(mspcompiler)
-- Read the msp file into R.
-- Make sure you have python installed
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

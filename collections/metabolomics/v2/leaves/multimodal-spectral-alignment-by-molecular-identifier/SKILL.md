@@ -22,8 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1002/ange.202517611
   title: MMST
-evidence_spans:
-- No usage/docs found.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

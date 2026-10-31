@@ -1,7 +1,7 @@
 ---
 name: p-value-combination-fisher-method
-description: Use when when you have tabulated p-values and study sample sizes (N)
-  from multiple independent metabolomics studies measuring the same compounds or metabolites,
+description: Use when you have tabulated p-values and study sample sizes (N) from
+  multiple independent metabolomics studies measuring the same compounds or metabolites,
   and you need to compute a single meta-analytic p-value that reflects both statistical
   significance and study weight.
 license: CC-BY-4.0
@@ -21,11 +21,6 @@ derived_from:
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
-evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted
-  meta-analysis in R
-- This vignette illustrates `Amanida` R package, which contains a collection of functions
-  for computing a weighted meta-analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

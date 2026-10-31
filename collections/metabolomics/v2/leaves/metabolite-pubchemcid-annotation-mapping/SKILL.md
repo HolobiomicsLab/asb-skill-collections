@@ -25,16 +25,6 @@ derived_from:
   title: MargheRita
 - doi: 10.1101/2024.06.20.599545
   title: ''
-evidence_spans:
-- margheRita implements both Over Representation Analysis (ORA) and Metabolite Set
-  Enrichment Analysis (MSEA), based on clusterProfiler
-- The R package margheRita addresses the complete workflow for metabolomic profiling
-  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
-  spectrometry (MS/MS)
-- The R package margheRita addresses the complete workflow for metabolomic profiling
-- The R package margheRita addresses the complete workflow
-- The R package margheRita
-- The function `h_map()` provides heatmaps based on package ComplexHeatmap
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

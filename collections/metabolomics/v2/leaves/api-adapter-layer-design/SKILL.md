@@ -1,9 +1,9 @@
 ---
 name: api-adapter-layer-design
-description: Use when when you have multiple mass spectrometry data formats (mzML,
-  mzXML, or others) that must be ingested into a single format-agnostic processing
-  engine (e.g., mspack compression), and you need to avoid replicating the core logic
-  for each format.
+description: Use when you have multiple mass spectrometry data formats (mzML, mzXML,
+  or others) that must be ingested into a single format-agnostic processing engine
+  (e.g., mspack compression), and you need to avoid replicating the core logic for
+  each format.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btab636
   title: mspack
-evidence_spans:
-- mspack is a C++ program for lossless and lossy mass spectrometry data compression
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

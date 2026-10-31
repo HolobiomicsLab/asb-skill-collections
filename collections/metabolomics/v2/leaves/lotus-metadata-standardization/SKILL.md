@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-025-02813-0
   title: MSnLib
-evidence_spans:
-- run `prepare_wikidata_lotus_prefect.py` for updating the data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

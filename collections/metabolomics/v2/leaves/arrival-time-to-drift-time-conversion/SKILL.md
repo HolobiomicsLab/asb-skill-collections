@@ -1,7 +1,7 @@
 ---
 name: arrival-time-to-drift-time-conversion
-description: Use when when processing raw TWIM-MS experimental data that contains
-  arrival time measurements but you need drift times for CCS calibration or class-specific
+description: Use when processing raw TWIM-MS experimental data that contains arrival
+  time measurements but you need drift times for CCS calibration or class-specific
   CCS calculations.
 license: CC-BY-4.0
 metadata:
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
-evidence_spans:
-- MOCCal, or Multi-Omic CCS Calibrator, is a Python application
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

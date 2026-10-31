@@ -1,6 +1,6 @@
 ---
 name: drugbank-format-parsing
-description: Use when when you have obtained a DrugBank release file (requiring access
+description: Use when you have obtained a DrugBank release file (requiring access
   credentials) and need to extract drug records with standardized fields (names, structures,
   identifiers, classification) for integration into a metadata enrichment or cleanup
   workflow that queries multiple drug/natural product.
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-025-02813-0
   title: MSnLib
-evidence_spans:
-- run `drugbank_extraction.py` on that file
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

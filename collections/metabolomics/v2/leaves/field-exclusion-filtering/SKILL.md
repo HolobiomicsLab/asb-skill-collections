@@ -1,8 +1,9 @@
 ---
 name: field-exclusion-filtering
-description: Use when when transforming tabular data via the matrix directive and
-  you need to copy most or all fields from input records into output dictionaries,
-  but must explicitly exclude certain named fields (e.
+description: Use when transforming tabular data via the matrix directive and you need
+  to copy most or all fields from input records into output dictionaries, but must
+  explicitly exclude certain named fields (e.g., internal identifiers, staging columns,
+  or redundant headers) from appearing in the final output.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -20,8 +21,6 @@ derived_from:
   title: messes
 - doi: 10.3390/metabo11030163
   title: ''
-evidence_spans:
-- MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1093/nar/gkac1049
   title: MIBiG 3.0
-evidence_spans:
-- GenBank/RefSeq databases
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,8 +1,8 @@
 ---
 name: smiles-canonicalization-rdkit
-description: Use when when processing raw SMILES strings from external databases or
-  user input that may contain non-canonical tautomeric forms, variable stereochemical
-  notation, or redundant representations of the same chemical structure.
+description: Use when processing raw SMILES strings from external databases or user
+  input that may contain non-canonical tautomeric forms, variable stereochemical notation,
+  or redundant representations of the same chemical structure.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3929
@@ -26,10 +26,6 @@ derived_from:
   title: ''
 - doi: 10.1186/s13321-024-00899-w
   title: ''
-evidence_spans:
-- Python scripts for data parsing and transformation
-- 221[[smiles.py]]
-- smiles.py uses RDKit for SMILES parsing and coordinate generation
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

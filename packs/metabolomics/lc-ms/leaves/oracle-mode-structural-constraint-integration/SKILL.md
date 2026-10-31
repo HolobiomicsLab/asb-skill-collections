@@ -1,8 +1,8 @@
 ---
 name: oracle-mode-structural-constraint-integration
-description: Use when when you have loaded both a known compound and its modified
-  analog with MS/MS spectra, initially generated baseline modification probability
-  scores, and then obtained or confirmed the structure of the modified compound.
+description: Use when you have loaded both a known compound and its modified analog
+  with MS/MS spectra, initially generated baseline modification probability scores,
+  and then obtained or confirmed the structure of the modified compound.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -24,14 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.4c00061
   title: ModiFinder
-evidence_spans:
-- mf = ModiFinder(known_compound, modified_compound, mz_tolerance=0.01, ppm_tolerance=40)
-- mf = ModiFinder(known_compound, modified_compound, helpers=helpers_array, **args)
-- ModiFinder requires Python 3.9 or above.
-- ModiFinder requires Python 3.9 or above
-- 'rdkit: http://www.rdkit.org/'
-- ModiFinder includes powerful visualization tools built on RDKit and matplotlib for
-  creating publication-quality figures.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

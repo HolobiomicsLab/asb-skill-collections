@@ -1,8 +1,8 @@
 ---
 name: sample-pair-filtering-by-feature-reproducibility
-description: Use when when you have a Marr() output object containing reproducibility
-  statistics from replicate experiments, and your goal is to retain only those sample
-  pairs (i,i') where reproducibility is robust across the majority of features.
+description: Use when you have a Marr() output object containing reproducibility statistics
+  from replicate experiments, and your goal is to retain only those sample pairs (i,i')
+  where reproducibility is robust across the majority of features.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -22,10 +22,6 @@ derived_from:
   title: marr
 - doi: 10.1080/01621459.2017.1397521
   title: ''
-evidence_spans:
-- 'marr: An R/Bioconductor package for Maximum Rank Reproducibility'
-- The R-package **marr** can be installed from GitHub using the R package [devtools]
-- '`marr`: An R/Bioconductor package for Maximum Rank Reproducibility'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

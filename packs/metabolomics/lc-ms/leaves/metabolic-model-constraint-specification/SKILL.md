@@ -35,17 +35,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
-evidence_spans:
-- using constraint-based stoichiometric metabolic models as a scaffold
-- we set flux boundaries as a function of gene expression as done, among others, by
-  eFlux [36]
-- we set flux boundaries as a function of gene expression as done, among others, by
-  eFlux [36] and TRFBA
-- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability
-  Analysis, as in GX-FBA [26]
-- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability
-  Analysis, as in scFBA [38]
-- raw reads were mapped with STAR aligner (v.2.6.1d) to human reference genome (hg38)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

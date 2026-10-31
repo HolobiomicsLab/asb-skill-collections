@@ -1,6 +1,6 @@
 ---
 name: spatial-metabolomics-integration
-description: Use when when you have paired spatial metabolomics and spatial transcriptomics
+description: Use when you have paired spatial metabolomics and spatial transcriptomics
   measurements from the same tissue samples and need to identify how metabolite distributions
   relate to gene expression patterns at aligned spatial coordinates.
 license: CC-BY-4.0
@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-63915-z
   title: SpatialMETA
-evidence_spans:
-- spatialMETA is a method for integrating spatial multi-omics data
-- spatialmeta.pp.calculate_qc_metrics_sm
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

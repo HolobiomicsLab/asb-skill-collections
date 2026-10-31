@@ -1,6 +1,6 @@
 ---
 name: missing-value-imputation-for-column-metadata
-description: Use when when preparing raw HPLC column parameter arrays for featurization
+description: Use when preparing raw HPLC column parameter arrays for featurization
   into feature vectors for retention time prediction models. Specifically apply this
   skill when column metadata contains empty strings (indicating missing diameter or
   pH values) or non-standard string encodings (e.g., '2.
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c05859
   title: Graphormer-RT
-evidence_spans:
-- import numpy as np
-- import pandas as pd
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,8 +1,8 @@
 ---
 name: gnn-architecture-design-for-molecular-graphs
-description: Use when when you have preprocessed molecular graph data (node and edge
-  tensors representing atoms and bonds) and need to train a regression model to predict
-  a continuous molecular property (e.g., LC retention time).
+description: Use when you have preprocessed molecular graph data (node and edge tensors
+  representing atoms and bonds) and need to train a regression model to predict a
+  continuous molecular property (e.g., LC retention time).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -22,8 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.0c04071
   title: GNN-RT
-evidence_spans:
-- Anaconda for python 3.6
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: metabolite-class-subset-filtering
-description: Use when when you have an omu_summary output dataframe with Class metadata
+description: Use when you have an omu_summary output dataframe with Class metadata
   and adjusted p-values (padj), and you need to focus downstream analysis (e.
 license: CC-BY-4.0
 metadata:
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
-evidence_spans:
-- Omu is an R package that enables rapid analysis of Metabolomics data sets
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

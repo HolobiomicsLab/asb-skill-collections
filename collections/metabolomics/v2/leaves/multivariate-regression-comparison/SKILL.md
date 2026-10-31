@@ -27,21 +27,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
-evidence_spans:
-- MelonnPan was downloaded from https://github.com/biobakery/melonnpan and executed
-  using the given instructions.
-- Multivariate Elastic Net models were implemented using ElasticNet and GridSearchCV
-  using 5-fold internal cross-validation for hyper-parameter tuning where the hyper-parameter
-  grid contained
-- Random Forest models were implemented using RandomForestRegressor with the default
-  parameter set-tings of 100 tree estimators.
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
-  function.
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
-  function
-- these models can predict the entire set of metabolites at once, and all models were
-  evaluated using 10 iterations of 10-fold cross-validation. Random Forest, multivariate
-  Elastic Net, and Canonical
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

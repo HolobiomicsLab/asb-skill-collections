@@ -1,8 +1,8 @@
 ---
 name: imputation-performance-metrics-calculation
-description: Use when when you have imputed a metabolomics dataset using multiple
-  MNAR (missing not at random) imputation methods and possess the ground-truth values
-  (from simulation or manual retrieval).
+description: Use when you have imputed a metabolomics dataset using multiple MNAR
+  (missing not at random) imputation methods and possess the ground-truth values (from
+  simulation or manual retrieval).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -24,9 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp
-evidence_spans:
-- '**GSimp.R** contains the core functions for GSimp'
-- GSimp.R contains the core functions for GSimp
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

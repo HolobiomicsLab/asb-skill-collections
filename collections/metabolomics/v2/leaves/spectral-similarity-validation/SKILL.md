@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-023-39279-7
   title: FastEI
-evidence_spans:
-- conda install -c conda-forge gensim
-- Anaconda for Python 3.7
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

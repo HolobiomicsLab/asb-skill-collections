@@ -1,7 +1,6 @@
 ---
 name: cross-tool-performance-comparison
-description: Use when when you have raw tandem MS metabolomics data in vendor formats
-  (.
+description: Use when you have raw tandem MS metabolomics data in vendor formats (.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -25,7 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00881
   title: MS-RT
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

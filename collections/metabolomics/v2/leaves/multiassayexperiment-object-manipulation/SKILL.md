@@ -1,8 +1,8 @@
 ---
 name: multiassayexperiment-object-manipulation
-description: Use when when you have parsed metabolite measurements into a table (rows
-  = metabolites, columns = samples) and have corresponding sample-level covariates
-  (e.g., disease status, treatment group) and/or feature-level annotations (e.
+description: Use when you have parsed metabolite measurements into a table (rows =
+  metabolites, columns = samples) and have corresponding sample-level covariates (e.g.,
+  disease status, treatment group) and/or feature-level annotations (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -21,11 +21,6 @@ derived_from:
   title: MetaboDiff
 - doi: 10.1158/0008-5472.can-14-1490
   title: ''
-evidence_spans:
-- The `MetaboDiff` R package requires R version 4.0.2 or higher.
-- The `MetaboDiff` R package requires R version 4.0.2 or higher
-- '`MetaboDiff` is available for all operating systems and can be installed via Github'
-- met = knn_impute(met,cutoff=0.4)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

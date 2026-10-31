@@ -1,6 +1,6 @@
 ---
 name: r-package-installation-and-execution
-description: Use when when you have a new or updated R package available via a non-CRAN
+description: Use when you have a new or updated R package available via a non-CRAN
   repository (such as r-universe) and need to verify it installs cleanly, passes R-CMD-check
   compliance, and is ready for downstream workflow execution.
 license: CC-BY-4.0
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.3389/fpls.2019.01329
   title: tima
-evidence_spans:
-- The initial work is available at <https://doi.org/10.3389/fpls.2019.01329>
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -24,8 +24,6 @@ metadata:
 derived_from:
 - doi: 10.3389/fpls.2019.01329
   title: tima
-evidence_spans:
-- The initial work is available at <https://doi.org/10.3389/fpls.2019.01329>
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

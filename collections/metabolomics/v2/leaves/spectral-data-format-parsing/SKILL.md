@@ -1,6 +1,6 @@
 ---
 name: spectral-data-format-parsing
-description: Use when when you have raw LC-MS/MS data files in mzML, mzXML, or vendor-specific
+description: Use when you have raw LC-MS/MS data files in mzML, mzXML, or vendor-specific
   formats and need to load them into a Java-based mass spectrometry analysis framework
   for downstream spectral analysis, fragmentation tree computation, or metabolite
   identification.
@@ -19,7 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41587-021-01045-9
   title: cosmic
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -19,10 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2025.10.15.682422v1
   title: LipidQMap
-evidence_spans:
-- LipidQMap writes MSI exports as HDF5 containers
-- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org)
-  conventions.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

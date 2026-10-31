@@ -1,9 +1,9 @@
 ---
 name: instrumental-parameter-validation-mass-spectrometry
-description: Use when when you have obtained a raw Orbitrap mass spectrometry file
-  and need to verify that the instrument was configured as claimed in the methods
-  section or dataset documentation—especially before investing in peptide fragmentation
-  analysis, spectrum library matching, or quantitative proteomics.
+description: Use when you have obtained a raw Orbitrap mass spectrometry file and
+  need to verify that the instrument was configured as claimed in the methods section
+  or dataset documentation—especially before investing in peptide fragmentation analysis,
+  spectrum library matching, or quantitative proteomics.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -23,13 +23,6 @@ derived_from:
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
-evidence_spans:
-- rawrr::readSpectrum
-- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime,
-  in the `r BiocStyle::Biocpkg('rawrr')` executable file
-- The extracted information is written to a temporary location on the harddrive, read
-  back into memory and parsed into `R` objects using RawFileReader API
-- 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: molecular-structure-tensor-encoding
-description: Use when when you have raw molecular structure representations (SMILES
-  strings, InChI notation, or chemical formulas) and need to feed them into a neural
-  spectrum prediction model like SCARF or ICEBERG. Apply this skill before any forward
-  inference pass through a pre-trained spectrum predictor.
+description: Use when you have raw molecular structure representations (SMILES strings,
+  InChI notation, or chemical formulas) and need to feed them into a neural spectrum
+  prediction model like SCARF or ICEBERG. Apply this skill before any forward inference
+  pass through a pre-trained spectrum predictor.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0362
@@ -18,7 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c04654
   title: ICEBERG / fragmentation graph generation
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

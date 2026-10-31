@@ -1,7 +1,7 @@
 ---
 name: mass-spectrometry-drift-time-processing
-description: Use when when you have raw ion mobility-mass spectrometry data (drift
-  times, m/z values, and frame metadata) from DTIMS-MS, TWIMS-MS, or SLIM-based instruments
+description: Use when you have raw ion mobility-mass spectrometry data (drift times,
+  m/z values, and frame metadata) from DTIMS-MS, TWIMS-MS, or SLIM-based instruments
   and need to compute CCS values for structural characterization or database matching.
 license: CC-BY-4.0
 metadata:
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btab429
   title: AutoCCS
-evidence_spans:
-- github.com__PNNL-Comp-Mass-Spec__AutoCCS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

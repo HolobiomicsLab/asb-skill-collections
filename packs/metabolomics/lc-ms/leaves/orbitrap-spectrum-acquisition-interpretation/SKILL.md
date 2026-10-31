@@ -1,7 +1,7 @@
 ---
 name: orbitrap-spectrum-acquisition-interpretation
-description: Use when when you have a Thermo Scientific .raw file from an Orbitrap
-  instrument (e.
+description: Use when you have a Thermo Scientific .raw file from an Orbitrap instrument
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -23,15 +23,6 @@ derived_from:
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
-evidence_spans:
-- rawrr::readSpectrum
-- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime,
-  in the `r BiocStyle::Biocpkg('rawrr')` executable file
-- The extracted information is written to a temporary location on the harddrive, read
-  back into memory and parsed into `R` objects using RawFileReader API
-- 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'
-- In case you prefer to compile `rawrr.exe` from C# source code, please install the
-  .NET 8.0
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

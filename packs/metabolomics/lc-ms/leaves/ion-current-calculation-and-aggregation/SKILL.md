@@ -1,8 +1,8 @@
 ---
 name: ion-current-calculation-and-aggregation
-description: Use when when raw LC-MS feature tables exhibit inter-sample intensity
-  variation due to instrument sensitivity drift, sample ionization efficiency differences,
-  or loading differences, and you need to normalize intensities to a common reference
+description: Use when raw LC-MS feature tables exhibit inter-sample intensity variation
+  due to instrument sensitivity drift, sample ionization efficiency differences, or
+  loading differences, and you need to normalize intensities to a common reference
   scale before downstream statistical analysis.
 license: CC-BY-4.0
 metadata:
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
-evidence_spans:
-- Python-Centric Pipeline for Metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

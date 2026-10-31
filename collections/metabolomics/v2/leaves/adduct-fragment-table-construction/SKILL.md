@@ -1,9 +1,9 @@
 ---
 name: adduct-fragment-table-construction
-description: Use when when initializing an mWISE annotation pipeline with a new or
-  custom KEGG database, or when you need to reconstruct the Cpd.Add matching table
-  with modified adduct/fragment specifications (e.g., subset to instrument-specific
-  adducts or adjust frequency thresholds).
+description: Use when initializing an mWISE annotation pipeline with a new or custom
+  KEGG database, or when you need to reconstruct the Cpd.Add matching table with modified
+  adduct/fragment specifications (e.g., subset to instrument-specific adducts or adjust
+  frequency thresholds).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -23,15 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
-evidence_spans:
-- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides
-  tools for context-based annotation of untargeted LC-MS data.
-- mWISE (metabolomics Wise Inference of Speck Entities) is an R package
-- The default table of adducts and fragments is built using information from CAMERA
-  R package
-- The default table of adducts and fragments is built using information from CAMERA
-  R package, H. Tong et al., and cliqueMS.
-- information from CAMERA R package, H. Tong et al., and cliqueMS.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

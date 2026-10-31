@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1093/gigascience/giaa154
   title: BiG-SLiCE
-evidence_spans:
-- '**BiG-SLiCE** using pip'
-- Ability to __export pre-calculated BGCs and GCFs table into TSVs__ (use __--export-csv__
-  parameter)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

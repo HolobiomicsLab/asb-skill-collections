@@ -21,9 +21,6 @@ derived_from:
   title: SpecEmbedding
 - doi: 10.6084/m9.figshare.28876751.v2
   title: ''
-evidence_spans:
-- Python：3.12
-- PyTorch：2.6.0 + CUDA 12.4
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

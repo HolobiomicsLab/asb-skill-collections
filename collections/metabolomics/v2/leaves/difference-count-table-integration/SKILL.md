@@ -1,7 +1,7 @@
 ---
 name: difference-count-table-integration
-description: Use when when analyzing tandem MS/MS spectra with SIMILE V2 and you want
-  to leverage both fragment ion mass differences and neutral loss patterns to improve
+description: Use when analyzing tandem MS/MS spectra with SIMILE V2 and you want to
+  leverage both fragment ion mass differences and neutral loss patterns to improve
   spectral similarity scoring.
 license: CC-BY-4.0
 metadata:
@@ -19,10 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
-evidence_spans:
-- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python
-  library
-- is a Python library for interrelating fragmentation spectra with significance estimation
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

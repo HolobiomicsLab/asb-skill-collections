@@ -1,6 +1,6 @@
 ---
 name: pooled-statistical-significance-testing
-description: Use when when you have validated link annotations from multiple independent
+description: Use when you have validated link annotations from multiple independent
   datasets (≥2), individual scoring functions with per-dataset enrichment p-values,
   and you want to test whether a combined scoring strategy (e.
 license: CC-BY-4.0
@@ -24,14 +24,6 @@ derived_from:
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
-evidence_spans:
-- after downloading the strain assemblies and metabolomics data, the genomes were
-  run through antiSMASH v5.0.0 for BGC detection
-- genomes were run through antiSMASH v5.0.0 for BGC detection
-- and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
-- BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
-- NPLinker, a software framework to link genomic and metabolomic data
-- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

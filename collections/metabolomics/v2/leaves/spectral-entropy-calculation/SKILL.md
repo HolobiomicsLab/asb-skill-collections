@@ -1,9 +1,9 @@
 ---
 name: spectral-entropy-calculation
-description: Use when when you have preprocessed MS/MS spectral peak data (m/z and
-  intensity pairs) and need to compute a complexity metric for individual spectra
-  prior to similarity comparisons, or when benchmarking compound identification performance
-  against dot product–based methods.
+description: Use when you have preprocessed MS/MS spectral peak data (m/z and intensity
+  pairs) and need to compute a complexity metric for individual spectra prior to similarity
+  comparisons, or when benchmarking compound identification performance against dot
+  product–based methods.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -27,9 +27,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-021-01331-z
   title: Spectral entropy
-evidence_spans:
-- This repository contains the original source code for the paper
-- '.. automodule:: spectral_similarity :members:'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

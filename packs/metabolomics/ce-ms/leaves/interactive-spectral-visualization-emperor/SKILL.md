@@ -1,7 +1,7 @@
 ---
 name: interactive-spectral-visualization-emperor
-description: Use when when you have computed PCA coordinates from chemical annotation
-  matrices (e.
+description: Use when you have computed PCA coordinates from chemical annotation matrices
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -25,11 +25,6 @@ derived_from:
   title: ReDU
 - doi: 10.1186/2047-217x-2-16
   title: ''
-evidence_spans:
-- Validation of the ReDU sample information template using the drag-and-drop validator
-- ReDU only interacts with MassIVE
-- How do I find out more about the plotting options in Emperor?
-- data uploaded to MassIVE as a public dataset
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: metabolite-background-set-construction
-description: Use when when preparing to run Over-representation Analysis (ORA) on
-  metabolomics pathway data, after you have loaded both a metabolomics pathway database
-  (e.g., KEGG, MetExplore) and an experimental detection list (metabolites measured
-  in your study).
+description: Use when preparing to run Over-representation Analysis (ORA) on metabolomics
+  pathway data, after you have loaded both a metabolomics pathway database (e.g.,
+  KEGG, MetExplore) and an experimental detection list (metabolites measured in your
+  study).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -18,7 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

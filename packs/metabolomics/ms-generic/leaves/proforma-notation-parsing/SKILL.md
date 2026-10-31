@@ -1,9 +1,9 @@
 ---
 name: proforma-notation-parsing
-description: Use when when peptide identifications from a search engine (MaxQuant,
-  MSGFPlus, Sage, etc.) contain custom or engine-specific modification notation that
-  must be converted to a standardized format before rescoring, or when different search
-  engines use incompatible modification label schemes that.
+description: Use when peptide identifications from a search engine (MaxQuant, MSGFPlus,
+  Sage, etc.) contain custom or engine-specific modification notation that must be
+  converted to a standardized format before rescoring, or when different search engines
+  use incompatible modification label schemes that need.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -23,9 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1002/pmic.202300336
   title: MS2Rescore (immunopeptidome rescoring)
-evidence_spans:
-- MS²Rescore is a tool for rescoring peptide-spectrum matches
-- Accepted ProForma modification labels in :py:mod:`psm_utils`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

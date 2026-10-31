@@ -1,8 +1,8 @@
 ---
 name: rare-variant-integration-analysis
-description: Use when when analyzing rare-variant associations where sample sizes
-  are modest, individual-variant tests lack power, or you need to aggregate signal
-  across multiple rare variants within a biological pathway.
+description: Use when analyzing rare-variant associations where sample sizes are modest,
+  individual-variant tests lack power, or you need to aggregate signal across multiple
+  rare variants within a biological pathway.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3197
@@ -17,8 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2021.04.23.440821v1
   title: PaIRKAT
-evidence_spans:
-- github.com/CharlieCarpenter/PaIRKAT
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

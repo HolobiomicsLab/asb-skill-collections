@@ -28,13 +28,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
-evidence_spans:
-- the main MsdialGuiApp project can be built using .NET Framework 4.7.2
-- we primarily utilize the frameworks of .NET Framework 4.7.2, .NET Core 3.1, and
-  .NET 6
-- The .NET class libraries adhere at least to the specifications of .NET Standard
-  2.0
-- To conduct tests, please refer to section `test:` of GitHub Actions
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: lc-ms-adduct-pattern-detection
-description: Use when when you have statistically significant features from multi-assay
+description: Use when you have statistically significant features from multi-assay
   LC-MS metabolomics data (with m/z and retention time annotations) and need to group
   features that may represent the same compound ionized as different adducts (e.g.,
   [M+H]⁺ vs. [M+Na]⁺).
@@ -26,12 +26,6 @@ derived_from:
   title: mamsi
 - doi: 10.1371/journal.pcbi.1011814
   title: ''
-evidence_spans:
-- MAMSI is a Python framework
-- import pandas as pd
-- import numpy as np
-- from matplotlib import pyplot as plt
-- A class for performing structural search on multi-modal MS data using
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

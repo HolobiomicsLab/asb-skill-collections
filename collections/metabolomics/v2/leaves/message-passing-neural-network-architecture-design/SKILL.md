@@ -1,6 +1,6 @@
 ---
 name: message-passing-neural-network-architecture-design
-description: Use when when you have a working base MPNN implementation (e.g., chemprop)
+description: Use when you have a working base MPNN implementation (e.g., chemprop)
   and need to adapt it for a new molecular property target (e.g., spectral data) that
   requires custom input processing, intermediate feature representations, or output
   layer modifications beyond the original model's scope.
@@ -18,9 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
-evidence_spans:
-- extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations
-  for Property Prediction]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

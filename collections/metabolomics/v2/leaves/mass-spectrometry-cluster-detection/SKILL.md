@@ -18,11 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-022-01496-1
   title: GLEAMS
-evidence_spans:
-- GLEAMS encodes mass spectra as vectors of features and feeds them to a neural network
-- GLEAMS is a Learned Embedding for Annotating Mass Spectra. GLEAMS encodes mass spectra
-  as vectors of features and feeds them to a neural network
-- GLEAMS requires Python 3.8, a Linux operating system, and a CUDA-enabled GPU
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

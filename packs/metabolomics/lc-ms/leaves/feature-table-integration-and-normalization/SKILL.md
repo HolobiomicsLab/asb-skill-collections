@@ -1,6 +1,6 @@
 ---
 name: feature-table-integration-and-normalization
-description: Use when when you have MS1 feature tables from heterogeneous sources—e.g.,
+description: Use when you have MS1 feature tables from heterogeneous sources—e.g.,
   XCMS peak detection output mixed with vendor software (MS-DIAL, MZmine2) results—and
   need to merge them into a single, format-normalized table for ISFrag analysis.
 license: CC-BY-4.0
@@ -20,12 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.1c01644
   title: ISFrag
-evidence_spans:
-- ISFrag is an R package for identifying and annotating in-source fragments in LCMS
-  metabolite feature table.
-- ISFrag is an R package for identifying and annotating in-source fragments in LCMS
-  metabolite feature table
-- To install ISFrag package R version 4.0.0 or above is required
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

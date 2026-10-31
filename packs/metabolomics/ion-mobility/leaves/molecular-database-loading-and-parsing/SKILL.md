@@ -1,8 +1,8 @@
 ---
 name: molecular-database-loading-and-parsing
-description: Use when when setting up a ViMMS chemical sampling environment and you
-  need to restrict the chemical search space to a specific m/z range (e.g., 100–1000)
-  and MS level (e.g., MS1 only) before generating virtual LC-MS/MS data.
+description: Use when setting up a ViMMS chemical sampling environment and you need
+  to restrict the chemical search space to a specific m/z range (e.g., 100–1000) and
+  MS level (e.g., MS1 only) before generating virtual LC-MS/MS data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -22,11 +22,6 @@ derived_from:
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
-evidence_spans:
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible
-  and modular framework designed to simulate fragmentation strategies'
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive
-  and modular framework for the simulation of fragmentation strategies'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: mass-grid-index-traversal-and-retrieval
-description: Use when when you have constructed a MassGrid (m/z-aligned mass tracks
-  across multiple samples) and need to retrieve all sample-specific mass tracks for
-  a given m/z value in order to sum their intensities, apply retention time calibration,
-  or construct composite mass track objects for peak.
+description: Use when you have constructed a MassGrid (m/z-aligned mass tracks across
+  multiple samples) and need to retrieve all sample-specific mass tracks for a given
+  m/z value in order to sum their intensities, apply retention time calibration, or
+  construct composite mass track objects for peak detection.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
-evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
-  preprocessing
-- Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

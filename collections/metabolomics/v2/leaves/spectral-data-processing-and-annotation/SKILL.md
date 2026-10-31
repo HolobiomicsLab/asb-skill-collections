@@ -1,9 +1,9 @@
 ---
 name: spectral-data-processing-and-annotation
-description: Use when when you have raw LC-MS/MS DDA spectral data (positive and/or
-  negative ionization modes) paired with sample metadata (originating taxon), and
-  you need to detect molecular features, build a molecular network from fragmentation
-  spectra, and annotate those features using both spectral.
+description: Use when you have raw LC-MS/MS DDA spectral data (positive and/or negative
+  ionization modes) paired with sample metadata (originating taxon), and you need
+  to detect molecular features, build a molecular network from fragmentation spectra,
+  and annotate those features using both spectral matching.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -33,8 +33,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acscentsci.3c00800
   title: enpkg
-evidence_spans:
-- Welcome to the ENPKG Full Workflow!
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

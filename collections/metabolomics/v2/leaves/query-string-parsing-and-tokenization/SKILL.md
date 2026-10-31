@@ -1,9 +1,9 @@
 ---
 name: query-string-parsing-and-tokenization
-description: Use when when you have a user-provided or system-generated query string
-  containing a chemical structure in unknown or mixed format, and you need to route
-  it to a structure-specific API endpoint (such as ClassyFire) that requires knowing
-  whether the input is SMILES, InChI, IUPAC nomenclature, or.
+description: Use when you have a user-provided or system-generated query string containing
+  a chemical structure in unknown or mixed format, and you need to route it to a structure-specific
+  API endpoint (such as ClassyFire) that requires knowing whether the input is SMILES,
+  InChI, IUPAC nomenclature, or FASTA.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -25,8 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-016-0174-y
   title: ClassyFire
-evidence_spans:
-- in order to use the commands below in a Ruby console
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

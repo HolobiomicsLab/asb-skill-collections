@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.0c02281
   title: MetIDfyR
-evidence_spans:
-- open-source, cross-platform and versatile R script
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

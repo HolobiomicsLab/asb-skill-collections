@@ -1,6 +1,6 @@
 ---
 name: repository-environment-setup
-description: Use when when you have received a GitHub repository URL for a computational
+description: Use when you have received a GitHub repository URL for a computational
   workflow (e.g., ENPKG full workflow) and need to prepare your local machine to execute
   the workflow.
 license: CC-BY-4.0
@@ -21,7 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acscentsci.3c00800
   title: enpkg
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

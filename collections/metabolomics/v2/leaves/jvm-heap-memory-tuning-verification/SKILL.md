@@ -1,9 +1,9 @@
 ---
 name: jvm-heap-memory-tuning-verification
-description: Use when when deploying the ipbhalle/metfragweb Docker container and
-  you need to confirm that custom JVM heap sizes (specified via JAVA_OPTS=-Xmx?g -Xms?g)
-  have taken effect, or when troubleshooting memory-related runtime issues in the
-  running container.
+description: Use when deploying the ipbhalle/metfragweb Docker container and you need
+  to confirm that custom JVM heap sizes (specified via JAVA_OPTS=-Xmx?g -Xms?g) have
+  taken effect, or when troubleshooting memory-related runtime issues in the running
+  container.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -16,7 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

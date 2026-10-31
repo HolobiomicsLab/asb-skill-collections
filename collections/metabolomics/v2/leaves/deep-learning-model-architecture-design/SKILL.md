@@ -27,13 +27,6 @@ metadata:
 derived_from:
 - doi: 10.1002/cem.70040
   title: PACCS
-evidence_spans:
-- '[python3](https://www.python.org/)'
-- '[RDKit](https://rdkit.org/)'
-- '[PyTorch](https://pytorch.org/)'
-- '[PyG](https://pytorch-geometric.readthedocs.io/en/latest/)'
-- '[pandas](https://pandas.pydata.org/)'
-- '[NumPy](https://numpy.org/)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

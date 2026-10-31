@@ -1,6 +1,9 @@
 ---
 name: jupyter-notebook-workflow-automation
-description: Use when when you have raw LC-MS/MS spectral data in .
+description: Use when you have raw LC-MS/MS spectral data in .mgf format that needs
+  to be converted into a specXplore session data object for interactive dashboard
+  exploration, and you want to iterate on preprocessing parameters, apply ms2deepscore
+  similarity embeddings, and validate feature identifiers within.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -20,8 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore
-evidence_spans:
-- processed in interactive Jupyter notebooks using the specXplore importing pipeline
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

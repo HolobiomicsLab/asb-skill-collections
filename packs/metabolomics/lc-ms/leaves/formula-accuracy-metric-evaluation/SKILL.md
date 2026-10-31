@@ -1,9 +1,9 @@
 ---
 name: formula-accuracy-metric-evaluation
-description: Use when when training or validating a deep learning model for molecular
-  formula prediction from tandem MS/MS spectra, use this metric to track whether the
-  model's predicted formula (including hydrogen atoms) exactly matches the annotated
-  ground-truth formula.
+description: Use when training or validating a deep learning model for molecular formula
+  prediction from tandem MS/MS spectra, use this metric to track whether the model's
+  predicted formula (including hydrogen atoms) exactly matches the annotated ground-truth
+  formula.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
-evidence_spans:
-- 'CLI and Python API: [msfiddle](https://github.com/josiehong/msfiddle)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

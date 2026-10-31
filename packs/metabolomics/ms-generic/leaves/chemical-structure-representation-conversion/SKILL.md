@@ -1,6 +1,6 @@
 ---
 name: chemical-structure-representation-conversion
-description: Use when when you have .msp mass spectrometry metadata containing chemical
+description: Use when you have .msp mass spectrometry metadata containing chemical
   identifiers (e.g., compound names or SMILES strings) and need to compute derived
   chemical properties (e.g., InChI, InChIKey, molecular formula) locally without network
   latency or service availability constraints.
@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer
-evidence_spans:
-- MSMetaEnhancer is a tool used for `.msp` files annotation
-- 'Converter Builder: Automatically discovers and instantiates available converters'
-- make sure the existing tests still work by running ``pytest``
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

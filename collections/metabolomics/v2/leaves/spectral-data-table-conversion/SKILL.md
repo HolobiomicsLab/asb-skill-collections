@@ -1,7 +1,7 @@
 ---
 name: spectral-data-table-conversion
-description: Use when when you have mzPeak format spectrum files and need to work
-  with spectrum metadata, intensity/m/z arrays, or precursor information in a tabular,
+description: Use when you have mzPeak format spectrum files and need to work with
+  spectrum metadata, intensity/m/z arrays, or precursor information in a tabular,
   columnar, or vectorized computing environment.
 license: CC-BY-4.0
 metadata:
@@ -24,9 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
-evidence_spans:
-- There is a separate Python implementation in `python/`
-- complete re-implementation for _reading_ mzPeak files using [`pyarrow`]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

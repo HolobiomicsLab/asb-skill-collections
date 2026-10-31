@@ -1,6 +1,6 @@
 ---
 name: volcano-plot-interpretation-cancer-benign
-description: Use when when you have performed two-group differential expression analysis
+description: Use when you have performed two-group differential expression analysis
   on preprocessed LipidomicsExperiment objects (with logged and normalized Area measurements)
   and need to identify and visualize lipid molecules with statistically significant
   differential regulation between cancer and benign.
@@ -19,13 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
-evidence_spans:
-- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object
-  using `lipidr` function `fetch_mw_study()`
-- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr`
-  provides an easy way to re-analyze and visualize these datasets.'
-- This step of the workflow requires the `limma` package to be installed.
-- Data Mining and Analysis of Lipidomics Datasets in R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
-evidence_spans:
-- analysed with Sciex Multiquant (> v3.0.3) software and exported to `txt` format
-- codecov.io/gh/ricoderks/QComics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

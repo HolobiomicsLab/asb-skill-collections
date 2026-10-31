@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
-evidence_spans:
-- Complete processing including peak picking, sample alignment, pick picking, grouping
-  of isotopologues and adducts, gap-filling by data recursion, extraction of consolidated
-  MS2 spectra and isotopic
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,7 +1,9 @@
 ---
 name: mass2motif-parameter-optimization
-description: Use when when you have a preprocessed bag-of-fragments corpus from tandem
+description: Use when you have a preprocessed bag-of-fragments corpus from tandem
   mass spectrometry spectra and need to train an MS2LDA model to discover Mass2Motifs.
+  Use this skill before model training to select hyperparameters that balance convergence
+  speed, motif interpretability, and computational cost.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -19,12 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
-evidence_spans:
-- MS2LDA (Mass Spectrometry–Latent Dirichlet Allocation) is a framework
-- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely
-  to explain the observed fragmentation patterns
-- Apply LDA to the processed spectra
-- Configure the Python environment (set PYTHONPATH, activate conda, etc.)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: flux-variability-analysis-interpretation
-description: Use when when you have sampled the feasible flux solution space of constraint-based
+description: Use when you have sampled the feasible flux solution space of constraint-based
   metabolic models (via optGpSampler or equivalent uniform sampling) and need to normalize
   flux predictions across reactions and cell lines for concordance analysis with transcriptomics
   and metabolomics data.
@@ -21,7 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

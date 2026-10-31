@@ -1,8 +1,8 @@
 ---
 name: matplotlib-heatmap-rendering
-description: Use when when you have a confusion matrix (predicted vs. ground-truth
-  labels) or similarity matrix (pairwise scores between spectra) and need to communicate
-  classification accuracy or chemical similarity patterns through a visual heatmap.
+description: Use when you have a confusion matrix (predicted vs. ground-truth labels)
+  or similarity matrix (pairwise scores between spectra) and need to communicate classification
+  accuracy or chemical similarity patterns through a visual heatmap.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2024.03.25.586580v5
   title: MS2DeepScore 2.0
-evidence_spans:
-- '`ms2deepscore` provides a Siamese neural network that is trained to predict molecular
-  structural similarities'
-- use the search functionality [here](https://github.com/matchms/ms2deepscore/issues)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

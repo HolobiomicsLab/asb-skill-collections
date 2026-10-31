@@ -1,7 +1,7 @@
 ---
 name: git-repository-tag-checkout
-description: Use when when you need to reproduce or validate a specific historical
-  release artifact (e.g., a Semantic Release v1.0.
+description: Use when you need to reproduce or validate a specific historical release
+  artifact (e.g., a Semantic Release v1.0.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -13,7 +13,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c07078
   title: qc4metabolomics
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

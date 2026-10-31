@@ -1,8 +1,9 @@
 ---
 name: multiple-testing-correction-application
-description: Use when when performing statistical tests (e.g., t-tests, ANOVA) across
-  many metabolites in a MultiAssayExperiment object to identify differentially abundant
-  metabolites between sample groups.
+description: Use when performing statistical tests (e.g., t-tests, ANOVA) across many
+  metabolites in a MultiAssayExperiment object to identify differentially abundant
+  metabolites between sample groups. Multiple testing correction is mandatory when
+  testing dozens or hundreds of metabolite features simultaneously;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -21,11 +22,6 @@ derived_from:
   title: MetaboDiff
 - doi: 10.1158/0008-5472.can-14-1490
   title: ''
-evidence_spans:
-- '`MetaboDiff` is available for all operating systems and can be installed via Github'
-- met = knn_impute(met,cutoff=0.4)
-- The `MetaboDiff` R package requires R version 4.0.2 or higher.
-- The `MetaboDiff` R package requires R version 4.0.2 or higher
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

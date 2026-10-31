@@ -1,8 +1,8 @@
 ---
 name: gzip-index-structure-parsing
-description: Use when when you have an indexed gzip-compressed mzML file (mzML.gz
-  with an internal index) and need to retrieve specific spectra or chromatogram data
-  blocks by integer index without decompressing the entire archive.
+description: Use when you have an indexed gzip-compressed mzML file (mzML.gz with
+  an internal index) and need to retrieve specific spectra or chromatogram data blocks
+  by integer index without decompressing the entire archive.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
-evidence_spans:
-- import xml.etree.ElementTree as et
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

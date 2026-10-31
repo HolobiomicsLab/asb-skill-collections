@@ -1,8 +1,8 @@
 ---
 name: batch-record-processing
-description: Use when when you have a repository containing hundreds or thousands
-  of structured records (e.g., MassBank records in standardized format) that must
-  be validated for correctness before release or merge.
+description: Use when you have a repository containing hundreds or thousands of structured
+  records (e.g., MassBank records in standardized format) that must be validated for
+  correctness before release or merge.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -20,7 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1002/jms.1777
   title: MassBank
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: deep-learning-layer-inspection
-description: Use when when you have downloaded pre-trained Keras models and need to
-  confirm their layer naming and structure conform to requirements for TensorFlow
-  Serving or other deployment pipelines—specifically before converting to HDF5 format
-  or integrating into a production API that expects fixed.
+description: Use when you have downloaded pre-trained Keras models and need to confirm
+  their layer naming and structure conform to requirements for TensorFlow Serving
+  or other deployment pipelines—specifically before converting to HDF5 format or integrating
+  into a production API that expects fixed input/output.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
-evidence_spans:
-- Make sure you have python installed
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

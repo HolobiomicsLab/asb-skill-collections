@@ -1,9 +1,9 @@
 ---
 name: smarts-pattern-matching-for-chemical-transformation
-description: Use when when you have seed metabolite structures (SMILES or MOL format)
-  from metabolomics data and a curated biotransformation rule database (each rule
-  specifying reactant SMARTS, product SMARTS, and transformation type), and you need
-  to systematically enumerate plausible biotransformation.
+description: Use when you have seed metabolite structures (SMILES or MOL format) from
+  metabolomics data and a curated biotransformation rule database (each rule specifying
+  reactant SMARTS, product SMARTS, and transformation type), and you need to systematically
+  enumerate plausible biotransformation products to.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0370
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c01565
   title: bam
-evidence_spans:
-- No usage/docs found.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

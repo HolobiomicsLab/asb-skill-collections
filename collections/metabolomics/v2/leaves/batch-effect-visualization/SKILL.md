@@ -26,17 +26,6 @@ derived_from:
   title: hRUV
 - doi: 10.1007/s11306-018-1347-7
   title: ''
-evidence_spans:
-- '`hRUV` is a package for normalisation of multiple batches of metabolomics data'
-- '`hRUV` is a package for normalisation of multiple batches of metabolomics data
-  in a hierarchical strategy'
-- 'utilises 2 types of replicates: intra-batch and inter-batch replicates to estimate
-  the unwanted variation within and between batches with RUV-III'
-- Install the R package from GitHub using the `devtools` package
-- we will load the hRUV package and other packages required for the demonstration...
-  library(dplyr)
-- The R software environment can be downloaded for free from the Comprehensive R Archive
-  Network (CRAN)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

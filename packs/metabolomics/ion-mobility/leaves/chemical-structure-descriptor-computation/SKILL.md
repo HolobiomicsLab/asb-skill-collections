@@ -1,9 +1,9 @@
 ---
 name: chemical-structure-descriptor-computation
-description: Use when when you have a set of molecular structures (N-Me derived unsaturated
+description: Use when you have a set of molecular structures (N-Me derived unsaturated
   sterol lipids or structurally similar organic molecules with C=C bonds) represented
   as SMILES or molecular geometry files, and you need to train or apply a machine-learning
-  model to predict an instrument-dependent.
+  model to predict an instrument-dependent property (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -24,9 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
-evidence_spans:
-- collection of Python scripts
-- All functions are implemented in jupyter notebook
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

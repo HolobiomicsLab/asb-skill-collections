@@ -1,7 +1,7 @@
 ---
 name: r-script-validation-and-execution
-description: Use when when you have obtained an R-based bioinformatic program (such
-  as DNMS2Purifier.
+description: Use when you have obtained an R-based bioinformatic program (such as
+  DNMS2Purifier.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c00736
   title: DNMS2Purifier
-evidence_spans:
-- The program is written in R (ver 4.2.1).
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

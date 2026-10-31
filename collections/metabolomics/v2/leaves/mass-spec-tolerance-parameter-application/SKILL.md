@@ -1,9 +1,9 @@
 ---
 name: mass-spec-tolerance-parameter-application
-description: Use when when you have a feature table from Orbitrap LC-MS containing
-  m/z, retention time, and intensity columns, and you need to group individual mass
-  features into putative metabolites that represent the same chemical entity across
-  different ionization states and isotopic compositions.
+description: Use when you have a feature table from Orbitrap LC-MS containing m/z,
+  retention time, and intensity columns, and you need to group individual mass features
+  into putative metabolites that represent the same chemical entity across different
+  ionization states and isotopic compositions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -22,9 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
-evidence_spans:
-- pre-annotation to group featues to empirical compounds (khipu)
-- Python-Centric Pipeline for Metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: molecular-formula-to-carbon-count-extraction
-description: Use when when you have a feature list from HRMS data with molecular formula
+description: Use when you have a feature list from HRMS data with molecular formula
   annotations (inferred or assigned) and need to compute per-carbon mass defect ratios
   (MD/C, m/C) as part of PFAS candidate prioritization.
 license: CC-BY-4.0
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
-evidence_spans:
-- PFΔScreen is an open-source Python based non-target screening software tool
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

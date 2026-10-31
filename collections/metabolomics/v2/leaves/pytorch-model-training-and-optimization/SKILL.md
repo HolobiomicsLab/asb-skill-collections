@@ -1,6 +1,6 @@
 ---
 name: pytorch-model-training-and-optimization
-description: Use when when you have preprocessed molecular graph representations (from
+description: Use when you have preprocessed molecular graph representations (from
   Preprocess.py or equivalent) and need to train a regression model to predict continuous
   retention time targets.
 license: CC-BY-4.0
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.0c04071
   title: GNN-RT
-evidence_spans:
-- conda install pytorch
-- Anaconda for python 3.6
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

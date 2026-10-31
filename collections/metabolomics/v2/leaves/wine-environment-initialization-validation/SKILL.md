@@ -17,9 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
-evidence_spans:
-- AirdPro V5 is now available at 2023.7
-- Wine to run Windows applications in Linux containers
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

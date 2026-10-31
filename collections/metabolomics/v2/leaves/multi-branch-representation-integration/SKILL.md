@@ -1,7 +1,7 @@
 ---
 name: multi-branch-representation-integration
-description: Use when when building an end-to-end deep learning model that predicts
-  multiple related properties from a single input (e.
+description: Use when building an end-to-end deep learning model that predicts multiple
+  related properties from a single input (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -16,8 +16,6 @@ metadata:
 derived_from:
 - doi: 10.26599/bdma.2024.9020059
   title: IsoFusion
-evidence_spans:
-- _No usage/docs found._
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

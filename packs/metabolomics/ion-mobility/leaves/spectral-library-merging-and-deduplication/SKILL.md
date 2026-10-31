@@ -1,9 +1,9 @@
 ---
 name: spectral-library-merging-and-deduplication
-description: Use when when building a comprehensive reference spectral library for
-  metabolomics or chemical identification, you have multiple source libraries in different
-  formats (msp, mgf, NIST binary) and ionization modes (positive/negative MS/MS or
-  EI) that need to be combined into a single.
+description: Use when building a comprehensive reference spectral library for metabolomics
+  or chemical identification, you have multiple source libraries in different formats
+  (msp, mgf, NIST binary) and ionization modes (positive/negative MS/MS or EI) that
+  need to be combined into a single, MS-DIAL-compatible.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -25,11 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
-evidence_spans:
-- library(mspcompiler)
-- Read the msp file into R.
-- MS-DIAL friendly msp file
-- organize them into a neat and up-to-date msp file that can be used in MS-DIAL.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

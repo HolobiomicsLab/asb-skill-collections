@@ -1,6 +1,6 @@
 ---
 name: python-automated-test-execution
-description: Use when when contributing code changes to a Python project (fork, feature
+description: Use when contributing code changes to a Python project (fork, feature
   branch, or pull request) that uses a setup.py-based test suite, before pushing changes
   to the remote repository or merging into the main branch.
 license: CC-BY-4.0
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query
-evidence_spans:
-- MS2Query - Reliable and fast MS/MS spectral-based analogue search
-- make sure the existing tests still work by running ``python setup.py test``
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btab636
   title: mspack
-evidence_spans:
-- mspack is a C++ program for lossless and lossy mass spectrometry data compression
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

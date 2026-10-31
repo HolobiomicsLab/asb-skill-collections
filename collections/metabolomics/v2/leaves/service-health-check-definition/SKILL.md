@@ -1,6 +1,6 @@
 ---
 name: service-health-check-definition
-description: 'Use when when deploying a multi-service microarchitecture (such as MAGMa''s
+description: 'Use when deploying a multi-service microarchitecture (such as MAGMa''s
   four distinct subprojects: magmaweb, joblauncher, job, and pubchem) via Docker Compose
   and you need to ensure that service startup order respects true readiness rather
   than container existence—particularly when services have.'
@@ -17,9 +17,6 @@ metadata:
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
-evidence_spans:
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'.
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

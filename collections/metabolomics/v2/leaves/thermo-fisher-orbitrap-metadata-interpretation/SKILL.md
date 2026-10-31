@@ -1,6 +1,9 @@
 ---
 name: thermo-fisher-orbitrap-metadata-interpretation
-description: Use when when you have a Thermo Fisher Scientific .
+description: Use when you have a Thermo Fisher Scientific .raw file from an Orbitrap
+  instrument and need to programmatically extract and interpret header-level metadata
+  (instrument configuration, acquisition time span, total scan count, dynamic instrument
+  parameters) prior to spectral data processing or to.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -21,11 +24,6 @@ derived_from:
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
-evidence_spans:
-- Calling a wrapper method typically results in the execution of methods defined in
-  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
-- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher
-  Scientific
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

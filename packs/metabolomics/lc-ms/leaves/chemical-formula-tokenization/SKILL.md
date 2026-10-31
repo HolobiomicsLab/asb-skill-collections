@@ -29,8 +29,6 @@ derived_from:
   title: MIST (chemical formula transformer)
 - doi: 10.1021/acs.jcim.3c01082
   title: ''
-evidence_spans:
-- github.com/samgoldman97/mist
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

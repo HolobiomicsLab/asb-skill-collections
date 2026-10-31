@@ -23,9 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch
-evidence_spans:
-- LipidMatch can be used with various peak picking software (for example MZmine, XCMS,
-  MS-DIAL, and Compound Discoverer)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

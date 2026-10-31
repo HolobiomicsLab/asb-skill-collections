@@ -1,9 +1,8 @@
 ---
 name: cross-split-metric-aggregation
-description: 'Use when when you have a pre-trained model and need to report stable,
-  generalizable performance on a fixed training set with multiple held-out test splits.
-  Specifically: when you have 10 (or n) random query/reference splits on the same
-  dataset (e.'
+description: 'Use when you have a pre-trained model and need to report stable, generalizable
+  performance on a fixed training set with multiple held-out test splits. Specifically:
+  when you have 10 (or n) random query/reference splits on the same dataset (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3745
@@ -29,10 +28,6 @@ derived_from:
   title: SpecEmbedding
 - doi: 10.6084/m9.figshare.28876751.v2
   title: ''
-evidence_spans:
-- Python：3.12
-- PyTorch：2.6.0 + CUDA 12.4
-- 该装饰器来自 numba
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

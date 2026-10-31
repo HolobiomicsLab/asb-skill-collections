@@ -1,6 +1,9 @@
 ---
 name: psm-spectrum-identifier-regex-extraction
-description: Use when when you have PSM identifications from a search engine (e.
+description: Use when you have PSM identifications from a search engine (e.g., MaxQuant,
+  MSGFPlus, Mascot) and spectrum files (mzML or mgf format) that use different naming
+  schemes or formats for their spectrum identifiers, and you need to establish a one-to-one
+  mapping between PSMs and spectra before rescoring.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -17,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1002/pmic.202300336
   title: MS2Rescore (immunopeptidome rescoring)
-evidence_spans:
-- MS²Rescore is a tool for rescoring peptide-spectrum matches
-- Accepted ProForma modification labels in :py:mod:`psm_utils`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

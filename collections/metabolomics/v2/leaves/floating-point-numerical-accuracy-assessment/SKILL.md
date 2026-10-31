@@ -1,6 +1,6 @@
 ---
 name: floating-point-numerical-accuracy-assessment
-description: 'Use when when implementing or validating a lossy numeric codec for mass-spectrometry
+description: 'Use when implementing or validating a lossy numeric codec for mass-spectrometry
   data (e.g., MSNumpressCoder in OpenMS). Specifically: after implementing both encoder
   and decoder, before shipping to production, or when comparing alternative compression
   schemes.'
@@ -22,8 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
-evidence_spans:
-- how you installed OpenMS (e.g., from within KNIME, binary installers, self compiled)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

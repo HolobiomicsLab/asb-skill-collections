@@ -1,8 +1,8 @@
 ---
 name: rust-library-compilation-and-testing
-description: Use when when you have access to Rust source code in a repository with
-  a Cargo manifest (Cargo.toml) and need to verify that a library's read and write
-  APIs produce byte-equivalent or structurally equivalent output.
+description: Use when you have access to Rust source code in a repository with a Cargo
+  manifest (Cargo.toml) and need to verify that a library's read and write APIs produce
+  byte-equivalent or structurally equivalent output.
 license: CC-BY-4.0
 metadata:
   grounding_tier: link-only
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
-evidence_spans:
-- The primary work shown here is written in Rust at the repository root
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

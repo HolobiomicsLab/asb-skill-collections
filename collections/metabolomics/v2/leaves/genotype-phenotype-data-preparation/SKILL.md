@@ -1,7 +1,7 @@
 ---
 name: genotype-phenotype-data-preparation
-description: Use when when you have raw genotype and phenotype data files (e.g., from
-  a GWAS dataset or genetic study) and need to apply PaIRKAT or similar pathway-level
+description: Use when you have raw genotype and phenotype data files (e.g., from a
+  GWAS dataset or genetic study) and need to apply PaIRKAT or similar pathway-level
   association tests.
 license: CC-BY-4.0
 metadata:
@@ -16,8 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2021.04.23.440821v1
   title: PaIRKAT
-evidence_spans:
-- github.com/CharlieCarpenter/PaIRKAT
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

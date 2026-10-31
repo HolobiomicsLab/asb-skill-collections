@@ -1,6 +1,6 @@
 ---
 name: feature-ablation-analysis
-description: Use when when you have a trained GNN model for molecular property prediction
+description: Use when you have a trained GNN model for molecular property prediction
   (e.g., collision cross section) and need to identify which graph structural features—atomic
   properties, bond types, or higher-order graph descriptors—are driving the model's
   predictions.
@@ -24,8 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
-evidence_spans:
-- graph neural networks
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

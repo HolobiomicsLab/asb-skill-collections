@@ -1,7 +1,7 @@
 ---
 name: ggplot2-customization-for-statistical-plots
-description: Use when when a statistical analysis function (e.g., random_forest or
-  PCA_plot from Omu) returns a ggplot2 object and you need to adjust visual presentation—such
+description: Use when a statistical analysis function (e.g., random_forest or PCA_plot
+  from Omu) returns a ggplot2 object and you need to adjust visual presentation—such
   as removing gridlines, applying a clean background theme (e.
 license: CC-BY-4.0
 metadata:
@@ -18,11 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
-evidence_spans:
-- Omu is an R package that enables rapid analysis of Metabolomics data sets
-- The figure is a ggplot2 object, so it is compatible with any ggplot2 themes
-- The figure is a ggplot2 object, so it is compatible with any ggplot2 themes you
-  wish to use to edit the appearance
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

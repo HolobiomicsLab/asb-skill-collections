@@ -1,7 +1,7 @@
 ---
 name: peak-intensity-normalization-weighted-aggregation
-description: Use when when training Word2Vec embeddings on mass spectra represented
-  as peak-word documents, and you need to preserve the quantitative intensity relationships
+description: Use when training Word2Vec embeddings on mass spectra represented as
+  peak-word documents, and you need to preserve the quantitative intensity relationships
   between fragments without allowing a single dominant peak to overwhelm the learned
   word associations.
 license: CC-BY-4.0
@@ -27,18 +27,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
-evidence_spans:
-- we introduce Spec2Vec, a novel spectral similarity score
-- spec2vec (https://github.com/iomega/spec2vec). Both packages are freely available
-  and can be installed via conda
-- the implementations for the cosine score and the modified cosine score used can
-  be found in the Python package matchms
-- the implementations for the cosine score and the modified cosine score used can
-  be found in the Python package matchms [31] (https://github.com/matchms/matchms)
-- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim
-  [37]
-- Tanimoto similarity (Jaccard index) based on daylight-like molecular fingerprints,
-  version 2020.03.2, 2048 bits, derived using rdkit
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

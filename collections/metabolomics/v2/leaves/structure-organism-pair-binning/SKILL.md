@@ -1,7 +1,7 @@
 ---
 name: structure-organism-pair-binning
-description: Use when when you have loaded a structure-organism pairs table from a
-  natural products database (e.g., LOTUS) and need to answer questions about the distribution
+description: Use when you have loaded a structure-organism pairs table from a natural
+  products database (e.g., LOTUS) and need to answer questions about the distribution
   of chemical diversity—specifically, how many unique 2D structures appear in exactly
   1 organism versus many organisms.
 license: CC-BY-4.0
@@ -21,11 +21,6 @@ derived_from:
   title: lotus
 - doi: 10.1007/s00044-016-1764-y
   title: ''
-evidence_spans:
-- standardizing.R, 1_integrating.R, 1_cleaningOriginal.R, 4_cleaningTaxonomy.R, 5_addingOTL.R
-- 1_integrating.R
-- 221[[smiles.py]], 260[[3_cleaningAndEnriching/sanitizing.py]], 280[[3_cleaningAndEnriching/stereocounting.py]]
-- R - Python 3 - Java >= 17
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

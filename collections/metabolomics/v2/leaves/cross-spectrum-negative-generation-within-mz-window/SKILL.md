@@ -1,7 +1,7 @@
 ---
 name: cross-spectrum-negative-generation-within-mz-window
-description: Use when when preparing augmented training data for a Siamese rescore
-  model that must learn to rank correct molecular formulas above incorrect ones;
+description: Use when preparing augmented training data for a Siamese rescore model
+  that must learn to rank correct molecular formulas above incorrect ones;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
-evidence_spans:
-- 'CLI and Python API: [msfiddle](https://github.com/josiehong/msfiddle)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

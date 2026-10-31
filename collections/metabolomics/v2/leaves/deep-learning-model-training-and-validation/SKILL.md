@@ -22,8 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1007/s11306-020-01726-7
   title: MetFID
-evidence_spans:
-- No usage/docs found.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -31,17 +31,6 @@ derived_from:
   title: MS2DeepScore
 - doi: 10.1021/acs.analchem.5c02655
   title: ''
-evidence_spans:
-- Our MS2DeepScore Python library offers two types of data generators
-- To estimate the uncertainty of a prediction we used Monte-Carlo Dropout ensembles
-- Our MS2DeepScore Python library offers two types of data generators, one which iterates
-  over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over
-  all spectra and was used for
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
-  (2048 bits) to compute structural similarities.
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
-  (2048 bits) to compute structural similarities
-- mean squared error (MSE) loss
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

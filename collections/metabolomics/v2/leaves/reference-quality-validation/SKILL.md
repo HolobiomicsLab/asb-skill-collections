@@ -1,9 +1,8 @@
 ---
 name: reference-quality-validation
-description: Use when when you have curated structure-organism pairs with associated
-  reference metadata and need to verify that each pair's literature citations are
-  present, non-conflicting, and complete before publishing them as a high-confidence
-  validated dataset.
+description: Use when you have curated structure-organism pairs with associated reference
+  metadata and need to verify that each pair's literature citations are present, non-conflicting,
+  and complete before publishing them as a high-confidence validated dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -19,9 +18,6 @@ derived_from:
   title: lotus
 - doi: 10.1007/s00044-016-1764-y
   title: ''
-evidence_spans:
-- db/../standardizing.R, common.R
-- 1_integrating.R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

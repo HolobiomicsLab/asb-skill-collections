@@ -1,9 +1,9 @@
 ---
 name: neural-network-module-architecture-design
-description: Use when when building an end-to-end deep learning model that must predict
+description: Use when building an end-to-end deep learning model that must predict
   multiple correlated peptide properties (charge, isotope count, retention time) simultaneously
   from mass spectrometry data, and you need a principled way to merge learned representations
-  from separate task-specific branches.
+  from separate task-specific branches so.
 license: CC-BY-4.0
 metadata:
   edam_topics:
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.26599/bdma.2024.9020059
   title: IsoFusion
-evidence_spans:
-- _No usage/docs found._
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

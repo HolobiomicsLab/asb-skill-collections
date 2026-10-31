@@ -1,8 +1,8 @@
 ---
 name: over-representation-analysis-pvalue-interpretation
-description: Use when when you have run ORA on a metabolomics dataset and obtained
-  p-values for pathway enrichment, but you need to assess whether observed significance
-  is genuine or an artifact of incomplete metabolite coverage.
+description: Use when you have run ORA on a metabolomics dataset and obtained p-values
+  for pathway enrichment, but you need to assess whether observed significance is
+  genuine or an artifact of incomplete metabolite coverage.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3439
@@ -19,7 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

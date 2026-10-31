@@ -1,9 +1,9 @@
 ---
 name: isotope-display-logic-modification
-description: Use when when isotope visibility in the Maven GUI isotopes widget does
-  not respect user selections made in application preferences, or when you need to
-  restrict the widget display to a user-configured subset of available isotopes without
-  modifying the underlying data model.
+description: Use when isotope visibility in the Maven GUI isotopes widget does not
+  respect user selections made in application preferences, or when you need to restrict
+  the widget display to a user-configured subset of available isotopes without modifying
+  the underlying data model.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -18,12 +18,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo12080684
   title: MAVEN2
-evidence_spans:
-- git clone --recursive [redacted-email]:eugenemel/maven.git maven
-- qmake -r build.pro
-- make -j4
-- 'Maven GUI: Metabolomics Analysis and Visualization Engine'
-- Install the qt5 package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

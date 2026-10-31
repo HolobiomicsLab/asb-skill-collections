@@ -23,14 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA
-evidence_spans:
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
-  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
-  R package'
-- IDSL.IPA is able to outperform similar peak picking tools such as MZmine 2
-- IDSL.IPA is able to outperform similar peak picking tools such as MZmine 2, *xcms
-- similar peak picking tools such as MZmine 2, *xcms
-- light-weight R package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

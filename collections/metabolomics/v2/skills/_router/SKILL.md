@@ -116,12 +116,12 @@ Three machine indexes back both scripts, and are worth querying directly with
 
 Then read that skill's `leaves/<slug>/SKILL.md` and follow it.
 
-## 2. Apply — use the skill
+## 2. Apply
 
-The skill body carries the procedure; its frontmatter carries `tools` (what to
-install/invoke), `derived_from` (source paper DOIs), and `evidence_spans`
-(verbatim anchors from the paper/repo). Use the tool records in
-`tools_index.json` for canonical install URLs.
+Read the chosen `leaves/<slug>/SKILL.md`. Its frontmatter carries `metadata.tools` (what
+to install or invoke) and `derived_from` (source paper DOIs). Find
+verbatim evidence lines in the body, then follow the procedure.
+Use the tool records in `tools_index.json` for canonical install URLs.
 
 ## 3. Ground (recommended) — verify against the source via Perspicacité
 
@@ -189,7 +189,8 @@ selection.
 
 ## Provenance
 
-Each skill is grounded (`derived_from` DOIs + `evidence_spans`), license-tagged
+Each skill is grounded (`derived_from` DOIs + verbatim evidence lines in its
+body), license-tagged
 (CC-BY-4.0), and EDAM-annotated. Non-open-access sources and ungrounded skills
 were held out at release. See `corpus.yaml` for the per-paper access basis
 (`repo-oa`: the redistributable source repository was cloned at build time) and

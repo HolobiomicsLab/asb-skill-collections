@@ -1,9 +1,9 @@
 ---
 name: metabolic-network-topology-encoding
-description: Use when when you have reconstructed metabolic networks for one or more
-  organisms and need to represent them in a way that preserves both the graph topology
-  (connectivity structure) and the metabolic function annotations (pathway membership
-  and enzymatic roles) for subsequent cross-organism.
+description: Use when you have reconstructed metabolic networks for one or more organisms
+  and need to represent them in a way that preserves both the graph topology (connectivity
+  structure) and the metabolic function annotations (pathway membership and enzymatic
+  roles) for subsequent cross-organism comparison.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -20,12 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pone.0246962
   title: MetNet
-evidence_spans:
-- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic
-  network of two organisms selected in KEGG
-- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic
-  network
-- MetNet is a Java tool
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

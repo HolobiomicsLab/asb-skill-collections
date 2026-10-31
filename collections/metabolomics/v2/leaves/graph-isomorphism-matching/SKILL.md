@@ -1,9 +1,9 @@
 ---
 name: graph-isomorphism-matching
-description: Use when when comparing two or more lipid structures and you need to
-  determine which atoms and bonds in one structure correspond to those in another,
-  prior to computing a distance metric. Specifically, when input lipids have variable
-  fatty acyl chain compositions (e.
+description: Use when comparing two or more lipid structures and you need to determine
+  which atoms and bonds in one structure correspond to those in another, prior to
+  computing a distance metric. Specifically, when input lipids have variable fatty
+  acyl chain compositions (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2941
@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c02449
   title: LipidSpace
-evidence_spans:
-- LipidSpace is a stand-alone tool to analyze and compare lipidomes
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

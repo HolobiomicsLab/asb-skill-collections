@@ -1,7 +1,7 @@
 ---
 name: spectra-mgf-format-loading
-description: Use when when you have downloaded a GNPS molecular networking archive
-  (GNPS1 or GNPS2 workflow output) and need to reconstruct spectral records for integration
+description: Use when you have downloaded a GNPS molecular networking archive (GNPS1
+  or GNPS2 workflow output) and need to reconstruct spectral records for integration
   with genomic data (BGCs, antiSMASH results) or for computing molecular family links
   and spectral similarity scores.
 license: CC-BY-4.0
@@ -22,12 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s40168-022-01444-3
   title: NPClassScore
-evidence_spans:
-- It provides the tools [`GNPSDownloader`][nplinker.metabolomics.gnps.GNPSDownloader]
-  and [`GNPSExtractor`][nplinker.metabolomics.gnps.GNPSExtractor]
-- '[![github repo badge](https://img.shields.io/badge/github-nplinker-000.svg?color=blue)](https://github.com/NPLinker/nplinker)'
-- Python version ≥3.11
-- make sure the existing tests still work by running ``pytest``
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

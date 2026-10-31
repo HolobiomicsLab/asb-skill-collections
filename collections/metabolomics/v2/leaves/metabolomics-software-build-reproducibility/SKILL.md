@@ -1,9 +1,9 @@
 ---
 name: metabolomics-software-build-reproducibility
-description: Use when when developing or maintaining a multi-platform metabolomics
-  GUI tool (such as Maven GUI) that must produce binary executables for end users,
-  and you need to ensure that builds are reproducible across different OS platforms,
-  dependency versions are pinned and tracked, and release artifacts.
+description: Use when developing or maintaining a multi-platform metabolomics GUI
+  tool (such as Maven GUI) that must produce binary executables for end users, and
+  you need to ensure that builds are reproducible across different OS platforms, dependency
+  versions are pinned and tracked, and release artifacts are.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -26,13 +26,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo12080684
   title: MAVEN2
-evidence_spans:
-- 'Maven GUI: Metabolomics Analysis and Visualization Engine'
-- git clone --recursive [redacted-email]:eugenemel/maven.git maven
-- qmake -r build.pro
-- make -j4
-- Install the qt5 package
-- Install the MSYS2 platform for Windows
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

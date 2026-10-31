@@ -1,6 +1,6 @@
 ---
 name: image-channel-masking-and-segmentation
-description: Use when when you have multi-channel LA-ICP-MS images and need to isolate
+description: Use when you have multi-channel LA-ICP-MS images and need to isolate
   specific elemental regions (e.
 license: CC-BY-4.0
 metadata:
@@ -19,13 +19,6 @@ derived_from:
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
-evidence_spans:
-- The built in `Calculator` can perform simple calculations on image data by entering
-  the desired formula into the `Formula` text box
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
-  defined threshold
-- '|pewpew| is an open-source LA-ICP-MS data import and processing application'
-- based on the python library pewlib_
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

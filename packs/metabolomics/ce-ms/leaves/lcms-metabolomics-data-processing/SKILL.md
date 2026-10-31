@@ -22,9 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
-evidence_spans:
-- Both Docker and Singularity (for high-performance computing) are supported
-- Both Docker and Singularity (for high-performance computing) are supported.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

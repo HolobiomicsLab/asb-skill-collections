@@ -1,9 +1,9 @@
 ---
 name: fuzzy-analog-search-fragmentation
-description: Use when when you have experimental MS/MS spectra and want to discover
-  structurally similar compounds beyond exact spectral library matches—particularly
-  useful for identifying chemical analogs, homologs, or isomers that share fragmentation
-  logic but differ in molecular structure.
+description: Use when you have experimental MS/MS spectra and want to discover structurally
+  similar compounds beyond exact spectral library matches—particularly useful for
+  identifying chemical analogs, homologs, or isomers that share fragmentation logic
+  but differ in molecular structure.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -25,12 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube
-evidence_spans:
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry
-  (LC-MS) data processing.
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry
-  (LC-MS) data processing
-- masscube is an integrated Python package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

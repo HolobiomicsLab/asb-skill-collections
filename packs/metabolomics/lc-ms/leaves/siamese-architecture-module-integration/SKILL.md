@@ -1,6 +1,6 @@
 ---
 name: siamese-architecture-module-integration
-description: Use when when refactoring a mass-spectrometry formula-prediction codebase
+description: Use when refactoring a mass-spectrometry formula-prediction codebase
   that has deprecated a monolithic scoring function (FDRNet) and requires a modular,
   symmetric Siamese design to independently embed spectrum and molecular-formula features
   before combining them.
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
-evidence_spans:
-- FIDDLE is a deep learning method for predicting molecular formulas from MS/MS spectra
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

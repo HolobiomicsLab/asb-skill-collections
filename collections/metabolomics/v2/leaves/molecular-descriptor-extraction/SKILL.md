@@ -32,10 +32,6 @@ derived_from:
   title: ''
 - doi: 10.1021/acs.analchem.9b05765
   title: ''
-evidence_spans:
-- 'Python: 3.7'
-- jhhung/PS2MS
-- github.com__oloBion__Retip
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

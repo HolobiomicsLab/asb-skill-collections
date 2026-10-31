@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00457
   title: compareMS2 2.0
-evidence_spans:
-- compareMS2 calculates the global similarity between tandem mass spectrometry datasets
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,8 +1,8 @@
 ---
 name: small-molecule-chromatography-modeling
-description: Use when when you have a set of small molecule structures (as SMILES
-  or molecular graphs) and need to predict their elution order in RPLC systems with
-  eluent pH around 2.
+description: Use when you have a set of small molecule structures (as SMILES or molecular
+  graphs) and need to predict their elution order in RPLC systems with eluent pH around
+  2.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-025-00968-8
   title: ROASMI
-evidence_spans:
-- ROASMI is a Retention Order model to Assist Small Molecule Identification
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

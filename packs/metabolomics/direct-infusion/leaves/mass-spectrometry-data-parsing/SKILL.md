@@ -48,16 +48,6 @@ derived_from:
   title: ''
 - doi: 10.3389/fbinf.2022.842964
   title: ''
-evidence_spans:
-- The default method uses `pymzml` to parse mzML files.
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
-  preprocessing
-- Trackable and scalable Python program for high-resolution metabolomics data processing.
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
-  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
-  R package'
-- light-weight R package
-- performs spectral database dereplication using R Package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

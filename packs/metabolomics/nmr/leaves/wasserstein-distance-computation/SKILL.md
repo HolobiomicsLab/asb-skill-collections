@@ -1,6 +1,6 @@
 ---
 name: wasserstein-distance-computation
-description: Use when when you have both an observed NMR mixture spectrum and a candidate
+description: Use when you have both an observed NMR mixture spectrum and a candidate
   reconstructed spectrum (each represented as intensity distributions across chemical
   shift bins), and you need a scalar similarity metric to evaluate how closely the
   reconstruction matches the observed data.
@@ -22,8 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c01652
   title: mcfNMR
-evidence_spans:
-- github.com__GeoMetabolomics-ICBM__mcfNMR
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: instrument-metadata-parsing
-description: Use when when you have raw or semi-processed mass spectrometry data files
+description: Use when you have raw or semi-processed mass spectrometry data files
   in mixed formats (e.g., vendor-native .raw, .d, .
 license: CC-BY-4.0
 metadata:
@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
-evidence_spans:
-- mzmine is an open-source software for mass spectrometry data processing
-- JDK version-25-blue
-- JavaFX version-24
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

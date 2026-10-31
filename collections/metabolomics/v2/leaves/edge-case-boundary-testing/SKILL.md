@@ -1,8 +1,8 @@
 ---
 name: edge-case-boundary-testing
-description: Use when when implementing or validating a quantitative formula (e.g.,
-  resource sizing, memory allocation, worker count calculation) that will be applied
-  across a range of input values, especially when the formula involves division, clamping,
+description: Use when implementing or validating a quantitative formula (e.g., resource
+  sizing, memory allocation, worker count calculation) that will be applied across
+  a range of input values, especially when the formula involves division, clamping,
   or has implicit domain constraints (e.
 license: CC-BY-4.0
 metadata:
@@ -14,7 +14,6 @@ metadata:
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

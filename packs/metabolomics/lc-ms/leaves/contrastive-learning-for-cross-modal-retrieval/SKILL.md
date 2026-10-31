@@ -25,13 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c01594
   title: CSU-MS2
-evidence_spans:
-- '- [rdkit](https://rdkit.org/)'
-- '- [pytorch](https://pytorch.org/)'
-- '- [PyTorch Geometric](https://pytorch-geometric.readthedocs.io/en/latest/)'
-- '- [matchms](https://matchms.readthedocs.io/en/latest/)'
-- '- [python3](https://www.python.org/)'
-- We recommend to use [conda](https://conda.io/docs/user-guide/install/download.html)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

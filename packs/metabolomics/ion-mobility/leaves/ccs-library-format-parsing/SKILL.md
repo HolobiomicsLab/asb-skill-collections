@@ -1,9 +1,9 @@
 ---
 name: ccs-library-format-parsing
-description: Use when when you have received or cloned a CCS reference library (such
-  as the DTCCSN2 library for U13C labeled lipids) bundled with lipidomics software
-  and need to verify its integrity, understand its lipid class composition, or extract
-  metadata before using it for CCS bias calculation or.
+description: Use when you have received or cloned a CCS reference library (such as
+  the DTCCSN2 library for U13C labeled lipids) bundled with lipidomics software and
+  need to verify its integrity, understand its lipid class composition, or extract
+  metadata before using it for CCS bias calculation or correction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c01253
   title: mobilipid
-evidence_spans:
-- Our tool enhances CCS quality control by providing a R Markdown that integrates
-  into IM-MS lipidomics workflows
-- providing a R Markdown that integrates into IM-MS lipidomics workflows
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c01652
   title: mcfNMR
-evidence_spans:
-- mcfNMR is a tool for recovering constituent compounds from an NMR spectrum
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

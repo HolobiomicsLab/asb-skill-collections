@@ -1,6 +1,6 @@
 ---
 name: rust-build-and-compilation
-description: Use when when you have Rust source code (such as the mzPeak format implementation
+description: Use when you have Rust source code (such as the mzPeak format implementation
   at the repository root) and need to generate executable binaries or libraries for
   converting mass-spectrometry file formats, validating output files, or reading/writing
   domain-specific formats like mzPeak.
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
-evidence_spans:
-- The primary work shown here is written in Rust at the repository root
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

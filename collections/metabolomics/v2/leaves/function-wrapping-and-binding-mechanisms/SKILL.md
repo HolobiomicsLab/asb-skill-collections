@@ -1,9 +1,9 @@
 ---
 name: function-wrapping-and-binding-mechanisms
-description: Use when when you have Spectra objects in R and need to apply Python
-  MS library functionality (spectral similarity scoring, filtering, normalization)
-  without leaving the R environment, or when you want to create custom hybrid workflows
-  that leverage both R and Python MS packages within a single.
+description: Use when you have Spectra objects in R and need to apply Python MS library
+  functionality (spectral similarity scoring, filtering, normalization) without leaving
+  the R environment, or when you want to create custom hybrid workflows that leverage
+  both R and Python MS packages within a single quarto.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -24,12 +24,6 @@ metadata:
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
-evidence_spans:
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based
-  MS analysis in R
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based
-  MS analysis in R.
-- integration of Python MS packages into a [*Spectra*]-based MS analysis in R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

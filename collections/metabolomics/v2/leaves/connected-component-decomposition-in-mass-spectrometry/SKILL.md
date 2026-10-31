@@ -24,11 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu
-evidence_spans:
-- The graph operations are supported by the networkx library
-- tree visualization aided by the treelib library
-- Khipu uses our package mass2chem for search functions
-- Khipu is developed as an open source Python 3 package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

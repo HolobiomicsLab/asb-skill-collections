@@ -1,6 +1,6 @@
 ---
 name: ms1-data-preprocessing-normalization
-description: Use when when you have loaded raw MS1 data from multiple instrument formats
+description: Use when you have loaded raw MS1 data from multiple instrument formats
   (Agilent, Thermo, Bruker, mzML) across a multi-sample cohort and need to prepare
   the ion intensity feature matrix for PCA analysis or cross-sample quality assessment.
 license: CC-BY-4.0
@@ -19,10 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.4c00146
   title: PeakQC
-evidence_spans:
-- IonToolPack is a software suite housing tools for mass spectrometry data
-- IonToolPack is a software suite housing tools for mass spectrometry data.
-- 'PeakQC: Automated quality control pipeline by PCA analysis on MS1 data'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

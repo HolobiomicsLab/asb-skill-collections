@@ -1,6 +1,6 @@
 ---
 name: repository-metadata-extraction
-description: Use when when you need to inventory a collection of related web applications
+description: Use when you need to inventory a collection of related web applications
   or tools distributed across multiple repositories, discover their live deployment
   URLs, trace their associated publications, and verify accessibility and metadata
   completeness.
@@ -26,9 +26,6 @@ derived_from:
   title: microbemasst
 - doi: 10.1101/2024.05.13.593988v1
   title: ''
-evidence_spans:
-- microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST
-- Aggregated search outputs can be generated and visualized using metadataMASST
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

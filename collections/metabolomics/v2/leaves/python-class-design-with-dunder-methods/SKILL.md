@@ -1,9 +1,9 @@
 ---
 name: python-class-design-with-dunder-methods
-description: Use when when you need to enable bracket notation (e.g., handler[5])
-  for random access to blocks within a large compressed or remote data source, or
-  when you want to support both random access and sequential iteration over data without
-  materializing all records upfront.
+description: Use when you need to enable bracket notation (e.g., handler[5]) for random
+  access to blocks within a large compressed or remote data source, or when you want
+  to support both random access and sequential iteration over data without materializing
+  all records upfront.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3209
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
-evidence_spans:
-- import sqlite3 import os from pymzml import spec
-- import xml.etree.ElementTree as et
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

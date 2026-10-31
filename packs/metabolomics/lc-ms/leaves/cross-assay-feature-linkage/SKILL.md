@@ -1,8 +1,8 @@
 ---
 name: cross-assay-feature-linkage
-description: Use when when you have structural clusters from multiple LC-MS assays
-  (e.g., positive and negative ion modes, or reversed-phase and HILIC methods) and
-  need to identify which features across assays represent the same underlying metabolite.
+description: Use when you have structural clusters from multiple LC-MS assays (e.g.,
+  positive and negative ion modes, or reversed-phase and HILIC methods) and need to
+  identify which features across assays represent the same underlying metabolite.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -28,14 +28,6 @@ derived_from:
   title: mamsi
 - doi: 10.1371/journal.pcbi.1011814
   title: ''
-evidence_spans:
-- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry
-  datasets.
-- import pandas as pd
-- import numpy as np
-- 'Dependencies: scipy'
-- 'Dependencies: networkx'
-- 'Dependencies: pyvis'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

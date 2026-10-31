@@ -1,8 +1,8 @@
 ---
 name: molecular-representation-learning
-description: Use when when you have a collection of molecules with known property
-  labels (e.g., retention times on a chromatographic column) and need to predict those
-  properties on new compounds.
+description: Use when you have a collection of molecules with known property labels
+  (e.g., retention times on a chromatographic column) and need to predict those properties
+  on new compounds.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -30,13 +30,6 @@ derived_from:
   title: ABCoRT
 - doi: 10.1021/acs.analchem.0c04071
   title: ''
-evidence_spans:
-- '**Python**'
-- '**PyG**'
-- '**RDKit**'
-- '- **RDKit**'
-- '**Pandas**'
-- '**torch-scatter**'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

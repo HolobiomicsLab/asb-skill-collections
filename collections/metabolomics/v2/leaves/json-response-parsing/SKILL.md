@@ -1,7 +1,7 @@
 ---
 name: json-response-parsing
-description: Use when when querying a TensorFlow Serving metadata endpoint or similar
-  REST API that returns JSON-formatted model metadata, and you need to programmatically
+description: Use when querying a TensorFlow Serving metadata endpoint or similar REST
+  API that returns JSON-formatted model metadata, and you need to programmatically
   extract and validate input/output layer names against known specifications (e.
 license: CC-BY-4.0
 metadata:
@@ -19,9 +19,6 @@ derived_from:
   title: CSCS / deep CNN natural-product annotation
 - doi: 10.1186/s13321-023-00738-4
   title: ''
-evidence_spans:
-- Make sure you have python installed
-- We pass through tensorflow serving at this url
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -22,8 +22,6 @@ metadata:
 derived_from:
 - doi: 10.48550/arxiv.2507.06853
   title: DiffSpectra
-evidence_spans:
-- github.com/AzureLeon1/DiffSpectra
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

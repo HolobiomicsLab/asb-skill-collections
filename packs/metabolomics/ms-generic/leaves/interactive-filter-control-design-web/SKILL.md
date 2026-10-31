@@ -1,6 +1,6 @@
 ---
 name: interactive-filter-control-design-web
-description: Use when when you have a web-based visualization of aligned mass spectrometry
+description: Use when you have a web-based visualization of aligned mass spectrometry
   peaks (m/z, intensity, retention time, alignment quality metrics) and need users
   to interactively explore subsets of those peaks by applying constraints on intensity
   thresholds, alignment score cutoffs, or peak.
@@ -23,9 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.5c00237
   title: MMSA
-evidence_spans:
-- interactive visualization
-- interactive visualization and analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,7 +1,7 @@
 ---
 name: mzml-data-access-abstraction
-description: Use when when building or extending a mass spectrometry data parser that
-  must support multiple mzML storage formats (plain .mzML, indexed .mzML.gz, standard-compressed
+description: Use when building or extending a mass spectrometry data parser that must
+  support multiple mzML storage formats (plain .mzML, indexed .mzML.gz, standard-compressed
   .mzML.
 license: CC-BY-4.0
 metadata:
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
-evidence_spans:
-- import sqlite3
-- import xml.etree.ElementTree as et
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

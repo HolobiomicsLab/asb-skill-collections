@@ -1,8 +1,8 @@
 ---
 name: fragmentation-pattern-spectral-matching
-description: Use when when you have detected m/z values from LC-IM-MS/MS that match
-  a candidate CCS prediction database but require structural confirmation. Apply this
-  skill to disambiguate isomers (e.
+description: Use when you have detected m/z values from LC-IM-MS/MS that match a candidate
+  CCS prediction database but require structural confirmation. Apply this skill to
+  disambiguate isomers (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3647
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
-evidence_spans:
-- collection of Python scripts
-- All functions are implemented in jupyter notebook
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

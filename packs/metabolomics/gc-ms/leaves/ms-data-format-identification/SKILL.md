@@ -1,6 +1,6 @@
 ---
 name: ms-data-format-identification
-description: 'Use when when receiving raw MS data files of unknown or mixed acquisition
+description: 'Use when receiving raw MS data files of unknown or mixed acquisition
   modalities and needing to route each to its corresponding analysis pipeline. Specifically,
   apply this skill when: (1) input files arrive without documented instrument type
   or chromatographic/mobility dimensionality;'
@@ -23,10 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
-evidence_spans:
-- mzmine is an open-source software for mass spectrometry data processing
-- JDK version-25-blue
-- JavaFX version-24
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

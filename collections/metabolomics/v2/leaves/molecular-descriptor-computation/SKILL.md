@@ -1,6 +1,6 @@
 ---
 name: molecular-descriptor-computation
-description: Use when when you have a query mass spectrum and a set of candidate molecular
+description: Use when you have a query mass spectrum and a set of candidate molecular
   structures (as SMILES or 2D/3D coordinates), and you need to prepare them for cross-view
   similarity comparison or machine learning-based ranking.
 license: CC-BY-4.0
@@ -23,8 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2025.11.12.688047v1
   title: MVP
-evidence_spans:
-- 'python_version: 3.11.7'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

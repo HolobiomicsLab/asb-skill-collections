@@ -1,9 +1,9 @@
 ---
 name: sequence-file-inventory-enumeration
-description: Use when when you maintain a repository with local sequence files and
-  need to determine which sequences are not publicly available in NCBI GenBank/RefSeq
-  databases—for example, to distinguish proprietary or supplementary sequence data
-  from publicly registered entries, or to create an inventory.
+description: Use when you maintain a repository with local sequence files and need
+  to determine which sequences are not publicly available in NCBI GenBank/RefSeq databases—for
+  example, to distinguish proprietary or supplementary sequence data from publicly
+  registered entries, or to create an inventory manifest.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1093/nar/gkac1049
   title: MIBiG 3.0
-evidence_spans:
-- GenBank/RefSeq databases
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

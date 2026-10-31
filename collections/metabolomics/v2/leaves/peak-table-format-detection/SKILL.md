@@ -1,9 +1,8 @@
 ---
 name: peak-table-format-detection
-description: Use when when receiving a peak or feature table output from an unknown
-  or variable upstream peak-picking tool, and you need to route it to the correct
-  ingestion adapter (e.g., in LipidMatch) to normalize and validate it before lipid
-  identification.
+description: Use when receiving a peak or feature table output from an unknown or
+  variable upstream peak-picking tool, and you need to route it to the correct ingestion
+  adapter (e.g., in LipidMatch) to normalize and validate it before lipid identification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -23,12 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch
-evidence_spans:
-- LipidMatch can be used with various peak picking software (for example MZmine, XCMS,
-  MS-DIAL, and Compound Discoverer)
-- for example MZmine, XCMS, MS-DIAL, and Compound Discoverer
-- LipidMatch identifications are obtained by matching experimental fragment m/z values
-  with simulated library m/z values
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

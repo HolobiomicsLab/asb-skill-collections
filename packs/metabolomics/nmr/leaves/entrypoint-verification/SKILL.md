@@ -1,6 +1,6 @@
 ---
 name: entrypoint-verification
-description: Use when when you have obtained a Python package from a repository (e.g.,
+description: Use when you have obtained a Python package from a repository (e.g.,
   via git clone) and need to confirm that the documented Python version constraint
   and pinned dependency versions are sufficient to execute the package's main entry
   point (typically main.py or a console script).
@@ -24,11 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1002/nbm.70131
   title: ROIAL-NMR
-evidence_spans:
-- XlsxWriter 3.2.2
-- pandas 2.2.3
-- PyQt5 5.15.11
-- openpyxl 3.1.5
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

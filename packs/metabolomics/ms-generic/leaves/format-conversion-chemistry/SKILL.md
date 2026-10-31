@@ -1,9 +1,9 @@
 ---
 name: format-conversion-chemistry
-description: Use when when you have retrieved a user database entry (sequence or structure
+description: Use when you have retrieved a user database entry (sequence or structure
   data) from the MassSpecBlocks backend and need to enable mass spectra analysis in
   the open-source CycloBranch program, or when you need to export NRP sequences and
-  building-block annotations for consumption by external.
+  building-block annotations for consumption by external mass.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -26,10 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-021-00530-2
   title: MassSpecBlocks
-evidence_spans:
-- Backend is written in PHP with Symfony framework
-- Application is developed for Mysql 8 /MariaDB 10
-- export format for open source program CycloBranch from Jiří Novák
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

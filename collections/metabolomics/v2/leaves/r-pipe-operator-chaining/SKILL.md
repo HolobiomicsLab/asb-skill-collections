@@ -1,9 +1,9 @@
 ---
 name: r-pipe-operator-chaining
-description: Use when when you have a metabolomics dataset loaded into a SummarizedExperiment
+description: Use when you have a metabolomics dataset loaded into a SummarizedExperiment
   and need to apply a sequence of analysis steps (data loading, annotation, statistical
   analysis, visualization, reporting) in a reproducible, self-contained pipeline where
-  each function's output becomes the next.
+  each function's output becomes the next function's.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -20,11 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btab741
   title: maplet
-evidence_spans:
-- maplet is an R package
-- The toolbox builds upon the bioconductor package SummarizedExperiment (SE)
-- maplet is designed to work with a pipe operator - either the popular %>% operator
-  from the magrittr package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

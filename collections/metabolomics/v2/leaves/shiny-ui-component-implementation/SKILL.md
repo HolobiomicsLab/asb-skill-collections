@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1002/jrsm.1713
   title: Easy-Amanida
-evidence_spans:
-- developed with Shiny
-- R package Amanida
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

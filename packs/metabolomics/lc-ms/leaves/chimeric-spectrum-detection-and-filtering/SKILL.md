@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c00736
   title: DNMS2Purifier
-evidence_spans:
-- The program is written in R (ver 4.2.1).
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

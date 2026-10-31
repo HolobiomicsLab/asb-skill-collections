@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1002/jms.1777
   title: MassBank
-evidence_spans:
-- Validator from MassBank-web
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: build-automation-scripting
-description: Use when when you have a Windows-only .NET Framework 4.
+description: Use when you have a Windows-only .NET Framework 4.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -17,11 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
-evidence_spans:
-- AirdPro is written in C#
-- pwiz_bindings_cli.dll from the ProteoWizard project
-- based on pwiz_bindings_cli.dll from the ProteoWizard project.
-- XQuartz (for GUI display support)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

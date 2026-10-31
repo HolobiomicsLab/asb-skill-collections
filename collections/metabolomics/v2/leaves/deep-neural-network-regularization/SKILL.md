@@ -1,9 +1,9 @@
 ---
 name: deep-neural-network-regularization
-description: Use when when training a DNN on molecular properties (e.g., retention
-  time) using high-dimensional feature sets (>2000 fingerprints + descriptors) where
-  test performance is critical and overfitting risk is high due to model capacity
-  or limited validation data;
+description: Use when training a DNN on molecular properties (e.g., retention time)
+  using high-dimensional feature sets (>2000 fingerprints + descriptors) where test
+  performance is critical and overfitting risk is high due to model capacity or limited
+  validation data;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
-evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
-  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

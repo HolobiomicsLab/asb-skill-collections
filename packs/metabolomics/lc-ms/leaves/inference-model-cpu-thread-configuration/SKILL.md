@@ -1,8 +1,8 @@
 ---
 name: inference-model-cpu-thread-configuration
-description: Use when when running Mass2SMILES inference on a TensorFlow-CPU build
-  (e.g., delser292/mass2smiles:final container) and you need to optimize inference
-  speed by controlling CPU core allocation.
+description: Use when running Mass2SMILES inference on a TensorFlow-CPU build (e.g.,
+  delser292/mass2smiles:final container) and you need to optimize inference speed
+  by controlling CPU core allocation.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2023.07.06.547963v1
   title: Mass2SMILES
-evidence_spans:
-- open-source Python based deep learning approach
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

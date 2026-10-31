@@ -1,8 +1,9 @@
 ---
 name: mz-retention-time-tolerance-parameter-configuration
-description: Use when when invoking Asari to process centroid mzML files for the first
+description: Use when invoking Asari to process centroid mzML files for the first
   time in a PCPFM experiment, or when RT and m/z accuracy characteristics of your
-  LC-MS instrument differ from the pipeline defaults (e.
+  LC-MS instrument differ from the pipeline defaults (e.g., instruments with lower
+  mass resolution, longer RT drift, or non-standard chromatography).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -22,9 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
-evidence_spans:
-- pcpfm asari -i ./my_experiment
-- Python-Centric Pipeline for Metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

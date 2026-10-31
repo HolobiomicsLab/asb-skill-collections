@@ -1,6 +1,6 @@
 ---
 name: graphical-interface-error-handling
-description: 'Use when when building a standalone desktop application with a graphical
+description: 'Use when building a standalone desktop application with a graphical
   user interface that depends on external binary tools or libraries, and you need
   to prevent user confusion from cryptic runtime errors. Specifically: when your GUI
   framework (e.'
@@ -16,7 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1002/cpz1.70009
   title: LipidOne 2.0
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

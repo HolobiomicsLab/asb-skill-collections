@@ -1,7 +1,7 @@
 ---
 name: spectral-peak-shape-modeling
-description: Use when when generating synthetic LC/GC-MS .mzML files from MoNA or
-  HMDB spectral records where you need to compute absolute ground-truth maximum intensity
+description: Use when generating synthetic LC/GC-MS .mzML files from MoNA or HMDB
+  spectral records where you need to compute absolute ground-truth maximum intensity
   (sim_ins) for each peak while accounting for chromatographic band broadening, peak
   tailing, and retention-time dispersion.
 license: CC-BY-4.0
@@ -25,11 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
-evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
-  BiocManager::install("mzrtsim")
-- The underlying engine handles binary data encoding via the `base64enc` package
-- github.com__yufree__mzrtsim
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

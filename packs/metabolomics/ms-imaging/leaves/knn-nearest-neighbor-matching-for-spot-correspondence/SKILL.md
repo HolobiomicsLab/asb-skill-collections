@@ -1,6 +1,6 @@
 ---
 name: knn-nearest-neighbor-matching-for-spot-correspondence
-description: Use when when integrating two spatial omics modalities (ST and SM) measured
+description: Use when integrating two spatial omics modalities (ST and SM) measured
   on the same tissue sample but at different spatial resolutions or spot coordinates.
 license: CC-BY-4.0
 metadata:
@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-63915-z
   title: SpatialMETA
-evidence_spans:
-- spatialMETA is a method for integrating spatial multi-omics data
-- spatialmeta.pp.calculate_qc_metrics_sm
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

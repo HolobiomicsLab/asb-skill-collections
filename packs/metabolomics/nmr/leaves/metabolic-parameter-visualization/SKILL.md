@@ -1,9 +1,9 @@
 ---
 name: metabolic-parameter-visualization
-description: Use when when you have paired NMR metabolite measurements and corresponding
+description: Use when you have paired NMR metabolite measurements and corresponding
   processing metadata (pre-centrifugation delay, post-centrifugation delay, sample
   type, cohort) for a blood sample cohort and need to determine which metabolites
-  remain stable across the expected or observed delay range, or.
+  remain stable across the expected or observed delay range, or to.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c04938
   title: PRIMA-Panel
-evidence_spans:
-- Pre-Analytical Investigator for NMR-based Metabolomics (PRIMA-Panel)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

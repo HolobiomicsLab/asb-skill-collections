@@ -26,14 +26,6 @@ derived_from:
   title: MetaNet
 - doi: 10.1016/j.cmpb.2025.108672
   title: ''
-evidence_spans:
-- MetaNet, a high-performance R package that unifies network construction, visualization,
-  and analysis across diverse omics layers.
-- MetaNet, a high-performance R package that unifies network construction, visualization,
-  and analysis across diverse omics layers
-- MetaNet, a high-performance R package
-- MInfer is an R package
-- MInfer is an R package designed for analyzing metabolomics data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

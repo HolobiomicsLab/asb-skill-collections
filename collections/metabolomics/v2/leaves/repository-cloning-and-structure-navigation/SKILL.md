@@ -1,7 +1,7 @@
 ---
 name: repository-cloning-and-structure-navigation
-description: Use when when starting a fresh ENPKG installation, you have a GitHub
-  URL (e.g., https://github.com/enpkg/enpkg_full or https://github.
+description: Use when starting a fresh ENPKG installation, you have a GitHub URL (e.g.,
+  https://github.com/enpkg/enpkg_full or https://github.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3439
@@ -28,8 +28,6 @@ derived_from:
   title: enpkg
 - doi: 10.5281/zenodo.10018590
   title: ''
-evidence_spans:
-- Welcome to the ENPKG Full Workflow!
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

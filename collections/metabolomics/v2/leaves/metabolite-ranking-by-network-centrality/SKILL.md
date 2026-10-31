@@ -1,7 +1,7 @@
 ---
 name: metabolite-ranking-by-network-centrality
-description: Use when when you have a directed metabolic network (digraph) and want
-  to identify which metabolites are most central to observed perturbations; specifically
+description: Use when you have a directed metabolic network (digraph) and want to
+  identify which metabolites are most central to observed perturbations; specifically
   when you have (1) a global network as an edge list, (2) seed nodes with known or
   hypothesized perturbation (e.
 license: CC-BY-4.0
@@ -17,8 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c04131
   title: FNICM
-evidence_spans:
-- FNICM is a tool to identify core nodes from significantly perturbed subnetwork.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

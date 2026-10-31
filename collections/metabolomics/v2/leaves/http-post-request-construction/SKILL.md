@@ -23,8 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-016-0174-y
   title: ClassyFire
-evidence_spans:
-- in order to use the commands below in a Ruby console
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

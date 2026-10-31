@@ -1,9 +1,9 @@
 ---
 name: orchestrator-architecture-design
-description: Use when when building a multi-backend visualization library where users
-  specify both a plot type (spectrum, chromatogram, peakmap) and a backend (matplotlib
-  for static output, Bokeh or Plotly for interactive), and you need to avoid code
-  duplication across backends while keeping the user-facing API.
+description: Use when building a multi-backend visualization library where users specify
+  both a plot type (spectrum, chromatogram, peakmap) and a backend (matplotlib for
+  static output, Bokeh or Plotly for interactive), and you need to avoid code duplication
+  across backends while keeping the user-facing API.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -23,7 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

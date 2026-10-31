@@ -1,6 +1,6 @@
 ---
 name: mass-tolerance-window-calibration
-description: Use when when implementing adduct detection in LC-MS metabolomics workflows,
+description: Use when implementing adduct detection in LC-MS metabolomics workflows,
   after defining theoretical adduct mass offsets (e.g., [M+NH4]+ at +17.0266 Da, [M+K]+
   at +38.9815 Da), and before assigning adduct labels to a feature table.
 license: CC-BY-4.0
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-024-50111-8
   title: FERMO
-evidence_spans:
-- No discussion section present in document
-- See our organization-level document on [CONTRIBUTING]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

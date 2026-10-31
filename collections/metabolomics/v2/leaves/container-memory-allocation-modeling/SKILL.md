@@ -1,6 +1,6 @@
 ---
 name: container-memory-allocation-modeling
-description: Use when when configuring a multi-worker online deployment of a containerized
+description: Use when configuring a multi-worker online deployment of a containerized
   Streamlit application (e.g., OpenMS workflows using RQ workers), you need to determine
   how many RQ worker processes can safely run in a single container given available
   RAM.
@@ -17,7 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

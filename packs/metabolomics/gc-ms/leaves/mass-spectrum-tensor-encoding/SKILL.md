@@ -1,8 +1,9 @@
 ---
 name: mass-spectrum-tensor-encoding
-description: Use when when you have parsed EI-MS spectrum data (m/z and intensity
-  values) and need to feed it into a pre-trained MWFormer transformer model for direct
-  molecular weight prediction.
+description: Use when you have parsed EI-MS spectrum data (m/z and intensity values)
+  and need to feed it into a pre-trained MWFormer transformer model for direct molecular
+  weight prediction. Use this skill as the final preprocessing step before model inference,
+  after spectrum parsing but before forward pass.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -25,10 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c03781
   title: MWFormer
-evidence_spans:
-- '[Anaconda](https://www.anaconda.com) for Python 3.9'
-- Install [Git](https://git-scm.com/downloads)
-- conda install -c conda-forge rdkit
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

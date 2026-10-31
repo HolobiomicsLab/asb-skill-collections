@@ -1,6 +1,6 @@
 ---
 name: unit-test-validation
-description: Use when when you need to confirm that a research tool or package maintains
+description: Use when you need to confirm that a research tool or package maintains
   a functioning test suite, especially before adopting it for downstream analysis
   or before contributing modifications. Triggered by the presence of a CI workflow
   badge (e.
@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-025-02785-1
   title: MassQL
-evidence_spans:
-- The Mass Spec Query Language (MassQL) is a domain specific language meant to be
-  a succinct way to express a query in a mass spectrometry centric fashion.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

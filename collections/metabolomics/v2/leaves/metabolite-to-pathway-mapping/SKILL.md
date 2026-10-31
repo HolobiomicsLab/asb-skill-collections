@@ -21,11 +21,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
-evidence_spans:
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
-  database queries of pathways
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
-  database queries of pathways,
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

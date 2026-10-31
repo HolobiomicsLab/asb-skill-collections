@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btad523
   title: metGWAS 1.0
-evidence_spans:
-- An R workflow for network-driven over-representation analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

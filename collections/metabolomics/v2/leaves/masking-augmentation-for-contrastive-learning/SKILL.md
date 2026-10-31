@@ -1,6 +1,6 @@
 ---
 name: masking-augmentation-for-contrastive-learning
-description: Use when when training a transformer encoder on tandem mass spectra (MS/MS)
+description: Use when training a transformer encoder on tandem mass spectra (MS/MS)
   and you need to generate positive sample pairs for contrastive learning without
   access to labeled chemical or spectral analogues.
 license: CC-BY-4.0
@@ -23,9 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c02426
   title: MSBERT
-evidence_spans:
-- '[Anaconda](https://www.anaconda.com) for Python 3.12'
-- Install [Git](https://git-scm.com/downloads)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,7 +1,7 @@
 ---
 name: feature-table-construction-for-multivariate-analysis
-description: Use when when you have high-resolution mass-spectrometry (HRMS) breath
-  data in mzML or mzXML format from multiple subjects or conditions and need to prepare
+description: Use when you have high-resolution mass-spectrometry (HRMS) breath data
+  in mzML or mzXML format from multiple subjects or conditions and need to prepare
   a sample-by-feature intensity matrix for downstream statistical comparison, biomarker
   discovery, or classification tasks.
 license: CC-BY-4.0
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.4c00152
   title: BreathXplorer
-evidence_spans:
-- '[![PyPI](https://img.shields.io/pypi/pyversions/breathXplorer)]'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

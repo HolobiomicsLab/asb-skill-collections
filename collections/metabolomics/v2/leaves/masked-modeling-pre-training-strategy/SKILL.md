@@ -1,8 +1,8 @@
 ---
 name: masked-modeling-pre-training-strategy
-description: Use when when you have unlabeled molecular structure data (SMILES or
-  molecular graphs) from natural products and need to learn task-agnostic representations
-  that capture both evolutionary (scaffold-level) and structural (side-chain) information
+description: Use when you have unlabeled molecular structure data (SMILES or molecular
+  graphs) from natural products and need to learn task-agnostic representations that
+  capture both evolutionary (scaffold-level) and structural (side-chain) information
   before finetuning on downstream classification or.
 license: CC-BY-4.0
 metadata:
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
-evidence_spans:
-- Fork the repository
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

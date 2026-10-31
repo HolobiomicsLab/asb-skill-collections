@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c03225
   title: SMART 2.0
-evidence_spans:
-- SMART written in R and R GUI has been developed as user-friendly software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

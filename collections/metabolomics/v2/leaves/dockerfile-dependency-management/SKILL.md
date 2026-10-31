@@ -1,6 +1,6 @@
 ---
 name: dockerfile-dependency-management
-description: Use when when deploying a Shiny application with mixed R and Python dependencies
+description: Use when deploying a Shiny application with mixed R and Python dependencies
   (e.g., pmartR backend with Kaleido for plot export) to production or CI/CD pipelines,
   and when some dependencies are under active development alongside the application.
 license: CC-BY-4.0
@@ -23,13 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.3c00512
   title: PMart
-evidence_spans:
-- Shiny GUI implementation of the pmartR R package.
-- Shiny GUI implementation of the pmartR R package
-- Remove orca in favor of Kaleido
-- the bulk of the functionality of the package to be available to the user without
-  the need for familiarity with R or the package itself
-- '#### Docker Containers'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

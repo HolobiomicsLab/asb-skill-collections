@@ -1,6 +1,6 @@
 ---
 name: gnps-repository-querying
-description: Use when when you have a USI string (e.g., mzspec:GNPS:TASK-d93bdbb5cdda40e48975e6e18a45c3ce-...
+description: Use when you have a USI string (e.g., mzspec:GNPS:TASK-d93bdbb5cdda40e48975e6e18a45c3ce-...
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3200
@@ -17,9 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-021-01339-5
   title: GNPS Dashboard
-evidence_spans:
-- GNPS LCMS Visualization Dashboard
-- GNPS Analysis Tasks - [mzspec:GNPS:TASK-d93bdbb5cdda40e48975e6e18a45c3ce
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

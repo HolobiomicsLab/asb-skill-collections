@@ -1,7 +1,7 @@
 ---
 name: csv-delimiter-parsing-and-configuration
-description: Use when when uploading a new mass spectrometry data file to Punc'data
-  in CSV or delimited-text format, before attempting to map columns to their semantic
+description: Use when uploading a new mass spectrometry data file to Punc'data in
+  CSV or delimited-text format, before attempting to map columns to their semantic
   roles (m/z value, intensity, formula).
 license: CC-BY-4.0
 metadata:
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.5c00151
   title: Punc’data
-evidence_spans:
-- 'Source: github:github.com__WTVoe__puncdata'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

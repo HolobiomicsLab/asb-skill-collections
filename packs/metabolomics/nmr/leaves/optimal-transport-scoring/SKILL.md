@@ -1,9 +1,8 @@
 ---
 name: optimal-transport-scoring
-description: Use when when you have an observed NMR mixture spectrum and one or more
-  candidate reconstructed spectra (each formed by combining single-compound reference
-  spectra from a library), and you need a scalar similarity score to rank or select
-  the approximation.
+description: Use when you have an observed NMR mixture spectrum and one or more candidate
+  reconstructed spectra (each formed by combining single-compound reference spectra
+  from a library), and you need a scalar similarity score to rank or select the approximation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -23,8 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c01652
   title: mcfNMR
-evidence_spans:
-- github.com__GeoMetabolomics-ICBM__mcfNMR
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

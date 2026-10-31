@@ -1,8 +1,7 @@
 ---
 name: detection-limit-threshold-definition
-description: Use when when preparing metabolomics abundance tables with left-censored
-  missingness (values below instrument detection limit or quantification limit) for
-  imputation.
+description: Use when preparing metabolomics abundance tables with left-censored missingness
+  (values below instrument detection limit or quantification limit) for imputation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -29,9 +28,6 @@ derived_from:
   title: GSimp
 - doi: 10.1186/s12859-017-1547-6
   title: ''
-evidence_spans:
-- '**GSimp.R** contains the core functions for GSimp'
-- GSimp.R contains the core functions for GSimp
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

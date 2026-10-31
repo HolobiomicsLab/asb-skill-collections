@@ -329,9 +329,9 @@ flat `member_skills` list, not a per-stage field. See
 
 ## 3. Use — apply the skill
 
-Read `leaves/<slug>/SKILL.md`: the body is the procedure; the frontmatter lists
-`tools` (install/invoke targets), `derived_from` (source DOIs), and
-`evidence_spans` (verbatim anchors). Use `tools_index.json` for canonical
+Read `leaves/<slug>/SKILL.md`: the body is the procedure and carries the
+verbatim evidence lines; the frontmatter lists `metadata.tools` (install/invoke
+targets) and `derived_from` (source DOIs). Use `tools_index.json` for canonical
 install URLs.
 
 ---
@@ -471,7 +471,7 @@ per-build in `build_manifest.json`). The raw ASB capsules + benchmark layer
 ## Provenance & policy
 
 Skills are CC-BY-4.0, EDAM-annotated, and `derived_from` a source DOI with
-verbatim `evidence_spans`. Non-open-access sources and ungrounded skills were
+verbatim evidence lines in the body. Non-open-access sources and ungrounded skills were
 held out at release. `corpus.yaml` records the per-paper access basis
 (`repo-oa` — the redistributable source repository was cloned at build time);
 `gate_report.json` records the passing release-gate verdict (access-tier,

@@ -1,9 +1,9 @@
 ---
 name: cmake-build-configuration-for-extensions
-description: Use when when you have C++ source code that needs to be wrapped as a
-  Python extension module (e.g., pyOpenMS nanobind bindings), and you need to automate
-  the build process via CMake to handle compilation, linking, and module artifact
-  generation across multiple platforms (Windows, macOS, Linux).
+description: Use when you have C++ source code that needs to be wrapped as a Python
+  extension module (e.g., pyOpenMS nanobind bindings), and you need to automate the
+  build process via CMake to handle compilation, linking, and module artifact generation
+  across multiple platforms (Windows, macOS, Linux).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0227
@@ -19,7 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

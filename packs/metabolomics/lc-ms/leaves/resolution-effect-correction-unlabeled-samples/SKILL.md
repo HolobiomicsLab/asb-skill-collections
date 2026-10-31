@@ -1,9 +1,9 @@
 ---
 name: resolution-effect-correction-unlabeled-samples
-description: Use when when you have paired LC-MS data from both labeled (isotope-tracer
+description: Use when you have paired LC-MS data from both labeled (isotope-tracer
   dosed) and unlabeled (control) samples of the same analytes, and you want to correct
   FAM to true MDV while accounting for resolution effects from the mass spectrometer
-  (especially relevant for high-resolution instruments.
+  (especially relevant for high-resolution instruments like.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-019-2669-9
   title: ElemCor
-evidence_spans:
-- ElemCor is a software tool to correct LC-MS data in isotope labeling experiments.
-- ElemCor is a software tool to correct LC-MS data in isotope labeling experiments
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

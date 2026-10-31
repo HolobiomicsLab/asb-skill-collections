@@ -1,9 +1,9 @@
 ---
 name: spectrum-preprocessing-precursor-masking
-description: Use when when training a formula-prediction model with a frozen pretrained
+description: Use when training a formula-prediction model with a frozen pretrained
   TCN spectrum encoder and unfrozen FormulaEncoder and RescoreHead components, or
   when you suspect the model may use precursor intensity as a spurious feature rather
-  than fragment-pattern information for molecular formula.
+  than fragment-pattern information for molecular formula inference.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
-evidence_spans:
-- FIDDLE is a deep learning method for predicting molecular formulas from MS/MS spectra
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

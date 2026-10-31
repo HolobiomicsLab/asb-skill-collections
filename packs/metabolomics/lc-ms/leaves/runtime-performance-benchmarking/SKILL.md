@@ -1,6 +1,6 @@
 ---
 name: runtime-performance-benchmarking
-description: Use when when you have implemented or adopted a new clustering or analysis
+description: Use when you have implemented or adopted a new clustering or analysis
   tool and need to validate that it meets stated runtime claims on a representative
   production-scale dataset. Particularly important when the tool uses hardware acceleration
   (GPU) and the claimed speedup is a core contribution;
@@ -21,11 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00612
   title: HyperSpec
-evidence_spans:
-- HyperSpec requires `Python 3.8+` with `CUDA` environment
-- HyperSpec requires `Python 3.8+` with `CUDA` environment.
-- github.com__wh-xu__Hyper-Spec
-- github.com/wh-xu/Hyper-Spec
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

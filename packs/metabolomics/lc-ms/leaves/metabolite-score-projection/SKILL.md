@@ -26,9 +26,6 @@ derived_from:
   title: MiMIR
 - doi: 10.1038/s41467-019-11311-9
   title: ''
-evidence_spans:
-- '[![R-CMD-check](https://github.com/DanieleBizzarri/MiMIR/actions/workflows/R-CMD-check.yaml/badge.svg)]'
-- github.com/DanieleBizzarri/MiMIR
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

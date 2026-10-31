@@ -1,6 +1,6 @@
 ---
 name: hmm-profile-database-querying
-description: Use when when you have BGC sequences (FASTA or GenBank format) or protein
+description: Use when you have BGC sequences (FASTA or GenBank format) or protein
   sequences and need to annotate them with biosynthetic or functional domains from
   a curated pHMM database (e.g., PFAM 35.0).
 license: CC-BY-4.0
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1093/gigascience/giaa154
   title: BiG-SLiCE
-evidence_spans:
-- Switching from HMMER to [pyHMMER](https://github.com/althonos/pyhmmer)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

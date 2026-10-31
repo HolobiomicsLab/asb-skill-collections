@@ -36,16 +36,6 @@ derived_from:
   title: ''
 - doi: 10.1021/acs.jproteome.1c00425
   title: ''
-evidence_spans:
-- library(mspcompiler)
-- Read the msp file into R.
-- MS-DIAL friendly msp file
-- organize them into a neat and up-to-date msp file that can be used in MS-DIAL.
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
-  spectrometry data files
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
-  spectrometry data files (MS-files) from drift tube (DT) and structure for lossless
-  ion manipulations (SLIM) IM-MS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

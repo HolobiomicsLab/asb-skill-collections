@@ -1,6 +1,6 @@
 ---
 name: r-ggplot2-multi-dimension-encoding
-description: Use when when you have tabular GO enrichment or gene set analysis results
+description: Use when you have tabular GO enrichment or gene set analysis results
   with at least 3–4 quantitative or categorical dimensions (e.
 license: CC-BY-4.0
 metadata:
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.3389/fgene.2022.957317
   title: GraphBio
-evidence_spans:
-- GraphBio---A modular and scalable R Shiny dashboard
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

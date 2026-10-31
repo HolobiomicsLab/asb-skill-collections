@@ -21,10 +21,6 @@ derived_from:
   title: ASICS
 - doi: 10.1007/s11306-017-1244-5
   title: ''
-evidence_spans:
-- The **R** package `ASICS` is a fully automated procedure to identify and quantify
-  metabolites in $^1$H 1D-NMR spectra
-- The **R** package `ASICS`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

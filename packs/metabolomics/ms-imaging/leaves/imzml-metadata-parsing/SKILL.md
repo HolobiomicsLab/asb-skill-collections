@@ -23,11 +23,6 @@ derived_from:
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
-evidence_spans:
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
-  defined threshold
-- '|pewpew| is an open-source LA-ICP-MS data import and processing application'
-- based on the python library pewlib_
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

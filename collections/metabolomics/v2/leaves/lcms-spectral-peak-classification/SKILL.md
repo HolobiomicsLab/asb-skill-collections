@@ -22,8 +22,6 @@ derived_from:
   title: DNN peak classifier
 - doi: 10.25345/C5FD2F
   title: ''
-evidence_spans:
-- Deep Neural Networks for Classification of LC-MS Spectral Peaks
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

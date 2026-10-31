@@ -17,10 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
-evidence_spans:
-- Clone the Met-ID repository
-- GitHub Actions CI workflow (main.yml)
-- Powered by RDKit
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

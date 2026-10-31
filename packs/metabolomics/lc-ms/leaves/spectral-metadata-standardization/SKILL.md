@@ -31,13 +31,6 @@ derived_from:
   title: Metabolomics Spectrum Resolver
 - doi: 10.21147/j.issn.1000-9604.2023.05.11
   title: ''
-evidence_spans:
-- GNPS Molecular Networking Clustered Spectra
-- GNPS Spectral Libraries
-- MassBank Library Spectra
-- MetaboLights Dataset Spectra
-- Metabolomics Workbench Dataset Spectra
-- MS2LDA Reference Motifs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -22,13 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
-evidence_spans:
-- Targeted peak integration of LC-MS data using TARDIS
-- loads MS data as `Spectra` objects so it's easily integrated with other tools
-- rmarkdown::html_document
-- Quick start for targeted peak integration of LC-MS data using TARDIS
-- It makes use of an established retention time correction algorithm from the `xcms`
-  package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

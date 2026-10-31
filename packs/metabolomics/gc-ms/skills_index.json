@@ -2,7 +2,7 @@
  {
   "slug": "2d-tic-preprocessing",
   "name": "2d-tic-preprocessing",
-  "description": "Use when when you have raw GCxGC-MS data imported from NetCDF into a 2D-TIC chromatogram object and need to remove chemical and instrumental noise (column bleeding, baseline drift, detector contamination) to reveal metabolite differences between sample groups for downstream multiway PCA or.",
+  "description": "Use when you have raw GCxGC-MS data imported from NetCDF into a 2D-TIC chromatogram object and need to remove chemical and instrumental noise (column bleeding, baseline drift, detector contamination) to reveal metabolite differences between sample groups for downstream multiway PCA or supervised.",
   "edam_operation": "http://edamontology.org/operation_3215",
   "edam_topics": [
    "http://edamontology.org/topic_0091",
@@ -96,7 +96,7 @@
  {
   "slug": "algorithm-parameter-comparison-analysis",
   "name": "algorithm-parameter-comparison-analysis",
-  "description": "Use when when you need to evaluate how a specific algorithm parameter (such as SearchMolecularFormulas first_hit mode) affects the quantity and quality of molecular formula assignments on a given spectrum or dataset.",
+  "description": "Use when you need to evaluate how a specific algorithm parameter (such as SearchMolecularFormulas first_hit mode) affects the quantity and quality of molecular formula assignments on a given spectrum or dataset.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -220,7 +220,7 @@
  {
   "slug": "automated-reaction-network-exploration",
   "name": "automated-reaction-network-exploration",
-  "description": "Use when when you have a molecular geometry (XYZ format) and need to predict electron ionization (EI) mass spectrum fragmentation patterns by exhaustively sampling conformational space and reaction intermediates.",
+  "description": "Use when you have a molecular geometry (XYZ format) and need to predict electron ionization (EI) mass spectrum fragmentation patterns by exhaustively sampling conformational space and reaction intermediates.",
   "edam_operation": "http://edamontology.org/operation_2426",
   "edam_topics": [
    "http://edamontology.org/topic_3314",
@@ -255,7 +255,7 @@
  {
   "slug": "axis-label-format-customization",
   "name": "axis-label-format-customization",
-  "description": "Use when when designing injection plate layouts in InjectionDesign and needing to display sample positions with clear, domain-appropriate labels on the y-axis (e.g., row identifiers, well coordinates, or sample indices).",
+  "description": "Use when designing injection plate layouts in InjectionDesign and needing to display sample positions with clear, domain-appropriate labels on the y-axis (e.g., row identifiers, well coordinates, or sample indices).",
   "edam_operation": "",
   "edam_topics": [],
   "tools": [
@@ -277,7 +277,7 @@
  {
   "slug": "baseline-comparison-analysis",
   "name": "baseline-comparison-analysis",
-  "description": "Use when when you have trained a candidate model (e.g., an ensemble, a new architecture) and need to demonstrate its advantage over published or reference implementations on the same test data.",
+  "description": "Use when you have trained a candidate model (e.g., an ensemble, a new architecture) and need to demonstrate its advantage over published or reference implementations on the same test data.",
   "edam_operation": "http://edamontology.org/operation_3809",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -308,7 +308,7 @@
  {
   "slug": "baseline-correction-algorithm-selection",
   "name": "baseline-correction-algorithm-selection",
-  "description": "Use when when you have imported a raw GCxGC-MS chromatogram as a 2D-TIC (2D Total Intensity Chromatogram) object from a NetCDF file and observe steady or increasing baseline intensity caused by instrumental contamination, column bleeding, or thermal drift.",
+  "description": "Use when you have imported a raw GCxGC-MS chromatogram as a 2D-TIC (2D Total Intensity Chromatogram) object from a NetCDF file and observe steady or increasing baseline intensity caused by instrumental contamination, column bleeding, or thermal drift.",
   "edam_operation": "http://edamontology.org/operation_3215",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -365,7 +365,7 @@
  {
   "slug": "baseline-model-training-and-evaluation",
   "name": "baseline-model-training-and-evaluation",
-  "description": "Use when when you need to establish comparable performance baselines for a novel spectrum prediction model and require fair comparison across multiple baseline architectures. Trigger this skill when: (1) you have a new spectrum prediction approach (e.g., ICEBERG, SCARF) to benchmark;",
+  "description": "Use when you need to establish comparable performance baselines for a novel spectrum prediction model and require fair comparison across multiple baseline architectures. Trigger this skill when: (1) you have a new spectrum prediction approach (e.g., ICEBERG, SCARF) to benchmark;",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_0091",
@@ -430,7 +430,7 @@
  {
   "slug": "batch-effect-matrix-construction",
   "name": "batch-effect-matrix-construction",
-  "description": "Use when when you need to generate synthetic metabolomics feature tables with quantified batch effects for validating batch-correction methods. Use this skill when: (1) you want reproducible, ground-truth batch effects overlaid on condition-only variation;",
+  "description": "Use when you need to generate synthetic metabolomics feature tables with quantified batch effects for validating batch-correction methods. Use this skill when: (1) you want reproducible, ground-truth batch effects overlaid on condition-only variation;",
   "edam_operation": "http://edamontology.org/operation_3434",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -460,7 +460,7 @@
  {
   "slug": "binary-data-base64-encoding",
   "name": "binary-data-base64-encoding",
-  "description": "Use when when converting simulated or real LC/GC-MS spectral data (m/z–retention-time intensity matrices) into mzML format for archival, sharing, or downstream processing.",
+  "description": "Use when converting simulated or real LC/GC-MS spectral data (m/z–retention-time intensity matrices) into mzML format for archival, sharing, or downstream processing.",
   "edam_operation": "http://edamontology.org/operation_0335",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -631,7 +631,7 @@
  {
   "slug": "chemical-identifier-unification",
   "name": "chemical-identifier-unification",
-  "description": "Use when when you have raw GC-MS output (CSV with columns: Component.RT, Base.Peak.MZ, Component.Area, Compound.Name, Match.Factor, File.",
+  "description": "Use when you have raw GC-MS output (CSV with columns: Component.RT, Base.Peak.MZ, Component.Area, Compound.Name, Match.Factor, File.",
   "edam_operation": "http://edamontology.org/operation_3280",
   "edam_topics": [
    "http://edamontology.org/topic_0625",
@@ -664,7 +664,7 @@
  {
   "slug": "chemical-identifier-verification",
   "name": "chemical-identifier-verification",
-  "description": "Use when when you have a list of chemically known compounds and need to validate that an MS processing pipeline (e.g., mzExacto) correctly retrieves their characteristic m/z, retention time, match factor, and area values from GC-MS data.",
+  "description": "Use when you have a list of chemically known compounds and need to validate that an MS processing pipeline (e.g., mzExacto) correctly retrieves their characteristic m/z, retention time, match factor, and area values from GC-MS data.",
   "edam_operation": "http://edamontology.org/operation_3629",
   "edam_topics": [
    "http://edamontology.org/topic_0769",
@@ -696,7 +696,7 @@
  {
   "slug": "chemical-mass-tolerance-matching",
   "name": "chemical-mass-tolerance-matching",
-  "description": "Use when when you have a metabolomics peak list (m/z values with optional retention times) from LC-MS or GC-MS and want to filter a computationally expanded chemical library to only compounds whose calculated masses (accounting for ionization adducts) fall within a defined tolerance of observed.",
+  "description": "Use when you have a metabolomics peak list (m/z values with optional retention times) from LC-MS or GC-MS and want to filter a computationally expanded chemical library to only compounds whose calculated masses (accounting for ionization adducts) fall within a defined tolerance of observed peaks.",
   "edam_operation": "http://edamontology.org/operation_3767",
   "edam_topics": [
    "http://edamontology.org/topic_0602",
@@ -729,7 +729,7 @@
  {
   "slug": "chemical-match-score-interpretation",
   "name": "chemical-match-score-interpretation",
-  "description": "Use when when you have query chemicals identified by GC-MS (with Match.Factor values) and need to verify structural similarity against a reference chemical library to confirm compound identity or detect structural analogs (e.g., isomers or homologs).",
+  "description": "Use when you have query chemicals identified by GC-MS (with Match.Factor values) and need to verify structural similarity against a reference chemical library to confirm compound identity or detect structural analogs (e.g., isomers or homologs).",
   "edam_operation": "http://edamontology.org/operation_3802",
   "edam_topics": [
    "http://edamontology.org/topic_0154",
@@ -839,7 +839,7 @@
  {
   "slug": "chemical-structure-fingerprint-comparison",
   "name": "chemical-structure-fingerprint-comparison",
-  "description": "Use when when you have MS/MS spectra with known chemical structures (InChIKeys or SMILES) and want to validate whether a novel or existing spectral similarity scoring method actually reflects true chemical structural similarity.",
+  "description": "Use when you have MS/MS spectra with known chemical structures (InChIKeys or SMILES) and want to validate whether a novel or existing spectral similarity scoring method actually reflects true chemical structural similarity.",
   "edam_operation": "http://edamontology.org/operation_3802",
   "edam_topics": [
    "http://edamontology.org/topic_0625",
@@ -1061,7 +1061,7 @@
  {
   "slug": "chromatographic-modality-classification",
   "name": "chromatographic-modality-classification",
-  "description": "Use when when ingesting raw or vendor-format mass spectrometry data files of unknown or mixed acquisition modality, and you need to automatically determine whether the input originated from liquid chromatography (LC), gas chromatography (GC), ion mobility spectrometry (IMS), or MS imaging (e.",
+  "description": "Use when ingesting raw or vendor-format mass spectrometry data files of unknown or mixed acquisition modality, and you need to automatically determine whether the input originated from liquid chromatography (LC), gas chromatography (GC), ion mobility spectrometry (IMS), or MS imaging (e.",
   "edam_operation": "http://edamontology.org/operation_3763",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -1283,7 +1283,7 @@
  {
   "slug": "chromatographic-peak-extraction-and-retention-time-filtering",
   "name": "chromatographic-peak-extraction-and-retention-time-filtering",
-  "description": "Use when when you have LC-MS/MS raw data (mzML or netCDF format) and need to isolate a specific compound's signal based on its known or suspected m/z value and retention time range.",
+  "description": "Use when you have LC-MS/MS raw data (mzML or netCDF format) and need to isolate a specific compound's signal based on its known or suspected m/z value and retention time range.",
   "edam_operation": "http://edamontology.org/operation_3215",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -1354,7 +1354,7 @@
  {
   "slug": "chromatographic-peak-resolution",
   "name": "chromatographic-peak-resolution",
-  "description": "Use when when you have loaded raw GC-MS data in netCDF or mzML format and visual or statistical inspection reveals overlapping chromatographic peaks (i.e., multiple m/z ions co-eluting at the same retention time window).",
+  "description": "Use when you have loaded raw GC-MS data in netCDF or mzML format and visual or statistical inspection reveals overlapping chromatographic peaks (i.e., multiple m/z ions co-eluting at the same retention time window).",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_0091",
@@ -1551,7 +1551,7 @@
  {
   "slug": "cohort-stratified-metabolic-performance-analysis",
   "name": "cohort-stratified-metabolic-performance-analysis",
-  "description": "Use when when you have uploaded a pre-analytical data table containing sample metadata, processing delay annotations (pre- and post-centrifugation times), and paired NMR metabolomic measurements for a plasma or serum cohort, and you need to determine how processing delays impact metabolite.",
+  "description": "Use when you have uploaded a pre-analytical data table containing sample metadata, processing delay annotations (pre- and post-centrifugation times), and paired NMR metabolomic measurements for a plasma or serum cohort, and you need to determine how processing delays impact metabolite stability.",
   "edam_operation": "http://edamontology.org/operation_3745",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -1945,7 +1945,7 @@
  {
   "slug": "control-flow-diagram-synthesis",
   "name": "control-flow-diagram-synthesis",
-  "description": "Use when when you need to understand how a multi-instrument mass spectrometry platform (such as mzmine) selectively routes data to different processing pipelines based on declared input type (LC, GC, IMS, or MS Imaging).",
+  "description": "Use when you need to understand how a multi-instrument mass spectrometry platform (such as mzmine) selectively routes data to different processing pipelines based on declared input type (LC, GC, IMS, or MS Imaging).",
   "edam_operation": "http://edamontology.org/operation_3096",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -1986,7 +1986,7 @@
  {
   "slug": "corpus-size-coverage-scaling-analysis",
   "name": "corpus-size-coverage-scaling-analysis",
-  "description": "Use when when deploying a Word2Vec-based spectral similarity model (such as Spec2Vec) on a new mass spectrometry dataset and needing to assess whether the pre-trained model's learned peak embeddings sufficiently represent the peaks in your query spectra.",
+  "description": "Use when deploying a Word2Vec-based spectral similarity model (such as Spec2Vec) on a new mass spectrometry dataset and needing to assess whether the pre-trained model's learned peak embeddings sufficiently represent the peaks in your query spectra.",
   "edam_operation": "http://edamontology.org/operation_3799",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -2313,7 +2313,7 @@
  {
   "slug": "drug-database-record-extraction",
   "name": "drug-database-record-extraction",
-  "description": "Use when when you have obtained a DrugBank release file (requiring access credentials) and need to integrate drug chemical structure, name, and identifier information into a metadata cleanup or chemical enrichment pipeline.",
+  "description": "Use when you have obtained a DrugBank release file (requiring access credentials) and need to integrate drug chemical structure, name, and identifier information into a metadata cleanup or chemical enrichment pipeline.",
   "edam_operation": "http://edamontology.org/operation_3762",
   "edam_topics": [
    "http://edamontology.org/topic_0154",
@@ -2402,7 +2402,7 @@
  {
   "slug": "ei-mass-spectrum-simulation",
   "name": "ei-mass-spectrum-simulation",
-  "description": "Use when when you have a molecular structure (XYZ or equivalent format) and need to predict its EI mass spectrum including major fragment ions and their relative intensities, particularly for validation against experimental data or when experimental spectra are unavailable;",
+  "description": "Use when you have a molecular structure (XYZ or equivalent format) and need to predict its EI mass spectrum including major fragment ions and their relative intensities, particularly for validation against experimental data or when experimental spectra are unavailable;",
   "edam_operation": "http://edamontology.org/operation_3860",
   "edam_topics": [
    "http://edamontology.org/topic_0154",
@@ -2869,7 +2869,7 @@
  {
   "slug": "feature-table-matrix-assembly",
   "name": "feature-table-matrix-assembly",
-  "description": "Use when when you need to generate a realistic LC/GC-MS feature table (peak intensity matrix) with controlled, quantifiable condition effects (e.g., differential metabolite abundance across disease states) and batch effects (e.g., instrument drift, sample processing day).",
+  "description": "Use when you need to generate a realistic LC/GC-MS feature table (peak intensity matrix) with controlled, quantifiable condition effects (e.g., differential metabolite abundance across disease states) and batch effects (e.g., instrument drift, sample processing day).",
   "edam_operation": "http://edamontology.org/operation_3635",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -2899,7 +2899,7 @@
  {
   "slug": "file-path-resolution-and-validation",
   "name": "file-path-resolution-and-validation",
-  "description": "Use when when initializing a SmartPeak session from a sequence file, you need to load and validate the workflow.csv and sequence.csv files that are co-located in the session directory.",
+  "description": "Use when initializing a SmartPeak session from a sequence file, you need to load and validate the workflow.csv and sequence.csv files that are co-located in the session directory.",
   "edam_operation": "http://edamontology.org/operation_0335",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -2958,7 +2958,7 @@
  {
   "slug": "fragmentation-database-construction",
   "name": "fragmentation-database-construction",
-  "description": "Use when when you have completed ORCA single-point energy calculations on interpolated reaction pathway geometries and need to convert quantum mechanical fragment energies and molecular properties into a structured fragmentation channel database suitable for automated EI mass spectrum simulation.",
+  "description": "Use when you have completed ORCA single-point energy calculations on interpolated reaction pathway geometries and need to convert quantum mechanical fragment energies and molecular properties into a structured fragmentation channel database suitable for automated EI mass spectrum simulation.",
   "edam_operation": "http://edamontology.org/operation_3456",
   "edam_topics": [
    "http://edamontology.org/topic_3375",
@@ -3284,7 +3284,7 @@
  {
   "slug": "gc-ms-chromatogram-processing",
   "name": "gc-ms-chromatogram-processing",
-  "description": "Use when when working with raw GC-MS data in NetCDF (ANDI) format that requires peak detection, baseline removal, and retention time alignment before spectral matching against reference libraries such as PNNLMetV20191015.MSL.",
+  "description": "Use when working with raw GC-MS data in NetCDF (ANDI) format that requires peak detection, baseline removal, and retention time alignment before spectral matching against reference libraries such as PNNLMetV20191015.MSL.",
   "edam_operation": "http://edamontology.org/operation_3629",
   "edam_topics": [
    "http://edamontology.org/topic_0625",
@@ -3403,7 +3403,7 @@
  {
   "slug": "gc-ms-spectral-library-matching",
   "name": "gc-ms-spectral-library-matching",
-  "description": "Use when when you have GC-MS data with detected peaks that require structural annotation, retention index calibration has been applied (typically using FAMES standards), and you need to assign compound identities with confidence scores.",
+  "description": "Use when you have GC-MS data with detected peaks that require structural annotation, retention index calibration has been applied (typically using FAMES standards), and you need to assign compound identities with confidence scores.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_0599",
@@ -3466,7 +3466,7 @@
  {
   "slug": "gc-ms-spectral-similarity-clustering",
   "name": "gc-ms-spectral-similarity-clustering",
-  "description": "Use when when you have deconvolved GC-MS spectra (post-deconvolution output compatible with GNPS_GC input specification) and need to group them by chemical similarity to construct a molecular network.",
+  "description": "Use when you have deconvolved GC-MS spectra (post-deconvolution output compatible with GNPS_GC input specification) and need to group them by chemical similarity to construct a molecular network.",
   "edam_operation": "http://edamontology.org/operation_3432",
   "edam_topics": [
    "http://edamontology.org/topic_0625",
@@ -3727,7 +3727,7 @@
  {
   "slug": "ground-truth-intensity-calculation",
   "name": "ground-truth-intensity-calculation",
-  "description": "Use when when generating synthetic LC/GC-MS .mzML files with companion ground-truth peak tables for method validation, you need to calculate the absolute maximum intensity that each simulated peak would exhibit in the raw mass spectrometry matrix.",
+  "description": "Use when generating synthetic LC/GC-MS .mzML files with companion ground-truth peak tables for method validation, you need to calculate the absolute maximum intensity that each simulated peak would exhibit in the raw mass spectrometry matrix.",
   "edam_operation": "http://edamontology.org/operation_3629",
   "edam_topics": [
    "http://edamontology.org/topic_0091",
@@ -3879,7 +3879,7 @@
  {
   "slug": "image-processing-on-two-dimensional-mass-spectrometry-maps",
   "name": "image-processing-on-two-dimensional-mass-spectrometry-maps",
-  "description": "Use when when you have raw GC–MS data in two-dimensional m/z × retention time format (NetCDF or proprietary binary) and need to identify marker features across aroma or breath samples at parts-per-billion concentration levels, particularly when conventional peak picking introduces false positives.",
+  "description": "Use when you have raw GC–MS data in two-dimensional m/z × retention time format (NetCDF or proprietary binary) and need to identify marker features across aroma or breath samples at parts-per-billion concentration levels, particularly when conventional peak picking introduces false positives or.",
   "edam_operation": "http://edamontology.org/operation_3443",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -3967,7 +3967,7 @@
  {
   "slug": "in-silico-fragment-m-z-calculation",
   "name": "in-silico-fragment-m-z-calculation",
-  "description": "Use when when you have experimental UHPLC-HRMS/MS or direct infusion MS/MS data and need to identify lipid species by comparing observed fragment m/z values against a library of simulated fragments. Apply this skill when your lipid library is incomplete or specialized (e.",
+  "description": "Use when you have experimental UHPLC-HRMS/MS or direct infusion MS/MS data and need to identify lipid species by comparing observed fragment m/z values against a library of simulated fragments. Apply this skill when your lipid library is incomplete or specialized (e.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_0153",
@@ -4031,7 +4031,7 @@
  {
   "slug": "injection-order-direction-specification",
   "name": "injection-order-direction-specification",
-  "description": "Use when when configuring a multi-well plate design (96-well, 384-well, or other format) in InjectionDesign for LC/GC-MS analysis and you need to specify whether analytical samples and QC controls should be injected row-by-row or column-by-column.",
+  "description": "Use when configuring a multi-well plate design (96-well, 384-well, or other format) in InjectionDesign for LC/GC-MS analysis and you need to specify whether analytical samples and QC controls should be injected row-by-row or column-by-column.",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_0091",
@@ -4056,7 +4056,7 @@
  {
   "slug": "instrument-metadata-parsing",
   "name": "instrument-metadata-parsing",
-  "description": "Use when when you have raw or semi-processed mass spectrometry data files in mixed formats (e.g., vendor-native .raw, .d, .",
+  "description": "Use when you have raw or semi-processed mass spectrometry data files in mixed formats (e.g., vendor-native .raw, .d, .",
   "edam_operation": "http://edamontology.org/operation_3357",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -4087,7 +4087,7 @@
  {
   "slug": "ion-mobility-dimension-detection",
   "name": "ion-mobility-dimension-detection",
-  "description": "Use when when processing raw mass spectrometry data files of unknown or mixed provenance, and you need to automatically route IMS inputs to their corresponding analysis pipeline.",
+  "description": "Use when processing raw mass spectrometry data files of unknown or mixed provenance, and you need to automatically route IMS inputs to their corresponding analysis pipeline.",
   "edam_operation": "http://edamontology.org/operation_3823",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -4145,7 +4145,7 @@
  {
   "slug": "ionisation-method-hardware-correspondence",
   "name": "ionisation-method-hardware-correspondence",
-  "description": "Use when when evaluating whether a mass spectrometry analysis platform (such as mzmine) has comprehensive module support across multiple ionisation and separation techniques (LC, GC, IMS, MALDI MS imaging), or when planning a multi-technique MS study and needing to confirm that all intended.",
+  "description": "Use when evaluating whether a mass spectrometry analysis platform (such as mzmine) has comprehensive module support across multiple ionisation and separation techniques (LC, GC, IMS, MALDI MS imaging), or when planning a multi-technique MS study and needing to confirm that all intended ionisation.",
   "edam_operation": "http://edamontology.org/operation_3631",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -4174,7 +4174,7 @@
  {
   "slug": "ionization-mode-detection-from-mass-spectrometry-data",
   "name": "ionization-mode-detection-from-mass-spectrometry-data",
-  "description": "Use when when you have raw LC-MS data in mzML format (converted from .raw or acquired directly in that format) and need to invoke Asari for feature extraction, but the ionization mode is not explicitly specified in your experimental metadata or pipeline configuration.",
+  "description": "Use when you have raw LC-MS data in mzML format (converted from .raw or acquired directly in that format) and need to invoke Asari for feature extraction, but the ionization mode is not explicitly specified in your experimental metadata or pipeline configuration.",
   "edam_operation": "http://edamontology.org/operation_3630",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -4256,7 +4256,7 @@
  {
   "slug": "java-source-code-inspection",
   "name": "java-source-code-inspection",
-  "description": "Use when when you need to understand how a Java application routes input data to processing modules based on declared data types, conditionally branches on instrument or format types (e.",
+  "description": "Use when you need to understand how a Java application routes input data to processing modules based on declared data types, conditionally branches on instrument or format types (e.",
   "edam_operation": "http://edamontology.org/operation_3096",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -4519,7 +4519,7 @@
  {
   "slug": "left-censored-missingness-simulation",
   "name": "left-censored-missingness-simulation",
-  "description": "Use when when you have a complete metabolomics abundance table (e.g., targeted LC/MS or untargeted GC/MS counts) and need to generate synthetic left-censored missingness for evaluating imputation algorithm performance.",
+  "description": "Use when you have a complete metabolomics abundance table (e.g., targeted LC/MS or untargeted GC/MS counts) and need to generate synthetic left-censored missingness for evaluating imputation algorithm performance.",
   "edam_operation": "http://edamontology.org/operation_3695",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -4681,7 +4681,7 @@
  {
   "slug": "linear-score-calculation-from-coefficients",
   "name": "linear-score-calculation-from-coefficients",
-  "description": "Use when when you have 1H-NMR metabolite measurements from Nightingale Health assayed on a new cohort and wish to compute risk scores (e.g., all-cause mortality, cardiovascular event, type 2 diabetes) using published metabolic biomarker weights from a reference study.",
+  "description": "Use when you have 1H-NMR metabolite measurements from Nightingale Health assayed on a new cohort and wish to compute risk scores (e.g., all-cause mortality, cardiovascular event, type 2 diabetes) using published metabolic biomarker weights from a reference study.",
   "edam_operation": "http://edamontology.org/operation_3799",
   "edam_topics": [
    "http://edamontology.org/topic_0769",
@@ -4802,7 +4802,7 @@
  {
   "slug": "low-resolution-mass-spectra-library-matching",
   "name": "low-resolution-mass-spectra-library-matching",
-  "description": "Use when when processing low-resolution GC-MS data in NetCDF format where you have already performed retention-index calibration and peak deconvolution, and you need to assign compound identities by comparing experimental mass spectra to a curated reference library such as PNNLMetV20191015.MSL.",
+  "description": "Use when processing low-resolution GC-MS data in NetCDF format where you have already performed retention-index calibration and peak deconvolution, and you need to assign compound identities by comparing experimental mass spectra to a curated reference library such as PNNLMetV20191015.MSL.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_0769",
@@ -4835,7 +4835,7 @@
  {
   "slug": "marker-feature-identification-and-validation",
   "name": "marker-feature-identification-and-validation",
-  "description": "Use when when processing GC–MS or LC–MS data as m/z vs retention time chromatograms and you need to identify biomarker or chemical marker features without conventional peak picking, particularly when false positive detection rates from peak detection algorithms are problematic.",
+  "description": "Use when processing GC–MS or LC–MS data as m/z vs retention time chromatograms and you need to identify biomarker or chemical marker features without conventional peak picking, particularly when false positive detection rates from peak detection algorithms are problematic.",
   "edam_operation": "http://edamontology.org/operation_3647",
   "edam_topics": [
    "http://edamontology.org/topic_0091",
@@ -4866,7 +4866,7 @@
  {
   "slug": "marker-feature-identification-chromatography-ms",
   "name": "marker-feature-identification-chromatography-ms",
-  "description": "Use when when processing raw chromatography–mass spectrometry data (GC–MS or LC–MS) as a 2D m/z vs retention time map and you need to identify and visualize marker features for analyte discrimination without relying on conventional peak picking.",
+  "description": "Use when processing raw chromatography–mass spectrometry data (GC–MS or LC–MS) as a 2D m/z vs retention time map and you need to identify and visualize marker features for analyte discrimination without relying on conventional peak picking.",
   "edam_operation": "http://edamontology.org/operation_3215",
   "edam_topics": [
    "http://edamontology.org/topic_0091",
@@ -4896,7 +4896,7 @@
  {
   "slug": "mass-calibration-against-reference-standards",
   "name": "mass-calibration-against-reference-standards",
-  "description": "Use when when processing raw FT-ICR transient data (e.g., ESI_NEG_SRFA.d) that requires assignment of molecular formulas to experimental m/z peaks. Calibration is necessary before SearchMolecularFormulas because uncalibrated mass error will cause false formula rejections or incorrect assignments.",
+  "description": "Use when processing raw FT-ICR transient data (e.g., ESI_NEG_SRFA.d) that requires assignment of molecular formulas to experimental m/z peaks. Calibration is necessary before SearchMolecularFormulas because uncalibrated mass error will cause false formula rejections or incorrect assignments.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -4971,7 +4971,7 @@
  {
   "slug": "mass-error-and-retention-time-alignment",
   "name": "mass-error-and-retention-time-alignment",
-  "description": "Use when when processing low- or high-resolution mass spectrometry data (mzML profile or centroided format) for isotopologue quantification and you need to match detected peaks to a targeted formulaTable of compounds.",
+  "description": "Use when processing low- or high-resolution mass spectrometry data (mzML profile or centroided format) for isotopologue quantification and you need to match detected peaks to a targeted formulaTable of compounds.",
   "edam_operation": "http://edamontology.org/operation_3767",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -5031,7 +5031,7 @@
  {
   "slug": "mass-spectral-data-augmentation",
   "name": "mass-spectral-data-augmentation",
-  "description": "Use when when you have limited real GC-MS overlapped peak data but need thousands of labeled examples to train a deep learning model for mass spectral deconvolution.",
+  "description": "Use when you have limited real GC-MS overlapped peak data but need thousands of labeled examples to train a deep learning model for mass spectral deconvolution.",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -5212,7 +5212,7 @@
  {
   "slug": "mass-spectral-missing-word-fraction-computation",
   "name": "mass-spectral-missing-word-fraction-computation",
-  "description": "Use when when applying a pre-trained Spec2Vec Word2Vec model to new mass spectra (particularly those outside the model's training distribution), you need to assess whether peaks and neutral losses in query spectra have been seen during model training.",
+  "description": "Use when applying a pre-trained Spec2Vec Word2Vec model to new mass spectra (particularly those outside the model's training distribution), you need to assess whether peaks and neutral losses in query spectra have been seen during model training.",
   "edam_operation": "http://edamontology.org/operation_3432",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -5658,7 +5658,7 @@
  {
   "slug": "mass-spectrometry-library-matching",
   "name": "mass-spectrometry-library-matching",
-  "description": "Use when when you have an unknown MS/MS spectrum (with ≥10 peaks, precursor m/z, and at least 5 fragment ions) and need to identify it by comparing against a curated spectral library with annotated InChIKeys or chemical structures.",
+  "description": "Use when you have an unknown MS/MS spectrum (with ≥10 peaks, precursor m/z, and at least 5 fragment ions) and need to identify it by comparing against a curated spectral library with annotated InChIKeys or chemical structures.",
   "edam_operation": "http://edamontology.org/operation_3647",
   "edam_topics": [
    "http://edamontology.org/topic_0153",
@@ -5699,7 +5699,7 @@
  {
   "slug": "mass-spectrometry-m-z-accuracy-assessment",
   "name": "mass-spectrometry-m-z-accuracy-assessment",
-  "description": "Use when when you have detected peaks in a direct injection FTICR-MS mzML file (or similar high-resolution MS format) and need to assess whether m/z measurements are accurate and consistent across the m/z range.",
+  "description": "Use when you have detected peaks in a direct injection FTICR-MS mzML file (or similar high-resolution MS format) and need to assess whether m/z measurements are accurate and consistent across the m/z range.",
   "edam_operation": "http://edamontology.org/operation_3441",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -5770,7 +5770,7 @@
  {
   "slug": "mass-spectrometry-matrix-background-simulation",
   "name": "mass-spectrometry-matrix-background-simulation",
-  "description": "Use when when you need to create negative control or background-only reference datasets for LC/GC-MS analysis pipelines—specifically to validate peak-picking algorithms, assess false-positive rates, or simulate instrument background and matrix effects (e.",
+  "description": "Use when you need to create negative control or background-only reference datasets for LC/GC-MS analysis pipelines—specifically to validate peak-picking algorithms, assess false-positive rates, or simulate instrument background and matrix effects (e.",
   "edam_operation": "http://edamontology.org/operation_3633",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -5894,7 +5894,7 @@
  {
   "slug": "mass-spectrometry-screening-workflows",
   "name": "mass-spectrometry-screening-workflows",
-  "description": "Use when when you have high-resolution LC-MS or GC-MS data from environmental samples and need to simultaneously screen for both known suspect chemicals and their transformation products, rather than targeting single compounds.",
+  "description": "Use when you have high-resolution LC-MS or GC-MS data from environmental samples and need to simultaneously screen for both known suspect chemicals and their transformation products, rather than targeting single compounds.",
   "edam_operation": "http://edamontology.org/operation_3802",
   "edam_topics": [
    "http://edamontology.org/topic_0593",
@@ -6067,7 +6067,7 @@
  {
   "slug": "mass-spectrum-peak-matching",
   "name": "mass-spectrum-peak-matching",
-  "description": "Use when when you have a query electron ionization mass spectrum (as m/z and intensity pairs) and need to identify it against a spectral library stored in msp format.",
+  "description": "Use when you have a query electron ionization mass spectrum (as m/z and intensity pairs) and need to identify it against a spectral library stored in msp format.",
   "edam_operation": "http://edamontology.org/operation_3631",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -6094,7 +6094,7 @@
  {
   "slug": "mass-spectrum-tensor-encoding",
   "name": "mass-spectrum-tensor-encoding",
-  "description": "Use when when you have parsed EI-MS spectrum data (m/z and intensity values) and need to feed it into a pre-trained MWFormer transformer model for direct molecular weight prediction.",
+  "description": "Use when you have parsed EI-MS spectrum data (m/z and intensity values) and need to feed it into a pre-trained MWFormer transformer model for direct molecular weight prediction. Use this skill as the final preprocessing step before model inference, after spectrum parsing but before forward pass.",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -6454,7 +6454,7 @@
  {
   "slug": "metabolite-signal-drift-detection",
   "name": "metabolite-signal-drift-detection",
-  "description": "Use when when you have multi-batch metabolomics data (SummarizedExperiment object with raw or log-transformed assays) and need to assess whether specific metabolites exhibit systematic signal drift across experimental run order or strong batch effects that would justify hierarchical normalisation.",
+  "description": "Use when you have multi-batch metabolomics data (SummarizedExperiment object with raw or log-transformed assays) and need to assess whether specific metabolites exhibit systematic signal drift across experimental run order or strong batch effects that would justify hierarchical normalisation.",
   "edam_operation": "http://edamontology.org/operation_3432",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -6801,7 +6801,7 @@
  {
   "slug": "metabolomics-feature-transformation",
   "name": "metabolomics-feature-transformation",
-  "description": "Use when when you have a feature intensity table (samples × compounds) from targeted or non-targeted metabolomics and need to prepare it for statistical modeling or multivariate analysis.",
+  "description": "Use when you have a feature intensity table (samples × compounds) from targeted or non-targeted metabolomics and need to prepare it for statistical modeling or multivariate analysis.",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_0625",
@@ -6924,7 +6924,7 @@
  {
   "slug": "metabolomics-workflow-step-enumeration",
   "name": "metabolomics-workflow-step-enumeration",
-  "description": "Use when when initializing a SmartPeak session and you have a workflow.csv file co-located with sequence.csv in the session directory, and you need to determine the precise order and validity of peak detection, calibration, and QC operations before execution.",
+  "description": "Use when initializing a SmartPeak session and you have a workflow.csv file co-located with sequence.csv in the session directory, and you need to determine the precise order and validity of peak detection, calibration, and QC operations before execution.",
   "edam_operation": "http://edamontology.org/operation_2409",
   "edam_topics": [
    "http://edamontology.org/topic_0629",
@@ -6955,7 +6955,7 @@
  {
   "slug": "metadata-coldata-integration",
   "name": "metadata-coldata-integration",
-  "description": "Use when when you have generated a feature abundance matrix from mzrtsim() peak list simulation with known sample-level attributes (condition assignments, batch labels, sample identifiers) and need to package this into a SummarizedExperiment object for Bioconductor-compatible analysis pipelines.",
+  "description": "Use when you have generated a feature abundance matrix from mzrtsim() peak list simulation with known sample-level attributes (condition assignments, batch labels, sample identifiers) and need to package this into a SummarizedExperiment object for Bioconductor-compatible analysis pipelines that.",
   "edam_operation": "http://edamontology.org/operation_3937",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -7085,7 +7085,7 @@
  {
   "slug": "missing-data-mechanism-specification",
   "name": "missing-data-mechanism-specification",
-  "description": "Use when when you have a metabolomics abundance table with missing values and need to decide which imputation method to apply, or when designing a simulation to evaluate imputation performance.",
+  "description": "Use when you have a metabolomics abundance table with missing values and need to decide which imputation method to apply, or when designing a simulation to evaluate imputation performance.",
   "edam_operation": "http://edamontology.org/operation_3695",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -7270,7 +7270,7 @@
  {
   "slug": "module-dispatch-architecture-analysis",
   "name": "module-dispatch-architecture-analysis",
-  "description": "Use when when you need to understand how a multi-instrument mass spectrometry platform (like mzmine) decides which processing module receives a given dataset based on its declared data type (LC vs. GC vs. IMS vs. MS imaging).",
+  "description": "Use when you need to understand how a multi-instrument mass spectrometry platform (like mzmine) decides which processing module receives a given dataset based on its declared data type (LC vs. GC vs. IMS vs. MS imaging).",
   "edam_operation": "http://edamontology.org/operation_3439",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -7311,7 +7311,7 @@
  {
   "slug": "molecular-fingerprint-structural-similarity-tanimoto",
   "name": "molecular-fingerprint-structural-similarity-tanimoto",
-  "description": "Use when when evaluating how well mass spectral similarity scores correlate with actual chemical structure for annotated spectral pairs (e.g., spectra with InChIKey metadata).",
+  "description": "Use when evaluating how well mass spectral similarity scores correlate with actual chemical structure for annotated spectral pairs (e.g., spectra with InChIKey metadata).",
   "edam_operation": "http://edamontology.org/operation_3802",
   "edam_topics": [
    "http://edamontology.org/topic_0593",
@@ -7547,7 +7547,7 @@
  {
   "slug": "mona-metadata-field-extraction",
   "name": "mona-metadata-field-extraction",
-  "description": "Use when when you have loaded a MoNA mass spectral library (GC-MS or LC-MS/MS) in MSP format and observe that SMILES strings are present in the Comment field rather than in a dedicated SMILES metadata field.",
+  "description": "Use when you have loaded a MoNA mass spectral library (GC-MS or LC-MS/MS) in MSP format and observe that SMILES strings are present in the Comment field rather than in a dedicated SMILES metadata field.",
   "edam_operation": "http://edamontology.org/operation_3280",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -7584,7 +7584,7 @@
  {
   "slug": "ms-data-format-identification",
   "name": "ms-data-format-identification",
-  "description": "Use when when receiving raw MS data files of unknown or mixed acquisition modalities and needing to route each to its corresponding analysis pipeline. Specifically, apply this skill when: (1) input files arrive without documented instrument type or chromatographic/mobility dimensionality;",
+  "description": "Use when receiving raw MS data files of unknown or mixed acquisition modalities and needing to route each to its corresponding analysis pipeline. Specifically, apply this skill when: (1) input files arrive without documented instrument type or chromatographic/mobility dimensionality;",
   "edam_operation": "http://edamontology.org/operation_3443",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -7615,7 +7615,7 @@
  {
   "slug": "ms-instrument-type-classification",
   "name": "ms-instrument-type-classification",
-  "description": "Use when when evaluating or designing a mass spectrometry data analysis platform, and you need to verify that every supported separation/ionisation technique (LC, GC, IMS, MS Imaging) is covered by at least one processing module.",
+  "description": "Use when evaluating or designing a mass spectrometry data analysis platform, and you need to verify that every supported separation/ionisation technique (LC, GC, IMS, MS Imaging) is covered by at least one processing module.",
   "edam_operation": "http://edamontology.org/operation_3443",
   "edam_topics": [
    "http://edamontology.org/topic_3370",
@@ -7679,7 +7679,7 @@
  {
   "slug": "ms-spectral-library-matching",
   "name": "ms-spectral-library-matching",
-  "description": "Use when when you have a GC-MS dataset (CSV with columns: Component.RT, Component.Area, Base.Peak.MZ, File.Name, Compound.Name, Match.Factor) and a known set of target chemicals you wish to locate and extract with their spectral match quality and quantitation.",
+  "description": "Use when you have a GC-MS dataset (CSV with columns: Component.RT, Component.Area, Base.Peak.MZ, File.Name, Compound.Name, Match.Factor) and a known set of target chemicals you wish to locate and extract with their spectral match quality and quantitation.",
   "edam_operation": "http://edamontology.org/operation_3629",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -7883,7 +7883,7 @@
  {
   "slug": "multi-task-attention-mechanism-integration",
   "name": "multi-task-attention-mechanism-integration",
-  "description": "Use when when baseline MLP or GNN models for spectral prediction show limited performance on metabolite annotation tasks, and you have access to auxiliary spectral topic labels (e.g., via LDA on spectral features) that could provide regularization signal.",
+  "description": "Use when baseline MLP or GNN models for spectral prediction show limited performance on metabolite annotation tasks, and you have access to auxiliary spectral topic labels (e.g., via LDA on spectral features) that could provide regularization signal.",
   "edam_operation": "http://edamontology.org/operation_3432",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -7941,7 +7941,7 @@
  {
   "slug": "mz-retention-time-tolerance-parameter-configuration",
   "name": "mz-retention-time-tolerance-parameter-configuration",
-  "description": "Use when when invoking Asari to process centroid mzML files for the first time in a PCPFM experiment, or when RT and m/z accuracy characteristics of your LC-MS instrument differ from the pipeline defaults (e.",
+  "description": "Use when invoking Asari to process centroid mzML files for the first time in a PCPFM experiment, or when RT and m/z accuracy characteristics of your LC-MS instrument differ from the pipeline defaults (e.g., instruments with lower mass resolution, longer RT drift, or non-standard chromatography).",
   "edam_operation": "http://edamontology.org/operation_3767",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -7978,7 +7978,7 @@
  {
   "slug": "mzml-file-format-generation",
   "name": "mzml-file-format-generation",
-  "description": "Use when when you need to generate reproducible synthetic LC/GC-MS raw data files with known ground-truth peak properties (m/z, retention time, intensity) for benchmarking peak detection, feature extraction, normalization, or batch correction algorithms;",
+  "description": "Use when you need to generate reproducible synthetic LC/GC-MS raw data files with known ground-truth peak properties (m/z, retention time, intensity) for benchmarking peak detection, feature extraction, normalization, or batch correction algorithms;",
   "edam_operation": "http://edamontology.org/operation_3436",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -8180,7 +8180,7 @@
  {
   "slug": "neutral-loss-annotation-interpretation",
   "name": "neutral-loss-annotation-interpretation",
-  "description": "Use when when building Word2Vec or embedding-based spectral similarity models where you need to capture fragmentation patterns beyond individual peak positions.",
+  "description": "Use when building Word2Vec or embedding-based spectral similarity models where you need to capture fragmentation patterns beyond individual peak positions.",
   "edam_operation": "http://edamontology.org/operation_3629",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -8222,7 +8222,7 @@
  {
   "slug": "neutral-loss-calculation-from-precursor",
   "name": "neutral-loss-calculation-from-precursor",
-  "description": "Use when when converting MS/MS spectra into spectral documents for Spec2Vec embedding, and you want to capture chemical relationships implicit in the fragmentation pattern (e.g., loss of water, ammonia, or CO2) that may correlate with structural similarity. Use this when the neutral loss range (5.",
+  "description": "Use when converting MS/MS spectra into spectral documents for Spec2Vec embedding, and you want to capture chemical relationships implicit in the fragmentation pattern (e.g., loss of water, ammonia, or CO2) that may correlate with structural similarity. Use this when the neutral loss range (5.0–200.",
   "edam_operation": "http://edamontology.org/operation_3627",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -8372,7 +8372,7 @@
  {
   "slug": "noise-level-parameter-tuning",
   "name": "noise-level-parameter-tuning",
-  "description": "Use when when you have an aligned GCIMS dataset and need to configure the findPeaks function with CWT algorithm to detect peaks across retention time and drift time dimensions.",
+  "description": "Use when you have an aligned GCIMS dataset and need to configure the findPeaks function with CWT algorithm to detect peaks across retention time and drift time dimensions.",
   "edam_operation": "http://edamontology.org/operation_3627",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -8523,7 +8523,7 @@
  {
   "slug": "overlapped-peak-resolution-transformer",
   "name": "overlapped-peak-resolution-transformer",
-  "description": "Use when when GC-MS chromatograms contain overlapped or co-eluting peaks in a retention time region and you need to recover the individual pure mass spectra and relative abundances of each component without manual peak picking or external standards.",
+  "description": "Use when gC-MS chromatograms contain overlapped or co-eluting peaks in a retention time region and you need to recover the individual pure mass spectra and relative abundances of each component without manual peak picking or external standards.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_0091",
@@ -8626,7 +8626,7 @@
  {
   "slug": "parallel-computing-workflow-orchestration",
   "name": "parallel-computing-workflow-orchestration",
-  "description": "Use when when compiling EI or MS/MS spectral libraries from multiple gigabyte-scale sources (e.",
+  "description": "Use when compiling EI or MS/MS spectral libraries from multiple gigabyte-scale sources (e.",
   "edam_operation": "http://edamontology.org/operation_3434",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -8696,7 +8696,7 @@
  {
   "slug": "peak-detection-cwt-optimization",
   "name": "peak-detection-cwt-optimization",
-  "description": "Use when when you have a pre-aligned GCIMSDataset and need to systematically identify and annotate chromatographic peaks across multiple samples.",
+  "description": "Use when you have a pre-aligned GCIMSDataset and need to systematically identify and annotate chromatographic peaks across multiple samples.",
   "edam_operation": "http://edamontology.org/operation_3630",
   "edam_topics": [
    "http://edamontology.org/topic_0625",
@@ -8849,7 +8849,7 @@
  {
   "slug": "peak-intensity-normalization-weighted-aggregation",
   "name": "peak-intensity-normalization-weighted-aggregation",
-  "description": "Use when when training Word2Vec embeddings on mass spectra represented as peak-word documents, and you need to preserve the quantitative intensity relationships between fragments without allowing a single dominant peak to overwhelm the learned word associations.",
+  "description": "Use when training Word2Vec embeddings on mass spectra represented as peak-word documents, and you need to preserve the quantitative intensity relationships between fragments without allowing a single dominant peak to overwhelm the learned word associations.",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -9134,7 +9134,7 @@
  {
   "slug": "pytorch-model-loading-and-forward-pass",
   "name": "pytorch-model-loading-and-forward-pass",
-  "description": "Use when when you have a pre-trained PyTorch model checkpoint (e.g., a MWFormer transformer) and structured input data (e.g., electron ionization mass spectrum m/z and intensity pairs) that must be converted to tensor format and passed through the model to produce a direct numerical output (e.",
+  "description": "Use when you have a pre-trained PyTorch model checkpoint (e.g., a MWFormer transformer) and structured input data (e.g., electron ionization mass spectrum m/z and intensity pairs) that must be converted to tensor format and passed through the model to produce a direct numerical output (e.",
   "edam_operation": "http://edamontology.org/operation_3891",
   "edam_topics": [
    "http://edamontology.org/topic_0091",
@@ -9198,7 +9198,7 @@
  {
   "slug": "qc-sample-type-classification",
   "name": "qc-sample-type-classification",
-  "description": "Use when when constructing a sample list from an Excel template for LC/GC-MS analysis, you must classify each QC sample by type before proceeding to plate layout and randomization steps.",
+  "description": "Use when constructing a sample list from an Excel template for LC/GC-MS analysis, you must classify each QC sample by type before proceeding to plate layout and randomization steps.",
   "edam_operation": "http://edamontology.org/operation_3763",
   "edam_topics": [
    "http://edamontology.org/topic_0091",
@@ -9419,7 +9419,7 @@
  {
   "slug": "rank-performance-metric-computation",
   "name": "rank-performance-metric-computation",
-  "description": "Use when when you have predictions from one or more metabolite annotation models (MLP baseline, GNN, or ESP ensemble) and need to quantify ranking performance on ESI/LC-MS test spectra.",
+  "description": "Use when you have predictions from one or more metabolite annotation models (MLP baseline, GNN, or ESP ensemble) and need to quantify ranking performance on ESI/LC-MS test spectra.",
   "edam_operation": "http://edamontology.org/operation_3927",
   "edam_topics": [
    "http://edamontology.org/topic_0625",
@@ -9507,7 +9507,7 @@
  {
   "slug": "reactant-ion-peak-exclusion",
   "name": "reactant-ion-peak-exclusion",
-  "description": "Use when when performing peak detection on Gas Chromatography–Ion Mobility Spectrometry samples where the Reactant Ion Peak (a high-intensity background signal from the ion source) would otherwise be misidentified as an analyte peak, causing false positives in the peak list.",
+  "description": "Use when performing peak detection on Gas Chromatography–Ion Mobility Spectrometry samples where the Reactant Ion Peak (a high-intensity background signal from the ion source) would otherwise be misidentified as an analyte peak, causing false positives in the peak list.",
   "edam_operation": "http://edamontology.org/operation_3215",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -9613,7 +9613,7 @@
  {
   "slug": "retention-index-calibration-application",
   "name": "retention-index-calibration-application",
-  "description": "Use when when processing GC-MS data where retention time alone is insufficient for compound identification due to instrument drift or method variation, and you need to match detected peaks against a spectral library (e.",
+  "description": "Use when processing GC-MS data where retention time alone is insufficient for compound identification due to instrument drift or method variation, and you need to match detected peaks against a spectral library (e.",
   "edam_operation": "http://edamontology.org/operation_3627",
   "edam_topics": [
    "http://edamontology.org/topic_0769",
@@ -9924,7 +9924,7 @@
  {
   "slug": "retention-time-prediction-optimization",
   "name": "retention-time-prediction-optimization",
-  "description": "Use when when you have a retention-time dataset (e.g., SMRT or Eawag_XBridgeC18_364) in .xlsx format and need to train or adapt a graph neural network model to predict chromatographic retention times for new compounds.",
+  "description": "Use when you have a retention-time dataset (e.g., SMRT or Eawag_XBridgeC18_364) in .xlsx format and need to train or adapt a graph neural network model to predict chromatographic retention times for new compounds.",
   "edam_operation": "http://edamontology.org/operation_3927",
   "edam_topics": [
    "http://edamontology.org/topic_0154",
@@ -9996,7 +9996,7 @@
  {
   "slug": "sample-capacity-constraint-setting",
   "name": "sample-capacity-constraint-setting",
-  "description": "Use when when designing injection sequences for LC/GC-MS multi-omics experiments where you need to distribute samples across multiple plates and must account for mandatory QC sample positions (Blank QC, Solvent QC, Pooled QC, Long-Term Reference QC, and custom QC).",
+  "description": "Use when designing injection sequences for LC/GC-MS multi-omics experiments where you need to distribute samples across multiple plates and must account for mandatory QC sample positions (Blank QC, Solvent QC, Pooled QC, Long-Term Reference QC, and custom QC).",
   "edam_operation": "http://edamontology.org/operation_3434",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -10021,7 +10021,7 @@
  {
   "slug": "sample-metadata-extraction",
   "name": "sample-metadata-extraction",
-  "description": "Use when when you have an Excel file uploaded by a user following the InjectionDesign template schema and need to convert it into a modifiable, structured sample list that preserves up to three classification dimensions and QC type assignments for LC/GC-MS multi-omics experiments.",
+  "description": "Use when you have an Excel file uploaded by a user following the InjectionDesign template schema and need to convert it into a modifiable, structured sample list that preserves up to three classification dimensions and QC type assignments for LC/GC-MS multi-omics experiments.",
   "edam_operation": "http://edamontology.org/operation_3434",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -10046,7 +10046,7 @@
  {
   "slug": "sample-study-size-stratified-algorithm-selection",
   "name": "sample-study-size-stratified-algorithm-selection",
-  "description": "Use when when beginning mass alignment in a multi-sample LC-MS metabolomics study, before constructing the MassGrid.",
+  "description": "Use when beginning mass alignment in a multi-sample LC-MS metabolomics study, before constructing the MassGrid.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -10166,7 +10166,7 @@
  {
   "slug": "separation-technique-workflow-alignment",
   "name": "separation-technique-workflow-alignment",
-  "description": "Use when when evaluating whether an MS data processing platform (such as mzmine) supports the full range of separation/ionization techniques your laboratory uses, or when assessing whether gaps exist in the software architecture that would require external pre- or post-processing for specific.",
+  "description": "Use when evaluating whether an MS data processing platform (such as mzmine) supports the full range of separation/ionization techniques your laboratory uses, or when assessing whether gaps exist in the software architecture that would require external pre- or post-processing for specific.",
   "edam_operation": "",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -10224,7 +10224,7 @@
  {
   "slug": "similarity-score-computation",
   "name": "similarity-score-computation",
-  "description": "Use when when you have a query electron ionization mass spectrum (m/z and intensity pairs) and need to identify the most similar spectra from an MSP-formatted spectral library.",
+  "description": "Use when you have a query electron ionization mass spectrum (m/z and intensity pairs) and need to identify the most similar spectra from an MSP-formatted spectral library.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -10278,7 +10278,7 @@
  {
   "slug": "smiles-notation-parsing",
   "name": "smiles-notation-parsing",
-  "description": "Use when when processing downloaded mass spectral libraries (particularly MoNA EI or MS2 libraries) where SMILES information exists but is embedded in unstructured Comment fields rather than a dedicated SMILES field, or when assigning SMILES from external structure databases (SDF files) to library.",
+  "description": "Use when processing downloaded mass spectral libraries (particularly MoNA EI or MS2 libraries) where SMILES information exists but is embedded in unstructured Comment fields rather than a dedicated SMILES field, or when assigning SMILES from external structure databases (SDF files) to library.",
   "edam_operation": "http://edamontology.org/operation_0338",
   "edam_topics": [
    "http://edamontology.org/topic_0154",
@@ -10404,7 +10404,7 @@
  {
   "slug": "spectral-adduct-ionmode-validation",
   "name": "spectral-adduct-ionmode-validation",
-  "description": "Use when when processing raw or aggregated mass spectra datasets (from .mgf, .msp, .json, or .",
+  "description": "Use when processing raw or aggregated mass spectra datasets (from .mgf, .msp, .json, or .",
   "edam_operation": "http://edamontology.org/operation_3695",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -10679,7 +10679,7 @@
  {
   "slug": "spectral-library-merging-and-deduplication",
   "name": "spectral-library-merging-and-deduplication",
-  "description": "Use when when building a comprehensive reference spectral library for metabolomics or chemical identification, you have multiple source libraries in different formats (msp, mgf, NIST binary) and ionization modes (positive/negative MS/MS or EI) that need to be combined into a single.",
+  "description": "Use when building a comprehensive reference spectral library for metabolomics or chemical identification, you have multiple source libraries in different formats (msp, mgf, NIST binary) and ionization modes (positive/negative MS/MS or EI) that need to be combined into a single, MS-DIAL-compatible.",
   "edam_operation": "http://edamontology.org/operation_3933",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -10759,7 +10759,7 @@
  {
   "slug": "spectral-library-metadata-reorganization",
   "name": "spectral-library-metadata-reorganization",
-  "description": "Use when when ingesting mass spectral libraries (EI or MS2) where SMILES information is embedded in the Comment field rather than in a dedicated SMILES metadata field—particularly common in MoNA GC-MS and LC-MS/MS exports.",
+  "description": "Use when ingesting mass spectral libraries (EI or MS2) where SMILES information is embedded in the Comment field rather than in a dedicated SMILES metadata field—particularly common in MoNA GC-MS and LC-MS/MS exports.",
   "edam_operation": "http://edamontology.org/operation_3096",
   "edam_topics": [
    "http://edamontology.org/topic_0091",
@@ -10873,7 +10873,7 @@
  {
   "slug": "spectral-match-score-interpretation",
   "name": "spectral-match-score-interpretation",
-  "description": "Use when when you have GC-MS output with Match.Factor values or structural similarity scores from categorate() and need to decide which identified compounds are reliable enough to carry forward. Specifically: (1) after running GC-MS and receiving a Match.Factor column;",
+  "description": "Use when you have GC-MS output with Match.Factor values or structural similarity scores from categorate() and need to decide which identified compounds are reliable enough to carry forward. Specifically: (1) after running GC-MS and receiving a Match.Factor column;",
   "edam_operation": "http://edamontology.org/operation_3802",
   "edam_topics": [
    "http://edamontology.org/topic_0625",
@@ -11012,7 +11012,7 @@
  {
   "slug": "spectral-peak-shape-modeling",
   "name": "spectral-peak-shape-modeling",
-  "description": "Use when when generating synthetic LC/GC-MS .mzML files from MoNA or HMDB spectral records where you need to compute absolute ground-truth maximum intensity (sim_ins) for each peak while accounting for chromatographic band broadening, peak tailing, and retention-time dispersion.",
+  "description": "Use when generating synthetic LC/GC-MS .mzML files from MoNA or HMDB spectral records where you need to compute absolute ground-truth maximum intensity (sim_ins) for each peak while accounting for chromatographic band broadening, peak tailing, and retention-time dispersion.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -11045,7 +11045,7 @@
  {
   "slug": "spectral-peak-word-embedding-representation",
   "name": "spectral-peak-word-embedding-representation",
-  "description": "Use when when you have MS/MS spectra (LC-MS or equivalent positive ionization mode data) that you intend to embed using Word2Vec or similar distributional semantic models, or when you need to prepare spectral data for training similarity models that learn peak co-occurrence patterns rather than.",
+  "description": "Use when you have MS/MS spectra (LC-MS or equivalent positive ionization mode data) that you intend to embed using Word2Vec or similar distributional semantic models, or when you need to prepare spectral data for training similarity models that learn peak co-occurrence patterns rather than relying.",
   "edam_operation": "http://edamontology.org/operation_3357",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -11162,7 +11162,7 @@
  {
   "slug": "spectral-similarity-scoring",
   "name": "spectral-similarity-scoring",
-  "description": "Use when when you have extracted low-resolution mass spectra from individual chromatographic peaks in GC-MS data and need to match them against a spectral library (e.g., PNNLMetV20191015.MSL) to identify the unknown compound.",
+  "description": "Use when you have extracted low-resolution mass spectra from individual chromatographic peaks in GC-MS data and need to match them against a spectral library (e.g., PNNLMetV20191015.MSL) to identify the unknown compound.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3370",
@@ -11304,7 +11304,7 @@
  {
   "slug": "spectral-vector-normalization-by-intensity",
   "name": "spectral-vector-normalization-by-intensity",
-  "description": "Use when when converting pre-processed MS/MS spectra into fixed-length vector representations using Word2Vec embeddings for Spec2Vec similarity scoring. Specifically, apply this skill after you have represented individual peaks and neutral losses as words ('[redacted-email]', 'loss@xxx.",
+  "description": "Use when converting pre-processed MS/MS spectra into fixed-length vector representations using Word2Vec embeddings for Spec2Vec similarity scoring.",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -11344,7 +11344,7 @@
  {
   "slug": "spectrum-document-conversion-peak-loss-representation",
   "name": "spectrum-document-conversion-peak-loss-representation",
-  "description": "Use when when preparing MS/MS spectral data for training word-embedding models (Word2Vec, Skip-gram, CBOW) that will learn relationships between fragment ions and neutral losses.",
+  "description": "Use when preparing MS/MS spectral data for training word-embedding models (Word2Vec, Skip-gram, CBOW) that will learn relationships between fragment ions and neutral losses.",
   "edam_operation": "http://edamontology.org/operation_3357",
   "edam_topics": [
    "http://edamontology.org/topic_0121",
@@ -11414,7 +11414,7 @@
  {
   "slug": "spectrum-peak-counting-and-reporting",
   "name": "spectrum-peak-counting-and-reporting",
-  "description": "Use when when you need to quantify and compare the filtering efficacy of mutually exclusive noise-threshold methods on the same input mass spectrum, or when validating that a selected noise-filtering strategy retains an expected number of peaks for downstream molecular formula assignment.",
+  "description": "Use when you need to quantify and compare the filtering efficacy of mutually exclusive noise-threshold methods on the same input mass spectrum, or when validating that a selected noise-filtering strategy retains an expected number of peaks for downstream molecular formula assignment.",
   "edam_operation": "http://edamontology.org/operation_3215",
   "edam_topics": [
    "http://edamontology.org/topic_3370",
@@ -11567,7 +11567,7 @@
  {
   "slug": "tandem-ms-peak-assignment",
   "name": "tandem-ms-peak-assignment",
-  "description": "Use when when you have experimental tandem MS spectra (with peak m/z and intensity values) and need to annotate each peak with its chemical formula (SCARF) or molecular fragment origin (ICEBERG), particularly for structural elucidation campaigns where understanding the fragmentation pathway is.",
+  "description": "Use when you have experimental tandem MS spectra (with peak m/z and intensity values) and need to annotate each peak with its chemical formula (SCARF) or molecular fragment origin (ICEBERG), particularly for structural elucidation campaigns where understanding the fragmentation pathway is required.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -11632,7 +11632,7 @@
  {
   "slug": "train-validation-test-split-management",
   "name": "train-validation-test-split-management",
-  "description": "Use when when you have a complete dataset of labeled examples (e.g., 100,000 augmented spectra, chromatograms, or synthetic samples) and need to train a supervised model (such as a Transformer) while preserving a held-out test set to measure generalization performance without bias.",
+  "description": "Use when you have a complete dataset of labeled examples (e.g., 100,000 augmented spectra, chromatograms, or synthetic samples) and need to train a supervised model (such as a Transformer) while preserving a held-out test set to measure generalization performance without bias.",
   "edam_operation": "http://edamontology.org/operation_3437",
   "edam_topics": [
    "http://edamontology.org/topic_3373",
@@ -11760,7 +11760,7 @@
  {
   "slug": "two-dimensional-correlation-optimized-warping-parameter-tuning",
   "name": "two-dimensional-correlation-optimized-warping-parameter-tuning",
-  "description": "Use when when you have a preprocessed sample chromatogram (smoothed and baseline-corrected) and a preprocessed reference chromatogram, and need to align them using 2D COW.",
+  "description": "Use when you have a preprocessed sample chromatogram (smoothed and baseline-corrected) and a preprocessed reference chromatogram, and need to align them using 2D COW.",
   "edam_operation": "http://edamontology.org/operation_3799",
   "edam_topics": [
    "http://edamontology.org/topic_0091",
@@ -11907,7 +11907,7 @@
  {
   "slug": "unsupervised-pattern-discovery-spectra",
   "name": "unsupervised-pattern-discovery-spectra",
-  "description": "Use when when you have preprocessed mass spectral data (normalized peak intensities or binned m/z representations) and need to discover latent spectral patterns to enhance neural network predictors without labeled spectral classes.",
+  "description": "Use when you have preprocessed mass spectral data (normalized peak intensities or binned m/z representations) and need to discover latent spectral patterns to enhance neural network predictors without labeled spectral classes.",
   "edam_operation": "http://edamontology.org/operation_2945",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -11937,7 +11937,7 @@
  {
   "slug": "untargeted-metabolomics-marker-identification",
   "name": "untargeted-metabolomics-marker-identification",
-  "description": "Use when when you have untargeted GC–MS or LC–MS data in the form of a two-dimensional m/z vs retention time map and need to identify marker features without conventional peak picking.",
+  "description": "Use when you have untargeted GC–MS or LC–MS data in the form of a two-dimensional m/z vs retention time map and need to identify marker features without conventional peak picking.",
   "edam_operation": "http://edamontology.org/operation_3438",
   "edam_topics": [
    "http://edamontology.org/topic_0769",
@@ -12021,7 +12021,7 @@
  {
   "slug": "word-embedding-aggregation-for-spectral-data",
   "name": "word-embedding-aggregation-for-spectral-data",
-  "description": "Use when when you have pre-processed MS/MS spectra and a pre-trained Word2Vec model, and need to compute fast, scalable similarity scores for library matching or molecular networking that correlate better with structural similarity than cosine-based methods.",
+  "description": "Use when you have pre-processed MS/MS spectra and a pre-trained Word2Vec model, and need to compute fast, scalable similarity scores for library matching or molecular networking that correlate better with structural similarity than cosine-based methods.",
   "edam_operation": "http://edamontology.org/operation_3891",
   "edam_topics": [
    "http://edamontology.org/topic_3172",
@@ -12061,7 +12061,7 @@
  {
   "slug": "word-embedding-based-spectrum-representation",
   "name": "word-embedding-based-spectrum-representation",
-  "description": "Use when when comparing large numbers of MS/MS spectra against spectral libraries or in molecular networking, particularly when molecules differ by multiple structural modifications and cosine-based scores produce excessive false positives.",
+  "description": "Use when comparing large numbers of MS/MS spectra against spectral libraries or in molecular networking, particularly when molecules differ by multiple structural modifications and cosine-based scores produce excessive false positives.",
   "edam_operation": "http://edamontology.org/operation_3802",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -12147,7 +12147,7 @@
  {
   "slug": "word2vec-model-inference-unknown-word-handling",
   "name": "word2vec-model-inference-unknown-word-handling",
-  "description": "Use when when applying a pre-trained Word2Vec model to mass spectra at inference time (e.g., library matching or molecular networking), especially when the query spectra may contain fragment peaks or neutral losses not represented in the model's training vocabulary.",
+  "description": "Use when applying a pre-trained Word2Vec model to mass spectra at inference time (e.g., library matching or molecular networking), especially when the query spectra may contain fragment peaks or neutral losses not represented in the model's training vocabulary.",
   "edam_operation": "http://edamontology.org/operation_3435",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -12228,7 +12228,7 @@
  {
   "slug": "workflow-routing-configuration",
   "name": "workflow-routing-configuration",
-  "description": "Use when when you have raw mass spectrometry data files from multiple acquisition modalities (LC-MS, GC-MS, ion mobility, or imaging) and need to automatically route each to the correct downstream analysis module without manual intervention.",
+  "description": "Use when you have raw mass spectrometry data files from multiple acquisition modalities (LC-MS, GC-MS, ion mobility, or imaging) and need to automatically route each to the correct downstream analysis module without manual intervention.",
   "edam_operation": "http://edamontology.org/operation_3937",
   "edam_topics": [
    "http://edamontology.org/topic_3520",
@@ -12332,7 +12332,7 @@
  {
   "slug": "xcms-parameter-optimization-msw",
   "name": "xcms-parameter-optimization-msw",
-  "description": "Use when when you have direct-injection or low-complexity mass spectrometry data (mzML files) and need to detect chromatographic peaks using wavelet-based methods instead of centWave, especially when standard retention-time-dependent peak detection is not suitable or when you need to tune.",
+  "description": "Use when you have direct-injection or low-complexity mass spectrometry data (mzML files) and need to detect chromatographic peaks using wavelet-based methods instead of centWave, especially when standard retention-time-dependent peak detection is not suitable or when you need to tune sensitivity.",
   "edam_operation": "http://edamontology.org/operation_3632",
   "edam_topics": [
    "http://edamontology.org/topic_3520",

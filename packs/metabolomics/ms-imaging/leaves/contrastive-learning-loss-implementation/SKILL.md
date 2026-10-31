@@ -1,9 +1,9 @@
 ---
 name: contrastive-learning-loss-implementation
-description: Use when when you have paired augmented ion images processed through
-  ResNet18 encoders producing 512-dimensional representation vectors, and you need
-  to learn meaningful low-dimensional representations without labeled data by enforcing
-  that augmentations of the same image remain similar while.
+description: Use when you have paired augmented ion images processed through ResNet18
+  encoders producing 512-dimensional representation vectors, and you need to learn
+  meaningful low-dimensional representations without labeled data by enforcing that
+  augmentations of the same image remain similar while different.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
-evidence_spans:
-- Two augmented images are propagated through a pair of ResNet18-based encoders
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

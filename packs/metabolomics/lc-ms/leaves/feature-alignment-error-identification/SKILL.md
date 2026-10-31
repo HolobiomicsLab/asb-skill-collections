@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c04046
   title: AVIR
-evidence_spans:
-- AVIR.R is a program developed to recognize computational variation among metabolic
-  features in samples
-- AVIR.R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

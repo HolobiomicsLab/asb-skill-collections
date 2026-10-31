@@ -29,14 +29,6 @@ derived_from:
   title: mamsi
 - doi: 10.1371/journal.pcbi.1011814
   title: ''
-evidence_spans:
-- MAMSI is a Python framework
-- 'It is based on MB_PLS package: Baum et al., (2019). Multiblock PLS: Block dependent
-  prediction modeling for Python.'
-- import pandas as pd
-- import numpy as np
-- from sklearn.model_selection import train_test_split
-- from matplotlib import pyplot as plt
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

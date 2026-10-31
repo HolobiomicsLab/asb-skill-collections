@@ -1,8 +1,7 @@
 ---
 name: spectral-similarity-matching-algorithms
-description: Use when when you have experimental MS/MS spectra (from mzML or .rda
-  preprocessed format) and need to annotate them against a reference fragmentation
-  library.
+description: Use when you have experimental MS/MS spectra (from mzML or .rda preprocessed
+  format) and need to annotate them against a reference fragmentation library.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -21,12 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-59683-5
   title: LipidIN
-evidence_spans:
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
-  peak alignment, matching and identification'
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
-  peak alignment, matching and identification.'
-- 'CAMERA: an'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -22,13 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
-evidence_spans:
-- MS2LDA (Mass Spectrometry–Latent Dirichlet Allocation) is a framework
-- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely
-  to explain the observed fragmentation patterns
-- from MS2LDA.Preprocessing import load_and_clean
-- Configure the Python environment (set PYTHONPATH, activate conda, etc.)
-- These steps assume you have Conda installed
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

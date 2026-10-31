@@ -1,9 +1,9 @@
 ---
 name: rank-order-correlation-analysis
-description: Use when when you have run a pathway ranking method (such as PALS/PLAGE)
-  on clean metabolomics data and wish to assess how sensitive the resulting pathway
-  activity rankings are to realistic data quality issues—specifically Gaussian noise
-  and random peak dropout—which are prevalent in untargeted.
+description: Use when you have run a pathway ranking method (such as PALS/PLAGE) on
+  clean metabolomics data and wish to assess how sensitive the resulting pathway activity
+  rankings are to realistic data quality issues—specifically Gaussian noise and random
+  peak dropout—which are prevalent in untargeted.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2939
@@ -21,7 +21,6 @@ derived_from:
   title: pals
 - doi: 10.1186/1471-2105-6-225
   title: ''
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

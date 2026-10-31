@@ -1,6 +1,6 @@
 ---
 name: peak-height-threshold-selection
-description: Use when when applying iterative peak detection (local-maximum or Gaussian-fit
+description: Use when applying iterative peak detection (local-maximum or Gaussian-fit
   methods) to 1D extracted ion chromatograms (XICs), arrival time distributions (ATDs),
   or MS1 spectra from MZA-format files, and you need to decide which peaks to retain
   based on their intensity.
@@ -25,11 +25,6 @@ derived_from:
   title: mzapy
 - doi: 10.1021/acs.jproteome.2c00313
   title: ''
-evidence_spans:
-- Dependencies ------------------------------ * ``scipy``
-- '* ``scipy``'
-- '* ``numpy``'
-- Dependencies ------------------------------ * ``numpy``
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,8 +1,8 @@
 ---
 name: lc-ms-roi-annotation-interpretation
-description: Use when when you have extracted LC-MS ROI windows (m/z × retention time
-  snippets) from raw mzML data and need to distinguish genuine metabolite peaks from
-  noise or artifacts.
+description: Use when you have extracted LC-MS ROI windows (m/z × retention time snippets)
+  from raw mzML data and need to distinguish genuine metabolite peaks from noise or
+  artifacts.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c04531
   title: QuanFormer
-evidence_spans:
-- written in Python (v3.8.1)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

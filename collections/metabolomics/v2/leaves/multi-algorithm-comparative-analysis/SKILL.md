@@ -1,8 +1,8 @@
 ---
 name: multi-algorithm-comparative-analysis
-description: Use when when you have prepared metabolomics data (e.g., covid_data)
-  with a binary outcome variable and need to select the most appropriate predictive
-  algorithm for your classification task.
+description: Use when you have prepared metabolomics data (e.g., covid_data) with
+  a binary outcome variable and need to select the most appropriate predictive algorithm
+  for your classification task.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -19,11 +19,6 @@ derived_from:
   title: MeTEor
 - doi: 10.1007/978-3-319-47656-8_6
   title: ''
-evidence_spans:
-- library(MeTEor)
-- 'You can perform binary classification using three different algorithms: logistic
-  regression (LR), random forest (RF), and XGBoost (XGB).'
-- library(tidyverse) library(VIM) library(laeken) library(MeTEor)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

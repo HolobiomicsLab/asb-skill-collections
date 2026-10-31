@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2021.02.28.433248v2
   title: MetaFetcheR
-evidence_spans:
-- MetaFetcheR is implemented in R
-- library(devtools)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

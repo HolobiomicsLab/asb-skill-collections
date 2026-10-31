@@ -1,6 +1,6 @@
 ---
 name: assembly-version-string-retrieval
-description: Use when when you need to validate that a .NET assembly (such as ThermoFisher.CommonCore.RawFileReader)
+description: Use when you need to validate that a .NET assembly (such as ThermoFisher.CommonCore.RawFileReader)
   is correctly installed and accessible before attempting data reading operations.
 license: CC-BY-4.0
 metadata:
@@ -17,10 +17,6 @@ derived_from:
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
-evidence_spans:
-- The extracted information is written to a temporary location on the harddrive, read
-  back into memory and parsed into `R` objects using RawFileReader API
-- 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

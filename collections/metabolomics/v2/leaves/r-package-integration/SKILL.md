@@ -1,8 +1,8 @@
 ---
 name: r-package-integration
-description: Use when when you have a functional R package with core statistical or
-  computational logic that needs to be made accessible to non-R users, or when you
-  want to streamline a multi-step analytical workflow (e.
+description: Use when you have a functional R package with core statistical or computational
+  logic that needs to be made accessible to non-R users, or when you want to streamline
+  a multi-step analytical workflow (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3562
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1002/jrsm.1713
   title: Easy-Amanida
-evidence_spans:
-- implements the R package Amanida
-- R package Amanida
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

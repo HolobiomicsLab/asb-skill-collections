@@ -1,6 +1,6 @@
 ---
 name: system-path-environment-configuration
-description: 'Use when when setting up imzML Writer for the first time on a new machine,
+description: 'Use when setting up imzML Writer for the first time on a new machine,
   or when raw vendor mass spectrometry file conversion fails with ''msconvert not
   found'' or Docker image unavailable errors. Specifically: on Windows/PC systems
   before invoking RAW_to_mzML conversion;'
@@ -24,11 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c06520
   title: imzML Writer
-evidence_spans:
-- On PC, download the latest msconvert release from ProteoWizard
-- 'On PC, this can be installed normally from Proteowizard: https://proteowizard.sourceforge.io/download.html'
-- import os import imzml_writer.utils as iw_utils
-- iw_utils.mzML_to_imzML_convert(PATH=mzML_path)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: molecular-structure-transformation
-description: Use when when you have native metabolite structures (SMILES or mol format)
+description: Use when you have native metabolite structures (SMILES or mol format)
   and need to predict adduct ions for a mass spectrometry imaging experiment that
   uses a derivatizing matrix known to produce ions other than common [M+H]+ (positive
   mode) or [M-H]- (negative mode).
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
-evidence_spans:
-- Powered by RDKit
-- '[![Powered by RDKit]'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

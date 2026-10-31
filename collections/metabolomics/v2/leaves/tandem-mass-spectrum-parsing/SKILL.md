@@ -1,9 +1,9 @@
 ---
 name: tandem-mass-spectrum-parsing
-description: Use when when you have raw or instrument-native tandem mass spectrometry
-  data (MS/MS) in formats such as mzML, mzXML, or proprietary binary formats, and
-  you need to align, match, or compare spectra using methods like SIMILE that require
-  structured access to precursor m/z, fragment m/z values, and.
+description: Use when you have raw or instrument-native tandem mass spectrometry data
+  (MS/MS) in formats such as mzML, mzXML, or proprietary binary formats, and you need
+  to align, match, or compare spectra using methods like SIMILE that require structured
+  access to precursor m/z, fragment m/z values, and peak.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
-evidence_spans:
-- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python
-  library
-- is a Python library for interrelating fragmentation spectra with significance estimation
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

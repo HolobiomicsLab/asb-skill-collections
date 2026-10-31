@@ -1,8 +1,8 @@
 ---
 name: data-lineage-preservation-in-etl-pipelines
-description: Use when when consolidating entries from multiple heterogeneous source
-  databases into a unified table, and you need to maintain auditable connections between
-  final curated records and their original source entries.
+description: Use when consolidating entries from multiple heterogeneous source databases
+  into a unified table, and you need to maintain auditable connections between final
+  curated records and their original source entries.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -19,9 +19,6 @@ derived_from:
   title: lotus
 - doi: 10.1007/s00044-016-1764-y
   title: ''
-evidence_spans:
-- db/../standardizing.R, common.R
-- 1_integrating.R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

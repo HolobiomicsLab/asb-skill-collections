@@ -1,8 +1,8 @@
 ---
 name: reference-database-maintenance
-description: Use when when preparing to run compound metadata enrichment or structure
-  queries, check whether your reference databases (LOTUS, DrugBank, DrugCentral) are
-  stale or missing.
+description: Use when preparing to run compound metadata enrichment or structure queries,
+  check whether your reference databases (LOTUS, DrugBank, DrugCentral) are stale
+  or missing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -18,7 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-025-02813-0
   title: MSnLib
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

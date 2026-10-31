@@ -1,6 +1,6 @@
 ---
 name: quality-control-threshold-application
-description: Use when when you have a raw feature abundance matrix with missing values
+description: Use when you have a raw feature abundance matrix with missing values
   (NAs or zeros) and need to remove features with excessive sparsity before imputation
   or reproducibility analysis.
 license: CC-BY-4.0
@@ -31,14 +31,6 @@ derived_from:
   title: ''
 - doi: 10.1371/journal.pcbi.1011912
   title: ''
-evidence_spans:
-- 'marr: An R/Bioconductor package for Maximum Rank Reproducibility'
-- The R-package **marr** can be installed from GitHub using the R package [devtools]
-- The **msprepCOPD** data in the **marr** package was pre-processed using the MSPrep
-  software
-- '`marr`: An R/Bioconductor package for Maximum Rank Reproducibility'
-- Assuming that R (>=3.3) and Bioconductor have been correctly installed
-- Here, we present a package to perform MWAS using univariate hypothesis testing
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

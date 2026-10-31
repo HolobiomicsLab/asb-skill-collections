@@ -27,12 +27,6 @@ derived_from:
   title: mwtab Python Library for RESTful Access
 - doi: 10.1038/s41589-020-00724-z
   title: ''
-evidence_spans:
-- The ``mwtab`` package is a Python library
-- jsonschema_ for validating functionality of ``mwTab`` files based on ``JSON`` schema
-- make sure the existing tests still work by running ``npm run test`` in `api/` and/or
-  `app/` directory
-- pull request (https://help.github.com/articles/about-pull-requests/)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

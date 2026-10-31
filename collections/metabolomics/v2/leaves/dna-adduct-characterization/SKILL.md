@@ -1,9 +1,9 @@
 ---
 name: dna-adduct-characterization
-description: Use when when you have a collection of DNA adduct compound structures
-  in SDF format that requires validation for structural integrity and completeness,
-  and you need to generate predicted fragment spectra at defined ionization levels
-  and mass ranges for comparison against experimental mass.
+description: Use when you have a collection of DNA adduct compound structures in SDF
+  format that requires validation for structural integrity and completeness, and you
+  need to generate predicted fragment spectra at defined ionization levels and mass
+  ranges for comparison against experimental mass spectrometry.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -21,11 +21,6 @@ metadata:
 derived_from:
 - doi: 10.3389/fchem.2022.908572
   title: DNA adduct database
-evidence_spans:
-- CFM-ID
-- the CFM-ID spectra, the Chemdraw files, the mol files and the SDF files of the DNA
-  adducts
-- compound database in SDF format
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

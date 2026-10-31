@@ -23,11 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
-evidence_spans:
-- library(MsBackendMgf)
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
-  package with additional functionality being implemented
-- VignetteDepends{xcms,BiocStyle,faahKO,pheatmap,MsFeatures}
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

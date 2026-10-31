@@ -27,11 +27,6 @@ derived_from:
   title: mamsi
 - doi: 10.1371/journal.pcbi.1011814
   title: ''
-evidence_spans:
-- MAMSI is a Python framework
-- The graph can be displayed interactively using pyvis.network
-- import pandas as pd
-- You can also save the network as an NX object and review in [Cytoscape](https://cytoscape.org)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

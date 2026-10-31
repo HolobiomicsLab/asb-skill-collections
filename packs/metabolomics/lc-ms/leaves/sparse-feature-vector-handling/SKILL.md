@@ -1,6 +1,6 @@
 ---
 name: sparse-feature-vector-handling
-description: Use when when you have tandem mass spectra (mz/intensity pairs with precursor
+description: Use when you have tandem mass spectra (mz/intensity pairs with precursor
   m/z) and need to train an interpretable model (e.
 license: CC-BY-4.0
 metadata:
@@ -21,8 +21,6 @@ derived_from:
   title: ChemEcho
 - doi: 10.1145/2939672.2939778
   title: ''
-evidence_spans:
-- github.com__biorack__chemecho
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

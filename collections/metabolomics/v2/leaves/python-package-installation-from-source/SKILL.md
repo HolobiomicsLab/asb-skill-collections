@@ -1,8 +1,8 @@
 ---
 name: python-package-installation-from-source
-description: Use when when you need to verify a Python package installs successfully
-  from a cloned or local repository, validate that all tests pass after installation,
-  or prepare a development environment for contributing to the package.
+description: Use when you need to verify a Python package installs successfully from
+  a cloned or local repository, validate that all tests pass after installation, or
+  prepare a development environment for contributing to the package.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3363
@@ -23,13 +23,6 @@ derived_from:
   title: biosynfoni
 - doi: 10.3390/metabo15010048
   title: ''
-evidence_spans:
-- pip install -e .[dev]
-- biosynfoni
-- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic
-  research
-- Python package to process 1D and 2D NMR spectroscopic data
-- github.com__ludwigc__metabolabpy
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

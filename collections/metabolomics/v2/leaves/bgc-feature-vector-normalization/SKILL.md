@@ -1,7 +1,7 @@
 ---
 name: bgc-feature-vector-normalization
-description: Use when when you have pre-computed BGC feature vectors (from domain
-  architecture extraction) and need to cluster them into GCFs using BiG-SLiCE v2.
+description: Use when you have pre-computed BGC feature vectors (from domain architecture
+  extraction) and need to cluster them into GCFs using BiG-SLiCE v2.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -17,7 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1093/gigascience/giaa154
   title: BiG-SLiCE
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

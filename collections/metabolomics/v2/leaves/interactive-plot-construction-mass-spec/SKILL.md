@@ -23,9 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c00786
   title: Rapid QC-MS
-evidence_spans:
-- '**Interactive data visualization** of internal standard retention time, _m/z_,
-  and intensity across samples'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

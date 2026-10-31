@@ -23,12 +23,6 @@ derived_from:
   title: MetaboShiny
 - doi: 10.1021/acs.est.3c04764
   title: ''
-evidence_spans:
-- Welcome to the info page on MetaboShiny
-- Welcome to the info page on MetaboShiny! We are currently on BioRXiv
-- Through R
-- Scannotation is an automated and user-friendly suspect screening tool for the rapid
-  pre-annotation of LC-HRMS datasets.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

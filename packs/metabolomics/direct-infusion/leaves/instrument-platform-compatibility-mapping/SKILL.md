@@ -1,9 +1,9 @@
 ---
 name: instrument-platform-compatibility-mapping
-description: Use when when adopting a mass spectrometry data processing tool (e.g.,
-  LipidMatch) and needing to verify whether your specific instrument platform (vendor
-  + model) and acquisition mode combination (targeted, ddMS2-topN, AIF, direct infusion,
-  imaging) have been formally validated.
+description: Use when adopting a mass spectrometry data processing tool (e.g., LipidMatch)
+  and needing to verify whether your specific instrument platform (vendor + model)
+  and acquisition mode combination (targeted, ddMS2-topN, AIF, direct infusion, imaging)
+  have been formally validated.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -23,8 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch
-evidence_spans:
-- tested and validated using Q-Exactive orbitrap UHPLC-HRMS/MS data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

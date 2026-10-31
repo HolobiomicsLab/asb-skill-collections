@@ -1,6 +1,6 @@
 ---
 name: feature-set-performance-evaluation
-description: Use when when deciding which molecular representation to use for retention
+description: Use when deciding which molecular representation to use for retention
   time prediction or similar regression tasks on small molecules, and you have access
   to multiple feature generation options (e.g., alvaDesc can generate both molecular
   descriptors and multiple fingerprint types).
@@ -18,9 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
-evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
-  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

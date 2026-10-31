@@ -1,6 +1,6 @@
 ---
 name: database-record-conditional-update
-description: 'Use when when processing mass spectrometry spectral records from a database
+description: 'Use when processing mass spectrometry spectral records from a database
   where critical fields (e.g., adduct annotation) are absent or null, and you have
   a secondary field (e.g., ionmode: ''pos''/''neg'') that can deterministically populate
   the missing field.'
@@ -27,8 +27,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
-evidence_spans:
-- Python-3.12
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

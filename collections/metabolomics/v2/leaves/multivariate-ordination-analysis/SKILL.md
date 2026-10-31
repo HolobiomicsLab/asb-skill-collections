@@ -1,6 +1,6 @@
 ---
 name: multivariate-ordination-analysis
-description: Use when when you have normalized peak intensities from FT-ICR MS metabolomic
+description: Use when you have normalized peak intensities from FT-ICR MS metabolomic
   data (or similar high-dimensional compositional data) grouped by experimental treatments
   (e.g., phage type, incubation time) and want to visualize whether sample groups
   cluster separately in reduced dimensionality.
@@ -21,14 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
-evidence_spans:
-- calculate diversity metrics using functions from the R packages vegan [63] and SYNCSA
-  [64]
-- using functions from the R packages vegan [63]
-- Molecular transformation networks for each sample (mass difference network-based
-  approach) are generated in this step
-- The MetaboDirect pipeline consists of 6 major steps/categories (Fig. 1)
-- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

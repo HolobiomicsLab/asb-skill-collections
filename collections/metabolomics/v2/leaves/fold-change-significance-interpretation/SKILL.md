@@ -1,6 +1,6 @@
 ---
 name: fold-change-significance-interpretation
-description: Use when when you have differential expression results with both fold-change
+description: Use when you have differential expression results with both fold-change
   and p-value columns from a CSV file (e.g., volcano_example.
 license: CC-BY-4.0
 metadata:
@@ -15,8 +15,6 @@ metadata:
 derived_from:
 - doi: 10.3389/fgene.2022.957317
   title: GraphBio
-evidence_spans:
-- GraphBio---A modular and scalable R Shiny dashboard
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

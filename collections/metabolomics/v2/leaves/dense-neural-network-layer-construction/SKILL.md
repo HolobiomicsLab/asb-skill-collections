@@ -1,6 +1,6 @@
 ---
 name: dense-neural-network-layer-construction
-description: Use when when you have a binned MS/MS spectrum vector (e.g., 9948-dimensional
+description: Use when you have a binned MS/MS spectrum vector (e.g., 9948-dimensional
   input from 10,000 equally-spaced m/z bins in the 10–1000 Da range) and need to compress
   it into a learned latent representation (e.
 license: CC-BY-4.0
@@ -21,11 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
-evidence_spans:
-- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included
-  cleaning compound names
-- Our MS2DeepScore Python library offers two types of data generators
-- Our MS2DeepScore Python library
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

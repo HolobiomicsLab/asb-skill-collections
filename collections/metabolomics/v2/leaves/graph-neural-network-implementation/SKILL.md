@@ -1,6 +1,6 @@
 ---
 name: graph-neural-network-implementation
-description: Use when when your input includes molecular structures (SMILES, conformers)
+description: Use when your input includes molecular structures (SMILES, conformers)
   and you need to predict a continuous property (e.g., CCS, binding affinity, solubility)
   that depends on molecular connectivity and spatial relationships.
 license: CC-BY-4.0
@@ -32,13 +32,6 @@ derived_from:
   title: PACCS
 - doi: 10.1021/acs.analchem.3c03177
   title: ''
-evidence_spans:
-- '[python3](https://www.python.org/)'
-- '[RDKit](https://rdkit.org/)'
-- '[PyTorch](https://pytorch.org/)'
-- '[PyG](https://pytorch-geometric.readthedocs.io/en/latest/)'
-- '[pandas](https://pandas.pydata.org/)'
-- '[NumPy](https://numpy.org/)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

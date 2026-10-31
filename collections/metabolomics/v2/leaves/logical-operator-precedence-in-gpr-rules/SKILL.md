@@ -1,6 +1,6 @@
 ---
 name: logical-operator-precedence-in-gpr-rules
-description: Use when when computing Reaction Activity Scores (RAS) from transcriptomics
+description: Use when computing Reaction Activity Scores (RAS) from transcriptomics
   data linked to a metabolic model via GPR associations, and the model contains reactions
   governed by mixed AND/OR logical rules (e.g., '(gene_A AND gene_B) OR gene_C').
 license: CC-BY-4.0
@@ -19,7 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

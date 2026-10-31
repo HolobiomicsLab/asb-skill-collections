@@ -20,13 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
-evidence_spans:
-- MetaNet, a high-performance R package that unifies network construction, visualization,
-  and analysis across diverse omics layers.
-- MetaNet, a high-performance R package that unifies network construction, visualization,
-  and analysis across diverse omics layers
-- MetaNet, a high-performance R package
-- devtools::install_github("Asa12138/pcutils")
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -23,11 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
-evidence_spans:
-- Two augmented images are propagated through a pair of ResNet18-based encoders
-- T_COL including color jitter, filtering, Poisson noise, and random missing value
-- T_ISO introduces an additional process of intensity-dependent missing value in ISO
-  mode
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

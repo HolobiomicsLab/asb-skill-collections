@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s42256-023-00708-3
   title: MIST (chemical formula transformer)
-evidence_spans:
-- and, when trained in a contrastive learning framework, enable embedding and structure
-  annotation by database lookup.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

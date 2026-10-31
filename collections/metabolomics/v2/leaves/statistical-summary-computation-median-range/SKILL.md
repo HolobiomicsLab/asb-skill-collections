@@ -1,9 +1,9 @@
 ---
 name: statistical-summary-computation-median-range
-description: Use when when you have a table of execution times or performance metrics
-  indexed by two or more categorical dimensions (e.g., plot_type × backend, or sample
-  × condition), and you need to compare central tendency and spread across groups
-  to rank or benchmark alternatives.
+description: Use when you have a table of execution times or performance metrics indexed
+  by two or more categorical dimensions (e.g., plot_type × backend, or sample × condition),
+  and you need to compare central tendency and spread across groups to rank or benchmark
+  alternatives.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -19,7 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

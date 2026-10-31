@@ -1,8 +1,8 @@
 ---
 name: missing-data-handling-in-metabolite-datasets
-description: Use when when importing metabolomics datasets with multiple studies into
-  amanida_read for quantitative or qualitative meta-analysis, and some studies report
-  missing values for p-values, fold-changes, sample sizes, or other effect size metrics.
+description: Use when importing metabolomics datasets with multiple studies into amanida_read
+  for quantitative or qualitative meta-analysis, and some studies report missing values
+  for p-values, fold-changes, sample sizes, or other effect size metrics.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -19,11 +19,6 @@ derived_from:
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
-evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted
-  meta-analysis in R
-- This vignette illustrates `Amanida` R package, which contains a collection of functions
-  for computing a weighted meta-analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

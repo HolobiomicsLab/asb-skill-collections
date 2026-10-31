@@ -1,7 +1,7 @@
 ---
 name: ms-dial-feature-detection-and-alignment
-description: Use when when you have raw LC-HRMS data in .mzML or .abf format and need
-  to detect metabolite features (peaks) across multiple samples, align them temporally
+description: Use when you have raw LC-HRMS data in .mzML or .abf format and need to
+  detect metabolite features (peaks) across multiple samples, align them temporally
   and by mass-to-charge ratio, and generate a reproducible feature matrix.
 license: CC-BY-4.0
 metadata:
@@ -22,11 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
-evidence_spans:
-- A reproducible Nextflow workflow for LC-HRMS metabolomics data processing with MS-DIAL.
-- containerized workflow MS-DIAL -> MSFLO
-- Both Docker and Singularity (for high-performance computing) are supported
-- Both Docker and Singularity (for high-performance computing) are supported.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

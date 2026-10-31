@@ -1,6 +1,6 @@
 ---
 name: spectrum-visualization-and-figure-rendering
-description: Use when when you have a processed or annotated MsmsSpectrum object (from
+description: Use when you have a processed or annotated MsmsSpectrum object (from
   USI loading or direct instantiation) and need to generate a figure showing observed
   peaks, their intensities, and assigned fragment ions (e.g., b/y ions) for publication
   or presentation.
@@ -22,15 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
-evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing
-  and visualization.
-- fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma)
-  specification
-- spectrum_utils is a Python package
-- spectrum = sus.MsmsSpectrum.from_usi(usi)
-- import matplotlib.pyplot as plt
-- fig, ax = plt.subplots(figsize=(12, 6))
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

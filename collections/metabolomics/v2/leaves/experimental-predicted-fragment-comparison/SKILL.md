@@ -1,9 +1,9 @@
 ---
 name: experimental-predicted-fragment-comparison
-description: Use when when you have downloaded or retrieved fragment records from
-  both experimental and predicted fragment databases as part of the DNA adductomics
-  resource, and you need to verify that all fragments can be successfully mapped to
-  their parent compound entries in the reference SDF-format compound.
+description: Use when you have downloaded or retrieved fragment records from both
+  experimental and predicted fragment databases as part of the DNA adductomics resource,
+  and you need to verify that all fragments can be successfully mapped to their parent
+  compound entries in the reference SDF-format compound.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3283
@@ -18,7 +18,6 @@ metadata:
 derived_from:
 - doi: 10.3389/fchem.2022.908572
   title: DNA adduct database
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: repository-history-analysis
-description: Use when when you need to understand how a complex feature or architectural
+description: Use when you need to understand how a complex feature or architectural
   pattern was implemented in a codebase, particularly when the current README or documentation
   does not fully explain the control flow, decision criteria, or parameter passing
   between subsystems.
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query
-evidence_spans:
-- MS2Query - Reliable and fast MS/MS spectral-based analogue search
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

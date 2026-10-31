@@ -1,7 +1,7 @@
 ---
 name: glasso-regularization-tuning
-description: Use when when estimating a sparse network graph from a feature matrix
-  using GLASSO and you need to determine the regularization strength.
+description: Use when estimating a sparse network graph from a feature matrix using
+  GLASSO and you need to determine the regularization strength.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -16,8 +16,6 @@ metadata:
 derived_from:
 - doi: 10.3389/fnins.2024.1520982
   title: MetaboLINK/ PCA-GLASSO
-evidence_spans:
-- A python package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

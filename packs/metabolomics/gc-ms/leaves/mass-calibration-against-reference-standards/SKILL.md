@@ -1,6 +1,6 @@
 ---
 name: mass-calibration-against-reference-standards
-description: Use when when processing raw FT-ICR transient data (e.g., ESI_NEG_SRFA.d)
+description: Use when processing raw FT-ICR transient data (e.g., ESI_NEG_SRFA.d)
   that requires assignment of molecular formulas to experimental m/z peaks. Calibration
   is necessary before SearchMolecularFormulas because uncalibrated mass error will
   cause false formula rejections or incorrect assignments.
@@ -23,14 +23,6 @@ metadata:
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
-evidence_spans:
-- from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
-  import MSParameters']
-- import pandas as pd
-- pandas [section=results; evidence='import pandas as pd']
-- import numpy as np
-- numpy [section=results; evidence='import numpy as np']
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

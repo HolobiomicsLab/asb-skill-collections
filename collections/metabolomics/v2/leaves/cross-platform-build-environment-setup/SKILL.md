@@ -1,7 +1,7 @@
 ---
 name: cross-platform-build-environment-setup
-description: Use when when you have a Qt5 C++ project (such as Maven GUI or Maven
-  Core) that must be built on multiple target operating systems, and you need to install
+description: Use when you have a Qt5 C++ project (such as Maven GUI or Maven Core)
+  that must be built on multiple target operating systems, and you need to install
   and verify platform-specific build dependencies (MSYS2 + mingw64 on Windows, Homebrew
   + Qt5 on macOS, PPA + Qt5.
 license: CC-BY-4.0
@@ -23,13 +23,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo12080684
   title: MAVEN2
-evidence_spans:
-- 'Maven GUI: Metabolomics Analysis and Visualization Engine'
-- git clone --recursive [redacted-email]:eugenemel/maven.git maven
-- qmake -r build.pro
-- make -j4
-- Install the qt5 package
-- Install the MSYS2 platform for Windows
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

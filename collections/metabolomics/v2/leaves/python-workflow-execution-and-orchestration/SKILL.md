@@ -29,13 +29,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c00060
   title: LAGF
-evidence_spans:
-- Python >= 3.8.2
-- pymzml==2.5.2
-- pandas==2.0.3
-- numpy==1.22.4
-- scipy==1.4.1
-- joblib==0.15.1
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

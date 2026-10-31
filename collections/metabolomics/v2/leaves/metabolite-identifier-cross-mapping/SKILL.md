@@ -1,9 +1,9 @@
 ---
 name: metabolite-identifier-cross-mapping
-description: Use when when you have metabolite identifiers from one or more metabolome
+description: Use when you have metabolite identifiers from one or more metabolome
   databases and need to resolve them to equivalent identifiers in other databases,
   or when standardizing metabolite representation across multi-source metabolomic
-  datasets where compounds may be annotated using different.
+  datasets where compounds may be annotated using different database.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2021.02.28.433248v2
   title: MetaFetcheR
-evidence_spans:
-- MetaFetcheR is implemented in R
-- library(devtools)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: r-python-interoperability-bridging
-description: Use when when your analysis requires functionality from both R (statistical
+description: Use when your analysis requires functionality from both R (statistical
   modeling, ROC analysis, caret machine learning) and Python (keras deep learning
   backend, numpy arrays) within a single R session, particularly for cross-language
   machine learning workflows like SERDA normalization that.
@@ -24,13 +24,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo13080944
   title: SERDA
-evidence_spans:
-- R version 3.6.3 (2020-02-29)
-- packageVersion("reticulate") [1] ‘1.19’
-- packageVersion("keras") [1] ‘2.7.0’
-- packageVersion("pROC") [1] ‘1.17.0.1’
-- packageVersion("caret") [1] ‘6.0.86’
-- 'version: 3.6.10 |Anaconda, Inc.| (default, May 7 2020, 19:46:08)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,8 +1,8 @@
 ---
 name: configuration-file-validation-dynaconf
-description: Use when when setting up NPLinker for natural products data mining and
-  you have a TOML configuration file (nplinker.toml) that specifies root_dir, mode
-  (local or podp), and paths to GNPS, AntiSMASH, and MIBiG directories.
+description: Use when setting up NPLinker for natural products data mining and you
+  have a TOML configuration file (nplinker.toml) that specifies root_dir, mode (local
+  or podp), and paths to GNPS, AntiSMASH, and MIBiG directories.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -26,12 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
-evidence_spans:
-- NPLinker is a python framework for data mining microbial natural products
-- GNPSDownloader, GNPSExtractor
-- Python version ≥3.11
-- Pass Dynaconf config validation
-- mibig directory contains the MIBiG metadata
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

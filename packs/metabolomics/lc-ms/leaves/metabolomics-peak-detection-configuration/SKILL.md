@@ -1,7 +1,7 @@
 ---
 name: metabolomics-peak-detection-configuration
-description: Use when when preparing to process raw LC-HRMS metabolomics data (.mzML
-  or .abf files) with MS-DIAL within a Nextflow pipeline, before executing peak detection
+description: Use when preparing to process raw LC-HRMS metabolomics data (.mzML or
+  .abf files) with MS-DIAL within a Nextflow pipeline, before executing peak detection
   and chromatogram alignment.
 license: CC-BY-4.0
 metadata:
@@ -26,8 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
-evidence_spans:
-- containerized workflow MS-DIAL -> MSFLO
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

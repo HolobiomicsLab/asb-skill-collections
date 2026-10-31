@@ -1,7 +1,7 @@
 ---
 name: summarized-experiment-initialization-and-population
-description: Use when when beginning a metabolomics analysis workflow in maplet, you
-  have raw or preprocessed metabolomics data (assay measurements) and associated sample
+description: Use when beginning a metabolomics analysis workflow in maplet, you have
+  raw or preprocessed metabolomics data (assay measurements) and associated sample
   metadata (colData) or feature annotations (rowData), and you need to create a single,
   unified container that will hold data, intermediate.
 license: CC-BY-4.0
@@ -20,11 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btab741
   title: maplet
-evidence_spans:
-- maplet is an R package
-- The toolbox builds upon the bioconductor package SummarizedExperiment (SE)
-- maplet is designed to work with a pipe operator - either the popular %>% operator
-  from the magrittr package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

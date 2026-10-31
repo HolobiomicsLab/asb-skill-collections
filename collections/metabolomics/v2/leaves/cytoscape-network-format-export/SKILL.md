@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btv194
   title: MetaMapR
-evidence_spans:
-- MetaMapR - A metabolomic network mapping tool
-- add cytoscape.js networks
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

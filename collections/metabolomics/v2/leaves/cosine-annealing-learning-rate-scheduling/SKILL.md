@@ -1,6 +1,6 @@
 ---
 name: cosine-annealing-learning-rate-scheduling
-description: Use when when training a heavily regularized deep neural network on large
+description: Use when training a heavily regularized deep neural network on large
   molecular datasets (e.
 license: CC-BY-4.0
 metadata:
@@ -16,9 +16,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
-evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
-  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

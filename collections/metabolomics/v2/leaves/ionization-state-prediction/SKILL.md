@@ -1,7 +1,9 @@
 ---
 name: ionization-state-prediction
-description: Use when when you have SMILES strings representing neutral organic molecules
-  and need to enumerate the likely protonated (e.g., [M+H]+) and deprotonated (e.
+description: Use when you have SMILES strings representing neutral organic molecules
+  and need to enumerate the likely protonated (e.g., [M+H]+) and deprotonated (e.g.,
+  [M−H]−) forms for downstream computational analysis such as CCS prediction, conformation
+  generation, or quantum mechanical property calculation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -20,13 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS
-evidence_spans:
-- Snakemake workflow manager for predicting collisional cross sections
-- This repository contains a Snakemake workflow manager for predicting collisional
-  cross sections (CCS)
-- 'Dimorphite-DL: For ionization state determination'
-- 'ASE-ANI: For conformation filtering'
-- 'QUICK: For quantum calculations'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

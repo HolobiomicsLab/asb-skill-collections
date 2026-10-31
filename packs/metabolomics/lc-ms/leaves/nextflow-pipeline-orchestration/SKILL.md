@@ -1,6 +1,6 @@
 ---
 name: nextflow-pipeline-orchestration
-description: Use when when you have raw LC-HRMS metabolomics data in .mzML or .
+description: Use when you have raw LC-HRMS metabolomics data in .mzML or .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -23,11 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
-evidence_spans:
-- '[![Nextflow](https://img.shields.io/badge/nextflow-%E2%89%A522.10.0-brightgreen.svg)](https://www.nextflow.io/)'
-- nextflow4ms-dial
-- Both Docker and Singularity (for high-performance computing) are supported
-- Both Docker and Singularity (for high-performance computing) are supported.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

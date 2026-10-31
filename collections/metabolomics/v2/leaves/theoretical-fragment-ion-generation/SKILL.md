@@ -1,6 +1,6 @@
 ---
 name: theoretical-fragment-ion-generation
-description: Use when when you have a peptide sequence and need to predict its fragment
+description: Use when you have a peptide sequence and need to predict its fragment
   ion spectrum for stable isotope labeling validation, particularly when comparing
   against observed mass spectrometry data with natural or enriched isotopic abundance
   (e.g., 1% or 50% 13C incorporation).
@@ -21,12 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c03207
   title: Aerith
-evidence_spans:
-- Aerith is an R package that provides interfaces to read and write mass spectrum
-  scans, calculate the theoretical isotopic peak envelope
-- Aerith is an R package that provides interfaces to read and write mass spectrum
-  scans
-- Aerith is an R package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

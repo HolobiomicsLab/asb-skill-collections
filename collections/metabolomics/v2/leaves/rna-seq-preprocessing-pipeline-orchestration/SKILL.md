@@ -1,7 +1,7 @@
 ---
 name: rna-seq-preprocessing-pipeline-orchestration
-description: Use when when you have raw FASTQ files (from SRA or local storage) and
-  need to produce normalized transcript quantification (quant.sf) files for a multi-sample
+description: Use when you have raw FASTQ files (from SRA or local storage) and need
+  to produce normalized transcript quantification (quant.sf) files for a multi-sample
   RNA-seq cohort.
 license: CC-BY-4.0
 metadata:
@@ -26,11 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator
-evidence_spans:
-- Genes, miRNA, isoforms | SRA download | SRA toolkit
-- Genes, miRNA, isoforms | Quality control | FastQC, trimgalore
-- It uses Docker/Singularity containers making installation trivial and results highly
-  reproducible.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

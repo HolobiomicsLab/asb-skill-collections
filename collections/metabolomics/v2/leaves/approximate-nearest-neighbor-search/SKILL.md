@@ -1,8 +1,8 @@
 ---
 name: approximate-nearest-neighbor-search
-description: Use when when you have pre-computed spectrum embeddings (e.g., Word2vec
-  vectors) and need to rapidly retrieve the most similar spectra from a large in-silico
-  or experimental library (thousands to millions of spectra).
+description: Use when you have pre-computed spectrum embeddings (e.g., Word2vec vectors)
+  and need to rapidly retrieve the most similar spectra from a large in-silico or
+  experimental library (thousands to millions of spectra).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3258
@@ -19,10 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-023-39279-7
   title: FastEI
-evidence_spans:
-- conda install -c conda-forge hnswlib
-- Anaconda for Python 3.7
-- conda install -c conda-forge gensim
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

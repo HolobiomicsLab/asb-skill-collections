@@ -1,6 +1,6 @@
 ---
 name: taxonomy-string-normalization
-description: Use when when preparing a metadata table (TSV format with species, genus,
+description: Use when preparing a metadata table (TSV format with species, genus,
   and family columns) for natural product metabolomics analysis where the Literature
   Component score must query known compounds by taxon.
 license: CC-BY-4.0
@@ -24,9 +24,6 @@ derived_from:
   title: Inventa
 - doi: 10.1038/s41467-021-23953-9
   title: ''
-evidence_spans:
-- The taxonomy should be cleaned to uptoday recognized names, you can use the Open
-  Tree of Life
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

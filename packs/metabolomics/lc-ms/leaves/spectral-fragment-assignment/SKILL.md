@@ -1,7 +1,7 @@
 ---
 name: spectral-fragment-assignment
-description: Use when when you have an experimental tandem mass spectrum (peaks with
-  m/z and intensity values) and wish to identify which fragments or chemical subformulae
+description: Use when you have an experimental tandem mass spectrum (peaks with m/z
+  and intensity values) and wish to identify which fragments or chemical subformulae
   each peak corresponds to.
 license: CC-BY-4.0
 metadata:
@@ -21,7 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s42256-024-00816-8
   title: ICEBERG
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

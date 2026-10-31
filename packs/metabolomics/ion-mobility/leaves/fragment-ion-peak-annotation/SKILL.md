@@ -22,9 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.4c00146
   title: PeakQC
-evidence_spans:
-- 'TandemMatch: MS/MS spectral library matching with support for MSP and CSV library
-  formats.'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

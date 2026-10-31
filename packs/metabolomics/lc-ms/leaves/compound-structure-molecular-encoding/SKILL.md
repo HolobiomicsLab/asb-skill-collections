@@ -1,6 +1,6 @@
 ---
 name: compound-structure-molecular-encoding
-description: Use when when you have SMILES strings or molecular structures for compounds
+description: Use when you have SMILES strings or molecular structures for compounds
   and need to predict their retention behavior in reversed-phase liquid chromatography
   (RPLC) systems at pH ~2.7, but lack pre-computed molecular fingerprints or descriptor-based
   feature representations.
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-025-00968-8
   title: ROASMI
-evidence_spans:
-- ROASMI is a Retention Order model to Assist Small Molecule Identification
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

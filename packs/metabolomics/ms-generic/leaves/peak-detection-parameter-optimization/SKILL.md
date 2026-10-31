@@ -1,8 +1,8 @@
 ---
 name: peak-detection-parameter-optimization
-description: Use when when loading and processing raw or recalibrated FT-ICR mass
-  spectrum data (Bruker .d format) on a defined field-strength instrument (e.g., 12
-  T or 15 T), before executing molecular formula search.
+description: Use when loading and processing raw or recalibrated FT-ICR mass spectrum
+  data (Bruker .d format) on a defined field-strength instrument (e.g., 12 T or 15
+  T), before executing molecular formula search.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -21,12 +21,6 @@ metadata:
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
-evidence_spans:
-- from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development
-  and data analysis of small molecules analysis.'
-- import pandas as pd
-- import numpy as np
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

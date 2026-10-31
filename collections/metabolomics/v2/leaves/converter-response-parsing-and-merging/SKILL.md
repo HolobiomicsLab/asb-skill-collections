@@ -26,13 +26,6 @@ metadata:
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer
-evidence_spans:
-- '**MSMetaEnhancer** is a tool used for `.msp` files annotation'
-- '`MSMetaEnhancer/libs/converters/web/` named after your service'
-- 'fetched from the following services: [CIR](https://cactus.nci.nih.gov/chemical/structure_documentation)'
-- __all__ = ['IDSM', 'CTS', 'CIR', 'PubChem', 'BridgeDb', 'MyService']
-- '[CTS](https://cts.fiehnlab.ucdavis.edu/)'
-- '[PubChem](https://pubchem.ncbi.nlm.nih.gov/)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

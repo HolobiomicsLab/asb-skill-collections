@@ -1,6 +1,6 @@
 ---
 name: peak-detection-and-boundary-identification
-description: Use when when you have CE-MS raw data (mzML or netCDF format) with extracted
+description: Use when you have CE-MS raw data (mzML or netCDF format) with extracted
   ion traces for target compounds and need to identify peak boundaries and extract
   quantitative peak properties (retention time on µeff scale, peak intensity, peak
   area) within a specified mobility window.
@@ -24,13 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
-evidence_spans:
-- Description and usage of MobilityTransformR
-- compute Procaine's effective mobility using mobilityTransform
-- The transformation is performed using functionality from the packages `r BiocStyle::Biocpkg("Spectra")`
-- The transformation is performed using functionality from the packages `r BiocStyle::Biocpkg("xcms")`
-- The MT of the peak will be determined by `findChromPeaks` from `xcms`.
-- The transformation is performed using functionality from the packages `r BiocStyle::Biocpkg("MetaboCoreUtils")`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

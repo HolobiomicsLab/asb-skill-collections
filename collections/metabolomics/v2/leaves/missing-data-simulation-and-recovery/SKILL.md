@@ -20,7 +20,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

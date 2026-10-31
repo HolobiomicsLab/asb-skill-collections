@@ -1,7 +1,7 @@
 ---
 name: ms-ms-ion-interpretation
-description: Use when when you have two MS/MS spectra (each with a precursor m/z and
-  a list of fragment ion m/z values) and need to identify which fragment ions correspond
+description: Use when you have two MS/MS spectra (each with a precursor m/z and a
+  list of fragment ion m/z values) and need to identify which fragment ions correspond
   between them, especially when structural differences make simple monotonic alignment
   unreliable.
 license: CC-BY-4.0
@@ -23,10 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
-evidence_spans:
-- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python
-  library
-- is a Python library for interrelating fragmentation spectra with significance estimation
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

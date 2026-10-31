@@ -1,6 +1,6 @@
 ---
 name: rdkit-molecular-descriptor-computation
-description: Use when when annotating .msp mass spectrometry files with chemical structure
+description: Use when annotating .msp mass spectrometry files with chemical structure
   metadata and you need fast, offline molecular transformations (SMILES↔InChI, canonical
   SMILES generation) without network latency or service availability constraints;
 license: CC-BY-4.0
@@ -21,11 +21,6 @@ metadata:
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer
-evidence_spans:
-- MSMetaEnhancer is a tool used for `.msp` files annotation
-- 'Converter Builder: Automatically discovers and instantiates available converters'
-- Use the RDKit converter as a reference implementation
-- make sure the existing tests still work by running ``pytest``
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

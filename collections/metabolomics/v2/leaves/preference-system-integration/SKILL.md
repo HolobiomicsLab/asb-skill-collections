@@ -1,9 +1,9 @@
 ---
 name: preference-system-integration
-description: Use when when a GUI widget (e.g., isotopes display, compound list, or
-  analysis parameter panel) must show or hide content according to user selections
-  stored in application preferences, and the current implementation either shows all
-  content regardless of preference or lacks a preference-reading.
+description: Use when a GUI widget (e.g., isotopes display, compound list, or analysis
+  parameter panel) must show or hide content according to user selections stored in
+  application preferences, and the current implementation either shows all content
+  regardless of preference or lacks a preference-reading.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -20,12 +20,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo12080684
   title: MAVEN2
-evidence_spans:
-- git clone --recursive [redacted-email]:eugenemel/maven.git maven
-- qmake -r build.pro
-- make -j4
-- 'Maven GUI: Metabolomics Analysis and Visualization Engine'
-- Install the qt5 package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

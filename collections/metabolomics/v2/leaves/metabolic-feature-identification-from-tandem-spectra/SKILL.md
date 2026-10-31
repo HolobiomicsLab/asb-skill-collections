@@ -1,6 +1,6 @@
 ---
 name: metabolic-feature-identification-from-tandem-spectra
-description: Use when when processing data with available MS2 spectra (DDA acquisition)
+description: Use when processing data with available MS2 spectra (DDA acquisition)
   after MS1 peak picking has been completed, and you seek to identify additional metabolic
   features or validate existing peak picking results through MS2 recognition.
 license: CC-BY-4.0
@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo12030212
   title: JPA
-evidence_spans:
-- JPA is a comprehensive and integrated metabolomics data processing software.
-- JPA is a comprehensive and integrated metabolomics data processing software
-- '''JPA'' is written in R and its source code is publicly available'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

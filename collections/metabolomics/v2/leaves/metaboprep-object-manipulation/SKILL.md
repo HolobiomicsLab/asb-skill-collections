@@ -22,12 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btac059
   title: Metaboprep
-evidence_spans:
-- library(metaboprep)
-- quality_control(m, source_layer = "input", sample_missingness = 0.2, feature_missingness
-  = 0.2)
-- '%\VignetteEngine{knitr::rmarkdown}'
-- library(ggplot2)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

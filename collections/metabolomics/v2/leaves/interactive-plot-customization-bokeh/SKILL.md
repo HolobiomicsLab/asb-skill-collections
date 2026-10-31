@@ -1,9 +1,9 @@
 ---
 name: interactive-plot-customization-bokeh
-description: Use when when you have loaded extracted ion chromatogram traces (via
-  SqMassLoader from sqMass files) and need to render them as interactive web-based
-  visualizations where users can pan, zoom, hover for metadata, mute individual traces,
-  and optionally visualize peak boundaries from OpenSwath results.
+description: Use when you have loaded extracted ion chromatogram traces (via SqMassLoader
+  from sqMass files) and need to render them as interactive web-based visualizations
+  where users can pan, zoom, hover for metadata, mute individual traces, and optionally
+  visualize peak boundaries from OpenSwath results or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0571
@@ -25,15 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash
-evidence_spans:
-- 'Chromatogram Loaders: Raw data stores chromatograms, this allows for faster loading
-  however since extraction has already been performed by the upstream analysis tool.
-  This includes SqMassLoader'
-- InteractivePlotter
-- The main area will be populated with interactive Bokeh figures
-- MRMTransitionGroupPicker
-- pyMRMTransitionGroupPicker
-- FeatureMap
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

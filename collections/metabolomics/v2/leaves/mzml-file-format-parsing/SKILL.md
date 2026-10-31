@@ -1,7 +1,7 @@
 ---
 name: mzml-file-format-parsing
-description: Use when when you have mass spectrometry raw data in mzML format and
-  need to execute MassQL queries, perform batch analysis across a directory of spectra
+description: Use when you have mass spectrometry raw data in mzML format and need
+  to execute MassQL queries, perform batch analysis across a directory of spectra
   files, or programmatically access MS1 and MS2 scan data with retention time, m/z,
   and intensity metadata.
 license: CC-BY-4.0
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1002/rcm.10132
   title: MassQLab
-evidence_spans:
-- github.com__JohnsonDylan__MassQLab
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

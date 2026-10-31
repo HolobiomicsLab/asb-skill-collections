@@ -1,7 +1,7 @@
 ---
 name: gpu-acceleration-cuda-configuration
-description: Use when when clustering or encoding large MS/MS spectra datasets (>1
-  million spectra) where CPU-only runtime exceeds practical thresholds (hours to days).
+description: Use when clustering or encoding large MS/MS spectra datasets (>1 million
+  spectra) where CPU-only runtime exceeds practical thresholds (hours to days).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3791
@@ -19,11 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00612
   title: HyperSpec
-evidence_spans:
-- HyperSpec requires `Python 3.8+` with `CUDA` environment
-- HyperSpec requires `Python 3.8+` with `CUDA` environment.
-- github.com__wh-xu__Hyper-Spec
-- github.com/wh-xu/Hyper-Spec
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

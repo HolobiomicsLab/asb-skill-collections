@@ -1,7 +1,7 @@
 ---
 name: descriptor-deduplication-across-toolkits
-description: Use when when computing molecular descriptors from SMILES strings using
-  both RDKit and mordred libraries simultaneously, and you need to combine their outputs
+description: Use when computing molecular descriptors from SMILES strings using both
+  RDKit and mordred libraries simultaneously, and you need to combine their outputs
   into a single feature matrix without redundant features.
 license: CC-BY-4.0
 metadata:
@@ -19,10 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c05859
   title: Graphormer-RT
-evidence_spans:
-- import mordred from mordred import Calculator, descriptors
-- import numpy as np
-- import pandas as pd
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

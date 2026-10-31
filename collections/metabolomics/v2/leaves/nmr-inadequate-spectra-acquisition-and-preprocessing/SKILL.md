@@ -1,9 +1,9 @@
 ---
 name: nmr-inadequate-spectra-acquisition-and-preprocessing
-description: Use when when you have raw INADEQUATE NMR spectral data (e.g., from a
-  query sample or library) and need to extract peak coordinates and intensities as
-  a first step toward identifying metabolite peak networks or comparing against a
-  metabolite database.
+description: Use when you have raw INADEQUATE NMR spectral data (e.g., from a query
+  sample or library) and need to extract peak coordinates and intensities as a first
+  step toward identifying metabolite peak networks or comparing against a metabolite
+  database.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -21,11 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c03966
   title: PyINETA
-evidence_spans:
-- pyINETA is a Python package
-- python run_pyineta.py <options>
-- This is the documentation for the PyINETA package version 2.0.0.
-- '.. automodule:: pyineta.finding :members:'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

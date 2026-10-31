@@ -1,6 +1,6 @@
 ---
 name: mass-error-tolerance-filtering
-description: 'Use when when annotating full-scan MS or MS imaging data against a metabolite
+description: 'Use when annotating full-scan MS or MS imaging data against a metabolite
   database (e.g., LipidMaps, HMDB) and you need to control the stringency of m/z matching.
   Use this filter to balance annotation sensitivity against specificity: tighter ppm
   tolerances (e.'
@@ -29,10 +29,6 @@ derived_from:
   title: SpaMTP
 - doi: 10.1101/2024.10.14.618269
   title: ''
-evidence_spans:
-- Install SpaMTP if not previously installed devtools::install_github("GenomicsMachineLearning/SpaMTP")
-- For plotting + DE plots
-- '## Install and Import *R* Libraries'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

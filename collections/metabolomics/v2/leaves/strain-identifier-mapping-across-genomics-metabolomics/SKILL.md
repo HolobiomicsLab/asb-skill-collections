@@ -1,9 +1,8 @@
 ---
 name: strain-identifier-mapping-across-genomics-metabolomics
-description: Use when when preparing multiomics datasets for NPLinker that combine
-  GNPS metabolomics, AntiSMASH genomics, and MIBiG reference data, and you need to
-  establish which strain IDs or sample identifiers appear in both genomic and metabolomic
-  experiments.
+description: Use when preparing multiomics datasets for NPLinker that combine GNPS
+  metabolomics, AntiSMASH genomics, and MIBiG reference data, and you need to establish
+  which strain IDs or sample identifiers appear in both genomic and metabolomic experiments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -26,11 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
-evidence_spans:
-- NPLinker is a python framework for data mining microbial natural products
-- GNPSDownloader, GNPSExtractor
-- Python version ≥3.11
-- mibig directory contains the MIBiG metadata
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

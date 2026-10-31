@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00602
   title: CloMet
-evidence_spans:
-- Follow these steps to install Docker and run CloMet for the first time
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

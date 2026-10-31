@@ -1,9 +1,8 @@
 ---
 name: r-package-loading-and-diagnostics
-description: Use when when deploying an R package from a non-CRAN repository (e.g.,
-  r-universe, Bioconductor, GitHub), or when verifying that a package build is reproducible
-  and meets CRAN submission standards prior to integration into a larger analysis
-  pipeline.
+description: Use when deploying an R package from a non-CRAN repository (e.g., r-universe,
+  Bioconductor, GitHub), or when verifying that a package build is reproducible and
+  meets CRAN submission standards prior to integration into a larger analysis pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3355
@@ -19,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.3389/fpls.2019.01329
   title: tima
-evidence_spans:
-- The initial work is available at <https://doi.org/10.3389/fpls.2019.01329>
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

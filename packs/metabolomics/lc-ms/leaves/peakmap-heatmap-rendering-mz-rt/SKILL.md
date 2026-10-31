@@ -1,9 +1,9 @@
 ---
 name: peakmap-heatmap-rendering-mz-rt
-description: Use when when you have mass spectrometry data organized in a Pandas DataFrame
+description: Use when you have mass spectrometry data organized in a Pandas DataFrame
   with m/z values, retention time (RT), and intensity measurements, and you want to
   visualize the joint distribution and correlation of these three dimensions to identify
-  peaks, assess separation, and detect patterns across.
+  peaks, assess separation, and detect patterns across the.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -26,9 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
-evidence_spans:
-- '.d -- .. toctree:: :maxdepth: 1 alphatims'
-- alphatims
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,8 +1,8 @@
 ---
 name: molecular-representation-encoding
-description: Use when when you have a molecular target compound defined by SMILES,
-  InChI, or chemical formula and need to feed it into a pretrained spectrum prediction
-  model (ICEBERG or SCARF) to generate tandem mass spectra or conduct structural elucidation.
+description: Use when you have a molecular target compound defined by SMILES, InChI,
+  or chemical formula and need to feed it into a pretrained spectrum prediction model
+  (ICEBERG or SCARF) to generate tandem mass spectra or conduct structural elucidation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -22,9 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c04654
   title: ICEBERG / fragmentation graph generation
-evidence_spans:
-- github.com__samgoldman97__ms-pred
-- You can run ICEBERG structural elucidation easily at http://iceberg-ms.mit.edu/
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

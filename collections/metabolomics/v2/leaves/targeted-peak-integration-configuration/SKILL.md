@@ -1,8 +1,8 @@
 ---
 name: targeted-peak-integration-configuration
-description: Use when when performing targeted quantification of known compounds in
-  LC-MS data using TARDIS, especially when the instrument acquired data with multiple
-  overlapping m/z scan windows.
+description: Use when performing targeted quantification of known compounds in LC-MS
+  data using TARDIS, especially when the instrument acquired data with multiple overlapping
+  m/z scan windows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -24,12 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
-evidence_spans:
-- It makes use of an established retention time correction algorithm from the `xcms`
-  package
-- loads MS data as `Spectra` objects so it's easily integrated with other tools
-- R package for *TArgeted Raw Data Integration In Spectrometry*
-- knitr::include_graphics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

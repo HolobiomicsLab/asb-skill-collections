@@ -1,9 +1,9 @@
 ---
 name: badge-endpoint-retrieval
-description: Use when when you need to verify the current operational status of a
-  software project across multiple dimensions (CI/CD, code quality, test coverage,
-  containerization, archival) and those status indicators are exposed as badge endpoints
-  in the project's README.
+description: Use when you need to verify the current operational status of a software
+  project across multiple dimensions (CI/CD, code quality, test coverage, containerization,
+  archival) and those status indicators are exposed as badge endpoints in the project's
+  README.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -21,9 +21,6 @@ derived_from:
   title: magma
 - doi: 10.5281/zenodo.1043226
   title: ''
-evidence_spans:
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'.
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

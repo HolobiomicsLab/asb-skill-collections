@@ -1,6 +1,6 @@
 ---
 name: lipid-type-category-enumeration
-description: Use when when you have downloaded or cloned a lipidomics library repository
+description: Use when you have downloaded or cloned a lipidomics library repository
   (such as LipidMatch) and need to audit the breadth of lipid-type coverage to ensure
   the library meets minimum requirements for your analysis scope (e.g., ≥60 distinct
   lipid categories).
@@ -19,7 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

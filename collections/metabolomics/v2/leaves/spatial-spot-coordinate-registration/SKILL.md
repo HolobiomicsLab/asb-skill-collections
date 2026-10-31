@@ -1,6 +1,6 @@
 ---
 name: spatial-spot-coordinate-registration
-description: Use when when you have paired spatial transcriptome and metabolome datasets
+description: Use when you have paired spatial transcriptome and metabolome datasets
   with spot-based coordinates that need to be aligned for multi-modal integration.
 license: CC-BY-4.0
 metadata:
@@ -18,9 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2024.08.20.608773v2
   title: haCCA
-evidence_spans:
-- haCCA, a workflow utilizing high Correlated feature pairs combined with a modified
-  spatial morphological alignment
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

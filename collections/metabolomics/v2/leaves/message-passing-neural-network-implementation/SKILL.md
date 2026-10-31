@@ -1,9 +1,9 @@
 ---
 name: message-passing-neural-network-implementation
-description: Use when when you have molecular input data (SMILES strings or graph
-  representations) and need to predict molecular properties or spectra using graph
-  neural networks. Apply this skill specifically when the base chemprop MPNN must
-  be extended with new feature modules (e.
+description: Use when you have molecular input data (SMILES strings or graph representations)
+  and need to predict molecular properties or spectra using graph neural networks.
+  Apply this skill specifically when the base chemprop MPNN must be extended with
+  new feature modules (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -19,10 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
-evidence_spans:
-- extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations
-  for Property Prediction]
-- The `chemprop-IR` architecture is an extension of `chemprop`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

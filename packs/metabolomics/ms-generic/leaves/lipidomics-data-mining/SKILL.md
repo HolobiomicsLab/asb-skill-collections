@@ -1,8 +1,8 @@
 ---
 name: lipidomics-data-mining
-description: Use when when you have quantitative lipidomics data (either from Skyline
-  CSV export or numerical matrix format) with sample annotations and a biological
-  grouping variable (e.
+description: Use when you have quantitative lipidomics data (either from Skyline CSV
+  export or numerical matrix format) with sample annotations and a biological grouping
+  variable (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3656
@@ -24,12 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
-evidence_spans:
-- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object
-  using `lipidr` function `fetch_mw_study()`
-- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr`
-  provides an easy way to re-analyze and visualize these datasets.'
-- Data Mining and Analysis of Lipidomics Datasets in R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,7 +1,9 @@
 ---
 name: metabolite-database-construction
-description: Use when when performing untargeted metabolomics annotation at scale
-  and you need to estimate false discovery rates for candidate metabolite identifications.
+description: Use when performing untargeted metabolomics annotation at scale and you
+  need to estimate false discovery rates for candidate metabolite identifications.
+  Apply this skill when you have a reference spectral dataset and compound database
+  but lack calibrated significance thresholds for matching quality.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -21,11 +23,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
-evidence_spans:
-- commons-math3-3.4.1
-- jfreechart-1.0.17-experimental
-- jopt-simple-4.3
-- trove4j-3.0.3
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

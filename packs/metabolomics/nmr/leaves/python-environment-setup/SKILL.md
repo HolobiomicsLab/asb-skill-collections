@@ -1,6 +1,6 @@
 ---
 name: python-environment-setup
-description: Use when when you have cloned a scientific Python repository (e.g., ROIAL-NMR)
+description: Use when you have cloned a scientific Python repository (e.g., ROIAL-NMR)
   and need to verify that the documented dependencies can be installed and the main
   entrypoint is invokable without errors. Use this skill before attempting to run
   the application's core analysis workflows.
@@ -23,13 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1002/nbm.70131
   title: ROIAL-NMR
-evidence_spans:
-- Python>=3.9
-- '[Python](https://www.anaconda.com/download/)>=3.9'
-- XlsxWriter 3.2.2
-- pandas 2.2.3
-- PyQt5 5.15.11
-- openpyxl 3.1.5
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

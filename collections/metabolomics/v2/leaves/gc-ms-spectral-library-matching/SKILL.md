@@ -1,6 +1,6 @@
 ---
 name: gc-ms-spectral-library-matching
-description: Use when when you have GC-MS data with detected peaks that require structural
+description: Use when you have GC-MS data with detected peaks that require structural
   annotation, retention index calibration has been applied (typically using FAMES
   standards), and you need to assign compound identities with confidence scores.
 license: CC-BY-4.0
@@ -21,10 +21,6 @@ metadata:
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
-evidence_spans:
-- from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development
-  and data analysis of small molecules analysis.'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

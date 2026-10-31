@@ -25,11 +25,6 @@ derived_from:
   title: MRMQuant
 - doi: 10.1038/nmeth.3959
   title: ''
-evidence_spans:
-- Users can install get_PrecMZ_ProdMZ in the "program/associated programs" folder
-  to acquire precursor and product m/z values in an MRM sample file.
-- Be sure to use the latest version (currently MRMQuant v2.7).
-- how you installed OpenMS (e.g., from within KNIME, binary installers, self compiled)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

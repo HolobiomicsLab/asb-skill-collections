@@ -1,6 +1,6 @@
 ---
 name: cross-database-nomenclature-alignment
-description: Use when when you have lipid abbreviations or names from different databases
+description: Use when you have lipid abbreviations or names from different databases
   (HMDB, LIPID MAPS, LipidHome, RefMet, SwissLipids) or lipidomics software (LipidSearch,
   MS-DIAL, LipidBlast, etc.) that must be cross-referenced, compared, or integrated
   into a single annotation scheme.
@@ -20,11 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2020.04.09.033894
   title: LipidLynxX
-evidence_spans:
-- The LipidLynxX project is aimed to provide a unified identifier for major lipids
-- LipidLynxX source code use [code style Black](https://github.com/psf/black) for
-  all python codes
-- JSON configurations are formatted by Visual Studio Code / PyCharm editor
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

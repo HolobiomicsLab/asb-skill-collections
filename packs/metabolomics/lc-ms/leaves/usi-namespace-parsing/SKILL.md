@@ -1,7 +1,7 @@
 ---
 name: usi-namespace-parsing
-description: Use when when you need to retrieve mass spectrometry spectrum data from
-  a metabolomics repository but only have a USI string (e.g., 'mzspec:GNPS:TASK-c95481f0c53d42e78a61bf899e9f9adb-spectra/specs_ms.mgf:scan:1943'
+description: Use when you need to retrieve mass spectrometry spectrum data from a
+  metabolomics repository but only have a USI string (e.g., 'mzspec:GNPS:TASK-c95481f0c53d42e78a61bf899e9f9adb-spectra/specs_ms.mgf:scan:1943'
   or 'mzspec:MASSBANK::accession:SM858102').
 license: CC-BY-4.0
 metadata:
@@ -24,12 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2020.05.09.086066
   title: Metabolomics Spectrum Resolver
-evidence_spans:
-- GNPS Molecular Networking Clustered Spectra
-- MassBank Library Spectra
-- MetaboLights Dataset Spectra
-- Metabolomics Workbench Dataset Spectra
-- MS2LDA Reference Motifs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

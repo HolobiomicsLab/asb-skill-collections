@@ -1,7 +1,7 @@
 ---
 name: lipid-a-structure-annotation
-description: Use when when you have high-resolution tandem mass spectrometry (MS2)
-  data in .ms2 format and need to identify and annotate lipid A structures at scale.
+description: Use when you have high-resolution tandem mass spectrometry (MS2) data
+  in .ms2 format and need to identify and annotate lipid A structures at scale.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3661
@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c00520
   title: LipidA-IDER
-evidence_spans:
-- $ python LipidAIDER_GUI.py
-- 'Step 0: Install git (if you have not done so before)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

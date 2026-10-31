@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2021.12.21.473622v1
   title: MolNotator
-evidence_spans:
-- from MolNotator.duplicate_filter import duplicate_filter
-- from MolNotator.sample_slicer import sample_slicer
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

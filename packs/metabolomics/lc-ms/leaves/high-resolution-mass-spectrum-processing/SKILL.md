@@ -1,6 +1,6 @@
 ---
 name: high-resolution-mass-spectrum-processing
-description: Use when when you have high-resolution tandem mass spectra from proteomics
+description: Use when you have high-resolution tandem mass spectra from proteomics
   experiments and need to search against a spectral library for both unmodified peptides
   and those with unknown or variable post-translational modifications.
 license: CC-BY-4.0
@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo
-evidence_spans:
-- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary)
-  is a spectral library search engine'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

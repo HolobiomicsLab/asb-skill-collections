@@ -1,9 +1,9 @@
 ---
 name: api-error-handling-and-rate-limiting
-description: Use when when enriching mass spectra metadata by querying multiple external
+description: Use when enriching mass spectra metadata by querying multiple external
   web services (CIR, CTS, PubChem, IDSM, BridgeDb) asynchronously, and you need to
   avoid API rate-limit violations, gracefully skip missing or malformed responses,
-  and maintain pipeline stability without losing partial.
+  and maintain pipeline stability without losing partial results.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3761
@@ -26,13 +26,6 @@ metadata:
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer
-evidence_spans:
-- '**MSMetaEnhancer** is a tool used for `.msp` files annotation'
-- '`MSMetaEnhancer/libs/converters/web/` named after your service'
-- 'fetched from the following services: [CIR](https://cactus.nci.nih.gov/chemical/structure_documentation)'
-- __all__ = ['IDSM', 'CTS', 'CIR', 'PubChem', 'BridgeDb', 'MyService']
-- '[CTS](https://cts.fiehnlab.ucdavis.edu/)'
-- '[PubChem](https://pubchem.ncbi.nlm.nih.gov/)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

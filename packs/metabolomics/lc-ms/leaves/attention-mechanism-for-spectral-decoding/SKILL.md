@@ -1,8 +1,7 @@
 ---
 name: attention-mechanism-for-spectral-decoding
-description: Use when when you have pretrained encoder-produced embeddings from MS/MS
-  spectra and need to decode them into canonical SMILES strings representing molecular
-  structures.
+description: Use when you have pretrained encoder-produced embeddings from MS/MS spectra
+  and need to decode them into canonical SMILES strings representing molecular structures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3761
@@ -19,9 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s42004-023-00932-3
   title: Spec2Mol
-evidence_spans:
-- Processing of the chemical data is based on the [RDKit](https://www.rdkit.org/)
-  software.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

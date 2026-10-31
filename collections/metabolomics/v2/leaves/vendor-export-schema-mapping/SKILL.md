@@ -19,10 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c05039
   title: CLAW-MRM
-evidence_spans:
-- _No usage/docs found._
-- streamline various tasks such as data parsing, matching, statistical analysis, and
-  visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

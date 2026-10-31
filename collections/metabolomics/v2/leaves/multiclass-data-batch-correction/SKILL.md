@@ -24,13 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA
-evidence_spans:
-- '[![R >3.5](https://img.shields.io/badge/R-%3E3.5-success.svg)](https://www.r-project.org/)'
-- devtools::install_github("idrblab/NOREVA")
-- BiocManager::install("impute")
-- BiocManager::install("statTarget")
-- BiocManager::install("limma")
-- BiocManager::install("pcaMethods")
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

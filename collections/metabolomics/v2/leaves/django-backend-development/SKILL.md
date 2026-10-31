@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00854
   title: MSConnect
-evidence_spans:
-- The platform is built with Python, Django, JavaScript, and HTML
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

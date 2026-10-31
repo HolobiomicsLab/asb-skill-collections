@@ -1,6 +1,6 @@
 ---
 name: transition-group-feature-extraction
-description: Use when when you have loaded a TransitionGroup (extracted ion chromatogram
+description: Use when you have loaded a TransitionGroup (extracted ion chromatogram
   or mobilogram from DIA mass spectrometry data) and need to identify precise peak
   boundaries, apex retention/drift time, and intensity values for quantitative feature
   detection.
@@ -23,11 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash
-evidence_spans:
-- optional dependencies are also required and can be installed with pip install -r
-  requirements-optional.txt
-- Tests are performed using Pytest
-- Syrupy is used to compare output to previous expected output states
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

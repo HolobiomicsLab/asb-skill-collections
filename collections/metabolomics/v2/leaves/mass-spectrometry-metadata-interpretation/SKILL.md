@@ -1,6 +1,6 @@
 ---
 name: mass-spectrometry-metadata-interpretation
-description: Use when when integrating LC-MS/MS data from diverse sources (e.g., public
+description: Use when integrating LC-MS/MS data from diverse sources (e.g., public
   repositories like MSV000080102, instrument outputs, or precomputed workflows) into
   NPDtools pipelines.
 license: CC-BY-4.0
@@ -34,19 +34,6 @@ derived_from:
   title: ''
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
-evidence_spans:
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
-  spectra) and genomic data to identify novel RiPPs
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
-  spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally
-  modified Peptides (RiPPs)
-- The latest version is available in the Natural Product Discovery toolkit (NPDtools)
-  at https://github.com/ablab/npdtools
-- For presenting Spectral Network propagation graphs, MetaMiner also requires `matplotlib`
-  and `networkx` Python libraries
-- rawrr::readSpectrum
-- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime,
-  in the `r BiocStyle::Biocpkg('rawrr')` executable file
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

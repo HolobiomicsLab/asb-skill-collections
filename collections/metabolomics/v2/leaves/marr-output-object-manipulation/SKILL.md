@@ -1,9 +1,9 @@
 ---
 name: marr-output-object-manipulation
-description: Use when when you have a Marr() output object containing reproducibility
-  statistics computed across replicate experiments and need to reduce dimensionality
-  by retaining only features or sample pairs that meet reproducibility criteria (percentage
-  of reproducible signals exceeding feature-level.
+description: Use when you have a Marr() output object containing reproducibility statistics
+  computed across replicate experiments and need to reduce dimensionality by retaining
+  only features or sample pairs that meet reproducibility criteria (percentage of
+  reproducible signals exceeding feature-level threshold.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -24,13 +24,6 @@ derived_from:
   title: marr
 - doi: 10.1080/01621459.2017.1397521
   title: ''
-evidence_spans:
-- 'marr: An R/Bioconductor package for Maximum Rank Reproducibility'
-- The R-package **marr** can be installed from GitHub using the R package [devtools]
-- devtools::install_github("Ghoshlab/marr")
-- marr (Maximum Rank Reproducibility) is a nonparametric approach that detects reproducible
-  signals using a maximal rank statistic for high-dimensional biological data
-- '`marr`: An R/Bioconductor package for Maximum Rank Reproducibility'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

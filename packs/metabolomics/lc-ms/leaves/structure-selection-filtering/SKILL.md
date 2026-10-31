@@ -1,9 +1,9 @@
 ---
 name: structure-selection-filtering
-description: Use when when you have an unknown metabolite's predicted structural similarity
+description: Use when you have an unknown metabolite's predicted structural similarity
   scores (from a deep learning model such as DeepMASS) against all known metabolites
   in a reference database, and need to identify which known metabolites are most likely
-  structurally related to the unknown to guide.
+  structurally related to the unknown to guide targeted.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -19,7 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.8b05405
   title: Deep MS/MS similarity
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: metabolite-change-direction-categorization
-description: Use when when you have omu_summary output containing log2FoldChange values
+description: Use when you have omu_summary output containing log2FoldChange values
   and adjusted p-values (padj) for metabolites, and you need to stratify them by direction
   of change within a specific compound class (e.g., organic acids, amino acids) at
-  a defined significance threshold (typically padj ≤ 0.
+  a defined significance threshold (typically padj ≤ 0.05).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -22,8 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
-evidence_spans:
-- Omu is an R package that enables rapid analysis of Metabolomics data sets
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

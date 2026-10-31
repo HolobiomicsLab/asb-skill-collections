@@ -18,7 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2024.08.17.608400v2
   title: Recon8D
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

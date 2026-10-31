@@ -1,6 +1,6 @@
 ---
 name: file-format-standardization
-description: Use when when you have raw outputs from LipidSearch or LIQUID identification
+description: Use when you have raw outputs from LipidSearch or LIQUID identification
   software (CSV or TSV format with vendor-specific column naming and lipid identifiers)
   and need to construct a structured data matrix suitable for batch normalization,
   statistical testing, or visualization.
@@ -21,12 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btac706
   title: ADViSELipidomics
-evidence_spans:
-- ADViSELipidomics can normalize the data matrix, providing absolute values of concentration
-  per lipid and sample
-- ADViSELipidomics is a novel Shiny app for the preprocessing, analysis, and visualization
-  of lipidomics data.
-- outputs from LipidSearch and LIQUID for lipid identification and quantification
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

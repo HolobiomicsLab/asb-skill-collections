@@ -1,8 +1,8 @@
 ---
 name: database-schema-design-for-sequential-media
-description: Use when when you have large sequential media files (mzML spectra, text
-  chapters, or similar) and need to enable both random access by ID and sequential
-  iteration without loading the entire file into memory.
+description: Use when you have large sequential media files (mzML spectra, text chapters,
+  or similar) and need to enable both random access by ID and sequential iteration
+  without loading the entire file into memory.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3750
@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
-evidence_spans:
-- import sqlite3
-- import xml.etree.ElementTree as et
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

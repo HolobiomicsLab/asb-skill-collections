@@ -1,7 +1,7 @@
 ---
 name: retention-time-mz-indexing
-description: Use when when you have parsed .mzML or Thermo .raw LC-MS data and need
-  to support interactive or programmatic queries by retention time (RT) and mass-to-charge
+description: Use when you have parsed .mzML or Thermo .raw LC-MS data and need to
+  support interactive or programmatic queries by retention time (RT) and mass-to-charge
   ratio (m/z) without re-scanning the entire file.
 license: CC-BY-4.0
 metadata:
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00618
   title: lcmsWorld
-evidence_spans:
-- lcmsWorld is a 3d viewer for LC-MS data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

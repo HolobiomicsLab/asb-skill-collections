@@ -1,6 +1,6 @@
 ---
 name: test-driven-database-development
-description: Use when when you have an existing tool or library with file-based storage
+description: Use when you have an existing tool or library with file-based storage
   (JSON, CSV, binary formats) that needs to support efficient querying across large
   datasets, and you want to migrate to a relational database without breaking existing
   functionality or performance expectations.
@@ -20,12 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query
-evidence_spans:
-- you want to make some kind of change to the code base
-- MS2Query - Reliable and fast MS/MS spectral-based analogue search
-- fork the repository to your own Github profile and create your own feature branch
-  off of the latest master commit
-- use the search functionality [here](https://github.com/iomega/ms2query/issues)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

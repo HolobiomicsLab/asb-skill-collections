@@ -1,7 +1,9 @@
 ---
 name: domain-specific-language-grammar-design
-description: Use when when you need to enable non-programmers or domain experts to
-  formulate complex, unambiguous queries over specialized data (e.
+description: Use when you need to enable non-programmers or domain experts to formulate
+  complex, unambiguous queries over specialized data (e.g., mass spectrometry repositories,
+  genomic databases) by providing a syntax that bakes in domain assumptions rather
+  than requiring them to write generic SQL or API calls.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -17,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41592-025-02785-1
   title: MassQL
-evidence_spans:
-- The Mass Spec Query Language (MassQL) is a domain specific language meant to be
-  a succinct way to express a query in a mass spectrometry centric fashion.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

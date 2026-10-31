@@ -1,8 +1,8 @@
 ---
 name: jupyter-notebook-execution
-description: Use when when you have three coordinated mass spectrometry data tables
-  (quantification, metadata, spectral) ready for integrated preprocessing and statistical
-  analysis, and you need to generate a standardized JSON artifact for downstream interactive
+description: Use when you have three coordinated mass spectrometry data tables (quantification,
+  metadata, spectral) ready for integrated preprocessing and statistical analysis,
+  and you need to generate a standardized JSON artifact for downstream interactive
   exploration rather than static tabular outputs.
 license: CC-BY-4.0
 metadata:
@@ -31,11 +31,6 @@ derived_from:
   title: msFeaST
 - doi: 10.1371/journal.pcbi.1009105
   title: ''
-evidence_spans:
-- The jupyter-notebook pipeline produces the a text file in json format
-- github.com__kevinmildau__msFeaST
-- The Python code to generate the results is contained within the Jupyter notebook
-- Jupyter notebook **src/reproducible_simulations.ipynb**
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

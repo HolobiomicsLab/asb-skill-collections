@@ -1,6 +1,6 @@
 ---
 name: cross-platform-reproducibility-configuration
-description: Use when when you have documented pinned package versions for a Python-based
+description: Use when you have documented pinned package versions for a Python-based
   scientific implementation (e.g., from a README or project documentation) and need
   to distribute a reproducible computational environment to other users or CI/CD systems.
 license: CC-BY-4.0
@@ -26,13 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btac032
   title: massNet
-evidence_spans:
-- numpy(1.15.4)
-- sklearn(0.23.2)
-- scipy(1.0.0)
-- seaborn (0.9.0)
-- Pandas(1.1.1.)
-- h5py(2.7.1)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

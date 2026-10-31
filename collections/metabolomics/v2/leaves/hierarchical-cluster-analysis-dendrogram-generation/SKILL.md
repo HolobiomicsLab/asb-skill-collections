@@ -18,12 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
-evidence_spans:
-- install_github("LargeMetabo/LargeMetabo", force = TRUE, build_vignettes = TRUE)
-- several R packages are utilized in the background processes, including factoextra,
-  FSelector, genefilter
-- several R packages are utilized in the background processes, including ggfortify,
-  ggplot2, igraph
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

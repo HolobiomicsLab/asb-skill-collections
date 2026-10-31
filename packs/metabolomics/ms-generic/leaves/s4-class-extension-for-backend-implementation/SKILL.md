@@ -22,13 +22,6 @@ metadata:
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
-evidence_spans:
-- Backends such as the `MsBackendMzR` for example retrieve the data on the fly from
-  the raw MS data files
-- library(Spectra) library(IRanges)
-- library(Spectra)
-- return the **full** spectra data within a backend as a `DataFrame` object (defined
-  in the `r Biocpkg("S4Vectors")`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

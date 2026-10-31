@@ -1,9 +1,9 @@
 ---
 name: metabolite-feature-distribution-comparison
-description: Use when when metabolomics data contains both QC control samples and
-  biological samples that will be normalized together using methods like tGAM, rGAM,
-  rLOESS, QC-RLSC, or QC-RSC. Apply this skill to verify that QC and biological sample
-  distributions remain consistent;
+description: Use when metabolomics data contains both QC control samples and biological
+  samples that will be normalized together using methods like tGAM, rGAM, rLOESS,
+  QC-RLSC, or QC-RSC. Apply this skill to verify that QC and biological sample distributions
+  remain consistent;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2945
@@ -25,10 +25,6 @@ derived_from:
   title: Metanorm
 - doi: 10.1021/acs.analchem.5c06841
   title: ''
-evidence_spans:
-- The R package implements three (new) robust normalization methods
-- Metanorm supports robust metabolomics data normalization across scales and experimental
-  designs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

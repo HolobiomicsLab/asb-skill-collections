@@ -1,7 +1,7 @@
 ---
 name: tomcat-application-server-initialization
-description: Use when when you need to deploy a Java web application packaged in a
-  Tomcat Docker container to a specified HTTP endpoint, and must verify that the container
+description: Use when you need to deploy a Java web application packaged in a Tomcat
+  Docker container to a specified HTTP endpoint, and must verify that the container
   starts successfully, the Tomcat server initializes, and the application becomes
   accessible at the mapped host port before proceeding with.
 license: CC-BY-4.0
@@ -22,10 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
-evidence_spans:
-- latest official tomcat docker container
-- This container packages the MetFrag (https://github.com/ipb-halle/MetFragRelaunched)
-  webapp
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

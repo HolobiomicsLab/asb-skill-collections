@@ -1,7 +1,7 @@
 ---
 name: metabolite-set-file-parsing-and-validation
-description: Use when when a user has prepared a custom collection of metabolite sets
-  (e.g., from spectral fragmentation clustering, literature curation, or domain-specific
+description: Use when a user has prepared a custom collection of metabolite sets (e.g.,
+  from spectral fragmentation clustering, literature curation, or domain-specific
   grouping) in CSV or JSON format and wants to score their activity levels using PALS
   without modifying the core PALS codebase.
 license: CC-BY-4.0
@@ -20,8 +20,6 @@ derived_from:
   title: pals
 - doi: 10.1186/1471-2105-6-225
   title: ''
-evidence_spans:
-- PALS Viewer
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

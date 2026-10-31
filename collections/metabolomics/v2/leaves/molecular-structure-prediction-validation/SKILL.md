@@ -1,6 +1,6 @@
 ---
 name: molecular-structure-prediction-validation
-description: Use when when you have executed the MultiModalSpectralTransformer architecture
+description: Use when you have executed the MultiModalSpectralTransformer architecture
   on a set of multi-modal spectroscopic inputs (NMR, HSQC, COSY, IR) and obtained
   predicted molecular structures, and you need to assess prediction accuracy and structural
   correctness against ground-truth or reference.
@@ -27,8 +27,6 @@ derived_from:
   title: ''
 - doi: 10.5281/zenodo.17284940
   title: ''
-evidence_spans:
-- github.com/mpriessner/MultiModalSpectralTransformer
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

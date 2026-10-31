@@ -1,8 +1,7 @@
 ---
 name: pathway-coverage-assessment
-description: Use when when preparing to run Over-representation Analysis (ORA) on
-  a metabolomics study, after constructing the background set but before running the
-  enrichment test.
+description: Use when preparing to run Over-representation Analysis (ORA) on a metabolomics
+  study, after constructing the background set but before running the enrichment test.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -18,7 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

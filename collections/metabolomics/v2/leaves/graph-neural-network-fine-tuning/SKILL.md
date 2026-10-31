@@ -1,6 +1,6 @@
 ---
 name: graph-neural-network-fine-tuning
-description: Use when when you have a pre-trained GNN checkpoint and a smaller, task-specific
+description: Use when you have a pre-trained GNN checkpoint and a smaller, task-specific
   dataset (e.g., Eawag_XBridgeC18_364.
 license: CC-BY-4.0
 metadata:
@@ -26,13 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jcim.4c02179
   title: ABCoRT
-evidence_spans:
-- '**Python**'
-- '**PyG**'
-- '**RDKit**'
-- '- **RDKit**'
-- '**Pandas**'
-- '**torch-scatter**'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

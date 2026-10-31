@@ -24,7 +24,6 @@ derived_from:
   title: Inventa
 - doi: 10.1038/s41467-021-23953-9
   title: ''
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

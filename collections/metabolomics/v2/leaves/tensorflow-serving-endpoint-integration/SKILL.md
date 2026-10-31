@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT
-evidence_spans:
-- We pass through tensorflow serving at this url
-- 'We pass through tensorflow serving at this url:'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

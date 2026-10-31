@@ -1,6 +1,6 @@
 ---
 name: cross-table-metadata-harmonization
-description: Use when when you have obtained raw metabolite abundance data in a format
+description: Use when you have obtained raw metabolite abundance data in a format
   that separates the measurement matrix from sample-level metadata (e.g., run day,
   plate ID, cohort variables) and feature-level annotations (e.
 license: CC-BY-4.0
@@ -17,8 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btac059
   title: Metaboprep
-evidence_spans:
-- library(metaboprep)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

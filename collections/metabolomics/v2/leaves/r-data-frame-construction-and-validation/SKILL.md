@@ -1,6 +1,6 @@
 ---
 name: r-data-frame-construction-and-validation
-description: Use when when you have instrument-exported text files (e.g., Sciex MultiQuant
+description: Use when you have instrument-exported text files (e.g., Sciex MultiQuant
   txt format) containing QCpool sample measurements, metadata, and timestamps that
   need to be converted into a reproducible, schema-validated R object for metabolomics
   or lipidomics quality overview analysis.
@@ -19,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
-evidence_spans:
-- The goal of the `QComics` package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

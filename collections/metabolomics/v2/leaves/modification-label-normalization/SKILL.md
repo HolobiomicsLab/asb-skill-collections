@@ -1,8 +1,8 @@
 ---
 name: modification-label-normalization
-description: Use when when PSM files from heterogeneous proteomics search engines
-  (MaxQuant, MSGFPlus, Sage, X!Tandem, etc.) use inconsistent or proprietary modification
-  notations that cannot be directly consumed by feature generators (e.
+description: Use when pSM files from heterogeneous proteomics search engines (MaxQuant,
+  MSGFPlus, Sage, X!Tandem, etc.) use inconsistent or proprietary modification notations
+  that cannot be directly consumed by feature generators (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -21,9 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1002/pmic.202300336
   title: MS2Rescore (immunopeptidome rescoring)
-evidence_spans:
-- Accepted ProForma modification labels in :py:mod:`psm_utils`
-- MS²Rescore is a tool for rescoring peptide-spectrum matches
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

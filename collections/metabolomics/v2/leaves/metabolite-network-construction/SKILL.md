@@ -1,6 +1,6 @@
 ---
 name: metabolite-network-construction
-description: 'Use when when you have a list of input metabolites (e.g., from differential
+description: 'Use when you have a list of input metabolites (e.g., from differential
   metabolomics analysis) and need to: (1) contextualize them within known metabolic
   pathways; (2) assess their structural importance in the pathway network rather than
   statistical significance alone;'
@@ -20,12 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2025.08.28.672951v2
   title: EnrichMET
-evidence_spans:
-- simplifies pathway enrichment analysis by allowing the complete workflow to be executed
-  through a single R function call
-- integrates fgsea for fast MetSEA, igraph for topology-based metrics
-- pathway to metabolite mappings are obtained from the KEGG resource using the KEGGREST
-  package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

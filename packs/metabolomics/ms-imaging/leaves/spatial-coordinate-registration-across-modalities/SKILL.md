@@ -1,8 +1,8 @@
 ---
 name: spatial-coordinate-registration-across-modalities
-description: Use when when you have preprocessed spatial transcriptomics (ST) and
-  spatial metabolomics (SM) datasets in AnnData format with spatial coordinates, and
-  need to align them to a common resolution before joint downstream analysis.
+description: Use when you have preprocessed spatial transcriptomics (ST) and spatial
+  metabolomics (SM) datasets in AnnData format with spatial coordinates, and need
+  to align them to a common resolution before joint downstream analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3352
@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-63915-z
   title: SpatialMETA
-evidence_spans:
-- spatialMETA is a method for integrating spatial multi-omics data
-- spatialmeta.pp.calculate_qc_metrics_sm
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,7 +1,7 @@
 ---
 name: multi-inheritance-class-hierarchy
-description: Use when when you need to support multiple plotting library backends
-  (static or interactive) for the same data visualization domain (e.
+description: Use when you need to support multiple plotting library backends (static
+  or interactive) for the same data visualization domain (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -21,7 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

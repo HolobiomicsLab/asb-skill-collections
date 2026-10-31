@@ -1,8 +1,8 @@
 ---
 name: hypergeometric-distribution-probability-calculation
-description: Use when when you have raw strain correlation scores computed across
-  GCF–MF pairs of varying sizes (different numbers of strains in each set) and need
-  to make those scores comparable.
+description: Use when you have raw strain correlation scores computed across GCF–MF
+  pairs of varying sizes (different numbers of strains in each set) and need to make
+  those scores comparable.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -21,10 +21,6 @@ derived_from:
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
-evidence_spans:
-- follows the hypergeometric distribution as previously stated
-- NPLinker, a Python module to accelerate and support the process of automatically
-  linking GCFs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

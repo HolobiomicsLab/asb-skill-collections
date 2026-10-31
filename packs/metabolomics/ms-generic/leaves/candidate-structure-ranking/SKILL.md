@@ -29,10 +29,6 @@ derived_from:
   title: ChemWalker
 - doi: 10.48550/arxiv.2507.06853
   title: ''
-evidence_spans:
-- ChemWalker is a python package
-- using [random walk](https://github.com/jinhongjung/pyrwr)
-- github.com/AzureLeon1/DiffSpectra
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

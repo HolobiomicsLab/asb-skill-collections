@@ -22,12 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
-evidence_spans:
-- The R software environment can be downloaded for free from the Comprehensive R Archive
-  Network (CRAN)
-- 'Install the NormalizeMets package by using the following function: `install.packages("NormalizeMets")`'
-- The use of RStudio is also recommended. RStudio is an integrated development environment
-  (IDE)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

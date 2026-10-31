@@ -48,16 +48,6 @@ derived_from:
   title: ''
 - doi: 10.1021/jasms.5c00322
   title: ''
-evidence_spans:
-- microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST
-- Aggregated search outputs can be generated and visualized using metadataMASST
-- search and annotate an unknown spectrum in their local database or public databases
-  (i.e. drug structures in GNPS, MASSBANK and DrugBANK)
-- github.com__daniellyz__meRgeION2
-- MS2Compound (v1.0.2) is a user friendly Graphical User Interface (GUI) for the identification
-  of the compounds from LC-MS and MS/MS metabolomics data
-- compatible with the customized database prepared using CFM-id, the fragment prediction
-  tool
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

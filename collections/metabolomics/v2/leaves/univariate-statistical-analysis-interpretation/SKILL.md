@@ -24,8 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41596-024-01046-3
   title: FBMN-STATS
-evidence_spans:
-- To easily install and run Jupyter Notebook in R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

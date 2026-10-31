@@ -1,8 +1,8 @@
 ---
 name: candidate-set-generation-for-annotation
-description: Use when when you have raw or unprocessed PubChem compound records and
-  need to produce a curated set of candidate metabolite structures for input to MAGMa
-  job calculations.
+description: Use when you have raw or unprocessed PubChem compound records and need
+  to produce a curated set of candidate metabolite structures for input to MAGMa job
+  calculations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3437
@@ -18,8 +18,6 @@ metadata:
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
-evidence_spans:
-- MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

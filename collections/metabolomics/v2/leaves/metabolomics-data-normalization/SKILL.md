@@ -37,14 +37,6 @@ derived_from:
   title: ''
 - doi: 10.1007/s11306-018-1347-7
   title: ''
-evidence_spans:
-- dbnorm (V-0.2.2) A package for drift across batches normalization and visualization
-- dbnorm contains R functions which allow visualization and removal of technical heterogeneity
-- '*dbnorm* contains R functions which allow visualization and removal of technical
-  heterogeneity'
-- ComBat(parametric and non-parametric)-model [PMID:16632515] from sva package [PMID:22257669]
-- MInfer is an R package designed for analyzing metabolomics data
-- MInfer is an R package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

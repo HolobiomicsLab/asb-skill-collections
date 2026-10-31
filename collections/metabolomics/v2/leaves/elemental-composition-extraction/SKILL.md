@@ -17,9 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.estlett.5c00284
   title: MoleTrans
-evidence_spans:
-- MoleTrans is a webtool for post analysis and data mining on the formula assigned
-  datasets from FT-ICR MS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

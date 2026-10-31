@@ -19,12 +19,6 @@ derived_from:
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
-evidence_spans:
-- after downloading the strain assemblies and metabolomics data, the genomes were
-  run through antiSMASH v5.0.0 for BGC detection
-- genomes were run through antiSMASH v5.0.0 for BGC detection
-- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining
-  the hierarchical relationship between them
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

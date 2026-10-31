@@ -1,6 +1,6 @@
 ---
 name: machine-learning-based-conformation-filtering
-description: Use when when you have generated multiple 3D conformations for a molecule
+description: Use when you have generated multiple 3D conformations for a molecule
   or set of ionized adducts (e.g., via RDKit) and need to retain only the most energetically
   favorable structures before expensive quantum calculations.
 license: CC-BY-4.0
@@ -22,13 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS
-evidence_spans:
-- Snakemake workflow manager for predicting collisional cross sections
-- This repository contains a Snakemake workflow manager for predicting collisional
-  cross sections (CCS)
-- 'Dimorphite-DL: For ionization state determination'
-- 'ASE-ANI: For conformation filtering'
-- 'QUICK: For quantum calculations'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

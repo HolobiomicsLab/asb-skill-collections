@@ -1,9 +1,9 @@
 ---
 name: chemical-structure-identifier-conversion
-description: Use when when you have a metabolomic dataset with heterogeneous chemical
-  identifiers (names, InChI strings, InChIKeys, or SMILES) and need a single canonical
-  identifier per metabolite to enable comparison across studies, detect redundant
-  entries, or link to external chemical databases for.
+description: Use when you have a metabolomic dataset with heterogeneous chemical identifiers
+  (names, InChI strings, InChIKeys, or SMILES) and need a single canonical identifier
+  per metabolite to enable comparison across studies, detect redundant entries, or
+  link to external chemical databases for enrichment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -23,12 +23,6 @@ derived_from:
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
-evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted
-  meta-analysis in R
-- the package will retrieve the PubChem ID from the ID using `webchem`
-- This vignette illustrates `Amanida` R package, which contains a collection of functions
-  for computing a weighted meta-analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

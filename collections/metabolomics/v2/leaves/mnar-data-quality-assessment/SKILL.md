@@ -1,6 +1,6 @@
 ---
 name: mnar-data-quality-assessment
-description: Use when when you have applied multiple left-censored missing value imputation
+description: Use when you have applied multiple left-censored missing value imputation
   methods to metabolomics data and need to compare their performance quantitatively.
 license: CC-BY-4.0
 metadata:
@@ -25,9 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp
-evidence_spans:
-- '**GSimp.R** contains the core functions for GSimp'
-- GSimp.R contains the core functions for GSimp
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

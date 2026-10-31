@@ -1,6 +1,6 @@
 ---
 name: sbml-model-manipulation
-description: Use when when you have consensus metabolic reconstructions in SBML format
+description: Use when you have consensus metabolic reconstructions in SBML format
   for individual community members and need to resolve metabolic gaps by leveraging
   cross-member dependencies and community-level constraints before phenotypic validation
   or flux analysis.
@@ -17,8 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
-evidence_spans:
-- community-dependent gap-filling using COMMIT for communites sampled from
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

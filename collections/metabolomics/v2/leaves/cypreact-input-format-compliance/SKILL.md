@@ -20,10 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jcim.8b00035
   title: CypReact
-evidence_spans:
-- 'To run the CypReact tool, the user should use command in the terminal as: ->java
-  -jar "PathOfCypReactBundle"'
-- java -jar "PathOfCypReactBundle"
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: robustness-metric-computation-metabolomics
-description: Use when when you have applied multiple normalization methods (e.g.,
-  tGAM, rGAM, rLOESS, QC-RLSC, QC-RSC) to metabolomics datasets and need to rank them
-  by robustness and execution speed to determine which method is most suitable for
-  your experimental design and computational constraints.
+description: Use when you have applied multiple normalization methods (e.g., tGAM,
+  rGAM, rLOESS, QC-RLSC, QC-RSC) to metabolomics datasets and need to rank them by
+  robustness and execution speed to determine which method is most suitable for your
+  experimental design and computational constraints.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -25,10 +25,6 @@ derived_from:
   title: Metanorm
 - doi: 10.1021/acs.analchem.5c06841
   title: ''
-evidence_spans:
-- The R package implements three (new) robust normalization methods
-- Metanorm supports robust metabolomics data normalization across scales and experimental
-  designs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

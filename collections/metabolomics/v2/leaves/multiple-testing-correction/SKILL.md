@@ -34,13 +34,6 @@ derived_from:
   title: ''
 - doi: 10.1093/bioinformatics/btad523
   title: ''
-evidence_spans:
-- simplifies pathway enrichment analysis by allowing the complete workflow to be executed
-  through a single R function call
-- library(readr)
-- curated KEGG data for enrichment using Fisher's Exact Test
-- MetENP
-- An R workflow for network-driven over-representation analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

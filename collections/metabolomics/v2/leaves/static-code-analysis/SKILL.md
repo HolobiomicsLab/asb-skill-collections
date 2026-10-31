@@ -1,6 +1,6 @@
 ---
 name: static-code-analysis
-description: Use when when preparing to submit a pull request to a collaborative Python
+description: Use when preparing to submit a pull request to a collaborative Python
   project (like BiG-SCAPE) that mandates PEP8 compliance, or when establishing quality
   gates for a codebase that has adopted linters as part of its contribution guidelines.
 license: CC-BY-4.0
@@ -22,8 +22,6 @@ derived_from:
   title: BiG-SCAPE biosynthetic diversity
 - doi: 10.1021/acs.jproteome.2c00602
   title: ''
-evidence_spans:
-- uses flake8 for linting
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,7 +1,7 @@
 ---
 name: mass-accuracy-tolerance-application
-description: Use when when you have generated in silico annotations (from GNPS ISDB,
-  SIRIUS, or timaR) and need to distinguish true matches from false positives by enforcing
+description: Use when you have generated in silico annotations (from GNPS ISDB, SIRIUS,
+  or timaR) and need to distinguish true matches from false positives by enforcing
   a mass accuracy constraint. Apply this skill before computing novelty metrics (e.
 license: CC-BY-4.0
 metadata:
@@ -31,16 +31,6 @@ derived_from:
   title: ''
 - doi: 10.1021/acs.analchem.2c04343
   title: ''
-evidence_spans:
-- MZmine output format using only the 'Peak area', 'row m/z' and 'row retention time'
-  columns. -Inventa takes input directly from MZmine2
-- Inventa takes input directly from MZmine2 or MZmine 3
-- -Inventa takes input directly from MZmine2 or [MZmine 3](http://mzmine.github.io/),
-  is possible to use other processing sofwares
-- 'tima_results_filename: timaR reponderated output format. - for performing in silico
-  annotations and taxonomically informed reponderation.'
-- 'tima_results_filename: timaR reponderated output format'
-- github.com__daniellyz__meRgeION2
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

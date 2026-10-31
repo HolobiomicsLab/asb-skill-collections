@@ -1,6 +1,6 @@
 ---
 name: metabolomics-data-processing
-description: Use when when you have raw or partially processed metabolomics data (feature
+description: Use when you have raw or partially processed metabolomics data (feature
   tables with sample metadata) and need to apply quality-control metrics, normalization,
   statistical inference, or advanced classification/variable selection without relying
   on a Galaxy instance.
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s12859-018-2134-1
   title: SECIMTools
-evidence_spans:
-- can be run in a standalone mode or via Galaxy Genomics Framework
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

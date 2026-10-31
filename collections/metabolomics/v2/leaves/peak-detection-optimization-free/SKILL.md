@@ -1,6 +1,6 @@
 ---
 name: peak-detection-optimization-free
-description: Use when when processing raw untargeted LC/MS data in mzML or mzXML format
+description: Use when processing raw untargeted LC/MS data in mzML or mzXML format
   and you need to detect peaks across mass-to-charge (m/z) and retention time (rt)
   dimensions without prior knowledge of optimal signal detection parameters, QC samples,
   or domain expertise in LC/MS preprocessing.
@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2025.01.26.634927v3
   title: mzLearn
-evidence_spans:
-- mzEmbed, a framework for developing pre-trained generative models and fine-tuning
-  them for specific tasks for untargeted metabolomics datasets
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

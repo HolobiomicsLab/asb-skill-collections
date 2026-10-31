@@ -1,7 +1,7 @@
 ---
 name: molecular-property-prediction-feature-construction
-description: Use when when you have molecular structures (SMILES or graph formats)
-  and need to predict a physicochemical or spectral property (e.g., infrared spectra)
+description: Use when you have molecular structures (SMILES or graph formats) and
+  need to predict a physicochemical or spectral property (e.g., infrared spectra)
   using a graph neural network architecture. Use this skill when the base model architecture
   (e.
 license: CC-BY-4.0
@@ -18,10 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
-evidence_spans:
-- extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations
-  for Property Prediction]
-- The `chemprop-IR` architecture is an extension of `chemprop`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

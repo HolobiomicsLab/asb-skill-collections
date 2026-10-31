@@ -1,6 +1,6 @@
 ---
 name: reactant-ion-peak-exclusion
-description: Use when when performing peak detection on Gas Chromatography–Ion Mobility
+description: Use when performing peak detection on Gas Chromatography–Ion Mobility
   Spectrometry samples where the Reactant Ion Peak (a high-intensity background signal
   from the ion source) would otherwise be misidentified as an analyte peak, causing
   false positives in the peak list.
@@ -21,8 +21,6 @@ metadata:
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
-evidence_spans:
-- library(ggplot2) library(cowplot) library(GCIMS)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

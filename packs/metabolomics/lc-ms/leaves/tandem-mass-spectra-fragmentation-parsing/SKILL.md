@@ -1,8 +1,8 @@
 ---
 name: tandem-mass-spectra-fragmentation-parsing
-description: Use when when you have raw tandem mass spectra in mz/intensity format
-  with precursor m/z values, and need to extract all fragmentation features (observed
-  peaks and neutral losses) as a foundation for building interpretable machine learning
+description: Use when you have raw tandem mass spectra in mz/intensity format with
+  precursor m/z values, and need to extract all fragmentation features (observed peaks
+  and neutral losses) as a foundation for building interpretable machine learning
   models.
 license: CC-BY-4.0
 metadata:
@@ -22,9 +22,6 @@ derived_from:
   title: ChemEcho
 - doi: 10.1145/2939672.2939778
   title: ''
-evidence_spans:
-- The Mass Query Language (MassQL) is a domain specific language used to describe
-  fragmentation patterns
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,8 +1,8 @@
 ---
 name: spectral-library-data-modeling
-description: Use when when migrating an existing file-based spectral library (stored
-  as JSON, CSV, or binary formats) into a production system that requires frequent
-  subset queries by metadata filters, similarity scoring across large spectral collections,
+description: Use when migrating an existing file-based spectral library (stored as
+  JSON, CSV, or binary formats) into a production system that requires frequent subset
+  queries by metadata filters, similarity scoring across large spectral collections,
   or integration into downstream tools like MS2Query that.
 license: CC-BY-4.0
 metadata:
@@ -23,12 +23,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query
-evidence_spans:
-- you want to make some kind of change to the code base
-- MS2Query - Reliable and fast MS/MS spectral-based analogue search
-- fork the repository to your own Github profile and create your own feature branch
-  off of the latest master commit
-- use the search functionality [here](https://github.com/iomega/ms2query/issues)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

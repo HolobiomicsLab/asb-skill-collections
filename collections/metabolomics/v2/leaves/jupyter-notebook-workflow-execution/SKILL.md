@@ -25,8 +25,6 @@ derived_from:
   title: CCS Predictor 2.0
 - doi: 10.1101/2022.08.09.503345
   title: ''
-evidence_spans:
-- a Google Colaboratory Jupyter notebook that is well suited for beginners
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

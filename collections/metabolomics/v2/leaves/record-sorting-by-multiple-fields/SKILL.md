@@ -1,7 +1,9 @@
 ---
 name: record-sorting-by-multiple-fields
-description: Use when when applying str or matrix directives to JSON table data, and
-  you need deterministic ordering of records before building output values—e.
+description: Use when applying str or matrix directives to JSON table data, and you
+  need deterministic ordering of records before building output values—e.g., selecting
+  the first matching record after sorting by priority, or grouping records by a collate
+  field that requires consistent ordering within each group.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -18,10 +20,6 @@ derived_from:
   title: messes
 - doi: 10.3390/metabo11030163
   title: ''
-evidence_spans:
-- MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_
-  (`jsonschema <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,8 @@
 ---
 name: mass-spectrum-simulation
-description: Use when when you have one or more peptide sequences (as strings) and
-  need to predict their theoretical isotopic distribution patterns to compare against
-  experimental MS data, validate peak assignments, or generate synthetic spectra for
-  method development.
+description: Use when you have one or more peptide sequences (as strings) and need
+  to predict their theoretical isotopic distribution patterns to compare against experimental
+  MS data, validate peak assignments, or generate synthetic spectra for method development.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -25,13 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
-evidence_spans:
-- Pyteomics is a collection of lightweight and handy tools for Python
-- Pyteomics supports recent versions of Python 3.
-- pip install pyteomics
-- conda install -c bioconda pyteomics
-- numpy
-- numpy <https://numpy.org/>
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

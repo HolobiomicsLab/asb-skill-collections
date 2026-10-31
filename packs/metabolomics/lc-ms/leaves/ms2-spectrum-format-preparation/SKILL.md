@@ -18,9 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c06875
   title: MS2MP
-evidence_spans:
-- MS2MP is a novel deep learning-based framework for KEGG pathway prediction directly
-  from untargeted tandem mass spectrometry(MS2)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

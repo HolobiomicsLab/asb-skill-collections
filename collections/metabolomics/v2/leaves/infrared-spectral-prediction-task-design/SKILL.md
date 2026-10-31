@@ -1,6 +1,6 @@
 ---
 name: infrared-spectral-prediction-task-design
-description: Use when when you have a dataset of molecules with experimentally measured
+description: Use when you have a dataset of molecules with experimentally measured
   or simulated infrared spectra and want to train a graph neural network to predict
   spectral features (e.g., absorption peaks, intensities) from molecular structure.
 license: CC-BY-4.0
@@ -18,9 +18,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
-evidence_spans:
-- extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations
-  for Property Prediction]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

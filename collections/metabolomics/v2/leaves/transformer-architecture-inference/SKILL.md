@@ -28,8 +28,6 @@ derived_from:
   title: ''
 - doi: 10.5281/zenodo.14712886
   title: ''
-evidence_spans:
-- github.com/mpriessner/MultiModalSpectralTransformer
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

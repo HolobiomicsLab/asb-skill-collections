@@ -1,9 +1,9 @@
 ---
 name: model-metadata-schema-inspection
-description: Use when when preparing to send peak data (1H and 13C NMR measurements)
-  to a machine learning classification endpoint and you need to verify the current
-  model's input/output names and schema, especially before implementing or updating
-  code that constructs JSON payloads for the /api/smart3/search.
+description: Use when preparing to send peak data (1H and 13C NMR measurements) to
+  a machine learning classification endpoint and you need to verify the current model's
+  input/output names and schema, especially before implementing or updating code that
+  constructs JSON payloads for the /api/smart3/search.
 license: CC-BY-4.0
 metadata:
   grounding_tier: link-only
@@ -17,7 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,6 @@
 ---
 name: repository-backend-dispatch
-description: Use when when you have a USI string (e.g., 'mzspec:GNPS:TASK-abc123:scan:1943')
+description: Use when you have a USI string (e.g., 'mzspec:GNPS:TASK-abc123:scan:1943')
   and need to retrieve the underlying spectrum data from its native repository without
   knowing a priori which backend stores it.
 license: CC-BY-4.0
@@ -26,13 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1101/2020.05.09.086066
   title: Metabolomics Spectrum Resolver
-evidence_spans:
-- GNPS Molecular Networking Clustered Spectra
-- ProteoXchange Repository Data
-- MassBank Library Spectra
-- MetaboLights Dataset Spectra
-- Metabolomics Workbench Dataset Spectra
-- MS2LDA Reference Motifs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: asynchronous-workflow-orchestration
-description: Use when when you have a Streamlit-based scientific application (e.g.
-  OpenMS workflows) that must support both online Docker deployments with multiple
-  worker processes and offline local deployments, and you need to prevent long-running
-  analyses from blocking the web UI thread.
+description: Use when you have a Streamlit-based scientific application (e.g. OpenMS
+  workflows) that must support both online Docker deployments with multiple worker
+  processes and offline local deployments, and you need to prevent long-running analyses
+  from blocking the web UI thread.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -22,9 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
-evidence_spans:
-- No code changes required for offline mode. The detection happens automatically
-- as well as deployment with docker-compose.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

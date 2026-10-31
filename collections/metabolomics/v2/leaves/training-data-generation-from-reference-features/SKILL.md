@@ -26,8 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot
-evidence_spans:
-- PeakBot is a python package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

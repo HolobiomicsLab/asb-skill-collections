@@ -1,6 +1,6 @@
 ---
 name: spectral-feature-normalization
-description: Use when when you have raw LC-MS metabolomics data in .mzML or .npy format
+description: Use when you have raw LC-MS metabolomics data in .mzML or .npy format
   from multiple disease groups with varying ionization efficiencies or detector sensitivities,
   and you need to train a deep learning model for disease classification.
 license: CC-BY-4.0
@@ -20,7 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

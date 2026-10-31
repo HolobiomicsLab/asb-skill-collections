@@ -1,8 +1,8 @@
 ---
 name: elution-profile-normalization-and-preprocessing
-description: Use when when you have raw co-fractionation/mass-spectrometry elution
-  intensity profiles and plan to train a CNN or semi-supervised learning model (Label
-  Spreading) directly on unengineered elution data.
+description: Use when you have raw co-fractionation/mass-spectrometry elution intensity
+  profiles and plan to train a CNN or semi-supervised learning model (Label Spreading)
+  directly on unengineered elution data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -17,7 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bib/bbad229
   title: SPIFFED
-evidence_spans: []
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

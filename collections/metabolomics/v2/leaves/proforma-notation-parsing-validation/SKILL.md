@@ -20,9 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
-evidence_spans:
-- The main way to obtain Pyteomics is via `pip Python package manager
-- '- `psims <https://mobiusklein.github.io/psims/docs/build/html/>`_ (used py :py:mod:`pyteomics.proforma`)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

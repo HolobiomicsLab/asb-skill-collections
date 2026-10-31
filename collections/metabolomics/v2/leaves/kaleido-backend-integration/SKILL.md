@@ -1,7 +1,7 @@
 ---
 name: kaleido-backend-integration
-description: Use when when a Shiny application currently uses orca for static plot
-  export but requires a lighter-weight, Python-native alternative that avoids Node.js/Electron
+description: Use when a Shiny application currently uses orca for static plot export
+  but requires a lighter-weight, Python-native alternative that avoids Node.js/Electron
   runtime overhead.
 license: CC-BY-4.0
 metadata:
@@ -22,13 +22,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.3c00512
   title: PMart
-evidence_spans:
-- Shiny GUI implementation of the pmartR R package.
-- Shiny GUI implementation of the pmartR R package
-- Remove orca in favor of Kaleido
-- the bulk of the functionality of the package to be available to the user without
-  the need for familiarity with R or the package itself
-- '#### Docker Containers'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

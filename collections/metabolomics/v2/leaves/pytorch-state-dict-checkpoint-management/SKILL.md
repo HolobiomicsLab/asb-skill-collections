@@ -1,8 +1,7 @@
 ---
 name: pytorch-state-dict-checkpoint-management
-description: Use when when training a multi-component deep learning model where some
-  components (e.g., a pretrained TCN spectrum encoder) should remain frozen while
-  others (e.
+description: Use when training a multi-component deep learning model where some components
+  (e.g., a pretrained TCN spectrum encoder) should remain frozen while others (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -20,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
-evidence_spans:
-- FIDDLE is a deep learning method for predicting molecular formulas from MS/MS spectra
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

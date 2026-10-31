@@ -1,9 +1,9 @@
 ---
 name: lipidomics-experiment-object-construction
-description: Use when when you have lipidomics quantitation data (lipid abundances
-  across samples) that you need to load into a unified, annotated R object for analysis—either
+description: Use when you have lipidomics quantitation data (lipid abundances across
+  samples) that you need to load into a unified, annotated R object for analysis—either
   from public Metabolomics Workbench studies via API, Skyline mass spectrometry software
-  exports, or a custom numerical matrix with.
+  exports, or a custom numerical matrix with clinical.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -24,13 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
-evidence_spans:
-- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object
-  using `lipidr` function `fetch_mw_study()`
-- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr`
-  provides an easy way to re-analyze and visualize these datasets.'
-- Data Mining and Analysis of Lipidomics Datasets in R
-- This step of the workflow requires the `limma` package to be installed.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

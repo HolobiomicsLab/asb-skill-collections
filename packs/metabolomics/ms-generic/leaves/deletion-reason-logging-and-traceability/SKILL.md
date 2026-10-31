@@ -1,6 +1,6 @@
 ---
 name: deletion-reason-logging-and-traceability
-description: Use when when processing OMSLs (Open Mass Spectra Libraries) with heterogeneous
+description: Use when processing OMSLs (Open Mass Spectra Libraries) with heterogeneous
   data quality, inconsistent annotations, or mixed ionmode/chromatographic modes (LC/GC),
   and you need to track which spectra were discarded, why, and potentially recover
   or reprocess them in future iterations.
@@ -27,8 +27,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
-evidence_spans:
-- Python-3.12
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

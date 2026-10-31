@@ -24,14 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
-evidence_spans:
-- Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
-  pandas dataframes
-- Multiple backends supported including matplotlib, bokeh, and plotly
-- Rendering is typically slower than the BOKEH backend
-- ms_data.plot(x="m/z", y="intensity", kind="spectrum")
-- conda create --name=pyopenms-viz python=3.12
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

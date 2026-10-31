@@ -25,10 +25,6 @@ metadata:
 derived_from:
 - doi: 10.1021/jasms.4c00146
   title: PeakQC
-evidence_spans:
-- IonToolPack is a software suite housing tools for mass spectrometry data
-- IonToolPack is a software suite housing tools for mass spectrometry data.
-- 'PeakQuant: Targeted MS1 peak abundance extraction for quantitation.'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

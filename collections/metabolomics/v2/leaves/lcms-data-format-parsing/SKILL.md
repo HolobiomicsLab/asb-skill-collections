@@ -1,9 +1,9 @@
 ---
 name: lcms-data-format-parsing
-description: Use when when you have raw LC/MS data in mzML format and need to execute
-  the LAGF non-targeted screening pipeline. Use this skill as the first step before
-  applying the LAGF algorithm workflow to extract and annotate features from mass
-  spectrometry data.
+description: Use when you have raw LC/MS data in mzML format and need to execute the
+  LAGF non-targeted screening pipeline. Use this skill as the first step before applying
+  the LAGF algorithm workflow to extract and annotate features from mass spectrometry
+  data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -26,13 +26,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.analchem.5c00060
   title: LAGF
-evidence_spans:
-- pymzml==2.5.2
-- pandas==2.0.3
-- numpy==1.22.4
-- scipy==1.4.1
-- joblib==0.15.1
-- tqdm==4.45.0
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

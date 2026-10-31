@@ -24,13 +24,6 @@ metadata:
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
-evidence_spans:
-- we exploited the implementation of optGpSampler algorithm [71] available in COBRApy
-  [72], and we sampled a million steady state solutions of the ENGRO2 model
-- We performed a Flux Variability Analysis (FVA). FVA [67, 68] is a constraint-based
-  modelling technique aimed at determining the maximal (and minimal) possible flux
-  through any reaction
-- using constraint-based stoichiometric metabolic models as a scaffold
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

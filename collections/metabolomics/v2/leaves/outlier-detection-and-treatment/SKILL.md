@@ -1,9 +1,8 @@
 ---
 name: outlier-detection-and-treatment
-description: Use when when you have a Metaboprep object with raw or batch-normalized
-  metabolomics abundance data and need to detect samples that deviate significantly
-  from the central distribution due to technical artifacts, processing errors, or
-  biological extremes.
+description: Use when you have a Metaboprep object with raw or batch-normalized metabolomics
+  abundance data and need to detect samples that deviate significantly from the central
+  distribution due to technical artifacts, processing errors, or biological extremes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -20,8 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1093/bioinformatics/btac059
   title: Metaboprep
-evidence_spans:
-- library(metaboprep)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

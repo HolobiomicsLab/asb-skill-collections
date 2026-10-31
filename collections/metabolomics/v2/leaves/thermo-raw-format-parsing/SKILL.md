@@ -1,8 +1,8 @@
 ---
 name: thermo-raw-format-parsing
-description: Use when when you have LC-MS data in Thermo .raw format (a proprietary
-  binary output from Thermo mass spectrometers) and need to load it into a 3D LC-MS
-  viewer or extract structured spectral metadata (retention time, m/z values, intensities,
+description: Use when you have LC-MS data in Thermo .raw format (a proprietary binary
+  output from Thermo mass spectrometers) and need to load it into a 3D LC-MS viewer
+  or extract structured spectral metadata (retention time, m/z values, intensities,
   scan number, MS level) for visualization or quantitative.
 license: CC-BY-4.0
 metadata:
@@ -20,8 +20,6 @@ metadata:
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00618
   title: lcmsWorld
-evidence_spans:
-- lcmsWorld is a 3d viewer for LC-MS data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

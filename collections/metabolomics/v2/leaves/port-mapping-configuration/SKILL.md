@@ -1,6 +1,6 @@
 ---
 name: port-mapping-configuration
-description: Use when when you have a containerized web application with a fixed internal
+description: Use when you have a containerized web application with a fixed internal
   port (e.g., Tomcat on port 8080) and need to expose it on a different localhost
   port for local access or testing.
 license: CC-BY-4.0
@@ -17,8 +17,6 @@ metadata:
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
-evidence_spans:
-- latest official tomcat docker container
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

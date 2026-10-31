@@ -52,15 +52,6 @@ derived_from:
   title: ''
 - doi: 10.3389/fpls.2019.01329
   title: ''
-evidence_spans:
-- Use the file pyproject.toml to determine the version of Python required.
-- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run
-- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run --host=0.0.0.0
-  --port=3007
-- docker pull proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses
-- docker run --detach --name msconvert_docker --rm -it -e WINEDEBUG=-all -v ./chem_spectra/tmp:/data
-  proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses bash
-- HyperSpec requires `Python 3.8+` with `CUDA` environment
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

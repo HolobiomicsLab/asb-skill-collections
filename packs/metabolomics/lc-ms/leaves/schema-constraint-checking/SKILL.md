@@ -19,9 +19,6 @@ metadata:
 derived_from:
 - doi: 10.1038/s41589-020-00724-z
   title: pairedomicsdatapla
-evidence_spans:
-- make sure the existing tests still work by running ``npm run test`` in `api/` and/or
-  `app/` directory
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
