@@ -49,13 +49,11 @@ actual `plugins[].name` and `plugins[].source` fields):
 
 ```json
 {
-  "schema_version": "1.0",
   "name": "ASB Skill Collections",
   "description": "Curated scientific-agent skill and benchmark collections from the AgenticScienceBuilder pipeline.",
-  "publisher": {
+  "owner": {
     "name": "Holobiomics Lab",
-    "url": "https://github.com/HolobiomicsLab",
-    "orcid_org": "https://orcid.org/0000-0002-XXXX-XXXX"
+    "url": "https://github.com/HolobiomicsLab"
   },
   "plugins": [
     {
@@ -86,12 +84,11 @@ actual `plugins[].name` and `plugins[].source` fields):
 
 | Field | Type | Req | Description |
 |-------|------|-----|---|
-| `schema_version` | string | Y | Marketplace schema version (currently `1.0`) |
-| `name` | string | Y | Publisher-level name |
-| `description` | string | Y | Publisher-level description |
-| `publisher.name` | string | Y | Publisher name (e.g., "Holobiomics Lab") |
-| `publisher.url` | string | Y | Publisher GitHub URL |
-| `publisher.orcid_org` | string | Y | Org-level ORCID (TODO: real ORCID; placeholder for v0) |
+| `name` | string | Y | Marketplace name |
+| `description` | string | Y | Marketplace description |
+| `owner.name` | string | Y | Owner name (e.g., "Holobiomics Lab") |
+| `owner.url` | string | Y | Owner GitHub URL |
+| `owner.orcid_org` | string | N | Org-level ORCID |
 | `plugins[].id` | string | Y | Unique plugin ID, format `<slug>-v<N>` |
 | `plugins[].name` | string | Y | Human-readable plugin name |
 | `plugins[].version` | string | Y | Semantic version string (e.g., `"1"`, `"2.1"`) |
