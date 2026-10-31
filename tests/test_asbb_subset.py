@@ -21,7 +21,7 @@ sys.path.insert(0, str(REPO_ROOT))
 
 from asb_skill_collections.asbb import manifest, subset  # noqa: E402
 from asb_skill_collections.asbb_cli import main  # noqa: E402
-from scripts import build_packs  # noqa: E402
+from scripts import build_grounding_bundle, build_packs  # noqa: E402
 from scripts.stamp_skill_license import stamp_skill  # noqa: E402
 
 DOMAIN = "astronomy"
@@ -259,7 +259,9 @@ def test_a_selection_of_a_packs_members_derives_that_pack(tmp_path):
     """On the shipped tree: the subset route and the pack build agree.
 
     The smallest declared pack keeps this quick; any pack would do. Only the two
-    files that name the unit differ: its plugin.json and its router.
+    files that name the unit differ: its plugin.json and its router. GROUNDING.md
+    is compared with the current generator instead of the shipped tree: the
+    shipped packs keep the earlier peer-review wording until they are rebuilt.
     """
     declared = []
     for pack_map in build_packs.discover_maps(REPO_ROOT):
@@ -277,8 +279,12 @@ def test_a_selection_of_a_packs_members_derives_that_pack(tmp_path):
 
     assert files(derived) == files(spec.directory)
     naming = {".claude-plugin/plugin.json", "skills/_router/SKILL.md"}
+    regenerated = {"GROUNDING.md"}
     differing = sorted(
-        rel for rel in files(derived) - naming
+        rel for rel in files(derived) - naming - regenerated
         if (derived / rel).read_bytes() != (spec.directory / rel).read_bytes()
     )
     assert differing == []
+    assert (derived / "GROUNDING.md").read_text(encoding="utf-8") == (
+        build_grounding_bundle.render_grounding_doc(derived.name)
+    )
