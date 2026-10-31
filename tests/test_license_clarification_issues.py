@@ -955,3 +955,147 @@ def test_verify_writes_ledger_back(tmp_path):
 
     ledger = yaml.safe_load(ledger_path.read_text())
     assert ledger["deployments"][0]["last_checked"] == "2026-07-01"
+
+
+# ---------------------------------------------------------------------------
+# verify as an argparse subcommand: read-only unless --write (#54)
+# ---------------------------------------------------------------------------
+
+def _two_row_ledger(tmp_path):
+    return _make_ledger(tmp_path, [
+        {
+            "repo": "o/r1", "tool_names": [], "doi": None,
+            "issue_url": "https://github.com/o/r1/issues/1",
+            "filed_on": "2026-06-24", "wave": "t", "status": "open",
+            "license_after": None, "last_checked": None,
+        },
+        {
+            "repo": "o/r2", "tool_names": [], "doi": None,
+            "issue_url": "https://github.com/o/r2/issues/2",
+            "filed_on": "2026-06-24", "wave": "t", "status": "open",
+            "license_after": None, "last_checked": None,
+        },
+    ])
+
+
+@pytest.fixture
+def fake_github(monkeypatch):
+    """Replace every GitHub lookup with a fake; any real gh call fails the test."""
+    import scripts.license_clarification_issues as lci
+
+    calls = []
+
+    def _no_subprocess(*args, **kwargs):
+        raise AssertionError(f"unexpected subprocess call: {args!r}")
+
+    def _license(owner, repo):
+        calls.append(("license", owner, repo))
+        return "MIT" if repo == "r1" else None
+
+    def _state(url):
+        calls.append(("state", url))
+        return {"state": "OPEN", "comments": 2}
+
+    monkeypatch.setattr(lci.subprocess, "run", _no_subprocess)
+    monkeypatch.setattr(lci, "_default_repo_license", _license)
+    monkeypatch.setattr(lci, "_default_issue_state", _state)
+    return calls
+
+
+def test_verify_help_exits_without_querying_or_writing(tmp_path, capsys, fake_github):
+    from scripts.license_clarification_issues import main
+
+    ledger_path = _two_row_ledger(tmp_path)
+    before = ledger_path.read_bytes()
+    with pytest.raises(SystemExit) as exc:
+        main(["verify", "--help"])
+    assert exc.value.code == 0
+    out = capsys.readouterr().out
+    assert "--dry-run" in out and "--write" in out
+    assert fake_github == []
+    assert ledger_path.read_bytes() == before
+
+
+def test_verify_dry_run_prints_each_issue_and_leaves_the_ledger(tmp_path, capsys, fake_github):
+    from scripts.license_clarification_issues import main
+
+    ledger_path = _two_row_ledger(tmp_path)
+    before = ledger_path.read_bytes()
+    assert main(["verify", "--dry-run", "--ledger", str(ledger_path)]) == 0
+    out = capsys.readouterr().out
+    assert ledger_path.read_bytes() == before
+    lines = out.splitlines()
+    r1 = [line for line in lines if "o/r1" in line and "issues/1" in line]
+    r2 = [line for line in lines if "o/r2" in line and "issues/2" in line]
+    assert r1 and "license-added" in r1[0] and "MIT" in r1[0]
+    assert r2 and "responded" in r2[0]
+    assert "not written" in out
+
+
+def test_verify_without_flags_does_not_write(tmp_path, capsys, fake_github):
+    from scripts.license_clarification_issues import main
+
+    ledger_path = _two_row_ledger(tmp_path)
+    before = ledger_path.read_bytes()
+    assert main(["verify", "--ledger", str(ledger_path)]) == 0
+    assert ledger_path.read_bytes() == before
+    assert "--write" in capsys.readouterr().out
+
+
+def test_verify_write_records_the_ledger(tmp_path, capsys, fake_github):
+    from scripts.license_clarification_issues import main
+
+    ledger_path = _two_row_ledger(tmp_path)
+    assert main(["verify", "--write", "--ledger", str(ledger_path)]) == 0
+    rows = yaml.safe_load(ledger_path.read_text())["deployments"]
+    assert [r["status"] for r in rows] == ["license-added", "responded"]
+    assert rows[0]["license_after"] == "MIT"
+    assert all(r["last_checked"] for r in rows)
+
+
+def test_verify_rejects_dry_run_with_write(tmp_path, fake_github):
+    from scripts.license_clarification_issues import main
+
+    ledger_path = _two_row_ledger(tmp_path)
+    before = ledger_path.read_bytes()
+    with pytest.raises(SystemExit) as exc:
+        main(["verify", "--dry-run", "--write", "--ledger", str(ledger_path)])
+    assert exc.value.code == 2
+    assert fake_github == []
+    assert ledger_path.read_bytes() == before
+
+
+def test_verify_ledger_without_write_leaves_the_file(tmp_path):
+    from scripts.license_clarification_issues import verify_ledger
+
+    ledger_path = _two_row_ledger(tmp_path)
+    before = ledger_path.read_bytes()
+    summary, rows = verify_ledger(
+        ledger_path=ledger_path,
+        _issue_state=lambda url: {"state": "CLOSED", "comments": 0},
+        _repo_license=lambda o, r: None,
+        today="2026-07-01",
+    )
+    assert summary == {"closed": 2}
+    assert [(r["repo"], r["status_before"], r["status"]) for r in rows] == [
+        ("o/r1", "open", "closed"), ("o/r2", "open", "closed"),
+    ]
+    assert ledger_path.read_bytes() == before
+
+
+def test_plan_mode_still_requires_corpus(fake_github):
+    from scripts.license_clarification_issues import main
+
+    with pytest.raises(SystemExit) as exc:
+        main([])
+    assert exc.value.code == 2
+
+
+def test_plan_mode_writes_the_plan_without_creating(tmp_path, fake_github):
+    from scripts.license_clarification_issues import main
+
+    corpus = _write_corpus(tmp_path)
+    out = tmp_path / "wave.yaml"
+    assert main(["--corpus", corpus, "--out", str(out)]) == 0
+    plan = yaml.safe_load(out.read_text())["plan"]
+    assert [(p["repo"], p["action"]) for p in plan] == [("repoA", "planned")]

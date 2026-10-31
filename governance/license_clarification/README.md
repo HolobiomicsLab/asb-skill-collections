@@ -108,19 +108,22 @@ created issue (deduplicated by `repo`). Dry-run mode never touches the ledger.
 
 ### Verify workflow
 
-Run `verify` to check the live state of all filed issues and update `status` /
-`license_after` in the ledger:
+Run `verify` to check the live state of all filed issues. It prints the
+per-issue state and leaves the ledger untouched (`--dry-run` says so
+explicitly); `--write` records `status`, `license_after` and `last_checked`:
 
 ```bash
-python3 -m scripts.license_clarification_issues verify
+python3 -m scripts.license_clarification_issues verify            # read-only
+python3 -m scripts.license_clarification_issues verify --write    # update the ledger
 ```
 
-This calls `gh` read-only to check:
+`verify --help` lists the options; `--ledger PATH` checks another ledger file.
+Either way it calls `gh` read-only to check:
 1. Whether the upstream repo now has an SPDX license → `status: license-added`.
 2. Whether the issue was closed → `status: closed`.
 3. Whether there are comments → `status: responded`.
 
-After running `verify`, review the output and **commit the updated ledger**:
+After running `verify --write`, review the output and **commit the updated ledger**:
 
 ```bash
 git add governance/license_clarification/deployments.yaml
