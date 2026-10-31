@@ -144,6 +144,15 @@ function runLunr(index, q) {
   }
 }
 
+// "<slug>/v<N>", followed by a "staged" chip when the index marks that
+// collection as staged (in the repository, not part of a release).
+function collectionNode(collection) {
+  const staged = ((DATA && DATA.collection_status) || {})[collection] === "staged";
+  return el("span", {}, collection || "",
+    staged ? " " : null,
+    staged ? el("span", { class: "badge badge-staged" }, "staged") : null);
+}
+
 function paperResultNode(paper, terms) {
   const doiHref = `./paper.html?doi=${encodeURIComponent(paper.doi || "")}&collection=${encodeURIComponent(paper.collection || "")}`;
   const snip = snippet(paper.rationale || paper.search_text || "", terms);
@@ -154,7 +163,7 @@ function paperResultNode(paper, terms) {
       " ",
       el("code", {}, paper.doi || "—"),
       " · ",
-      el("span", {}, paper.collection || ""),
+      collectionNode(paper.collection),
       " · ",
       el("span", {}, paper.status || ""),
       " · ",
@@ -175,7 +184,7 @@ function skillResultNode(skill, terms) {
     el("div", { class: "result-meta" },
       el("span", { class: "badge badge-skill" }, "skill"),
       " ",
-      el("span", {}, skill.collection || ""),
+      collectionNode(skill.collection),
       skill.source_dois && skill.source_dois.length
         ? el("span", {}, " · derived from ", el("code", {}, skill.source_dois[0]))
         : null,
@@ -192,7 +201,7 @@ function workflowResultNode(wf, terms) {
     el("div", { class: "result-meta" },
       el("span", { class: "badge" }, "workflow"),
       " ",
-      el("span", {}, wf.collection || ""),
+      collectionNode(wf.collection),
       wf.stage_count ? el("span", {}, ` · ${wf.stage_count} stages`) : null,
     ),
     snip ? el("div", { class: "result-snippet", html: highlight(snip, terms) }) : null,
@@ -212,7 +221,7 @@ function toolResultNode(tool, terms) {
       el("code", {}, tool.slug),
       tool.license_spdx ? el("span", {}, " · ", tool.license_spdx) : null,
       " · ",
-      el("span", {}, tool.collection || ""),
+      collectionNode(tool.collection),
       tool.source_doi ? el("span", {}, " · src ", el("code", {}, tool.source_doi)) : null,
     ),
     snip ? el("div", { class: "result-snippet", html: highlight(snip, terms) }) : null,
@@ -322,10 +331,12 @@ function onInput() {
     return;
   }
   IDX = buildLunrIndices(DATA);
+  const stagedCount = Object.values(DATA.collection_status || {}).filter(v => v === "staged").length;
   hintEl.textContent =
     `Searching ${DATA.papers.length} papers, ${DATA.skills.length} skills, ` +
     `${(DATA.workflows || []).length} workflows, ${DATA.tools.length} tools ` +
-    `across ${(DATA.collections || []).length} collections.`;
+    `across ${(DATA.collections || []).length} collections` +
+    (stagedCount ? ` (${stagedCount} staged, not part of a release).` : ".");
 
   const input = document.getElementById("search-input");
   input.addEventListener("input", onInput);

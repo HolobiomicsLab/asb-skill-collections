@@ -62,6 +62,7 @@ The index is a single JSON object with the shape:
   "schema_version": "0.1",
   "generated_at": "2026-05-25T...Z",
   "collections": ["metabolomics/v1", ...],
+  "collection_status": {"metabolomics/v1": "staged", "metabolomics/v2": "released", ...},
   "papers": [{"doi": "...", "title": "...", "rationale": "...", "collection": "...",
               "status": "...", "access_type": "...", "derived_skills": N,
               "derived_tools": M, "search_text": "..."}, ...],
@@ -74,7 +75,10 @@ The index is a single JSON object with the shape:
 }
 ```
 
-`search_text` is the concatenated searchable text — all other fields are for
+`collection_status` says which collections are released (served by the plugin
+marketplace) and which are staged, with the rule `scripts/regen_catalogue.py`
+applies to `catalogue.jsonld`; the search page labels results from staged
+collections. `search_text` is the concatenated searchable text — all other fields are for
 display. The lunr index itself is built client-side from this JSON on page
 load (a few hundred ms for the current corpus).
 

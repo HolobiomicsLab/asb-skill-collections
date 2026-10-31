@@ -232,6 +232,19 @@ code, .skill-list code {
   color: var(--cnrs-blue);
   border-color: var(--cnrs-yellow);
 }
+/* Release status: released collections install from the plugin marketplace,
+   staged ones are in the repository but not part of a release. */
+.badge-released {
+  background: rgba(176, 238, 137, 0.20);
+  color: #2d5e1f;
+  border-color: var(--cnrs-green);
+}
+.badge-staged {
+  background: var(--bg-soft);
+  color: var(--fg-muted);
+  border-color: var(--border-strong);
+}
+td details summary { cursor: pointer; color: var(--fg-muted); white-space: nowrap; }
 
 /* ─── State + hint colors ─── */
 .error { color: #a02b2b; font-style: italic; }

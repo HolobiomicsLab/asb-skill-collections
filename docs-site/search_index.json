@@ -1,12 +1,18 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-08-21T18:15:01+00:00",
+  "generated_at": "2026-10-31T11:56:43+00:00",
   "collections": [
     "epigenomics/v1",
     "metabolomics/v1",
     "metabolomics/v2",
     "transcriptomics/v1"
   ],
+  "collection_status": {
+    "epigenomics/v1": "staged",
+    "metabolomics/v1": "staged",
+    "metabolomics/v2": "released",
+    "transcriptomics/v1": "staged"
+  },
   "papers": [
     {
       "doi": "10.1186/gb-2008-9-9-r137",
