@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -61,7 +61,7 @@ jobs:
           echo "Releasing tag=${TAG} -> slug=${SLUG} collection dir v${COLL_VERSION}"
 
       - name: Set up Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
@@ -429,7 +429,7 @@ jobs:
         # Gated OFF by default — the HuggingFace mirror is not live yet. Set the
         # repo variable ENABLE_HF_MIRROR=true to opt in.
         if: vars.ENABLE_HF_MIRROR == 'true'
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             await github.rest.actions.createWorkflowDispatch({
