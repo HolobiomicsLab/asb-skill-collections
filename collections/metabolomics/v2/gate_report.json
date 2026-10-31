@@ -1,6 +1,6 @@
 {
   "schema": "asbb-release-gate/1.1",
-  "generated_at": "2026-10-31T16:56:34.846402+00:00",
+  "generated_at": "2026-10-31T17:45:58.745340+00:00",
   "collection_dir": "collections/metabolomics/v2",
   "corpus_path": "collections/metabolomics/v2/corpus.yaml",
   "mode": "strict",
@@ -48,7 +48,7 @@
   },
   "binding": {
     "payload": {
-      "sha256": "9ed70ead3c109e59616d4f4d541deec67d2d5e6637e6866d443c2855ec8a3d35",
+      "sha256": "6743db8351086088ed6f7e91da0abfffee0130ffc64382b5454959d2a4a2afbe",
       "entries": [
         {
           "path": ".claude-plugin",
@@ -86,8 +86,8 @@
         },
         {
           "path": "USAGE.md",
-          "bytes": 23828,
-          "sha256": "f968d234b177a24185ceaa0e939387c765ed3f45859c3625badc6593f2df0941"
+          "bytes": 25022,
+          "sha256": "240cc29d3705cbd45dd1a7dfd3223f36d636cb21eeb68cab75563bd154c61db5"
         },
         {
           "path": "bin",
@@ -58369,5 +58369,5 @@
       "coverage": {}
     }
   ],
-  "receipt_sha256": "fb9a4c190c0feadc4c8b0f9b3a3b4095a7c28d18de943e6fba406cd622a5b568"
+  "receipt_sha256": "12a40c0de532f24fd1f4ff6f19fdc6457d30f6defaac8c8ce3e3cb04bd41204a"
 }
