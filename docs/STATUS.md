@@ -102,7 +102,7 @@ Measured 2026-10-30, install at CLI level: verified at CLI level with Claude Cod
   estimated always-on cost of about 626 tokens.
 - `claude plugin validate .` passed with 2 warnings, for the fields
   `schema_version` and `publisher` of `marketplace.json`, which the host does
-  not know.
+  not know; both fields were removed on 2026-10-31 and `--strict` passes.
 - The cached plugin holds the 5,859 leaves, and its `bin/search_skills.py --query`
   ran from the cache.
 - Not exercised: loading the skills in a live Claude Code session, which needs a

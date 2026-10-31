@@ -7,15 +7,20 @@ ROOT = pathlib.Path(__file__).parent.parent
 
 def test_marketplace_json_parseable():
     data = json.loads((ROOT / ".claude-plugin/marketplace.json").read_text())
-    assert "schema_version" in data
+    assert "name" in data
+    assert "owner" in data and "name" in data["owner"]
     assert "plugins" in data
     assert isinstance(data["plugins"], list)
 
 
-def test_marketplace_json_has_publisher():
+def test_marketplace_json_carries_no_field_the_strict_validator_rejects():
+    """Gate 10 runs `claude plugin validate --strict`, which fails on fields the
+    runtime ignores (`schema_version`, `publisher`); keep the manifest to the
+    fields it knows."""
     data = json.loads((ROOT / ".claude-plugin/marketplace.json").read_text())
-    assert "publisher" in data
-    assert "name" in data["publisher"]
+    assert set(data) <= {"name", "description", "owner", "metadata", "plugins"}, (
+        f"unknown marketplace fields: {sorted(set(data) - {'name', 'description', 'owner', 'metadata', 'plugins'})}"
+    )
 
 
 def _plugin_sources():
