@@ -308,8 +308,6 @@ def _validate_marketplace(
         raise LandingError(f"{relative} must be a tracked regular file")
 
     marketplace = _read_json(path, relative)
-    if marketplace.get("schema_version") != "1.0":
-        raise LandingError(f"{relative} has invalid schema_version")
     if marketplace.get("name") != f"asb-skills-{domain}":
         raise LandingError(f"{relative} has invalid name")
     plugins = marketplace.get("plugins")
@@ -426,8 +424,9 @@ def _marketplace(plan: LandingPlan) -> dict[str, Any]:
         f"AgenticScienceBuilder pipeline. Not a release; see receipts/{cut_id}/."
     )
     repository = f"https://github.com/HolobiomicsLab/asb-skills-{domain}"
+    # `claude plugin validate --strict` refuses a marketplace that carries
+    # `schema_version` or `publisher`; the owner block names the publisher.
     return {
-        "schema_version": "1.0",
         "name": f"asb-skills-{domain}",
         "description": (
             f"ASB {domain} skill collections: evidence-grounded scientific-agent "
@@ -436,7 +435,6 @@ def _marketplace(plan: LandingPlan) -> dict[str, Any]:
             "https://github.com/HolobiomicsLab/asb-skill-collections."
         ),
         "owner": dict(OWNER),
-        "publisher": dict(OWNER),
         "release": False,
         "plugins": [
             {

@@ -299,7 +299,6 @@ def test_real_run_lands_exact_candidate_receipts_marketplace_and_commit(
     )
     repository_url = f"https://github.com/HolobiomicsLab/asb-skills-{DOMAIN}"
     assert marketplace == {
-        "schema_version": "1.0",
         "name": f"asb-skills-{DOMAIN}",
         "description": (
             f"ASB {DOMAIN} skill collections: evidence-grounded scientific-agent "
@@ -308,7 +307,6 @@ def test_real_run_lands_exact_candidate_receipts_marketplace_and_commit(
             "https://github.com/HolobiomicsLab/asb-skill-collections."
         ),
         "owner": OWNER,
-        "publisher": OWNER,
         "release": False,
         "plugins": [
             {
