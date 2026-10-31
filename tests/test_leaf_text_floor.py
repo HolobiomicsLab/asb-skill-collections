@@ -44,15 +44,16 @@ def test_doubled_use_when_fails(tmp_path: Path) -> None:
     _leaf(tmp_path, "b", "use When  WHEN a table is ready.", ["Span b."])
     _leaf(tmp_path, "c", "Use when you have raw LC-MS data.", ["Span c."])
     _leaf(tmp_path, "d", "Use when whenever a run finishes.", ["Span d."])
+    _leaf(tmp_path, "e", "Use when whenning you have raw GC-MS data", ["Span e."])
 
     result = release_gate.check_leaf_text_floor(tmp_path)
 
     assert result.status == release_gate.FAIL
     [finding] = _failures(result)
-    assert finding["count"] == 2
-    assert finding["examples"] == ["leaves/a", "leaves/b"]
-    assert result.counts["checked"] == 4
-    assert result.counts["failed"] == 2
+    assert finding["count"] == 3
+    assert finding["examples"] == ["leaves/a", "leaves/b", "leaves/e"]
+    assert result.counts["checked"] == 5
+    assert result.counts["failed"] == 3
 
 
 def test_a_span_shared_by_more_than_ten_leaves_fails(tmp_path: Path) -> None:

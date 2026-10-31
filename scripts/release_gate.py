@@ -1690,7 +1690,7 @@ def check_peer_review_claim(collection_dir: Path, corpus: dict[str, Any]) -> Che
     return res.finish()
 
 
-_DOUBLED_USE_WHEN_RE = re.compile(r"^\s*use\s+when\s+when\b", re.IGNORECASE)
+_DOUBLED_USE_WHEN_RE = re.compile(r"^\s*use\s+when\s+when(?:ning)?\b", re.IGNORECASE)
 _MAX_LEAVES_PER_SPAN = 10
 _FLOOR_EXAMPLES = 20
 
@@ -1700,7 +1700,7 @@ def check_leaf_text_floor(collection_dir: Path) -> CheckResult:
 
     Two generator faults reached a release unseen: descriptions that read "Use
     when when ..." (a "When ..." source sentence given a second "Use when"
-    prefix) and frontmatter ``evidence_spans`` copied from tool mentions, so
+    prefix, or its glued form "Use when whenning ...") and frontmatter ``evidence_spans`` copied from tool mentions, so
     that one sentence such as an import line grounded dozens of unrelated
     leaves. A description starting "Use when when" fails, and so does any
     frontmatter evidence span (``evidence_spans`` or ``evidence``) shared by
