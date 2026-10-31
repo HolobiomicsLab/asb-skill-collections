@@ -7,22 +7,27 @@ and emits docs-site/search_index.json. `collection_status` maps each
 collection to "released" or "staged" with the rule regen_catalogue.py uses,
 so the search page can label results from staged collections.
 
-Stdlib + PyYAML only (no other deps). Idempotent — overwrites the index
+Stdlib + PyYAML only (no other deps). Idempotent: overwrites the index
 in place. Maintainers re-run this after promote, before committing.
 
+The output depends only on the tree: no build time is recorded and every walk
+is in sorted path order, so two builds of one tree are byte-identical. CI
+relies on that to compare a fresh build with the committed index.
+
 Usage:
-    python3 docs-site/build_search_index.py
+    python docs-site/build_search_index.py
+    python docs-site/build_search_index.py --output /tmp/search_index.json
 
 Output:
-    docs-site/search_index.json
+    docs-site/search_index.json, or the --output path
     stdout summary: "Indexed N papers, M skills, K tools."
 """
 from __future__ import annotations
 
+import argparse
 import json
 import re
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
 
 try:
@@ -369,7 +374,8 @@ def collection_statuses(labels: list[str]) -> dict[str, str]:
     return {label: collection_status(f"collections/{label}", released) for label in labels}
 
 
-def main() -> int:
+def build_index() -> dict:
+    """The index payload for the tree under REPO_ROOT."""
     papers = index_papers()
     skills = index_skills()
     workflows = index_workflows()
@@ -377,10 +383,8 @@ def main() -> int:
     collections = sorted(
         {r["collection"] for r in papers + skills + workflows + tools if r.get("collection")}
     )
-
-    payload = {
+    return {
         "schema_version": SCHEMA_VERSION,
-        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "collections": collections,
         "collection_status": collection_statuses(collections),
         "papers": papers,
@@ -388,13 +392,41 @@ def main() -> int:
         "workflows": workflows,
         "tools": tools,
     }
-    OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    size = OUTPUT.stat().st_size
+
+
+def serialize(payload: dict) -> str:
+    """The exact text written to disk, so a byte comparison is meaningful."""
+    return json.dumps(payload, ensure_ascii=False, indent=2)
+
+
+def _display(path: Path) -> str:
+    try:
+        return str(path.resolve().relative_to(REPO_ROOT))
+    except ValueError:
+        return str(path)
+
+
+def main(argv: list[str] | None = None) -> int:
+    ap = argparse.ArgumentParser(description="Build the docs-site full-text search index.")
+    ap.add_argument(
+        "--output",
+        type=Path,
+        default=None,
+        help="Write the index here instead of docs-site/search_index.json.",
+    )
+    args = ap.parse_args(argv)
+    output = args.output if args.output is not None else OUTPUT
+
+    payload = build_index()
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(serialize(payload), encoding="utf-8")
+    size = output.stat().st_size
     staged = sum(1 for v in payload["collection_status"].values() if v != "released")
     print(
-        f"Indexed {len(papers)} papers, {len(skills)} skills, {len(workflows)} workflows, "
-        f"{len(tools)} tools across {len(collections)} collections ({staged} staged). "
-        f"Wrote {OUTPUT.relative_to(REPO_ROOT)} ({size:,} bytes)."
+        f"Indexed {len(payload['papers'])} papers, {len(payload['skills'])} skills, "
+        f"{len(payload['workflows'])} workflows, {len(payload['tools'])} tools across "
+        f"{len(payload['collections'])} collections ({staged} staged). "
+        f"Wrote {_display(output)} ({size:,} bytes)."
     )
     return 0
 

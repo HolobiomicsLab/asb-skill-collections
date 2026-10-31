@@ -56,6 +56,17 @@ Indexed 5 papers, 106 skills, 38 tools across 1 collections. Wrote docs-site/sea
 
 Commit the updated `search_index.json` alongside the content change.
 
+The build records no timestamp and walks every tree in sorted path order, so
+two builds of the same tree are byte-identical. The `search-index` job in
+`.github/workflows/validate.yml` relies on that: it rebuilds the index with
+`--output "$RUNNER_TEMP/search_index.json"` and fails when the result differs
+from the committed file. To check locally without touching the committed file:
+
+```bash
+python docs-site/build_search_index.py --output /tmp/search_index.json
+cmp /tmp/search_index.json docs-site/search_index.json
+```
+
 ### Schema
 
 The index is a single JSON object with the shape:
@@ -63,7 +74,6 @@ The index is a single JSON object with the shape:
 ```json
 {
   "schema_version": "0.1",
-  "generated_at": "2026-05-25T...Z",
   "collections": ["metabolomics/v1", ...],
   "collection_status": {"metabolomics/v1": "staged", "metabolomics/v2": "released", ...},
   "papers": [{"doi": "...", "title": "...", "rationale": "...", "collection": "...",

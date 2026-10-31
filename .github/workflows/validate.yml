@@ -29,6 +29,8 @@
 #                    pass `release_gate.py --verify`.
 #   citation         every tracked CITATION.cff outside the legacy v1 trees is
 #                    valid CFF 1.2.0 (cffconvert).
+#   search-index     docs-site/search_index.json matches a fresh build of the
+#                    collections it indexes.
 #   plugin-manifest  gate 10.
 
 name: Validate
@@ -466,6 +468,42 @@ jobs:
 
       - name: gate_report.json re-verifies against this tree
         run: python scripts/release_gate.py collections/metabolomics/v2 --verify
+
+  # -- docs-site/search_index.json is current ---------------------------------
+  # The docs site searches a committed index built by
+  # docs-site/build_search_index.py. A change that adds, renames or rewords
+  # skills, papers or tools without rebuilding it leaves the site searching stale
+  # text, and nothing else notices. The job rebuilds the index into a runner
+  # temporary path and compares the bytes with the committed file; the build
+  # records no timestamp, so the two match exactly when the index is current.
+  search-index:
+    name: "docs-site/search_index.json matches the collections"
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Committed search index equals a fresh build
+        run: |
+          fresh="$RUNNER_TEMP/search_index.json"
+          python docs-site/build_search_index.py --output "$fresh"
+          if cmp -s "$fresh" docs-site/search_index.json; then
+            echo "PASS: docs-site/search_index.json is current."
+          else
+            diff docs-site/search_index.json "$fresh" | head -n 40 || true
+            echo "::error file=docs-site/search_index.json::docs-site/search_index.json is stale. Run python docs-site/build_search_index.py and commit the result."
+            exit 1
+          fi
 
   # -- CITATION.cff files are valid CFF 1.2.0 ---------------------------------
   # GitHub's "Cite this repository" and Zenodo read CITATION.cff, and an invalid
