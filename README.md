@@ -179,7 +179,7 @@ In Claude Code, run `/ground` on the skill in play; elsewhere, call the bundled
 
 | File | Contents |
 |---|---|
-| `leaves/<slug>/SKILL.md` | one evidence-grounded skill each (frontmatter: EDAM IRIs, `derived_from` DOIs, `evidence_spans`, `tools`, `attribution`). Shipped as data and read on demand, so installing does not load the corpus into the session's context. |
+| `leaves/<slug>/SKILL.md` | one evidence-grounded skill each (frontmatter: EDAM IRIs, `derived_from` DOIs, `tools`, `attribution`; verbatim evidence lines in the body). Shipped as data and read on demand, so installing does not load the corpus into the session's context. |
 | `skills/*/SKILL.md` | three advertised entries: the router, the collection and licence policy, the contribution channel |
 | `workflows/<slug>/SKILL.md` | composite workflows and their router, `workflows/_workflow_router/SKILL.md` |
 | `tools/<slug>.yaml` | deduplicated software-tool records with EDAM terms and source DOIs |
