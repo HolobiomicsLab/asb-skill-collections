@@ -54,42 +54,91 @@ lipidomics, some NMR, and multi-omics, statistics and pathway tools.
 
 ## Install
 
-**Claude Code** (plugin marketplace). The verified route adds the marketplace from a
-local checkout: from the checkout root, `claude plugin marketplace add "$PWD"` then
-`claude plugin install metabolomics@asb-skill-collections`
-([USAGE §1](collections/metabolomics/v2/USAGE.md#claude-code-verified-local-marketplace-route)).
-The public GitHub transport below is pending verification. Per-technique packs such as
-`metabolomics-lc-ms` are lighter subsets, experimental and not verified end to end
-([packs/metabolomics](packs/metabolomics/README.md)); packs overlap, so install the full
-plugin or a few packs, not both.
+**Claude Code** (plugin marketplace, public GitHub route):
 
 ```bash
-# public transport: pending verification
 /plugin marketplace add HolobiomicsLab/asb-skill-collections
 /plugin install metabolomics@asb-skill-collections
 ```
 
-**Other agent runtimes** (`asbb` CLI from a checkout; Python 3.12 or later and PyYAML):
+This route was verified at CLI level on 2026-10-30 with Claude Code 2.1.304:
+`claude plugin marketplace add HolobiomicsLab/asb-skill-collections` and
+`claude plugin install metabolomics@asb-skill-collections` both exited 0. Loading
+the skills in a live session was not exercised. The marketplace keeps a clone of
+this repository (286 MB) beside the plugin cache (72 MB), about 358 MB on disk.
+From a local checkout, `claude plugin marketplace add "$PWD"` then
+`claude plugin install metabolomics@asb-skill-collections` installs the same
+plugin without that clone
+([USAGE §1](collections/metabolomics/v2/USAGE.md#claude-code-verified-local-marketplace-route)).
+Per-technique packs such as `metabolomics-lc-ms` are lighter subsets
+([packs/metabolomics](packs/metabolomics/README.md)): `metabolomics-lc-ms` was
+installed the same way at CLI level (29 MB plugin cache), and the other seven
+packs were built but not installed.
+
+**Other agent runtimes** (`asbb` CLI from a checkout; Python 3.12 or later and PyYAML,
+in a virtual environment):
 
 ```bash
 git clone https://github.com/HolobiomicsLab/asb-skill-collections
 cd asb-skill-collections
+uv venv -p 3.12 --allow-existing && source .venv/bin/activate && uv pip install pyyaml
 python3 -m asb_skill_collections.asbb_cli install metabolomics --runtime agents   # ~/.agents/skills (Codex, Copilot CLI, Gemini CLI)
 python3 -m asb_skill_collections.asbb_cli install --list-runtimes                 # agents (verified), codex, copilot, gemini, claude, cursor, cline, vscode-copilot, --dest DIR (experimental)
 ```
 
+Without uv, `python3.12 -m venv .venv && . .venv/bin/activate && python -m pip install pyyaml`
+prepares the same environment. On macOS the environment is needed: Homebrew's Python
+refuses a system-wide `pip install`, and Apple's `/usr/bin/python3` is older than 3.12.
 Each install copies the unit into a content-addressed snapshot that survives a moved
 checkout; rerun `install` to refresh ([usage guide](collections/metabolomics/v2/USAGE.md#1-install-one-domain-collection):
 commands, outputs, `uninstall`). Any other agent can read the Markdown and JSON under
 `collections/metabolomics/v2/` directly ([AGENTS.md](AGENTS.md)). Not on PyPI in v0: an index
 install would fetch the CLI without the corpus it reads. Verified routes and dates: [docs/STATUS.md](docs/STATUS.md).
 
+### Choose what to install
+
+Install the whole collection, a technique pack, a selection of skills
+(`asbb install --skills`, `--skills-file` or `--query`), or fetch chosen skills
+without a checkout (`asbb fetch`). Commands, outputs and refusals:
+[docs/partial-install.md](docs/partial-install.md).
+
+| Install | Technique tag | Leaves | On disk (`du`) |
+|---|---|---:|---:|
+| `metabolomics`, the full collection | all | 5,859 | 72 MiB |
+| `metabolomics-lc-ms` | `LC-MS` | 2,617 | 29 MiB |
+| `metabolomics-ms-generic` | `mass-spectrometry` | 804 | 8.5 MiB |
+| `metabolomics-ion-mobility` | `ion-mobility-MS` | 385 | 4.3 MiB |
+| `metabolomics-gc-ms` | `GC-MS` | 367 | 4.0 MiB |
+| `metabolomics-ms-imaging` | `MS-imaging` | 291 | 3.2 MiB |
+| `metabolomics-nmr` | `NMR` | 276 | 2.9 MiB |
+| `metabolomics-ce-ms` | `CE-MS` | 113 | 1.4 MiB |
+| `metabolomics-direct-infusion` | `direct-infusion-MS` | 97 | 1.1 MiB |
+| a selection, `asbb install --skills a,b,c --collection metabolomics/v2 --runtime agents` | chosen slugs | 10 in the example | 188 KiB |
+| a fetch, `asbb fetch a,b --collection metabolomics/v2 --dest DIR` | chosen slugs | 10 in the example | 112 KiB |
+
+The first nine rows install by name: `/plugin install <name>@asb-skill-collections`
+in Claude Code, where the public marketplace also keeps its 286 MB clone of this
+repository, or `python3 -m asb_skill_collections.asbb_cli install <name> --runtime agents`.
+Their sizes are `du -sk` of the built unit in this repository on 2026-10-31; the
+selection and fetch rows are the 10-skill example of
+[docs/partial-install.md](docs/partial-install.md#sizes), and a fetch also
+downloads the 5.2 MiB (5,430,046 bytes) `skills_index.json`. `du` counts allocated
+blocks, so the full collection that takes 72 MiB here is the 61 MB of file content
+that docs/partial-install.md reports.
+
+Packs overlap: a skill tagged with several techniques is in several packs, so
+install the full collection or a few packs, not both. The 1,520 technique-agnostic
+skills (statistics, pathway and generic data-handling procedures) carry no
+technique tag and are in no pack; they come with the full collection, a selection
+or a fetch.
+
 ## Use: search, apply, ground
 
 **Search** a checkout offline, with no API key:
 
 ```bash
-uv pip install -e .            # or: python3 -m pip install -e .
+uv venv -p 3.12 --allow-existing && source .venv/bin/activate
+uv pip install -e .            # in a python3.12 -m venv environment: python -m pip install -e .
 asbb search "untargeted LC-MS/MS annotation" --collection metabolomics --target workflows
 asbb get untargeted-lcmsms-annotation --collection metabolomics/v2 --target workflows
 asbb search --list-collections
@@ -137,6 +186,7 @@ In Claude Code, run `/ground` on the skill in play; elsewhere, call the bundled
 | `skills_index.json`, `tools_index.json` | machine search indexes (EDAM IRI, tool name, keyword) |
 | `kb_bundle.json` | skill to source-paper KB slugs and `repo_urls` (the grounding map) |
 | `bin/perspicacite_kb_bind.py`, `commands/ground.md`, `GROUNDING.md` | packaged grounding: the binder, the `/ground` command and a how-to |
+| `commands/*.md` | the four plugin commands: `/ground`; `/propose-skill`, which stages a community skill proposal; `/synthesize-meta-skill`, which stages a workflow super-skill proposal; `/claim-skill`, run by a maintainer to turn a tool author's claim into a proposal that credits the author |
 | `collection.yaml`, `corpus.yaml` | collection record; per-paper access basis (`repo-oa`) |
 | `CITATION.cff`, `PROVENANCE.md`, `gate_report.json` | citation, how it was generated, release-gate verdict |
 
@@ -200,8 +250,12 @@ frontmatter) that answers *what may I do with the underlying tool?*
 | `restricted` | licence established and it constrains reuse; **check it before commercial use or redistribution** |
 | `unknown` | no tool-level licence evidence; describing and using are unaffected; **never redistribute** the tool's code |
 
-Discovery defaults to `open` skills; the `asb-metabolomics` meta-skill enforces the
-`noncommercial` acknowledgement ([LICENSE_TIERS.md](governance/LICENSE_TIERS.md)). Code is
+The search tools do not filter by tier. The router tells the agent to prefer `open`
+skills when no tier is requested, and to get confirmation of a permitted (academic or
+noncommercial) use before applying a `noncommercial` one; the `asb-metabolomics`
+meta-skill carries the same acknowledgement step. A technique pack's router carries the
+`noncommercial` confirmation inline but no `open`-first default
+([LICENSE_TIERS.md](governance/LICENSE_TIERS.md)). Code is
 under [Apache-2.0](LICENSE), collection content under CC-BY-4.0; verbatim quotations
 (`evidence_spans`) are minimal and attributed, and a rights holder may request removal
 ([LICENSING.md](LICENSING.md)). Other policies are in [governance/](governance), starting
@@ -224,7 +278,8 @@ with [MAINTAINERS.md](governance/MAINTAINERS.md) and [COI_POLICY.md](governance/
 ## Status
 
 - Verified for this release: the full `metabolomics` collection as a managed install, Claude Code from a local-checkout marketplace, and the checkout CLI.
-- Pending or experimental: the public marketplace transport, packs, the web UI, runtime adapters other than `agents`, the MCP server. Not yet published: PyPI, the documentation site, the HuggingFace mirror, the benchmark and the capsules.
+- Verified at CLI level on 2026-10-30 (Claude Code 2.1.304), in-session load not exercised: Claude Code from the public GitHub marketplace (about 358 MB on disk) and the `metabolomics-lc-ms` pack.
+- Pending or experimental: the other seven packs, the web UI, runtime adapters other than `agents`, the MCP server. Not yet published: PyPI, the documentation site, the HuggingFace mirror, the benchmark and the capsules.
 - The `w3id.org/holobiomicslab/` and `w3id.org/asb` identifiers resolve. Dates, measurements and detail per surface: [docs/STATUS.md](docs/STATUS.md).
 
 ## Acknowledgements

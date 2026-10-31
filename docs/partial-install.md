@@ -44,13 +44,17 @@ the filtered indexes 14,797 bytes.
 
 ## Before you start
 
-The installer reads a local checkout. Use Python 3.12 or later with PyYAML, and
-run the commands from the repository root:
+The installer reads a local checkout. Use Python 3.12 or later with PyYAML in a
+virtual environment, and run the commands from the repository root:
 
 ```bash
 git clone https://github.com/HolobiomicsLab/asb-skill-collections
 cd asb-skill-collections
+uv venv -p 3.12 --allow-existing && source .venv/bin/activate && uv pip install pyyaml
 ```
+
+Without uv, `python3.12 -m venv .venv && . .venv/bin/activate && python -m pip install pyyaml`
+prepares the same environment.
 
 `fetch` is the exception. It downloads from GitHub and needs only the `asbb`
 package; see [Fetch](#fetch-without-a-checkout).
@@ -247,7 +251,7 @@ helper, and no install record. The files are the collection's own `SKILL.md`
 bytes; no agent host was run against them for this page.
 
 Every fetch reads the whole `skills_index.json` (5,430,046 bytes on `main`
-today), so the download is about 5.5 MB whether you ask for one skill or ten.
+today), so the download is about 5.4 MB whether you ask for one skill or ten.
 
 Fetch refuses, before writing anything, a slug the remote index does not list,
 a collection not written as `<slug>/vN`, a ref that is not a plain branch, tag
@@ -268,8 +272,12 @@ from a clone, without the editable flag:
 
 ```bash
 git clone https://github.com/HolobiomicsLab/asb-skill-collections
-python3 -m pip install ./asb-skill-collections
+uv venv -p 3.12 --allow-existing && source .venv/bin/activate
+uv pip install ./asb-skill-collections
 ```
+
+Without uv, `python3.12 -m venv .venv && . .venv/bin/activate && python -m pip install ./asb-skill-collections`
+does the same.
 
 The fetch output above came from such an install in a fresh virtual
 environment, run from a directory that is not a checkout. There the package

@@ -29,6 +29,19 @@ function makeTable(headers, rows) {
   return el("table", {}, thead, tbody);
 }
 
+// The catalogue marks each collection "released" (served by the plugin
+// marketplace) or "staged" (in the repository, not part of a release). An
+// entry without a status is treated as staged.
+function isReleased(c) {
+  return c.status === "released";
+}
+
+function statusBadge(c) {
+  return isReleased(c)
+    ? el("span", { class: "badge badge-released" }, "released")
+    : el("span", { class: "badge badge-staged" }, "staged");
+}
+
 async function renderCatalogue() {
   const section = document.getElementById("catalogue");
   try {
@@ -38,26 +51,34 @@ async function renderCatalogue() {
       section.innerHTML += "<p class='loading'>No collections released yet.</p>";
       return;
     }
-    const rows = cols.map(c => {
+    // Released collections first; the sort is stable, so catalogue order holds within each group.
+    const ordered = [...cols].sort((a, b) => Number(isReleased(b)) - Number(isReleased(a)));
+    const rows = ordered.map(c => {
       const doiLink = c.doi
         ? [el("a", { href: `https://doi.org/${c.doi}`, target: "_blank" }, c.doi)]
-        : ["—"];
-      const topics = (c.domain_topics || []).map(t => {
-        const label = t.split("/").pop();
-        return el("span", { class: "badge" }, label);
-      });
+        : ["none"];
+      const chips = (c.domain_topics || []).map(t => el("span", { class: "badge" }, t.split("/").pop()));
+      const topics = chips.length
+        ? [el("details", {},
+            el("summary", {}, `${chips.length} EDAM topics`),
+            el("div", { class: "badges" }, ...chips))]
+        : ["none"];
+      const released = isReleased(c) && c.released_at
+        ? [c.released_at.substring(0, 10)]
+        : ["not released"];
       return [
         [el("a", { href: c["@id"] || "#", target: "_blank" }, c.title || c.slug)],
-        c.version || "—",
+        c.version || "",
+        [statusBadge(c)],
         String(c.skills_count || 0),
         String(c.tools_count || 0),
-        topics.length ? topics : ["—"],
+        topics,
         doiLink,
-        c.released_at ? [c.released_at.substring(0, 10)] : ["pending"],
+        released,
       ];
     });
     section.appendChild(makeTable(
-      ["Collection", "Version", "Skills", "Tools", "EDAM Topics", "DOI", "Released"],
+      ["Collection", "Version", "Status", "Skills", "Tools", "EDAM Topics", "DOI", "Released"],
       rows
     ));
     section.querySelector(".loading")?.remove();
@@ -122,7 +143,7 @@ async function renderBanner() {
   if (!box) return;
   try {
     const data = await fetchJSON("catalogue.jsonld");
-    const cols = (data.collections || []).filter(c => c.released_at);
+    const cols = (data.collections || []).filter(c => isReleased(c) && c.released_at);
     if (!cols.length) return;
     const newest = cols.reduce((a, b) => (a.released_at > b.released_at ? a : b));
     const id = `${newest.slug}-v${newest.version}-${(newest.released_at || "").substring(0, 10)}`;
@@ -133,7 +154,7 @@ async function renderBanner() {
       `🆕 Newest release: ${newest.title || newest.slug} (v${newest.version}) — `,
       el("strong", {}, `${newest.skills_count || 0} skills`), ", ",
       `${newest.tools_count || 0} tools, released ${date}. `,
-      el("a", { href: `./collections.html?c=${newest.slug}` }, "Browse →")
+      el("a", { href: `./collections.html?c=${newest.slug}&v=${newest.version}` }, "Browse →")
     ));
     const close = el("button", { class: "banner-x", title: "Dismiss" }, "✕");
     close.addEventListener("click", () => { localStorage.setItem(`asb-banner-${id}`, "1"); box.remove(); });

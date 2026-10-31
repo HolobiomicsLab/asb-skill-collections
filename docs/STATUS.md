@@ -15,13 +15,13 @@ Two kinds of entry appear below.
 
 ## Summary
 
-| Surface | State | Last verified (as the README states it) |
+| Surface | State | Last verified (as the README at `e80767838` states it, or measured 2026-10-30) |
 |---|---|---|
 | Managed install of the full `metabolomics` domain (`--runtime agents`) | verified | 2026-09-13, `int/collections-release-2026-09-13` at `777671bc3` |
 | Claude Code, local-checkout marketplace | verified | Claude Code 2.1.241; no date stated |
 | Checkout CLI (`asbb search`, `get`, `--list-collections`) | verified | 2026-09-13, shared-selector behaviour at `777671bc3` |
-| Claude Code, public GitHub marketplace transport | pending verification | not verified |
-| Per-technique packs | experimental, not verified end to end | not verified |
+| Claude Code, public GitHub marketplace transport | verified at CLI level, in-session load not exercised | measured 2026-10-30, Claude Code 2.1.304, `main` at `e80767838`; 358 MB on disk |
+| Per-technique packs | `metabolomics-lc-ms` verified at CLI level, in-session load not exercised; the other seven experimental, not installed | measured 2026-10-30, Claude Code 2.1.304 and `--runtime agents`; 29 MB |
 | Web UI uploads | experimental, not verified end to end | not exercised |
 | Runtime adapters other than `agents` | experimental | not launched |
 | MCP server | pending current verification | pinned release audit; no date stated |
@@ -75,13 +75,42 @@ README (e80767838), section labelled "pending verification":
 > no usable DNS; it is not inferred from the local result. Claude's component
 > inventory saw `_router`, `asb-contribute`, `asb-metabolomics` and `ground`.
 
-Measured 2026-10-30 (reachability only; `/plugin marketplace add` was not run):
+Measured 2026-10-30, reachability:
 
 - The repository is public (`gh api repos/HolobiomicsLab/asb-skill-collections`:
   `"visibility":"public"`).
 - `curl` of `raw.githubusercontent.com/HolobiomicsLab/asb-skill-collections/main/.claude-plugin/marketplace.json`
   returned 200; `git ls-remote` of the public URL returned `e807678383b5…` for `HEAD`.
 - `marketplace.json` lists 9 plugins (`metabolomics` and 8 packs), all at version 0.1.0.
+
+Measured 2026-10-30, install at CLI level: verified at CLI level with Claude Code
+2.1.304, in-session load not exercised. Each run set `HOME` and
+`CLAUDE_CONFIG_DIR` to scratch directories; no model session was run.
+
+- `claude plugin marketplace add HolobiomicsLab/asb-skill-collections` exited 0
+  in two runs, in 19.5 s and in 20.8 s; the 20.8 s run recorded that the clone
+  went over SSH. In a further run with SSH given no identity, as for a user
+  without a key, Claude Code printed `SSH clone failed, retrying with HTTPS` and
+  succeeded in 26.2 s.
+- `claude plugin install metabolomics@asb-skill-collections` exited 0 in 2.5 s
+  and in 3.9 s, at `e80767838`. The plugin cache held 6,866 files.
+- Disk cost: the marketplace keeps a shallow clone of this repository, 286 MB
+  (of which `.git` is 43 MB), beside the 72 MB plugin cache: 358 MB in all.
+- `claude plugin details metabolomics@asb-skill-collections` listed 7 components:
+  the skills `_router`, `asb-contribute` and `asb-metabolomics`, and the commands
+  `claim-skill`, `ground`, `propose-skill` and `synthesize-meta-skill`, with an
+  estimated always-on cost of about 626 tokens.
+- `claude plugin validate .` passed with 2 warnings, for the fields
+  `schema_version` and `publisher` of `marketplace.json`, which the host does
+  not know.
+- The cached plugin holds the 5,859 leaves, and its `bin/search_skills.py --query`
+  ran from the cache.
+- Not exercised: loading the skills in a live Claude Code session, which needs a
+  model call.
+
+For comparison, the local-checkout route (`claude plugin marketplace add "$PWD"`,
+then the same install) took 1.4 s and 3.8 s and wrote the 72 MB plugin cache
+without a clone.
 
 ## Per-technique packs
 
@@ -90,7 +119,17 @@ README (e80767838), section labelled "experimental, not verified end to end":
 > Packs **overlap** (a multi-technique skill appears in several) — install **one** full plugin **or** a few packs, not both. See [packs/metabolomics/](../packs/metabolomics/README.md).
 
 Measured 2026-10-30: the 8 pack sources exist on disk and `unit_closure` reports
-no violation across the 9 indexed units. No pack was installed.
+no violation across the 9 indexed units. One pack, `metabolomics-lc-ms`, was
+installed at CLI level, in-session load not exercised:
+
+- `claude plugin install metabolomics-lc-ms@asb-skill-collections` exited 0
+  (Claude Code 2.1.304, public marketplace). The plugin cache was 29 MB, with
+  the components `_router` and `ground` and an estimated always-on cost of about
+  141 tokens.
+- `asbb install metabolomics-lc-ms --runtime agents` wrote 2,627 files, 29,752 KiB
+  on disk ([partial-install.md](partial-install.md#sizes)).
+
+The other seven packs were not installed.
 
 ## Web UI
 

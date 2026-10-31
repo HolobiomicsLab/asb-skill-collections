@@ -56,8 +56,9 @@
   --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 }
 
-/* Load IBM Plex from Google Fonts (lab-website default). */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap');
+/* No web font is fetched: IBM Plex is used when installed on the reader's
+   machine, the system stack otherwise. Loading fonts from a third-party host
+   would send every visitor's address to that host. */
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -119,6 +120,13 @@ header::before {
   transform: translateY(2px);
 }
 header h1 { margin-top: 0; }
+
+/* Brand mark above the page title (assets/brand/BRAND.md: the mark alone is
+   at least 48 px, with clear space of one eighth of its width). */
+.site-mark { display: inline-block; margin-top: 1.5rem; line-height: 0; }
+header .site-mark { margin-top: 0; }
+.site-mark img { display: block; width: 48px; height: 48px; }
+.site-mark + h1 { margin-top: .5rem; }
 .tagline {
   color: var(--fg-muted);
   font-size: .95rem;
@@ -232,6 +240,19 @@ code, .skill-list code {
   color: var(--cnrs-blue);
   border-color: var(--cnrs-yellow);
 }
+/* Release status: released collections install from the plugin marketplace,
+   staged ones are in the repository but not part of a release. */
+.badge-released {
+  background: rgba(176, 238, 137, 0.20);
+  color: #2d5e1f;
+  border-color: var(--cnrs-green);
+}
+.badge-staged {
+  background: var(--bg-soft);
+  color: var(--fg-muted);
+  border-color: var(--border-strong);
+}
+td details summary { cursor: pointer; color: var(--fg-muted); white-space: nowrap; }
 
 /* ─── State + hint colors ─── */
 .error { color: #a02b2b; font-style: italic; }

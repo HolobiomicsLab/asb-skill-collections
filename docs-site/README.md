@@ -1,7 +1,10 @@
 # docs-site/
 
 Static GitHub Pages site for the ASB Skill Collections project. Pure HTML +
-vanilla JS + CDN-loaded libraries. No build step, no npm, no backend.
+vanilla JS. No build step, no npm, no backend. Pages load no script, style or
+font from another host: lunr.js is vendored under `vendor/` (MIT, licence in
+`vendor/LICENSE-lunr.txt`) and the stylesheet uses locally installed or system
+fonts.
 
 ## Pages
 
@@ -27,7 +30,7 @@ before building the issue body (same rules as the Python CLI).
 ## Search index
 
 `search.html` performs client-side full-text search via
-[lunr.js](https://lunrjs.org/) (loaded from CDN, pinned to `lunr@2.3.9`)
+[lunr.js](https://lunrjs.com/) (2.3.9, vendored as `vendor/lunr-2.3.9.js`)
 against a pre-built index at `docs-site/search_index.json`. The index is
 checked into the repo so the site works offline / on Pages without any CI
 step.
@@ -62,6 +65,7 @@ The index is a single JSON object with the shape:
   "schema_version": "0.1",
   "generated_at": "2026-05-25T...Z",
   "collections": ["metabolomics/v1", ...],
+  "collection_status": {"metabolomics/v1": "staged", "metabolomics/v2": "released", ...},
   "papers": [{"doi": "...", "title": "...", "rationale": "...", "collection": "...",
               "status": "...", "access_type": "...", "derived_skills": N,
               "derived_tools": M, "search_text": "..."}, ...],
@@ -74,7 +78,10 @@ The index is a single JSON object with the shape:
 }
 ```
 
-`search_text` is the concatenated searchable text — all other fields are for
+`collection_status` says which collections are released (served by the plugin
+marketplace) and which are staged, with the rule `scripts/regen_catalogue.py`
+applies to `catalogue.jsonld`; the search page labels results from staged
+collections. `search_text` is the concatenated searchable text; all other fields are for
 display. The lunr index itself is built client-side from this JSON on page
 load (a few hundred ms for the current corpus).
 

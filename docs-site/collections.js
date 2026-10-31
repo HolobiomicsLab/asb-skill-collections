@@ -82,7 +82,7 @@ function renderSummary() {
        <div class="stat-row">
          ${stats.map(([k, v]) => `<div class="stat"><div class="stat-n">${v}</div><div class="stat-k">${k}</div></div>`).join("")}
        </div>
-       <p class="muted">Version ${c.version} · DOI ${doi} ·
+       <p class="muted">Version ${c.version} · ${c.status === "released" ? "released" : "staged, not part of a release"} · DOI ${doi} ·
          <a href="${BLOB}/${collDir(c)}" target="_blank" rel="noopener">source on GitHub</a></p>
        <div id="summary-chart"></div>
      </div>`;
@@ -216,7 +216,9 @@ async function init() {
     return;
   }
   if (!cols.length) { sel.innerHTML = "<option>No collections released</option>"; return; }
-  sel.innerHTML = cols.map((c, i) => `<option value="${i}">${c.title || c.slug} (v${c.version})</option>`).join("");
+  const released = c => c.status === "released";
+  sel.innerHTML = cols.map((c, i) =>
+    `<option value="${i}">${c.title || c.slug} (v${c.version}${released(c) ? "" : ", staged"})</option>`).join("");
   sel.addEventListener("change", () => selectCollection(cols[sel.value]));
 
   document.querySelectorAll(".tab").forEach(btn => btn.addEventListener("click", () => {
@@ -229,9 +231,13 @@ async function init() {
   document.getElementById("filter-q").addEventListener("input", renderResults);
   document.getElementById("filter-technique").addEventListener("change", renderResults);
 
-  // deep-link ?c=<slug>
-  const want = new URLSearchParams(location.search).get("c");
-  const startIdx = want ? Math.max(0, cols.findIndex(c => c.slug === want)) : 0;
+  // deep-link ?c=<slug>[&v=<version>]; without a version, prefer the released collection
+  const params = new URLSearchParams(location.search);
+  const want = params.get("c");
+  const wantV = params.get("v");
+  const matches = c => (!want || c.slug === want) && (!wantV || String(c.version) === wantV);
+  let startIdx = cols.findIndex(c => matches(c) && released(c));
+  if (startIdx < 0) startIdx = Math.max(0, cols.findIndex(matches));
   sel.value = startIdx;
   selectCollection(cols[startIdx]);
 }

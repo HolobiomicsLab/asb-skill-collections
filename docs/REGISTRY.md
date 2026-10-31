@@ -107,7 +107,7 @@ actual `plugins[].name` and `plugins[].source` fields):
 | `plugins[].released_at` | string (ISO 8601) | N | Release timestamp (UTC with Z suffix) |
 | `plugins[].lead_curator` | object | N | Lead curator contact info (name, ORCID, GitHub handle) |
 
-**Regeneration:** Marketplace.json is NOT automatically regenerated; it is **manually curated** alongside catalogue.jsonld. The `regen_catalogue.py` script handles catalogue.jsonld only. A maintainer updates marketplace.json when a collection is ready to be advertised for public install.
+**Regeneration:** Marketplace.json is NOT automatically regenerated; it is **manually curated** alongside catalogue.jsonld. The `regen_catalogue.py` script handles catalogue.jsonld only. A maintainer updates marketplace.json when a collection is ready to be advertised for public install. Because each catalogue entry's `status` and the search index's `collection_status` follow marketplace.json, an edit to marketplace.json is followed in the same commit by `python scripts/regen_catalogue.py` and `python docs-site/build_search_index.py`; otherwise the consistency tests in `validate.yml` and `release.yml` fail.
 
 ### 1.3 Non-OA exclusion rule
 
@@ -153,12 +153,14 @@ A collection is publicly advertised **if and only if:**
     "tools_count": {"@id": "asb:toolsCount", "@type": "xsd:integer"},
     "generated_at": {"@id": "asb:generatedAt", "@type": "xsd:dateTime"},
     "released_at": {"@id": "asb:releasedAt", "@type": "xsd:dateTime"},
-    "slug": "asb:slug"
+    "slug": "asb:slug",
+    "leaf_dir": "asb:leafDir",
+    "status": "asb:status"
   },
   "@type": "asb:SkillCollectionRegistry",
   "@id": "https://w3id.org/holobiomicslab/asb-skill/registry",
   "name": "ASB Skill Collection Registry",
-  "description": "Auto-generated registry of all released ASB Skill Collections.",
+  "description": "Auto-generated registry of the ASB Skill Collections in this repository. Each entry's status says whether it is released or staged.",
   "generated_at": "2026-06-14T10:30:45Z",
   "collections": [
     {
@@ -179,7 +181,8 @@ A collection is publicly advertised **if and only if:**
           "name": "Curator Name",
           "orcid": "https://orcid.org/0000-0000-0000-0000"
         }
-      ]
+      ],
+      "status": "released"
     }
   ]
 }
@@ -196,6 +199,8 @@ A collection is publicly advertised **if and only if:**
 **Publication:** Committed to the repo, served by GitHub Pages and Zenodo (as part of collection releases; see §2.4)
 
 **Determinism:** Collections are sorted alphabetically by slug + version; timestamps use UTC ISO 8601 (Z suffix); no non-deterministic ordering
+
+**Release status:** `status` is `released` when `.claude-plugin/marketplace.json` serves the collection directory and `staged` otherwise. `doi` is written only once it is minted (`10.<registrant>/<suffix>`); a placeholder in `collection.yaml` such as `TODO-zenodo` is left out of the catalogue.
 
 ### 2.3 Querying the catalogue
 
@@ -250,7 +255,7 @@ A maintainer can prepare the same new-version draft by hand with `scripts/zenodo
 
 ```
 asb-skill-collections/
-├── collections/                  # Released, tagged collections
+├── collections/                  # Versioned collections (released when the marketplace serves them)
 │   ├── metabolomics/
 │   │   └── v1/
 │   │       ├── collection.yaml            # collection metadata + skills/tools lists
@@ -370,7 +375,7 @@ require Perspicacité, and `local` retrieves source material over the network.
 
 ## 4. The asbb CLI Helper (Local Installation)
 
-> **Caveat (locked):** The `asbb` CLI is **to-build (Phase 1.7)** and is scoped to **`registry` / `verify` / `doctor` ONLY**. It is a **registry utility, NOT the install surface**. The install surface is the Claude Code plugin marketplace (`/plugin install <slug>-v<N>@HolobiomicsLab/asb-skill-collections`, resolved via `.claude-plugin/marketplace.json`). Commands beyond `registry`/`verify`/`doctor` shown elsewhere in this doc (e.g. `export-sssom`) are aspirational/post-Phase-1.7 and are not part of the v0 surface.
+> **Caveat (locked):** The `asbb` CLI is **to-build (Phase 1.7)** and is scoped to **`registry` / `verify` / `doctor` ONLY**. It is a **registry utility, NOT the install surface**. The install surface is the Claude Code plugin marketplace (`/plugin install <plugin-name>@asb-skill-collections`, resolved via `.claude-plugin/marketplace.json`). Commands beyond `registry`/`verify`/`doctor` shown elsewhere in this doc (e.g. `export-sssom`) are aspirational/post-Phase-1.7 and are not part of the v0 surface.
 
 > **Superseded in fact, not yet in governance (2026-09-13, revised 2026-09-14).**
 > The shipped CLI is `search / get / verify / doctor / install / uninstall`.
@@ -396,7 +401,7 @@ The `asbb` command-line tool provides operations that do not go through Claude C
 
 ```bash
 # Install path, Claude Code (recommended there):
-/plugin install metabolomics-v1@HolobiomicsLab/asb-skill-collections
+/plugin install metabolomics@asb-skill-collections
 #   resolved via .claude-plugin/marketplace.json
 
 # Install path, every other runtime (shipped, not a stub):
@@ -539,7 +544,7 @@ follows.
 
 | Advertised check | What actually runs it |
 | --- | --- |
-| `collection.yaml` schema compliance | Nothing. `layout_packaging` checks the on-disk layout and `unit_closure` that every declared member resolves, and `--catalogue-membership` checks that the catalogue's advertised members exist — none of them validates `collection.yaml` against a schema. `validate.yml` gate 1 validates every manifest closed against `SkillCollection` in `asb-schema` >= 0.3.0 and fails the job when one does not validate. That package is not on PyPI yet, so in CI the step still says it did not run. It used to call `linkml-validate --schema asb_skill_bundle.yaml`, a file that exists nowhere here, so every run failed behind `continue-on-error`; and `asb-schema` 0.2 did not declare seven keys the manifests carry (ten for `metabolomics/v2`). 0.3.0 declares them, and the four manifests validate against it locally. |
+| `collection.yaml` schema compliance | Nothing. `layout_packaging` checks the on-disk layout and `unit_closure` that every declared member resolves, and `--catalogue-membership` checks that the catalogue's advertised members exist: none of them validates `collection.yaml` against a schema. `validate.yml` gate 1 validates every manifest closed against `SkillCollection` in `asb-schema` >= 0.3.0 and fails the job when one does not validate. CI installs that package from PyPI, so the gate runs and blocks; only if that install fails does the step say it did not run. It used to call `linkml-validate --schema asb_skill_bundle.yaml`, a file that exists nowhere here, so every run failed behind `continue-on-error`; and `asb-schema` 0.2 did not declare seven keys the manifests carry (ten for `metabolomics/v2`). 0.3.0 declares them, and the four manifests validate against it locally. |
 | All `derived_from` DOIs resolve | `provenance_doi_license` checks that each leaf carries a source DOI **or** a repository URL, plus a licence tag. Nothing in this repository resolves a DOI over the network. |
 | RO-Crate metadata validity | `validate.yml` gate 8, blocking, since 2026-09-14. Every released capsule ships the crate its build wrote, pruned at promotion to what the capsule holds (`scripts/release_capsule_truth.py`), and the gate holds each to `crate_problems`: RO-Crate 1.1 context and descriptor, a root `Dataset`, every held file described and listed in `hasPart`, no entity naming a file the capsule does not hold, no absolute filesystem path. The build crates also claim Workflow Run Profile 0.5 but lack its `mainEntity`; the release copy drops that claim rather than ship one nothing checks. `release_gate.py` itself still has no RO-Crate check, and no manifest declares `ro_crate_path`: the crates are per capsule, not per collection. |
 | SKILL.md frontmatter discipline (description length, no marketing terms) | `python scripts/lint_skill_descriptions.py`, a separate script, not part of the gate, checks length and wording. The gate's `skill_frontmatter` check fails any SKILL.md, the router included, whose frontmatter is missing, unclosed, unparsable or not a mapping, and `leaf_text_floor` fails leaf descriptions that start "Use when when". |
@@ -662,7 +667,7 @@ The promotion step is manual (move the directory), not automated. This allows:
 
 | Gate | Checked by | Blocks? | When |
 |------|-----------|---------|------|
-| **LinkML schema** | `validate.yml` gate 1 | PR, once `asb-schema` >= 0.3.0 is installable; until then it says it did not run and validates nothing | every commit to collections/ or staged-collections/ |
+| **LinkML schema** | `validate.yml` gate 1 | PR: installs `asb-schema` >= 0.3.0 from PyPI and fails on any manifest that does not validate | every commit to collections/ or staged-collections/ |
 | **DOI resolution** | `validate.yml` gate 2 | PR | every commit |
 | **Description discipline** | `validate.yml` gate 5 | PR | every commit |
 | **EDAM IRI resolution** | `validate.yml` gate 6 | PR | every commit |
@@ -725,7 +730,7 @@ The promotion step is manual (move the directory), not automated. This allows:
 |-------|------|--------|----------|---|---|
 | **Native install surface** | `.claude-plugin/marketplace.json` | JSON | Users: `/plugin install <marketplace-name>@asb-skill-collections` | Manual (maintainer) | Lead curator approval |
 | **Machine registry** | `catalogue.jsonld` | JSON-LD (w3id IRIs) | Bots, linked-data clients, citation systems | Auto (regen_catalogue.py on tag) | Deterministic algorithm |
-| **Collection metadata** | `collections/<slug>/v<N>/collection.yaml` | YAML (LinkML schema) | Release gate, regen_catalogue.py | Manual (collection author) | LinkML validation (gate 1) — blocking once `asb-schema` >= 0.3.0 is installable |
+| **Collection metadata** | `collections/<slug>/v<N>/collection.yaml` | YAML (LinkML schema) | Release gate, regen_catalogue.py | Manual (collection author) | LinkML validation (gate 1), blocking, against `asb-schema` >= 0.3.0 from PyPI |
 | **KB grounding** | `collections/<slug>/v<N>/kb.yaml` | YAML | Install script, skill runtime | Manual (collection author) | Optional (fail-soft if absent) |
 | **Registry reconciliation** | `scripts/release_gate.py`, `regen_catalogue.py`, `check_advertised_counts.py` | shell commands | Maintainers, CI/CD, power users | Manual command invocation (gate also runs at promotion and release) | Release gate. (`asbb registry`, listed here until 2026-09-14, was a stub and was removed — §4.1) |
 
@@ -733,8 +738,8 @@ The promotion step is manual (move the directory), not automated. This allows:
 
 ## 9. References
 
-- **§Specification:** `/Users/nothiasl/git/agenticsciencebuilder_dev/docs/asbb/SPEC.md` § 6–7 (Distribution & Installation)
-- **§Implementation Plan:** `/Users/nothiasl/git/agenticsciencebuilder_dev/docs/asbb/PLAN.md` § Phase 0–1
+- **§Specification:** the ASB specification (private repository, to be published), § 6–7 (Distribution & Installation)
+- **§Implementation Plan:** the ASB implementation plan (private repository, to be published), § Phase 0–1
 - **§Release gate:** `POLICY-content.md` (authored Phase 0.1)
 - **§Content policies:** `governance/COI_POLICY.md`, `.github/CONTRIBUTING.md`, `LICENSING.md`
 - **§Linked data:** `catalogue.jsonld` context, w3id.org namespaces, indicium `uri-scheme.md`

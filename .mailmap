@@ -1,0 +1,4 @@
+# Canonical author identities for git shortlog, git log --use-mailmap and
+# contributor tooling. History is not rewritten.
+Louis-Félix Nothias <louis-felix.nothias@cnrs.fr>
+Louis-Félix Nothias <louis-felix.nothias@cnrs.fr> <louisfelix.nothias@gmail.com>

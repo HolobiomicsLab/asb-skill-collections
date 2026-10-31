@@ -34,13 +34,14 @@
       "@type": "xsd:dateTime"
     },
     "slug": "asb:slug",
-    "leaf_dir": "asb:leafDir"
+    "leaf_dir": "asb:leafDir",
+    "status": "asb:status"
   },
   "@type": "asb:SkillCollectionRegistry",
   "@id": "https://w3id.org/holobiomicslab/asb-skill/registry",
   "name": "ASB Skill Collection Registry",
-  "description": "Auto-generated registry of all released ASB Skill Collections.",
-  "generated_at": "2026-08-19T11:19:01Z",
+  "description": "Auto-generated registry of the ASB Skill Collections in this repository. Each entry's status says whether it is released or staged.",
+  "generated_at": "2026-10-31T11:52:58Z",
   "collections": [
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/epigenomics/v1",
@@ -98,7 +99,6 @@
         "http://edamontology.org/topic_3676",
         "http://edamontology.org/topic_3957"
       ],
-      "doi": "TODO-zenodo",
       "released_at": "2026-06-15T18:49:37Z",
       "lead_curators": [
         {
@@ -106,7 +106,8 @@
           "orcid": "0000-0001-6711-6719",
           "github": "lfnothias"
         }
-      ]
+      ],
+      "status": "staged"
     },
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v1",
@@ -227,7 +228,6 @@
         "http://edamontology.org/topic_3957",
         "http://edamontology.org/topic_3958"
       ],
-      "doi": "TODO-zenodo",
       "released_at": "2026-06-15T11:24:28Z",
       "lead_curators": [
         {
@@ -235,7 +235,8 @@
           "orcid": "0000-0001-6711-6719",
           "github": "lfnothias"
         }
-      ]
+      ],
+      "status": "staged"
     },
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2",
@@ -444,7 +445,8 @@
           "orcid": "0000-0001-6711-6719",
           "github": "lfnothias"
         }
-      ]
+      ],
+      "status": "released"
     },
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/transcriptomics/v1",
@@ -513,7 +515,6 @@
         "http://edamontology.org/topic_3678",
         "http://edamontology.org/topic_3813"
       ],
-      "doi": "TODO-zenodo",
       "released_at": "2026-06-15T18:49:38Z",
       "lead_curators": [
         {
@@ -521,7 +522,8 @@
           "orcid": "0000-0001-6711-6719",
           "github": "lfnothias"
         }
-      ]
+      ],
+      "status": "staged"
     }
   ]
 }

@@ -321,11 +321,12 @@ therefore nothing for a collection tag to pin. The steps below are kept for **v1
 ship, and one of them has to change first:
 
 1. **Before tagging**, check the indicium version pinned in the release/profile.
-   - Lookup: `agenticsciencebuilder_dev/docs/asbb/RELEASE.yaml` — **this file does not exist**; treat
-     the lookup as unavailable rather than assuming it carries `indicium_version`.
+   - Lookup: the release record kept with the ASB specification (private repository, to be
+     published). It cannot be read from this repository; treat the lookup as unavailable rather than
+     assuming it carries `indicium_version`.
    - Or read the pinned version in the AgenticScienceBuilder codebase.
 
-2. **Pin a commit SHA, not a tag.** `~/git/indicium` has **zero tags**, and its two version strings
+2. **Pin a commit SHA, not a tag.** indicium (measured 2026-09-13) has **zero tags**, and its two version strings
    disagree — `pyproject.toml` says `2.0.0`, the installed distribution reports `1.12.0`. "The tag
    (e.g. `v1.11.0`)" is unproducible; a SHA identifies the schema exactly and is available today.
 
@@ -360,7 +361,7 @@ The release-gate reviews (gates 13, 14 in the SPEC: independent co-reviewer and 
 
 | Gate | Description | Trigger | Automated | Blocking |
 |---|---|---|---|---|
-| 1 | LinkML schema validation (collection.yaml, closed, `SkillCollection`) | PR, push-main, tag | ✓ | once `asb-schema` >= 0.3.0 is installable; until then (not yet on PyPI) the step says it did not run and never blocks |
+| 1 | LinkML schema validation (collection.yaml, closed, `SkillCollection`) | PR, push-main, tag | ✓ | yes: installs `asb-schema` >= 0.3.0 from PyPI and fails on any manifest that does not validate; only if that install fails does the step say it did not run |
 | 2 | No orphan skills (DOI resolution sample) | PR, push-main, tag | ✓ | ✓ |
 | 5 | Description discipline lint | PR, push-main, tag | ✓ | ✓ |
 | 6 | EDAM IRI resolution | PR, push-main, tag | ✓ | ✓ |
@@ -602,7 +603,7 @@ A skipped step is the default: deposit with `scripts/zenodo_deposit.py` (`docs/R
 - **Contributing guide:** `CONTRIBUTING.md`
 - **Maintainers guide:** `MAINTAINERS.md`
 - **COI policy:** `COI_POLICY.md`
-- **ASB specification:** `/Users/nothiasl/git/agenticsciencebuilder_dev/docs/asbb/SPEC.md`
+- **ASB specification:** private repository, to be published
 - **Zenodo API docs:** https://developers.zenodo.org/
 - **HuggingFace API docs:** https://huggingface.co/docs/hub/api
 

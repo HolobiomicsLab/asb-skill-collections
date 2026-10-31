@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="asb-mark-title asb-mark-desc">
+  <title id="asb-mark-title">AgenticScienceBuilder mark</title>
+  <desc id="asb-mark-desc">A tower crane lifts a platform that carries three building blocks: a code sign, a summation sign and a bar chart.</desc>
+  <g transform="translate(2.25 4.75)">
+    <g fill="none" stroke="#00284b" stroke-linecap="round" stroke-linejoin="round">
+      <g stroke-width="7">
+        <path d="M45 222V44L58 14L71 44V222"/>
+        <rect x="14" y="44" width="182" height="22" rx="2"/>
+      </g>
+      <g stroke-width="5">
+        <path d="M45 66L71 92 45 118 71 144 45 170 71 196 45 222M71 66L45 92 71 118 45 144 71 170 45 196 71 222"/>
+        <path d="M71 66L83.5 44 96 66 108.5 44 121 66 133.5 44 146 66 158.5 44 171 66 183.5 44 196 66"/>
+        <path d="M14 44L29.5 66L45 44"/>
+        <path d="M18 44L58 14L133.5 44"/>
+        <path d="M171 66V118"/>
+        <path d="M137 163L171 118L205 163"/>
+      </g>
+    </g>
+    <g fill="#00284b">
+      <rect x="30" y="222" width="56" height="14" rx="4"/>
+      <circle cx="171" cy="118" r="8"/>
+      <path d="M103 215H239Q241 215 240 217.5L238 225Q237 227 234.5 227H107.5Q105 227 104 225L102 217.5Q101 215 103 215Z"/>
+    </g>
+    <g fill="none" stroke="#e06c0a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M119 182L108 193L119 204"/>
+      <path d="M146 182L157 193L146 204"/>
+      <path d="M128.5 207L136.5 179"/>
+      <path d="M192.5 179.5H171L182.5 192L171 204.5H192.5"/>
+    </g>
+    <g fill="#e06c0a">
+      <rect x="202.5" y="189" width="9" height="16" rx="1"/>
+      <rect x="214.5" y="181" width="9" height="24" rx="1"/>
+      <rect x="226.5" y="172" width="9" height="33" rx="1"/>
+      <rect x="200.5" y="204" width="37" height="4" rx="1"/>
+    </g>
+  </g>
+</svg>

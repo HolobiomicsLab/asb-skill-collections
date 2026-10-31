@@ -3,7 +3,9 @@
 
 Walks `collections/**` and `staged-collections/**` from the repo root,
 extracts searchable fields from corpus.yaml, SKILL.md, and tool YAMLs,
-and emits docs-site/search_index.json.
+and emits docs-site/search_index.json. `collection_status` maps each
+collection to "released" or "staged" with the rule regen_catalogue.py uses,
+so the search page can label results from staged collections.
 
 Stdlib + PyYAML only (no other deps). Idempotent — overwrites the index
 in place. Maintainers re-run this after promote, before committing.
@@ -36,6 +38,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
 from asb_skill_collections import layout  # noqa: E402  (needs REPO_ROOT on the path)
+from scripts.regen_catalogue import collection_status, released_collection_dirs  # noqa: E402
 from scripts.skill_index import split_frontmatter  # noqa: E402
 DOCS_SITE = Path(__file__).resolve().parent
 OUTPUT = DOCS_SITE / "search_index.json"
@@ -354,6 +357,18 @@ def index_tools() -> list[dict]:
     return out
 
 
+def collection_statuses(labels: list[str]) -> dict[str, str]:
+    """Map each '<slug>/v<N>' label to "released" or "staged", as the catalogue does.
+
+    The status follows the label, not the tree: a label is released when the
+    marketplace serves collections/<label>, and staged otherwise. A
+    staged-collections/<label> tree that shares its label with a released
+    collection is therefore reported as released.
+    """
+    released = released_collection_dirs(REPO_ROOT)
+    return {label: collection_status(f"collections/{label}", released) for label in labels}
+
+
 def main() -> int:
     papers = index_papers()
     skills = index_skills()
@@ -367,6 +382,7 @@ def main() -> int:
         "schema_version": SCHEMA_VERSION,
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "collections": collections,
+        "collection_status": collection_statuses(collections),
         "papers": papers,
         "skills": skills,
         "workflows": workflows,
@@ -374,9 +390,10 @@ def main() -> int:
     }
     OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     size = OUTPUT.stat().st_size
+    staged = sum(1 for v in payload["collection_status"].values() if v != "released")
     print(
         f"Indexed {len(papers)} papers, {len(skills)} skills, {len(workflows)} workflows, "
-        f"{len(tools)} tools across {len(collections)} collections. "
+        f"{len(tools)} tools across {len(collections)} collections ({staged} staged). "
         f"Wrote {OUTPUT.relative_to(REPO_ROOT)} ({size:,} bytes)."
     )
     return 0
