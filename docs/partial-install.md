@@ -181,7 +181,8 @@ The router and the snapshot are removed, and the record leaves
 
 ### What is refused
 
-Nothing is written when a selection is refused, and the command exits 1.
+Nothing is written when a selection is refused. The command exits 1, or 2 for
+a checkout older than the package (see [Getting the asbb command](#getting-the-asbb-command)).
 
 | Case | Message |
 |---|---|
@@ -250,7 +251,9 @@ today), so the download is about 5.5 MB whether you ask for one skill or ten.
 
 Fetch refuses, before writing anything, a slug the remote index does not list,
 a collection not written as `<slug>/vN`, a ref that is not a plain branch, tag
-or commit name (such as `x/../main`), and a destination that already holds
+or commit name (such as `x/../main`), a ref the GitHub commits API does not
+resolve to a commit (a full commit id is used as given, with no API call), and
+a destination that already holds
 `PROVENANCE.json` or a directory of the same name as a requested skill. Running
 the fetch command above a second time gives:
 
