@@ -197,6 +197,25 @@ jobs:
           base_url = "https://sandbox.zenodo.org/api" if sandbox else "https://zenodo.org/api"
           print(f"Zenodo target: {'SANDBOX' if sandbox else 'PRODUCTION'} ({base_url})")
 
+          # ---- Checks before any request, so a refusal leaves no draft ----
+          # The license texts are required in the archive, and a checked-in
+          # .zenodo.json must start with scripts/release_creators.yaml, as in
+          # scripts/zenodo_deposit.py.
+          license_files = ["LICENSING.md", "LICENSE", "governance/LICENSE_TIERS.md"]
+          missing = [p for p in license_files if not pathlib.Path(p).is_file()]
+          if missing:
+            print(f"License texts not found: {missing}", file=sys.stderr)
+            sys.exit(1)
+          template_path = collection_dir / ".zenodo.json"
+          if template_path.exists():
+            from scripts import zenodo_deposit
+            refusals = zenodo_deposit.creator_problems(
+              json.loads(template_path.read_text()),
+              zenodo_deposit.expected_creators(pathlib.Path(".")))
+            if refusals:
+              print("refused: " + "; ".join(refusals), file=sys.stderr)
+              sys.exit(1)
+
           # ---- Resolve the Zenodo concept record for version lineage ----
           # Read any prior-version DOI from the collection's OWN metadata so no DOI
           # is hardcoded in CI (generalize-or-stop). ZENODO_CONCEPT_RECORD overrides.
@@ -249,12 +268,7 @@ jobs:
           # Zip the collection directory + bundle the Perspicacité grounding
           # binder (+ deps + agent guide) so the deposit is self-contained:
           # users can run the KB grounding from the archive alone. The license
-          # texts are required, as in scripts/zenodo_deposit.py.
-          license_files = ["LICENSING.md", "LICENSE", "governance/LICENSE_TIERS.md"]
-          missing = [p for p in license_files if not pathlib.Path(p).is_file()]
-          if missing:
-            print(f"License texts not found: {missing}", file=sys.stderr)
-            sys.exit(1)
+          # texts are required; they were checked before the first request.
           with tempfile.NamedTemporaryFile(suffix=".zip", delete=False) as tf:
             zip_path = tf.name
           arc_root = f"{slug}/v{version}"

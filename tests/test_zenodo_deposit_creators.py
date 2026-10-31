@@ -13,6 +13,7 @@ import pytest
 
 from scripts import select_release_coauthors, zenodo_deposit
 from tests.test_zenodo_deposit import DATE, ZENODO_JSON, FakeZenodo, make_repo
+from tests.test_zenodo_deposit_bundle import run_release_zenodo_step
 
 
 @pytest.fixture
@@ -130,3 +131,18 @@ def test_entries_after_the_list_must_be_distinct_orcid_persons(repo, capsys, cre
     _write_template_creators(repo, creators)
     assert _plan(repo) == 1
     assert "refused: creators differ" in capsys.readouterr().out
+
+
+def test_the_release_step_refuses_mismatched_creators_before_any_request(repo, tmp_path):
+    _write_template_creators(repo, [{"name": "Somebody Else"}])
+    code, err, requested = run_release_zenodo_step(repo, tmp_path / "stub")
+    assert (code, requested) == (1, False)
+    assert "refused: creators differ from scripts/release_creators.yaml" in err
+
+
+def test_the_release_step_accepts_appended_orcid_coauthors(repo, tmp_path):
+    select_release_coauthors._apply_zenodo(
+        repo / "collections/dom/v1/.zenodo.json",
+        [{"name": "Ada Example", "orcid": "0000-0002-1825-0097"}])
+    code, _, requested = run_release_zenodo_step(repo, tmp_path / "stub")
+    assert (code, requested) == (3, True)

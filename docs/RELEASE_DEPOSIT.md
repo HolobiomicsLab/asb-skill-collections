@@ -61,8 +61,8 @@ Run from the repository root, on the commit that carries the release.
 
    Check the target host, the record id, the metadata and the file list. The
    command exits 1 and prints `rejected by the API:` for each problem, and
-   `refused:` when the template's creators differ from
-   `scripts/release_creators.yaml`. `draft` stops on the same conditions
+   `refused:` when the template's creators do not start with
+   `scripts/release_creators.yaml` (see Metadata handling). `draft` stops on the same conditions
    before any request.
 
 3. Make a sandbox draft first. The sandbox has no copy of the production record.
@@ -94,7 +94,11 @@ Run from the repository root, on the commit that carries the release.
 
 6. Record the new version DOI in the `doi:` field of
    `collections/<domain>/<vN>/CITATION.cff` and in the collection entry of
-   `catalogue.jsonld`, in a pull request.
+   `catalogue.jsonld`, in a pull request. `CITATION.cff` is bound by the
+   collection's gate receipt, so regenerate the receipt in the same pull
+   request with `python scripts/release_gate.py collections/<domain>/<vN> --strict`,
+   in an environment where the AgenticScienceBuilder package is not importable
+   (see the receipt job of `validate.yml`); otherwise that job fails.
 
 7. Once that pull request is merged, push the release tag on the merged
    commit. With `ZENODO_UPLOAD` unset, `release.yml` runs the tests and the
@@ -168,7 +172,10 @@ per-collection release: the metadata template and the files live under
 The release workflow (`.github/workflows/release.yml`) makes the same kind of
 draft from CI only when the repository variable `ZENODO_UPLOAD` is `true` and
 `ZENODO_TOKEN` is set, and publishes it when `ZENODO_PUBLISH` is `true`.
-`ZENODO_UPLOAD` is unset by default. The step sends the template unchanged,
+`ZENODO_UPLOAD` is unset by default. Before its first request the step stops
+when a license text is missing or when the creators of a checked-in
+`.zenodo.json` do not start with `scripts/release_creators.yaml`, by the rule
+of `plan` and `draft`. It then sends the template unchanged,
 including the `isVersionOf` relation
 that the API vocabulary does not list. That was not exercised against a live
 deposit here. Use the sandbox draft in step 3 to check it before relying on that
