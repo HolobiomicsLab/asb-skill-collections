@@ -11,20 +11,18 @@ It reuses `asb_skill_index`, also used by `asbb search` and embedded in the
 packaged router and semantic script's keyword mode. These surfaces return the
 same ranked candidates and typed explanations. Pure-offline, no API key required.
 
-Run:
-    ASB_COLLECTIONS_ROOT=/path/to/checkout asb-mcp        # after `pip install .[mcp]`
-    uvx --from "asb-skill-collections[mcp]" asb-mcp        # zero-install
+Run, after `pip install -e ".[mcp]"` in a checkout (the package is not on PyPI):
+    ASB_COLLECTIONS_ROOT=/path/to/checkout asb-mcp
 
 Claude Desktop / Code config (mcpServers):
     {
       "asb-skills": {
-        "command": "uvx",
-        "args": ["--from", "asb-skill-collections[mcp]", "asb-mcp"],
+        "command": "/path/to/venv/bin/asb-mcp",
         "env": {"ASB_COLLECTIONS_ROOT": "/path/to/asb-skill-collections"}
       }
     }
 
-Requires the `mcp` extra: `pip install "asb-skill-collections[mcp]"`.
+Requires the `mcp` extra, which pins `mcp>=1.2,<2`: mcp 2.x renamed `FastMCP`.
 
 Local load counting is **off unless `ASB_SKILLS_USAGE_PATH` is set**, and even
 then it is purely local: it appends nothing to the network, records no user,
@@ -42,11 +40,16 @@ from pathlib import Path
 
 try:
     from mcp.server.fastmcp import FastMCP
-except ModuleNotFoundError:  # pragma: no cover - exercised only without the extra
+except ModuleNotFoundError as exc:  # exercised by tests/test_mcp_import.py
+    # The exception names what is missing: no `mcp` at all, or an mcp 2.x that
+    # renamed FastMCP. Saying only "requires the 'mcp' package" was wrong in
+    # the second case, where the package is installed.
     print(
-        "asb-mcp requires the 'mcp' package. Install with:\n"
-        '  pip install "asb-skill-collections[mcp]"\n'
-        "  # or: uvx --from \"asb-skill-collections[mcp]\" asb-mcp",
+        f"asb-mcp cannot import the MCP SDK: {exc}\n"
+        "Install the server's extra from a checkout of asb-skill-collections:\n"
+        '  pip install -e ".[mcp]"\n'
+        "The extra pins mcp>=1.2,<2. With mcp 2.x installed, pin mcp<2:\n"
+        '  pip install "mcp>=1.2,<2"',
         file=sys.stderr,
     )
     raise SystemExit(1)

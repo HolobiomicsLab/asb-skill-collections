@@ -36,7 +36,8 @@ asb-mcp = "asb_skill_collections.asb_mcp_server:main"
 
 [project.optional-dependencies]
 mcp = [
-    "mcp>=1.2",
+    # mcp 2.x renamed FastMCP to MCPServer; asb-mcp imports FastMCP.
+    "mcp>=1.2,<2",
 ]
 hf = [
     "huggingface_hub>=0.23",
