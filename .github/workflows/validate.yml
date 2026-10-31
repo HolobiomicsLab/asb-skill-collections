@@ -2,10 +2,10 @@
 # Enforces CI gates per section 14 of ASB-Skills Release Design Doc v2.
 #
 # Gates implemented here:
-#   1. LinkML schema validation (collection.yaml) — BLOCKING once resolvable:
-#      every manifest is validated closed against SkillCollection in
-#      asb-schema >= 0.3.0. WARN-ONLY until that package is installable (it is
-#      not yet on PyPI): the step then says it did not run and exits 0.
+#   1. LinkML schema validation (collection.yaml): BLOCKING. The step installs
+#      asb-schema >= 0.3.0 from PyPI and validates every manifest closed against
+#      SkillCollection. If the schema cannot be resolved (the install failed, or
+#      it is older than 0.3.0), the step says it did not run and exits 0.
 #   2. No orphan skills (DOI resolution sample)
 #   5. Description discipline lint (leading phrase, length, no marketing)
 #   6. EDAM IRI resolution
@@ -291,11 +291,13 @@ jobs:
 
       # -- Gate 1: LinkML schema validation ------------------------------------
       - name: LinkML schema validation
-        # Blocking once the schema is resolvable. Every collection.yaml is
-        # validated closed against the SkillCollection class of asb-schema
-        # >= 0.3.0, the first version that declares the keys the released
-        # manifests carry. Until that package is installable the step says it
-        # did not run and exits 0; it no longer hides behind continue-on-error.
+        # BLOCKING. The step installs asb-schema >= 0.3.0 from PyPI (a wheel
+        # only) and validates every collection.yaml closed against its
+        # SkillCollection class; 0.3.0 is the first version that declares the
+        # keys the released manifests carry. One manifest that does not validate
+        # fails the job. If the schema still cannot be resolved (the install
+        # failed, or it resolves to a version older than 0.3.0), the step says
+        # it did not run and exits 0 rather than report a pass.
         run: |
           pip install --only-binary :all: "asb-schema>=0.3.0" || echo "INFO: asb-schema>=0.3.0 is not installable; gate 1 will say it did not run"
           python - <<'EOF'
