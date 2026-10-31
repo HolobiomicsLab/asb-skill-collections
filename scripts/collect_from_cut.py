@@ -33,6 +33,15 @@ DOI_CAP = release_gate._CUMULATIVE_CAP
 _SLUG_RE = re.compile(r"^[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$")
 _VERSION_RE = re.compile(r"^v([1-9][0-9]*)$")
 _SECTION_RE = re.compile(r"(?m)^## (?P<name>[^\n]+)\s*\n(?P<body>.*?)(?=^## |\Z)", re.S)
+# The single source of a domain's display name. The collection title built from
+# it is written to collection.yaml, plugin.json and CITATION.cff here, and
+# land_candidate.py copies collection.yaml's title into .zenodo.json and the
+# marketplace entry. A slug not listed is title-cased, which is only right
+# when no word in it is an acronym or a hyphenated term.
+DISPLAY_NAMES = {
+    "agentic-ai": "Agentic AI",
+    "multi-omics": "Multi-Omics",
+}
 
 
 class CollectorError(RuntimeError):
@@ -95,6 +104,16 @@ def _stable_unique(values: list[Any]) -> list[Any]:
         if value not in result:
             result.append(value)
     return result
+
+
+def display_name(domain: str) -> str:
+    """Return the display name of a domain slug."""
+    return DISPLAY_NAMES.get(domain) or domain.replace("-", " ").title()
+
+
+def collection_title(domain: str, version: str) -> str:
+    """Return the one title every metadata file of a collection carries."""
+    return f"ASB {display_name(domain)} Skill Collection {version}"
 
 
 def _validate_slug(value: str, label: str = "slug") -> str:
@@ -771,8 +790,8 @@ def _documents(
     )
     people = copy.deepcopy(creators["creators"])
     lead_curators = copy.deepcopy(creators["lead_curators"])
-    title_domain = options.domain.replace("-", " ").title()
-    title = f"ASB {title_domain} Skill Collection {options.version}"
+    title_domain = display_name(options.domain)
+    title = collection_title(options.domain, options.version)
     iri = (
         "https://w3id.org/holobiomicslab/asb-skill/collection/"
         f"{options.domain}/{options.version}"
