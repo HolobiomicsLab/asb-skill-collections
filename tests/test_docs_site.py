@@ -178,3 +178,25 @@ def test_no_font_cdn_anywhere_in_the_site():
         and FONT_HOSTS.search((REPO / path).read_text(encoding="utf-8"))
     ]
     assert not hits, hits
+
+
+# --------------------------------------------------------------------------- #
+# Brand: every page carries the favicon and the mark from assets/brand/       #
+# --------------------------------------------------------------------------- #
+# Pages serves docs-site/ alone, so the site keeps copies of the two files it
+# uses; they must stay byte-identical to the brand kit.
+BRAND_KIT = REPO / "assets" / "brand"
+SITE_BRAND = SITE / "brand"
+SITE_BRAND_FILES = ("favicon.svg", "asb-mark.svg")
+
+
+@pytest.mark.parametrize("name", SITE_BRAND_FILES)
+def test_site_brand_files_match_the_kit(name):
+    assert (SITE_BRAND / name).read_bytes() == (BRAND_KIT / name).read_bytes()
+
+
+@pytest.mark.parametrize("page", PAGES, ids=[p.name for p in PAGES])
+def test_page_carries_favicon_and_mark(page):
+    refs = {(tag, ref) for _line, tag, ref in page_refs(page)}
+    assert ("link", "brand/favicon.svg") in refs, f"{page.name}: no favicon link"
+    assert ("img", "brand/asb-mark.svg") in refs, f"{page.name}: no brand mark"

@@ -120,6 +120,13 @@ header::before {
   transform: translateY(2px);
 }
 header h1 { margin-top: 0; }
+
+/* Brand mark above the page title (assets/brand/BRAND.md: the mark alone is
+   at least 48 px, with clear space of one eighth of its width). */
+.site-mark { display: inline-block; margin-top: 1.5rem; line-height: 0; }
+header .site-mark { margin-top: 0; }
+.site-mark img { display: block; width: 48px; height: 48px; }
+.site-mark + h1 { margin-top: .5rem; }
 .tagline {
   color: var(--fg-muted);
   font-size: .95rem;
