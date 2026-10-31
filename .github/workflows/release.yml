@@ -5,10 +5,11 @@
 #      This is the last measurement before anything leaves the repository, and it
 #      blocks. promote-collection.yml runs the same gate on `collections/**` pull
 #      requests, which is a different population from "what a tag points at".
-#   3. Call regen_catalogue.py and commit the updated catalogue.jsonld
+#   3. Call regen_catalogue.py and propose the updated catalogue.jsonld in a
+#      pull request from a bot branch (nothing here pushes to main)
 #   4. Upload the collection directory to Zenodo, only when the repository
 #      variable ZENODO_UPLOAD is `true` (unset by default; see the step)
-#   5. Update CITATION.cff with the minted DOI
+#   5. Update CITATION.cff with the minted DOI, in a pull request from a bot branch
 #   6. Trigger mirror-to-hf.yml via workflow_dispatch
 name: Release
 
@@ -24,7 +25,8 @@ on:
         type: string
 
 permissions:
-  contents: write
+  contents: write        # push the bot branches of the pull requests below
+  pull-requests: write   # open those pull requests
 
 jobs:
   release:
@@ -122,26 +124,20 @@ jobs:
           python scripts/regen_catalogue.py --repo-root . --output catalogue.jsonld
           echo "catalogue.jsonld regenerated"
 
-      - name: Commit updated catalogue.jsonld (fail-soft)
+      - name: Propose the updated catalogue.jsonld in a pull request (fail-soft)
+        # main changes only through pull requests: the regenerated catalogue is
+        # committed on top of the tagged commit, on the bot branch
+        # bot/catalogue-<tag>, and proposed to main. Best-effort only: never fail
+        # the release over the catalogue (it is regenerated on main separately).
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ steps.tag.outputs.tag }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add catalogue.jsonld
-          if git diff --cached --quiet; then
-            echo "No catalogue changes to commit"
-          else
-            git commit -m "chore: regen catalogue.jsonld for ${{ steps.tag.outputs.tag }}"
-            # The release runs from a detached tag commit; main may be ahead, so a
-            # direct push is often non-fast-forward. Best-effort only — never fail
-            # the release over the catalogue (it is regenerated/maintained on main
-            # separately). Rebase onto current main, then try once.
-            git fetch origin main || true
-            if git push origin "HEAD:main" 2>/dev/null; then
-              echo "catalogue.jsonld pushed to main"
-            else
-              echo "::notice::catalogue push skipped (non-fast-forward from tag commit); regenerate on main separately"
-            fi
-          fi
+          bash scripts/bot_pull_request.sh "bot/catalogue-${RELEASE_TAG}" \
+            "chore: regen catalogue.jsonld for ${RELEASE_TAG}" catalogue.jsonld
 
       - name: Propose release co-authors from leaderboard (advisory)
         # Turns the measured contribution record into a PROPOSED author list for
@@ -366,11 +362,16 @@ jobs:
           PYEOF
 
       - name: Update CITATION.cff with minted DOI
+        # Runs only when the Zenodo step published (ZENODO_UPLOAD and
+        # ZENODO_PUBLISH both true). The DOI goes to main in a pull request from
+        # the bot branch bot/citation-doi-<tag>, not by a push to main.
         if: steps.zenodo.outputs.doi != ''
         env:
           DOI: ${{ steps.zenodo.outputs.doi }}
           COLLECTION_SLUG: ${{ steps.tag.outputs.slug }}
           COLLECTION_VERSION: ${{ steps.tag.outputs.version }}
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ steps.tag.outputs.tag }}
         run: |
           python - <<'PYEOF'
           import os, pathlib, re
@@ -397,13 +398,9 @@ jobs:
           PYEOF
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add CITATION.cff "collections/${{ steps.tag.outputs.slug }}/v${{ steps.tag.outputs.version }}/CITATION.cff" 2>/dev/null || true
-          if git diff --cached --quiet; then
-            echo "No CITATION.cff changes"
-          else
-            git commit -m "chore: update CITATION.cff with Zenodo DOI ${{ steps.zenodo.outputs.doi }}"
-            git push origin HEAD:main
-          fi
+          bash scripts/bot_pull_request.sh "bot/citation-doi-${RELEASE_TAG}" \
+            "chore: update CITATION.cff with Zenodo DOI ${DOI}" \
+            CITATION.cff "collections/${COLLECTION_SLUG}/v${COLLECTION_VERSION}/CITATION.cff"
 
       - name: Trigger mirror-to-hf.yml
         # Gated OFF by default — the HuggingFace mirror is not live yet. Set the

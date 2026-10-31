@@ -12,6 +12,10 @@
   `true`.
 * pages.yml: deployed only on a push to main touching the site paths, so
   enabling Pages deployed nothing until such a push. It can now be dispatched.
+* release.yml, career-stats-regen.yml and tier-update.yml pushed their commits
+  straight to main. They now open a pull request from a bot branch through
+  scripts/bot_pull_request.sh (tested in tests/test_bot_pull_request.py), and
+  no workflow line that runs git push names main.
 
 The `if:` conditions are evaluated by `evaluate`, a small reader of the GitHub
 Actions expression syntax these workflows use: string literals, context paths,
@@ -328,3 +332,37 @@ def test_pages_can_be_dispatched_and_still_deploys_on_site_pushes():
     triggers = _triggers("pages.yml")
     assert "workflow_dispatch" in triggers
     assert "docs-site/**" in triggers["push"]["paths"]
+
+
+# --- GAP-066: nothing in CI pushes to main ------------------------------------
+
+_PUSH = re.compile(r"\bgit\b[^\n]*\bpush\b")
+
+
+def _run_text(name: str) -> str:
+    jobs = _workflow(name)["jobs"]
+    return "\n".join(step.get("run", "") for job in jobs.values() for step in job.get("steps", []))
+
+
+@pytest.mark.parametrize("path", sorted(WORKFLOWS.glob("*.yml")), ids=lambda p: p.name)
+def test_no_workflow_pushes_to_main(path):
+    text = path.read_text()
+    assert "HEAD:main" not in text
+    assert "refs/heads/main" not in text
+    for line in text.splitlines():
+        if _PUSH.search(line):
+            assert not re.search(r"\bmain\b", line), line.strip()
+
+
+@pytest.mark.parametrize("name", ["release.yml", "career-stats-regen.yml", "tier-update.yml"])
+def test_regenerating_workflows_propose_through_a_bot_pull_request(name):
+    assert _workflow(name)["permissions"]["pull-requests"] == "write"
+    runs = _run_text(name)
+    assert "bash scripts/bot_pull_request.sh" in runs
+    assert not _PUSH.search(runs)
+
+
+def test_tier_update_opens_one_bot_branch_per_push():
+    # tier_update.py increments counters in place: a branch shared across runs
+    # would drop the increments of a pull request not merged yet.
+    assert 'bot_pull_request.sh "bot/tier-update-${GITHUB_SHA::12}"' in _run_text("tier-update.yml")
