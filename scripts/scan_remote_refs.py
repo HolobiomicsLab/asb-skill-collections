@@ -10,8 +10,11 @@ from the local repository without writing a ref or ``FETCH_HEAD``, and reads
 each commit's tree for three defects:
 
 - an evidence trim receipt (any ``evidence_trim_receipt.json``) that carries a
-  span text field (``text``, ``kept_text``, ``dropped_text`` or ``quote``) or a
-  string longer than ``--max-string`` characters;
+  span text field, or a string longer than ``--max-string`` characters. Only
+  the writer's digest keys may hold a string (``DIGEST_STRING_KEYS``, and the
+  DOIs listed under ``strict_dois``); a string under any other key, whatever
+  its length, counts as span text, so a quote held as ``raw_block`` or
+  ``excerpt`` is reported even when it is short;
 - an absolute local path (``/Users/``, ``/home/``, ``/private/``, ``/tmp/`` or
   ``/var/folders/``) in a text file under the ``--paths-in`` pathspecs
   (``receipts`` by default; ``.`` scans the whole tree);
@@ -20,8 +23,9 @@ each commit's tree for three defects:
 
 The JSON report gives, per ref, the commit, the files and the counts. A trim
 receipt finding is reported by field name, JSON location, length and SHA-256,
-never by its text. Absolute path findings quote the matched line, which names
-local directories: keep the report out of the repository it describes.
+never by its text. Absolute path findings quote the matched line, and a
+receipt that keys a map by local path yields pointers naming that path: keep
+the report out of the repository it describes.
 
 Exit codes: 0 when every ref was scanned and none has a finding, 1 when a ref
 has a finding, 2 when a ref could not be scanned or the remote could not be
@@ -53,7 +57,15 @@ from scripts.release_gate import _frontmatter_error
 
 
 TRIM_RECEIPT_NAME = "evidence_trim_receipt.json"
-SPAN_TEXT_KEYS = frozenset({"text", "kept_text", "dropped_text", "quote"})
+# The string fields `collect_from_cut.py` writes into a trim receipt: span rows
+# (kind, leaf, tool, build, doi, source, sha256, reason) and the top-level
+# description (status, cut_id, order, span_identity, policy_source). Lengths,
+# line numbers and flags are not strings. Any other string field is span text.
+DIGEST_STRING_KEYS = frozenset({
+    "kind", "leaf", "tool", "build", "doi", "source", "sha256", "reason",
+    "status", "cut_id", "order", "span_identity", "policy_source",
+})
+DIGEST_STRING_LISTS = frozenset({"strict_dois"})
 DEFAULT_MAX_STRING = 200
 DEFAULT_PATHS_IN = ("receipts",)
 # Extended regular expression for `git grep -E`: a POSIX root that does not
@@ -162,22 +174,33 @@ def _blob_text(repo: Path, commit: str, path: str) -> str:
     return _git(repo, "show", f"{commit}:{path}").stdout.decode("utf-8", "replace")
 
 
-def _strings(node: Any, pointer: str = "") -> Iterator[tuple[str, str | None, str]]:
-    """Yield ``(json_pointer, key, value)`` for every string in a JSON value."""
+def _strings(
+    node: Any, pointer: str = "", owner: str | None = None
+) -> Iterator[tuple[str, str | None, bool, str]]:
+    """Yield ``(json_pointer, key, in_list, value)`` for every string in a JSON value.
+
+    For a string inside a list, ``key`` is the key that holds the list.
+    """
     if isinstance(node, dict):
         for key, value in node.items():
             child = f"{pointer}/{key}"
             if isinstance(value, str):
-                yield child, str(key), value
+                yield child, str(key), False, value
             else:
-                yield from _strings(value, child)
+                yield from _strings(value, child, str(key))
     elif isinstance(node, list):
         for index, value in enumerate(node):
             child = f"{pointer}/{index}"
             if isinstance(value, str):
-                yield child, None, value
+                yield child, owner, True, value
             else:
-                yield from _strings(value, child)
+                yield from _strings(value, child, None)
+
+
+def _is_digest_string(key: str | None, in_list: bool) -> bool:
+    if in_list:
+        return key in DIGEST_STRING_LISTS
+    return key in DIGEST_STRING_KEYS
 
 
 def scan_trim_receipt(text: str, max_string: int) -> dict[str, Any]:
@@ -190,14 +213,14 @@ def scan_trim_receipt(text: str, max_string: int) -> dict[str, Any]:
     span_fields: list[dict[str, Any]] = []
     long_strings: list[dict[str, Any]] = []
     longest = 0
-    for pointer, key, value in _strings(payload):
+    for pointer, key, in_list, value in _strings(payload):
         longest = max(longest, len(value))
         row = {
             "pointer": pointer,
             "characters": len(value),
             "sha256": hashlib.sha256(value.encode("utf-8")).hexdigest(),
         }
-        if key in SPAN_TEXT_KEYS:
+        if not _is_digest_string(key, in_list):
             span_fields.append(row)
         elif len(value) > max_string:
             long_strings.append(row)

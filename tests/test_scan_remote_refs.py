@@ -178,13 +178,61 @@ def test_paths_in_widens_the_path_scan_to_the_whole_tree(remote: Path, tmp_path:
 
 
 def test_a_long_string_in_a_trim_receipt_is_a_finding() -> None:
-    receipt = {"dropped": [{"leaf": "a-leaf", "note": "x" * 201}]}
+    receipt = {"dropped": [{"leaf": "a-leaf", "build": "x" * 201}]}
 
     described = scan.scan_trim_receipt(json.dumps(receipt), max_string=200)
 
     assert described["span_text_fields"] == []
-    assert [row["pointer"] for row in described["long_strings"]] == ["/dropped/0/note"]
+    assert [row["pointer"] for row in described["long_strings"]] == ["/dropped/0/build"]
     assert described["longest_string"] == 201
+
+
+@pytest.mark.parametrize("key", ["raw_block", "excerpt", "note"])
+def test_a_short_string_outside_the_digest_schema_is_span_text(key: str) -> None:
+    # A quote under --max-string held by a key the writer never emits must not
+    # read as clean: only the digest schema's own keys may carry strings.
+    receipt = {**CLEAN_RECEIPT, "dropped": [{"kind": "leaf", "leaf": "a-leaf", key: QUOTE}]}
+
+    described = scan.scan_trim_receipt(json.dumps(receipt), max_string=200)
+
+    assert [row["pointer"] for row in described["span_text_fields"]] == [f"/dropped/0/{key}"]
+    assert described["span_text_characters"] == len(QUOTE)
+
+
+def test_the_writer_schema_is_clean() -> None:
+    receipt = {
+        "status": "applied", "cut_id": "abc123def456", "order": "sorted leaves",
+        "span_identity": "characters and sha256", "policy_source": "scripts.release_gate",
+        "strict_dois": ["10.1/x"], "characters_by_doi": {"10.1/x": 40}, "parser_stats": {"n": 1},
+        "kept": [{"kind": "leaf", "leaf": "a-leaf", "body_line": 3, "doi": "10.1/x",
+                  "source": "body", "characters": 40, "sha256": "0" * 64, "capped": True}],
+        "dropped": [{"kind": "tool", "tool": "t", "build": "b", "doi": "10.1/x",
+                     "source": "tools/_index.json", "characters": 9, "kept_characters": 0,
+                     "dropped_characters": 9, "sha256": "0" * 64,
+                     "reason": "cumulative_budget_exhausted"}],
+        "summary": {"kept_spans": 1},
+    }
+
+    described = scan.scan_trim_receipt(json.dumps(receipt), max_string=200)
+
+    assert described["span_text_fields"] == []
+    assert described["long_strings"] == []
+
+
+def test_a_short_raw_block_on_a_remote_ref_exits_one(tmp_path: Path) -> None:
+    bare = tmp_path / "remote.git"
+    _git(tmp_path, "init", "-q", "--bare", "-b", "main", str(bare))
+    seed = tmp_path / "seed"
+    _git(tmp_path, "init", "-q", "-b", "main", str(seed))
+    receipt = {**CLEAN_RECEIPT, "dropped": [{"kind": "leaf", "leaf": "a-leaf", "raw_block": QUOTE}]}
+    _write_tree(seed, receipt, GOOD_ROUTER, "OK collections/d/v1")
+    _commit(seed, "short raw block")
+    _git(seed, "push", "-q", str(bare), "main")
+    local = _clone(bare, tmp_path)
+    out = tmp_path / "scan.json"
+
+    assert scan.main(["--repo", str(local), "--out", str(out)]) == 1
+    assert QUOTE[:30] not in out.read_text("utf-8")
 
 
 def test_a_clean_remote_exits_zero(tmp_path: Path) -> None:
