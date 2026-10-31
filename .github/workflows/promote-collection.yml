@@ -45,7 +45,6 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install pyyaml numpy jsonschema requests httpx
-          pip install indicium-adapters || echo "WARNING: indicium-adapters not yet published; gate 9 stays warn-only"
 
       # -- Hard block: strict release gate over every promoted collection ------
       - name: Release gate (strict)
