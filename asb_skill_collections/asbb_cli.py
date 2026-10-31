@@ -243,6 +243,9 @@ def _install_selection(args, repo, target) -> int:
     with tempfile.TemporaryDirectory(prefix="asbb-selection-") as stage:
         try:
             pack = subset.derive(selection, Path(stage))
+        except subset.CheckoutMismatch as e:
+            print(f"error: {e}", file=sys.stderr)
+            return 2
         except (OSError, ValueError) as e:
             print(f"error: cannot derive the selection: {e}", file=sys.stderr)
             return 1

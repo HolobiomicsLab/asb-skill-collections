@@ -271,7 +271,10 @@ environment, run from a directory that is not a checkout. There the package
 resolved to the environment's `site-packages`, and the wheel held the
 `asb_skill_collections` package only, not the corpus and not `scripts/`.
 `install` with a selection still needs a checkout: from a package install, pass
-it with `--repo`.
+it with `--repo`. The selection is derived by that checkout's
+`scripts/build_packs.py`, so a checkout older than the installed package is
+refused with exit 2 and `error: checkout at <path> predates selection support;
+update it (git pull) or use a matching release`.
 
 ## Licence tiers
 
