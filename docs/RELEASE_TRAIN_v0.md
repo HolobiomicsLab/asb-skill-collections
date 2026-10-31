@@ -352,7 +352,7 @@ The release-gate reviews (gates 13, 14 in the SPEC: independent co-reviewer and 
 
 | Gate | Description | Trigger | Automated | Blocking |
 |---|---|---|---|---|
-| 1 | LinkML schema validation (collection.yaml, closed, `SkillCollection`) | PR, push-main, tag | ✓ | once `asb-schema` >= 0.3.0 is installable; until then (not yet on PyPI) the step says it did not run and never blocks |
+| 1 | LinkML schema validation (collection.yaml, closed, `SkillCollection`) | PR, push-main, tag | ✓ | ✓: installs `asb-schema` >= 0.3.0 from PyPI and fails on any manifest that does not validate; only if that install fails does the step say it did not run |
 | 2 | No orphan skills (DOI resolution sample) | PR, push-main, tag | ✓ | ✓ |
 | 5 | Description discipline lint | PR, push-main, tag | ✓ | ✓ |
 | 6 | EDAM IRI resolution | PR, push-main, tag | ✓ | ✓ |
