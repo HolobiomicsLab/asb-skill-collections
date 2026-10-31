@@ -41,6 +41,8 @@ except (ImportError, PackageNotFoundError):  # running from a checkout
     __version__ = "0.0.0+source"
 
 _TO_BUILD = "(Phase 1.7 stub — not yet implemented)"
+#: What `--help` says of the two stubs, so no reader plans around them.
+_STUB_HELP = "(not implemented; use scripts/release_gate.py --strict)"
 
 
 def _cmd_verify(args: argparse.Namespace) -> int:
@@ -302,9 +304,10 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="asbb",
         description=(
-            "asb-skill-collections CLI: verify/doctor utilities + "
-            "install/uninstall for non-Claude runtimes "
-            "(for Claude Code, use /plugin install)."
+            "asb-skill-collections CLI: offline search and get, install and "
+            "uninstall for non-Claude runtimes (for Claude Code, use /plugin "
+            "install), and fetch without a checkout. verify and doctor are not "
+            "implemented; use scripts/release_gate.py --strict."
         ),
     )
     parser.add_argument(
@@ -334,7 +337,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     # asbb verify [target]
     p_verify = sub.add_parser(
-        "verify", help="Validate a collection / catalogue / marketplace."
+        "verify", help=f"Validate a collection / catalogue / marketplace {_STUB_HELP}."
     )
     p_verify.add_argument(
         "target",
@@ -346,7 +349,8 @@ def build_parser() -> argparse.ArgumentParser:
 
     # asbb doctor
     p_doctor = sub.add_parser(
-        "doctor", help="Health check: DOI resolution, KB reachability, manifests."
+        "doctor",
+        help=f"Health check: DOI resolution, KB reachability, manifests {_STUB_HELP}.",
     )
     p_doctor.set_defaults(func=_cmd_doctor)
 

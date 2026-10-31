@@ -131,6 +131,28 @@ def test_registry_is_neither_advertised_nor_accepted(capsys):
     assert "invalid choice" in refusal and "registry" in refusal
 
 
+def test_help_marks_verify_and_doctor_as_not_implemented(capsys, monkeypatch):
+    """Both commands are stubs that exit 1; the help says so and names the gate."""
+    from asb_skill_collections.asbb_cli import main
+
+    monkeypatch.setenv("COLUMNS", "200")  # one help line per command
+    with pytest.raises(SystemExit) as helped:
+        main(["--help"])
+    assert helped.value.code == 0
+    advertised = capsys.readouterr().out
+    lines = {line.split()[0]: line for line in advertised.splitlines()
+             if line.strip().startswith(("verify", "doctor"))}
+    for stub in ("verify", "doctor"):
+        assert "not implemented" in lines[stub], lines[stub]
+        assert "scripts/release_gate.py --strict" in lines[stub], lines[stub]
+    description = " ".join(advertised.split("positional arguments")[0].split())
+    assert "verify/doctor utilities" not in description
+    assert "verify and doctor are not implemented" in description
+
+    for stub in ("verify", "doctor"):
+        assert main([stub]) == 1
+
+
 def test_mcp_server_requires_extra():
     """Without the mcp extra, importing the server exits cleanly with guidance."""
     try:
