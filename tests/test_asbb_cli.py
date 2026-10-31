@@ -150,6 +150,14 @@ def test_help_marks_verify_and_doctor_as_not_implemented(capsys, monkeypatch):
     assert "verify and doctor are not implemented" in description
 
     for stub in ("verify", "doctor"):
+        with pytest.raises(SystemExit) as helped:
+            main([stub, "--help"])
+        assert helped.value.code == 0
+        own = " ".join(capsys.readouterr().out.split())
+        assert "Not implemented" in own, own
+        assert "scripts/release_gate.py --strict" in own, own
+
+    for stub in ("verify", "doctor"):
         assert main([stub]) == 1
 
 

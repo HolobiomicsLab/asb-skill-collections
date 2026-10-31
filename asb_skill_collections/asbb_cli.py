@@ -340,7 +340,12 @@ def build_parser() -> argparse.ArgumentParser:
 
     # asbb verify [target]
     p_verify = sub.add_parser(
-        "verify", help=f"Validate a collection / catalogue / marketplace {_STUB_HELP}."
+        "verify",
+        help=f"Validate a collection / catalogue / marketplace {_STUB_HELP}.",
+        description=(
+            "Not implemented: prints a notice and exits 1 without checking "
+            "anything. Use scripts/release_gate.py --strict instead."
+        ),
     )
     p_verify.add_argument(
         "target",
@@ -354,6 +359,11 @@ def build_parser() -> argparse.ArgumentParser:
     p_doctor = sub.add_parser(
         "doctor",
         help=f"Health check: DOI resolution, KB reachability, manifests {_STUB_HELP}.",
+        description=(
+            "Not implemented: prints a notice and exits 1 without checking "
+            "anything. scripts/release_gate.py --strict runs the local checks; "
+            "no asbb command checks DOI resolution or KB reachability."
+        ),
     )
     p_doctor.set_defaults(func=_cmd_doctor)
 

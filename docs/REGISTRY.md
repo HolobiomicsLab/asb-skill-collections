@@ -518,7 +518,8 @@ separate top-level command, still present, and still a stub.
 > 2026-09-13, when all of the stubs stopped printing on stdout and exiting 0. A
 > command that answers *is this consistent?* — and a health check most of all — must
 > not report success having looked at nothing, because no caller can tell that from a
-> healthy answer. Neither command's `--help` says it is a stub. Whether they follow
+> healthy answer. `asbb --help`, `asbb verify --help` and `asbb doctor --help` mark
+> both as not implemented. Whether they follow
 > `registry` out of the CLI is a separate owner decision; see
 > `governance/CONTENT_POLICY.md` §7.1.
 

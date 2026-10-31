@@ -33,8 +33,8 @@ Repository = "https://github.com/HolobiomicsLab/asb-skill-collections"
 
 [project.scripts]
 # Thin programmatic surface: `asbb search/get` (offline retrieval over a checkout)
-# + verify/doctor + install for non-Claude runtimes. For Claude Code the
-# canonical collection install is `/plugin install`.
+# + install for non-Claude runtimes. verify and doctor are stubs that exit 1.
+# For Claude Code the canonical collection install is `/plugin install`.
 asbb = "asb_skill_collections.asbb_cli:main"
 # MCP skill-server (needs the [mcp] extra). Any MCP agent can search/fetch skills.
 asb-mcp = "asb_skill_collections.asb_mcp_server:main"
