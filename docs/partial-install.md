@@ -44,13 +44,17 @@ the filtered indexes 14,797 bytes.
 
 ## Before you start
 
-The installer reads a local checkout. Use Python 3.12 or later with PyYAML, and
-run the commands from the repository root:
+The installer reads a local checkout. Use Python 3.12 or later with PyYAML in a
+virtual environment, and run the commands from the repository root:
 
 ```bash
 git clone https://github.com/HolobiomicsLab/asb-skill-collections
 cd asb-skill-collections
+uv venv -p 3.12 && source .venv/bin/activate && uv pip install pyyaml
 ```
+
+Without uv, `python3.12 -m venv .venv && . .venv/bin/activate && python -m pip install pyyaml`
+prepares the same environment.
 
 `fetch` is the exception. It downloads from GitHub and needs only the `asbb`
 package; see [Fetch](#fetch-without-a-checkout).
@@ -263,8 +267,12 @@ from a clone, without the editable flag:
 
 ```bash
 git clone https://github.com/HolobiomicsLab/asb-skill-collections
-python3 -m pip install ./asb-skill-collections
+uv venv -p 3.12 && source .venv/bin/activate
+uv pip install ./asb-skill-collections
 ```
+
+Without uv, `python3.12 -m venv .venv && . .venv/bin/activate && python -m pip install ./asb-skill-collections`
+does the same.
 
 The fetch output above came from such an install in a fresh virtual
 environment, run from a directory that is not a checkout. There the package

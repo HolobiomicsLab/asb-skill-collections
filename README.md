@@ -76,15 +76,20 @@ installed the same way at CLI level (29 MB plugin cache), and the other seven
 packs were built but not installed. Packs overlap, so install the full plugin or
 a few packs, not both.
 
-**Other agent runtimes** (`asbb` CLI from a checkout; Python 3.12 or later and PyYAML):
+**Other agent runtimes** (`asbb` CLI from a checkout; Python 3.12 or later and PyYAML,
+in a virtual environment):
 
 ```bash
 git clone https://github.com/HolobiomicsLab/asb-skill-collections
 cd asb-skill-collections
+uv venv -p 3.12 && source .venv/bin/activate && uv pip install pyyaml
 python3 -m asb_skill_collections.asbb_cli install metabolomics --runtime agents   # ~/.agents/skills (Codex, Copilot CLI, Gemini CLI)
 python3 -m asb_skill_collections.asbb_cli install --list-runtimes                 # agents (verified), codex, copilot, gemini, claude, cursor, cline, vscode-copilot, --dest DIR (experimental)
 ```
 
+Without uv, `python3.12 -m venv .venv && . .venv/bin/activate && python -m pip install pyyaml`
+prepares the same environment. On macOS the environment is needed: Homebrew's Python
+refuses a system-wide `pip install`, and Apple's `/usr/bin/python3` is older than 3.12.
 Each install copies the unit into a content-addressed snapshot that survives a moved
 checkout; rerun `install` to refresh ([usage guide](collections/metabolomics/v2/USAGE.md#1-install-one-domain-collection):
 commands, outputs, `uninstall`). Any other agent can read the Markdown and JSON under
@@ -100,7 +105,8 @@ without a checkout (`asbb fetch`): [docs/partial-install.md](docs/partial-instal
 **Search** a checkout offline, with no API key:
 
 ```bash
-uv pip install -e .            # or: python3 -m pip install -e .
+uv venv -p 3.12 --allow-existing && source .venv/bin/activate
+uv pip install -e .            # in a python3.12 -m venv environment: python -m pip install -e .
 asbb search "untargeted LC-MS/MS annotation" --collection metabolomics --target workflows
 asbb get untargeted-lcmsms-annotation --collection metabolomics/v2 --target workflows
 asbb search --list-collections
