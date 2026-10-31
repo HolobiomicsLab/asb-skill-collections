@@ -712,7 +712,8 @@ def test_explicit_symlink_build_root_matches_implicit_collection(
         (explicit_receipts / "collect_receipt.json").read_text(encoding="utf-8")
     )
     assert implicit_receipt["builds_root"] is None
-    assert explicit_receipt["builds_root"] == str(linked_builds.resolve())
+    # Outside a git checkout a receipt records the final component only.
+    assert explicit_receipt["builds_root"] == linked_builds.resolve().name
 
 
 def test_explicit_build_root_missing_member_writes_nothing(
@@ -758,7 +759,7 @@ def test_explicit_build_root_works_without_cut_relative_builds(tmp_path: Path) -
     receipt = json.loads(
         (receipts / "collect_receipt.json").read_text(encoding="utf-8")
     )
-    assert receipt["builds_root"] == str(moved_builds.resolve())
+    assert receipt["builds_root"] == "moved-builds"
 
 
 def test_manifest_doi_is_stamped_when_leaf_provenance_has_none(tmp_path: Path) -> None:

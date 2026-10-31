@@ -15,6 +15,13 @@ from typing import Any
 
 import numpy as np
 
+# Invoked by path (`python scripts/x.py`), only `scripts/` lands on sys.path, so
+# the repo root has to be added before the sibling package can be imported.
+if __package__ in (None, ""):
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from scripts.recorded_path import recorded_path
+
 
 MODEL = "BAAI/bge-small-en-v1.5"
 MODEL_ALIASES = frozenset({"bge-small-en-v1.5", MODEL})
@@ -286,7 +293,7 @@ def _build_report(
             "embed_view": EMBED_VIEW,
             "pair_scope": PAIR_SCOPE,
         },
-        "view": str(resolved),
+        "view": recorded_path(resolved),
         "input_digests": {
             "coverage_summary_sha256": coverage_digest,
             "outputs": len(outputs),

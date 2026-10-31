@@ -21,6 +21,7 @@ if __package__ in (None, ""):
 
 from asb_skill_collections import layout
 from scripts.provenance_tier import validate_entry
+from scripts.recorded_path import recorded_child, recorded_path
 
 
 def _repo_urls(collection_dir) -> dict[str, str]:
@@ -76,10 +77,10 @@ def check_collection(collection_dir) -> list[str]:
         fm_tier = (fm.get("metadata") or {}).get("provenance_tier")
         index_tier = slug_to_index_tier[slug]
         if fm_tier is None:
-            violations.append(f"{md}: metadata.provenance_tier missing")
+            violations.append(f"{recorded_child(d, md)}: metadata.provenance_tier missing")
         elif fm_tier != index_tier:
             violations.append(
-                f"{md}: metadata.provenance_tier {fm_tier!r} != skills_index {index_tier!r}"
+                f"{recorded_child(d, md)}: metadata.provenance_tier {fm_tier!r} != skills_index {index_tier!r}"
             )
     return violations
 
@@ -94,11 +95,11 @@ def main(argv=None) -> int:
         v = check_collection(col)
         if v:
             failed = True
-            print(f"FAIL {col}:")
+            print(f"FAIL {recorded_path(col)}:")
             for x in v:
                 print(f"  - {x}")
         else:
-            print(f"OK   {col}")
+            print(f"OK   {recorded_path(col)}")
     return 1 if failed else 0
 
 

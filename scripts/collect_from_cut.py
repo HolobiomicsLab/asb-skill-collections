@@ -24,6 +24,7 @@ if __package__ in (None, ""):
 
 from scripts import collect_metabolomics_collection as description_writer
 from scripts import release_gate, router_shape, skill_index
+from scripts.recorded_path import recorded_path
 from asb_skill_collections import layout
 
 
@@ -1014,7 +1015,9 @@ def _assemble(options: argparse.Namespace) -> tuple[dict[str, bytes], dict[str, 
         "cut_id": cut_id,
         "domain": options.domain,
         "version": options.version,
-        "builds_root": str(options.builds) if options.builds is not None else None,
+        "builds_root": (
+            recorded_path(options.builds) if options.builds is not None else None
+        ),
         "input_sha256": dict(sorted(digests.items())),
         "output_tree_sha256": _tree_digest(shaped),
         "counts": {

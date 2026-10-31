@@ -22,6 +22,7 @@ if __package__ in (None, ""):
 
 from scripts.license_tier import (DETECTION_VENDOR_PRODUCT, SUBJECT_TOOL, TIER_UNKNOWN,
                                   TOOL_DETECTIONS, load_map)
+from scripts.recorded_path import recorded_path
 
 # The tier vocabulary has one home: governance/license_tiers.yaml. A hand-copied set
 # here silently rejects any tier added there -- which is how `unknown` would have
@@ -163,11 +164,11 @@ def main(argv=None) -> int:
         v = check_collection(col)
         if v:
             failed = True
-            print(f"FAIL {col}:")
+            print(f"FAIL {recorded_path(col)}:")
             for x in v:
                 print(f"  - {x}")
         else:
-            print(f"OK   {col}")
+            print(f"OK   {recorded_path(col)}")
     return 1 if failed else 0
 
 

@@ -95,6 +95,7 @@ if __package__ in (None, ""):
 from asb_skill_collections import layout
 from scripts import unit_closure
 from scripts import release_receipt as receipt
+from scripts.recorded_path import recorded_path
 
 try:
     import yaml
@@ -2046,13 +2047,10 @@ def _recorded_path(path: Path) -> str:
 
     The receipt ships inside the collection, so an absolute path would publish
     the directory layout of whichever machine ran the gate. Outside a git
-    checkout there is no stable anchor, and the path is recorded as given.
+    checkout there is no stable anchor, and only the final component is
+    recorded (``scripts/recorded_path.py``).
     """
-    path = Path(path).resolve()
-    for anchor in (path, *path.parents):
-        if (anchor / ".git").exists():
-            return path.relative_to(anchor).as_posix() or "."
-    return str(path)
+    return recorded_path(path)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -2135,7 +2133,7 @@ def main(argv: list[str] | None = None) -> int:
 
     if not args.quiet:
         _print_human_summary(report)
-        print(f"  report     : {report_path}")
+        print(f"  report     : {_recorded_path(report_path)}")
 
     return int(report["exit_code"])
 

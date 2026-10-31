@@ -25,6 +25,7 @@ if __package__ in (None, ""):
 
 from asb_skill_collections import layout
 from scripts.license_tier import ack_required, load_map
+from scripts.recorded_path import recorded_child, recorded_path
 
 # The tier vocabulary has one home: governance/license_tiers.yaml. A hand-copied
 # set here silently rejects any tier added there.
@@ -98,9 +99,9 @@ def check_collection(collection_dir) -> list[str]:
             fm_tier = (fm.get("metadata") or {}).get("license_tier")
             index_tier = slug_to_index_tier[slug]
             if fm_tier not in _VALID:
-                violations.append(f"{md}: metadata.license_tier missing/invalid")
+                violations.append(f"{recorded_child(d, md)}: metadata.license_tier missing/invalid")
             elif fm_tier != index_tier:
-                violations.append(f"{md}: metadata.license_tier {fm_tier!r} != skills_index {index_tier!r}")
+                violations.append(f"{recorded_child(d, md)}: metadata.license_tier {fm_tier!r} != skills_index {index_tier!r}")
 
         tl = (fm.get("metadata") or {}).get("tool_license")
         if not tl:
@@ -113,12 +114,12 @@ def check_collection(collection_dir) -> list[str]:
             # exempt by the same rule: their block gates nothing, and the soft
             # note they do owe the user is carried by the body banner.
             if ack_required((fm.get("metadata") or {}).get("license_tier")):
-                violations.append(f"{md}: tool_license block missing, required by tier")
+                violations.append(f"{recorded_child(d, md)}: tool_license block missing, required by tier")
             continue
         if tl.get("tier") not in _VALID:
-            violations.append(f"{md}: tool_license.tier invalid")
+            violations.append(f"{recorded_child(d, md)}: tool_license.tier invalid")
         elif tl.get("requires_ack") != ack_required(tl["tier"]):
-            violations.append(f"{md}: requires_ack inconsistent with tier {tl['tier']}")
+            violations.append(f"{recorded_child(d, md)}: requires_ack inconsistent with tier {tl['tier']}")
     return violations
 
 
@@ -132,11 +133,11 @@ def main(argv=None) -> int:
         v = check_collection(col)
         if v:
             failed = True
-            print(f"FAIL {col}:")
+            print(f"FAIL {recorded_path(col)}:")
             for x in v:
                 print(f"  - {x}")
         else:
-            print(f"OK   {col}  ({scope(col)})")
+            print(f"OK   {recorded_path(col)}  ({scope(col)})")
     return 1 if failed else 0
 
 

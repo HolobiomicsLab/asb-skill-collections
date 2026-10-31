@@ -276,7 +276,8 @@ def test_driver_builds_complete_candidate_and_second_run_is_identical(
     assert source["cut_id"] == expected_cut_id
     assert source["domain"] == "metabarcoding"
     assert source["version"] == "v1"
-    assert source["view"] == str(fixture / "corpus")
+    # Outside a git checkout a receipt records the final component only.
+    assert source["view"] == "corpus"
     assert source["view_source_sha256"] == _sha256(fixture / "FIXTURE.md")
     assert source["asb_commit"] == COMMITS["asb"]
     assert source["tooling_commit"] == COMMITS["tooling"]
