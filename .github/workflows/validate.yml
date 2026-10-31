@@ -4,8 +4,11 @@
 # Gates implemented here:
 #   1. LinkML schema validation (collection.yaml): BLOCKING. The step installs
 #      asb-schema >= 0.3.0 from PyPI and validates every manifest closed against
-#      SkillCollection. If the schema cannot be resolved (the install failed, or
-#      it is older than 0.3.0), the step says it did not run and exits 0.
+#      SkillCollection. The step says it did not run and exits 0, instead of
+#      reporting a pass, in three cases: linkml-runtime or the linkml-validate
+#      CLI is absent (their install is allowed to fail), the schema cannot be
+#      resolved (the install failed, or it is older than 0.3.0), or no
+#      collection.yaml exists.
 #   2. No orphan skills (DOI resolution sample)
 #   5. Description discipline lint (leading phrase, length, no marketing)
 #   6. EDAM IRI resolution
@@ -17,12 +20,13 @@
 #      indicium-adapters, not yet on PyPI and not installed here, so this gate is
 #      advertised but does not run in public CI (emits a ::warning:: annotation;
 #      never blocks). See gate9-inert.
-#  10. Plugin manifest validation: `claude plugin validate --strict .`, in the
+#  10. Plugin manifest validation: `claude plugin validate --strict` on
+#      .claude-plugin/marketplace.json and on every plugin it lists, in the
 #      plugin-manifest job.
 #
 # Jobs beside `validate`, so that a red one does not skip the gates above:
-#   receipt          on PRs that change a path it binds, the metabolomics v2
-#                    gate_report.json must pass `release_gate.py --verify`.
+#   receipt          on every PR, the metabolomics v2 gate_report.json must
+#                    pass `release_gate.py --verify`.
 #   citation         every tracked CITATION.cff outside the legacy v1 trees is
 #                    valid CFF 1.2.0 (cffconvert).
 #   plugin-manifest  gate 10.
@@ -287,9 +291,11 @@ jobs:
         # only) and validates every collection.yaml closed against its
         # SkillCollection class; 0.3.0 is the first version that declares the
         # keys the released manifests carry. One manifest that does not validate
-        # fails the job. If the schema still cannot be resolved (the install
-        # failed, or it resolves to a version older than 0.3.0), the step says
-        # it did not run and exits 0 rather than report a pass.
+        # fails the job. The step says it did not run and exits 0, rather than
+        # report a pass, when linkml-runtime or the linkml-validate CLI is
+        # absent (Install dependencies lets their install fail), when the schema
+        # cannot be resolved (the install failed, or it resolves to a version
+        # older than 0.3.0), or when no collection.yaml exists.
         run: |
           pip install --only-binary :all: "asb-schema>=0.3.0" || echo "INFO: asb-schema>=0.3.0 is not installable; gate 1 will say it did not run"
           python - <<'EOF'
@@ -432,48 +438,33 @@ jobs:
   # scripts/release_receipt.py, asb_skill_collections/layout.py). A PR that
   # changes one of them without regenerating the receipt leaves it failing its
   # own --verify, and an archive cut from that tree ships the failing receipt.
-  # This job rechecks the receipt, read only, on every PR that changes one of
-  # those paths. To regenerate it, run
+  # --verify also recomputes the checks and the overall status, from code and
+  # data well beyond those paths (the gate's whole import closure, packs/), and
+  # a path filter misses renames out of the tree. So this job rechecks the
+  # receipt, read only, on every PR, with no path filter. To regenerate it, run
   # `python scripts/release_gate.py collections/metabolomics/v2 --strict` (the
   # default report path, never --report elsewhere) in an environment where the
   # AgenticScienceBuilder package is not importable, as here: the policy digest
   # records which copy of the promotion constants the gate used.
   receipt:
     name: "Receipt: metabolomics v2 gate_report.json re-verifies"
+    permissions:
+      contents: read
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          # A pull_request checkout is the merge commit, whose first parent is
-          # the base branch: depth 2 is enough to list what the PR changes.
-          fetch-depth: 2
-
-      - name: Does the PR change a path the receipt binds?
-        id: scope
-        run: |
-          bound='^(collections/|scripts/pii_config\.py$|scripts/release_gate\.py$|scripts/release_receipt\.py$|asb_skill_collections/layout\.py$)'
-          changed=$(git diff --name-only HEAD^1 HEAD)
-          if printf '%s\n' "$changed" | grep -Eq "$bound"; then
-            echo "touched=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "touched=false" >> "$GITHUB_OUTPUT"
-            echo "This PR changes no path the receipt binds; the receipt was not re-verified."
-          fi
 
       - name: Set up Python 3.12
-        if: steps.scope.outputs.touched == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
       - name: Install dependencies
-        if: steps.scope.outputs.touched == 'true'
         run: pip install pyyaml
 
       - name: gate_report.json re-verifies against this tree
-        if: steps.scope.outputs.touched == 'true'
         run: python scripts/release_gate.py collections/metabolomics/v2 --verify
 
   # -- CITATION.cff files are valid CFF 1.2.0 ---------------------------------
@@ -484,6 +475,8 @@ jobs:
   # requires jsonschema<4, so it is installed in an environment of its own.
   citation:
     name: "CITATION.cff files are valid CFF 1.2.0"
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -527,11 +520,16 @@ jobs:
   # -- Gate 10: plugin manifests pass Claude Code's own validator -------------
   # `claude plugin validate --strict .` reads .claude-plugin/marketplace.json the
   # way Claude Code does, and --strict fails on what the runtime only tolerates:
-  # unknown fields and missing metadata. The check it replaces required a
-  # schema_version key, one of the fields this validator rejects. The release is
-  # pinned, so a new validator cannot turn the gate red on its own.
+  # unknown fields and missing metadata. On the repository root it checks the
+  # marketplace manifest only, so the second step runs it on each plugin the
+  # marketplace lists, which checks that plugin's .claude-plugin/plugin.json.
+  # The check it replaces required a schema_version key, one of the fields this
+  # validator rejects. The release is pinned, so a new validator cannot turn the
+  # gate red on its own.
   plugin-manifest:
     name: "Gate 10: plugin manifests validate"
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     env:
       CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: "1"
@@ -549,3 +547,26 @@ jobs:
 
       - name: Validate the marketplace manifest
         run: claude plugin validate --strict .
+
+      - name: Validate every plugin the marketplace lists
+        run: |
+          # A source that is not a local path cannot be validated from this
+          # checkout, so it fails the step instead of being passed over.
+          sources=$(jq -r '.plugins[].source | if type == "string" then . else error("plugin source is not a local path") end' .claude-plugin/marketplace.json)
+          if [ -z "$sources" ]; then
+            echo "FAIL: marketplace.json lists no plugin; the step checked nothing."
+            exit 1
+          fi
+          checked=0
+          failed=0
+          for s in $sources; do
+            checked=$((checked + 1))
+            if claude plugin validate --strict "$s"; then
+              echo "PASS: $s"
+            else
+              echo "::error::plugin $s does not pass claude plugin validate --strict"
+              failed=$((failed + 1))
+            fi
+          done
+          echo "$((checked - failed)) of $checked plugins pass claude plugin validate --strict"
+          [ "$failed" -eq 0 ]

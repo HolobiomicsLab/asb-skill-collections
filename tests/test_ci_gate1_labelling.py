@@ -127,6 +127,27 @@ def test_gate1_comment_and_pr_template_say_it_blocks():
     assert "once that package is installable" not in line
 
 
+def _prose(comment: str) -> str:
+    """A YAML comment block as one line of prose."""
+    return re.sub(r"\s*\n\s*#\s*", " ", comment)
+
+
+def test_every_did_not_run_cause_is_named_where_gate1_is_called_blocking():
+    """BLOCKING is unqualified there, so every way the step exits 0 unchecked is named.
+
+    The step has three: linkml absent, schema unresolved or too old, and no
+    manifest at all.
+    """
+    header = VALIDATE.read_text().split("name: Validate", 1)[0]
+    start = header.index("#   1.")
+    entry = _prose(header[start:header.index("#   2.", start)])
+    comment = _prose(_gate1_section().split("run: |", 1)[0])
+    for text in (entry, comment):
+        assert "linkml-validate" in text and "linkml-runtime" in text, text
+        assert "older than 0.3.0" in text, text
+        assert "no collection.yaml exists" in text, text
+
+
 def test_the_schema_gate1_needs_is_not_in_this_repository():
     """The premise of the did-not-run branch, asserted rather than assumed.
 
