@@ -13,6 +13,13 @@ Lighter per-technique installs of the ASB metabolomics collection.
 | `metabolomics-nmr` | 276 |
 | `metabolomics-ms-generic` | 804 |
 
+The packs do not cover the whole collection. A pack holds the skills tagged
+with its technique, so the 1,520 technique-agnostic skills (an empty
+`techniques` list: statistics, pathway and generic data-handling procedures)
+are in no pack. They come only with the full `metabolomics` plugin, an
+`asbb install --skills` selection or an `asbb fetch`
+([docs/partial-install.md](../../docs/partial-install.md)).
+
 Every pack is **derived**, never edited: its leaves are byte copies of
 `collections/metabolomics/v2/leaves/<slug>/SKILL.md`, and both its indexes are
 that collection's rows filtered to the pack's members. Membership is declared in
