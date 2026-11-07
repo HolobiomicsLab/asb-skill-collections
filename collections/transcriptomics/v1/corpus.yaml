@@ -23,7 +23,6 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
-  license_subject: paper
 - name: DESeq2
   doi: 10.1186/s13059-014-0550-8
   title: DESeq2
@@ -37,7 +36,6 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
-  license_subject: paper
 - name: Salmon
   doi: 10.1038/nmeth.4197
   title: Salmon
@@ -51,7 +49,6 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
-  license_subject: paper
 - name: SUPPA2
   doi: 10.1186/s13059-018-1417-1
   title: SUPPA2
@@ -66,7 +63,6 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
-  license_subject: paper
 - name: Squidpy
   doi: 10.1038/s41592-021-01358-2
   title: Squidpy
@@ -81,7 +77,6 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
-  license_subject: paper
 - name: limma-voom
   doi: 10.1186/gb-2014-15-2-r29
   title: limma-voom
@@ -96,7 +91,6 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
-  license_subject: paper
 - name: sctransform
   doi: 10.1186/s13059-019-1874-1
   title: sctransform
@@ -111,7 +105,6 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
-  license_subject: paper
 - name: WGCNA
   doi: 10.1186/1471-2105-9-559
   title: WGCNA
@@ -125,7 +118,6 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
-  license_subject: paper
 - name: tximport
   doi: 10.12688/f1000research.7563.1
   title: tximport
@@ -139,7 +131,6 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
-  license_subject: paper
 - name: fgsea
   doi: 10.1101/060012
   title: fgsea
@@ -153,4 +144,3 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
-  license_subject: paper
