@@ -21,7 +21,11 @@ papers:
     source_reuse: restricted
     verified_on: '2026-09-18'
     verified_via: unpaywall_oa_locations
-  license_subject: paper
+  tool_license:
+    spdx: null
+    detection: null
+    verified_on: '2026-09-18'
+    source: https://github.com/devonorourke/tidybug
   license_tier: open
   license_detection: unpaywall
 - name: asbb_wave250_2026-09-01__coll_10_1038_s41467_019_13036_1_cq
@@ -39,7 +43,11 @@ papers:
     source_reuse: permissive
     verified_on: '2026-09-18'
     verified_via: unpaywall_oa_locations
-  license_subject: paper
+  tool_license:
+    spdx: null
+    detection: null
+    verified_on: '2026-09-18'
+    source: https://github.com/TheJacksonLaboratory/weinstock_full_length_16s
   license_tier: open
   license_detection: unpaywall
 - name: asbb_wave250_2026-09-01__coll_10_1038_s41598_023_30764_z_cq
@@ -57,6 +65,10 @@ papers:
     source_reuse: permissive
     verified_on: '2026-09-18'
     verified_via: unpaywall_oa_locations
-  license_subject: paper
+  tool_license:
+    spdx: null
+    detection: null
+    verified_on: '2026-09-18'
+    source: https://github.com/ruben-aladid/-Hypervariable-regions-of-16S-rRNA-with-the-highest-resolving-power-for-taxonomic-identification
   license_tier: open
   license_detection: unpaywall

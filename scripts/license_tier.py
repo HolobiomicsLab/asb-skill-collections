@@ -7,6 +7,7 @@ they may do with the tool. See governance/LICENSE_TIERS.md.
 from __future__ import annotations
 
 import pathlib
+import warnings
 import yaml
 
 _DEFAULT_MAP = pathlib.Path(__file__).resolve().parent.parent / "governance" / "license_tiers.yaml"
@@ -20,16 +21,14 @@ UNESTABLISHED_DETECTIONS = frozenset({None, "", "none", "file-present-unclassifi
 # --------------------------------------------------------------------------- #
 # Which licence a recorded value is about.                                     #
 #                                                                              #
-# `access.license` is written by two resolvers with different evidence: one    #
-# reads a code repository, the other a DOI registry. The value alone does not  #
-# say which -- `MIT` could be the tool's licence and `CC-BY-4.0` the paper's,  #
-# and a corpus can hold both. Without the distinction a repository lookup can  #
-# substitute a tool licence for a paper one and no guard fires, because a      #
-# value is still present. See governance/LICENSE_TIERS.md and issue #35.       #
+# New corpora separate tool_license from the paper's access.license. The      #
+# subject constants and inference below support the previous shape for one     #
+# release while consumers direct maintainers to the migration command.         #
 # --------------------------------------------------------------------------- #
 
 SUBJECT_TOOL = "tool"
 SUBJECT_PAPER = "paper"
+TOOL_LICENSE_KEYS = ("spdx", "detection", "verified_on", "source")
 
 # No tool-level evidence was found. Distinct from `restricted`, which is a verdict:
 # a licence WAS established and it constrains reuse. `unknown` is an open question.
@@ -86,6 +85,41 @@ def licence_subject(entry: dict) -> str | None:
     if verified.startswith(PAPER_VERIFICATION_PREFIX):
         return SUBJECT_PAPER
     return None
+
+
+def warn_legacy_tool_licenses(entries: list[dict], corpus: object = "corpus") -> None:
+    """Warn once when one corpus still stores tool licences in ``access``."""
+    if any(entry.get("license_subject") == SUBJECT_TOOL for entry in entries):
+        warnings.warn(
+            f"{corpus}: legacy tool licences detected; run "
+            "scripts/migrate_tool_license_field.py --corpus <path>",
+            UserWarning,
+            stacklevel=2,
+        )
+
+
+def tool_license(entry: dict) -> dict | None:
+    """Return the new tool-licence block or its one-release legacy projection."""
+    block = entry.get("tool_license")
+    if isinstance(block, dict):
+        return block
+    if entry.get("license_subject") != SUBJECT_TOOL:
+        return None
+    access = entry.get("access") if isinstance(entry.get("access"), dict) else {}
+    return {
+        "spdx": access.get("license"),
+        "detection": entry.get("license_detection"),
+        "verified_on": access.get("verified_on"),
+        "source": entry.get("repo_url"),
+    }
+
+
+def paper_license(entry: dict) -> str | None:
+    """Return only a paper licence, excluding the legacy tool-axis shape."""
+    if entry.get("license_subject") == SUBJECT_TOOL:
+        return None
+    access = entry.get("access") if isinstance(entry.get("access"), dict) else {}
+    return access.get("license")
 
 
 def load_map(path: pathlib.Path | None = None) -> dict:

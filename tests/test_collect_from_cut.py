@@ -612,6 +612,7 @@ def test_tool_records_keep_build_repository_without_canonical_url(
             (candidate / "tools" / f"{slug}.yaml").read_text(encoding="utf-8")
         )
         assert tool["license_tier"] == "unknown"
+        assert "license_subject" not in tool
         assert "canonical_url" not in tool
         assert expected <= set(tool["source_repos"])
 

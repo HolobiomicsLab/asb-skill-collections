@@ -115,6 +115,7 @@ def test_a_full_reuse_licence_promotes_any_publisher_to_open_access(tmp_path, do
     assert entry["access"]["type"] == "open-access"
     assert entry["access"]["license"] == "CC-BY-4.0"
     assert entry["license_detection"] == "crossref-paper"
+    assert "license_subject" not in entry
     assert entry["source_reuse"] == "full"
 
 

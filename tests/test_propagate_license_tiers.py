@@ -1,4 +1,4 @@
-import json, pathlib, sys, textwrap, yaml
+import json, pathlib, sys, textwrap, warnings, yaml
 sys.path.insert(0, str(pathlib.Path(__file__).parent.parent))
 from scripts import propagate_license_tiers as p
 from scripts import license_tier as lt
@@ -8,11 +8,42 @@ def test_corpus_tier_by_doi(tmp_path):
     c = tmp_path / "corpus.yaml"
     c.write_text(textwrap.dedent('''
         papers:
-        - {name: A, doi: 10.1/a, repo_url: https://github.com/a/b, license_tier: noncommercial, access: {license: CC-BY-NC-4.0}}
-        - {name: B, doi: 10.1/b, license_tier: open, access: {license: MIT}}
+        - name: A
+          doi: 10.1/a
+          repo_url: https://github.com/a/b
+          license_tier: noncommercial
+          tool_license: {spdx: CC-BY-NC-4.0, detection: license-file, verified_on: 2026-11-07, source: https://github.com/a/b}
+          access: {}
+        - {name: B, doi: 10.1/b, license_tier: open, access: {license: CC-BY-4.0}}
     '''))
     m = p.corpus_tier_by_doi(str(c))
     assert m["10.1/a"]["tier"] == "noncommercial" and m["10.1/a"]["license"] == "CC-BY-NC-4.0"
+
+
+def test_legacy_fallback_warns_once_and_only_for_old_shape(tmp_path):
+    old = tmp_path / "old.yaml"
+    old.write_text(textwrap.dedent('''
+        papers:
+        - {doi: 10.1/a, license_tier: open, license_subject: tool, access: {license: MIT}}
+        - {doi: 10.1/b, license_tier: open, license_subject: tool, access: {license: Apache-2.0}}
+    '''))
+    with __import__("pytest").warns(UserWarning, match="migrate_tool_license_field.py") as caught:
+        found = p.corpus_tier_by_doi(old)
+    assert len(caught) == 1
+    assert found["10.1/a"]["license"] == "MIT"
+
+    new = tmp_path / "new.yaml"
+    new.write_text(textwrap.dedent('''
+        papers:
+        - doi: 10.1/a
+          license_tier: open
+          tool_license: {spdx: MIT, detection: github-api, verified_on: null, source: owner/repo}
+          access: {}
+    '''))
+    with warnings.catch_warnings(record=True) as caught:
+        warnings.simplefilter("always")
+        p.corpus_tier_by_doi(new)
+    assert not caught
 
 def test_skill_tier_most_restrictive():
     tiers = {"10.1/a": {"tier": "open"}, "10.1/b": {"tier": "noncommercial"}}

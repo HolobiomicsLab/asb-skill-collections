@@ -1,8 +1,7 @@
 """Resolve each corpus entry's tool license via the GitHub license API and write
-license_tier (+ raw access.license) into corpus.yaml. Network; cache-backed.
+license_tier plus tool_license into corpus.yaml. Network; cache-backed.
 
-The OA axis (access.type) is NOT changed here — only access.license (raw SPDX) is
-filled and license_tier added. No resolvable license -> restricted (by design).
+The paper-access axis is not changed here. No resolvable licence is restricted.
 """
 from __future__ import annotations
 
@@ -23,8 +22,9 @@ if __package__ in (None, ""):
     _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
 
 
-from scripts.license_tier import (SUBJECT_PAPER, SUBJECT_TOOL, UNESTABLISHED_DETECTIONS,
-                                  licence_subject, load_map, tier_for_license)
+from scripts.license_tier import (SUBJECT_PAPER, UNESTABLISHED_DETECTIONS,
+                                  licence_subject, load_map, tier_for_license,
+                                  tool_license, warn_legacy_tool_licenses)
 
 _GH_API = "https://api.github.com/repos/{}/{}/license"
 _LICENSE_FILE_RE = re.compile(r"^(licen[sc]e|copying|notice)(\.[\w.-]+)?$", re.I)
@@ -202,9 +202,10 @@ def tier_for_repo(repo_url, token=None, cache=None, _detect=detect_license):
 
 
 def apply_to_corpus(corpus_path, token, cache=None, _detect=detect_license) -> dict:
-    """Write license_tier + access.license + license_detection into every corpus entry. Returns {tier:count}."""
+    """Write the tool tier and corpus-level tool-licence block. Return tier counts."""
     path = pathlib.Path(corpus_path)
     doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+    warn_legacy_tool_licenses(doc.get("papers", []), path)
     summary: dict[str, int] = {}
     for p in doc.get("papers", []):
         # An entry with no repository is not this script's question, and writing
@@ -221,7 +222,7 @@ def apply_to_corpus(corpus_path, token, cache=None, _detect=detect_license) -> d
         # metabolomics/v1 the recorded licences carry `license_detection: null`
         # because they came from Unpaywall rather than from a repository, and a
         # guard keyed only on the label wiped nineteen of them.
-        recorded = (p.get("access") or {}).get("license")
+        recorded = (tool_license(p) or {}).get("spdx")
         # This script reads a repository, so it may only speak about the tool.
         # Writing over a licence that describes the *paper* substitutes one axis
         # for the other, and nothing downstream can tell that it happened.
@@ -235,9 +236,15 @@ def apply_to_corpus(corpus_path, token, cache=None, _detect=detect_license) -> d
             summary[kept] = summary.get(kept, 0) + 1
             continue
         p["license_tier"] = tier
-        p.setdefault("access", {})["license"] = lic
-        p["license_detection"] = src
-        p["license_subject"] = SUBJECT_TOOL
+        access = p.setdefault("access", {})
+        p["tool_license"] = {
+            "spdx": lic,
+            "detection": src,
+            "verified_on": access.get("verified_on"),
+            "source": p.get("repo_url"),
+        }
+        p.pop("license_detection", None)
+        p.pop("license_subject", None)
         summary[tier] = summary.get(tier, 0) + 1
     path.write_text(yaml.safe_dump(doc, sort_keys=False, allow_unicode=True), encoding="utf-8")
     return summary
