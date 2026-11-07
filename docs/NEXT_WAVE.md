@@ -41,6 +41,15 @@ that is otherwise ready.
    A `/add-asb-skill <doi> <repo>` wrapper skill that orchestrates verify → build
    → collect → reindex would turn "add a tool" into a single prompt.
 
+## Collector options
+
+Candidate assembly keeps collector exceptions opt-in. `--exclude-invalid-leaves`
+omits an unreadable leaf with a receipt row, while
+`--redact-third-party-emails` replaces non-allowlisted addresses in leaf bodies
+and frontmatter with `<maintainer e-mail, see the repository README>` and writes
+`email_redaction_receipt.json` with counts, field paths and address hash prefixes.
+The release gate and its PII policy are unchanged.
+
 ## Distillation recipe (per tool)
 
 Distillation is **scripted**, in the `AgenticScienceBuilder` repo (it *uses* LLM

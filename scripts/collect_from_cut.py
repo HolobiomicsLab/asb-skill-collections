@@ -24,6 +24,7 @@ if __package__ in (None, ""):
 
 from scripts import collect_metabolomics_collection as description_writer
 from scripts import release_gate, router_shape, skill_index
+from scripts.pii_config import PII_CONFIG, _is_notation_not_email
 from scripts.recorded_path import recorded_path
 from asb_skill_collections import layout
 
@@ -31,6 +32,20 @@ from asb_skill_collections import layout
 APPROVED_PREFIXES = description_writer.APPROVED_PREFIXES
 SPAN_CAP = release_gate._TEXT_FIELD_CAP
 DOI_CAP = release_gate._CUMULATIVE_CAP
+EMAIL_REDACTION_PLACEHOLDER = "<maintainer e-mail, see the repository README>"
+_EMAIL_RE = re.compile(PII_CONFIG["email_regex"])
+_EMAIL_ALLOWLIST_EXACT = frozenset(
+    email.lower() for email in PII_CONFIG["email_allowlist_exact"]
+)
+_EMAIL_ALLOWLIST_ROLE_RE = re.compile(
+    PII_CONFIG["email_allowlist_role_regex"], re.IGNORECASE
+)
+_EMAIL_PLACEHOLDER_LOCALPARTS = frozenset(
+    local.lower() for local in PII_CONFIG["email_placeholder_localparts"]
+)
+_EMAIL_PLACEHOLDER_DOMAIN_RE = re.compile(
+    PII_CONFIG["email_placeholder_domain_regex"]
+)
 _SLUG_RE = re.compile(r"^[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$")
 _VERSION_RE = re.compile(r"^v([1-9][0-9]*)$")
 _SECTION_RE = re.compile(r"(?m)^## (?P<name>[^\n]+)\s*\n(?P<body>.*?)(?=^## |\Z)", re.S)
@@ -101,6 +116,81 @@ def _read_yaml(path: Path) -> Any:
 def _normal_doi(value: Any) -> str:
     """Use the gate identity and strip resolver-only query/fragment suffixes."""
     return release_gate._norm_doi(value).split("#", 1)[0].split("?", 1)[0].strip()
+
+
+def _email_is_allowed(email: str, match: re.Match[str]) -> bool:
+    """Return whether an email-shaped token is safe to retain."""
+    local, _, domain = email.partition("@")
+    return (
+        _is_notation_not_email(email, match=match)
+        or email.lower() in _EMAIL_ALLOWLIST_EXACT
+        or _EMAIL_ALLOWLIST_ROLE_RE.fullmatch(email) is not None
+        or local.lower() in _EMAIL_PLACEHOLDER_LOCALPARTS
+        or _EMAIL_PLACEHOLDER_DOMAIN_RE.fullmatch(domain) is not None
+    )
+
+
+def _redact_email_text(text: str) -> tuple[str, list[str]]:
+    """Replace disallowed addresses and return their normalized identities."""
+    redacted: list[str] = []
+
+    def replace(match: re.Match[str]) -> str:
+        email = match.group(0)
+        if _email_is_allowed(email, match):
+            return email
+        redacted.append(email.lower())
+        return EMAIL_REDACTION_PLACEHOLDER
+
+    return _EMAIL_RE.sub(replace, text), redacted
+
+
+def _frontmatter_path(parts: tuple[str | int, ...]) -> str:
+    """Render one stable dotted frontmatter key path."""
+    result = ""
+    for part in parts:
+        if isinstance(part, int):
+            result += f"[{part}]"
+        else:
+            result += f"{'.' if result else ''}{part}"
+    return result
+
+
+def _redact_frontmatter_emails(
+    node: Any,
+    redactions: dict[str, list[str]],
+    path: tuple[str | int, ...] = (),
+) -> Any:
+    """Redact strings recursively while recording changed frontmatter fields."""
+    if isinstance(node, str):
+        rendered, addresses = _redact_email_text(node)
+        if addresses:
+            redactions[f"frontmatter:{_frontmatter_path(path)}"].extend(addresses)
+        return rendered
+    if isinstance(node, list):
+        return [
+            _redact_frontmatter_emails(value, redactions, (*path, index))
+            for index, value in enumerate(node)
+        ]
+    if isinstance(node, dict):
+        return {
+            key: _redact_frontmatter_emails(value, redactions, (*path, str(key)))
+            for key, value in node.items()
+        }
+    return node
+
+
+def _redact_leaf_emails(
+    frontmatter: dict[str, Any], body: str
+) -> tuple[str, dict[str, list[str]]]:
+    """Redact one leaf and return addresses grouped by rendered field."""
+    redactions: dict[str, list[str]] = defaultdict(list)
+    updated = _redact_frontmatter_emails(frontmatter, redactions)
+    frontmatter.clear()
+    frontmatter.update(updated)
+    rendered_body, addresses = _redact_email_text(body)
+    if addresses:
+        redactions["body"].extend(addresses)
+    return rendered_body, dict(redactions)
 
 
 def _stable_unique(values: list[Any]) -> list[Any]:
@@ -551,7 +641,8 @@ def _prepare_leaf(
     budget: QuoteBudget,
     domain: str,
     license_name: str,
-) -> tuple[bytes, dict[str, Any], dict[str, Any]]:
+    redact_third_party_emails: bool,
+) -> tuple[bytes, dict[str, Any], dict[str, Any], dict[str, list[str]]]:
     output_id = source.name
     if coverage.get("output_id") != output_id:
         raise CollectorError(f"coverage output id does not match directory: {source}")
@@ -643,6 +734,13 @@ def _prepare_leaf(
         if repo:
             canonical_build["tool_repos"][str(tool["name"])].add(repo)
 
+    frontmatter.pop("emails_redacted", None)
+    redactions: dict[str, list[str]] = {}
+    if redact_third_party_emails:
+        body, redactions = _redact_leaf_emails(frontmatter, body)
+    if redactions:
+        frontmatter["emails_redacted"] = True
+
     mapping = {
         "output_id": output_id,
         "leaf_slug": output_id,
@@ -655,6 +753,7 @@ def _prepare_leaf(
         "doi_source": doi_source,
         "description_rewritten": rewritten,
         "evidence_trimmed": trimmed,
+        "emails_redacted": bool(redactions),
     }
     index = {
         "slug": output_id,
@@ -667,7 +766,7 @@ def _prepare_leaf(
         "techniques": metadata.get("techniques") or [],
         "license_tier": "unknown",
     }
-    return _render_skill(frontmatter, body), mapping, index
+    return _render_skill(frontmatter, body), mapping, index, redactions
 
 
 def _tool_sources(
@@ -945,15 +1044,18 @@ def _assemble(options: argparse.Namespace) -> tuple[dict[str, bytes], dict[str, 
     mappings: list[dict[str, Any]] = []
     indexes: list[dict[str, Any]] = []
     excluded: list[dict[str, Any]] = []
+    email_redaction_leaves: list[dict[str, Any]] = []
+    addresses_redacted = 0
     for source in source_dirs:
         try:
-            data, mapping, index = _prepare_leaf(
+            data, mapping, index, redactions = _prepare_leaf(
                 source,
                 coverages[source.name],
                 builds,
                 budget,
                 options.domain,
                 options.license,
+                options.redact_third_party_emails,
             )
         except InvalidLeafError as exc:
             # A leaf the cut wrote but no reader can parse (for example a YAML
@@ -980,6 +1082,23 @@ def _assemble(options: argparse.Namespace) -> tuple[dict[str, bytes], dict[str, 
         outputs[f"leaves/{source.name}/SKILL.md"] = data
         mappings.append(mapping)
         indexes.append(index)
+        if redactions:
+            addresses = [
+                address for values in redactions.values() for address in values
+            ]
+            addresses_redacted += len(addresses)
+            email_redaction_leaves.append(
+                {
+                    "output_id": source.name,
+                    "fields": sorted(redactions),
+                    "address_sha256_prefix": sorted(
+                        {
+                            _sha256_bytes(address.encode("utf-8"))[:12]
+                            for address in addresses
+                        }
+                    ),
+                }
+            )
 
     tools: dict[str, dict[str, Any]] = {}
     for slug, sources in _tool_sources(builds).items():
@@ -995,6 +1114,7 @@ def _assemble(options: argparse.Namespace) -> tuple[dict[str, bytes], dict[str, 
         "tools": len(tools),
         "description_rewrites": sum(row["description_rewritten"] for row in mappings),
         "evidence_trimmed_leaves": sum(row["evidence_trimmed"] for row in mappings),
+        "emails_redacted_leaves": sum(row["emails_redacted"] for row in mappings),
     }
     outputs["mapping.json"] = _json_bytes(
         {"mappings": mappings, "summary": mapping_summary}
@@ -1058,12 +1178,22 @@ def _assemble(options: argparse.Namespace) -> tuple[dict[str, bytes], dict[str, 
                 mapping["doi_source"] == "build_manifest" for mapping in mappings
             ),
             "excluded_leaves": len(excluded),
+            "emails_redacted_leaves": len(email_redaction_leaves),
         },
         "excluded_leaves": excluded,
         "router_index": "provisional skills_index.json derived from leaf frontmatter before router_shape.shape",
     }
     return shaped, {
         "collect_receipt.json": collect_receipt,
+        "email_redaction_receipt.json": {
+            "enabled": options.redact_third_party_emails,
+            "placeholder": EMAIL_REDACTION_PLACEHOLDER,
+            "counts": {
+                "leaves_changed": len(email_redaction_leaves),
+                "addresses_redacted": addresses_redacted,
+            },
+            "leaves": email_redaction_leaves,
+        },
         "evidence_trim_receipt.json": trim_receipt,
     }
 
@@ -1131,6 +1261,14 @@ def _parser() -> argparse.ArgumentParser:
         help=(
             "leave out a cut leaf whose skill.md has no readable frontmatter instead of "
             "failing; every exclusion is listed in collect_receipt.json under excluded_leaves"
+        ),
+    )
+    parser.add_argument(
+        "--redact-third-party-emails",
+        action="store_true",
+        help=(
+            "replace non-allowlisted e-mail addresses in collected leaves and record "
+            "only their hash prefixes in email_redaction_receipt.json"
         ),
     )
     parser.add_argument("--dry-run", action="store_true")
