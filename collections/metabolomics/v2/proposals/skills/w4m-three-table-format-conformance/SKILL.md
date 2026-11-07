@@ -27,6 +27,7 @@ metadata:
   verified_against:
     repo_ref: master
     observed: '2026-08-21'
+    community_correction: 'GitHub issue #16 author comment, 2026-11-03'
 schema_version: 0.2.0
 ---
 
@@ -71,11 +72,12 @@ matching.
 
 ## Procedure
 
-1. **Run `Check Format` first, on every entry into the platform.** It compares
-   the row and column names across the three tables and, where the sets agree
-   but the orders differ, permutes the `dataMatrix` to match the metadata. It
-   also performs the `make.names` conversion when asked. Running it costs one
-   step and converts a silent mismatch into a reported one.
+1. **Run the `Check Format` tool first, on every entry into the platform.** It
+   validates the file names and order of the three tables, then compares their
+   row and column names. Where the identifier sets agree but the orders differ,
+   it permutes the `dataMatrix` to match the metadata. It also performs the
+   `make.names` conversion when asked. Running it costs one step and converts a
+   silent mismatch into a reported one.
 
 2. **Let the conversion happen in one place.** Enable the syntactic-validity
    option at the point of entry rather than letting individual tools rename as

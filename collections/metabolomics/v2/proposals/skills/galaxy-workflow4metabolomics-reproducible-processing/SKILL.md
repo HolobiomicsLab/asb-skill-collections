@@ -26,6 +26,7 @@ metadata:
   verified_against:
     repo_ref: master
     observed: '2026-08-21'
+    community_correction: 'GitHub issue #16 author comment, 2026-11-03'
 schema_version: 0.2.0
 ---
 
@@ -81,6 +82,12 @@ and joined with `CAMERA combinexsAnnos`. `Mz(X)ML Shaper` reshapes open formats
 into XCMS-readable mz(X)ML — it accepts mzML, mzXML and netCDF only, so vendor
 conversion still happens before upload and outside the platform.
 
+For a single file, the newer CAMERA modules do not require the multi-sample
+grouping and gap-filling chain. Run `findChromPeaks`, then `CAMERA groupFWHM`,
+`CAMERA findIsotopes` and `CAMERA findAdducts`. This single-file route is an
+annotation alternative, not a replacement for the multi-sample preprocessing
+order above.
+
 ## Procedure
 
 1. **Upload raw data in an open format.** Convert vendor files to mzML first.
@@ -96,6 +103,10 @@ conversion still happens before upload and outside the platform.
    statistics stay distinct steps rather than one composite. A step you cannot
    inspect is a step you cannot defend, and the datatypes above give you the
    inspection points for free.
+
+   After retention-time correction, always run `groupChromPeaks` again before
+   `fillChromPeaks`. For single-file CAMERA annotation, use `findChromPeaks` →
+   `CAMERA groupFWHM` → `CAMERA findIsotopes` → `CAMERA findAdducts`.
 
 4. **Record every non-default parameter.** The workflow document stores them,
    but a reader needs to know which were chosen deliberately and why. Where a

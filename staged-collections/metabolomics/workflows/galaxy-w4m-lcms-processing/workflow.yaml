@@ -156,8 +156,7 @@ steps:
     peak_detection:
     - rdata:rdata.xcms.findchrompeaks
 - id: rt_alignment
-  goal: correct retention-time drift, then repeat correspondence against the corrected
-    times
+  goal: correct retention-time drift
   edam_operation: http://edamontology.org/operation_3632
   primary_skill: retention-time-correction-and-alignment
   skills:
@@ -165,13 +164,12 @@ steps:
   - retention-time-alignment-correction
   tools:
   - xcms adjustRtime
-  - xcms groupChromPeaks
   inputs:
   - type: rdata
     flavour: rdata.xcms.group
   outputs:
   - type: rdata
-    flavour: rdata.xcms.group
+    flavour: rdata.xcms.retcor
   grounding:
     kb_slugs:
     - asb-paper-10-1021-acs-analchem-4c04906
@@ -192,6 +190,31 @@ steps:
   inputs_from:
     correspondence:
     - rdata:rdata.xcms.group
+- id: post_alignment_correspondence
+  goal: repeat correspondence against the corrected retention times
+  edam_operation: http://edamontology.org/operation_3632
+  primary_skill: retention-time-based-feature-grouping
+  skills:
+  - retention-time-based-feature-grouping
+  tools:
+  - xcms groupChromPeaks
+  inputs:
+  - type: rdata
+    flavour: rdata.xcms.retcor
+  outputs:
+  - type: rdata
+    flavour: rdata.xcms.group
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-ac051437y
+    dois:
+    - 10.1021/ac051437y
+  after:
+  - rt_alignment
+  inputs_from:
+    rt_alignment:
+    - rdata:rdata.xcms.retcor
+  verified_against: 'GitHub issue #16 author comment, 2026-11-03'
 - id: gap_filling
   goal: integrate the areas of peaks missing from the feature matrix
   edam_operation: http://edamontology.org/operation_3214
@@ -212,14 +235,14 @@ steps:
     dois:
     - 10.1093/bioinformatics/btaa037
   after:
-  - rt_alignment
+  - post_alignment_correspondence
   candidate_tools:
   - R
   - compCV
   - ncGTW
   - xcms
   inputs_from:
-    rt_alignment:
+    post_alignment_correspondence:
     - rdata:rdata.xcms.group
 - id: annotation
   goal: group features into pseudospectra and annotate isotopes and adducts
