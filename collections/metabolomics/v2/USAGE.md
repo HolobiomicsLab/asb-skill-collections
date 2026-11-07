@@ -118,11 +118,11 @@ selector: asb-keyword / 1.0.0 / package
 ```
 
 That block is the rehearsal's own output and predates the change of default. The
-same command run today returns the same `qualified_slug` with `score: 4.0` and
-`selector: asb-keyword / 1.0.0 / router`: the router rule counts each distinct
-matched term once instead of every occurrence, so its scores are smaller and are
-comparable only within one request. The install behaviour the rehearsal was
-checking is unchanged.
+same command run today returns the same `qualified_slug` with `score: 17.0` and
+`selector: asb-keyword / 1.1.0 / router`. The router rule weights each matched
+term by field: description 3, name 2 and tool metadata 1. Scores are comparable
+only within one request. The install behaviour the rehearsal was checking is
+unchanged.
 
 There is no separate `asbb update` command. After updating the checkout through
 your normal source-control process, rerun the same `install` command to refresh
@@ -187,9 +187,9 @@ python3 -m asb_skill_collections.asbb_cli search --list-collections
 
 All three commands exited 0. Search returned
 `metabolomics/v2/workflows/untargeted-lcmsms-annotation` with score 12 and
-selector `asb-keyword/1.0.0/package` — recorded before the default changed; the
-same command returns the same workflow today with score 4 and selector
-`asb-keyword/1.0.0/router`. `get` opened that workflow, and the host visibility
+selector `asb-keyword/1.0.0/package`, recorded before the default changed. The
+same command returns the same workflow today with score 17 and selector
+`asb-keyword/1.1.0/router`. `get` opened that workflow, and the host visibility
 check printed:
 
 ```text
@@ -272,12 +272,19 @@ jq -r '.[] | select(.description | test("library match";"i")) | .slug' skills_in
 
 ### Semantic retrieval & the embedding cache
 
+Prefer `bin/semantic_search.py --mode auto` when semantic retrieval may be
+available. Direct `bin/search_skills.py` is the deterministic offline keyword
+fallback and states that fact once on stderr, naming the semantic command; pass
+`--quiet` only when a caller deliberately suppresses that notice.
+
 For offline retrieval, the collection-level `bin/search_skills.py`,
 `bin/semantic_search.py --mode keyword`, `asbb search` and MCP use one versioned
 selector. Add `--json` to the router command for the same result dictionaries,
 including matched fields, filters and qualified collection/target/slug. See
 [the selector contract and measured comparison](https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/docs/selection.md).
-The router rule is the measured default; the previous package rule remains
+The router rule is the default; it weights the trigger-bearing description and
+name above tool metadata and de-boosts explicit plumbing vocabulary only when
+the query does not ask for that plumbing. The previous package rule remains
 available through `--selector package` (or `ASB_SELECTOR_RULE=package` for
 `asbb`) for one release and is deprecated.
 

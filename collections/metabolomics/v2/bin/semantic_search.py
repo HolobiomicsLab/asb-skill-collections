@@ -32,10 +32,22 @@ ROUTER_STOP = frozenset(
     "with what which when data set my our this these those i need want".split()
 )
 SELECTOR_NAME = "asb-keyword"
-SELECTOR_VERSION = "1.0.0"
+SELECTOR_VERSION = "1.1.0"
 DEFAULT_SELECTOR = "router"
 SELECTOR_ENV = "ASB_SELECTOR_RULE"
 SELECTORS = ("package", "router")
+ROUTER_FIELD_WEIGHTS = {
+    "name": 2.0,
+    "description": 3.0,
+    "tools": 1.0,
+    "member_tools": 1.0,
+}
+PLUMBING_TERMS = frozenset(
+    "parse parsed parsing parser convert converted conversion export exporting import importing "
+    "loading handle handling request requests submit submitting submission configuration configure "
+    "configuring parameterization parameterisation toggle toggling".split()
+)
+PLUMBING_PENALTY = 6.0
 TARGETS = {
     "skills": ("skills_index.json",),
     "workflows": ("workflows/workflows_index.json", "workflows_index.json"),
@@ -258,13 +270,28 @@ def _field_matches(fields: dict, terms: list[str], rule: str) -> dict[str, list[
             for field, text in fields.items()}
 
 
+def _plumbing_penalty(fields: dict[str, str], terms: list[str]) -> float:
+    """De-boost plumbing descriptions unless the query asks for plumbing."""
+    if set(terms) & PLUMBING_TERMS:
+        return 0.0
+    description_terms = set(tokenize(fields["description"], "router"))
+    return PLUMBING_PENALTY if description_terms & PLUMBING_TERMS else 0.0
+
+
+def _router_score(fields: dict[str, str], matched: dict, terms: list[str]) -> float:
+    """Weight role-bearing fields above tool metadata, then de-boost plumbing."""
+    score = sum(
+        ROUTER_FIELD_WEIGHTS.get(field, 0.0) * len(values)
+        for field, values in matched.items()
+    )
+    return score - _plumbing_penalty(fields, terms)
+
+
 def _score_row(row: dict, terms: list[str], rule: str) -> tuple[float, dict]:
     fields = row_fields(row)
     matched = {field: values for field, values in _field_matches(fields, terms, rule).items() if values}
     if rule == "router":
-        overlap = {term for values in matched.values() for term in values}
-        boost = 2.0 if set(terms) & {tool.lower() for tool in entry_tools(row)} else 0.0
-        return float(len(overlap)) + boost, matched
+        return _router_score(fields, matched, terms), matched
     text = " ".join(fields.values())
     score = sum(text.count(term) for term in terms)
     score += 3 * sum(term in fields["name"] for term in terms)
