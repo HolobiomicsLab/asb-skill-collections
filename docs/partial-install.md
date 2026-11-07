@@ -143,7 +143,10 @@ Drop `--dry-run` to install. The installed unit holds the 10 leaves, the
 filtered `skills_index.json` and `kb_bundle.json`, `bin/search_skills.py`,
 `bin/perspicacite_kb_bind.py`, `commands/ground.md`, `GROUNDING.md` and the
 router, whose description reads "search this unit's 10 evidence-grounded
-skills". Run from the unit, `bin/search_skills.py` searches those 10 only.
+skills". Run from the unit, `bin/search_skills.py` searches those 10 only. This
+deterministic keyword command is the offline fallback; when the semantic cache
+and query-embedding access are available, prefer
+`bin/semantic_search.py --mode auto`.
 
 ### From a file, under your own name
 

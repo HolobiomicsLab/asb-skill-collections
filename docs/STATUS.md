@@ -66,6 +66,11 @@ Measured 2026-10-30:
   AGENTS.md, CLAUDE.md and the unit's Markdown match the on-disk census:
   5,859 leaves, 909 tool records, 566 papers in `corpus.yaml`, 21 `workflow.yaml`).
 
+Current selector note: `bin/search_skills.py` is the deterministic offline
+fallback and names `bin/semantic_search.py --mode auto` on stderr. Selector
+1.1.0 weights description 3, name 2 and tool metadata 1, with a query-sensitive
+plumbing de-boost. Use `--quiet` to suppress the notice.
+
 ## Claude Code public marketplace
 
 README (e80767838), section labelled "pending verification":

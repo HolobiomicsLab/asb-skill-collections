@@ -185,6 +185,7 @@ def _router_payload(case: dict, router, capsys: pytest.CaptureFixture[str]) -> d
         "-k",
         str(K),
         "--json",
+        "--quiet",
     ]
     if case["technique"]:
         argv += ["--technique", case["technique"]]
@@ -201,7 +202,7 @@ def _assert_hit_shape(hit: dict, case: dict, rule: str) -> None:
     assert hit["qualified_slug"] == f"{COLLECTION}/{case['target']}/{hit['slug']}"
     assert hit["selector"] == {
         "name": "asb-keyword",
-        "version": "1.0.0",
+        "version": "1.1.0",
         "rule": rule,
     }
     assert hit["filters"] == {

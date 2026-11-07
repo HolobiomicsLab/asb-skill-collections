@@ -13,18 +13,23 @@ is cited only as the revision the frozen labels were taken from.
 
 ## Ranking rule
 
-The default selector is `asb-keyword` version `1.0.0`, rule `router`. It:
+The default selector is `asb-keyword` version `1.1.0`, rule `router`. It:
 
 1. splits the query into lowercase ASCII alphanumeric terms;
 2. removes domain-neutral stopwords and terms shorter than two characters, and
    keeps each remaining term once;
-3. scores one point per distinct term that reaches `name`, `description` or
-   `tools`; and
-4. adds two points when a term is exactly a tool name.
+3. scores each matched term by field: three points in the trigger-bearing
+   `description`, two in `name`, and one in `tools` or `member_tools`; and
+4. subtracts six points from descriptions that name parsing, conversion,
+   import/export, request/submission construction, configuration or parameter
+   toggling, unless the query itself contains one of those plumbing terms.
 
-A repeated query term is counted once, so the score is a count of distinct
-matched terms, not a frequency. It is a lexical ranking value, not a
-probability or a measure of scientific suitability.
+A repeated query term is counted once per field, not by frequency within a
+field. The explicit weights make the method role in `name` and `description`
+stronger than incidental tool metadata. The query-sensitive de-boost keeps file
+and request operations available when they are what the user asked for. The
+score is a lexical ranking value, not a probability or a measure of scientific
+suitability.
 
 ### Order, and what breaks a tie
 
@@ -55,8 +60,8 @@ The `package` rule remains as a temporary compatibility option. It uses repeated
 Unicode alphanumeric terms of at least three characters, counts occurrences in
 `name`, `description`, `tools` and `techniques`, and adds three points when a
 term occurs in `name`. It keeps its historical score/slug order with no name
-tie-break, so an older result reproduces exactly. Select it only for that; the
-measured default is `router`.
+tie-break. Select it only to compare historical ordering; result identity now
+reports selector version 1.1.0. The default is `router`.
 
 ## Reading an explanation
 
@@ -92,16 +97,14 @@ python3 -B bin/search_skills.py --collection . --target workflows --technique LC
 ```
 
 ```text
-metabolomics/v2/workflows/untargeted-lcmsms-annotation  4.0  description,member_tools,name
-metabolomics/v2/workflows/compound-class-annotation     4.0  description,name
-metabolomics/v2/workflows/lipidomics-lcms-annotation    4.0  description,member_tools,name
+metabolomics/v2/workflows/untargeted-lcmsms-annotation  17.0  description,member_tools,name
+metabolomics/v2/workflows/lipidomics-lcms-annotation    12.0  description,member_tools,name
+metabolomics/v2/workflows/fbmn-annotation-propagation   12.0  description
 ```
 
-Five workflows score 4.0 here, so the title tie-break decides the block:
-`untargeted` and `annotation` both reach the first workflow's name, one query
-term reaches each of the next two, and none reaches the last two. Under a
-slug-only order `compound-class-annotation` came first, which is the documented
-wrong answer for this query.
+The first workflow carries the discriminating terms in both its title and its
+trigger-bearing description. Tool metadata contributes only one point per
+term, so it cannot override those role fields.
 
 A single-step request searches leaf skills:
 
@@ -110,18 +113,14 @@ python3 -B bin/search_skills.py --collection . --target skills --query "spectral
 ```
 
 ```text
-metabolomics/v2/skills/spectral-library-matching        3.0  description,name
-metabolomics/v2/skills/ms-ms-spectral-library-matching  3.0  name
-metabolomics/v2/skills/ms-spectral-library-matching     3.0  description,name
+metabolomics/v2/skills/spectral-library-matching-evaluation       15.0  description,name
+metabolomics/v2/skills/spectral-library-annotation-interpretation 13.0  description,name
+metabolomics/v2/skills/spectral-library-molecular-networking      13.0  description,name
 ```
 
-All three score 3.0 and all three carry the same three query terms in their
-names, so the count half of the tie-break cannot separate them. The coverage
-half does: the first skill's name *is* those three terms and nothing else, while
-the others qualify them with a platform. The equal-score block here holds 84
-candidates, and a slug-only order returned
-`candidate-neighbourhood-analysis-for-spectral-matching` first — two of the three
-terms, in a much longer name, and a different question from the one asked.
+The role fields decide this order. A parser or format converter can still match
+these words, but it receives the plumbing de-boost unless the query asks for
+parsing or conversion.
 
 A retention-time request shows the whole ladder:
 
@@ -130,14 +129,13 @@ python3 -B bin/search_skills.py --collection . --target skills --query "retentio
 ```
 
 ```text
-metabolomics/v2/skills/retention-time-prediction                 3.0  description,name
-metabolomics/v2/skills/retention-time-prediction-chromatography  3.0  description,name
-metabolomics/v2/skills/retention-time-prediction-from-structures 3.0  description,name,tools
+metabolomics/v2/skills/retention-time-prediction-from-structures     14.0  description,name,tools
+metabolomics/v2/skills/fingerprint-feature-extraction-retention-time 13.0  description,name
+metabolomics/v2/skills/retention-time-prediction                     12.0  description,name
 ```
 
-Equal score, equal name count; the exact-title skill wins on coverage, and the
-last two are equal on coverage as well, so their order is alphabetical by slug
-and says nothing about which is scientifically preferable.
+Description evidence supplies most of the score. The one tool-field match adds
+one point to the first result, while the role fields supply the other thirteen.
 
 ## Asking for a different result
 
@@ -154,9 +152,9 @@ python3 -B bin/search_skills.py --collection . --target skills --tool GNPS --que
 ```
 
 ```text
-metabolomics/v2/skills/spectral-library-matching             3.0  gnps  description,name
-metabolomics/v2/skills/spectral-library-annotation-matching  3.0  gnps  description,name
-metabolomics/v2/skills/spectral-library-matching-annotation  3.0  gnps  description,name
+metabolomics/v2/skills/spectral-library-annotation-interpretation 13.0  gnps  description,name
+metabolomics/v2/skills/spectral-library-molecular-networking      13.0  gnps  description,name
+metabolomics/v2/skills/spectral-library-annotation-matching       12.0  gnps  description,name
 ```
 
 The router accepts `--selector package`; package callers and MCP accept the same
@@ -195,7 +193,7 @@ computation and its result schema stay outside this keyword contract.
 
 The `package` rule is deprecated and retained for one release after this change.
 It uses the shared resolver and explanation contract, and keeps its historical
-score/slug order so an older result reproduces exactly.
+score/slug order for comparisons with older results.
 
 ```bash
 python bin/search_skills.py --query "annotate spectra" --selector package --json
@@ -219,10 +217,12 @@ python scripts/router_shape.py --scripts-only collections/metabolomics/v2 packs/
 The byte-identity test covers both canonical standalone scripts and all eight
 pack routers, and fails if any embedded source differs from the package module.
 
-## What the default was measured on
+## What selector 1.0.0 was measured on
 
-Two label sets back the default. Both are documentation- or benchmark-derived,
-not independent user queries; the limits are stated at the end of this section.
+The previous unweighted selector used two label sets. Both are documentation-
+or benchmark-derived, not independent user queries; the limits are stated at
+the end of this section. Selector 1.1.0 adds the field weights and plumbing
+de-boost described above in response to the separate analyst-query evaluation.
 
 ### 1. The 22 frozen documentation labels
 
