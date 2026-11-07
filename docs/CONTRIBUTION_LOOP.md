@@ -57,6 +57,11 @@ rest were folded in or deferred:
 
 ## For maintainers
 
+For a new paper, use the proposal rail for a single reviewed suggestion or the
+batch build-and-cut rail for a maintained collection. The complete commands and
+the boundary between incremental builds and batch consolidation are in
+[Adding papers to a collection](adding-papers.md).
+
 Reports arrive labelled `usage-feedback` + `needs-triage`, with `propose` added
 when the reporter is asking for new work. Triage on the kind:
 

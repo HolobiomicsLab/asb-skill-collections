@@ -269,6 +269,9 @@ with [MAINTAINERS.md](governance/MAINTAINERS.md) and [COI_POLICY.md](governance/
   and with `--print-url` a pre-filled issue URL.
 - **Propose or annotate a paper, a collection or a workflow:**
   [CONTRIBUTING.md](.github/CONTRIBUTING.md#propose-or-annotate-a-paper).
+- **Add papers to a collection.** See the contributor proposal rail and the
+  maintainer build, view, cut and candidate rail in
+  [Adding papers to a collection](docs/adding-papers.md).
 - **Credit.** Merged contributions count on the contributor leaderboard and can lead
   to co-authorship of the next release DOI ([CONTRIBUTION_LOOP.md](governance/CONTRIBUTION_LOOP.md)).
 - **Before packaging,** run `python -m scripts.unit_closure` from the repository root:
