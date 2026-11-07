@@ -811,3 +811,52 @@ def test_missing_leaf_and_manifest_doi_writes_nothing(
     assert f"cut leaf has no source DOI: {output_id}" in capsys.readouterr().err
     assert not candidate.exists()
     assert not receipts.exists()
+
+
+def test_unreadable_leaf_fails_unless_excluded_with_a_receipt_row(tmp_path: Path) -> None:
+    """A leaf whose frontmatter cannot be parsed stops the collection; with the
+    flag it is left out and collect_receipt.json names it and its source bundle."""
+    fixture_copy = tmp_path / "fixture"
+    shutil.copytree(FIXTURE, fixture_copy)
+    skill = next(iter(sorted((fixture_copy / "corpus" / "skills").glob("*/skill.md"))))
+    output_id = skill.parent.name
+    text = skill.read_text(encoding="utf-8")
+    # A C1 control character, as left by a mis-decoded UTF-8 dash, is not
+    # allowed in YAML, so the frontmatter has no parse.
+    skill.write_text(text.replace("description:", "description: \x80", 1), encoding="utf-8")
+    total = len(list((fixture_copy / "corpus" / "skills").glob("*/skill.md")))
+
+    strict = tmp_path / "strict"
+    assert (
+        collector.main(
+            _args(fixture_copy, strict / "candidate", receipts=strict / "receipts")
+        )
+        == 1
+    )
+    assert not (strict / "candidate").exists()
+
+    lenient = tmp_path / "lenient"
+    assert (
+        collector.main(
+            [
+                *_args(fixture_copy, lenient / "candidate", receipts=lenient / "receipts"),
+                "--exclude-invalid-leaves",
+            ]
+        )
+        == 0
+    )
+    assert not (lenient / "candidate" / "leaves" / output_id).exists()
+    receipt = json.loads(
+        (lenient / "receipts" / "collect_receipt.json").read_text(encoding="utf-8")
+    )
+    assert receipt["counts"]["skills"] == total - 1
+    assert receipt["counts"]["excluded_leaves"] == 1
+    (row,) = receipt["excluded_leaves"]
+    assert row["output_id"] == output_id
+    assert "frontmatter" in row["reason"]
+    assert row["source_bundles"]
+    assert row["skill_sha256"] == hashlib.sha256(skill.read_bytes()).hexdigest()
+    index = json.loads(
+        (lenient / "candidate" / "skills_index.json").read_text(encoding="utf-8")
+    )
+    assert output_id not in {entry.get("slug") for entry in index}
