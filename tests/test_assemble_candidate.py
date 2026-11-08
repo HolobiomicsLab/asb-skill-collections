@@ -33,6 +33,7 @@ EXPECTED_RECEIPTS = {
     "collect_receipt.json",
     "corpus.yaml",
     "corpus_join_receipt.json",
+    "email_redaction_receipt.json",
     "evidence_trim_receipt.json",
     "gate.txt",
     "gate_report.json",
@@ -420,3 +421,54 @@ def test_driver_completes_with_directory_symlink_build_tree(tmp_path: Path) -> N
         (receipts / "gate_report.json").read_text(encoding="utf-8")
     )
     assert gate_report["release_verified"] is True
+
+
+def test_exclude_invalid_leaves_passes_through_to_the_collect_stage(tmp_path: Path) -> None:
+    """The driver forwards the exclusion flag to collect_from_cut.py and nowhere else."""
+    fixture = _copy_fixture(tmp_path)
+    output = tmp_path / "candidate"
+    output.mkdir()
+    receipts = tmp_path / "receipts"
+
+    result = _run(
+        [*_arguments(fixture, output, receipts), "--dry-run", "--exclude-invalid-leaves"]
+    )
+
+    assert result.returncode == 0, result.stdout
+    commands = {
+        entry["stage"]: entry["command"] for entry in _last_json(result.stdout)["commands"]
+    }
+    assert "--exclude-invalid-leaves" in commands["collect"]
+    assert all(
+        "--exclude-invalid-leaves" not in command
+        for stage, command in commands.items()
+        if stage != "collect"
+    )
+
+
+def test_email_redaction_passes_through_to_the_collect_stage(tmp_path: Path) -> None:
+    """The driver forwards the redaction flag to collect_from_cut.py only."""
+    fixture = _copy_fixture(tmp_path)
+    output = tmp_path / "candidate"
+    output.mkdir()
+    receipts = tmp_path / "receipts"
+
+    result = _run(
+        [
+            *_arguments(fixture, output, receipts),
+            "--dry-run",
+            "--redact-third-party-emails",
+        ]
+    )
+
+    assert result.returncode == 0, result.stdout
+    commands = {
+        entry["stage"]: entry["command"]
+        for entry in _last_json(result.stdout)["commands"]
+    }
+    assert "--redact-third-party-emails" in commands["collect"]
+    assert all(
+        "--redact-third-party-emails" not in command
+        for stage, command in commands.items()
+        if stage != "collect"
+    )

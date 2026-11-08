@@ -43,6 +43,7 @@ MAPPING_KEYS = {
     "doi_source",
     "description_rewritten",
     "evidence_trimmed",
+    "emails_redacted",
 }
 
 
@@ -811,3 +812,219 @@ def test_missing_leaf_and_manifest_doi_writes_nothing(
     assert f"cut leaf has no source DOI: {output_id}" in capsys.readouterr().err
     assert not candidate.exists()
     assert not receipts.exists()
+
+
+def test_unreadable_leaf_fails_unless_excluded_with_a_receipt_row(tmp_path: Path) -> None:
+    """A leaf whose frontmatter cannot be parsed stops the collection; with the
+    flag it is left out and collect_receipt.json names it and its source bundle."""
+    fixture_copy = tmp_path / "fixture"
+    shutil.copytree(FIXTURE, fixture_copy)
+    skill = next(iter(sorted((fixture_copy / "corpus" / "skills").glob("*/skill.md"))))
+    output_id = skill.parent.name
+    text = skill.read_text(encoding="utf-8")
+    # A C1 control character, as left by a mis-decoded UTF-8 dash, is not
+    # allowed in YAML, so the frontmatter has no parse.
+    skill.write_text(text.replace("description:", "description: \x80", 1), encoding="utf-8")
+    total = len(list((fixture_copy / "corpus" / "skills").glob("*/skill.md")))
+
+    strict = tmp_path / "strict"
+    assert (
+        collector.main(
+            _args(fixture_copy, strict / "candidate", receipts=strict / "receipts")
+        )
+        == 1
+    )
+    assert not (strict / "candidate").exists()
+
+    lenient = tmp_path / "lenient"
+    assert (
+        collector.main(
+            [
+                *_args(fixture_copy, lenient / "candidate", receipts=lenient / "receipts"),
+                "--exclude-invalid-leaves",
+            ]
+        )
+        == 0
+    )
+    assert not (lenient / "candidate" / "leaves" / output_id).exists()
+    receipt = json.loads(
+        (lenient / "receipts" / "collect_receipt.json").read_text(encoding="utf-8")
+    )
+    assert receipt["counts"]["skills"] == total - 1
+    assert receipt["counts"]["excluded_leaves"] == 1
+    (row,) = receipt["excluded_leaves"]
+    assert row["output_id"] == output_id
+    assert "frontmatter" in row["reason"]
+    assert row["source_bundles"]
+    assert row["skill_sha256"] == hashlib.sha256(skill.read_bytes()).hexdigest()
+    index = json.loads(
+        (lenient / "candidate" / "skills_index.json").read_text(encoding="utf-8")
+    )
+    assert output_id not in {entry.get("slug") for entry in index}
+
+
+def test_third_party_emails_are_redacted_only_on_request_with_a_receipt(
+    tmp_path: Path,
+) -> None:
+    """Redact body and nested frontmatter strings only when explicitly enabled."""
+    fixture = tmp_path / "fixture"
+    shutil.copytree(FIXTURE, fixture)
+    skill = next(iter(sorted((fixture / "corpus" / "skills").glob("*/skill.md"))))
+    output_id = skill.parent.name
+    frontmatter, body = _read_skill(skill)
+    frontmatter_email = "ada.lovelace@private.example.org"
+    body_email = "grace.hopper@private.example.net"
+    span_doi = "10.9999/redaction-budget-probe"
+    frontmatter["evidence_spans"] = [
+        {"text": f"For details contact {frontmatter_email}", "doi": span_doi}
+    ]
+    body += (
+        f'\n- [readme] access contact: "Request access to {body_email} for details"\n'
+    )
+    _write_skill(skill, frontmatter, body)
+
+    strict = tmp_path / "strict"
+    assert (
+        collector.main(
+            _args(
+                fixture,
+                strict / "candidate",
+                receipts=strict / "receipts",
+            )
+        )
+        == 0
+    )
+    strict_skill = strict / "candidate" / "leaves" / output_id / "SKILL.md"
+    strict_text = strict_skill.read_text(encoding="utf-8")
+    strict_frontmatter, _ = _read_skill(strict_skill)
+    strict_receipt = json.loads(
+        (strict / "receipts" / "email_redaction_receipt.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    assert frontmatter_email in strict_text
+    assert body_email in strict_text
+    assert "emails_redacted" not in strict_frontmatter
+    assert strict_receipt == {
+        "enabled": False,
+        "placeholder": collector.EMAIL_REDACTION_PLACEHOLDER,
+        "counts": {"leaves_changed": 0, "addresses_redacted": 0},
+        "leaves": [],
+    }
+
+    redacted = tmp_path / "redacted"
+    assert (
+        collector.main(
+            [
+                *_args(
+                    fixture,
+                    redacted / "candidate",
+                    receipts=redacted / "receipts",
+                ),
+                "--redact-third-party-emails",
+            ]
+        )
+        == 0
+    )
+    redacted_skill = redacted / "candidate" / "leaves" / output_id / "SKILL.md"
+    redacted_text = redacted_skill.read_text(encoding="utf-8")
+    redacted_frontmatter, _ = _read_skill(redacted_skill)
+    assert frontmatter_email not in redacted_text
+    assert body_email not in redacted_text
+    assert redacted_text.count(collector.EMAIL_REDACTION_PLACEHOLDER) == 2
+    assert redacted_frontmatter["emails_redacted"] is True
+
+    receipt_path = redacted / "receipts" / "email_redaction_receipt.json"
+    receipt_text = receipt_path.read_text(encoding="utf-8")
+    receipt = json.loads(receipt_text)
+    assert receipt["enabled"] is True
+    assert receipt["counts"] == {"leaves_changed": 1, "addresses_redacted": 2}
+    assert receipt["leaves"] == [
+        {
+            "output_id": output_id,
+            "fields": ["body", "frontmatter:evidence_spans[0].text"],
+            "address_sha256_prefix": sorted(
+                hashlib.sha256(address.lower().encode()).hexdigest()[:12]
+                for address in (frontmatter_email, body_email)
+            ),
+        }
+    ]
+    assert all(
+        part not in receipt_text for part in ("ada.lovelace", "private.example")
+    )
+    mapping = json.loads(
+        (redacted / "candidate" / "mapping.json").read_text(encoding="utf-8")
+    )
+    row = next(item for item in mapping["mappings"] if item["output_id"] == output_id)
+    assert row["emails_redacted"] is True
+    collect_receipt = json.loads(
+        (redacted / "receipts" / "collect_receipt.json").read_text(encoding="utf-8")
+    )
+    assert collect_receipt["counts"]["emails_redacted_leaves"] == 1
+
+    # The quote budget counts the redacted text, not the original: the
+    # placeholder is longer than the addresses it replaces. The probe DOI is
+    # unknown to the corpus, so the span is strict and alone under its DOI.
+    def _span_doi_characters(root: Path) -> int:
+        receipt = json.loads(
+            (root / "receipts" / "evidence_trim_receipt.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        return receipt["characters_by_doi"][span_doi]
+
+    assert _span_doi_characters(strict) == len(
+        f"For details contact {frontmatter_email}"
+    )
+    assert _span_doi_characters(redacted) == len(
+        f"For details contact {collector.EMAIL_REDACTION_PLACEHOLDER}"
+    )
+
+
+def test_email_redaction_preserves_allowlisted_notation_and_placeholder_tokens(
+    tmp_path: Path,
+) -> None:
+    """Keep every configured safe e-mail-shaped class unchanged."""
+    fixture = tmp_path / "fixture"
+    shutil.copytree(FIXTURE, fixture)
+    skill = next(iter(sorted((fixture / "corpus" / "skills").glob("*/skill.md"))))
+    output_id = skill.parent.name
+    frontmatter, body = _read_skill(skill)
+    retained = [
+        "louisfelix.nothias@gmail.com",
+        "info@lab.edu",
+        "peak@xxx.xx",
+        "your@mail-adress.com",
+    ]
+    body += f'\n- [readme] safe tokens: "{" ".join(retained)}"\n'
+    _write_skill(skill, frontmatter, body)
+    run = tmp_path / "run"
+
+    assert (
+        collector.main(
+            [
+                *_args(
+                    fixture,
+                    run / "candidate",
+                    corpus=False,
+                    receipts=run / "receipts",
+                ),
+                "--redact-third-party-emails",
+            ]
+        )
+        == 0
+    )
+
+    published = run / "candidate" / "leaves" / output_id / "SKILL.md"
+    published_text = published.read_text(encoding="utf-8")
+    published_frontmatter, _ = _read_skill(published)
+    assert all(token in published_text for token in retained)
+    assert "emails_redacted" not in published_frontmatter
+    receipt = json.loads(
+        (run / "receipts" / "email_redaction_receipt.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    assert receipt["enabled"] is True
+    assert receipt["counts"] == {"leaves_changed": 0, "addresses_redacted": 0}
+    assert receipt["leaves"] == []

@@ -2,9 +2,10 @@
 
 Instructions for coding/research agents (Claude Code, OpenAI Codex, GitHub
 Copilot, or any SKILL-aware agent) to **install and use** the ASB Metabolomics
-Skill Collection. The public release is the **metabolomics** collection at
-`collections/metabolomics/v2/` (5,859 evidence-grounded skills over 909
-software tools for computational LC-MS/MS; release `metabolomics-v0.2.0`, preliminary).
+Skill Collection. The public release is **metabolomics v3** (11,830 skills over
+1,989 tools, release `metabolomics-v3.0.0`) in the domain repository
+`HolobiomicsLab/asb-skills-metabolomics`; this repository's marketplace and the
+local paths below still serve v2 (5,859 skills over 909 tools).
 
 > Full human guide: [`collections/metabolomics/v2/USAGE.md`](collections/metabolomics/v2/USAGE.md).
 > Which install routes were verified, and when: [`docs/STATUS.md`](docs/STATUS.md).
@@ -67,7 +68,7 @@ no build step.
 For end users without a CLI: upload `skills_index.json` + `tools_index.json` and
 your chosen `leaves/<slug>/SKILL.md` files as the assistant's **knowledge**
 (Claude *Projects*, ChatGPT *Custom GPT / Project*, Mistral *Agent / Library*),
-then paste a short routing instruction. Don't upload all 5,859 skills — upload
+then paste a short routing instruction. Don't upload all skills — upload
 the indexes plus the few skills you need. This route was not exercised for the
 release; see [`docs/STATUS.md`](docs/STATUS.md#web-ui).
 

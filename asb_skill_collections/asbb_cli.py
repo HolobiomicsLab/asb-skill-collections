@@ -264,7 +264,13 @@ def _cmd_fetch(args) -> int:
     from pathlib import Path
     from .asbb import fetch
     from .asbb.subset import parse_slugs
-    request = fetch.FetchRequest(args.collection, tuple(parse_slugs(args.slugs)), args.ref)
+    request = fetch.FetchRequest(
+        args.collection,
+        tuple(parse_slugs(args.slugs)),
+        args.ref,
+        args.repository,
+        args.manifest_ref,
+    )
     dest = Path(args.dest)
     try:
         provenance = fetch.fetch(request, dest)
@@ -420,6 +426,10 @@ def build_parser() -> argparse.ArgumentParser:
     p_fetch.add_argument("--dest", required=True, help="Directory to write the skills into.")
     p_fetch.add_argument("--ref", default=DEFAULT_REF,
                          help=f"Branch, tag or commit of the repository (default {DEFAULT_REF}).")
+    p_fetch.add_argument("--repository",
+                         help="Read OWNER/NAME directly, bypassing the collections manifest.")
+    p_fetch.add_argument("--manifest-ref", default=DEFAULT_REF,
+                         help="Ref of the master collections manifest (default main).")
     p_fetch.set_defaults(func=_cmd_fetch)
 
     return parser

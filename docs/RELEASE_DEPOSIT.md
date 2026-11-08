@@ -5,8 +5,8 @@ to a draft. Publishing is a manual step in the Zenodo web interface.
 
 Tool: `scripts/zenodo_deposit.py` (standard library and PyYAML, a dependency
 of the package). Tests: `tests/test_zenodo_deposit.py`,
-`tests/test_zenodo_deposit_bundle.py` and
-`tests/test_zenodo_deposit_creators.py`. The tool never calls the publish
+`tests/test_zenodo_deposit_bundle.py`, `tests/test_zenodo_deposit_creators.py`
+and `tests/test_zenodo_deposit_domain.py`. The tool never calls the publish
 action of the API, and has no flag that does.
 
 ## Order of a release
@@ -75,8 +75,7 @@ Run from the repository root, on the commit that carries the release.
    ```
 
    Open the printed URL and check the title, creators, description, license,
-   version, related identifiers, communities, language and the single uploaded
-   file.
+   version, related identifiers, communities, language and the uploaded files.
 
 4. Make the real draft.
 
@@ -85,8 +84,8 @@ Run from the repository root, on the commit that carries the release.
    python scripts/zenodo_deposit.py draft metabolomics v2
    ```
 
-   The output gives the draft URL and the sha256 of the uploaded file. It must
-   equal the sha256 from step 1.
+The output gives the draft URL and the sha256 of each uploaded file. The archive
+sha256 must equal the sha256 from step 1.
 
 5. Publish by hand. In the Zenodo web interface, open the draft, check every
    field, and click Publish. This mints the version DOI and cannot be undone.
@@ -112,7 +111,8 @@ Run from the repository root, on the commit that carries the release.
 | 2 | `GET` the `latest_draft` link from step 1 |
 | 3 | `DELETE /api/deposit/depositions/{draft}/files/{file}` for each inherited file |
 | 4 | `PUT {bucket}/{domain}-{vN}.zip` with the archive |
-| 5 | `PUT /api/deposit/depositions/{draft}` with `{"metadata": {...}}`: the template over the metadata the draft inherited |
+| 5 | `PUT {bucket}/{file name}` for each `--extra-file`, in the order given |
+| 6 | `PUT /api/deposit/depositions/{draft}` with `{"metadata": {...}}`: the template over the metadata the draft inherited |
 
 Any non-2xx answer stops the run and names the step. A failed run leaves a draft
 on Zenodo. Zenodo allows one unpublished new version per record; running `draft`
@@ -128,6 +128,11 @@ covers which layer), `LICENSE` (the Apache-2.0 text) and
 `governance/LICENSE_TIERS.md` (the per-skill license tiers). A missing license
 text stops the build. These are the files `release.yml` bundles.
 
+Extra files passed with repeatable `--extra-file` options on `plan` and `draft`
+are listed beside the archive with their size and sha256, then uploaded after
+the archive. They are not added to the zip. `archive` does not accept this
+option, and a missing extra file stops `draft` before its first request.
+
 - Entries are sorted by name. Timestamps are fixed to 1980-01-01. File modes are
   `0755` for files with the user execute bit and `0644` otherwise.
 - Paths with a `__pycache__` component are left out. So is any path with a
@@ -141,7 +146,46 @@ When its Zenodo step is on (`ZENODO_UPLOAD` is `true`), `release.yml` differs:
 it keeps dotfiles (so its archive carries `.claude-plugin/plugin.json`), uploads
 `.cache/leafemb_v<N>.npz` as a second file `<domain>-v<N>-leafemb.npz` when
 present, and publishes when the repository variable `ZENODO_PUBLISH` is `true`.
-This tool does none of these.
+This tool still keeps neither collection dotfiles nor collection caches in the
+zip and never publishes; an external cache can be uploaded with `--extra-file`.
+
+## Domain repositories
+
+A release repository may hold only its collection and release content, without
+the master's tooling and governance directories. Pass the master checkout as
+`--tooling-root` to `archive`, `plan` or `draft`. Every bundled, licence and
+creators file resolves from `--repo-root` first, then from the tooling root;
+archive paths stay under `<domain>/<vN>/` and do not change. Without the option,
+the repository holding the running script is the tooling root. Existing master
+checkouts retain their repository files, and an archive built from one is
+unchanged by an explicit empty tooling root.
+
+`plan` prints both roots and the root that supplied each resolved file.
+`LICENSING.md` and `LICENSE` are release content: the tooling root is only a
+fallback, and a tooling-supplied `LICENSING.md` adds a notice that its text may
+differ from the domain repository's. A file absent from both roots stops the
+command with both roots named.
+
+For the `asb-skills-metabolomics` v3 deposit, the command sequence is:
+
+```bash
+python <path to asb-skill-collections>/scripts/zenodo_deposit.py archive metabolomics v3 \
+  --repo-root <path to asb-skills-metabolomics> \
+  --tooling-root <path to asb-skill-collections>
+python <path to asb-skill-collections>/scripts/zenodo_deposit.py plan metabolomics v3 \
+  --repo-root <path to asb-skills-metabolomics> \
+  --tooling-root <path to asb-skill-collections> \
+  --record-id 20794027 --publication-date 2026-11-09 \
+  --extra-file <path to leafemb_metabolomics.npz>
+python <path to asb-skill-collections>/scripts/zenodo_deposit.py draft metabolomics v3 \
+  --repo-root <path to asb-skills-metabolomics> \
+  --tooling-root <path to asb-skill-collections> \
+  --record-id 20794027 --publication-date 2026-11-09 \
+  --extra-file <path to leafemb_metabolomics.npz>
+```
+
+The extra file is uploaded as `leafemb_metabolomics.npz`, after the archive.
+The draft remains unpublished for manual review.
 
 ## Metadata handling
 
@@ -155,7 +199,7 @@ under `metadata`; the tool wraps it.
 | `license` | required when `access_right` is `open` or `embargoed` |
 | `related_identifiers[].relation` | checked against the API vocabulary |
 | `isVersionOf` | not in the API vocabulary. The tool reads the record id from it and does not send it. Zenodo links the versions of a record itself |
-| Inherited metadata | the draft starts from the previous record. Keys it carries that the template lacks, such as `communities` and `language`, are kept and listed in the output. The template wins on every key it has. `doi` and `prereserve_doi` are never sent. `plan` makes no request and cannot show inherited keys |
+| Inherited metadata | the draft starts from the previous record. Keys it carries that the template lacks, such as `communities` and `language`, are kept and listed in the output. The template wins on every key it has. `doi` and `prereserve_doi` are never sent; an inherited `dates` entry without `start` or `end` (the web interface can store one) is dropped and counted in the output, since the API rejects it with 400 "Invalid date provided". `plan` makes no request and cannot show inherited keys |
 | `publication_date` | set to today (`--publication-date` overrides) when the template has none, so the draft does not keep the previous version's date |
 | `creators[].name` | the API documents the form `Family name, Given names`. Entity names such as a community or a lab are sent as written, not in that form |
 | `creators` | must start with `scripts/release_creators.yaml`, unchanged and in order: a person entry as `Family, Given` with its bare ORCID iD and affiliation when listed, an entity entry by its name. Entries after the list are accepted only as persons with a bare ORCID iD, each iD once: the co-authors that `scripts/select_release_coauthors.py --apply` appends (see `docs/CURATION_CALL.md`). Any other difference is refused by `plan` and `draft` |

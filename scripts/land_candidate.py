@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Land a verified domain candidate on an unpushed Git branch (S8)."""
+"""Land a verified domain candidate on an unpushed Git branch (S8).
+
+Use ``--plugin-name`` to land beside a released plugin that still uses the
+domain name.
+"""
 
 from __future__ import annotations
 
@@ -18,6 +22,7 @@ import yaml
 
 
 DOMAIN_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
+PLUGIN_NAME_PATTERN = re.compile(r"^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$")
 VERSION_PATTERN = re.compile(r"^v([1-9][0-9]*)$")
 CUT_PATTERN = re.compile(r"^[0-9a-f]{12}$")
 COMMIT_PATTERN = re.compile(r"^[0-9a-fA-F]{7,40}$")
@@ -70,6 +75,7 @@ class LandingPlan:
     inputs: CandidateInput
     repository: RepositoryInput
     branch: str
+    plugin_name: str
     collection_path: str
     receipts_path: str
     marketplace_path: str
@@ -84,6 +90,7 @@ def _parser() -> argparse.ArgumentParser:
     parser.add_argument("--receipts", required=True, type=Path)
     parser.add_argument("--repo", required=True, type=Path)
     parser.add_argument("--domain", required=True)
+    parser.add_argument("--plugin-name")
     parser.add_argument("--version", required=True)
     parser.add_argument("--title", required=True)
     parser.add_argument("--author-name")
@@ -296,8 +303,13 @@ def _ensure_absent_path(repo: Path, relative: str) -> None:
 
 
 def _validate_marketplace(
-    repo: Path, relative: str, domain: str, collection_path: str
+    repo: Path,
+    relative: str,
+    domain: str,
+    collection_path: str,
+    plugin_name: str | None = None,
 ) -> dict[str, Any] | None:
+    plugin_name = plugin_name or domain
     path = repo / relative
     if not path.exists() and not path.is_symlink():
         _ensure_absent_path(repo, relative)
@@ -321,15 +333,15 @@ def _validate_marketplace(
     ):
         raise ConflictError(f"marketplace already lists {source}")
     # Two plugins under one name fail `claude plugin validate`, and
-    # `<domain>@asb-skills-<domain>` no longer says which one installs. Whether
-    # the older entry is renamed or dropped is a release decision, not this
-    # script's.
+    # `<plugin-name>@asb-skills-<domain>` no longer says which one installs.
+    # Whether the older entry is renamed or dropped is a release decision, not
+    # this script's.
     if any(
-        isinstance(plugin, dict) and plugin.get("name") == domain
+        isinstance(plugin, dict) and plugin.get("name") == plugin_name
         for plugin in plugins
     ):
         raise ConflictError(
-            f"marketplace already lists a plugin named {domain!r}; rename or "
+            f"marketplace already lists a plugin named {plugin_name!r}; rename or "
             "remove that entry before landing another under the same name"
         )
     return marketplace
@@ -354,8 +366,13 @@ def _validate_repository(
     if _git_output(repo, "status", "--porcelain", "--untracked-files=all"):
         raise LandingError("repository worktree is dirty")
     collection_path, receipts_path, marketplace_path = paths
+    plugin_name = options.plugin_name or options.domain
     marketplace = _validate_marketplace(
-        repo, marketplace_path, options.domain, collection_path
+        repo,
+        marketplace_path,
+        options.domain,
+        collection_path,
+        plugin_name=plugin_name,
     )
     for relative in (collection_path, receipts_path):
         _ensure_absent_path(repo, relative)
@@ -370,17 +387,23 @@ def _validate_repository(
     )
 
 
-def _validate_options(options: argparse.Namespace) -> None:
+def _validate_options(options: argparse.Namespace) -> str:
     if not DOMAIN_PATTERN.fullmatch(options.domain):
         raise LandingError(f"invalid domain slug: {options.domain!r}")
     if not VERSION_PATTERN.fullmatch(options.version):
         raise LandingError(f"invalid version: {options.version!r}")
+    plugin_name = (
+        options.domain if options.plugin_name is None else options.plugin_name
+    )
+    if not PLUGIN_NAME_PATTERN.fullmatch(plugin_name):
+        raise LandingError(f"invalid plugin name: {plugin_name!r}")
     if not options.title.strip() or "\n" in options.title:
         raise LandingError("title must be a non-empty single line")
+    return plugin_name
 
 
 def _build_plan(options: argparse.Namespace) -> LandingPlan:
-    _validate_options(options)
+    plugin_name = _validate_options(options)
     inputs = _validate_candidate(options)
     cut_id = inputs.source["cut_id"]
     collection_path = f"collections/{options.domain}/{options.version}"
@@ -388,6 +411,8 @@ def _build_plan(options: argparse.Namespace) -> LandingPlan:
     marketplace_path = ".claude-plugin/marketplace.json"
     branch = f"candidate/{cut_id}"
     message = f"feat(candidate): {options.domain} {options.version} candidate {cut_id}"
+    if plugin_name != options.domain:
+        message = f"{message} as {plugin_name}"
     repository = _validate_repository(
         options, inputs, (collection_path, receipts_path, marketplace_path)
     )
@@ -404,6 +429,7 @@ def _build_plan(options: argparse.Namespace) -> LandingPlan:
         inputs,
         repository,
         branch,
+        plugin_name,
         collection_path,
         receipts_path,
         marketplace_path,
@@ -413,6 +439,7 @@ def _build_plan(options: argparse.Namespace) -> LandingPlan:
 
 def _marketplace(plan: LandingPlan) -> dict[str, Any]:
     domain = plan.inputs.source["domain"]
+    plugin_name = plan.plugin_name
     descriptor = plan.inputs.descriptor
     cut_id = plan.inputs.source["cut_id"]
     title = descriptor["title"]
@@ -438,7 +465,7 @@ def _marketplace(plan: LandingPlan) -> dict[str, Any]:
         "release": False,
         "plugins": [
             {
-                "name": domain,
+                "name": plugin_name,
                 "source": f"./{plan.collection_path}",
                 "description": description,
                 "version": "0.1.0",
@@ -629,6 +656,8 @@ def _dry_run(plan: LandingPlan) -> dict[str, Any]:
     }
     if _writes_zenodo(plan):
         result["paths"]["zenodo_root"] = ".zenodo.json"
+    if plan.plugin_name != plan.inputs.source["domain"]:
+        result["plugin_name"] = plan.plugin_name
     if plan.repository.marketplace is not None:
         result["marketplace"] = {"path": plan.marketplace_path, "mode": "merge"}
     return result

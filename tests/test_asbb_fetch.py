@@ -35,6 +35,10 @@ class FakeHost:
         base = f"{fetch.RAW_HOST}/{fetch.REPOSITORY}/{commit}/collections/{COLLECTION}"
         index = [{"slug": slug, "license_tier": tier} for slug, tier in TIERS.items()]
         self.files = {fetch.commit_url(ref): commit.encode()}
+        self.files[fetch.commit_url("main")] = commit.encode()
+        self.files[f"{fetch.RAW_HOST}/{fetch.REPOSITORY}/{commit}/collections.yaml"] = (
+            b"schema: asb-collections-manifest/1\ndomains: {}\n"
+        )
         self.files[f"{base}/skills_index.json"] = json.dumps(index).encode()
         self.files.update({
             f"{base}/leaves/{slug}/SKILL.md": body
@@ -43,7 +47,7 @@ class FakeHost:
         self.seen = []
         self.accepted = {}
 
-    def __call__(self, url, accept=None):
+    def __call__(self, url, accept=None, headers=None):
         self.seen.append(url)
         self.accepted[url] = accept
         if url not in self.files:
@@ -84,10 +88,16 @@ def test_fetch_reads_the_index_then_only_the_requested_leaves(tmp_path):
 
     base = f"https://raw.githubusercontent.com/HolobiomicsLab/asb-skill-collections/{COMMIT}/collections/{COLLECTION}"
     assert host.seen == [
-        "https://api.github.com/repos/HolobiomicsLab/asb-skill-collections/commits/0123abc",
+        "https://api.github.com/repos/HolobiomicsLab/asb-skill-collections/commits/main",
+        f"https://raw.githubusercontent.com/HolobiomicsLab/asb-skill-collections/{COMMIT}/collections.yaml",
         f"{base}/skills_index.json",
         f"{base}/leaves/radio-interferometry/SKILL.md",
     ]
+
+
+@pytest.fixture(autouse=True)
+def without_github_token(monkeypatch):
+    monkeypatch.delenv("GITHUB_TOKEN", raising=False)
 
 
 @pytest.mark.parametrize(

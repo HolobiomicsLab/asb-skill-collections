@@ -5,6 +5,7 @@ from __future__ import annotations
 import pathlib
 import subprocess
 import sys
+import yaml
 
 from scripts import check_advertised_counts as guard
 
@@ -60,3 +61,124 @@ def test_stale_twin_exits_nonzero_and_lists_every_stale_site():
         "packs/astronomy/README.md:5",
     }
     assert all(site in result.stdout for site in expected_sites)
+
+
+def _manifest_repository(tmp_path: pathlib.Path, skills: int = 30) -> pathlib.Path:
+    collection = tmp_path / "collections" / "alpha" / "v2"
+    (collection / "leaves" / "one").mkdir(parents=True)
+    (collection / "leaves" / "two").mkdir()
+    (collection / "tools").mkdir()
+    (collection / "workflows" / "one").mkdir(parents=True)
+    for path in collection.glob("leaves/*/"):
+        (path / "SKILL.md").write_text("---\n---\n", encoding="utf-8")
+    (collection / "tools" / "one.yaml").write_text("name: one\n", encoding="utf-8")
+    (collection / "workflows" / "one" / "workflow.yaml").write_text(
+        "name: one\n", encoding="utf-8"
+    )
+    (collection / "corpus.yaml").write_text(
+        "papers: [{status: included}, {status: included}]\n", encoding="utf-8"
+    )
+    (collection / "collection.yaml").write_text(
+        "slug: alpha\nversion: 2\n", encoding="utf-8"
+    )
+    marketplace = tmp_path / ".claude-plugin"
+    marketplace.mkdir()
+    (marketplace / "marketplace.json").write_text(
+        '{"plugins":[{"name":"alpha","source":"./collections/alpha/v2"}]}',
+        encoding="utf-8",
+    )
+    (tmp_path / "collections.yaml").write_text(
+        yaml.safe_dump(
+            {
+                "domains": {
+                    "alpha": {
+                        "repository": "ExampleOrg/asb-skills-alpha",
+                        "releases": [
+                            {
+                                "version": 2,
+                                "path": "collections/alpha/v2",
+                                "tag": None,
+                                "version_doi": "10.5281/zenodo.123455",
+                                "skills": 999,
+                                "tools": 999,
+                                "workflows": 999,
+                                "papers": 999,
+                            },
+                            {
+                                "version": 3,
+                                "path": "collections/alpha/v3",
+                                "tag": "alpha-v3.0.0",
+                                "version_doi": "10.5281/zenodo.123456",
+                                "skills": skills,
+                                "tools": 4,
+                                "workflows": 5,
+                                "papers": 6,
+                            }
+                        ],
+                    }
+                }
+            }
+        ),
+        encoding="utf-8",
+    )
+    (tmp_path / "README.md").write_text(
+        f"""<a href=\"https://doi.org/10.5281/zenodo.123456\"><img src=\"https://img.shields.io/badge/skills-{skills}-blue\"></a>
+
+# Domain release
+
+The local v2 census has 2 skills.
+The external v3 census has {skills} skills.
+The badge release has {skills} skills.
+""",
+        encoding="utf-8",
+    )
+    return tmp_path
+
+
+def test_manifest_release_claims_use_their_named_censuses(tmp_path):
+    repo = _manifest_repository(tmp_path)
+
+    claims, failures = guard.audit_repository(repo)
+
+    assert failures == []
+    root_claims = {
+        claim.line: claim for claim in claims if claim.site == pathlib.Path("README.md")
+    }
+    assert root_claims[5].unit == pathlib.Path("collections/alpha/v2")
+    assert root_claims[6].unit == pathlib.Path("collections/alpha/v3")
+    assert root_claims[7].unit == pathlib.Path("collections/alpha/v3")
+
+
+def test_wrong_manifest_release_count_is_a_finding(tmp_path):
+    repo = _manifest_repository(tmp_path)
+    readme = repo / "README.md"
+    readme.write_text(
+        readme.read_text(encoding="utf-8").replace(
+            "The external v3 census has 30 skills.",
+            "The external v3 census has 31 skills.",
+        ),
+        encoding="utf-8",
+    )
+
+    _, failures = guard.audit_repository(repo)
+
+    assert len(failures) == 1
+    assert failures[0].claim.unit == pathlib.Path("collections/alpha/v3")
+    assert failures[0].claim.actual == 30
+
+
+def test_badge_links_select_manifest_units_regardless_of_markup_order(tmp_path):
+    repo = _manifest_repository(tmp_path)
+    readme = repo / "README.md"
+    readme.write_text(
+        '[![30 skills](https://img.shields.io/badge/skills-30-blue)]'
+        '(https://doi.org/10.5281/zenodo.123456)\n\n30 skills.\n',
+        encoding="utf-8",
+    )
+
+    claims, failures = guard.audit_repository(repo)
+
+    assert failures == []
+    assert {
+        claim.unit for claim in claims if claim.site == pathlib.Path("README.md")
+    } == {pathlib.Path("collections/alpha/v3")}

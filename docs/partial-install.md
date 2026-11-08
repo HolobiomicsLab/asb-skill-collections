@@ -1,6 +1,8 @@
 # Installing part of a collection
 
-The metabolomics collection (`collections/metabolomics/v2`) holds 5,859 skills.
+The v2 metabolomics collection holds 5,859 skills. Its measured local copy in
+this repository is at `collections/metabolomics/v2`; in a domain checkout the
+same layout is `<domain checkout>/collections/metabolomics/v2`.
 Installed whole, it is a 61 MB snapshot of 6,870 files. Most tasks need a
 handful of those skills. This page describes four ways to take less.
 
@@ -8,7 +10,7 @@ handful of those skills. This page describes four ways to take less.
 |---|---|---|---|
 | Technique pack | `asbb install <pack>` | yes | every skill tagged with one technique, for example the 2,617 LC-MS skills |
 | Selection | `asbb install --skills ...`, `--skills-file ...` or `--query ...` | yes | exactly the skills you name or the top hits of a search, installed as a pack |
-| Fetch | `asbb fetch <slugs> --collection <slug>/vN --dest <dir>` | no | the chosen `SKILL.md` files and a provenance record, nothing else |
+| Fetch | `asbb fetch <slugs> --collection <slug>/vN --dest <dir>` | no | leaves from the manifest-named domain repository at its release commit, with provenance |
 | Claude Code marketplace | `/plugin install <collection-or-pack>@asb-skill-collections` | no | a named collection or one of its published technique packs |
 
 A pack and a selection are the same thing built from a different membership
@@ -18,14 +20,14 @@ install as one advertised router over `leaves/`, with `skills_index.json` and
 `kb_bundle.json` filtered to their members, the offline search script and the
 grounding helper. Fetch skips all of that and downloads leaf files only.
 
-## Which collections support it
-
-Selections and fetch require a router-shaped collection: its root must contain
-`skills_index.json` and `leaves/`. The released `metabolomics/v2` collection has
-that shape. Candidates produced by `scripts/collect_from_cut.py` and landed by
-`scripts/land_candidate.py` have it too, including the current metabolomics v3
-candidate. A collection without both paths can still provide a named pack, but it
-cannot use selection or fetch.
+Selections and fetch need a router-shaped collection with a root
+`skills_index.json` and `leaves/`. The measured examples below use the v2
+metabolomics collection; fetch can also resolve released domain repositories,
+including metabolomics v3. Candidates and landed leaves use paths such as
+`<domain checkout>/collections/<domain>/<version>/leaves/`, relative to the
+root of the corresponding `asb-skills-<domain>` checkout, not this master
+repository. A collection without both router files can still provide a named
+pack, but it cannot use selection or fetch.
 
 ## Claude Code marketplace
 
@@ -236,12 +238,32 @@ unit being installed is still refused, with
 
 ## Fetch without a checkout
 
-`asbb fetch` downloads chosen leaves straight from GitHub. It resolves the
-requested ref to a commit once, through the GitHub commits API, reads the
-collection's `skills_index.json` at that commit to check the slugs and read
-their licence tiers, then fetches each
-`collections/<slug>/vN/leaves/<skill>/SKILL.md` at the same commit from
-`raw.githubusercontent.com`.
+`asbb fetch` downloads chosen leaves straight from GitHub. It reads
+`collections.yaml` from the master repository at `--manifest-ref` (default
+`main`). For a listed release, the manifest supplies the domain repository,
+collection path and immutable release commit. Fetch reads that release's
+`skills_index.json` to check the slugs and their licence tiers, then reads each
+leaf at the same commit. Its provenance records the domain repository, commit,
+tag, version DOI and resolved master manifest.
+
+```bash
+asbb fetch nmr-peak-picking,gcms-spectral-deconvolution --collection metabolomics/v3 --dest asb-skills
+```
+
+This resolves `metabolomics/v3` to `HolobiomicsLab/asb-skills-metabolomics` at
+the commit pinned by the master manifest. `--manifest-ref` selects another
+branch, tag or commit of the master manifest. An unlisted release, or a
+manifest that cannot be read, falls back to the master repository at `--ref`
+with one diagnostic on stderr and a `note` in the provenance.
+
+`--repository OWNER/NAME` bypasses the manifest entirely and reads that
+repository at `--ref` (default `main`), using the conventional
+`collections/<slug>/vN` path. Set `GITHUB_TOKEN` to send a bearer token on
+every API and raw-file request, including reads of private repositories. The
+token is never printed; a 404 from a manifest-named repository reports that it
+may be private and names this variable.
+
+The following measured v2 example retains its original output:
 
 ```bash
 asbb fetch untargeted-metabolomics-annotation,ms2-spectrum-consolidation --collection metabolomics/v2 --dest asb-skills
@@ -261,11 +283,11 @@ asb-skills/ms2-spectrum-consolidation/SKILL.md
 asb-skills/untargeted-metabolomics-annotation/SKILL.md
 ```
 
-`--ref` takes a branch, tag or commit (default `main`). `PROVENANCE.json`
-records the repository, the ref, the commit it resolved to, the collection, the
-date, the slugs, each skill's licence tier, and the URL and SHA-256 of every
-file written. The URLs name the commit, so they keep serving the same bytes
-after the branch moves. The leaves
+Without a manifest match, `--ref` takes a branch, tag or commit (default
+`main`). `PROVENANCE.json` uses schema `asbb-fetch/2` and retains the original
+fields while adding manifest, release and fallback details when applicable.
+The URLs name the commit, so they keep serving the same bytes after a branch
+moves. For this v2 example, the leaves
 are byte-identical to the checkout: all 10 leaves of the selection above,
 fetched from `main`, matched `collections/metabolomics/v2/leaves/` exactly.
 
@@ -273,8 +295,9 @@ What fetch does not give you: no router, no index, no search or grounding
 helper, and no install record. The files are the collection's own `SKILL.md`
 bytes; no agent host was run against them for this page.
 
-Every fetch reads the whole `skills_index.json` (5,430,046 bytes on `main`
-today), so the download is about 5.4 MB whether you ask for one skill or ten.
+Every fetch reads the whole `skills_index.json` (5,430,046 bytes for the v2
+example on `main` at measurement time), so that download was about 5.4 MB
+whether asking for one skill or ten.
 
 Fetch refuses, before writing anything, a slug the remote index does not list,
 a collection not written as `<slug>/vN`, a ref that is not a plain branch, tag
