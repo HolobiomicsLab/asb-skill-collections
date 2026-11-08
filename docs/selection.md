@@ -1,30 +1,40 @@
 # How offline skill selection works
 
-The checkout CLI (`asbb search`), MCP search tools, the collection router and
-`bin/semantic_search.py --mode keyword` share one selector. The package source is
-`asb_skill_collections/asb_skill_index.py`; the standalone scripts carry the same
-module so an installed collection can search without importing the checkout.
+The checkout CLI (`asbb search`) and MCP search tools use the package selector at
+`asb_skill_collections/asb_skill_index.py`. Released collection routers and
+`bin/semantic_search.py --mode keyword` embed a copy so an installed collection
+can search without importing the package.
 
-The behaviour described here is the integrated release behaviour: the package
-module is the single source and the standalone scripts embed it verbatim, so the
-four surfaces cannot drift. The worked examples below were executed against the
-integration branch; source revision `600f4a5dc` predates the selector fixes and
-is cited only as the revision the frozen labels were taken from.
+The package uses selector 1.1.0. The released v2 collection and eight packs in
+this repository still embed 1.0.0; the domain repository must regenerate them
+under a release decision before they adopt 1.1.0. During this intentional skew,
+the surfaces share their resolution, filter and explanation contracts but can
+return different scores and ranking. The worked examples below use the package
+CLI against the v2 index; source revision `600f4a5dc` is cited only as the
+revision from which the frozen labels were taken.
 
 ## Ranking rule
 
-The default selector is `asb-keyword` version `1.0.0`, rule `router`. It:
+The default selector is `asb-keyword` version `1.1.0`, rule `router`. It:
 
 1. splits the query into lowercase ASCII alphanumeric terms;
 2. removes domain-neutral stopwords and terms shorter than two characters, and
    keeps each remaining term once;
-3. scores one point per distinct term that reaches `name`, `description` or
-   `tools`; and
-4. adds two points when a term is exactly a tool name.
+3. scores each matched term by field: three points in the trigger-bearing
+   `description`, two in `name`, and one in `tools` or `member_tools`; and
+4. subtracts six points from descriptions that name parsing, conversion,
+   import/export, request/submission construction, configuration or parameter
+   toggling, unless the query itself contains one of those plumbing terms;
+   and
+5. clamps a penalised row with at least one matched term to 0.5, below every
+   unpenalised match, so de-boosting cannot remove a legitimate match.
 
-A repeated query term is counted once, so the score is a count of distinct
-matched terms, not a frequency. It is a lexical ranking value, not a
-probability or a measure of scientific suitability.
+A repeated query term is counted once per field, not by frequency within a
+field. The explicit weights make the method role in `name` and `description`
+stronger than incidental tool metadata. The query-sensitive de-boost keeps file
+and request operations available when they are what the user asked for. The
+score is a lexical ranking value, not a probability or a measure of scientific
+suitability.
 
 ### Order, and what breaks a tie
 
@@ -55,8 +65,8 @@ The `package` rule remains as a temporary compatibility option. It uses repeated
 Unicode alphanumeric terms of at least three characters, counts occurrences in
 `name`, `description`, `tools` and `techniques`, and adds three points when a
 term occurs in `name`. It keeps its historical score/slug order with no name
-tie-break, so an older result reproduces exactly. Select it only for that; the
-measured default is `router`.
+tie-break. Select it only to compare historical ordering; result identity now
+reports selector version 1.1.0. The default is `router`.
 
 ## Reading an explanation
 
@@ -82,62 +92,55 @@ returns no match, and the selector does not fill the list with unrelated items.
 
 ## Three executed examples
 
-The following commands were run from `collections/metabolomics/v2` on the
-integration branch, and reproduce there. The `jq` projection keeps the real output readable.
+The following commands were run from the checkout root. The `jq` projection
+keeps the package output readable.
 
 An end-to-end request should search workflows first:
 
 ```bash
-python3 -B bin/search_skills.py --collection . --target workflows --technique LC-MS --query "untargeted LC-MS/MS annotation" --json -k 3 | jq -r '.results[] | [.qualified_slug, .score, (.matched_fields | keys | join(","))] | @tsv'
+python3 -m asb_skill_collections.asbb_cli search "untargeted LC-MS/MS annotation" --collection metabolomics/v2 --target workflows --technique LC-MS -k 3 | jq -r '.results[] | [.qualified_slug, .score, (.matched_fields | keys | join(","))] | @tsv'
 ```
 
 ```text
-metabolomics/v2/workflows/untargeted-lcmsms-annotation  4.0  description,member_tools,name
-metabolomics/v2/workflows/compound-class-annotation     4.0  description,name
-metabolomics/v2/workflows/lipidomics-lcms-annotation    4.0  description,member_tools,name
+metabolomics/v2/workflows/untargeted-lcmsms-annotation  17.0  description,member_tools,name
+metabolomics/v2/workflows/lipidomics-lcms-annotation    12.0  description,member_tools,name
+metabolomics/v2/workflows/fbmn-annotation-propagation   12.0  description
 ```
 
-Five workflows score 4.0 here, so the title tie-break decides the block:
-`untargeted` and `annotation` both reach the first workflow's name, one query
-term reaches each of the next two, and none reaches the last two. Under a
-slug-only order `compound-class-annotation` came first, which is the documented
-wrong answer for this query.
+The first workflow carries the discriminating terms in both its title and its
+trigger-bearing description. Tool metadata contributes only one point per
+term, so it cannot override those role fields.
 
 A single-step request searches leaf skills:
 
 ```bash
-python3 -B bin/search_skills.py --collection . --target skills --query "spectral library matching" --json -k 3 | jq -r '.results[] | [.qualified_slug, .score, (.matched_fields | keys | join(","))] | @tsv'
+python3 -m asb_skill_collections.asbb_cli search "spectral library matching" --collection metabolomics/v2 --target skills -k 3 | jq -r '.results[] | [.qualified_slug, .score, (.matched_fields | keys | join(","))] | @tsv'
 ```
 
 ```text
-metabolomics/v2/skills/spectral-library-matching        3.0  description,name
-metabolomics/v2/skills/ms-ms-spectral-library-matching  3.0  name
-metabolomics/v2/skills/ms-spectral-library-matching     3.0  description,name
+metabolomics/v2/skills/spectral-library-matching-evaluation       15.0  description,name
+metabolomics/v2/skills/spectral-library-annotation-interpretation 13.0  description,name
+metabolomics/v2/skills/spectral-library-molecular-networking      13.0  description,name
 ```
 
-All three score 3.0 and all three carry the same three query terms in their
-names, so the count half of the tie-break cannot separate them. The coverage
-half does: the first skill's name *is* those three terms and nothing else, while
-the others qualify them with a platform. The equal-score block here holds 84
-candidates, and a slug-only order returned
-`candidate-neighbourhood-analysis-for-spectral-matching` first — two of the three
-terms, in a much longer name, and a different question from the one asked.
+The role fields decide this order. A parser or format converter can still match
+these words, but it receives the plumbing de-boost unless the query asks for
+parsing or conversion.
 
 A retention-time request shows the whole ladder:
 
 ```bash
-python3 -B bin/search_skills.py --collection . --target skills --query "retention time prediction" --json -k 3 | jq -r '.results[] | [.qualified_slug, .score, (.matched_fields | keys | join(","))] | @tsv'
+python3 -m asb_skill_collections.asbb_cli search "retention time prediction" --collection metabolomics/v2 --target skills -k 3 | jq -r '.results[] | [.qualified_slug, .score, (.matched_fields | keys | join(","))] | @tsv'
 ```
 
 ```text
-metabolomics/v2/skills/retention-time-prediction                 3.0  description,name
-metabolomics/v2/skills/retention-time-prediction-chromatography  3.0  description,name
-metabolomics/v2/skills/retention-time-prediction-from-structures 3.0  description,name,tools
+metabolomics/v2/skills/retention-time-prediction-from-structures     14.0  description,name,tools
+metabolomics/v2/skills/fingerprint-feature-extraction-retention-time 13.0  description,name
+metabolomics/v2/skills/retention-time-prediction                     12.0  description,name
 ```
 
-Equal score, equal name count; the exact-title skill wins on coverage, and the
-last two are equal on coverage as well, so their order is alphabetical by slug
-and says nothing about which is scientifically preferable.
+Description evidence supplies most of the score. The one tool-field match adds
+one point to the first result, while the role fields supply the other thirteen.
 
 ## Asking for a different result
 
@@ -150,6 +153,20 @@ or open the `qualified_slug` rather than relying on its position.
 For example, adding the named tool GNPS changed the candidate set:
 
 ```bash
+python3 -c 'from asb_skill_collections import asb_skill_index as i; import json; print(json.dumps(i.search("metabolomics/v2", "skills", "spectral library matching", tool="GNPS", k=3, root=".")))' | jq -r '.[] | [.qualified_slug, .score, (.filters.tool // ""), (.matched_fields | keys | join(","))] | @tsv'
+```
+
+```text
+metabolomics/v2/skills/spectral-library-annotation-interpretation 13.0  gnps  description,name
+metabolomics/v2/skills/spectral-library-molecular-networking      13.0  gnps  description,name
+metabolomics/v2/skills/spectral-library-annotation-matching       12.0  gnps  description,name
+```
+
+These are package 1.1.0 results, obtained through the package API because
+`asbb search` does not expose `--tool`. The equivalent released-router command,
+run from `collections/metabolomics/v2`, is:
+
+```bash
 python3 -B bin/search_skills.py --collection . --target skills --tool GNPS --query "spectral library matching" --json -k 3 | jq -r '.results[] | [.qualified_slug, .score, (.filters.tool // ""), (.matched_fields | keys | join(","))] | @tsv'
 ```
 
@@ -159,9 +176,12 @@ metabolomics/v2/skills/spectral-library-annotation-matching  3.0  gnps  descript
 metabolomics/v2/skills/spectral-library-matching-annotation  3.0  gnps  description,name
 ```
 
-The router accepts `--selector package`; package callers and MCP accept the same
-selector value, while the checkout CLI can use `ASB_SELECTOR_RULE=package`. An
-explicit selector takes precedence over the environment variable.
+Its output demonstrates the intentional release skew; it does not reproduce
+the package scores above.
+
+The package API and released router accept `--selector package`; MCP accepts the
+same selector value, while the checkout CLI uses `ASB_SELECTOR_RULE=package`.
+An explicit selector takes precedence over the environment variable.
 
 ## Output shape and exit status
 
@@ -195,7 +215,7 @@ computation and its result schema stay outside this keyword contract.
 
 The `package` rule is deprecated and retained for one release after this change.
 It uses the shared resolver and explanation contract, and keeps its historical
-score/slug order so an older result reproduces exactly.
+score/slug order for comparisons with older results.
 
 ```bash
 python bin/search_skills.py --query "annotate spectra" --selector package --json
@@ -209,20 +229,24 @@ variable.
 
 ## Regeneration
 
-Refresh the canonical script and the eight pack copies through the generator:
+After an approved release decision, refresh the canonical script and the eight
+pack copies in the domain repository through the generator:
 
 ```bash
 python scripts/router_shape.py --scripts-only collections/metabolomics/v2 packs/metabolomics/*/
 ```
 
 `--scripts-only` does not move leaves, regenerate indexes or rewrite `SKILL.md`.
-The byte-identity test covers both canonical standalone scripts and all eight
-pack routers, and fails if any embedded source differs from the package module.
+The tooling test proves that generated scripts embed the current package. Its
+frozen-release test keeps the local v2 and pack copies at their common 1.0.0
+source until that regeneration; package-only tests do not require byte equality.
 
-## What the default was measured on
+## What selector 1.0.0 was measured on
 
-Two label sets back the default. Both are documentation- or benchmark-derived,
-not independent user queries; the limits are stated at the end of this section.
+The previous unweighted selector used two label sets. Both are documentation-
+or benchmark-derived, not independent user queries; the limits are stated at
+the end of this section. Selector 1.1.0 adds the field weights and plumbing
+de-boost described above in response to the separate analyst-query evaluation.
 
 ### 1. The 22 frozen documentation labels
 

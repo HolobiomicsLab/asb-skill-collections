@@ -69,6 +69,12 @@ Measured 2026-10-30:
   AGENTS.md, CLAUDE.md and the unit's Markdown match the on-disk census:
   5,859 leaves, 909 tool records, 566 papers in `corpus.yaml`, 21 `workflow.yaml`).
 
+Current package selector note: `asb_skill_collections/asb_skill_index.py`
+1.1.0 weights description 3, name 2 and tool metadata 1, with a query-sensitive
+plumbing de-boost that retains matched rows. The released v2 and pack scripts
+remain at 1.0.0 until the domain repository regenerates them under a release
+decision. Their output and options are unchanged here.
+
 ## Claude Code public marketplace
 
 README (e80767838), section labelled "pending verification":
