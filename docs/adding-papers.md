@@ -31,6 +31,14 @@ metadata and stages the paper in a `wave-*.yaml` file under
 After review, a maintainer builds the held paper. It enters the collection in
 the next combined view and cut, not by editing the released version.
 
+Validate paper and resource queues with `python scripts/proposal_corpus.py
+validate <domain checkout>/collections/<domain>/proposals/wave-*.yaml`. Their
+status vocabulary is `candidate` for machine-discovered proposals awaiting
+review, `hold` for curator-queued work, `included` after confirmed landing, and
+`rejected` or `duplicate` for explicit dispositions. See
+[`proposal-corpus-schema.md`](proposal-corpus-schema.md) for field and
+transition rules.
+
 `/propose-skill` is the sibling rail for a complete skill rather than a paper.
 It stages under the current version's `proposals/skills/` directory. Maintainers
 check those skill proposals, preview promotion and promote a reviewed one with:
