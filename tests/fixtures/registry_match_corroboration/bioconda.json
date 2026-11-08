@@ -1,0 +1,12 @@
+{
+  "packages": {
+    "peaks": {"summary": "Python mass peak detection", "source_url": "https://pypi.io/peaks.tgz"},
+    "workflow": {"summary": "Sequence pipeline runner"},
+    "reader": {"summary": "Python tandem spectrum parser"},
+    "overlap": {"summary": "isotope fragment annotation"},
+    "empty": {"summary": "A richly described registry package"},
+    "bacteria": {"summary": "bacterial genome read typing"},
+    "pycollision": {"summary": "Python genome assembler", "source_url": "https://pypi.io/pycollision.tgz"},
+    "thin": {"summary": "bacterial abundance estimator"}
+  }
+}

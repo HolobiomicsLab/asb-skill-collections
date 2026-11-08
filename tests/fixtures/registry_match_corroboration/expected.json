@@ -1,0 +1,677 @@
+{
+  "dataset": {
+    "accepted_by_registry": {
+      "bioconda": 5,
+      "bioconductor": 2
+    },
+    "accepted_matches": 7,
+    "held_out_positive_slugs": [
+      "empty",
+      "reader"
+    ],
+    "tuning_positive_slugs": [
+      "lipidr",
+      "overlap",
+      "peaks",
+      "plotter",
+      "workflow"
+    ],
+    "wrong_match_slugs": [
+      "bacteria",
+      "javacollision",
+      "methyl",
+      "pycollision",
+      "thin"
+    ],
+    "wrong_matches": 5
+  },
+  "inputs": {
+    "bioconda": {
+      "file": "bioconda.json",
+      "retained": true,
+      "sha256": "9f4254a92f8277142089fcf2ea0ed91cf305d789ee236495646bcd5ce288109b",
+      "snapshot_date": "2026-11-07",
+      "source": "https://conda.anaconda.org/bioconda/channeldata.json"
+    },
+    "bioconductor": {
+      "file": "bioconductor.json",
+      "retained": true,
+      "sha256": "c08fc4a1457c88647267de85d1269bcf130cae91a8664160768c45e215f944c5",
+      "snapshot_date": "2026-11-07",
+      "source": "https://bioc.r-universe.dev/api/packages/{name}"
+    }
+  },
+  "measurements": {
+    "held_out": {
+      "accepted_matches": 2,
+      "contradicted_wrong_matches": {
+        "actual": 5,
+        "f1": 0.888889,
+        "precision": 1.0,
+        "predicted": 4,
+        "recall": 0.8,
+        "true_positive": 4
+      },
+      "corroborated_accepted_matches": {
+        "actual": 2,
+        "f1": 0.0,
+        "precision": 0.0,
+        "predicted": 0,
+        "recall": 0.0,
+        "true_positive": 0
+      },
+      "insufficient": 3,
+      "verdict_counts": {
+        "contradicted": 4,
+        "insufficient": 3
+      },
+      "wrong_matches": 5
+    },
+    "tuning": {
+      "accepted_matches": 5,
+      "contradicted_wrong_matches": {
+        "actual": 5,
+        "f1": 0.888889,
+        "precision": 1.0,
+        "predicted": 4,
+        "recall": 0.8,
+        "true_positive": 4
+      },
+      "corroborated_accepted_matches": {
+        "actual": 5,
+        "f1": 0.888889,
+        "precision": 1.0,
+        "predicted": 4,
+        "recall": 0.8,
+        "true_positive": 4
+      },
+      "insufficient": 2,
+      "verdict_counts": {
+        "contradicted": 4,
+        "corroborated": 4,
+        "insufficient": 2
+      },
+      "wrong_matches": 5
+    }
+  },
+  "method": {
+    "domain_score": "binary cosine over identity-free informative token sets",
+    "held_out_positive_fraction": 0.3,
+    "minimum_domain_tokens_per_text": 3,
+    "negative_split": "all five wrong matches appear in both splits",
+    "seed": 17,
+    "selection_objective": "macro F1, then contradiction precision, corroboration recall, lower threshold",
+    "stopwords": [
+      "a",
+      "about",
+      "after",
+      "again",
+      "against",
+      "all",
+      "allow",
+      "allows",
+      "also",
+      "am",
+      "an",
+      "analyses",
+      "analysis",
+      "and",
+      "any",
+      "application",
+      "applications",
+      "approach",
+      "are",
+      "as",
+      "at",
+      "available",
+      "based",
+      "be",
+      "because",
+      "been",
+      "before",
+      "being",
+      "between",
+      "both",
+      "but",
+      "by",
+      "can",
+      "could",
+      "data",
+      "did",
+      "do",
+      "does",
+      "doing",
+      "down",
+      "during",
+      "each",
+      "few",
+      "for",
+      "framework",
+      "from",
+      "further",
+      "had",
+      "has",
+      "have",
+      "having",
+      "he",
+      "her",
+      "here",
+      "hers",
+      "herself",
+      "him",
+      "himself",
+      "his",
+      "how",
+      "i",
+      "if",
+      "implementation",
+      "in",
+      "include",
+      "includes",
+      "including",
+      "inference",
+      "into",
+      "is",
+      "it",
+      "its",
+      "itself",
+      "just",
+      "me",
+      "method",
+      "methods",
+      "more",
+      "most",
+      "my",
+      "myself",
+      "new",
+      "no",
+      "nor",
+      "not",
+      "now",
+      "of",
+      "off",
+      "on",
+      "once",
+      "only",
+      "open",
+      "or",
+      "other",
+      "our",
+      "ours",
+      "ourselves",
+      "out",
+      "over",
+      "own",
+      "package",
+      "packages",
+      "perform",
+      "performed",
+      "performs",
+      "provide",
+      "provides",
+      "same",
+      "she",
+      "should",
+      "so",
+      "software",
+      "some",
+      "source",
+      "such",
+      "system",
+      "systems",
+      "than",
+      "that",
+      "the",
+      "their",
+      "theirs",
+      "them",
+      "themselves",
+      "then",
+      "there",
+      "these",
+      "they",
+      "this",
+      "those",
+      "through",
+      "to",
+      "too",
+      "tool",
+      "tools",
+      "under",
+      "until",
+      "up",
+      "use",
+      "used",
+      "uses",
+      "using",
+      "version",
+      "very",
+      "was",
+      "we",
+      "were",
+      "what",
+      "when",
+      "where",
+      "which",
+      "while",
+      "who",
+      "whom",
+      "why",
+      "will",
+      "with",
+      "you",
+      "your",
+      "yours",
+      "yourself",
+      "yourselves"
+    ],
+    "threshold": 0.57735,
+    "threshold_candidates": [
+      0.288675,
+      0.57735,
+      0.774597,
+      0.816497,
+      1.0
+    ]
+  },
+  "records": [
+    {
+      "label": "wrong_match",
+      "registry": "bioconda",
+      "registry_package": "bacteria",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 4,
+          "overlap_tokens": [],
+          "registry_token_count": 4,
+          "score": 0.0,
+          "threshold": 0.57735,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "bacterial genome read typing",
+        "registry_ecosystem_hints": "bacterial genome read typing",
+        "tool_evidence": "mass spectrum molecular annotation"
+      },
+      "tool_name": "bacteria",
+      "tool_slug": "bacteria",
+      "verdict": "contradicted"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "empty",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 0,
+          "overlap_tokens": [],
+          "registry_token_count": 3,
+          "score": 0.0,
+          "threshold": 0.57735,
+          "verdict": "insufficient"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "A richly described registry package",
+        "registry_ecosystem_hints": "A richly described registry package",
+        "tool_evidence": ""
+      },
+      "tool_name": "empty",
+      "tool_slug": "empty",
+      "verdict": "insufficient"
+    },
+    {
+      "label": "wrong_match",
+      "registry": "bioconductor",
+      "registry_package": "javacollision",
+      "score": 0.288675,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 4,
+          "overlap_tokens": [
+            "metabolite"
+          ],
+          "registry_token_count": 3,
+          "score": 0.288675,
+          "threshold": 0.57735,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "java"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "contradicted"
+        }
+      },
+      "texts": {
+        "registry_description": "Differential metabolite statistics",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "Java metabolite network reconstruction"
+      },
+      "tool_name": "javacollision",
+      "tool_slug": "javacollision",
+      "verdict": "contradicted"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "lipidr",
+      "score": 0.57735,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 4,
+          "overlap_tokens": [
+            "lipid",
+            "spectra"
+          ],
+          "registry_token_count": 3,
+          "score": 0.57735,
+          "threshold": 0.57735,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Lipid spectra quantification",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "library(lipidr) quantifies lipid spectra"
+      },
+      "tool_name": "lipidr",
+      "tool_slug": "lipidr",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "wrong_match",
+      "registry": "bioconductor",
+      "registry_package": "methyl",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 4,
+          "overlap_tokens": [],
+          "registry_token_count": 3,
+          "score": 0.0,
+          "threshold": 0.57735,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "DNA methylation trajectory analysis",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "tandem spectra formula prediction"
+      },
+      "tool_name": "methyl",
+      "tool_slug": "methyl",
+      "verdict": "contradicted"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "overlap",
+      "score": 1.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 3,
+          "overlap_tokens": [
+            "annotation",
+            "fragment",
+            "isotope"
+          ],
+          "registry_token_count": 3,
+          "score": 1.0,
+          "threshold": 0.57735,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "isotope fragment annotation",
+        "registry_ecosystem_hints": "isotope fragment annotation",
+        "tool_evidence": "fragment isotope annotation"
+      },
+      "tool_name": "overlap",
+      "tool_slug": "overlap",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "peaks",
+      "score": 0.816497,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 6,
+          "overlap_tokens": [
+            "detection",
+            "mass",
+            "peak",
+            "python"
+          ],
+          "registry_token_count": 4,
+          "score": 0.816497,
+          "threshold": 0.57735,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "python"
+          ],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Python mass peak detection",
+        "registry_ecosystem_hints": "Python mass peak detection\nhttps://pypi.io/peaks.tgz",
+        "tool_evidence": "pip install peaks; Python mass peak detection"
+      },
+      "tool_name": "peaks",
+      "tool_slug": "peaks",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "plotter",
+      "score": 0.288675,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 4,
+          "overlap_tokens": [
+            "chemical"
+          ],
+          "registry_token_count": 3,
+          "score": 0.288675,
+          "threshold": 0.57735,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Chemical figure creation",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "plotter.Rmd creates chemical figures"
+      },
+      "tool_name": "plotter",
+      "tool_slug": "plotter",
+      "verdict": "insufficient"
+    },
+    {
+      "label": "wrong_match",
+      "registry": "bioconda",
+      "registry_package": "pycollision",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 3,
+          "overlap_tokens": [],
+          "registry_token_count": 3,
+          "score": 0.0,
+          "threshold": 0.57735,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "contradicted"
+        }
+      },
+      "texts": {
+        "registry_description": "Python genome assembler",
+        "registry_ecosystem_hints": "Python genome assembler\nhttps://pypi.io/pycollision.tgz",
+        "tool_evidence": "library(pycollision) models metabolites"
+      },
+      "tool_name": "pycollision",
+      "tool_slug": "pycollision",
+      "verdict": "contradicted"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "reader",
+      "score": 0.25,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 4,
+          "overlap_tokens": [
+            "tandem"
+          ],
+          "registry_token_count": 4,
+          "score": 0.25,
+          "threshold": 0.57735,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "python"
+          ],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Python tandem spectrum parser",
+        "registry_ecosystem_hints": "Python tandem spectrum parser",
+        "tool_evidence": "reader.py parses tandem spectra"
+      },
+      "tool_name": "reader",
+      "tool_slug": "reader",
+      "verdict": "insufficient"
+    },
+    {
+      "label": "wrong_match",
+      "registry": "bioconda",
+      "registry_package": "thin",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 0,
+          "overlap_tokens": [],
+          "registry_token_count": 3,
+          "score": 0.0,
+          "threshold": 0.57735,
+          "verdict": "insufficient"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "bacterial abundance estimator",
+        "registry_ecosystem_hints": "bacterial abundance estimator",
+        "tool_evidence": "thin"
+      },
+      "tool_name": "thin",
+      "tool_slug": "thin",
+      "verdict": "insufficient"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "workflow",
+      "score": 0.774597,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 5,
+          "overlap_tokens": [
+            "pipeline",
+            "runner",
+            "sequence"
+          ],
+          "registry_token_count": 3,
+          "score": 0.774597,
+          "threshold": 0.57735,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "conda"
+          ],
+          "registry_ecosystems": [],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Sequence pipeline runner",
+        "registry_ecosystem_hints": "Sequence pipeline runner",
+        "tool_evidence": "conda install workflow; sequence pipeline runner"
+      },
+      "tool_name": "workflow",
+      "tool_slug": "workflow",
+      "verdict": "corroborated"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+[
+  {"slug": "lipidr", "license_detection": "bioconductor-package"},
+  {"slug": "peaks", "license_detection": "bioconda-package"},
+  {"slug": "workflow", "license_detection": "bioconda-package"},
+  {"slug": "plotter", "license_detection": "bioconductor-package"},
+  {"slug": "reader", "license_detection": "bioconda-package"},
+  {"slug": "overlap", "license_detection": "bioconda-package"},
+  {"slug": "empty", "license_detection": "bioconda-package"}
+]

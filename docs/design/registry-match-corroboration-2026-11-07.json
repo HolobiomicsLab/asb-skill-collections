@@ -1,0 +1,3609 @@
+{
+  "dataset": {
+    "accepted_by_registry": {
+      "bioconda": 40,
+      "bioconductor": 49
+    },
+    "accepted_matches": 89,
+    "held_out_positive_slugs": [
+      "antismash",
+      "aws-cli",
+      "big-scape",
+      "bigscape",
+      "complexheatmap",
+      "impute",
+      "marr",
+      "matchms",
+      "metabcombiner",
+      "metabolabpy",
+      "metams",
+      "metnet",
+      "ms-entropy",
+      "msbackendmgf",
+      "msexperiment",
+      "msfeatures",
+      "msnbase",
+      "mzr",
+      "notame",
+      "peakqc",
+      "pyhmmer",
+      "pyteomics",
+      "salmon",
+      "snakemake",
+      "spectrum-utils",
+      "summarizedexperiment",
+      "xcms"
+    ],
+    "tuning_positive_slugs": [
+      "aerith",
+      "alphatims",
+      "asics",
+      "big-slice",
+      "biobase",
+      "camera",
+      "chemminer",
+      "cliquems",
+      "clumsid",
+      "clusterprofiler",
+      "deseq2",
+      "edger",
+      "fella",
+      "fgsea",
+      "fmcsr",
+      "ipapy2",
+      "isoformswitchanalyzer",
+      "keggrest",
+      "limma",
+      "lipidr",
+      "massdash",
+      "massspecwavelet",
+      "metaboannotator",
+      "metabocoreutils",
+      "metdatamodel",
+      "metfrag",
+      "mixomics",
+      "ms2deepscore",
+      "ms2query",
+      "msdatahub",
+      "msentropy",
+      "msmetaenhancer",
+      "multiassayexperiment",
+      "multtest",
+      "mzmine",
+      "ncgtw",
+      "neatms",
+      "nextflow",
+      "openms",
+      "openpyxl",
+      "pairkat",
+      "pcamethods",
+      "proteomm",
+      "psims",
+      "psm-utils",
+      "pubchempy",
+      "pymzml",
+      "pyopenms",
+      "rawrr",
+      "rdkit",
+      "rhdf5",
+      "ruby",
+      "s4vectors",
+      "singularity",
+      "spec2vec",
+      "spectra",
+      "spectripy",
+      "stattarget",
+      "sva",
+      "thermorawfileparser",
+      "tqdm",
+      "trimgalore"
+    ],
+    "wrong_match_slugs": [
+      "bart",
+      "ggplot",
+      "grid",
+      "meteor",
+      "mist"
+    ],
+    "wrong_matches": 5
+  },
+  "inputs": {
+    "bioconda": {
+      "file": null,
+      "retained": false,
+      "sha256": null,
+      "snapshot_date": "2026-11-07",
+      "source": "https://conda.anaconda.org/bioconda/channeldata.json"
+    },
+    "bioconductor": {
+      "file": null,
+      "retained": false,
+      "sha256": null,
+      "snapshot_date": "2026-11-07",
+      "source": "https://bioc.r-universe.dev/api/packages/{name}"
+    }
+  },
+  "measurements": {
+    "held_out": {
+      "accepted_matches": 27,
+      "contradicted_wrong_matches": {
+        "actual": 5,
+        "f1": 0.571429,
+        "precision": 0.444444,
+        "predicted": 9,
+        "recall": 0.8,
+        "true_positive": 4
+      },
+      "corroborated_accepted_matches": {
+        "actual": 27,
+        "f1": 0.8,
+        "precision": 1.0,
+        "predicted": 18,
+        "recall": 0.666667,
+        "true_positive": 18
+      },
+      "insufficient": 5,
+      "verdict_counts": {
+        "contradicted": 9,
+        "corroborated": 18,
+        "insufficient": 5
+      },
+      "wrong_matches": 5
+    },
+    "tuning": {
+      "accepted_matches": 62,
+      "contradicted_wrong_matches": {
+        "actual": 5,
+        "f1": 0.421053,
+        "precision": 0.285714,
+        "predicted": 14,
+        "recall": 0.8,
+        "true_positive": 4
+      },
+      "corroborated_accepted_matches": {
+        "actual": 62,
+        "f1": 0.784314,
+        "precision": 1.0,
+        "predicted": 40,
+        "recall": 0.645161,
+        "true_positive": 40
+      },
+      "insufficient": 13,
+      "verdict_counts": {
+        "contradicted": 14,
+        "corroborated": 40,
+        "insufficient": 13
+      },
+      "wrong_matches": 5
+    }
+  },
+  "method": {
+    "domain_score": "binary cosine over identity-free informative token sets",
+    "held_out_positive_fraction": 0.3,
+    "minimum_domain_tokens_per_text": 3,
+    "negative_split": "all five wrong matches appear in both splits",
+    "seed": 48,
+    "selection_objective": "macro F1, then contradiction precision, corroboration recall, lower threshold",
+    "stopwords": [
+      "a",
+      "about",
+      "after",
+      "again",
+      "against",
+      "all",
+      "allow",
+      "allows",
+      "also",
+      "am",
+      "an",
+      "analyses",
+      "analysis",
+      "and",
+      "any",
+      "application",
+      "applications",
+      "approach",
+      "are",
+      "as",
+      "at",
+      "available",
+      "based",
+      "be",
+      "because",
+      "been",
+      "before",
+      "being",
+      "between",
+      "both",
+      "but",
+      "by",
+      "can",
+      "could",
+      "data",
+      "did",
+      "do",
+      "does",
+      "doing",
+      "down",
+      "during",
+      "each",
+      "few",
+      "for",
+      "framework",
+      "from",
+      "further",
+      "had",
+      "has",
+      "have",
+      "having",
+      "he",
+      "her",
+      "here",
+      "hers",
+      "herself",
+      "him",
+      "himself",
+      "his",
+      "how",
+      "i",
+      "if",
+      "implementation",
+      "in",
+      "include",
+      "includes",
+      "including",
+      "inference",
+      "into",
+      "is",
+      "it",
+      "its",
+      "itself",
+      "just",
+      "me",
+      "method",
+      "methods",
+      "more",
+      "most",
+      "my",
+      "myself",
+      "new",
+      "no",
+      "nor",
+      "not",
+      "now",
+      "of",
+      "off",
+      "on",
+      "once",
+      "only",
+      "open",
+      "or",
+      "other",
+      "our",
+      "ours",
+      "ourselves",
+      "out",
+      "over",
+      "own",
+      "package",
+      "packages",
+      "perform",
+      "performed",
+      "performs",
+      "provide",
+      "provides",
+      "same",
+      "she",
+      "should",
+      "so",
+      "software",
+      "some",
+      "source",
+      "such",
+      "system",
+      "systems",
+      "than",
+      "that",
+      "the",
+      "their",
+      "theirs",
+      "them",
+      "themselves",
+      "then",
+      "there",
+      "these",
+      "they",
+      "this",
+      "those",
+      "through",
+      "to",
+      "too",
+      "tool",
+      "tools",
+      "under",
+      "until",
+      "up",
+      "use",
+      "used",
+      "uses",
+      "using",
+      "version",
+      "very",
+      "was",
+      "we",
+      "were",
+      "what",
+      "when",
+      "where",
+      "which",
+      "while",
+      "who",
+      "whom",
+      "why",
+      "will",
+      "with",
+      "you",
+      "your",
+      "yours",
+      "yourself",
+      "yourselves"
+    ],
+    "threshold": 0.021713,
+    "threshold_candidate_source": "tuning records only",
+    "threshold_candidates": [
+      0.021713,
+      0.025666,
+      0.032686,
+      0.037743,
+      0.040825,
+      0.043073,
+      0.050252,
+      0.059131,
+      0.060193,
+      0.071067,
+      0.076999,
+      0.084515,
+      0.086066,
+      0.09513,
+      0.09759,
+      0.099015,
+      0.106904,
+      0.117851,
+      0.133631,
+      0.138675,
+      0.16169,
+      0.162221,
+      0.166667,
+      0.179124,
+      0.1849,
+      0.191675,
+      0.195698,
+      0.196116,
+      0.218218,
+      0.224574,
+      0.225374,
+      0.283069,
+      0.301511,
+      0.424264,
+      0.471521,
+      0.516398,
+      0.615385,
+      0.707107
+    ]
+  },
+  "records": [
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "Aerith",
+      "score": 0.059131,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 11,
+          "overlap_tokens": [
+            "isotopic"
+          ],
+          "registry_token_count": 26,
+          "score": 0.059131,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Visualization and Annotation of Isotopic Enrichment Patterns of\nPeptides and Metabolites with Stable Isotope Labeling from\nProteomics and Metabolomics\nVisualisation of peptide isotopic peaks and SIP peptide\nspectra match (PSM). Filtration of high quality PSM. Accurate\nisotopic abundance calculation of peptide and metabolites.\nVisualisation of SIP proteomics results.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "Aerith is an R package that provides interfaces to read and write mass spectrum scans, calculate the theoretical isotopic peak envelope\nAerith is an R package that provides interfaces to read and write mass spectrum scans\nAerith"
+      },
+      "tool_name": "Aerith",
+      "tool_slug": "aerith",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "alphatims",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 3,
+          "overlap_tokens": [],
+          "registry_token_count": 10,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "A Python package for indexing Bruker timsTOF raw data.\nAlphaTims provides fast indexing and slicing of Bruker timsTOF raw data for mass spectrometry-based proteomics.",
+        "registry_ecosystem_hints": "A Python package for indexing Bruker timsTOF raw data.\nAlphaTims provides fast indexing and slicing of Bruker timsTOF raw data for mass spectrometry-based proteomics.\nhttps://github.com/MannLabs/alphatims\nhttps://github.com/MannLabs/alphatims\nhttps://github.com/MannLabs/alphatims/archive/refs/tags/v1.1.1.tar.gz",
+        "tool_evidence": ".d -- .. toctree:: :maxdepth: 1 alphatims\nalphatims\npyopenmsviz"
+      },
+      "tool_name": "AlphaTims",
+      "tool_slug": "alphatims",
+      "verdict": "contradicted"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "antismash",
+      "score": 0.047458,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 37,
+          "overlap_tokens": [
+            "genome"
+          ],
+          "registry_token_count": 12,
+          "score": 0.047458,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "antiSMASH - the antibiotics and Secondary Metabolite Analysis SHell.\nantiSMASH allows the rapid genome-wide identification, annotation and analysis of secondary metabolite biosynthesis gene clusters.",
+        "registry_ecosystem_hints": "antiSMASH - the antibiotics and Secondary Metabolite Analysis SHell.\nantiSMASH allows the rapid genome-wide identification, annotation and analysis of secondary metabolite biosynthesis gene clusters.\nhttps://docs.antismash.secondarymetabolites.org/intro\nhttps://github.com/antismash/antismash\nhttps://github.com/antismash/antismash/archive/refs/tags/8-0-4.tar.gz",
+        "tool_evidence": "MetaMiner uses either raw nucleotide sequences or specific genome mining tools' output: raw nucleotide sequences `.fasta` format or *antiSMASH*'s `.final.gbk` or `.gbk` file\nantismash directory contains a collection of AntiSMASH BGC data\nafter downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection\ngenomes were run through antiSMASH v5.0.0 for BGC detection\nthe genomes were run through antiSMASH v5.0.0 for BGC detection\nAfter downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection\ndereplicator\nNPClassScore\nRanking microbial metabolomic and genomic links in the NPLinker framework using complementary scoring functions\nNPLinker"
+      },
+      "tool_name": "antiSMASH",
+      "tool_slug": "antismash",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "ASICS",
+      "score": 0.283069,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 12,
+          "overlap_tokens": [
+            "automatic",
+            "complex",
+            "identification",
+            "metabolites",
+            "spectra"
+          ],
+          "registry_token_count": 26,
+          "score": 0.283069,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Automatic Statistical Identification in Complex Spectra\nWith a set of pure metabolite reference spectra, ASICS\nquantifies concentration of metabolites in a complex spectrum.\nThe identification of metabolites is performed by fitting a\nmixture model to the spectra of the library with a sparse\npenalty. The method and its statistical properties are\ndescribed in Tardivel et al. (2017)\n<doi:10.1007/s11306-017-1244-5>.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "The **R** package `ASICS` is a fully automated procedure to identify and quantify metabolites in $^1$H 1D-NMR spectra\nASICS: an automatic method for identification and quantification of metabolites in complex 1D 1H NMR spectra"
+      },
+      "tool_name": "ASICS",
+      "tool_slug": "asics",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "awscli",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 8,
+          "overlap_tokens": [],
+          "registry_token_count": 0,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "insufficient"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "",
+        "registry_ecosystem_hints": "https://pypi.python.org/packages/source/a/awscli/awscli-1.8.3.tar.gz",
+        "tool_evidence": "aws s3 cp --recursive s3://sirius-novelist/dataset-s6-202311 data\nMSNovelist"
+      },
+      "tool_name": "AWS CLI",
+      "tool_slug": "aws-cli",
+      "verdict": "insufficient"
+    },
+    {
+      "label": "wrong_match",
+      "registry": "bioconda",
+      "registry_package": "bart",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 12,
+          "overlap_tokens": [],
+          "registry_token_count": 3,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "bart - a bacterial read type",
+        "registry_ecosystem_hints": "bart - a bacterial read type\nhttps://github.com/tomdstanton/bart\nhttps://github.com/tomdstanton/bart/archive/refs/tags/v0.1.2.tar.gz",
+        "tool_evidence": "MS-BART is the first to leverage language model for mass spectra structure elucidation by introducing a unified vocabulary\nMS-BART"
+      },
+      "tool_name": "BART",
+      "tool_slug": "bart",
+      "verdict": "contradicted"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "bigscape",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 17,
+          "overlap_tokens": [],
+          "registry_token_count": 6,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Biosynthetic Genes Similarity Clustering and Prospecting Engine.",
+        "registry_ecosystem_hints": "Biosynthetic Genes Similarity Clustering and Prospecting Engine.\nhttps://github.com/medema-group/BiG-SCAPE\nhttps://github.com/medema-group/BiG-SCAPE\nhttps://github.com/medema-group/BiG-SCAPE/archive/refs/tags/v2.0.3.tar.gz",
+        "tool_evidence": "and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs\nBiG-SCAPE v1.0.0 to cluster the BGCs into GCFs\nBiG-SCAPE clusters the BGCs separately by product type\nRanking microbial metabolomic and genomic links in the NPLinker framework using complementary scoring functions"
+      },
+      "tool_name": "BiG-SCAPE",
+      "tool_slug": "big-scape",
+      "verdict": "contradicted"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "bigslice",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 11,
+          "overlap_tokens": [],
+          "registry_token_count": 9,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "A highly scalable, user-interactive tool for the large scale analysis of Biosynthetic Gene Clusters data.",
+        "registry_ecosystem_hints": "A highly scalable, user-interactive tool for the large scale analysis of Biosynthetic Gene Clusters data.\nhttps://github.com/satriaphd/bigslice\nhttps://github.com/satriaphd/bigslice\nhttps://pypi.org/packages/source/b/bigslice/bigslice-2.0.2.tar.gz",
+        "tool_evidence": "**BiG-SLiCE** using pip\nAbility to __export pre-calculated BGCs and GCFs table into TSVs__ (use __--export-csv__ parameter)\nBiG-SLiCE"
+      },
+      "tool_name": "BiG-SLiCE",
+      "tool_slug": "big-slice",
+      "verdict": "contradicted"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "bigscape",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 7,
+          "overlap_tokens": [],
+          "registry_token_count": 6,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Biosynthetic Genes Similarity Clustering and Prospecting Engine.",
+        "registry_ecosystem_hints": "Biosynthetic Genes Similarity Clustering and Prospecting Engine.\nhttps://github.com/medema-group/BiG-SCAPE\nhttps://github.com/medema-group/BiG-SCAPE\nhttps://github.com/medema-group/BiG-SCAPE/archive/refs/tags/v2.0.3.tar.gz",
+        "tool_evidence": "NPLinker can run BigScape automatically if the `bigscape` directory does not exist in the working directory.\nNPLinker can run BigScape automatically if the `bigscape` directory does not exist\nNPClassScore\nNPLinker"
+      },
+      "tool_name": "BigScape",
+      "tool_slug": "bigscape",
+      "verdict": "contradicted"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "Biobase",
+      "score": 0.099015,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 17,
+          "overlap_tokens": [
+            "bioconductor"
+          ],
+          "registry_token_count": 6,
+          "score": 0.099015,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Biobase: Base functions for Bioconductor\nFunctions that are needed by many other packages or which\nreplace R functions.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "BiocManager::install(\"Biobase\")\n```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package by Bioconductor\nNOREVA\nMissForest\u2014non-parametric missing value imputation for mixed-type data"
+      },
+      "tool_name": "Biobase",
+      "tool_slug": "biobase",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "CAMERA",
+      "score": 0.166667,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 8,
+          "overlap_tokens": [
+            "adducts",
+            "fragments"
+          ],
+          "registry_token_count": 18,
+          "score": 0.166667,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Collection of annotation related methods for mass spectrometry\ndata\nAnnotation of peaklists generated by xcms, rule based\nannotation of isotopes and adducts, isotope validation, EIC\ncorrelation based tagging of unknown adducts and fragments",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "CAMERA: an\nThe default table of adducts and fragments is built using information from CAMERA R package\nLipidIN\nmWISE"
+      },
+      "tool_name": "CAMERA",
+      "tool_slug": "camera",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "ChemmineR",
+      "score": 0.09513,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 13,
+          "overlap_tokens": [
+            "chemical",
+            "cheminformatics"
+          ],
+          "registry_token_count": 34,
+          "score": 0.09513,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Cheminformatics Toolkit for R\nChemmineR is a cheminformatics package for analyzing\ndrug-like small molecule data in R. Its latest version contains\nfunctions for efficient processing of large numbers of\nmolecules, physicochemical/structural property predictions,\nstructural similarity searching, classification and clustering\nof compound libraries with a wide spectrum of algorithms. In\naddition, it offers visualization functions for compound\nclustering results and chemical structures.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "uafR taps into an amazing set of cheminformatics packages -- ChemmineR, fmcsR, webchem\nTo perform the chemical structure matches and summarize atomic features, uafR taps into an amazing set of cheminformatics packages -- [ChemmineR]\nuafr"
+      },
+      "tool_name": "ChemmineR",
+      "tool_slug": "chemminer",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "cliqueMS",
+      "score": 0.043073,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 11,
+          "overlap_tokens": [
+            "adducts"
+          ],
+          "registry_token_count": 49,
+          "score": 0.043073,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Annotation of Isotopes, Adducts and Fragmentation Adducts for\nin-Source LC/MS Metabolomics Data\nAnnotates data from liquid chromatography coupled to mass\nspectrometry (LC/MS) metabolomics experiments. Based on a\nnetwork algorithm (O.Senan, A. Aguilar- Mogas, M. Navarro, O.\nYanes, R.Guimer\u00e0 and M. Sales-Pardo, Bioinformatics, 35(20),\n2019), 'CliqueMS' builds a weighted similarity network where\nnodes are features and edges are weighted according to the\nsimilarity of this features. Then it searches for the most\nplausible division of the similarity network into cliques\n(fully connected components). Finally it annotates metabolites\nwithin each clique, obtaining for each annotated metabolite the\nneutral mass and their features, corresponding to isotopes,\nionization adducts and fragmentation adducts of that\nmetabolite.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "The default table of adducts and fragments is built using information from CAMERA R package, H. Tong et al., and cliqueMS.\ninformation from CAMERA R package, H. Tong et al., and cliqueMS.\nmWISE"
+      },
+      "tool_name": "cliqueMS",
+      "tool_slug": "cliquems",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "CluMSID",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 1,
+          "overlap_tokens": [],
+          "registry_token_count": 24,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "insufficient"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Clustering of MS2 Spectra for Metabolite Identification\nCluMSID is a tool that aids the identification of features\nin untargeted LC-MS/MS analysis by the use of MS2 spectra\nsimilarity and unsupervised statistical methods. It offers\nfunctions for a complete and customisable workflow from raw\ndata to visualisations and is interfaceable with the xmcs\nfamily of preprocessing packages.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "CluMSID\nCMDN"
+      },
+      "tool_name": "CluMSID",
+      "tool_slug": "clumsid",
+      "verdict": "insufficient"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "clusterProfiler",
+      "score": 0.133631,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 16,
+          "overlap_tokens": [
+            "enrichment",
+            "ora",
+            "representation",
+            "set"
+          ],
+          "registry_token_count": 56,
+          "score": 0.133631,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "A Universal Enrichment Tool for Interpreting Omics Data\nA universal tool for interpreting functional\ncharacteristics of omics data. It supports Over-Representation\nAnalysis (ORA) and Gene Set Enrichment Analysis (GSEA) for both\ncoding and non-coding genomics data of thousands of species. It\nprovides a unified and tidy interface to access, manipulate,\nand visualize enrichment results. A key capability is the\nsimultaneous analysis and comparison of datasets from multiple\ntreatments or time points. It also provides high-level access\nto topology-aware enrichment workflows powered by 'enrichit',\nincluding single-network and multi-layer network enrichment for\nGene Ontology and KEGG analyses. Furthermore, it integrates\nLarge Language Model (LLM) capabilities to provide automated\nand insightful interpretation of enrichment results.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "margheRita implements both Over Representation Analysis (ORA) and Metabolite Set Enrichment Analysis (MSEA), based on clusterProfiler\nPathway enrichment analysis | Clusterprofiler, Biotranslator\nMargheRita: streamlining MS-DIAL output analysis and metabolite identification in R\nMultiOmicsIntegrator"
+      },
+      "tool_name": "clusterProfiler",
+      "tool_slug": "clusterprofiler",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "ComplexHeatmap",
+      "score": 0.045502,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 23,
+          "overlap_tokens": [
+            "heatmaps"
+          ],
+          "registry_token_count": 21,
+          "score": 0.045502,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Make Complex Heatmaps\nComplex heatmaps are efficient to visualize associations\nbetween different sources of data sets and reveal potential\npatterns. Here the ComplexHeatmap package provides a highly\nflexible way to arrange multiple heatmaps and supports various\nannotation graphics.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "The function `h_map()` provides heatmaps based on package ComplexHeatmap\nGenes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva, ggplot2, ComplexHeatmap\nR packages: DESeq2, edger, RankProd, ggplot2 ComplexHeatmap\nData preprocessing | R packages: edger, limma, sva, ggplot2, ComplexHeatmap\nMargheRita: streamlining MS-DIAL output analysis and metabolite identification in R\nMultiOmicsIntegrator"
+      },
+      "tool_name": "ComplexHeatmap",
+      "tool_slug": "complexheatmap",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "DESeq2",
+      "score": 0.16169,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 9,
+          "overlap_tokens": [
+            "differential",
+            "expression"
+          ],
+          "registry_token_count": 17,
+          "score": 0.16169,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Differential gene expression analysis based on the negative\nbinomial distribution\nEstimate variance-mean dependence in count data from\nhigh-throughput sequencing assays and test for differential\nexpression based on a model using the negative binomial\ndistribution.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "Differential expression analyss | R packages: DESeq2, edger, RankProd\n### DESeq2 [deseq](../modules/local/deseq2)\nMultiOmicsIntegrator"
+      },
+      "tool_name": "DESeq2",
+      "tool_slug": "deseq2",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "edgeR",
+      "score": 0.060193,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 24,
+          "overlap_tokens": [
+            "differential",
+            "expression"
+          ],
+          "registry_token_count": 46,
+          "score": 0.060193,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Empirical Analysis of Digital Gene Expression Data in R\nDifferential expression analysis of sequence count data.\nImplements a range of statistical methodology based on the\nnegative binomial distributions, including empirical Bayes\nestimation, exact tests, generalized linear models,\nquasi-likelihood, and gene set enrichment. Can perform\ndifferential analyses of any type of omics data that produces\nread counts, including RNA-seq, ChIP-seq, ATAC-seq,\nBisulfite-seq, SAGE, CAGE, metabolomics, or proteomics spectral\ncounts. RNA-seq analyses can be conducted at the gene or\nisoform level, and tests can be conducted for differential exon\nor transcript usage.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "allows the identification of differentially abundant lipids in simple and complex experimental designs\nGenes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva\nDifferential expression analyss | R packages: DESeq2, edger, RankProd\n### edger [edger](../modules/local/edger)\nADViSELipidomics\nMultiOmicsIntegrator"
+      },
+      "tool_name": "edgeR",
+      "tool_slug": "edger",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "FELLA",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 4,
+          "overlap_tokens": [],
+          "registry_token_count": 23,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Interpretation and enrichment for metabolomics data\nEnrichment of metabolomics data using KEGG entries. Given\na set of affected compounds, FELLA suggests affected reactions,\nenzymes, modules and pathways using label propagation in a\nknowledge model network. The resulting subnetwork can be\nvisualised and exported.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "we will now use the sample graph provided by FELLA R package\nmWISE"
+      },
+      "tool_name": "FELLA",
+      "tool_slug": "fella",
+      "verdict": "insufficient"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "fgsea",
+      "score": 0.117851,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 4,
+          "overlap_tokens": [
+            "fast"
+          ],
+          "registry_token_count": 18,
+          "score": 0.117851,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Fast Gene Set Enrichment Analysis\nThe package implements an algorithm for fast gene set\nenrichment analysis. Using the fast algorithm allows to make\nmore permutations and get more fine grained p-values, which\nallows to use accurate stantard approaches to multiple\nhypothesis correction.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "enrichmet integrates fgsea for fast MetSEA\nEnrichMET"
+      },
+      "tool_name": "fgsea",
+      "tool_slug": "fgsea",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "fmcsR",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 14,
+          "overlap_tokens": [],
+          "registry_token_count": 51,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Mismatch Tolerant Maximum Common Substructure Searching\nThe fmcsR package introduces an efficient maximum common\nsubstructure (MCS) algorithms combined with a novel matching\nstrategy that allows for atom and/or bond mismatches in the\nsubstructures shared among two small molecules. The resulting\nflexible MCSs (FMCSs) are often larger than strict MCSs,\nresulting in the identification of more common features in\ntheir source structures, as well as a higher sensitivity in\nfinding compounds with weak structural similarities. The fmcsR\npackage provides several utilities to use the FMCS algorithm\nfor pairwise compound comparisons, structure similarity\nsearching and clustering.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "uafR taps into an amazing set of cheminformatics packages -- ChemmineR, fmcsR, webchem\nuafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html), [fmcsR]\nuafr"
+      },
+      "tool_name": "fmcsR",
+      "tool_slug": "fmcsr",
+      "verdict": "insufficient"
+    },
+    {
+      "label": "wrong_match",
+      "registry": "bioconda",
+      "registry_package": "ggplot",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 19,
+          "overlap_tokens": [],
+          "registry_token_count": 5,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "An extremely un-pythonic package for doing exactly what ggplot2 does",
+        "registry_ecosystem_hints": "An extremely un-pythonic package for doing exactly what ggplot2 does\nhttps://github.com/yhat/ggplot/\nhttps://pypi.python.org/packages/source/g/ggplot/ggplot-0.6.8.tar.gz",
+        "tool_evidence": "creating an interactive plot of input features and the filters they failed, if any, using `ggplot` and `plotly`\nMetabolomics Peak Analysis Computational Tool (MPACT): An Advanced Informatics Tool for Metabolomics and Data Visualization of Molecules from Complex Biological Samples"
+      },
+      "tool_name": "ggplot",
+      "tool_slug": "ggplot",
+      "verdict": "contradicted"
+    },
+    {
+      "label": "wrong_match",
+      "registry": "bioconda",
+      "registry_package": "grid",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 1,
+          "overlap_tokens": [],
+          "registry_token_count": 15,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "insufficient"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Growth Rate Index (GRiD) measures bacterial growth rate from reference genomes (including draft quality genomes) and metagenomic bins at ultra-low sequencing coverage (> 0.2x).",
+        "registry_ecosystem_hints": "Growth Rate Index (GRiD) measures bacterial growth rate from reference genomes (including draft quality genomes) and metagenomic bins at ultra-low sequencing coverage (> 0.2x).\nhttps://github.com/ohlab/GRiD\nhttps://github.com/ohlab/GRiD/archive/1.3.tar.gz",
+        "tool_evidence": "grid\nCMDN"
+      },
+      "tool_name": "grid",
+      "tool_slug": "grid",
+      "verdict": "insufficient"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "impute",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 3,
+          "overlap_tokens": [],
+          "registry_token_count": 4,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "impute: Imputation for microarray data\nImputation for microarray data (currently KNN only)",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "BiocManager::install(\"impute\")\nNOREVA"
+      },
+      "tool_name": "impute",
+      "tool_slug": "impute",
+      "verdict": "insufficient"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "ipapy2",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 3,
+          "overlap_tokens": [],
+          "registry_token_count": 5,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Integrated Probabilistic Annotation (IPA) 2.0 - Python implementation",
+        "registry_ecosystem_hints": "Integrated Probabilistic Annotation (IPA) 2.0 - Python implementation\nhttps://github.com/francescodc87/ipaPy2\nhttps://pypi.io/packages/source/i/ipaPy2/ipaPy2-1.3.0.tar.gz",
+        "tool_evidence": "github.com__francescodc87__ipaPy2\nipaPy2"
+      },
+      "tool_name": "ipaPy2",
+      "tool_slug": "ipapy2",
+      "verdict": "contradicted"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "IsoformSwitchAnalyzeR",
+      "score": 0.086066,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 5,
+          "overlap_tokens": [
+            "isoform"
+          ],
+          "registry_token_count": 27,
+          "score": 0.086066,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Identify, Annotate and Visualize Isoform Switches with\nFunctional Consequences from both short- and long-read RNA-seq\ndata\nAnalysis of alternative splicing and isoform switches with\npredicted functional consequences (e.g. gain/loss of protein\ndomains etc.) from quantification of all types of RNA-seq\n(short/long) by tools such as Kallisto, Salmon, StringTie,\nTallon, IsoQuant etc.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "Isoforms | Genome wide isoform analysis | IsoformSwitchAnalyzer\nMultiOmicsIntegrator"
+      },
+      "tool_name": "IsoformSwitchAnalyzer",
+      "tool_slug": "isoformswitchanalyzer",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "KEGGREST",
+      "score": 0.084515,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 20,
+          "overlap_tokens": [
+            "api",
+            "kegg"
+          ],
+          "registry_token_count": 28,
+          "score": 0.084515,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Client-side REST access to the Kyoto Encyclopedia of Genes and\nGenomes (KEGG)\nA package that provides a client interface to the Kyoto\nEncyclopedia of Genes and Genomes (KEGG) REST API. Only for\nacademic use by academic users belonging to academic\ninstitutions (see <https://www.kegg.jp/kegg/rest/>). Note that\nKEGGREST is based on KEGGSOAP by J. Zhang, R. Gentleman, and\nMarc Carlson, and KEGG (python package) by Aurelien Mazurie.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "pathway to metabolite mappings are obtained from the KEGG resource using the KEGGREST package\nquery the KEGG database [59] using the R package KEGGREST [60]\nMetaboDirect can use the assigned molecular formulas to query the KEGG database [59] using the R package KEGGREST [60]\nwhich retrieves data from the KEGG API using the function ```keggGet``` from the package KEGGREST\nEnrichMET\nMetaboDirect\nomu metabolomics count data tool"
+      },
+      "tool_name": "KEGGREST",
+      "tool_slug": "keggrest",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "limma",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 30,
+          "overlap_tokens": [],
+          "registry_token_count": 6,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Linear Models for Microarray and Omics Data\nData analysis, linear models and differential expression\nfor omics data.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "allows the identification of differentially abundant lipids in simple and complex experimental designs\nThis step of the workflow requires the `limma` package to be installed.\nGenes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva\nBiocManager::install(\"limma\")\ncan be performed on the feature matrix using functionality from other R packages, such as `r Biocpkg(\"limma\")`.\nADViSELipidomics\nlipidr\nMultiOmicsIntegrator\nNOREVA\nXCMS"
+      },
+      "tool_name": "limma",
+      "tool_slug": "limma",
+      "verdict": "insufficient"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "lipidr",
+      "score": 0.09759,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 21,
+          "overlap_tokens": [
+            "datasets",
+            "easy",
+            "lipidomics"
+          ],
+          "registry_token_count": 45,
+          "score": 0.09759,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Data Mining and Analysis of Lipidomics Datasets\nlipidr an easy-to-use R package implementing a complete\nworkflow for downstream analysis of targeted and untargeted\nlipidomics data. lipidomics results can be imported into lipidr\nas a numerical matrix or a Skyline export, allowing integration\ninto current analysis frameworks. Data mining of lipidomics\ndatasets is enabled through integration with Metabolomics\nWorkbench API. lipidr allows data inspection, normalization,\nunivariate and multivariate analysis, displaying informative\nvisualizations. lipidr also implements a novel Lipid Set\nEnrichment Analysis (LSEA), harnessing molecular information\nsuch as lipid class, total chain length and unsaturation.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object using `lipidr` function `fetch_mw_study()`\n`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr` provides an easy way to re-analyze and visualize these datasets.\nlipidr allows users, to quickly explore public lipidomics experiments\nlipidr"
+      },
+      "tool_name": "lipidr",
+      "tool_slug": "lipidr",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "marr",
+      "score": 0.507833,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 19,
+          "overlap_tokens": [
+            "biological",
+            "detects",
+            "dimensional",
+            "experiments",
+            "high",
+            "maximal",
+            "maximum",
+            "nonparametric",
+            "rank",
+            "replicate",
+            "reproducibility",
+            "reproducible",
+            "signals",
+            "statistic"
+          ],
+          "registry_token_count": 40,
+          "score": 0.507833,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Maximum rank reproducibility\nmarr (Maximum Rank Reproducibility) is a nonparametric\napproach that detects reproducible signals using a maximal rank\nstatistic for high-dimensional biological data. In this R\npackage, we implement functions that measures the\nreproducibility of features per sample pair and sample pairs\nper feature in high-dimensional biological replicate\nexperiments. The user-friendly plot functions in this package\nalso plot histograms of the reproducibility of features per\nsample pair and sample pairs per feature. Furthermore, our\napproach also allows the users to select optimal filtering\nthreshold values for the identification of reproducible\nfeatures and sample pairs based on output visualization checks\n(histograms). This package also provides the subset of data\nfiltered by reproducible features and/or sample pairs.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "devtools::install_github(\"Ghoshlab/marr\")\nmarr (Maximum Rank Reproducibility) is a nonparametric approach that detects reproducible signals using a maximal rank statistic for high-dimensional biological data\nMaximum Rank Reproducibility: A Nonparametric Approach to Assessing Reproducibility in Replicate Experiments"
+      },
+      "tool_name": "marr",
+      "tool_slug": "marr",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "massdash",
+      "score": 0.162221,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 19,
+          "overlap_tokens": [
+            "mass",
+            "visualization"
+          ],
+          "registry_token_count": 8,
+          "score": 0.162221,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "python"
+          ],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "MassDash is a streamlined DIA mass spec visualization, analysis, optimization, and rapid prototyping.",
+        "registry_ecosystem_hints": "MassDash is a streamlined DIA mass spec visualization, analysis, optimization, and rapid prototyping.\nhttps://github.com/Roestlab/massdash\nhttps://github.com/Roestlab/massdash\nhttps://pypi.io/packages/source/m/massdash/massdash-0.1.1.tar.gz",
+        "tool_evidence": "MassDash is a modular and flexible python package that has a streamlit graphical user interface (GUI)\n:mod:`massdash.loaders`: Classes for loading data\nMassDash is a modular and flexible python package\nMassDash: A Web-Based Dashboard for Data-Independent Acquisition Mass Spectrometry Visualization"
+      },
+      "tool_name": "MassDash",
+      "tool_slug": "massdash",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "MassSpecWavelet",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 5,
+          "overlap_tokens": [],
+          "registry_token_count": 40,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Peak Detection for Mass Spectrometry data using wavelet-based\nalgorithms\nPeak Detection in Mass Spectrometry data is one of the\nimportant preprocessing steps. The performance of peak\ndetection affects subsequent processes, including protein\nidentification, profile alignment and biomarker identification.\nUsing Continuous Wavelet Transform (CWT), this package provides\na reliable algorithm for peak detection that does not require\nany type of smoothing or previous baseline correction method,\nproviding more consistent results for different spectra. See\n<doi:10.1093/bioinformatics/btl355} for further details.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "`r Biocpkg(\"xcms\")` uses functionality from the *MassSpecWavelet* package to identify such peaks\nXCMS"
+      },
+      "tool_name": "MassSpecWavelet",
+      "tool_slug": "massspecwavelet",
+      "verdict": "contradicted"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "matchms",
+      "score": 0.10799,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 49,
+          "overlap_tokens": [
+            "mass",
+            "python"
+          ],
+          "registry_token_count": 7,
+          "score": 0.10799,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "python"
+          ],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Python library for fuzzy comparison of mass spectrum data and other Python objects.",
+        "registry_ecosystem_hints": "Python library for fuzzy comparison of mass spectrum data and other Python objects.\nhttps://github.com/matchms/matchms\nhttps://github.com/matchms/matchms\nhttps://pypi.org/packages/source/m/matchms/matchms-0.33.1.tar.gz",
+        "tool_evidence": "the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms\nthe implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31] (https://github.com/matchms/matchms)\nthe implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31]\n- [matchms](https://matchms.readthedocs.io/en/latest/)\nMatchms offers an array of tools for metadata cleaning and validation\nMatchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data\nSpec2Vec: Improved mass spectral similarity scoring through learning of structural relationships\nCSU-MS2\nmatchms\nmemo\nMS2DeepScore: a novel deep learning similarity measure to compare tandem mass spectra\nMS2DeepScore 2.0\nCommon data models to streamline metabolomics processing and annotation, and implementation in a Python pipeline"
+      },
+      "tool_name": "matchms",
+      "tool_slug": "matchms",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "metabCombiner",
+      "score": 0.263752,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 5,
+          "overlap_tokens": [
+            "datasets",
+            "lc",
+            "metabolomics",
+            "ms"
+          ],
+          "registry_token_count": 46,
+          "score": 0.263752,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Method for Combining LC-MS Metabolomics Feature Measurements\nThis package aligns LC-HRMS metabolomics datasets acquired\nfrom biologically similar specimens analyzed under similar, but\nnot necessarily identical, conditions. Peak-picked and simply\naligned metabolomics feature tables (consisting of m/z, rt, and\nper-sample abundance measurements, plus optional identifiers &\nadduct annotations) are accepted as input. The package outputs\na combined table of feature pair alignments, organized into\ngroups of similar m/z, and ranked by a similarity score. Input\ntables are assumed to be acquired using similar (but not\nnecessarily identical) analytical methods.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "Combine LC-MS Metabolomics Datasets with metabCombiner\nmetabCombiner"
+      },
+      "tool_name": "metabCombiner",
+      "tool_slug": "metabcombiner",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "MetaboAnnotatoR",
+      "score": 0.615385,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 13,
+          "overlap_tokens": [
+            "annotation",
+            "automated",
+            "datasets",
+            "features",
+            "fragmentation",
+            "ion",
+            "lc",
+            "ms"
+          ],
+          "registry_token_count": 13,
+          "score": 0.615385,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Automated Annotation of All-Ion Fragmentation LC-MS Metabolomic\nFeatures\nPerforms feature annotations on LC-MS All-ion\nfragmentation datasets using fragment ion libraries.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets\nAutomated Annotation of Untargeted All-Ion Fragmentation LC\u2013MS Metabolomics Data with MetaboAnnotatoR"
+      },
+      "tool_name": "MetaboAnnotatoR",
+      "tool_slug": "metaboannotator",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "MetaboCoreUtils",
+      "score": 0.050252,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 11,
+          "overlap_tokens": [
+            "functionality"
+          ],
+          "registry_token_count": 36,
+          "score": 0.050252,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Core Utils for Metabolomics Data\nMetaboCoreUtils defines metabolomics-related core\nfunctionality provided as low-level functions to allow a data\nstructure-independent usage across various R packages. This\nincludes functions to calculate between ion (adduct) and\ncompound mass-to-charge ratios and masses or functions to work\nwith chemical formulas. The package provides also a set of\nadduct definitions and information on some commercially\navailable internal standard mixes commonly used in MS\nexperiments.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "The transformation is performed using functionality from the packages `r BiocStyle::Biocpkg(\"MetaboCoreUtils\")`\n%\\VignetteDepends{xcms,MsDataHub,BiocStyle,pander,Spectra,MsBackendMgf,MetaboCoreUtils}\nMobilityTransformR\nXCMS"
+      },
+      "tool_name": "MetaboCoreUtils",
+      "tool_slug": "metabocoreutils",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "metabolabpy",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 3,
+          "overlap_tokens": [],
+          "registry_token_count": 7,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Python package to process 1D and 2D NMR spectroscopic data for metabolomics and tracer-based metabolism analysis.",
+        "registry_ecosystem_hints": "Python package to process 1D and 2D NMR spectroscopic data for metabolomics and tracer-based metabolism analysis.\nhttps://github.com/ludwigc/metabolabpy\nhttps://github.com/ludwigc/metabolabpy\nhttps://pypi.io/packages/source/m/metabolabpy/metabolabpy-0.9.91.tar.gz",
+        "tool_evidence": "github.com__ludwigc__metabolabpy\nMetaboLabPy"
+      },
+      "tool_name": "metabolabpy",
+      "tool_slug": "metabolabpy",
+      "verdict": "contradicted"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "metaMS",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 1,
+          "overlap_tokens": [],
+          "registry_token_count": 6,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "insufficient"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "MS-based metabolomics annotation pipeline\nMS-based metabolomics data processing and compound\nannotation pipeline.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "metaMS Version 1.25.1\nDaDIA"
+      },
+      "tool_name": "metaMS",
+      "tool_slug": "metams",
+      "verdict": "insufficient"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "metdatamodel",
+      "score": 0.196116,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 13,
+          "overlap_tokens": [
+            "metabolomics"
+          ],
+          "registry_token_count": 2,
+          "score": 0.196116,
+          "threshold": 0.021713,
+          "verdict": "insufficient"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Data models for metabolomics",
+        "registry_ecosystem_hints": "Data models for metabolomics\nhttps://github.com/shuzhao-li/metDataModel\nhttps://pypi.io/packages/source/m/metdatamodel/metDataModel-0.6.0.tar.gz",
+        "tool_evidence": "The data model of \u201cempirical compound\u201d is described in the metDataModel package.\nGeneralized Tree Structure to Annotate Untargeted Metabolomics and Stable Isotope Tracing Data"
+      },
+      "tool_name": "metDataModel",
+      "tool_slug": "metdatamodel",
+      "verdict": "insufficient"
+    },
+    {
+      "label": "wrong_match",
+      "registry": "bioconda",
+      "registry_package": "meteor",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 18,
+          "overlap_tokens": [],
+          "registry_token_count": 19,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "contradicted"
+        }
+      },
+      "texts": {
+        "registry_description": "Meteor is a plateform for quantitative metagenomics profiling of complex ecosystems.\nMeteor is a plateform for quantitative metagenomics profiling of complex ecosystems. Meteor relies on genes catalogue to perform species-level taxonomic profiling (Bacteria, Archaea and Eukaryotes), functional analysis and strain-level population structure inference.",
+        "registry_ecosystem_hints": "Meteor is a plateform for quantitative metagenomics profiling of complex ecosystems.\nMeteor is a plateform for quantitative metagenomics profiling of complex ecosystems. Meteor relies on genes catalogue to perform species-level taxonomic profiling (Bacteria, Archaea and Eukaryotes), functional analysis and strain-level population structure inference.\nhttps://github.com/metagenopolis/meteor\nhttps://github.com/metagenopolis/meteor\nhttps://pypi.io/packages/source/m/meteor/meteor-2.0.22.tar.gz",
+        "tool_evidence": "library(MeTEor)\nYou can perform binary classification using three different algorithms: logistic regression (LR), random forest (RF), and XGBoost (XGB).\nPreprocessing and Pretreatment of Metabolomics Data for Statistical Analysis"
+      },
+      "tool_name": "MeTEor",
+      "tool_slug": "meteor",
+      "verdict": "contradicted"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "metfrag",
+      "score": 0.025666,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 46,
+          "overlap_tokens": [
+            "mass"
+          ],
+          "registry_token_count": 33,
+          "score": 0.025666,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "java"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "MetFrag is a freely available software for the annotation of high precision tandem mass spectra of metabolites which is a first and critical step for the identification of a molecular structure. Candidate molecules of different databases are fragmented in silico and matched against mass to charge values. A score calculated using the fragment peak matches gives hints to the quality of the candidate spectrum assignment.",
+        "registry_ecosystem_hints": "MetFrag is a freely available software for the annotation of high precision tandem mass spectra of metabolites which is a first and critical step for the identification of a molecular structure. Candidate molecules of different databases are fragmented in silico and matched against mass to charge values. A score calculated using the fragment peak matches gives hints to the quality of the candidate spectrum assignment.\nhttp://c-ruttkies.github.io/MetFrag/\nhttp://msbi.ipb-halle.de/~cruttkie/metfrag/MetFrag2.4.5-CL.jar",
+        "tool_evidence": "such as metFrag for example, check it out: https://github.com/rickhelmus/patRoon\ncompound database dereplication using SIRIUS OR MetFrag\nThis container packages the MetFrag (https://github.com/ipb-halle/MetFragRelaunched) webapp\nconvertToMFDB | Generates a [MetFrag] database for all TPs (and optionally parents, only for TPs with structural information)\nGenerates a [MetFrag] database for all TPs\nif MetFrag analysis is enabled, a comprehensive summary of all entries can be generated using the corresponding export option.\nStreamlining feature elaboration and\u00a0statistics analysis in\u00a0metabolomics: the\u00a0GetFeatistics R-package\nMAW\nMetFrag\npatRoon: open source software platform for environmental mass spectrometry based non-target screening\nShinyscreen"
+      },
+      "tool_name": "metFrag",
+      "tool_slug": "metfrag",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "MetNet",
+      "score": 0.13194,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 11,
+          "overlap_tokens": [
+            "metabolic",
+            "network",
+            "two"
+          ],
+          "registry_token_count": 47,
+          "score": 0.13194,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "java"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "contradicted"
+        }
+      },
+      "texts": {
+        "registry_description": "Inferring metabolic networks from untargeted high-resolution\nmass spectrometry data\nMetNet contains functionality to infer metabolic network\ntopologies from quantitative data and high-resolution\nmass/charge information. Using statistical models (including\ncorrelation, mutual information, regression and Bayes\nstatistics) and quantitative data (intensity values of\nfeatures) adjacency matrices are inferred that can be combined\nto a consensus matrix. Mass differences calculated between\nmass/charge values of features will be matched against a data\nframe of supplied mass/charge differences referring to\ntransformations of enzymatic activities. In a third step, the\ntwo levels of information are combined to form a adjacency\nmatrix inferred from both quantitative and structure\ninformation.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic network of two organisms selected in KEGG\nMetNet is a Java tool that makes it possible to automatically reconstruct the metabolic network\nMetNet"
+      },
+      "tool_name": "MetNet",
+      "tool_slug": "metnet",
+      "verdict": "insufficient"
+    },
+    {
+      "label": "wrong_match",
+      "registry": "bioconductor",
+      "registry_package": "mist",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 22,
+          "overlap_tokens": [],
+          "registry_token_count": 36,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Differential Methylation Analysis for scDNAm Data\nmist (Methylation Inference for Single-cell along\nTrajectory) is a hierarchical Bayesian framework for modeling\nDNA methylation trajectories and performing differential\nmethylation (DM) analysis in single-cell DNA methylation\n(scDNAm) data. It estimates developmental-stage-specific\nvariations, identifies genomic features with drastic changes\nalong pseudotime, and, for two phenotypic groups, detects\nfeatures with distinct temporal methylation patterns. mist uses\nGibbs sampling to estimate parameters for temporal changes and\nstage-specific variations.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "and, when trained in a contrastive learning framework, enable embedding and structure annotation by database lookup.\nan extension of MIST for annotating MS1 precursor masses from MS/MS data\nMIST (chemical formula transformer)\nMIST-CF: Chemical Formula Inference from Tandem Mass Spectra"
+      },
+      "tool_name": "MIST",
+      "tool_slug": "mist",
+      "verdict": "contradicted"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "mixOmics",
+      "score": 0.021713,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 21,
+          "overlap_tokens": [
+            "models"
+          ],
+          "registry_token_count": 101,
+          "score": 0.021713,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Omics Data Integration Project\nMultivariate methods are well suited to large omics data\nsets where the number of variables (e.g. genes, proteins,\nmetabolites) is much larger than the number of samples\n(patients, cells, mice). They have the appealing properties of\nreducing the dimension of the data by using instrumental\nvariables (components), which are defined as combinations of\nall variables. Those components are then used to produce useful\ngraphical outputs that enable better understanding of the\nrelationships and correlation structures between the different\ndata sets that are integrated. mixOmics offers a wide range of\nmultivariate methods for the exploration and integration of\nbiological datasets with a particular focus on variable\nselection. The package proposes several sparse multivariate\nmodels we have developed to identify the key variables that are\nhighly correlated, and/or explain the biological outcome of\ninterest. The data that can be analysed with mixOmics may come\nfrom high throughput sequencing technologies, such as omics\ndata (transcriptomics, metabolomics, proteomics, metagenomics\netc) but also beyond the realm of omics (e.g. spectral\nimaging). The methods implemented in mixOmics can also handle\nmissing values without having to delete entire rows with\nmissing data. A non exhaustive list of methods include variants\nof generalised Canonical Correlation Analysis, sparse Partial\nLeast Squares and sparse Discriminant Analysis. Recently we\nimplemented integrative methods to combine multiple data sets:\nN-integration with variants of Generalised Canonical\nCorrelation Analysis and P-integration with variants of\nmulti-group Partial Least Squares.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "\"igraph\", \"MASS\", \"mixOmics\", \"SOMbrero\", \"varSelRF\"\nSupervised models can be done with the [mixOmics](https://bioconductor.org/packages/release/bioc/html/mixOmics.html) functions.\nLargeMetabo\nDiagnostic metabolite biomarkers of chronic typhoid carriage"
+      },
+      "tool_name": "mixOmics",
+      "tool_slug": "mixomics",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "ms-entropy",
+      "score": 0.5,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 8,
+          "overlap_tokens": [
+            "flash",
+            "mass",
+            "search",
+            "spectral"
+          ],
+          "registry_token_count": 8,
+          "score": 0.5,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "This package provides a Python implementation of calculating spectral entropy, entropy similarity, and Flash entropy search for mass spectrometry data.",
+        "registry_ecosystem_hints": "This package provides a Python implementation of calculating spectral entropy, entropy similarity, and Flash entropy search for mass spectrometry data.\nhttps://github.com/YuanyueLi/MSEntropy\nhttps://github.com/YuanyueLi/MSEntropy\nhttps://pypi.io/packages/source/m/ms-entropy/ms_entropy-1.3.4.tar.gz",
+        "tool_evidence": "ms_entropy==1.3.3\n- ``ms_entropy==1.3.3``\nFlash entropy search to query all mass spectral libraries in real time"
+      },
+      "tool_name": "ms_entropy",
+      "tool_slug": "ms-entropy",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "ms2deepscore",
+      "score": 0.471521,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 46,
+          "overlap_tokens": [
+            "deep",
+            "learning",
+            "mass",
+            "measure",
+            "molecular",
+            "network",
+            "neural",
+            "predict",
+            "scores",
+            "siamese",
+            "similarities",
+            "similarity",
+            "spectra",
+            "structural",
+            "trained"
+          ],
+          "registry_token_count": 22,
+          "score": 0.471521,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "python"
+          ],
+          "registry_ecosystems": [],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Deep learning similarity measure for comparing MS/MS spectra with respect to their chemical similarity\nms2deepscore provides a Siamese neural network that is trained to predict molecular structural similarities (Tanimoto scores) from pairs of mass spectrometry spectra.",
+        "registry_ecosystem_hints": "Deep learning similarity measure for comparing MS/MS spectra with respect to their chemical similarity\nms2deepscore provides a Siamese neural network that is trained to predict molecular structural similarities (Tanimoto scores) from pairs of mass spectrometry spectra.\nhttps://github.com/matchms/ms2deepscore\nhttps://github.com/matchms/ms2deepscore\nhttps://github.com/matchms/ms2deepscore/archive/refs/tags/2.9.0.tar.gz",
+        "tool_evidence": "MS2DeepScore to predict structural similarity scores for spe\nwe used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral embeddings for all 3601 spectra in the test set\nOur MS2DeepScore Python library offers two types of data generators\n`ms2deepscore` provides a Siamese neural network that is trained to predict molecular structural similarities\nTo estimate the uncertainty of a prediction we used Monte-Carlo Dropout ensembles\nt-SNE embedding that serves as an overview representation of mass spectral similarities based on ms2deepscore\nMS2DeepScore: a novel deep learning similarity measure to compare tandem mass spectra\nMS2DeepScore 2.0\nspecxplore"
+      },
+      "tool_name": "MS2DeepScore",
+      "tool_slug": "ms2deepscore",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "ms2query",
+      "score": 0.707107,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 12,
+          "overlap_tokens": [
+            "analogue",
+            "fast",
+            "ms",
+            "reliable",
+            "search",
+            "spectral"
+          ],
+          "registry_token_count": 6,
+          "score": 0.707107,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Reliable and fast MS/MS spectral based analogue search.",
+        "registry_ecosystem_hints": "Reliable and fast MS/MS spectral based analogue search.\nhttps://github.com/iomega/ms2query\nhttps://github.com/iomega/ms2query\nhttps://github.com/iomega/ms2query/archive/refs/tags/1.5.4.tar.gz",
+        "tool_evidence": "MS2Query - Reliable and fast MS/MS spectral-based analogue search\nyou want to make some kind of change to the code base\nms2query"
+      },
+      "tool_name": "MS2Query",
+      "tool_slug": "ms2query",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "MsBackendMgf",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 2,
+          "overlap_tokens": [],
+          "registry_token_count": 21,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "insufficient"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Mass Spectrometry Data Backend for Mascot Generic Format (mgf)\nFiles\nMass spectrometry (MS) data backend supporting import and\nexport of MS/MS spectra data from Mascot Generic Format (mgf)\nfiles. Objects defined in this package are supposed to be used\nwith the Spectra Bioconductor package. This package thus adds\nmgf file support to the Spectra package.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "library(MsBackendMgf)\nXCMS"
+      },
+      "tool_name": "MsBackendMgf",
+      "tool_slug": "msbackendmgf",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "MsDataHub",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 2,
+          "overlap_tokens": [],
+          "registry_token_count": 14,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "insufficient"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Mass Spectrometry Data on ExperimentHub\nThe MsDataHub package uses the ExperimentHub\ninfrastructure to distribute raw mass spectrometry data files,\npeptide spectrum matches or quantitative data from proteomics\nand metabolomics experiments.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "library(MsDataHub)\nXCMS"
+      },
+      "tool_name": "MsDataHub",
+      "tool_slug": "msdatahub",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "ms-entropy",
+      "score": 0.424264,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 25,
+          "overlap_tokens": [
+            "flash",
+            "mass",
+            "python",
+            "search",
+            "similarity",
+            "spectral"
+          ],
+          "registry_token_count": 8,
+          "score": 0.424264,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "python"
+          ],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "This package provides a Python implementation of calculating spectral entropy, entropy similarity, and Flash entropy search for mass spectrometry data.",
+        "registry_ecosystem_hints": "This package provides a Python implementation of calculating spectral entropy, entropy similarity, and Flash entropy search for mass spectrometry data.\nhttps://github.com/YuanyueLi/MSEntropy\nhttps://github.com/YuanyueLi/MSEntropy\nhttps://pypi.io/packages/source/m/ms-entropy/ms_entropy-1.3.4.tar.gz",
+        "tool_evidence": "msentropy\nwe provide a Python implementation of the algorithm in the `MSEntropy` repository\nThese are all integrated into the [MSEntropy package\nThese are all integrated into the MSEntropy package (https://github.com/YuanyueLi/MSEntropy)\nCMDN\nFlash entropy search to query all mass spectral libraries in real time\nSpectral entropy outperforms MS/MS dot product similarity for small-molecule compound identification"
+      },
+      "tool_name": "msentropy",
+      "tool_slug": "msentropy",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "MsExperiment",
+      "score": 0.072739,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 18,
+          "overlap_tokens": [
+            "metabolomics",
+            "ms"
+          ],
+          "registry_token_count": 42,
+          "score": 0.072739,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Infrastructure for Mass Spectrometry Experiments\nInfrastructure to store and manage all aspects related to\na complete proteomics or metabolomics mass spectrometry (MS)\nexperiment. The MsExperiment package provides light-weight and\nflexible containers for MS experiments building on the new MS\ninfrastructure provided by the Spectra, QFeatures and related\npackages. Along with raw data representations, links to\noriginal data files and sample annotations, additional metadata\nor annotations can also be stored within the MsExperiment\ncontainer. To guarantee maximum flexibility only minimal\nconstraints are put on the type and content of the data within\nthe containers.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "Alternatively, instead of using file paths as input for TARDIS, the user can also use an `MsExperiment` object\nAutomated Integration and Quality Assessment of Chromatographic Peaks in LC\u2013MS-Based Metabolomics and Lipidomics Using TARDIS"
+      },
+      "tool_name": "MsExperiment",
+      "tool_slug": "msexperiment",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "MsFeatures",
+      "score": 0.199205,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 14,
+          "overlap_tokens": [
+            "functionality",
+            "grouping",
+            "implemented",
+            "ms",
+            "xcms"
+          ],
+          "registry_token_count": 45,
+          "score": 0.199205,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Functionality for Mass Spectrometry Features\nThe MsFeature package defines functionality for Mass\nSpectrometry features. This includes functions to group (LC-MS)\nfeatures based on some of their properties, such as retention\ntime (coeluting features), or correlation of signals across\nsamples. This packge hence allows to group features, and its\nresults can be used as an input for the `QFeatures` package\nwhich allows to aggregate abundance levels of features within\neach group. This package defines concepts and functions for\nbase and common data types, implementations for more specific\ndata types are expected to be implemented in the respective\npackages (such as e.g. `xcms`). All functionality of this\npackage is implemented in a modular way which allows\ncombination of different grouping approaches and enables its\nre-use in other R packages.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "General MS feature grouping functionality if defined by the `r Biocpkg(\"MsFeatures\")` package\nGeneral MS feature grouping functionality if defined by the `r Biocpkg(\"MsFeatures\")` package with additional functionality being implemented\nVignetteDepends{xcms,BiocStyle,faahKO,pheatmap,MsFeatures}\nXCMS"
+      },
+      "tool_name": "MsFeatures",
+      "tool_slug": "msfeatures",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "msmetaenhancer",
+      "score": 0.1849,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 13,
+          "overlap_tokens": [
+            "files",
+            "msp"
+          ],
+          "registry_token_count": 9,
+          "score": 0.1849,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "MSMetaEnhancer is a Python tool that adds more annotations (e.g. SMILES, InChI, CAS number) to MSP files.",
+        "registry_ecosystem_hints": "MSMetaEnhancer is a Python tool that adds more annotations (e.g. SMILES, InChI, CAS number) to MSP files.\nhttps://github.com/RECETOX/MSMetaEnhancer\nhttps://github.com/RECETOX/MSMetaEnhancer\nhttps://pypi.io/packages/source/m/msmetaenhancer/msmetaenhancer-0.6.1.tar.gz",
+        "tool_evidence": "MSMetaEnhancer is a tool used for `.msp` files annotation\nConverter Builder: Automatically discovers and instantiates available converters\nMSMetaEnhancer is a tool used for `.msp` files annotation.\n**MSMetaEnhancer** is a tool used for `.msp` files annotation\n`MSMetaEnhancer/libs/converters/web/` named after your service\nmsmetaenhancer"
+      },
+      "tool_name": "MSMetaEnhancer",
+      "tool_slug": "msmetaenhancer",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "MSnbase",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 10,
+          "overlap_tokens": [],
+          "registry_token_count": 14,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Base Functions and Classes for Mass Spectrometry and Proteomics\nMSnbase provides infrastructure for manipulation,\nprocessing and visualisation of mass spectrometry and\nproteomics data, ranging from raw to quantitative and annotated\ndata.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "The transformation is performed using functionality from the packages `r BiocStyle::Biocpkg(\"MSnbase\")`\nextension of the of *in-memory* and *on-disk* data representations from the `r Biocpkg(\"MSnbase\")` package\nMobilityTransformR\nspectra"
+      },
+      "tool_name": "MSnbase",
+      "tool_slug": "msnbase",
+      "verdict": "contradicted"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "MultiAssayExperiment",
+      "score": 0.037743,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 18,
+          "overlap_tokens": [
+            "downstream"
+          ],
+          "registry_token_count": 39,
+          "score": 0.037743,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Software for the integration of multi-omics experiments in\nBioconductor\nHarmonize data management of multiple experimental assays\nperformed on an overlapping set of specimens.  It provides a\nfamiliar Bioconductor user experience by extending concepts\nfrom SummarizedExperiment, supporting an open-ended mix of\nstandard data classes for individual assays, and allowing\nsubsetting by genomic ranges or rownames. Facilities are\nprovided for reshaping data into wide and long formats for\nadaptability to graphing and downstream analysis.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "The function `create_mae` merges all objects into a so called `MultiAssayExperiment` object\nThe function `create_mae` merges all objects into a so called `MultiAssayExperiment` object to simplify all downstream analysis.\nAKT1 and MYC Induce Distinctive Metabolic Fingerprints in Human Prostate Cancer"
+      },
+      "tool_name": "MultiAssayExperiment",
+      "tool_slug": "multiassayexperiment",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "multtest",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 3,
+          "overlap_tokens": [],
+          "registry_token_count": 86,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Resampling-based multiple hypothesis testing\nNon-parametric bootstrap and permutation resampling-based\nmultiple testing procedures (including empirical Bayes methods)\nfor controlling the family-wise error rate (FWER), generalized\nfamily-wise error rate (gFWER), tail probability of the\nproportion of false positives (TPPFP), and false discovery rate\n(FDR).  Several choices of bootstrap-based null distribution\nare implemented (centered, centered and scaled,\nquantile-transformed). Single-step and step-wise methods are\navailable. Tests based on a variety of t- and F-statistics\n(including t-statistics based on regression parameters from\nlinear and survival models as well as those based on\ncorrelation parameters) are included.  When probing hypotheses\nwith t-statistics, users may also select a potentially faster\nnull distribution which is multivariate normal with mean zero\nand variance covariance matrix derived from the vector\ninfluence function.  Results are reported in terms of adjusted\np-values, confidence regions and test statistic cutoffs. The\nprocedures are directly applicable to identifying\ndifferentially expressed genes in DNA microarray experiments.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "BiocManager::install(\"multtest\")\nNOREVA"
+      },
+      "tool_name": "multtest",
+      "tool_slug": "multtest",
+      "verdict": "insufficient"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "mzmine",
+      "score": 0.191675,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 67,
+          "overlap_tokens": [
+            "compound",
+            "lipidomics",
+            "mass",
+            "metabolomics",
+            "ms",
+            "processing",
+            "spectrometry",
+            "various"
+          ],
+          "registry_token_count": 26,
+          "score": 0.191675,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "python"
+          ],
+          "registry_ecosystems": [],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Integrative analysis of multimodal mass spectrometry data.\nMZmine 3 is an open-source and platform-independent software for mass spectrometry (MS) data processing and visualization. It enables large-scale metabolomics and lipidomics research by spectral preprocessing, feature detection, and various options for compound identification, including spectral library querying and creation.",
+        "registry_ecosystem_hints": "Integrative analysis of multimodal mass spectrometry data.\nMZmine 3 is an open-source and platform-independent software for mass spectrometry (MS) data processing and visualization. It enables large-scale metabolomics and lipidomics research by spectral preprocessing, feature detection, and various options for compound identification, including spectral library querying and creation.\nhttps://github.com/mzmine/mzmine\nhttps://github.com/mzmine/mzmine\nhttps://github.com/mzmine/mzmine/archive/refs/tags/v4.7.29.tar.gz",
+        "tool_evidence": "mzmine is an open-source software for mass spectrometry data processing\nGetting started with the [Documentation](https://mzmine.github.io/mzmine_documentation/index.html)\nThe evaluation helpers rely on peak picking using MZMine parameters defined in `PeakPicking.py`.\n-Inventa takes input directly from MZmine2 or [MZmine 3](http://mzmine.github.io/)\nLipidMatch can be used with various peak picking software (for example MZmine, XCMS, MS-DIAL, and Compound Discoverer)\nDuplicate filtering on MZmine's MGF and CSV files (NEG)\niimn\nRapid Development of Improved Data-Dependent Acquisition Strategies\nIon identity molecular networking for mass spectrometry-based metabolomics in the GNPS environment\nlipidmatch\nMolNotator\nmzmine2\nmzmine3\nneatms\nplantMASST\nAutomated Integration and Quality Assessment of Chromatographic Peaks in LC\u2013MS-Based Metabolomics and Lipidomics Using TARDIS"
+      },
+      "tool_name": "mzmine",
+      "tool_slug": "mzmine",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "mzR",
+      "score": 0.123091,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 12,
+          "overlap_tokens": [
+            "files",
+            "mzml"
+          ],
+          "registry_token_count": 22,
+          "score": 0.123091,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "parser for netCDF, mzXML and mzML and mzIdentML files (mass\nspectrometry data)\nmzR provides a unified API to the common file formats and\nparsers available for mass spectrometry data. It comes with a\nsubset of the proteowizard library for mzXML, mzML and\nmzIdentML. The netCDF reading code has previously been used in\nXCMS.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "Integration with the mzR package from Bioconductor allows direct parsing of mzML and MGF files\nisoSCAN uses `mzR` package in order to read MS files\nAerith\nisoSCAN"
+      },
+      "tool_name": "mzR",
+      "tool_slug": "mzr",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "ncGTW",
+      "score": 0.516398,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 10,
+          "overlap_tokens": [
+            "alignment",
+            "compound",
+            "graphical",
+            "neighbor",
+            "specific",
+            "time",
+            "warping",
+            "wise"
+          ],
+          "registry_token_count": 24,
+          "score": 0.516398,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Alignment of LC-MS Profiles by Neighbor-wise Compound-specific\nGraphical Time Warping with Misalignment Detection\nThe purpose of ncGTW is to help XCMS for LC-MS data\nalignment. Currently, ncGTW can detect the misaligned feature\ngroups by XCMS, and the user can choose to realign these\nfeature groups by ncGTW or not.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an alignment algorithm\nncGTW"
+      },
+      "tool_name": "ncGTW",
+      "tool_slug": "ncgtw",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "neatms",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 16,
+          "overlap_tokens": [],
+          "registry_token_count": 7,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "NeatMS is an open source python package for untargeted LCMS deep learning peak curation",
+        "registry_ecosystem_hints": "NeatMS is an open source python package for untargeted LCMS deep learning peak curation\nhttps://github.com/bihealth/NeatMS\nhttps://files.pythonhosted.org/packages/8d/2c/b77d0e5fd8857efcfef96e7f27e59ac54399f701ae1e68768997a2252202/NeatMS-v0.7.tar.gz",
+        "tool_evidence": "NeatMS provides the necessary functions to do that, all we will have to do is create a `Neural network handler` object\nCalling the method `get_threshold()` will compute and return the optimal threshold\nNeatMS provides the necessary functions to do that, all we will have to do is create a `Neural network handler` object and call the batch creation method\nneatms"
+      },
+      "tool_name": "NeatMS",
+      "tool_slug": "neatms",
+      "verdict": "contradicted"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "nextflow",
+      "score": 0.071067,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 33,
+          "overlap_tokens": [
+            "io"
+          ],
+          "registry_token_count": 6,
+          "score": 0.071067,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "A DSL for data-driven computational pipelines http://nextflow.io",
+        "registry_ecosystem_hints": "A DSL for data-driven computational pipelines http://nextflow.io\nhttps://github.com/nextflow-io/nextflow\nhttps://github.com/nextflow-io/nextflow/releases/download/v26.10.5/nextflow",
+        "tool_evidence": "The pipeline is built using [Nextflow](https://www.nextflow.io) version 23.04.2.5870\nThe pipeline is built using [Nextflow](https://www.nextflow.io) version 23.04.2.5870 (IMPORTANT), a workflow tool to run tasks across multiple compute infrastructures\n[![Nextflow](https://img.shields.io/badge/nextflow-%E2%89%A522.10.0-brightgreen.svg)](https://www.nextflow.io/)\nnextflow4ms-dial\nTo learn NextFlow checkout this documentation\nTo learn NextFlow checkout this documentation: https://www.nextflow.io/docs/latest/index.html\nMultiOmicsIntegrator\nnextflow4msdial\nReverse metabolomics"
+      },
+      "tool_name": "Nextflow",
+      "tool_slug": "nextflow",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "notame",
+      "score": 0.217643,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 19,
+          "overlap_tokens": [
+            "lc",
+            "metabolomics",
+            "ms",
+            "non",
+            "quality",
+            "targeted"
+          ],
+          "registry_token_count": 40,
+          "score": 0.217643,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Workflow for non-targeted LC-MS metabolic profiling\nProvides functionality for untargeted LC-MS metabolomics\nresearch as specified in the associated protocol article in the\n'Metabolomics Data Processing and Data Analysis\u2014Current Best\nPractices' special issue of the Metabolites journal (2020).\nThis includes tabular data preprocessing and quality control,\nuni- and multivariate analysis as well as quality control\nvisualizations, feature-wise visualizations and results\nvisualizations. Raw data preprocessing and functionality\nrelated to biological context, such as pathway analysis, is not\nincluded.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "This package can be used to analyze preprocessed LC-MS data in non-targeted metabolomics\nlibrary(notame)\n```flag_quality``` is used to flag features based on the other quality metrics\nMissForest\u2014non-parametric missing value imputation for mixed-type data"
+      },
+      "tool_name": "notame",
+      "tool_slug": "notame",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "openms",
+      "score": 0.040825,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 60,
+          "overlap_tokens": [
+            "library"
+          ],
+          "registry_token_count": 10,
+          "score": 0.040825,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "python",
+            "r"
+          ],
+          "registry_ecosystems": [],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "The OpenMS TOPP tools (without GUI components and adapted thirdparty tools) and the TOPP tool framework library OpenMS_CLI with its headers, for developing own tools.",
+        "registry_ecosystem_hints": "The OpenMS TOPP tools (without GUI components and adapted thirdparty tools) and the TOPP tool framework library OpenMS_CLI with its headers, for developing own tools.\nhttps://github.com/OpenMS/OpenMS\nhttps://github.com/OpenMS/OpenMS\nhttps://github.com/OpenMS/OpenMS/releases/download/v3.6.0/OpenMS-3.6.0.tar.gz",
+        "tool_evidence": "[Optimus](https://github.com/MolecularCartography/Optimus) (using OpenMS)\nor [Optimus](https://github.com/MolecularCartography/Optimus) (using OpenMS)\nProcesses mzML output from a simulation (or real acquisition) to compute fragmentation coverage using OpenMS feature detection.\npyOpenMS (Python interface to the C++ OpenMS library)\npyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data.\nprojects like OpenMS or pyteomics chose a fundamentally different approach.\nBioactivity-Based Molecular Networking\nfeaturefindermetab\nRapid Development of Improved Data-Dependent Acquisition Strategies\nmzPeak: Designing a Scalable, Interoperable, and Future-Ready Mass Spectrometry Data Format\nOpenMS\nPF\u0394Screen \u2014 an open-source tool for automated PFAS feature prioritization in non-target HRMS data\nThe rawrr R Package: Direct Access to Orbitrap Data and Beyond\nSmartPeak"
+      },
+      "tool_name": "OpenMS",
+      "tool_slug": "openms",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "openpyxl",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 2,
+          "overlap_tokens": [],
+          "registry_token_count": 8,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "insufficient"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "A Python library to read/write Excel 2010 xlsx/xlsm files",
+        "registry_ecosystem_hints": "A Python library to read/write Excel 2010 xlsx/xlsm files\nhttp://openpyxl.readthedocs.org\nhttps://pypi.python.org/packages/25/69/7976ba24d2b532e96157623daa8de4bbcad23e0761b3062d5e38775577d5/openpyxl-2.4.0-b1.tar.gz",
+        "tool_evidence": "openpyxl 3.1.5\nROIAL-NMR"
+      },
+      "tool_name": "openpyxl",
+      "tool_slug": "openpyxl",
+      "verdict": "insufficient"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "pairkat",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 3,
+          "overlap_tokens": [],
+          "registry_token_count": 63,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "PaIRKAT\nPaIRKAT is model framework for assessing statistical\nrelationships between networks of metabolites (pathways) and an\noutcome of interest (phenotype). PaIRKAT queries the KEGG\ndatabase to determine interactions between metabolites from\nwhich network connectivity is constructed. This model framework\nimproves testing power on high dimensional data by including\ngraph topography in the kernel machine regression setting.\nStudies on high dimensional data can struggle to include the\ncomplex relationships between variables. The semi-parametric\nkernel machine regression model is a powerful tool for\ncapturing these types of relationships. They provide a\nframework for testing for relationships between outcomes of\ninterest and high dimensional data such as metabolomic,\ngenomic, or proteomic pathways. PaIRKAT uses known biological\nconnections between high dimensional variables by representing\nthem as edges of \u2018graphs\u2019 or \u2018networks.\u2019 It is common for nodes\n(e.g. metabolites) to be disconnected from all others within\nthe graph, which leads to meaningful decreases in testing power\nwhether or not the graph information is included. We include a\ngraph regularization or \u2018smoothing\u2019 approach for managing this\nissue.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "github.com/CharlieCarpenter/PaIRKAT\nPaIRKAT"
+      },
+      "tool_name": "PaIRKAT",
+      "tool_slug": "pairkat",
+      "verdict": "contradicted"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "pcaMethods",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 3,
+          "overlap_tokens": [],
+          "registry_token_count": 42,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "A collection of PCA methods\nProvides Bayesian PCA, Probabilistic PCA, Nipals PCA,\nInverse Non-Linear PCA and the conventional SVD PCA. A cluster\nbased method for missing value estimation is included for\ncomparison. BPCA, PPCA and NipalsPCA may be used to perform PCA\non incomplete data as well as for accurate missing value\nestimation. A set of methods for printing and plotting the\nresults is also provided. All PCA methods make use of the same\ndata structure (pcaRes) to provide a common interface to the\nPCA results. Initiated at the Max-Planck Institute for\nMolecular Plant Physiology, Golm, Germany.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "BiocManager::install(\"pcaMethods\")\nNOREVA"
+      },
+      "tool_name": "pcaMethods",
+      "tool_slug": "pcamethods",
+      "verdict": "insufficient"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "peakqc",
+      "score": 0.272166,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 6,
+          "overlap_tokens": [
+            "control",
+            "quality"
+          ],
+          "registry_token_count": 9,
+          "score": 0.272166,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Quality control of single cell ATAC-seq data based on fragment length distributions.",
+        "registry_ecosystem_hints": "Quality control of single cell ATAC-seq data based on fragment length distributions.\nhttps://github.com/loosolab/PEAKQC\nhttps://github.com/loosolab/PEAKQC\nhttps://pypi.org/packages/source/p/peakqc/peakqc-0.1.8.tar.gz",
+        "tool_evidence": "PeakQC: Automated quality control pipeline by PCA analysis on MS1 data\nPeakQC"
+      },
+      "tool_name": "PeakQC",
+      "tool_slug": "peakqc",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "ProteoMM",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 3,
+          "overlap_tokens": [],
+          "registry_token_count": 40,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Multi-Dataset Model-based Differential Expression Proteomics\nAnalysis Platform\nProteoMM is a statistical method to perform model-based\npeptide-level differential expression analysis of single or\nmultiple datasets. For multiple datasets ProteoMM produces a\nsingle fold change and p-value for each protein across multiple\ndatasets. ProteoMM provides functionality for normalization,\nmissing value imputation and differential expression.\nModel-based peptide-level imputation and differential\nexpression analysis component of package follows the analysis\ndescribed in \u201cA statistical framework for protein quantitation\nin bottom-up MS based proteomics\" (Karpievitch et al.\nBioinformatics 2009). EigenMS normalisation is implemented as\ndescribed in \"Normalization of peak intensities in bottom-up\nMS-based proteomics using singular value decomposition.\"\n(Karpievitch et al. Bioinformatics 2009).",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "BiocManager::install(\"ProteoMM\")\nNOREVA"
+      },
+      "tool_name": "ProteoMM",
+      "tool_slug": "proteomm",
+      "verdict": "insufficient"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "psims",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 11,
+          "overlap_tokens": [],
+          "registry_token_count": 9,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Writers and controlled vocabulary manager for PSI-MS's mzML and mzIdentML standards",
+        "registry_ecosystem_hints": "Writers and controlled vocabulary manager for PSI-MS's mzML and mzIdentML standards\nhttps://github.com/mobiusklein/psims\nhttps://github.com/mobiusklein/psims\nhttps://pypi.io/packages/source/p/psims/psims-1.3.5.tar.gz",
+        "tool_evidence": "- `psims <https://mobiusklein.github.io/psims/docs/build/html/>`_ (used py :py:mod:`pyteomics.proforma`)\npyteomics"
+      },
+      "tool_name": "psims",
+      "tool_slug": "psims",
+      "verdict": "contradicted"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "psm-utils",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 9,
+          "overlap_tokens": [],
+          "registry_token_count": 10,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Common utilities for parsing and handling peptide-spectrum matches and search engine results.",
+        "registry_ecosystem_hints": "Common utilities for parsing and handling peptide-spectrum matches and search engine results.\nhttps://github.com/compomics/psm_utils\nhttps://github.com/compomics/psm_utils\nhttps://pypi.io/packages/source/p/psm-utils/psm_utils-1.5.5.tar.gz",
+        "tool_evidence": "Accepted ProForma modification labels in :py:mod:`psm_utils`\nMS2Rescore (immunopeptidome rescoring)"
+      },
+      "tool_name": "psm_utils",
+      "tool_slug": "psm-utils",
+      "verdict": "contradicted"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "pubchempy",
+      "score": 0.138675,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 26,
+          "overlap_tokens": [
+            "pubchem",
+            "python"
+          ],
+          "registry_token_count": 8,
+          "score": 0.138675,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "python"
+          ],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "A simple Python wrapper around the PubChem PUG REST API.",
+        "registry_ecosystem_hints": "A simple Python wrapper around the PubChem PUG REST API.\nhttps://github.com/mcs07/PubChemPy\nhttps://github.com/mcs07/PubChemPy\nhttps://pypi.io/packages/source/P/PubChemPy/PubChemPy-1.0.4.tar.gz",
+        "tool_evidence": "Final candidate selection is done in Python using RDKit and PubChemPy\nWe then ran an automated search against PubChem [42] using pubchempy [43] for spectra which still missed InChI or SMILES annotations.\nMAW\nMS2DeepScore: a novel deep learning similarity measure to compare tandem mass spectra"
+      },
+      "tool_name": "PubChemPy",
+      "tool_slug": "pubchempy",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "pyhmmer",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 8,
+          "overlap_tokens": [],
+          "registry_token_count": 5,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Cython bindings and Python interface to HMMER3.",
+        "registry_ecosystem_hints": "Cython bindings and Python interface to HMMER3.\nhttps://github.com/althonos/pyhmmer\nhttps://github.com/althonos/pyhmmer\nhttps://pypi.org/packages/source/p/pyhmmer/pyhmmer-0.12.3.tar.gz",
+        "tool_evidence": "Switching from HMMER to [pyHMMER](https://github.com/althonos/pyhmmer)\nBiG-SLiCE"
+      },
+      "tool_name": "pyHMMER",
+      "tool_slug": "pyhmmer",
+      "verdict": "contradicted"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "pymzml",
+      "score": 0.084515,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 35,
+          "overlap_tokens": [
+            "mzml"
+          ],
+          "registry_token_count": 4,
+          "score": 0.084515,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "python"
+          ],
+          "registry_ecosystems": [],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "High-throughput mzML parsing.",
+        "registry_ecosystem_hints": "High-throughput mzML parsing.\nhttps://github.com/pymzml/pymzML\nhttps://github.com/pymzml/pymzML\nhttps://github.com/pymzml/pymzML/archive/refs/tags/v2.5.11.tar.gz",
+        "tool_evidence": "The default method uses `pymzml` to parse mzML files.\npymzml==2.5.2\nIn order to make pymzML accept other kinds of mzML data (e.g databases), one can implement an own wrapper\nfrom pymzml import spec\nfrom pymzml.run import Reader\n.mzML ----- .. toctree:: :maxdepth: 1 pyopenms pymzml\nTrackable and scalable LC-MS metabolomics data processing using asari\nLAGF\npymzml\npyopenmsviz\n<tt>spectrum_utils</tt>\n                    : A Python Package for Mass Spectrometry Data Processing and Visualization"
+      },
+      "tool_name": "pymzml",
+      "tool_slug": "pymzml",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "pyopenms",
+      "score": 0.225374,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 45,
+          "overlap_tokens": [
+            "library",
+            "ms",
+            "openms",
+            "python"
+          ],
+          "registry_token_count": 7,
+          "score": 0.225374,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "python"
+          ],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Python bindings for OpenMS, an open-source software C++ library for LC-MS data management and analyses.",
+        "registry_ecosystem_hints": "Python bindings for OpenMS, an open-source software C++ library for LC-MS data management and analyses.\nhttps://github.com/OpenMS/OpenMS\nhttps://github.com/OpenMS/OpenMS\nhttps://github.com/OpenMS/OpenMS/releases/download/v3.6.0/OpenMS-3.6.0.tar.gz",
+        "tool_evidence": "A :class:`MSExperiment` object (supported by :mod:`pyopenms`)\npyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data\n.mzML ----- .. toctree:: :maxdepth: 1 pyopenms pymzml\npyopenms ... pymzml ... pyteomics\nThese files can be parsed and processed by the pyOpenMS Python package\npyOpenMS](https://pyopenms.readthedocs.io/) (version 2.7.0)\nIntroduction to Modern Liquid Chromatography\nPF\u0394Screen \u2014 an open-source tool for automated PFAS feature prioritization in non-target HRMS data\npyopenmsviz\nSmartPeak\n<tt>spectrum_utils</tt>\n                    : A Python Package for Mass Spectrometry Data Processing and Visualization"
+      },
+      "tool_name": "pyopenms",
+      "tool_slug": "pyopenms",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "pyteomics",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 16,
+          "overlap_tokens": [],
+          "registry_token_count": 1,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "insufficient"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "python"
+          ],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "A framework for proteomics data analysis.",
+        "registry_ecosystem_hints": "A framework for proteomics data analysis.\nhttps://github.com/levitsky/pyteomics\nhttps://pypi.io/packages/source/p/pyteomics/pyteomics-4.7.5.tar.gz",
+        "tool_evidence": "pyopenms ... pymzml ... pyteomics\nPyteomics supports recent versions of Python 3.\nimport pyteomics.mgf\npyopenmsviz\npyteomics\n<tt>spectrum_utils</tt>\n                    : A Python Package for Mass Spectrometry Data Processing and Visualization"
+      },
+      "tool_name": "pyteomics",
+      "tool_slug": "pyteomics",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "rawrr",
+      "score": 0.179124,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 33,
+          "overlap_tokens": [
+            "access",
+            "beyond",
+            "direct",
+            "functions",
+            "net",
+            "orbitrap"
+          ],
+          "registry_token_count": 34,
+          "score": 0.179124,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Direct Access to Orbitrap Data and Beyond\nThis package wraps the functionality of the Thermo Fisher\nScientic RawFileReader .NET 8.0 assembly. Within the R\nenvironment, spectra and chromatograms are represented by S3\nobjects. The package provides basic functions to download and\ninstall the required third-party libraries. The package is\ndeveloped, tested, and used at the Functional Genomics Center\nZurich, Switzerland.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "rawrr::readSpectrum\nOur .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file\nSpecifically, `R` functions requesting access to data stored in binary raw files (reader family functions listed in Table 1) invoke compiled `C#` wrapper methods using a system call\nOur `.NET 8.0` [@dotnet] precompiled wrapper methods are bundled, including the runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file and shipped with the released `R` package.\nR` functions requesting access to data stored in binary raw files (reader family functions listed in Table 1) invoke compiled `C#` wrapper methods\nThe `rawrr` executable will run out of the box\nThe rawrr R Package: Direct Access to Orbitrap Data and Beyond"
+      },
+      "tool_name": "rawrr",
+      "tool_slug": "rawrr",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "rdkit",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 120,
+          "overlap_tokens": [],
+          "registry_token_count": 0,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "insufficient"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "python"
+          ],
+          "registry_ecosystems": [],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "",
+        "registry_ecosystem_hints": "https://github.com/rdkit/rdkit/archive/Release_2016_03_3.tar.gz",
+        "tool_evidence": "Tanimoto similarity (Jaccard index) based on daylight-like molecular fingerprints, version 2020.03.2, 2048 bits, derived using rdkit\n3DMolMS has the following dependencies: * Python 3.8+ * PyTorch * RDKit\n**RDKit**\n- **RDKit**\nstandard library for parsing and manipulating SMILES and chemical structures\nNo usage/docs found.\nSpec2Vec: Improved mass spectral similarity scoring through learning of structural relationships\n3DMolMS\nABCoRT\nbam\nChemDistiller\nCOCONUT online: Collection of Open Natural Products database\nCSU-MS2\nDeepMet\nDNA adduct database\nFastEI\nFragHub\nGNN-RT\nFrom Reverse Phase Chromatography to HILIC: Graph Transformers Power Method-Independent Machine Learning of Retention Times\nidslmint\nBinding of anti-Trypanosoma natural products from African flora against selected drug targets: a docking study\nMass Spectrum Transformer\nMAW\nmetid\nModiFinder: Tandem Mass Spectral Alignment Enables Structural Modification Site Localization\nmol2ccs\nMS2DeepScore: a novel deep learning similarity measure to compare tandem mass spectra\nmsmetaenhancer\nMWFormer\nPACCS\nPickaxe\n<i>In Silico</i> Collision Cross Section Calculations to Aid Metabolite Annotation\nPS<sup>2</sup>MS: A Deep Learning-Based Prediction System for Identifying New Psychoactive Substances Using Mass Spectrometry\npyopenmsviz\nSpec2Mol\nFlash entropy search to query all mass spectral libraries in real time"
+      },
+      "tool_name": "RDKit",
+      "tool_slug": "rdkit",
+      "verdict": "insufficient"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "rhdf5",
+      "score": 0.086066,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 5,
+          "overlap_tokens": [
+            "hdf5"
+          ],
+          "registry_token_count": 27,
+          "score": 0.086066,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "R Interface to HDF5\nThis package provides an interface between HDF5 and R.\nHDF5's main features are the ability to store and access very\nlarge and/or complex datasets and a wide variety of metadata on\nmass storage (disk) through a completely portable file format.\nThe rhdf5 package is thus suited for the exchange of large\nand/or complex datasets between R and other software package,\nand for letting R applications work on datasets that are larger\nthan the available RAM.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "using generic HDF5 libraries available (e.g., h5py and rhdf5)\nMZA"
+      },
+      "tool_name": "rhdf5",
+      "tool_slug": "rhdf5",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "ruby",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 5,
+          "overlap_tokens": [],
+          "registry_token_count": 8,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "ruby"
+          ],
+          "registry_ecosystems": [
+            "ruby"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Ruby is a dynamic, reflective, object-oriented, general-purpose programming language.",
+        "registry_ecosystem_hints": "Ruby is a dynamic, reflective, object-oriented, general-purpose programming language.\nhttps://www.ruby-lang.org\nhttps://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.3.tar.gz",
+        "tool_evidence": "in order to use the commands below in a Ruby console\nClassyFire"
+      },
+      "tool_name": "Ruby",
+      "tool_slug": "ruby",
+      "verdict": "insufficient"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "S4Vectors",
+      "score": 0.032686,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 26,
+          "overlap_tokens": [
+            "dataframe"
+          ],
+          "registry_token_count": 36,
+          "score": 0.032686,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Foundation of vector-like and list-like containers in\nBioconductor\nThe S4Vectors package defines the Vector and List virtual\nclasses and a set of generic functions that extend the semantic\nof ordinary vectors and lists in R. Package developers can\neasily implement vector-like or list-like objects as concrete\nsubclasses of Vector or List. In addition, a few low-level\nconcrete subclasses of general interest (e.g. DataFrame, Rle,\nFactor, and Hits) are implemented in the S4Vectors package\nitself (many more are implemented in the IRanges package and in\nother Bioconductor infrastructure packages).",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "invisible(lapply(c(\"dplyr\", \"readr\", \"data.table\", \"pbapply\", \"magrittr\", \"utils\", \"stats\", \"rPref\", \"ggplot2\", \"DEoptim\", \"patchwork\", \"S4Vectors\", \"Spectra\"\ninvisible(lapply(c(\"dplyr\", \"readr\", \"data.table\", \"pbapply\", \"magrittr\", \"utils\", \"stats\", \"rPref\", \"ggplot2\", \"DEoptim\", \"patchwork\", \"S4Vectors\", \"Spectra\", \"BiocManager\", \"knitr\", \"markdown\"),\nreturn the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg(\"S4Vectors\")`\n`DataFrame` object (defined in the `r Biocpkg(\"S4Vectors\")` package)\nDataFrame` object (defined in the `r Biocpkg(\"S4Vectors\")` package)\nDuReS\nspectra"
+      },
+      "tool_name": "S4Vectors",
+      "tool_slug": "s4vectors",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "salmon",
+      "score": 0.046225,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 18,
+          "overlap_tokens": [
+            "quantification"
+          ],
+          "registry_token_count": 26,
+          "score": 0.046225,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "conda"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Highly-accurate & wicked fast transcript-level quantification from RNA-seq reads (salmon 2.0, Rust).\nsalmon 1.12.0 is the final C++ release of salmon (selective-alignment transcript quantification). The default `salmon` package is the maintained Rust 2.0 build; install this legacy C++ line explicitly with `conda install \"salmon=1.12\"`, ideally in a dedicated environment.",
+        "registry_ecosystem_hints": "Highly-accurate & wicked fast transcript-level quantification from RNA-seq reads (salmon 2.0, Rust).\nsalmon 1.12.0 is the final C++ release of salmon (selective-alignment transcript quantification). The default `salmon` package is the maintained Rust 2.0 build; install this legacy C++ line explicitly with `conda install \"salmon=1.12\"`, ideally in a dedicated environment.\nhttps://github.com/COMBINE-lab/salmon\nhttps://github.com/COMBINE-lab/salmon\nhttps://github.com/COMBINE-lab/salmon/archive/refs/tags/v1.10.3.tar.gz",
+        "tool_evidence": "Genes, miRNA, isoforms | Align and Assembly | Salmon, samtools, STAR, Hisat2, StringTie2\nIt then employs [salmon](../modules/nf-core/salmon) in order to obtain quantification files\nMultiOmicsIntegrator"
+      },
+      "tool_name": "Salmon",
+      "tool_slug": "salmon",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "singularity",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 25,
+          "overlap_tokens": [],
+          "registry_token_count": 5,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Singularity - Enabling users to have full control of their environment",
+        "registry_ecosystem_hints": "Singularity - Enabling users to have full control of their environment\nhttp://singularity.lbl.gov\nhttps://github.com/singularityware/singularity/releases/download/2.4.2/singularity-2.4.2.tar.gz",
+        "tool_evidence": "Build singularity image on job node. Freaks out on login node: ``` SCRATCH_PATH=/cluster/scratch/$(id\nBuild singularity image on job node\nBuild singularity image on job node.\nIt uses Docker/Singularity containers making installation trivial and results highly reproducible.\nBoth Docker and Singularity (for high-performance computing) are supported\nBoth Docker and Singularity (for high-performance computing) are supported.\nMSNovelist\nMultiOmicsIntegrator\nnextflow4msdial"
+      },
+      "tool_name": "Singularity",
+      "tool_slug": "singularity",
+      "verdict": "contradicted"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "snakemake",
+      "score": 0.088388,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 32,
+          "overlap_tokens": [
+            "fast",
+            "silico",
+            "workflow"
+          ],
+          "registry_token_count": 36,
+          "score": 0.088388,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "A popular workflow management system aiming at full in-silico reproducibility.\nSnakemake is a workflow management system that aims to reduce the complexity of creating workflows by providing a fast and comfortable execution environment, together with a clean and modern specification language in python style. Snakemake workflows are essentially Python scripts extended by declarative code to define rules. Rules describe how to create output files from input files.",
+        "registry_ecosystem_hints": "A popular workflow management system aiming at full in-silico reproducibility.\nSnakemake is a workflow management system that aims to reduce the complexity of creating workflows by providing a fast and comfortable execution environment, together with a clean and modern specification language in python style. Snakemake workflows are essentially Python scripts extended by declarative code to define rules. Rules describe how to create output files from input files.\nhttps://snakemake.github.io\nhttps://github.com/snakemake/snakemake\nhttps://pypi.org/packages/source/s/snakemake/snakemake-9.27.1.tar.gz",
+        "tool_evidence": "snakemake --configfile config/config_fast.yaml --jobs 1 --dry-run -p\nA Snakemake configuration file in YAML format is required.\nA Snakemake configuration file in `YAML <http://yaml.org/>`_ format is required.\nSnakemake workflow manager for predicting collisional cross sections\nThis repository contains a Snakemake workflow manager for predicting collisional cross sections (CCS)\nDeepMet\ndeimos\n<i>In Silico</i> Collision Cross Section Calculations to Aid Metabolite Annotation\nUmetaFlow"
+      },
+      "tool_name": "Snakemake",
+      "tool_slug": "snakemake",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "spec2vec",
+      "score": 0.195698,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 47,
+          "overlap_tokens": [
+            "mass",
+            "measure",
+            "similarity"
+          ],
+          "registry_token_count": 5,
+          "score": 0.195698,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "python"
+          ],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Word2Vec based similarity measure of mass spectrometry data.",
+        "registry_ecosystem_hints": "Word2Vec based similarity measure of mass spectrometry data.\nhttps://github.com/iomega/spec2vec\nhttps://github.com/iomega/spec2vec\nhttps://pypi.org/packages/source/s/spec2vec/spec2vec-0.9.1.tar.gz",
+        "tool_evidence": "we introduce Spec2Vec, a novel spectral similarity score\nspec2vec (https://github.com/iomega/spec2vec). Both packages are freely available and can be installed via conda\nThe underlying code was developed into two Python packages to handle and compare mass spectra, matchms (https://github.com/matchms/matchms) and spec2vec (https://github.com/iomega/spec2vec)\nMEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra\nrecently introduced unsupervised Spec2V\nAutomated Mass2Motif Annotation Guidance (MAG) with Spec2Vec\nSpec2Vec: Improved mass spectral similarity scoring through learning of structural relationships\nmemo\nMS2DeepScore: a novel deep learning similarity measure to compare tandem mass spectra\nMS2LDA"
+      },
+      "tool_name": "Spec2Vec",
+      "tool_slug": "spec2vec",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "Spectra",
+      "score": 0.224574,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 47,
+          "overlap_tokens": [
+            "defines",
+            "efficient",
+            "functionality",
+            "handling",
+            "infrastructure",
+            "mass",
+            "spectrometry",
+            "storing"
+          ],
+          "registry_token_count": 27,
+          "score": 0.224574,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Spectra Infrastructure for Mass Spectrometry Data\nThe Spectra package defines an efficient infrastructure\nfor storing and handling mass spectrometry spectra and\nfunctionality to subset, process, visualize and compare spectra\ndata. It provides different implementations (backends) to store\nmass spectrometry data. These comprise backends tuned for fast\ndata access and processing and backends for very large data\nsets ensuring a small memory footprint.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "invisible(lapply(c(\"dplyr\", \"readr\", \"data.table\", \"pbapply\", \"magrittr\", \"utils\", \"stats\", \"rPref\", \"ggplot2\", \"DEoptim\", \"patchwork\", \"S4Vectors\", \"Spectra\"\ninvisible(lapply(c(\"dplyr\", \"readr\", \"data.table\", \"pbapply\", \"magrittr\", \"utils\", \"stats\", \"rPref\", \"ggplot2\", \"DEoptim\", \"patchwork\", \"S4Vectors\", \"Spectra\", \"BiocManager\", \"knitr\", \"markdown\"),\nperforms spectral database dereplication using R Package\nspectral database dereplication using R Package Spectra\nThe transformation is performed using functionality from the packages `r BiocStyle::Biocpkg(\"Spectra\")`\nThe *Spectra* package defines an efficient infrastructure for storing and handling mass spectrometry spectra\nDuReS\nMAW\nMobilityTransformR\nspectra\nspectripy\nAutomated Integration and Quality Assessment of Chromatographic Peaks in LC\u2013MS-Based Metabolomics and Lipidomics Using TARDIS\nXCMS"
+      },
+      "tool_name": "Spectra",
+      "tool_slug": "spectra",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "SpectriPy",
+      "score": 0.301511,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 8,
+          "overlap_tokens": [
+            "integration",
+            "ms",
+            "python",
+            "spectra"
+          ],
+          "registry_token_count": 22,
+          "score": 0.301511,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "python",
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Enhancing Cross-Language Mass Spectrometry Data Analysis with R\nand Python\nThe SpectriPy package allows integration of Python-based\nMS analysis code with the Spectra package. Spectra objects can\nbe converted into Python MS data structures. In addition,\nSpectriPy integrates and wraps the similarity scoring and\nprocessing/filtering functions from the Python matchms package\ninto R.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R\nThe *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R.\nThe *SpectriPy* package allows integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based MS analysis in R\nspectripy"
+      },
+      "tool_name": "SpectriPy",
+      "tool_slug": "spectripy",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "spectrum_utils",
+      "score": 0.229416,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 19,
+          "overlap_tokens": [
+            "mass",
+            "spectrometry"
+          ],
+          "registry_token_count": 4,
+          "score": 0.229416,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "python"
+          ],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Mass spectrometry utility functions.",
+        "registry_ecosystem_hints": "Mass spectrometry utility functions.\nhttps://github.com/bittremieux/spectrum_utils\nhttps://github.com/bittremieux/spectrum_utils\nhttps://pypi.org/packages/source/s/spectrum_utils/spectrum_utils-0.5.0.tar.gz",
+        "tool_evidence": "spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.\nfragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma) specification\nspectrum_utils (version 0.4.0) is faster than alternative libraries\nspectrum_utils is a Python package for efficient mass spectrometry data processing and visualization\n<tt>spectrum_utils</tt>\n                    : A Python Package for Mass Spectrometry Data Processing and Visualization"
+      },
+      "tool_name": "spectrum_utils",
+      "tool_slug": "spectrum-utils",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "statTarget",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 3,
+          "overlap_tokens": [],
+          "registry_token_count": 22,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "Statistical Analysis of Molecular Profiles\nA streamlined tool provides a graphical user interface for\nquality control based signal drift correction (QC-RFSC),\nintegration of data from multi-batch MS-based experiments, and\nthe comprehensive statistical analysis in metabolomics and\nproteomics.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "BiocManager::install(\"statTarget\")\nNOREVA"
+      },
+      "tool_name": "statTarget",
+      "tool_slug": "stattarget",
+      "verdict": "insufficient"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "SummarizedExperiment",
+      "score": 0.048795,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 21,
+          "overlap_tokens": [
+            "object"
+          ],
+          "registry_token_count": 20,
+          "score": 0.048795,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "A container (S4 class) for matrix-like assays\nThe SummarizedExperiment container contains one or more\nassays, each represented by a matrix-like object of numeric or\nother mode. The rows typically represent genomic ranges of\ninterest and the columns represent samples.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "library(SummarizedExperiment)... The data is already formatted in to a `SummarizedExperiment` object\nThe toolbox builds upon the bioconductor package SummarizedExperiment (SE)\nThe `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.\nInternally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data.\nInternally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data\nThe `buildExperiment` function will then take the data and create an experiment object\nhRUV\nmaplet\nmzquality\nmzrtsim"
+      },
+      "tool_name": "SummarizedExperiment",
+      "tool_slug": "summarizedexperiment",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "sva",
+      "score": 0.076999,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 22,
+          "overlap_tokens": [
+            "batch",
+            "combat",
+            "effects"
+          ],
+          "registry_token_count": 69,
+          "score": 0.076999,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Surrogate Variable Analysis\nThe sva package contains functions for removing batch\neffects and other unwanted variation in high-throughput\nexperiment. Specifically, the sva package contains functions\nfor the identifying and building surrogate variables for\nhigh-dimensional data sets. Surrogate variables are covariates\nconstructed directly from high-dimensional data (like gene\nexpression/RNA sequencing/methylation/brain imaging data) that\ncan be used in subsequent analyses to adjust for unknown,\nunmodeled, or latent sources of noise. The sva package can be\nused to remove artifacts in three ways: (1) identifying and\nestimating surrogate variables for unknown sources of variation\nin high-throughput experiments (Leek and Storey 2007 PLoS\nGenetics,2008 PNAS), (2) directly removing known batch effects\nusing ComBat (Johnson et al. 2007 Biostatistics) and (3)\nremoving batch effects with known control probes (Leek 2014\nbiorXiv). Removing batch effects and using surrogate variables\nin differential expression analysis have been shown to reduce\ndependence, stabilize error rate estimates, and improve\nreproducibility, see (Leek and Storey 2007 PLoS Genetics, 2008\nPNAS or Leek et al. 2011 Nat. Reviews Genetics).",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "ComBat(parametric and non-parametric)-model [PMID:16632515] from sva package [PMID:22257669]\nGenes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva\nA Two-Stage Procedure for the Removal of Batch Effects in Microarray Studies\nMultiOmicsIntegrator"
+      },
+      "tool_name": "sva",
+      "tool_slug": "sva",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "thermorawfileparser",
+      "score": 0.218218,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 12,
+          "overlap_tokens": [
+            "raw",
+            "thermo"
+          ],
+          "registry_token_count": 7,
+          "score": 0.218218,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "python"
+          ],
+          "registry_ecosystems": [],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Parser for Thermo RAW files based on the ThermoFisher ThermoRawFileReader library.",
+        "registry_ecosystem_hints": "Parser for Thermo RAW files based on the ThermoFisher ThermoRawFileReader library.\nhttps://github.com/compomics/ThermoRawFileParser\nhttps://github.com/compomics/ThermoRawFileParser\nhttps://github.com/compomics/ThermoRawFileParser/releases/download/v.2.0.0-dev/ThermoRawFileParser-v.2.0.0-dev-osx.zip",
+        "tool_evidence": "convert Thermo .raw to mzML (ThermoRawFileParser)\nCommon data models to streamline metabolomics processing and annotation, and implementation in a Python pipeline"
+      },
+      "tool_name": "ThermoRawFileParser",
+      "tool_slug": "thermorawfileparser",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "tqdm",
+      "score": 0.0,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 10,
+          "overlap_tokens": [],
+          "registry_token_count": 4,
+          "score": 0.0,
+          "threshold": 0.021713,
+          "verdict": "contradicted"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "python"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "A Fast, Extensible Progress Meter",
+        "registry_ecosystem_hints": "A Fast, Extensible Progress Meter\nhttps://github.com/tqdm/tqdm\nhttps://pypi.python.org/packages/b0/66/1888cc699f6f7d73e262c2da7f0169ffdf358949af6e5dfbd6548ba82ac7/tqdm-4.7.2.tar.gz",
+        "tool_evidence": "tqdm==4.45.0\ntqdm\nLAGF\nThe METLIN small molecule dataset for machine learning-based retention time\u00a0prediction"
+      },
+      "tool_name": "tqdm",
+      "tool_slug": "tqdm",
+      "verdict": "contradicted"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconda",
+      "registry_package": "trim-galore",
+      "score": 0.106904,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 7,
+          "overlap_tokens": [
+            "fastqc",
+            "quality"
+          ],
+          "registry_token_count": 50,
+          "score": 0.106904,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [],
+          "registry_ecosystems": [
+            "java",
+            "python"
+          ],
+          "verdict": "insufficient"
+        }
+      },
+      "texts": {
+        "registry_description": "Fast adapter and quality trimming for NGS data \u2014 Oxidized Edition (Rust)\nTrim Galore v2 is a Rust rewrite of the original Perl Trim Galore. Single static binary, no Python/Perl/Cutadapt/Java/igzip/pigz dependencies. Drop-in compatible with v0.6.x scripts and pipelines (same CLI, same output filenames, same report format) with adapter auto-detection (Illumina, Nextera, Small RNA, BGI/DNBSEQ), poly-G/poly-A trimming, paired-end single-pass processing, RRBS support, and bundled FastQC integration via fastqc-rust.",
+        "registry_ecosystem_hints": "Fast adapter and quality trimming for NGS data \u2014 Oxidized Edition (Rust)\nTrim Galore v2 is a Rust rewrite of the original Perl Trim Galore. Single static binary, no Python/Perl/Cutadapt/Java/igzip/pigz dependencies. Drop-in compatible with v0.6.x scripts and pipelines (same CLI, same output filenames, same report format) with adapter auto-detection (Illumina, Nextera, Small RNA, BGI/DNBSEQ), poly-G/poly-A trimming, paired-end single-pass processing, RRBS support, and bundled FastQC integration via fastqc-rust.\nhttps://www.trimgalore.com/\nhttps://github.com/FelixKrueger/TrimGalore\nhttps://github.com/FelixKrueger/TrimGalore/archive/refs/tags/v2.3.0.tar.gz",
+        "tool_evidence": "Genes, miRNA, isoforms | Quality control | FastQC, trimgalore\nMultiOmicsIntegrator"
+      },
+      "tool_name": "trimgalore",
+      "tool_slug": "trimgalore",
+      "verdict": "corroborated"
+    },
+    {
+      "label": "accepted_match",
+      "registry": "bioconductor",
+      "registry_package": "xcms",
+      "score": 0.102598,
+      "signals": {
+        "domain": {
+          "evidence_token_count": 95,
+          "overlap_tokens": [
+            "lc",
+            "mass",
+            "ms",
+            "processing",
+            "untargeted"
+          ],
+          "registry_token_count": 25,
+          "score": 0.102598,
+          "threshold": 0.021713,
+          "verdict": "corroborated"
+        },
+        "ecosystem": {
+          "evidence_ecosystems": [
+            "python",
+            "r"
+          ],
+          "registry_ecosystems": [
+            "r"
+          ],
+          "verdict": "corroborated"
+        }
+      },
+      "texts": {
+        "registry_description": "LC-MS and GC-MS Data Analysis\nFramework for processing and visualization of\nchromatographically separated and single-spectra mass spectral\ndata. Imports from AIA/ANDI NetCDF, mzXML, mzData and mzML\nfiles. Preprocesses data for high-throughput, untargeted\nanalyte profiling.",
+        "registry_ecosystem_hints": "",
+        "tool_evidence": "AutoTuner is a parameter tuning algorithm for XCMS, MZmine2, and other metabolomics data processing softwares.\nthe estimates may be entered directly into XCMS to processes raw untargeted metabolomics data.\nOther metabolomics data processing tools can also be used for customized evaluation: `XCMS\nXCMS Development Version 3.11.4 or above\nUse XCMS package (https://bioconductor.org/packages/release/bioc/html/xcms.html) for peak picking, alignment and grouping\nopen source tools such as XCMS and MS-Dial\nAutoTuner parameter selection\nIntroduction to Modern Liquid Chromatography\nDaDIA\ngeoRge\nStreamlining feature elaboration and\u00a0statistics analysis in\u00a0metabolomics: the\u00a0GetFeatistics R-package\nIDSL.IPA\nISFrag\nLipidIN\nlipidmatch\nPathIntegrate: Multivariate modelling approaches for pathway-based multi-omics data integration\nAutomated Annotation of Untargeted All-Ion Fragmentation LC\u2013MS Metabolomics Data with MetaboAnnotatoR\nQuality evaluation of extracted ion chromatograms and chromatographic peaks in liquid chromatography/mass spectrometry-based metabolomics data\nMobilityTransformR\nmzquality\nmzRAPP\nncGTW\nneatms\nImage Processing and Machine Learning for Automated Identification of Chemo-/Biomarkers in Chromatography\u2013Mass Spectrometry\nRAMClust\nstatTarget: A streamlined tool for signal drift correction and interpretations of quantitative mass spectrometry-based omics data\nAutomated Integration and Quality Assessment of Chromatographic Peaks in LC\u2013MS-Based Metabolomics and Lipidomics Using TARDIS\nA Python-Based Pipeline for Preprocessing LC\u2013MS Data for Untargeted Metabolomics Workflows\nXCMS"
+      },
+      "tool_name": "XCMS",
+      "tool_slug": "xcms",
+      "verdict": "corroborated"
+    }
+  ]
+}
