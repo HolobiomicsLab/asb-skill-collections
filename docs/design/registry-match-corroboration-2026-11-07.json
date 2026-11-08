@@ -107,6 +107,22 @@
     ],
     "wrong_matches": 5
   },
+  "inputs": {
+    "bioconda": {
+      "file": null,
+      "retained": false,
+      "sha256": null,
+      "snapshot_date": "2026-11-07",
+      "source": "https://conda.anaconda.org/bioconda/channeldata.json"
+    },
+    "bioconductor": {
+      "file": null,
+      "retained": false,
+      "sha256": null,
+      "snapshot_date": "2026-11-07",
+      "source": "https://bioc.r-universe.dev/api/packages/{name}"
+    }
+  },
   "measurements": {
     "held_out": {
       "accepted_matches": 27,
@@ -333,6 +349,7 @@
       "yourselves"
     ],
     "threshold": 0.021713,
+    "threshold_candidate_source": "tuning records only",
     "threshold_candidates": [
       0.021713,
       0.025666,
@@ -340,28 +357,18 @@
       0.037743,
       0.040825,
       0.043073,
-      0.045502,
-      0.046225,
-      0.047458,
-      0.048795,
       0.050252,
       0.059131,
       0.060193,
       0.071067,
-      0.072739,
       0.076999,
       0.084515,
       0.086066,
-      0.088388,
       0.09513,
       0.09759,
       0.099015,
-      0.102598,
       0.106904,
-      0.10799,
       0.117851,
-      0.123091,
-      0.13194,
       0.133631,
       0.138675,
       0.16169,
@@ -372,20 +379,13 @@
       0.191675,
       0.195698,
       0.196116,
-      0.199205,
-      0.217643,
       0.218218,
       0.224574,
       0.225374,
-      0.229416,
-      0.263752,
-      0.272166,
       0.283069,
       0.301511,
       0.424264,
       0.471521,
-      0.5,
-      0.507833,
       0.516398,
       0.615385,
       0.707107

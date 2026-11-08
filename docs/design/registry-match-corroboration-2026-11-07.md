@@ -13,6 +13,56 @@ The `corroborated` verdict was more selective: precision was 100% and recall was
 positives. It is useful supporting evidence, but absence of corroboration must
 not be treated as evidence that a match is wrong.
 
+## Reproduce
+
+The bioconda input was `channeldata.json` from
+`https://conda.anaconda.org/bioconda/channeldata.json`. The Bioconductor input
+was the JSON array assembled from
+`https://bioc.r-universe.dev/api/packages/{name}` for every matched package,
+with `{name}` replaced by the package name. Both snapshots were taken on 7
+November 2026. Neither input was retained in this checkout or in the mission
+evidence available here, so their SHA-256 digests cannot be established. The
+committed 94-record result is therefore reproducible only from a new snapshot;
+the result's `inputs` block records this limitation explicitly.
+
+From a checkout containing a metabolomics domain collection and fresh snapshots,
+regenerate a complete measurement with:
+
+```bash
+python scripts/corroborate_registry_match.py \
+  --collection /path/to/metabolomics-domain/collections/metabolomics/v2 \
+  --registry-config governance/tool_registries.yaml \
+  --bioconda /path/to/channeldata.json \
+  --bioconductor /path/to/bioconductor.json \
+  --bioconda-snapshot-date YYYY-MM-DD \
+  --bioconductor-snapshot-date YYYY-MM-DD \
+  --output docs/design/registry-match-corroboration-2026-11-07.json
+```
+
+The regeneration command computes and records each input's SHA-256 digest. A
+new snapshot can change the threshold and measurements; the committed values
+must not be presented as verified against it.
+
+The deterministic 12-record fixture checks the complete CLI pipeline without
+network access. Its exact reproduction command is:
+
+```bash
+python scripts/corroborate_registry_match.py \
+  --collection tests/fixtures/registry_match_corroboration/collection \
+  --registry-config tests/fixtures/registry_match_corroboration/registry_config.yaml \
+  --bioconda tests/fixtures/registry_match_corroboration/bioconda.json \
+  --bioconductor tests/fixtures/registry_match_corroboration/bioconductor.json \
+  --seed 17 \
+  --bioconda-snapshot-date 2026-11-07 \
+  --bioconductor-snapshot-date 2026-11-07 \
+  --output tests/fixtures/registry_match_corroboration/expected.json
+```
+
+The test suite compares that output byte for byte with the committed fixture
+and validates the committed 94-record result against the script's output
+schema. It does not claim to regenerate the historical result from unavailable
+snapshots.
+
 ## Labelled set
 
 The accepted set is every v2 tool whose `license_detection` is
@@ -49,7 +99,11 @@ too few to split. Consequently, held-out negative recall is not independent;
 only the positive side is held out. The threshold is selected on the tuning
 split by macro F1 for wrong-match contradiction and accepted-match
 corroboration, then contradiction precision, corroboration recall, and the
-lower threshold. The selected cosine threshold is 0.021713.
+lower threshold. Threshold candidates were previously derived from all records;
+they are now derived from tuning records only. This reduces the candidate set
+from 55 to 38 and leaves the selected cosine threshold at 0.021713, with
+identical verdicts and measurements. The evaluation is not transductive with
+respect to threshold selection, but negative recall remains non-independent.
 
 If one signal corroborates while the other contradicts, the combined verdict is
 `insufficient`. Otherwise a contradiction wins over missing evidence, a

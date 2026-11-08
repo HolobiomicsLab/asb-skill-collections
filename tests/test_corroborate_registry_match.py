@@ -1,5 +1,14 @@
 """Offline checks for registry-match corroboration signals."""
+import json
+from pathlib import Path
+import subprocess
+import sys
+
 from scripts import corroborate_registry_match as c
+
+
+ROOT = Path(__file__).resolve().parent.parent
+FIXTURES = ROOT / "tests" / "fixtures" / "registry_match_corroboration"
 
 
 def _record(
@@ -109,6 +118,16 @@ def test_tuning_and_split_are_deterministic_on_twelve_records():
     assert first["measurements"]["held_out"]["wrong_matches"] == 5
 
 
+def test_threshold_candidates_come_from_tuning_records_only():
+    tuning, _ = c._split_positive_slugs(SYNTHETIC_RECORDS, 17, 0.30)
+    selected = [
+        record for record in SYNTHETIC_RECORDS
+        if record["label"] == "wrong_match" or record["tool_slug"] in tuning
+    ]
+    result = c.analyse_records(SYNTHETIC_RECORDS, seed=17, held_out_fraction=0.30)
+    assert result["method"]["threshold_candidates"] == c._threshold_candidates(selected)
+
+
 def test_synthetic_fixture_exercises_all_three_combined_verdicts():
     result = c.analyse_records(SYNTHETIC_RECORDS, seed=17, held_out_fraction=0.30)
     assert {record["verdict"] for record in result["records"]} == {
@@ -116,3 +135,41 @@ def test_synthetic_fixture_exercises_all_three_combined_verdicts():
         "contradicted",
         "insufficient",
     }
+
+
+def test_cli_regenerates_committed_fixture_byte_for_byte(tmp_path):
+    output = tmp_path / "result.json"
+    subprocess.run(
+        [
+            sys.executable,
+            "scripts/corroborate_registry_match.py",
+            "--collection", str(FIXTURES / "collection"),
+            "--registry-config", str(FIXTURES / "registry_config.yaml"),
+            "--bioconda", str(FIXTURES / "bioconda.json"),
+            "--bioconductor", str(FIXTURES / "bioconductor.json"),
+            "--seed", "17",
+            "--bioconda-snapshot-date", "2026-11-07",
+            "--bioconductor-snapshot-date", "2026-11-07",
+            "--output", str(output),
+        ],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    assert output.read_bytes() == (FIXTURES / "expected.json").read_bytes()
+
+
+def test_committed_result_validates_and_discloses_unretained_inputs():
+    result = json.loads(
+        (ROOT / "docs/design/registry-match-corroboration-2026-11-07.json").read_text()
+    )
+    c.validate_result(result)
+    assert len(result["records"]) == 94
+    assert result["method"]["threshold"] == 0.021713
+    assert len(result["method"]["threshold_candidates"]) == 38
+    for registry in ("bioconda", "bioconductor"):
+        assert result["inputs"][registry]["snapshot_date"] == "2026-11-07"
+        assert result["inputs"][registry]["retained"] is False
+        assert result["inputs"][registry]["file"] is None
+        assert result["inputs"][registry]["sha256"] is None

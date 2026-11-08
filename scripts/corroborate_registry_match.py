@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import math
 import random
@@ -20,6 +21,110 @@ REGISTRY_DETECTIONS = {
 MIN_DOMAIN_TOKENS = 3
 DEFAULT_SEED = 48
 DEFAULT_HELD_OUT_FRACTION = 0.30
+REGISTRY_SOURCES = {
+    "bioconda": "https://conda.anaconda.org/bioconda/channeldata.json",
+    "bioconductor": "https://bioc.r-universe.dev/api/packages/{name}",
+}
+
+
+def _class_metrics_schema() -> dict:
+    integer = {"type": "integer", "minimum": 0}
+    return {
+        "type": "object",
+        "additionalProperties": False,
+        "required": ["true_positive", "predicted", "actual", "precision", "recall", "f1"],
+        "properties": {
+            "true_positive": integer,
+            "predicted": integer,
+            "actual": integer,
+            "precision": {"type": "number"},
+            "recall": {"type": "number"},
+            "f1": {"type": "number"},
+        },
+    }
+
+
+RESULT_SCHEMA = {
+    "type": "object",
+    "additionalProperties": False,
+    "required": ["method", "dataset", "measurements", "records"],
+    "properties": {
+        "method": {"type": "object"},
+        "dataset": {"type": "object"},
+        "measurements": {
+            "type": "object",
+            "additionalProperties": False,
+            "required": ["tuning", "held_out"],
+            "properties": {
+                split: {
+                    "type": "object",
+                    "additionalProperties": False,
+                    "required": [
+                        "accepted_matches", "wrong_matches", "contradicted_wrong_matches",
+                        "corroborated_accepted_matches", "insufficient", "verdict_counts",
+                    ],
+                    "properties": {
+                        "accepted_matches": {"type": "integer", "minimum": 0},
+                        "wrong_matches": {"type": "integer", "minimum": 0},
+                        "contradicted_wrong_matches": _class_metrics_schema(),
+                        "corroborated_accepted_matches": _class_metrics_schema(),
+                        "insufficient": {"type": "integer", "minimum": 0},
+                        "verdict_counts": {
+                            "type": "object",
+                            "additionalProperties": {"type": "integer", "minimum": 0},
+                        },
+                    },
+                }
+                for split in ("tuning", "held_out")
+            },
+        },
+        "records": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": False,
+                "required": [
+                    "tool_slug", "tool_name", "registry", "registry_package", "label",
+                    "texts", "signals", "score", "verdict",
+                ],
+                "properties": {
+                    "tool_slug": {"type": "string"},
+                    "tool_name": {"type": "string"},
+                    "registry": {"enum": list(REGISTRY_SOURCES)},
+                    "registry_package": {"type": "string"},
+                    "label": {"enum": ["accepted_match", "wrong_match"]},
+                    "texts": {
+                        "type": "object",
+                        "additionalProperties": {"type": "string"},
+                    },
+                    "signals": {"type": "object"},
+                    "score": {"type": "number"},
+                    "verdict": {"enum": ["corroborated", "contradicted", "insufficient"]},
+                },
+            },
+        },
+        "inputs": {
+            "type": "object",
+            "additionalProperties": False,
+            "required": list(REGISTRY_SOURCES),
+            "properties": {
+                registry: {
+                    "type": "object",
+                    "additionalProperties": False,
+                    "required": ["source", "snapshot_date", "file", "sha256", "retained"],
+                    "properties": {
+                        "source": {"type": "string"},
+                        "snapshot_date": {"type": ["string", "null"]},
+                        "file": {"type": ["string", "null"]},
+                        "sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+                        "retained": {"type": "boolean"},
+                    },
+                }
+                for registry in REGISTRY_SOURCES
+            },
+        },
+    },
+}
 STOPWORDS = frozenset(
     """
     a about after again against all also am an and any are as at be because been before
@@ -146,12 +251,13 @@ def analyse_records(
     records: list[dict],
     seed: int = DEFAULT_SEED,
     held_out_fraction: float = DEFAULT_HELD_OUT_FRACTION,
+    inputs: dict | None = None,
 ) -> dict:
     """Tune a domain threshold and report tuning and held-out measurements."""
     tuning_slugs, held_out_slugs = _split_positive_slugs(records, seed, held_out_fraction)
     threshold, candidates = _choose_threshold(records, tuning_slugs)
     scored = [_score_record(record, threshold) for record in records]
-    return {
+    result = {
         "method": _method_metadata(seed, held_out_fraction, threshold, candidates),
         "dataset": _dataset_metadata(records, tuning_slugs, held_out_slugs),
         "measurements": {
@@ -160,6 +266,10 @@ def analyse_records(
         },
         "records": scored,
     }
+    if inputs is not None:
+        result["inputs"] = inputs
+    validate_result(result)
+    return result
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -172,6 +282,8 @@ def main(argv: list[str] | None = None) -> int:
         args.bioconductor,
     )
     result = analyse_records(records, args.seed, args.held_out_fraction)
+    result["inputs"] = _input_metadata(args)
+    validate_result(result)
     rendered = json.dumps(result, indent=2, sort_keys=True) + "\n"
     if args.output:
         args.output.write_text(rendered, encoding="utf-8")
@@ -189,7 +301,84 @@ def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     parser.add_argument("--output", type=Path)
     parser.add_argument("--seed", type=int, default=DEFAULT_SEED)
     parser.add_argument("--held-out-fraction", type=float, default=DEFAULT_HELD_OUT_FRACTION)
+    parser.add_argument("--bioconda-snapshot-date")
+    parser.add_argument("--bioconductor-snapshot-date")
     return parser.parse_args(argv)
+
+
+def _input_metadata(args: argparse.Namespace) -> dict:
+    return {
+        registry: {
+            "source": REGISTRY_SOURCES[registry],
+            "snapshot_date": getattr(args, f"{registry}_snapshot_date"),
+            "file": getattr(args, registry).name,
+            "sha256": _sha256(getattr(args, registry)),
+            "retained": True,
+        }
+        for registry in REGISTRY_SOURCES
+    }
+
+
+def _sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def validate_result(result: dict) -> None:
+    """Validate a measurement against the script's JSON output schema."""
+    errors = list(_schema_errors(result, RESULT_SCHEMA, "result"))
+    if errors:
+        raise ValueError("invalid corroboration result: " + "; ".join(errors))
+
+
+def _schema_errors(value: object, schema: dict, path: str) -> Iterable[str]:
+    expected = schema.get("type")
+    if expected and not _matches_type(value, expected):
+        yield f"{path} has the wrong type"
+        return
+    if "enum" in schema and value not in schema["enum"]:
+        yield f"{path} is not an allowed value"
+    if "pattern" in schema and isinstance(value, str) and not re.fullmatch(schema["pattern"], value):
+        yield f"{path} has the wrong format"
+    if isinstance(value, (int, float)) and not isinstance(value, bool):
+        if value < schema.get("minimum", value):
+            yield f"{path} is below its minimum"
+    if isinstance(value, dict):
+        yield from _object_schema_errors(value, schema, path)
+    if isinstance(value, list) and "items" in schema:
+        for index, item in enumerate(value):
+            yield from _schema_errors(item, schema["items"], f"{path}[{index}]")
+
+
+def _object_schema_errors(value: dict, schema: dict, path: str) -> Iterable[str]:
+    properties = schema.get("properties", {})
+    for key in schema.get("required", []):
+        if key not in value:
+            yield f"{path}.{key} is required"
+    for key, item in value.items():
+        if key in properties:
+            yield from _schema_errors(item, properties[key], f"{path}.{key}")
+        elif schema.get("additionalProperties") is False:
+            yield f"{path}.{key} is not allowed"
+        elif isinstance(schema.get("additionalProperties"), dict):
+            yield from _schema_errors(item, schema["additionalProperties"], f"{path}.{key}")
+
+
+def _matches_type(value: object, expected: str | list[str]) -> bool:
+    types = [expected] if isinstance(expected, str) else expected
+    checks = {
+        "object": lambda: isinstance(value, dict),
+        "array": lambda: isinstance(value, list),
+        "string": lambda: isinstance(value, str),
+        "integer": lambda: isinstance(value, int) and not isinstance(value, bool),
+        "number": lambda: isinstance(value, (int, float)) and not isinstance(value, bool),
+        "boolean": lambda: isinstance(value, bool),
+        "null": lambda: value is None,
+    }
+    return any(checks[item]() for item in types)
 
 
 def _load_yaml(path: Path) -> dict:
@@ -339,7 +528,11 @@ def _threshold_candidates(records: list[dict]) -> list[float]:
 
 
 def _choose_threshold(records: list[dict], tuning_slugs: set[str]) -> tuple[float, list[float]]:
-    candidates = _threshold_candidates(records)
+    tuning_records = [
+        record for record in records
+        if record["label"] == "wrong_match" or record["tool_slug"] in tuning_slugs
+    ]
+    candidates = _threshold_candidates(tuning_records)
     ranked: list[tuple[tuple[float, float, float, float], float]] = []
     for threshold in candidates:
         scored = [_score_record(record, threshold) for record in records]
