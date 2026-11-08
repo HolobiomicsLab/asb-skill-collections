@@ -175,19 +175,52 @@ def test_without_a_marketplace_every_collection_is_staged(tmp_path):
     assert entry["status"] == "staged"
 
 
+def test_manifest_marks_a_domain_release_as_released(tmp_path):
+    from scripts.regen_catalogue import build_catalogue
+    import yaml
+
+    _write_collection(tmp_path, "alpha", 2, None)
+    _write_collection(tmp_path, "alpha", 3, None)
+    _write_marketplace(tmp_path, ["./collections/alpha/v2"])
+    (tmp_path / "collections.yaml").write_text(
+        yaml.safe_dump(
+            {
+                "domains": {
+                    "alpha": {
+                        "releases": [{"path": "collections/alpha/v3"}],
+                    }
+                }
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    status = {
+        f"{entry['slug']}/v{entry['version']}": entry["status"]
+        for entry in build_catalogue(tmp_path)["collections"]
+    }
+    assert status == {"alpha/v2": "released", "alpha/v3": "released"}
+
+
 def test_status_is_a_context_term(tmp_repo):
     from scripts.regen_catalogue import build_catalogue
     assert "status" in build_catalogue(tmp_repo)["@context"]
 
 
 def test_committed_catalogue_matches_the_release_state():
-    """The served catalogue carries no placeholder DOI and the marketplace's status."""
-    from scripts.regen_catalogue import collection_status, is_minted_doi, released_collection_dirs
+    """The served catalogue agrees with marketplace and domain-release statuses."""
+    from scripts.regen_catalogue import (
+        collection_status,
+        is_minted_doi,
+        manifest_release_dirs,
+        released_collection_dirs,
+    )
     entries = json.loads((REPO / "catalogue.jsonld").read_text(encoding="utf-8"))["collections"]
     released = released_collection_dirs(REPO)
+    manifest = manifest_release_dirs(REPO)
     assert entries
     for entry in entries:
         rel = f"collections/{entry['slug']}/v{entry['version']}"
-        assert entry.get("status") == collection_status(rel, released), rel
+        assert entry.get("status") == collection_status(rel, released, manifest), rel
         if "doi" in entry:
             assert is_minted_doi(entry["doi"]), (rel, entry["doi"])

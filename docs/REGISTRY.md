@@ -198,6 +198,7 @@ A collection is publicly advertised **if and only if:**
 **Determinism:** Collections are sorted alphabetically by slug + version; timestamps use UTC ISO 8601 (Z suffix); no non-deterministic ordering
 
 **Release status:** for collections held in this repository, `status` is `released` when `.claude-plugin/marketplace.json` serves the collection directory and `staged` otherwise. A release held in a domain repository is `released` when `collections.yaml` records it as published, independently of the local marketplace. `doi` is written only once it is minted (`10.<registrant>/<suffix>`); a placeholder in `collection.yaml` such as `TODO-zenodo` is left out of the catalogue.
+The advertised-count guard resolves root-document claims by the release named on the line or nearest heading, otherwise by the manifest DOI linked from its count badges or the local marketplace fallback. Manifest counts are censuses for external releases; local files remain the census for repository-held collections.
 
 ### 2.3 Querying the catalogue
 
