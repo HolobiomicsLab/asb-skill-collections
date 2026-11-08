@@ -31,7 +31,7 @@ draft made here. Use one deposit path per release.
 | Sandbox token | environment variable `ZENODO_SANDBOX_TOKEN` |
 | Token scopes | `deposit:write` and `deposit:actions` (newversion needs `deposit:actions`; file and metadata calls need `deposit:write`) |
 | Record to version from | the latest published version record id, not the concept id |
-| Metadata template | `collections/<domain>/<vN>/.zenodo.json` |
+| Metadata template | `<domain checkout>/collections/<domain>/<vN>/.zenodo.json` |
 
 The tokens are read from the environment only and are never printed. Create them
 in the Zenodo account settings (Applications, Personal access tokens). The
@@ -92,10 +92,10 @@ sha256 must equal the sha256 from step 1.
    The concept DOI stays the same.
 
 6. Record the new version DOI in the `doi:` field of
-   `collections/<domain>/<vN>/CITATION.cff` and in the collection entry of
+   `<domain checkout>/collections/<domain>/<vN>/CITATION.cff` and in the collection entry of
    `catalogue.jsonld`, in a pull request. `CITATION.cff` is bound by the
    collection's gate receipt, so regenerate the receipt in the same pull
-   request with `python scripts/release_gate.py collections/<domain>/<vN> --strict`,
+   request with `python scripts/release_gate.py <domain checkout>/collections/<domain>/<vN> --strict`,
    in an environment where the AgenticScienceBuilder package is not importable
    (see the receipt job of `validate.yml`); otherwise that job fails.
 
@@ -120,7 +120,7 @@ again reuses it and replaces its files. Discard a draft in the web interface.
 
 ## Archive contents
 
-The archive holds `collections/<domain>/<vN>/` under the prefix `<domain>/<vN>/`,
+The archive holds the domain repository's collection directory under the prefix `<domain>/<vN>/`,
 plus three files bundled so the deposit runs grounding on its own:
 `scripts/perspicacite_kb_bind.py`, `scripts/requirements.txt` and `AGENTS.md`,
 and the license texts at their repository paths: `LICENSING.md` (which license
@@ -211,7 +211,7 @@ GitHub settings. It reads `.zenodo.json` or `CITATION.cff` from the repository
 root and archives the repository snapshot. This is described in the Zenodo
 documentation and was not run for this repository. It does not fit a
 per-collection release: the metadata template and the files live under
-`collections/<domain>/<vN>/`, and the snapshot is the whole repository.
+`<domain checkout>/collections/<domain>/<vN>/`, and the snapshot is the whole repository.
 
 The release workflow (`.github/workflows/release.yml`) makes the same kind of
 draft from CI only when the repository variable `ZENODO_UPLOAD` is `true` and
