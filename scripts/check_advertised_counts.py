@@ -3,7 +3,9 @@
 The checker discovers marketplace collection and pack sources, count
 metadata, plugin descriptions, router frontmatter and release-facing Markdown.
 It deliberately derives totals from shipped records rather than from another
-advertised index value.
+advertised index value. Manifest releases supply external censuses. Root-document
+claims follow a release named on their line or nearest heading; otherwise they
+follow the unit selected by the README badges, falling back to the marketplace.
 """
 
 from __future__ import annotations
@@ -29,6 +31,7 @@ if __package__ in (None, ""):
 
 
 from asb_skill_collections import layout
+from scripts.regen_catalogue import load_collections_manifest
 
 COUNT_KINDS = ("skills", "tools", "workflows", "papers", "entries")
 WORD_COUNTS = {
@@ -90,6 +93,10 @@ class Unit:
     version: str | None
     census: dict[str, int]
     sources: dict[str, str]
+    release_tag: str | None = None
+    version_doi: str | None = None
+    repository: str | None = None
+    external: bool = False
 
 
 @dataclass(frozen=True)
@@ -253,6 +260,57 @@ def _marketplace_plugins(repo: pathlib.Path) -> list[dict]:
     return value.get("plugins", []) if isinstance(value, dict) else []
 
 
+def _manifest_units(repo: pathlib.Path) -> list[Unit]:
+    """Build external census units from domain releases in collections.yaml."""
+    domains = load_collections_manifest(repo).get("domains")
+    if not isinstance(domains, dict):
+        return []
+    units = []
+    for slug, domain in domains.items():
+        if not isinstance(domain, dict):
+            continue
+        releases = domain.get("releases")
+        if not isinstance(releases, list):
+            continue
+        for index, release in enumerate(releases):
+            if not isinstance(release, dict) or not isinstance(
+                release.get("path"), str
+            ):
+                continue
+            relative = pathlib.Path(release["path"])
+            if relative.is_absolute() or ".." in relative.parts:
+                continue
+            census = {
+                kind: release[kind]
+                for kind in COUNT_KINDS
+                if isinstance(release.get(kind), int)
+            }
+            sources = {
+                kind: f"collections.yaml domains.{slug}.releases[{index}].{kind}"
+                for kind in census
+            }
+            version = release.get("version")
+            units.append(
+                Unit(
+                    repo / relative,
+                    relative,
+                    str(slug),
+                    str(version) if version is not None else None,
+                    census,
+                    sources,
+                    str(release["tag"]) if release.get("tag") else None,
+                    str(release["version_doi"])
+                    if release.get("version_doi")
+                    else None,
+                    str(domain["repository"])
+                    if domain.get("repository")
+                    else None,
+                    external=True,
+                )
+            )
+    return units
+
+
 def discover_units(repo: pathlib.Path) -> tuple[list[Unit], dict[str, Unit]]:
     """Discover advertised collection and pack roots without a site allowlist."""
     roots: set[pathlib.Path] = set()
@@ -274,7 +332,8 @@ def discover_units(repo: pathlib.Path) -> tuple[list[Unit], dict[str, Unit]]:
         )
     units = [_unit(path, repo) for path in sorted(roots)]
     by_root = {unit.root: unit for unit in units}
-    return units, {name: by_root[path] for name, path in plugin_roots.items()}
+    plugin_units = {name: by_root[path] for name, path in plugin_roots.items()}
+    return [*units, *_manifest_units(repo)], plugin_units
 
 
 def _line_for(path: pathlib.Path, pattern: str, start: int = 0) -> int:
@@ -328,6 +387,7 @@ def _prose_claims(
     text: str,
     unit: Unit,
     start_line: int = 1,
+    include_entries: bool = True,
 ) -> list[CountClaim]:
     """Extract total-like numeric noun phrases from prose."""
     claims: list[CountClaim] = []
@@ -342,7 +402,8 @@ def _prose_claims(
                 line = start_line + text.count("\n", 0, match.start())
                 value = int(match.group("count").replace(",", ""))
                 claims.append(_claim(repo, site, line, unit, kind, value))
-    claims.extend(_entry_claims(repo, site, text, unit, start_line))
+    if include_entries:
+        claims.extend(_entry_claims(repo, site, text, unit, start_line))
     return claims
 
 
@@ -447,13 +508,120 @@ def _released_collection_units(plugin_units: dict[str, Unit]) -> list[Unit]:
 def _root_doc_unit(
     text: str, units: list[Unit], plugin_units: dict[str, Unit]
 ) -> Unit | None:
-    """Resolve a root document's collection, with a single-release fallback."""
+    """Resolve a root document's default census, preferring its badge target."""
+    badge_units = _badge_units(text, units)
+    if len(badge_units) == 1:
+        return badge_units[0]
+    local_units = [unit for unit in units if not unit.external]
     lowered = text.lower()
-    matched = [unit for unit in units if unit.relative.as_posix().lower() in lowered]
+    matched = [
+        unit for unit in local_units if unit.relative.as_posix().lower() in lowered
+    ]
     if len(matched) == 1:
         return matched[0]
     released = _released_collection_units(plugin_units)
     return released[0] if len(released) == 1 else None
+
+
+def _badge_units(text: str, units: list[Unit]) -> list[Unit]:
+    """Return manifest units whose version DOI links a count badge."""
+    html_link = re.compile(
+        r"<a\s+[^>]*href=[\"']([^\"']+)[\"'][^>]*>\s*<img[^>]*"
+        r"badge/(?:skills|tools|workflows|papers)-",
+        re.IGNORECASE,
+    )
+    markdown_link = re.compile(
+        r"\[![^]]*\]\([^)]*badge/(?:skills|tools|workflows|papers)-[^)]*\)\]"
+        r"\(([^)]+)\)",
+        re.IGNORECASE,
+    )
+    badge_links = [
+        match.group(1)
+        for pattern in (html_link, markdown_link)
+        for match in pattern.finditer(text)
+    ]
+    return [
+        unit
+        for unit in units
+        if unit.external
+        and unit.version_doi
+        and any(unit.version_doi in unquote(link) for link in badge_links)
+    ]
+
+
+def _release_for_context(
+    context: str, local_units: list[Unit], manifest_units: list[Unit]
+) -> Unit | None:
+    """Resolve explicit release identities, preferring tags, DOIs and repositories."""
+    lowered = context.casefold()
+    strong_matches = [
+        unit
+        for unit in manifest_units
+        if any(
+            identity and identity.casefold() in lowered
+            for identity in (
+                unit.release_tag,
+                unit.version_doi,
+                unit.repository,
+                pathlib.PurePosixPath(unit.repository).name
+                if unit.repository
+                else None,
+            )
+        )
+    ]
+    if len(strong_matches) == 1:
+        return strong_matches[0]
+    path_matches = [
+        unit
+        for unit in local_units
+        if unit.relative.as_posix().casefold() in lowered
+    ]
+    if len(path_matches) == 1:
+        return path_matches[0]
+    version_matches = [
+        unit
+        for unit in [*local_units, *manifest_units]
+        if unit.version
+        and re.search(
+            rf"(?<![\w.])v{re.escape(unit.version)}(?:\.\d+){{0,2}}(?![\w.])",
+            context,
+            re.IGNORECASE,
+        )
+    ]
+    unique: dict[pathlib.Path, Unit] = {}
+    for unit in version_matches:
+        unique.setdefault(unit.relative, unit)
+    return next(iter(unique.values())) if len(unique) == 1 else None
+
+
+def _root_doc_claim_unit(
+    text: str,
+    line: int,
+    default: Unit,
+    units: list[Unit],
+) -> Unit:
+    """Resolve one claim from its line, then its nearest Markdown heading."""
+    lines = text.splitlines()
+    claim_line = lines[line - 1] if 0 < line <= len(lines) else ""
+    local_units = [unit for unit in units if not unit.external]
+    manifest_units = [unit for unit in units if unit.external]
+    selected = _release_for_context(claim_line, local_units, manifest_units)
+    if selected is not None:
+        return selected
+    heading = next(
+        (
+            candidate
+            for candidate in reversed(lines[: max(0, line - 1)])
+            if candidate.lstrip().startswith("#")
+        ),
+        "",
+    )
+    return (
+        _release_for_context(
+            f"{heading}\n{claim_line}", local_units, manifest_units
+        )
+        or default
+    )
 
 
 def _markdown_claims(
@@ -470,9 +638,36 @@ def _markdown_claims(
     claims: list[CountClaim] = []
     for site in sorted({path for path in sites if path.is_file()}):
         raw = site.read_text(encoding="utf-8")
-        unit = _unit_for_site(site, units) or _root_doc_unit(raw, units, plugin_units)
+        local_unit = _unit_for_site(site, [unit for unit in units if not unit.external])
+        unit = local_unit or _root_doc_unit(raw, units, plugin_units)
         if unit is not None:
-            claims.extend(_prose_claims(repo, site, _strip_fences(raw), unit))
+            text = _strip_fences(raw)
+            if local_unit is not None:
+                claims.extend(_prose_claims(repo, site, text, unit))
+                continue
+            for number, line in enumerate(text.splitlines(), 1):
+                if not any(
+                    pattern.search(line)
+                    for patterns in PROSE_PATTERNS.values()
+                    for pattern in patterns
+                ):
+                    continue
+                claim_unit = _root_doc_claim_unit(raw, number, unit, units)
+                claims.extend(
+                    _prose_claims(
+                        repo,
+                        site,
+                        line,
+                        claim_unit,
+                        number,
+                        include_entries=False,
+                    )
+                )
+            fallback = _root_doc_unit(
+                "", [u for u in units if not u.external], plugin_units
+            )
+            if fallback is not None:
+                claims.extend(_entry_claims(repo, site, text, fallback, 1))
     return claims
 
 
@@ -764,16 +959,17 @@ def audit_repository(
     """Discover all supported advertisements and return claims plus failures."""
     repo = pathlib.Path(repo_root).resolve()
     units, plugin_units = discover_units(repo)
+    local_units = [unit for unit in units if not unit.external]
     claims = _deduplicate(
         [
-            *_metadata_claims(repo, units),
-            *_corpus_summary_claims(repo, units),
-            *_description_claims(repo, units, plugin_units),
-            *_catalogue_claims(repo, units),
+            *_metadata_claims(repo, local_units),
+            *_corpus_summary_claims(repo, local_units),
+            *_description_claims(repo, local_units, plugin_units),
+            *_catalogue_claims(repo, local_units),
             *_markdown_claims(repo, units, plugin_units),
             *_badge_claims(repo, units, plugin_units),
             *_pack_table_claims(repo, plugin_units),
-            *_facet_table_claims(repo, units, plugin_units),
+            *_facet_table_claims(repo, local_units, plugin_units),
         ]
     )
     failures = [

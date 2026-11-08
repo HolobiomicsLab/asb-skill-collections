@@ -6,9 +6,9 @@ Each collection entry carries: @id (w3id IRI), title, version, slug, domain_topi
 (EDAM IRIs), doi, released_at, skills_count, tools_count, lead_curators[], status.
 
 `status` is "released" when the plugin marketplace (.claude-plugin/marketplace.json)
-serves the collection directory, and "staged" otherwise. `doi` is written only
-when it is a minted DOI (10.<registrant>/<suffix>); a placeholder such as
-"TODO-zenodo" is left out.
+serves the collection directory or collections.yaml records its domain release,
+and "staged" otherwise. `doi` is written only when it is a minted DOI
+(10.<registrant>/<suffix>); a placeholder such as "TODO-zenodo" is left out.
 
 Output is deterministic: collections sorted alphabetically by slug; timestamps
 are UTC ISO 8601 with Z suffix.
@@ -58,6 +58,7 @@ CATALOGUE_CONTEXT = {
 REGISTRY_ID = "https://w3id.org/holobiomicslab/asb-skill/registry"
 
 MARKETPLACE = pathlib.Path(".claude-plugin") / "marketplace.json"
+COLLECTIONS_MANIFEST = pathlib.Path("collections.yaml")
 RELEASED = "released"
 STAGED = "staged"
 
@@ -83,9 +84,41 @@ def released_collection_dirs(repo_root: pathlib.Path) -> set[str]:
     return out
 
 
-def collection_status(rel_dir: str, released_dirs: set[str]) -> str:
-    """Return "released" when the marketplace serves rel_dir, "staged" otherwise."""
-    return RELEASED if rel_dir in released_dirs else STAGED
+def load_collections_manifest(repo_root: pathlib.Path) -> dict:
+    """Load the optional domain-release manifest without validating its schema."""
+    path = repo_root / COLLECTIONS_MANIFEST
+    if not path.is_file():
+        return {}
+    with path.open(encoding="utf-8") as stream:
+        manifest = yaml.safe_load(stream)
+    return manifest if isinstance(manifest, dict) else {}
+
+
+def manifest_release_dirs(repo_root: pathlib.Path) -> set[str]:
+    """Return repository-relative paths recorded for every domain release."""
+    domains = load_collections_manifest(repo_root).get("domains")
+    if not isinstance(domains, dict):
+        return set()
+    paths = set()
+    for domain in domains.values():
+        if not isinstance(domain, dict):
+            continue
+        releases = domain.get("releases")
+        if not isinstance(releases, list):
+            continue
+        for release in releases:
+            if isinstance(release, dict) and isinstance(release.get("path"), str):
+                paths.add(release["path"])
+    return paths
+
+
+def collection_status(
+    rel_dir: str,
+    released_dirs: set[str],
+    manifest_dirs: set[str] = frozenset(),
+) -> str:
+    """Return released for a marketplace or manifest release, staged otherwise."""
+    return RELEASED if rel_dir in released_dirs | manifest_dirs else STAGED
 
 
 def _load_collection_yaml(path: pathlib.Path) -> dict:
@@ -155,6 +188,7 @@ def build_catalogue(repo_root: pathlib.Path) -> dict:
     collections_dir = repo_root / "collections"
     entries: list[dict] = []
     released_dirs = released_collection_dirs(repo_root)
+    manifest_dirs = manifest_release_dirs(repo_root)
 
     if collections_dir.exists():
         # Walk all collection.yaml files: collections/<slug>/v<N>/collection.yaml
@@ -162,7 +196,7 @@ def build_catalogue(repo_root: pathlib.Path) -> dict:
             try:
                 col_data = _load_collection_yaml(col_yaml_path)
                 rel_dir = col_yaml_path.parent.relative_to(repo_root).as_posix()
-                status = collection_status(rel_dir, released_dirs)
+                status = collection_status(rel_dir, released_dirs, manifest_dirs)
                 entry = _collection_entry(col_data, col_yaml_path.parent, status)
                 entries.append(entry)
             except Exception as exc:
