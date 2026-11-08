@@ -17,7 +17,7 @@ import pathlib
 import yaml
 
 from asb_skill_collections import layout
-from scripts.license_tier import ack_required
+from scripts.license_tier import ack_required, tool_license, warn_legacy_tool_licenses
 
 _ORDER = {"open": 0, "unknown": 1, "noncommercial": 2, "restricted": 3}
 
@@ -33,11 +33,14 @@ def detect_indent(text: str, default: int = 2) -> int:
 
 def corpus_tier_by_doi(corpus_path) -> dict:
     doc = yaml.safe_load(pathlib.Path(corpus_path).read_text(encoding="utf-8"))
+    papers = doc.get("papers", [])
+    warn_legacy_tool_licenses(papers, corpus_path)
     out = {}
-    for p in doc.get("papers", []):
+    for p in papers:
         doi, tier = p.get("doi"), p.get("license_tier")
         if doi and tier:
-            out[doi] = {"tier": tier, "license": (p.get("access") or {}).get("license"),
+            licence = tool_license(p) or {}
+            out[doi] = {"tier": tier, "license": licence.get("spdx"),
                         "repo_url": p.get("repo_url")}
     return out
 

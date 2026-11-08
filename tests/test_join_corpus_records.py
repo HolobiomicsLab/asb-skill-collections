@@ -321,6 +321,10 @@ def test_policy_branches_and_unmatched_builds_are_kept(tmp_path: Path) -> None:
     assert papers[unmatched_doi]["access"]["license"] is None
     assert papers[unmatched_doi]["license_tier"] == "unknown"
     assert papers[unmatched_doi]["license_detection"] is None
+    assert all("license_subject" not in paper for paper in papers.values())
+    assert all(set(paper["tool_license"]) == {
+        "spdx", "detection", "verified_on", "source"
+    } for paper in papers.values())
 
     receipt = _read_json(receipts / "corpus_join_receipt.json")
     assert receipt["unmatched_rows"] == [

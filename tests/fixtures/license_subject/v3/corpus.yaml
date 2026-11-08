@@ -1,0 +1,28 @@
+schema: asb-corpus/1.0
+collection: metabolomics
+version: 3
+papers:
+- name: ms2decide
+  doi: 10.1002/cmtd.202400088
+  repo_url: https://github.com/MejriY/MS2DECIDE
+  access:
+    type: gold-oa
+    license: CC-BY-4.0
+    is_oa: true
+    verified_on: '2026-11-08'
+    source_reuse: permissive
+    verified_via: unpaywall_oa_locations
+  license_subject: paper
+  license_tier: open
+  license_detection: unpaywall
+- name: closed-paper
+  doi: 10.1002/anie.202507483
+  repo_url: https://github.com/Chen-micslab/QCCAssisted4DSterol
+  access:
+    type: link-only
+    license: null
+    is_oa: false
+    source_reuse: none
+  license_subject: paper
+  license_tier: unknown
+  license_detection: unpaywall

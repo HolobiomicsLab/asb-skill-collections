@@ -158,6 +158,16 @@ def test_pre_subject_schema_reads_access_paper_licence():
     }
 
 
+def test_open_tool_tier_never_grants_paper_reuse():
+    corpus = {"papers": [{
+        "doi": "10.1/dual-axis",
+        "license_tier": "open",
+        "access": {"type": "open-access", "license": "CC-BY-NC-4.0"},
+        "tool_license": {"spdx": "MIT", "detection": "github-api"},
+    }]}
+    assert release_gate._reuse_by_doi_from_corpus(corpus) == {"10.1/dual-axis": False}
+
+
 def test_source_reuse_precedes_subject_and_tier():
     corpus = {
         "papers": [

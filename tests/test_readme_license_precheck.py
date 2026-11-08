@@ -312,8 +312,9 @@ class TestRunPrecheck:
         doc = yaml.safe_load(corpus_path.read_text(encoding="utf-8"))
         paper = doc["papers"][0]
         assert paper["license_tier"] == "open"
-        assert paper["access"]["license"] == "MIT"
-        assert paper["license_detection"] == "readme-llm"
+        assert paper["tool_license"]["spdx"] == "MIT"
+        assert paper["tool_license"]["detection"] == "readme-llm"
+        assert "license_detection" not in paper
         assert paper["license_evidence"] == "MIT License here."
 
     def test_null_detection_leaves_corpus_unchanged(self, tmp_path):
@@ -485,4 +486,4 @@ class TestRunPrecheck:
         doc = yaml.safe_load(corpus_path.read_text(encoding="utf-8"))
         assert doc["papers"][0]["license_tier"] == "restricted"  # unchanged
         assert doc["papers"][1]["license_tier"] == "open"  # retiered
-        assert doc["papers"][1]["access"]["license"] == "MIT"
+        assert doc["papers"][1]["tool_license"]["spdx"] == "MIT"

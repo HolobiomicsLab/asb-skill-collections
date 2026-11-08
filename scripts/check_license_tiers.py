@@ -24,7 +24,12 @@ if __package__ in (None, ""):
     _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
 
 from asb_skill_collections import layout
-from scripts.license_tier import ack_required, load_map
+from scripts.license_tier import (
+    TOOL_LICENSE_KEYS,
+    ack_required,
+    load_map,
+    warn_legacy_tool_licenses,
+)
 from scripts.recorded_path import recorded_child, recorded_path
 
 # The tier vocabulary has one home: governance/license_tiers.yaml. A hand-copied
@@ -55,11 +60,28 @@ def corpus_violations(unit_dir: pathlib.Path) -> list[str]:
             ]
         return []
     corpus = yaml.safe_load(corpus_path.read_text(encoding="utf-8")) or {}
-    return [
+    papers = corpus.get("papers", [])
+    warn_legacy_tool_licenses(papers, corpus_path)
+    violations = [
         f"corpus entry {p.get('name')!r}: missing/invalid license_tier"
-        for p in corpus.get("papers", [])
+        for p in papers
         if p.get("license_tier") not in _VALID
     ]
+    for paper in papers:
+        if "tool_license" not in paper:
+            continue
+        block = paper.get("tool_license")
+        if not isinstance(block, dict) or set(block) != set(TOOL_LICENSE_KEYS):
+            violations.append(
+                f"corpus entry {paper.get('name')!r}: tool_license must contain "
+                f"exactly {', '.join(TOOL_LICENSE_KEYS)}"
+            )
+            continue
+        if paper.get("license_subject") == "tool" and block.get("spdx") is not None:
+            violations.append(
+                f"corpus entry {paper.get('name')!r}: tool licence remains in access.license"
+            )
+    return violations
 
 
 def scope(unit_dir) -> str:

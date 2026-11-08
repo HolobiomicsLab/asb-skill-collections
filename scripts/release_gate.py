@@ -101,6 +101,7 @@ if __package__ in (None, ""):
 from asb_skill_collections import layout
 from scripts import unit_closure
 from scripts import release_receipt as receipt
+from scripts.license_tier import paper_license, warn_legacy_tool_licenses
 from scripts.recorded_path import recorded_path
 
 try:
@@ -579,38 +580,38 @@ def _paper_licence_is_permissive(licence: Any) -> bool | None:
 def _reuse_by_doi_from_corpus(corpus: dict[str, Any]) -> dict[str, bool]:
     """Map only DOIs whose paper text reuse is known under P2 option (b).
 
-    ``access.source_reuse`` is authoritative when present. Otherwise licence
-    fields describe paper text only when ``license_subject`` is ``paper``, or
-    in the pre-subject schema where both subject and tier are absent. For those
-    rows, a known tier precedes ``access.license``. Tool-subject and unresolved
-    paper licences stay absent so access alone determines their cap regime.
+    ``access.source_reuse`` is authoritative when present. Otherwise
+    ``access.license`` describes paper text. The previous ``license_subject``
+    shape remains accepted for one release, with a migration warning.
     """
     out: dict[str, bool] = {}
-    for paper in corpus.get("papers") or []:
+    papers = corpus.get("papers") or []
+    warn_legacy_tool_licenses(papers)
+    for paper in papers:
         if not isinstance(paper, dict):
             continue
         doi = _norm_doi(paper.get("doi"))
         if not doi:
+            continue
+        licence = paper_license(paper)
+        if paper.get("license_subject") == "tool":
             continue
         access = paper.get("access") if isinstance(paper.get("access"), dict) else {}
         source_reuse = str(access.get("source_reuse") or "").strip().lower()
         if source_reuse:
             out[doi] = source_reuse == "permissive"
             continue
-        license_subject = str(paper.get("license_subject") or "").strip().lower()
         license_tier = str(paper.get("license_tier") or "").strip().lower()
-        licence_describes_paper = license_subject == "paper" or (
-            not license_subject and not license_tier
-        )
-        if not licence_describes_paper:
+        if licence is None and paper.get("license_subject") != "paper":
             continue
-        if license_tier == "open":
-            out[doi] = True
-            continue
-        if license_tier in {"noncommercial", "restricted"}:
-            out[doi] = False
-            continue
-        licence_is_permissive = _paper_licence_is_permissive(access.get("license"))
+        if paper.get("license_subject") == "paper":
+            if license_tier == "open":
+                out[doi] = True
+                continue
+            if license_tier in {"noncommercial", "restricted"}:
+                out[doi] = False
+                continue
+        licence_is_permissive = _paper_licence_is_permissive(licence)
         if licence_is_permissive is not None:
             out[doi] = licence_is_permissive
     return out

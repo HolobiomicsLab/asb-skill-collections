@@ -91,6 +91,13 @@ documentation. The paper can still be cited, but its text follows the paper's
 own posting licence. The existence or licence of the repository does not grant
 rights over the accompanying paper.
 
+`tool_license` records the tool's code licence in its `spdx`, `detection`,
+`verified_on` and `source` fields; `access.license`, when present, records the
+paper's licence independently. For one release, readers also accept
+`license_subject`, with `subject: tool` identifying a legacy tool licence in
+`access.license`; migrate those rows with
+`scripts/migrate_tool_license_field.py --corpus <path>`.
+
 ### Paper text and grounding tier
 
 Paper access determines quotation handling and grounding strength, not

@@ -42,7 +42,7 @@ if __package__ in (None, ""):
 
 
 from scripts.derive_license_tiers import classify_license_text, parse_repo
-from scripts.license_tier import tier_for_license
+from scripts.license_tier import tier_for_license, warn_legacy_tool_licenses
 
 
 # ---------------------------------------------------------------------------
@@ -343,6 +343,7 @@ def run_precheck(
     path = pathlib.Path(corpus_path)
     doc = yaml.safe_load(path.read_text(encoding="utf-8"))
     papers = doc.get("papers", [])
+    warn_legacy_tool_licenses(papers, path)
 
     # Build a lookup from (owner, repo) → list of paper dicts in the corpus
     repo_to_papers: dict[tuple[str, str], list[dict]] = {}
@@ -416,8 +417,15 @@ def run_precheck(
             # Mutate ALL corpus papers with this repo URL
             for p in paper_list:
                 p["license_tier"] = tier
-                p.setdefault("access", {})["license"] = lic
-                p["license_detection"] = "readme-llm"
+                access = p.setdefault("access", {})
+                p["tool_license"] = {
+                    "spdx": lic,
+                    "detection": "readme-llm",
+                    "verified_on": access.get("verified_on"),
+                    "source": p.get("repo_url"),
+                }
+                p.pop("license_detection", None)
+                p.pop("license_subject", None)
                 p["license_evidence"] = evidence
 
             retiered += 1

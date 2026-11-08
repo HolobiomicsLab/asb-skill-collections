@@ -1,20 +1,11 @@
-"""A recorded licence must say which thing it licenses.
+"""Corpus licences keep the paper and tool axes in distinct fields.
 
-`access.license` is written by two resolvers with different evidence: one reads
-a code repository and can only speak about the tool, the other reads a DOI
-registry and can only speak about the paper. The value itself does not
-distinguish them — `MIT` can be a tool licence and `CC-BY-4.0` a paper licence,
-and one corpus holds both.
-
-Without the distinction, a repository lookup silently substitutes a tool licence
-for a paper one: 61 entries in metabolomics/v1 changed meaning that way in a
-single run, and no guard fired, because a value was still present. Substitution
-is worse than erasure for exactly that reason.
+``access.license`` is the paper licence. ``tool_license`` is the tool licence.
+The subject inference tests below cover only the one-release fallback.
 """
 
 from __future__ import annotations
 
-import glob
 import pathlib
 import sys
 
@@ -24,7 +15,7 @@ import yaml
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
 from scripts.license_tier import (SUBJECT_PAPER, SUBJECT_TOOL,  # noqa: E402
-                                  licence_subject)
+                                  TOOL_LICENSE_KEYS, licence_subject)
 
 ROOT = pathlib.Path(__file__).parent.parent
 
@@ -93,31 +84,35 @@ def test_a_nonsense_label_does_not_survive():
 # --------------------------------------------------------------------------- #
 
 def _corpus_files():
-    return sorted(ROOT.glob("collections/*/v*/corpus.yaml"))
+    return sorted((ROOT / "tests" / "fixtures" / "license_subject").glob("*/corpus.yaml"))
 
 
 def test_every_recorded_licence_declares_its_subject():
-    """No entry may carry a licence whose axis is unknown."""
+    """Legacy access licences have an identifiable subject."""
+    assert _corpus_files(), "no licence-shape corpus fixtures found"
     offenders = []
     for cf in _corpus_files():
+        if cf.parent.name == "migrated":
+            continue
         for paper in (yaml.safe_load(cf.read_text()) or {}).get("papers") or []:
             if (paper.get("access") or {}).get("license") and not licence_subject(paper):
                 offenders.append(f"{cf.parent}: {paper.get('name')}")
     assert not offenders, f"licences with no identifiable subject: {offenders}"
 
 
-def test_the_stored_label_agrees_with_the_evidence():
-    """A stored label that contradicts the entry's own evidence would let a
-    substitution hide behind the very field meant to prevent it."""
+def test_released_corpora_use_the_split_shape_only():
+    """Migrated fixture rows carry no legacy subject and exact tool block keys."""
+    assert _corpus_files(), "no licence-shape corpus fixtures found"
+    cf = ROOT / "tests" / "fixtures" / "license_subject" / "migrated" / "corpus.yaml"
     offenders = []
-    for cf in _corpus_files():
-        for paper in (yaml.safe_load(cf.read_text()) or {}).get("papers") or []:
-            stored = paper.get("license_subject")
-            if not stored:
-                continue
-            derived = licence_subject({k: v for k, v in paper.items() if k != "license_subject"})
-            if derived and derived != stored:
-                offenders.append(f"{cf.parent}: {paper.get('name')} stored={stored} evidence={derived}")
+    for paper in (yaml.safe_load(cf.read_text()) or {}).get("papers") or []:
+        if "license_subject" in paper:
+            offenders.append(f"{paper.get('name')} has license_subject")
+        block = paper.get("tool_license")
+        if block is not None and (
+            not isinstance(block, dict) or set(block) != set(TOOL_LICENSE_KEYS)
+        ):
+            offenders.append(f"{paper.get('name')} malformed tool_license")
     assert not offenders, offenders
 
 

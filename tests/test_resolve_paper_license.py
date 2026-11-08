@@ -115,6 +115,7 @@ def test_a_full_reuse_licence_promotes_any_publisher_to_open_access(tmp_path, do
     assert entry["access"]["type"] == "open-access"
     assert entry["access"]["license"] == "CC-BY-4.0"
     assert entry["license_detection"] == "crossref-paper"
+    assert entry["license_subject"] == "paper"
     assert entry["source_reuse"] == "full"
 
 
@@ -163,6 +164,18 @@ def test_a_cached_outcome_is_re_evaluated_against_the_current_access_type(tmp_pa
     path = _corpus(tmp_path, [already_open])
     findings = rpl.run([path], apply=True, cache_path=cache, _resolve=_registry({}))
     assert findings[0]["promotes"] is False, "already open-access: nothing to promote"
+
+
+def test_paper_resolution_does_not_overwrite_tool_tier():
+    entry = _entry("10.1/dual", license_tier="noncommercial")
+    assert rpl.apply_outcome(entry, {
+        "status": rpl.STATUS_RESOLVED, "spdx": "CC-BY-4.0", "registry": "crossref",
+        "source_reuse": "full", "promotes": True,
+    })
+    assert entry["access"]["license"] == "CC-BY-4.0"
+    assert entry["license_tier"] == "noncommercial"
+    assert entry["license_subject"] == "paper"
+    assert entry["license_detection"] == "crossref-paper"
 
 
 if __name__ == "__main__":

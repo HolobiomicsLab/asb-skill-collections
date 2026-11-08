@@ -1,8 +1,7 @@
 """Resolve each corpus entry's tool license via the GitHub license API and write
-license_tier (+ raw access.license) into corpus.yaml. Network; cache-backed.
+license_tier plus tool_license into corpus.yaml. Network; cache-backed.
 
-The OA axis (access.type) is NOT changed here — only access.license (raw SPDX) is
-filled and license_tier added. No resolvable license -> restricted (by design).
+The paper-access axis is not changed here. No resolvable licence is restricted.
 """
 from __future__ import annotations
 
@@ -23,8 +22,9 @@ if __package__ in (None, ""):
     _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
 
 
-from scripts.license_tier import (SUBJECT_PAPER, SUBJECT_TOOL, UNESTABLISHED_DETECTIONS,
-                                  licence_subject, load_map, tier_for_license)
+from scripts.license_tier import (UNESTABLISHED_DETECTIONS,
+                                  load_map, tier_for_license,
+                                  tool_license, warn_legacy_tool_licenses)
 
 _GH_API = "https://api.github.com/repos/{}/{}/license"
 _LICENSE_FILE_RE = re.compile(r"^(licen[sc]e|copying|notice)(\.[\w.-]+)?$", re.I)
@@ -202,42 +202,34 @@ def tier_for_repo(repo_url, token=None, cache=None, _detect=detect_license):
 
 
 def apply_to_corpus(corpus_path, token, cache=None, _detect=detect_license) -> dict:
-    """Write license_tier + access.license + license_detection into every corpus entry. Returns {tier:count}."""
+    """Write the tool tier and corpus-level tool-licence block. Return tier counts."""
     path = pathlib.Path(corpus_path)
     doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+    warn_legacy_tool_licenses(doc.get("papers", []), path)
     summary: dict[str, int] = {}
     for p in doc.get("papers", []):
-        # An entry with no repository is not this script's question, and writing
-        # `restricted` / `none` over it destroys whatever the *paper* licence
-        # resolver established from the registry (`resolve_paper_license.py`).
-        # Both write the same fields; only one of them has evidence per entry.
+        # An entry with no repository is not this script's question.
         if p.get("license_locked") or not str(p.get("repo_url") or "").strip():
             t = p.get("license_tier", "restricted")
             summary[t] = summary.get(t, 0) + 1
             continue
         tier, lic, src = tier_for_repo(p.get("repo_url"), token=token, cache=cache, _detect=_detect)
-        # A lookup that found nothing must not erase one that did. The licence
-        # *value* is what matters, not the detection label beside it: in
-        # metabolomics/v1 the recorded licences carry `license_detection: null`
-        # because they came from Unpaywall rather than from a repository, and a
-        # guard keyed only on the label wiped nineteen of them.
-        recorded = (p.get("access") or {}).get("license")
-        # This script reads a repository, so it may only speak about the tool.
-        # Writing over a licence that describes the *paper* substitutes one axis
-        # for the other, and nothing downstream can tell that it happened.
-        if licence_subject(p) == SUBJECT_PAPER:
-            kept = p.get("license_tier") or "restricted"
-            summary[kept] = summary.get(kept, 0) + 1
-            continue
+        recorded = (tool_license(p) or {}).get("spdx")
         if lic is None and (recorded
                             or p.get("license_detection") not in UNESTABLISHED_DETECTIONS):
             kept = p.get("license_tier", "restricted")
             summary[kept] = summary.get(kept, 0) + 1
             continue
         p["license_tier"] = tier
-        p.setdefault("access", {})["license"] = lic
-        p["license_detection"] = src
-        p["license_subject"] = SUBJECT_TOOL
+        access = p.setdefault("access", {})
+        p["tool_license"] = {
+            "spdx": lic,
+            "detection": src,
+            "verified_on": access.get("verified_on"),
+            "source": p.get("repo_url"),
+        }
+        p.pop("license_detection", None)
+        p.pop("license_subject", None)
         summary[tier] = summary.get(tier, 0) + 1
     path.write_text(yaml.safe_dump(doc, sort_keys=False, allow_unicode=True), encoding="utf-8")
     return summary

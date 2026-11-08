@@ -1,0 +1,28 @@
+schema: asb-corpus/1.0
+collection: metabolomics
+version: 2
+papers:
+- name: MS2DECIDE
+  doi: 10.1002/cmtd.202400088
+  repo_url: https://github.com/MejriY/MS2DECIDE
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+    license: MIT
+  license_tier: open
+  license_detection: github-api
+  license_subject: tool
+- name: LipidOne 2.0
+  doi: 10.1002/cpz1.70009
+  repo_url: matteogiulietti/LipidOne
+  access:
+    type: open-access
+    license: CC-BY-4.0
+    is_oa: true
+    verified_on: '2026-11-08'
+    verified_via: unpaywall_oa_locations
+  license_tier: open
+  license_detection: unpaywall
+  license_subject: paper

@@ -286,16 +286,22 @@ def _make_paper(
     """Create one asb-corpus/1.0 row from joined source records."""
     access, tier, detection = _paper_access(tiered, access_map, verified_on)
     build_name = build["dir"].name
+    repo_url = _github_url(build["flags"])
     return {
         "name": build_name,
         "doi": build["doi"],
         "title": _paper_title(tiered or {}, build["enrichment"]),
         "category": domain,
-        "repo_url": _github_url(build["flags"]),
+        "repo_url": repo_url,
         "status": "included",
         "wave": build_name.split("__", 1)[0],
         "access": access,
-        "license_subject": "paper",
+        "tool_license": {
+            "spdx": None,
+            "detection": None,
+            "verified_on": verified_on,
+            "source": repo_url,
+        },
         "license_tier": tier,
         "license_detection": detection,
     }
