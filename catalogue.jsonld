@@ -40,8 +40,8 @@
   "@type": "asb:SkillCollectionRegistry",
   "@id": "https://w3id.org/holobiomicslab/asb-skill/registry",
   "name": "ASB Skill Collection Registry",
-  "description": "Auto-generated registry of the ASB Skill Collections in this repository. Each entry's status says whether it is released or staged.",
-  "generated_at": "2026-10-31T11:52:58Z",
+  "description": "Auto-generated registry of the ASB Skill Collections in the domain repositories. Each entry's status says whether it is released or staged.",
+  "generated_at": "2026-11-08T20:36:31Z",
   "collections": [
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/epigenomics/v1",
@@ -438,12 +438,33 @@
         "http://edamontology.org/topic_3958"
       ],
       "doi": "10.5281/zenodo.20794027",
-      "released_at": "2026-06-28T00:00:00Z",
+      "released_at": "2026-06-22T00:00:00Z",
       "lead_curators": [
         {
           "name": "Louis-Felix Nothias",
           "orcid": "0000-0001-6711-6719",
           "github": "lfnothias"
+        }
+      ],
+      "status": "released"
+    },
+    {
+      "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v3",
+      "title": "ASB Metabolomics Skill Collection v3",
+      "version": "3",
+      "slug": "metabolomics",
+      "skills_count": 11830,
+      "tools_count": 1989,
+      "leaf_dir": "leaves",
+      "domain_topics": [],
+      "doi": "10.5281/zenodo.24054446",
+      "released_at": "2026-11-09T00:00:00Z",
+      "lead_curators": [
+        {
+          "family": "Nothias",
+          "given": "Louis-Félix",
+          "orcid": "0000-0001-6711-6719",
+          "affiliation": "Holobiomics Lab, Institut de Chimie de Nice (ICN), CNRS UMR 7272 / Université Côte d'Azur"
         }
       ],
       "status": "released"
@@ -524,27 +545,6 @@
         }
       ],
       "status": "staged"
-    },
-    {
-      "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v3",
-      "title": "ASB Metabolomics Skill Collection v3",
-      "version": "3",
-      "slug": "metabolomics",
-      "skills_count": 11830,
-      "tools_count": 1989,
-      "leaf_dir": "leaves",
-      "domain_topics": [],
-      "doi": "10.5281/zenodo.24054446",
-      "released_at": "2026-11-09T00:00:00Z",
-      "lead_curators": [
-        {
-          "family": "Nothias",
-          "given": "Louis-Félix",
-          "orcid": "0000-0001-6711-6719",
-          "affiliation": "Holobiomics Lab, Institut de Chimie de Nice (ICN), CNRS UMR 7272 / Université Côte d'Azur"
-        }
-      ],
-      "status": "released"
     }
   ]
 }

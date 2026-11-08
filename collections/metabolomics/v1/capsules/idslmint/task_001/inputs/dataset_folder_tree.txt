@@ -1,2 +1,0 @@
-  figures/IDSL_MINT-logo.png
-paper.md

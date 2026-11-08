@@ -16,7 +16,7 @@ that was already in the session when it happened.
 
 | Piece | What it does |
 |---|---|
-| [`asb-contribute`](../collections/metabolomics/v2/skills/asb-contribute/SKILL.md) | Advertised skill. Fires on friction, classifies it, searches for an existing issue, drafts a redacted report, and files it **only** on an explicit yes. |
+| `asb-contribute`, at `<domain checkout>/collections/metabolomics/v3/skills/asb-contribute/SKILL.md` | Advertised skill. Fires on friction, classifies it, searches for an existing issue, drafts a redacted report, and files it **only** on an explicit yes. |
 | [`scripts/skill_feedback.py`](../scripts/skill_feedback.py) | Renders the report, strips outbound secrets, and computes the fingerprint that merges reports of one problem. |
 | [`.github/ISSUE_TEMPLATE/skill-feedback.md`](../.github/ISSUE_TEMPLATE/skill-feedback.md) | The manual path, for people not running an agent. |
 | Proposal rails | `propose-skill`, `propose-meta-skill`, `claim-skill`, `proposals.yml`, and [`governance/AUTHORSHIP.md`](../governance/AUTHORSHIP.md) — where a report that carries its own fix becomes credit. |
@@ -56,6 +56,17 @@ rest were folded in or deferred:
 | **Pre-flight grounding check** — verify a skill's claim against its source before acting | **Not a new skill.** Already step 4 of `asb-metabolomics`, via the Perspicacité binder. Duplicating it would split the protocol. |
 
 ## For maintainers
+
+Metabolomics v3 is released as `metabolomics-v3.0.0` (DOI
+`10.5281/zenodo.24054446`) in the private domain repository
+`asb-skills-metabolomics`. Domain content belongs in the corresponding
+`asb-skills-<domain>` checkout, while this repository holds tooling, governance
+and the registry.
+
+For a new paper, use the proposal rail for a single reviewed suggestion or the
+batch build-and-cut rail for a maintained collection. The complete commands and
+the boundary between incremental builds and batch consolidation are in
+[Adding papers to a collection](adding-papers.md).
 
 Reports arrive labelled `usage-feedback` + `needs-triage`, with `propose` added
 when the reporter is asking for new work. Triage on the kind:

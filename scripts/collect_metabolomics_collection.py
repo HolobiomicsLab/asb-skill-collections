@@ -1216,8 +1216,8 @@ def main() -> None:
     )
     parser.add_argument(
         "--repo-root",
-        default=".",
-        help="asb-skill-collections repo root (output written under "
+        required=True,
+        help="metabolomics domain checkout root (output written under "
         "collections/metabolomics/v1/).",
     )
     parser.add_argument(

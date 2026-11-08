@@ -1,0 +1,16 @@
+{
+  "collection": "fixture",
+  "version": 1,
+  "skills": {
+    "chromatographic-alignment": {"dois": ["10.9999/asb-fixture-1"]},
+    "formula-prediction": {"dois": ["10.9999/asb-fixture-2"]},
+    "spectral-pattern-query": {"dois": ["10.9999/asb-fixture-3"]},
+    "gcms-deconvolution": {"dois": ["10.9999/asb-fixture-4"]},
+    "spectral-library-matching": {"dois": ["10.9999/asb-fixture-5"]},
+    "molecular-networking": {"dois": ["10.9999/asb-fixture-6"]},
+    "nmr-profiling": {"dois": ["10.9999/asb-fixture-7"]},
+    "imaging-annotation": {"dois": ["10.9999/asb-fixture-8"]},
+    "isotope-tracing": {"dois": ["10.9999/asb-fixture-9"]},
+    "noncommercial-deconvolution": {"dois": ["10.9999/asb-fixture-10"]}
+  }
+}

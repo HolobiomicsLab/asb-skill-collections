@@ -1,147 +1,112 @@
-"""Unit tests for regen_catalogue.py."""
+"""Catalogue generation is driven by the domain-release manifest."""
+
 import json
 import pathlib
+import re
+
 import pytest
-import sys
+import yaml
 
-sys.path.insert(0, str(pathlib.Path(__file__).parent.parent))
-
-FIXTURES = pathlib.Path(__file__).parent / "fixtures"
-MINI_COLLECTION_DIR = FIXTURES / "mini_collection"
-
-
-@pytest.fixture()
-def tmp_repo(tmp_path):
-    """A minimal fake repo root with one collection."""
-    collections_dir = tmp_path / "collections" / "test-domain" / "v1"
-    collections_dir.mkdir(parents=True)
-    # Copy mini collection YAML
-    import shutil
-    shutil.copy(MINI_COLLECTION_DIR / "collection.yaml", collections_dir / "collection.yaml")
-    return tmp_path
-
-
-def test_catalogue_has_context(tmp_repo):
-    from scripts.regen_catalogue import build_catalogue
-    cat = build_catalogue(tmp_repo)
-    assert "@context" in cat
-    assert "@type" in cat
-    assert cat["@type"] == "asb:SkillCollectionRegistry"
-
-
-def test_catalogue_lists_collection(tmp_repo):
-    from scripts.regen_catalogue import build_catalogue
-    cat = build_catalogue(tmp_repo)
-    assert "collections" in cat
-    assert len(cat["collections"]) == 1
-    entry = cat["collections"][0]
-    assert entry["title"] == "Test Domain Collection"
-
-
-def test_catalogue_has_required_fields(tmp_repo):
-    from scripts.regen_catalogue import build_catalogue
-    cat = build_catalogue(tmp_repo)
-    entry = cat["collections"][0]
-    required = ["@id", "title", "version", "slug", "skills_count", "tools_count"]
-    for field in required:
-        assert field in entry, f"Missing field: {field}"
-
-
-def test_catalogue_is_alphabetically_ordered(tmp_path):
-    """Multiple collections should be sorted alphabetically by slug."""
-    from scripts.regen_catalogue import build_catalogue
-    import yaml
-    for slug in ["zebra-domain", "alpha-domain", "metabolomics"]:
-        col_dir = tmp_path / "collections" / slug / "v1"
-        col_dir.mkdir(parents=True)
-        (col_dir / "collection.yaml").write_text(yaml.dump({
-            "@type": "asb:SkillCollection",
-            "@id": f"https://w3id.org/holobiomicslab/asb-skill/collection/{slug}/v1",
-            "title": f"{slug.title()} Collection",
-            "version": "1",
-            "slug": slug,
-            "domain_topics": [],
-            "doi": None,
-            "released_at": None,
-            "lead_curators": [],
-            "skills_count": 0,
-            "tools_count": 0,
-        }))
-    cat = build_catalogue(tmp_path)
-    slugs = [e["slug"] for e in cat["collections"]]
-    assert slugs == sorted(slugs)
-
-
-def test_catalogue_generated_at_is_iso(tmp_repo):
-    from scripts.regen_catalogue import build_catalogue
-    import re
-    cat = build_catalogue(tmp_repo)
-    ts = cat.get("generated_at", "")
-    # ISO 8601 UTC: 2026-05-25T00:00:00Z
-    assert re.match(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z", ts), f"Bad timestamp: {ts}"
-
-
-def test_catalogue_write_to_file(tmp_repo, tmp_path):
-    from scripts.regen_catalogue import build_catalogue, write_catalogue
-    cat = build_catalogue(tmp_repo)
-    out = tmp_path / "catalogue.jsonld"
-    write_catalogue(cat, out)
-    reloaded = json.loads(out.read_text())
-    assert reloaded["@type"] == "asb:SkillCollectionRegistry"
-
-
-# --- Release status and DOI placeholders -------------------------------------
-#
-# The catalogue listed three staged v1 collections with `doi: TODO-zenodo`, and
-# the site rendered them as released with a link to doi.org/TODO-zenodo. A
-# collection is released when the plugin marketplace serves it; every other
-# catalogued collection is staged, and a DOI is published only once minted.
+from scripts.regen_catalogue import build_catalogue, is_minted_doi, main, write_catalogue
 
 REPO = pathlib.Path(__file__).resolve().parent.parent
 
 
-def _write_collection(root, slug, version, doi):
-    import yaml
-    col_dir = root / "collections" / slug / f"v{version}"
-    col_dir.mkdir(parents=True)
-    (col_dir / "collection.yaml").write_text(yaml.dump({
-        "title": f"{slug} v{version}",
-        "version": str(version),
+def _release(version, *, status=None, doi=None, leaf_dir="leaves"):
+    release = {
+        "version": version,
+        "path": f"collections/demo/v{version}",
+        "released": f"2026-02-0{version}",
+        "version_doi": doi,
+        "leaf_dir": leaf_dir,
+        "skills": version * 7,
+        "tools": version * 3,
+        "workflows": 0,
+        "papers": 0,
+    }
+    if status:
+        release["status"] = status
+    return release
+
+
+def _template(slug, version, *, doi=None):
+    entry = {
         "slug": slug,
-        "domain_topics": [],
-        "doi": doi,
-        "released_at": "2026-06-15T00:00:00Z",
-        "lead_curators": [],
-        "skills_count": 1,
-        "tools_count": 1,
-    }))
+        "version": str(version),
+        "title": f"{slug.title()} Collection v{version}",
+        "domain_topics": ["http://edamontology.org/topic_3172"],
+        "lead_curators": [{"name": "Curator"}],
+    }
+    if doi is not None:
+        entry["doi"] = doi
+    return entry
 
 
-def _write_marketplace(root, sources):
-    plugin_dir = root / ".claude-plugin"
-    plugin_dir.mkdir()
-    (plugin_dir / "marketplace.json").write_text(json.dumps({
-        "name": "fixture",
-        "plugins": [{"name": f"p{i}", "source": s} for i, s in enumerate(sources)],
-    }))
+@pytest.fixture
+def tmp_repo(tmp_path):
+    manifest = {
+        "domains": {
+            "zebra": {"releases": [_release(1)]},
+            "alpha": {
+                "releases": [
+                    _release(2, doi="10.5281/zenodo.22"),
+                    _release(1, status="legacy", doi="TODO-zenodo", leaf_dir="skills"),
+                ]
+            },
+        }
+    }
+    (tmp_path / "collections.yaml").write_text(yaml.safe_dump(manifest), encoding="utf-8")
+    templates = [
+        _template("alpha", 1, doi="TODO-zenodo"),
+        _template("alpha", 2, doi="10.5281/zenodo.22"),
+        _template("zebra", 1),
+    ]
+    (tmp_path / "catalogue.jsonld").write_text(
+        json.dumps({"collections": templates}), encoding="utf-8"
+    )
+    return tmp_path
 
 
-def test_placeholder_doi_is_omitted(tmp_path):
-    from scripts.regen_catalogue import build_catalogue
-    _write_collection(tmp_path, "alpha", 1, "TODO-zenodo")
-    entry = build_catalogue(tmp_path)["collections"][0]
-    assert "doi" not in entry
+def test_catalogue_has_registry_context(tmp_repo):
+    catalogue = build_catalogue(tmp_repo)
+    assert catalogue["@type"] == "asb:SkillCollectionRegistry"
+    assert catalogue["@context"]["status"] == "asb:status"
+    assert re.fullmatch(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z", catalogue["generated_at"])
 
 
-def test_minted_doi_is_kept(tmp_path):
-    from scripts.regen_catalogue import build_catalogue
-    _write_collection(tmp_path, "alpha", 1, "10.5281/zenodo.20794027")
-    entry = build_catalogue(tmp_path)["collections"][0]
-    assert entry["doi"] == "10.5281/zenodo.20794027"
+def test_manifest_entries_have_required_fields_in_alphabetical_order(tmp_repo):
+    entries = build_catalogue(tmp_repo)["collections"]
+    assert [(entry["slug"], entry["version"]) for entry in entries] == [
+        ("alpha", "1"), ("alpha", "2"), ("zebra", "1")
+    ]
+    required = {
+        "@id", "title", "version", "slug", "skills_count", "tools_count",
+        "leaf_dir", "domain_topics", "lead_curators", "released_at", "status",
+    }
+    for entry in entries:
+        assert required <= entry.keys()
+        assert entry["title"] == f"{entry['slug'].title()} Collection v{entry['version']}"
+
+
+def test_status_leaf_directory_and_release_timestamps_come_from_manifest(tmp_repo):
+    entries = build_catalogue(tmp_repo)["collections"]
+    legacy, published, _ = entries
+    assert legacy["status"] == "staged"
+    assert published["status"] == "released"
+    assert legacy["leaf_dir"] == "skills"
+    assert published["leaf_dir"] == "leaves"
+    assert legacy["released_at"] == "2026-02-01T00:00:00Z"
+    assert published["released_at"] == "2026-02-02T00:00:00Z"
+
+
+def test_minted_doi_is_kept_and_placeholder_doi_is_omitted(tmp_repo):
+    legacy, published, _ = build_catalogue(tmp_repo)["collections"]
+    assert "doi" not in legacy
+    assert published["doi"] == "10.5281/zenodo.22"
 
 
 @pytest.mark.parametrize(
-    "doi, minted",
+    ("doi", "minted"),
     [
         ("10.5281/zenodo.20794027", True),
         ("https://doi.org/10.5281/zenodo.1", False),
@@ -151,76 +116,21 @@ def test_minted_doi_is_kept(tmp_path):
     ],
 )
 def test_is_minted_doi(doi, minted):
-    from scripts.regen_catalogue import is_minted_doi
     assert is_minted_doi(doi) is minted
 
 
-def test_status_follows_the_marketplace(tmp_path):
-    from scripts.regen_catalogue import build_catalogue
-    _write_collection(tmp_path, "alpha", 1, None)
-    _write_collection(tmp_path, "alpha", 2, None)
-    _write_collection(tmp_path, "beta", 1, None)
-    _write_marketplace(tmp_path, ["./collections/alpha/v2", "./packs/alpha/lc-ms"])
-    status = {
-        f"{e['slug']}/v{e['version']}": e["status"]
-        for e in build_catalogue(tmp_path)["collections"]
-    }
-    assert status == {"alpha/v1": "staged", "alpha/v2": "released", "beta/v1": "staged"}
+def test_catalogue_write_to_file(tmp_repo):
+    output = tmp_repo / "nested" / "catalogue.jsonld"
+    write_catalogue(build_catalogue(tmp_repo), output)
+    assert json.loads(output.read_text(encoding="utf-8"))["collections"]
+    cli_output = tmp_repo / "cli" / "catalogue.jsonld"
+    assert main(["--repo-root", str(tmp_repo), "--output", str(cli_output)]) == 0
+    assert json.loads(cli_output.read_text(encoding="utf-8"))["collections"]
 
 
-def test_without_a_marketplace_every_collection_is_staged(tmp_path):
-    from scripts.regen_catalogue import build_catalogue
-    _write_collection(tmp_path, "alpha", 1, None)
-    entry = build_catalogue(tmp_path)["collections"][0]
-    assert entry["status"] == "staged"
-
-
-def test_manifest_marks_a_domain_release_as_released(tmp_path):
-    from scripts.regen_catalogue import build_catalogue
-    import yaml
-
-    _write_collection(tmp_path, "alpha", 2, None)
-    _write_collection(tmp_path, "alpha", 3, None)
-    _write_marketplace(tmp_path, ["./collections/alpha/v2"])
-    (tmp_path / "collections.yaml").write_text(
-        yaml.safe_dump(
-            {
-                "domains": {
-                    "alpha": {
-                        "releases": [{"path": "collections/alpha/v3"}],
-                    }
-                }
-            }
-        ),
-        encoding="utf-8",
-    )
-
-    status = {
-        f"{entry['slug']}/v{entry['version']}": entry["status"]
-        for entry in build_catalogue(tmp_path)["collections"]
-    }
-    assert status == {"alpha/v2": "released", "alpha/v3": "released"}
-
-
-def test_status_is_a_context_term(tmp_repo):
-    from scripts.regen_catalogue import build_catalogue
-    assert "status" in build_catalogue(tmp_repo)["@context"]
-
-
-def test_committed_catalogue_matches_the_release_state():
-    """The served catalogue agrees with marketplace and domain-release statuses."""
-    from scripts.regen_catalogue import (
-        collection_status,
-        is_minted_doi,
-        manifest_release_dirs,
-        released_collection_dirs,
-    )
-    entries = json.loads((REPO / "catalogue.jsonld").read_text(encoding="utf-8"))["collections"]
-    released = released_collection_dirs(REPO)
-    manifest = manifest_release_dirs(REPO)
-    assert entries
-    for entry in entries:
-        rel = f"collections/{entry['slug']}/v{entry['version']}"
-        assert entry.get("status") == collection_status(rel, released, manifest), rel
-        if "doi" in entry:
-            assert is_minted_doi(entry["doi"]), (rel, entry["doi"])
+def test_committed_catalogue_matches_manifest_regeneration():
+    regenerated = build_catalogue(REPO)
+    committed = json.loads((REPO / "catalogue.jsonld").read_text(encoding="utf-8"))
+    regenerated.pop("generated_at")
+    committed.pop("generated_at")
+    assert committed == regenerated

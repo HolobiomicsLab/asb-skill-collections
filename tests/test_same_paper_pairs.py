@@ -77,7 +77,9 @@ def _plant_duplicate(cut: Path) -> list[str]:
     return coverage["capsules"]
 
 
-def _run(cut: Path, output: Path, *extra: str) -> subprocess.CompletedProcess[str]:
+def _run(
+    cut: Path, output: Path, offline_env: dict[str, str] | None = None, *extra: str
+) -> subprocess.CompletedProcess[str]:
     """Invoke the public command under the release offline environment."""
     return subprocess.run(
         [
@@ -90,7 +92,7 @@ def _run(cut: Path, output: Path, *extra: str) -> subprocess.CompletedProcess[st
             *extra,
         ],
         cwd=REPO,
-        env=_environment(),
+        env=offline_env or _environment(),
         text=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
@@ -106,14 +108,14 @@ def _last_json(output: str) -> dict:
 
 
 def test_duplicate_pair_is_reported_once_per_shared_run_and_is_deterministic(
-    tmp_path: Path,
+    tmp_path: Path, offline_environment: dict[str, str]
 ) -> None:
     """Score the planted duplicate per shared run and preserve identical bytes."""
     cut = _copy_cut(tmp_path)
     shared_runs = _plant_duplicate(cut)
     output = tmp_path / "same_paper_pairs.json"
 
-    first = _run(cut, output)
+    first = _run(cut, output, offline_environment)
     assert first.returncode == 0, first.stdout
     first_bytes = output.read_bytes()
     report = json.loads(first_bytes)
@@ -160,20 +162,20 @@ def test_duplicate_pair_is_reported_once_per_shared_run_and_is_deterministic(
             "merge_kind": "semantic_auto",
         }
 
-    second = _run(cut, output)
+    second = _run(cut, output, offline_environment)
     assert second.returncode == 0, second.stdout
     assert _last_json(second.stdout)["output_status"] == "identical"
     assert output.read_bytes() == first_bytes
 
 
 def test_unmodified_cut_has_no_high_pair_and_dry_run_writes_nothing(
-    tmp_path: Path,
+    tmp_path: Path, offline_environment: dict[str, str]
 ) -> None:
     """Keep unrelated same-paper outputs separate and make dry run read-only."""
     cut = _copy_cut(tmp_path)
     output = tmp_path / "same_paper_pairs.json"
 
-    result = _run(cut, output)
+    result = _run(cut, output, offline_environment)
     assert result.returncode == 0, result.stdout
     report = json.loads(output.read_text(encoding="utf-8"))
     assert report["pairs_ge_0_95"] == []
@@ -181,7 +183,7 @@ def test_unmodified_cut_has_no_high_pair_and_dry_run_writes_nothing(
     assert report["surplus_leaves"]["ge_0_95"] == 0
 
     dry_output = tmp_path / "dry" / "same_paper_pairs.json"
-    dry_run = _run(cut, dry_output, "--dry-run")
+    dry_run = _run(cut, dry_output, offline_environment, "--dry-run")
     assert dry_run.returncode == 0, dry_run.stdout
     assert not dry_output.exists()
     assert not dry_output.parent.exists()
@@ -194,7 +196,7 @@ def test_unmodified_cut_has_no_high_pair_and_dry_run_writes_nothing(
 
 
 def test_conflict_and_invalid_calibration_options_do_not_replace_output(
-    tmp_path: Path,
+    tmp_path: Path, offline_environment: dict[str, str]
 ) -> None:
     """Return the 1/2 contract for invalid calibration and differing bytes."""
     cut = _copy_cut(tmp_path)
@@ -202,7 +204,7 @@ def test_conflict_and_invalid_calibration_options_do_not_replace_output(
     foreign = b'{"owned": "elsewhere"}\n'
     output.write_bytes(foreign)
 
-    conflict = _run(cut, output)
+    conflict = _run(cut, output, offline_environment)
     assert conflict.returncode == 2, conflict.stdout
     assert output.read_bytes() == foreign
 
@@ -210,6 +212,7 @@ def test_conflict_and_invalid_calibration_options_do_not_replace_output(
     invalid_model = _run(
         cut,
         invalid_model_output,
+        offline_environment,
         "--model",
         "text-embedding-3-large",
     )
@@ -220,6 +223,7 @@ def test_conflict_and_invalid_calibration_options_do_not_replace_output(
     invalid_threshold = _run(
         cut,
         invalid_threshold_output,
+        offline_environment,
         "--thresholds",
         "0.89,0.90",
     )

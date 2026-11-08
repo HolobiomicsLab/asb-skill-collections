@@ -48,7 +48,6 @@ def _collect_paper_urls(repo_root: pathlib.Path, base_url: str) -> list[tuple[st
             print(f"WARNING: skipping {corpus_yaml}: {exc}", file=sys.stderr)
             continue
         collection = data.get("collection", "")
-        version = data.get("collection_version", "")
         for paper in (data.get("papers") or []):
             if not isinstance(paper, dict):
                 continue
@@ -103,7 +102,11 @@ def build_sitemap(repo_root: pathlib.Path, base_url: str) -> str:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    parser.add_argument("--repo-root", default=".", help="Repo root path")
+    parser.add_argument(
+        "--repo-root",
+        required=True,
+        help="Domain checkout containing collections/ and staged-collections/",
+    )
     parser.add_argument(
         "--output", default="docs-site/sitemap.xml", help="Output path"
     )

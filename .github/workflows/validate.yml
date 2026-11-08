@@ -1,37 +1,6 @@
 # validate.yml -- runs on every PR
-# Enforces CI gates per section 14 of ASB-Skills Release Design Doc v2.
-#
-# Gates implemented here:
-#   1. LinkML schema validation (collection.yaml): BLOCKING. The step installs
-#      asb-schema >= 0.3.0 from PyPI and validates every manifest closed against
-#      SkillCollection. The step says it did not run and exits 0, instead of
-#      reporting a pass, in three cases: linkml-runtime or the linkml-validate
-#      CLI is absent (their install is allowed to fail), the schema cannot be
-#      resolved (the install failed, or it is older than 0.3.0), or no
-#      collection.yaml exists.
-#   2. No orphan skills (DOI resolution sample)
-#   5. Description discipline lint (leading phrase, length, no marketing)
-#   6. EDAM IRI resolution
-#   8. RO-Crate validation (RO-Crate 1.1) — BLOCKING: every released capsule
-#      ships its build's crate pruned to what the capsule holds, and each is held
-#      to scripts/release_capsule_truth.py `crate_problems`. The Workflow Run
-#      Profile 0.5 claim is not checked, so the release copy does not make it.
-#   9. Indicium round-trip (verify-claims) — WARN-ONLY / inert: the CLI ships in
-#      indicium-adapters, not yet on PyPI and not installed here, so this gate is
-#      advertised but does not run in public CI (emits a ::warning:: annotation;
-#      never blocks). See gate9-inert.
-#  10. Plugin manifest validation: `claude plugin validate --strict` on
-#      .claude-plugin/marketplace.json and on every plugin it lists, in the
-#      plugin-manifest job.
-#
-# Jobs beside `validate`, so that a red one does not skip the gates above:
-#   receipt          on every PR, the metabolomics v2 gate_report.json must
-#                    pass `release_gate.py --verify`.
-#   citation         every tracked CITATION.cff outside the legacy v1 trees is
-#                    valid CFF 1.2.0 (cffconvert).
-#   search-index     docs-site/search_index.json matches a fresh build of the
-#                    collections it indexes.
-#   plugin-manifest  gate 10.
+# Gates on released content run in each domain repository's pipeline.
+# Gate 10 validates .claude-plugin/marketplace.json in the plugin-manifest job.
 
 name: Validate
 
@@ -94,365 +63,41 @@ jobs:
       - name: Run test suite
         run: python -m pytest tests/ -q
 
-      # -- Gate 0b: Index coverage -------------------------------------------
-      # A skill absent from skills_index.json / kb_bundle.json ships on disk but
-      # cannot be found by search, the MCP server, or the docs site. Nothing else
-      # notices: check_license_tiers.py only inspects skills the index already
-      # knows about, so the orphan stays invisible and CI stays green.
-      - name: Every skill is in every index its collection publishes
-        run: python -m scripts.skill_index
+      # Every-skill index coverage runs in the domain repository's pipeline.
 
       # Gate 10 (plugin manifest) runs in the plugin-manifest job below.
 
-      # -- Gate 5: Description discipline lint --------------------------------
-      # The rules used to live here as a heredoc, so the only way to run them was
-      # to push. They are `scripts/lint_skill_descriptions.py` now, covered by
-      # tests/test_lint_skill_descriptions.py and runnable before the push.
-      - name: Lint skill descriptions
-        run: python -m scripts.lint_skill_descriptions
+      # Skill-description lint runs in the domain repository's pipeline.
 
-      # -- Gate 2: No orphan skills (DOI resolution sample) ------------------
-      - name: Check derived_from DOIs resolve (sample)
-        run: |
-          python - <<'EOF'
-          import sys, pathlib, yaml, urllib.request, urllib.error
+      # The derived_from DOI sample runs in the domain repository's pipeline.
 
-          failures = []
-          unverified = []
-          checked = 0
-          skill_files = list(pathlib.Path("collections").rglob("SKILL.md"))
-          skill_files += list(pathlib.Path("staged-collections").rglob("SKILL.md"))
-          for skill_md in skill_files[:10]:
-              text = skill_md.read_text()
-              if not text.startswith("---"):
-                  continue
-              try:
-                  fm = yaml.safe_load(text.split("---", 2)[1])
-              except Exception:
-                  continue
-              derived = fm.get("derived_from") or []
-              if not derived:
-                  failures.append(f"{skill_md}: no derived_from DOIs")
-                  continue
-              # Sample: check first DOI only to keep CI fast
-              entry = derived[0]
-              doi = entry.get("doi") if isinstance(entry, dict) else entry
-              url = f"https://doi.org/{doi}"
-              try:
-                  req = urllib.request.Request(
-                      url, method="HEAD",
-                      headers={"User-Agent": "asb-skill-collections/0.1"}
-                  )
-                  with urllib.request.urlopen(req, timeout=10):
-                      checked += 1
-              except urllib.error.HTTPError as e:
-                  # 404/410 = the DOI genuinely does not resolve (orphan).
-                  # 403/429/401/405/5xx = the resolver answered but the
-                  # publisher bot-blocked HEAD; the DOI exists, not an orphan.
-                  if e.code in (404, 410):
-                      failures.append(f"{skill_md}: DOI {doi} does not resolve (HTTP {e.code})")
-                  else:
-                      unverified.append(f"{skill_md}: DOI {doi} reachable, target blocked HEAD (HTTP {e.code})")
-              except Exception as e:
-                  # Network/timeout flakiness is inconclusive, not a missing DOI.
-                  unverified.append(f"{skill_md}: DOI {doi} check inconclusive ({e})")
-          if unverified:
-              print(f"NOTE: {len(unverified)} DOI(s) reachable but not target-verified (not orphans):")
-              for u in unverified:
-                  print(f"  - {u}")
-          if failures:
-              print("FAIL: orphan skill / DOI resolution failures:")
-              for f in failures:
-                  print(f"  - {f}")
-              sys.exit(1)
-          print(f"PASS: DOI resolution OK ({checked} verified, {len(unverified)} unverified)")
-          EOF
+      # EDAM IRI resolution runs in the domain repository's pipeline.
 
-      # -- Gate 6: EDAM IRI resolution ----------------------------------------
-      - name: Check EDAM IRIs
-        run: |
-          python - <<'EOF'
-          import sys, pathlib, yaml
+      # RO-Crate validation runs in the domain repository's pipeline.
 
-          EDAM_BASE = "http://edamontology.org/"
-          failures = []
-          checked = set()
-          skill_files = list(pathlib.Path("collections").rglob("SKILL.md"))
-          skill_files += list(pathlib.Path("staged-collections").rglob("SKILL.md"))
-          for skill_md in skill_files:
-              text = skill_md.read_text()
-              if not text.startswith("---"):
-                  continue
-              try:
-                  fm = yaml.safe_load(text.split("---", 2)[1])
-              except Exception:
-                  continue
-              meta = fm.get("metadata") or {}
-              iris = []
-              if meta.get("edam_operation"):
-                  iris.append(meta["edam_operation"])
-              iris.extend(meta.get("edam_topics") or [])
-              for iri in iris:
-                  if iri in checked:
-                      continue
-                  checked.add(iri)
-                  if not iri.startswith(EDAM_BASE):
-                      failures.append(
-                          f"{skill_md}: EDAM IRI {iri} does not start with {EDAM_BASE}"
-                      )
-          if failures:
-              print("FAIL: EDAM IRI violations:")
-              for f in failures:
-                  print(f"  - {f}")
-              sys.exit(1)
-          print(f"PASS: EDAM IRIs OK ({len(checked)} unique IRIs validated)")
-          EOF
+      # Gate 9 runs in the domain repository's pipeline.
 
-      # -- Gate 8: RO-Crate validation ----------------------------------------
-      - name: Validate RO-Crate metadata
-        # BLOCKING. Every released capsule ships the RO-Crate its build wrote, pruned
-        # at promotion to the capsule the release carries
-        # (`scripts/release_capsule_truth.py`, `prune_crate`). This step holds each
-        # one to `crate_problems`, the rule the tests use too: RO-Crate 1.1's
-        # structural requirements, no profile claim this gate does not check, no
-        # path the capsule does not hold, no file in the capsule the crate does not
-        # describe, and no path of the machine that ran the build.
-        #
-        # It checks RO-Crate 1.1 only. The builds claim the Workflow Run Crate 0.5
-        # profile, which requires a `mainEntity` workflow that none of the 417
-        # declares; the release copy drops that claim rather than ship it unchecked.
-        #
-        # Until crates shipped, this step found zero files, printed a pass and sat
-        # behind continue-on-error. Finding no released capsule now fails: it means
-        # the layout this gate reads has moved, not that there is nothing to check.
-        run: |
-          python - <<'EOF'
-          import pathlib, sys
+      # LinkML schema validation runs in the domain repository's pipeline.
 
-          sys.path.insert(0, "scripts")
-          from release_capsule_truth import CRATE, crate_problems, released_capsules
+      # The pack-derivation gate runs in the domain repository's pipeline.
 
-          bases = ("collections", "staged-collections")
-          roots = sorted(p.parent for b in bases for p in pathlib.Path(b).glob("*/*/collection.yaml"))
-          capsules = [c for root in roots for c in released_capsules(root)]
-          if not capsules:
-              print("FAIL: gate 8 found no released capsule under collections/ or staged-collections/; the layout it reads has moved.")
-              sys.exit(1)
-          inside = {c / CRATE for c in capsules}
-          failures = [
-              f"{p}: a crate outside a released capsule, which this gate does not check"
-              for b in bases for p in sorted(pathlib.Path(b).rglob(CRATE)) if p not in inside
-          ]
-          for capsule in capsules:
-              failures += [f"{capsule}: {problem}" for problem in crate_problems(capsule)]
-          if failures:
-              print(f"FAIL: {len(failures)} RO-Crate problem(s) across {len(capsules)} released capsules:")
-              for f in failures[:200]:
-                  print(f"  - {f}")
-              sys.exit(1)
-          print(f"PASS: {len(capsules)} released capsules each ship an RO-Crate 1.1 that describes exactly what they hold")
-          EOF
+      # The released-capsule gate runs in the domain repository's pipeline.
 
-      # -- Gate 9: indicium round-trip (verify-claims) — WARN-ONLY -------------
-      # This gate is ADVERTISED but INERT in public CI: the verify-claims CLI ships
-      # in indicium-adapters, which is not yet on PyPI. No workflow installs that
-      # name before it is published: an unregistered name installed by a public
-      # workflow runs whatever its first registrant uploads (dependency
-      # confusion). The install returns, pinned to a released version, once the
-      # name is published. Until then the command is always absent, so the step
-      # emits a GitHub ::warning:: annotation (visible in the PR checks UI) and
-      # exits 0: it must never read as an enforced gate that passed. See the
-      # `gate9-inert` item in agenticsciencebuilder_dev/docs/asbb/HUMAN_REVIEW_GATE.md.
-      - name: "Gate 9: indicium round-trip (WARN-ONLY until indicium-adapters is published)"
-        run: |
-          if ! command -v verify-claims &> /dev/null; then
-            echo "::warning title=Gate 9 inert (not enforced)::verify-claims CLI is absent (indicium-adapters is not on PyPI), so the indicium round-trip gate did NOT run. This is advisory only — do not read a green Validate as gate 9 passing. Tracked as gate9-inert."
-            echo "=============================================================="
-            echo " GATE 9 DID NOT RUN — verify-claims CLI not found."
-            echo " indicium-adapters is not yet published to PyPI, so this gate"
-            echo " is advertised but INERT. It is NOT enforced. Non-blocking."
-            echo "=============================================================="
-            exit 0
-          fi
-          EXIT=0
-          for collection_dir in collections/*/v*; do
-            [ -d "$collection_dir" ] || continue
-            echo "Running verify-claims on $collection_dir ..."
-            verify-claims --collection "$collection_dir" --format json || EXIT=$?
-          done
-          for collection_dir in staged-collections/*/v*; do
-            [ -d "$collection_dir" ] || continue
-            echo "Running verify-claims on $collection_dir ..."
-            verify-claims --collection "$collection_dir" --format json || EXIT=$?
-          done
-          exit $EXIT
+      # The advertised-count gate runs in the domain repository's pipeline.
 
-      # -- Gate 1: LinkML schema validation ------------------------------------
-      - name: LinkML schema validation
-        # BLOCKING. The step installs asb-schema >= 0.3.0 from PyPI (a wheel
-        # only) and validates every collection.yaml closed against its
-        # SkillCollection class; 0.3.0 is the first version that declares the
-        # keys the released manifests carry. One manifest that does not validate
-        # fails the job. The step says it did not run and exits 0, rather than
-        # report a pass, when linkml-runtime or the linkml-validate CLI is
-        # absent (Install dependencies lets their install fail), when the schema
-        # cannot be resolved (the install failed, or it resolves to a version
-        # older than 0.3.0), or when no collection.yaml exists.
-        run: |
-          pip install --only-binary :all: "asb-schema>=0.3.0" || echo "INFO: asb-schema>=0.3.0 is not installable; gate 1 will say it did not run"
-          python - <<'EOF'
-          import shutil, sys, pathlib, subprocess
+      # The license-tier gate runs in the domain repository's pipeline.
 
-          SCHEMA_NAME = "asb_skill_collection.yaml"
-          MIN_VERSION = (0, 3, 0)
+      # The provenance-tier gate runs in the domain repository's pipeline.
 
-          def did_not_run(reason):
-              print(f"::warning title=Gate 1 did not run::{reason} Do not read a green Validate as gate 1 passing.")
-              print(f"GATE 1 DID NOT RUN — {reason}")
-              sys.exit(0)
+  # The tool-catalogue gate runs in the domain repository's pipeline.
 
-          try:
-              import linkml_runtime  # noqa: F401
-              import yaml
-          except ImportError:
-              did_not_run("linkml_runtime is not installed, so no collection.yaml was validated against the LinkML schema.")
+  # The release-receipt job runs in the domain repository's pipeline.
 
-          if shutil.which("linkml-validate") is None:
-              did_not_run("The linkml-validate CLI is not on PATH, so no collection.yaml was validated against the LinkML schema.")
-
-          # The schema ships in the asb-schema package. A copy at the root or
-          # under schema/ wins, so a local run can point at a candidate schema.
-          schema = None
-          for candidate in (pathlib.Path(SCHEMA_NAME), pathlib.Path("schema") / SCHEMA_NAME):
-              if candidate.is_file():
-                  schema = candidate.resolve()
-                  break
-          if schema is None:
-              try:
-                  from importlib.resources import files as _files
-                  packaged = _files("asb_schema") / SCHEMA_NAME
-                  if packaged.is_file():
-                      schema = pathlib.Path(str(packaged)).resolve()
-              except (ImportError, ModuleNotFoundError, AttributeError):
-                  pass
-          if schema is None:
-              did_not_run(f"{SCHEMA_NAME} is not in this repository and asb-schema>=0.3.0 is not installed, so no collection.yaml was validated against the LinkML schema.")
-
-          declared = str(yaml.safe_load(schema.read_text()).get("version", "0"))
-          try:
-              found = tuple(int(p) for p in declared.split(".")[:3])
-          except ValueError:
-              found = (0,)
-          if found < MIN_VERSION:
-              did_not_run(f"{schema} declares version {declared}; the released manifests need 0.3.0 or later, so validating against it would only report the keys it predates.")
-
-          collection_files = sorted(pathlib.Path("collections").rglob("collection.yaml"))
-          collection_files += sorted(pathlib.Path("staged-collections").rglob("collection.yaml"))
-          if not collection_files:
-              did_not_run("No collection.yaml exists under collections/ or staged-collections/, so the LinkML gate validated zero files.")
-
-          failures = []
-          for cf in collection_files:
-              result = subprocess.run(
-                  ["linkml-validate", "--schema", str(schema),
-                   "--target-class", "SkillCollection", str(cf)],
-                  capture_output=True, text=True
-              )
-              if result.returncode != 0:
-                  detail = (result.stdout + result.stderr).strip()
-                  failures.append(f"{cf}: {detail}")
-          if failures:
-              print(f"FAIL: {len(failures)} of {len(collection_files)} collection.yaml files do not validate against {schema} (version {declared}):")
-              for f in failures:
-                  print(f"  - {f}")
-              sys.exit(1)
-          print(f"PASS: {len(collection_files)} collection.yaml files validate closed against SkillCollection in {schema} (version {declared})")
-          EOF
-
-      # -- Gate: packs are re-derivable from their collection ------------------
-      # marketplace.json advertises eight technique packs beside the collection,
-      # so the pack tree is what most installs actually get. It was split from
-      # the collection once, by hand, and nothing re-derived it afterwards: a
-      # leaf added the next day never arrived, three front-matter keys were
-      # dropped from all 4,949 copies, and a later DOI repair reached only the
-      # collection. Every gate stayed green, because each pack was internally
-      # consistent with its own indexes. This one compares the packs with the
-      # collection they claim to be a view of.
-      - name: Pack-derivation gate
-        run: python -m scripts.build_packs --check
-
-      # The promoted capsule is deliberately slim, and two documents inside it
-      # were promoted unchanged from the build, so both described files that are
-      # not here: 417 benchmark cards told the reader to open the capsule's
-      # `ro-crate-metadata.json`, and the 417 `artifact_provenance.json` files
-      # beside them listed 2,085 artefact paths of which 0 existed. This is gate
-      # 8's defect one layer down — a shipped document naming a file the release
-      # does not ship — in the artefacts whose whole purpose is to say what is
-      # there. The rule lives in one place and promotion applies it; this gate
-      # holds the tree to it.
-      - name: Released-capsule self-description gate
-        run: |
-          python scripts/release_capsule_truth.py --check \
-            collections/epigenomics/v1 collections/metabolomics/v1 \
-            collections/metabolomics/v2 collections/transcriptomics/v1
-
-      # Every number the repository advertises about itself, against the census
-      # of the unit that number is a claim about. The script and its tests
-      # already existed; nothing ever ran them outside the suite's own fixtures.
-      #
-      # It would not have caught the stale lc-ms count, and that is worth
-      # recording rather than glossing: the pack really did hold 2,616 leaves,
-      # so `advertised=2616, actual=2616` passed, while the collection's own
-      # ABOUT.md said 2,617 for the same technique. Both numbers were true of
-      # their own unit and contradicted each other, and no census could see it
-      # because they counted different units. The gate above is what makes them
-      # one number; this one is what keeps them one number, across the six sites
-      # that now carry 2,617 and the 138 claims beside them.
-      - name: Advertised-count gate
-        run: python -m scripts.check_advertised_counts
-
-      # -- Gate: License-tier enforcement ------
-      # Aimed at the packs as well as the collection: the tiers a consumer
-      # actually installs are the copies'. A pack ships no corpus of its own, so
-      # the corpus half of this gate reports "no corpus of its own" rather than
-      # passing silently -- see scripts/check_license_tiers.corpus_violations.
-      - name: License-tier gate
-        run: python -m scripts.check_license_tiers collections/metabolomics/v2 packs/*/*/
-
-      # Every published skill must be able to show where its content came from,
-      # and the SKILL.md must agree with the index. Ported from the dev line and
-      # wired here once its producer had been run over the corpus. Aimed at the
-      # packs too: before the pack generator existed, every pack index entry
-      # carried no provenance_tier at all and this gate failed on the first row.
-      - name: Provenance-tier gate
-        run: python -m scripts.check_provenance_tiers collections/metabolomics/v2 packs/*/*/
-
-      # The catalogue's own licence fields must agree with tools_index.json, and
-      # every tool a skill claims to use must exist. Wired once the enrichers had
-      # been run over the corpus; the last of the gates ported from the dev line.
-      - name: Tool-catalogue gate
-        run: python -m scripts.check_tools_index collections/metabolomics/v2
-
-  # -- Receipt: the metabolomics v2 gate receipt re-verifies -----------------
-  # collections/metabolomics/v2/gate_report.json binds the collection tree, the
-  # PII configuration (scripts/pii_config.py, in policy.config_sha256) and the
-  # gate's own code (policy.implementation_sha256: scripts/release_gate.py,
-  # scripts/release_receipt.py, asb_skill_collections/layout.py). A PR that
-  # changes one of them without regenerating the receipt leaves it failing its
-  # own --verify, and an archive cut from that tree ships the failing receipt.
-  # --verify also recomputes the checks and the overall status, from code and
-  # data well beyond those paths (the gate's whole import closure, packs/), and
-  # a path filter misses renames out of the tree. So this job rechecks the
-  # receipt, read only, on every PR, with no path filter. To regenerate it, run
-  # `python scripts/release_gate.py collections/metabolomics/v2 --strict` (the
-  # default report path, never --report elsewhere) in an environment where the
-  # AgenticScienceBuilder package is not importable, as here: the policy digest
-  # records which copy of the promotion constants the gate used.
-  receipt:
-    name: "Receipt: metabolomics v2 gate_report.json re-verifies"
+  # -- collections.yaml and catalogue.jsonld agree ----------------------------
+  manifest:
+    name: "Registry manifest and catalogue are consistent"
     permissions:
       contents: read
-    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -466,16 +111,12 @@ jobs:
       - name: Install dependencies
         run: pip install pyyaml
 
-      - name: gate_report.json re-verifies against this tree
-        run: python scripts/release_gate.py collections/metabolomics/v2 --verify
+      - name: Validate the registry manifest
+        run: python scripts/check_collections_manifest.py
 
   # -- docs-site/search_index.json is current ---------------------------------
-  # The docs site searches a committed index built by
-  # docs-site/build_search_index.py. A change that adds, renames or rewords
-  # skills, papers or tools without rebuilding it leaves the site searching stale
-  # text, and nothing else notices. The job rebuilds the index into a runner
-  # temporary path and compares the bytes with the committed file; the build
-  # records no timestamp, so the two match exactly when the index is current.
+  # Private domain checkouts are unavailable here, so CI checks that the committed
+  # index records the current manifest digest. The domain pipeline rebuilds content.
   search-index:
     name: "docs-site/search_index.json matches the collections"
     permissions:
@@ -493,24 +134,14 @@ jobs:
       - name: Install dependencies
         run: pip install pyyaml
 
-      - name: Committed search index equals a fresh build
-        run: |
-          fresh="$RUNNER_TEMP/search_index.json"
-          python docs-site/build_search_index.py --output "$fresh"
-          if cmp -s "$fresh" docs-site/search_index.json; then
-            echo "PASS: docs-site/search_index.json is current."
-          else
-            diff docs-site/search_index.json "$fresh" | head -n 40 || true
-            echo "::error file=docs-site/search_index.json::docs-site/search_index.json is stale. Run python docs-site/build_search_index.py and commit the result."
-            exit 1
-          fi
+      - name: Committed search index matches the registry manifest
+        run: python docs-site/build_search_index.py --check-manifest docs-site/search_index.json
 
   # -- CITATION.cff files are valid CFF 1.2.0 ---------------------------------
   # GitHub's "Cite this repository" and Zenodo read CITATION.cff, and an invalid
-  # file is misread or ignored without an error. Every tracked CITATION.cff is
-  # validated, except those of the three legacy v1 trees, which keep
-  # `doi: TODO-zenodo` until a decision on those trees. cffconvert 2.0.0
-  # requires jsonschema<4, so it is installed in an environment of its own.
+  # file is misread or ignored without an error. Only the root file remains here;
+  # collection citation files are validated in their domain repositories.
+  # cffconvert 2.0.0 requires jsonschema<4, so it gets its own environment.
   citation:
     name: "CITATION.cff files are valid CFF 1.2.0"
     permissions:
@@ -530,40 +161,13 @@ jobs:
           python -m venv "$RUNNER_TEMP/cffconvert"
           "$RUNNER_TEMP/cffconvert/bin/pip" install "cffconvert==2.0.0"
 
-      - name: Validate every non-legacy CITATION.cff
-        run: |
-          checked=0
-          failed=0
-          for f in $(git ls-files -- CITATION.cff '*/CITATION.cff'); do
-            case "$f" in
-              collections/epigenomics/v1/*|collections/metabolomics/v1/*|collections/transcriptomics/v1/*)
-                echo "SKIP: $f (legacy v1 tree)"
-                continue ;;
-            esac
-            checked=$((checked + 1))
-            if "$RUNNER_TEMP/cffconvert/bin/cffconvert" --validate -i "$f"; then
-              echo "PASS: $f"
-            else
-              echo "::error file=$f::$f is not valid CFF 1.2.0"
-              failed=$((failed + 1))
-            fi
-          done
-          if [ "$checked" -eq 0 ]; then
-            echo "FAIL: no tracked CITATION.cff outside the legacy v1 trees; the step checked nothing."
-            exit 1
-          fi
-          echo "$((checked - failed)) of $checked CITATION.cff files are valid CFF 1.2.0"
-          [ "$failed" -eq 0 ]
+      - name: Validate the root CITATION.cff
+        run: '"$RUNNER_TEMP/cffconvert/bin/cffconvert" --validate -i CITATION.cff'
 
   # -- Gate 10: plugin manifests pass Claude Code's own validator -------------
   # `claude plugin validate --strict .` reads .claude-plugin/marketplace.json the
-  # way Claude Code does, and --strict fails on what the runtime only tolerates:
-  # unknown fields and missing metadata. On the repository root it checks the
-  # marketplace manifest only, so the second step runs it on each plugin the
-  # marketplace lists, which checks that plugin's .claude-plugin/plugin.json.
-  # The check it replaces required a schema_version key, one of the fields this
-  # validator rejects. The release is pinned, so a new validator cannot turn the
-  # gate red on its own.
+  # way Claude Code does. Remote plugin sources have no local plugin directories
+  # to iterate, so only the marketplace manifest is validated here.
   plugin-manifest:
     name: "Gate 10: plugin manifests validate"
     permissions:
@@ -584,27 +188,4 @@ jobs:
         run: npm install --global "@anthropic-ai/claude-code@2.1.304"
 
       - name: Validate the marketplace manifest
-        run: claude plugin validate --strict .
-
-      - name: Validate every plugin the marketplace lists
-        run: |
-          # A source that is not a local path cannot be validated from this
-          # checkout, so it fails the step instead of being passed over.
-          sources=$(jq -r '.plugins[].source | if type == "string" then . else error("plugin source is not a local path") end' .claude-plugin/marketplace.json)
-          if [ -z "$sources" ]; then
-            echo "FAIL: marketplace.json lists no plugin; the step checked nothing."
-            exit 1
-          fi
-          checked=0
-          failed=0
-          for s in $sources; do
-            checked=$((checked + 1))
-            if claude plugin validate --strict "$s"; then
-              echo "PASS: $s"
-            else
-              echo "::error::plugin $s does not pass claude plugin validate --strict"
-              failed=$((failed + 1))
-            fi
-          done
-          echo "$((checked - failed)) of $checked plugins pass claude plugin validate --strict"
-          [ "$failed" -eq 0 ]
+        run: claude plugin validate --strict .claude-plugin/marketplace.json

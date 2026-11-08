@@ -3,6 +3,12 @@
 What has been verified for each distribution surface of `asb-skill-collections`,
 when, and what was measured on 2026-10-30.
 
+Step 2 of the per-domain split was completed on 2026-11-08: this master is the
+registry and tooling repository; released content is in the domain repositories.
+The measurements below predate the new marketplace sources and do not verify an
+install through them. `collections.yaml` pins repository, commit and tree digest
+for each release.
+
 Two kinds of entry appear below.
 
 - **README (e80767838)** quotes, verbatim, the statement the README carried on
@@ -43,7 +49,7 @@ README (e80767838):
 > The release-verified perimeter is the complete `metabolomics` domain installed
 > as a managed snapshot, Claude Code from a local-checkout marketplace, and the
 > checkout CLI. Exact lifecycle output, uninstall residue and pending surfaces
-> are recorded in [the usage guide](../collections/metabolomics/v2/USAGE.md#1-install-one-domain-collection).
+> are recorded in `<domain checkout>/collections/metabolomics/v2/USAGE.md`, section 1.
 > The complete-snapshot and shared-selector behaviour was verified on
 > `int/collections-release-2026-09-13` at `777671bc3`; this source revision
 > predates those fixes.
@@ -125,7 +131,7 @@ without a clone.
 
 README (e80767838), section labelled "experimental, not verified end to end":
 
-> Packs **overlap** (a multi-technique skill appears in several) — install **one** full plugin **or** a few packs, not both. See [packs/metabolomics/](../packs/metabolomics/README.md).
+> Packs **overlap** (a multi-technique skill appears in several): install **one** full plugin **or** a few packs, not both. See `<domain checkout>/packs/metabolomics/README.md`.
 
 Measured 2026-10-30: the 8 pack sources exist on disk and `unit_closure` reports
 no violation across the 9 indexed units. One pack, `metabolomics-lc-ms`, was
@@ -265,7 +271,7 @@ missing or private repository.
 README (e80767838):
 
 > Only **ASB-Skills** and **ASB-Tools** are published now; the benchmark and capsule
-> layers follow (see [PROVENANCE.md](../collections/metabolomics/v2/PROVENANCE.md)).
+> layers follow (see `<domain checkout>/collections/metabolomics/v2/PROVENANCE.md`).
 
 > **Benchmark / capsules** — to be released later.
 
@@ -313,8 +319,8 @@ Measured 2026-10-30 (`curl` and the Zenodo REST API, `/api/records/20794027` and
   (metabolomics-v0.1.0)", version `metabolomics-v0.1.0`, publication date
   2026-06-22, one file `metabolomics-v2.zip` (19,474,788 bytes). Its description
   gives 5,865 skills, 909 tools and 568 papers.
-- The repository today holds 5,859 skills, 909 tools, 566 papers and 21 workflows
-  in `collections/metabolomics/v2`. `collections/metabolomics/v2/.zenodo.json`
+- At that measurement, the repository held 5,859 skills, 909 tools, 566 papers and 21 workflows
+  in `<domain checkout>/collections/metabolomics/v2`. `<domain checkout>/collections/metabolomics/v2/.zenodo.json`
   prepares version `metabolomics-v0.2.0`; no such deposit exists yet.
 - `git ls-remote --tags origin` shows one release tag, `metabolomics-v0.1.0`;
   `gh release list` shows one pre-release, "ASB Metabolomics Skill Collection
@@ -324,10 +330,12 @@ Measured 2026-10-30 (`curl` and the Zenodo REST API, `/api/records/20794027` and
 
 README (e80767838):
 
-> `collections/` also contains `epigenomics/v1`, `transcriptomics/v1`, and the
-> earlier `metabolomics/v1`. These are **staged/internal** and **not part of this
-> release** — only `metabolomics/v2` is published via the plugin.
+> The legacy v1 trees for epigenomics, transcriptomics and metabolomics were
+> staged/internal and not part of the public plugin release.
 
-Measured 2026-10-30: `marketplace.json` sources are `collections/metabolomics/v2`
-and `packs/metabolomics/*` only. Private domain repositories (`asb-skills-<domain>`)
-exist for metabolomics and nine further domains and are not public.
+Measured 2026-10-30: marketplace sources were
+`<domain checkout>/collections/metabolomics/v2` and
+`<domain checkout>/packs/metabolomics/*` only. Private domain repositories
+(`asb-skills-<domain>`) exist for metabolomics and nine further domains and are
+not public. After step 2, the entries use domain-repository `git-subdir`
+sources; the full plugin serves v3 and the packs remain v2-derived.

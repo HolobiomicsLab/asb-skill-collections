@@ -2,7 +2,6 @@
 
 from pathlib import Path
 
-import yaml
 
 from scripts import release_gate
 
@@ -252,23 +251,6 @@ def test_policy_findings_keep_the_reader_facing_raw_doi(tmp_path):
     )
 
     assert _failures(result)[0]["doi"] == raw_doi
-
-
-def test_released_v1_corpora_map_every_doi_to_true():
-    """The v1 corpora mark every CC BY licence as paper-subject evidence."""
-    for name in ("epigenomics", "transcriptomics"):
-        corpus = yaml.safe_load(
-            (REPO / "collections" / name / "v1" / "corpus.yaml").read_text(
-                encoding="utf-8"
-            )
-        )
-        expected_dois = {
-            release_gate._norm_doi(paper["doi"]) for paper in corpus["papers"]
-        }
-        reuse = release_gate._reuse_by_doi_from_corpus(corpus)
-
-        assert set(reuse) == expected_dois, name
-        assert all(reuse.values()), (name, [doi for doi, ok in reuse.items() if not ok])
 
 
 def test_legacy_access_only_path_warns_without_text_licence_class(tmp_path):

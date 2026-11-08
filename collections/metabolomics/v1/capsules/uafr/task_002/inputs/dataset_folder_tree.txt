@@ -1,2 +1,0 @@
-  figures/GraphicalAbstract.jpg
-paper.md

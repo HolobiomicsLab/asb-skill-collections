@@ -106,8 +106,3 @@ def test_allowlist_holds_only_documented_exact_values():
 def test_version_bumped_for_this_change():
     assert PII_CONFIG["version"] >= "2026-10-29.1"
 
-
-def test_both_config_copies_are_identical():
-    a = (REPO_ROOT / "scripts" / "pii_config.py").read_text()
-    b = (REPO_ROOT / "collections" / "metabolomics" / "v2" / "scripts" / "pii_config.py").read_text()
-    assert a == b

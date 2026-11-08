@@ -1,2 +1,0 @@
-  figures/Calcd_42086_image.png
-paper.md

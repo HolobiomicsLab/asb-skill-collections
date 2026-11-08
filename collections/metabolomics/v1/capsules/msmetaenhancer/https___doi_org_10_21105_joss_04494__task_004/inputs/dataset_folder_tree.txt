@@ -1,2 +1,0 @@
-  figures/scheme.png
-paper.md

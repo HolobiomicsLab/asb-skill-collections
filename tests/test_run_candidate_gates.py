@@ -28,7 +28,7 @@ EXPECTED_CHECKS = {
 EXPECTED_LOGS = {f"{name}.txt" for name in EXPECTED_CHECKS}
 
 
-def _prepared_candidate(tmp_path: Path) -> Path:
+def _prepared_candidate(tmp_path: Path, tooling_checkout: Path) -> Path:
     """Collect the Task 3 fixture and bootstrap it through the first S5 half."""
     candidate = tmp_path / "candidate"
     corpus = candidate / "corpus.yaml"
@@ -63,8 +63,8 @@ def _prepared_candidate(tmp_path: Path) -> Path:
         PYTHONDONTWRITEBYTECODE="1",
     )
     result = subprocess.run(
-        [sys.executable, str(REPO / "scripts" / "collect_from_cut.py"), *args],
-        cwd=REPO,
+        [sys.executable, str(tooling_checkout / "scripts" / "collect_from_cut.py"), *args],
+        cwd=tooling_checkout,
         env=environment,
         text=True,
         stdout=subprocess.PIPE,
@@ -124,9 +124,9 @@ def _plant_personal_email(candidate: Path) -> None:
     )
 
 
-def test_runner_executes_seven_checks_and_verifies_receipt(tmp_path: Path) -> None:
+def test_runner_executes_seven_checks_and_verifies_receipt(tmp_path: Path, tooling_checkout: Path) -> None:
     """Keep all seven zero exit codes and a verified strict gate receipt."""
-    candidate = _prepared_candidate(tmp_path)
+    candidate = _prepared_candidate(tmp_path, tooling_checkout)
     receipts = tmp_path / "gate-receipts"
 
     assert _run(candidate, receipts) == 0
@@ -149,9 +149,9 @@ def test_runner_executes_seven_checks_and_verifies_receipt(tmp_path: Path) -> No
     assert EXPECTED_LOGS <= {path.name for path in receipts.glob("*.txt")}
 
 
-def test_runner_preserves_real_email_finding(tmp_path: Path) -> None:
+def test_runner_preserves_real_email_finding(tmp_path: Path, tooling_checkout: Path) -> None:
     """Run every check after a hard PII failure and retain the named finding."""
-    candidate = _prepared_candidate(tmp_path)
+    candidate = _prepared_candidate(tmp_path, tooling_checkout)
     receipts = tmp_path / "gate-receipts"
     _plant_personal_email(candidate)
 
@@ -166,9 +166,9 @@ def test_runner_preserves_real_email_finding(tmp_path: Path) -> None:
     assert "non-author personal email" in gate_log
 
 
-def test_runner_preserves_surface_finding_and_runs_every_check(tmp_path: Path) -> None:
+def test_runner_preserves_surface_finding_and_runs_every_check(tmp_path: Path, tooling_checkout: Path) -> None:
     """Retain a foreign DOI finding without short-circuiting later checks."""
-    candidate = _prepared_candidate(tmp_path)
+    candidate = _prepared_candidate(tmp_path, tooling_checkout)
     receipts = tmp_path / "gate-receipts"
     readme = candidate / "README.md"
     readme.write_text(
@@ -190,10 +190,10 @@ def test_runner_preserves_surface_finding_and_runs_every_check(tmp_path: Path) -
 
 
 def test_runner_dry_run_prints_commands_and_writes_nothing(
-    tmp_path: Path, capsys
+    tmp_path: Path, tooling_checkout: Path, capsys
 ) -> None:
     """Print the exact seven commands under the active interpreter without writes."""
-    candidate = _prepared_candidate(tmp_path)
+    candidate = _prepared_candidate(tmp_path, tooling_checkout)
     receipts = tmp_path / "gate-receipts"
     before = _tree_bytes(candidate)
 

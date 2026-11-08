@@ -1,8 +1,8 @@
-# CLAUDE.md — ASB Metabolomics skills
+# CLAUDE.md: ASB Metabolomics skills
 
-The public release is **metabolomics v3** (11,830 skills + 1,989 tools) in
-`HolobiomicsLab/asb-skills-metabolomics`; this repo's marketplace and the local
-paths below still serve v2 (5,859 skills + 909 tools).
+The public release is metabolomics v3: 11,830 skills over 1,989 tools in the
+private domain repository `asb-skills-metabolomics`. This master repository
+holds the tooling, governance and registry, not released content.
 
 ## Install (Claude Code plugin)
 
@@ -11,30 +11,30 @@ paths below still serve v2 (5,859 skills + 909 tools).
 /plugin install metabolomics@asb-skill-collections
 ```
 
-Verified at CLI level on 2026-10-30 with Claude Code 2.1.304; loading the skills
-in a live session was not exercised. The marketplace keeps a 286 MB clone of this
-repository beside the 72 MB plugin cache. From a local checkout,
-`claude plugin marketplace add "$PWD"` then
-`claude plugin install metabolomics@asb-skill-collections` installs the same
-plugin without the clone. Routes and dates: [`docs/STATUS.md`](docs/STATUS.md).
+The marketplace entries point at the domain repository, so installation needs
+read access until it becomes public. Earlier CLI verification predates these
+sources. Routes and dates: [`docs/STATUS.md`](docs/STATUS.md).
 
-Three skills are advertised; the corpus ships as data at
-`collections/metabolomics/v2/leaves/<slug>/SKILL.md` and is read on demand. Start at
-the `asb-metabolomics` meta-skill (guide + license-tier governance), which hands off
-to `skills/_router/SKILL.md` for routing. The third, `asb-contribute`, is the
-contribution route: it turns a skill that proved wrong, stale or missing into a
-redacted report you approve before anything is filed.
+Three skills are advertised. Start at the `asb-metabolomics` meta-skill for the
+guide and licence-tier governance; it hands off to `skills/_router/SKILL.md`.
+The third, `asb-contribute`, turns a wrong, stale or missing skill into a
+redacted report approved before filing. The corpus ships as data and is read on
+demand.
 
 ## Use
 
-Search → apply → ground. Full protocol in [`AGENTS.md`](AGENTS.md) and
-[`collections/metabolomics/v2/USAGE.md`](collections/metabolomics/v2/USAGE.md).
+Search, apply, ground. Full protocol in [`AGENTS.md`](AGENTS.md) and
+`<domain checkout>/collections/metabolomics/v3/USAGE.md`.
 
-- Find a skill via `collections/metabolomics/v2/skills_index.json` (EDAM IRI /
-  tool name / keyword) or `tools_index.json`.
-- Ground a skill against its source paper with the Perspicacité binder:
-  `python scripts/perspicacite_kb_bind.py query --collection collections/metabolomics/v2 --skill <slug> --question "..."`
-  (skill→KB map in `kb_bundle.json`; tiers `paper`/`si`/`repo`).
+- Obtain leaves through `asbb fetch --collection metabolomics/v3`, a domain
+  checkout or the [Zenodo archive](https://doi.org/10.5281/zenodo.24054446).
+- Search `<domain checkout>/collections/metabolomics/v3/skills_index.json` by
+  EDAM IRI, tool name or keyword, and use `tools_index.json` in the same
+  collection.
+- Ground a skill against its source with the bundled Perspicacité binder:
+  `python bin/perspicacite_kb_bind.py query --collection <domain checkout>/collections/metabolomics/v3 --skill <slug> --question "..."`.
+  The map is `kb_bundle.json`; tiers are `paper`, `si` and `repo`.
 
-The public release is **metabolomics only**; other `collections/` domains are
-staged/internal.
+[`collections.yaml`](collections.yaml) is the release registry. It pins each
+domain repository, commit and tree digest. Other domain repositories are
+private and to follow.

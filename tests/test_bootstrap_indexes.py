@@ -25,7 +25,9 @@ PLUGIN_REPO = "https://github.com/HolobiomicsLab/asb-skills-metabarcoding"
 INDEX_NAMES = {"skills_index.json", "kb_bundle.json", "tools_index.json"}
 
 
-def _collect_candidate(tmp_path: Path, *, unknown_tier: bool = False) -> Path:
+def _collect_candidate(
+    tmp_path: Path, tooling_checkout: Path, *, unknown_tier: bool = False
+) -> Path:
     """Build the Task 3 candidate and install the Task 4 corpus output."""
     candidate = tmp_path / "candidate"
     collector_receipts = tmp_path / "collector-receipts"
@@ -70,8 +72,8 @@ def _collect_candidate(tmp_path: Path, *, unknown_tier: bool = False) -> Path:
         PYTHONDONTWRITEBYTECODE="1",
     )
     result = subprocess.run(
-        [sys.executable, str(REPO / "scripts" / "collect_from_cut.py"), *args],
-        cwd=REPO,
+        [sys.executable, str(tooling_checkout / "scripts" / "collect_from_cut.py"), *args],
+        cwd=tooling_checkout,
         env=environment,
         text=True,
         stdout=subprocess.PIPE,
@@ -120,9 +122,9 @@ def _frontmatter(path: Path) -> dict:
     return frontmatter
 
 
-def test_bootstrap_builds_indexes_links_stamps_and_receipt(tmp_path: Path) -> None:
+def test_bootstrap_builds_indexes_links_stamps_and_receipt(tmp_path: Path, tooling_checkout: Path) -> None:
     """Build all indexes from leaf/tool data and record every helper result."""
-    candidate = _collect_candidate(tmp_path)
+    candidate = _collect_candidate(tmp_path, tooling_checkout)
     receipts = tmp_path / "bootstrap-receipts"
     provisional_hash = _sha256(candidate / "skills_index.json")
 
@@ -191,9 +193,9 @@ def test_bootstrap_builds_indexes_links_stamps_and_receipt(tmp_path: Path) -> No
     }
 
 
-def test_bootstrap_accepts_unknown_tier_and_is_idempotent(tmp_path: Path) -> None:
+def test_bootstrap_accepts_unknown_tier_and_is_idempotent(tmp_path: Path, tooling_checkout: Path) -> None:
     """Accept the canonical unknown tier and keep a second run byte-identical."""
-    candidate = _collect_candidate(tmp_path, unknown_tier=True)
+    candidate = _collect_candidate(tmp_path, tooling_checkout, unknown_tier=True)
     receipts = tmp_path / "bootstrap-receipts"
 
     assert _bootstrap(candidate, receipts) == 0
@@ -205,9 +207,9 @@ def test_bootstrap_accepts_unknown_tier_and_is_idempotent(tmp_path: Path) -> Non
     assert (_tree_bytes(candidate), _tree_bytes(receipts)) == before
 
 
-def test_bootstrap_dry_run_writes_nothing(tmp_path: Path, capsys) -> None:
+def test_bootstrap_dry_run_writes_nothing(tmp_path: Path, tooling_checkout: Path, capsys) -> None:
     """Describe the planned bootstrap without changing either output tree."""
-    candidate = _collect_candidate(tmp_path)
+    candidate = _collect_candidate(tmp_path, tooling_checkout)
     receipts = tmp_path / "bootstrap-receipts"
     before = _tree_bytes(candidate)
 
@@ -219,9 +221,9 @@ def test_bootstrap_dry_run_writes_nothing(tmp_path: Path, capsys) -> None:
     assert plan["indexes"] == sorted(INDEX_NAMES)
 
 
-def test_bootstrap_refuses_nonprovisional_index_outputs(tmp_path: Path) -> None:
+def test_bootstrap_refuses_nonprovisional_index_outputs(tmp_path: Path, tooling_checkout: Path) -> None:
     """Return conflict without replacing an index not owned by the bootstrap."""
-    candidate = _collect_candidate(tmp_path)
+    candidate = _collect_candidate(tmp_path, tooling_checkout)
     receipts = tmp_path / "bootstrap-receipts"
     foreign = b'{"skills": "owned elsewhere"}\n'
     (candidate / "kb_bundle.json").write_bytes(foreign)
@@ -233,10 +235,10 @@ def test_bootstrap_refuses_nonprovisional_index_outputs(tmp_path: Path) -> None:
 
 
 def test_bootstrap_preflights_receipt_parent_before_candidate_write(
-    tmp_path: Path,
+    tmp_path: Path, tooling_checkout: Path,
 ) -> None:
     """Treat a non-directory receipt root as conflict before synchronizing."""
-    candidate = _collect_candidate(tmp_path)
+    candidate = _collect_candidate(tmp_path, tooling_checkout)
     receipts = tmp_path / "blocked-receipts"
     receipts.write_text("not a directory\n", encoding="utf-8")
     before = _tree_bytes(candidate)

@@ -23,9 +23,9 @@ AgenticScienceBuilder (ASB) pipeline writes each one from a published method pap
 verbatim evidence from those sources (for `repo-oa` papers, the repository's own
 documentation; [CONTENT_POLICY.md](governance/CONTENT_POLICY.md)), annotates it with
 EDAM terms, and passes it through a licence and PII gate before release. This
-repository is the public registry of those collections: the released metabolomics
-collection, its per-technique packs, the install and search tooling, and the
-governance of the community that curates them. The project started at the
+repository is the public registry of those collections. It holds the install and
+search tooling, the governance of the community that curates them, and the
+release registry. Released content lives in per-domain repositories. The project started at the
 Dagstuhl Seminar **Computational Metabolomics**
 ([26181](https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/26181),
 26 to 30 April 2026).
@@ -43,8 +43,8 @@ lipidomics, some NMR, and multi-omics, statistics and pathway tools.
 The collection was released from the domain repository `asb-skills-metabolomics`
 (private until its visibility is opened; the Zenodo record carries the full
 collection); this repository holds the tooling, the registry and [`collections.yaml`](collections.yaml).
-The public marketplace of this repository still serves v2, and its technique packs
-remain v2 until step 2 of the domain-release migration.
+Its marketplace serves the v3 collection and the v2-derived technique packs from
+that domain repository.
 
 | Layer | Contents | State |
 |---|---|---|
@@ -60,60 +60,57 @@ remain v2 until step 2 of the domain-release migration.
 
 ## Install
 
-**Claude Code** (plugin marketplace, public GitHub route):
+**Claude Code** (plugin marketplace):
 
 ```bash
 /plugin marketplace add HolobiomicsLab/asb-skill-collections
 /plugin install metabolomics@asb-skill-collections
+# Or one of the eight technique packs, for example:
+/plugin install metabolomics-lc-ms@asb-skill-collections
 ```
 
-This route was verified at CLI level on 2026-10-30 with Claude Code 2.1.304:
-`claude plugin marketplace add HolobiomicsLab/asb-skill-collections` and
-`claude plugin install metabolomics@asb-skill-collections` both exited 0. Loading
-the skills in a live session was not exercised. The marketplace keeps a clone of
-this repository (286 MB) beside the plugin cache (72 MB), about 358 MB on disk.
-From a local checkout, `claude plugin marketplace add "$PWD"` then
-`claude plugin install metabolomics@asb-skill-collections` installs the same
-plugin without that clone
-([USAGE §1](collections/metabolomics/v2/USAGE.md#claude-code-verified-local-marketplace-route)).
-Per-technique packs such as `metabolomics-lc-ms` are lighter subsets
-([packs/metabolomics](packs/metabolomics/README.md)): `metabolomics-lc-ms` was
-installed the same way at CLI level (29 MB plugin cache), and the other seven
-packs were built but not installed.
+The marketplace entries point at `asb-skills-metabolomics`, so installation needs
+read access to that repository until it becomes public. Earlier transport
+measurements predate this source change and do not verify the new entries
+([docs/STATUS.md](docs/STATUS.md)).
 
-**Other agent runtimes** (`asbb` CLI from a checkout; Python 3.12 or later and PyYAML,
-in a virtual environment):
+**Chosen leaves without a checkout** (`asbb fetch`, Python 3.12 or later):
 
 ```bash
-git clone https://github.com/HolobiomicsLab/asb-skill-collections
-cd asb-skill-collections
-uv venv -p 3.12 --allow-existing && source .venv/bin/activate && uv pip install pyyaml
-python3 -m asb_skill_collections.asbb_cli install metabolomics --runtime agents   # ~/.agents/skills (Codex, Copilot CLI, Gemini CLI)
-python3 -m asb_skill_collections.asbb_cli install --list-runtimes                 # agents (verified), codex, copilot, gemini, claude, cursor, cline, vscode-copilot, --dest DIR (experimental)
+asbb fetch <slugs> --collection metabolomics/v3 --dest <directory>
 ```
 
-Without uv, `python3.12 -m venv .venv && . .venv/bin/activate && python -m pip install pyyaml`
-prepares the same environment. On macOS the environment is needed: Homebrew's Python
-refuses a system-wide `pip install`, and Apple's `/usr/bin/python3` is older than 3.12.
-Each install copies the unit into a content-addressed snapshot that survives a moved
-checkout; rerun `install` to refresh ([usage guide](collections/metabolomics/v2/USAGE.md#1-install-one-domain-collection):
-commands, outputs, `uninstall`). Any other agent can read the Markdown and JSON under
-`collections/metabolomics/v2/` directly ([AGENTS.md](AGENTS.md)). Not on PyPI in v0: an index
-install would fetch the CLI without the corpus it reads. Verified routes and dates: [docs/STATUS.md](docs/STATUS.md).
+`fetch` reads [`collections.yaml`](collections.yaml) and downloads the selected
+leaves from the domain repository at the pinned commit. Set `GITHUB_TOKEN` while
+that repository is private.
+
+**A derived selection from a domain checkout** (`asbb install`):
+
+```bash
+asbb install --repo <domain checkout> --skills <slug-a>,<slug-b> --collection metabolomics/v3 --runtime agents
+```
+
+The human guide is `<domain checkout>/collections/metabolomics/v3/USAGE.md` in
+plain text. The complete release is also available from the
+[Zenodo archive](https://doi.org/10.5281/zenodo.24054446). Install routes,
+measured v2 examples and refusals are in
+[docs/partial-install.md](docs/partial-install.md); the agent procedure is in
+[AGENTS.md](AGENTS.md).
 
 ### Choose what to install
-
-The figures in this table describe the v2 collection and packs currently served
-by this repository.
 
 Install the whole collection, a technique pack, a selection of skills
 (`asbb install --skills`, `--skills-file` or `--query`), or fetch chosen skills
 without a checkout (`asbb fetch`). Commands, outputs and refusals:
 [docs/partial-install.md](docs/partial-install.md).
 
-| Install | Technique tag | Leaves | On disk (`du`) |
+The full `metabolomics` plugin serves v3: 11,830 skills over 1,989 tools. The
+eight technique packs are the v2-derived packs shipped by the domain repository.
+Their measured v2 sizes remain useful for choosing a pack; no v3 full-install
+size is claimed here.
+
+| Install | Technique tag | v2 leaves | Measured v2 size on 2026-10-31 |
 |---|---|---:|---:|
-| `metabolomics`, the full collection | all | 5,859 | 72 MiB |
 | `metabolomics-lc-ms` | `LC-MS` | 2,617 | 29 MiB |
 | `metabolomics-ms-generic` | `mass-spectrometry` | 804 | 8.5 MiB |
 | `metabolomics-ion-mobility` | `ion-mobility-MS` | 385 | 4.3 MiB |
@@ -122,18 +119,15 @@ without a checkout (`asbb fetch`). Commands, outputs and refusals:
 | `metabolomics-nmr` | `NMR` | 276 | 2.9 MiB |
 | `metabolomics-ce-ms` | `CE-MS` | 113 | 1.4 MiB |
 | `metabolomics-direct-infusion` | `direct-infusion-MS` | 97 | 1.1 MiB |
-| a selection, `asbb install --skills a,b,c --collection metabolomics/v2 --runtime agents` | chosen slugs | 10 in the example | 188 KiB |
+| a selection, `asbb install --repo <domain checkout> --skills a,b,c --collection metabolomics/v2 --runtime agents` | chosen slugs | 10 in the example | 188 KiB |
 | a fetch, `asbb fetch a,b --collection metabolomics/v2 --dest DIR` | chosen slugs | 10 in the example | 112 KiB |
 
-The first nine rows install by name: `/plugin install <name>@asb-skill-collections`
-in Claude Code, where the public marketplace also keeps its 286 MB clone of this
-repository, or `python3 -m asb_skill_collections.asbb_cli install <name> --runtime agents`.
-Their sizes are `du -sk` of the built unit in this repository on 2026-10-31; the
+The eight packs install by name with `/plugin install <name>@asb-skill-collections`.
+Their sizes are `du -sk` of the v2 units measured before the domain split. The
 selection and fetch rows are the 10-skill example of
 [docs/partial-install.md](docs/partial-install.md#sizes), and a fetch also
-downloads the 5.2 MiB (5,430,046 bytes) `skills_index.json`. `du` counts allocated
-blocks, so the full collection that takes 72 MiB here is the 61 MB of file content
-that docs/partial-install.md reports.
+downloaded the 5.2 MiB (5,430,046 bytes) v2 `skills_index.json` at measurement
+time.
 
 Packs overlap: a skill tagged with several techniques is in several packs, so
 install the full collection or a few packs, not both. The 1,520 technique-agnostic
@@ -143,7 +137,7 @@ or a fetch.
 
 ## Use: search, apply, ground
 
-**Search** a checkout offline, with no API key:
+**Search** a domain checkout offline, with no API key and the tooling installed:
 
 ```bash
 uv venv -p 3.12 --allow-existing && source .venv/bin/activate
@@ -160,7 +154,8 @@ and qualified slug. [How offline skill selection works](docs/selection.md)
 documents the rule, its tie handling and its 22-query measurement.
 
 **Apply.** Read the skill's `SKILL.md` and follow the procedure. Tool
-requirements are in its frontmatter and in [USAGE §0](collections/metabolomics/v2/USAGE.md#0-requirements).
+requirements are in its frontmatter and in
+`<domain checkout>/collections/metabolomics/v3/USAGE.md`, section 0.
 
 **Ground.** To check an exact parameter, threshold or claim (the difference
 between "the skill says about 5 ppm" and "the paper specifies 5 ppm"), ground the
@@ -177,7 +172,7 @@ Holobiomics Lab's local-first literature RAG engine, with two backends:
 
 In Claude Code, run `/ground` on the skill in play; elsewhere, call the bundled
 `bin/perspicacite_kb_bind.py` (`prepare`, `query`, `local`). Full guide:
-[USAGE §4](collections/metabolomics/v2/USAGE.md#4-ground-recommended--verify-against-the-source-kb-or-serverless).
+`<domain checkout>/collections/metabolomics/v3/USAGE.md`, section 4.
 
 ## What is in the collection
 
@@ -199,27 +194,31 @@ In Claude Code, run `/ground` on the skill in play; elsewhere, call the bundled
 | `collection.yaml`, `corpus.yaml` | collection record; per-paper access basis (`repo-oa`) |
 | `CITATION.cff`, `PROVENANCE.md`, `gate_report.json` | citation, how it was generated, release-gate verdict |
 
+These files are relative to `<domain checkout>/collections/metabolomics/v3/`.
 The default entry point is `skills/_router/SKILL.md`. Technique and EDAM-topic
-breakdowns and the selection criteria are in [ABOUT.md](collections/metabolomics/v2/ABOUT.md).
+breakdowns and the selection criteria are in
+`<domain checkout>/collections/metabolomics/v3/ABOUT.md`, also available in the
+Zenodo archive.
 
 ## How it was generated
 
 Skills come from method papers anchored to the computational metabolomics review
 series ([SOURCES.md](governance/SOURCES.md): sources and inclusion criteria;
 [CONTENT_POLICY.md](governance/CONTENT_POLICY.md): legal and open-access policy).
-[PROVENANCE.md](collections/metabolomics/v2/PROVENANCE.md) records the exact build
-command and model routing: Claude Opus 4.8 for outline and card revision, Claude
-Haiku 4.5 for the other stages, OpenAI `text-embedding-3-large` and `-small` for
+`<domain checkout>/collections/metabolomics/v3/PROVENANCE.md` and the Zenodo
+record carry the release provenance. The method records the exact build command
+and model routing: Claude Opus 4.8 for outline and card revision, Claude Haiku
+4.5 for the other stages, OpenAI `text-embedding-3-large` and `-small` for
 embeddings, each build recorded in `build_manifest.json`.
 
 ## Repository family
 
 | Repository | Role | Access |
 |---|---|---|
-| asb-skill-collections (this one) | registry, release tooling, governance and domain-release manifest | public |
+| asb-skill-collections (this one) | `asb_skill_collections` tooling, `scripts/`, tests, governance, registry, catalogue and docs-site | public |
 | AgenticScienceBuilder | the pipeline and schema that generate the collections | private, to follow |
-| asb-skills-metabolomics | metabolomics domain releases, v3 deposited on Zenodo | private, to follow |
-| asb-skills-&lt;domain&gt; | one repository per other domain, same `collections/<domain>/<version>/` and `packs/<domain>/<technique>/` layout | private, to follow |
+| asb-skills-metabolomics | `<domain checkout>/collections/metabolomics/<version>/`, `<domain checkout>/packs/metabolomics/<technique>/`, `<domain checkout>/staged-collections/metabolomics/` and receipts; v3 deposited on Zenodo | private, to follow |
+| asb-skills-&lt;domain&gt; | one repository per other domain, with `<domain checkout>/collections/<domain>/<version>/`, `<domain checkout>/packs/<domain>/<technique>/`, `<domain checkout>/staged-collections/<domain>/` and receipts | private, to follow |
 | indicium | standard for a typed scientific claim bound to the evidence that grounds it | private, to follow |
 | indicium-adapters, indicium-adapters-&lt;domain&gt; | per-domain adapters that enrich indicium claims with ontology terms | private, to follow |
 | [Perspicacite-AI](https://github.com/HolobiomicsLab/Perspicacite-AI) | literature RAG engine used for grounding | public |
@@ -229,9 +228,10 @@ embeddings, each build recorded in `build_manifest.json`.
 repository, commit, collection path and tree digest. Domain and adapter
 repositories exist for metabolomics and nine further domains
 (agentic AI, astronomy, epigenomics, genomics, metabarcoding, metagenomics, multi-omics,
-proteomics, transcriptomics) and will be published with their releases. Until then the
-metabolomics collection is served from here; `collections/` also holds staged
-`epigenomics/v1`, `transcriptomics/v1` and `metabolomics/v1`, not part of this release.
+proteomics, transcriptomics) and will be published with their releases. The
+metabolomics collection is released from its domain repository. The legacy
+epigenomics, transcriptomics and metabolomics v1 trees are recorded in the
+registry and are not part of this release.
 
 ## Attribution and citation
 
@@ -243,10 +243,13 @@ Cite the collection and the original paper behind each skill you use
   the release is recorded in [`collections.yaml`](collections.yaml).
 - **Previous version DOI**, v2 (22 June 2026):
   [10.5281/zenodo.20794027](https://doi.org/10.5281/zenodo.20794027). The
-  `metabolomics-v0.2.0` content of this repository was not deposited.
-- **Authors.** The v2 deposit ([CITATION.cff](collections/metabolomics/v2/CITATION.cff)):
+  registry records the domain commit and tree digest for both versions.
+- **Version citation files.** The v2 and v3 `CITATION.cff` files are
+  `<domain checkout>/collections/metabolomics/v2/CITATION.cff` and
+  `<domain checkout>/collections/metabolomics/v3/CITATION.cff`.
+- **Authors.** The v2 deposit:
   AgenticScienceBuilder Community, Louis-Félix Nothias, HolobiomicsLab.cnrs.fr, MetaboLinkAI.net.
-  From the next versioned release on ([root CITATION.cff](CITATION.cff)): Louis-Félix Nothias and
+  The concept record in this repository ([root CITATION.cff](CITATION.cff)): Louis-Félix Nothias and
   the AgenticScienceBuilder AI framework, joined by curators ([call for curators](docs/CURATION_CALL.md)).
 - **Per-skill roles** (`attribution:` in each `SKILL.md`): `generator` (the ASB
   pipeline), `curators` (none yet), `promoter` (Louis-Félix Nothias), `sponsor`
@@ -283,6 +286,13 @@ with [MAINTAINERS.md](governance/MAINTAINERS.md) and [COI_POLICY.md](governance/
   and with `--print-url` a pre-filled issue URL.
 - **Propose or annotate a paper, a collection or a workflow:**
   [CONTRIBUTING.md](.github/CONTRIBUTING.md#propose-or-annotate-a-paper).
+- **Add papers to a collection.** See the contributor proposal rail and the
+  maintainer build, view, cut and candidate rail in
+  [Adding papers to a collection](docs/adding-papers.md). Metabolomics v3 is
+  released as `metabolomics-v3.0.0` (DOI `10.5281/zenodo.24054446`) in the
+  private `asb-skills-metabolomics` repository. Domain content and candidates
+  belong in the corresponding `asb-skills-<domain>` checkout; this repository
+  holds tooling, governance and the registry.
 - **Credit.** Merged contributions count on the contributor leaderboard and can lead
   to co-authorship of the next release DOI ([CONTRIBUTION_LOOP.md](governance/CONTRIBUTION_LOOP.md)).
 - **Before packaging,** run `python -m scripts.unit_closure` from the repository root:
@@ -291,8 +301,8 @@ with [MAINTAINERS.md](governance/MAINTAINERS.md) and [COI_POLICY.md](governance/
 
 ## Status
 
-- Verified for this release: the full `metabolomics` collection as a managed install, Claude Code from a local-checkout marketplace, and the checkout CLI.
-- Verified at CLI level on 2026-10-30 (Claude Code 2.1.304), in-session load not exercised: Claude Code from the public GitHub marketplace (about 358 MB on disk) and the `metabolomics-lc-ms` pack.
+- Step 2 of the per-domain split is complete: this master is the registry and tooling repository; released content is in the domain repositories.
+- The managed-install and Claude Code measurements predate the new marketplace sources; see [docs/STATUS.md](docs/STATUS.md) for their scope and dates.
 - Pending or experimental: the other seven packs, the web UI, runtime adapters other than `agents`, the MCP server. Not yet published: PyPI, the documentation site, the HuggingFace mirror, the benchmark and the capsules.
 - The `w3id.org/holobiomicslab/` and `w3id.org/asb` identifiers resolve. Dates, measurements and detail per surface: [docs/STATUS.md](docs/STATUS.md).
 

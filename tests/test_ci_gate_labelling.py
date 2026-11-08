@@ -1,80 +1,44 @@
-"""Gate 9 (indicium round-trip) must advertise itself as inert, not enforced.
+"""The description lint enforces its rules directly on fixture trees."""
 
-The verify-claims CLI ships in indicium-adapters, which is not on PyPI, so the gate
-never runs in public CI. It must therefore emit a GitHub ::warning:: annotation and
-say plainly that it did not run — a bare `exit 0` would let a green Validate read as
-if an enforced gate passed. This guards that honest labelling (the `gate9-inert` item).
-
-No workflow installs indicium-adapters either. validate.yml and
-promote-collection.yml ran `pip install indicium-adapters` while the name was not
-registered on PyPI: in a public repository, whoever registered it first would have
-had their code run in CI (dependency confusion). The install returns, pinned, once
-the name is published.
-"""
 import pathlib
 import re
 
-ROOT = pathlib.Path(__file__).parent.parent
-VALIDATE = ROOT / ".github" / "workflows" / "validate.yml"
-WORKFLOWS = ROOT / ".github" / "workflows"
+import yaml
 
-# Names no workflow may install: they are not registered on PyPI. When one is
-# published, reinstate its install pinned (`name==X.Y.Z`) and remove it here.
-UNPUBLISHED = ("indicium-adapters",)
-_INSTALL = re.compile(r"\b(pip3?|pipx|uv pip)\s+(install|run)\b")
+from scripts import lint_skill_descriptions
 
 
-def _gate9_step() -> str:
-    """Return the gate-9 section (its comment block + the step body)."""
-    text = VALIDATE.read_text()
-    start_marker = "# -- Gate 9:"
-    assert start_marker in text, "gate-9 section comment not found"
-    start = text.index(start_marker)
-    rest = text[start:]
-    # the section runs until the next `# -- Gate` banner (Gate 1 / LinkML follows)
-    nxt = rest.find("\n      # -- Gate", 1)
-    return rest if nxt == -1 else rest[:nxt]
-
-
-def test_gate9_emits_a_warning_annotation():
-    step = _gate9_step()
-    assert "::warning" in step, "gate 9 must emit a ::warning:: annotation when inert"
-
-
-def test_gate9_says_it_did_not_run():
-    step = _gate9_step().lower()
-    assert "did not run" in step or "not enforced" in step, (
-        "gate 9 must state plainly that it did not run / is not enforced"
+def _skill(root, slug, description):
+    directory = root / "skills" / slug
+    directory.mkdir(parents=True)
+    (directory / "SKILL.md").write_text(
+        f"---\n{yaml.safe_dump({'description': description})}---\n", encoding="utf-8"
     )
 
 
-def test_gate9_points_at_the_register_item():
-    assert "gate9-inert" in _gate9_step(), "gate 9 must reference the gate9-inert register item"
+def test_lint_accepts_a_bounded_use_when_description(tmp_path):
+    _skill(tmp_path, "valid", "Use when testing a skill description in a compact fixture tree.")
+    assert lint_skill_descriptions.lint([tmp_path]) == []
+    assert lint_skill_descriptions.main([str(tmp_path)]) == 0
 
 
-def test_header_marks_gate9_warn_only():
-    header = VALIDATE.read_text()[:1200]
-    assert "9." in header and "WARN-ONLY" in header, (
-        "the gate list must mark gate 9 as WARN-ONLY, not a plain implemented gate"
-    )
+def test_lint_rejects_an_invalid_description(tmp_path):
+    _skill(tmp_path, "invalid", "Best tool.")
+    failures = lint_skill_descriptions.lint([tmp_path])
+    assert len(failures) == 3
+    assert any("description must start" in failure for failure in failures)
+    assert any("description too short" in failure for failure in failures)
+    assert any("marketing term" in failure for failure in failures)
+    assert lint_skill_descriptions.main([str(tmp_path)]) == 1
 
 
 def test_no_workflow_installs_an_unpublished_name():
+    workflows = pathlib.Path(__file__).parent.parent / ".github" / "workflows"
+    install = re.compile(r"\b(pip3?|pipx|uv pip)\s+(install|run)\b")
     offenders = [
-        f"{wf.name}:{n}: {line.strip()}"
-        for wf in sorted(WORKFLOWS.glob("*.y*ml"))
-        for n, line in enumerate(wf.read_text().splitlines(), 1)
-        if _INSTALL.search(line) and any(name in line for name in UNPUBLISHED)
+        f"{workflow.name}:{number}"
+        for workflow in workflows.glob("*.y*ml")
+        for number, line in enumerate(workflow.read_text(encoding="utf-8").splitlines(), 1)
+        if install.search(line) and "indicium-adapters" in line
     ]
-    assert not offenders, (
-        "a public workflow must not install a name nobody has registered on PyPI: "
-        + "; ".join(offenders)
-    )
-
-
-if __name__ == "__main__":
-    import sys
-
-    import pytest
-
-    sys.exit(pytest.main([__file__, "-q"]))
+    assert not offenders

@@ -1,3 +1,0 @@
-  figures/gfop-empress-plot-wlegend.png
-  figures/paper-ncb.png
-paper.md

@@ -592,7 +592,7 @@ def _parser() -> argparse.ArgumentParser:
         command.set_defaults(handler=handler)
         command.add_argument("domain", help="collection domain, e.g. metabolomics")
         command.add_argument("version", help="collection version directory, e.g. v2")
-        command.add_argument("--repo-root", default=".")
+        command.add_argument("--repo-root", required=True, help="domain checkout root")
         command.add_argument("--tooling-root", default=None,
                              help="fallback root for tooling and governance files")
         command.add_argument("--out-dir", default=str(DEFAULT_OUT_DIR))
