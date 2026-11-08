@@ -24,7 +24,6 @@ import glob as globlib
 import json
 import pathlib
 import re
-import sys
 import time
 import urllib.error
 import urllib.parse
@@ -32,6 +31,7 @@ import urllib.request
 from dataclasses import dataclass
 
 import yaml
+
 # Invoked by path (`python scripts/x.py`), only `scripts/` lands on sys.path, so
 # the repo root has to be added before the sibling package can be imported.
 if __package__ in (None, ""):
@@ -380,8 +380,8 @@ def _print_audit(findings: list[dict]) -> int:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--doi", help="resolve a single DOI and print the outcome")
-    parser.add_argument("--corpus", nargs="*", default=["collections/*/v*/corpus.yaml"],
-                        help="glob(s) of corpus.yaml files to audit")
+    parser.add_argument("--corpus", nargs="+", required=True,
+                        help="glob(s) of corpus.yaml files in a domain checkout")
     parser.add_argument("--cache", default=".cache/preprint_licenses.json")
     parser.add_argument("--strict", action="store_true", help="exit 1 if any pre-print is not full-reuse or unresolved")
     parser.add_argument("--smoke", action="store_true", help="run the module's self-check and exit")

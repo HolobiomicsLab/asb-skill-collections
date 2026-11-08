@@ -175,7 +175,8 @@ def summarize(findings: list[dict]) -> dict[str, int]:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--corpus", nargs="*", default=["collections/*/v*/corpus.yaml"])
+    parser.add_argument("--corpus", nargs="+", required=True,
+                        help="glob(s) of corpus.yaml files in a domain checkout")
     parser.add_argument("--apply", action="store_true", help="write the repaired DOIs back")
     parser.add_argument("--strict", action="store_true",
                         help="exit 1 if any suspect DOI is left unrepaired")

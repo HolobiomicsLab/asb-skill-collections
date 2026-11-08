@@ -165,8 +165,8 @@ def summarize(findings: list[dict]) -> dict[str, int]:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--corpus", nargs="*", default=["collections/*/v*/corpus.yaml"],
-                        help="glob(s) of corpus.yaml files")
+    parser.add_argument("--corpus", nargs="+", required=True,
+                        help="glob(s) of corpus.yaml files in a domain checkout")
     parser.add_argument("--apply", action="store_true", help="write the resolved licences back")
     parser.add_argument("--cache", default=".cache/paper_licenses.json")
     parser.add_argument("--strict", action="store_true",
