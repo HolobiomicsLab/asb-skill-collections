@@ -38,7 +38,7 @@ def test_every_file_is_read_at_the_resolved_commit(tmp_path):
 
     provenance = fetch.fetch(_request(*TIERS), tmp_path / "out", host)
 
-    resolve, *reads = host.seen
+    resolve, _manifest, *reads = host.seen
     assert resolve == fetch.commit_url("main")
     assert host.accepted[resolve] == "application/vnd.github.sha"
     raw = f"{fetch.RAW_HOST}/{fetch.REPOSITORY}/{COMMIT}/"
@@ -76,13 +76,22 @@ def test_a_ref_that_does_not_resolve_writes_nothing(tmp_path, answer, message):
 
 
 def test_a_full_commit_ref_needs_no_api_call(tmp_path):
-    host = FakeHost(ref=COMMIT)
-    del host.files[fetch.commit_url(COMMIT)]
+    host = FakeHost()
+    del host.files[fetch.commit_url("main")]
 
-    provenance = fetch.fetch(_request(*TIERS, ref=COMMIT), tmp_path / "out", host)
+    provenance = fetch.fetch(
+        fetch.FetchRequest(COLLECTION, tuple(TIERS), COMMIT, manifest_ref=COMMIT),
+        tmp_path / "out",
+        host,
+    )
 
     assert (provenance["ref"], provenance["commit"]) == (COMMIT, COMMIT)
     assert not any(url.startswith(fetch.API_HOST) for url in host.seen)
+
+
+@pytest.fixture(autouse=True)
+def without_github_token(monkeypatch):
+    monkeypatch.delenv("GITHUB_TOKEN", raising=False)
 
 
 @pytest.mark.parametrize("status", (403, 429))

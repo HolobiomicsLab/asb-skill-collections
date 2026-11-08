@@ -1,22 +1,21 @@
-"""Download chosen skills from the published repository, without a checkout.
+"""Download chosen skills from their published repository, without a checkout.
 
-The named ref is resolved once to a commit through the GitHub commits API, and
-every file is then read from the raw file host at that commit: the leaves,
-together with the collection's ``skills_index.json``, which validates the
-request and supplies each skill's licence tier. Files land under
-``<dest>/<slug>/`` beside a ``PROVENANCE.json`` that records the ref, the commit
-it resolved to, where each file came from and its SHA-256.
+The master manifest maps a released collection to its repository and pinned
+commit. Unlisted releases and explicit repository overrides use the requested
+ref instead. Files land under ``<dest>/<slug>/`` beside a ``PROVENANCE.json``
+recording the resolved source and each file's URL and SHA-256.
 
-Every network read goes through :func:`_request`, called as
-``transport(url)`` or ``transport(url, accept=...)``. Tests pass a transport in
-its place, so nothing else in this module touches the network.
+Every network read goes through :func:`_request`. Tests pass a transport in its
+place, so nothing else in this module touches the network.
 """
 
 from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
+import sys
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -36,7 +35,7 @@ SHA_MEDIA_TYPE = "application/vnd.github.sha"
 COMMIT_PATTERN = re.compile(r"[0-9a-f]{40}|[0-9a-f]{64}")
 DEFAULT_REF = "main"
 PROVENANCE_FILE = "PROVENANCE.json"
-PROVENANCE_SCHEMA = "asbb-fetch/1"
+PROVENANCE_SCHEMA = "asbb-fetch/2"
 TIMEOUT_SECONDS = 60
 USER_AGENT = "asbb-fetch"
 #: ``<collection slug>/v<N>``: the published path of one collection version.
@@ -45,6 +44,10 @@ COLLECTION_PATTERN = re.compile(r"[a-z0-9][a-z0-9_-]*/v[0-9]+")
 SLUG_PATTERN = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]*")
 #: A branch, tag or commit: slash-separated segments, none starting with ``.``.
 REF_PATTERN = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]*(?:/[A-Za-z0-9][A-Za-z0-9._-]*)*")
+REPOSITORY_PATTERN = re.compile(
+    r"[A-Za-z0-9][A-Za-z0-9_.-]*/[A-Za-z0-9][A-Za-z0-9_.-]*"
+)
+MANIFEST_PATH = "collections.yaml"
 
 
 class FetchError(RuntimeError):
@@ -58,6 +61,21 @@ class FetchRequest:
     collection: str
     slugs: tuple[str, ...]
     ref: str = DEFAULT_REF
+    repository: str | None = None
+    manifest_ref: str = DEFAULT_REF
+
+
+@dataclass(frozen=True)
+class CollectionSource:
+    """The repository, immutable ref and root path of one collection."""
+
+    repository: str
+    ref: str
+    path: str
+    manifest: dict | None = None
+    tag: str | None = None
+    version_doi: str | None = None
+    note: str | None = None
 
 
 def _request(url: str, accept: str | None = None) -> bytes:
@@ -75,17 +93,26 @@ def _request(url: str, accept: str | None = None) -> bytes:
         raise FetchError(f"{url}: {exc.reason}") from exc
 
 
-def raw_url(ref: str, path: str) -> str:
+def _get(transport, url: str, accept: str | None = None) -> bytes:
+    """Call an injected transport, authenticating when a token is available."""
+    options = {"accept": accept} if accept else {}
+    token = os.environ.get("GITHUB_TOKEN")
+    if token:
+        options["headers"] = {"Authorization": f"Bearer {token}"}
+    return transport(url, **options)
+
+
+def raw_url(ref: str, path: str, repository: str = REPOSITORY) -> str:
     """The raw-file URL of one repository path at one ref."""
-    return f"{RAW_HOST}/{REPOSITORY}/{urllib.parse.quote(ref, safe='/')}/{path}"
+    return f"{RAW_HOST}/{repository}/{urllib.parse.quote(ref, safe='/')}/{path}"
 
 
-def commit_url(ref: str) -> str:
+def commit_url(ref: str, repository: str = REPOSITORY) -> str:
     """The commits API URL that resolves one ref of the repository."""
-    return f"{API_HOST}/repos/{REPOSITORY}/commits/{urllib.parse.quote(ref, safe='/')}"
+    return f"{API_HOST}/repos/{repository}/commits/{urllib.parse.quote(ref, safe='/')}"
 
 
-def resolve_commit(ref: str, transport) -> str:
+def resolve_commit(ref: str, transport, repository: str = REPOSITORY) -> str:
     """Return the commit ``ref`` names now, asked once of the commits API.
 
     A branch moves, so a fetch recorded against ``main`` alone cannot be
@@ -96,9 +123,9 @@ def resolve_commit(ref: str, transport) -> str:
     """
     if COMMIT_PATTERN.fullmatch(ref):
         return ref
-    url = commit_url(ref)
+    url = commit_url(ref, repository)
     try:
-        body = transport(url, accept=SHA_MEDIA_TYPE)
+        body = _get(transport, url, accept=SHA_MEDIA_TYPE)
     except FetchError as exc:
         hint = ""
         if str(exc).endswith(("HTTP 403", "HTTP 429")):
@@ -123,6 +150,85 @@ def leaf_path(collection: str, slug: str) -> str:
     return f"collections/{collection}/{LEAF_DIRNAME}/{slug}/SKILL.md"
 
 
+def _master_source(request: FetchRequest, transport, note=None, commit=None):
+    commit = commit or resolve_commit(request.ref, transport)
+    return CollectionSource(REPOSITORY, commit, f"collections/{request.collection}", note=note)
+
+
+def _fallback_source(request: FetchRequest, transport, note: str, commit=None):
+    print(f"note: {note}", file=sys.stderr)
+    return _master_source(request, transport, note, commit)
+
+
+def _validate_repository(repository: str) -> None:
+    if not REPOSITORY_PATTERN.fullmatch(repository) or ".." in repository:
+        raise FetchError(f"not a GitHub repository as OWNER/NAME: {repository!r}")
+
+
+def _validate_path(path: str) -> None:
+    if path.startswith("/") or any(part in ("", ".", "..") for part in path.split("/")):
+        raise FetchError(f"manifest release path is not a repository-relative path: {path!r}")
+
+
+def _manifest_release(manifest: dict, collection: str) -> dict | None:
+    domain, version = collection.split("/v", 1)
+    domains = manifest.get("domains") if isinstance(manifest, dict) else None
+    entry = domains.get(domain) if isinstance(domains, dict) else None
+    releases = entry.get("releases") if isinstance(entry, dict) else None
+    if not isinstance(releases, list):
+        return None
+    for release in releases:
+        if isinstance(release, dict) and release.get("version") == int(version):
+            try:
+                return {"repository": entry["repository"], **release}
+            except KeyError as exc:
+                raise FetchError("manifest domain lacks 'repository'") from exc
+    return None
+
+
+def _domain_source(release: dict, request: FetchRequest, manifest_commit: str):
+    try:
+        repository = release["repository"]
+        commit = release["commit"]
+        path = release["path"]
+    except KeyError as exc:
+        raise FetchError(f"manifest release lacks {exc.args[0]!r}") from exc
+    _validate_repository(repository)
+    if not COMMIT_PATTERN.fullmatch(commit):
+        raise FetchError(f"manifest release commit is not a full commit id: {commit!r}")
+    _validate_path(path)
+    manifest = {"repository": REPOSITORY, "ref": request.manifest_ref, "commit": manifest_commit}
+    return CollectionSource(
+        repository, commit, path, manifest, release.get("tag"), release.get("version_doi")
+    )
+
+
+def _resolve_source(request: FetchRequest, transport) -> CollectionSource:
+    """Resolve through the manifest, unless an explicit repository bypasses it."""
+    if request.repository:
+        _validate_repository(request.repository)
+        commit = resolve_commit(request.ref, transport, request.repository)
+        return CollectionSource(
+            request.repository, commit, f"collections/{request.collection}"
+        )
+    manifest_commit = resolve_commit(request.manifest_ref, transport)
+    manifest_url = raw_url(manifest_commit, MANIFEST_PATH)
+    try:
+        import yaml
+        manifest = yaml.safe_load(_get(transport, manifest_url))
+        release = _manifest_release(manifest, request.collection)
+        if release is None:
+            note = (
+                f"{request.collection} is not listed in the manifest; "
+                f"using {REPOSITORY} at {request.ref}"
+            )
+            return _fallback_source(request, transport, note, manifest_commit)
+        return _domain_source(release, request, manifest_commit)
+    except (FetchError, OSError, TypeError, ValueError, yaml.YAMLError):
+        note = f"manifest could not be read; using {REPOSITORY} at {request.ref}"
+        return _fallback_source(request, transport, note, manifest_commit)
+
+
 def _check_request(request: FetchRequest) -> None:
     """Refuse a request whose parts could leave the repository's raw-file tree.
 
@@ -132,6 +238,10 @@ def _check_request(request: FetchRequest) -> None:
     """
     if not REF_PATTERN.fullmatch(request.ref) or ".." in request.ref:
         raise FetchError(f"not a git ref: {request.ref!r}")
+    if not REF_PATTERN.fullmatch(request.manifest_ref) or ".." in request.manifest_ref:
+        raise FetchError(f"not a git ref: {request.manifest_ref!r}")
+    if request.repository:
+        _validate_repository(request.repository)
     if not COLLECTION_PATTERN.fullmatch(request.collection):
         raise FetchError(
             f"collection {request.collection!r} must be <slug>/v<N>, e.g. metabolomics/v2"
@@ -152,10 +262,22 @@ def _check_destination(request: FetchRequest, dest: Path) -> None:
         )
 
 
-def _license_tiers(request: FetchRequest, commit: str, transport) -> dict[str, str]:
+def _download(transport, url: str, source: CollectionSource) -> bytes:
+    try:
+        return _get(transport, url)
+    except FetchError as exc:
+        if source.manifest and str(exc).endswith("HTTP 404"):
+            raise FetchError(
+                f"{source.repository} answered 404: the repository may be private; "
+                "set GITHUB_TOKEN"
+            ) from exc
+        raise
+
+
+def _license_tiers(request: FetchRequest, source: CollectionSource, transport) -> dict[str, str]:
     """Read the remote index at ``commit``, refuse unknown slugs, return each tier."""
-    url = raw_url(commit, f"collections/{request.collection}/skills_index.json")
-    rows = json.loads(transport(url))
+    url = raw_url(source.ref, f"{source.path}/skills_index.json", source.repository)
+    rows = json.loads(_download(transport, url, source))
     if not isinstance(rows, list):
         raise FetchError(f"{url}: expected a JSON list of skill rows")
     tiers = {row.get("slug"): row.get("license_tier") for row in rows if isinstance(row, dict)}
@@ -168,12 +290,12 @@ def _license_tiers(request: FetchRequest, commit: str, transport) -> dict[str, s
     return {slug: tiers[slug] or "unrecorded" for slug in request.slugs}
 
 
-def _provenance(request: FetchRequest, commit: str, tiers: dict, files: dict) -> dict:
-    return {
+def _provenance(request: FetchRequest, source: CollectionSource, tiers: dict, files: dict):
+    provenance = {
         "schema": PROVENANCE_SCHEMA,
-        "repository": REPOSITORY_URL,
+        "repository": f"https://github.com/{source.repository}",
         "ref": request.ref,
-        "commit": commit,
+        "commit": source.ref,
         "collection": request.collection,
         "date": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "slugs": list(request.slugs),
@@ -183,6 +305,14 @@ def _provenance(request: FetchRequest, commit: str, tiers: dict, files: dict) ->
             for rel, (url, body) in files.items()
         },
     }
+    optional = {
+        "manifest": source.manifest,
+        "tag": source.tag,
+        "version_doi": source.version_doi,
+        "note": source.note,
+    }
+    provenance.update({key: value for key, value in optional.items() if value is not None})
+    return provenance
 
 
 def fetch(request: FetchRequest, dest: Path, transport=None) -> dict:
@@ -192,20 +322,27 @@ def fetch(request: FetchRequest, dest: Path, transport=None) -> dict:
     request or a failed download leaves the destination as it was.
     """
     transport = transport or _request
-    request = FetchRequest(request.collection, tuple(dict.fromkeys(request.slugs)), request.ref)
+    request = FetchRequest(
+        request.collection,
+        tuple(dict.fromkeys(request.slugs)),
+        request.ref,
+        request.repository,
+        request.manifest_ref,
+    )
     dest = Path(dest)
     _check_request(request)
     _check_destination(request, dest)
-    commit = resolve_commit(request.ref, transport)
-    tiers = _license_tiers(request, commit, transport)
+    source = _resolve_source(request, transport)
+    tiers = _license_tiers(request, source, transport)
     files = {}
     for slug in request.slugs:
-        url = raw_url(commit, leaf_path(request.collection, slug))
-        files[f"{slug}/SKILL.md"] = (url, transport(url))
+        path = f"{source.path}/{LEAF_DIRNAME}/{slug}/SKILL.md"
+        url = raw_url(source.ref, path, source.repository)
+        files[f"{slug}/SKILL.md"] = (url, _download(transport, url, source))
     for rel, (_, body) in files.items():
         (dest / rel).parent.mkdir(parents=True, exist_ok=True)
         (dest / rel).write_bytes(body)
-    provenance = _provenance(request, commit, tiers, files)
+    provenance = _provenance(request, source, tiers, files)
     (dest / PROVENANCE_FILE).write_text(
         json.dumps(provenance, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
