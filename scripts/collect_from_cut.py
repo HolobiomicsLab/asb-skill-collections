@@ -53,6 +53,10 @@ class ConflictError(CollectorError):
     """A destination already contains different bytes."""
 
 
+class InvalidLeafError(CollectorError):
+    """One cut leaf cannot be read as a skill; excludable on request, with a receipt row."""
+
+
 def _json_bytes(value: Any) -> bytes:
     """Render stable, human-readable JSON."""
     return (
@@ -554,7 +558,7 @@ def _prepare_leaf(
     text = _read_bytes(source / "skill.md").decode("utf-8")
     frontmatter, body = skill_index.split_frontmatter(text)
     if not isinstance(frontmatter, dict):
-        raise CollectorError(f"skill has no valid frontmatter: {source / 'skill.md'}")
+        raise InvalidLeafError(f"skill has no valid frontmatter: {source / 'skill.md'}")
     cut_tools = _read_json(source / "tools.json")
     if not isinstance(cut_tools, list) or not all(
         isinstance(name, str) for name in cut_tools
@@ -940,15 +944,39 @@ def _assemble(options: argparse.Namespace) -> tuple[dict[str, bytes], dict[str, 
     outputs: dict[str, bytes] = {}
     mappings: list[dict[str, Any]] = []
     indexes: list[dict[str, Any]] = []
+    excluded: list[dict[str, Any]] = []
     for source in source_dirs:
-        data, mapping, index = _prepare_leaf(
-            source,
-            coverages[source.name],
-            builds,
-            budget,
-            options.domain,
-            options.license,
-        )
+        try:
+            data, mapping, index = _prepare_leaf(
+                source,
+                coverages[source.name],
+                builds,
+                budget,
+                options.domain,
+                options.license,
+            )
+        except InvalidLeafError as exc:
+            # A leaf the cut wrote but no reader can parse (for example a YAML
+            # control character from a mis-decoded build) is a defect of its
+            # source build, not of the cut. Without the flag it stops the
+            # collection; with it the leaf is left out and the receipt names it,
+            # so the exclusion is a recorded decision rather than a silent drop.
+            if not getattr(options, "exclude_invalid_leaves", False):
+                raise
+            members = coverages[source.name].get("members") or []
+            excluded.append(
+                {
+                    "output_id": source.name,
+                    "reason": str(exc),
+                    "source_bundles": sorted(
+                        str(member.get("source_bundle"))
+                        for member in members
+                        if isinstance(member, dict) and member.get("source_bundle")
+                    ),
+                    "skill_sha256": digests[f"corpus/skills/{source.name}/skill.md"],
+                }
+            )
+            continue
         outputs[f"leaves/{source.name}/SKILL.md"] = data
         mappings.append(mapping)
         indexes.append(index)
@@ -1029,7 +1057,9 @@ def _assemble(options: argparse.Namespace) -> tuple[dict[str, bytes], dict[str, 
             "manifest_doi_stamped": sum(
                 mapping["doi_source"] == "build_manifest" for mapping in mappings
             ),
+            "excluded_leaves": len(excluded),
         },
+        "excluded_leaves": excluded,
         "router_index": "provisional skills_index.json derived from leaf frontmatter before router_shape.shape",
     }
     return shaped, {
@@ -1095,6 +1125,14 @@ def _parser() -> argparse.ArgumentParser:
     parser.add_argument("--creators", required=True, type=Path)
     parser.add_argument("--corpus", type=Path)
     parser.add_argument("--receipts", type=Path)
+    parser.add_argument(
+        "--exclude-invalid-leaves",
+        action="store_true",
+        help=(
+            "leave out a cut leaf whose skill.md has no readable frontmatter instead of "
+            "failing; every exclusion is listed in collect_receipt.json under excluded_leaves"
+        ),
+    )
     parser.add_argument("--dry-run", action="store_true")
     return parser
 

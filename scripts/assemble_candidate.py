@@ -267,6 +267,7 @@ def _stage_commands(options: argparse.Namespace) -> list[Stage]:
                 str(corpus_staging),
                 "--receipts",
                 str(options.receipts),
+                *(("--exclude-invalid-leaves",) if options.exclude_invalid_leaves else ()),
             ),
             "collect.txt",
         ),
@@ -609,6 +610,11 @@ def _parser() -> argparse.ArgumentParser:
     parser.add_argument("--view-source", type=Path)
     parser.add_argument("--model", default="bge-small-en-v1.5")
     parser.add_argument("--thresholds", default=DEFAULT_THRESHOLDS)
+    parser.add_argument(
+        "--exclude-invalid-leaves",
+        action="store_true",
+        help="pass through to collect_from_cut.py: exclude unreadable leaves with a receipt row",
+    )
     parser.add_argument("--dry-run", action="store_true")
     return parser
 
