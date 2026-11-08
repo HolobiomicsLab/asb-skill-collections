@@ -874,8 +874,9 @@ def test_third_party_emails_are_redacted_only_on_request_with_a_receipt(
     frontmatter, body = _read_skill(skill)
     frontmatter_email = "ada.lovelace@private.example.org"
     body_email = "grace.hopper@private.example.net"
+    span_doi = "10.9999/redaction-budget-probe"
     frontmatter["evidence_spans"] = [
-        {"text": f"For details contact {frontmatter_email}", "doi": STRICT_DOI}
+        {"text": f"For details contact {frontmatter_email}", "doi": span_doi}
     ]
     body += (
         f'\n- [readme] access contact: "Request access to {body_email} for details"\n'
@@ -888,7 +889,6 @@ def test_third_party_emails_are_redacted_only_on_request_with_a_receipt(
             _args(
                 fixture,
                 strict / "candidate",
-                corpus=False,
                 receipts=strict / "receipts",
             )
         )
@@ -919,7 +919,6 @@ def test_third_party_emails_are_redacted_only_on_request_with_a_receipt(
                 *_args(
                     fixture,
                     redacted / "candidate",
-                    corpus=False,
                     receipts=redacted / "receipts",
                 ),
                 "--redact-third-party-emails",
@@ -962,6 +961,24 @@ def test_third_party_emails_are_redacted_only_on_request_with_a_receipt(
         (redacted / "receipts" / "collect_receipt.json").read_text(encoding="utf-8")
     )
     assert collect_receipt["counts"]["emails_redacted_leaves"] == 1
+
+    # The quote budget counts the redacted text, not the original: the
+    # placeholder is longer than the addresses it replaces. The probe DOI is
+    # unknown to the corpus, so the span is strict and alone under its DOI.
+    def _span_doi_characters(root: Path) -> int:
+        receipt = json.loads(
+            (root / "receipts" / "evidence_trim_receipt.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        return receipt["characters_by_doi"][span_doi]
+
+    assert _span_doi_characters(strict) == len(
+        f"For details contact {frontmatter_email}"
+    )
+    assert _span_doi_characters(redacted) == len(
+        f"For details contact {collector.EMAIL_REDACTION_PLACEHOLDER}"
+    )
 
 
 def test_email_redaction_preserves_allowlisted_notation_and_placeholder_tokens(

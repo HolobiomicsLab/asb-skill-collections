@@ -719,6 +719,14 @@ def _prepare_leaf(
     dois, doi_source = _resolve_leaf_dois(frontmatter, canonical_build["flags"])
     if not dois:
         raise CollectorError(f"cut leaf has no source DOI: {output_id}")
+    # Redaction runs before the quote budget so the trim counts the text the
+    # gate will read: the placeholder is longer than most addresses.
+    frontmatter.pop("emails_redacted", None)
+    redactions: dict[str, list[str]] = {}
+    if redact_third_party_emails:
+        body, redactions = _redact_leaf_emails(frontmatter, body)
+    if redactions:
+        frontmatter["emails_redacted"] = True
     body, trimmed = budget.trim_leaf(frontmatter, body, output_id, dois[0])
     if trimmed:
         frontmatter["evidence_trimmed"] = True
@@ -733,13 +741,6 @@ def _prepare_leaf(
         repo = _github_url(tool.get("repo"))
         if repo:
             canonical_build["tool_repos"][str(tool["name"])].add(repo)
-
-    frontmatter.pop("emails_redacted", None)
-    redactions: dict[str, list[str]] = {}
-    if redact_third_party_emails:
-        body, redactions = _redact_leaf_emails(frontmatter, body)
-    if redactions:
-        frontmatter["emails_redacted"] = True
 
     mapping = {
         "output_id": output_id,
