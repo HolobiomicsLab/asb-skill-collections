@@ -1,0 +1,34 @@
+schema: asb-collections-manifest/1
+# One entry per domain repository; one release per published collection version.
+# tree_digest: sha256 over the sorted lines "<sha256 of the file bytes>  <path relative to the repository root>\n"
+# of every regular file under `path` at `commit` (symlinks and directories excluded), hex digest, prefixed "sha256:".
+domains:
+  metabolomics:
+    repository: HolobiomicsLab/asb-skills-metabolomics
+    concept_doi: 10.5281/zenodo.20794026
+    releases:
+      - version: 3
+        path: collections/metabolomics/v3
+        tag: metabolomics-v3.0.0
+        commit: 788df247c887bea90670a4252ab94da36088d2be
+        source_commit: null
+        tree_digest: sha256:89b0cf5b5a666940503b2f248ff416834f6a52fd868aff83c336776d742f81b8
+        version_doi: 10.5281/zenodo.24054446
+        released: 2026-11-09
+        skills: 11830
+        tools: 1989
+        workflows: 20
+        papers: 477
+      - version: 2
+        path: collections/metabolomics/v2
+        # The only master tag in this checkout is metabolomics-v0.1.0; v2 has no tag.
+        tag: null
+        commit: 788df247c887bea90670a4252ab94da36088d2be
+        source_commit: f554641c24ea7c60bbaa5322ec8a56b1a6bd30db
+        tree_digest: sha256:d806f8c549928b24323c335401e4c58c018dc60944b9a10e33f9e1fef7abbd5b
+        version_doi: 10.5281/zenodo.20794027
+        released: 2026-06-22
+        skills: 5859
+        tools: 909
+        workflows: 21
+        papers: 566

@@ -11,15 +11,15 @@
 <p align="center">Evidence-grounded skills and software-tool records for scientific AI agents,<br>distilled from published method papers and their code by the AgenticScienceBuilder pipeline.</p>
 
 <p align="center">
-  <a href="collections/metabolomics/v2"><img src="https://img.shields.io/badge/release-metabolomics--v0.2.0%20preliminary-00284b" alt="release metabolomics-v0.2.0 preliminary"></a> <a href="collections/metabolomics/v2/skills_index.json"><img src="https://img.shields.io/badge/skills-5%2C859-04919a" alt="5,859 skills"></a>
-  <a href="collections/metabolomics/v2/tools_index.json"><img src="https://img.shields.io/badge/tools-909-04919a" alt="909 tools"></a> <a href="collections/metabolomics/v2/corpus.yaml"><img src="https://img.shields.io/badge/papers-566-04919a" alt="566 papers"></a>
-  <a href="collections/metabolomics/v2/workflows"><img src="https://img.shields.io/badge/workflows-21-04919a" alt="21 workflows"></a> <a href="LICENSE"><img src="https://img.shields.io/badge/code-Apache--2.0-5d6a78" alt="code licence Apache-2.0"></a>
+  <a href="https://doi.org/10.5281/zenodo.24054446"><img src="https://img.shields.io/badge/release-metabolomics--v3.0.0-00284b" alt="release metabolomics-v3.0.0"></a> <a href="https://doi.org/10.5281/zenodo.24054446"><img src="https://img.shields.io/badge/skills-11%2C830-04919a" alt="11,830 skills"></a>
+  <a href="https://doi.org/10.5281/zenodo.24054446"><img src="https://img.shields.io/badge/tools-1%2C989-04919a" alt="1,989 tools"></a> <a href="https://doi.org/10.5281/zenodo.24054446"><img src="https://img.shields.io/badge/papers-477-04919a" alt="477 papers"></a>
+  <a href="https://doi.org/10.5281/zenodo.24054446"><img src="https://img.shields.io/badge/workflows-20-04919a" alt="20 workflows"></a> <a href="LICENSE"><img src="https://img.shields.io/badge/code-Apache--2.0-5d6a78" alt="code licence Apache-2.0"></a>
   <a href="LICENSING.md"><img src="https://img.shields.io/badge/content-CC--BY--4.0-5d6a78" alt="content licence CC-BY-4.0"></a> <a href="https://doi.org/10.5281/zenodo.20794026"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.20794026.svg" alt="Zenodo concept DOI 10.5281/zenodo.20794026"></a>
 </p>
 
 A skill is a short procedure that an AI agent can read and follow. The
-AgenticScienceBuilder (ASB) pipeline writes each one from a method paper (54 of the
-566 are preprints) and, where one exists, its public code repository, anchors it to
+AgenticScienceBuilder (ASB) pipeline writes each one from a published method paper
+(journal article or preprint) and, where one exists, its public code repository, anchors it to
 verbatim evidence from those sources (for `repo-oa` papers, the repository's own
 documentation; [CONTENT_POLICY.md](governance/CONTENT_POLICY.md)), annotates it with
 EDAM terms, and passes it through a licence and PII gate before release. This
@@ -32,13 +32,19 @@ Dagstuhl Seminar **Computational Metabolomics**
 
 ## This release
 
-[`collections/metabolomics/v2`](collections/metabolomics/v2), release
-`metabolomics-v0.2.0` (preliminary): **5,859 skills** across **909 tools**,
-distilled from **566 papers**, plus **21 composite workflow super-skills** that
-chain the atomic skills into end-to-end pipelines
-([`workflows/`](collections/metabolomics/v2/workflows)). Coverage is mostly
+Release `metabolomics-v3.0.0`: **11,830 skills** across **1,989 tools**, distilled
+from **477 published method papers (journal articles and preprints)**, plus **20
+composite workflow super-skills** that chain the atomic skills into end-to-end
+pipelines. The release is deposited as
+[10.5281/zenodo.24054446](https://doi.org/10.5281/zenodo.24054446). Coverage is mostly
 LC-MS/MS, with LC-MS, GC-MS, mass-spectrometry imaging, ion mobility and
 lipidomics, some NMR, and multi-omics, statistics and pathway tools.
+
+The collection was released from the domain repository `asb-skills-metabolomics`
+(private until its visibility is opened; the Zenodo record carries the full
+collection); this repository holds the tooling, the registry and [`collections.yaml`](collections.yaml).
+The public marketplace of this repository still serves v2, and its technique packs
+remain v2 until step 2 of the domain-release migration.
 
 | Layer | Contents | State |
 |---|---|---|
@@ -96,6 +102,9 @@ commands, outputs, `uninstall`). Any other agent can read the Markdown and JSON 
 install would fetch the CLI without the corpus it reads. Verified routes and dates: [docs/STATUS.md](docs/STATUS.md).
 
 ### Choose what to install
+
+The figures in this table describe the v2 collection and packs currently served
+by this repository.
 
 Install the whole collection, a technique pack, a selection of skills
 (`asbb install --skills`, `--skills-file` or `--query`), or fetch chosen skills
@@ -173,7 +182,7 @@ In Claude Code, run `/ground` on the skill in play; elsewhere, call the bundled
 ## What is in the collection
 
 <p align="center">
-  <img src="assets/metabolomics-skills-collection.png" alt="Metabolomics skill collection: peer-reviewed papers, ASB, EDAM-typed deduplicated skills routed by Perspicacité (EDAM filter and skill KB) to an agent, across the untargeted LC-MS/MS workflow and community tools such as GNPS, XCMS, matchms, MS-DIAL, MZmine, SIRIUS and spec2vec" width="760">
+  <img src="assets/metabolomics-skills-collection.png" alt="Metabolomics skill collection: published method papers, ASB, EDAM-typed deduplicated skills routed by Perspicacité (EDAM filter and skill KB) to an agent, across the untargeted LC-MS/MS workflow and community tools such as GNPS, XCMS, matchms, MS-DIAL, MZmine, SIRIUS and spec2vec" width="760">
   <br><sub>The LC-MS view of the collection (the <code>metabolomics-lc-ms</code> pack). The full release covers all techniques.</sub>
 </p>
 
@@ -207,15 +216,18 @@ embeddings, each build recorded in `build_manifest.json`.
 
 | Repository | Role | Access |
 |---|---|---|
-| asb-skill-collections (this one) | registry, release tooling, governance, released metabolomics collection | public |
+| asb-skill-collections (this one) | registry, release tooling, governance and domain-release manifest | public |
 | AgenticScienceBuilder | the pipeline and schema that generate the collections | private, to follow |
-| asb-skills-&lt;domain&gt; | one repository per domain, same `collections/<domain>/<version>/` and `packs/<domain>/<technique>/` layout | private, to follow |
+| asb-skills-metabolomics | metabolomics domain releases, v3 deposited on Zenodo | private, to follow |
+| asb-skills-&lt;domain&gt; | one repository per other domain, same `collections/<domain>/<version>/` and `packs/<domain>/<technique>/` layout | private, to follow |
 | indicium | standard for a typed scientific claim bound to the evidence that grounds it | private, to follow |
 | indicium-adapters, indicium-adapters-&lt;domain&gt; | per-domain adapters that enrich indicium claims with ontology terms | private, to follow |
 | [Perspicacite-AI](https://github.com/HolobiomicsLab/Perspicacite-AI) | literature RAG engine used for grounding | public |
 | [Mimosa-AI](https://github.com/HolobiomicsLab/Mimosa-AI) | multi-agent framework for autonomous scientific research | public |
 
-Domain and adapter repositories exist for metabolomics and nine further domains
+[`collections.yaml`](collections.yaml) pins each published domain release to its
+repository, commit, collection path and tree digest. Domain and adapter
+repositories exist for metabolomics and nine further domains
 (agentic AI, astronomy, epigenomics, genomics, metabarcoding, metagenomics, multi-omics,
 proteomics, transcriptomics) and will be published with their releases. Until then the
 metabolomics collection is served from here; `collections/` also holds staged
@@ -227,9 +239,11 @@ Cite the collection and the original paper behind each skill you use
 (`attribution.original_doi` in its `SKILL.md`).
 
 - **Concept DOI**, for all versions: [10.5281/zenodo.20794026](https://doi.org/10.5281/zenodo.20794026).
-- **Version DOI** of the deposited version, `metabolomics-v0.1.0` (22 June 2026):
+- **Version DOI**, v3 (9 November 2026): [10.5281/zenodo.24054446](https://doi.org/10.5281/zenodo.24054446);
+  the release is recorded in [`collections.yaml`](collections.yaml).
+- **Previous version DOI**, v2 (22 June 2026):
   [10.5281/zenodo.20794027](https://doi.org/10.5281/zenodo.20794027). The
-  `metabolomics-v0.2.0` content of this repository is not yet deposited.
+  `metabolomics-v0.2.0` content of this repository was not deposited.
 - **Authors.** The v2 deposit ([CITATION.cff](collections/metabolomics/v2/CITATION.cff)):
   AgenticScienceBuilder Community, Louis-Félix Nothias, HolobiomicsLab.cnrs.fr, MetaboLinkAI.net.
   From the next versioned release on ([root CITATION.cff](CITATION.cff)): Louis-Félix Nothias and

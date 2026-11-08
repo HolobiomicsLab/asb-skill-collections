@@ -197,7 +197,7 @@ A collection is publicly advertised **if and only if:**
 
 **Determinism:** Collections are sorted alphabetically by slug + version; timestamps use UTC ISO 8601 (Z suffix); no non-deterministic ordering
 
-**Release status:** `status` is `released` when `.claude-plugin/marketplace.json` serves the collection directory and `staged` otherwise. `doi` is written only once it is minted (`10.<registrant>/<suffix>`); a placeholder in `collection.yaml` such as `TODO-zenodo` is left out of the catalogue.
+**Release status:** for collections held in this repository, `status` is `released` when `.claude-plugin/marketplace.json` serves the collection directory and `staged` otherwise. A release held in a domain repository is `released` when `collections.yaml` records it as published, independently of the local marketplace. `doi` is written only once it is minted (`10.<registrant>/<suffix>`); a placeholder in `collection.yaml` such as `TODO-zenodo` is left out of the catalogue.
 
 ### 2.3 Querying the catalogue
 
@@ -243,6 +243,20 @@ for col in catalogue.get("collections", []):
 **Why one concept per collection:** Simplifies citation, enables "latest version" resolution, and keeps the DOI tree flat (no matrix explosion from multi-LLM variants).
 
 A maintainer can prepare the same new-version draft by hand with `scripts/zenodo_deposit.py`; see [RELEASE_DEPOSIT.md](RELEASE_DEPOSIT.md).
+
+### 2.5 Domain releases manifest
+
+[`collections.yaml`](../collections.yaml) records domain repositories and each
+published collection version: repository path, tag and commit, source commit,
+tree digest, version DOI, release date and content counts. The tree digest covers
+every regular file below the collection path, with paths relative to the domain
+repository root. The catalogue's v3 `released` status records the published
+domain release; the local marketplace still serves v2.
+`scripts/check_collections_manifest.py` checks this manifest
+against `catalogue.jsonld`; repeat `--checkout <slug>=<path>` to also recompute
+tree digests and counts from local domain checkouts. It runs offline and without
+Git. Its `--catalogue` option supports registry fixtures; by default it reads the
+catalogue beside the manifest.
 
 ---
 

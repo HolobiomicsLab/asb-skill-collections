@@ -343,6 +343,15 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   — but it is what keeps the six corrected sites honest now that the derivation
   gate makes the two numbers one number.
 
+## [metabolomics-v3.0.0] — 2026-11-09
+
+Consolidated rebuild on the class-A pipeline: **11,830 skills** across **1,989
+tools**, distilled from **477 published method papers (journal articles and
+preprints)**, with **20 composite workflows** recomposed from the v2 collection.
+The release was published from the domain repository
+`HolobiomicsLab/asb-skills-metabolomics` as
+[10.5281/zenodo.24054446](https://doi.org/10.5281/zenodo.24054446).
+
 ## [0.2.0] — 2026-06-29
 
 First release of the installable tooling and of composite workflow super-skills.
