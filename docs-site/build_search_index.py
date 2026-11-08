@@ -363,7 +363,25 @@ def collection_statuses(labels: list[str]) -> dict[str, str]:
     return {label: statuses.get(label, "staged") for label in labels}
 
 
-def _discover_collections(manifest: dict, checkouts: dict[str, Path]) -> None:
+def _indexed_releases(domain: dict, include_superseded: bool) -> list[dict]:
+    """The releases of one domain the site indexes.
+
+    The latest published release of a domain plus its legacy trees, unless
+    ``include_superseded`` asks for every release: a superseded release doubles
+    the index for text the latest release carries in a newer form.
+    """
+    releases = [r for r in domain.get("releases", []) if isinstance(r, dict)]
+    if include_superseded:
+        return releases
+    published = [r for r in releases if r.get("status") != "legacy"]
+    legacy = [r for r in releases if r.get("status") == "legacy"]
+    latest = max(published, key=lambda r: int(r["version"]), default=None)
+    return ([latest] if latest else []) + legacy
+
+
+def _discover_collections(
+    manifest: dict, checkouts: dict[str, Path], include_superseded: bool = False
+) -> None:
     """Resolve manifest releases and staged trees in supplied checkouts."""
     global _COLLECTIONS
     _COLLECTIONS = {}
@@ -372,7 +390,7 @@ def _discover_collections(manifest: dict, checkouts: dict[str, Path]) -> None:
         if checkout is None:
             sys.stderr.write(f"warning: no checkout for {slug}; skipping its releases\n")
             continue
-        for release in domain.get("releases", []):
+        for release in _indexed_releases(domain, include_superseded):
             collection = checkout / release["path"]
             _COLLECTIONS[collection] = {
                 "label": _collection_label(slug, release["version"]),
@@ -391,12 +409,14 @@ def _discover_collections(manifest: dict, checkouts: dict[str, Path]) -> None:
 
 
 def build_index(
-    manifest_path: Path | None = None, checkouts: dict[str, Path] | None = None
+    manifest_path: Path | None = None,
+    checkouts: dict[str, Path] | None = None,
+    include_superseded: bool = False,
 ) -> dict:
     """Build a deterministic payload from a manifest and domain checkouts."""
     manifest_path = manifest_path or REPO_ROOT / "collections.yaml"
     manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
-    _discover_collections(manifest, checkouts or {})
+    _discover_collections(manifest, checkouts or {}, include_superseded)
     papers = index_papers()
     skills = index_skills()
     workflows = index_workflows()
@@ -446,6 +466,11 @@ def main(argv: list[str] | None = None) -> int:
         help="Domain checkout to index; repeatable",
     )
     ap.add_argument(
+        "--include-superseded",
+        action="store_true",
+        help="Index every release of a domain, not only the latest published one and the legacy trees",
+    )
+    ap.add_argument(
         "--check-manifest",
         type=Path,
         metavar="INDEX_JSON",
@@ -483,7 +508,7 @@ def main(argv: list[str] | None = None) -> int:
         return 2
     output = args.output if args.output is not None else OUTPUT
 
-    payload = build_index(args.manifest, checkouts)
+    payload = build_index(args.manifest, checkouts, args.include_superseded)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(serialize(payload), encoding="utf-8")
     size = output.stat().st_size

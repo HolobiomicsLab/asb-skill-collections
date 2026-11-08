@@ -44,12 +44,18 @@ holds no content trees: the builder reads `collections.yaml` and the domain
 checkouts passed on its command line.
 
 ```bash
-python3 docs-site/build_search_index.py
+python3 docs-site/build_search_index.py --checkout metabolomics=<domain checkout> --checkout epigenomics=<domain checkout> --checkout transcriptomics=<domain checkout>
 ```
 
+The index covers the latest published release of each domain and the legacy
+trees; `--include-superseded` adds every release the registry lists. The
+payload records the manifest digest it was built from, and CI compares that
+digest with the committed `collections.yaml` (`--check-manifest`), since the
+domain repositories are private.
+
 Requirements: Python 3.9+ and `PyYAML` (already pinned in `pyproject.toml`).
-The script walks the local filesystem from the repo root. No network access is
-needed.
+The script walks the domain checkouts given on the command line. No network
+access is needed.
 
 Stdout prints a one-line summary like:
 
@@ -66,7 +72,7 @@ two builds of the same tree are byte-identical. The `search-index` job in
 from the committed file. To check locally without touching the committed file:
 
 ```bash
-python docs-site/build_search_index.py --output /tmp/search_index.json
+python docs-site/build_search_index.py --checkout metabolomics=<domain checkout> --output /tmp/search_index.json
 cmp /tmp/search_index.json docs-site/search_index.json
 ```
 

@@ -64,21 +64,37 @@ def compute_tree_digest(repository: Path, release_path: str) -> str:
 
 
 def checkout_counts(collection: Path) -> dict[str, int]:
-    """Read release totals from the collection indexes and source corpus."""
-    with (collection / "skills_index.json").open(encoding="utf-8") as stream:
-        skills = json.load(stream)
-    with (collection / "tools_index.json").open(encoding="utf-8") as stream:
-        tools = json.load(stream)
-    with (collection / "workflows" / "workflows_index.json").open(
-        encoding="utf-8"
-    ) as stream:
-        workflows = json.load(stream)
+    """Read release totals from the collection indexes and source corpus.
+
+    A router-shaped release carries ``skills_index.json``, ``tools_index.json``
+    and ``workflows/workflows_index.json``. A legacy tree (the v1 collections)
+    has none of them: its skills are the ``SKILL.md`` files under ``skills/``,
+    its tools the YAML files under ``tools/``, and it ships no workflows.
+    """
+    skills_index = collection / "skills_index.json"
+    if skills_index.is_file():
+        with skills_index.open(encoding="utf-8") as stream:
+            skills = len(json.load(stream))
+    else:
+        skills = sum(1 for _ in (collection / "skills").rglob("SKILL.md"))
+    tools_index = collection / "tools_index.json"
+    if tools_index.is_file():
+        with tools_index.open(encoding="utf-8") as stream:
+            tools = len(json.load(stream))
+    else:
+        tools = len(list((collection / "tools").glob("*.yaml")))
+    workflows_index = collection / "workflows" / "workflows_index.json"
+    if workflows_index.is_file():
+        with workflows_index.open(encoding="utf-8") as stream:
+            workflows = len(json.load(stream))
+    else:
+        workflows = 0
     with (collection / "corpus.yaml").open(encoding="utf-8") as stream:
         corpus = yaml.safe_load(stream)
     return {
-        "skills": len(skills),
-        "tools": len(tools),
-        "workflows": len(workflows),
+        "skills": skills,
+        "tools": tools,
+        "workflows": workflows,
         "papers": len(corpus["papers"]),
     }
 
@@ -242,7 +258,14 @@ def validate_domain(
     failures = []
     if not domain.get("repository"):
         failures.append(f"{slug}: missing repository")
-    if not DOI_PATTERN.fullmatch(str(domain.get("concept_doi", ""))):
+    releases = domain.get("releases")
+    all_legacy = isinstance(releases, list) and bool(releases) and all(
+        isinstance(release, dict) and release.get("status") == "legacy"
+        for release in releases
+    )
+    if domain.get("concept_doi") is None and all_legacy:
+        pass  # a domain with only legacy releases has no Zenodo lineage yet
+    elif not DOI_PATTERN.fullmatch(str(domain.get("concept_doi", ""))):
         failures.append(f"{slug}: invalid concept_doi {domain.get('concept_doi')!r}")
     releases = domain.get("releases")
     if not isinstance(releases, list) or not releases:
