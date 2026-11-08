@@ -107,6 +107,10 @@ def validate_release(
     if not isinstance(release, dict):
         return [f"{label}: release must be a mapping"]
     failures = []
+    status = release.get("status")
+    is_legacy = status == "legacy"
+    if status is not None and not is_legacy:
+        failures.append(f"{label}: invalid status {status!r}")
     release_path = release.get("path")
     if (
         not isinstance(release_path, str)
@@ -119,9 +123,19 @@ def validate_release(
         f"{label}: missing required key {key}"
         for key in sorted(REQUIRED_RELEASE_KEYS - release.keys())
     )
-    for key in ("version_doi",):
-        if not DOI_PATTERN.fullmatch(str(release.get(key, ""))):
-            failures.append(f"{label}: invalid {key} {release.get(key)!r}")
+    if is_legacy:
+        for key in ("tag", "version_doi"):
+            if release.get(key) is not None:
+                failures.append(f"{label}: legacy {key} must be null")
+    else:
+        if release.get("tag") is not None and (
+            not isinstance(release["tag"], str) or not release["tag"]
+        ):
+            failures.append(f"{label}: invalid tag {release.get('tag')!r}")
+        if not DOI_PATTERN.fullmatch(str(release.get("version_doi", ""))):
+            failures.append(
+                f"{label}: invalid version_doi {release.get('version_doi')!r}"
+            )
     if not COMMIT_PATTERN.fullmatch(str(release.get("commit", ""))):
         failures.append(f"{label}: invalid commit {release.get('commit')!r}")
     if not DIGEST_PATTERN.fullmatch(str(release.get("tree_digest", ""))):
@@ -151,7 +165,10 @@ def validate_catalogue(label: str, release: dict, entries: dict) -> list[str]:
     if entry is None:
         return [f"{label}: catalogue entry missing"]
     failures = []
-    if entry.get("doi") != release.get("version_doi"):
+    is_legacy = release.get("status") == "legacy"
+    if is_legacy and not entry.get("doi"):
+        pass
+    elif entry.get("doi") != release.get("version_doi"):
         failures.append(
             f"{label}: catalogue doi {entry.get('doi')!r} != {release.get('version_doi')!r}"
         )

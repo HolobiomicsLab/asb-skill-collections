@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
-"""Build search_index.json for the static docs-site full-text search.
+"""Build search_index.json from explicit domain-repository checkouts.
 
-Walks `collections/**` and `staged-collections/**` from the repo root,
-extracts searchable fields from corpus.yaml, SKILL.md, and tool YAMLs,
-and emits docs-site/search_index.json. `collection_status` maps each
-collection to "released" or "staged" with the rule regen_catalogue.py uses,
-so the search page can label results from staged collections.
+``collections.yaml`` lists released trees. Each ``--checkout slug=path`` adds
+that domain's releases and any staged tree to the index. Missing checkouts are
+reported and skipped; a build with no checkouts is refused.
 
 Stdlib + PyYAML only (no other deps). Idempotent: overwrites the index
 in place. Maintainers re-run this after promote, before committing.
@@ -15,7 +13,7 @@ is in sorted path order, so two builds of one tree are byte-identical. CI
 relies on that to compare a fresh build with the committed index.
 
 Usage:
-    python docs-site/build_search_index.py
+    python docs-site/build_search_index.py --checkout metabolomics=/path/to/domain
     python docs-site/build_search_index.py --output /tmp/search_index.json
 
 Output:
@@ -25,6 +23,7 @@ Output:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import sys
@@ -43,13 +42,14 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
 from asb_skill_collections import layout  # noqa: E402  (needs REPO_ROOT on the path)
-from scripts.regen_catalogue import collection_status, released_collection_dirs  # noqa: E402
+from scripts.check_collections_manifest import parse_checkout  # noqa: E402
 from scripts.skill_index import split_frontmatter  # noqa: E402
 DOCS_SITE = Path(__file__).resolve().parent
 OUTPUT = DOCS_SITE / "search_index.json"
 
 SCHEMA_VERSION = "0.1"
 SUMMARY_CHAR_LIMIT = 500
+_COLLECTIONS: dict[Path, dict] = {}
 
 
 def _strip_html(text: str) -> str:
@@ -103,13 +103,11 @@ def _extract_summary(body: str) -> str:
 
 
 def _iter_corpus_files() -> list[Path]:
-    paths: list[Path] = []
-    for root_name in ("collections", "staged-collections"):
-        root = REPO_ROOT / root_name
-        if not root.exists():
-            continue
-        paths.extend(sorted(root.glob("*/v*/corpus.yaml")))
-    return paths
+    return [
+        root / "corpus.yaml"
+        for root in sorted(_COLLECTIONS)
+        if (root / "corpus.yaml").is_file()
+    ]
 
 
 def _iter_skill_files() -> list[Path]:
@@ -119,47 +117,44 @@ def _iter_skill_files() -> list[Path]:
     `skills/`. Globbing one of them drops the other silently, so resolution
     goes through the same helper the release gate uses.
     """
-    paths: list[Path] = []
-    for root_name in ("collections", "staged-collections"):
-        root = REPO_ROOT / root_name
-        if not root.exists():
-            continue
-        for version_dir in sorted(root.glob("*/v*")):
-            paths.extend(layout.iter_skill_md(version_dir))
-    return paths
+    return [
+        path
+        for collection in sorted(_COLLECTIONS)
+        for path in layout.iter_skill_md(collection)
+    ]
 
 
 def _iter_workflow_files() -> list[Path]:
-    paths: list[Path] = []
-    for root_name in ("collections", "staged-collections"):
-        root = REPO_ROOT / root_name
-        if not root.exists():
-            continue
-        # Composite-workflow super-skills; skip the _workflow_router and bin/.
-        paths.extend(
-            p for p in sorted(root.glob("*/v*/workflows/*/SKILL.md"))
-            if not p.parent.name.startswith("_")
-        )
-    return paths
+    return [
+        path
+        for collection in sorted(_COLLECTIONS)
+        for path in sorted((collection / "workflows").glob("*/SKILL.md"))
+        if not path.parent.name.startswith("_")
+    ]
 
 
 def _iter_tool_files() -> list[Path]:
-    paths: list[Path] = []
-    for root_name in ("collections", "staged-collections"):
-        root = REPO_ROOT / root_name
-        if not root.exists():
-            continue
-        paths.extend(sorted(root.glob("*/v*/tools/*.yaml")))
-    return paths
+    return [
+        path
+        for collection in sorted(_COLLECTIONS)
+        for path in sorted((collection / "tools").glob("*.yaml"))
+    ]
 
 
 def _collection_from_path(path: Path) -> str:
-    """Path like .../collections/metabolomics/v1/... -> 'metabolomics/v1'."""
-    parts = path.relative_to(REPO_ROOT).parts
-    # parts[0] in {collections, staged-collections}; parts[1]=slug; parts[2]=vN
-    if len(parts) >= 3:
-        return f"{parts[1]}/{parts[2]}"
+    """Return the manifest label for a file in an indexed checkout."""
+    for collection, info in _COLLECTIONS.items():
+        if collection == path or collection in path.parents:
+            return info["label"]
     return ""
+
+
+def _source_path(path: Path) -> str:
+    """Return a checkout-relative POSIX source path."""
+    for collection, info in _COLLECTIONS.items():
+        if collection == path or collection in path.parents:
+            return path.relative_to(info["checkout"]).as_posix()
+    return path.as_posix()
 
 
 def index_papers() -> list[dict]:
@@ -258,7 +253,7 @@ def index_skills() -> list[dict]:
                 "collection": coll_label,
                 "summary": summary,
                 "source_dois": source_dois,
-                "md_path": str(spath.relative_to(REPO_ROOT)),
+                    "md_path": _source_path(spath),
                 "search_text": search_text,
             }
         )
@@ -306,7 +301,7 @@ def index_workflows() -> list[dict]:
                 "stage_count": stage_count,
                 "collection": coll_label,
                 "summary": summary,
-                "md_path": str(wpath.relative_to(REPO_ROOT)),
+                    "md_path": _source_path(wpath),
                 "search_text": search_text,
             }
         )
@@ -355,7 +350,7 @@ def index_tools() -> list[dict]:
                 "evidence_text": evidence_text,
                 "collection": coll_label,
                 "source_doi": source_doi,
-                "yaml_path": str(tpath.relative_to(REPO_ROOT)),
+                "yaml_path": _source_path(tpath),
                 "search_text": search_text,
             }
         )
@@ -363,19 +358,45 @@ def index_tools() -> list[dict]:
 
 
 def collection_statuses(labels: list[str]) -> dict[str, str]:
-    """Map each '<slug>/v<N>' label to "released" or "staged", as the catalogue does.
-
-    The status follows the label, not the tree: a label is released when the
-    marketplace serves collections/<label>, and staged otherwise. A
-    staged-collections/<label> tree that shares its label with a released
-    collection is therefore reported as released.
-    """
-    released = released_collection_dirs(REPO_ROOT)
-    return {label: collection_status(f"collections/{label}", released) for label in labels}
+    """Map indexed labels to their manifest or staging status."""
+    statuses = {info["label"]: info["status"] for info in _COLLECTIONS.values()}
+    return {label: statuses.get(label, "staged") for label in labels}
 
 
-def build_index() -> dict:
-    """The index payload for the tree under REPO_ROOT."""
+def _discover_collections(manifest: dict, checkouts: dict[str, Path]) -> None:
+    """Resolve manifest releases and staged trees in supplied checkouts."""
+    global _COLLECTIONS
+    _COLLECTIONS = {}
+    for slug, domain in sorted(manifest.get("domains", {}).items()):
+        checkout = checkouts.get(slug)
+        if checkout is None:
+            sys.stderr.write(f"warning: no checkout for {slug}; skipping its releases\n")
+            continue
+        for release in domain.get("releases", []):
+            collection = checkout / release["path"]
+            _COLLECTIONS[collection] = {
+                "label": _collection_label(slug, release["version"]),
+                "checkout": checkout,
+                "commit": release.get("commit"),
+                "status": "staged" if release.get("status") == "legacy" else "released",
+            }
+        staged_root = checkout / "staged-collections" / slug
+        for collection in sorted(staged_root.glob("v*")):
+            _COLLECTIONS[collection] = {
+                "label": f"{slug}/{collection.name}",
+                "checkout": checkout,
+                "commit": None,
+                "status": "staged",
+            }
+
+
+def build_index(
+    manifest_path: Path | None = None, checkouts: dict[str, Path] | None = None
+) -> dict:
+    """Build a deterministic payload from a manifest and domain checkouts."""
+    manifest_path = manifest_path or REPO_ROOT / "collections.yaml"
+    manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
+    _discover_collections(manifest, checkouts or {})
     papers = index_papers()
     skills = index_skills()
     workflows = index_workflows()
@@ -383,10 +404,17 @@ def build_index() -> dict:
     collections = sorted(
         {r["collection"] for r in papers + skills + workflows + tools if r.get("collection")}
     )
+    commits = {
+        info["label"]: info["commit"]
+        for info in _COLLECTIONS.values()
+        if info["label"] in collections and info["commit"] is not None
+    }
     return {
         "schema_version": SCHEMA_VERSION,
+        "manifest_sha256": hashlib.sha256(manifest_path.read_bytes()).hexdigest(),
         "collections": collections,
         "collection_status": collection_statuses(collections),
+        "collection_commits": dict(sorted(commits.items())),
         "papers": papers,
         "skills": skills,
         "workflows": workflows,
@@ -396,7 +424,7 @@ def build_index() -> dict:
 
 def serialize(payload: dict) -> str:
     """The exact text written to disk, so a byte comparison is meaningful."""
-    return json.dumps(payload, ensure_ascii=False, indent=2)
+    return json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True)
 
 
 def _display(path: Path) -> str:
@@ -408,6 +436,21 @@ def _display(path: Path) -> str:
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="Build the docs-site full-text search index.")
+    ap.add_argument("--manifest", type=Path, default=REPO_ROOT / "collections.yaml")
+    ap.add_argument(
+        "--checkout",
+        action="append",
+        type=parse_checkout,
+        default=[],
+        metavar="SLUG=PATH",
+        help="Domain checkout to index; repeatable",
+    )
+    ap.add_argument(
+        "--check-manifest",
+        type=Path,
+        metavar="INDEX_JSON",
+        help="Only compare the index's recorded manifest digest with the current one",
+    )
     ap.add_argument(
         "--output",
         type=Path,
@@ -415,9 +458,32 @@ def main(argv: list[str] | None = None) -> int:
         help="Write the index here instead of docs-site/search_index.json.",
     )
     args = ap.parse_args(argv)
+    if args.check_manifest is not None:
+        expected = hashlib.sha256(args.manifest.read_bytes()).hexdigest()
+        recorded = json.loads(args.check_manifest.read_text(encoding="utf-8")).get(
+            "manifest_sha256"
+        )
+        if recorded == expected:
+            print(f"OK: search index matches {args.manifest}")
+            return 0
+        print(
+            f"error: search index manifest_sha256 {recorded!r} != current {expected!r}",
+            file=sys.stderr,
+        )
+        return 1
+    if not args.checkout:
+        print(
+            "error: at least one --checkout slug=path is required to build the search index",
+            file=sys.stderr,
+        )
+        return 2
+    checkouts = dict(args.checkout)
+    if len(checkouts) != len(args.checkout):
+        print("error: each --checkout slug must be unique", file=sys.stderr)
+        return 2
     output = args.output if args.output is not None else OUTPUT
 
-    payload = build_index()
+    payload = build_index(args.manifest, checkouts)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(serialize(payload), encoding="utf-8")
     size = output.stat().st_size

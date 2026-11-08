@@ -1,21 +1,11 @@
+"""Regenerate ``catalogue.jsonld`` from the domain-release manifest.
+
+The current catalogue supplies descriptive metadata (titles, topics, curators)
+that is not duplicated in ``collections.yaml``. The manifest supplies release
+membership, counts, dates, DOIs and leaf layout. Checkouts verify those counts
+without becoming catalogue inputs.
 """
-Regenerate catalogue.jsonld at the repo root by walking collections/ directory.
 
-JSON-LD schema: @type SkillCollectionRegistry (LinkML class from asb-schema).
-Each collection entry carries: @id (w3id IRI), title, version, slug, domain_topics
-(EDAM IRIs), doi, released_at, skills_count, tools_count, lead_curators[], status.
-
-`status` is "released" when the plugin marketplace (.claude-plugin/marketplace.json)
-serves the collection directory or collections.yaml records its domain release,
-and "staged" otherwise. `doi` is written only when it is a minted DOI
-(10.<registrant>/<suffix>); a placeholder such as "TODO-zenodo" is left out.
-
-Output is deterministic: collections sorted alphabetically by slug; timestamps
-are UTC ISO 8601 with Z suffix.
-
-Usage:
-    python scripts/regen_catalogue.py [--repo-root .] [--output catalogue.jsonld]
-"""
 from __future__ import annotations
 
 import argparse
@@ -31,12 +21,10 @@ import yaml
 # the repo root has to be added before the sibling package can be imported.
 if __package__ in (None, ""):
     import os.path as _p
-    import sys as _sys
 
-    _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
+    sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
 
-from asb_skill_collections import layout
-
+from scripts.check_collections_manifest import COUNTS, checkout_counts, parse_checkout  # noqa: E402
 
 CATALOGUE_CONTEXT = {
     "@vocab": "https://schema.org/",
@@ -54,39 +42,35 @@ CATALOGUE_CONTEXT = {
     "leaf_dir": "asb:leafDir",
     "status": "asb:status",
 }
-
 REGISTRY_ID = "https://w3id.org/holobiomicslab/asb-skill/registry"
-
 MARKETPLACE = pathlib.Path(".claude-plugin") / "marketplace.json"
-COLLECTIONS_MANIFEST = pathlib.Path("collections.yaml")
 RELEASED = "released"
 STAGED = "staged"
-
-_MINTED_DOI = re.compile(r"^10\.\d{4,9}/\S+$")
+MINTED_DOI = re.compile(r"^10\.\d{4,9}/\S+$")
 
 
 def is_minted_doi(doi: object) -> bool:
-    """True for a bare DOI (10.<registrant>/<suffix>), False for a placeholder or URL."""
-    return isinstance(doi, str) and bool(_MINTED_DOI.match(doi.strip()))
+    """Return whether a value is a bare minted DOI."""
+    return isinstance(doi, str) and bool(MINTED_DOI.fullmatch(doi.strip()))
 
 
 def released_collection_dirs(repo_root: pathlib.Path) -> set[str]:
-    """Repo-relative directories the plugin marketplace serves, e.g. collections/x/v2."""
+    """Retain local marketplace paths for older callers; ignore remote sources."""
     path = repo_root / MARKETPLACE
     if not path.is_file():
         return set()
     plugins = json.loads(path.read_text(encoding="utf-8")).get("plugins") or []
-    out: set[str] = set()
-    for plugin in plugins:
-        source = plugin.get("source") if isinstance(plugin, dict) else None
-        if isinstance(source, str):
-            out.add(pathlib.PurePosixPath(source.strip()).as_posix().removeprefix("./").rstrip("/"))
-    return out
+    sources = [plugin.get("source") for plugin in plugins if isinstance(plugin, dict)]
+    return {
+        pathlib.PurePosixPath(source.strip()).as_posix().removeprefix("./").rstrip("/")
+        for source in sources
+        if isinstance(source, str)
+    }
 
 
 def load_collections_manifest(repo_root: pathlib.Path) -> dict:
-    """Load the optional domain-release manifest without validating its schema."""
-    path = repo_root / COLLECTIONS_MANIFEST
+    """Load the optional registry for shared manifest consumers."""
+    path = repo_root / "collections.yaml"
     if not path.is_file():
         return {}
     with path.open(encoding="utf-8") as stream:
@@ -94,174 +78,173 @@ def load_collections_manifest(repo_root: pathlib.Path) -> dict:
     return manifest if isinstance(manifest, dict) else {}
 
 
+def require_collections_manifest(repo_root: pathlib.Path) -> dict:
+    """Require a domains mapping when generating registry artifacts."""
+    manifest = load_collections_manifest(repo_root)
+    if not isinstance(manifest.get("domains"), dict):
+        raise ValueError(f"manifest must contain a domains mapping: {repo_root / 'collections.yaml'}")
+    return manifest
+
+
 def manifest_release_dirs(repo_root: pathlib.Path) -> set[str]:
-    """Return repository-relative paths recorded for every domain release."""
-    domains = load_collections_manifest(repo_root).get("domains")
-    if not isinstance(domains, dict):
-        return set()
-    paths = set()
-    for domain in domains.values():
-        if not isinstance(domain, dict):
-            continue
-        releases = domain.get("releases")
-        if not isinstance(releases, list):
-            continue
-        for release in releases:
-            if isinstance(release, dict) and isinstance(release.get("path"), str):
-                paths.add(release["path"])
-    return paths
+    """Return release paths for callers that classify existing catalogue rows."""
+    return {
+        release["path"]
+        for _, release in iter_releases(load_collections_manifest(repo_root))
+    }
 
 
 def collection_status(
-    rel_dir: str,
-    released_dirs: set[str],
-    manifest_dirs: set[str] = frozenset(),
+    rel_dir: str, released_dirs: set[str], manifest_dirs: set[str] = frozenset()
 ) -> str:
-    """Return released for a marketplace or manifest release, staged otherwise."""
+    """Classify a legacy path without using it for catalogue discovery."""
     return RELEASED if rel_dir in released_dirs | manifest_dirs else STAGED
 
 
-def _load_collection_yaml(path: pathlib.Path) -> dict:
-    """Load and return a collection.yaml, raising ValueError on bad content."""
-    with open(path) as f:
-        data = yaml.safe_load(f)
-    if not isinstance(data, dict):
-        raise ValueError(f"Expected dict in {path}, got {type(data)}")
-    return data
+def _template_entries(catalogue_path: pathlib.Path) -> dict[tuple[str, str], dict]:
+    if not catalogue_path.is_file():
+        return {}
+    with catalogue_path.open(encoding="utf-8") as stream:
+        catalogue = json.load(stream)
+    return {
+        (str(entry.get("slug")), str(entry.get("version"))): entry
+        for entry in catalogue.get("collections", [])
+        if isinstance(entry, dict)
+    }
 
 
-def _collection_entry(
-    col_yaml: dict, collection_dir: pathlib.Path, status: str | None = None
-) -> dict:
-    """Convert a collection.yaml dict to a catalogue entry dict."""
-    entry: dict = {}
-
-    # @id: use explicit or construct from slug + version
-    iri = col_yaml.get("@id")
-    if not iri:
-        slug = col_yaml.get("slug", "")
-        version = col_yaml.get("version", "")
-        iri = f"https://w3id.org/holobiomicslab/asb-skill/collection/{slug}/v{version}"
-    entry["@id"] = iri
-
-    # Required fields
-    entry["title"] = col_yaml.get("title", "")
-    entry["version"] = str(col_yaml.get("version", ""))
-    entry["slug"] = col_yaml.get("slug", "")
-    entry["skills_count"] = int(col_yaml.get("skills_count", 0))
-    entry["tools_count"] = int(col_yaml.get("tools_count", 0))
-    # Consumers that link to a skill's source need the layout, not a guess:
-    # the corpus sits in leaves/ when router-shaped and in skills/ otherwise.
-    entry["leaf_dir"] = layout.leaf_dir(collection_dir).name
-
-    # Optional fields
-    domain_topics = col_yaml.get("domain_topics") or []
-    entry["domain_topics"] = list(domain_topics)
-
-    doi = col_yaml.get("doi")
+def _release_entry(slug: str, release: dict, template: dict) -> dict:
+    version = str(release["version"])
+    entry = dict(template)
+    entry["@id"] = template.get(
+        "@id",
+        f"https://w3id.org/holobiomicslab/asb-skill/collection/{slug}/v{version}",
+    )
+    entry.setdefault("title", f"ASB {slug.title()} Skill Collection v{version}")
+    entry.update(
+        version=version,
+        slug=slug,
+        skills_count=release["skills"],
+        tools_count=release["tools"],
+        leaf_dir=release.get("leaf_dir", "leaves"),
+        status=STAGED if release.get("status") == "legacy" else RELEASED,
+    )
+    entry.setdefault("domain_topics", [])
+    entry.setdefault("lead_curators", [])
+    if release.get("released") is not None:
+        released = str(release["released"])
+        # The manifest records a date; keep the template's full timestamp when
+        # it falls on that date, so a regeneration does not rewrite it.
+        current = str(template.get("released_at", ""))
+        entry["released_at"] = current if current.startswith(released) else released
+    doi = release.get("version_doi")
     if is_minted_doi(doi):
         entry["doi"] = doi.strip()
-
-    released_at = col_yaml.get("released_at")
-    if released_at:
-        entry["released_at"] = str(released_at)
-
-    lead_curators = col_yaml.get("lead_curators") or []
-    entry["lead_curators"] = list(lead_curators)
-
-    if status is not None:
-        entry["status"] = status
-
+    else:
+        entry.pop("doi", None)
     return entry
 
 
-def build_catalogue(repo_root: pathlib.Path) -> dict:
-    """
-    Walk repo_root/collections/ and build a catalogue dict.
+def iter_releases(manifest: dict) -> list[tuple[str, dict]]:
+    """Return releases in deterministic domain/version order."""
+    releases = [
+        (slug, release)
+        for slug, domain in manifest["domains"].items()
+        for release in domain.get("releases", [])
+    ]
+    return sorted(releases, key=lambda item: (item[0], str(item[1]["version"])))
 
-    Args:
-        repo_root: Path to the repository root.
 
-    Returns:
-        A dict suitable for serialisation as JSON-LD.
-    """
-    collections_dir = repo_root / "collections"
-    entries: list[dict] = []
-    released_dirs = released_collection_dirs(repo_root)
-    manifest_dirs = manifest_release_dirs(repo_root)
-
-    if collections_dir.exists():
-        # Walk all collection.yaml files: collections/<slug>/v<N>/collection.yaml
-        for col_yaml_path in sorted(collections_dir.glob("**/collection.yaml")):
-            try:
-                col_data = _load_collection_yaml(col_yaml_path)
-                rel_dir = col_yaml_path.parent.relative_to(repo_root).as_posix()
-                status = collection_status(rel_dir, released_dirs, manifest_dirs)
-                entry = _collection_entry(col_data, col_yaml_path.parent, status)
-                entries.append(entry)
-            except Exception as exc:
-                print(
-                    f"WARNING: skipping {col_yaml_path}: {exc}",
-                    file=sys.stderr,
-                )
-
-    # Sort deterministically by slug
-    entries.sort(key=lambda e: (e.get("slug", ""), e.get("version", "")))
-
-    now_utc = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-
+def build_catalogue(
+    repo_root: pathlib.Path,
+) -> dict:
+    """Build one catalogue entry per manifest release."""
+    manifest = require_collections_manifest(repo_root)
+    templates = _template_entries(repo_root / "catalogue.jsonld")
+    entries = []
+    for slug, release in iter_releases(manifest):
+        key = (slug, str(release["version"]))
+        entries.append(_release_entry(slug, release, templates.get(key, {})))
     return {
         "@context": CATALOGUE_CONTEXT,
         "@type": "asb:SkillCollectionRegistry",
         "@id": REGISTRY_ID,
         "name": "ASB Skill Collection Registry",
         "description": (
-            "Auto-generated registry of the ASB Skill Collections in this "
-            "repository. Each entry's status says whether it is released or staged."
+            "Auto-generated registry of the ASB Skill Collections in the domain "
+            "repositories. Each entry's status says whether it is released or staged."
         ),
-        "generated_at": now_utc,
+        "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "collections": entries,
     }
 
 
+def verify_checkouts(manifest: dict, checkouts: dict[str, pathlib.Path]) -> list[str]:
+    """Compare all four release counts with each supplied domain checkout."""
+    failures = []
+    for slug, release in iter_releases(manifest):
+        checkout = checkouts.get(slug)
+        if checkout is None:
+            continue
+        label = f"{slug}/v{release['version']}"
+        try:
+            actual = checkout_counts(checkout / release["path"])
+        except (OSError, KeyError, TypeError, ValueError, yaml.YAMLError) as error:
+            failures.append(f"{label}: checkout validation failed: {error}")
+            continue
+        failures.extend(
+            f"{label}: checkout {key} expected {release[key]} got {actual[key]}"
+            for key in COUNTS
+            if actual[key] != release[key]
+        )
+    return failures
+
+
 def write_catalogue(catalogue: dict, output_path: pathlib.Path) -> None:
-    """Serialise catalogue dict to JSON-LD at output_path (deterministic, 2-space indent)."""
+    """Write stable, human-readable JSON-LD."""
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(output_path, "w") as f:
-        json.dump(catalogue, f, indent=2, ensure_ascii=False)
-        f.write("\n")
-
-
-def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Regenerate catalogue.jsonld from collections/ directory."
+    output_path.write_text(
+        json.dumps(catalogue, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
+
+
+def main(argv: list[str] | None = None) -> int:
+    """Regenerate the catalogue or refuse inconsistent checkouts."""
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--repo-root", default=".", help="Tooling repository root")
+    parser.add_argument("--output", default="catalogue.jsonld")
     parser.add_argument(
-        "--repo-root",
-        default=".",
-        help="Path to the repository root (default: current directory)",
+        "--checkout",
+        action="append",
+        type=parse_checkout,
+        default=[],
+        metavar="SLUG=PATH",
+        help="Verify release counts against a domain checkout; repeatable",
     )
-    parser.add_argument(
-        "--output",
-        default="catalogue.jsonld",
-        help="Output path for catalogue.jsonld (default: catalogue.jsonld)",
-    )
-    args = parser.parse_args()
-
-    repo_root = pathlib.Path(args.repo_root).resolve()
-    output_path = pathlib.Path(args.output)
+    arguments = parser.parse_args(argv)
+    repo_root = pathlib.Path(arguments.repo_root).resolve()
+    checkouts = dict(arguments.checkout)
+    if len(checkouts) != len(arguments.checkout):
+        print("usage: each --checkout slug must be unique", file=sys.stderr)
+        return 2
+    try:
+        manifest = require_collections_manifest(repo_root)
+        failures = verify_checkouts(manifest, checkouts)
+    except (OSError, ValueError, TypeError, json.JSONDecodeError, yaml.YAMLError) as error:
+        print(f"catalogue: {error}", file=sys.stderr)
+        return 1
+    if failures:
+        print("\n".join(failures), file=sys.stderr)
+        return 1
+    output_path = pathlib.Path(arguments.output)
     if not output_path.is_absolute():
         output_path = repo_root / output_path
-
     catalogue = build_catalogue(repo_root)
     write_catalogue(catalogue, output_path)
-
     count = len(catalogue["collections"])
-    print(
-        f"catalogue.jsonld written to {output_path} "
-        f"({count} collection{'s' if count != 1 else ''})"
-    )
+    print(f"catalogue.jsonld written to {output_path} ({count} collections)")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
