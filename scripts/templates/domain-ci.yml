@@ -1,0 +1,27 @@
+name: Domain content gates
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  released-collections:
+    name: ${{ matrix.collection.collection_path }}
+    strategy:
+      fail-fast: false
+      matrix:
+        collection:
+<MATRIX_ROWS>
+    # Pin the tooling commit recorded in collections.yaml for the release.
+    # Bump this full commit SHA deliberately when adopting newer gate tooling.
+    uses: HolobiomicsLab/asb-skill-collections/.github/workflows/domain-gates.yml@<TOOLING_SHA>
+    with:
+      domain: ${{ matrix.collection.domain }}
+      collection_path: ${{ matrix.collection.collection_path }}
+      receipts_path: ${{ matrix.collection.receipts_path }}
+      strict: true
