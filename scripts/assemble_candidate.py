@@ -54,6 +54,7 @@ EXPECTED_RECEIPTS = frozenset(
         "collect_receipt.json",
         "corpus.yaml",
         "corpus_join_receipt.json",
+        "email_redaction_receipt.json",
         "evidence_trim_receipt.json",
         "gate.txt",
         "gate_report.json",
@@ -268,6 +269,7 @@ def _stage_commands(options: argparse.Namespace) -> list[Stage]:
                 "--receipts",
                 str(options.receipts),
                 *(("--exclude-invalid-leaves",) if options.exclude_invalid_leaves else ()),
+                *(("--redact-third-party-emails",) if options.redact_third_party_emails else ()),
             ),
             "collect.txt",
         ),
@@ -614,6 +616,11 @@ def _parser() -> argparse.ArgumentParser:
         "--exclude-invalid-leaves",
         action="store_true",
         help="pass through to collect_from_cut.py: exclude unreadable leaves with a receipt row",
+    )
+    parser.add_argument(
+        "--redact-third-party-emails",
+        action="store_true",
+        help="pass through to collect_from_cut.py: redact non-allowlisted leaf e-mail addresses",
     )
     parser.add_argument("--dry-run", action="store_true")
     return parser
