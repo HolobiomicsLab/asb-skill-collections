@@ -19,11 +19,12 @@ fonts.
 | `search.html` (+ `search.js`) | Full-text search across papers / skills / tools (lunr.js) |
 
 All write actions (verify, flag, propose, contribute) round-trip through GitHub
-Issues or Pull Requests via prefilled URL params — no server.
+Issues or Pull Requests via prefilled URL params, with no server.
 
-`collections.html` reads each collection's machine indexes directly from GitHub
-raw (`collections/<slug>/v<N>/skills_index.json`, `…/workflows/workflows_index.json`,
-`…/tools_index.json`) — so it needs no build step and stays current with `main`.
+`collections.html` reads each collection's machine indexes from the domain
+repository's raw files (`<domain checkout>/collections/<slug>/v<N>/skills_index.json`,
+`workflows/workflows_index.json` and `tools_index.json` in that collection).
+Private domain content is not publicly readable until its repository opens.
 `contribute.html` scrubs file paths, emails, IPs, and secrets in the browser
 before building the issue body (same rules as the Python CLI).
 
@@ -37,16 +38,18 @@ step.
 
 ### Regenerating `search_index.json`
 
-Run after any promote (i.e. anytime `collections/**` or `staged-collections/**`
-changes in a way that affects papers, SKILL.md frontmatter, or tool YAMLs):
+After a domain promotion changes papers, SKILL.md frontmatter or tool YAMLs,
+make the relevant domain checkout available to the builder. The master checkout
+holds no content trees: the builder reads `collections.yaml` and the domain
+checkouts passed on its command line.
 
 ```bash
 python3 docs-site/build_search_index.py
 ```
 
 Requirements: Python 3.9+ and `PyYAML` (already pinned in `pyproject.toml`).
-The script walks the local filesystem from the repo root — no network access
-is needed.
+The script walks the local filesystem from the repo root. No network access is
+needed.
 
 Stdout prints a one-line summary like:
 

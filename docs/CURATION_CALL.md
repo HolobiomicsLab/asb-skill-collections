@@ -32,7 +32,7 @@ check (`governance/COI_POLICY.md`).
 
 1. **Expert review of a skill.** Read a skill and its source paper; accept it, edit it or
    reject it, with a one-line reason. Copy `templates/attestation.yaml.template` to
-   `collections/<slug>/v<N>/reviews/<paper-doi-slug>.yaml`, put the verdict and its reason in
+   `<domain checkout>/collections/<slug>/v<N>/reviews/<paper-doi-slug>.yaml`, put the verdict and its reason in
    `summary`, and open a pull request (`.github/CONTRIBUTING.md`, "How to contribute a
    review"). To ask for a paper to be reviewed without reviewing it yourself, open an issue
    from the request-paper-review template (`.github/ISSUE_TEMPLATE/request-paper-review.md`).
