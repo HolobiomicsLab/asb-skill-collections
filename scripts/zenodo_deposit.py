@@ -395,19 +395,36 @@ def metadata_payload(path: Path, publication_date: str):
     return {"metadata": metadata}, dropped
 
 
+def _dated_entries(dates):
+    """Return (entries with a start or an end, number dropped) from an inherited dates list.
+
+    A record edited in the web interface can carry a dates entry with a type and a
+    description but no date at all; the deposit API rejects it with 400 "Invalid date
+    provided" when it is sent back, so such entries are not carried.
+    """
+    entries = [d for d in (dates or []) if isinstance(d, dict) and (d.get("start") or d.get("end"))]
+    return entries, len(dates or []) - len(entries)
+
+
 def inherit_metadata(draft_metadata, payload):
-    """Return (payload, kept): the template laid over the metadata the draft inherited.
+    """Return (payload, kept, undated): the template laid over the metadata the draft inherited.
 
     A new-version draft starts from the previous record's metadata, including keys
     set in the web interface such as communities and language. Sending the template
     alone would drop them, so they are kept and the template wins on every key it
-    has. Only keys the deposit API documents are carried; read-only ones are not.
-    `kept` lists the inherited keys the template does not carry.
+    has. Only keys the deposit API documents are carried; read-only ones are not,
+    and inherited dates entries without a start or an end are not (`undated` counts
+    them). `kept` lists the inherited keys the template does not carry.
     """
     sendable = API_METADATA_KEYS - READ_ONLY_KEYS
     inherited = {key: value for key, value in (draft_metadata or {}).items() if key in sendable}
+    undated = 0
+    if "dates" in inherited and "dates" not in payload["metadata"]:
+        inherited["dates"], undated = _dated_entries(inherited["dates"])
+        if not inherited["dates"]:
+            del inherited["dates"]
     kept = sorted(set(inherited) - set(payload["metadata"]))
-    return {"metadata": {**inherited, **payload["metadata"]}}, kept
+    return {"metadata": {**inherited, **payload["metadata"]}}, kept, undated
 
 
 def record_id_from(path: Path) -> str:
@@ -549,10 +566,12 @@ def run_draft(args) -> int:
     for extra in extras:
         name = urllib.parse.quote(extra.path.name)
         _call("extra file upload", "PUT", f"{draft['links']['bucket']}/{name}", token, extra.path)
-    payload, kept = inherit_metadata(draft.get("metadata"), template)
+    payload, kept, undated = inherit_metadata(draft.get("metadata"), template)
     _call("metadata update", "PUT", f"{base}/{draft['id']}", token, payload)
     if kept:
         print("inherited metadata not in the template, kept: " + ", ".join(kept))
+    if undated:
+        print(f"inherited dates entry without start or end dropped: {undated}")
     url = draft["links"].get("html") or f"{host}/deposit/{draft['id']}"
     print(f"draft {draft['id']} created, not published: {url}\n"
           f"uploaded {archive.path.name} sha256 {archive.sha256}")

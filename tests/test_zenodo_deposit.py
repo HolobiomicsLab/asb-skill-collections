@@ -304,6 +304,29 @@ def test_draft_does_not_send_read_only_or_unknown_inherited_keys(repo, monkeypat
     assert not {"doi", "prereserve_doi", "not_a_deposit_key"} & set(sent)
 
 
+def test_draft_drops_inherited_dates_without_start_or_end(repo, monkeypatch, capsys):
+    # A record edited in the web interface can carry a dates entry with a type and a
+    # description but no date; the deposit API answers 400 "Invalid date provided".
+    inherited = {**INHERITED, "dates": [
+        {"type": "available", "description": "Release"},
+        {"start": "2026-06-22", "type": "collected"},
+    ]}
+    fake = FakeZenodo(zenodo_deposit.ZENODO_URL, inherited=inherited)
+    code, out, fake = run_draft(repo, monkeypatch, capsys, fake=fake)
+    sent = fake.calls[-1][3]["metadata"]
+    assert code == 0
+    assert sent["dates"] == [{"start": "2026-06-22", "type": "collected"}]
+    assert "inherited dates entry without start or end dropped: 1" in out.out
+
+
+def test_draft_drops_the_inherited_dates_key_when_no_entry_has_a_date(repo, monkeypatch, capsys):
+    inherited = {**INHERITED, "dates": [{"type": "available", "description": "Release"}]}
+    fake = FakeZenodo(zenodo_deposit.ZENODO_URL, inherited=inherited)
+    code, _, fake = run_draft(repo, monkeypatch, capsys, fake=fake)
+    assert code == 0
+    assert "dates" not in fake.calls[-1][3]["metadata"]
+
+
 def test_draft_without_inherited_metadata_sends_the_template_alone(repo, monkeypatch, capsys):
     code, out, fake = run_draft(repo, monkeypatch, capsys)
     assert code == 0 and "inherited metadata" not in out.out
