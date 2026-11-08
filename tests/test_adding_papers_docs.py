@@ -10,8 +10,14 @@ import shlex
 
 REPO = pathlib.Path(__file__).resolve().parent.parent
 DOC = REPO / "docs" / "adding-papers.md"
+CONTENT_DOCS = (
+    DOC,
+    REPO / "docs" / "CONTRIBUTION_LOOP.md",
+    REPO / "docs" / "NEXT_WAVE.md",
+)
 FENCE = re.compile(r"^```(?:bash|sh)\n(.*?)^```", re.MULTILINE | re.DOTALL)
 LOCAL_SCRIPT = re.compile(r"(?<![/\w.-])(scripts/[A-Za-z0-9_./-]+\.py)\b")
+UNQUALIFIED_CONTENT_PATH = re.compile(r"(?<!<domain checkout>/)collections/<domain>/")
 
 
 def _documented_local_commands() -> list[tuple[str, str]]:
@@ -72,3 +78,17 @@ def test_documented_version_gap_matches_both_candidate_parsers():
     assert not assemble_candidate.VERSION_RE.fullmatch("v3.1")
     assert not land_candidate.VERSION_PATTERN.fullmatch("v3.1")
 
+
+def test_generic_content_paths_are_domain_checkout_relative():
+    """The literal prefix <domain checkout>/ is the ownership marker."""
+    offenders = []
+    for document in CONTENT_DOCS:
+        for line_number, line in enumerate(
+            document.read_text(encoding="utf-8").splitlines(), start=1
+        ):
+            if UNQUALIFIED_CONTENT_PATH.search(line):
+                offenders.append(f"{document.relative_to(REPO)}:{line_number}")
+    assert not offenders, (
+        "generic content paths must start at the domain checkout: "
+        + ", ".join(offenders)
+    )

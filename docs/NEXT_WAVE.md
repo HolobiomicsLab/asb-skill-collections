@@ -10,7 +10,8 @@ new batch cut, see [Adding papers to a collection](adding-papers.md).
 
 ## Why these are deferred, not blocked
 
-The released collection (`collections/metabolomics/v2/`) already admits tools on
+The released v2 collection (`<domain checkout>/collections/metabolomics/v2/`,
+relative to an `asb-skills-metabolomics` checkout) already admits tools on
 the openness of their **code repository** (the `repo-oa` tier family — see
 [OPEN_ACCESS_POLICY.md → *Software tools — repository-OA tier*](../governance/OPEN_ACCESS_POLICY.md)).
 `patRoon`, `OpenTIMS`, and `Galaxy-M` are therefore **already included** in v2.
@@ -77,3 +78,10 @@ Keep that build intact. Do not copy its leaves into a released version. Add it
 to the next combined per-paper view, make a fresh filtered cut, assemble a new
 candidate and land it for review by following
 [Adding papers to a collection](adding-papers.md#maintainer-rail-build-view-cut-and-candidate).
+Candidate and landed leaves stay under the domain checkout, for example
+`<domain checkout>/collections/<domain>/<version>/leaves/`.
+
+Metabolomics v3 is already released as `metabolomics-v3.0.0` (DOI
+`10.5281/zenodo.24054446`) in the private `asb-skills-metabolomics` repository.
+New domain content belongs in the corresponding `asb-skills-<domain>` checkout;
+this repository holds the tooling, governance and registry.

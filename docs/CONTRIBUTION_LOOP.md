@@ -57,6 +57,12 @@ rest were folded in or deferred:
 
 ## For maintainers
 
+Metabolomics v3 is released as `metabolomics-v3.0.0` (DOI
+`10.5281/zenodo.24054446`) in the private domain repository
+`asb-skills-metabolomics`. Domain content belongs in the corresponding
+`asb-skills-<domain>` checkout, while this repository holds tooling, governance
+and the registry.
+
 For a new paper, use the proposal rail for a single reviewed suggestion or the
 batch build-and-cut rail for a maintained collection. The complete commands and
 the boundary between incremental builds and batch consolidation are in

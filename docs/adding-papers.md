@@ -5,11 +5,19 @@ generation pipeline. A maintainer can build papers independently, then periodica
 make a new collection cut from all retained builds. A proposal is reviewed and held
 for that next cut. It is not inserted directly into a released collection.
 
+Metabolomics v3 is released as `metabolomics-v3.0.0`, with DOI
+`10.5281/zenodo.24054446`, in the private domain repository
+`asb-skills-metabolomics`. Each domain's content, proposals, candidates and
+landing belong in its `asb-skills-<domain>` checkout. This repository holds the
+tooling, governance and release registry. Run the `scripts/` commands below
+from this tooling checkout; `<domain checkout>` marks the root of the domain
+checkout in every content path.
+
 ## The two rails
 
 | Rail | Use it for | Result |
 |---|---|---|
-| Proposal | One paper, tool or resource from a contributor | A reviewed entry under `collections/<domain>/proposals/` with `status: hold` |
+| Proposal | One paper, tool or resource from a contributor | A reviewed entry under `<domain checkout>/collections/<domain>/proposals/` with `status: hold` |
 | Build and cut | A maintainer's batch of new and retained papers | A new candidate branch, version directory, receipts and lineage |
 
 ### Contributor rail: propose one paper
@@ -18,7 +26,7 @@ Open a **Propose a paper, tool, or resource** issue, or use `/propose-skill` in
 a checkout that provides that command. Give a DOI or public link, the target
 collection and one or two sentences on why it matters. A curator resolves the
 metadata and stages the paper in a `wave-*.yaml` file under
-`collections/<domain>/proposals/` with `status: hold`.
+`<domain checkout>/collections/<domain>/proposals/` with `status: hold`.
 
 After review, a maintainer builds the held paper. It enters the collection in
 the next combined view and cut, not by editing the released version.
@@ -28,10 +36,10 @@ It stages under the current version's `proposals/skills/` directory. Maintainers
 check those skill proposals, preview promotion and promote a reviewed one with:
 
 ```bash
-python scripts/check_proposals.py collections/<domain>/<current-version>
-python scripts/promote_proposals.py --collection collections/<domain>/<version> \
+python scripts/check_proposals.py <domain checkout>/collections/<domain>/<current-version>
+python scripts/promote_proposals.py --collection <domain checkout>/collections/<domain>/<version> \
   --slug <proposal-slug> --date <YYYY-MM-DD> --dry-run
-python scripts/promote_proposals.py --collection collections/<domain>/<version> \
+python scripts/promote_proposals.py --collection <domain checkout>/collections/<domain>/<version> \
   --slug <proposal-slug> --date <YYYY-MM-DD>
 ```
 
@@ -78,7 +86,9 @@ ASB_EMBED_MODEL=bge-small-en-v1.5 asb consolidate-skills \
 
 Assemble the candidate from that cut and the unfiltered per-paper builds. The tiered
 inventory is the paper-access input; the three commits and the filter receipt are
-lineage inputs recorded in `source.json`.
+lineage inputs recorded in `source.json`. Assemble into
+`<domain checkout>/candidates/<cut-id>/`; its accompanying receipts go into
+`<domain checkout>/receipts/<cut-id>/` at landing.
 
 ```bash
 python scripts/assemble_candidate.py \
@@ -86,7 +96,8 @@ python scripts/assemble_candidate.py \
   --builds <combined-view>/<domain> \
   --tiered <tiered-corpus.json> \
   --domain <domain> --version <vN> \
-  --out <candidate-dir> --receipts <receipts-dir> \
+  --out <domain checkout>/candidates/<cut-id> \
+  --receipts <domain checkout>/receipts/<cut-id> \
   --asb-commit <asb-commit> --tooling-commit <tooling-commit> \
   --corpus-commit <corpus-commit> --verified-on <YYYY-MM-DD> \
   --view-source <filtered-view>/filter_receipt.json \
@@ -94,24 +105,27 @@ python scripts/assemble_candidate.py \
 ```
 
 Review the assembled candidate and its gate report, then preview and perform the local
-landing from a clean collection repository on `main`:
+landing from a clean `asb-skills-<domain>` collection repository on `main`:
 
 ```bash
 python scripts/land_candidate.py \
-  --candidate <candidate-dir> --receipts <receipts-dir> \
-  --repo <collection-repository> --domain <domain> --version <vN> \
+  --candidate <domain checkout>/candidates/<cut-id> \
+  --receipts <domain checkout>/receipts/<cut-id> \
+  --repo <domain checkout> --domain <domain> --version <vN> \
   --title "<Collection title>" --author-name "<name>" \
   --author-email "<email>" --dry-run
 python scripts/land_candidate.py \
-  --candidate <candidate-dir> --receipts <receipts-dir> \
-  --repo <collection-repository> --domain <domain> --version <vN> \
+  --candidate <domain checkout>/candidates/<cut-id> \
+  --receipts <domain checkout>/receipts/<cut-id> \
+  --repo <domain checkout> --domain <domain> --version <vN> \
   --title "<Collection title>" --author-name "<name>" \
   --author-email "<email>"
 ```
 
 Landing creates a local `candidate/<cut-id>` branch and commits
-`collections/<domain>/<vN>/`, `receipts/<cut-id>/` and the marketplace update. It
-does not push, merge or release the candidate.
+`<domain checkout>/collections/<domain>/<vN>/`, `<domain checkout>/receipts/<cut-id>/`
+and the marketplace update in that checkout. It does not push, merge or release
+the candidate.
 
 ## What is incremental and what is batch
 
