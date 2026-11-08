@@ -1,3 +1,0 @@
-  figures/nextflow4ms-dial-logo.png
-  figures/pipeline_dag.svg
-paper.md

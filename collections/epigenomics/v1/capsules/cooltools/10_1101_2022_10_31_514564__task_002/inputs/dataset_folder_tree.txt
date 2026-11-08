@@ -1,2 +1,0 @@
-  figures/cooltools-logo-futura.png
-paper.md
