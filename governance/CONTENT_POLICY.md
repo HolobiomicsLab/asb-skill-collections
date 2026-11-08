@@ -47,69 +47,86 @@ This policy establishes the legal and operational boundaries for ingesting, stor
 
 ---
 
-## 3. Open-Access-First Commitment (v0)
+## 3. Source admission, paper access and tool licences
 
-**Locked decision (2026-06-14):** ASBB v0 ingests **only open-access papers** with verifiable OA status.
+The paper licence does not decide whether a skill is admitted. A source can be
+admitted on either of two evidence axes:
 
-### Definition
+1. **Paper axis.** The paper has a recorded open-access type such as
+   `gold-oa`, `green-oa`, `diamond` or `open-access`.
+2. **Repository axis.** A public repository was available at build time and the
+   corpus records one of `repo-oa`, `repo-permissive` or `repo-copyleft`.
 
-**OA-tier enum (single source of truth).** The allowed open-access tier values are aligned to `src/agentic_science_builder/release/promote.py` (in the AgenticScienceBuilder repo). The allowed OA set is:
+When neither basis is established, the source is recorded as `link-only`. That
+tier means the DOI is citable but no clone or text-reuse right is claimed. It is
+still an admitted source, with weaker grounding. A skill based solely on such a
+source carries `metadata.grounding_tier: link-only`; a skill with neither a
+source nor a repository is `ungrounded`.
 
-```
-{open-access, open_access, oa, gold-oa, gold_oa, green-oa, green, diamond}
-```
+The release gate admits the normalized paper-OA set
+`{open-access, oa, gold-oa, green-oa, diamond}`, including its documented
+hyphen and underscore aliases, together with the three `repo-*` tiers and
+`link-only`. It rejects an empty or `unknown` access type. `preprint` is a
+provenance value, not an access type.
 
-Both hyphen and underscore spellings are accepted; `green` normalizes to `green-oa` (see §7.5 verify-paper.yml normalization step).
+### Repository access evidence
 
-A paper qualifies as **open-access** if its access tier is one of the values above, i.e. it is published under one of the following:
+The repository tiers have these meanings:
 
-1. **Gold OA** (`gold-oa` / `gold_oa`) — published under a CC-BY, CC-BY-SA, CC0, or equivalent permissive CC license by the publisher
-2. **Green OA** (`green-oa` / `green`) — self-archived by the author in an institutional or disciplinary repository (arXiv, PubMed Central, etc.) with explicit OA license or public-domain designation (e.g., PubMed Central NIH/USDA papers)
-3. **Diamond OA** (`diamond`) — published in a no-fee, no-charge OA journal (no APC to author or reader)
-4. **Generic OA** (`open-access` / `open_access` / `oa`) — verified open access where the specific tier is not further resolved
-5. **Government works** — papers authored by U.S. federal employees in their official capacity (public domain by law); recorded with a generic OA tier plus a public-domain license tag
+| `access.type` | Meaning |
+|---|---|
+| `repo-oa` | A public, cloneable repository is the grounding source, but its SPDX family has not been made more specific. |
+| `repo-permissive` | The grounding repository has a permissive open-source licence, for example MIT, Apache-2.0, BSD-3-Clause or ISC. |
+| `repo-copyleft` | The grounding repository has a copyleft open-source licence, for example GPL, AGPL, LGPL or MPL. |
 
-> **NOTE — software / dataset / tutorial DOIs (e.g. Zenodo).** A source's citable identifier need not be a journal paper DOI (see [`SOURCES.md` §3.1](SOURCES.md)). For a software/dataset/tutorial deposition, the OA tier is read from the **deposition license**: a CC-BY / CC-BY-SA / CC0 Zenodo release qualifies as `gold-oa`; a public git repository cloned at build qualifies as `repo-oa`. This is the *paper-access* axis only — what a consumer may do with the tool is the separate `license_tier` axis (§4 "Tool License Tier", §7.7).
->
-> **`repo-oa` requires evidence, not a stamp.** The tier asserts a clone was possible, so an entry carrying it MUST have a non-empty `repo_url`. `access.verified_via` is a constant string, not evidence: it reads `git_clone_succeeded_at_build` even on entries with no `repo_url`. The promotion gate (`scripts/release_gate.py --strict`) FAILs any `repo-oa` entry with an empty `repo_url`; such an entry is set `status: needs-evidence` and excluded, never silently admitted.
->
-> **`link-only` — a citable DOI and nothing more.** When a source has no public repository to clone — a paywalled book or chapter, a journal placeholder with no code-availability statement, an archived deposit not bound to its source — the honest tier is `link-only`. It asserts only that the DOI resolves and the work is citable: no clone happened, no reuse right is claimed, and `access.is_oa` is left `null` unless separately established. Because it claims no clone, a `link-only` entry MUST NOT carry `access.verified_via`; the release gate FAILs one that does, mirroring the evidence rule for `repo-oa`. Skills deriving *solely* from `link-only` entries are stamped `metadata.grounding_tier: link-only`, and a skill with neither a source nor a repository is stamped `ungrounded` — neither is presented alongside repository-grounded skills as if equivalent. **A declared repository is full provenance, not a fallback:** because grounding is repository-only, a skill for a tool with no method paper is grounded on its published code, and the provenance gate accepts a non-empty http(s) `metadata.repo_url` in place of a source DOI. A bare slug or non-URL value is not evidence.
+Every `repo-*` entry must have a non-empty `repo_url`; the strict release gate
+fails the entry without it. For this family, `access.verified_via` must contain
+the literal `git_clone_succeeded_at_build`. That value is an audit stamp, not
+evidence by itself: `repo_url` is the evidence the gate checks.
+A `link-only` entry must omit `access.verified_via`, because it asserts that no
+clone occurred.
 
-> **Repository-only grounding.** Skills built from a `repo-oa` entry ground **only on the cloned repository** — code, README, in-repo docs — which is what the entry's licence covers. They never ground on the paper's text, whatever its licence. This holds uniformly for every entry, so a preprint that grants no text-reuse rights (e.g. a bioRxiv `cc_no` deposit) is still admissible on its repository basis, and no per-entry licence resolution can turn a grounding into a rights violation. `access.license` on a `repo-oa` entry therefore records the *tool's code* licence, not a right over the paper text.
+Repository-grounded skills use the cloned code, README and in-repository
+documentation. The paper can still be cited, but its text follows the paper's
+own posting licence. The existence or licence of the repository does not grant
+rights over the accompanying paper.
 
-> **NOTE — `preprint` is NOT an OA tier.** "Preprint" is a value on a **separate provenance axis** (the version/stage of the document: preprint vs. accepted-manuscript vs. version-of-record), recorded in `provenance.version` / `provenance.source`. It is NOT a member of the OA set above and MUST NOT be used as `access.type`. A bioRxiv/medRxiv/arXiv preprint is admitted because its access tier is open (`open-access` / `gold-oa` as applicable) AND its provenance is `preprint`; the two axes are recorded independently. Do not conflate the open-access axis with the provenance axis.
+### Paper text and grounding tier
 
-> **NOTE — software tools have their own tier family.** The enum above governs
-> **papers**. A corpus entry that is a *software tool* is admitted on the openness
-> of its **code repository**, not the paper's reuse license, via the
-> `repo-oa` / `repo-permissive` / `repo-copyleft` tiers (`scripts/release_gate.py`
-> `_REPO_OA_TIERS`, layered on top of promote.py's `_OA_TIERS`). See
-> [OPEN_ACCESS_POLICY.md → *Software tools — repository-OA tier*](OPEN_ACCESS_POLICY.md)
-> for the rationale and requirements.
+Paper access determines quotation handling and grounding strength, not
+admission. `scripts/release_gate.py` applies strict caps when the access type is
+non-OA or `link-only`, or when `access.source_reuse` is known not to be
+permissive:
 
-### Non-OA Exclusion
+- at most **300 characters per quoted text field**;
+- at most **1,500 quoted characters cumulatively per DOI**.
 
-Papers with the following status are **rejected at curation**:
+Open paper text and openly licensed repository text receive the attributed OA
+regime. Unknown paper-text reuse follows the access-type rule. Consolidation
+can therefore combine knowledge derived from papers without making their
+licences an admission test. Concepts and factual knowledge may be described
+and disseminated; the licence controls reuse of protected text, not the facts
+themselves.
 
-- Closed/paywalled (Elsevier, Springer, Wiley, etc. without OA marking)
-- Hybrid (tagged as hybrid OA but underlying license is restrictive)
-- Unknown (access status unresolved)
-- Green OA with restrictive manuscript license (author-accepted manuscript under All Rights Reserved)
+### Preprints
 
-### Verification Procedure
+A preprint remains a provenance stage. A `repo-*` preprint entry grounds on its
+repository, while quotation from the preprint follows that posting's own
+licence. A preprint whose posting grants no reuse is cited but not quoted. This
+zero-quotation rule is stricter than the current gate implementation: the gate
+recognises non-permissive `source_reuse`, but currently applies the 300-character
+field and 1,500-character DOI caps rather than a zero cap. Such entries require
+curator review until the gate enforces the rule directly.
 
-1. **Automated check:** OpenAlex API lookup; flag `is_oa: true|false`
-2. **Manual spot-check:** Sample papers in the final corpus (≥10% per domain) to confirm OA license accuracy
-3. **Red-flag gate:** CI verify-paper.yml (stage §7.5) enforces `access.type ∈ {open-access, open_access, oa, gold-oa, gold_oa, green-oa, green, diamond} ∪ {repo-oa, repo-permissive, repo-copyleft} ∪ {link-only}` (after hyphen/underscore + `green`→`green-oa` normalization) for all `status:included` papers; unknown/non-OA triggers a hard fail. `preprint` is rejected as an `access.type` value because it is a provenance value, not an OA tier. The three `repo-*` values are the repository-access tiers from the software/dataset note above, and `link-only` is the no-repository tier; `tests/test_oa_tier_parity.py` keeps these sets identical to `scripts/release_gate.py:_REPO_OA_TIERS` and `_LINK_ONLY_TIERS`, so the push gate and the release gate cannot drift apart.
+### Separate tool-licence axis
 
-### Exception Procedure (Post-v0)
-
-Admission of closed-access or hybrid papers is deferred to v1. If a post-v0 release includes closed sources:
-
-1. A legal review must be completed (recommend institutional counsel)
-2. The decision is recorded in a new `CLOSED_ACCESS_POLICY.md` addendum
-3. The release notes must explicitly label affected artifacts as "mixed" or "closed" tier (§4)
-4. The `benchmark_tier.openness` axis defaults to `closed` or `mixed` for that release
+`license_tier` is a separate per-skill axis. It records what a consumer may do
+with the associated tool: `open`, `noncommercial`, `restricted` or `unknown`.
+It does not relicense paper text and it is not a skill-admission gate. Papers
+without an open licence can therefore be processed, especially in a
+consolidation where passages are transformed and merged, while the tool's own
+terms remain attached to its use. The consumer is responsible for checking and
+obeying the tool licence. See [`LICENSE_TIERS.md`](LICENSE_TIERS.md).
 
 ---
 

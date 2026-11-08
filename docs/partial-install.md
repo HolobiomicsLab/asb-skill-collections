@@ -1,14 +1,17 @@
 # Installing part of a collection
 
-The metabolomics collection (`collections/metabolomics/v2`) holds 5,859 skills.
+The v2 metabolomics collection holds 5,859 skills. Its measured local copy in
+this repository is at `collections/metabolomics/v2`; in a domain checkout the
+same layout is `<domain checkout>/collections/metabolomics/v2`.
 Installed whole, it is a 61 MB snapshot of 6,870 files. Most tasks need a
-handful of those skills. This page describes the three ways to take less.
+handful of those skills. This page describes four ways to take less.
 
 | Way | Command | Needs a checkout | What you get |
 |---|---|---|---|
 | Technique pack | `asbb install <pack>` | yes | every skill tagged with one technique, for example the 2,617 LC-MS skills |
 | Selection | `asbb install --skills ...`, `--skills-file ...` or `--query ...` | yes | exactly the skills you name or the top hits of a search, installed as a pack |
 | Fetch | `asbb fetch <slugs> --collection <slug>/vN --dest <dir>` | no | leaves from the manifest-named domain repository at its release commit, with provenance |
+| Claude Code marketplace | `/plugin install <collection-or-pack>@asb-skill-collections` | no | a named collection or one of its published technique packs |
 
 A pack and a selection are the same thing built from a different membership
 rule: a pack takes every skill whose `techniques` carry its tag, a selection
@@ -19,7 +22,28 @@ grounding helper. Fetch skips all of that and downloads leaf files only.
 
 Selections and fetch need a router-shaped collection with a root
 `skills_index.json` and `leaves/`. The measured examples below use the v2
-metabolomics collection; fetch can also resolve released domain repositories.
+metabolomics collection; fetch can also resolve released domain repositories,
+including metabolomics v3. Candidates and landed leaves use paths such as
+`<domain checkout>/collections/<domain>/<version>/leaves/`, relative to the
+root of the corresponding `asb-skills-<domain>` checkout, not this master
+repository. A collection without both router files can still provide a named
+pack, but it cannot use selection or fetch.
+
+## Claude Code marketplace
+
+Claude Code can install either the whole collection or a named technique pack
+without a checkout:
+
+```text
+/plugin marketplace add HolobiomicsLab/asb-skill-collections
+/plugin install metabolomics@asb-skill-collections
+/plugin install metabolomics-lc-ms@asb-skill-collections
+```
+
+Replace `metabolomics-lc-ms` with any of the eight pack names below. Marketplace
+installation selects a published unit by name; it does not accept an arbitrary
+slug list or query. Use `asbb install` for a derived selection, or `asbb fetch`
+for leaf files without an installed router.
 
 All figures on this page were measured on 2026-10-30 from a checkout of `main`
 at `e80767838` plus this change, with `HOME` pointed at a temporary directory.
