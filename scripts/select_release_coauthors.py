@@ -260,7 +260,7 @@ def _apply_zenodo(path: pathlib.Path, selected: list[dict]) -> int:
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--repo-root", default=".")
+    ap.add_argument("--repo-root", required=True, help="domain checkout root")
     ap.add_argument("--collection", default=None, help="scope to one collection slug")
     ap.add_argument("--min-tier", default="domain_contributor", choices=list(TIER_ORDER))
     ap.add_argument("--min-external", type=int, default=3)

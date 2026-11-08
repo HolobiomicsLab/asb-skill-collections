@@ -517,7 +517,9 @@ def test_omitted_corpus_records_not_applied_without_trimming(tmp_path: Path) -> 
         assert _skill_evidence(published) == _skill_evidence(source)
 
 
-def test_conflicting_existing_output_exits_two_without_mutation(tmp_path: Path) -> None:
+def test_conflicting_existing_output_exits_two_without_mutation(
+    tmp_path: Path, tooling_checkout: Path
+) -> None:
     """Reject a different destination before writing any candidate or receipt file."""
     candidate = tmp_path / "candidate"
     receipts = tmp_path / "receipts"
@@ -528,11 +530,10 @@ def test_conflicting_existing_output_exits_two_without_mutation(tmp_path: Path) 
     completed = subprocess.run(
         [
             sys.executable,
-            "-m",
-            "scripts.collect_from_cut",
+            str(tooling_checkout / "scripts" / "collect_from_cut.py"),
             *_args(FIXTURE, candidate, receipts=receipts),
         ],
-        cwd=REPO,
+        cwd=tooling_checkout,
         text=True,
         capture_output=True,
         check=False,

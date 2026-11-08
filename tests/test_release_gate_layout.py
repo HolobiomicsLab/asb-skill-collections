@@ -11,11 +11,9 @@ written would have advertised a 404.
 The four cases the spec names are pinned below, plus the two things a gate
 like this most easily gets wrong:
 
-* **It must not fail on the tree that is already shipped.** All four published
-  collections hold exactly ``SKILL.md`` in every skill directory, and
-  ``collections/epigenomics/v1`` is driven through ``--strict`` by an existing
-  test that requires exit 0. A gate that reddens the current release is not a
-  gate, it is an outage, so the real collections are asserted to pass.
+* **It must accept a well-formed fixture.** The synthetic collections hold
+  exactly ``SKILL.md`` in every skill directory, and the path-invocation test
+  drives a fixture through ``--strict``.
 * **It must refuse rather than truncate.** Both budgets FAIL. A truncated
   sidecar still parses, so truncating would ship a knowledge-base manifest that
   silently understates itself — the exact confusion the status enum exists to
@@ -241,32 +239,6 @@ def test_a_layout_failure_is_advisory_without_strict(tmp_path):
     col = _collection(tmp_path)
     (col / "skills" / "s1" / "tools.json").write_text("[]")
     assert release_gate.main([str(col), "--report", str(tmp_path / "r.json")]) == 0
-
-
-SHIPPED = sorted(p.parent for p in REPO_ROOT.glob("collections/*/v*/collection.yaml"))
-
-
-@pytest.mark.parametrize("col", SHIPPED, ids=[f"{p.parent.name}-{p.name}" for p in SHIPPED])
-def test_every_shipped_collection_already_satisfies_the_layout_gate(col):
-    """Read-only over the real tree: a new gate that reddens the release is an outage.
-
-    `test_scripts_are_path_invocable` drives `collections/epigenomics/v1` through
-    `--strict` and requires exit 0, so this is not merely nice to have.
-    """
-    res = _layout(col)
-    assert res.status == release_gate.PASS, _messages(res)
-
-
-def test_the_shipped_set_is_not_empty():
-    """A parametrized guard over an empty list passes for the wrong reason."""
-    assert len(SHIPPED) >= 4
-
-
-def test_the_check_is_not_vacuous_on_the_shipped_tree():
-    """It really walked those skills rather than finding nothing to walk."""
-    counts = [int(_layout(c).summary.split("(")[-1].split()[0]) for c in SHIPPED]
-    assert all(n > 0 for n in counts), counts
-    assert sum(counts) > 1000
 
 
 if __name__ == "__main__":

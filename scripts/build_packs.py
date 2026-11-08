@@ -481,7 +481,9 @@ def check_map(pack_map: PackMap) -> dict[str, list[Divergence]]:
 def main(argv: list[str] | None = None) -> int:
     """Build the declared packs, or report how far they have drifted."""
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--root", type=Path, default=Path.cwd(), help="repository root")
+    parser.add_argument(
+        "--root", type=Path, required=True, help="domain checkout containing collections/ and packs/"
+    )
     parser.add_argument(
         "--map",
         type=Path,

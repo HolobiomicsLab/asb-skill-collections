@@ -174,32 +174,19 @@ def test_complete_references_of_an_earlier_file_are_reused(tmp_path: Path) -> No
     assert reused == {"10.1038/nbt.3597": complete}
 
 
-def test_every_v2_reference_has_type_title_and_authors() -> None:
-    payload = yaml.safe_load(V2_CITATION.read_text(encoding="utf-8"))
-
-    incomplete = [r.get("doi") for r in payload.get("references") or [] if not (
-        r.get("type") and _complete(r)
-    )]
-    assert not incomplete, incomplete
-
-
 @pytest.mark.skipif(shutil.which("cffconvert") is None, reason="cffconvert not on PATH")
-@pytest.mark.parametrize("source", ["generated", "v2"])
-def test_cffconvert_validates(source: str, tmp_path: Path, monkeypatch) -> None:
+def test_cffconvert_validates(tmp_path: Path, monkeypatch) -> None:
     # The module's own DOI is the v1 placeholder "TODO-zenodo", left to the
     # legacy-v1 decision; the references are what this test is about.
     monkeypatch.setattr(collector, "COLLECTION_DOI", "10.5281/zenodo.20794027")
-    if source == "v2":
-        path = V2_CITATION
-    else:
-        path = tmp_path / "CITATION.cff"
-        references = {"10.1038/nbt.3597": collector.reference_from_crossref(
-            "10.1038/nbt.3597", CROSSREF_WORK
-        )}
-        path.write_text(
-            collector.render_citation_cff(["10.1038/nbt.3597"], "2026-10-31T00:00:00Z", references),
-            encoding="utf-8",
-        )
+    path = tmp_path / "CITATION.cff"
+    references = {"10.1038/nbt.3597": collector.reference_from_crossref(
+        "10.1038/nbt.3597", CROSSREF_WORK
+    )}
+    path.write_text(
+        collector.render_citation_cff(["10.1038/nbt.3597"], "2026-10-31T00:00:00Z", references),
+        encoding="utf-8",
+    )
 
     result = subprocess.run(
         ["cffconvert", "--validate", "-i", str(path)], capture_output=True, text=True, check=False

@@ -1,3 +1,0 @@
-  figures/callvar_algorithm.jpeg
-  figures/pileup.png
-paper.md

@@ -18,7 +18,7 @@ MINIMAL_COLLECTION = {
 
 LEADERBOARD_URL = (
     "https://raw.githubusercontent.com/HolobiomicsLab/"
-    "asb-skill-collections/main/collections/metabolomics/v1/benchmark/leaderboard.jsonld"
+    "asb-skills-fixture/main/collections/fixture/v1/benchmark/leaderboard.jsonld"
 )
 
 

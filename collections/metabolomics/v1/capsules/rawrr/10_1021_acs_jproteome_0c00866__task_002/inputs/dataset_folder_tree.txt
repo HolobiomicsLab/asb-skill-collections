@@ -1,4 +1,0 @@
-  figures/rawRcolor.png
-  figures/rawRcolor10%.png
-  figures/rawrr_logo.png
-paper.md

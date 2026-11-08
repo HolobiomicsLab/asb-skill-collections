@@ -202,35 +202,5 @@ class TestAgainstTheShippedCollection:
         )
 
 
-# --------------------------------------------------------------------------- #
-# The commands that make the check reachable at all.                           #
-# --------------------------------------------------------------------------- #
-@pytest.mark.parametrize(
-    "command,symbols",
-    [
-        ("propose-skill.md", ("duplicate_candidates", "DUPLICATE_THRESHOLD")),
-        ("claim-skill.md", ("duplicate_candidates", "DUPLICATE_THRESHOLD")),
-        ("synthesize-meta-skill.md", ("near_duplicates",)),
-    ],
-)
-def test_the_command_that_runs_the_check_ships(command, symbols):
-    """The defect was a missing caller, not a wrong number — pin the caller.
-
-    ``governance/COMMUNITY_SKILLS.md``, ``META_SKILLS.md`` and ``AUTHORSHIP.md``
-    each link one of these; a release that drops them again turns those links
-    into 404s and the prose into an unbacked claim.
-    """
-    path = COLLECTION / "commands" / command
-    assert path.is_file(), f"{path} is linked from governance/ and must ship"
-    text = path.read_text()
-    for symbol in symbols:
-        assert symbol in text, f"{command} must drive {symbol}"
-
-
-def test_no_command_carries_the_dev_line_threshold():
-    for path in (COLLECTION / "commands").glob("*.md"):
-        assert "threshold=0.85" not in path.read_text(), path
-
-
 if __name__ == "__main__":
     raise SystemExit(pytest.main([__file__, "-q"]))

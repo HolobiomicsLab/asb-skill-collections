@@ -887,9 +887,8 @@ def _documents(
 ) -> dict[str, bytes]:
     reference = _read_yaml(
         Path(__file__).resolve().parent.parent
-        / "collections"
-        / "metabolomics"
-        / "v2"
+        / "scripts"
+        / "templates"
         / "collection.yaml"
     )
     people = copy.deepcopy(creators["creators"])

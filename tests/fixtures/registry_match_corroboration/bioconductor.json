@@ -1,0 +1,6 @@
+[
+  {"Package": "lipidr", "Title": "Lipid spectra quantification"},
+  {"Package": "plotter", "Title": "Chemical figure creation"},
+  {"Package": "methyl", "Title": "DNA methylation trajectory analysis"},
+  {"Package": "javacollision", "Title": "Differential metabolite statistics"}
+]

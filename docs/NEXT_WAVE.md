@@ -5,9 +5,13 @@ release so it ships clean. Nothing here blocks v0.2.0; each item needs an **ASB
 generation run** (paper/repo → skills) or a small new mechanism, not a corpus
 status flip.
 
+For the current process, including incremental per-paper builds and the required
+new batch cut, see [Adding papers to a collection](adding-papers.md).
+
 ## Why these are deferred, not blocked
 
-The released collection (`collections/metabolomics/v2/`) already admits tools on
+The released v2 collection (`<domain checkout>/collections/metabolomics/v2/`,
+relative to an `asb-skills-metabolomics` checkout) already admits tools on
 the openness of their **code repository** (the `repo-oa` tier family — see
 [OPEN_ACCESS_POLICY.md → *Software tools — repository-OA tier*](../governance/OPEN_ACCESS_POLICY.md)).
 `patRoon`, `OpenTIMS`, and `Galaxy-M` are therefore **already included** in v2.
@@ -63,15 +67,21 @@ Perspicacité server (grounding falls back to git-clone + local read otherwise).
 ```bash
 # 1. Package the paper: a dir with article.pdf [+ supplementary.pdf] and a
 #    README.md carrying  doi: / repo_url: / title:
-# 2. Distill (AgenticScienceBuilder repo, conda env active):
-PYTHONPATH=src python3 -m agentic_science_builder build <pkg_dir> \
-    --output outputs/<run> --llm --enrich-skills --claim-ledger --no-pin --metabolomics
-# 3. Promote into the registry + reindex (this repo):
-# the released collection is router-shaped: leaves ship in leaves/, and only
-# the router + licence-gate skill are advertised under skills/
-cp -r <AgenticScienceBuilder>/outputs/<run>/skills/<slug> collections/metabolomics/v2/leaves/
-python3 scripts/regen_catalogue.py collections/metabolomics/v2 --update-indexes
-# 4. Add the corpus.yaml entry (repo-permissive / repo-copyleft + code_license),
-#    then gate:
-python3 scripts/release_gate.py collections/metabolomics/v2 --strict
+# 2. Distill into an independent increment root (AgenticScienceBuilder checkout,
+#    environment active):
+asb build <pkg_dir> --output <increment-root>/<paper-id> --llm \
+    --enrich-skills --claim-ledger --skill-bundle --classify \
+    --domain-plugin metabolomics
 ```
+
+Keep that build intact. Do not copy its leaves into a released version. Add it
+to the next combined per-paper view, make a fresh filtered cut, assemble a new
+candidate and land it for review by following
+[Adding papers to a collection](adding-papers.md#maintainer-rail-build-view-cut-and-candidate).
+Candidate and landed leaves stay under the domain checkout, for example
+`<domain checkout>/collections/<domain>/<version>/leaves/`.
+
+Metabolomics v3 is already released as `metabolomics-v3.0.0` (DOI
+`10.5281/zenodo.24054446`) in the private `asb-skills-metabolomics` repository.
+New domain content belongs in the corresponding `asb-skills-<domain>` checkout;
+this repository holds the tooling, governance and registry.

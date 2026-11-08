@@ -399,7 +399,9 @@ def _report(findings: list[Violation], root: Path, units: int) -> int:
 def main(argv: list[str] | None = None) -> int:
     """Check all indexed units; optionally prune pack rows using their declared parent."""
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--root", type=Path, default=Path.cwd(), help="repository root")
+    parser.add_argument(
+        "--root", type=Path, required=True, help="domain checkout containing collections/ and packs/"
+    )
     parser.add_argument(
         "--prune",
         action="store_true",

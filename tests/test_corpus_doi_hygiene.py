@@ -26,7 +26,7 @@ KNOWN_ORPHAN_ENTANGLED = {"10.1021/acs.analchem.1c03163?ref="}
 
 
 def _corpus_files():
-    return sorted(ROOT.glob("collections/*/v*/corpus.yaml"))
+    return sorted((ROOT / "tests" / "fixtures").glob("collections/*/v*/corpus.yaml"))
 
 
 def test_corpus_files_exist():
@@ -46,17 +46,6 @@ def test_corpus_dois_are_canonical():
                 continue
             offenders.append(f"{cf.relative_to(ROOT)}: {doi!r}")
     assert not offenders, "non-canonical DOIs (strip ?ref=/#frag/.svg): " + "; ".join(offenders)
-
-
-def test_the_only_allowed_exception_still_needs_a_human():
-    """The allow-list must not outlive its cause: if the entangled DOI is gone from
-    the corpus, delete the exception so it cannot mask a future regression."""
-    present = set()
-    for cf in _corpus_files():
-        doc = yaml.safe_load(cf.read_text()) or {}
-        present |= {(p.get("doi") or "").strip() for p in doc.get("papers", [])}
-    stale = KNOWN_ORPHAN_ENTANGLED - present
-    assert not stale, f"remove resolved allow-list entries: {stale}"
 
 
 if __name__ == "__main__":

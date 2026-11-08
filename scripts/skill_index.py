@@ -214,7 +214,12 @@ def _report(version_dir: pathlib.Path, gaps: dict[str, list[str]], fixing: bool)
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--collections", nargs="*", default=list(DEFAULT_COLLECTION_GLOBS))
+    parser.add_argument(
+        "--collections",
+        nargs="+",
+        required=True,
+        help="collection/pack globs in a domain checkout",
+    )
     parser.add_argument("--fix", action="store_true", help="insert the missing entries instead of failing")
     parser.add_argument("--smoke", action="store_true", help="run the module's self-check and exit")
     args = parser.parse_args(argv)

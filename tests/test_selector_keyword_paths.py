@@ -12,8 +12,18 @@ from asb_skill_collections import asb_skill_index as idx
 from scripts import router_shape
 
 ROOT = Path(__file__).resolve().parent.parent
-COLLECTION = ROOT / "collections/metabolomics/v2"
-LABELS = json.loads((ROOT / "tests/fixtures/selector_queries.json").read_text())
+COLLECTION = ROOT / "tests/fixtures/router_collection"
+REPO = ROOT / "tests/fixtures"
+LABELS = [
+    {
+        "id": "fixture-workflow-choice",
+        "query": "untargeted LC-MS/MS annotation",
+        "collection": "fixture/v1",
+        "target": "workflows",
+        "technique": "LC-MS",
+        "expected_slugs": ["untargeted-annotation"],
+    }
+]
 
 
 @pytest.fixture(autouse=True)
@@ -35,7 +45,7 @@ def semantic_module():
 @pytest.mark.parametrize("inside_workflows", [False, True])
 @pytest.mark.parametrize(
     ("target", "query"),
-    [("skills", "untargeted annotation"), ("workflows", "MZmine2"), ("tools", "XCMS")],
+        [("skills", "untargeted annotation"), ("workflows", "MZmine2"), ("tools", "MassQL")],
 )
 def test_explicit_keyword_mode_uses_the_shared_results(
     semantic_module, target, query, inside_workflows, monkeypatch, capsys
@@ -51,7 +61,7 @@ def test_explicit_keyword_mode_uses_the_shared_results(
     ])
     actual = json.loads(capsys.readouterr().out)
     assert actual["mode"] == "keyword"
-    expected = idx.search("metabolomics/v2", target, query, k=3, root=ROOT)
+    expected = idx.search("fixture/v1", target, query, k=3, root=REPO)
     assert expected
     assert actual["results"] == expected
     if target == "workflows":
@@ -69,14 +79,15 @@ def test_unavailable_semantic_result_has_an_explicit_keyword_fallback(
     ]) == 0
     actual = json.loads(capsys.readouterr().out)
     expected = idx.search(
-        "metabolomics/v2", "skills", "untargeted annotation", k=3, root=ROOT,
+        "fixture/v1", "skills", "untargeted annotation", k=3, root=REPO,
         fallback="keyword-after-semantic",
     )
     assert actual["mode"] == "keyword"
     assert actual["results"] == expected
 
 
-def test_generator_refreshes_scripts_without_changing_unit_assets(tmp_path):
+def test_generator_refreshes_scripts_without_changing_unit_assets(tmp_path, monkeypatch):
+    monkeypatch.setattr(router_shape, "SEARCH_SCRIPT", COLLECTION / "bin/search_skills.py")
     unit = tmp_path / "installed-unit"
     unit.mkdir()
     index = unit / "skills_index.json"
@@ -96,23 +107,9 @@ def test_generator_refreshes_scripts_without_changing_unit_assets(tmp_path):
 
 @pytest.mark.parametrize("label", LABELS, ids=lambda row: row["id"])
 def test_measured_default_retains_documented_workflow_choices(label):
-    source = label["source"]
-    lines = (ROOT / source["path"]).read_text().splitlines()
-    excerpt_lines = source["excerpt"].splitlines()
-    # The recorded line is a hint: documentation above the excerpt may grow or
-    # shrink on other branches, so the excerpt is located by content and the
-    # label is only tied to the text it quotes.
-    starts = [
-        number for number, line in enumerate(lines, start=1)
-        if line.startswith(excerpt_lines[0])
-    ]
-    assert starts, f"{source['path']} no longer contains: {excerpt_lines[0]!r}"
-    start = source["line"] if source["line"] in starts else starts[0]
-    for offset, excerpt in enumerate(excerpt_lines):
-        assert lines[start - 1 + offset].startswith(excerpt)
     hits = idx.search(
         label["collection"], label["target"], label["query"],
-        technique=label["technique"], k=3, root=ROOT,
+        technique=label["technique"], k=3, root=REPO,
     )
     assert hits[0]["slug"] in label["expected_slugs"]
     assert hits[0]["selector"]["rule"] == "router"
@@ -185,13 +182,13 @@ def test_cli_compatibility_option_is_explicit_and_overridable(monkeypatch, capsy
 
     monkeypatch.setenv(idx.SELECTOR_ENV, "router")
     assert main([
-        "search", "untargeted LC-MS/MS annotation", "--collection", "metabolomics/v2",
-        "--target", "workflows", "--repo", str(ROOT), "--k", "3",
+            "search", "untargeted LC-MS/MS annotation", "--collection", "fixture/v1",
+            "--target", "workflows", "--repo", str(REPO), "--k", "3",
     ]) == 0
     results = json.loads(capsys.readouterr().out)["results"]
     expected = idx.search(
-        "metabolomics/v2", "workflows", "untargeted LC-MS/MS annotation", k=3,
-        root=ROOT, selector="router",
+        "fixture/v1", "workflows", "untargeted LC-MS/MS annotation", k=3,
+        root=REPO, selector="router",
     )
     assert results == expected
     assert all(hit["selector"]["rule"] == "router" for hit in results)

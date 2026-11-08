@@ -5,20 +5,10 @@
   `metabolomics-v0.2.0`) used to build and publish the Python package to PyPI.
   The build and publish jobs now run only on a manual dispatch or on a release
   whose tag starts with `v` and contains no `-v`.
-* release.yml: a collection tag made a production Zenodo draft whenever the
-  ZENODO_TOKEN secret was set, which collides with the draft of
-  scripts/zenodo_deposit.py (Zenodo keeps one unpublished version per record).
-  The upload step now runs only when the repository variable ZENODO_UPLOAD is
-  `true`.
 * pages.yml: deployed only on a push to main touching the site paths, so
   enabling Pages deployed nothing until such a push. It can now be dispatched.
-* release.yml, career-stats-regen.yml and tier-update.yml pushed their commits
-  straight to main. They now open a pull request from a bot branch through
-  scripts/bot_pull_request.sh (tested in tests/test_bot_pull_request.py), and
-  no workflow line that runs git push names main.
-* The five workflows above pinned actions that run on the deprecated Node 20.
-  They now pin the Node 24 majors, and .github/dependabot.yml proposes the
-  remaining updates weekly.
+* No surviving workflow line that runs git push names main. The release-side
+  workflows pin current action majors, and Dependabot proposes updates weekly.
 
 The `if:` conditions are evaluated by `evaluate`, a small reader of the GitHub
 Actions expression syntax these workflows use: string literals, context paths,
@@ -284,44 +274,6 @@ def test_releasing_pypi_doc_names_the_tag_guard():
     assert "metabolomics-v0.2.0" in text
 
 
-# --- GAP-057: release.yml makes no Zenodo draft unless ZENODO_UPLOAD is true --
-
-
-def _names(steps: list[dict]) -> list[str]:
-    return [step.get("name", "") for step in steps]
-
-
-@pytest.mark.parametrize("variables", [{}, {"ZENODO_UPLOAD": ""}, {"ZENODO_UPLOAD": "false"},
-                                       {"ZENODO_UPLOAD": "1"}, {"ZENODO_PUBLISH": "true"}])
-def test_a_collection_tag_run_makes_no_zenodo_call_unless_zenodo_upload_is_true(variables):
-    ran = steps_that_run("release.yml", "release", tag_push("metabolomics-v0.2.0", variables))
-    assert any("Release gate" in name for name in _names(ran))
-    for step in ran:
-        text = yaml.safe_dump(step)
-        assert "zenodo.org" not in text, step.get("name")
-        assert "ZENODO_TOKEN" not in text, step.get("name")
-    assert not any("CITATION.cff" in name for name in _names(ran))
-
-
-def test_zenodo_upload_true_turns_the_upload_step_on():
-    ran = steps_that_run("release.yml", "release",
-                         tag_push("metabolomics-v0.2.0", {"ZENODO_UPLOAD": "true"}))
-    assert "zenodo" in [step.get("id") for step in ran]
-
-
-def test_the_zenodo_step_condition_names_the_variable():
-    steps = _workflow("release.yml")["jobs"]["release"]["steps"]
-    (zenodo,) = [step for step in steps if step.get("id") == "zenodo"]
-    assert zenodo["if"] == "vars.ZENODO_UPLOAD == 'true'"
-
-
-def test_release_deposit_doc_states_the_order_and_the_variable():
-    text = (ROOT / "docs" / "RELEASE_DEPOSIT.md").read_text()
-    assert "## Order of a release" in text
-    assert "`ZENODO_UPLOAD`" in text
-    assert "published by hand" in text
-
-
 # --- GAP-078: pages.yml can be dispatched --------------------------------------
 
 
@@ -357,24 +309,9 @@ def test_no_workflow_pushes_to_main(path):
             assert not re.search(r"\bmain\b", line), line.strip()
 
 
-@pytest.mark.parametrize("name", ["release.yml", "career-stats-regen.yml", "tier-update.yml"])
-def test_regenerating_workflows_propose_through_a_bot_pull_request(name):
-    assert _workflow(name)["permissions"]["pull-requests"] == "write"
-    runs = _run_text(name)
-    assert "bash scripts/bot_pull_request.sh" in runs
-    assert not _PUSH.search(runs)
-
-
-def test_tier_update_opens_one_bot_branch_per_push():
-    # tier_update.py increments counters in place: a branch shared across runs
-    # would drop the increments of a pull request not merged yet.
-    assert 'bot_pull_request.sh "bot/tier-update-${GITHUB_SHA::12}"' in _run_text("tier-update.yml")
-
-
 # --- GAP-140: Node 24 action pins and Dependabot -------------------------------
 
-RELEASE_WORKFLOWS = ("publish-pypi.yml", "release.yml", "pages.yml",
-                     "career-stats-regen.yml", "tier-update.yml")
+RELEASE_WORKFLOWS = ("publish-pypi.yml", "pages.yml")
 PINS = {
     "actions/checkout": "v7",
     "actions/setup-python": "v7",

@@ -94,7 +94,7 @@ def test_the_bootstrap_comes_before_the_first_sibling_import(rel):
     )
 
 
-def test_the_release_gate_runs_by_path_without_pythonpath(tmp_path):
+def test_the_release_gate_runs_by_path_without_pythonpath(tmp_path, tooling_checkout):
     """The gate is the one CI blocks on; prove it end to end, not just --help.
 
     The report goes to `tmp_path`: the gate defaults it to
@@ -109,9 +109,10 @@ def test_the_release_gate_runs_by_path_without_pythonpath(tmp_path):
     """
     report = tmp_path / "gate_report.json"
     proc = subprocess.run(
-        [sys.executable, "scripts/release_gate.py", "collections/epigenomics/v1",
+        [sys.executable, str(tooling_checkout / "scripts" / "release_gate.py"),
+         str(tooling_checkout / "collections" / "metabolomics" / "v2"),
          "--strict", "--report", str(report)],
-        cwd=REPO, env=_clean_env(), capture_output=True, text=True,
+        cwd=tooling_checkout, env=_clean_env(), capture_output=True, text=True,
     )
     assert "Traceback" not in proc.stderr, proc.stderr.strip()[-600:]
     assert report.is_file(), "the gate did not honour --report"
@@ -120,13 +121,13 @@ def test_the_release_gate_runs_by_path_without_pythonpath(tmp_path):
     assert proc.returncode in (0, 1), proc.stdout.strip()[-600:]
 
 
-def test_running_the_gate_leaves_the_tracked_tree_clean():
+def test_running_the_gate_leaves_the_tracked_tree_clean(tooling_checkout):
     """Guards the guard above: a test must not rewrite a tracked artefact.
 
     Asserted on the real gate rather than on this file's source, so the next
     caller that forgets `--report` is caught too.
     """
-    tracked = REPO / "collections" / "epigenomics" / "v1" / "gate_report.json"
+    tracked = tooling_checkout / "collections" / "metabolomics" / "v2" / "gate_report.json"
     before = tracked.read_bytes() if tracked.is_file() else None
     subprocess.run(
         [sys.executable, "-m", "pytest", "tests/test_scripts_are_path_invocable.py",

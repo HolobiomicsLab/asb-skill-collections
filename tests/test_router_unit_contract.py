@@ -3,14 +3,13 @@
 from __future__ import annotations
 
 import json
-import shutil
 from pathlib import Path
 
 from scripts import router_shape
 
 
 REPO = Path(__file__).resolve().parent.parent
-V2 = REPO / "collections" / "metabolomics" / "v2"
+V2 = REPO / "tests" / "fixtures" / "router_collection"
 
 CURRENT_APPLY = """## 2. Apply
 
@@ -138,28 +137,6 @@ def test_mixed_leaf_contract_names_both_variants(tmp_path):
         "`evidence_spans`",
     ):
         assert key in rendered
-
-
-def test_existing_metabolomics_v2_router_is_byte_identical_in_a_copy(tmp_path):
-    unit = tmp_path / "v2"
-    shutil.copytree(V2 / ".claude-plugin", unit / ".claude-plugin")
-    shutil.copytree(V2 / "skills" / "_router", unit / "skills" / "_router")
-    leaves = sorted((V2 / "leaves").glob("*/SKILL.md"))[:20]
-    for source in leaves:
-        target = unit / "leaves" / source.parent.name / source.name
-        target.parent.mkdir(parents=True)
-        shutil.copy2(source, target)
-    (unit / "bin").mkdir()
-    shutil.copy2(
-        V2 / "bin" / "perspicacite_kb_bind.py",
-        unit / "bin" / "perspicacite_kb_bind.py",
-    )
-    shutil.copy2(V2 / "GROUNDING.md", unit / "GROUNDING.md")
-    expected = (V2 / "skills" / "_router" / "SKILL.md").read_bytes()
-
-    router_shape.write_router(unit, 5_859)
-
-    assert (unit / "skills" / "_router" / "SKILL.md").read_bytes() == expected
 
 
 def test_legacy_contract_uses_layout_slug_dirs(tmp_path, monkeypatch):

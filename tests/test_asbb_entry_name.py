@@ -120,11 +120,20 @@ def test_a_reinstall_retires_the_entry_installed_under_the_directory_name(
 
 
 def test_the_shipped_collection_installs_its_router_under_its_name(tmp_path, capsys):
-    rc = main(["install", "metabolomics", "--runtime", "agents", "--repo", str(REPO_ROOT),
-               "--home", str(tmp_path), "--dry-run"])
+    marketplace = REPO_ROOT / ".claude-plugin" / "marketplace.json"
+    original = marketplace.read_bytes()
+    marketplace.write_text(json.dumps({
+        "name": "fixture",
+        "plugins": [{"name": "fixture", "source": "./tests/fixtures/router_collection"}],
+    }))
+    try:
+        rc = main(["install", "fixture", "--runtime", "agents", "--repo", str(REPO_ROOT),
+                   "--home", str(tmp_path), "--dry-run"])
+    finally:
+        marketplace.write_bytes(original)
 
     out = capsys.readouterr().out
     assert rc == 0
     dest = tmp_path.resolve() / ".agents" / "skills"
-    assert f"would write {dest / 'metabolomics-collection-router'}" in out
+    assert f"would write {dest / 'fixture-router'}" in out
     assert f"would write {dest / '_router'}" not in out

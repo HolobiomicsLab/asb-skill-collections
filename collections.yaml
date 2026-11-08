@@ -32,3 +32,53 @@ domains:
         tools: 909
         workflows: 21
         papers: 566
+      - version: 1
+        status: legacy
+        leaf_dir: skills
+        path: collections/metabolomics/v1
+        tag: null
+        commit: 7b906e42d8c684ba2c21e3d5db0bb5e7280a89bc
+        source_commit: f554641c24ea7c60bbaa5322ec8a56b1a6bd30db
+        tree_digest: sha256:d184671163264b897dd7e08755193cb757feccb34d78aa4103656807cc8ed194
+        version_doi: null
+        released: 2026-06-15
+        skills: 1485
+        tools: 292
+        workflows: 0
+        papers: 98
+  epigenomics:
+    repository: HolobiomicsLab/asb-skills-epigenomics
+    concept_doi: null
+    releases:
+      - version: 1
+        status: legacy
+        leaf_dir: skills
+        path: collections/epigenomics/v1
+        tag: null
+        commit: 3f10bd43bbaa2fd978c554fa9623d7c378397cb0
+        source_commit: f554641c24ea7c60bbaa5322ec8a56b1a6bd30db
+        tree_digest: sha256:be4869016eee7a6844df82b64aaab490f3f05f644893d9507fa35b68c1f1d86c
+        version_doi: null
+        released: 2026-06-15
+        skills: 203
+        tools: 68
+        workflows: 0
+        papers: 11
+  transcriptomics:
+    repository: HolobiomicsLab/asb-skills-transcriptomics
+    concept_doi: null
+    releases:
+      - version: 1
+        status: legacy
+        leaf_dir: skills
+        path: collections/transcriptomics/v1
+        tag: null
+        commit: a08e5e959ba0c15c45136898795b469caf462f3d
+        source_commit: f554641c24ea7c60bbaa5322ec8a56b1a6bd30db
+        tree_digest: sha256:a1dc11fb6b29ab14ccc599fc4fdeb5c5f7539ae35bafc4d068355c32d4328e86
+        version_doi: null
+        released: 2026-06-15
+        skills: 166
+        tools: 37
+        workflows: 0
+        papers: 10

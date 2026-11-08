@@ -1,0 +1,6 @@
+excluded_matches:
+  - {tool: bacteria, registry: bioconda}
+  - {tool: methyl, registry: bioconductor}
+  - {tool: pycollision, registry: bioconda}
+  - {tool: javacollision, registry: bioconductor}
+  - {tool: thin, registry: bioconda}

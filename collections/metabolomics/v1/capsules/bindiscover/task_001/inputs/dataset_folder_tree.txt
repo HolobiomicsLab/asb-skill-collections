@@ -1,7 +1,0 @@
-  figures/file.png
-  figures/fontawesome-webfont.svg
-  figures/graphical_abstract.png
-  figures/mana_cover.png
-  figures/minus.png
-  figures/plus.png
-paper.md

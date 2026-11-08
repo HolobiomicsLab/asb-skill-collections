@@ -1,2 +1,0 @@
-  figures/Rplot001.jpg
-paper.md

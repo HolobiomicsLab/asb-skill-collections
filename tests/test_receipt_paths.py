@@ -52,7 +52,11 @@ def test_a_path_outside_any_checkout_is_recorded_by_its_name(tmp_path: Path) -> 
 
 
 @pytest.fixture(scope="module")
-def assembled(tmp_path_factory: pytest.TempPathFactory) -> tuple[Path, Path]:
+def assembled(
+    tmp_path_factory: pytest.TempPathFactory,
+    tooling_checkout: Path,
+    embedding_stub: Path,
+) -> tuple[Path, Path]:
     """Assemble the fixture in a scratch directory that no checkout holds."""
     root = tmp_path_factory.mktemp("receipt-paths")
     fixture = root / "fixture"
@@ -66,11 +70,12 @@ def assembled(tmp_path_factory: pytest.TempPathFactory) -> tuple[Path, Path]:
         TRANSFORMERS_OFFLINE="1",
         ASB_EMBED_MODEL="bge-small-en-v1.5",
         PYTHONDONTWRITEBYTECODE="1",
+        PYTHONPATH=str(embedding_stub),
     )
     result = subprocess.run(
         [
             sys.executable,
-            str(SCRIPT),
+            str(tooling_checkout / "scripts" / "assemble_candidate.py"),
             "--cut",
             str(fixture / "corpus"),
             "--builds",
@@ -94,7 +99,7 @@ def assembled(tmp_path_factory: pytest.TempPathFactory) -> tuple[Path, Path]:
             "--verified-on",
             "2026-09-18",
         ],
-        cwd=REPO,
+        cwd=tooling_checkout,
         env=environment,
         text=True,
         stdout=subprocess.PIPE,
