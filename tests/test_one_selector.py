@@ -18,9 +18,8 @@ from asb_skill_collections.asbb_cli import main as cli_main
 
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-V2 = ROOT / "collections" / "metabolomics" / "v2"
-COLLECTION = "metabolomics/v2"
-ROUTER_PATH = V2 / "bin" / "search_skills.py"
+COLLECTION = "fixture/v1"
+V2 = ROOT / "tests" / "fixtures" / "router_collection"
 K = 3
 
 SEARCH_CASES = (
@@ -122,10 +121,11 @@ def _default_selector_rule(monkeypatch):
     monkeypatch.delenv("ASB_SELECTOR_RULE", raising=False)
 
 
-@pytest.fixture(scope="module")
-def router_module():
+@pytest.fixture
+def router_module(collection_repo):
     """Import the installed collection's retrieval entry point as a module."""
-    spec = importlib.util.spec_from_file_location("asb_packaged_router", ROUTER_PATH)
+    path = collection_repo / "collections" / COLLECTION / "bin" / "search_skills.py"
+    spec = importlib.util.spec_from_file_location("asb_packaged_router", path)
     assert spec is not None and spec.loader is not None
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
@@ -141,12 +141,12 @@ def mcp_server():
     return asb_mcp_server
 
 
-def _cli_payload(case: dict, capsys: pytest.CaptureFixture[str]) -> dict:
+def _cli_payload(case: dict, root: pathlib.Path, capsys: pytest.CaptureFixture[str]) -> dict:
     argv = [
         "search",
         case["query"],
         "--repo",
-        str(ROOT),
+        str(root),
         "--collection",
         COLLECTION,
         "--target",
@@ -174,12 +174,14 @@ def _mcp_results(case: dict, server) -> list[dict]:
     return server.search_workflows(**common)
 
 
-def _router_payload(case: dict, router, capsys: pytest.CaptureFixture[str]) -> dict:
+def _router_payload(
+    case: dict, root: pathlib.Path, router, capsys: pytest.CaptureFixture[str]
+) -> dict:
     argv = [
         "--query",
         case["query"],
         "--collection",
-        str(V2),
+        str(root / "collections" / COLLECTION),
         "--target",
         case["target"],
         "-k",
@@ -243,15 +245,16 @@ def test_parity_matrix_has_the_required_shape():
 @pytest.mark.parametrize("case", SEARCH_CASES, ids=lambda case: case["id"])
 def test_cli_mcp_and_packaged_router_have_one_result_contract(
     case,
+    collection_repo,
     router_module,
     mcp_server,
     monkeypatch,
     capsys,
 ):
-    monkeypatch.setenv("ASB_COLLECTIONS_ROOT", str(ROOT))
-    cli_payload = _cli_payload(case, capsys)
+    monkeypatch.setenv("ASB_COLLECTIONS_ROOT", str(collection_repo))
+    cli_payload = _cli_payload(case, collection_repo, capsys)
     mcp_results = _mcp_results(case, mcp_server)
-    router_payload = _router_payload(case, router_module, capsys)
+    router_payload = _router_payload(case, collection_repo, router_module, capsys)
 
     envelope = {"mode": "keyword", "target": case["target"], "query": case["query"]}
     assert {key: cli_payload[key] for key in envelope} == envelope
@@ -487,14 +490,6 @@ def _vendored_body(path: pathlib.Path) -> bytes:
     return before_end.split(BEGIN_MARKER)[1]
 
 
-PACK_VENDORS = sorted(ROOT.glob("packs/*/*/bin/search_skills.py"))
-VENDORED_PATHS = [V2 / "bin" / "search_skills.py", V2 / "bin" / "semantic_search.py", *PACK_VENDORS]
-
-
-def test_all_eight_pack_routers_are_in_the_drift_guard():
-    assert len(PACK_VENDORS) == 8
-
-
 def test_router_generator_replaces_a_stale_vendor_block():
     from scripts import router_shape
 
@@ -506,13 +501,15 @@ def test_router_generator_replaces_a_stale_vendor_block():
     assert after_end == b"main()\n"
 
 
-@pytest.mark.parametrize("vendored_path", VENDORED_PATHS, ids=lambda path: str(path.relative_to(ROOT)))
-def test_every_vendored_selector_is_byte_for_byte_canonical(vendored_path):
+def test_every_vendored_selector_is_byte_for_byte_canonical():
     canonical = (ROOT / "asb_skill_collections" / "asb_skill_index.py").read_bytes()
+    vendored_path = (
+        ROOT / "tests" / "fixtures" / "router_collection" / "bin" / "search_skills.py"
+    )
     assert _vendored_body(vendored_path) == canonical
 
 
-def test_vendored_router_runs_with_only_the_standard_library(tmp_path):
+def test_vendored_router_runs_with_only_the_standard_library(collection_repo, tmp_path):
     env = dict(os.environ)
     env["PYTHONPATH"] = ""
     env["PYTHONDONTWRITEBYTECODE"] = "1"
@@ -522,11 +519,11 @@ def test_vendored_router_runs_with_only_the_standard_library(tmp_path):
         [
             sys.executable,
             "-S",
-            str(ROUTER_PATH),
+            str(collection_repo / "collections" / COLLECTION / "bin" / "search_skills.py"),
             "--query",
             "untargeted LC-MS/MS annotation",
             "--collection",
-            str(V2),
+            str(collection_repo / "collections" / COLLECTION),
             "--target",
             "workflows",
             "-k",

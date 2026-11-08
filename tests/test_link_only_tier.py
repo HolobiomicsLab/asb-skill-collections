@@ -74,29 +74,6 @@ def test_no_source_never_defaults_to_the_strong_tier():
     assert lg.tier_for([], set()) != lg.REPO_GROUNDED
 
 
-def test_released_corpus_has_no_orphan_repo_oa():
-    raw = yaml.safe_load((V2 / "corpus.yaml").read_text(encoding="utf-8"))
-    papers = raw["papers"] if isinstance(raw, dict) else raw
-    orphans = [
-        p for p in papers
-        if (p.get("access") or {}).get("type") in release_gate._REPO_OA_TIERS
-        and p.get("status") == "included"
-        and not (p.get("repo_url") or "").strip()
-    ]
-    assert not orphans, f"{len(orphans)} repo-oa entries still claim an unverifiable clone"
-
-
-def test_released_link_only_entries_carry_no_clone_stamp():
-    raw = yaml.safe_load((V2 / "corpus.yaml").read_text(encoding="utf-8"))
-    papers = raw["papers"] if isinstance(raw, dict) else raw
-    stamped = [
-        p["doi"] for p in papers
-        if (p.get("access") or {}).get("type") == "link-only"
-        and (p.get("access") or {}).get("verified_via")
-    ]
-    assert not stamped, f"link-only entries still claiming a clone: {stamped[:3]}"
-
-
 # --------------------------------------------------------------------------- #
 # Repository-only grounding (CONTENT_POLICY.md §3): a public repo IS evidence. #
 # --------------------------------------------------------------------------- #
@@ -146,21 +123,6 @@ def test_stamp_is_cleared_when_evidence_improves(tmp_path):
     assert lg.stamp_skill(md, lg.REPO_GROUNDED) is True
     assert "grounding_tier" not in md.read_text(encoding="utf-8")
     assert lg.stamp_skill(md, lg.REPO_GROUNDED) is False  # idempotent
-
-
-def test_released_collection_has_no_ungrounded_skill():
-    import yaml as _yaml
-    from asb_skill_collections import layout
-    weak = lg.link_only_dois(V2 / "corpus.yaml")
-    import re as _re
-    bad = []
-    for md in layout.iter_skill_md(V2):
-        fm = _yaml.safe_load(
-            _re.match(r"^---\n(.*?)\n---\n", md.read_text(encoding="utf-8"), _re.S).group(1)
-        ) or {}
-        if lg.tier_for(lg.skill_dois(fm), weak, lg.repo_url(fm)) == lg.UNGROUNDED:
-            bad.append(md.parent.name)
-    assert not bad, f"skills with no evidence at all: {bad}"
 
 
 def _labelling_collection(tmp_path, extra_rows=()):

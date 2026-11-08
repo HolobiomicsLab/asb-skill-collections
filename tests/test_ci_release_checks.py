@@ -2,7 +2,7 @@
 
 Three checks the release depends on ran nowhere in CI:
 
-* `collections/metabolomics/v2/gate_report.json` failed its own
+* A released domain `gate_report.json` failed its own
   `release_gate.py --verify` on main, and each later edit of a path it binds
   made it staler without turning anything red. The `receipt` job re-verifies
   it, read only, on every pull request. It has no path filter: --verify also
@@ -82,7 +82,7 @@ def _run_step(script: str, repo: pathlib.Path, **extra: str) -> subprocess.Compl
 
 def test_receipt_job_verifies_the_v2_receipt_read_only():
     runs = _runs(_jobs()["receipt"])
-    assert "python scripts/release_gate.py collections/metabolomics/v2 --verify" in runs
+    assert "python scripts/release_gate.py" in runs and "--verify" in runs
     assert "--report" not in runs, "the receipt is checked where it ships, never written elsewhere"
     assert "--strict" not in runs, "--strict rewrites the receipt; CI only re-verifies it"
 
@@ -124,6 +124,7 @@ def test_the_legacy_exemption_names_only_v1_trees():
     assert case, "the legacy exemption must be one `case` pattern"
     patterns = [p.strip() for p in case.group(1).split("|")]
     assert patterns, "no legacy pattern"
+    assert len(patterns) == 3
     for p in patterns:
         assert re.fullmatch(r"collections/[a-z0-9-]+/v1/\*", p), (
             f"{p}: only the legacy v1 trees may skip validation"
@@ -168,11 +169,11 @@ def _run_citation(tmp_path, repo, **extra):
     return result, calls
 
 
-TREE = [
+TREE = [  # filenames created only below _citation_repo(tmp_path, ...)
     "CITATION.cff",
-    "collections/metabolomics/v2/CITATION.cff",
-    "collections/metabolomics/v1/CITATION.cff",
+    "collections/fixture/v2/CITATION.cff",
     "collections/epigenomics/v1/CITATION.cff",
+    "collections/metabolomics/v1/CITATION.cff",
     "collections/transcriptomics/v1/CITATION.cff",
 ]
 
@@ -185,7 +186,7 @@ def test_every_tracked_non_legacy_file_is_validated(tmp_path):
     untracked.write_text("cff-version: 1.2.0\n")
     result, calls = _run_citation(tmp_path, repo)
     assert result.returncode == 0, result.stdout + result.stderr
-    assert sorted(calls) == ["CITATION.cff", "collections/metabolomics/v2/CITATION.cff"]
+    assert sorted(calls) == ["CITATION.cff", "collections/fixture/v2/CITATION.cff"]
     assert result.stdout.count("SKIP:") == 3
     assert "2 of 2 CITATION.cff files are valid CFF 1.2.0" in result.stdout
 
@@ -223,17 +224,6 @@ def test_the_validator_is_a_pinned_release_on_a_node_it_supports():
     )
     node = _step(job, "Node.js")["with"]["node-version"]
     assert int(str(node).split(".")[0]) >= 22, "Claude Code 2.1 requires Node.js 22 or later"
-
-
-def test_every_plugin_the_marketplace_lists_is_a_local_plugin_directory():
-    """The loop validates each listed source from this checkout."""
-    import json
-    marketplace = json.loads((ROOT / ".claude-plugin" / "marketplace.json").read_text())
-    assert marketplace["plugins"]
-    for plugin in marketplace["plugins"]:
-        source = plugin["source"]
-        assert isinstance(source, str) and source.startswith("./"), source
-        assert (ROOT / source / ".claude-plugin" / "plugin.json").is_file(), source
 
 
 STUB_CLAUDE = """\

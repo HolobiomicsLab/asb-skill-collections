@@ -1,6 +1,6 @@
 import pathlib
 
-R = pathlib.Path(__file__).parent.parent / "collections/metabolomics/v2/skills/_router/SKILL.md"
+R = pathlib.Path(__file__).parent.parent / "tests/fixtures/router_collection/skills/_router/SKILL.md"
 
 
 def test_router_is_tier_aware():

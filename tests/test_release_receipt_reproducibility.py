@@ -2,8 +2,7 @@
 
 The gate binds the tree it finds on disk. Anything a local run leaves behind is
 therefore bound as if the release shipped it, and the receipt then fails for
-every reader who does not have that file. The case measured here is the one
-that reached `collections/metabolomics/v2`: two `__pycache__` entries written
+every reader who does not have that file. The motivating case was two `__pycache__` entries written
 by running the collection's own `bin/` scripts, ignored by the repository and
 absent from every checkout and deposition.
 """

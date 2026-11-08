@@ -5,8 +5,9 @@ from scripts import license_tier as lt
 from asb_skill_collections import layout
 
 V2 = layout.leaf_dir(
-    pathlib.Path(__file__).parent.parent / "collections/metabolomics/v2"
+    pathlib.Path(__file__).parent.parent / "tests/fixtures/router_collection"
 )
+SLUG = "noncommercial-deconvolution"
 
 def _frontmatter(skill_md: pathlib.Path) -> dict:
     text = skill_md.read_text(encoding="utf-8")
@@ -15,19 +16,19 @@ def _frontmatter(skill_md: pathlib.Path) -> dict:
     return yaml.safe_load(fm)
 
 def test_masster_declares_noncommercial_gate():
-    fm = _frontmatter(V2 / "masster" / "SKILL.md")
+    fm = _frontmatter(V2 / SLUG / "SKILL.md")
     tl = fm["metadata"]["tool_license"]
     assert tl["tier"] == "noncommercial"
     assert tl["requires_ack"] is True
     assert "Noncommercial" in tl["ref"]
-    assert tl["url"].startswith("https://github.com/zamboni-lab/masster-dist")
+    assert tl["url"].startswith("https://example.invalid/")
 
 def test_gate_flag_consistent_with_tier():
-    fm = _frontmatter(V2 / "masster" / "SKILL.md")
+    fm = _frontmatter(V2 / SLUG / "SKILL.md")
     tl = fm["metadata"]["tool_license"]
     assert tl["requires_ack"] == lt.ack_required(tl["tier"])
 
 def test_body_has_license_notice():
-    text = (V2 / "masster" / "SKILL.md").read_text(encoding="utf-8")
+    text = (V2 / SLUG / "SKILL.md").read_text(encoding="utf-8")
     assert "## License notice" in text
     assert "noncommercial" in text.lower()

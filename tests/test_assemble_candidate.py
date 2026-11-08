@@ -116,12 +116,16 @@ def _arguments(
     ]
 
 
-def _run(arguments: list[str]) -> subprocess.CompletedProcess[str]:
+def _run(
+    arguments: list[str],
+    tooling_check: Path = REPO,
+    offline_env: dict[str, str] | None = None,
+) -> subprocess.CompletedProcess[str]:
     """Invoke the candidate driver through its supported CLI."""
     return subprocess.run(
-        [sys.executable, str(SCRIPT), *arguments],
-        cwd=REPO,
-        env=_environment(),
+        [sys.executable, str(tooling_check / "scripts" / "assemble_candidate.py"), *arguments],
+        cwd=tooling_check,
+        env=offline_env or _environment(),
         text=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
@@ -217,7 +221,7 @@ def test_driver_dry_run_prints_seven_check_pipeline_and_writes_nothing(
 
 
 def test_driver_builds_complete_candidate_and_second_run_is_identical(
-    tmp_path: Path,
+    tmp_path: Path, tooling_checkout: Path, offline_environment: dict[str, str]
 ) -> None:
     """Run the fixture through every stage and preserve the completed trees."""
     fixture = _copy_fixture(tmp_path)
@@ -226,7 +230,7 @@ def test_driver_builds_complete_candidate_and_second_run_is_identical(
     receipts = tmp_path / "receipts"
     arguments = _arguments(fixture, output, receipts)
 
-    first = _run(arguments)
+    first = _run(arguments, tooling_checkout, offline_environment)
     assert first.returncode == 0, first.stdout
     assert {path.name for path in receipts.iterdir()} == EXPECTED_RECEIPTS
     assert (output / "corpus.yaml").is_file()
@@ -301,7 +305,7 @@ def test_driver_builds_complete_candidate_and_second_run_is_identical(
     }
     before = (_tree_bytes(output), _tree_bytes(receipts))
 
-    second = _run(arguments)
+    second = _run(arguments, tooling_checkout, offline_environment)
     assert second.returncode == 0, second.stdout
     assert _last_json(second.stdout) == {
         "cut_id": expected_cut_id,
@@ -403,7 +407,9 @@ def test_driver_passes_builds_to_collect_immediately_after_cut(tmp_path: Path) -
     ]
 
 
-def test_driver_completes_with_directory_symlink_build_tree(tmp_path: Path) -> None:
+def test_driver_completes_with_directory_symlink_build_tree(
+    tmp_path: Path, tooling_checkout: Path, offline_environment: dict[str, str]
+) -> None:
     """Run every stage from a root containing per-build directory symlinks."""
     fixture = _copy_fixture(tmp_path)
     source_builds = tmp_path / "source-builds"
@@ -414,7 +420,9 @@ def test_driver_completes_with_directory_symlink_build_tree(tmp_path: Path) -> N
     output = tmp_path / "candidate"
     receipts = tmp_path / "receipts"
 
-    result = _run(_arguments(fixture, output, receipts))
+    result = _run(
+        _arguments(fixture, output, receipts), tooling_checkout, offline_environment
+    )
 
     assert result.returncode == 0, result.stdout
     gate_report = json.loads(

@@ -19,7 +19,7 @@ from pathlib import Path
 import pytest
 
 ROOT = Path(__file__).resolve().parent.parent
-COLLECTION = ROOT / "collections" / "metabolomics" / "v2"
+COLLECTION = ROOT / "tests" / "fixtures" / "router_collection"
 SCRIPT = COLLECTION / "bin" / "semantic_search.py"
 QUERY = ["--collection", str(COLLECTION), "--query", "untargeted annotation", "--k", "3"]
 

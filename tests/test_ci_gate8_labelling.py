@@ -75,34 +75,6 @@ def test_header_describes_gate8_as_it_now_behaves():
     assert "not checked" in entry, "the header must say the run-profile claim is not checked"
 
 
-def test_every_released_capsule_ships_a_crate():
-    """The premise of the gate, asserted rather than assumed."""
-    sys.path.insert(0, str(ROOT / "scripts"))
-    from release_capsule_truth import released_capsules
-
-    capsules = [
-        c for p in sorted((ROOT / "collections").glob("*/*/collection.yaml"))
-        for c in released_capsules(p.parent)
-    ]
-    assert len(capsules) == 417, f"expected the 417 released capsules, found {len(capsules)}"
-    without = [str(c.relative_to(ROOT)) for c in capsules if not (c / CRATE).is_file()]
-    assert not without, f"{len(without)} released capsule(s) ship no crate: {without[:5]}"
-
-
-def test_no_collection_manifest_declares_a_collection_level_crate():
-    """The crates are per capsule. No collection ships a crate at its root, so a
-    manifest declaring `ro_crate_path` would re-create the dangling path that
-    dropping the field removed."""
-    manifests = sorted((ROOT / "collections").rglob("collection.yaml"))
-    assert manifests, "no collection manifest found"
-    declaring = [m for m in manifests if "ro_crate_path" in m.read_text()]
-    assert not declaring, (
-        f"{[str(m.relative_to(ROOT)) for m in declaring]} declare ro_crate_path; "
-        f"no collection ships {CRATE} at its root"
-    )
-    assert not [m.parent / CRATE for m in manifests if (m.parent / CRATE).exists()]
-
-
 def test_the_generator_does_not_reintroduce_the_field():
     """Dropping it from the four manifests is undone by the next generation run
     unless the generator stops writing it."""

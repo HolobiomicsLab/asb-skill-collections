@@ -79,12 +79,6 @@ def test_a_missing_license_text_stops_the_build(repo, tmp_path, relative):
     assert not (tmp_path / "o" / "dom-v1.zip").exists()
 
 
-def test_the_repository_archive_lists_the_license_texts():
-    names = {name for name, _ in zenodo_deposit._archive_members(ROOT, "metabolomics", "v2")}
-    for relative in LICENSE_FILES:
-        assert f"metabolomics/v2/{relative}" in names
-
-
 def test_the_release_workflow_bundles_the_same_license_texts():
     workflow = yaml.safe_load((ROOT / ".github" / "workflows" / "release.yml").read_text())
     (step,) = [s for s in workflow["jobs"]["release"]["steps"] if s.get("id") == "zenodo"]

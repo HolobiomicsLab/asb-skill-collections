@@ -64,9 +64,9 @@ def _write_zenodo(candidate: Path, document: dict) -> None:
     )
 
 
-def test_prepared_candidate_has_no_surface_findings(tmp_path: Path) -> None:
+def test_prepared_candidate_has_no_surface_findings(tmp_path: Path, tooling_checkout: Path) -> None:
     """Keep the prepared public fixture clean under the recorded rules."""
-    result = _run(_prepared_candidate(tmp_path))
+    result = _run(_prepared_candidate(tmp_path, tooling_checkout))
 
     assert result.returncode == 0, result.stderr
     assert re.fullmatch(
@@ -75,9 +75,9 @@ def test_prepared_candidate_has_no_surface_findings(tmp_path: Path) -> None:
     )
 
 
-def test_v2_doi_in_workflow_is_a_finding(tmp_path: Path) -> None:
+def test_v2_doi_in_workflow_is_a_finding(tmp_path: Path, tooling_checkout: Path) -> None:
     """Reject a foreign release DOI wherever candidate prose carries it."""
-    candidate = _prepared_candidate(tmp_path)
+    candidate = _prepared_candidate(tmp_path, tooling_checkout)
     skill = candidate / "workflows" / "example" / "SKILL.md"
     skill.parent.mkdir(parents=True, exist_ok=True)
     skill.write_text(
@@ -97,10 +97,10 @@ def test_v2_doi_in_workflow_is_a_finding(tmp_path: Path) -> None:
     ("domain", "version"), [("metabolomics", "v3"), ("astronomy", "v1")]
 )
 def test_identifier_rules_are_domain_neutral(
-    tmp_path: Path, domain: str, version: str
+    tmp_path: Path, tooling_checkout: Path, domain: str, version: str
 ) -> None:
     """Reject a foreign identifier independently of candidate domain."""
-    candidate = _prepared_candidate(tmp_path)
+    candidate = _prepared_candidate(tmp_path, tooling_checkout)
     (candidate / "collection.yaml").write_text(
         f"domain: {domain}\nversion: {version}\n", encoding="utf-8"
     )
@@ -114,10 +114,10 @@ def test_identifier_rules_are_domain_neutral(
 
 @pytest.mark.parametrize(("rule_id", "phrase"), RETRACTED_PHRASES.items())
 def test_each_retracted_phrase_is_a_finding(
-    tmp_path: Path, rule_id: str, phrase: str
+    tmp_path: Path, tooling_checkout: Path, rule_id: str, phrase: str
 ) -> None:
     """Report every recorded retraction under its own data-defined id."""
-    candidate = _prepared_candidate(tmp_path)
+    candidate = _prepared_candidate(tmp_path, tooling_checkout)
     (candidate / "README.md").write_text(f"{phrase}\n", encoding="utf-8")
 
     result = _run(candidate)
@@ -126,9 +126,9 @@ def test_each_retracted_phrase_is_a_finding(
     assert f"README.md:1: {rule_id}: {phrase}" in result.stdout
 
 
-def test_phrase_matching_collapses_whitespace_and_case(tmp_path: Path) -> None:
+def test_phrase_matching_collapses_whitespace_and_case(tmp_path: Path, tooling_checkout: Path) -> None:
     """Find a retracted sentence after wrapping and recasing it."""
-    candidate = _prepared_candidate(tmp_path)
+    candidate = _prepared_candidate(tmp_path, tooling_checkout)
     (candidate / "README.md").write_text(
         "Context\nIS GRADABLE BY `ASB\nSOLVE-WORKFLOW`\n", encoding="utf-8"
     )
@@ -141,10 +141,10 @@ def test_phrase_matching_collapses_whitespace_and_case(tmp_path: Path) -> None:
 
 @pytest.mark.parametrize("relation", ["isNewVersionOf", "isPreviousVersionOf"])
 def test_doi_is_allowed_as_zenodo_lineage_identifier(
-    tmp_path: Path, relation: str
+    tmp_path: Path, tooling_checkout: Path, relation: str
 ) -> None:
     """Permit the previous deposit DOI only in an approved lineage relation."""
-    candidate = _prepared_candidate(tmp_path)
+    candidate = _prepared_candidate(tmp_path, tooling_checkout)
     _write_zenodo(
         candidate,
         {
@@ -186,10 +186,10 @@ def test_doi_is_allowed_as_zenodo_lineage_identifier(
     ],
 )
 def test_doi_outside_approved_lineage_value_is_a_finding(
-    tmp_path: Path, relative_path: str, document: dict | str
+    tmp_path: Path, tooling_checkout: Path, relative_path: str, document: dict | str
 ) -> None:
     """Reject the DOI in prose, another relation, or another file."""
-    candidate = _prepared_candidate(tmp_path)
+    candidate = _prepared_candidate(tmp_path, tooling_checkout)
     target = candidate / relative_path
     if isinstance(document, dict):
         target.write_text(json.dumps(document, indent=2) + "\n", encoding="utf-8")
@@ -204,9 +204,9 @@ def test_doi_outside_approved_lineage_value_is_a_finding(
     assert "surface: 1 findings" in result.stdout
 
 
-def test_iri_has_no_zenodo_lineage_exception(tmp_path: Path) -> None:
+def test_iri_has_no_zenodo_lineage_exception(tmp_path: Path, tooling_checkout: Path) -> None:
     """Reject the foreign collection IRI even in an approved relation shape."""
-    candidate = _prepared_candidate(tmp_path)
+    candidate = _prepared_candidate(tmp_path, tooling_checkout)
     _write_zenodo(
         candidate,
         {"related_identifiers": [{"identifier": IRI, "relation": "isNewVersionOf"}]},
@@ -218,9 +218,9 @@ def test_iri_has_no_zenodo_lineage_exception(tmp_path: Path) -> None:
     assert ".zenodo.json:4: metabolomics-v2-iri" in result.stdout
 
 
-def test_invalid_utf8_is_counted_and_skipped(tmp_path: Path) -> None:
+def test_invalid_utf8_is_counted_and_skipped(tmp_path: Path, tooling_checkout: Path) -> None:
     """Skip an undecodable regular file without failing a clean candidate."""
-    candidate = _prepared_candidate(tmp_path)
+    candidate = _prepared_candidate(tmp_path, tooling_checkout)
     (candidate / "opaque.bin").write_bytes(b"\xff\xfe\x00")
 
     result = _run(candidate)
@@ -232,9 +232,9 @@ def test_invalid_utf8_is_counted_and_skipped(tmp_path: Path) -> None:
     )
 
 
-def test_second_run_is_byte_identical(tmp_path: Path) -> None:
+def test_second_run_is_byte_identical(tmp_path: Path, tooling_checkout: Path) -> None:
     """Emit byte-identical output for an unchanged candidate."""
-    candidate = _prepared_candidate(tmp_path)
+    candidate = _prepared_candidate(tmp_path, tooling_checkout)
 
     first = _run(candidate)
     second = _run(candidate)

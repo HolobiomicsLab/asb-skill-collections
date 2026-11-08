@@ -1,0 +1,12 @@
+[
+ {"slug":"alignfixture","name":"AlignFixture","techniques":["LC-MS"],"entry_kind":"software","license_tier":"open"},
+ {"slug":"formulafixture","name":"FormulaFixture","techniques":["LC-MS"],"entry_kind":"software","license_tier":"open"},
+ {"slug":"massql","name":"MassQL","techniques":["LC-MS"],"entry_kind":"software","license_tier":"open"},
+ {"slug":"deconvolutionfixture","name":"DeconvolutionFixture","techniques":["GC-MS"],"entry_kind":"software","license_tier":"open"},
+ {"slug":"matchfixture","name":"MatchFixture","techniques":["LC-MS"],"entry_kind":"software","license_tier":"open"},
+ {"slug":"networkfixture","name":"NetworkFixture","techniques":["LC-MS"],"entry_kind":"software","license_tier":"open"},
+ {"slug":"nmrfixture","name":"NMRFixture","techniques":["NMR"],"entry_kind":"software","license_tier":"open"},
+ {"slug":"imagingfixture","name":"ImagingFixture","techniques":["MS-imaging"],"entry_kind":"software","license_tier":"open"},
+ {"slug":"fluxfixture","name":"FluxFixture","techniques":["LC-MS"],"entry_kind":"software","license_tier":"open"},
+ {"slug":"restrictedfixture","name":"RestrictedFixture","techniques":["LC-MS"],"entry_kind":"software","license_tier":"noncommercial"}
+]
