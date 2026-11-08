@@ -36,8 +36,9 @@ if __package__ in (None, ""):
     _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
 
 from scripts.derive_license_tiers import classify_license_text, spdx_from_r_license_field
-from scripts.license_tier import (SUBJECT_TOOL, UNESTABLISHED_DETECTIONS, licence_subject,
-                                  load_map, tier_for_license)
+from scripts.license_tier import (UNESTABLISHED_DETECTIONS, load_map,
+                                  tier_for_license, tool_license,
+                                  warn_legacy_tool_licenses)
 
 _REGISTRIES = pathlib.Path(__file__).resolve().parent.parent / "governance" / "tool_registries.yaml"
 _USER_AGENT = "asb-skill-collections tool-licence-resolver"
@@ -96,10 +97,11 @@ def self_published_evidence(tool, papers) -> dict | None:
     is the defect issue #42 fixed.
     """
     paper = introducing_paper(tool, papers)
-    if not paper or licence_subject(paper) != SUBJECT_TOOL:
+    if not paper or tool_license(paper) is None:
         return None
-    detection = paper.get("license_detection")
-    licence = (paper.get("access") or {}).get("license")
+    block = tool_license(paper) or {}
+    detection = block.get("detection")
+    licence = block.get("spdx")
     if detection in UNESTABLISHED_DETECTIONS or not licence:
         return None
     return {"license": licence, "license_detection": detection,
@@ -251,7 +253,9 @@ def resolve(collection_dir, cache_dir, registries=None) -> dict:
     d = pathlib.Path(collection_dir)
     tools = json.loads((d / "tools_index.json").read_text(encoding="utf-8"))
     corpus = yaml.safe_load((d / "corpus.yaml").read_text(encoding="utf-8"))
-    papers = {p["doi"]: p for p in corpus.get("papers", []) if p.get("doi")}
+    corpus_papers = corpus.get("papers", [])
+    warn_legacy_tool_licenses(corpus_papers, d / "corpus.yaml")
+    papers = {p["doi"]: p for p in corpus_papers if p.get("doi")}
     config = load_registry_config()
     registries = registries if registries is not None else (config.get("registries") or [])
     excluded = excluded_pairs(config)

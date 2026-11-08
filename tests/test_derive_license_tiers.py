@@ -1,4 +1,6 @@
-import pathlib, sys, textwrap
+import pathlib
+import sys
+import textwrap
 
 import pytest
 import yaml
@@ -21,12 +23,14 @@ def test_parse_repo_tolerates_punctuation_and_paths():
     assert d.parse_repo("https://github.com/a/b.git") == ("a", "b")   # still works
 
 def test_tier_for_repo_maps_spdx():
-    det = lambda o, r, t: ({"iomega/spec2vec": "Apache-2.0"}.get(f"{o}/{r}"), "github-api")
+    def det(o, r, t):
+        return {"iomega/spec2vec": "Apache-2.0"}.get(f"{o}/{r}"), "github-api"
     tier, lic, src = d.tier_for_repo("https://github.com/iomega/spec2vec", _detect=det)
     assert (tier, lic) == ("open", "Apache-2.0")
 
 def test_tier_for_repo_noncommercial():
-    det = lambda o, r, t: ("CC-BY-NC-4.0", "github-api")
+    def det(o, r, t):
+        return "CC-BY-NC-4.0", "github-api"
     tier, lic, src = d.tier_for_repo("https://github.com/x/y", _detect=det)
     assert (tier, lic) == ("noncommercial", "CC-BY-NC-4.0")
 
@@ -38,7 +42,9 @@ def test_tier_for_repo_no_license_is_restricted():
 
 def test_tier_for_repo_uses_cache(tmp_path):
     calls = []
-    def det(o, r, t): calls.append((o, r)); return ("MIT", "github-api")
+    def det(o, r, t):
+        calls.append((o, r))
+        return "MIT", "github-api"
     cache = {}
     d.tier_for_repo("https://github.com/a/b", cache=cache, _detect=det)
     d.tier_for_repo("https://github.com/a/b", cache=cache, _detect=det)
@@ -66,13 +72,35 @@ def test_apply_to_corpus_writes_tiers(tmp_path):
         return (lic, "github-api")
     summary = d.apply_to_corpus(str(corpus), token=None, _detect=det)
     out = yaml.safe_load(corpus.read_text())["papers"]
-    assert out[0]["license_tier"] == "open" and out[0]["access"]["license"] == "MIT"
-    assert out[1]["license_tier"] == "noncommercial" and out[1]["access"]["license"] == "CC-BY-NC-4.0"
+    assert out[0]["license_tier"] == "open" and out[0]["tool_license"]["spdx"] == "MIT"
+    assert out[1]["license_tier"] == "noncommercial" and out[1]["tool_license"]["spdx"] == "CC-BY-NC-4.0"
     assert out[0]["access"]["type"] == "repo-oa"
     assert out[1]["access"]["type"] == "repo-oa"
-    assert out[0]["license_detection"] == "github-api"
-    assert out[1]["license_detection"] == "github-api"
+    assert out[0]["tool_license"]["detection"] == "github-api"
+    assert out[1]["tool_license"]["detection"] == "github-api"
     assert summary == {"open": 1, "noncommercial": 1}
+
+
+def test_apply_to_corpus_records_tool_licence_beside_paper_evidence(tmp_path):
+    corpus = tmp_path / "corpus.yaml"
+    corpus.write_text(textwrap.dedent('''
+        papers:
+        - name: dual-axis
+          repo_url: https://github.com/a/open
+          access: {type: gold-oa, license: CC-BY-4.0, verified_via: unpaywall_oa_locations}
+          license_tier: open
+          license_detection: unpaywall
+          license_subject: paper
+    '''))
+    d.apply_to_corpus(corpus, token=None, _detect=lambda *args: ("MIT", "github-api"))
+    entry = yaml.safe_load(corpus.read_text())["papers"][0]
+    assert entry["access"]["license"] == "CC-BY-4.0"
+    assert entry["tool_license"] == {
+        "spdx": "MIT", "detection": "github-api", "verified_on": None,
+        "source": "https://github.com/a/open",
+    }
+    assert entry["license_tier"] == "open"
+    assert "license_subject" not in entry
 
 def test_apply_to_corpus_respects_license_locked(tmp_path):
     corpus = tmp_path / "corpus.yaml"
@@ -95,7 +123,7 @@ def test_apply_to_corpus_respects_license_locked(tmp_path):
     assert out[0]["license_tier"] == "noncommercial"               # locked, untouched
     assert out[0]["access"]["license"] == "Academic; commercial by permission"
     assert out[1]["license_tier"] == "open"                        # auto-derived
-    assert out[1]["license_detection"] == "github-api"
+    assert out[1]["tool_license"]["detection"] == "github-api"
     assert summary == {"noncommercial": 1, "open": 1}
 
 
@@ -140,7 +168,8 @@ def test_detect_license_none_when_no_file():
 
 
 def test_tier_for_repo_threetuple_and_unclassified_is_restricted():
-    det = lambda o, r, t: (None, "file-present-unclassified")
+    def det(o, r, t):
+        return None, "file-present-unclassified"
     tier, lic, src = d.tier_for_repo("https://github.com/o/r", _detect=det)
     assert (tier, src) == ("restricted", "file-present-unclassified")
 
@@ -151,10 +180,13 @@ def test_apply_to_corpus_writes_license_detection(tmp_path):
         papers:
         - {name: A, doi: 10.1/a, repo_url: https://github.com/a/open, status: included, access: {type: repo-oa}}
     '''))
-    det = lambda o, r, t: ("MIT", "license-file")
+    def det(o, r, t):
+        return "MIT", "license-file"
     d.apply_to_corpus(str(corpus), token=None, _detect=det)
     p = yaml.safe_load(corpus.read_text())["papers"][0]
-    assert p["license_tier"] == "open" and p["access"]["license"] == "MIT" and p["license_detection"] == "license-file"
+    assert p["license_tier"] == "open"
+    assert p["tool_license"]["spdx"] == "MIT"
+    assert p["tool_license"]["detection"] == "license-file"
 
 
 def test_full_cc_by_nc_text_classifies_nc():
@@ -281,7 +313,7 @@ def test_an_entry_with_a_repository_is_still_derived(tmp_path):
     d.apply_to_corpus(c, token=None, _detect=lambda *a, **k: ("MIT", "github-api"))
     entry = yaml.safe_load(c.read_text())["papers"][0]
     assert entry["license_tier"] == "open"
-    assert entry["license_detection"] == "github-api"
+    assert entry["tool_license"]["detection"] == "github-api"
 
 
 def test_a_failed_lookup_never_erases_an_established_licence(tmp_path):
@@ -296,14 +328,14 @@ def test_a_failed_lookup_never_erases_an_established_licence(tmp_path):
         - name: read-from-readme
           doi: 10.1/a
           repo_url: https://github.com/o/r
-          access: {license: LGPL-3.0}
+          access: {}
+          tool_license: {spdx: LGPL-3.0, detection: readme-llm, verified_on: null, source: https://github.com/o/r}
           license_tier: open
-          license_detection: readme-llm
     ''').strip() + "\n", encoding="utf-8")
     d.apply_to_corpus(c, token=None, _detect=lambda *a, **k: (None, "none"))
     entry = yaml.safe_load(c.read_text())["papers"][0]
-    assert entry["access"]["license"] == "LGPL-3.0"
-    assert entry["license_detection"] == "readme-llm"
+    assert entry["tool_license"]["spdx"] == "LGPL-3.0"
+    assert entry["tool_license"]["detection"] == "readme-llm"
 
 
 def test_a_failed_lookup_may_still_overwrite_an_unestablished_one(tmp_path):
@@ -320,7 +352,7 @@ def test_a_failed_lookup_may_still_overwrite_an_unestablished_one(tmp_path):
           license_detection: none
     ''').strip() + "\n", encoding="utf-8")
     d.apply_to_corpus(c, token=None, _detect=lambda *a, **k: (None, "file-present-unclassified"))
-    assert yaml.safe_load(c.read_text())["papers"][0]["license_detection"] == "file-present-unclassified"
+    assert yaml.safe_load(c.read_text())["papers"][0]["tool_license"]["detection"] == "file-present-unclassified"
 
 
 def test_a_successful_lookup_still_updates_an_established_licence(tmp_path):
@@ -331,14 +363,14 @@ def test_a_successful_lookup_still_updates_an_established_licence(tmp_path):
         - name: now-known-properly
           doi: 10.1/c
           repo_url: https://github.com/o/r
-          access: {license: BSD}
+          access: {}
+          tool_license: {spdx: BSD, detection: readme-llm, verified_on: null, source: https://github.com/o/r}
           license_tier: open
-          license_detection: readme-llm
     ''').strip() + "\n", encoding="utf-8")
     d.apply_to_corpus(c, token=None, _detect=lambda *a, **k: ("Apache-2.0", "github-api"))
     entry = yaml.safe_load(c.read_text())["papers"][0]
-    assert entry["access"]["license"] == "Apache-2.0"
-    assert entry["license_detection"] == "github-api"
+    assert entry["tool_license"]["spdx"] == "Apache-2.0"
+    assert entry["tool_license"]["detection"] == "github-api"
 
 
 @pytest.mark.parametrize("field,expected", [
@@ -391,7 +423,7 @@ def test_an_entry_with_neither_a_licence_nor_a_detection_is_still_derived(tmp_pa
           license_detection: null
     ''').strip() + "\n", encoding="utf-8")
     d.apply_to_corpus(c, token=None, _detect=lambda *a, **k: ("MIT", "github-api"))
-    assert yaml.safe_load(c.read_text())["papers"][0]["access"]["license"] == "MIT"
+    assert yaml.safe_load(c.read_text())["papers"][0]["tool_license"]["spdx"] == "MIT"
 
 
 def test_a_paper_licence_is_never_substituted_by_a_tool_licence(tmp_path):
@@ -414,7 +446,8 @@ def test_a_paper_licence_is_never_substituted_by_a_tool_licence(tmp_path):
     d.apply_to_corpus(c, token=None, _detect=lambda *a, **k: ("GPL-3.0", "github-api"))
     entry = yaml.safe_load(c.read_text())["papers"][0]
     assert entry["access"]["license"] == "cc-by"
-    assert entry["license_subject"] == "paper"
+    assert entry["tool_license"]["spdx"] == "GPL-3.0"
+    assert "license_subject" not in entry
 
 
 def test_a_tool_licence_is_still_updated(tmp_path):
@@ -425,14 +458,15 @@ def test_a_tool_licence_is_still_updated(tmp_path):
         - name: tool-licensed
           doi: 10.1/b
           repo_url: https://github.com/o/r
-          access: {license: BSD}
+          access: {}
+          tool_license: {spdx: BSD, detection: readme-llm, verified_on: null, source: https://github.com/o/r}
           license_tier: open
-          license_detection: readme-llm
     ''').strip() + "\n", encoding="utf-8")
     d.apply_to_corpus(c, token=None, _detect=lambda *a, **k: ("Apache-2.0", "github-api"))
     entry = yaml.safe_load(c.read_text())["papers"][0]
-    assert entry["access"]["license"] == "Apache-2.0"
-    assert entry["license_subject"] == "tool"
+    assert entry["tool_license"]["spdx"] == "Apache-2.0"
+    assert entry["tool_license"]["detection"] == "github-api"
+    assert "license_subject" not in entry
 
 
 def test_an_entry_with_no_licence_at_all_is_still_derived(tmp_path):
@@ -448,5 +482,5 @@ def test_an_entry_with_no_licence_at_all_is_still_derived(tmp_path):
     ''').strip() + "\n", encoding="utf-8")
     d.apply_to_corpus(c, token=None, _detect=lambda *a, **k: ("MIT", "github-api"))
     entry = yaml.safe_load(c.read_text())["papers"][0]
-    assert entry["access"]["license"] == "MIT"
-    assert entry["license_subject"] == "tool"
+    assert entry["tool_license"]["spdx"] == "MIT"
+    assert "license_subject" not in entry

@@ -44,8 +44,17 @@ def cache(tmp_path):
 
 
 def paper(name, licence, detection, repo="owner/repo"):
-    return {"doi": "10.1/p", "name": name, "repo_url": repo,
-            "license_detection": detection, "access": {"license": licence}}
+    entry = {"doi": "10.1/p", "name": name, "repo_url": repo, "access": {}}
+    if detection.endswith("-paper"):
+        entry.update(license_detection=detection, access={"license": licence})
+    else:
+        entry["tool_license"] = {
+            "spdx": licence,
+            "detection": detection,
+            "verified_on": None,
+            "source": repo,
+        }
+    return entry
 
 
 def tool(slug, name, dois=("10.1/p",)):

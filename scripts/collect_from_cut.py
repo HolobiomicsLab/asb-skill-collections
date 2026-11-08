@@ -856,7 +856,6 @@ def _prepare_tool(
         "license_tier": "unknown",
         "license": None,
         "license_detection": None,
-        "license_subject": None,
         "repo_url": repos[0] if repos else None,
     }
 

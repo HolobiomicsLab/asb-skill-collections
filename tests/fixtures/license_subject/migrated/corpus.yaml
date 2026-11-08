@@ -1,0 +1,17 @@
+schema: asb-corpus/1.0
+collection: metabolomics
+version: 2
+papers:
+- name: Dual-axis
+  doi: 10.1002/cmtd.202400088
+  repo_url: https://github.com/MejriY/MS2DECIDE
+  access:
+    type: gold-oa
+    license: CC-BY-4.0
+    is_oa: true
+  license_tier: open
+  tool_license:
+    spdx: MIT
+    detection: github-api
+    verified_on: '2026-06-22'
+    source: https://github.com/MejriY/MS2DECIDE

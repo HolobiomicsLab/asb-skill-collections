@@ -32,6 +32,8 @@ if __package__ in (None, ""):
 
     _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
 
+from scripts.license_tier import tool_license, warn_legacy_tool_licenses
+
 
 from scripts.derive_license_tiers import parse_repo
 
@@ -130,6 +132,7 @@ def candidates(corpus_path: str) -> list[dict]:
     """
     path = pathlib.Path(corpus_path)
     doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+    warn_legacy_tool_licenses(doc.get("papers", []), path)
 
     # ordered dict keyed by (owner, repo) to collect all names (F2 dedup)
     seen: dict[tuple[str, str], dict] = {}
@@ -150,11 +153,12 @@ def candidates(corpus_path: str) -> list[dict]:
         if not parsed:
             continue
 
-        if (p.get("access") or {}).get("license"):
+        block = tool_license(p) or {}
+        if block.get("spdx"):
             continue
 
         # Task 2 — skip entries where a license file exists but couldn't be classified
-        if p.get("license_detection") == "file-present-unclassified":
+        if block.get("detection") == "file-present-unclassified":
             continue
 
         owner, repo = parsed

@@ -26,7 +26,9 @@ FIXTURE_CORPUS = {
             "doi": "10.1000/bbb",
             "repo_url": "https://github.com/owner2/repoB",
             "license_tier": "restricted",
-            "access": {"license": "MIT"},
+            "access": {},
+            "tool_license": {"spdx": "MIT", "detection": "license-file",
+                             "verified_on": None, "source": "owner2/repoB"},
         },
         # 3. No repo, restricted → excluded
         {
@@ -50,7 +52,9 @@ FIXTURE_CORPUS = {
             "doi": "10.1000/eee",
             "repo_url": "https://github.com/owner5/repoE",
             "license_tier": "open",
-            "access": {"license": "Apache-2.0"},
+            "access": {},
+            "tool_license": {"spdx": "Apache-2.0", "detection": "license-file",
+                             "verified_on": None, "source": "owner5/repoE"},
         },
     ],
 }
@@ -407,7 +411,8 @@ def test_candidates_excludes_file_present_unclassified(tmp_path):
                 "doi": "10.1/b",
                 "repo_url": "https://github.com/b/hasfile",
                 "license_tier": "restricted",
-                "license_detection": "file-present-unclassified",
+                "tool_license": {"spdx": None, "detection": "file-present-unclassified",
+                                 "verified_on": None, "source": "owner/repo"},
                 "access": {},
             },
         ],
