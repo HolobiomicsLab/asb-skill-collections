@@ -1,0 +1,66 @@
+name: Retraction watch
+
+on:
+  schedule:
+    - cron: '0 6 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  retraction-watch:
+    runs-on: ubuntu-latest
+    env:
+      CROSSREF_MAILTO: ${{ vars.CROSSREF_MAILTO }}
+    steps:
+      - name: Check out domain content
+        uses: actions/checkout@v7
+        with:
+          path: domain
+      - name: Check out pinned tooling
+        uses: actions/checkout@v7
+        with:
+          repository: HolobiomicsLab/asb-skill-collections
+          ref: <TOOLING_SHA>
+          path: tooling
+      - name: Install Python dependencies
+        run: python -m pip install pyyaml
+      - name: Read open retraction-watch issues
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue list --state open --label retraction-watch --limit 1000 --json number,title,body,createdAt > open-issues.json
+      - name: Check Crossref for retractions
+        id: monitor
+        run: |
+          python -c 'import json; p="open-issues.json"; rows=json.load(open(p)); [row.update(created_at=row.pop("createdAt")) for row in rows]; json.dump(rows, open(p, "w"))'
+          set +e
+          python tooling/scripts/check_retractions.py \
+            --collections domain/collections \
+            --staged domain/staged-collections \
+            --user-agent-mailto "$CROSSREF_MAILTO" \
+            --existing-issues open-issues.json \
+            --report retraction-report.json > retraction-commands.sh
+          code=$?
+          set -e
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          if [ "$code" -eq 2 ]; then
+            echo "Crossref errors prevent a complete answer; inspect the report."
+            exit 2
+          fi
+          if [ "$code" -gt 2 ]; then
+            exit "$code"
+          fi
+      - name: Create or comment on the recommended issue
+        if: steps.monitor.outputs.exit_code == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash retraction-commands.sh
+      - name: Publish the machine-readable report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: retraction-report
+          path: retraction-report.json
+          if-no-files-found: ignore
