@@ -647,10 +647,17 @@ def _v2_arguments(candidate: Path, receipts: Path, repo: Path) -> list[str]:
 
 
 def _land_v2(
-    candidate: Path, receipts: Path, repo: Path, *, dry_run: bool = False
+    candidate: Path,
+    receipts: Path,
+    repo: Path,
+    *,
+    dry_run: bool = False,
+    plugin_name: str | None = None,
 ) -> subprocess.CompletedProcess[str]:
     """Invoke the landing command for a candidate derived as v2."""
     command = [sys.executable, str(SCRIPT), *_v2_arguments(candidate, receipts, repo)]
+    if plugin_name is not None:
+        command.extend(("--plugin-name", plugin_name))
     if dry_run:
         command.append("--dry-run")
     return _run_process(command, repo.parent)
@@ -848,3 +855,101 @@ def test_merge_dry_run_reports_marketplace_mode_without_writes(
     assert _git(repo, "status", "--porcelain").stdout == ""
     assert _tree_bytes(repo) == before
     assert (repo / ".zenodo.json").read_bytes() == zenodo
+
+
+def test_distinct_plugin_name_lands_beside_released_domain_name(
+    assembled: tuple[Path, Path], tmp_path: Path
+) -> None:
+    """Keep the released domain entry intact while naming the candidate distinctly."""
+    candidate, receipts = _copy_v2_inputs(assembled, tmp_path)
+    repo, initial, _, marketplace_bytes = _create_released_repo(
+        tmp_path, plugin_name=DOMAIN
+    )
+    original = json.loads(marketplace_bytes)
+
+    refused = _land_v2(candidate, receipts, repo)
+    assert refused.returncode == 2
+    assert f"already lists a plugin named {DOMAIN!r}" in refused.stderr
+
+    plugin_name = f"{DOMAIN}-v3"
+    landed = _land_v2(candidate, receipts, repo, plugin_name=plugin_name)
+
+    assert landed.returncode == 0, landed.stdout + landed.stderr
+    assert _git(repo, "rev-parse", "main").stdout.strip() == initial
+    marketplace = json.loads((repo / MARKETPLACE_PATH).read_bytes())
+    assert json.dumps(marketplace["plugins"][0], ensure_ascii=False).encode() == (
+        json.dumps(original["plugins"][0], ensure_ascii=False).encode()
+    )
+    assert marketplace["plugins"][1]["name"] == plugin_name
+    assert marketplace["plugins"][1]["release"] is False
+    assert _git(repo, "log", "-1", "--format=%s").stdout.strip() == (
+        f"{V2_SUBJECT} as {plugin_name}"
+    )
+
+
+def test_distinct_plugin_name_conflict_is_refused(
+    assembled: tuple[Path, Path], tmp_path: Path
+) -> None:
+    """Refuse a caller-selected name that is already present in the marketplace."""
+    candidate, receipts = _copy_v2_inputs(assembled, tmp_path)
+    plugin_name = f"{DOMAIN}-v3"
+    repo, initial, _, marketplace_bytes = _create_released_repo(
+        tmp_path, plugin_name=plugin_name
+    )
+
+    result = _land_v2(candidate, receipts, repo, plugin_name=plugin_name)
+
+    assert result.returncode == 2
+    assert f"already lists a plugin named {plugin_name!r}" in result.stderr
+    assert _branches(repo) == ["main"]
+    assert _git(repo, "rev-parse", "HEAD").stdout.strip() == initial
+    assert (repo / MARKETPLACE_PATH).read_bytes() == marketplace_bytes
+
+
+@pytest.mark.parametrize(
+    "plugin_name",
+    ["", "Metabarcoding-v3", "metabarcoding v3", "-metabarcoding"],
+)
+def test_invalid_plugin_name_is_refused_before_git(
+    assembled: tuple[Path, Path],
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+    capsys: pytest.CaptureFixture[str],
+    plugin_name: str,
+) -> None:
+    """Validate the plugin name before inspecting any Git state."""
+    candidate, receipts = _copy_v2_inputs(assembled, tmp_path)
+    repo, _, _, _ = _create_released_repo(tmp_path)
+    module = _load_landing_module(monkeypatch)
+
+    def fail_git(*_arguments: object) -> None:
+        raise AssertionError("Git must not run for an invalid plugin name")
+
+    monkeypatch.setattr(module, "_git", fail_git)
+    exit_code = module.main(
+        [*_v2_arguments(candidate, receipts, repo), f"--plugin-name={plugin_name}"]
+    )
+    captured = capsys.readouterr()
+
+    assert exit_code == 1
+    assert f"invalid plugin name: {plugin_name!r}" in captured.err
+
+
+def test_dry_run_reports_distinct_plugin_name(
+    assembled: tuple[Path, Path], tmp_path: Path
+) -> None:
+    """Include the selected plugin name in the dry-run plan and commit subject."""
+    candidate, receipts = _copy_v2_inputs(assembled, tmp_path)
+    repo, initial, _, _ = _create_released_repo(tmp_path, plugin_name=DOMAIN)
+    plugin_name = f"{DOMAIN}-v3"
+
+    result = _land_v2(
+        candidate, receipts, repo, dry_run=True, plugin_name=plugin_name
+    )
+
+    assert result.returncode == 0, result.stdout + result.stderr
+    plan = _json_output(result)
+    assert plan["plugin_name"] == plugin_name
+    assert plan["message"] == f"{V2_SUBJECT} as {plugin_name}"
+    assert _git(repo, "rev-parse", "HEAD").stdout.strip() == initial
+    assert _branches(repo) == ["main"]

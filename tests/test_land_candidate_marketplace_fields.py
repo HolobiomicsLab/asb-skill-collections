@@ -30,6 +30,7 @@ def _plan() -> SimpleNamespace:
             descriptor={"title": "ASB Proteomics", "skills_count": 12, "tools_count": 3},
         ),
         collection_path=COLLECTION_PATH,
+        plugin_name=DOMAIN,
     )
 
 
