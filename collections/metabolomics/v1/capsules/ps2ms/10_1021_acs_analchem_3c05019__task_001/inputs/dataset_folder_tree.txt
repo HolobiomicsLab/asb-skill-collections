@@ -1,3 +1,0 @@
-  figures/figure.png
-  figures/logo.png
-paper.md

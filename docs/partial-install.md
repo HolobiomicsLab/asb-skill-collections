@@ -1,15 +1,14 @@
 # Installing part of a collection
 
-The v2 metabolomics collection holds 5,859 skills. Its measured local copy in
-this repository is at `collections/metabolomics/v2`; in a domain checkout the
-same layout is `<domain checkout>/collections/metabolomics/v2`.
-Installed whole, it is a 61 MB snapshot of 6,870 files. Most tasks need a
+The v2 metabolomics collection holds 5,859 skills. The measured local copy was
+at `<domain checkout>/collections/metabolomics/v2` before the per-domain split.
+Installed whole, it was a 61 MB snapshot of 6,870 files. Most tasks need a
 handful of those skills. This page describes four ways to take less.
 
 | Way | Command | Needs a checkout | What you get |
 |---|---|---|---|
-| Technique pack | `asbb install <pack>` | yes | every skill tagged with one technique, for example the 2,617 LC-MS skills |
-| Selection | `asbb install --skills ...`, `--skills-file ...` or `--query ...` | yes | exactly the skills you name or the top hits of a search, installed as a pack |
+| Technique pack | `asbb install --repo <domain checkout> <pack>` | domain | every skill tagged with one technique, for example the 2,617 LC-MS skills |
+| Selection | `asbb install --repo <domain checkout> --skills ...`, `--skills-file ...` or `--query ...` | domain | exactly the skills you name or the top hits of a search, installed as a pack |
 | Fetch | `asbb fetch <slugs> --collection <slug>/vN --dest <dir>` | no | leaves from the manifest-named domain repository at its release commit, with provenance |
 | Claude Code marketplace | `/plugin install <collection-or-pack>@asb-skill-collections` | no | a named collection or one of its published technique packs |
 
@@ -45,6 +44,10 @@ installation selects a published unit by name; it does not accept an arbitrary
 slug list or query. Use `asbb install` for a derived selection, or `asbb fetch`
 for leaf files without an installed router.
 
+The entries point at `asb-skills-metabolomics`, so installation needs read
+access to that domain repository until it becomes public. The full plugin
+serves v3; the eight packs are v2-derived.
+
 All figures on this page were measured on 2026-10-30 from a checkout of `main`
 at `e80767838` plus this change, with `HOME` pointed at a temporary directory.
 Outputs below show that directory as `$HOME`.
@@ -69,8 +72,10 @@ the filtered indexes 14,797 bytes.
 
 ## Before you start
 
-The installer reads a local checkout. Use Python 3.12 or later with PyYAML in a
-virtual environment, and run the commands from the repository root:
+The installer reads a local domain checkout. Use Python 3.12 or later with
+PyYAML in a virtual environment. Clone this master for the `asbb` tooling, and
+obtain `asb-skills-metabolomics` separately while read access is available.
+Run the commands from the master checkout:
 
 ```bash
 git clone https://github.com/HolobiomicsLab/asb-skill-collections
@@ -86,7 +91,8 @@ package; see [Fetch](#fetch-without-a-checkout).
 
 ## Technique packs
 
-Eight packs are declared in `packs/metabolomics/packs.yaml`:
+Eight packs are declared in
+`<domain checkout>/packs/metabolomics/packs.yaml`:
 
 | Pack | Skills |
 |---|---:|
@@ -102,7 +108,7 @@ Eight packs are declared in `packs/metabolomics/packs.yaml`:
 A skill tagged with several techniques is in several packs.
 
 ```bash
-python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --runtime agents
+python3 -m asb_skill_collections.asbb_cli install --repo <domain checkout> metabolomics-lc-ms --runtime agents
 ```
 
 ```text
@@ -135,14 +141,14 @@ refreshes it in place.
 search shows what the selection will hold:
 
 ```bash
-python3 -m asb_skill_collections.asbb_cli search "untargeted LC-MS/MS annotation" --collection metabolomics/v2 --k 10
+python3 -m asb_skill_collections.asbb_cli search --repo <domain checkout> "untargeted LC-MS/MS annotation" --collection metabolomics/v2 --k 10
 ```
 
 `--dry-run` resolves the selection, derives it and prints every write without
 making one:
 
 ```bash
-python3 -m asb_skill_collections.asbb_cli install --query "untargeted LC-MS/MS annotation" --top 10 --collection metabolomics/v2 --runtime agents --dry-run
+python3 -m asb_skill_collections.asbb_cli install --repo <domain checkout> --query "untargeted LC-MS/MS annotation" --top 10 --collection metabolomics/v2 --runtime agents --dry-run
 ```
 
 ```text
@@ -183,7 +189,7 @@ Beside the first selection (see
 `asbb uninstall metabolomics-subset-349bfa1b --runtime agents`:
 
 ```bash
-python3 -m asb_skill_collections.asbb_cli install --skills-file my-skills.txt --collection metabolomics/v2 --name my-annotation-set --runtime agents
+python3 -m asb_skill_collections.asbb_cli install --repo <domain checkout> --skills-file my-skills.txt --collection metabolomics/v2 --name my-annotation-set --runtime agents
 ```
 
 ```text
@@ -258,7 +264,7 @@ with one diagnostic on stderr and a `note` in the provenance.
 
 `--repository OWNER/NAME` bypasses the manifest entirely and reads that
 repository at `--ref` (default `main`), using the conventional
-`collections/<slug>/vN` path. Set `GITHUB_TOKEN` to send a bearer token on
+`collections/<slug>/vN` path inside that repository. Set `GITHUB_TOKEN` to send a bearer token on
 every API and raw-file request, including reads of private repositories. The
 token is never printed; a 404 from a manifest-named repository reports that it
 may be private and names this variable.
@@ -289,7 +295,7 @@ fields while adding manifest, release and fallback details when applicable.
 The URLs name the commit, so they keep serving the same bytes after a branch
 moves. For this v2 example, the leaves
 are byte-identical to the checkout: all 10 leaves of the selection above,
-fetched from `main`, matched `collections/metabolomics/v2/leaves/` exactly.
+fetched from `main`, matched `<domain checkout>/collections/metabolomics/v2/leaves/` exactly.
 
 What fetch does not give you: no router, no index, no search or grounding
 helper, and no install record. The files are the collection's own `SKILL.md`

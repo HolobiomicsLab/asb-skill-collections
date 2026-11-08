@@ -16,7 +16,7 @@ that was already in the session when it happened.
 
 | Piece | What it does |
 |---|---|
-| [`asb-contribute`](../collections/metabolomics/v2/skills/asb-contribute/SKILL.md) | Advertised skill. Fires on friction, classifies it, searches for an existing issue, drafts a redacted report, and files it **only** on an explicit yes. |
+| `asb-contribute`, at `<domain checkout>/collections/metabolomics/v3/skills/asb-contribute/SKILL.md` | Advertised skill. Fires on friction, classifies it, searches for an existing issue, drafts a redacted report, and files it **only** on an explicit yes. |
 | [`scripts/skill_feedback.py`](../scripts/skill_feedback.py) | Renders the report, strips outbound secrets, and computes the fingerprint that merges reports of one problem. |
 | [`.github/ISSUE_TEMPLATE/skill-feedback.md`](../.github/ISSUE_TEMPLATE/skill-feedback.md) | The manual path, for people not running an agent. |
 | Proposal rails | `propose-skill`, `propose-meta-skill`, `claim-skill`, `proposals.yml`, and [`governance/AUTHORSHIP.md`](../governance/AUTHORSHIP.md) — where a report that carries its own fix becomes credit. |

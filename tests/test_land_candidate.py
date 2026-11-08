@@ -95,14 +95,18 @@ def _tree_digest(root: Path) -> str:
 
 
 @pytest.fixture(scope="module")
-def assembled(tmp_path_factory: pytest.TempPathFactory) -> tuple[Path, Path]:
+def assembled(
+    tmp_path_factory: pytest.TempPathFactory,
+    tooling_checkout: Path,
+    embedding_stub: Path,
+) -> tuple[Path, Path]:
     """Run the Task 6 driver once and expose its complete candidate and receipts."""
     root = tmp_path_factory.mktemp("assembled-candidate")
     candidate = root / "candidate"
     receipts = root / "receipts"
     command = [
         sys.executable,
-        str(ASSEMBLER),
+        str(tooling_checkout / "scripts" / "assemble_candidate.py"),
         "--cut",
         str(FIXTURE / "corpus"),
         "--builds",
@@ -126,7 +130,16 @@ def assembled(tmp_path_factory: pytest.TempPathFactory) -> tuple[Path, Path]:
         "--verified-on",
         "2026-09-18",
     ]
-    result = _run_process(command, REPO)
+    environment = _clean_environment()
+    environment["PYTHONPATH"] = str(embedding_stub)
+    result = subprocess.run(
+        command,
+        cwd=tooling_checkout,
+        env=environment,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
     assert result.returncode == 0, result.stdout + result.stderr
     source = json.loads((receipts / "source.json").read_text(encoding="utf-8"))
     assert source["status"] == "complete"

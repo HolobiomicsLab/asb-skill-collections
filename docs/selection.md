@@ -82,7 +82,7 @@ returns no match, and the selector does not fill the list with unrelated items.
 
 ## Three executed examples
 
-The following commands were run from `collections/metabolomics/v2` on the
+The following commands were run from `<domain checkout>/collections/metabolomics/v2` on the
 integration branch, and reproduce there. The `jq` projection keeps the real output readable.
 
 An end-to-end request should search workflows first:
@@ -212,7 +212,7 @@ variable.
 Refresh the canonical script and the eight pack copies through the generator:
 
 ```bash
-python scripts/router_shape.py --scripts-only collections/metabolomics/v2 packs/metabolomics/*/
+python scripts/router_shape.py --scripts-only <domain checkout>/collections/metabolomics/v2 <domain checkout>/packs/metabolomics/*/
 ```
 
 `--scripts-only` does not move leaves, regenerate indexes or rewrite `SKILL.md`.
@@ -254,7 +254,7 @@ the evidence for the default.
 
 ### 2. The 326 benchmark-card labels
 
-`collections/metabolomics/v1/links.json` carries 336 promoted benchmark cards;
+`<domain checkout>/collections/metabolomics/v1/links.json` carries 336 promoted benchmark cards;
 326 have at least one gold skill present in the corpus. Each card's title is the
 query and its `skills` list is the gold set.
 `scripts/promote_benchmark_layer.py` writes those labels from the card's own
@@ -271,10 +271,10 @@ survives the rule's own tie-break; lower and upper bound Hit@1 over the best and
 worst possible resolution of that residue.
 
 **The two corpora.** *Canonical, 5,859 rows* is the whole of
-`collections/metabolomics/v2/skills_index.json` — what the `metabolomics`
+`<domain checkout>/collections/metabolomics/v2/skills_index.json`: what the `metabolomics`
 plugin installs, and what the eight technique packs are drawn from. *Installed
 unit, 1,478 rows* is that index restricted to the slugs
-`collections/metabolomics/v1` also ships: the 1,485 skills of the public
+`<domain checkout>/collections/metabolomics/v1` also ships: the 1,485 skills of the public
 `metabolomics-v0.1.0` pre-release, less the 7 that v2 no longer carries. It is
 reported because it is the corpus a reader who installed that release is
 actually searching, and because a ranking rule's lead can be an artefact of how

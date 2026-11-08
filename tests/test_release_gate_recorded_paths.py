@@ -1,10 +1,8 @@
 """A receipt ships inside its collection, so it must not carry the gate machine's paths.
 
 `gate_report.json` recorded `collection_dir` and `corpus_path` as absolute paths.
-The four receipts regenerated for the release therefore each carried
-`/Users/<account>/git/<worktree>/collections/...`, including the one in
-`collections/metabolomics/v2`, the public collection, whose tree on `main` held no
-such path before receipts were added. Verification never reads either field
+Receipts regenerated for a release therefore each carried
+`/Users/<account>/git/<worktree>/collections/...`. Verification never reads either field
 (it recomputes the bindings from the tree), so the absolute form bought nothing
 and published the directory layout of whichever machine ran the gate.
 """
@@ -81,17 +79,6 @@ def test_the_verification_still_passes_on_a_relative_receipt(tmp_path):
     assert release_gate.main([str(collection), "--strict", "--quiet"]) == 0
 
     assert release_gate.main([str(collection), "--verify", "--quiet"]) == 0
-
-
-def test_no_shipped_receipt_carries_an_absolute_path():
-    receipts = sorted(ROOT.glob("collections/*/v*/gate_report.json"))
-    assert receipts, "no receipt found; this test would pass over nothing"
-    offenders = {}
-    for path in receipts:
-        hits = ABSOLUTE.findall(path.read_text(encoding="utf-8"))
-        if hits:
-            offenders[str(path.relative_to(ROOT))] = len(hits)
-    assert not offenders, f"receipts carry absolute paths: {offenders}"
 
 
 def test_an_unreadable_leaf_is_named_relative_to_the_collection(tmp_path):

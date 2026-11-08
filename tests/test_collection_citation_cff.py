@@ -25,9 +25,9 @@ FIXTURE = REPO / "tests" / "fixtures" / "cut_three_outputs"
 CREATORS = REPO / "scripts" / "release_creators.yaml"
 
 
-@pytest.fixture(scope="module")
-def citation(tmp_path_factory: pytest.TempPathFactory) -> Path:
-    root = tmp_path_factory.mktemp("citation")
+@pytest.fixture
+def citation(tmp_path: Path) -> Path:
+    root = tmp_path
     code = collector.main(
         [
             "--cut",

@@ -64,21 +64,37 @@ def compute_tree_digest(repository: Path, release_path: str) -> str:
 
 
 def checkout_counts(collection: Path) -> dict[str, int]:
-    """Read release totals from the collection indexes and source corpus."""
-    with (collection / "skills_index.json").open(encoding="utf-8") as stream:
-        skills = json.load(stream)
-    with (collection / "tools_index.json").open(encoding="utf-8") as stream:
-        tools = json.load(stream)
-    with (collection / "workflows" / "workflows_index.json").open(
-        encoding="utf-8"
-    ) as stream:
-        workflows = json.load(stream)
+    """Read release totals from the collection indexes and source corpus.
+
+    A router-shaped release carries ``skills_index.json``, ``tools_index.json``
+    and ``workflows/workflows_index.json``. A legacy tree (the v1 collections)
+    has none of them: its skills are the ``SKILL.md`` files under ``skills/``,
+    its tools the YAML files under ``tools/``, and it ships no workflows.
+    """
+    skills_index = collection / "skills_index.json"
+    if skills_index.is_file():
+        with skills_index.open(encoding="utf-8") as stream:
+            skills = len(json.load(stream))
+    else:
+        skills = sum(1 for _ in (collection / "skills").rglob("SKILL.md"))
+    tools_index = collection / "tools_index.json"
+    if tools_index.is_file():
+        with tools_index.open(encoding="utf-8") as stream:
+            tools = len(json.load(stream))
+    else:
+        tools = len(list((collection / "tools").glob("*.yaml")))
+    workflows_index = collection / "workflows" / "workflows_index.json"
+    if workflows_index.is_file():
+        with workflows_index.open(encoding="utf-8") as stream:
+            workflows = len(json.load(stream))
+    else:
+        workflows = 0
     with (collection / "corpus.yaml").open(encoding="utf-8") as stream:
         corpus = yaml.safe_load(stream)
     return {
-        "skills": len(skills),
-        "tools": len(tools),
-        "workflows": len(workflows),
+        "skills": skills,
+        "tools": tools,
+        "workflows": workflows,
         "papers": len(corpus["papers"]),
     }
 
@@ -107,6 +123,10 @@ def validate_release(
     if not isinstance(release, dict):
         return [f"{label}: release must be a mapping"]
     failures = []
+    status = release.get("status")
+    is_legacy = status == "legacy"
+    if status is not None and not is_legacy:
+        failures.append(f"{label}: invalid status {status!r}")
     release_path = release.get("path")
     if (
         not isinstance(release_path, str)
@@ -119,9 +139,19 @@ def validate_release(
         f"{label}: missing required key {key}"
         for key in sorted(REQUIRED_RELEASE_KEYS - release.keys())
     )
-    for key in ("version_doi",):
-        if not DOI_PATTERN.fullmatch(str(release.get(key, ""))):
-            failures.append(f"{label}: invalid {key} {release.get(key)!r}")
+    if is_legacy:
+        for key in ("tag", "version_doi"):
+            if release.get(key) is not None:
+                failures.append(f"{label}: legacy {key} must be null")
+    else:
+        if release.get("tag") is not None and (
+            not isinstance(release["tag"], str) or not release["tag"]
+        ):
+            failures.append(f"{label}: invalid tag {release.get('tag')!r}")
+        if not DOI_PATTERN.fullmatch(str(release.get("version_doi", ""))):
+            failures.append(
+                f"{label}: invalid version_doi {release.get('version_doi')!r}"
+            )
     if not COMMIT_PATTERN.fullmatch(str(release.get("commit", ""))):
         failures.append(f"{label}: invalid commit {release.get('commit')!r}")
     if not DIGEST_PATTERN.fullmatch(str(release.get("tree_digest", ""))):
@@ -151,7 +181,10 @@ def validate_catalogue(label: str, release: dict, entries: dict) -> list[str]:
     if entry is None:
         return [f"{label}: catalogue entry missing"]
     failures = []
-    if entry.get("doi") != release.get("version_doi"):
+    is_legacy = release.get("status") == "legacy"
+    if is_legacy and not entry.get("doi"):
+        pass
+    elif entry.get("doi") != release.get("version_doi"):
         failures.append(
             f"{label}: catalogue doi {entry.get('doi')!r} != {release.get('version_doi')!r}"
         )
@@ -225,7 +258,14 @@ def validate_domain(
     failures = []
     if not domain.get("repository"):
         failures.append(f"{slug}: missing repository")
-    if not DOI_PATTERN.fullmatch(str(domain.get("concept_doi", ""))):
+    releases = domain.get("releases")
+    all_legacy = isinstance(releases, list) and bool(releases) and all(
+        isinstance(release, dict) and release.get("status") == "legacy"
+        for release in releases
+    )
+    if domain.get("concept_doi") is None and all_legacy:
+        pass  # a domain with only legacy releases has no Zenodo lineage yet
+    elif not DOI_PATTERN.fullmatch(str(domain.get("concept_doi", ""))):
         failures.append(f"{slug}: invalid concept_doi {domain.get('concept_doi')!r}")
     releases = domain.get("releases")
     if not isinstance(releases, list) or not releases:

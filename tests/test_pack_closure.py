@@ -452,46 +452,11 @@ def test_gate_checks_collection_and_only_same_repository_packs(tmp_path):
     assert not any("missing-unrelated.py" in message for message in messages)
 
 
-REAL_UNITS = sorted(
-    path
-    for pattern in ("collections/*/v*", "packs/*/*")
-    for path in REPO_ROOT.glob(pattern)
-    if path.is_dir()
-)
-
-
-@pytest.mark.parametrize(
-    "unit",
-    REAL_UNITS,
-    ids=[str(path.relative_to(REPO_ROOT)) for path in REAL_UNITS],
-)
-def test_every_shipped_unit_has_closure_and_contained_helpers(unit):
-    findings = unit_closure.check_unit(unit)
-    details = "\n".join(
-        f"{item.file}: {item.direction}: {item.message}" for item in findings
-    )
-    assert findings == [], details
-
-
-def test_real_unit_matrix_covers_collections_and_packs():
-    relatives = [path.relative_to(REPO_ROOT).parts[0] for path in REAL_UNITS]
-    assert "collections" in relatives
-    assert "packs" in relatives
-
-
-@pytest.mark.parametrize("filename", ("skill_feedback.py", "pii_config.py"))
-def test_collection_feedback_helpers_are_byte_identical_to_root(filename):
-    root_helper = REPO_ROOT / "scripts" / filename
-    shipped_helper = REPO_ROOT / "collections/metabolomics/v2/scripts" / filename
-
-    assert shipped_helper.read_bytes() == root_helper.read_bytes()
-
-
 def _copy_feedback_unit(tmp_path: pathlib.Path) -> pathlib.Path:
-    source = REPO_ROOT / "collections/metabolomics/v2"
     unit = tmp_path / "installed-unit"
-    shutil.copytree(source / "skills/asb-contribute", unit / "skills/asb-contribute")
-    shutil.copytree(source / "scripts", unit / "scripts")
+    (unit / "scripts").mkdir(parents=True)
+    for filename in ("skill_feedback.py", "pii_config.py"):
+        shutil.copy2(REPO_ROOT / "scripts" / filename, unit / "scripts" / filename)
     return unit
 
 
@@ -510,11 +475,11 @@ ISOLATED_DRY_RUN_ARGS = (
     "--kind",
     "defect",
     "--target",
-    "/Users/example/collections/metabolomics/v2/leaves/example-skill",
+    "/Users/example/collections/fixture/v1/leaves/example-skill",
     "--symptom",
     "failed at /Users/example/private/run.raw for reporter@example.org",
     "--collection",
-    "/Users/example/collections/metabolomics/v2",
+    "/Users/example/collections/fixture/v1",
 )
 
 
@@ -739,11 +704,3 @@ def test_the_cli_fails_on_a_pack_that_has_drifted(tmp_path, capsys):
     assert "pack-to-collection" in output
     assert SELECTED in output
     assert "absent from the pack" in output
-
-
-def test_shipped_packs_are_faithful_derivations_of_their_collection():
-    findings = unit_closure.derivation_findings(REPO_ROOT)
-
-    assert findings == [], "\n".join(
-        f"{item.unit.relative_to(REPO_ROOT)}: {item.message}" for item in findings[:20]
-    )

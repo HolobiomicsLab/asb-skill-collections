@@ -1,0 +1,7 @@
+[
+ {"slug":"untargeted-annotation","name":"Untargeted annotation","description":"Annotate untargeted LC-MS/MS data with libraries and molecular networking.","member_tools":["MatchFixture","NetworkFixture","MZmine2"],"techniques":["LC-MS"],"edam_topics":["http://edamontology.org/topic_3172"]},
+ {"slug":"nmr-metabolite-profiling","name":"NMR metabolite profiling","description":"Profile metabolites from NMR spectra with a reproducible workflow.","member_tools":["NMRFixture"],"techniques":["NMR"],"edam_topics":["http://edamontology.org/topic_3172"]},
+ {"slug":"spatial-imaging-annotation","name":"Spatial imaging annotation","description":"Spatial metabolite annotation from mass spectrometry imaging.","member_tools":["ImagingFixture"],"techniques":["MS-imaging"],"edam_topics":["http://edamontology.org/topic_3172"]},
+ {"slug":"repository-spectral-search","name":"Repository spectral search","description":"Search public repositories for matching mass spectra and reuse evidence.","member_tools":["MatchFixture"],"techniques":["LC-MS"],"edam_topics":["http://edamontology.org/operation_3694"]},
+ {"slug":"stable-isotope-flux","name":"Stable isotope flux","description":"Stable isotope tracing and flux analysis for labelled LC-MS samples.","member_tools":["FluxFixture"],"techniques":["LC-MS"],"edam_topics":["http://edamontology.org/operation_3651"]}
+]

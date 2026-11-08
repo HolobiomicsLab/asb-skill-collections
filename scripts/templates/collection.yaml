@@ -1,0 +1,4 @@
+"@context":
+  "@vocab": "https://schema.org/"
+  asb: "https://w3id.org/holobiomicslab/asb-skill/"
+"@type": "asb:SkillCollection"

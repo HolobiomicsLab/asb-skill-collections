@@ -14,6 +14,17 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
 
 ## [Unreleased]
 
+### Changed
+- Complete step 2 of the per-domain split: released content leaves this master,
+  which retains the `asb_skill_collections` tooling package, scripts, tests,
+  governance, docs-site, catalogue, release registry and validation workflows.
+  The legacy epigenomics, transcriptomics and metabolomics v1 trees are recorded
+  in `collections.yaml`. Marketplace entries now use `git-subdir` sources in
+  `asb-skills-metabolomics`: v3 for the full collection and the v2-derived packs
+  at the same pinned commit. The master's former v2 copy had diverged from the
+  domain v2 in description wording and `evidence_spans` fields in 5,858 leaves;
+  the registry pins the domain copy.
+
 ### Fixed
 - Bind `nhs_number` to its label like the other clinical identifiers, treat a
   bounded set of documented template e-mail local parts (`your@…`,

@@ -7,8 +7,8 @@ import json
 from scripts import skill_feedback as sf
 
 
-COLLECTION_ONE = "/Users/reporter-one/code/asb/collections/metabolomics/v2"
-COLLECTION_TWO = "/home/reporter-two/code/asb/collections/metabolomics/v2"
+COLLECTION_ONE = "/Users/reporter-one/code/asb/collections/fixture/v1"
+COLLECTION_TWO = "/home/reporter-two/code/asb/collections/fixture/v1"
 INSIDE_TARGET_ONE = f"{COLLECTION_ONE}/leaves/spectral-library-match/SKILL.md"
 INSIDE_TARGET_TWO = f"{COLLECTION_TWO}/leaves/spectral-library-match/SKILL.md"
 OUTSIDE_TARGET = "/Users/reporter-one/SecretStudy/Patient-42"
@@ -52,7 +52,7 @@ def test_every_submission_field_and_preview_are_redacted() -> None:
     assert payload == {key: report[key] for key in ("title", "labels", "body")}
     assert _payload_text(report["preview"]) == _payload_text(payload)
     _assert_synthetic_values_absent(_payload_text(payload))
-    assert "metabolomics/v2/leaves/spectral-library-match/SKILL.md" in report["body"]
+    assert "fixture/v1/leaves/spectral-library-match/SKILL.md" in report["body"]
     assert "path_prefix" in report["redacted"]
 
 

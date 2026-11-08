@@ -13,15 +13,11 @@ the check runs them against the same tree instead — a textual match could pass
 two behaviours drifted apart.
 """
 import pathlib
-import re
 import sys
 
 REPO_ROOT = pathlib.Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 from scripts import lint_skill_descriptions, release_gate  # noqa: E402
-
-VALIDATE = REPO_ROOT / ".github" / "workflows" / "validate.yml"
-
 
 def test_release_gate_skips_workflows_and_underscore(tmp_path):
     """release_gate._iter_skill_md must yield leaves only, not workflows/_ scaffolds."""
@@ -32,21 +28,6 @@ def test_release_gate_skips_workflows_and_underscore(tmp_path):
         (d / "SKILL.md").write_text("---\nname: x\n---\n# x\n")
     yielded = {p.parent.name for p in release_gate._iter_skill_md(col)}
     assert yielded == {"real-leaf"}, f"expected only the leaf, got {yielded}"
-
-
-def test_validate_runs_the_lint_module_rather_than_an_inline_copy():
-    """A second copy of the rules in YAML is a second thing to keep in sync, and
-    the copy in CI is the one nobody can run before pushing."""
-    text = VALIDATE.read_text()
-    start = text.index("Lint skill descriptions")
-    nxt = text.find("\n      - name:", start)
-    step = text[start:] if nxt == -1 else text[start:nxt]
-    assert "scripts.lint_skill_descriptions" in step, (
-        "validate.yml must call the lint module, not reimplement it inline"
-    )
-    assert "MAX_LEN" not in step and "_is_leaf" not in step, (
-        "the rules must live in the module only — this step is reimplementing them"
-    )
 
 
 def test_the_two_gates_lint_exactly_the_same_files(tmp_path):

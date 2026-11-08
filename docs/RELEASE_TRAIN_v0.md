@@ -4,6 +4,10 @@
 
 This runbook documents the complete **linear release pipeline** for ASB-Skill-Collections v0 releases. It is intended for the lead maintainer and release operators.
 
+After step 2, content staging, promotion and tagging happen in the relevant
+`asb-skills-<domain>` checkout. The master holds the shared tooling and
+registry. Paths below are therefore relative to `<domain checkout>`.
+
 ---
 
 ## Quick reference
@@ -15,7 +19,7 @@ The version DOI is minted before the tag: deposit and publish by hand with
 merged commit (`docs/RELEASE_DEPOSIT.md`, "Order of a release").
 
 ```
-[1. Human] Draft collection in staged-collections/
+[1. Human] Draft collection in <domain checkout>/staged-collections/
    ↓
 [2. Contrib PR] → validate.yml gates → Lead maintainer merge
    ↓
@@ -43,19 +47,19 @@ merged commit (`docs/RELEASE_DEPOSIT.md`, "Order of a release").
 
 ## 1. Pipeline stages & automation
 
-### Stage 0: Authoring (in `staged-collections/`)
+### Stage 0: Authoring (in `<domain checkout>/staged-collections/`)
 
 **Responsibility:** Lead Curator (or nominated contributor) + Holobiomics Lab.
 
 **What happens here:**
-- Skill files (SKILL.md), tools, benchmarks, and metadata go into `staged-collections/<slug>/v<N>/`
+- Skill files (SKILL.md), tools, benchmarks, and metadata go into `<domain checkout>/staged-collections/<slug>/v<N>/`
 - Use the templates in `templates/` and follow the structure doc in [CONTRIBUTING.md](../.github/CONTRIBUTING.md)
-- Reviews are accumulated in `staged-collections/<slug>/v<N>/reviews/*.yaml` (one file per reviewed paper)
+- Reviews are accumulated in `<domain checkout>/staged-collections/<slug>/v<N>/reviews/*.yaml` (one file per reviewed paper)
 - Contributor PRs reference external papers, linked by DOI via `derived_from` fields in SKILL.md frontmatter
 
 **CI gates run here:** None yet. Staged collections bypass all gates.
 
-**Output:** Complete, review-annotated collection directory under `staged-collections/`
+**Output:** Complete, review-annotated collection directory under `<domain checkout>/staged-collections/`
 
 ---
 
@@ -64,10 +68,10 @@ merged commit (`docs/RELEASE_DEPOSIT.md`, "Order of a release").
 **Responsibility:** Lead maintainer only.
 
 **What happens:**
-1. Review the collection in `staged-collections/<slug>/v<N>/` for completeness
+1. Review the collection in `<domain checkout>/staged-collections/<slug>/v<N>/` for completeness
 2. Verify all SKILL.md frontmatter is properly formed (see gate 5, 6, 8 in validate.yml)
-3. Move directory from `staged-collections/` → `collections/` (or via PR)
-4. Commit: `git add collections/<slug>/v<N>` && `git commit -m "promote: <slug>/v<N> to collections"`
+3. Move the directory from the domain staging tree to its release tree (or via PR)
+4. Commit: `git add <domain checkout>/collections/<slug>/v<N>` && `git commit -m "promote: <slug>/v<N>"`
 5. Push to `main`: `git push origin main`
 
 **CI gates run here:** Yes — validate.yml runs on all push-to-main events (gates 1, 2, 5, 6, 8, 9, 10).
@@ -81,9 +85,9 @@ merged commit (`docs/RELEASE_DEPOSIT.md`, "Order of a release").
 - ✓ verify-claims round-trip (indicium adapter) passes (gate 9)
 - ✓ Marketplace.json declares all skills
 
-**If CI fails:** Revert the commit and fix the issue(s) in staged-collections/ before re-promoting.
+**If CI fails:** Revert the commit and fix the issue(s) in the domain staging tree before re-promoting.
 
-**Output:** Collection now in `collections/<slug>/v<N>/`, passing all CI gates, ready for release tag.
+**Output:** Collection now in `<domain checkout>/collections/<slug>/v<N>/`, passing all CI gates, ready for release tag.
 
 ---
 
@@ -126,7 +130,7 @@ pytest tests/ -v
 ```
 The suite tests gate behavior; a target-specific content receipt comes from `python scripts/release_gate.py <collection> --strict`. It writes `gate_report.json` (override with `--report`), schema `asbb-release-gate/1.1`, with per-check `checked / skipped / missing / failed` item counts and separate inspected-file coverage. The receipt binds the final payload tree (excluding only that receipt and `MANIFEST.gen.json`), the manifest digest when present, source inputs, recomputed inventory and policy/configuration version. Supply `--inputs <source-dir> [...]` for an ASB cut's source closure. `--verify` rechecks the saved strict receipt without writing; strict gating and re-verification return 0 for verified, 1 for failed or uncheckable, and 2 for usage errors. Empty required measurements are uncheckable and return 1 in both modes. Nonempty advisory runs retain exit 0 and state “diagnostic run, not a release verification”. This receipt establishes the stated content/integrity checks, not publication approval.
 
-**If pytest fails:** release.yml **stops**. The tag is pushed but the workflow fails. The maintainer must fix the code, amend the collection in `collections/`, re-run pytest locally to confirm, then (optionally) re-push to `main` and re-tag.
+**If pytest fails:** release.yml **stops**. The tag is pushed but the workflow fails. The maintainer must fix the code, amend the collection in `<domain checkout>/collections/`, re-run pytest locally to confirm, then (optionally) re-push to `main` and re-tag.
 
 ---
 
@@ -163,7 +167,7 @@ ELSE:
   → Stop before any request if a license text is missing or the
     .zenodo.json creators do not start with scripts/release_creators.yaml
   → Create a new version draft of the concept record (or a new deposition)
-  → Zip collections/<slug>/v<N>/ with the bundled files → <slug>-v<N>.zip
+  → Zip <domain checkout>/collections/<slug>/v<N>/ with the bundled files → <slug>-v<N>.zip
   → Upload zip to bucket
   → Set metadata from .zenodo.json (else derived from CITATION.cff)
   → Publish only when the variable ZENODO_PUBLISH is true; otherwise leave a draft
@@ -202,7 +206,7 @@ Only if `steps.zenodo.outputs.doi` is not empty:
 
 ```bash
 python << 'EOF'
-# Update both root CITATION.cff and collections/<slug>/v<N>/CITATION.cff
+# Update both root CITATION.cff and <domain checkout>/collections/<slug>/v<N>/CITATION.cff
 # regex: ^(doi:\s*).*$ → doi: <minted-doi>
 EOF
 ```
@@ -247,7 +251,7 @@ github.rest.actions.createWorkflowDispatch({
 #### Step 1: Parse tag to slug & version
 ```bash
 TAG=metabolomics-v1 → SLUG=metabolomics, VERSION=1
-COLLECTION_PATH=collections/metabolomics/v1
+COLLECTION_PATH=<domain checkout>/collections/metabolomics/v1
 HF_REPO=HolobiomicsLab/asb-metabolomics-v1
 SPACE_REPO=HolobiomicsLab/asb-metabolomics-v1-leaderboard
 ```
@@ -255,18 +259,18 @@ SPACE_REPO=HolobiomicsLab/asb-metabolomics-v1-leaderboard
 #### Step 2: Generate HF Dataset README
 ```bash
 python scripts/generate_hf_dataset_card.py \
-  --collection collections/metabolomics/v1/collection.yaml \
-  --citation collections/metabolomics/v1/CITATION.cff \
-  --output collections/metabolomics/v1/README_HF.md
+  --collection <domain checkout>/collections/metabolomics/v1/collection.yaml \
+  --citation <domain checkout>/collections/metabolomics/v1/CITATION.cff \
+  --output <domain checkout>/collections/metabolomics/v1/README_HF.md
 ```
 Output: `README_HF.md` (markdown, suitable for HF Datasets front page).
 
 #### Step 3: Generate HF Space leaderboard config
 ```bash
 python scripts/generate_hf_space_config.py \
-  --collection collections/metabolomics/v1/collection.yaml \
-  --leaderboard-url https://raw.githubusercontent.com/HolobiomicsLab/asb-skill-collections/main/collections/metabolomics/v1/benchmark/leaderboard.jsonld \
-  --output collections/metabolomics/v1/.hf-space/
+  --collection <domain checkout>/collections/metabolomics/v1/collection.yaml \
+  --leaderboard-url <domain checkout>/collections/metabolomics/v1/benchmark/leaderboard.jsonld \
+  --output <domain checkout>/collections/metabolomics/v1/.hf-space/
 ```
 Output: `.hf-space/` directory with `app.py` (Streamlit), `requirements.txt`, etc.
 
@@ -420,25 +424,25 @@ python scripts/regen_catalogue.py --repo-root . --output catalogue.jsonld
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────┐
-│ PRE-RELEASE: Contribution cycle (in staged-collections/, any contributor │
+│ PRE-RELEASE: Contribution cycle in the domain repository, any contributor  │
 │ Main step: open PR, CI validates via validate.yml, lead maintainer merges)
 └──────────────────────────────────────────────────────────────────────────┘
                                     │
                                     ▼
 ┌──────────────────────────────────────────────────────────────────────────┐
 │ STAGE 0: Authoring                                                       │
-│ Location: staged-collections/<slug>/v<N>/                              │
+│ Location: <domain checkout>/staged-collections/<slug>/v<N>/              │
 │ No CI gates; review happens in GitHub PRs                              │
 └──────────────────────────────────────────────────────────────────────────┘
                                     │
          ┌──────────────────────────┘
          │ [Lead maintainer action]
-         │ Promote to collections/
+         │ Promote to the domain release tree
          │
          ▼
 ┌──────────────────────────────────────────────────────────────────────────┐
 │ STAGE 1: Promotion                                                       │
-│ Location: collections/<slug>/v<N>/                                     │
+│ Location: <domain checkout>/collections/<slug>/v<N>/                     │
 │ CI gates: validate.yml (gates 1, 2, 5, 6, 8, 9, 10) on push-main    │
 │ Status: ready for release tag                                          │
 └──────────────────────────────────────────────────────────────────────────┘
@@ -502,7 +506,7 @@ pytest tests/ -v
 ```
 
 **Fix:**
-1. Commit fixes to `collections/<slug>/v<N>/` on main
+1. Commit fixes to `<domain checkout>/collections/<slug>/v<N>/` on main
 2. Optionally re-tag (delete old tag, create new one) if the fix is critical
 3. Or wait for next release cycle
 
@@ -546,7 +550,7 @@ A skipped step is the default: deposit with `scripts/zenodo_deposit.py` (`docs/R
 
 ### Pre-release (1 day before)
 
-- [ ] Confirm collection in `collections/<slug>/v<N>/` is complete
+- [ ] Confirm collection in `<domain checkout>/collections/<slug>/v<N>/` is complete
 - [ ] Run local pytest: `pytest tests/ -v` (passes)
 - [ ] Review `CITATION.cff` (authors, DOIs, license)
 - [ ] ~~Check that `indicium_version` is pinned~~ — **not applicable at v0** (no indicium dependency, no claim records, no release manifest; see "Indicium co-release")
@@ -651,7 +655,7 @@ The following require real input before the first release:
 
 - **Status:** Per-collection-release, declared in CITATION.cff
 - **What to do:**
-  1. For each collection release, populate `authors` array in collections/<slug>/v<N>/CITATION.cff with:
+  1. For each collection release, populate `authors` array in `<domain checkout>/collections/<slug>/v<N>/CITATION.cff` with:
      - given-names, family-names
      - orcid (optional but encouraged)
      - role (optional, from CRediT taxonomy if desired)

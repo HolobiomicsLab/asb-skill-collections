@@ -1,0 +1,19 @@
+{
+  "name": "fixture-marketplace",
+  "plugins": [
+    {
+      "name": "relative-unit",
+      "source": "./tests/fixtures/router_collection"
+    },
+    {
+      "name": "remote-unit",
+      "source": {
+        "source": "git-subdir",
+        "url": "HolobiomicsLab/asb-skills-fixture",
+        "path": "collections/fixture/v1",
+        "ref": "main",
+        "sha": "0123456789abcdef0123456789abcdef01234567"
+      }
+    }
+  ]
+}

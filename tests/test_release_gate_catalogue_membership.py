@@ -56,11 +56,6 @@ def _messages(result) -> str:
     return " | ".join(detail["message"] for detail in result.details)
 
 
-def test_corrected_repository_catalogues_pass():
-    result = release_gate.check_catalogue_membership(REPO_ROOT / "collections")
-    assert result.status == release_gate.PASS, _messages(result)
-
-
 def test_membership_check_is_a_hard_release_gate(tmp_path):
     collection = _write_collection(tmp_path)
     report = release_gate.run_gate(collection, None, strict=True)

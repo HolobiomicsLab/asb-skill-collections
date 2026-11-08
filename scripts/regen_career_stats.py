@@ -11,7 +11,7 @@ Aggregated fields per contributor entry:
   reviewer_of[], self_authored_percentage
 
 Usage:
-    python scripts/regen_career_stats.py [--repo-root .]
+    python scripts/regen_career_stats.py --repo-root /path/to/domain-checkout
 """
 from __future__ import annotations
 
@@ -290,8 +290,8 @@ def main() -> None:
     )
     parser.add_argument(
         "--repo-root",
-        default=".",
-        help="Path to the repository root (default: current directory)",
+        required=True,
+        help="Domain checkout containing collections/ and contributor metadata",
     )
     args = parser.parse_args()
     repo_root = pathlib.Path(args.repo_root).resolve()

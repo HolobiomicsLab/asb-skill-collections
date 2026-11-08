@@ -17,6 +17,7 @@ from html.parser import HTMLParser
 from urllib.parse import urlsplit
 
 import pytest
+import yaml
 
 from scripts.regen_catalogue import collection_status, released_collection_dirs
 
@@ -46,12 +47,18 @@ def test_indexer_status_follows_the_marketplace():
 
 def test_committed_search_index_labels_every_collection():
     index = json.loads((SITE / "search_index.json").read_text(encoding="utf-8"))
-    released = released_collection_dirs(REPO)
+    manifest = yaml.safe_load((REPO / "collections.yaml").read_text(encoding="utf-8"))
+    releases = {
+        f"{slug}/v{release['version']}"
+        for slug, domain in manifest["domains"].items()
+        for release in domain["releases"]
+    }
     status = index.get("collection_status")
     assert isinstance(status, dict), "search_index.json has no collection_status: rebuild it"
     assert set(status) == set(index["collections"])
     for label, value in status.items():
-        assert value == collection_status(f"collections/{label}", released), label
+        assert value in {"released", "staged"}, label
+        assert label in releases, label
 
 
 # --------------------------------------------------------------------------- #

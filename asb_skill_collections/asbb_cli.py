@@ -165,7 +165,13 @@ def _cmd_install(args) -> int:
         pack = resolve_pack(repo, args.pack)
     except KeyError:
         slugs = ", ".join(list_pack_slugs(repo))
-        print(f"error: unknown pack {args.pack!r}; valid: {slugs}", file=sys.stderr)
+        location = f"valid: {slugs}" if slugs else "no packs found"
+        print(
+            f"error: unknown pack {args.pack!r}; {location}. Packs live in a domain "
+            "checkout: pass --repo <path> or set ASB_COLLECTIONS_ROOT. "
+            "See collections.yaml for the domain registry.",
+            file=sys.stderr,
+        )
         return 1
     except ValueError as e:
         # resolve_pack refuses a marketplace source that leaves the checkout

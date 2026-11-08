@@ -1,0 +1,6 @@
+papers:
+  - doi: "10.9999/asb-fixture-1"
+    status: included
+    access:
+      type: gold-oa
+    repo_url: "https://example.invalid/asb-fixture-1"

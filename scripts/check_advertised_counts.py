@@ -981,7 +981,12 @@ def audit_repository(
 def main(argv: list[str] | None = None) -> int:
     """Run the advertised-count audit and return a shell-friendly status."""
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--repo-root", type=pathlib.Path, default=pathlib.Path.cwd())
+    parser.add_argument(
+        "--repo-root",
+        type=pathlib.Path,
+        required=True,
+        help="domain checkout containing collections/ and packs/",
+    )
     args = parser.parse_args(argv)
     claims, failures = audit_repository(args.repo_root)
     if failures:

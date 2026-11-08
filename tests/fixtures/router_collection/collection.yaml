@@ -1,0 +1,14 @@
+"@context":
+  "@vocab": "https://schema.org/"
+  asb: "https://w3id.org/holobiomicslab/asb-skill/"
+"@type": "asb:SkillCollection"
+"@id": "https://w3id.org/holobiomicslab/asb-skill/collection/fixture/v1"
+title: "ASB Fixture Skill Collection v1"
+slug: "fixture"
+version: 1
+description: "A compact collection for tooling tests."
+license: "CC-BY-4.0"
+status: "candidate"
+skills_count: 10
+tools_count: 10
+workflows_count: 5
