@@ -60,7 +60,7 @@ class Row:
 
 
 def load_rules(path):
-    document = yaml.safe_load(Path(path).read_text())
+    document = yaml.safe_load(Path(path).read_text(encoding="utf-8"))
     vocabulary = tuple(document["vocabulary"])
     rules = []
     for tag, entries in document["vocabulary"].items():
@@ -100,11 +100,11 @@ def find_leaf(collection, slug):
 
 def load_rows(collection, rules=None, selected=None):
     collection = Path(collection)
-    index_rows = json.loads((collection / "skills_index.json").read_text())
+    index_rows = json.loads((collection / "skills_index.json").read_text(encoding="utf-8"))
     rows = []
     for index_row in index_rows:
         leaf = find_leaf(collection, index_row["slug"])
-        text = leaf.read_text()
+        text = leaf.read_text(encoding="utf-8")
         frontmatter, body = parse_skill_md(text)
         if frontmatter is None:
             raise ValueError(f"Missing frontmatter: {leaf}")
@@ -341,7 +341,7 @@ def investigation_samples(path=None):
     """Read the investigation's spot-check slugs per tag when a receipt is given."""
     if path is None or not Path(path).is_file():
         return {}
-    document = json.loads(path.read_text())
+    document = json.loads(path.read_text(encoding="utf-8"))
     return {
         tag: [entry["slug"] for entry in entries]
         for tag, entries in document.get("v3_spot_check", {}).items()
@@ -376,7 +376,7 @@ def write_packet(rows, rules, output, sample_size, seed, selected, spot_check_ev
                         "",
                     ]
                 )
-        (output / filename).write_text("\n".join(lines))
+        (output / filename).write_text("\n".join(lines), encoding="utf-8")
 
 
 def receipt(collection, rules_path, rules, rows, selected, write, generated_at):
@@ -445,7 +445,7 @@ def main(argv=None):
     rows = load_rows(arguments.collection, rules, selected)
     if arguments.write:
         index_path = arguments.collection / "skills_index.json"
-        index_text = index_path.read_text()
+        index_text = index_path.read_text(encoding="utf-8")
         index_rows = {row["slug"]: row for row in json.loads(index_text)}
         spans = index_row_spans(index_text)
         for row in rows:
@@ -468,7 +468,7 @@ def main(argv=None):
             else:
                 updated = strip_techniques(row.text)
             if updated != row.text:
-                row.leaf.write_text(updated)
+                row.leaf.write_text(updated, encoding="utf-8")
             previous_length = len(index_text)
             index_text = set_json_techniques_at(index_text, spans, row, preserved)
             difference = len(index_text) - previous_length
@@ -478,14 +478,14 @@ def main(argv=None):
                     slug: (start + difference if start > opening else start, end + difference)
                     for slug, (start, end) in spans.items()
                 }
-        if index_text != index_path.read_text():
-            index_path.write_text(index_text)
+        if index_text != index_path.read_text(encoding="utf-8"):
+            index_path.write_text(index_text, encoding="utf-8")
     generated_at = datetime.now(timezone.utc).isoformat()
     summary = receipt(arguments.collection, arguments.rules, rules, rows, selected, arguments.write, generated_at)
     print(json.dumps({key: summary[key] for key in ("per_tag", "totals")}, indent=2))
     if arguments.report:
         arguments.report.parent.mkdir(parents=True, exist_ok=True)
-        arguments.report.write_text(json.dumps(summary, indent=2, ensure_ascii=False) + "\n")
+        arguments.report.write_text(json.dumps(summary, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     if arguments.sample is not None:
         write_packet(
             rows, rules, arguments.out, arguments.sample, arguments.seed, selected,

@@ -146,16 +146,18 @@ def test_write_is_idempotent_and_changes_only_technique_fields(tmp_path):
     index.write_text(json.dumps(index_rows, indent=1) + "\n")
     for row in index_rows:
         index.write_text(insert_json_field(index.read_text(), row["slug"], "techniques", []))
-    baseline = {path: path.read_bytes() for path in collection.rglob("*") if path.is_file()}
+    baseline = {path: path.read_bytes() for path in collection.rglob("*") if path.is_file() and "__pycache__" not in path.parts}
     run_cli("--collection", collection, "--rules", RULES_PATH, "--write")
-    once = {path: path.read_bytes() for path in collection.rglob("*") if path.is_file()}
+    once = {path: path.read_bytes() for path in collection.rglob("*") if path.is_file() and "__pycache__" not in path.parts}
     run_cli("--collection", collection, "--rules", RULES_PATH, "--write")
-    assert once == {path: path.read_bytes() for path in collection.rglob("*") if path.is_file()}
+    assert once == {path: path.read_bytes() for path in collection.rglob("*") if path.is_file() and "__pycache__" not in path.parts}
     assert set(once) == set(baseline)
     index_by_slug = {row["slug"]: row for row in json.loads(index.read_text())}
     for path, after in once.items():
-        before_text = baseline[path].decode()
-        after_text = after.decode()
+        if after == baseline[path]:
+            continue  # untouched bytes, text or not (CI may add bytecode caches under the copy)
+        before_text = baseline[path].decode("utf-8")
+        after_text = after.decode("utf-8")
         if path.name == "SKILL.md" and path.parent.parent.name == "leaves":
             assert strip_techniques(before_text) == strip_techniques(after_text)
             tags = actual_techniques(path)
