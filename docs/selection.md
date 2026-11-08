@@ -5,26 +5,36 @@ The checkout CLI (`asbb search`), MCP search tools, the collection router and
 `asb_skill_collections/asb_skill_index.py`; the standalone scripts carry the same
 module so an installed collection can search without importing the checkout.
 
-The behaviour described here is the integrated release behaviour: the package
-module is the single source and the standalone scripts embed it verbatim, so the
-four surfaces cannot drift. The worked examples below were executed against the
-integration branch; source revision `600f4a5dc` predates the selector fixes and
-is cited only as the revision the frozen labels were taken from.
+The package and the script template it vendors (`scripts/templates/search_skills.py`)
+carry selector 1.1.0. The released collections and packs in the domain
+repositories still embed 1.0.0 until a release decision regenerates their
+scripts with `scripts/router_shape.py --scripts-only`; during that skew the
+surfaces share their resolution, filter and explanation contracts but can return
+different scores and ranking. The worked examples below were executed against
+the integration branch with 1.0.0; source revision `600f4a5dc` predates the
+selector fixes and is cited only as the revision the frozen labels were taken from.
 
 ## Ranking rule
 
-The default selector is `asb-keyword` version `1.0.0`, rule `router`. It:
+The default selector is `asb-keyword` version `1.1.0`, rule `router`. It:
 
 1. splits the query into lowercase ASCII alphanumeric terms;
 2. removes domain-neutral stopwords and terms shorter than two characters, and
    keeps each remaining term once;
-3. scores one point per distinct term that reaches `name`, `description` or
-   `tools`; and
-4. adds two points when a term is exactly a tool name.
+3. scores each matched term by field: three points in the trigger-bearing
+   `description`, two in `name`, one in `tools` or `member_tools`;
+4. subtracts six points from a description that names parsing, conversion,
+   import or export, request or submission construction, configuration or
+   parameter toggling, unless the query itself contains one of those plumbing
+   terms; and
+5. clamps a penalised row that matched at least one term to 0.5, below every
+   unpenalised match, so the de-rank cannot drop a legitimate match.
 
-A repeated query term is counted once, so the score is a count of distinct
-matched terms, not a frequency. It is a lexical ranking value, not a
-probability or a measure of scientific suitability.
+A repeated query term is counted once. The score is a weighted count of
+distinct matched terms, not a frequency; it is a lexical ranking value, not a
+probability or a measure of scientific suitability. Version 1.0.0 scored one
+point per matched term in any of the three fields, added two points for an
+exact tool name, and had no de-rank.
 
 ### Order, and what breaks a tie
 
