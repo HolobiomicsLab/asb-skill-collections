@@ -83,6 +83,7 @@ def test_manifest_releases_have_current_schema_and_statuses(tmp_path: Path) -> N
     assert entries[1]["leaf_dir"] == "leaves"
     assert entries[1]["doi"] == "10.5281/zenodo.22"
     assert entries[1]["released_at"] == "2026-02-03T04:05:06Z"
+    assert entries[0]["released_at"] == "2025-01-01T00:00:00Z"
     for entry in entries:
         assert {
             "@id",

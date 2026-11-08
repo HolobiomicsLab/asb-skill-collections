@@ -1,4 +1,6 @@
-import pathlib, sys, yaml
+import pathlib
+import sys
+import yaml
 sys.path.insert(0, str(pathlib.Path(__file__).parent.parent))
 from scripts import license_tier as lt
 

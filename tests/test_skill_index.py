@@ -150,7 +150,7 @@ def test_entry_is_derived_from_frontmatter(tmp_path):
 
 def test_a_gate_that_matched_no_directory_fails(tmp_path, monkeypatch, capsys):
     monkeypatch.chdir(tmp_path)
-    assert si.main([]) == 1
+    assert si.main(["--collections", "collections/*/v*"]) == 1
     assert "no skill directories matched" in capsys.readouterr().out
 
 
@@ -160,12 +160,15 @@ def test_every_configured_tree_is_visited(tmp_path, monkeypatch):
     pack = tmp_path / "packs" / "metabolomics" / "lc-ms"
     write_skill(pack, "pack-leaf", leaf("pack-leaf"))
     (pack / "kb_bundle.json").write_text(json.dumps({"skills": {}}), encoding="utf-8")
-    assert si.main([]) == 1, "an orphan inside packs/ must fail the gate"
+    assert si.main(["--collections", "collections/*/v*", "packs/*/*"]) == 1, (
+        "an orphan inside packs/ must fail the gate"
+    )
 
 
-def test_default_globs_cover_both_shipped_trees():
-    assert "collections/*/v*" in si.DEFAULT_COLLECTION_GLOBS
-    assert "packs/*/*" in si.DEFAULT_COLLECTION_GLOBS
+def test_collection_globs_are_required():
+    with pytest.raises(SystemExit) as error:
+        si.main([])
+    assert error.value.code == 2
 
 
 # --- The tier vocabulary has exactly one home ---------------------------------

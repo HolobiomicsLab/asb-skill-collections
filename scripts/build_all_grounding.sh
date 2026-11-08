@@ -12,7 +12,9 @@ if [ ! -d "$COL" ]; then
 fi
 python3 scripts/build_grounding_bundle.py --unit "$COL" --collection "$COL"
 shopt -s nullglob
-packs=("$ROOT"/packs/metabolomics/*/)
+# The packs of the collection's domain: collections/<domain>/vN -> packs/<domain>/*/
+DOMAIN="$(echo "$2" | cut -d/ -f2)"
+packs=("$ROOT"/packs/"$DOMAIN"/*/)
 shopt -u nullglob
 for d in "${packs[@]}"; do
   python3 scripts/build_grounding_bundle.py --unit "$d" --collection "$COL"

@@ -37,7 +37,7 @@ from asb_skill_collections import layout
 from scripts.skill_index import parse_frontmatter
 
 REPO = Path(__file__).resolve().parent.parent
-SEARCH_SCRIPT = REPO / "collections" / "metabolomics" / "v2" / "bin" / "search_skills.py"
+SEARCH_SCRIPT = REPO / "scripts" / "templates" / "search_skills.py"
 SELECTOR_SOURCE = REPO / "asb_skill_collections" / "asb_skill_index.py"
 SELECTOR_BEGIN = b"# BEGIN VENDORED SELECTOR\n"
 SELECTOR_END = b"# END VENDORED SELECTOR\n"

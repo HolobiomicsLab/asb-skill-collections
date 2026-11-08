@@ -133,13 +133,15 @@ def _release_entry(slug: str, release: dict, template: dict) -> dict:
     entry.setdefault("lead_curators", [])
     if release.get("released") is not None:
         released = str(release["released"])
+        released_timestamp = released if "T" in released else f"{released}T00:00:00Z"
         # The manifest records a date; keep the template's full timestamp when
         # it falls on that date, so a regeneration does not rewrite it.
+        release_date = released.split("T", 1)[0]
         current = str(template.get("released_at", ""))
         entry["released_at"] = (
             current
-            if current.startswith(released) and len(current) > len(released)
-            else f"{released}T00:00:00Z"
+            if current.startswith(release_date) and len(current) > len(release_date)
+            else released_timestamp
         )
     doi = release.get("version_doi")
     if is_minted_doi(doi):

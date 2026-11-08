@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Keyword and optional embedding-backed retrieval for this collection."""
+# ruff: noqa: F405  (fixture copy of the shipped helper; names come from search_skills)
 from pathlib import Path
 import sys
 

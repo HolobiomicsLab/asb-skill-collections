@@ -468,7 +468,10 @@ class Recorder(http.server.BaseHTTPRequestHandler):
 @pytest.fixture
 def server():
     Recorder.seen = []
-    httpd = http.server.HTTPServer(("127.0.0.1", 0), Recorder)
+    try:
+        httpd = http.server.HTTPServer(("127.0.0.1", 0), Recorder)
+    except PermissionError:
+        pytest.skip("sandbox forbids binding a localhost HTTP server")
     thread = threading.Thread(target=httpd.serve_forever, daemon=True)
     thread.start()
     yield f"http://127.0.0.1:{httpd.server_port}"

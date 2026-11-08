@@ -7,7 +7,7 @@ from pathlib import Path
 
 import pytest
 
-from scripts import collect_from_cut, router_shape
+from scripts import collect_from_cut
 
 
 FIXTURE_COLLECTION = Path(__file__).parent / "fixtures" / "router_collection"
@@ -21,21 +21,6 @@ def collection_repo(tmp_path: Path) -> Path:
     collection.parent.mkdir(parents=True)
     shutil.copytree(FIXTURE_COLLECTION, collection)
     return root
-
-
-@pytest.fixture(autouse=True)
-def collection_tooling_templates(monkeypatch: pytest.MonkeyPatch):
-    """Keep builder inputs in the fixture rather than a released collection."""
-    monkeypatch.setattr(router_shape, "SEARCH_SCRIPT", FIXTURE_COLLECTION / "bin" / "search_skills.py")
-    original_read_yaml = collect_from_cut._read_yaml
-    template_parts = ("collections", "metabolomics", "v2", "collection.yaml")
-
-    def read_fixture_yaml(path: Path):
-        if path.parts[-4:] == template_parts:
-            return original_read_yaml(FIXTURE_COLLECTION / "collection.yaml")
-        return original_read_yaml(path)
-
-    monkeypatch.setattr(collect_from_cut, "_read_yaml", read_fixture_yaml)
 
 
 @pytest.fixture(scope="session")
