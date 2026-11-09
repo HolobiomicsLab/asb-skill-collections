@@ -28,6 +28,14 @@ collection and one or two sentences on why it matters. A curator resolves the
 metadata and stages the paper in a `wave-*.yaml` file under
 `<domain checkout>/collections/<domain>/proposals/` with `status: hold`.
 
+The shared offline intake command is `python scripts/intake_issue.py --kind
+paper`; its full path arguments, receipt, exit codes and trust boundary are in
+[`intake-issue.md`](intake-issue.md). It stages `hold` only for a resolved,
+open-access paper with full text-reuse rights; unclear or closed submissions
+remain `candidate` for curator review. The command never closes the issue,
+builds the paper, merges a change or marks a row `included`. Its GitHub comment
+and label fields are consumed by a separate domain adapter.
+
 After review, a maintainer builds the held paper. It enters the collection in
 the next combined view and cut, not by editing the released version.
 

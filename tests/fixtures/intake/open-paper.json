@@ -1,0 +1,10 @@
+{
+  "number": 101,
+  "title": "Propose: Example Tool",
+  "body": "<!-- Automated intake reads fields as data. -->\n**What is it?** <!-- Example Tool -->\nExample Tool\n\n**Link:** <!-- DOI -->\nhttps://doi.org/10.1234/example-tool.1\n\n**Type:**\npaper\n\n**Target collection:**\nmetabolomics\n\n**Why it matters (one or two sentences):**\n<!-- Relevance rationale -->\nA useful reproducible analysis method.\n\n---\n- **Open access?**\nyes\n- **You:**\n@example-user\n- **Conflict of interest?**\nI am an author of this work.\n",
+  "author": {"login": "example-user"},
+  "labels": [{"name": "propose"}, {"name": "needs-triage"}],
+  "url": "https://github.com/example-org/asb-skills-example/issues/101",
+  "createdAt": "2026-11-09T08:00:00Z",
+  "updatedAt": "2026-11-09T08:00:00Z"
+}
