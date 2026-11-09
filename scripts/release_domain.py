@@ -871,15 +871,57 @@ def replace_release(existing: dict, row: dict) -> dict:
     return {**row, "superseded": superseded} if superseded else row
 
 
+class RegistryDumper(yaml.SafeDumper):
+    """Indent sequences under their key, the layout of the hand-written registry."""
+
+    def increase_indent(self, flow=False, indentless=False):
+        return super().increase_indent(flow, False)
+
+
+def registry_dates(release: dict) -> dict:
+    """Return a copy of a row whose dates are YAML dates, as the hand-written rows have."""
+    def dated(entry: dict) -> dict:
+        value = entry.get("released")
+        if isinstance(value, str) and DATE_PATTERN.fullmatch(value):
+            return {**entry, "released": datetime.date.fromisoformat(value)}
+        return dict(entry)
+    copy = dated(release)
+    if isinstance(release.get("superseded"), list):
+        copy["superseded"] = [dated(entry) if isinstance(entry, dict) else entry
+                              for entry in release["superseded"]]
+    return copy
+
+
+def dump_registry(document: dict, original: str) -> str:
+    """Serialise the registry, keeping the top-level comment block of the file.
+
+    Comments inside release rows are not preserved.
+    """
+    body = yaml.dump(document, Dumper=RegistryDumper, sort_keys=False, allow_unicode=True, width=4096)
+    comments = []
+    for line in original.splitlines(keepends=True):
+        if line.startswith("domains:"):
+            break
+        if line.startswith("#"):
+            comments.append(line)
+    if not comments:
+        return body
+    lines = body.splitlines(keepends=True)
+    position = next((index for index, line in enumerate(lines) if line.startswith("domains:")), 0)
+    return "".join(lines[:position] + comments + lines[position:])
+
+
 def update_manifest(context: ReleaseContext, row: dict) -> Path:
     """Insert or replace the domain release without discarding other domains."""
     path = context.args.tooling_root / "collections.yaml"
-    document = yaml.safe_load(path.read_text(encoding="utf-8")) if path.is_file() else {}
+    original = path.read_text(encoding="utf-8") if path.is_file() else ""
+    document = yaml.safe_load(original) if original else {}
     if document.get("schema") != "asb-collections-manifest/1":
         raise ReleaseError(f"collections.yaml has the wrong schema: {path}")
     domains = document.setdefault("domains", {})
     domain = domains.setdefault(context.args.domain, {
-        "repository": f"HolobiomicsLab/asb-skills-{context.args.domain}", "releases": [],
+        "repository": f"HolobiomicsLab/asb-skills-{context.args.domain}", "concept_doi": None,
+        "releases": [],
     })
     if domain.get("concept_doi") is None:
         concept_doi = context.args.concept_doi or context.state["stages"].get(
@@ -897,7 +939,9 @@ def update_manifest(context: ReleaseContext, row: dict) -> Path:
     else:
         releases.append(row)
     releases.sort(key=lambda release: int(release["version"]), reverse=True)
-    path.write_text(yaml.safe_dump(document, sort_keys=False, allow_unicode=True), encoding="utf-8")
+    releases[:] = [registry_dates(release) if isinstance(release, dict) else release
+                   for release in releases]
+    path.write_text(dump_registry(document, original), encoding="utf-8")
     return path
 
 

@@ -760,3 +760,38 @@ def test_record_doi_selects_the_row_whose_path_cell_is_the_collection(release_fi
     assert status in text
     assert (f"| `collections/fixture/v1` | ASB Fixture Skill Collection v1 | 10 | 10 | 2026-11-09 "
             f"| [{DOI}](https://doi.org/{DOI}) |") in text
+
+
+def test_manifest_keeps_the_registry_layout(release_fixture) -> None:
+    registry = release_fixture.tooling / "collections.yaml"
+    other = (
+        "  other:\n"
+        "    repository: Example/other\n"
+        "    concept_doi: 10.5281/zenodo.1111110\n"
+        "    releases:\n"
+        "      - version: 1\n"
+        "        path: collections/other/v1\n"
+        "        tag: other-v1.0.0\n"
+        "        commit: " + "a" * 40 + "\n"
+        "        source_commit: null\n"
+        "        tree_digest: sha256:" + "0" * 64 + "\n"
+        "        version_doi: 10.5281/zenodo.1111111\n"
+        "        released: 2026-01-02\n"
+        "        skills: 1\n        tools: 1\n        workflows: 0\n        papers: 1\n"
+    )
+    header = "schema: asb-collections-manifest/1\n# tree_digest: defined over the committed tree.\ndomains:\n"
+    registry.write_text(header + other)
+    seed_state(release_fixture, {
+        "record-doi": {"status": "done", "inputs": {"doi": DOI}}, "receipt": {"status": "done"},
+    }, doi=DOI, released="2026-11-09")
+    commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=release_fixture.repo, text=True).strip()
+    release_domain.update_manifest(release_domain.ReleaseContext(
+        argparse.Namespace(tooling_root=release_fixture.tooling, domain="fixture", concept_doi=CONCEPT_DOI),
+        None, None, lambda: NOW, json.loads(release_fixture.state.read_text()), [],
+    ), {"version": 1, "path": "collections/fixture/v1", "tag": "fixture-v1.0.0", "commit": commit,
+        "source_commit": None, "tree_digest": "sha256:" + "1" * 64, "version_doi": DOI,
+        "released": "2026-11-09", "skills": 10, "tools": 10, "workflows": 5, "papers": 1})
+    text = registry.read_text()
+    assert text.startswith(header + other)
+    assert "  fixture:\n    repository: HolobiomicsLab/asb-skills-fixture\n    concept_doi: " in text
+    assert "        released: 2026-11-09\n" in text
