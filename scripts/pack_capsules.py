@@ -201,7 +201,7 @@ def screen_build(root: Path, paper: dict, collection_meta: dict, deny_patterns: 
         failures.extend(f"{crate.relative_to(root).as_posix()}: {problem}" for problem in problems)
     counts["failures"] = len(failures)
     counts["spans_dropped_by_access_class"] = counts["spans_dropped"] if context.drop_quotes else 0
-    return {"counts": dict(sorted(counts.items())), "failures": failures}, quotes_by_capsule
+    return {"counts": dict(sorted(counts.items())), "failures": failures, "quote_retention": context.retention}, quotes_by_capsule
 
 
 def validation_state(path: Path) -> tuple[str, dict]:

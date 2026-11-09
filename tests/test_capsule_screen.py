@@ -5,15 +5,16 @@ from scripts import capsule_screen as screen
 from scripts.release_gate import _build_email_allowlist
 
 
-def context(access="gold", licence="CC-BY-4.0", deny=()):
+def context(access="gold", licence="other-oa", deny=()):
     result = screen.context_for("10.1234/example.open", {"type": access, "license": licence})
     result.email_allowlist, result.email_role = _build_email_allowlist({})
     result.deny_patterns = tuple(deny)
     return result
 
 
-def test_open_quotes_share_the_doi_budget_and_keep_anchors():
+def test_open_quotes_under_a_non_permissive_licence_share_the_doi_budget_and_keep_anchors():
     source = json.dumps({"source_excerpt": "a" * 350, "nested": {"quote": "b" * 1400}})
+    assert context().retention == "capped"
     result = screen.screen_text(source, "ledger/claims.json", context(), screen.QuoteBudget())
     payload = json.loads(result.text)
     assert len(payload["source_excerpt"]) == 300
@@ -22,6 +23,32 @@ def test_open_quotes_share_the_doi_budget_and_keep_anchors():
     assert payload["_screen_redactions"][0]["redacted_reason"] == "quotation_cap"
     assert payload["nested"]["_screen_redactions"][0]["redacted_reason"] == "quotation_cap"
     assert screen.QuoteBudget(1500).allowance() == 0
+
+
+@pytest.mark.parametrize(
+    ("access", "licence"),
+    [("gold", "CC-BY-4.0"), ("gold", "cc-by"), ("green", "cc-by-nc-nd"), ("gold", "cc0"), ("diamond", "public-domain")],
+)
+def test_open_permissive_sources_keep_the_full_attributed_text(access, licence):
+    rule = context(access, licence)
+    assert rule.retention == "full"
+    source = json.dumps({"source_excerpt": "a" * 350, "nested": {"quote": "b" * 1400}})
+    budget = screen.QuoteBudget()
+    result = screen.screen_text(source, "ledger/claims.json", rule, budget)
+    payload = json.loads(result.text)
+    assert len(payload["source_excerpt"]) == 350
+    assert len(payload["nested"]["quote"]) == 1400
+    assert "_screen_redactions" not in payload
+    assert result.counts["spans_truncated"] == 0
+    assert result.counts["spans_dropped"] == 0
+    assert result.quotes == {"count": 2, "characters": 1750, "longest": 1400, "truncated": 0, "dropped": 0}
+    assert budget.retained == 0
+
+
+def test_explicit_reuse_grant_lifts_the_caps_and_a_missing_licence_still_drops():
+    granted = screen.context_for("10.1234/example.open", {"type": "gold", "license": "other-oa", "reuse_grant": True})
+    assert granted.retention == "full"
+    assert screen.context_for("10.1234/example.open", {"type": "green", "license": None}).retention == "dropped"
 
 
 @pytest.mark.parametrize("access", ["closed", "hybrid", "bronze", "unknown", "gold"])
@@ -109,6 +136,14 @@ def test_blockquotes_are_screened_and_anchored():
     )
     assert "asb-redaction" in result.text
     assert result.quotes["characters"] == 300
+
+
+def test_blockquotes_of_a_permissive_open_source_are_kept_whole():
+    text = "> " + "x" * 350 + "\n> continuation\n"
+    result = screen.screen_text(text, "evidence/span.md", context("gold", "CC-BY-4.0"), screen.QuoteBudget())
+    assert result.text == text
+    assert "asb-redaction" not in result.text
+    assert result.quotes["characters"] == 363
 
 
 def test_invalid_structured_text_is_a_failure():

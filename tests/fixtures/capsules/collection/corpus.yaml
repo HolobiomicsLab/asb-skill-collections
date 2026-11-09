@@ -11,6 +11,12 @@ papers:
   access:
     type: gold
     license: CC-BY-4.0
+- name: build__coll_open_capped
+  doi: 10.1234/example.open-capped
+  status: included
+  access:
+    type: green
+    license: other-oa
 - name: build__coll_preprint
   doi: 10.1234/example.preprint
   status: included

@@ -42,19 +42,23 @@ def test_packs_screened_archives_receipts_metadata_and_benchmark(tmp_path):
     rows = [json.loads(line) for line in (out / "capsules.jsonl").read_text().splitlines()]
     benchmark = json.loads((out / "benchmark-manifest.json").read_text())
     assert manifest["schema"] == "asb-capsules-manifest/1"
-    assert manifest["build_count"] == 3
-    assert manifest["capsule_count"] == 4
+    assert manifest["build_count"] == 4
+    assert manifest["capsule_count"] == 6
     assert screen["schema"] == "asb-capsules-screen/1"
     assert screen["totals"]["spans_truncated"] >= 1
     assert screen["totals"]["spans_dropped"] >= 1
     assert screen["totals"]["emails_redacted"] == 1
-    assert screen["totals"]["phones_redacted"] == 1
+    assert screen["totals"]["phones_redacted"] == 2
     assert screen["totals"]["paths_rewritten"] >= 7
     assert screen["totals"]["crates_pruned"] >= 1
     assert screen["totals"]["deny_hits"] == 0
     assert screen["totals"]["failures"] == 0
-    assert [row["validation_state"] for row in rows].count("strict") == 3
-    assert len(benchmark["capsules"]) == 3
+    retention = {row["build_slug"]: row["quote_retention"] for row in screen["builds"]}
+    assert retention == {"closed": "dropped", "open": "full", "open_capped": "capped", "preprint": "dropped"}
+    quotes = {row["build_slug"]: row["screen"]["quote_retention"] for row in manifest["builds"]}
+    assert quotes == retention
+    assert [row["validation_state"] for row in rows].count("strict") == 4
+    assert len(benchmark["capsules"]) == 4
     metadata = json.loads((out / "zenodo" / "metadata.json").read_text())
     assert zenodo_deposit.validate_metadata(metadata) == []
     assert metadata["related_identifiers"][0]["identifier"] == "10.1234/example.collection"
@@ -102,7 +106,7 @@ def test_strict_deny_failure_writes_receipts_but_no_archives(tmp_path):
     assert pack_capsules.run(arguments(out, deny_patterns_file=deny, strict=True)) == 1
     assert not (out / "builds").exists()
     screen_text = (out / "SCREEN.json").read_text()
-    assert json.loads(screen_text)["totals"]["deny_hits"] == 2
+    assert json.loads(screen_text)["totals"]["deny_hits"] == 4
     assert "synthetic-partner" not in screen_text
 
 

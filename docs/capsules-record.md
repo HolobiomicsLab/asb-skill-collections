@@ -36,11 +36,15 @@ importable code never reads the clock.
 ## Screen order
 
 Every staged JSON, JSONL, JSON-LD, Markdown, YAML and plain-text member is
-screened before zipping. Structured quote fields and evidence blockquotes are
-limited to 300 characters per field and 1,500 retained characters per DOI.
-Restricted, unresolved, licence-less, and ungranted-preprint sources drop
-quote text and retain a DOI, location, offsets, original length, digest and
-reason. Emails and phone-shaped values then use the release-gate rules.
+screened before zipping. Quoted text follows one of three regimes, recorded
+per build as `quote_retention` in `MANIFEST.json` and `SCREEN.json`. Open
+sources under a permissive licence (the CC-BY family, CC0, public domain, or
+an explicit reuse grant) keep their attributed text in full (`full`). Open
+sources under any other licence string keep structured quote fields and
+evidence blockquotes under 300 characters per field and 1,500 retained
+characters per DOI (`capped`). Restricted, unresolved, licence-less, and
+ungranted-preprint sources drop quote text and retain a DOI, location,
+offsets, original length, digest and reason (`dropped`). Emails and phone-shaped values then use the release-gate rules.
 Build-machine paths become build locators and RO-Crates use the canonical
 release pruning rule. The optional deny list runs last.
 

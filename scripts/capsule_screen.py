@@ -33,7 +33,8 @@ SPACED_USER_PATH_RE = re.compile(
     re.IGNORECASE,
 )
 RESIDUAL_PATH_RE = re.compile(r"file://|/(?:Users|Volumes|private|tmp|var/folders)/|(?<![A-Za-z0-9+.-])[A-Za-z]:[\\/]")
-OPEN_ACCESS = {"open", "open-access", "open_access", "oa", "gold", "gold-oa", "gold_oa", "green-oa", "diamond"}
+OPEN_ACCESS = {"open", "open-access", "open_access", "oa", "gold", "gold-oa", "gold_oa", "green", "green-oa", "diamond"}
+PERMISSIVE_LICENSE_PREFIXES = ("cc-by", "cc0", "public-domain", "public_domain")
 
 
 def empty_counts() -> Counter:
@@ -59,9 +60,17 @@ class ScreenContext:
     license: str | None
     drop_quotes: bool
     redacted_reason: str
+    cap_quotes: bool = True
     email_allowlist: set[str] = field(default_factory=set)
     email_role: re.Pattern | None = None
     deny_patterns: tuple[str, ...] = ()
+
+    @property
+    def retention(self) -> str:
+        """Name the G2 regime applied to quoted text: dropped, capped or full."""
+        if self.drop_quotes:
+            return "dropped"
+        return "capped" if self.cap_quotes else "full"
 
 
 @dataclass
@@ -86,13 +95,21 @@ class ScreenResult:
 
 
 def context_for(doi: str, access: dict[str, Any]) -> ScreenContext:
-    """Map access metadata to the G2 text-retention decision."""
+    """Map access metadata to the G2 text-retention decision.
+
+    Open-access sources under a permissive licence (the CC-BY family, CC0,
+    public domain, or an explicit reuse grant) keep their attributed text in
+    full. Open-access sources under any other licence string keep it under the
+    caps. Restricted, unresolved and licence-less sources, and preprints without
+    a reuse grant, drop the text and keep the anchor.
+    """
     access_class = access_class_for(access)
     licence = access.get("license") or access.get("licence")
     is_preprint = access_class == "preprint" or bool(access.get("preprint"))
     has_grant = bool(access.get("reuse_grant") or access.get("reuse_allowed"))
-    has_grant = has_grant or bool(licence and str(licence).lower().startswith(("cc-by", "cc0", "public-domain")))
+    has_grant = has_grant or bool(licence and str(licence).lower().startswith(PERMISSIVE_LICENSE_PREFIXES))
     drop = access_class not in OPEN_ACCESS or not licence or (is_preprint and not has_grant)
+    cap = drop or not has_grant
     if is_preprint and not has_grant:
         reason = "preprint_without_reuse_grant"
     elif not licence:
@@ -101,7 +118,7 @@ def context_for(doi: str, access: dict[str, Any]) -> ScreenContext:
         reason = f"access_{access_class}"
     else:
         reason = ""
-    return ScreenContext(doi, access_class, str(licence) if licence else None, drop, reason)
+    return ScreenContext(doi, access_class, str(licence) if licence else None, drop, reason, cap_quotes=cap)
 
 
 def access_class_for(access: dict[str, Any]) -> str:
@@ -251,9 +268,14 @@ def _screen_json(value, location, context, budget, counts, quotes, source, point
 
 
 def _screen_quote(value, location, pointer, context, budget, counts, quotes, source):
-    allowed = 0 if context.drop_quotes else budget.allowance()
+    if context.drop_quotes:
+        allowed = 0
+    elif context.cap_quotes:
+        allowed = budget.allowance()
+    else:
+        allowed = len(value)
     retained = value[:allowed]
-    if not context.drop_quotes:
+    if context.cap_quotes and not context.drop_quotes:
         budget.retained += len(retained)
     quotes["count"] += 1
     quotes["characters"] += len(retained)
