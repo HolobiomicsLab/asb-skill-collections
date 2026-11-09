@@ -795,3 +795,52 @@ def test_manifest_keeps_the_registry_layout(release_fixture) -> None:
     assert text.startswith(header + other)
     assert "  fixture:\n    repository: HolobiomicsLab/asb-skills-fixture\n    concept_doi: " in text
     assert "        released: 2026-11-09\n" in text
+
+
+def test_committed_registry_round_trips_byte_identical() -> None:
+    original = (REPO / "collections.yaml").read_text(encoding="utf-8")
+    text, dropped = release_domain.dump_registry(yaml.safe_load(original), original)
+    assert dropped == []
+    assert text == original
+
+
+def make_other_domain(root: Path) -> tuple[Path, dict]:
+    """A second registered domain built from the fixture collection."""
+    from scripts.check_collections_manifest import checkout_counts, compute_tree_digest
+
+    other = root / "other-domain"
+    shutil.copytree(FIXTURE, other / "collections" / "other" / "v1")
+    run_git(other, "init", "-b", "main")
+    run_git(other, "config", "user.name", "Fixture")
+    run_git(other, "config", "user.email", "fixture@example.invalid")
+    commit = commit_all(other)
+    row = {
+        "version": 1, "path": "collections/other/v1", "tag": "other-v1.0.0", "commit": commit,
+        "source_commit": None, "tree_digest": compute_tree_digest(other, "collections/other/v1"),
+        "version_doi": "10.5281/zenodo.7777771", "released": "2026-11-01",
+        **checkout_counts(other / "collections" / "other" / "v1"),
+    }
+    return other, {"repository": "Example/other", "concept_doi": "10.5281/zenodo.7777770", "releases": [row]}
+
+
+def test_manifest_regen_requires_every_registry_domain_checkout(release_fixture, tmp_path, capsys) -> None:
+    other, entry = make_other_domain(tmp_path)
+    registry = release_fixture.tooling / "collections.yaml"
+    registry.write_text(yaml.safe_dump({"schema": "asb-collections-manifest/1", "domains": {"other": entry}},
+                                       sort_keys=False))
+    before = registry.read_bytes()
+    seed_state(release_fixture, {"deposit-draft": {"status": "waiting"}})
+    assert invoke(release_fixture, "record-doi", "--doi", DOI) == 0
+    assert invoke(release_fixture, "receipt") == 0
+    commit = commit_all(release_fixture.repo, "first release DOI")
+    capsys.readouterr()
+    arguments = ("--concept-doi", CONCEPT_DOI, "--commit", commit, "--regen")
+    assert invoke(release_fixture, "manifest", *arguments) == 1
+    assert "pass --checkout <domain>=<path> for: other" in capsys.readouterr().err
+    assert registry.read_bytes() == before
+    assert not (release_fixture.tooling / "docs-site/search_index.json").exists()
+    assert invoke(release_fixture, "manifest", *arguments, "--checkout", f"other={other}") == 0
+    index = json.loads((release_fixture.tooling / "docs-site/search_index.json").read_text())
+    assert set(index["collection_commits"]) == {"fixture/v1", "other/v1"}
+    document = yaml.safe_load(registry.read_text())
+    assert set(document["domains"]) == {"other", "fixture"}

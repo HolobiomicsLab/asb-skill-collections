@@ -224,7 +224,7 @@ def stage_inputs(context: ReleaseContext) -> dict:
         "deposit-plan": {"record_id", "publication_date", "sandbox", "extra_file", "first_release"},
         "deposit-draft": {"record_id", "publication_date", "sandbox", "extra_file", "first_release"},
         "record-doi": {"doi", "released"}, "receipt": {"candidate"},
-        "manifest": {"commit", "source_commit", "tag_name", "released", "regen"},
+        "manifest": {"commit", "source_commit", "tag_name", "released", "regen", "checkout"},
         "tag": {"commit", "tag_name", "verify"},
     }[context.args.stage]
     return normalise({key: value for key, value in vars(context.args).items() if key in relevant})
@@ -524,6 +524,25 @@ def doi_label(version: str, label: str) -> str:
     return version if label.endswith(".0.0") else label
 
 
+def with_identifiers(text: str, document: dict) -> str:
+    """Rewrite only the top-level identifiers block of a CFF text.
+
+    The rest of the file keeps its bytes, so a DOI pull request does not reflow
+    long lines. When the result would not parse to `document`, the whole file
+    is serialised instead.
+    """
+    block = yaml.safe_dump({"identifiers": document["identifiers"]}, sort_keys=False,
+                           allow_unicode=True, width=1000)
+    match = re.search(r"(?m)^identifiers:[ \t]*\n(?:[ \-].*\n?)*", text)
+    if match:
+        updated = text[:match.start()] + block + text[match.end():]
+    else:
+        updated = text.rstrip("\n") + "\n" + block
+    if yaml.safe_load(updated) == document:
+        return updated
+    return yaml.safe_dump(document, sort_keys=False, allow_unicode=True)
+
+
 def collection_citation_text(text: str, path: Path, doi: str, released: str, name: str) -> str:
     """Insert or replace the version DOI while preserving unrelated CFF bytes.
 
@@ -551,7 +570,7 @@ def collection_citation_text(text: str, path: Path, doi: str, released: str, nam
     document["identifiers"] = identifiers
     document["doi"] = doi
     document["date-released"] = released
-    return yaml.safe_dump(document, sort_keys=False, allow_unicode=True)
+    return with_identifiers(text, document)
 
 
 def root_citation_text(text: str, doi: str, released: str, name: str) -> str:
@@ -566,7 +585,7 @@ def root_citation_text(text: str, doi: str, released: str, name: str) -> str:
             break
     else:
         identifiers.append({"type": "doi", "value": doi, "description": description})
-    return yaml.safe_dump(document, sort_keys=False, allow_unicode=True)
+    return with_identifiers(text, document)
 
 
 README_HEADER = "| Path | Title | Skills | Tools | Released | DOI |"
@@ -892,23 +911,43 @@ def registry_dates(release: dict) -> dict:
     return copy
 
 
-def dump_registry(document: dict, original: str) -> str:
-    """Serialise the registry, keeping the top-level comment block of the file.
+def comment_groups(text: str) -> list[tuple[str, str, list[str]]]:
+    """Find each run of comment lines with the content lines just before and after it."""
+    groups, run, previous = [], [], ""
+    for line in text.splitlines(keepends=True):
+        if line.lstrip().startswith("#"):
+            run.append(line)
+            continue
+        if run:
+            groups.append((previous, line, run))
+            run = []
+        previous = line
+    if run:
+        groups.append((previous, "", run))
+    return groups
 
-    Comments inside release rows are not preserved.
+
+def dump_registry(document: dict, original: str) -> tuple[str, list[str]]:
+    """Serialise the registry in the layout of the hand-written file.
+
+    Sequences are indented under their key and dates stay dates. A comment is put
+    back between the same two lines it sat between; when a rewritten row no
+    longer has those neighbours, the comment is dropped and returned.
     """
     body = yaml.dump(document, Dumper=RegistryDumper, sort_keys=False, allow_unicode=True, width=4096)
-    comments = []
-    for line in original.splitlines(keepends=True):
-        if line.startswith("domains:"):
-            break
-        if line.startswith("#"):
-            comments.append(line)
-    if not comments:
-        return body
     lines = body.splitlines(keepends=True)
-    position = next((index for index, line in enumerate(lines) if line.startswith("domains:")), 0)
-    return "".join(lines[:position] + comments + lines[position:])
+    dropped, cursor = [], 0
+    for previous, following, comments in comment_groups(original):
+        for index in range(max(cursor - 1, 0), len(lines) + 1):
+            before = lines[index - 1] if index else ""
+            after = lines[index] if index < len(lines) else ""
+            if before == previous and after == following:
+                lines[index:index] = comments
+                cursor = index + len(comments)
+                break
+        else:
+            dropped.extend(line.strip() for line in comments)
+    return "".join(lines), dropped
 
 
 def update_manifest(context: ReleaseContext, row: dict) -> Path:
@@ -941,30 +980,61 @@ def update_manifest(context: ReleaseContext, row: dict) -> Path:
     releases.sort(key=lambda release: int(release["version"]), reverse=True)
     releases[:] = [registry_dates(release) if isinstance(release, dict) else release
                    for release in releases]
-    path.write_text(dump_registry(document, original), encoding="utf-8")
+    text, dropped = dump_registry(document, original)
+    for comment in dropped:
+        print(f"warning: registry comment dropped, its row changed: {comment}", file=sys.stderr)
+    path.write_text(text, encoding="utf-8")
     return path
+
+
+def domain_checkouts(context: ReleaseContext) -> dict[str, Path]:
+    """Map every supplied domain checkout, this release's repository included."""
+    checkouts = {context.args.domain: context.args.repo_root}
+    for slug, path in context.args.checkout:
+        if slug == context.args.domain and path != context.args.repo_root:
+            raise ReleaseError(f"--checkout {slug}= must be --repo-root or omitted")
+        checkouts[slug] = path
+    return checkouts
+
+
+def checkout_arguments(checkouts: dict[str, Path]) -> list[str]:
+    """Repeat --checkout slug=path for the sibling tools."""
+    return [item for slug, path in sorted(checkouts.items()) for item in ("--checkout", f"{slug}={path}")]
+
+
+def require_index_checkouts(context: ReleaseContext, checkouts: dict[str, Path]) -> None:
+    """Refuse a search-index rebuild that would silently drop domains without a checkout."""
+    path = context.args.tooling_root / "collections.yaml"
+    document = yaml.safe_load(path.read_text(encoding="utf-8")) if path.is_file() else {}
+    domains = set((document or {}).get("domains") or {}) | {context.args.domain}
+    missing = sorted(domains - set(checkouts))
+    if missing:
+        raise ReleaseError(
+            "--regen indexes every registry domain; pass --checkout <domain>=<path> for: "
+            + ", ".join(missing)
+        )
 
 
 def run_manifest(context: ReleaseContext) -> dict:
     """Write the registry row, validate it, and optionally rebuild public indexes."""
+    checkouts = domain_checkouts(context)
+    if context.args.regen:
+        require_index_checkouts(context, checkouts)
     row = manifest_row(context)
     path = update_manifest(context, row)
+    forwarded = checkout_arguments(checkouts)
     catalogue = context.sibling("scripts/regen_catalogue.py", [
-        "--repo-root", str(context.args.tooling_root),
-        "--checkout", f"{context.args.domain}={context.args.repo_root}",
+        "--repo-root", str(context.args.tooling_root), *forwarded,
     ])
     require_success(catalogue, "catalogue regeneration")
     regenerated = []
     if context.args.regen:
-        search = context.sibling("docs-site/build_search_index.py", [
-            "--manifest", str(path), "--checkout", f"{context.args.domain}={context.args.repo_root}",
-        ])
+        search = context.sibling("docs-site/build_search_index.py", ["--manifest", str(path), *forwarded])
         require_success(search, "search index regeneration")
         regenerated = [context.args.tooling_root / "docs-site/search_index.json"]
     catalogue_path = context.args.tooling_root / "catalogue.jsonld"
     check = context.sibling("scripts/check_collections_manifest.py", [
-        "--manifest", str(path), "--catalogue", str(catalogue_path),
-        "--checkout", f"{context.args.domain}={context.args.repo_root}",
+        "--manifest", str(path), "--catalogue", str(catalogue_path), *forwarded,
     ])
     require_success(check, "collections manifest check")
     outputs = {"manifest": path, "release": row, "catalogue": catalogue_path,
@@ -1110,6 +1180,8 @@ def parser() -> argparse.ArgumentParser:
         command.add_argument("--receipts-commit", default="")
         command.add_argument("--tag-name", default="")
         command.add_argument("--regen", action="store_true")
+        command.add_argument("--checkout", action="append", default=[], metavar="DOMAIN=PATH",
+                             help="manifest: another domain checkout for the catalogue, index and check")
         command.add_argument("--verify", action="store_true")
         command.add_argument("--execute", action="store_true")
         command.add_argument("--title", default="")
@@ -1131,6 +1203,15 @@ def validated_args(argv: list[str]) -> argparse.Namespace:
         if value is not None:
             setattr(args, name, value.expanduser().resolve())
     args.extra_file = [str(Path(value).expanduser().resolve()) for value in args.extra_file]
+    checkouts = []
+    for value in args.checkout:
+        slug, separator, path = value.partition("=")
+        if not separator or not DOMAIN_PATTERN.fullmatch(slug) or not path:
+            raise ReleaseError(f"--checkout must be <domain>=<path>: {value!r}")
+        checkouts.append((slug, Path(path).expanduser().resolve()))
+    if len({slug for slug, _ in checkouts}) != len(checkouts):
+        raise ReleaseError("each --checkout domain must be unique")
+    args.checkout = checkouts
     if args.released and not DATE_PATTERN.fullmatch(args.released):
         raise ReleaseError("--released must be YYYY-MM-DD")
     return args
