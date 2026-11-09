@@ -257,7 +257,8 @@ def prune_crate(crate: dict, capsule_dir: Path) -> dict:
       is removed rather than kept empty);
     * a string value that is a filesystem path becomes a ``urn:asb:build:`` locator;
     * every file the capsule holds is described and listed in the root's ``hasPart``;
-    * the descriptor keeps only the conformance claims gate 8 checks.
+    * the descriptor keeps only the conformance claims gate 8 checks, and is the
+      RO-Crate descriptor of ``./`` even when a build wrote it as a plain File.
 
     Applying it to its own output changes nothing.
     """
@@ -305,6 +306,12 @@ def prune_crate(crate: dict, capsule_dir: Path) -> dict:
         claims = claims if isinstance(claims, list) else [claims] if claims else []
         kept = [c for c in claims if isinstance(c, dict) and c.get("@id") in CHECKED_PROFILES]
         descriptor["conformsTo"] = kept or [{"@id": ROCRATE_1_1}]
+        # A build that wrote its own metadata file as a plain File entity names no
+        # root; the shipped capsule's descriptor is the RO-Crate one, about ./.
+        if "./" in by_id:
+            descriptor["@type"] = "CreativeWork"
+            descriptor["about"] = {"@id": "./"}
+            descriptor.pop("encodingFormat", None)
 
     root = by_id.get("./")
     if root is not None:

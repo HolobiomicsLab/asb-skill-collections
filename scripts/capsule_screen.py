@@ -32,7 +32,12 @@ SPACED_USER_PATH_RE = re.compile(
     r"(?:file://)?/Users/\s*<\s*user\s*name\s*>\s*/[^\s\"'<>()\[\]{},]+",
     re.IGNORECASE,
 )
-RESIDUAL_PATH_RE = re.compile(r"file://|/(?:Users|Volumes|private|tmp|var/folders)/|(?<![A-Za-z0-9+.-])[A-Za-z]:[\\/]")
+# A bare scheme in prose ("served from file:// needs a flag") names no path, so the
+# residual check only counts a file URI that is followed by something.
+RESIDUAL_PATH_RE = re.compile(
+    r"file://(?=[^\s\"'<>()\[\]{},.;:])|/(?:Users|Volumes|private|tmp|var/folders)/"
+    r"|(?<![A-Za-z0-9+.-])[A-Za-z]:[\\/]"
+)
 OPEN_ACCESS = {"open", "open-access", "open_access", "oa", "gold", "gold-oa", "gold_oa", "green", "green-oa", "diamond"}
 PERMISSIVE_LICENSE_PREFIXES = ("cc-by", "cc0", "public-domain", "public_domain")
 
