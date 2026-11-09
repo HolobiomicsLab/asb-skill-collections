@@ -32,12 +32,12 @@ followed by every status count. Counts are always recomputed from `papers`.
 | `title` | string | yes | Full paper or resource title. |
 | `year` | integer or null | yes | Publication year; null when a repository-only resource has no established year. |
 | `category` | string | yes | Curator-assigned functional category. |
-| `repo_url` | string | yes | Canonical public repository URL. |
+| `repo_url` | string or null | yes | Canonical public repository URL; null only on a `candidate` row whose repository is unknown (a literature-watch find), never on a held or included row. |
 | `status` | string | yes | One of the five disposition values below. |
 | `license_tier` | string | yes | Corpus reuse tier, independent of article access. |
 | `wave` | string | yes | Proposing or landing wave identifier. |
 | `resource_type` | string | yes | Paper, software, database, workflow, or other resource subtype. |
-| `source_issue` | integer | yes | Originating issue number, not a repository URL. |
+| `source_issue` | integer or null | yes | Originating issue number, not a repository URL; null only when `source_watch` is present (the row came from the literature watch, not from an issue). |
 | `links` | list of strings | no | Context links that are not the primary grounding source. |
 | `source_watch` | date string | no | Literature-watch run date. |
 | `source_queries` | list of strings | no | Source and query provenance retained for the row. |
@@ -58,7 +58,7 @@ existing community wave invalid.
 |---|---|---|---|
 | `type` | string | yes | Access classification, such as `gold-oa`, `repo-oa`, or `restricted`. |
 | `license` | string | yes | Article or resource reuse licence, or its explicit restriction. |
-| `is_oa` | boolean | yes | Whether open access was established; this is not a reuse-tier decision. |
+| `is_oa` | boolean or null | yes | Whether open access was established; null means the resolution failed or was not attempted, not that the paper is closed; never a reuse-tier decision. |
 | `provenance` | string | no | Publication stage, such as `preprint`. |
 | `oa_status` | string | no | Resolver-specific open-access classification. |
 | `verified_via` | string | yes | Method or resolver that supplied the evidence. |

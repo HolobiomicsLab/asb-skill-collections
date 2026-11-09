@@ -404,3 +404,31 @@ def test_no_clock_or_cross_repository_import():
     assert "date.today" not in source
     assert "doi_utils" not in source
     assert copy.deepcopy(valid_document()) == valid_document()
+
+
+def test_watch_row_may_leave_issue_and_repository_null() -> None:
+    row = valid_row(status="candidate", source_issue=None, repo_url=None,
+                    source_watch="2026-11-09")
+    assert pc.validate({**valid_document(), "papers": [row]}) == []
+
+
+def test_null_source_issue_requires_source_watch() -> None:
+    row = valid_row(status="candidate", source_issue=None)
+    paths = [violation.path for violation in pc.validate({**valid_document(), "papers": [row]})]
+    assert "papers[0].source_issue" in paths
+
+
+def test_null_repo_url_is_refused_on_a_held_row() -> None:
+    row = valid_row(status="hold", repo_url=None, source_issue=7)
+    paths = [violation.path for violation in pc.validate({**valid_document(), "papers": [row]})]
+    assert "papers[0].repo_url" in paths
+
+
+def test_access_is_oa_may_be_null_when_unresolved() -> None:
+    row = valid_row(status="candidate", source_issue=None, repo_url=None,
+                    source_watch="2026-11-09")
+    row["access"] = {**row["access"], "is_oa": None, "verified_via": "unresolved"}
+    assert pc.validate({**valid_document(), "papers": [row]}) == []
+    row["access"] = {**row["access"], "is_oa": "yes"}
+    paths = [v.path for v in pc.validate({**valid_document(), "papers": [row]})]
+    assert "papers[0].access.is_oa" in paths
