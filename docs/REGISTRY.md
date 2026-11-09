@@ -712,6 +712,8 @@ The promotion step is manual (move the directory), not automated. This allows:
 
 ## CI of a domain repository
 
+For the complete scaffold-to-release path, see [Domain onboarding and release](domain-onboarding.md).
+
 An `asb-skills-<domain>` repository calls the tooling repository's reusable
 `.github/workflows/domain-gates.yml` on pull requests and pushes to `main`.
 Generate the content caller and the separate plugin-manifest caller from the

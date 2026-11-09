@@ -1,0 +1,29 @@
+{
+  "title": "ASB <DOMAIN_TITLE> Skill Collection",
+  "upload_type": "dataset",
+  "description": "Evidence-grounded skill and software-tool collections for <DOMAIN_TITLE>, released by the Holobiomics Lab.",
+  "access_right": "open",
+  "license": "CC-BY-4.0",
+  "creators": [
+    {
+      "name": "Holobiomics Lab"
+    }
+  ],
+  "keywords": [
+    "<DOMAIN>",
+    "agentic-science",
+    "skills"
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "<REPOSITORY_URL>",
+      "scheme": "url"
+    },
+    {
+      "relation": "references",
+      "identifier": "https://github.com/HolobiomicsLab/asb-skill-collections",
+      "scheme": "url"
+    }
+  ]
+}
