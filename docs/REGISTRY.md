@@ -702,6 +702,49 @@ The promotion step is manual (move the directory), not automated. This allows:
 
 ---
 
+## CI of a domain repository
+
+An `asb-skills-<domain>` repository calls the tooling repository's reusable
+`.github/workflows/domain-gates.yml` on pull requests and pushes to `main`.
+Generate the content caller and the separate plugin-manifest caller from the
+release registry:
+
+```bash
+python scripts/render_domain_ci.py --manifest collections.yaml \
+  --domain <domain> --tooling-sha <full-tooling-commit-sha> \
+  --out <domain checkout>/.github/workflows
+```
+
+Every release without `status: legacy` becomes a matrix row. To enable receipt
+verification, pass `--receipts <mapping.json>`, where the JSON object maps a
+release's `collection_path` to its `receipts_path`. The current registry has no
+receipt or tooling-commit field; maintainers must not infer either pin from a
+content commit. Review and record the intended tooling commit before adopting
+it, then deliberately replace the full SHA in the caller to upgrade gates.
+
+At run time, the caller checks out the domain repository. The reusable workflow
+checks out `HolobiomicsLab/asb-skill-collections` at
+`${{ github.job_workflow_sha }}`, the commit of the called reusable workflow,
+using the caller's read-only `GITHUB_TOKEN`. It installs the pinned tooling and
+runs index coverage, description lint, EDAM IRI syntax, advertised counts,
+licence tiers, provenance tiers, tool catalogue integrity, related skill links,
+proposal structure, release-surface rules and the release gate in that order.
+The DOI resolution sample is nonblocking and needs no secret. When
+`receipts_path` is present, `release_gate.py --verify --report
+<receipts_path>/gate_report.json` recomputes the saved receipt without writing.
+
+The release gate has no embedding-model dependency. The old S6 model cache is
+therefore omitted. The separate plugin caller pins Claude Code and validates
+`.claude-plugin/marketplace.json` plus each local plugin source with `claude
+plugin validate --strict`.
+
+Use `scripts/run_domain_gates.sh <tooling-root> <content-root>
+<collection_path> [receipts_path] [--strict]` before pushing. It uses advisory
+release-gate mode by default and performs no DOI network request. Local runs do
+not establish hosted Actions permissions, live plugin validation or human
+review. LinkML, RO-Crate and Indicium checks stay outside this reusable
+workflow until their package and source prerequisites are maintained.
+
 ## 7. Grounded Current State (2026-06-14)
 
 ### 7.1 What exists now

@@ -1,0 +1,135 @@
+name: Domain content gates
+
+on:
+  workflow_call:
+    inputs:
+      domain:
+        description: Domain slug used to label the reusable job.
+        required: true
+        type: string
+      collection_path:
+        description: Collection path relative to the domain repository root.
+        required: true
+        type: string
+      receipts_path:
+        description: Optional receipt directory relative to the domain repository root.
+        required: false
+        type: string
+      strict:
+        description: Require a passing strict release gate.
+        required: false
+        default: true
+        type: boolean
+
+permissions:
+  contents: read
+
+jobs:
+  content-gates:
+    name: ${{ inputs.domain }} / ${{ inputs.collection_path }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the calling domain repository
+        uses: actions/checkout@v7
+        with:
+          path: content
+
+      - name: Check out the pinned tooling repository
+        id: tooling
+        uses: actions/checkout@v7
+        with:
+          repository: HolobiomicsLab/asb-skill-collections
+          ref: ${{ github.job_workflow_sha }}
+          token: ${{ github.token }}
+          path: tooling
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Validate content paths
+        env:
+          COLLECTION_PATH: ${{ inputs.collection_path }}
+          RECEIPTS_PATH: ${{ inputs.receipts_path }}
+        run: python tooling/scripts/domain_content_gates.py --validate-paths "$COLLECTION_PATH" "$RECEIPTS_PATH"
+
+      - name: Install the pinned tooling
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ./tooling
+          python -m pip install -r ./tooling/scripts/requirements.txt
+
+      - name: Every skill is in every index its collection publishes
+        working-directory: content
+        env:
+          COLLECTION_PATH: ${{ inputs.collection_path }}
+        run: python ../tooling/scripts/skill_index.py --collections "$COLLECTION_PATH"
+
+      - name: Lint skill descriptions
+        env:
+          COLLECTION_PATH: ${{ inputs.collection_path }}
+        run: python tooling/scripts/lint_skill_descriptions.py "content/$COLLECTION_PATH"
+
+      - name: Check derived_from DOIs resolve (sample)
+        continue-on-error: true
+        env:
+          COLLECTION_PATH: ${{ inputs.collection_path }}
+        run: python tooling/scripts/domain_content_gates.py --doi-only "content/$COLLECTION_PATH"
+
+      - name: Check EDAM IRIs
+        env:
+          COLLECTION_PATH: ${{ inputs.collection_path }}
+        run: python tooling/scripts/domain_content_gates.py --edam-only "content/$COLLECTION_PATH"
+
+      - name: Advertised counts
+        run: python tooling/scripts/check_advertised_counts.py --repo-root content
+
+      - name: License tiers
+        env:
+          COLLECTION_PATH: ${{ inputs.collection_path }}
+        run: python tooling/scripts/check_license_tiers.py "content/$COLLECTION_PATH"
+
+      - name: Provenance tiers
+        env:
+          COLLECTION_PATH: ${{ inputs.collection_path }}
+        run: python tooling/scripts/check_provenance_tiers.py "content/$COLLECTION_PATH"
+
+      - name: Tool catalogue
+        env:
+          COLLECTION_PATH: ${{ inputs.collection_path }}
+        run: python tooling/scripts/check_tools_index.py "content/$COLLECTION_PATH"
+
+      - name: Related skills
+        env:
+          COLLECTION_PATH: ${{ inputs.collection_path }}
+        run: python tooling/scripts/check_related_skills.py "content/$COLLECTION_PATH"
+
+      - name: Proposals
+        env:
+          COLLECTION_PATH: ${{ inputs.collection_path }}
+        run: python tooling/scripts/check_proposals.py "content/$COLLECTION_PATH"
+
+      - name: Release surface
+        env:
+          COLLECTION_PATH: ${{ inputs.collection_path }}
+        run: python tooling/scripts/check_release_surface.py "content/$COLLECTION_PATH"
+
+      - name: Release gate
+        env:
+          STRICT: ${{ inputs.strict }}
+          COLLECTION_PATH: ${{ inputs.collection_path }}
+        run: |
+          mode=--advisory
+          if [ "$STRICT" = "true" ]; then mode=--strict; fi
+          python tooling/scripts/release_gate.py "content/$COLLECTION_PATH" \
+            "$mode" --report "$RUNNER_TEMP/gate_report.json"
+
+      - name: Receipt re-verification
+        if: inputs.receipts_path != ''
+        env:
+          COLLECTION_PATH: ${{ inputs.collection_path }}
+          RECEIPTS_PATH: ${{ inputs.receipts_path }}
+        run: |
+          python tooling/scripts/release_gate.py "content/$COLLECTION_PATH" \
+            --verify --report "content/$RECEIPTS_PATH/gate_report.json"
