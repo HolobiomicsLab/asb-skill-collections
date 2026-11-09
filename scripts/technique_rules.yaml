@@ -1,0 +1,53 @@
+rules_version: 2026-11-08.1
+vocabulary:
+  LC-MS:
+    - rule: lc_ms
+      regex: '(?<![a-z0-9])(?:lc|hplc|uhplc|uplc)\s*[-/–—]?\s*ms(?:/ms|ms)?(?![a-z0-9])'
+      fields: [name, description, tools, body]
+    - rule: liquid_chromatography
+      regex: 'liquid chromatograph'
+      fields: [name, description, tools, body]
+    - rule: tandem_ms
+      regex: '(?:tandem mass spectrom|ms/ms|ms2|ms\^2)'
+      fields: [name, description, tools, body]
+  GC-MS:
+    - rule: gc_ms
+      regex: '(?<![a-z0-9])(?:gc|gcxgc|gc×gc)\s*[-/–—]?\s*ms(?:/ms|ms)?(?![a-z0-9])'
+      fields: [name, description, tools, body]
+    - rule: gas_chromatography
+      regex: 'gas chromatograph'
+      fields: [name, description, tools, body]
+  CE-MS:
+    - rule: ce_ms
+      regex: '(?<![a-z0-9])(?:ce|cesi)\s*[-/–—]?\s*ms(?:/ms|ms)?(?![a-z0-9])'
+      fields: [name, description, tools, body]
+    - rule: capillary_electrophoresis
+      regex: 'capillary electrophores'
+      fields: [name, description, tools, body]
+  direct-infusion-MS:
+    - rule: di_ms_strict
+      regex: '(?<![a-z0-9])(?:dims|fia)\s*[-/–—]?\s*ms(?:/ms|ms)?(?![a-z0-9])'
+      fields: [name, description, tools, body]
+    - rule: flow_injection
+      regex: 'flow[- ]injection'
+      fields: [name, description, tools, body]
+  MS-imaging:
+    - rule: ms_imaging
+      regex: '(?:mass spectrometry imaging|imaging mass spectrometry|ms imaging|msi data|msi image|spatial metabolomics|maldi imaging|desi imaging)'
+      fields: [name, description, tools, body]
+    - rule: desi
+      regex: '(?<![a-z0-9])desi(?![a-z0-9])'
+      fields: [name, description, tools, body]
+  ion-mobility-MS:
+    - rule: ion_mobility
+      regex: 'ion[- ]mobility'
+      fields: [name, description, tools, body]
+    - rule: ims_ms
+      regex: '(?<![a-z0-9])(?:ims|tims|twims|faims|dms)\s*[-/–—]?\s*ms(?:/ms|ms)?(?![a-z0-9])'
+      fields: [name, description, tools, body]
+  NMR:
+    - rule: nmr
+      regex: '(?<![a-z0-9])nmr(?![a-z0-9])|nuclear magnetic resonance'
+      fields: [name, description, tools, body]
+# Generic mass-spectrometry is deliberately absent: its measured held-out
+# precision was 0.17, below the 0.90 threshold for a deterministic tag.

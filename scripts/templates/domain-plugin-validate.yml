@@ -1,0 +1,52 @@
+name: Domain plugin manifests
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  plugin-manifest:
+    name: Plugin manifests validate
+    runs-on: ubuntu-latest
+    env:
+      CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: "1"
+    steps:
+      - name: Check out the domain repository
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+
+      - name: Install Claude Code
+        run: npm install --global "@anthropic-ai/claude-code@2.1.304"
+
+      - name: Validate the marketplace manifest
+        run: claude plugin validate --strict .claude-plugin/marketplace.json
+
+      - name: Validate every plugin the marketplace lists
+        run: |
+          sources=$(jq -r '.plugins[].source | if type == "string" then . else error("plugin source is not a local path") end' .claude-plugin/marketplace.json)
+          if [ -z "$sources" ]; then
+            echo "FAIL: marketplace.json lists no plugin; the step checked nothing."
+            exit 1
+          fi
+          checked=0
+          failed=0
+          for source in $sources; do
+            checked=$((checked + 1))
+            if claude plugin validate --strict "$source"; then
+              echo "PASS: $source"
+            else
+              echo "::error::plugin $source does not pass claude plugin validate --strict"
+              failed=$((failed + 1))
+            fi
+          done
+          echo "$((checked - failed)) of $checked plugins pass claude plugin validate --strict"
+          [ "$failed" -eq 0 ]

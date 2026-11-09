@@ -1,0 +1,44 @@
+# Community proposal queue, staged for the next curation wave.
+
+schema: asb-corpus/1.0
+collection: metabolomics
+version: 2
+generated_on: '2026-11-07'
+source: community proposals (GitHub issue #45), curator-normalized
+policy: OPEN_ACCESS_POLICY.md (OA verified per entry)
+wave: community-2026-11
+summary:
+  total: 1
+  included: 0
+  hold: 1
+
+papers:
+- name: PyCompound
+  doi: 10.3390/metabo16080585
+  title: 'PyCompound: An Open-Source Python Package for Spectral-Library Matching in Mass Spectrometry-Based Metabolomics'
+  year: 2026
+  category: Annotation
+  repo_url: https://github.com/hdlugas/pycompound
+  status: hold
+  license_tier: open
+  wave: community-2026-11
+  resource_type: software-tool
+  source_issue: 45
+  access:
+    type: gold-oa
+    license: cc-by-4.0
+    is_oa: true
+    verified_via: crossref_license_url
+    verified_on: '2026-11-07'
+    code_license: MIT
+  triage:
+    proposer: lfnothias
+    conflict_declared: false
+    rationale: >-
+      PyCompound performs spectral-library matching for compound identification
+      across mass-spectrometry data and provides an open Python implementation.
+    decision: accept
+    notes: >-
+      Published in Metabolites on 18 August 2026 under CC-BY-4.0. The MIT-licensed
+      repository was last pushed on 29 August 2026. Hold for the next distillation
+      wave and maintainer review.
