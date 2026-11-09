@@ -1,5 +1,6 @@
 """Deterministic EDAM remap tiers, byte preservation, and receipts."""
 
+import hashlib
 import json
 import os
 import shutil
@@ -60,7 +61,7 @@ def make_collection(tmp_path):
     collection.mkdir(exist_ok=True)
     (collection / "skills_index.json").write_text(json.dumps(rows, indent=1) + "\n")
     (collection / "collection.yaml").write_text(
-        "name: fixture\nedam_topics:\n" + "".join(f"- {iri}\n" for row in rows for iri in row["edam_topics"])
+        "name: fixture\nslug: metabolomics\nedam_topics:\n" + "".join(f"- {iri}\n" for row in rows for iri in row["edam_topics"])
         + "other: preserved\n"
     )
     (collection / "tools_index.json").write_text(json.dumps([
@@ -78,6 +79,40 @@ def run_cli(collection, receipt, tier="T2", *extra):
         cwd=REPO, env={**os.environ, "PYTHONDONTWRITEBYTECODE": "1"},
         text=True, capture_output=True, check=True,
     )
+
+
+def test_t3_requires_domain_rules(tmp_path):
+    collection = make_collection(tmp_path)
+    (collection / "collection.yaml").write_text("name: fixture\nslug: astronomy\n")
+    result = subprocess.run(
+        [sys.executable, "scripts/remap_edam.py", "remap", "--collection", str(collection),
+         "--vocabulary", str(VOCABULARY), "--tier", "T3", "--receipt", str(tmp_path / "receipt.json"),
+         "--date", "2026-11-09"], cwd=REPO, text=True, capture_output=True,
+    )
+    assert result.returncode != 0
+    assert "scripts/rules/astronomy/edam_remap_rules.yaml" in result.stderr
+
+
+def test_t2_does_not_require_domain_rules(tmp_path):
+    collection = make_collection(tmp_path)
+    (collection / "collection.yaml").write_text(
+        (collection / "collection.yaml").read_text().replace("slug: metabolomics", "slug: astronomy")
+    )
+    result = run_cli(collection, tmp_path / "receipt.json")
+    assert json.loads(result.stdout)["leaves_touched"] == 5
+
+
+def test_receipt_records_domain_rules_path_and_digest(tmp_path):
+    collection = make_collection(tmp_path)
+    receipt = tmp_path / "receipt.json"
+    run_cli(collection, receipt, "T3")
+    document = json.loads(receipt.read_text())
+    rules_path = REPO / "scripts" / "rules" / "metabolomics" / "edam_remap_rules.yaml"
+    assert document["rules"] == {
+        "path": str(rules_path),
+        "sha256": hashlib.sha256(rules_path.read_bytes()).hexdigest(),
+        "version": "2026-11-09.1",
+    }
 
 
 def test_tiers_and_never_touch_topic_3520(tmp_path):

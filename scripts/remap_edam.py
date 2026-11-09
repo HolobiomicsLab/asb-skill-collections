@@ -19,24 +19,29 @@ if __package__ in (None, ""):
 from scripts.edam_vocabulary import EDAM_IRI, load, resolve
 from scripts.normalize_skill import parse_skill_md
 from scripts.tag_techniques import index_row_spans
+from scripts.domain_rules import resolve_rules_path
 from asb_skill_collections.layout import leaf_dir
 
 
 RECEIPT_SCHEMA = "asb-edam-remap/1"
 TIERS = ("T1", "T2", "T3", "T3b", "T4")
-PROTEOMICS_PATTERN = re.compile(
-    r"(\bproteom\w*|\bpeptide[s]?\b|\btryptic\b|\bpsm[s]?\b|"
-    r"\bprotein[s]?\b|\bproteoform\w*|\buniprot\b|\bmaxquant\b|"
-    r"\bmascot\b|\bsequest\b|\bmsfragger\b|\bdia-?nn\b|\bcasanovo\b|\bprosit\b|"
-    r"post-translational|\bptm\b)", re.IGNORECASE,
-)
-PROTEOMICS_TOOLS = {
-    "maxquant", "andromeda", "sequest", "msgf+", "comet", "mascot", "proteinpilot",
-    "spectronaut", "dia-nn", "diann", "skyline", "percolator", "msfragger", "fragpipe",
-    "proteome discoverer", "peaks studio", "prosit", "deepnovo", "casanovo", "byonic", "uniprot",
-}
-T3B_OPERATIONS = {"operation_3646", "operation_0282"}
-T4_OPERATIONS = T3B_OPERATIONS | {"operation_3218", "operation_3216", "operation_3219", "operation_3222", "operation_3891"}
+DOMAIN_RULE_TIERS = {"T3", "T3b", "T4"}
+
+
+def load_domain_rules(path):
+    """Load and validate the foreign vocabulary for tiers T3 through T4."""
+    document = yaml.safe_load(Path(path).read_text(encoding="utf-8")) or {}
+    required = ("rules_version", "foreign_text_pattern", "foreign_tools", "t3b_operations", "t4_operations")
+    missing = [key for key in required if key not in document]
+    if missing:
+        raise ValueError(f"rules file {path} is missing: {', '.join(missing)}")
+    return {
+        "rules_version": str(document["rules_version"]),
+        "foreign_text_pattern": re.compile(document["foreign_text_pattern"], re.IGNORECASE),
+        "foreign_tools": set(document["foreign_tools"]),
+        "t3b_operations": set(document["t3b_operations"]),
+        "t4_operations": set(document["t4_operations"]),
+    }
 
 
 def sha256(path: Path) -> str:
@@ -44,14 +49,14 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
-def proteomics_signal(row: dict, body: str) -> bool:
+def proteomics_signal(row: dict, body: str, rules) -> bool:
     """Reproduce the audit's tool, name, description, and body signal."""
     text = " ".join((row.get("name") or "", row.get("description") or "", body))
     tools = {str(tool).strip().lower() for tool in row.get("tools") or []}
-    return bool(PROTEOMICS_PATTERN.search(text) or tools & PROTEOMICS_TOOLS)
+    return bool(rules["foreign_text_pattern"].search(text) or tools & rules["foreign_tools"])
 
 
-def remap_topics(values, vocabulary, tier, row, body, counts):
+def remap_topics(values, vocabulary, tier, row, body, counts, rules=None):
     """Apply topic rules while preserving order and valid identifiers."""
     result = []
     for iri in values or []:
@@ -68,14 +73,14 @@ def remap_topics(values, vocabulary, tier, row, body, counts):
             else:
                 counts["R2_topic_removed"] += 1
             continue
-        if tier in ("T3", "T3b", "T4") and resolution.id == "topic_0121" and not proteomics_signal(row, body):
+        if tier in DOMAIN_RULE_TIERS and resolution.id == "topic_0121" and not proteomics_signal(row, body, rules):
             counts["R3_topic_0121_removed"] += 1
             continue
         result.append(iri)
     return list(dict.fromkeys(result))
 
 
-def remap_operation(value, vocabulary, tier, counts):
+def remap_operation(value, vocabulary, tier, counts, rules=None):
     """Apply operation rules to one nullable scalar value."""
     if not value:
         return value
@@ -90,17 +95,22 @@ def remap_operation(value, vocabulary, tier, counts):
             return EDAM_IRI + resolution.replaced_by
         counts["R2_operation_removed"] += 1
         return None
-    removals = T4_OPERATIONS if tier == "T4" else T3B_OPERATIONS if tier == "T3b" else set()
+    removals = rules["t4_operations"] if tier == "T4" else rules["t3b_operations"] if tier == "T3b" else set()
     if resolution.id in removals:
         counts["R5_operation_removed"] += 1
         return None
     return value
 
 
-def plan_remap(collection: Path, vocabulary_path: Path, tier="T2"):
+def plan_remap(collection: Path, vocabulary_path: Path, tier="T2", rules_path=None):
     """Return every proposed field change without modifying the collection."""
     collection = Path(collection)
     vocabulary = load(vocabulary_path)
+    if tier in DOMAIN_RULE_TIERS:
+        rules_path = resolve_rules_path(collection, "edam_remap_rules.yaml", rules_path)
+        domain_rules = load_domain_rules(rules_path)
+    else:
+        domain_rules = None
     rows = json.loads((collection / "skills_index.json").read_text(encoding="utf-8"))
     counts = Counter()
     changes = []
@@ -113,8 +123,8 @@ def plan_remap(collection: Path, vocabulary_path: Path, tier="T2"):
             raise ValueError(f"missing frontmatter: {leaf}")
         before = {"edam_topics": row.get("edam_topics") or [], "edam_operation": row.get("edam_operation")}
         after = {
-            "edam_topics": remap_topics(before["edam_topics"], vocabulary, tier, row, body or "", counts),
-            "edam_operation": remap_operation(before["edam_operation"], vocabulary, tier, counts),
+            "edam_topics": remap_topics(before["edam_topics"], vocabulary, tier, row, body or "", counts, domain_rules),
+            "edam_operation": remap_operation(before["edam_operation"], vocabulary, tier, counts, domain_rules),
         }
         output_row = dict(row, **after)
         output_rows.append(output_row)
@@ -125,7 +135,7 @@ def plan_remap(collection: Path, vocabulary_path: Path, tier="T2"):
             if before[field] != after[field]:
                 changes.append({
                     "slug": row["slug"], "field": field, "before": before[field],
-                    "after": after[field], "rules": field_rules(before[field], after[field], vocabulary, tier),
+                    "after": after[field], "rules": field_rules(before[field], after[field], vocabulary, tier, domain_rules),
                 })
     counts["R4_topic_3520_removed"] = 0
     totals = {
@@ -136,10 +146,10 @@ def plan_remap(collection: Path, vocabulary_path: Path, tier="T2"):
         "operation_fields_empty_before": sum(not row.get("edam_operation") for row in rows),
         "operation_fields_empty_after": sum(not row.get("edam_operation") for row in output_rows),
     }
-    return {"vocabulary": vocabulary, "changes": changes, "rule_counts": dict(sorted(counts.items())), "totals": totals, "rows": output_rows}
+    return {"vocabulary": vocabulary, "changes": changes, "rule_counts": dict(sorted(counts.items())), "totals": totals, "rows": output_rows, "domain_rules": domain_rules, "rules_path": rules_path}
 
 
-def field_rules(before, after, vocabulary, tier):
+def field_rules(before, after, vocabulary, tier, domain_rules=None):
     """Name every rule contributing to one changed field."""
     values = before if isinstance(before, list) else [before] if before else []
     rules = set()
@@ -151,7 +161,7 @@ def field_rules(before, after, vocabulary, tier):
             rules.add("R2")
         elif tier in ("T3", "T3b", "T4") and resolution.id == "topic_0121":
             rules.add("R3")
-        elif resolution.id in (T4_OPERATIONS if tier == "T4" else T3B_OPERATIONS if tier == "T3b" else set()):
+        elif domain_rules is not None and resolution.id in (domain_rules["t4_operations"] if tier == "T4" else domain_rules["t3b_operations"] if tier == "T3b" else set()):
             rules.add("R5")
     return sorted(rules)
 
@@ -277,8 +287,12 @@ def make_receipt(collection, vocabulary_path, plan, tier, write, generated_at):
     manifest = yaml.safe_load(manifest_text)
     leaf_texts = {slug: (leaf_dir(collection) / slug / "SKILL.md").read_text(encoding="utf-8") for slug in {change["slug"] for change in plan["changes"]}}
     tools_text = tools_path.read_text(encoding="utf-8") if tools_path.is_file() else None
+    rules_receipt = None
+    if plan.get("rules_path") is not None:
+        rules_receipt = {"path": str(plan["rules_path"]), "sha256": sha256(plan["rules_path"]), "version": plan["domain_rules"]["rules_version"]}
     return {
         "schema": RECEIPT_SCHEMA, "generated_at": generated_at, "tier": tier, "write": write,
+        "rules": rules_receipt,
         "vocabulary": {"release": plan["vocabulary"]["release"], "release_inferred": plan["vocabulary"]["release_inferred"], "sha256": sha256(vocabulary_path)},
         "input_sha256": {"skills_index.json": sha256(Path(collection) / "skills_index.json"), "collection.yaml": sha256(Path(collection) / "collection.yaml"), "leaves": combined},
         "rule_counts": plan["rule_counts"], "totals": plan["totals"], "changes": plan["changes"],
@@ -337,7 +351,7 @@ def plan_tools(path, vocabulary, tier):
 
 def run_remap(options):
     """Measure a tier, optionally write it, and always emit its receipt."""
-    plan = plan_remap(options.collection, options.vocabulary, options.tier)
+    plan = plan_remap(options.collection, options.vocabulary, options.tier, options.rules)
     plan["tier"] = options.tier
     receipt = make_receipt(options.collection, options.vocabulary, plan, options.tier, options.write, options.date)
     if not options.write:
@@ -380,6 +394,7 @@ def parser():
         target.add_argument("--collection", type=Path)
         target.add_argument("--vocabulary", type=Path, default=Path(__file__).parent / "data" / "edam_vocabulary.json")
         target.add_argument("--tier", choices=TIERS, default="T2")
+        target.add_argument("--rules", type=Path)
         target.add_argument("--write", action="store_true")
         target.add_argument("--receipt", type=Path)
         target.add_argument("--date", required=target is remap)
@@ -397,7 +412,10 @@ def main(argv=None):
         return 0
     if not options.collection or not options.receipt:
         parser().error("--collection and --receipt are required")
-    return run_remap(options)
+    try:
+        return run_remap(options)
+    except ValueError as exc:
+        raise SystemExit(f"error: {exc}") from exc
 
 
 if __name__ == "__main__":

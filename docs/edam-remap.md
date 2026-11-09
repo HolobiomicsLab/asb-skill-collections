@@ -34,6 +34,13 @@ python scripts/edam_vocabulary.py refresh \
 
 ## Remap tiers
 
+### Per-domain rules
+
+T1 and T2 are generic and need no domain rules. T3, T3b and T4 load
+`scripts/rules/<domain>/edam_remap_rules.yaml`, with `<domain>` resolved from
+`collection.yaml`; `--rules` selects another file. These tiers refuse to run
+without the file. The receipt records its path, version and SHA-256 digest.
+
 `scripts/remap_edam.py` defaults to T2 and to a dry run. T1 removes unresolved
 identifiers. T2 also replaces obsolete identifiers with a live same-branch
 `replacedBy`, or removes them when no such replacement exists. T3 additionally

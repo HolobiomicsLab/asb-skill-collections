@@ -20,10 +20,11 @@ if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from scripts.normalize_skill import parse_skill_md
+from scripts.domain_rules import resolve_rules_path
 
 
 GENERATOR_VERSION = "1.0.0"
-RULES_PATH = Path(__file__).with_name("technique_rules.yaml")
+RULES_PATH = Path(__file__).parent / "rules" / "metabolomics" / "technique_rules.yaml"
 FIELDS = ("name", "description", "tools", "body")
 
 
@@ -439,7 +440,11 @@ def parse_args(argv=None):
 
 def main(argv=None):
     arguments = parse_args(argv)
-    rules = load_rules(arguments.rules)
+    try:
+        arguments.rules = resolve_rules_path(arguments.collection, "technique_rules.yaml", arguments.rules)
+        rules = load_rules(arguments.rules)
+    except ValueError as exc:
+        raise SystemExit(f"error: {exc}") from exc
     selected = arguments.only.split(",") if arguments.only else list(rules.vocabulary)
     selected_set = set(selected)
     rows = load_rows(arguments.collection, rules, selected)

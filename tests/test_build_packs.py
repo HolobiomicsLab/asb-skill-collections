@@ -17,6 +17,8 @@ import sys
 import pytest
 import yaml
 
+import scripts.domain_rules
+
 REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
@@ -27,6 +29,15 @@ from scripts.stamp_skill_license import stamp_skill  # noqa: E402
 # in the generator may depend on which domain or which tag it is applied to.
 DOMAIN = "astronomy"
 COLLECTION_VERSION = 3
+
+
+@pytest.fixture(autouse=True)
+def fixture_rules(tmp_path, monkeypatch):
+    """Give the astronomy fixture a minimal domain technique vocabulary."""
+    rules = tmp_path / "rules" / DOMAIN / "technique_rules.yaml"
+    rules.parent.mkdir(parents=True)
+    rules.write_text("rules_version: test\nvocabulary: {}\n", encoding="utf-8")
+    monkeypatch.setattr(scripts.domain_rules, "RULES_ROOT", rules.parents[1])
 
 
 def _write_leaf(collection: pathlib.Path, slug: str, tier: str = "open") -> None:
@@ -56,6 +67,8 @@ def _write_leaf(collection: pathlib.Path, slug: str, tier: str = "open") -> None
 def _collection(root: pathlib.Path, membership: dict[str, list[str]]) -> pathlib.Path:
     """A router-shaped collection whose index carries the techniques of each leaf."""
     collection = root / "collections" / DOMAIN / f"v{COLLECTION_VERSION}"
+    collection.mkdir(parents=True, exist_ok=True)
+    (collection / "collection.yaml").write_text(f"slug: {DOMAIN}\nversion: {COLLECTION_VERSION}\n", encoding="utf-8")
     for slug in membership:
         _write_leaf(collection, slug)
     index = [

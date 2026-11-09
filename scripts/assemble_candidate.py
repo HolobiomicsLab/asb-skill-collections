@@ -36,10 +36,13 @@ VERSION_RE = re.compile(r"^v[1-9][0-9]*$")
 STAGE_SCRIPT_NAMES = (
     "join_corpus_records.py",
     "collect_from_cut.py",
+    "description_writer.py",
+    "domain_rules.py",
     "bootstrap_indexes.py",
     "run_candidate_gates.py",
     "check_release_surface.py",
     "release_surface_rules.yaml",
+    "rules/metabolomics/release_surface_rules.yaml",
     "same_paper_pairs.py",
 )
 EXPECTED_RECEIPTS = frozenset(

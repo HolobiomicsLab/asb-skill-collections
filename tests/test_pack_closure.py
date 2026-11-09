@@ -15,6 +15,7 @@ REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
 from scripts import release_gate, unit_closure  # noqa: E402
+import scripts.domain_rules  # noqa: E402
 
 
 SCIENCE_CASES = (
@@ -24,6 +25,15 @@ SCIENCE_CASES = (
     ("climate-science", "climate-model-calibration"),
 )
 NO_VALUE = object()
+
+
+@pytest.fixture(autouse=True)
+def derived_domain_rules(tmp_path, monkeypatch):
+    """Provide technique rules for derived astronomy pack fixtures."""
+    path = tmp_path / "domain-rules" / "astronomy" / "technique_rules.yaml"
+    path.parent.mkdir(parents=True)
+    path.write_text("rules_version: test\nvocabulary: {}\n", encoding="utf-8")
+    monkeypatch.setattr(scripts.domain_rules, "RULES_ROOT", path.parents[1])
 
 
 @pytest.fixture(params=SCIENCE_CASES, ids=[case[0] for case in SCIENCE_CASES])
@@ -530,6 +540,8 @@ def _derived_repository(tmp_path: pathlib.Path) -> tuple[pathlib.Path, pathlib.P
     """A built pack and the root it lives in: a correct derivation to break."""
     root = tmp_path / "repository"
     collection = root / "collections" / DERIVED_DOMAIN / "v4"
+    collection.mkdir(parents=True, exist_ok=True)
+    (collection / "collection.yaml").write_text(f"slug: {DERIVED_DOMAIN}\nversion: 4\n", encoding="utf-8")
     membership = {SELECTED: [DERIVED_TAG, "survey"], UNSELECTED: ["radio"]}
     for slug in membership:
         skill = collection / "leaves" / slug / "SKILL.md"

@@ -14,6 +14,9 @@ The local `asbb install` / `uninstall` materializer is described in §4. The
 remaining registry and release sections retain historical design material;
 `registry`, `verify` and `doctor` currently print stubs.
 
+Domain-specific tooling vocabulary is versioned under `scripts/rules/`; see
+[`scripts/rules/README.md`](../scripts/rules/README.md).
+
 For an orchestrated release, the `manifest` stage of
 `scripts/release_domain.py` upserts the domain and version in
 `collections.yaml`. It computes the tree digest and counts from the supplied

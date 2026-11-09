@@ -18,10 +18,4 @@ retracted_phrases:
   - id: staging-heading
     text: "— STAGING"
 
-foreign_identifiers:
-  - id: metabolomics-v2-iri
-    text: "https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2"
-    lineage_exception: false
-  - id: metabolomics-v2-doi
-    text: "10.5281/zenodo.20794027"
-    lineage_exception: true
+foreign_identifiers: []

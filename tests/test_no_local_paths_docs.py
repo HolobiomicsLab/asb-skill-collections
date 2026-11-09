@@ -16,7 +16,6 @@ from __future__ import annotations
 
 import pathlib
 import re
-import subprocess
 
 import pytest
 
@@ -27,11 +26,12 @@ TEXT_SUFFIXES = {".md", ".py", ".sh", ".yaml", ".yml", ".json", ".txt", ".html",
 LOCAL_PATH = re.compile(r"/Users/[A-Za-z0-9._-]+/|/home/[A-Za-z0-9._-]+/|~/git/")
 
 def tracked_text_files() -> list[str]:
-    out = subprocess.run(
-        ["git", "ls-files", "--", *SCANNED],
-        cwd=REPO, capture_output=True, text=True, check=True,
-    ).stdout
-    return [p for p in out.splitlines() if pathlib.PurePosixPath(p).suffix in TEXT_SUFFIXES]
+    return [
+        path.relative_to(REPO).as_posix()
+        for directory in SCANNED
+        for path in (REPO / directory).rglob("*")
+        if path.is_file() and path.suffix in TEXT_SUFFIXES
+    ]
 
 
 def local_paths(text: str) -> list[tuple[int, str]]:

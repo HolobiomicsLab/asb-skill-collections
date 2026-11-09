@@ -22,7 +22,7 @@ See governance/COMMUNITY_SKILLS.md for how community skills are curated.
 
 **Tool(s) it grounds on:** <!-- the software/tool the skill drives, if any -->
 
-**Target collection:** <!-- metabolomics (default), or another collection slug -->
+**Target collection:** <!-- the domain repository's collection slug, or a slug registered in collections.yaml -->
 
 ---
 <!-- Optional, all skippable — a maintainer/the command resolves these: -->

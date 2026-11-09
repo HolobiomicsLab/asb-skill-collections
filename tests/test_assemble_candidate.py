@@ -50,10 +50,13 @@ EXPECTED_RECEIPTS = {
 STAGE_SCRIPTS = {
     "join_corpus_records.py",
     "collect_from_cut.py",
+    "description_writer.py",
+    "domain_rules.py",
     "bootstrap_indexes.py",
     "run_candidate_gates.py",
     "check_release_surface.py",
     "release_surface_rules.yaml",
+    "rules/metabolomics/release_surface_rules.yaml",
     "same_paper_pairs.py",
 }
 

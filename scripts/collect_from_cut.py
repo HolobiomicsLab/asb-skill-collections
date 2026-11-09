@@ -22,7 +22,7 @@ import yaml
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from scripts import collect_metabolomics_collection as description_writer
+from scripts import description_writer
 from scripts import release_gate, router_shape, skill_index
 from scripts.pii_config import PII_CONFIG, _is_notation_not_email
 from scripts.recorded_path import recorded_path
