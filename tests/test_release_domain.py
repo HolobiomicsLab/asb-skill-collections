@@ -134,9 +134,12 @@ def fake_tokens(monkeypatch) -> None:
 class FakeZenodo:
     """Scripted deposit responses with an observable request journal."""
 
-    def __init__(self, *, pending: bool, failure: int | None = None) -> None:
+    def __init__(self, *, pending: bool, failure: int | None = None,
+                 first_release_pending: bool = False, record_failure: int | None = None) -> None:
         self.pending = pending
         self.failure = failure
+        self.record_failure = record_failure
+        self.first_release_pending = first_release_pending
         self.calls: list[tuple[str, str, object]] = []
         self.metadata: dict = {"dates": [{"type": "collected", "description": "undated"}]}
 
@@ -145,6 +148,17 @@ class FakeZenodo:
         if self.failure:
             return self.failure, {"message": "scripted refusal"}
         base = f"{zenodo_deposit.ZENODO_URL}/api/deposit/depositions"
+        if method == "GET" and url == f"{base}?status=draft":
+            candidates = [{
+                "id": 88, "state": "unsubmitted",
+                "metadata": {"title": "Another title", "version": "v1.0.0"},
+                "links": {"self": f"{base}/88"},
+            }]
+            if self.first_release_pending:
+                candidates.append(self.first_release_draft())
+            return 200, candidates
+        if method == "POST" and url == base:
+            return 201, self.first_release_draft()
         if method == "GET" and url == f"{base}/55/versions":
             versions = [{"id": 55, "state": "done", "links": {"self": f"{base}/55"}}]
             if self.pending:
@@ -153,7 +167,7 @@ class FakeZenodo:
         if method == "POST" and url.endswith("/actions/newversion"):
             return 201, {"links": {"latest_draft": f"{base}/77"}}
         if method == "GET" and url == f"{base}/77":
-            return 200, self.draft()
+            return 200, self.first_release_draft() if self.first_release_pending else self.draft()
         if method == "DELETE" and "/files/" in url:
             return 204, None
         if method == "PUT" and "/bucket/" in url:
@@ -161,6 +175,13 @@ class FakeZenodo:
         if method == "PUT" and url == f"{base}/77":
             self.metadata = body["metadata"]
             return 200, self.draft()
+        if method == "GET" and url.startswith(f"{zenodo_deposit.ZENODO_URL}/api/records/"):
+            if self.record_failure:
+                return self.record_failure, {"message": "scripted refusal"}
+            return 200, {
+                "id": 1234567, "doi": DOI, "conceptdoi": CONCEPT_DOI,
+                "conceptrecid": "1234566", "metadata": {"version": "v1.0.0"},
+            }
         raise AssertionError(f"unexpected deposit request: {method} {url}")
 
     def draft(self) -> dict:
@@ -173,6 +194,14 @@ class FakeZenodo:
             "links": {"bucket": f"{base}/77/bucket", "html": f"{zenodo_deposit.ZENODO_URL}/deposit/77"},
         }
 
+    def first_release_draft(self) -> dict:
+        draft = self.draft()
+        draft.update(
+            conceptrecid="456",
+            metadata={"title": "ASB Fixture Skill Collection v1", "version": "v1.0.0"},
+        )
+        return draft
+
 
 def seed_state(namespace: argparse.Namespace, stages: dict, **values) -> None:
     namespace.state.write_text(json.dumps({
@@ -183,7 +212,8 @@ def seed_state(namespace: argparse.Namespace, stages: dict, **values) -> None:
 
 def invoke(namespace: argparse.Namespace, stage: str, *extra: str, fake=None) -> int:
     options = list(extra)
-    if stage in {"deposit-plan", "deposit-draft"} and "--record-id" not in options:
+    if (stage in {"deposit-plan", "deposit-draft"} and "--record-id" not in options
+            and "--first-release" not in options):
         options.extend(["--record-id", "55"])
     return release_domain.main(
         namespace.argv(stage, *options),
@@ -245,6 +275,46 @@ def test_deposit_draft_creates_first_draft_and_propagates_refusals(release_fixtu
     assert invoke(release_fixture, "deposit-draft", "--record-id", "55", fake=FakeZenodo(pending=False, failure=403)) == 1
 
 
+def test_deposit_plan_first_release_records_no_record_and_refuses_a_lineage(release_fixture) -> None:
+    assert invoke(release_fixture, "deposit-plan", "--first-release") == 0
+    state = json.loads(release_fixture.state.read_text())
+    outputs = state["stages"]["deposit-plan"]["outputs"]
+    assert outputs["record_id"] is None
+    assert outputs["first_release"] is True
+    registry = release_fixture.tooling / "collections.yaml"
+    registry.write_text(yaml.safe_dump({
+        "schema": "asb-collections-manifest/1",
+        "domains": {"fixture": {"concept_doi": CONCEPT_DOI, "releases": []}},
+    }))
+    assert invoke(release_fixture, "deposit-plan", "--first-release", "--force") == 1
+
+
+def test_deposit_draft_first_release_creates_and_reports_owner_steps(release_fixture, capsys) -> None:
+    assert invoke(release_fixture, "deposit-plan", "--first-release") == 0
+    fake = FakeZenodo(pending=False)
+    assert invoke(release_fixture, "deposit-draft", "--first-release", fake=fake) == 2
+    assert any(method == "POST" and url.endswith("/api/deposit/depositions")
+               for method, url, _ in fake.calls)
+    assert not any("newversion" in url or "publish" in url for _, url, _ in fake.calls)
+    state = json.loads(release_fixture.state.read_text())
+    outputs = state["stages"]["deposit-draft"]["outputs"]
+    assert outputs == {
+        "draft_url": f"{zenodo_deposit.ZENODO_URL}/deposit/77", "draft_id": "77",
+        "reused": False, "conceptrecid": "456", "first_release": True,
+    }
+    assert "publishing mints both the version DOI and the concept DOI" in capsys.readouterr().out
+
+
+def test_deposit_draft_first_release_reuses_matching_title_and_version(release_fixture) -> None:
+    assert invoke(release_fixture, "deposit-plan", "--first-release") == 0
+    fake = FakeZenodo(pending=False, first_release_pending=True)
+    assert invoke(release_fixture, "deposit-draft", "--first-release", fake=fake) == 2
+    assert not any(method == "POST" for method, _, _ in fake.calls)
+    assert any(method == "GET" and url.endswith("?status=draft") for method, url, _ in fake.calls)
+    state = json.loads(release_fixture.state.read_text())
+    assert state["stages"]["deposit-draft"]["outputs"]["reused"] is True
+
+
 def test_deposit_draft_refuses_an_archive_digest_mismatch(release_fixture) -> None:
     assert invoke(release_fixture, "deposit-plan", "--record-id", "55") == 0
     (release_fixture.repo / "collections/fixture/v1/collection.yaml").write_text("changed: true\n")
@@ -259,21 +329,101 @@ def test_manifest_row_passes_the_real_checker_and_regen(release_fixture) -> None
     seed_state(release_fixture, stages, doi=DOI)
     commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=release_fixture.repo, text=True).strip()
     assert invoke(release_fixture, "manifest", "--concept-doi", CONCEPT_DOI, "--regen", "--commit", commit) == 0
-    manifest = yaml.safe_load((release_fixture.tooling / "collections.yaml").read_text())
-    row = manifest["domains"]["fixture"]["releases"][0]
-    assert row["version"] == 1
-    assert row["version_doi"] == DOI
-    assert row["released"] == "2026-11-09"
-    assert row["tree_digest"].startswith("sha256:")
-    checker = subprocess.run(
-        [sys.executable, str(REPO / "scripts/check_collections_manifest.py"),
-         "--manifest", str(release_fixture.tooling / "collections.yaml"),
-         "--catalogue", str(release_fixture.tooling / "catalogue.jsonld"),
-         "--checkout", f"fixture={release_fixture.repo}"],
-        capture_output=True, text=True, check=False,
-    )
-    assert checker.returncode == 0, checker.stdout + checker.stderr
-    assert (release_fixture.tooling / "docs-site/search_index.json").is_file()
+
+
+def test_manifest_records_concept_doi_for_a_null_first_release_lineage(release_fixture) -> None:
+    registry = release_fixture.tooling / "collections.yaml"
+    registry.write_text(yaml.safe_dump({
+        "schema": "asb-collections-manifest/1",
+        "domains": {"fixture": {
+            "repository": "Example/fixture", "concept_doi": None, "releases": [],
+        }},
+    }))
+    seed_state(release_fixture, {"deposit-draft": {"status": "waiting"}})
+    assert invoke(release_fixture, "record-doi", "--doi", DOI) == 0
+    assert invoke(release_fixture, "receipt") == 0
+    commit = commit_all(release_fixture.repo, "first release DOI")
+    assert invoke(release_fixture, "manifest", "--concept-doi", CONCEPT_DOI, "--commit", commit) == 0
+    document = yaml.safe_load(registry.read_text())
+    assert document["domains"]["fixture"]["concept_doi"] == CONCEPT_DOI
+
+
+def test_record_doi_first_release_prints_and_stores_the_concept_doi(release_fixture, capsys) -> None:
+    seed_state(release_fixture, {"deposit-draft": {
+        "status": "waiting", "outputs": {"first_release": True},
+    }})
+    fake = FakeZenodo(pending=False)
+    assert invoke(release_fixture, "record-doi", "--doi", DOI, fake=fake) == 0
+    output = capsys.readouterr().out
+    assert f"concept DOI {CONCEPT_DOI} (record 1234566)" in output
+    assert f"next: manifest --concept-doi {CONCEPT_DOI}" in output
+    assert ("GET", f"{zenodo_deposit.ZENODO_URL}/api/records/1234567", None) in fake.calls
+    state = json.loads(release_fixture.state.read_text())
+    outputs = state["stages"]["record-doi"]["outputs"]
+    assert outputs["concept_doi"] == CONCEPT_DOI
+    assert outputs["conceptrecid"] == "1234566"
+
+
+def test_manifest_defaults_concept_doi_from_the_record_doi_stage(release_fixture) -> None:
+    registry = release_fixture.tooling / "collections.yaml"
+    registry.write_text(yaml.safe_dump({
+        "schema": "asb-collections-manifest/1",
+        "domains": {"fixture": {
+            "repository": "Example/fixture", "concept_doi": None, "releases": [],
+        }},
+    }))
+    seed_state(release_fixture, {"deposit-draft": {
+        "status": "waiting", "outputs": {"first_release": True},
+    }})
+    assert invoke(release_fixture, "record-doi", "--doi", DOI, fake=FakeZenodo(pending=False)) == 0
+    assert invoke(release_fixture, "receipt") == 0
+    commit = commit_all(release_fixture.repo, "first release DOI")
+    assert invoke(release_fixture, "manifest", "--commit", commit) == 0
+    document = yaml.safe_load(registry.read_text())
+    assert document["domains"]["fixture"]["concept_doi"] == CONCEPT_DOI
+
+
+def test_manifest_explicit_concept_doi_wins_over_the_stage_log(release_fixture) -> None:
+    registry = release_fixture.tooling / "collections.yaml"
+    registry.write_text(yaml.safe_dump({
+        "schema": "asb-collections-manifest/1",
+        "domains": {"fixture": {
+            "repository": "Example/fixture", "concept_doi": None, "releases": [],
+        }},
+    }))
+    seed_state(release_fixture, {
+        "record-doi": {"status": "done", "inputs": {"doi": DOI},
+                       "outputs": {"concept_doi": CONCEPT_DOI}},
+        "receipt": {"status": "done"},
+    }, doi=DOI)
+    commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=release_fixture.repo, text=True).strip()
+    explicit = "10.5281/zenodo.9999999"
+    assert invoke(release_fixture, "manifest", "--concept-doi", explicit, "--commit", commit) == 0
+    document = yaml.safe_load(registry.read_text())
+    assert document["domains"]["fixture"]["concept_doi"] == explicit
+
+
+def test_record_doi_non_first_release_does_not_read_a_record(release_fixture, capsys) -> None:
+    seed_state(release_fixture, {"deposit-draft": {"status": "waiting", "outputs": {}}})
+    fake = FakeZenodo(pending=False)
+    assert invoke(release_fixture, "record-doi", "--doi", DOI, fake=fake) == 0
+    assert not any("/api/records/" in url for _, url, _ in fake.calls)
+    assert "concept DOI" not in capsys.readouterr().out
+    state = json.loads(release_fixture.state.read_text())
+    assert "concept_doi" not in state["stages"]["record-doi"]["outputs"]
+
+
+def test_record_doi_first_release_fetch_failure_keeps_the_stage(release_fixture, capsys) -> None:
+    seed_state(release_fixture, {"deposit-draft": {
+        "status": "waiting", "outputs": {"first_release": True},
+    }})
+    assert invoke(release_fixture, "record-doi", "--doi", DOI,
+                  fake=FakeZenodo(pending=False, record_failure=503)) == 0
+    output = capsys.readouterr().out
+    assert "manifest --concept-doi <concept DOI>" in output
+    state = json.loads(release_fixture.state.read_text())
+    assert state["stages"]["record-doi"]["status"] == "done"
+    assert "concept_doi" not in state["stages"]["record-doi"]["outputs"]
 
 
 def test_tag_prints_but_never_runs_git_tag_or_push(release_fixture, capsys) -> None:

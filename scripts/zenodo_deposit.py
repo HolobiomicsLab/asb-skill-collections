@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Prepare a Zenodo deposit for one collection release, up to a reviewed draft.
 
-Three subcommands, in the order a maintainer runs them:
+Four subcommands, in the order a maintainer runs them:
 
   archive  build the release zip of collections/<domain>/<vN>/ and print its
            sha256 and size. The zip is deterministic: sorted entries, fixed
@@ -13,6 +13,8 @@ Three subcommands, in the order a maintainer runs them:
            No network.
   draft    create a NEW VERSION draft of an existing Zenodo record, replace its
            inherited files with the archive, and set the metadata.
+  create   create a first-release draft as a new record, without inherited
+           metadata or a previous record to version from.
 
 This tool never publishes. Publishing mints the DOI and cannot be undone, so it
 stays a manual step in the Zenodo web interface after the draft is checked.
@@ -55,6 +57,7 @@ ZIP_EPOCH = (1980, 1, 1, 0, 0, 0)
 ERROR_BODY_LIMIT = 300
 REQUEST_TIMEOUT_SECONDS = 600
 DEFAULT_TOOLING_ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_COMMUNITY = "asb_skill_collections"
 
 # Files bundled beside the collection so the deposit runs grounding on its own.
 # They match the bundle the release workflow builds.
@@ -145,7 +148,9 @@ def _request(method, url, token, body=None):
     `body` is a dict (sent as JSON), a Path (streamed as the raw file), or None.
     HTTP error statuses are returned, not raised; callers decide what is fatal.
     """
-    headers = {"Authorization": f"Bearer {token}", "Accept": "application/json"}
+    headers = {"Accept": "application/json"}
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
     data = None
     if isinstance(body, Path):
         headers["Content-Type"] = "application/octet-stream"
@@ -439,6 +444,8 @@ def record_id_from(path: Path) -> str:
 
 
 def _resolve_record_id(args, template: Path) -> str:
+    if getattr(args, "first_release", False):
+        return ""
     record = args.record_id or record_id_from(template)
     if not record:
         raise ZenodoError("no record to version from: pass --record-id or add an "
@@ -506,6 +513,15 @@ def _prepare(args, out_dir: Path):
     payload, dropped = metadata_payload(template, args.publication_date)
     problems = validate_metadata(payload["metadata"])
     refusals = creator_problems(payload["metadata"], expected_creators(repo_root, tooling_root))
+    if getattr(args, "first_release", False):
+        if args.record_id:
+            refusals.append("--record-id is not valid for a first release; there is no previous record")
+        if any(relation.get("relation") == "isNewVersionOf"
+               for relation in payload["metadata"].get("related_identifiers") or []):
+            refusals.append("a first release cannot carry an isNewVersionOf relation")
+        communities = payload["metadata"].get("communities")
+        if not communities and args.community:
+            payload["metadata"]["communities"] = [{"identifier": args.community}]
     record = _resolve_record_id(args, template)
     archive = build_archive(repo_root, args.domain, args.version, out_dir, tooling_root)
     sources = _source_lines(repo_root, tooling_root)
@@ -513,9 +529,10 @@ def _prepare(args, out_dir: Path):
 
 
 def _describe(host, record, payload, dropped, problems, archive, refusals, sources, extras) -> str:
+    action = "new record for a first release" if not record else f"new version of record {record}"
     lines = [
         f"target: {host}",
-        f"action: new version of record {record}",
+        f"action: {action}",
         "metadata:",
         json.dumps(payload, indent=2, ensure_ascii=False),
         "files:",
@@ -548,35 +565,81 @@ def run_archive(args) -> int:
     return 0
 
 
-def run_draft(args) -> int:
-    """Create the new-version draft and print its URL. Never publishes."""
-    token = _token(args.sandbox)
-    host, record, template, _, problems, archive, refusals, _, extras = _prepare(
-        args, Path(args.out_dir))
+def validate_prepared(prepared):
+    """Stop before a request when preparation found invalid or unsafe metadata."""
+    _, _, _, _, problems, _, refusals, _, _ = prepared
     if problems:
         raise ZenodoError("metadata rejected by the API: " + "; ".join(problems))
     if refusals:
         raise ZenodoError("; ".join(refusals))
-    base = f"{host}/api/deposit/depositions"
-    created = _call("newversion", "POST", f"{base}/{record}/actions/newversion", token)
-    draft = _call("draft fetch", "GET", created["links"]["latest_draft"], token)
-    for stale in draft.get("files") or []:
-        _call("inherited file delete", "DELETE", f"{base}/{draft['id']}/files/{stale['id']}", token)
+
+
+def upload_files(draft, archive, extras, token):
+    """Upload the release archive followed by the extras, in the order supplied."""
     _call("archive upload", "PUT", f"{draft['links']['bucket']}/{archive.path.name}", token, archive.path)
     for extra in extras:
         name = urllib.parse.quote(extra.path.name)
         _call("extra file upload", "PUT", f"{draft['links']['bucket']}/{name}", token, extra.path)
-    payload, kept, undated = inherit_metadata(draft.get("metadata"), template)
+
+
+def update_metadata(draft, template, token, base, inherited=True):
+    """Apply the template, optionally over metadata inherited by a new-version draft."""
+    if inherited:
+        payload, kept, undated = inherit_metadata(draft.get("metadata"), template)
+    else:
+        payload, kept, undated = template, [], 0
     _call("metadata update", "PUT", f"{base}/{draft['id']}", token, payload)
     if kept:
         print("inherited metadata not in the template, kept: " + ", ".join(kept))
     if undated:
         print(f"inherited dates entry without start or end dropped: {undated}")
-    url = draft["links"].get("html") or f"{host}/deposit/{draft['id']}"
-    print(f"draft {draft['id']} created, not published: {url}\n"
-          f"uploaded {archive.path.name} sha256 {archive.sha256}")
+
+
+def print_uploaded_files(archive, extras):
+    """Print the exact names and digests sent to the draft bucket."""
+    print(f"uploaded {archive.path.name} sha256 {archive.sha256}")
     for extra in extras:
         print(f"uploaded {extra.path.name} sha256 {extra.sha256}")
+
+
+def create_record(prepared, token):
+    """Create an empty deposition and return it without publishing."""
+    host = prepared[0]
+    return _call("new record", "POST", f"{host}/api/deposit/depositions", token, {})
+
+
+def run_draft(args) -> int:
+    """Create the new-version draft and print its URL. Never publishes."""
+    token = _token(args.sandbox)
+    prepared = _prepare(args, Path(args.out_dir))
+    validate_prepared(prepared)
+    host, record, template, _, _, archive, _, _, extras = prepared
+    base = f"{host}/api/deposit/depositions"
+    created = _call("newversion", "POST", f"{base}/{record}/actions/newversion", token)
+    draft = _call("draft fetch", "GET", created["links"]["latest_draft"], token)
+    for stale in draft.get("files") or []:
+        _call("inherited file delete", "DELETE", f"{base}/{draft['id']}/files/{stale['id']}", token)
+    upload_files(draft, archive, extras, token)
+    update_metadata(draft, template, token, base)
+    url = draft["links"].get("html") or f"{host}/deposit/{draft['id']}"
+    print(f"draft {draft['id']} created, not published: {url}")
+    print_uploaded_files(archive, extras)
+    return 0
+
+
+def run_create(args) -> int:
+    """Create a first-release draft as a new record and print its URL. Never publishes."""
+    token = _token(args.sandbox)
+    prepared = _prepare(args, Path(args.out_dir))
+    validate_prepared(prepared)
+    host, _, template, _, _, archive, _, _, extras = prepared
+    draft = create_record(prepared, token)
+    upload_files(draft, archive, extras, token)
+    update_metadata(draft, template, token, f"{host}/api/deposit/depositions", inherited=False)
+    url = draft["links"].get("html") or f"{host}/deposit/{draft['id']}"
+    print(f"draft {draft['id']} created as a new record, not published: {url}")
+    print(f"conceptrecid {draft['conceptrecid']}")
+    print_uploaded_files(archive, extras)
     return 0
 
 
@@ -587,6 +650,7 @@ def _parser() -> argparse.ArgumentParser:
         ("archive", run_archive, "build the release zip"),
         ("plan", run_plan, "print the metadata and files a deposit would send"),
         ("draft", run_draft, "create a new-version draft on Zenodo (never publishes)"),
+        ("create", run_create, "create a first-release draft as a new record on Zenodo; never publishes"),
     ):
         command = commands.add_parser(name, help=help_text)
         command.set_defaults(handler=handler)
@@ -602,8 +666,14 @@ def _parser() -> argparse.ArgumentParser:
             command.add_argument("--sandbox", action="store_true",
                                  help="use sandbox.zenodo.org and ZENODO_SANDBOX_TOKEN")
             command.add_argument("--record-id", default="",
-                                 help="latest published record to version from")
+                                 help=("latest published record to version from" if name != "create"
+                                       else "invalid: a first release has no previous record"))
             command.add_argument("--publication-date", default=datetime.date.today().isoformat())
+        if name in {"draft", "create"}:
+            command.set_defaults(first_release=name == "create")
+        if name == "create":
+            command.add_argument("--community", default=DEFAULT_COMMUNITY,
+                                 help="community used when the template has none")
     return parser
 
 
