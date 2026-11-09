@@ -25,3 +25,4 @@ jobs:
       collection_path: ${{ matrix.collection.collection_path }}
       receipts_path: ${{ matrix.collection.receipts_path }}
       strict: true
+      edam_strict: true

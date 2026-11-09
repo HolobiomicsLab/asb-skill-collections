@@ -20,6 +20,11 @@ on:
         required: false
         default: true
         type: boolean
+      edam_strict:
+        description: Fail on EDAM identifiers that do not resolve to a valid term.
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: read
@@ -80,7 +85,11 @@ jobs:
       - name: Check EDAM IRIs
         env:
           COLLECTION_PATH: ${{ inputs.collection_path }}
-        run: python tooling/scripts/domain_content_gates.py --edam-only "content/$COLLECTION_PATH"
+          EDAM_STRICT: ${{ inputs.edam_strict }}
+        run: |
+          mode=""
+          if [ "$EDAM_STRICT" = "true" ]; then mode=--edam-strict; fi
+          python tooling/scripts/domain_content_gates.py --edam-only "content/$COLLECTION_PATH" $mode
 
       - name: Advertised counts
         run: python tooling/scripts/check_advertised_counts.py --repo-root content
