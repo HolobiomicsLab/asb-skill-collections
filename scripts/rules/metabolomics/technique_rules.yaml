@@ -1,4 +1,4 @@
-rules_version: 2026-11-08.1
+rules_version: 2026-11-09.1
 vocabulary:
   LC-MS:
     - rule: lc_ms
@@ -25,12 +25,19 @@ vocabulary:
       regex: 'capillary electrophores'
       fields: [name, description, tools, body]
   direct-infusion-MS:
+    # Body text names flow injection or an FIA-MS file in passing (a calibration
+    # test, a sample list, an example file name), which tagged LC-MS skills in the
+    # 2026-11-09 review; these rules read the declared fields only, and the
+    # spelled-out platform name is matched as well.
     - rule: di_ms_strict
       regex: '(?<![a-z0-9])(?:dims|fia)\s*[-/–—]?\s*ms(?:/ms|ms)?(?![a-z0-9])'
-      fields: [name, description, tools, body]
+      fields: [name, description, tools]
+    - rule: direct_infusion
+      regex: 'direct[- ]infusion'
+      fields: [name, description, tools]
     - rule: flow_injection
       regex: 'flow[- ]injection'
-      fields: [name, description, tools, body]
+      fields: [name, description, tools]
   MS-imaging:
     - rule: ms_imaging
       regex: '(?:mass spectrometry imaging|imaging mass spectrometry|ms imaging|msi data|msi image|spatial metabolomics|maldi imaging|desi imaging)'
