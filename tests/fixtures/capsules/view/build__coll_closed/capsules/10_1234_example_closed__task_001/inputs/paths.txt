@@ -1,0 +1,4 @@
+/private/tmp/outputs/closed/input.txt
+/tmp/outputs/closed/input.txt
+/var/folders/ab/outputs/closed/input.txt
+file:///Users/example/outputs/closed/input.txt

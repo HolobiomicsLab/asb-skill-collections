@@ -200,6 +200,9 @@ breakdowns and the selection criteria are in
 `<domain checkout>/collections/metabolomics/v3/ABOUT.md`, also available in the
 Zenodo archive.
 
+Local build-capsule archives and record metadata are packed and screened by
+[`scripts/pack_capsules.py`](docs/capsules-record.md), without deposit or upload.
+
 ## How it was generated
 
 Skills come from method papers anchored to the computational metabolomics review
