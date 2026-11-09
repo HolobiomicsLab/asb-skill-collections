@@ -747,3 +747,16 @@ def test_receipt_writes_under_the_cut_receipts_or_beside_the_collection(release_
     fallback = release_fixture.repo / "collections/fixture/v1/gate_report.json"
     assert fallback.is_file()
     assert invoke(release_fixture, "receipt", "--force") == 0
+
+
+def test_record_doi_selects_the_row_whose_path_cell_is_the_collection(release_fixture) -> None:
+    readme = release_fixture.repo / "README.md"
+    status = "| Plugin manifests | validated for `collections/fixture/v1` |\n"
+    readme.write_text(readme.read_text().replace("## Collections", "| Item | State |\n|---|---|\n"
+                                                 + status + "\n## Collections"))
+    seed_state(release_fixture, {"deposit-draft": {"status": "waiting"}})
+    assert invoke(release_fixture, "record-doi", "--doi", DOI, "--released", "2026-11-09") == 0
+    text = readme.read_text()
+    assert status in text
+    assert (f"| `collections/fixture/v1` | ASB Fixture Skill Collection v1 | 10 | 10 | 2026-11-09 "
+            f"| [{DOI}](https://doi.org/{DOI}) |") in text

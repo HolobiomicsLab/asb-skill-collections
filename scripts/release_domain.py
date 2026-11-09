@@ -573,17 +573,26 @@ README_HEADER = "| Path | Title | Skills | Tools | Released | DOI |"
 
 
 def readme_text(text: str, path: Path, doi: str, released: str, release_path: str) -> str:
-    """Update the Released and DOI cells of the row selected by its collection path."""
+    """Update the Released and DOI cells of the row whose first cell is the collection path.
+
+    Other table rows that merely mention the path (a status table, say) are left alone.
+    """
     lines = text.splitlines(keepends=True)
+    rows = []
     for index, line in enumerate(lines):
-        if not line.lstrip().startswith("|") or f"`{release_path}`" not in line:
+        if not line.lstrip().startswith("|"):
             continue
         cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+        if cells[0] == f"`{release_path}`":
+            rows.append((index, cells))
+    if len(rows) > 1:
+        raise ReleaseError(f"README has {len(rows)} release-table rows for {release_path}: {path}")
+    for index, cells in rows:
         if len(cells) < 6:
             raise ReleaseError(f"README release row has fewer than six cells: {path}")
         cells[-2] = released
         cells[-1] = f"[{doi}](https://doi.org/{doi})"
-        ending = "\n" if line.endswith("\n") else ""
+        ending = "\n" if lines[index].endswith("\n") else ""
         lines[index] = "| " + " | ".join(cells) + " |" + ending
         return "".join(lines)
     raise ReleaseError(
