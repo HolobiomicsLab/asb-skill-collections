@@ -153,10 +153,13 @@ python scripts/release_domain.py status --domain <domain> --version v1 \
   --repo-root <domain-checkout> --state <release-state.json>
 ```
 
-The first release of a domain creates its concept DOI. The create-record path is not yet implemented
-in the orchestrator; this first-record step is planned. Existing `deposit-plan` and `deposit-draft`
-operate on an existing record lineage, so stop and use the owner-approved first-record procedure rather
-than inventing a record id.
+The first release of a domain creates its concept DOI. Pass `--first-release` (and no `--record-id`)
+to `deposit-plan` and `deposit-draft`: the draft is a new record, and after the owner publishes it,
+`record-doi` reads the concept DOI that `manifest` then records. Before `record-doi`, the domain README
+needs a release row whose path cell is `` `collections/<domain>/v<N>` `` in the table headed
+`| Path | Title | Skills | Tools | Released | DOI |`; the stage refuses otherwise and writes nothing.
+`USAGE.md` is optional. Remove any untracked `gate_report.json` left in the collection by `gate`
+before `receipt` and `manifest`; both stages refuse untracked files in the release path.
 
 ## 9. Maintain the domain
 
