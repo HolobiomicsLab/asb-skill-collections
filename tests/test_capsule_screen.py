@@ -122,6 +122,42 @@ def test_crate_pruning_uses_the_release_rule(tmp_path):
     assert not result.failures
 
 
+def test_a_bare_file_scheme_in_prose_is_not_a_residual_path():
+    text = "Running locally from file:// requires modified browser settings."
+    result = screen.screen_text(text, "workflow.yaml", context(), screen.QuoteBudget())
+    assert result.text == text
+    assert not result.failures
+    hosted = screen.screen_text("see file://server/share/data.txt", "workflow.yaml", context(), screen.QuoteBudget())
+    assert hosted.failures == ["workflow.yaml: residual_paths_rewritten"]
+
+
+def test_a_descriptor_written_as_a_plain_file_is_repaired(tmp_path):
+    from scripts.release_capsule_truth import crate_problems
+
+    capsule = tmp_path / "capsule"
+    capsule.mkdir()
+    (capsule / "eval.json").write_text("{}\n")
+    crate = {
+        "@context": "https://w3id.org/ro/crate/1.1/context",
+        "@graph": [
+            {"@id": "ro-crate-metadata.json", "@type": "File", "encodingFormat": "application/json",
+             "name": "ro-crate-metadata.json"},
+            {"@id": "./", "@type": "Dataset", "name": "capsule", "description": "d", "datePublished": "2026-11-09",
+             "license": {"@id": "https://creativecommons.org/licenses/by/4.0/"}},
+        ],
+    }
+    result = screen.screen_text(
+        json.dumps(crate), "ro-crate-metadata.json", context(), screen.QuoteBudget(), capsule
+    )
+    descriptor = {entity["@id"]: entity for entity in json.loads(result.text)["@graph"]}["ro-crate-metadata.json"]
+    assert descriptor["@type"] == "CreativeWork"
+    assert descriptor["about"] == {"@id": "./"}
+    assert "encodingFormat" not in descriptor
+    assert not result.failures
+    (capsule / "ro-crate-metadata.json").write_text(result.text)
+    assert "the descriptor is not about ./" not in crate_problems(capsule)
+
+
 def test_deny_hits_are_counted_without_returning_the_pattern():
     rule = context()
     rule.deny_patterns = ("synthetic-secret",)
