@@ -186,7 +186,12 @@ def _call(step, method, url, token, body=None):
     status, payload = _request(method, url, token, body)
     if not 200 <= status < 300:
         detail = json.dumps(payload)[:ERROR_BODY_LIMIT] if payload else "no body"
-        raise ZenodoError(f"{step}: {method} answered HTTP {status} ({detail})")
+        hint = ""
+        if status in (401, 403):
+            host = urllib.parse.urlsplit(url).netloc
+            hint = (f"; the token was refused: it must be a personal access token created on {host} "
+                    "(sandbox and production accounts are separate) with the deposit:write scope")
+        raise ZenodoError(f"{step}: {method} answered HTTP {status} ({detail}){hint}")
     return payload
 
 
