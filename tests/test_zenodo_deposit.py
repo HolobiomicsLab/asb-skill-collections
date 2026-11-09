@@ -449,6 +449,25 @@ def test_non_2xx_on_newversion_stops_the_run(repo, monkeypatch, capsys):
     assert len(fake.calls) == 1
 
 
+@pytest.mark.parametrize("status", [401, 403])
+def test_a_refused_token_names_the_host_and_the_scope(repo, monkeypatch, capsys, status):
+    base = zenodo_deposit.ZENODO_URL
+    fake = FakeZenodo(base, fail={("POST", f"/api/deposit/depositions/{RECORD}/actions/newversion"): status})
+    code, out, fake = run_draft(repo, monkeypatch, capsys, fake=fake)
+    assert code == 1
+    host = zenodo_deposit.urllib.parse.urlsplit(base).netloc
+    assert f"created on {host}" in out.err and "deposit:write" in out.err
+    assert TOKEN not in out.err and TOKEN not in out.out
+
+
+def test_other_errors_carry_no_token_hint(repo, monkeypatch, capsys):
+    base = zenodo_deposit.ZENODO_URL
+    fake = FakeZenodo(base, fail={("PUT", "/api/files/bkt/dom-v1.zip"): 413})
+    code, out, fake = run_draft(repo, monkeypatch, capsys, fake=fake)
+    assert code == 1
+    assert "413" in out.err and "deposit:write" not in out.err
+
+
 def test_failed_file_delete_stops_before_upload(repo, monkeypatch, capsys):
     base = zenodo_deposit.ZENODO_URL
     fake = FakeZenodo(base, fail={("DELETE", f"/api/deposit/depositions/{DRAFT_ID}/files/old-2"): 500})
