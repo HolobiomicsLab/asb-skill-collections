@@ -212,16 +212,33 @@ def _validate_row(row: Any, index: int) -> list[Violation]:
     if not isinstance(row, dict):
         return [Violation(path, "expected mapping")]
     violations = _check_keys(row, ROW_KEYS, path)
-    for key in ("name", "title", "category", "repo_url", "status", "license_tier",
+    for key in ("name", "title", "category", "status", "license_tier",
                 "wave", "resource_type"):
         violations.extend(_check_string(row, key, path))
+    if "repo_url" not in row:
+        violations.append(Violation(path, "missing required field 'repo_url'"))
+    elif row["repo_url"] is None:
+        if row.get("status") != "candidate":
+            violations.append(Violation(
+                f"{path}.repo_url", "null is allowed only on a candidate row"
+            ))
+    else:
+        violations.extend(_check_string(row, "repo_url", path))
     if "year" not in row:
         violations.append(Violation(path, "missing required field 'year'"))
     elif row["year"] is not None and not isinstance(row["year"], int):
         violations.append(Violation(f"{path}.year", "expected integer or null"))
     if isinstance(row.get("year"), bool):
         violations.append(Violation(f"{path}.year", "expected integer or string"))
-    violations.extend(_check_type(row, "source_issue", int, path, True))
+    if "source_issue" not in row:
+        violations.append(Violation(path, "missing required field 'source_issue'"))
+    elif row["source_issue"] is None:
+        if "source_watch" not in row:
+            violations.append(Violation(
+                f"{path}.source_issue", "null requires source_watch on the row"
+            ))
+    else:
+        violations.extend(_check_type(row, "source_issue", int, path, True))
     if "doi" in row and row["doi"] is not None:
         if not isinstance(row["doi"], str) or normalise_doi(row["doi"]) is None:
             violations.append(Violation(f"{path}.doi", "invalid DOI"))
