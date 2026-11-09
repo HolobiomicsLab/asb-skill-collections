@@ -182,3 +182,62 @@ def test_badge_links_select_manifest_units_regardless_of_markup_order(tmp_path):
     assert {
         claim.unit for claim in claims if claim.site == pathlib.Path("README.md")
     } == {pathlib.Path("collections/alpha/v3")}
+
+
+def test_claims_follow_the_release_named_in_their_own_sentence(tmp_path):
+    """One line naming two releases binds each count to its sentence's release."""
+    repo = _manifest_repository(tmp_path)
+    (repo / "README.md").write_text(
+        '<a href="https://doi.org/10.5281/zenodo.123456">'
+        '<img src="https://img.shields.io/badge/skills-30-blue"></a>\n'
+        "\n# Domain release\n\n"
+        "Collection v2 (2 skills, 1 tool) is the earlier collection; "
+        "it is on main today. The marketplace lists v3 only, with 30 skills.\n",
+        encoding="utf-8",
+    )
+
+    claims, failures = guard.audit_repository(repo)
+
+    assert failures == []
+    line_claims = {
+        (claim.kind, claim.advertised): claim.unit
+        for claim in claims
+        if claim.site == pathlib.Path("README.md") and claim.line == 5
+    }
+    assert line_claims == {
+        ("skills", 2): pathlib.Path("collections/alpha/v2"),
+        ("tools", 1): pathlib.Path("collections/alpha/v2"),
+        ("skills", 30): pathlib.Path("collections/alpha/v3"),
+    }
+
+
+def test_sentence_naming_an_unlisted_sibling_collection_is_censused_there(tmp_path):
+    """A legacy tree beside the candidate is checked on disk, not against v2."""
+    repo = _manifest_repository(tmp_path)
+    legacy = repo / "collections" / "alpha" / "v1"
+    (legacy / "skills" / "only").mkdir(parents=True)
+    (legacy / "skills" / "only" / "SKILL.md").write_text("---\n---\n", encoding="utf-8")
+    (legacy / "tools").mkdir()
+    for name in ("a", "b", "c"):
+        (legacy / "tools" / f"{name}.yaml").write_text(f"name: {name}\n", encoding="utf-8")
+    (legacy / "collection.yaml").write_text("slug: alpha\nversion: 1\n", encoding="utf-8")
+    (repo / "README.md").write_text(
+        "# Domain release\n\n"
+        "Collection v1 (1 skill, 3 tools) is the earlier flat-layout collection; "
+        "it stays on main. The marketplace lists v2 only, with 2 skills.\n",
+        encoding="utf-8",
+    )
+
+    claims, failures = guard.audit_repository(repo)
+
+    assert failures == []
+    line_claims = {
+        (claim.kind, claim.advertised): claim.unit
+        for claim in claims
+        if claim.site == pathlib.Path("README.md") and claim.line == 3
+    }
+    assert line_claims == {
+        ("skills", 1): pathlib.Path("collections/alpha/v1"),
+        ("tools", 3): pathlib.Path("collections/alpha/v1"),
+        ("skills", 2): pathlib.Path("collections/alpha/v2"),
+    }
