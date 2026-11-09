@@ -135,8 +135,10 @@ class FakeZenodo:
     """Scripted deposit responses with an observable request journal."""
 
     def __init__(self, *, pending: bool, failure: int | None = None,
-                 first_release_pending: bool = False, record_failure: int | None = None) -> None:
+                 first_release_pending: bool = False, record_failure: int | None = None,
+                 pending_page: int = 1) -> None:
         self.pending = pending
+        self.pending_page = pending_page
         self.failure = failure
         self.record_failure = record_failure
         self.first_release_pending = first_release_pending
@@ -150,20 +152,22 @@ class FakeZenodo:
         base = f"{zenodo_deposit.ZENODO_URL}/api/deposit/depositions"
         if method == "GET" and url == f"{base}?status=draft":
             candidates = [{
-                "id": 88, "state": "unsubmitted",
+                "id": 88, "conceptrecid": "999", "state": "unsubmitted",
                 "metadata": {"title": "Another title", "version": "v1.0.0"},
                 "links": {"self": f"{base}/88"},
             }]
             if self.first_release_pending:
                 candidates.append(self.first_release_draft())
+            if self.pending and self.pending_page == 1:
+                candidates.append(self.draft())
             return 200, candidates
+        if method == "GET" and url.startswith(f"{base}?status=draft&page="):
+            page = int(url.rsplit("=", 1)[-1])
+            if self.pending and self.pending_page == page:
+                return 200, [self.draft()]
+            return 200, []
         if method == "POST" and url == base:
             return 201, self.first_release_draft()
-        if method == "GET" and url == f"{base}/55/versions":
-            versions = [{"id": 55, "state": "done", "links": {"self": f"{base}/55"}}]
-            if self.pending:
-                versions.append(self.draft())
-            return 200, {"hits": {"hits": versions}}
         if method == "POST" and url.endswith("/actions/newversion"):
             return 201, {"links": {"latest_draft": f"{base}/77"}}
         if method == "GET" and url == f"{base}/77":
@@ -188,6 +192,7 @@ class FakeZenodo:
         base = f"{zenodo_deposit.ZENODO_URL}/api/deposit/depositions"
         return {
             "id": 77,
+            "conceptrecid": "1234566",
             "state": "unsubmitted",
             "metadata": self.metadata,
             "files": [{"id": "old-file"}],
@@ -266,6 +271,23 @@ def test_deposit_draft_reuses_pending_draft_and_never_creates_another(release_fi
     assert any(method == "PUT" and url.endswith("/77") for method, url, _ in fake.calls)
     assert not any("publish" in url for _, url, _ in fake.calls)
     assert fake.metadata.get("dates") is None
+
+
+def test_new_version_lookup_uses_drafts_of_the_record_concept(release_fixture) -> None:
+    assert invoke(release_fixture, "deposit-plan", "--record-id", "55") == 0
+    fake = FakeZenodo(pending=True, pending_page=2)
+    assert invoke(release_fixture, "deposit-draft", "--record-id", "55", fake=fake) == 2
+    urls = [url for _, url, _ in fake.calls]
+    assert not any(url.endswith("/versions") for url in urls)
+    assert any(url.endswith("/api/records/55") for url in urls)
+    assert not any(url.endswith("/actions/newversion") for url in urls)
+
+
+def test_a_draft_of_another_concept_is_not_reused(release_fixture) -> None:
+    assert invoke(release_fixture, "deposit-plan", "--record-id", "55") == 0
+    fake = FakeZenodo(pending=False)
+    assert invoke(release_fixture, "deposit-draft", "--record-id", "55", fake=fake) == 2
+    assert any(method == "POST" and url.endswith("/actions/newversion") for method, url, _ in fake.calls)
 
 
 def test_deposit_draft_creates_first_draft_and_propagates_refusals(release_fixture) -> None:

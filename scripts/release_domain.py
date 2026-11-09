@@ -371,21 +371,54 @@ def run_deposit_plan(context: ReleaseContext) -> dict:
 
 
 def version_items(payload) -> list[dict]:
-    """Accept both the envelope and bare-list forms of the versions endpoint."""
+    """Accept both the envelope and bare-list forms of a deposit list response."""
     if isinstance(payload, list):
         return payload
     hits = payload.get("hits", {}) if isinstance(payload, dict) else {}
     return hits.get("hits", []) if isinstance(hits, dict) else []
 
 
+DEPOSIT_PATH = "/api/deposit/depositions"
+DRAFT_PAGES_MAX = 20
+
+
+def list_drafts(base: str, token: str) -> list[dict]:
+    """Every unpublished deposition of the token's owner, following the list's pages.
+
+    Pages use Zenodo's default size; listing stops at the first page that brings no
+    new id, so a server that ignores `page` costs one extra request, not a loop.
+    """
+    drafts: list[dict] = []
+    seen: set = set()
+    for page in range(1, DRAFT_PAGES_MAX + 1):
+        query = {"status": "draft"} if page == 1 else {"status": "draft", "page": page}
+        payload = zenodo_deposit._call("drafts list", "GET", f"{base}?{urllib.parse.urlencode(query)}", token)
+        fresh = [item for item in version_items(payload) if item.get("id") not in seen]
+        if not fresh:
+            return drafts
+        seen.update(item.get("id") for item in fresh)
+        drafts.extend(fresh)
+    raise ReleaseError(f"more than {DRAFT_PAGES_MAX} pages of Zenodo drafts; owner must clear stale drafts")
+
+
 def find_pending_draft(context: ReleaseContext, base: str, record: str, token: str) -> dict | None:
-    """Find the record's unpublished next-version draft through the deposit API."""
-    payload = zenodo_deposit._call("versions list", "GET", f"{base}/{record}/versions", token)
+    """Find the record's unpublished next-version draft.
+
+    The deposit API has no versions listing (`/depositions/<id>/versions` answers
+    404), so the draft is found among the owner's drafts by the concept record id
+    it shares with the published record.
+    """
+    host = base.removesuffix(DEPOSIT_PATH)
+    published = zenodo_deposit._call("record fetch", "GET", f"{host}/api/records/{record}", token) or {}
+    concept = str(published.get("conceptrecid") or "")
+    if not concept:
+        raise ReleaseError(f"record {record} reports no concept record id; owner must check the record")
     candidates = []
-    for version in version_items(payload):
+    for version in list_drafts(base, token):
         state = str(version.get("state") or version.get("status") or "").lower()
         submitted = version.get("submitted") is True or state in {"done", "published"}
-        if not submitted and (state in {"unsubmitted", "draft", "in_progress"} or version.get("submitted") is False):
+        if (str(version.get("conceptrecid") or "") == concept and str(version.get("id")) != str(record)
+                and not submitted):
             candidates.append(version)
     if len(candidates) > 1:
         raise ReleaseError("multiple pending next-version drafts found; owner must select one")
@@ -399,10 +432,7 @@ def find_pending_first_release(context: ReleaseContext, prepared, base: str, tok
     """Find one unpublished new-record draft with the release's exact title and version."""
     metadata = prepared[2]["metadata"]
     title, version = metadata.get("title"), metadata.get("version")
-    payload = zenodo_deposit._call(
-        "drafts list", "GET", f"{base}?{urllib.parse.urlencode({'status': 'draft'})}", token,
-    )
-    candidates = [draft for draft in version_items(payload)
+    candidates = [draft for draft in list_drafts(base, token)
                   if draft.get("metadata", {}).get("title") == title
                   and draft.get("metadata", {}).get("version") == version]
     if len(candidates) > 1:
@@ -433,7 +463,7 @@ def run_deposit_draft(context: ReleaseContext) -> dict:
         if archive.sha256 != plan["digests"]["archive_sha256"]:
             raise ReleaseError("archive sha256 differs from deposit-plan; rerun deposit-plan --force")
         token = zenodo_deposit._token(context.args.sandbox)
-        base = f"{prepared[0]}/api/deposit/depositions"
+        base = f"{prepared[0]}{DEPOSIT_PATH}"
         record = prepared[1]
         if ((record or None) != plan["outputs"]["record_id"] or prepared[0] != plan["outputs"]["host"]
                 or context.args.first_release != plan["outputs"].get("first_release", False)):
