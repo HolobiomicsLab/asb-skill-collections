@@ -1,0 +1,15 @@
+name: fixture
+edam_topics:
+- http://edamontology.org/topic_0001
+- http://edamontology.org/topic_0003
+- http://edamontology.org/topic_0100
+- http://edamontology.org/topic_9999
+- http://edamontology.org/topic_bad
+- http://edamontology.org/topic_0121
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_0121
+- http://edamontology.org/topic_0121
+- http://edamontology.org/topic_3520
+- http://edamontology.org/topic_3520
+- http://edamontology.org/topic_3172
+other: preserved

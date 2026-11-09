@@ -1,0 +1,144 @@
+[
+ {
+  "slug": "obsolete-replaced",
+  "name": "obsolete-replaced",
+  "description": "Metabolite workflow",
+  "tools": [],
+  "edam_operation": "http://edamontology.org/operation_0001",
+  "edam_topics": [
+   "http://edamontology.org/topic_0001"
+  ],
+  "dois": [
+   "10.0000/obsolete-replaced"
+  ]
+ },
+ {
+  "slug": "obsolete-cross",
+  "name": "obsolete-cross",
+  "description": "Metabolite workflow",
+  "tools": [],
+  "edam_operation": "http://edamontology.org/operation_0003",
+  "edam_topics": [
+   "http://edamontology.org/topic_0003"
+  ],
+  "dois": [
+   "10.0000/obsolete-cross"
+  ]
+ },
+ {
+  "slug": "wrong-branch",
+  "name": "wrong-branch",
+  "description": "Metabolite workflow",
+  "tools": [],
+  "edam_operation": "http://edamontology.org/operation_0100",
+  "edam_topics": [
+   "http://edamontology.org/topic_0100"
+  ],
+  "dois": [
+   "10.0000/wrong-branch"
+  ]
+ },
+ {
+  "slug": "ghost",
+  "name": "ghost",
+  "description": "Metabolite workflow",
+  "tools": [],
+  "edam_operation": "http://edamontology.org/operation_9999",
+  "edam_topics": [
+   "http://edamontology.org/topic_9999"
+  ],
+  "dois": [
+   "10.0000/ghost"
+  ]
+ },
+ {
+  "slug": "malformed",
+  "name": "malformed",
+  "description": "Metabolite workflow",
+  "tools": [],
+  "edam_operation": "http://edamontology.org/operation_bad",
+  "edam_topics": [
+   "http://edamontology.org/topic_bad"
+  ],
+  "dois": [
+   "10.0000/malformed"
+  ]
+ },
+ {
+  "slug": "generic-topic-drop",
+  "name": "generic-topic-drop",
+  "description": "Metabolite quantification",
+  "tools": [
+   "Python"
+  ],
+  "edam_operation": "http://edamontology.org/operation_3646",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3172"
+  ],
+  "dois": [
+   "10.0000/generic-topic-drop"
+  ]
+ },
+ {
+  "slug": "proteomics-tool",
+  "name": "proteomics-tool",
+  "description": "Spectral analysis",
+  "tools": [
+   "MaxQuant"
+  ],
+  "edam_operation": "http://edamontology.org/operation_0282",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121"
+  ],
+  "dois": [
+   "10.0000/proteomics-tool"
+  ]
+ },
+ {
+  "slug": "proteomics-text",
+  "name": "proteomics-text",
+  "description": "Peptide identification",
+  "tools": [
+   "Python"
+  ],
+  "edam_operation": "http://edamontology.org/operation_0002",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121"
+  ],
+  "dois": [
+   "10.0000/proteomics-text"
+  ]
+ },
+ {
+  "slug": "foreign-operation",
+  "name": "foreign-operation",
+  "description": "NMR workflow",
+  "tools": [
+   "Python"
+  ],
+  "edam_operation": "http://edamontology.org/operation_3218",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520"
+  ],
+  "dois": [
+   "10.0000/foreign-operation"
+  ]
+ },
+ {
+  "slug": "valid-unchanged",
+  "name": "valid-unchanged",
+  "description": "Mass spectrometry",
+  "tools": [
+   "Python"
+  ],
+  "edam_operation": "http://edamontology.org/operation_0002",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_3172"
+  ],
+  "dois": [
+   "10.0000/valid-unchanged"
+  ]
+ }
+]

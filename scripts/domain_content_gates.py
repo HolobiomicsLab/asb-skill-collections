@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+from collections import Counter
 from dataclasses import dataclass
 import os
 from pathlib import Path
@@ -19,6 +20,7 @@ if __package__ in (None, ""):
 DOI_SAMPLE_SIZE = 10
 DOI_TIMEOUT_SECONDS = 10
 EDAM_BASE = "http://edamontology.org/"
+DEFAULT_EDAM_VOCABULARY = Path(__file__).with_name("data") / "edam_vocabulary.json"
 GATE_NAMES = (
     "Every skill is in every index its collection publishes",
     "Lint skill descriptions",
@@ -105,30 +107,54 @@ def check_dois(collection: Path) -> list[str]:
     return failures
 
 
-def check_edam(collection: Path) -> list[str]:
-    """Require canonical EDAM IRIs on every skill in the collection."""
+def check_edam(
+    collection: Path, *, vocabulary_path: Path = DEFAULT_EDAM_VOCABULARY, strict: bool = False
+) -> list[str]:
+    """Require canonical prefixes and optionally fail on vocabulary resolution."""
+    from scripts.edam_vocabulary import load, resolve
+
     failures = []
-    checked = set()
+    checked = Counter()
+    statuses = Counter()
+    vocabulary = load(vocabulary_path)
     for path in sorted(collection.rglob("SKILL.md")):
         metadata = frontmatter(path).get("metadata") or {}
         iris = ([metadata["edam_operation"]] if metadata.get("edam_operation") else [])
         iris.extend(metadata.get("edam_topics") or [])
         for iri in iris:
-            checked.add(iri)
+            checked[iri] += 1
             if not isinstance(iri, str) or not iri.startswith(EDAM_BASE):
                 failures.append(f"{path}: EDAM IRI {iri} does not start with {EDAM_BASE}")
+            result = resolve(iri, vocabulary)
+            statuses[result.status] += 1
+            if strict and result.status != "valid":
+                failures.append(f"{path}: EDAM IRI {iri} resolves as {result.status}")
     print(f"PASS candidate: {len(checked)} unique EDAM IRIs checked")
+    print("EDAM resolution: " + ", ".join(
+        f"{status}: {statuses[status]}" for status in ("valid", "obsolete", "wrong_branch", "ghost", "malformed")
+    ))
+    offenders = [(iri, count) for iri, count in checked.most_common() if resolve(iri, vocabulary).status != "valid"]
+    for iri, count in offenders[:10]:
+        print(f"EDAM offender: {count} {iri} ({resolve(iri, vocabulary).status})")
+    if not strict:
+        print("NOTE: EDAM resolution is advisory; use --edam-strict to fail on resolution statuses")
     return failures
 
 
-def gate_commands(tooling: Path, content: Path, relative_collection: str) -> list[tuple[str, list[str]]]:
+def gate_commands(
+    tooling: Path, content: Path, relative_collection: str, *, edam_strict: bool = False,
+    edam_vocabulary: Path = DEFAULT_EDAM_VOCABULARY,
+) -> list[tuple[str, list[str]]]:
     """Return the static gates in their documented execution order."""
     scripts = tooling / "scripts"
     collection = content / relative_collection
+    edam = [sys.executable, str(Path(__file__).resolve()), "--edam-only", str(collection), "--edam-vocabulary", str(edam_vocabulary)]
+    if edam_strict:
+        edam.append("--edam-strict")
     return [
         (GATE_NAMES[0], [sys.executable, "-m", "scripts.skill_index", "--collections", relative_collection]),
         (GATE_NAMES[1], [sys.executable, str(scripts / "lint_skill_descriptions.py"), str(collection)]),
-        (GATE_NAMES[3], [sys.executable, str(Path(__file__).resolve()), "--edam-only", str(collection)]),
+        (GATE_NAMES[3], edam),
         (GATE_NAMES[4], [sys.executable, str(scripts / "check_advertised_counts.py"), "--repo-root", str(content)]),
         (GATE_NAMES[5], [sys.executable, str(scripts / "check_license_tiers.py"), str(collection)]),
         (GATE_NAMES[6], [sys.executable, str(scripts / "check_provenance_tiers.py"), str(collection)]),
@@ -169,7 +195,10 @@ def run_all(options: argparse.Namespace) -> int:
         raise ValueError(f"collection is not a directory: {collection}")
     environment = dict(os.environ, PYTHONDONTWRITEBYTECODE="1", PYTHONPATH=str(tooling))
     results = []
-    for name, command in gate_commands(tooling, content, options.collection):
+    for name, command in gate_commands(
+        tooling, content, options.collection, edam_strict=options.edam_strict,
+        edam_vocabulary=options.edam_vocabulary,
+    ):
         cwd = content if name == GATE_NAMES[0] else tooling
         results.append(run_step(name, command, cwd, environment))
     if not options.offline:
@@ -202,6 +231,8 @@ def parser() -> argparse.ArgumentParser:
     result.add_argument("--strict", action=argparse.BooleanOptionalAction, default=True)
     result.add_argument("--offline", action="store_true")
     result.add_argument("--edam-only", type=Path)
+    result.add_argument("--edam-strict", action="store_true")
+    result.add_argument("--edam-vocabulary", type=Path, default=DEFAULT_EDAM_VOCABULARY)
     result.add_argument("--doi-only", type=Path)
     result.add_argument("--list", action="store_true")
     result.add_argument("--validate-paths", nargs=2, metavar=("COLLECTION", "RECEIPTS"))
@@ -220,8 +251,8 @@ def main(argv: list[str] | None = None) -> int:
         validate_relative_path(receipts, optional=True)
         return 0
     if options.edam_only:
-        failures = check_edam(options.edam_only)
-        print("\n".join(failures))
+        failures = check_edam(options.edam_only, vocabulary_path=options.edam_vocabulary, strict=options.edam_strict)
+        print("\n".join(failures), file=sys.stderr if options.edam_strict else sys.stdout)
         return 1 if failures else 0
     if options.doi_only:
         failures = check_dois(options.doi_only)

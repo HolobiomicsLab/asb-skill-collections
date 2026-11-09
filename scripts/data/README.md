@@ -24,3 +24,9 @@ PYTHONDONTWRITEBYTECODE=1 python3 scripts/build_facets.py refresh-labels \
 No download is part of the refresh. Inspect the resulting labels and diff
 before using them to name facets.
 
+`edam_vocabulary.json` is the separate four-branch resolution table used by
+`scripts/remap_edam.py` and `scripts/domain_content_gates.py`. Generate it with
+`scripts/edam_vocabulary.py refresh` from a local CSV and an explicit date. It
+records the source digest, obsolete status, replacement identifiers, and the
+same inferred release convention and CC-BY-SA-4.0 attribution as the label
+table. Refreshing this file does not change `edam_labels.json`.
