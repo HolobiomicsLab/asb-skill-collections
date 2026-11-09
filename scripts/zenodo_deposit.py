@@ -148,7 +148,9 @@ def _request(method, url, token, body=None):
     `body` is a dict (sent as JSON), a Path (streamed as the raw file), or None.
     HTTP error statuses are returned, not raised; callers decide what is fatal.
     """
-    headers = {"Authorization": f"Bearer {token}", "Accept": "application/json"}
+    headers = {"Accept": "application/json"}
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
     data = None
     if isinstance(body, Path):
         headers["Content-Type"] = "application/octet-stream"

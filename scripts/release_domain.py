@@ -583,15 +583,46 @@ def run_record_doi(context: ReleaseContext) -> dict:
     update_usage(collection / "USAGE.md", args.doi, args.version)
     context.state["doi"] = args.doi
     context.state["released"] = args.released
+    concept = read_concept_doi(context, args.doi)
     hub_manifest = emit_hub_manifest(context)
     merge_commit = args.commit or None
     if merge_commit and not COMMIT_PATTERN.fullmatch(merge_commit):
         raise ReleaseError("--commit must name the full merged DOI pull request commit")
     changed = [path for path, content in before.items() if path.read_bytes() != content]
     paths = citation_paths(context) + ([hub_manifest] if hub_manifest else [])
-    return {"changed_files": changed, "hub_manifest": hub_manifest, "merge_commit": merge_commit}, {
+    outputs = {"changed_files": changed, "hub_manifest": hub_manifest, "merge_commit": merge_commit}
+    if concept:
+        outputs.update(concept_doi=concept["conceptdoi"], conceptrecid=concept["conceptrecid"])
+        print(
+            f"concept DOI {concept['conceptdoi']} (record {concept['conceptrecid']}); "
+            f"next: manifest --concept-doi {concept['conceptdoi']}"
+        )
+    return outputs, {
         path.name: sha256(path) for path in paths if path
     }
+
+
+def read_concept_doi(context: ReleaseContext, doi: str) -> dict | None:
+    """Read the published record's concept DOI after a first-release draft."""
+    draft = context.state["stages"].get("deposit-draft", {})
+    if not draft.get("outputs", {}).get("first_release"):
+        return None
+    record_id = doi.rsplit(".", 1)[-1]
+    host = zenodo_deposit.SANDBOX_URL if context.args.sandbox else zenodo_deposit.ZENODO_URL
+    try:
+        status, payload = zenodo_deposit._request("GET", f"{host}/api/records/{record_id}", "")
+    except zenodo_deposit.ZenodoError:
+        status, payload = None, None
+    concept_doi = (payload or {}).get("conceptdoi")
+    conceptrecid = (payload or {}).get("conceptrecid")
+    if not (status and 200 <= status < 300 and concept_doi and conceptrecid
+            and DOI_PATTERN.fullmatch(str(concept_doi))):
+        context.owner(
+            "read the concept DOI from the published record, then run "
+            "manifest --concept-doi <concept DOI>"
+        )
+        return None
+    return {"conceptdoi": str(concept_doi), "conceptrecid": str(conceptrecid)}
 
 
 def citation_paths(context: ReleaseContext) -> list[Path]:
@@ -661,11 +692,13 @@ def update_manifest(context: ReleaseContext, row: dict) -> Path:
         "repository": f"HolobiomicsLab/asb-skills-{context.args.domain}", "releases": [],
     })
     if domain.get("concept_doi") is None:
-        if not context.args.concept_doi:
+        concept_doi = context.args.concept_doi or context.state["stages"].get(
+            "record-doi", {}).get("outputs", {}).get("concept_doi", "")
+        if not concept_doi:
             raise ReleaseError("first release requires --concept-doi with a numeric Zenodo record id")
-        if not DOI_PATTERN.fullmatch(context.args.concept_doi):
+        if not DOI_PATTERN.fullmatch(concept_doi):
             raise ReleaseError("invalid concept DOI")
-        domain["concept_doi"] = context.args.concept_doi
+        domain["concept_doi"] = concept_doi
     releases = domain.setdefault("releases", [])
     for index, existing in enumerate(releases):
         if int(existing["version"]) == row["version"]:

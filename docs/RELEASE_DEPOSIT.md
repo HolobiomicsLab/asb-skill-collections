@@ -178,6 +178,11 @@ version DOI and the domain's concept DOI. Read them from the published record,
 then record the version DOI and, after the usual receipt and DOI pull request
 merge, the concept DOI:
 
+For a first release, `record-doi` reads the published record without a token,
+prints the concept DOI and stores it in the stage log. `manifest` then defaults
+`--concept-doi` to that value when the flag is absent and the registry entry has
+no concept DOI yet.
+
 ```bash
 python scripts/release_domain.py record-doi ... --doi <version DOI>
 python scripts/release_domain.py receipt ...
