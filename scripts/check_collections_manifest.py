@@ -8,6 +8,7 @@ import json
 import os
 import re
 import stat
+import subprocess
 import sys
 from pathlib import Path
 from typing import Any
@@ -31,6 +32,8 @@ REQUIRED_RELEASE_KEYS = {
 DOI_PATTERN = re.compile(r"^10\.5281/zenodo\.\d+$")
 COMMIT_PATTERN = re.compile(r"^[0-9a-f]{40}$")
 DIGEST_PATTERN = re.compile(r"^sha256:[0-9a-f]{64}$")
+DATE_PATTERN = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+SUPERSEDED_KEYS = {"tag", "commit", "tree_digest", "version_doi", "released"}
 
 
 def compute_tree_digest(repository: Path, release_path: str) -> str:
@@ -61,6 +64,76 @@ def compute_tree_digest(repository: Path, release_path: str) -> str:
             relative = path.relative_to(root).as_posix()
             lines.append(f"{digest.hexdigest()}  {relative}\n")
     return "sha256:" + hashlib.sha256("".join(sorted(lines)).encode()).hexdigest()
+
+
+def git_tree_digest(repository: Path, commit: str, release_path: str) -> str:
+    """Hash the release tree as committed at ``commit``, read from git objects.
+
+    The lines are those of ``compute_tree_digest``: regular blobs only, symbolic
+    links (mode 120000) and submodules excluded, paths relative to the repository
+    root. A clean checkout of ``commit`` gives the same digest from the filesystem.
+    """
+    root = repository.resolve()
+    listing = subprocess.run(
+        ["git", "ls-tree", "-r", "-z", "--full-tree", commit, "--", release_path],
+        cwd=root, capture_output=True, check=False,
+    )
+    if listing.returncode:
+        raise ValueError(
+            f"cannot list {release_path} at {commit}: {listing.stderr.decode(errors='replace').strip()}"
+        )
+    entries = []
+    for record in listing.stdout.split(b"\0"):
+        if not record:
+            continue
+        meta, path = record.split(b"\t", 1)
+        mode, kind, oid = meta.split()
+        if kind != b"blob" or mode == b"120000":
+            continue
+        entries.append((oid.decode(), path.decode("utf-8")))
+    if not entries:
+        raise ValueError(f"release path has no files at {commit}: {release_path}")
+    batch = subprocess.Popen(
+        ["git", "cat-file", "--batch"], cwd=root, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+    )
+    lines = []
+    try:
+        for oid, path in entries:
+            batch.stdin.write(oid.encode() + b"\n")
+            batch.stdin.flush()
+            header = batch.stdout.readline().split()
+            if len(header) != 3 or header[1] != b"blob":
+                raise ValueError(f"cannot read blob {oid} for {path}")
+            data = batch.stdout.read(int(header[2]))
+            batch.stdout.read(1)
+            lines.append(f"{hashlib.sha256(data).hexdigest()}  {path}\n")
+    finally:
+        batch.stdin.close()
+        batch.wait()
+    return "sha256:" + hashlib.sha256("".join(sorted(lines)).encode()).hexdigest()
+
+
+def release_path_drift(repository: Path, commit: str, release_path: str) -> list[str]:
+    """List paths under ``release_path`` whose checkout bytes are not those of ``commit``.
+
+    Covers tracked files that differ from ``commit`` (staged or not) and every
+    untracked file, ignored ones included, since the filesystem digest and the
+    release counts would read them.
+    """
+    root = repository.resolve()
+    drift = []
+    for command in (
+        ["git", "diff", "--name-only", "-z", commit, "--", release_path],
+        ["git", "ls-files", "--others", "-z", "--", release_path],
+    ):
+        result = subprocess.run(command, cwd=root, capture_output=True, check=False)
+        if result.returncode:
+            raise ValueError(
+                f"cannot compare {release_path} with {commit}: "
+                f"{result.stderr.decode(errors='replace').strip()}"
+            )
+        drift.extend(name.decode("utf-8") for name in result.stdout.split(b"\0") if name)
+    return sorted(set(drift))
 
 
 def checkout_counts(collection: Path) -> dict[str, int]:
@@ -157,6 +230,7 @@ def validate_release(
     if not DIGEST_PATTERN.fullmatch(str(release.get("tree_digest", ""))):
         failures.append(f"{label}: invalid tree_digest {release.get('tree_digest')!r}")
     failures.extend(validate_counts(label, release))
+    failures.extend(validate_superseded(label, release))
     failures.extend(validate_catalogue(label, release, entries))
     if checkout is not None:
         failures.extend(validate_checkout(label, release, checkout))
@@ -172,6 +246,45 @@ def validate_counts(label: str, release: dict) -> list[str]:
         or isinstance(release.get(key), bool)
         or release[key] < 0
     ]
+
+
+def validate_superseded(label: str, release: dict) -> list[str]:
+    """Check the optional trace of earlier releases of the same major version.
+
+    A patch release (for example v3.0.1 after v3.0.0) replaces the row's tag,
+    commit, digest, DOI and date; the replaced values stay listed here.
+    """
+    if "superseded" not in release:
+        return []
+    superseded = release["superseded"]
+    if not isinstance(superseded, list) or not superseded:
+        return [f"{label}: superseded must be a non-empty list"]
+    failures = []
+    tags = []
+    for index, entry in enumerate(superseded):
+        where = f"{label}: superseded[{index}]"
+        if not isinstance(entry, dict):
+            failures.append(f"{where} must be a mapping")
+            continue
+        if set(entry) != SUPERSEDED_KEYS:
+            failures.append(f"{where} keys must be {', '.join(sorted(SUPERSEDED_KEYS))}")
+        tag = entry.get("tag")
+        if not isinstance(tag, str) or not tag:
+            failures.append(f"{where}: invalid tag {tag!r}")
+        tags.append(tag)
+        if not COMMIT_PATTERN.fullmatch(str(entry.get("commit", ""))):
+            failures.append(f"{where}: invalid commit {entry.get('commit')!r}")
+        if not DIGEST_PATTERN.fullmatch(str(entry.get("tree_digest", ""))):
+            failures.append(f"{where}: invalid tree_digest {entry.get('tree_digest')!r}")
+        if not DOI_PATTERN.fullmatch(str(entry.get("version_doi", ""))):
+            failures.append(f"{where}: invalid version_doi {entry.get('version_doi')!r}")
+        if not DATE_PATTERN.fullmatch(str(entry.get("released", ""))):
+            failures.append(f"{where}: invalid released {entry.get('released')!r}")
+    if release.get("tag") in tags:
+        failures.append(f"{label}: superseded repeats the current tag {release.get('tag')!r}")
+    if len(tags) != len(set(map(str, tags))):
+        failures.append(f"{label}: superseded tags must be unique")
+    return failures
 
 
 def validate_catalogue(label: str, release: dict, entries: dict) -> list[str]:

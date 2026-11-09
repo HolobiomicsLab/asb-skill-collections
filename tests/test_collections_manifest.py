@@ -194,3 +194,45 @@ def test_escaping_release_path_is_rejected(tmp_path: Path) -> None:
     assert result.returncode == 1
     assert "astronomy/v1: invalid relative path '../outside'" in result.stdout
     assert "checkout validation failed" not in result.stdout
+
+
+SUPERSEDED = {
+    "tag": "astronomy-v1.0.0",
+    "commit": "b" * 40,
+    "tree_digest": "sha256:" + "1" * 64,
+    "version_doi": "10.5281/zenodo.1234560",
+    "released": "2026-01-01",
+}
+
+
+def test_superseded_trace_of_a_patch_release_passes(tmp_path: Path) -> None:
+    """A row moved to a patch release keeps the replaced values under superseded."""
+    manifest, catalogue, checkout = write_fixture(tmp_path)
+    update_release(manifest, "tag", "astronomy-v1.0.1")
+    update_release(manifest, "superseded", [SUPERSEDED])
+
+    result = run_checker(manifest, catalogue, checkout)
+
+    assert result.returncode == 0, result.stdout + result.stderr
+
+
+@pytest.mark.parametrize(
+    ("value", "message"),
+    [
+        ([], "superseded must be a non-empty list"),
+        ([{**SUPERSEDED, "commit": "short"}], "superseded[0]: invalid commit 'short'"),
+        ([{**SUPERSEDED, "released": "9 Nov"}], "superseded[0]: invalid released '9 Nov'"),
+        ([{**SUPERSEDED, "extra": 1}], "superseded[0] keys must be"),
+        ([{**SUPERSEDED, "tag": "astronomy-v1.0.1"}], "superseded repeats the current tag"),
+    ],
+)
+def test_malformed_superseded_trace_fails(tmp_path: Path, value: object, message: str) -> None:
+    """Shape and formats of the superseded entries are checked."""
+    manifest, catalogue, checkout = write_fixture(tmp_path)
+    update_release(manifest, "tag", "astronomy-v1.0.1")
+    update_release(manifest, "superseded", value)
+
+    result = run_checker(manifest, catalogue, checkout)
+
+    assert result.returncode == 1
+    assert message in result.stdout
