@@ -105,6 +105,8 @@ def test_candidate_scaffold_needs_no_registry_entry(tmp_path: Path) -> None:
     assert_complete_surface(out)
     assert "candidate/<cut-id>" in (out / "README.md").read_text(encoding="utf-8")
     assert json.loads((out / ".claude-plugin/marketplace.json").read_text(encoding="utf-8"))["plugins"] == []
+    workflows = sorted(path.name for path in (out / ".github/workflows").glob("*.yml"))
+    assert workflows == ["gates.yml", "intake.yml", "retraction-watch.yml"]
     gates = (out / ".github/workflows/gates.yml").read_text(encoding="utf-8")
     assert gates.count("- domain: fixture") == 1
     assert "# candidate stage:" in gates
@@ -154,6 +156,29 @@ def test_force_replaces_scaffold_files_and_dry_run_writes_nothing(tmp_path: Path
     assert scaffold_domain_repo.main(arguments) == 0
     assert not dry.exists()
     assert not list(tmp_path.rglob("*.pyc"))
+
+
+def test_candidate_dry_run_listing_matches_the_written_files(tmp_path: Path, capsys) -> None:
+    """The candidate dry run names exactly the files a real run writes."""
+    manifest = tmp_path / "collections.yaml"
+    manifest.write_text("domains: {}\n", encoding="utf-8")
+    arguments = [
+        "--domain", "fixture", "--title", "fixture science", "--tooling-sha", SHA,
+        "--stage", "candidate", "--manifest", str(manifest),
+        "--collection-path", "collections/fixture/v1",
+    ]
+    dry_out = tmp_path / "dry"
+    dry_arguments = arguments + ["--out", str(dry_out), "--dry-run"]
+    options = scaffold_domain_repo.parser().parse_args(dry_arguments)
+    assert scaffold_domain_repo.scaffold(scaffold_domain_repo.Options(**vars(options))) == []
+    listed = {Path(line).relative_to(dry_out) for line in capsys.readouterr().out.splitlines()}
+    assert not dry_out.exists()
+    written_out = tmp_path / "written"
+    written_arguments = arguments + ["--out", str(written_out)]
+    options = scaffold_domain_repo.parser().parse_args(written_arguments)
+    paths = scaffold_domain_repo.scaffold(scaffold_domain_repo.Options(**vars(options)))
+    assert {path.relative_to(written_out) for path in paths} == listed
+    assert Path(".github/workflows/plugin-validate.yml") not in listed
 
 
 def test_policy_rejects_a_private_pipeline_url() -> None:

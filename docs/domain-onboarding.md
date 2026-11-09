@@ -42,9 +42,9 @@ renderer in-process. Review metadata before using it in a deposit.
 
 The candidate marketplace intentionally has an empty `plugins` list. Validate its syntax with
 `claude plugin validate .claude-plugin/marketplace.json`; strict mode treats that required empty
-list as a warning and fails. The rendered plugin workflow therefore needs a candidate-stage guard
-before hosted CI can be green. This is a plugin-workflow limitation, not a missing content-gate row.
-Released marketplaces use `claude plugin validate --strict` normally.
+list as a warning and fails. Candidate rendering therefore omits the plugin workflow until
+registration. This is a plugin-workflow limitation, not a missing content-gate row. Released
+marketplaces use `claude plugin validate --strict` normally.
 
 ## 3. Land the candidate branch
 
@@ -78,8 +78,9 @@ python scripts/release_gate.py <domain-checkout>/collections/<domain>/v1 \
   --advisory --report <diagnostic-report.json>
 ```
 
-The scaffolded `gates.yml`, `plugin-validate.yml`, `intake.yml` and `retraction-watch.yml` are the
-CI callers. `gates.yml` has one candidate matrix row and must be rerendered after registration.
+The scaffolded `gates.yml`, `intake.yml` and `retraction-watch.yml` are the candidate CI callers;
+rerendering at the released stage adds `plugin-validate.yml`, and `gates.yml` has one candidate
+matrix row that must be rerendered after registration.
 Local success does not establish hosted Actions permissions or human approval.
 
 ## 5. Resolve the PII gate

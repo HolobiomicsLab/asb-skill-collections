@@ -127,17 +127,36 @@ def test_generator_renders_published_releases_and_omits_legacy(tmp_path: Path) -
 
 
 def test_generator_renders_an_unregistered_candidate(tmp_path: Path) -> None:
-    """Candidate CI needs one explicit collection and no registry release."""
+    """Candidate CI needs one collection, no registry release and no plugin caller."""
     paths = render_domain_ci.render(
         manifest_fixture(tmp_path), "new-domain", SHA, REPO / "scripts" / "templates",
         tmp_path / "candidate", stage="candidate", collection_path="collections/new-domain/v1",
     )
+    assert [path.name for path in paths] == ["gates.yml", "intake.yml", "retraction-watch.yml"]
+    assert not (tmp_path / "candidate/plugin-validate.yml").exists()
     text = paths[0].read_text(encoding="utf-8")
     assert "# candidate stage: rendered before the first registry release; re-render after registration" in text
     document = read_workflow(paths[0])
     assert document["jobs"]["released-collections"]["strategy"]["matrix"]["collection"] == [
         {"domain": "new-domain", "collection_path": "collections/new-domain/v1", "receipts_path": ""}
     ]
+    assert read_workflow(paths[1])["name"] == "Paper issue intake"
+    assert read_workflow(paths[2])["name"] == "Retraction watch"
+
+
+def test_candidate_rendering_removes_a_stale_plugin_caller(tmp_path: Path) -> None:
+    """Rerendering at candidate stage does not leave the released plugin caller behind."""
+    output = tmp_path / "out"
+    render_domain_ci.render(
+        manifest_fixture(tmp_path), "fixture", SHA, REPO / "scripts" / "templates", output
+    )
+    assert (output / "plugin-validate.yml").is_file()
+    paths = render_domain_ci.render(
+        manifest_fixture(tmp_path), "fixture", SHA, REPO / "scripts" / "templates", output,
+        stage="candidate", collection_path="collections/fixture/v3",
+    )
+    assert [path.name for path in paths] == ["gates.yml", "intake.yml", "retraction-watch.yml"]
+    assert not (output / "plugin-validate.yml").exists()
 
 
 def test_candidate_requires_a_collection_path(tmp_path: Path) -> None:
@@ -162,6 +181,7 @@ def test_candidate_cli_accepts_an_unregistered_domain(tmp_path: Path) -> None:
         capture_output=True, text=True, check=False,
     )
     assert result.returncode == 0, result.stderr
+    assert not (tmp_path / "candidate/plugin-validate.yml").exists()
     assert (tmp_path / "candidate/retraction-watch.yml").is_file()
 
 
