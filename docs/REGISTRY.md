@@ -14,6 +14,14 @@ The local `asbb install` / `uninstall` materializer is described in §4. The
 remaining registry and release sections retain historical design material;
 `registry`, `verify` and `doctor` currently print stubs.
 
+For an orchestrated release, the `manifest` stage of
+`scripts/release_domain.py` upserts the domain and version in
+`collections.yaml`. It computes the tree digest and counts from the supplied
+domain checkout, records the version DOI and merged DOI commit, regenerates
+`catalogue.jsonld`, and runs `check_collections_manifest.py --checkout`. With
+`--regen` it also rebuilds `docs-site/search_index.json`; all resulting digests
+are recorded in the release state.
+
 ---
 
 ## 1. The Claude Code Plugin Marketplace (User Interface)

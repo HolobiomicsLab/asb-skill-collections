@@ -9,6 +9,43 @@ of the package). Tests: `tests/test_zenodo_deposit.py`,
 and `tests/test_zenodo_deposit_domain.py`. The tool never calls the publish
 action of the API, and has no flag that does.
 
+## Orchestrated release
+
+`scripts/release_domain.py` coordinates the release across the domain checkout,
+this tooling checkout and, when supplied, the hub. The common invocation is:
+
+```bash
+python scripts/release_domain.py <stage> --domain <slug> --version v<N> \
+  --repo-root <domain checkout> --tooling-root <this checkout> \
+  --state <path to release_state.json> [stage options]
+```
+
+| Stage | Action and durable result |
+|---|---|
+| `gate` | Runs the strict release gate and surface check; records the verdict and receipt digest. `--candidate` selects a pre-landing tree. |
+| `land` | Dry-runs `land_candidate.py`, then lands only with `--execute`; requires `--candidate`, `--receipts` and `--title`. Records the branch and commit. |
+| `deposit-plan` | Prepares the archive and metadata offline with `--record-id` and repeatable `--extra-file`; records their digests. |
+| `deposit-draft` | Reuses a pending next-version draft or creates the first one, replaces every file and applies the inherited metadata fix. Refuses an archive digest different from the plan. `--sandbox` selects the sandbox. |
+| `record-doi` | Requires `--doi`; updates collection and root CITATION.cff, the README release row and the USAGE citation. `.zenodo.json` is unchanged. `--hub-root` also invokes the hub's release-manifest emitter. |
+| `receipt` | Regenerates the strict receipt, verifies it and repeats the surface check. |
+| `manifest` | Requires the merged DOI commit in `--commit`; upserts `collections.yaml`, regenerates the catalogue and validates the checkout. `--regen` also rebuilds the search index. A new domain requires `--concept-doi`. |
+| `tag` | Prints the exact tag and push commands for the DOI merge commit. `--verify` checks the remote tag after the owner pushes it. |
+| `status` | Prints each recorded stage, its inputs, outputs and digests, and the next unfinished stage. |
+
+The state file uses schema `asb-release-state/1` and records UTC timestamps,
+the domain HEAD at each stage, commands with exit codes, digests and owner
+prompts. A completed stage with identical inputs prints `unchanged; no-op`;
+`--force` repeats it. `--resume` continues through prepared stages and stops at
+the next owner dependency. The Markdown stage log is
+`receipts/<cut-id>/release_log.md` when those receipts exist, otherwise beside
+the state file. An explicit `--receipts` also selects the log location for a
+read-only domain checkout.
+
+Exit status 0 means the requested stage is done, 1 means refusal with a reason,
+and 2 means an owner's act is next. Merges, the Zenodo publish click, tag
+creation and push, and repository visibility remain the owner's. They appear as
+`OWNER:` commands or prompts and are never executed by the orchestrator.
+
 ## Order of a release
 
 1. The Zenodo version is made with this tool and published by hand (procedure
