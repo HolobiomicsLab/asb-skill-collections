@@ -48,17 +48,17 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Validate content paths
-        env:
-          COLLECTION_PATH: ${{ inputs.collection_path }}
-          RECEIPTS_PATH: ${{ inputs.receipts_path }}
-        run: python tooling/scripts/domain_content_gates.py --validate-paths "$COLLECTION_PATH" "$RECEIPTS_PATH"
-
       - name: Install the pinned tooling
         run: |
           python -m pip install --upgrade pip
           python -m pip install -e ./tooling
           python -m pip install -r ./tooling/scripts/requirements.txt
+
+      - name: Validate content paths
+        env:
+          COLLECTION_PATH: ${{ inputs.collection_path }}
+          RECEIPTS_PATH: ${{ inputs.receipts_path }}
+        run: python tooling/scripts/domain_content_gates.py --validate-paths "$COLLECTION_PATH" "$RECEIPTS_PATH"
 
       - name: Every skill is in every index its collection publishes
         working-directory: content
