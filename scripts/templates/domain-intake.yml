@@ -1,0 +1,112 @@
+name: Paper issue intake
+
+# Runs in one domain repository. Its issues, wave files and proposals belong to
+# that domain; the pinned tooling repository supplies the parser and adapter.
+#
+# Trust boundary: issue fields are untrusted data. `gh issue view` writes them
+# to issue.json and they are never interpolated into a shell string. No
+# proposed repository is cloned, built or executed, and no secret-bearing build
+# runs here. The core step is the only step that makes research network calls:
+# api.crossref.org, api.datacite.org, api.openalex.org, api.unpaywall.org and
+# api.github.com.
+#
+# Covered DOIs are optional. If the maintainers mirror the corpus registry file
+# at collections/<DOMAIN>/proposals/covered_dois.json, the core uses it.
+# Otherwise the core deduplicates against the collection corpus and the open
+# wave and watch files only.
+#
+# <TOOLING_SHA> is a reviewed full tooling commit: bump it deliberately after
+# reviewing the new tooling. <DOMAIN> is the domain slug the Action serves.
+# scripts/render_domain_ci.py replaces both.
+
+on:
+  issues:
+    types: [opened, edited, reopened, labeled]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: intake-<DOMAIN>-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  intake:
+    name: Stage paper proposal for curator review
+    if: >-
+      contains(github.event.issue.labels.*.name, 'propose') &&
+      contains(github.event.issue.labels.*.name, 'paper-intake')
+    runs-on: ubuntu-latest
+    env:
+      ISSUE_NUMBER: ${{ github.event.issue.number }}
+      DOMAIN: <DOMAIN>
+      GH_TOKEN: ${{ github.token }}
+      CROSSREF_MAILTO: ${{ vars.CROSSREF_MAILTO }}
+      ASB_WATCH_EMAIL: ${{ vars.ASB_WATCH_EMAIL }}
+      ASB_INTAKE_BOT_NAME: ${{ vars.ASB_INTAKE_BOT_NAME }}
+      ASB_INTAKE_BOT_EMAIL: ${{ vars.ASB_INTAKE_BOT_EMAIL }}
+    steps:
+      - name: Check out domain content at main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          path: content
+          token: ${{ github.token }}
+
+      - name: Check out pinned tooling
+        uses: actions/checkout@v7
+        with:
+          repository: HolobiomicsLab/asb-skill-collections
+          ref: <TOOLING_SHA>
+          token: ${{ github.token }}
+          path: tooling
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Install tooling dependencies
+        run: python -m pip install --upgrade pip pyyaml requests
+
+      - name: Read the issue into a data file
+        run: gh issue view "$ISSUE_NUMBER" --json number,title,body,labels,author,url > issue.json
+
+      - name: Parse, resolve and stage the proposal
+        id: core
+        working-directory: content
+        run: |
+          set +e
+          covered=()
+          if [ -f "collections/$DOMAIN/proposals/covered_dois.json" ]; then
+            covered=(--covered "collections/$DOMAIN/proposals/covered_dois.json")
+          fi
+          corpus=$(ls -d "collections/$DOMAIN"/v*/corpus.yaml | sort -V | tail -n 1)
+          python "$GITHUB_WORKSPACE/tooling/scripts/intake_issue.py" \
+            --kind paper \
+            --issue-json "$GITHUB_WORKSPACE/issue.json" \
+            --domain "$DOMAIN" \
+            --wave-file "collections/$DOMAIN/proposals/wave-$(date -u +%Y-%m)-community.yaml" \
+            --collection-corpus "$corpus" \
+            --proposal-glob "collections/$DOMAIN/proposals/wave-*.yaml" \
+            --proposal-glob "collections/$DOMAIN/proposals/watch-*.yaml" \
+            --date "$(date -u +%F)" \
+            --out "$GITHUB_WORKSPACE/receipt.json" \
+            --email-env ASB_WATCH_EMAIL \
+            "${covered[@]}"
+          code=$?
+          set -e
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          if [ "$code" -gt 2 ]; then
+            exit "$code"
+          fi
+
+      - name: Stage the branch, pull request, comment and labels
+        if: steps.core.outputs.exit_code == '0' || steps.core.outputs.exit_code == '1' || steps.core.outputs.exit_code == '2'
+        run: |
+          python tooling/scripts/intake_github.py \
+            --receipt receipt.json \
+            --repo content \
+            --domain "$DOMAIN"

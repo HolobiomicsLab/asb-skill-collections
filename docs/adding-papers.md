@@ -164,3 +164,15 @@ The current assembly and landing scripts accept only `v<N>`, where `N` is a posi
 integer such as `v3` or `v4`. They reject a minor directory such as `v3.1`. A re-cut
 must therefore land in a new integer version directory today. Minor collection
 versions require a future tooling change; do not encode one by hand.
+
+## Automated staging
+
+A `propose` issue labelled `paper-intake` is processed by the domain repository's
+intake Action, which parses the issue, resolves the DOI and access route, checks
+duplicates against the collection corpus and the open wave and watch files, and
+stages one row with `status: hold` and `triage.decision: pending` on
+`bot/intake-paper-<issue>`. It opens one pull request, comments its findings on
+the issue and labels it `intake-staged` or `intake-blocked`; a definite duplicate
+is commented and labelled `duplicate` without a branch. The bot never closes the
+issue, merges, builds or marks a row `included`. Curator review, `accept`, the
+build and the release stay manual, and the issue stays open until its build lands.

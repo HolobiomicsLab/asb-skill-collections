@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import shutil
 import subprocess
 import sys
 
@@ -106,7 +107,7 @@ def test_generator_renders_published_releases_and_omits_legacy(tmp_path: Path) -
     paths = render_domain_ci.render(
         manifest_fixture(tmp_path), "fixture", SHA, REPO / "scripts" / "templates", tmp_path / "out"
     )
-    assert [path.name for path in paths] == ["gates.yml", "plugin-validate.yml"]
+    assert [path.name for path in paths] == ["gates.yml", "plugin-validate.yml", "intake.yml"]
     document = read_workflow(paths[0])
     rows = document["jobs"]["released-collections"]["strategy"]["matrix"]["collection"]
     assert rows == [
@@ -116,6 +117,7 @@ def test_generator_renders_published_releases_and_omits_legacy(tmp_path: Path) -
     assert document["jobs"]["released-collections"]["uses"].endswith("@" + SHA)
     assert "<TOOLING_SHA>" not in paths[0].read_text(encoding="utf-8")
     assert read_workflow(paths[1])["jobs"]["plugin-manifest"]["steps"][2]["run"].startswith("npm install")
+    assert read_workflow(paths[2])["name"] == "Paper issue intake"
 
 
 def test_generator_cli_rejects_a_legacy_only_domain(tmp_path: Path) -> None:
@@ -196,3 +198,60 @@ def test_generator_applies_an_explicit_receipt_map(tmp_path: Path) -> None:
     rows = document["jobs"]["released-collections"]["strategy"]["matrix"]["collection"]
     assert rows[0]["receipts_path"] == ""
     assert rows[1]["receipts_path"] == "receipts/current"
+
+
+def test_intake_template_renders_both_placeholders_and_exact_permissions(tmp_path: Path) -> None:
+    """The intake caller names its domain, pin and only the three write scopes."""
+    paths = render_domain_ci.render(
+        manifest_fixture(tmp_path), "fixture", SHA, REPO / "scripts" / "templates", tmp_path / "out"
+    )
+    text = (tmp_path / "out" / "intake.yml").read_text(encoding="utf-8")
+    assert "<TOOLING_SHA>" not in text
+    assert "<DOMAIN>" not in text
+    document = read_workflow(tmp_path / "out" / "intake.yml")
+    assert document["permissions"] == {
+        "contents": "write",
+        "pull-requests": "write",
+        "issues": "write",
+    }
+    assert document["concurrency"] == {
+        "group": "intake-fixture-${{ github.event.issue.number }}",
+        "cancel-in-progress": False,
+    }
+    trigger = document[workflow_key(document)]["issues"]
+    assert trigger["types"] == ["opened", "edited", "reopened", "labeled"]
+    job = document["jobs"]["intake"]
+    assert job["if"].count("contains(github.event.issue.labels.*.name") == 2
+    assert "'propose'" in job["if"]
+    assert "'paper-intake'" in job["if"]
+    checkouts = [step for step in job["steps"] if step.get("uses", "").startswith("actions/checkout@")]
+    assert [step["with"]["path"] for step in checkouts] == ["content", "tooling"]
+    assert checkouts[1]["with"]["repository"] == "HolobiomicsLab/asb-skill-collections"
+    assert checkouts[1]["with"]["ref"] == SHA
+    assert paths[2].name == "intake.yml"
+
+
+def test_intake_template_keeps_issue_text_out_of_shell_interpolation() -> None:
+    """The issue body reaches the core as a file, never as a shell string."""
+    text = (REPO / "scripts" / "templates" / "domain-intake.yml").read_text(encoding="utf-8")
+    assert "github.event.issue.body" not in text
+    assert "github.event.issue.title" not in text
+    assert "gh issue view" in text
+    assert "issue.json" in text
+    assert "actions/checkout@v7" in text
+    assert "cancel-in-progress: false" in text
+
+
+def test_intake_template_passes_actionlint_when_available(tmp_path: Path) -> None:
+    """The rendered caller is a valid workflow for actionlint when installed."""
+    render_domain_ci.render(
+        manifest_fixture(tmp_path), "fixture", SHA, REPO / "scripts" / "templates", tmp_path / "out"
+    )
+    if shutil.which("actionlint") is None:
+        import pytest
+        pytest.skip("actionlint is not installed on PATH")
+    result = subprocess.run(
+        ["actionlint", str(tmp_path / "out" / "intake.yml")],
+        capture_output=True, text=True, check=False,
+    )
+    assert result.returncode == 0, result.stdout + result.stderr
