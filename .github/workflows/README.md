@@ -13,16 +13,19 @@ Their scripts remain in `scripts/` and are path-invocable against a domain check
 ## CI of a domain repository
 
 Each `asb-skills-<domain>` repository owns its content checks. Install
-`scripts/templates/domain-ci.yml` as `.github/workflows/gates.yml` and
+`scripts/templates/domain-ci.yml` as `.github/workflows/gates.yml`,
 `scripts/templates/domain-plugin-validate.yml` as
-`.github/workflows/plugin-validate.yml`, or render both from the registry:
+`.github/workflows/plugin-validate.yml` and
+`scripts/templates/domain-intake.yml` as `.github/workflows/intake.yml`, or
+render all three from the registry:
 
 ```bash
 python scripts/render_domain_ci.py --manifest collections.yaml \
   --domain <domain> --tooling-sha <full-tooling-commit-sha> --out <domain checkout>/.github/workflows
 ```
 
-The generator emits one matrix row per non-legacy release. An optional JSON
+The generator emits one matrix row per non-legacy release and also renders
+the paper intake caller for the named domain. An optional JSON
 file passed through `--receipts` maps `collection_path` to `receipts_path`; an
 empty receipt path skips receipt re-verification. The registry does not yet
 record receipt directories or the tooling commit per release, so the lead must
@@ -74,3 +77,59 @@ placeholders. If `scripts/render_domain_ci.py` is present, use its normal
 template rendering route instead. A hit opens or comments on a labelled issue;
 it requires a reviewed release action, never a silent removal. Registry errors
 make the run incomplete and fail the job rather than reporting a clean sweep.
+
+
+## Issue intake
+
+`scripts/templates/domain-intake.yml` runs in each `asb-skills-<domain>`
+repository on issue `opened`, `edited`, `reopened` and `labeled` events. Its
+job runs only when the issue carries both `propose` and `paper-intake`, so the
+shared propose form does not feed every resource or workflow suggestion into
+the paper parser. The tooling commit is pinned in the rendered caller and
+checked out separately from the domain content, which is checked out at `main`.
+
+The job reads the issue with `gh issue view` into `issue.json`, so the body is
+data and never a shell string. It then runs `scripts/intake_issue.py`, which is
+the only step allowed research network egress (`api.crossref.org`,
+`api.datacite.org`, `api.openalex.org`, `api.unpaywall.org` and
+`api.github.com`), and applies the receipt with `scripts/intake_github.py`.
+
+On `staged` the adapter resets or creates `bot/intake-paper-<issue>` from
+`main`, commits only the wave file and, when the receipt names one, the copy
+under `collections/<domain>/proposals/receipts/intake-<issue>.json`, pushes the
+branch and opens or updates one pull request. It comments the core's text on
+the issue once per receipt digest, using an `<!-- asb-intake ... -->` marker,
+then applies the receipt's label additions and removals. On `blocked` and
+`duplicate` it comments and labels only, with `duplicate` added for the latter.
+The attached workflow does not pass `--dry-run`: it is the write path.
+
+The Action never closes the issue, merges a pull request, pushes `main`, builds
+a paper or marks a row `included`. Those remain curator actions. The bot commit
+identity comes from the `ASB_INTAKE_BOT_NAME` and `ASB_INTAKE_BOT_EMAIL`
+repository variables; a missing pair makes the adapter refuse.
+
+Covered DOIs are optional. `covered_dois.json` lives in the private corpus
+registry, which a domain Action cannot check out without a second token. When
+maintainers mirror it at `collections/<domain>/proposals/covered_dois.json`
+the core uses it; otherwise it deduplicates against the collection corpus and
+the open `wave-*.yaml` and `watch-*.yaml` files. Mirroring is an owner
+decision, not a requirement.
+
+Install the rendered caller in a domain repository:
+
+```bash
+python scripts/render_domain_ci.py --manifest collections.yaml \
+  --domain <domain> --tooling-sha <full-tooling-commit-sha> \
+  --out <domain checkout>/.github/workflows
+```
+
+That writes `gates.yml`, `plugin-validate.yml` and `intake.yml`. Create the
+`propose`, `paper-intake`, `intake-staged`, `intake-blocked` and `duplicate`
+labels in the domain repository before enabling the job, set the
+`CROSSREF_MAILTO`, `ASB_WATCH_EMAIL`, `ASB_INTAKE_BOT_NAME` and
+`ASB_INTAKE_BOT_EMAIL` repository variables, and confirm that Actions may
+create pull requests. Run one owner-approved live dry run first: disable the
+push by committing the caller with the adapter step replaced by
+`python tooling/scripts/intake_github.py --receipt receipt.json --repo content
+--domain "$DOMAIN" --dry-run`, read the printed commands, then restore the
+write step. A dry run that opens no pull request is the expected result.

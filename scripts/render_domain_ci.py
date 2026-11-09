@@ -14,7 +14,7 @@ import yaml
 REPOSITORY = Path(__file__).resolve().parent.parent
 SHA_PATTERN = re.compile(r"^[0-9a-fA-F]{40}$")
 DOMAIN_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
-OUTPUTS = ("gates.yml", "plugin-validate.yml")
+OUTPUTS = ("gates.yml", "plugin-validate.yml", "intake.yml")
 
 
 def published_releases(manifest: Path, domain: str) -> list[dict]:
@@ -65,7 +65,12 @@ def render(manifest: Path, domain: str, tooling_sha: str, templates: Path, out: 
                 for release in releases]
     caller = (templates / "domain-ci.yml").read_text(encoding="utf-8")
     plugin = (templates / "domain-plugin-validate.yml").read_text(encoding="utf-8")
-    rendered = (render_caller(caller, domain, tooling_sha, releases), plugin.replace("<TOOLING_SHA>", tooling_sha))
+    intake = (templates / "domain-intake.yml").read_text(encoding="utf-8")
+    rendered = (
+        render_caller(caller, domain, tooling_sha, releases),
+        plugin.replace("<TOOLING_SHA>", tooling_sha),
+        intake.replace("<TOOLING_SHA>", tooling_sha).replace("<DOMAIN>", domain),
+    )
     out.mkdir(parents=True, exist_ok=True)
     paths = [out / filename for filename in OUTPUTS]
     for path, text in zip(paths, rendered, strict=True):
@@ -90,7 +95,7 @@ def parser() -> argparse.ArgumentParser:
 
 
 def main(argv: list[str] | None = None) -> int:
-    """Render two workflows and report their destinations."""
+    """Render the workflow callers and report their destinations."""
     options = parser().parse_args(argv)
     try:
         receipts = json.loads(options.receipts.read_text(encoding="utf-8")) if options.receipts else None
