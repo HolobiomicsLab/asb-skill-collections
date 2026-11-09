@@ -486,7 +486,11 @@ def test_fake_end_to_end_covers_all_stages_and_writes_trace(release_fixture) -> 
     assert invoke(release_fixture, "deposit-plan", "--record-id", "55") == 0
     assert invoke(release_fixture, "deposit-draft", "--record-id", "55", fake=fake) == 2
     assert invoke(release_fixture, "record-doi", "--doi", DOI) == 0
+    stale = release_fixture.repo / "collections/fixture/v1/gate_report.json"
+    assert invoke(release_fixture, "receipt") == 1
+    stale.unlink()
     assert invoke(release_fixture, "receipt") == 0
+    assert (release_fixture.repo / "receipts/fixture/gate_report.json").is_file()
     head = commit_all(release_fixture.repo, "record DOI and receipt")
     assert invoke(release_fixture, "manifest", "--concept-doi", CONCEPT_DOI, "--commit", head) == 0
     assert invoke(release_fixture, "tag", "--commit", head) == 2
@@ -576,3 +580,170 @@ def test_land_dry_runs_then_executes_and_records_branch(release_fixture, tmp_pat
     assert state["stages"]["land"]["outputs"]["branch"] == "candidate/0123456789ab"
     assert state["stages"]["land"]["outputs"]["commit"]
     assert (domain / "receipts/0123456789ab/release_log.md").is_file()
+
+
+PATCH_DOI = "10.5281/zenodo.1234999"
+SURFACES = (
+    "collections/fixture/v1/CITATION.cff", "CITATION.cff", "README.md",
+    "collections/fixture/v1/USAGE.md",
+)
+
+
+def snapshot(repo: Path) -> dict:
+    return {relative: (repo / relative).read_bytes() if (repo / relative).exists() else None
+            for relative in SURFACES}
+
+
+def test_record_doi_skips_an_absent_usage_file(release_fixture) -> None:
+    (release_fixture.repo / "collections/fixture/v1/USAGE.md").unlink()
+    seed_state(release_fixture, {"deposit-draft": {"status": "waiting"}})
+    assert invoke(release_fixture, "record-doi", "--doi", DOI, "--released", "2026-11-09") == 0
+    state = json.loads(release_fixture.state.read_text())
+    outputs = state["stages"]["record-doi"]["outputs"]
+    assert outputs["skipped_files"] == [str(release_fixture.repo / "collections/fixture/v1/USAGE.md")]
+    assert len(outputs["changed_files"]) == 3
+    for relative in SURFACES[:3]:
+        assert DOI in (release_fixture.repo / relative).read_text()
+    assert not (release_fixture.repo / "collections/fixture/v1/USAGE.md").exists()
+
+
+def test_record_doi_refuses_a_readme_without_the_row_and_writes_nothing(release_fixture, capsys) -> None:
+    readme = release_fixture.repo / "README.md"
+    readme.write_text("# Fixture\n\nNo release table yet.\n")
+    before = snapshot(release_fixture.repo)
+    seed_state(release_fixture, {"deposit-draft": {"status": "waiting"}})
+    assert invoke(release_fixture, "record-doi", "--doi", DOI) == 1
+    assert snapshot(release_fixture.repo) == before
+    error = capsys.readouterr().err
+    assert "README has no release-table row for collections/fixture/v1" in error
+    assert "| Path | Title | Skills | Tools | Released | DOI |" in error
+    state = json.loads(release_fixture.state.read_text())
+    assert "doi" not in state
+
+
+def first_release(namespace: argparse.Namespace) -> str:
+    """Record DOI, receipt, commit and register the fixture's v1.0.0 release."""
+    seed_state(namespace, {"deposit-draft": {"status": "waiting"}})
+    assert invoke(namespace, "record-doi", "--doi", DOI, "--released", "2026-11-01") == 0
+    assert invoke(namespace, "receipt") == 0
+    commit = commit_all(namespace.repo, "first release DOI")
+    assert invoke(namespace, "manifest", "--concept-doi", CONCEPT_DOI, "--commit", commit) == 0
+    return commit
+
+
+def test_patch_release_keeps_earlier_dois_and_traces_the_superseded_row(release_fixture, capsys) -> None:
+    collection = release_fixture.repo / "collections/fixture/v1"
+    (collection / "USAGE.md").write_text(
+        "# Usage\n\n## Citation\n\nCite both:\n\n"
+        "1. **The collection**, using v1's `CITATION.cff` and the version DOI of its\n"
+        "   Zenodo record, `PENDING`.\n"
+        "2. **Every source paper**, through its DOI.\n"
+    )
+    commit_all(release_fixture.repo, "usage placeholder")
+    first = first_release(release_fixture)
+    registry = release_fixture.tooling / "collections.yaml"
+    first_row = yaml.safe_load(registry.read_text())["domains"]["fixture"]["releases"][0]
+    assert first_row["tag"] == "fixture-v1.0.0"
+    usage = (collection / "USAGE.md").read_text()
+    (collection / "USAGE.md").write_text(usage.replace(
+        f"`{DOI}`.\n", f"`{DOI}`; the lineage's concept DOI (all\n   versions) is `{CONCEPT_DOI}`.\n"))
+    metadata = json.loads((collection / ".zenodo.json").read_text())
+    metadata["version"] = "v1.0.1"
+    (collection / ".zenodo.json").write_text(json.dumps(metadata))
+    commit_all(release_fixture.repo, "patch release metadata")
+
+    arguments = ("--doi", PATCH_DOI, "--released", "2026-11-09")
+    assert invoke(release_fixture, "record-doi", *arguments) == 0
+    cff = yaml.safe_load((collection / "CITATION.cff").read_text())
+    assert cff["doi"] == PATCH_DOI
+    assert [(item["value"], item["description"]) for item in cff["identifiers"]] == [
+        (PATCH_DOI, "Zenodo version DOI of v1.0.1 (2026-11-09)"),
+        (DOI, "Zenodo version DOI of v1 (2026-11-01)"),
+    ]
+    root = yaml.safe_load((release_fixture.repo / "CITATION.cff").read_text())
+    assert [(item["value"], item["description"]) for item in root["identifiers"]] == [
+        (DOI, "Zenodo version DOI of v1 (2026-11-01)"),
+        (PATCH_DOI, "Zenodo version DOI of v1.0.1 (2026-11-09)"),
+    ]
+    usage = (collection / "USAGE.md").read_text()
+    assert f"Zenodo record, `{PATCH_DOI}`; the lineage's concept DOI (all\n   versions) is `{CONCEPT_DOI}`." in usage
+    assert f"`{DOI}`" not in usage
+    readme = (release_fixture.repo / "README.md").read_text()
+    assert f"| 2026-11-09 | [{PATCH_DOI}](https://doi.org/{PATCH_DOI}) |" in readme
+    surfaces = snapshot(release_fixture.repo)
+    assert invoke(release_fixture, "record-doi", *arguments, "--force") == 0
+    assert snapshot(release_fixture.repo) == surfaces
+
+    assert invoke(release_fixture, "receipt") == 0
+    patch = commit_all(release_fixture.repo, "patch release DOI")
+    assert invoke(release_fixture, "manifest", "--commit", patch, "--regen") == 0
+    row = yaml.safe_load(registry.read_text())["domains"]["fixture"]["releases"][0]
+    assert (row["tag"], row["commit"], row["version_doi"]) == ("fixture-v1.0.1", patch, PATCH_DOI)
+    assert row["superseded"] == [{
+        "tag": "fixture-v1.0.0", "commit": first, "tree_digest": first_row["tree_digest"],
+        "version_doi": DOI, "released": first_row["released"],
+    }]
+    registered = registry.read_bytes()
+    assert invoke(release_fixture, "manifest", "--commit", patch, "--regen", "--force") == 0
+    assert registry.read_bytes() == registered
+    capsys.readouterr()
+    assert invoke(release_fixture, "tag", "--commit", patch) == 2
+    assert f"OWNER: git tag fixture-v1.0.1 {patch}" in capsys.readouterr().out
+
+
+def test_release_label_must_share_the_major_version(release_fixture, capsys) -> None:
+    collection = release_fixture.repo / "collections/fixture/v1"
+    metadata = json.loads((collection / ".zenodo.json").read_text())
+    metadata["version"] = "v2.0.1"
+    (collection / ".zenodo.json").write_text(json.dumps(metadata))
+    before = snapshot(release_fixture.repo)
+    seed_state(release_fixture, {"deposit-draft": {"status": "waiting"}})
+    assert invoke(release_fixture, "record-doi", "--doi", DOI) == 1
+    assert snapshot(release_fixture.repo) == before
+    assert "is not v<major>.<minor>.<patch> with major v1" in capsys.readouterr().err
+
+
+def test_manifest_digest_is_read_from_git_objects_and_refuses_untracked_files(release_fixture, capsys) -> None:
+    from scripts.check_collections_manifest import compute_tree_digest, git_tree_digest
+
+    seed_state(release_fixture, {"deposit-draft": {"status": "waiting"}})
+    assert invoke(release_fixture, "record-doi", "--doi", DOI) == 0
+    assert invoke(release_fixture, "receipt") == 0
+    commit = commit_all(release_fixture.repo, "first release DOI")
+    registry = release_fixture.tooling / "collections.yaml"
+    before = registry.read_bytes()
+    stray = release_fixture.repo / "collections/fixture/v1/gate_report.json"
+    stray.write_text('{"stale": true}\n')
+    assert invoke(release_fixture, "manifest", "--concept-doi", CONCEPT_DOI, "--commit", commit) == 1
+    assert "collections/fixture/v1/gate_report.json" in capsys.readouterr().err
+    assert registry.read_bytes() == before
+    stray.unlink()
+    (release_fixture.repo / "collections/fixture/v1/corpus.yaml").write_text("papers: []\n")
+    assert invoke(release_fixture, "manifest", "--concept-doi", CONCEPT_DOI, "--commit", commit) == 1
+    assert "collections/fixture/v1/corpus.yaml" in capsys.readouterr().err
+    run_git(release_fixture.repo, "checkout", "--", "collections/fixture/v1/corpus.yaml")
+    assert invoke(release_fixture, "manifest", "--concept-doi", CONCEPT_DOI, "--commit", commit) == 0
+    row = yaml.safe_load(registry.read_text())["domains"]["fixture"]["releases"][0]
+    expected = git_tree_digest(release_fixture.repo, commit, "collections/fixture/v1")
+    assert row["tree_digest"] == expected
+    assert compute_tree_digest(release_fixture.repo, "collections/fixture/v1") == expected
+    assert "superseded" not in row
+
+
+def test_receipt_writes_under_the_cut_receipts_or_beside_the_collection(release_fixture) -> None:
+    seed_state(release_fixture, {"deposit-draft": {"status": "waiting"}})
+    assert invoke(release_fixture, "record-doi", "--doi", DOI) == 0
+    assert invoke(release_fixture, "receipt") == 0
+    report = release_fixture.repo / "receipts/fixture/gate_report.json"
+    state = json.loads(release_fixture.state.read_text())
+    assert state["stages"]["receipt"]["outputs"]["report"] == str(report)
+    assert state["stages"]["receipt"]["digests"]["receipt"] == hashlib.sha256(report.read_bytes()).hexdigest()
+    assert not (release_fixture.repo / "collections/fixture/v1/gate_report.json").exists()
+
+    shutil.rmtree(release_fixture.repo / "receipts")
+    state.pop("cut_id", None)
+    release_fixture.state.write_text(json.dumps(state))
+    assert invoke(release_fixture, "receipt", "--force") == 0
+    fallback = release_fixture.repo / "collections/fixture/v1/gate_report.json"
+    assert fallback.is_file()
+    assert invoke(release_fixture, "receipt", "--force") == 0

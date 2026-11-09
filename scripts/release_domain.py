@@ -24,7 +24,9 @@ if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from scripts import zenodo_deposit
-from scripts.check_collections_manifest import checkout_counts, compute_tree_digest
+from scripts.check_collections_manifest import (
+    checkout_counts, compute_tree_digest, git_tree_digest, release_path_drift,
+)
 
 STATE_SCHEMA = "asb-release-state/1"
 STAGES = (
@@ -34,6 +36,7 @@ DOI_PATTERN = re.compile(r"^10\.5281/zenodo\.\d+$")
 COMMIT_PATTERN = re.compile(r"^[0-9a-f]{40}$")
 DATE_PATTERN = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 VERSION_PATTERN = re.compile(r"^v[1-9][0-9]*$")
+LABEL_PATTERN = re.compile(r"^v([1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$")
 DOMAIN_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 TOOLING_ROOT = Path(__file__).resolve().parents[1]
 
@@ -495,9 +498,38 @@ def run_deposit_draft(context: ReleaseContext) -> dict:
     raise WaitingForOwner("draft ready", outputs, {"archive_sha256": archive.sha256})
 
 
-def update_collection_citation(path: Path, doi: str, released: str, version: str) -> None:
-    """Insert or replace the version DOI while preserving unrelated CFF bytes."""
-    text = path.read_text(encoding="utf-8")
+def release_label(context: ReleaseContext) -> str:
+    """Return the full release label, v<major>.<minor>.<patch>, of this collection.
+
+    The label is the collection's `.zenodo.json` `version`; its major must equal
+    `--version`. Without that field the label is `<version>.0.0`.
+    """
+    path = context.collection / ".zenodo.json"
+    version = None
+    if path.is_file():
+        version = json.loads(path.read_text(encoding="utf-8")).get("version")
+    if version in (None, ""):
+        return f"{context.args.version}.0.0"
+    match = LABEL_PATTERN.fullmatch(str(version))
+    if not match or f"v{match.group(1)}" != context.args.version:
+        raise ReleaseError(
+            f".zenodo.json version {version!r} is not v<major>.<minor>.<patch> with major "
+            f"{context.args.version}: {path}"
+        )
+    return str(version)
+
+
+def doi_label(version: str, label: str) -> str:
+    """Name a version DOI by its major for a .0.0 release, by the full label otherwise."""
+    return version if label.endswith(".0.0") else label
+
+
+def collection_citation_text(text: str, path: Path, doi: str, released: str, name: str) -> str:
+    """Insert or replace the version DOI while preserving unrelated CFF bytes.
+
+    Only the identifier of `name` is replaced, so a patch release keeps the DOI
+    entries of the earlier releases of its major version.
+    """
     text, count = re.subn(r"(?m)^doi:.*$", f"doi: {doi}", text)
     if not count:
         match = re.search(r"(?m)^version:.*$", text)
@@ -509,36 +541,40 @@ def update_collection_citation(path: Path, doi: str, released: str, version: str
         text = re.sub(r"(?m)^(doi:.*)$", f"\\1\ndate-released: '{released}'", text, count=1)
     document = yaml.safe_load(text)
     identifiers = [item for item in document.get("identifiers", [])
-                   if not (item.get("type") == "doi" and str(item.get("description", "")).startswith(
-                       f"Zenodo version DOI of {version} "))]
+                   if not (item.get("type") == "doi" and (
+                       item.get("value") == doi
+                       or str(item.get("description", "")).startswith(f"Zenodo version DOI of {name} ")))]
     identifiers.insert(0, {
         "type": "doi", "value": doi,
-        "description": f"Zenodo version DOI of {version} ({released})",
+        "description": f"Zenodo version DOI of {name} ({released})",
     })
     document["identifiers"] = identifiers
     document["doi"] = doi
     document["date-released"] = released
-    path.write_text(yaml.safe_dump(document, sort_keys=False, allow_unicode=True), encoding="utf-8")
+    return yaml.safe_dump(document, sort_keys=False, allow_unicode=True)
 
 
-def update_root_citation(path: Path, doi: str, released: str, version: str) -> None:
-    """Upsert this version's DOI in the root CFF identifier list."""
-    document = yaml.safe_load(path.read_text(encoding="utf-8"))
-    description = f"Zenodo version DOI of {version} ({released})"
+def root_citation_text(text: str, doi: str, released: str, name: str) -> str:
+    """Upsert the DOI of `name` in the root CFF identifier list."""
+    document = yaml.safe_load(text)
+    description = f"Zenodo version DOI of {name} ({released})"
     identifiers = document.setdefault("identifiers", [])
     for item in identifiers:
         if item.get("value") == doi or str(item.get("description", "")).startswith(
-                f"Zenodo version DOI of {version} "):
+                f"Zenodo version DOI of {name} "):
             item.update(type="doi", value=doi, description=description)
             break
     else:
         identifiers.append({"type": "doi", "value": doi, "description": description})
-    path.write_text(yaml.safe_dump(document, sort_keys=False, allow_unicode=True), encoding="utf-8")
+    return yaml.safe_dump(document, sort_keys=False, allow_unicode=True)
 
 
-def update_readme(path: Path, doi: str, released: str, release_path: str) -> None:
-    """Update the release-table row selected by its collection path."""
-    lines = path.read_text(encoding="utf-8").splitlines(keepends=True)
+README_HEADER = "| Path | Title | Skills | Tools | Released | DOI |"
+
+
+def readme_text(text: str, path: Path, doi: str, released: str, release_path: str) -> str:
+    """Update the Released and DOI cells of the row selected by its collection path."""
+    lines = text.splitlines(keepends=True)
     for index, line in enumerate(lines):
         if not line.lstrip().startswith("|") or f"`{release_path}`" not in line:
             continue
@@ -549,25 +585,37 @@ def update_readme(path: Path, doi: str, released: str, release_path: str) -> Non
         cells[-1] = f"[{doi}](https://doi.org/{doi})"
         ending = "\n" if line.endswith("\n") else ""
         lines[index] = "| " + " | ".join(cells) + " |" + ending
-        path.write_text("".join(lines), encoding="utf-8")
-        return
-    raise ReleaseError(f"README has no release-table row for {release_path}")
+        return "".join(lines)
+    raise ReleaseError(
+        f"README has no release-table row for {release_path}: {path}. Add a row whose path "
+        f"cell is `{release_path}` to the table headed `{README_HEADER}`, then rerun record-doi"
+    )
 
 
-def update_usage(path: Path, doi: str, version: str) -> None:
-    """Replace the collection citation paragraph, leaving source-paper citation intact."""
-    text = path.read_text(encoding="utf-8")
-    pattern = re.compile(
-        r"(?ms)^1\. \*\*The collection\*\*.*?(?=^2\. \*\*Every source paper|\Z)"
-    )
-    replacement = (
-        f"1. **The collection**, using {version}'s `CITATION.cff` and the version DOI of its\n"
-        f"   Zenodo record, `{doi}`.\n"
-    )
-    updated, count = pattern.subn(replacement, text, count=1)
-    if not count:
+USAGE_PARAGRAPH = re.compile(r"(?ms)^1\. \*\*The collection\*\*.*?(?=^2\. \*\*Every source paper|\Z)")
+USAGE_VERSION_DOI = re.compile(r"(version DOI[^`]*?`)(10\.5281/zenodo\.\d+)(`)", re.S)
+
+
+def usage_text(text: str, path: Path, doi: str, version: str) -> str:
+    """Set the version DOI in the collection citation paragraph.
+
+    A paragraph that already cites a version DOI keeps its other clauses (the
+    concept DOI among them) and only the DOI changes; a placeholder paragraph is
+    rewritten. Source-paper citation stays intact.
+    """
+    match = USAGE_PARAGRAPH.search(text)
+    if not match:
         raise ReleaseError(f"USAGE.md lacks the numbered collection citation paragraph: {path}")
-    path.write_text(updated, encoding="utf-8")
+    paragraph = match.group(0)
+    if USAGE_VERSION_DOI.search(paragraph):
+        paragraph = USAGE_VERSION_DOI.sub(lambda found: found.group(1) + doi + found.group(3),
+                                          paragraph, count=1)
+    else:
+        paragraph = (
+            f"1. **The collection**, using {version}'s `CITATION.cff` and the version DOI of its\n"
+            f"   Zenodo record, `{doi}`.\n"
+        )
+    return text[:match.start()] + paragraph + text[match.end():]
 
 
 def emit_hub_manifest(context: ReleaseContext) -> Path | None:
@@ -600,27 +648,55 @@ def emit_hub_manifest(context: ReleaseContext) -> Path | None:
 
 
 def run_record_doi(context: ReleaseContext) -> dict:
-    """Record a minted DOI on all four domain surfaces and refresh the hub trace."""
+    """Record a minted DOI on the domain surfaces and refresh the hub trace.
+
+    Every new file content is computed first; files are written only when all
+    surfaces accept the DOI, so a refusal leaves the checkout unchanged. USAGE.md
+    is optional and reported as skipped when absent.
+    """
     args = context.args
     args.released = context.release_date()
     if not DOI_PATTERN.fullmatch(args.doi):
         raise ReleaseError("--doi must be a Zenodo DOI with a numeric record id")
-    collection = context.collection
-    before = {path: path.read_bytes() for path in citation_paths(context)}
-    update_collection_citation(collection / "CITATION.cff", args.doi, args.released, args.version)
-    update_root_citation(args.repo_root / "CITATION.cff", args.doi, args.released, args.version)
-    update_readme(args.repo_root / "README.md", args.doi, args.released, context.release_path)
-    update_usage(collection / "USAGE.md", args.doi, args.version)
-    context.state["doi"] = args.doi
-    context.state["released"] = args.released
-    concept = read_concept_doi(context, args.doi)
-    hub_manifest = emit_hub_manifest(context)
     merge_commit = args.commit or None
     if merge_commit and not COMMIT_PATTERN.fullmatch(merge_commit):
         raise ReleaseError("--commit must name the full merged DOI pull request commit")
-    changed = [path for path, content in before.items() if path.read_bytes() != content]
-    paths = citation_paths(context) + ([hub_manifest] if hub_manifest else [])
-    outputs = {"changed_files": changed, "hub_manifest": hub_manifest, "merge_commit": merge_commit}
+    collection = context.collection
+    label = release_label(context)
+    name = doi_label(args.version, label)
+    surfaces = {
+        collection / "CITATION.cff": lambda text, path: collection_citation_text(
+            text, path, args.doi, args.released, name),
+        args.repo_root / "CITATION.cff": lambda text, path: root_citation_text(
+            text, args.doi, args.released, name),
+        args.repo_root / "README.md": lambda text, path: readme_text(
+            text, path, args.doi, args.released, context.release_path),
+        collection / "USAGE.md": lambda text, path: usage_text(text, path, args.doi, args.version),
+    }
+    planned, skipped = {}, []
+    for path, update in surfaces.items():
+        if path.name == "USAGE.md" and not path.is_file():
+            skipped.append(path)
+            continue
+        if not path.is_file():
+            raise ReleaseError(f"record-doi surface is missing: {path}")
+        before = path.read_bytes()
+        after = update(before.decode("utf-8"), path).encode("utf-8")
+        planned[path] = (before, after)
+    for path, (before, after) in planned.items():
+        if after != before:
+            path.write_bytes(after)
+    for path in skipped:
+        print(f"skipped: {path} is absent")
+    context.state["doi"] = args.doi
+    context.state["released"] = args.released
+    context.state["release_label"] = label
+    concept = read_concept_doi(context, args.doi)
+    hub_manifest = emit_hub_manifest(context)
+    changed = [path for path, (before, after) in planned.items() if after != before]
+    paths = list(planned) + ([hub_manifest] if hub_manifest else [])
+    outputs = {"changed_files": changed, "skipped_files": skipped, "release_label": label,
+               "hub_manifest": hub_manifest, "merge_commit": merge_commit}
     if concept:
         outputs.update(concept_doi=concept["conceptdoi"], conceptrecid=concept["conceptrecid"])
         print(
@@ -655,34 +731,81 @@ def read_concept_doi(context: ReleaseContext, doi: str) -> dict | None:
     return {"conceptdoi": str(concept_doi), "conceptrecid": str(conceptrecid)}
 
 
-def citation_paths(context: ReleaseContext) -> list[Path]:
-    """List the four byte-stable DOI recording surfaces."""
-    return [
-        context.collection / "CITATION.cff", context.args.repo_root / "CITATION.cff",
-        context.args.repo_root / "README.md", context.collection / "USAGE.md",
-    ]
+def receipt_report_path(context: ReleaseContext) -> Path:
+    """Write the receipt in the tracked receipts directory of the cut when it exists."""
+    cut_id = context.state.get("cut_id") or discover_cut_id(context)
+    if cut_id:
+        receipts = context.args.repo_root / "receipts" / cut_id
+        if receipts.is_dir():
+            return receipts / "gate_report.json"
+    return context.collection / "gate_report.json"
+
+
+def untracked_in_release(context: ReleaseContext, allowed: set[Path]) -> list[str]:
+    """List untracked files under the release path, ignored ones included."""
+    result = context.command(
+        ["git", "ls-files", "--others", "-z", "--", context.release_path], context.args.repo_root,
+    )
+    if result.returncode:
+        raise ReleaseError("cannot list untracked files of the release path")
+    names = [name for name in result.stdout.split("\0") if name]
+    allowed_names = {path.resolve() for path in allowed}
+    return sorted(name for name in names
+                  if (context.args.repo_root / name).resolve() not in allowed_names)
+
+
+def offending(paths: list[str], limit: int = 5) -> str:
+    """Show the first offending paths of a refusal."""
+    shown = ", ".join(paths[:limit])
+    return shown + (f" and {len(paths) - limit} more" if len(paths) > limit else "")
 
 
 def run_receipt(context: ReleaseContext) -> dict:
-    """Regenerate and independently verify the strict receipt, then scan the surface."""
+    """Regenerate and independently verify the strict receipt, then scan the surface.
+
+    The report goes to receipts/<cut-id>/gate_report.json when that directory
+    exists, otherwise beside the collection. Untracked files in the release path
+    would enter the payload binding, so they are refused.
+    """
     collection = context.collection
-    gate = context.sibling("scripts/release_gate.py", [str(collection), "--strict", "--quiet"])
+    report = receipt_report_path(context)
+    allowed = {report} if collection in report.parents else set()
+    if context.args.candidate is None:
+        untracked = untracked_in_release(context, allowed)
+        if untracked:
+            raise ReleaseError(
+                f"untracked files in {context.release_path} would enter the receipt payload: "
+                f"{offending(untracked)}; remove them (a gate stage report is regenerated on demand), "
+                "then rerun receipt"
+            )
+    report_args = ["--report", str(report)]
+    gate = context.sibling("scripts/release_gate.py", [str(collection), "--strict", "--quiet", *report_args])
     require_success(gate, "strict receipt regeneration")
-    verify = context.sibling("scripts/release_gate.py", [str(collection), "--verify", "--quiet"])
+    verify = context.sibling("scripts/release_gate.py", [str(collection), "--verify", "--quiet", *report_args])
     surface = context.sibling("scripts/check_release_surface.py", [str(collection)])
     require_success(verify, "release receipt verification")
     require_success(surface, "release surface check")
-    report = collection / "gate_report.json"
-    return {"verified": True}, {"receipt": sha256(report)}
+    return {"verified": True, "report": report}, {"receipt": sha256(report)}
 
 
-def default_tag(domain: str, version: str) -> str:
-    """Use the domain tag convention v<N>.0.0."""
-    return f"{domain}-{version}.0.0"
+def default_tag(context: ReleaseContext) -> str:
+    """Name the tag <domain>-<release label>, for example metabolomics-v3.0.1."""
+    label = release_label(context)
+    recorded = context.state.get("release_label")
+    if recorded and recorded != label:
+        raise ReleaseError(
+            f"release label {label} differs from {recorded} recorded by record-doi; rerun record-doi"
+        )
+    return f"{context.args.domain}-{label}"
 
 
 def manifest_row(context: ReleaseContext) -> dict:
-    """Compute one complete published release row from state and checkout bytes."""
+    """Compute one complete published release row from state and the committed tree.
+
+    The digest is read from git objects at --commit. The release path in the
+    checkout must hold exactly those bytes, so the counts read from the
+    filesystem are the committed ones too.
+    """
     args = context.args
     doi = context.state.get("doi")
     if not doi:
@@ -700,15 +823,43 @@ def manifest_row(context: ReleaseContext) -> dict:
         raise ReleaseError("manifest requires --commit, the merged DOI pull request commit")
     if source_commit and not COMMIT_PATTERN.fullmatch(source_commit):
         raise ReleaseError("source_commit must be null or a full 40-character hexadecimal commit")
+    try:
+        drift = release_path_drift(args.repo_root, commit, context.release_path)
+        digest = git_tree_digest(args.repo_root, commit, context.release_path)
+    except ValueError as error:
+        raise ReleaseError(str(error)) from error
+    if drift:
+        raise ReleaseError(
+            f"{context.release_path} in the checkout differs from {commit} or holds untracked files: "
+            f"{offending(drift)}; check out {commit} and remove untracked files there, then rerun manifest"
+        )
     released = context.state.get("released") or context.release_date()
     return {
         "version": int(args.version[1:]), "path": context.release_path,
-        "tag": args.tag_name or default_tag(args.domain, args.version), "commit": commit,
+        "tag": args.tag_name or default_tag(context), "commit": commit,
         "source_commit": source_commit,
-        "tree_digest": compute_tree_digest(args.repo_root, context.release_path),
+        "tree_digest": digest,
         "version_doi": doi, "released": released,
         **checkout_counts(context.collection),
     }
+
+
+SUPERSEDED_FIELDS = ("tag", "commit", "tree_digest", "version_doi", "released")
+
+
+def replace_release(existing: dict, row: dict) -> dict:
+    """Move a major's row to a new release, keeping a trace of the values it replaces.
+
+    A different tag means a later patch of the same major: the replaced tag,
+    commit, digest, DOI and date join `superseded`. The same tag is a rerun and
+    keeps the trace unchanged.
+    """
+    superseded = list(existing.get("superseded") or [])
+    if existing.get("tag") and existing.get("tag") != row["tag"]:
+        if any(entry.get("tag") == row["tag"] for entry in superseded):
+            raise ReleaseError(f"tag {row['tag']} is already superseded in this row; refusing to move back")
+        superseded.append({field: existing.get(field) for field in SUPERSEDED_FIELDS})
+    return {**row, "superseded": superseded} if superseded else row
 
 
 def update_manifest(context: ReleaseContext, row: dict) -> Path:
@@ -732,7 +883,7 @@ def update_manifest(context: ReleaseContext, row: dict) -> Path:
     releases = domain.setdefault("releases", [])
     for index, existing in enumerate(releases):
         if int(existing["version"]) == row["version"]:
-            releases[index] = row
+            releases[index] = replace_release(existing, row)
             break
     else:
         releases.append(row)
@@ -777,7 +928,7 @@ def run_tag(context: ReleaseContext) -> dict:
         "outputs", {}).get("merge_commit")
     if not commit or not COMMIT_PATTERN.fullmatch(commit):
         raise ReleaseError("tag requires --commit or a full merge commit recorded by manifest")
-    tag_name = context.args.tag_name or default_tag(context.args.domain, context.args.version)
+    tag_name = context.args.tag_name or default_tag(context)
     context.owner(f"git tag {shlex.quote(tag_name)} {commit}")
     context.owner(f"git push origin {shlex.quote(tag_name)}")
     verified = None
