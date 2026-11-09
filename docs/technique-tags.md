@@ -49,3 +49,7 @@ A write on a released collection is a `release content:` change on the domain
 repository, not a tooling-only update. Maintainers review and commit the changed
 collection content and regenerate its receipt through the release process. The
 tagger does not commit, publish, or modify release records itself.
+
+The related `scripts/domain_content_gates.py` EDAM check is advisory for
+vocabulary resolution by default; pass `--edam-strict` after metabolomics
+v3.0.1 lands. See `docs/edam-remap.md`.

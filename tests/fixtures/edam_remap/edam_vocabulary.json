@@ -1,0 +1,26 @@
+{
+  "schema": "asb-edam-vocabulary/1",
+  "release": "1.25",
+  "release_inferred": true,
+  "release_inference": "maximum numeric Created in value",
+  "source_file": "EDAM.csv",
+  "source_sha256": "fixture",
+  "generated_at": "2026-11-09",
+  "license": "CC-BY-SA-4.0",
+  "terms": {
+    "topic_0001": {"id": "topic_0001", "branch": "topic", "label": "Old topic", "obsolete": true, "replaced_by": "topic_0002"},
+    "topic_0002": {"id": "topic_0002", "branch": "topic", "label": "Live topic", "obsolete": false, "replaced_by": null},
+    "topic_0003": {"id": "topic_0003", "branch": "topic", "label": "Cross replacement", "obsolete": true, "replaced_by": "operation_0002"},
+    "topic_0121": {"id": "topic_0121", "branch": "topic", "label": "Proteomics", "obsolete": false, "replaced_by": null},
+    "topic_3172": {"id": "topic_3172", "branch": "topic", "label": "Metabolomics", "obsolete": false, "replaced_by": null},
+    "topic_3520": {"id": "topic_3520", "branch": "topic", "label": "Proteomics experiment", "obsolete": false, "replaced_by": null},
+    "operation_0001": {"id": "operation_0001", "branch": "operation", "label": "Old operation", "obsolete": true, "replaced_by": "operation_0002"},
+    "operation_0002": {"id": "operation_0002", "branch": "operation", "label": "Live operation", "obsolete": false, "replaced_by": null},
+    "operation_0003": {"id": "operation_0003", "branch": "operation", "label": "No replacement", "obsolete": true, "replaced_by": null},
+    "operation_0100": {"id": "operation_0100", "branch": "operation", "label": "Valid operation", "obsolete": false, "replaced_by": null},
+    "operation_3646": {"id": "operation_3646", "branch": "operation", "label": "Peptide database search", "obsolete": false, "replaced_by": null},
+    "operation_0282": {"id": "operation_0282", "branch": "operation", "label": "Genetic mapping", "obsolete": false, "replaced_by": null},
+    "operation_3218": {"id": "operation_3218", "branch": "operation", "label": "Sequencing quality control", "obsolete": false, "replaced_by": null},
+    "data_0100": {"id": "data_0100", "branch": "data", "label": "Data identifier", "obsolete": false, "replaced_by": null}
+  }
+}

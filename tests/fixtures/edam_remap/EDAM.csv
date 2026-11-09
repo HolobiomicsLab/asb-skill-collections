@@ -1,0 +1,13 @@
+Class ID,Preferred Label,Synonyms,Definitions,Obsolete,CUI,Semantic Types,Parents,Citation,Created in,http://www.geneontology.org/formats/oboInOwl#replacedBy
+http://edamontology.org/topic_0001,Old topic,,,TRUE,,,,,1.0,http://edamontology.org/topic_0002
+http://edamontology.org/topic_0002,Live topic,,,FALSE,,,,,1.0,
+http://edamontology.org/topic_0003,Cross replacement,,,TRUE,,,,,1.0,http://edamontology.org/operation_0002
+http://edamontology.org/topic_0121,Proteomics,,,FALSE,,,,,1.0,
+http://edamontology.org/topic_3172,Metabolomics,,,FALSE,,,,,1.0,
+http://edamontology.org/topic_3520,Proteomics experiment,Mass spectrometry,,FALSE,,,,,1.25,
+http://edamontology.org/operation_0001,Old operation,,,TRUE,,,,,1.0,http://edamontology.org/operation_0002
+http://edamontology.org/operation_0002,Live operation,,,FALSE,,,,,1.0,
+http://edamontology.org/operation_0003,No replacement,,,TRUE,,,,,1.0,
+http://edamontology.org/operation_3646,Peptide database search,,,FALSE,,,,,1.0,
+http://edamontology.org/operation_0282,Genetic mapping,,,FALSE,,,,,1.0,
+http://edamontology.org/data_0100,Data identifier,,,FALSE,,,,,1.0,

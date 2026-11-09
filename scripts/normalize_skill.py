@@ -56,6 +56,13 @@ def valid_edam(iri) -> bool:
     return isinstance(iri, str) and iri.startswith(EDAM_PREFIX) and len(iri) > len(EDAM_PREFIX)
 
 
+def resolve_edam(iri, vocabulary):
+    """Resolve an IRI without changing the prefix behavior of valid_edam."""
+    from scripts.edam_vocabulary import resolve
+
+    return resolve(iri, vocabulary)
+
+
 def check_description(desc) -> list[str]:
     """Return violation strings for the description discipline (empty = valid).
 

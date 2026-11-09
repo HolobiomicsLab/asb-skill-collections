@@ -1,0 +1,14 @@
+[
+ {
+  "slug": "empty",
+  "edam_topics": []
+ },
+ {
+  "slug": "tool",
+  "edam_topics": [
+   "http://edamontology.org/topic_0001",
+   "http://edamontology.org/topic_9999"
+  ],
+  "other": "keep"
+ }
+]
