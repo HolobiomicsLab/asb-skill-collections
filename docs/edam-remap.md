@@ -114,6 +114,11 @@ while released v3 still carries its known defects. Add `--edam-strict` to the
 focused command or the full orchestrating command to fail on every non-valid
 resolution. `--edam-vocabulary` selects another pinned table.
 
+The reusable domain workflow `.github/workflows/domain-gates.yml` exposes the
+switch as the `edam_strict` input, false by default. The caller template sets it
+to true for new domains; a released domain enables it once its collection
+resolves cleanly, as metabolomics does from v3.0.1.
+
 `scripts/normalize_skill.py` keeps `valid_edam` as the prefix-only predicate
 used by `frontmatter_violations`. Its new `resolve_edam` delegates to the pinned
 resolver. Existing callers retain their behavior; contribution normalization

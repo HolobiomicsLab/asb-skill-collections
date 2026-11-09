@@ -28,18 +28,27 @@ def read_workflow(path: Path) -> dict:
 
 
 def test_reusable_workflow_declares_the_domain_contract() -> None:
-    """The reusable caller interface exposes only the four supported inputs."""
+    """The reusable caller interface exposes only the five supported inputs."""
     path = REPO / ".github" / "workflows" / "domain-gates.yml"
     document = read_workflow(path)
     trigger = document[workflow_key(document)]["workflow_call"]
-    assert set(trigger["inputs"]) == {"domain", "collection_path", "receipts_path", "strict"}
+    assert set(trigger["inputs"]) == {"domain", "collection_path", "receipts_path", "strict", "edam_strict"}
     assert trigger["inputs"]["strict"] == {
         "description": "Require a passing strict release gate.",
         "required": False,
         "default": True,
         "type": "boolean",
     }
+    assert trigger["inputs"]["edam_strict"] == {
+        "description": "Fail on EDAM identifiers that do not resolve to a valid term.",
+        "required": False,
+        "default": False,
+        "type": "boolean",
+    }
     job = document["jobs"]["content-gates"]
+    edam_step = next(step for step in job["steps"] if step["name"] == "Check EDAM IRIs")
+    assert edam_step["env"]["EDAM_STRICT"] == "${{ inputs.edam_strict }}"
+    assert "--edam-strict" in edam_step["run"]
     checkouts = [step for step in job["steps"] if step.get("uses", "").startswith("actions/checkout@")]
     assert checkouts[0]["with"] == {"path": "content"}
     assert checkouts[1]["with"] == {
