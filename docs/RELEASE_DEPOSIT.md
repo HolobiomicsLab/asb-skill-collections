@@ -27,9 +27,9 @@ python scripts/release_domain.py <stage> --domain <slug> --version v<N> \
 | `land` | Dry-runs `land_candidate.py`, then lands only with `--execute`; requires `--candidate`, `--receipts` and `--title`. Records the branch and commit. |
 | `deposit-plan` | Prepares the archive and metadata offline with `--record-id` and repeatable `--extra-file`; records their digests. `--first-release` instead prepares a new record with no record id and refuses an existing domain lineage. |
 | `deposit-draft` | Reuses a pending next-version draft or creates the first one, replaces every file and applies the inherited metadata fix. With `--first-release`, it finds a matching unpublished draft by title and version or creates a new record. Refuses an archive digest different from the plan. `--sandbox` selects the sandbox. |
-| `record-doi` | Requires `--doi`; updates collection and root CITATION.cff, the README release row and the USAGE citation. `.zenodo.json` is unchanged. `--hub-root` also invokes the hub's release-manifest emitter. |
-| `receipt` | Regenerates the strict receipt, verifies it and repeats the surface check. |
-| `manifest` | Requires the merged DOI commit in `--commit`; upserts `collections.yaml`, regenerates the catalogue and validates the checkout. `--regen` also rebuilds the search index. A new domain requires `--concept-doi`. |
+| `record-doi` | Requires `--doi`; updates collection and root CITATION.cff, the README release row and, when present, the USAGE citation. All contents are computed before any write, so a refusal (for example a README without the release row) changes nothing. `.zenodo.json` is unchanged. `--hub-root` also invokes the hub's release-manifest emitter. |
+| `receipt` | Regenerates the strict receipt, verifies it and repeats the surface check. The report is `receipts/<cut-id>/gate_report.json` when that directory exists, otherwise `gate_report.json` in the collection. Refuses untracked files in the release path, which would enter the payload binding. |
+| `manifest` | Requires the merged DOI commit in `--commit`; reads the tree digest from git objects at that commit and refuses when the release path in the checkout differs from it or holds untracked files. Upserts `collections.yaml`, regenerates the catalogue and validates the checkout. `--regen` also rebuilds the search index. A new domain requires `--concept-doi`. |
 | `tag` | Prints the exact tag and push commands for the DOI merge commit. `--verify` checks the remote tag after the owner pushes it. |
 | `status` | Prints each recorded stage, its inputs, outputs and digests, and the next unfinished stage. |
 
@@ -46,6 +46,24 @@ Exit status 0 means the requested stage is done, 1 means refusal with a reason,
 and 2 means an owner's act is next. Merges, the Zenodo publish click, tag
 creation and push, and repository visibility remain the owner's. They appear as
 `OWNER:` commands or prompts and are never executed by the orchestrator.
+
+### Release label and patch releases
+
+The release label is the collection's `.zenodo.json` `version`, written
+`v<major>.<minor>.<patch>` with the major of `--version` (`v<N>.0.0` when the
+field is absent). The default tag is `<domain>-<label>`; `--tag-name` overrides
+it. A `.0.0` label names its DOI by the major (`Zenodo version DOI of v3`). A
+later label, for example `v3.0.1`, is a new Zenodo version of the same
+collection path:
+
+- both CITATION files gain an identifier `Zenodo version DOI of v3.0.1` and keep
+  the earlier DOIs of the major; the collection `doi` field moves to the new DOI;
+- the USAGE paragraph changes only its version DOI and keeps its other clauses;
+- the README row's Released and DOI cells move to the patch;
+- the registry row of the major takes the new tag, commit, digest, DOI, date and
+  counts, and lists the values it replaces under `superseded`.
+
+The earlier tag stays where it is; tags never move.
 
 ## Order of a release
 
