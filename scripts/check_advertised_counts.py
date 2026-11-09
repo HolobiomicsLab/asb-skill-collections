@@ -4,18 +4,21 @@ The checker discovers marketplace collection and pack sources, count
 metadata, plugin descriptions, router frontmatter and release-facing Markdown.
 It deliberately derives totals from shipped records rather than from another
 advertised index value. Manifest releases supply external censuses. Root-document
-claims follow a release named on their line or nearest heading; otherwise they
-follow the unit selected by the README badges, falling back to the marketplace.
+claims follow a release named in their own sentence, then on their line, then in
+the nearest heading (a sibling ``collections/<slug>/v<N>`` tree named there is
+censused on the spot); otherwise they follow the unit selected by the README
+badges, falling back to the marketplace.
 """
 
 from __future__ import annotations
 
 import argparse
+import functools
 import json
 import pathlib
 import re
 from collections import Counter
-from collections.abc import Iterable
+from collections.abc import Callable, Iterable
 from dataclasses import dataclass
 from urllib.parse import unquote
 
@@ -71,6 +74,7 @@ PROSE_PATTERNS = {
         ),
     ),
 }
+SENTENCE_BREAK = re.compile(r"(?<=[.;!?])\s+")
 NON_TOTAL_CONTEXT = re.compile(
     r"\b(?:dropped|excluded|held out|duplicate(?:d|s)?|technique-agnostic|checked)\b",
     re.IGNORECASE,
@@ -388,8 +392,13 @@ def _prose_claims(
     unit: Unit,
     start_line: int = 1,
     include_entries: bool = True,
+    unit_at: Callable[[int], Unit] | None = None,
 ) -> list[CountClaim]:
-    """Extract total-like numeric noun phrases from prose."""
+    """Extract total-like numeric noun phrases from prose.
+
+    ``unit_at`` resolves the unit of the claim starting at a text offset; without
+    it every claim belongs to ``unit``.
+    """
     claims: list[CountClaim] = []
     for kind, patterns in PROSE_PATTERNS.items():
         for pattern in patterns:
@@ -401,7 +410,8 @@ def _prose_claims(
                     continue
                 line = start_line + text.count("\n", 0, match.start())
                 value = int(match.group("count").replace(",", ""))
-                claims.append(_claim(repo, site, line, unit, kind, value))
+                claim_unit = unit_at(match.start()) if unit_at else unit
+                claims.append(_claim(repo, site, line, claim_unit, kind, value))
     if include_entries:
         claims.extend(_entry_claims(repo, site, text, unit, start_line))
     return claims
@@ -594,20 +604,66 @@ def _release_for_context(
     return next(iter(unique.values())) if len(unique) == 1 else None
 
 
+def _sibling_collection_unit(
+    repo: pathlib.Path, context: str, units: list[Unit]
+) -> Unit | None:
+    """Census a collection version named in ``context`` that no unit covers.
+
+    A root document may describe an earlier or later ``collections/<slug>/v<N>``
+    tree that the marketplace does not list (an unreleased legacy collection kept
+    beside the candidate, for instance); its counts are checked against that tree
+    rather than against the advertised unit.
+    """
+    known = {unit.root for unit in units}
+    slugs = sorted({unit.slug for unit in units if not unit.external})
+    versions = sorted(
+        {
+            match.group("version")
+            for match in re.finditer(
+                r"(?<![\w.])v(?P<version>\d+)(?![\w.])", context, re.IGNORECASE
+            )
+        }
+    )
+    found = [
+        root
+        for slug in slugs
+        for version in versions
+        if (root := repo / "collections" / slug / f"v{version}") not in known
+        and (root / "collection.yaml").is_file()
+    ]
+    return _unit(found[0], repo) if len(found) == 1 else None
+
+
+def _sentence_at(text: str, offset: int) -> str:
+    """Return the sentence of ``text`` that contains ``offset``."""
+    start = 0
+    for boundary in SENTENCE_BREAK.finditer(text):
+        if boundary.end() > offset:
+            return text[start : boundary.start()]
+        start = boundary.end()
+    return text[start:]
+
+
 def _root_doc_claim_unit(
+    repo: pathlib.Path,
     text: str,
     line: int,
     default: Unit,
     units: list[Unit],
+    offset: int | None = None,
 ) -> Unit:
-    """Resolve one claim from its line, then its nearest Markdown heading."""
+    """Resolve one claim from its sentence, its line, then its nearest heading.
+
+    A line that names several releases ("Collection v1 (166 skills) ... lists v2
+    only") binds each claim to the release named in the claim's own sentence when
+    ``offset`` (the claim's column on the line) is given. Each context is tried
+    against the known units first, then against a sibling collection tree it
+    names.
+    """
     lines = text.splitlines()
     claim_line = lines[line - 1] if 0 < line <= len(lines) else ""
     local_units = [unit for unit in units if not unit.external]
     manifest_units = [unit for unit in units if unit.external]
-    selected = _release_for_context(claim_line, local_units, manifest_units)
-    if selected is not None:
-        return selected
     heading = next(
         (
             candidate
@@ -616,12 +672,16 @@ def _root_doc_claim_unit(
         ),
         "",
     )
-    return (
-        _release_for_context(
-            f"{heading}\n{claim_line}", local_units, manifest_units
-        )
-        or default
-    )
+    contexts = [claim_line, f"{heading}\n{claim_line}"]
+    if offset is not None:
+        contexts.insert(0, _sentence_at(claim_line, offset))
+    for context in contexts:
+        selected = _release_for_context(
+            context, local_units, manifest_units
+        ) or _sibling_collection_unit(repo, context, units)
+        if selected is not None:
+            return selected
+    return default
 
 
 def _markdown_claims(
@@ -652,15 +712,18 @@ def _markdown_claims(
                     for pattern in patterns
                 ):
                     continue
-                claim_unit = _root_doc_claim_unit(raw, number, unit, units)
+                line_unit = _root_doc_claim_unit(repo, raw, number, unit, units)
                 claims.extend(
                     _prose_claims(
                         repo,
                         site,
                         line,
-                        claim_unit,
+                        line_unit,
                         number,
                         include_entries=False,
+                        unit_at=functools.partial(
+                            _root_doc_claim_unit, repo, raw, number, line_unit, units
+                        ),
                     )
                 )
             fallback = _root_doc_unit(
