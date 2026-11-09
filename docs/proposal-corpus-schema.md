@@ -58,7 +58,7 @@ existing community wave invalid.
 |---|---|---|---|
 | `type` | string | yes | Access classification, such as `gold-oa`, `repo-oa`, or `restricted`. |
 | `license` | string | yes | Article or resource reuse licence, or its explicit restriction. |
-| `is_oa` | boolean | yes | Whether open access was established; this is not a reuse-tier decision. |
+| `is_oa` | boolean or null | yes | Whether open access was established; null means the resolution failed or was not attempted, not that the paper is closed; never a reuse-tier decision. |
 | `provenance` | string | no | Publication stage, such as `preprint`. |
 | `oa_status` | string | no | Resolver-specific open-access classification. |
 | `verified_via` | string | yes | Method or resolver that supplied the evidence. |

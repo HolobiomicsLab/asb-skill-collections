@@ -184,7 +184,10 @@ def _validate_access(access: Any, path: str) -> list[Violation]:
     violations = _check_keys(access, ACCESS_KEYS, path)
     for key in ("type", "license", "verified_via"):
         violations.extend(_check_string(access, key, path))
-    violations.extend(_check_type(access, "is_oa", bool, path, True))
+    if "is_oa" not in access:
+        violations.append(Violation(path, "missing required field 'is_oa'"))
+    elif access["is_oa"] is not None:
+        violations.extend(_check_type(access, "is_oa", bool, path, True))
     if "verified_on" in access:
         violations.extend(_check_date(access["verified_on"], f"{path}.verified_on"))
     for key in ("provenance", "oa_status", "code_license"):

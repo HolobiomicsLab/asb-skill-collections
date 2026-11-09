@@ -422,3 +422,13 @@ def test_null_repo_url_is_refused_on_a_held_row() -> None:
     row = valid_row(status="hold", repo_url=None, source_issue=7)
     paths = [violation.path for violation in pc.validate({**valid_document(), "papers": [row]})]
     assert "papers[0].repo_url" in paths
+
+
+def test_access_is_oa_may_be_null_when_unresolved() -> None:
+    row = valid_row(status="candidate", source_issue=None, repo_url=None,
+                    source_watch="2026-11-09")
+    row["access"] = {**row["access"], "is_oa": None, "verified_via": "unresolved"}
+    assert pc.validate({**valid_document(), "papers": [row]}) == []
+    row["access"] = {**row["access"], "is_oa": "yes"}
+    paths = [v.path for v in pc.validate({**valid_document(), "papers": [row]})]
+    assert "papers[0].access.is_oa" in paths
