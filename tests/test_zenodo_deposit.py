@@ -21,6 +21,7 @@ TOKEN = "tok-prod-0123456789"
 SANDBOX_TOKEN = "tok-sandbox-9876543210"
 RECORD = "555"
 DRAFT_ID = 777
+CONCEPT_RECORD_ID = 444
 DATE = "2026-11-01"
 
 ZENODO_JSON = {
@@ -97,6 +98,14 @@ class FakeZenodo:
         dep = f"{self.base}/api/deposit/depositions"
         if method == "POST" and url == f"{dep}/{RECORD}/actions/newversion":
             return 201, {"id": int(RECORD), "links": {"latest_draft": f"{dep}/{DRAFT_ID}"}}
+        if method == "POST" and url == dep:
+            return 201, {
+                "id": DRAFT_ID, "conceptrecid": str(CONCEPT_RECORD_ID),
+                "metadata": {"language": "inherited-must-not-be-sent"},
+                "links": {"bucket": f"{self.base}/api/files/bkt",
+                          "html": f"{self.base}/deposit/{DRAFT_ID}",
+                          "latest_draft": f"{dep}/{DRAFT_ID}"},
+            }
         if method == "GET" and url == f"{dep}/{DRAFT_ID}":
             return 200, {
                 "id": DRAFT_ID,
@@ -128,6 +137,64 @@ def run_draft(repo, monkeypatch, capsys, *extra, fake=None, sandbox=False):
     code = zenodo_deposit.main(argv)
     out = capsys.readouterr()
     return code, out, fake
+
+
+def run_create(repo, monkeypatch, capsys, *extra, fake=None):
+    fake = fake or FakeZenodo(zenodo_deposit.ZENODO_URL)
+    monkeypatch.setattr(zenodo_deposit, "_request", fake)
+    code = zenodo_deposit.main([
+        "create", "dom", "v1", "--repo-root", str(repo), "--out-dir", str(repo / "out"),
+        "--publication-date", DATE, *extra,
+    ])
+    return code, capsys.readouterr(), fake
+
+
+def test_create_call_sequence_payload_and_concept_record(repo, monkeypatch, capsys):
+    first_release = {key: value for key, value in ZENODO_JSON.items() if key != "related_identifiers"}
+    (repo / "collections/dom/v1/.zenodo.json").write_text(json.dumps(first_release))
+    code, out, fake = run_create(repo, monkeypatch, capsys)
+    dep = "/api/deposit/depositions"
+    assert code == 0
+    assert fake.steps() == [
+        ("POST", dep),
+        ("PUT", "/api/files/bkt/dom-v1.zip"),
+        ("PUT", f"{dep}/{DRAFT_ID}"),
+    ]
+    assert fake.calls[0][3] == {}
+    metadata = fake.calls[-1][3]["metadata"]
+    assert metadata["communities"] == [{"identifier": "asb_skill_collections"}]
+    assert metadata["title"] == first_release["title"]
+    assert "language" not in metadata
+    assert not any("newversion" in url or "publish" in url for _, url in fake.steps())
+    assert f"draft {DRAFT_ID} created as a new record, not published" in out.out
+    assert f"conceptrecid {CONCEPT_RECORD_ID}" in out.out
+    assert "uploaded dom-v1.zip sha256 " in out.out
+
+
+def test_create_preserves_template_community(repo, monkeypatch, capsys):
+    template = {**ZENODO_JSON, "communities": [{"identifier": "another_community"}]}
+    (repo / "collections/dom/v1/.zenodo.json").write_text(json.dumps(template))
+    code, _, fake = run_create(repo, monkeypatch, capsys)
+    assert code == 0
+    assert fake.calls[-1][3]["metadata"]["communities"] == [{"identifier": "another_community"}]
+
+
+def test_create_refuses_record_id_before_any_request(repo, monkeypatch, capsys):
+    code, out, fake = run_create(repo, monkeypatch, capsys, "--record-id", RECORD)
+    assert code == 1
+    assert fake.calls == []
+    assert "--record-id is not valid for a first release" in out.err
+
+
+def test_create_refuses_new_version_relation_before_any_request(repo, monkeypatch, capsys):
+    template = {**ZENODO_JSON, "related_identifiers": [
+        {"relation": "isNewVersionOf", "identifier": f"10.5281/zenodo.{RECORD}", "scheme": "doi"},
+    ]}
+    (repo / "collections/dom/v1/.zenodo.json").write_text(json.dumps(template))
+    code, out, fake = run_create(repo, monkeypatch, capsys)
+    assert code == 1
+    assert fake.calls == []
+    assert "first release cannot carry an isNewVersionOf relation" in out.err
 
 
 def entries(zip_path):

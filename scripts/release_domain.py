@@ -218,8 +218,8 @@ def stage_inputs(context: ReleaseContext) -> dict:
     relevant = {
         "gate": {"candidate"},
         "land": {"candidate", "title", "plugin_name", "author_name", "author_email"},
-        "deposit-plan": {"record_id", "publication_date", "sandbox", "extra_file"},
-        "deposit-draft": {"record_id", "publication_date", "sandbox", "extra_file"},
+        "deposit-plan": {"record_id", "publication_date", "sandbox", "extra_file", "first_release"},
+        "deposit-draft": {"record_id", "publication_date", "sandbox", "extra_file", "first_release"},
         "record-doi": {"doi", "released"}, "receipt": {"candidate"},
         "manifest": {"commit", "source_commit", "tag_name", "released", "regen"},
         "tag": {"commit", "tag_name", "verify"},
@@ -331,6 +331,7 @@ def deposit_options(context: ReleaseContext, out_dir: Path) -> argparse.Namespac
         repo_root=args.repo_root, tooling_root=args.tooling_root, domain=args.domain,
         version=args.version, extra_file=args.extra_file, sandbox=args.sandbox,
         record_id=args.record_id, publication_date=args.publication_date, out_dir=out_dir,
+        first_release=args.first_release, community=zenodo_deposit.DEFAULT_COMMUNITY,
     )
 
 
@@ -338,6 +339,13 @@ def prepare_deposit(context: ReleaseContext, out_dir: Path):
     """Prepare and validate the archive and metadata through the existing deposit tool."""
     prepared = zenodo_deposit._prepare(deposit_options(context, out_dir), out_dir)
     _, _, _, _, problems, _, refusals, _, _ = prepared
+    if context.args.first_release:
+        registry = context.args.tooling_root / "collections.yaml"
+        document = yaml.safe_load(registry.read_text(encoding="utf-8")) if registry.is_file() else {}
+        domain = (document.get("domains") or {}).get(context.args.domain, {})
+        if domain.get("concept_doi"):
+            refusals = [*refusals,
+                        "domain already has a concept DOI; use the normal new-version deposit path"]
     if problems or refusals:
         raise ReleaseError("deposit preparation refused: " + "; ".join(problems + refusals))
     return prepared
@@ -350,7 +358,8 @@ def run_deposit_plan(context: ReleaseContext) -> dict:
         host, record, payload, dropped, _, archive, _, _, extras = prepared
         print(zenodo_deposit._describe(*prepared))
         outputs = {
-            "host": host, "record_id": record, "archive": archive.path.name,
+            "host": host, "record_id": record or None, "first_release": context.args.first_release,
+            "archive": archive.path.name,
             "archive_size": archive.size, "archive_entries": archive.entries,
             "metadata": payload, "dropped_lineage_relations": dropped,
             "extra_files": [{"name": extra.path.name, "sha256": extra.sha256, "size": extra.size}
@@ -386,23 +395,33 @@ def find_pending_draft(context: ReleaseContext, base: str, record: str, token: s
     return zenodo_deposit._call("pending draft fetch", "GET", draft_url, token)
 
 
+def find_pending_first_release(context: ReleaseContext, prepared, base: str, token: str) -> dict | None:
+    """Find one unpublished new-record draft with the release's exact title and version."""
+    metadata = prepared[2]["metadata"]
+    title, version = metadata.get("title"), metadata.get("version")
+    payload = zenodo_deposit._call(
+        "drafts list", "GET", f"{base}?{urllib.parse.urlencode({'status': 'draft'})}", token,
+    )
+    candidates = [draft for draft in version_items(payload)
+                  if draft.get("metadata", {}).get("title") == title
+                  and draft.get("metadata", {}).get("version") == version]
+    if len(candidates) > 1:
+        raise ReleaseError("multiple pending first-release drafts match this title and version; owner must select one")
+    if not candidates:
+        return None
+    draft_url = candidates[0].get("links", {}).get("self") or f"{base}/{candidates[0]['id']}"
+    return zenodo_deposit._call("pending draft fetch", "GET", draft_url, token)
+
+
 def upload_draft(context: ReleaseContext, prepared, draft: dict, token: str, base: str) -> None:
-    """Replace all stale files, then apply metadata over the draft's inherited values."""
+    """Replace stale files and apply metadata, inheriting only on the new-version path."""
     _, _, template, _, _, archive, _, _, extras = prepared
     for stale in draft.get("files") or []:
         zenodo_deposit._call("stale file delete", "DELETE", f"{base}/{draft['id']}/files/{stale['id']}", token)
-    bucket = draft["links"]["bucket"]
-    archive_name = urllib.parse.quote(archive.path.name)
-    zenodo_deposit._call("archive upload", "PUT", f"{bucket}/{archive_name}", token, archive.path)
-    for extra in extras:
-        name = urllib.parse.quote(extra.path.name)
-        zenodo_deposit._call("extra file upload", "PUT", f"{bucket}/{name}", token, extra.path)
-    payload, kept, undated = zenodo_deposit.inherit_metadata(draft.get("metadata"), template)
-    zenodo_deposit._call("metadata update", "PUT", f"{base}/{draft['id']}", token, payload)
-    if kept:
-        print("inherited metadata not in the template, kept: " + ", ".join(kept))
-    if undated:
-        print(f"inherited dates entry without start or end dropped: {undated}")
+    zenodo_deposit.upload_files(draft, archive, extras, token)
+    zenodo_deposit.update_metadata(
+        draft, template, token, base, inherited=not context.args.first_release,
+    )
 
 
 def run_deposit_draft(context: ReleaseContext) -> dict:
@@ -416,22 +435,34 @@ def run_deposit_draft(context: ReleaseContext) -> dict:
         token = zenodo_deposit._token(context.args.sandbox)
         base = f"{prepared[0]}/api/deposit/depositions"
         record = prepared[1]
-        if record != plan["outputs"]["record_id"] or prepared[0] != plan["outputs"]["host"]:
-            raise ReleaseError("record id or host differs from deposit-plan; rerun deposit-plan --force")
-        draft = find_pending_draft(context, base, record, token)
+        if ((record or None) != plan["outputs"]["record_id"] or prepared[0] != plan["outputs"]["host"]
+                or context.args.first_release != plan["outputs"].get("first_release", False)):
+            raise ReleaseError("record id, host or first-release mode differs from deposit-plan; rerun deposit-plan --force")
+        draft = (find_pending_first_release(context, prepared, base, token)
+                 if context.args.first_release else find_pending_draft(context, base, record, token))
         reused = draft is not None
         if draft is None:
-            created = zenodo_deposit._call(
-                "newversion", "POST", f"{base}/{record}/actions/newversion", token,
-            )
-            draft = zenodo_deposit._call("draft fetch", "GET", created["links"]["latest_draft"], token)
+            if context.args.first_release:
+                draft = zenodo_deposit.create_record(prepared, token)
+            else:
+                created = zenodo_deposit._call(
+                    "newversion", "POST", f"{base}/{record}/actions/newversion", token,
+                )
+                draft = zenodo_deposit._call("draft fetch", "GET", created["links"]["latest_draft"], token)
         upload_draft(context, prepared, draft, token, base)
     url = draft["links"].get("html") or f"{prepared[0]}/deposit/{draft['id']}"
     print(f"draft {draft['id']} {'reused' if reused else 'created'}, not published: {url}")
     print(f"uploaded {archive.path.name} sha256 {archive.sha256}")
-    context.owner(f"publish the reviewed Zenodo draft at {url}, then run record-doi --doi <version DOI>")
-    raise WaitingForOwner("draft ready", {"draft_url": url, "draft_id": str(draft["id"]), "reused": reused},
-                          {"archive_sha256": archive.sha256})
+    outputs = {"draft_url": url, "draft_id": str(draft["id"]), "reused": reused}
+    if context.args.first_release:
+        context.owner(
+            f"publish the reviewed Zenodo draft at {url}; publishing mints both the version DOI and the concept DOI"
+        )
+        context.owner("run record-doi --doi <version DOI>, then manifest --concept-doi <concept DOI>")
+        outputs.update(conceptrecid=str(draft["conceptrecid"]), first_release=True)
+    else:
+        context.owner(f"publish the reviewed Zenodo draft at {url}, then run record-doi --doi <version DOI>")
+    raise WaitingForOwner("draft ready", outputs, {"archive_sha256": archive.sha256})
 
 
 def update_collection_citation(path: Path, doi: str, released: str, version: str) -> None:
@@ -798,6 +829,8 @@ def parser() -> argparse.ArgumentParser:
         command.add_argument("--receipts", type=Path)
         command.add_argument("--extra-file", action="append", default=[])
         command.add_argument("--record-id", default=None)
+        command.add_argument("--first-release", action="store_true",
+                             help="create a new record and domain lineage, without newversion")
         command.add_argument("--publication-date", default=None)
         command.add_argument("--sandbox", action="store_true")
         command.add_argument("--doi", default="")

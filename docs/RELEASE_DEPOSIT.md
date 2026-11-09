@@ -1,7 +1,8 @@
 # Zenodo deposit for a collection release
 
-Maintainer procedure. It prepares a new version of an existing Zenodo record up
-to a draft. Publishing is a manual step in the Zenodo web interface.
+Maintainer procedure. It prepares a new version of an existing record or a new
+first-release record up to a draft. Publishing is a manual step in the Zenodo
+web interface.
 
 Tool: `scripts/zenodo_deposit.py` (standard library and PyYAML, a dependency
 of the package). Tests: `tests/test_zenodo_deposit.py`,
@@ -24,8 +25,8 @@ python scripts/release_domain.py <stage> --domain <slug> --version v<N> \
 |---|---|
 | `gate` | Runs the strict release gate and surface check; records the verdict and receipt digest. `--candidate` selects a pre-landing tree. |
 | `land` | Dry-runs `land_candidate.py`, then lands only with `--execute`; requires `--candidate`, `--receipts` and `--title`. Records the branch and commit. |
-| `deposit-plan` | Prepares the archive and metadata offline with `--record-id` and repeatable `--extra-file`; records their digests. |
-| `deposit-draft` | Reuses a pending next-version draft or creates the first one, replaces every file and applies the inherited metadata fix. Refuses an archive digest different from the plan. `--sandbox` selects the sandbox. |
+| `deposit-plan` | Prepares the archive and metadata offline with `--record-id` and repeatable `--extra-file`; records their digests. `--first-release` instead prepares a new record with no record id and refuses an existing domain lineage. |
+| `deposit-draft` | Reuses a pending next-version draft or creates the first one, replaces every file and applies the inherited metadata fix. With `--first-release`, it finds a matching unpublished draft by title and version or creates a new record. Refuses an archive digest different from the plan. `--sandbox` selects the sandbox. |
 | `record-doi` | Requires `--doi`; updates collection and root CITATION.cff, the README release row and the USAGE citation. `.zenodo.json` is unchanged. `--hub-root` also invokes the hub's release-manifest emitter. |
 | `receipt` | Regenerates the strict receipt, verifies it and repeats the surface check. |
 | `manifest` | Requires the merged DOI commit in `--commit`; upserts `collections.yaml`, regenerates the catalogue and validates the checkout. `--regen` also rebuilds the search index. A new domain requires `--concept-doi`. |
@@ -140,6 +141,53 @@ sha256 must equal the sha256 from step 1.
    commit. With `ZENODO_UPLOAD` unset, `release.yml` runs the tests and the
    strict release gate and makes no Zenodo request.
 
+### First release of a domain
+
+A first release creates the domain's Zenodo lineage. There is no previous
+record, so do not pass `--record-id`. Use the same staged release procedure
+with `--first-release` on the two deposit stages:
+
+```bash
+python scripts/release_domain.py deposit-plan --domain <domain> --version v1 \
+  --repo-root <domain checkout> --tooling-root <this checkout> \
+  --state <path to release_state.json> --first-release
+python scripts/release_domain.py deposit-draft --domain <domain> --version v1 \
+  --repo-root <domain checkout> --tooling-root <this checkout> \
+  --state <path to release_state.json> --first-release
+```
+
+The plan refuses a registry entry that already has a concept DOI. The draft
+stage reuses an unpublished deposition whose title and version match the
+template, or creates a new deposition. The template receives the
+`asb_skill_collections` community when it has none; an existing communities
+value is preserved. An `isNewVersionOf` relation is refused.
+
+The direct equivalent of the second command is:
+
+```bash
+python scripts/zenodo_deposit.py create <domain> v1 --repo-root <domain checkout> \
+  --tooling-root <this checkout>
+```
+
+`create` uploads the archive and extras, then sends only the template metadata,
+without inherited values. It prints the draft URL and `conceptrecid`. Neither
+command publishes.
+
+The owner reviews and publishes the draft in Zenodo. Publishing mints both the
+version DOI and the domain's concept DOI. Read them from the published record,
+then record the version DOI and, after the usual receipt and DOI pull request
+merge, the concept DOI:
+
+```bash
+python scripts/release_domain.py record-doi ... --doi <version DOI>
+python scripts/release_domain.py receipt ...
+python scripts/release_domain.py manifest ... --commit <merged DOI commit> \
+  --concept-doi <concept DOI>
+```
+
+Finish with the usual receipt, merged DOI change, tag and repository visibility
+gates. Later versions use the normal `draft` path and keep the same concept DOI.
+
 ## What `draft` sends
 
 | Step | Request |
@@ -238,6 +286,7 @@ under `metadata`; the tool wraps it.
 | `isVersionOf` | not in the API vocabulary. The tool reads the record id from it and does not send it. Zenodo links the versions of a record itself |
 | Inherited metadata | the draft starts from the previous record. Keys it carries that the template lacks, such as `communities` and `language`, are kept and listed in the output. The template wins on every key it has. `doi` and `prereserve_doi` are never sent; an inherited `dates` entry without `start` or `end` (the web interface can store one) is dropped and counted in the output, since the API rejects it with 400 "Invalid date provided". `plan` makes no request and cannot show inherited keys |
 | `publication_date` | set to today (`--publication-date` overrides) when the template has none, so the draft does not keep the previous version's date |
+| First-release community | `create` and `deposit-draft --first-release` add `asb_skill_collections` only when the template has no communities value. No metadata is inherited, and an `isNewVersionOf` relation stops the command |
 | `creators[].name` | the API documents the form `Family name, Given names`. Entity names such as a community or a lab are sent as written, not in that form |
 | `creators` | must start with `scripts/release_creators.yaml`, unchanged and in order: a person entry as `Family, Given` with its bare ORCID iD and affiliation when listed, an entity entry by its name. Entries after the list are accepted only as persons with a bare ORCID iD, each iD once: the co-authors that `scripts/select_release_coauthors.py --apply` appends (see `docs/CURATION_CALL.md`). Any other difference is refused by `plan` and `draft` |
 
