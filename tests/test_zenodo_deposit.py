@@ -84,11 +84,13 @@ def tokens(monkeypatch):
 class FakeZenodo:
     """Records each request and answers like the deposit API, with overrides per call."""
 
-    def __init__(self, base, fail=None, inherited=None):
+    def __init__(self, base, fail=None, inherited=None, checksums=True, stored_override=None):
         self.base = base
         self.calls = []
         self.fail = fail or {}
         self.inherited = inherited or {}
+        self.checksums = checksums
+        self.stored_override = stored_override or {}
 
     def __call__(self, method, url, token, body=None):
         self.calls.append((method, url, token, body))
@@ -117,7 +119,12 @@ class FakeZenodo:
         if method == "DELETE" and "/files/" in url:
             return 204, None
         if method == "PUT" and url.startswith(f"{self.base}/api/files/bkt/"):
-            return 201, {"key": url.rsplit("/", 1)[1]}
+            stored = {"key": url.rsplit("/", 1)[1]}
+            if self.checksums and isinstance(body, Path):
+                data = body.read_bytes()
+                stored.update(size=len(data), checksum="md5:" + hashlib.md5(data).hexdigest())
+                stored.update(self.stored_override)
+            return 201, stored
         if method == "PUT" and url == f"{dep}/{DRAFT_ID}":
             return 200, {"id": DRAFT_ID}
         raise AssertionError(f"unexpected request {method} {url}")
@@ -466,6 +473,32 @@ def test_other_errors_carry_no_token_hint(repo, monkeypatch, capsys):
     code, out, fake = run_draft(repo, monkeypatch, capsys, fake=fake)
     assert code == 1
     assert "413" in out.err and "deposit:write" not in out.err
+
+
+def test_upload_checks_the_stored_md5_and_size(repo, monkeypatch, capsys):
+    code, out, fake = run_draft(repo, monkeypatch, capsys)
+    assert code == 0
+    assert "dom-v1.zip stored copy verified (md5 and size)" in out.out
+
+
+@pytest.mark.parametrize("override, words", [
+    ({"checksum": "md5:" + "0" * 32}, "local md5 is"),
+    ({"size": 1}, "Zenodo stored 1 bytes"),
+])
+def test_a_stored_copy_that_differs_stops_before_the_metadata(repo, monkeypatch, capsys, override, words):
+    base = zenodo_deposit.ZENODO_URL
+    fake = FakeZenodo(base, stored_override=override)
+    code, out, fake = run_draft(repo, monkeypatch, capsys, fake=fake)
+    assert code == 1
+    assert words in out.err
+    assert fake.steps()[-1] == ("PUT", "/api/files/bkt/dom-v1.zip")
+
+
+def test_a_response_without_md5_is_reported_not_fatal(repo, monkeypatch, capsys):
+    fake = FakeZenodo(zenodo_deposit.ZENODO_URL, checksums=False)
+    code, out, fake = run_draft(repo, monkeypatch, capsys, fake=fake)
+    assert code == 0
+    assert "no md5 returned for dom-v1.zip" in out.out
 
 
 def test_failed_file_delete_stops_before_upload(repo, monkeypatch, capsys):
