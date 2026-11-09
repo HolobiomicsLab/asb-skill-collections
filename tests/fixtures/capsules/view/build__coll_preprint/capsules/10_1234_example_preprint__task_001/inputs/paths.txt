@@ -1,0 +1,4 @@
+/private/tmp/outputs/preprint/input.txt
+/tmp/outputs/preprint/input.txt
+/var/folders/ab/outputs/preprint/input.txt
+file:///Users/example/outputs/preprint/input.txt
