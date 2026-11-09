@@ -16,8 +16,9 @@ Each `asb-skills-<domain>` repository owns its content checks. Install
 `scripts/templates/domain-ci.yml` as `.github/workflows/gates.yml`,
 `scripts/templates/domain-plugin-validate.yml` as
 `.github/workflows/plugin-validate.yml` and
-`scripts/templates/domain-intake.yml` as `.github/workflows/intake.yml`, or
-render all three from the registry:
+`scripts/templates/domain-intake.yml` as `.github/workflows/intake.yml`, and
+`scripts/templates/domain-retraction-watch.yml` as
+`.github/workflows/retraction-watch.yml`, or render all four from the registry:
 
 ```bash
 python scripts/render_domain_ci.py --manifest collections.yaml \
@@ -25,7 +26,10 @@ python scripts/render_domain_ci.py --manifest collections.yaml \
 ```
 
 The generator emits one matrix row per non-legacy release and also renders
-the paper intake caller for the named domain. An optional JSON
+the paper intake and retraction-watch callers for the named domain. For a domain
+without a registry release, pass `--stage candidate --collection-path
+collections/<domain>/v1`; this renders one row with no receipt and a comment
+requiring a released-stage rerender after registration. An optional JSON
 file passed through `--receipts` maps `collection_path` to `receipts_path`; an
 empty receipt path skips receipt re-verification. The registry does not yet
 record receipt directories or the tooling commit per release, so the lead must
@@ -72,9 +76,8 @@ reviewed pinned commit. Copy `scripts/templates/domain-retraction-watch.yml` to
 variable to the maintainer contact for Crossref requests. The monitor does not
 modify corpus rows or skills.
 
-To render by hand, no generator is required: the template contains no other
-placeholders. If `scripts/render_domain_ci.py` is present, use its normal
-template rendering route instead. A hit opens or comments on a labelled issue;
+The normal generator renders this file with the other three callers. A hit opens
+or comments on a labelled issue;
 it requires a reviewed release action, never a silent removal. Registry errors
 make the run incomplete and fail the job rather than reporting a clean sweep.
 

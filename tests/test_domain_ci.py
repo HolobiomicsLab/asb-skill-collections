@@ -116,7 +116,9 @@ def test_generator_renders_published_releases_and_omits_legacy(tmp_path: Path) -
     paths = render_domain_ci.render(
         manifest_fixture(tmp_path), "fixture", SHA, REPO / "scripts" / "templates", tmp_path / "out"
     )
-    assert [path.name for path in paths] == ["gates.yml", "plugin-validate.yml", "intake.yml"]
+    assert [path.name for path in paths] == [
+        "gates.yml", "plugin-validate.yml", "intake.yml", "retraction-watch.yml"
+    ]
     document = read_workflow(paths[0])
     rows = document["jobs"]["released-collections"]["strategy"]["matrix"]["collection"]
     assert rows == [
@@ -127,6 +129,76 @@ def test_generator_renders_published_releases_and_omits_legacy(tmp_path: Path) -
     assert "<TOOLING_SHA>" not in paths[0].read_text(encoding="utf-8")
     assert read_workflow(paths[1])["jobs"]["plugin-manifest"]["steps"][2]["run"].startswith("npm install")
     assert read_workflow(paths[2])["name"] == "Paper issue intake"
+    retraction = paths[3].read_text(encoding="utf-8")
+    assert "ref: " + SHA in retraction
+    assert "<TOOLING_SHA>" not in retraction
+    assert read_workflow(paths[3])["name"] == "Retraction watch"
+
+
+def test_generator_renders_an_unregistered_candidate(tmp_path: Path) -> None:
+    """Candidate CI needs one collection, no registry release and no plugin caller."""
+    paths = render_domain_ci.render(
+        manifest_fixture(tmp_path), "new-domain", SHA, REPO / "scripts" / "templates",
+        tmp_path / "candidate", stage="candidate", collection_path="collections/new-domain/v1",
+    )
+    assert [path.name for path in paths] == ["gates.yml", "intake.yml", "retraction-watch.yml"]
+    assert not (tmp_path / "candidate/plugin-validate.yml").exists()
+    text = paths[0].read_text(encoding="utf-8")
+    assert "# candidate stage: rendered before the first registry release; re-render after registration" in text
+    document = read_workflow(paths[0])
+    assert document["jobs"]["released-collections"]["strategy"]["matrix"]["collection"] == [
+        {"domain": "new-domain", "collection_path": "collections/new-domain/v1", "receipts_path": ""}
+    ]
+    assert read_workflow(paths[1])["name"] == "Paper issue intake"
+    assert read_workflow(paths[2])["name"] == "Retraction watch"
+
+
+def test_candidate_rendering_removes_a_stale_plugin_caller(tmp_path: Path) -> None:
+    """Rerendering at candidate stage does not leave the released plugin caller behind."""
+    output = tmp_path / "out"
+    render_domain_ci.render(
+        manifest_fixture(tmp_path), "fixture", SHA, REPO / "scripts" / "templates", output
+    )
+    assert (output / "plugin-validate.yml").is_file()
+    paths = render_domain_ci.render(
+        manifest_fixture(tmp_path), "fixture", SHA, REPO / "scripts" / "templates", output,
+        stage="candidate", collection_path="collections/fixture/v3",
+    )
+    assert [path.name for path in paths] == ["gates.yml", "intake.yml", "retraction-watch.yml"]
+    assert not (output / "plugin-validate.yml").exists()
+
+
+def test_candidate_requires_a_collection_path(tmp_path: Path) -> None:
+    """The candidate matrix cannot invent a collection location."""
+    try:
+        render_domain_ci.render(
+            manifest_fixture(tmp_path), "new-domain", SHA, REPO / "scripts" / "templates",
+            tmp_path / "candidate", stage="candidate",
+        )
+    except ValueError as exc:
+        assert "candidate stage requires --collection-path" in str(exc)
+    else:
+        raise AssertionError("candidate rendering without a collection path must fail")
+
+
+def test_candidate_cli_accepts_an_unregistered_domain(tmp_path: Path) -> None:
+    """The CLI exposes the same candidate contract as the in-process renderer."""
+    result = subprocess.run(
+        [PYTHON, str(REPO / "scripts/render_domain_ci.py"), "--manifest", str(manifest_fixture(tmp_path)),
+         "--domain", "new-domain", "--tooling-sha", SHA, "--stage", "candidate",
+         "--collection-path", "collections/new-domain/v1", "--out", str(tmp_path / "candidate")],
+        capture_output=True, text=True, check=False,
+    )
+    assert result.returncode == 0, result.stderr
+    assert not (tmp_path / "candidate/plugin-validate.yml").exists()
+    assert (tmp_path / "candidate/retraction-watch.yml").is_file()
+
+
+def test_candidate_rejects_a_malformed_collection_path(tmp_path: Path) -> None:
+    """The candidate path is one concrete versioned directory, not a prefix."""
+    import pytest
+    with pytest.raises(ValueError, match="collection path"):
+        render_domain_ci.candidate_release("fixture", "collections/fixture/v1/../../other")
 
 
 def test_generator_cli_rejects_a_legacy_only_domain(tmp_path: Path) -> None:

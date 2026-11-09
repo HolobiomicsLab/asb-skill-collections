@@ -236,6 +236,8 @@ metabolomics collection is released from its domain repository. The legacy
 epigenomics, transcriptomics and metabolomics v1 trees are recorded in the
 registry and are not part of this release.
 
+For a new domain, follow [Domain onboarding and release](docs/domain-onboarding.md).
+
 ## Attribution and citation
 
 Cite the collection and the original paper behind each skill you use

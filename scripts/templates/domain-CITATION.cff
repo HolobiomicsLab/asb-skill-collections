@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: If you use this collection, cite it and the source paper of each skill you use.
+title: ASB <DOMAIN_TITLE> Skill Collection
+type: dataset
+license: CC-BY-4.0
+repository-code: <REPOSITORY_URL>
+url: <REPOSITORY_URL>
+authors:
+  - name: Holobiomics Lab
+keywords:
+  - <DOMAIN>
+  - agentic-science
+  - skills

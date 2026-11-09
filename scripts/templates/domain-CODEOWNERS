@@ -1,0 +1,4 @@
+# Curator ownership starts when the first external curator joins the domain.
+# The organisation creates the review team at that point; until then repository
+# owners review changes directly. Uncomment and adjust the line when the team exists.
+# * @HolobiomicsLab/asb-<DOMAIN>-curators
