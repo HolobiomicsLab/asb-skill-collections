@@ -581,10 +581,39 @@ def validate_prepared(prepared):
 
 def upload_files(draft, archive, extras, token):
     """Upload the release archive followed by the extras, in the order supplied."""
-    _call("archive upload", "PUT", f"{draft['links']['bucket']}/{archive.path.name}", token, archive.path)
+    bucket = draft["links"]["bucket"]
+    _upload("archive upload", f"{bucket}/{archive.path.name}", archive.path, token)
     for extra in extras:
-        name = urllib.parse.quote(extra.path.name)
-        _call("extra file upload", "PUT", f"{draft['links']['bucket']}/{name}", token, extra.path)
+        _upload("extra file upload", f"{bucket}/{urllib.parse.quote(extra.path.name)}", extra.path, token)
+
+
+def _md5(path):
+    """Return the hex md5 of a file, the digest Zenodo reports for a stored file."""
+    digest = hashlib.md5()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1 << 20), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def _upload(step, url, path, token):
+    """PUT one file into the draft bucket and check the size and md5 Zenodo stored.
+
+    A mismatch stops the run before the metadata is sent. A response without a
+    checksum is reported, not fatal, so a change in the API cannot block a release.
+    """
+    payload = _call(step, "PUT", url, token, path) or {}
+    sent = path.stat().st_size
+    stored = payload.get("size")
+    if stored is not None and int(stored) != sent:
+        raise ZenodoError(f"{step}: Zenodo stored {stored} bytes for {path.name}, {sent} were sent")
+    checksum = str(payload.get("checksum") or "")
+    if not checksum.startswith("md5:"):
+        print(f"{step}: no md5 returned for {path.name}, stored copy not verified")
+        return
+    if checksum[4:] != _md5(path):
+        raise ZenodoError(f"{step}: Zenodo stored {checksum} for {path.name}, local md5 is {_md5(path)}")
+    print(f"{step}: {path.name} stored copy verified (md5 and size)")
 
 
 def update_metadata(draft, template, token, base, inherited=True):
