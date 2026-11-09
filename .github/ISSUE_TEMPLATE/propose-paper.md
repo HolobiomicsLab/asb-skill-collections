@@ -19,7 +19,7 @@ branch for curator review, comments its findings here and leaves the issue open.
 
 **Type:** <!-- paper / tool / data resource -->
 
-**Target collection:** <!-- metabolomics (default), or another collection slug -->
+**Target collection:** <!-- the domain repository's collection slug, or a slug registered in collections.yaml -->
 
 **Why it matters (one or two sentences):**
 <!-- What does it do, and why is it worth grounding agent retrieval on? -->

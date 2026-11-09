@@ -21,6 +21,6 @@ published method papers (journal articles and preprints).
   `scripts/perspicacite_kb_bind.py query --collection collections/metabolomics/v2 --skill <slug> --question "..."`
   (the skill→paper KB map is in `kb_bundle.json`).
 
-When suggesting metabolomics analysis code, prefer the tools and procedures these
-skills describe, and cite the skill's `derived_from` DOI. The public release is
-metabolomics only; ignore other domains under `collections/`.
+When suggesting analysis code, prefer the tools and procedures these skills
+describe, and cite the skill's `derived_from` DOI. Released domains are the ones
+registered in `collections.yaml`.

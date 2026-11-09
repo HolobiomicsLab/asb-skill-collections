@@ -3,7 +3,10 @@
 Technique tags are tags by mention: they name the analytical platform that the
 leaf's context uses. They are deterministic retrieval metadata, not assertions
 that a paper used only that platform or that every procedure performs acquisition.
-The declared vocabulary is in `scripts/technique_rules.yaml`.
+The declared vocabulary is in `scripts/rules/<domain>/technique_rules.yaml`.
+The tagger derives `<domain>` from `domain` or `slug` in `collection.yaml`.
+`--rules` overrides this resolution. A domain without its rules file gets an
+error naming the expected path.
 
 ## Preview and receipt
 
@@ -14,7 +17,6 @@ the collection.
 ```bash
 python scripts/tag_techniques.py \
   --collection <domain checkout>/collections/<domain>/<version> \
-  --rules scripts/technique_rules.yaml \
   --report <evidence directory>/technique-tags.json
 ```
 
@@ -30,7 +32,6 @@ when the investigation evidence is available, its spot-check slugs:
 ```bash
 python scripts/tag_techniques.py \
   --collection <domain checkout>/collections/<domain>/<version> \
-  --rules scripts/technique_rules.yaml \
   --only CE-MS,direct-infusion-MS --sample 20 --seed 45045 \
   --out <evidence directory>/review-packet
 ```

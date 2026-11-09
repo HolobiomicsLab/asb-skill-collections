@@ -13,6 +13,11 @@ from typing import Any
 
 import yaml
 
+if __package__ in (None, ""):
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from scripts.domain_rules import domain_rules_path
+
 
 DEFAULT_RULES = Path(__file__).with_name("release_surface_rules.yaml")
 LINEAGE_RELATIONS = frozenset({"isNewVersionOf", "isPreviousVersionOf"})
@@ -163,7 +168,7 @@ def _parse_rules(document: Any, key: str, *, identifiers: bool) -> list[Rule]:
     return rules
 
 
-def _load_rules(path: Path) -> tuple[list[Rule], list[Rule]]:
+def _load_rules(path: Path, domain_path: Path | None = None) -> tuple[list[Rule], list[Rule]]:
     """Load and validate the canonical YAML rule document."""
     if path.is_symlink() or not path.is_file():
         raise SurfaceCheckError("rules must be an existing regular file")
@@ -173,6 +178,12 @@ def _load_rules(path: Path) -> tuple[list[Rule], list[Rule]]:
         raise SurfaceCheckError("rules file is not valid UTF-8 YAML") from exc
     phrases = _parse_rules(document, "retracted_phrases", identifiers=False)
     identifiers = _parse_rules(document, "foreign_identifiers", identifiers=True)
+    if domain_path is not None and domain_path.is_file():
+        try:
+            domain_document = yaml.safe_load(domain_path.read_text(encoding="utf-8")) or {}
+        except (OSError, UnicodeError, yaml.YAMLError) as exc:
+            raise SurfaceCheckError("domain rules file is not valid UTF-8 YAML") from exc
+        identifiers.extend(_parse_rules(domain_document, "foreign_identifiers", identifiers=True))
     rule_ids = [rule.id for rule in [*phrases, *identifiers]]
     if len(rule_ids) != len(set(rule_ids)):
         raise SurfaceCheckError("rule ids must be unique")
@@ -328,7 +339,8 @@ def _candidate_files(candidate: Path) -> list[Path]:
 
 def _check(candidate: Path, rules_path: Path) -> tuple[list[Finding], int, int]:
     """Scan a candidate and return findings, file count, and decode skips."""
-    phrases, identifiers = _load_rules(rules_path)
+    domain_path = None if rules_path != DEFAULT_RULES else domain_rules_path(candidate, "release_surface_rules.yaml")
+    phrases, identifiers = _load_rules(rules_path, domain_path)
     files = _candidate_files(candidate)
     findings: list[Finding] = []
     skipped = 0

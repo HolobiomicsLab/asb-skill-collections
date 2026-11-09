@@ -10,6 +10,7 @@ import sys
 from pathlib import Path
 
 import pytest
+import yaml
 
 from tests.test_run_candidate_gates import _prepared_candidate
 
@@ -64,6 +65,21 @@ def _write_zenodo(candidate: Path, document: dict) -> None:
     )
 
 
+def _metabolomics_candidate(tmp_path: Path, tooling_checkout: Path) -> Path:
+    """Return the prepared candidate with a metabolomics domain declaration."""
+    candidate = _prepared_candidate(tmp_path, tooling_checkout)
+    set_candidate_domain(candidate, "metabolomics")
+    return candidate
+
+
+def set_candidate_domain(candidate: Path, domain: str) -> None:
+    """Set a prepared candidate's domain without replacing its metadata."""
+    manifest = candidate / "collection.yaml"
+    document = yaml.safe_load(manifest.read_text(encoding="utf-8"))
+    document["domain"] = domain
+    manifest.write_text(yaml.safe_dump(document, sort_keys=False), encoding="utf-8")
+
+
 def test_prepared_candidate_has_no_surface_findings(tmp_path: Path, tooling_checkout: Path) -> None:
     """Keep the prepared public fixture clean under the recorded rules."""
     result = _run(_prepared_candidate(tmp_path, tooling_checkout))
@@ -77,7 +93,7 @@ def test_prepared_candidate_has_no_surface_findings(tmp_path: Path, tooling_chec
 
 def test_v2_doi_in_workflow_is_a_finding(tmp_path: Path, tooling_checkout: Path) -> None:
     """Reject a foreign release DOI wherever candidate prose carries it."""
-    candidate = _prepared_candidate(tmp_path, tooling_checkout)
+    candidate = _metabolomics_candidate(tmp_path, tooling_checkout)
     skill = candidate / "workflows" / "example" / "SKILL.md"
     skill.parent.mkdir(parents=True, exist_ok=True)
     skill.write_text(
@@ -108,8 +124,35 @@ def test_identifier_rules_are_domain_neutral(
 
     result = _run(candidate)
 
-    assert result.returncode == 1, result.stderr
+    expected = 1 if domain == "metabolomics" else 0
+    assert result.returncode == expected, result.stderr
+    assert ("README.md:1: metabolomics-v2-doi" in result.stdout) is (domain == "metabolomics")
+
+
+def test_domain_rules_merge_with_global_phrases(tmp_path: Path, tooling_checkout: Path) -> None:
+    """Apply global retractions and only the candidate domain's identifiers."""
+    candidate = _prepared_candidate(tmp_path, tooling_checkout)
+    (candidate / "collection.yaml").write_text("domain: metabolomics\nversion: v3\n", encoding="utf-8")
+    (candidate / "README.md").write_text(f"{DOI}\nSTAGING ONLY\n", encoding="utf-8")
+
+    result = _run(candidate)
+
+    assert result.returncode == 1
     assert "README.md:1: metabolomics-v2-doi" in result.stdout
+    assert "README.md:2: staging-only" in result.stdout
+
+
+def test_explicit_rules_disable_domain_merge(tmp_path: Path, tooling_checkout: Path) -> None:
+    """Use exactly an explicitly supplied global file without implicit additions."""
+    candidate = _prepared_candidate(tmp_path, tooling_checkout)
+    (candidate / "collection.yaml").write_text("domain: metabolomics\nversion: v3\n", encoding="utf-8")
+    (candidate / "README.md").write_text(f"{DOI}\n", encoding="utf-8")
+    rules = tmp_path / "rules.yaml"
+    rules.write_text("retracted_phrases: []\nforeign_identifiers: []\n", encoding="utf-8")
+
+    result = _run(candidate, rules=rules)
+
+    assert result.returncode == 0, result.stdout
 
 
 @pytest.mark.parametrize(("rule_id", "phrase"), RETRACTED_PHRASES.items())
@@ -189,12 +232,14 @@ def test_doi_outside_approved_lineage_value_is_a_finding(
     tmp_path: Path, tooling_checkout: Path, relative_path: str, document: dict | str
 ) -> None:
     """Reject the DOI in prose, another relation, or another file."""
-    candidate = _prepared_candidate(tmp_path, tooling_checkout)
+    candidate = _metabolomics_candidate(tmp_path, tooling_checkout)
     target = candidate / relative_path
     if isinstance(document, dict):
         target.write_text(json.dumps(document, indent=2) + "\n", encoding="utf-8")
     else:
-        target.write_text(document, encoding="utf-8")
+        manifest = yaml.safe_load(target.read_text(encoding="utf-8"))
+        manifest["doi"] = DOI
+        target.write_text(yaml.safe_dump(manifest, sort_keys=False), encoding="utf-8")
 
     result = _run(candidate)
 
@@ -206,7 +251,7 @@ def test_doi_outside_approved_lineage_value_is_a_finding(
 
 def test_iri_has_no_zenodo_lineage_exception(tmp_path: Path, tooling_checkout: Path) -> None:
     """Reject the foreign collection IRI even in an approved relation shape."""
-    candidate = _prepared_candidate(tmp_path, tooling_checkout)
+    candidate = _metabolomics_candidate(tmp_path, tooling_checkout)
     _write_zenodo(
         candidate,
         {"related_identifiers": [{"identifier": IRI, "relation": "isNewVersionOf"}]},

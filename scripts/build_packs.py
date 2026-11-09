@@ -53,6 +53,7 @@ import yaml
 
 from asb_skill_collections import layout
 from scripts.build_grounding_bundle import _read_corpus, filter_and_enrich_bundle
+from scripts.domain_rules import resolve_rules_path
 from scripts.propagate_license_tiers import detect_indent
 from scripts.skill_index import split_frontmatter
 from scripts.stamp_skill_license import stamp_copies
@@ -177,6 +178,7 @@ def load_map(path: Path, root: Path) -> PackMap:
     collection_dir = (root / source).resolve()
     if not collection_dir.is_relative_to(root) or not collection_dir.is_dir():
         raise ValueError(f"{path}: source {source!r} is not a directory inside {root}")
+    resolve_rules_path(collection_dir, "technique_rules.yaml")
     entries = document.get("packs")
     if not isinstance(entries, list) or not entries:
         raise ValueError(f"{path}: packs must be a non-empty list")

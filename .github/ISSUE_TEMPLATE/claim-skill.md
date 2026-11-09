@@ -27,7 +27,7 @@ governance/AUTHORSHIP.md and governance/COMMUNITY_SKILLS.md.
 
 **Link to the skill:** <!-- a gist, repo path, or the SKILL.md pasted below — whatever you have -->
 
-**Target collection:** <!-- metabolomics (default), or another collection slug -->
+**Target collection:** <!-- the domain repository's collection slug, or a slug registered in collections.yaml -->
 
 ## You (for verified authorship credit — required)
 

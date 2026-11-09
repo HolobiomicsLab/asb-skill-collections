@@ -24,16 +24,13 @@ if __package__ in (None, ""):
 
 import argparse
 import pathlib
-import sys
 
 import yaml
 
 from asb_skill_collections import layout
+from scripts.description_writer import APPROVED_PREFIXES, MAX_LEN, MIN_LEN
 
 # A description answers "when would I reach for this?", so it opens by saying so.
-APPROVED_PREFIXES = ("Use when", "Reference for", "Explains", "Decision support for")
-MIN_LEN = 50
-MAX_LEN = 300
 MARKETING_TERMS = ("best", "state-of-the-art", "revolutionary", "leading", "superior")
 
 DEFAULT_ROOTS = ("collections", "staged-collections")

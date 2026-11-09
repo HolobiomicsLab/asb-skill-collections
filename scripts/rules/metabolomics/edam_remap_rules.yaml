@@ -1,0 +1,35 @@
+rules_version: 2026-11-09.1
+foreign_text_pattern: '(\bproteom\w*|\bpeptide[s]?\b|\btryptic\b|\bpsm[s]?\b|\bprotein[s]?\b|\bproteoform\w*|\buniprot\b|\bmaxquant\b|\bmascot\b|\bsequest\b|\bmsfragger\b|\bdia-?nn\b|\bcasanovo\b|\bprosit\b|post-translational|\bptm\b)'
+foreign_tools:
+  - maxquant
+  - andromeda
+  - sequest
+  - msgf+
+  - comet
+  - mascot
+  - proteinpilot
+  - spectronaut
+  - dia-nn
+  - diann
+  - skyline
+  - percolator
+  - msfragger
+  - fragpipe
+  - proteome discoverer
+  - peaks studio
+  - prosit
+  - deepnovo
+  - casanovo
+  - byonic
+  - uniprot
+t3b_operations:
+  - operation_3646
+  - operation_0282
+t4_operations:
+  - operation_3646
+  - operation_0282
+  - operation_3218
+  - operation_3216
+  - operation_3219
+  - operation_3222
+  - operation_3891

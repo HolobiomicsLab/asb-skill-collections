@@ -9,6 +9,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+import yaml
+
 from scripts import run_candidate_gates as gate_runner
 from scripts import bootstrap_indexes as bootstrap
 
@@ -170,6 +172,10 @@ def test_runner_preserves_surface_finding_and_runs_every_check(tmp_path: Path, t
     """Retain a foreign DOI finding without short-circuiting later checks."""
     candidate = _prepared_candidate(tmp_path, tooling_checkout)
     receipts = tmp_path / "gate-receipts"
+    manifest = candidate / "collection.yaml"
+    descriptor = yaml.safe_load(manifest.read_text(encoding="utf-8"))
+    descriptor["domain"] = "metabolomics"
+    manifest.write_text(yaml.safe_dump(descriptor, sort_keys=False), encoding="utf-8")
     readme = candidate / "README.md"
     readme.write_text(
         "Foreign release DOI: 10.5281/zenodo.20794027\n",

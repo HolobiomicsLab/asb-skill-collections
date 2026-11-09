@@ -33,7 +33,7 @@ e.g.
   4. visualization — <slug or tool>
 -->
 
-**Target collection:** <!-- metabolomics (default), or another collection slug -->
+**Target collection:** <!-- the domain repository's collection slug, or a slug registered in collections.yaml -->
 
 ---
 <!-- Optional, all skippable — a maintainer/the command resolves these: -->
