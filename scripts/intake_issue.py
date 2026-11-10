@@ -13,8 +13,9 @@ import glob
 import hashlib
 import json
 import re
+import sys
 from pathlib import Path
-from typing import Any, Mapping, Sequence
+from typing import Any, Mapping, NoReturn, Sequence
 from urllib.parse import urlsplit
 
 from scripts import intake_resolvers
@@ -222,15 +223,20 @@ def existing_identity_row(metadata: Mapping[str, Any], own: tuple[Path, dict[str
 
 def duplicate_match(metadata: Mapping[str, Any], inputs: Mapping[str, Any],
                     own: tuple[Path, dict[str, Any], int] | None) -> dict[str, Any] | None:
-    """Check covered, released corpus, then other proposals in fixed order."""
+    """Check covered, released corpus, then other proposals in fixed order.
+
+    The covered registry is optional: a domain that does not mirror it passes
+    None and deduplicates against its corpus and proposal files only.
+    """
     doi = corpus.normalise_doi(metadata.get("doi"))
     if not doi:
         return None
     key = doi_key(doi)
-    covered = json.loads(Path(inputs["covered"]).read_text(encoding="utf-8"))
-    if key in covered_keys(covered):
-        return {"where": "covered", "path": Path(inputs["covered"]).name, "doi": doi,
-                "stage": "covered"}
+    if inputs.get("covered"):
+        covered = json.loads(Path(inputs["covered"]).read_text(encoding="utf-8"))
+        if key in covered_keys(covered):
+            return {"where": "covered", "path": Path(inputs["covered"]).name, "doi": doi,
+                    "stage": "covered"}
     released = corpus.load(inputs["collection_corpus"])
     for row in released.get("papers", released.get("corpus", [])) or []:
         if doi_key(row.get("doi")) == key:
@@ -458,8 +464,8 @@ def write_receipt(path: Path, receipt: dict[str, Any]) -> dict[str, Any]:
     return receipt
 
 
-def run_intake(*, kind: str, issue_json: str, domain: str, wave_file: str, covered: str,
-               collection_corpus: str, proposal_glob: Sequence[str], date: str, out: str,
+def run_intake(*, kind: str, issue_json: str, domain: str, wave_file: str,
+               covered: str | None = None, collection_corpus: str, proposal_glob: Sequence[str], date: str, out: str,
                dry_run: bool = False, fetcher: intake_resolvers.Fetch | None = None,
                email: str | None = None, sleep: intake_resolvers.Sleep = lambda seconds: None) -> dict[str, Any]:
     """Run paper intake with explicit paths and an injected network transport."""
@@ -525,14 +531,25 @@ def collection_version(path: str) -> int:
     return int(match.group(1)) if match else 1
 
 
+USAGE_ERROR = 64
+
+
+class _Parser(argparse.ArgumentParser):
+    """Exit 64 on a usage error: argparse's default 2 is the duplicate outcome."""
+
+    def error(self, message: str) -> NoReturn:
+        self.print_usage(sys.stderr)
+        self.exit(USAGE_ERROR, f"{self.prog}: error: {message}\n")
+
+
 def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     """Parse the stable interface consumed by the separate issue Action."""
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = _Parser(description=__doc__)
     parser.add_argument("--kind", choices=["paper", "workflow"], required=True)
     parser.add_argument("--issue-json", required=True)
     parser.add_argument("--domain", required=True)
     parser.add_argument("--wave-file", required=True)
-    parser.add_argument("--covered", required=True)
+    parser.add_argument("--covered", help="optional covered-DOI registry file")
     parser.add_argument("--collection-corpus", required=True)
     parser.add_argument("--proposal-glob", action="append", required=True)
     parser.add_argument("--date", required=True)
@@ -543,7 +560,7 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
 
 
 def main(argv: Sequence[str] | None = None) -> int:
-    """Run intake and return 0 staged, 1 blocked, or 2 duplicate."""
+    """Run intake and return 0 staged, 1 blocked, or 2 duplicate; a usage error exits 64."""
     args = parse_args(argv)
     email = None
     if args.email_env:

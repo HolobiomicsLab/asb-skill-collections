@@ -196,13 +196,16 @@ def github_repository(url: Any) -> tuple[str, str] | None:
 
 
 def published_doi(metadata: dict[str, Any], normalise: Callable[[Any], str | None]) -> str | None:
-    """Find a registry-declared published version of a preprint."""
+    """Find a registry-declared published version of a preprint.
+
+    Only `is-preprint-of` points from a preprint to its publication. A published
+    article carries `has-preprint`, which points the other way and is not followed.
+    """
     relations = metadata.get("relation") or {}
-    for key in ("is-preprint-of", "has-preprint"):
-        for item in relations.get(key) or []:
-            if str(item.get("id-type", "doi")).lower() == "doi":
-                if doi := normalise(item.get("id")):
-                    return doi
+    for item in relations.get("is-preprint-of") or []:
+        if str(item.get("id-type", "doi")).lower() == "doi":
+            if doi := normalise(item.get("id")):
+                return doi
     for item in metadata.get("related") or []:
         if item.get("relationType") in {"IsVersionOf", "IsPreviousVersionOf"}:
             if item.get("relatedIdentifierType") == "DOI":

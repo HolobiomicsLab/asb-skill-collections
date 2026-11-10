@@ -11,11 +11,11 @@ comment, pull-request, or merge APIs.
 python <tooling>/scripts/intake_issue.py --kind paper --issue-json issue.json \
   --domain <slug> \
   --wave-file <domain-checkout>/collections/<slug>/proposals/wave-<YYYY-MM>-community.yaml \
-  --covered <corpus>/covered_dois.json \
   --collection-corpus <domain-checkout>/collections/<slug>/v<N>/corpus.yaml \
   --proposal-glob '<domain-checkout>/collections/<slug>/proposals/wave-*.yaml' \
   --proposal-glob '<domain-checkout>/collections/<slug>/proposals/watch-*.yaml' \
-  --date YYYY-MM-DD --out receipt.json [--email-env ASB_WATCH_EMAIL] [--dry-run]
+  --date YYYY-MM-DD --out receipt.json [--covered <corpus>/covered_dois.json] \
+  [--email-env ASB_WATCH_EMAIL] [--dry-run]
 ```
 
 The issue JSON has the shape returned by `gh issue view --json
@@ -24,7 +24,8 @@ is also the access verification date and monthly wave identifier. `--dry-run`
 writes only the receipt. `--kind workflow` is reserved for later implementation
 and currently returns a blocked receipt.
 
-Exit code 0 means staged, 1 means blocked, and 2 means duplicate. Only staged
+Exit code 0 means staged, 1 means blocked, and 2 means duplicate. A usage error
+exits 64 and writes no receipt. Only staged
 runs add or idempotently update a row. Blocked and duplicate runs never modify
 the wave file. The receipt at `--out` is written for every outcome.
 
@@ -82,7 +83,7 @@ similarity and honors the publisher's expected DOI prefix. Registry-declared
 published versions replace preprint DOIs. No missing title or year is invented.
 
 Deduplication checks covered DOIs, the released corpus, and proposal/watch files
-in that order. Repository identity alone is not proof of a paper duplicate.
+in that order. `--covered` is optional: without it the covered check is skipped. Repository identity alone is not proof of a paper duplicate.
 Repository verification happens after duplicate elimination. Article reuse and
 code licence remain independent. An unresolved lookup is not called closed.
 
