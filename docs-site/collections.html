@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Browse collections — ASB Skill Collections</title>
-  <meta name="description" content="Browse the skills, composite workflows (super-skills), and software tools in each ASB skill collection, and contribute improvements directly on GitHub." />
+  <meta name="description" content="Browse the skills, composite workflows (super-skills), and software tools of each released ASB skill collection, from the public index of the site." />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="brand/favicon.svg" type="image/svg+xml">
 </head>
@@ -13,8 +13,10 @@
   <h1>Browse a collection</h1>
   <p>
     Explore the <strong>skills</strong>, composite <strong>workflows</strong> (super-skills),
-    and software <strong>tools</strong> in each collection. Every item links to its source on
-    GitHub — open it, edit it, or file an anonymized improvement.
+    and software <strong>tools</strong> of each released collection. Each item shows the
+    description, EDAM topics and source paper held in the public index of this site; the full
+    text is in the Zenodo record of the release. Found something to fix? Each item links to an
+    anonymized improvement report.
   </p>
   <nav>
     <a href="./">Catalogue</a>
@@ -30,6 +32,8 @@
     <label for="collection-select">Collection</label>
     <select id="collection-select"><option>Loading…</option></select>
   </div>
+  <p id="collection-note" class="muted"></p>
+  <div id="not-browsable"></div>
 
   <div id="summary"></div>
 
@@ -40,13 +44,14 @@
   </div>
 
   <div class="field">
-    <input type="search" id="filter-q" placeholder="Filter by name, description, tool…" autocomplete="off" />
-    <select id="filter-technique"><option value="">All techniques</option></select>
+    <input type="search" id="filter-q" placeholder="Filter by name, description, DOI…" aria-label="Filter the items" autocomplete="off" />
+    <select id="filter-topic" aria-label="EDAM topic"><option value="">All EDAM topics</option></select>
   </div>
 
   <p id="result-meta" class="muted"></p>
-  <div id="results"><p class="loading">Pick a collection to begin.</p></div>
+  <div id="results"><p class="loading">Loading the registry…</p></div>
 
+  <script src="site-data.js"></script>
   <script src="collections.js"></script>
 </body>
 </html>

@@ -1,200 +1,142 @@
-/* corpus.js — browse all collections' corpus.yaml ledgers (static, no backend) */
+/* corpus.js: source papers of one domain, read from the public index.
+ *
+ * The papers of every collection of a domain are in search_index/<domain>.json
+ * (loaded through site-data.js). One domain is loaded at a time: the manifest's
+ * default domain, or the one named in ?domain=, or the one picked in the selector,
+ * whose download size the selector shows.
+ */
 
-const RAW_BASE = "https://raw.githubusercontent.com/HolobiomicsLab/asb-skill-collections/main";
-const CATALOGUE_URL = `${RAW_BASE}/catalogue.jsonld`;
+let MANIFEST = null;
+let PAPERS = [];
+let STATUS = {};   // collection label -> "released" | "staged"
+let SKILL_COUNT = new Map();  // "<collection> <doi lower case>" -> skills citing that paper
 
-function el(tag, attrs = {}, ...children) {
-  const node = document.createElement(tag);
-  for (const [k, v] of Object.entries(attrs)) {
-    if (k === "class") node.className = v;
-    else if (k.startsWith("on")) node.addEventListener(k.slice(2).toLowerCase(), v);
-    else node.setAttribute(k, v);
-  }
-  for (const c of children) {
-    if (c == null) continue;
-    node.appendChild(typeof c === "string" ? document.createTextNode(c) : c);
-  }
-  return node;
-}
-
-async function fetchYAML(url) {
-  const r = await fetch(url, { cache: "no-store" });
-  if (!r.ok) throw new Error(`${r.status} ${url}`);
-  return r.text();
-}
-
-async function fetchJSON(url) {
-  const r = await fetch(url, { cache: "no-store" });
-  if (!r.ok) throw new Error(`${r.status} ${url}`);
-  return r.json();
-}
-
-// Tiny YAML parser sufficient for corpus.yaml (lists of dicts with scalar values + nested access dict)
-// Falls back to a simple line-based scanner since we don't want to ship js-yaml for this single file.
-function parseSimpleYAML(text) {
-  // The corpus.yaml shape is: { schema_version, collection, ..., papers: [...] }
-  // Each paper is a dict. We just need DOIs + a few scalar fields per paper.
-  // For robustness, embed a minimal parser:
-  const lines = text.split("\n");
-  let papers = [];
-  let current = null;
-  let inPapers = false;
-  let nestedKey = null;
-  let collection = "";
-  let collectionVersion = "";
-  for (const raw of lines) {
-    const line = raw.replace(/\r$/, "");
-    if (line.startsWith("collection:")) collection = line.split(":").slice(1).join(":").trim().replace(/^['"]|['"]$/g, "");
-    if (line.startsWith("collection_version:")) collectionVersion = line.split(":").slice(1).join(":").trim();
-    if (line.match(/^papers:\s*$/)) { inPapers = true; continue; }
-    if (!inPapers) continue;
-    const m = line.match(/^- (\w+):\s*(.*)$/);
-    if (m) {
-      if (current) papers.push(current);
-      current = { collection, collection_version: collectionVersion, [m[1]]: m[2].trim().replace(/^['"]|['"]$/g, "") };
-      nestedKey = null;
-      continue;
-    }
-    const flat = line.match(/^  (\w+):\s*(.*)$/);
-    if (flat && current) {
-      if (flat[2] === "" || flat[2] == null) {
-        nestedKey = flat[1];
-        current[nestedKey] = {};
-      } else {
-        current[flat[1]] = flat[2].trim().replace(/^['"]|['"]$/g, "");
-        nestedKey = null;
-      }
-      continue;
-    }
-    const nested = line.match(/^    (\w+):\s*(.*)$/);
-    if (nested && current && nestedKey) {
-      current[nestedKey][nested[1]] = nested[2].trim().replace(/^['"]|['"]$/g, "");
-      continue;
+// The ledger fields derived_skills and derived_tools are 0 in every index file,
+// so the skill count is computed from the source_dois of the skills instead.
+// The index does not link tools to papers, so no tool count is shown.
+function countSkillsByPaper(skills) {
+  const counts = new Map();
+  for (const s of skills || []) {
+    for (const d of s.source_dois || []) {
+      const key = `${s.collection} ${String(d).toLowerCase()}`;
+      counts.set(key, (counts.get(key) || 0) + 1);
     }
   }
-  if (current) papers.push(current);
-  return papers;
+  return counts;
 }
 
-async function loadAllCorpus() {
-  let collections = [];
-  try {
-    const cat = await fetchJSON(CATALOGUE_URL);
-    collections = cat?.collections ?? [];
-  } catch {
-    // No catalogue yet — fall back to a hard-coded list of one (metabolomics/v1).
-    collections = [{ slug: "metabolomics", version: 1 }];
-  }
-  const all = [];
-  for (const c of collections) {
-    const slug = c.slug || (c["@id"] ?? "").split("/").slice(-3, -2)[0];
-    const ver = c.version ?? 1;
-    if (!slug) continue;
-    // Try staged-collections first, then collections.
-    const paths = [
-      `${RAW_BASE}/staged-collections/${slug}/v${ver}/corpus.yaml`,
-      `${RAW_BASE}/collections/${slug}/v${ver}/corpus.yaml`,
-    ];
-    for (const path of paths) {
-      try {
-        const text = await fetchYAML(path);
-        const papers = parseSimpleYAML(text);
-        for (const p of papers) {
-          all.push({ ...p, _source_path: path });
-        }
-        break; // first hit wins
-      } catch {
-        // try next
-      }
-    }
-  }
-  return all;
+function fillSelect(id, values, allLabel) {
+  const sel = document.getElementById(id);
+  const keep = sel.value;
+  sel.innerHTML = "";
+  sel.appendChild(siteEl("option", { value: "" }, allLabel));
+  for (const v of values) sel.appendChild(siteEl("option", { value: v }, v));
+  if (values.includes(keep)) sel.value = keep;
 }
 
-function renderPapers(papers) {
+function distinct(key) {
+  return [...new Set(PAPERS.map(p => p[key] || "unknown"))].sort();
+}
+
+function collectionCell(label) {
+  return siteEl("td", {}, label || "—",
+    STATUS[label] === "staged" ? " " : null,
+    STATUS[label] === "staged" ? siteEl("span", { class: "badge badge-staged" }, "staged") : null);
+}
+
+function renderPapers() {
   const container = document.getElementById("papers");
   container.innerHTML = "";
-
-  // Filters
   const fColl = document.getElementById("filter-collection").value;
   const fStatus = document.getElementById("filter-status").value;
   const fAccess = document.getElementById("filter-access").value;
   const fSearch = document.getElementById("filter-search").value.toLowerCase().trim();
 
-  let filtered = papers;
+  let filtered = PAPERS;
   if (fColl) filtered = filtered.filter(p => p.collection === fColl);
-  if (fStatus) filtered = filtered.filter(p => p.status === fStatus);
-  if (fAccess) filtered = filtered.filter(p => (p.access?.type || "unknown") === fAccess);
+  if (fStatus) filtered = filtered.filter(p => (p.status || "unknown") === fStatus);
+  if (fAccess) filtered = filtered.filter(p => (p.access_type || "unknown") === fAccess);
   if (fSearch) filtered = filtered.filter(p =>
     (p.doi || "").toLowerCase().includes(fSearch) ||
-    (p.title || "").toLowerCase().includes(fSearch)
-  );
+    (p.title || "").toLowerCase().includes(fSearch));
 
-  container.appendChild(el("p", { class: "hint" },
-    `Showing ${filtered.length} of ${papers.length} papers`));
-
+  container.appendChild(siteEl("p", { class: "hint" }, `Showing ${filtered.length} of ${PAPERS.length} papers`));
   if (!filtered.length) {
-    container.appendChild(el("p", { class: "empty" }, "No matches."));
+    container.appendChild(siteEl("p", { class: "empty" }, "No matches."));
     return;
   }
-
-  const table = el("table", { class: "catalogue" },
-    el("thead", {},
-      el("tr", {},
-        el("th", {}, "DOI"),
-        el("th", {}, "Title"),
-        el("th", {}, "Collection"),
-        el("th", {}, "Status"),
-        el("th", {}, "Access"),
-        el("th", {}, "Skills"),
-        el("th", {}, "Tools"),
-        el("th", {}, "Actions"),
-      ),
-    ),
-    el("tbody"),
-  );
-  const tbody = table.querySelector("tbody");
+  const tbody = siteEl("tbody");
   for (const p of filtered) {
-    const doiHref = `https://doi.org/${p.doi}`;
     const paperHref = `./paper.html?doi=${encodeURIComponent(p.doi || "")}&collection=${encodeURIComponent(p.collection || "")}`;
-    tbody.appendChild(el("tr", {},
-      el("td", {}, el("a", { href: doiHref, target: "_blank" }, p.doi || "—")),
-      el("td", {}, p.title || "—"),
-      el("td", {}, p.collection || "—"),
-      el("td", {}, p.status || "—"),
-      el("td", {}, (p.access?.type) || "unknown"),
-      el("td", {}, String(p.derived_skills ?? "—")),
-      el("td", {}, String(p.derived_tools ?? "—")),
-      el("td", {}, el("a", { href: paperHref }, "Review →")),
+    tbody.appendChild(siteEl("tr", {},
+      siteEl("td", {}, p.doi ? siteEl("a", { href: doiURL(p.doi), target: "_blank", rel: "noopener" }, p.doi) : "—"),
+      siteEl("td", {}, p.title || "—"),
+      collectionCell(p.collection),
+      siteEl("td", {}, p.status || "—"),
+      siteEl("td", {}, p.access_type || "unknown"),
+      siteEl("td", {}, String(SKILL_COUNT.get(`${p.collection} ${String(p.doi || "").toLowerCase()}`) || 0)),
+      siteEl("td", {}, siteEl("a", { href: paperHref }, "Details")),
     ));
   }
-  container.appendChild(table);
+  container.appendChild(siteEl("table", { class: "catalogue" },
+    siteEl("thead", {}, siteEl("tr", {},
+      ...["DOI", "Title", "Collection", "Status", "Access", "Skills", ""].map(h => siteEl("th", {}, h)))),
+    tbody));
 }
 
-function populateCollectionFilter(papers) {
-  const sel = document.getElementById("filter-collection");
-  const seen = new Set();
-  for (const p of papers) {
-    if (p.collection && !seen.has(p.collection)) {
-      seen.add(p.collection);
-      sel.appendChild(el("option", { value: p.collection }, p.collection));
-    }
+async function selectDomain(slug) {
+  const entry = MANIFEST.domains[slug];
+  const container = document.getElementById("papers");
+  container.innerHTML = "";
+  container.appendChild(siteEl("p", { class: "loading" }, `Loading the ${slug} index (${siteBytes(entry.bytes)})…`));
+  const url = new URL(window.location.href);
+  url.searchParams.set("domain", slug);
+  window.history.replaceState(null, "", url.toString());
+  keepOnlyDomain(slug);
+  let payload;
+  try {
+    payload = await loadDomain(MANIFEST, slug);
+  } catch (e) {
+    container.innerHTML = "";
+    container.appendChild(siteEl("p", { class: "error" }, `Could not load the ${slug} index: ${e.message}.`));
+    return;
   }
+  if (document.getElementById("filter-domain").value !== slug) return;
+  PAPERS = payload.papers || [];
+  STATUS = payload.collection_status || {};
+  SKILL_COUNT = countSkillsByPaper(payload.skills);
+  fillSelect("filter-collection", [...new Set(PAPERS.map(p => p.collection))].sort(), "All");
+  fillSelect("filter-status", distinct("status"), "All");
+  fillSelect("filter-access", distinct("access_type"), "All");
+  renderPapers();
 }
 
 (async function init() {
-  let papers;
   try {
-    papers = await loadAllCorpus();
+    MANIFEST = await loadManifest();
   } catch (e) {
     document.getElementById("papers").innerHTML =
-      `<p class="error">Could not load corpus.yaml files: ${e.message}.<br>` +
-      `(If the repository is still private, the static pages can't reach raw URLs yet.)</p>`;
+      `<p class="error">Could not load the index manifest: ${siteEsc(e.message)}.</p>`;
     return;
   }
-  populateCollectionFilter(papers);
-  renderPapers(papers);
-  for (const id of ["filter-collection", "filter-status", "filter-access", "filter-search"]) {
-    document.getElementById(id).addEventListener("input", () => renderPapers(papers));
+  const domains = Object.keys(MANIFEST.domains || {}).sort();
+  const sel = document.getElementById("filter-domain");
+  sel.innerHTML = "";
+  for (const slug of domains) {
+    const entry = MANIFEST.domains[slug];
+    sel.appendChild(siteEl("option", { value: slug },
+      `${slug} (${(entry.counts || {}).papers || 0} papers, ${siteBytes(entry.bytes)})`));
   }
+  const asked = new URLSearchParams(window.location.search).get("domain");
+  const start = domains.includes(asked) ? asked
+    : ((MANIFEST.default_domains || []).find(d => domains.includes(d)) || domains[0]);
+  if (asked && asked !== start) {
+    document.getElementById("domain-note").textContent = `Not in the index: ${asked}.`;
+  }
+  sel.value = start;
+  sel.addEventListener("change", () => selectDomain(sel.value));
+  for (const id of ["filter-collection", "filter-status", "filter-access", "filter-search"]) {
+    document.getElementById(id).addEventListener("input", renderPapers);
+  }
+  await selectDomain(start);
 })();

@@ -32,7 +32,7 @@
   <header>
     <a class="site-mark" href="./"><img src="brand/asb-mark.svg" alt="ASB Skill Collections home" width="48" height="48"></a>
     <h1>Corpus</h1>
-    <p class="tagline">Source papers in each ASB-Skill collection — proposed, accepted, included, retracted.</p>
+    <p class="tagline">Source papers of each ASB-Skill collection, one domain at a time, from the public index of this site.</p>
     <nav>
       <a href="./">Catalogue</a>
       <a href="./corpus.html">Corpus</a>
@@ -46,35 +46,26 @@
 
   <main>
     <section id="filters">
+      <label>Domain:
+        <select id="filter-domain"><option>Loading…</option></select>
+      </label>
       <label>Collection:
         <select id="filter-collection"><option value="">All</option></select>
       </label>
       <label>Status:
-        <select id="filter-status">
-          <option value="">All</option>
-          <option value="proposed">proposed</option>
-          <option value="accepted">accepted</option>
-          <option value="included" selected>included</option>
-          <option value="retracted">retracted</option>
-          <option value="excluded">excluded</option>
-        </select>
+        <select id="filter-status"><option value="">All</option></select>
       </label>
       <label>Access:
-        <select id="filter-access">
-          <option value="">All</option>
-          <option value="open-access">open-access</option>
-          <option value="hybrid">hybrid</option>
-          <option value="closed">closed</option>
-          <option value="unknown">unknown</option>
-        </select>
+        <select id="filter-access"><option value="">All</option></select>
       </label>
       <label>Search:
-        <input type="search" id="filter-search" placeholder="DOI / title / author">
+        <input type="search" id="filter-search" placeholder="DOI / title">
       </label>
+      <span id="domain-note" class="filter-count"></span>
     </section>
 
     <section id="papers">
-      <p class="loading">Loading corpus…</p>
+      <p class="loading">Loading the index manifest…</p>
     </section>
 
     <section id="about" class="hint">
@@ -83,6 +74,11 @@
         <a href="https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/governance/OPEN_ACCESS_POLICY.md">OPEN_ACCESS_POLICY.md</a>
         for what we store under each access tier and the proposal workflow.
       </p>
+      <p>
+        The papers come from the public index of this site (<code>search_index/</code>), one domain
+        file at a time. The Skills column counts the skills of the same collection that cite the
+        paper as a source; the index does not link tools to papers.
+      </p>
     </section>
   </main>
 
@@ -90,6 +86,7 @@
     <p>Holobiomics Lab · CNRS / Université Côte d'Azur</p>
   </footer>
 
+  <script src="site-data.js"></script>
   <script src="corpus.js"></script>
 </body>
 </html>

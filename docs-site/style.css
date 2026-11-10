@@ -689,3 +689,6 @@ section#skills, section#tools, section#workflow, section#claims, section#actions
   border-radius: var(--radius-button); padding: .8rem; white-space: pre-wrap;
   font-family: var(--font-mono); font-size: .8rem; max-height: 22rem; overflow: auto;
 }
+
+/* The hidden attribute wins over the display of a class (.actions is a flex row). */
+[hidden] { display: none !important; }
