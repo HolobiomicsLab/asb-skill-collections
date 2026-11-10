@@ -45,8 +45,8 @@ The co-reviewer must:
 narrower and worth stating exactly, because a reader who takes the previous paragraph at face
 value believes a check ran:
 
-- it compared the **declared** COI against the one detected from OpenAlex authorship, and fails on a
-  mismatch — this is a real check and it is the one with teeth;
+- it compared the **declared** COI against the one detected from OpenAlex authorship, and failed on a
+  mismatch — this was a real check and it was the one with teeth;
 - it tested that a `co_reviewer` block is **present** (truthy), and looked at nothing inside it;
 - ORCID distinctness, the >=Reviewer tier lookup and the sign-off comment are **not implemented**.
   `sign_off_pr` appears three times in this repository, all in documentation and none in code.
