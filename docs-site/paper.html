@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>Paper review — ASB Skill Collections</title>
-  <meta name="description" content="Per-paper review page: see all skills, tools, claims derived from a given source paper; one-click verify / flag.">
+  <meta name="description" content="One source paper of an ASB-Skill collection and the skills derived from it; request a review or flag an issue.">
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Paper review — ASB Skill Collections" />
-  <meta property="og:description" content="Per-paper review surface for ASB-derived skills, tools, and claims." />
+  <meta property="og:description" content="One source paper and the ASB skills derived from it." />
   <meta name="twitter:card" content="summary" />
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="brand/favicon.svg" type="image/svg+xml">
@@ -29,45 +29,28 @@
 
   <main>
     <section id="paper-info">
-      <div id="meta-card"><p class="loading">Resolving DOI…</p></div>
+      <div id="meta-card"><p class="loading">Loading the index…</p></div>
     </section>
 
-    <section id="actions" class="actions">
-      <button id="btn-verify-all">✓ Verify all derived content</button>
-      <button id="btn-flag">⚠ Flag an issue</button>
+    <section id="actions" class="actions" hidden>
+      <button id="btn-review" type="button">Request expert review</button>
+      <button id="btn-flag" type="button">Flag an issue</button>
     </section>
 
     <section id="skills">
-      <h2>Derived skills</h2>
+      <h2>Skills derived from this paper</h2>
       <div id="skills-list"><p class="loading">Loading…</p></div>
     </section>
 
     <section id="tools">
-      <h2>Derived tools</h2>
+      <h2>Tools</h2>
       <div id="tools-list"><p class="loading">Loading…</p></div>
-    </section>
-
-    <section id="workflow">
-      <h2>Reference workflow</h2>
-      <div id="workflow-detail"><p class="hint">Loading…</p></div>
-    </section>
-
-    <section id="claims">
-      <h2>Verifiable claims</h2>
-      <div id="claims-filter" class="filter-row" hidden>
-        <span class="filter-label">Tier:</span>
-        <button type="button" class="tier-btn is-active" data-tier="all">All</button>
-        <button type="button" class="tier-btn" data-tier="silver">Silver only</button>
-        <button type="button" class="tier-btn" data-tier="gold">Gold only</button>
-        <span id="claims-count" class="filter-count"></span>
-      </div>
-      <div id="claims-list"><p class="loading">Loading…</p></div>
     </section>
 
     <section id="about" class="hint">
       <p>
         See <a href="https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/governance/COI_POLICY.md">COI policy</a>
-        for self-review rules. Verifying content requires an ORCID-linked GitHub account
+        for self-review rules. Both buttons open a pre-filled issue on the public repository
         (see <a href="https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/.github/CONTRIBUTING.md">CONTRIBUTING.md</a>).
       </p>
     </section>
@@ -77,6 +60,7 @@
     <p>Holobiomics Lab · CNRS / Université Côte d'Azur</p>
   </footer>
 
+  <script src="site-data.js"></script>
   <script src="paper.js"></script>
 </body>
 </html>

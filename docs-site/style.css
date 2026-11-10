@@ -663,7 +663,7 @@ section#skills, section#tools, section#workflow, section#claims, section#actions
 .stat-n { font-family: var(--font-display); font-size: 1.7rem; color: var(--cnrs-blue); font-weight: 600; }
 .stat-k { font-size: .8rem; color: var(--fg-muted); text-transform: uppercase; letter-spacing: .04em; }
 
-.chart { width: 100%; max-width: 480px; margin-top: .4rem; }
+.chart { width: 100%; max-width: 540px; margin-top: .4rem; }
 .chart-title { margin: .6rem 0 .1rem; }
 .chart-label { font: 12px var(--font-body); fill: var(--fg); }
 .chart-num { font: 11px var(--font-mono); fill: var(--fg-muted); }
@@ -689,3 +689,6 @@ section#skills, section#tools, section#workflow, section#claims, section#actions
   border-radius: var(--radius-button); padding: .8rem; white-space: pre-wrap;
   font-family: var(--font-mono); font-size: .8rem; max-height: 22rem; overflow: auto;
 }
+
+/* The hidden attribute wins over the display of a class (.actions is a flex row). */
+[hidden] { display: none !important; }

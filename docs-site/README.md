@@ -8,25 +8,68 @@ fonts.
 
 ## Pages
 
-| File | What it shows |
-| ---- | ------------- |
-| `index.html` (+ `app.js`) | Catalogue of collections + new-release banner + ranked contributor leaderboard |
-| `collections.html` (+ `collections.js`) | Browse a collection's skills, composite workflows (super-skills), and tools, with filters + per-item GitHub view/edit/suggest links |
-| `corpus.html` (+ `corpus.js`) | Browse all source papers across collections, with filters |
-| `paper.html` (+ `paper.js`) | Per-paper review: skills, tools, claims; verify/flag actions |
-| `contribute.html` (+ `contribute.js`) | Package an anonymized skill/workflow improvement → pre-filled GitHub issue (mirrors `scripts/make_improvement_report.py`) |
-| `propose.html` | Form to propose a new paper (submits via GitHub Issue URL params) |
-| `search.html` (+ `search.js`) | Full-text search across papers / skills / workflows / tools of the selected domains (lunr.js) |
+| File | What it reads | What it shows |
+| ---- | ------------- | ------------- |
+| `index.html` (+ `app.js`) | `catalogue.jsonld` and `leaderboard/career.jsonld` from this repository's raw files on `main` | Registry of collections with status, counts and version DOI (a released collection links to its Browse page), new-release banner, contributor leaderboard |
+| `collections.html` (+ `site-data.js`, `collections.js`) | `catalogue.jsonld` (raw), `search_index/manifest.json`, `search_index/<domain>.json` | Skills, workflows and tools of one released collection, with a text filter and an EDAM topic filter on skills; registry counts and version DOI |
+| `corpus.html` (+ `site-data.js`, `corpus.js`) | `search_index/manifest.json`, `search_index/<domain>.json` | Source papers of one domain, filtered by collection, status, access type and text |
+| `paper.html` (+ `site-data.js`, `paper.js`) | `search_index/manifest.json`, `search_index/<domain>.json`, `catalogue.jsonld` (raw) | One paper and the skills that cite it; request-review and flag buttons |
+| `search.html` (+ `search.js`) | `search_index/manifest.json`, `search_index/<domain>.json` | Full-text search across papers, skills, workflows and tools of the selected domains (lunr.js) |
+| `contribute.html` (+ `contribute.js`) | nothing | Anonymized skill, workflow or tool improvement report as a pre-filled GitHub issue (mirrors `scripts/make_improvement_report.py`) |
+| `propose.html` | nothing | Form to propose a paper, submitted as a pre-filled GitHub issue |
 
-All write actions (verify, flag, propose, contribute) round-trip through GitHub
-Issues or Pull Requests via prefilled URL params, with no server.
+The collection trees (each `SKILL.md`, tool record, `corpus.yaml` and machine
+index) are in the private domain repositories `HolobiomicsLab/asb-skills-<domain>`
+and in the Zenodo record of each release. No page requests them and no page
+links to a domain repository. What a page shows of an item is what the public
+index holds: name, description, summary, EDAM topics and source DOIs of a skill;
+name, description, summary and stage count of a workflow; name, slug, licence,
+code repositories cited by the source paper and evidence text of a tool; DOI,
+title, status, access type and collection of a paper. Each page that shows
+items says that the full text is in the Zenodo record of the release (the
+version DOI from the registry) and in the private domain repository for people
+with access.
 
-`collections.html` reads each collection's machine indexes from the domain
-repository's raw files (`<domain checkout>/collections/<slug>/v<N>/skills_index.json`,
-`workflows/workflows_index.json` and `tools_index.json` in that collection).
-The domain repositories are private, so these raw files are not publicly readable.
+A domain file is downloaded only for the domain on screen. Browse and Paper
+load the domain of the collection or paper asked for, Corpus and Browse
+default to the manifest's `default_domains` and show the download size in
+their selector. All pages fetch a domain file with the same URL
+(`search_index/<file>?v=<first 16 hex of its sha256>`), so the browser cache
+serves it once to every page. All paths are relative, so the same code works
+on `localhost` and under `/asb-skill-collections/` on GitHub Pages.
+
+Browse offers the released collections that the index holds. Registry entries
+it cannot show (a staged tree, or an earlier release that the index does not
+hold, such as `metabolomics/v2`) are listed as not browsable here, with their
+DOI when they have one. Search labels the rows of staged trees, links them to
+their source paper page, and links rows of released collections to Browse
+filtered to that item.
+
+All write actions (request a review, flag, propose, contribute) open a
+pre-filled issue on this public repository through URL parameters, with the
+labels of the matching issue template: `propose,paper-intake,needs-triage`
+(`propose-paper.md`), `review-requested,needs-triage` (`request-paper-review.md`)
+and `usage-feedback,needs-triage` (`skill-feedback.md`). The contribute form
+keeps the labels of `scripts/make_improvement_report.py`. GitHub applies labels
+from the URL only for people with triage access to the repository.
 `contribute.html` scrubs file paths, emails, IPs, and secrets in the browser
 before building the issue body (same rules as the Python CLI).
+
+## EDAM topic labels
+
+Browse (chart, topic filter, skill cards) and the catalogue show an EDAM topic
+by its label, with the id in parentheses or as a tooltip. The labels come from
+`edam_topic_labels.json`: the EDAM version, the source and licence
+(CC-BY-SA-4.0) and an `id -> label` map of every topic term in
+`scripts/data/edam_labels.json`. Regenerate it with
+
+```bash
+python3 docs-site/build_edam_topic_labels.py
+```
+
+and check it with `--check`, which also fails when a topic of the search index
+has no label (`tests/test_docs_site.py` runs it). A page loads the file once and
+shows the id when a label is missing or the file cannot be read.
 
 ## Search index
 
@@ -156,7 +199,7 @@ A domain file, `<slug>.json`:
 ```
 
 `collection_status` marks the latest published release `released` and the
-legacy trees `staged` (in the repository, not part of a release); the search
+legacy trees `staged` (in a domain repository, not part of a release); the search
 page labels results from staged collections. `search_text` is the
 concatenated searchable text; all other fields are for display. The page
 merges the selected domain files into one object of this shape (without

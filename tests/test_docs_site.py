@@ -13,6 +13,7 @@ import json
 import pathlib
 import re
 import subprocess
+import sys
 from html.parser import HTMLParser
 from urllib.parse import urlsplit
 
@@ -71,6 +72,39 @@ def test_search_page_reads_the_per_domain_index():
     assert '"./search_index/"' in script and '"manifest.json"' in script
     assert "search_index.json" not in script
     assert "search_index.json" not in (SITE / "search.html").read_text(encoding="utf-8")
+
+
+# --------------------------------------------------------------------------- #
+# Public data only: the collection trees are in private domain repositories    #
+# --------------------------------------------------------------------------- #
+# The pages once fetched collections/<slug>/v<N>/ files, corpus.yaml and
+# _workflow_index.json from raw URLs; after the trees moved to private
+# repositories every one of them answered 404. The pages read search_index/
+# and the registry instead, and never link a private domain repository.
+PRIVATE_TREE_REFS = re.compile(
+    r"staged-collections/|skills_index\.json|corpus\.yaml|_workflow_index"
+    r"|github\.com/HolobiomicsLab/asb-skills-"
+)
+
+
+def test_site_scripts_and_pages_read_no_private_tree():
+    hits = [
+        f"{path.name}:{number}: {line.strip()}"
+        for path in sorted([*SITE.glob("*.js"), *SITE.glob("*.html")])
+        for number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1)
+        if PRIVATE_TREE_REFS.search(line)
+    ]
+    assert not hits, "references to private or removed collection trees:\n  " + "\n  ".join(hits)
+
+
+def test_edam_topic_labels_are_current_and_cover_the_index():
+    """build_edam_topic_labels.py --check: the committed file is what it generates,
+    and every topic of the search index has a label."""
+    result = subprocess.run(
+        [sys.executable, str(SITE / "build_edam_topic_labels.py"), "--check"],
+        cwd=REPO, capture_output=True, text=True,
+    )
+    assert result.returncode == 0, result.stdout + result.stderr
 
 
 # --------------------------------------------------------------------------- #

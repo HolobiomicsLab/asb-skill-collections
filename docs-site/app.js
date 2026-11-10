@@ -1,5 +1,5 @@
 // app.js — fetch catalogue.jsonld + career.jsonld from GitHub raw and render tables.
-// Paths are relative to the repo root on the main branch.
+// Both files are public, at the root of this repository on the main branch.
 const REPO = "HolobiomicsLab/asb-skill-collections";
 const BRANCH = "main";
 const RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}`;
@@ -9,6 +9,17 @@ async function fetchJSON(path) {
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status} for ${url}`);
   return resp.json();
+}
+
+// EDAM topic labels served next to the page (built by build_edam_topic_labels.py);
+// {} when the file cannot be read, so a topic shows its id.
+async function fetchTopicLabels() {
+  try {
+    const resp = await fetch("./edam_topic_labels.json", { cache: "no-cache" });
+    return resp.ok ? ((await resp.json()).labels || {}) : {};
+  } catch (e) {
+    return {};
+  }
 }
 
 function el(tag, attrs = {}, ...children) {
@@ -45,7 +56,7 @@ function statusBadge(c) {
 async function renderCatalogue() {
   const section = document.getElementById("catalogue");
   try {
-    const data = await fetchJSON("catalogue.jsonld");
+    const [data, labels] = await Promise.all([fetchJSON("catalogue.jsonld"), fetchTopicLabels()]);
     const cols = data.collections || [];
     if (cols.length === 0) {
       section.innerHTML += "<p class='loading'>No collections released yet.</p>";
@@ -57,7 +68,10 @@ async function renderCatalogue() {
       const doiLink = c.doi
         ? [el("a", { href: `https://doi.org/${c.doi}`, target: "_blank" }, c.doi)]
         : ["none"];
-      const chips = (c.domain_topics || []).map(t => el("span", { class: "badge" }, t.split("/").pop()));
+      const chips = (c.domain_topics || []).map(t => {
+        const id = t.split("/").pop();
+        return el("span", { class: "badge", title: id }, labels[id] || id);
+      });
       const topics = chips.length
         ? [el("details", {},
             el("summary", {}, `${chips.length} EDAM topics`),
@@ -67,7 +81,11 @@ async function renderCatalogue() {
         ? [c.released_at.substring(0, 10)]
         : ["not released"];
       return [
-        [el("a", { href: c["@id"] || "#", target: "_blank" }, c.title || c.slug)],
+        // The @id (a w3id IRI) resolves to a tree that left this repository; a
+        // released collection links to its Browse page, a staged one is plain text.
+        isReleased(c)
+          ? [el("a", { href: `./collections.html?c=${encodeURIComponent(c.slug)}&v=${encodeURIComponent(c.version)}` }, c.title || c.slug)]
+          : c.title || c.slug,
         c.version || "",
         [statusBadge(c)],
         String(c.skills_count || 0),
