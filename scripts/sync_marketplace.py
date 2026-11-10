@@ -179,8 +179,11 @@ def new_entry(release: dict, description: str) -> dict[str, Any]:
     }
 
 
-def apply_write(marketplace, latest, texts, checkouts):
-    """Mutate the marketplace in place; return the notes. Raises InputError first."""
+def apply_write(marketplace, latest, texts, checkouts, existing_only=False):
+    """Mutate the marketplace in place; return the notes. Raises InputError first.
+
+    With existing_only, governed entries move and no entry is added.
+    """
     notes: list[str] = []
     seen: set[str] = set()
     for plugin in marketplace["plugins"]:
@@ -199,6 +202,9 @@ def apply_write(marketplace, latest, texts, checkouts):
         if not release["tag"]:
             notes.append(f"{slug}: skipped, registry release has no tag")
             continue
+        if existing_only:
+            notes.append(f"{slug}: not added (--existing-only)")
+            continue
         additions.append(new_entry(release, description_for(release, texts, checkouts)))
         notes.append(f"{slug}: added")
     marketplace["plugins"].extend(additions)
@@ -216,6 +222,8 @@ def parse_args(argv):
     mode.add_argument("--write", action="store_true", help="bring the marketplace to the registry")
     parser.add_argument("--require-all", action="store_true",
                         help="--check also fails when a latest release has no entry")
+    parser.add_argument("--existing-only", action="store_true",
+                        help="--write moves governed entries and adds none")
     parser.add_argument("--marketplace", type=Path, default=DEFAULT_MARKETPLACE)
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
     parser.add_argument("--description", action="append", default=[], metavar="SLUG=TEXT")
@@ -234,7 +242,7 @@ def main(argv=None) -> int:
         if args.write:
             texts = parse_pairs(args.description, "--description")
             checkouts = parse_pairs(args.checkout, "--checkout")
-            notes = apply_write(marketplace, latest, texts, checkouts)
+            notes = apply_write(marketplace, latest, texts, checkouts, args.existing_only)
             new_text = dump(marketplace)
             if new_text != args.marketplace.read_text(encoding="utf-8"):
                 args.marketplace.write_text(new_text, encoding="utf-8")
