@@ -185,6 +185,28 @@ def test_receipt_binds_exact_payload_and_reverifies_without_writing(tmp_path):
     assert json.loads(receipt.read_text()) == report
 
 
+@pytest.mark.parametrize("written,verified", [
+    ("agentic_science_builder.release.promote", "vendored-fallback"),
+    ("vendored-fallback", "agentic_science_builder.release.promote"),
+])
+def test_receipt_verifies_whichever_module_supplied_the_promotion_constants(tmp_path, monkeypatch, written, verified):
+    """Hosted CI has no AgenticScienceBuilder package; a receipt written beside it must still verify."""
+    collection = _write_collection(tmp_path / "collection")
+    monkeypatch.setattr(release_gate, "_PROMOTE_SOURCE", written)
+    assert release_gate.main([str(collection), "--strict", "--quiet"]) == 0
+    report = json.loads((collection / "gate_report.json").read_text())
+    assert report["promote_logic_source"] == written
+    monkeypatch.setattr(release_gate, "_PROMOTE_SOURCE", verified)
+    assert release_gate.main([str(collection), "--verify", "--quiet"]) == 0
+
+
+def test_policy_digest_binds_the_promotion_constant_values(monkeypatch):
+    before = release_gate._policy_snapshot()
+    assert before["non_oa_tiers"] == sorted(release_gate._NON_OA_TIERS)
+    monkeypatch.setattr(release_gate, "_PER_SPAN_CAP", release_gate._PER_SPAN_CAP + 1)
+    assert release_gate._policy_snapshot()["config_sha256"] != before["config_sha256"]
+
+
 @pytest.mark.parametrize("change", ["add", "remove", "rename", "metadata", "policy", "receipt"])
 def test_reverification_rejects_target_or_policy_or_receipt_changes(tmp_path, monkeypatch, change):
     collection = _write_collection(tmp_path / "collection")
