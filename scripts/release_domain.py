@@ -646,6 +646,66 @@ def usage_text(text: str, path: Path, doi: str, version: str) -> str:
     return text[:match.start()] + paragraph + text[match.end():]
 
 
+JSON_VERSION_VALUE = re.compile(r'"version"\s*:\s*"([^"\\]*)"')
+
+
+def json_version_text(text: str, path: Path, version: str, locate: Callable[[object], dict]) -> str:
+    """Set one `version` string of a JSON file by an anchored edit of its value.
+
+    `locate` returns the object whose `version` changes. Each `"version": "..."`
+    value in the text is tried in turn; exactly one replacement must parse to the
+    original document with only that field changed, so no other byte moves.
+    """
+    try:
+        document = json.loads(text)
+    except ValueError as error:
+        raise ReleaseError(f"{path} is not valid JSON: {error}") from error
+    target = locate(document)
+    current = target.get("version")
+    if not isinstance(current, str):
+        raise ReleaseError(f"{path} has no string version to set")
+    if current == version:
+        return text
+    target["version"] = version
+    candidates = []
+    for match in JSON_VERSION_VALUE.finditer(text):
+        candidate = text[:match.start(1)] + version + text[match.end(1):]
+        try:
+            if json.loads(candidate) == document:
+                candidates.append(candidate)
+        except ValueError:
+            continue
+    if len(candidates) != 1:
+        raise ReleaseError(f"cannot set the plugin version by one anchored edit of its value: {path}")
+    return candidates[0]
+
+
+def plugin_json_text(text: str, path: Path, version: str) -> str:
+    """Set the collection plugin manifest's `version`."""
+    def locate(document):
+        if not isinstance(document, dict):
+            raise ReleaseError(f"{path} is not a JSON object")
+        return document
+    return json_version_text(text, path, version, locate)
+
+
+def marketplace_text(text: str, path: Path, version: str, release_path: str) -> str:
+    """Set `version` on the one marketplace entry whose source is the release path."""
+    source = f"./{release_path}"
+
+    def locate(document):
+        plugins = document.get("plugins") if isinstance(document, dict) else None
+        entries = [entry for entry in plugins or [] if isinstance(entry, dict)
+                   and entry.get("source") == source]
+        if len(entries) != 1:
+            raise ReleaseError(
+                f"marketplace has {len(entries)} plugins[] entries with source {source}; "
+                f"exactly one is required: {path}"
+            )
+        return entries[0]
+    return json_version_text(text, path, version, locate)
+
+
 def emit_hub_manifest(context: ReleaseContext) -> Path | None:
     """Call the hub-owned emitter as a subprocess when a hub and receipts exist."""
     if not context.args.hub_root:
@@ -679,8 +739,11 @@ def run_record_doi(context: ReleaseContext) -> dict:
     """Record a minted DOI on the domain surfaces and refresh the hub trace.
 
     Every new file content is computed first; files are written only when all
-    surfaces accept the DOI, so a refusal leaves the checkout unchanged. USAGE.md
-    is optional and reported as skipped when absent.
+    surfaces accept the DOI, so a refusal leaves the checkout unchanged. The same
+    pass sets the plugin version (the release label without its `v`) in the
+    collection `plugin.json` and in the root marketplace entry of the release
+    path. USAGE.md, `plugin.json` and the marketplace are optional and reported
+    as skipped when absent.
     """
     args = context.args
     args.released = context.release_date()
@@ -692,6 +755,10 @@ def run_record_doi(context: ReleaseContext) -> dict:
     collection = context.collection
     label = release_label(context)
     name = doi_label(args.version, label)
+    plugin_version = label[1:]
+    plugin = collection / ".claude-plugin" / "plugin.json"
+    marketplace = args.repo_root / ".claude-plugin" / "marketplace.json"
+    optional = {collection / "USAGE.md", plugin, marketplace}
     surfaces = {
         collection / "CITATION.cff": lambda text, path: collection_citation_text(
             text, path, args.doi, args.released, name),
@@ -700,10 +767,13 @@ def run_record_doi(context: ReleaseContext) -> dict:
         args.repo_root / "README.md": lambda text, path: readme_text(
             text, path, args.doi, args.released, context.release_path),
         collection / "USAGE.md": lambda text, path: usage_text(text, path, args.doi, args.version),
+        plugin: lambda text, path: plugin_json_text(text, path, plugin_version),
+        marketplace: lambda text, path: marketplace_text(
+            text, path, plugin_version, context.release_path),
     }
     planned, skipped = {}, []
     for path, update in surfaces.items():
-        if path.name == "USAGE.md" and not path.is_file():
+        if path in optional and not path.is_file():
             skipped.append(path)
             continue
         if not path.is_file():
@@ -724,7 +794,7 @@ def run_record_doi(context: ReleaseContext) -> dict:
     changed = [path for path, (before, after) in planned.items() if after != before]
     paths = list(planned) + ([hub_manifest] if hub_manifest else [])
     outputs = {"changed_files": changed, "skipped_files": skipped, "release_label": label,
-               "hub_manifest": hub_manifest, "merge_commit": merge_commit}
+               "plugin_version": plugin_version, "hub_manifest": hub_manifest, "merge_commit": merge_commit}
     if concept:
         outputs.update(concept_doi=concept["conceptdoi"], conceptrecid=concept["conceptrecid"])
         print(

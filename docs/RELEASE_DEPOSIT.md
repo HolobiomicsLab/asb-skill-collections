@@ -27,7 +27,7 @@ python scripts/release_domain.py <stage> --domain <slug> --version v<N> \
 | `land` | Dry-runs `land_candidate.py`, then lands only with `--execute`; requires `--candidate`, `--receipts` and `--title`. Records the branch and commit. |
 | `deposit-plan` | Prepares the archive and metadata offline with `--record-id` and repeatable `--extra-file`; records their digests. `--first-release` instead prepares a new record with no record id and refuses an existing domain lineage. |
 | `deposit-draft` | Reuses a pending next-version draft or creates the first one, replaces every file and applies the inherited metadata fix. With `--first-release`, it finds a matching unpublished draft by title and version or creates a new record. Refuses an archive digest different from the plan. `--sandbox` selects the sandbox. |
-| `record-doi` | Requires `--doi`; updates collection and root CITATION.cff, the README release row and, when present, the USAGE citation. All contents are computed before any write, so a refusal (for example a README without the release row) changes nothing. `.zenodo.json` is unchanged. `--hub-root` also invokes the hub's release-manifest emitter. |
+| `record-doi` | Requires `--doi`; updates collection and root CITATION.cff, the README release row and, when present, the USAGE citation, the collection `.claude-plugin/plugin.json` `version` and the `version` of the root `.claude-plugin/marketplace.json` entry whose `source` is `./<release path>` (both set to the release label without `v`). All contents are computed before any write, so a refusal (for example a README without the release row) changes nothing. `.zenodo.json` is unchanged. `--hub-root` also invokes the hub's release-manifest emitter. |
 | `receipt` | Regenerates the strict receipt, verifies it and repeats the surface check. The report is `receipts/<cut-id>/gate_report.json` when that directory exists, otherwise `gate_report.json` in the collection. Refuses untracked files in the release path, which would enter the payload binding. |
 | `manifest` | Requires the merged DOI commit in `--commit`; reads the tree digest from git objects at that commit and refuses when the release path in the checkout differs from it or holds untracked files. Upserts `collections.yaml` in its existing layout, regenerates the catalogue and validates the checkout. Repeatable `--checkout <domain>=<path>` adds other domain checkouts to the catalogue, index and check. `--regen` also rebuilds the search index and refuses unless every registry domain has a checkout. A new domain requires `--concept-doi`. |
 | `tag` | Prints the exact tag and push commands for the DOI merge commit. `--verify` checks the remote tag after the owner pushes it. |
@@ -60,10 +60,18 @@ collection path:
   the earlier DOIs of the major; the collection `doi` field moves to the new DOI;
 - the USAGE paragraph changes only its version DOI and keeps its other clauses;
 - the README row's Released and DOI cells move to the patch;
+- the plugin version becomes the label without its `v` (`3.0.1`) in the
+  collection `plugin.json` and in the marketplace entry of the collection path;
+  other marketplace entries keep their bytes;
 - the registry row of the major takes the new tag, commit, digest, DOI, date and
   counts, and lists the values it replaces under `superseded`.
 
 The earlier tag stays where it is; tags never move.
+
+Every release sets the plugin version the same way: `1.0.0` for a `v1.0.0`
+label, `2.0.0` for `v2.0.0`, `3.0.1` for `v3.0.1`. Candidates keep `0.1.0` until
+`record-doi`. The edit replaces only the version value, and the stage refuses
+when the text cannot be edited that way.
 
 ## Order of a release
 
