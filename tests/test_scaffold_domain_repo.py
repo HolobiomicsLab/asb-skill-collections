@@ -111,7 +111,7 @@ def test_candidate_scaffold_needs_no_registry_entry(tmp_path: Path) -> None:
     assert gates.count("- domain: fixture") == 1
     assert "# candidate stage:" in gates
     issue = (out / ".github/ISSUE_TEMPLATE/propose-paper.md").read_text(encoding="utf-8")
-    assert "metabolomics (default)" not in issue
+    assert "**Target collection:** <!-- fixture -->" in issue
     assert 'labels: ["propose", "paper-intake", "needs-triage"]' in issue
 
 

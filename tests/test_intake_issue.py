@@ -308,6 +308,18 @@ def test_preprint_relation_uses_published_doi(inputs):
     assert any("published DOI" in warning for warning in receipt["warnings"])
 
 
+def test_published_article_is_not_replaced_by_its_preprint(inputs):
+    """`has-preprint` sits on the published article; following it would lose the corpus duplicate."""
+    preprint = "10.1101/2026.01.01.123456"
+    published = crossref_message(relation={"has-preprint": [{"id": preprint, "id-type": "doi"}]})
+    inputs["corpus"].write_text(yaml.safe_dump({"papers": [row(doi=DOI)]}), encoding="utf-8")
+    receipt = run_intake(inputs, Fetchers(crossref_payload={"message": published}))
+    assert receipt["doi"] == DOI
+    assert not any("published DOI" in warning for warning in receipt["warnings"])
+    assert receipt["outcome"] == "duplicate"
+    assert receipt["duplicate_of"]["where"] == "corpus"
+
+
 def test_title_resolution_checks_similarity_and_expected_prefix(inputs):
     body = issue_body(**{"What is it?": TITLE, "Link:": "https://www.nature.com/articles/example"})
     inputs["issue_path"].write_text(json.dumps(issue(body=body)), encoding="utf-8")
@@ -591,6 +603,34 @@ def test_cli_dry_run_returns_staged_exit_zero(inputs, monkeypatch):
     monkeypatch.setattr(intake_resolvers, "http_json", Fetchers())
     assert intake_issue.main(args) == 0
     assert read_receipt(inputs)["outcome"] == "staged"
+
+
+def test_cli_runs_without_a_covered_registry(inputs, monkeypatch):
+    """The domain Action omits --covered when the domain mirrors no registry file."""
+    args = ["--kind", "paper", "--issue-json", str(inputs["issue_path"]),
+            "--domain", "metabolomics", "--wave-file", str(inputs["wave"]),
+            "--collection-corpus", str(inputs["corpus"]),
+            "--proposal-glob", inputs["glob"], "--date", DATE, "--out", str(inputs["out"]),
+            "--dry-run"]
+    monkeypatch.setattr(intake_resolvers, "http_json", Fetchers())
+    assert intake_issue.main(args) == 0
+    assert read_receipt(inputs)["outcome"] == "staged"
+
+
+def test_corpus_duplicate_is_found_without_a_covered_registry(inputs):
+    inputs["corpus"].write_text(yaml.safe_dump({"papers": [row(doi=DOI)]}), encoding="utf-8")
+    receipt = run_intake(inputs, covered=None)
+    assert receipt["outcome"] == "duplicate"
+    assert receipt["duplicate_of"]["where"] == "corpus"
+
+
+def test_usage_error_does_not_exit_with_the_duplicate_code(inputs, capsys):
+    with pytest.raises(SystemExit) as raised:
+        intake_issue.main(["--kind", "paper", "--issue-json", str(inputs["issue_path"])])
+    assert raised.value.code == intake_issue.USAGE_ERROR
+    assert raised.value.code not in intake_issue.OUTCOMES.values()
+    assert not inputs["out"].exists()
+    assert "required" in capsys.readouterr().err
 
 
 def test_retry_after_is_honored_without_real_sleep():
