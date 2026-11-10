@@ -133,8 +133,10 @@ equal to the tag without the `<domain>-v` prefix. Entries whose path is not a re
 as technique packs, are reported and never judged. `--write` moves the `sha` and `version` of governed
 entries and adds an entry for a latest release that has none; a new entry needs its description from
 `--description <domain>=<text>` or from `--checkout <domain>=<domain-checkout>` (the `description` in the
-collection's `.claude-plugin/plugin.json`), and the script writes nothing when one is missing. Add
-`--require-all` to `--check` to fail while a latest release still has no entry. Review the marketplace
+collection's `.claude-plugin/plugin.json`), and the script writes nothing when one is missing. With
+`--existing-only`, `--write` moves governed entries and adds none: use it when a registration moves a
+domain already listed while other domains still wait for their entry. Add `--require-all` to `--check`
+to fail while a latest release still has no entry. Review the marketplace
 change in the same pull request as the registry row.
 
 ## 8. Run the release stages

@@ -185,6 +185,26 @@ def test_patch_release_moves_sha_and_version_and_keeps_description(files):
     assert data["plugins"][1]["version"] == "0.1.0"
 
 
+def test_existing_only_moves_governed_entries_and_adds_none(files, capsys):
+    reg = registry()
+    reg["domains"]["metabolomics"]["releases"][0].update(tag="metabolomics-v3.0.1", commit=SHA_C)
+    args, m, _ = files(marketplace(), reg)
+    assert sm.main(["--write", "--existing-only", *args]) == 0
+    data = json.loads(m.read_text(encoding="utf-8"))
+    assert [p["name"] for p in data["plugins"]] == ["metabolomics", "metabolomics-nmr"]
+    assert (data["plugins"][0]["source"]["sha"], data["plugins"][0]["version"]) == (SHA_C, "3.0.1")
+    assert "proteomics: not added (--existing-only)" in capsys.readouterr().out
+    assert sm.main(["--check", *args]) == 0
+    assert sm.main(["--check", "--require-all", *args]) == 1
+
+
+def test_existing_only_with_nothing_to_move_is_byte_identical(files):
+    args, m, _ = files(marketplace())
+    before = m.read_bytes()
+    assert sm.main(["--write", "--existing-only", *args]) == 0
+    assert m.read_bytes() == before
+
+
 def test_noop_write_is_byte_identical_and_idempotent(files):
     args, m, _ = files(marketplace(with_proteomics=True))
     before = m.read_bytes()
