@@ -96,8 +96,9 @@ collection and the v2-derived technique packs from that domain repository.
 The other released domains install the same way under their domain name, for
 example `/plugin install genomics@asb-skill-collections`. Each marketplace entry
 points at its private domain repository, so installation needs read access to
-that repository. Earlier transport
-measurements predate this source change and do not verify the new entries
+that repository. The nine domains released on 2026-11-09 were installed this
+way on 2026-11-10, with Claude Code and with Codex CLI; the `metabolomics`
+entry was last installed before its source moved to the domain repository
 ([docs/STATUS.md](docs/STATUS.md)).
 
 **Codex CLI** reads the same marketplace file:
@@ -186,19 +187,37 @@ asbb search --list-collections
 ```
 
 Without installing, `python3 -m asb_skill_collections.asbb_cli` runs the same
-commands. The CLI, the router, the MCP server and the collection-level search
+commands.
+
+An installed collection searches itself, with no tooling and no network:
+
+```bash
+python3 "<collection root>/bin/search_skills.py" --query "<task>" -k 10
+python3 "<collection root>/bin/search_skills.py" --query "<goal>" --target workflows -k 3
+python3 "<collection root>/bin/search_skills.py" --query "<tool or task>" --target tools -k 5
+```
+
+`<collection root>` is the directory that holds `skills_index.json`; in an
+installed plugin it is two directories above the router's `SKILL.md`. Written as
+an absolute path, the command runs from any directory. The routers of the
+releases of 2026-11-09 print `python bin/search_skills.py`, relative to the
+collection root: it fails from any other directory and on a system with only
+`python3`, so run the form above instead. The CLI, the router, the MCP server and the collection-level search
 scripts share one versioned selector; each hit reports its score, matched fields
 and qualified slug. [How offline skill selection works](docs/selection.md)
 documents the rule, its tie handling and its 22-query measurement.
 
-**Apply.** Read the skill's `SKILL.md` and follow the procedure. Tool
-requirements are in its frontmatter and in
+**Apply.** Read the skill's `SKILL.md` (the `read:` path of the hit) and follow
+the procedure. Tool requirements are in its frontmatter and in
 `<domain checkout>/collections/metabolomics/v3/USAGE.md`, section 0.
 
 **Ground.** To check an exact parameter, threshold or claim (the difference
 between "the skill says about 5 ppm" and "the paper specifies 5 ppm"), ground the
-skill against its source paper. Grounding is optional, ships inside every plugin
-and pack, and uses [Perspicacité](https://github.com/HolobiomicsLab/Perspicacite-AI),
+skill against its source paper. Grounding is optional. Every released collection
+ships the grounding map `kb_bundle.json`; the binder is
+[`scripts/perspicacite_kb_bind.py`](scripts/perspicacite_kb_bind.py) in this
+repository, and a selection built with `asbb install` carries a copy. It uses
+[Perspicacité](https://github.com/HolobiomicsLab/Perspicacite-AI),
 Holobiomics Lab's local-first literature RAG engine, with two backends:
 
 - **`kb`**: RAG over the paper's full text and supplementary information. The
@@ -208,9 +227,10 @@ Holobiomics Lab's local-first literature RAG engine, with two backends:
 - **`local`**: no server. Clones the skill's source repository and fetches the
   open-access paper where possible. Needs `git` and network.
 
-In Claude Code, run `/ground` on the skill in play; elsewhere, call the bundled
-`bin/perspicacite_kb_bind.py` (`prepare`, `query`, `local`). Full guide:
-`<domain checkout>/collections/metabolomics/v3/USAGE.md`, section 4.
+Run `python3 scripts/perspicacite_kb_bind.py` (`prepare`, `query`, `local`,
+`resolve`) with `--collection "<collection root>" --skill <slug>`; in a selection
+built with `asbb install`, its `bin/` copy and the `/ground` command do the same.
+Full guide: `<domain checkout>/collections/metabolomics/v3/USAGE.md`, section 5.
 
 ## What is in the collection
 
@@ -221,22 +241,20 @@ In Claude Code, run `/ground` on the skill in play; elsewhere, call the bundled
 
 | File | Contents |
 |---|---|
-| `leaves/<slug>/SKILL.md` | one evidence-grounded skill each (frontmatter: EDAM IRIs, `derived_from` DOIs, `tools`, `attribution`; verbatim evidence lines in the body). Shipped as data and read on demand, so installing does not load the corpus into the session's context. |
-| `skills/*/SKILL.md` | three advertised entries: the router, the collection and licence policy, the contribution channel |
-| `workflows/<slug>/SKILL.md` | composite workflows and their router, `workflows/_workflow_router/SKILL.md` |
+| `leaves/<slug>/SKILL.md` | one evidence-grounded skill each (frontmatter: EDAM IRIs, `provenance.source_papers` DOIs and titles, `tools` with their roles, `metadata.license_tier`; verbatim evidence lines in the body). Shipped as data and read on demand, so installing does not load the corpus into the session's context. |
+| `skills/_router/SKILL.md` | the one advertised entry, the router `<domain>-router` |
+| `workflows/<slug>/SKILL.md` | composite workflows, their index `workflows/workflows_index.json` and their router `workflows/_workflow_router/SKILL.md` (not advertised) |
 | `tools/<slug>.yaml` | deduplicated software-tool records with EDAM terms and source DOIs |
 | `skills_index.json`, `tools_index.json` | machine search indexes (EDAM IRI, tool name, keyword) |
+| `bin/search_skills.py` | the offline search over skills, workflows and tools (standard library only) |
 | `kb_bundle.json` | skill to source-paper KB slugs and `repo_urls` (the grounding map) |
-| `bin/perspicacite_kb_bind.py`, `commands/ground.md`, `GROUNDING.md` | packaged grounding: the binder, the `/ground` command and a how-to |
-| `commands/*.md` | the four plugin commands: `/ground`; `/propose-skill`, which stages a community skill proposal; `/synthesize-meta-skill`, which stages a workflow super-skill proposal; `/claim-skill`, run by a maintainer to turn a tool author's claim into a proposal that credits the author |
-| `collection.yaml`, `corpus.yaml` | collection record; per-paper access basis (`repo-oa`) |
-| `CITATION.cff`, `PROVENANCE.md`, `gate_report.json` | citation, how it was generated, release-gate verdict |
+| `collection.yaml`, `corpus.yaml`, `mapping.json` | collection record; per-paper access basis (`repo-oa`); each leaf mapped to its source build records and DOIs |
+| `CITATION.cff` | citation |
 
-These files are relative to `<domain checkout>/collections/metabolomics/v3/`.
-The default entry point is `skills/_router/SKILL.md`. Technique and EDAM-topic
-breakdowns and the selection criteria are in
-`<domain checkout>/collections/metabolomics/v3/ABOUT.md`, also available in the
-Zenodo archive.
+These files are relative to `<domain checkout>/collections/metabolomics/v3/`;
+the other released collections have the same layout. No released collection
+ships the grounding binder or a `commands/` directory. The release-gate report
+and the other receipts are in the domain repository under `receipts/<cut-id>/`.
 
 Local build-capsule archives and record metadata are packed and screened by
 [`scripts/pack_capsules.py`](docs/capsules-record.md), without deposit or upload.
@@ -246,8 +264,8 @@ Local build-capsule archives and record metadata are packed and screened by
 Skills come from method papers anchored to the computational metabolomics review
 series ([SOURCES.md](governance/SOURCES.md): sources and inclusion criteria;
 [CONTENT_POLICY.md](governance/CONTENT_POLICY.md): legal and open-access policy).
-`<domain checkout>/collections/metabolomics/v3/PROVENANCE.md` and the Zenodo
-record carry the release provenance. The method records the exact build command
+The receipts under `<domain checkout>/receipts/<cut-id>/` and the Zenodo record
+carry the release provenance. The method records the exact build command
 and model routing: Claude Opus 4.8 for outline and card revision, Claude Haiku
 4.5 for the other stages, OpenAI `text-embedding-3-large` and `-small` for
 embeddings, each build recorded in `build_manifest.json`.
@@ -280,7 +298,7 @@ For a new domain, follow [Domain onboarding and release](docs/domain-onboarding.
 ## Attribution and citation
 
 Cite the collection and the original paper behind each skill you use
-(`attribution.original_doi` in its `SKILL.md`).
+(the DOIs in `provenance.source_papers` in its `SKILL.md`).
 
 - **Other domains.** The concept DOI of each domain and the version DOI of each
   release are recorded in [`collections.yaml`](collections.yaml); the version
@@ -302,27 +320,25 @@ Cite the collection and the original paper behind each skill you use
   AgenticScienceBuilder Community, Louis-Félix Nothias, HolobiomicsLab.cnrs.fr, MetaboLinkAI.net.
   The concept record in this repository ([root CITATION.cff](CITATION.cff)): Louis-Félix Nothias and
   the AgenticScienceBuilder AI framework, joined by curators ([call for curators](docs/CURATION_CALL.md)).
-- **Per-skill roles** (`attribution:` in each `SKILL.md`): `generator` (the ASB
+- **Roles** (`roles` in `collection.yaml`, `attribution:` in each workflow `SKILL.md`): `generator` (the ASB
   pipeline), `curators` (none yet), `promoter` (Louis-Félix Nothias), `sponsor`
-  (CNRS and Université Côte d'Azur, who paid the API cost), `original_doi`.
+  (CNRS and Université Côte d'Azur, who paid the API cost).
 
 ## Governance and licensing
 
 Every skill carries a `license_tier` (in `skills_index.json` and in its `SKILL.md`
-frontmatter) that answers *what may I do with the underlying tool?*
+frontmatter, `metadata.license_tier`) that answers *what may I do with the underlying tool?*
 
 | Tier | Meaning |
 |---|---|
 | `open` | commercial use allowed (MIT, Apache-2.0, GPL, CC-BY, ...) |
 | `noncommercial` | academic or noncommercial use only; **confirm permitted use before applying** the skill |
 | `restricted` | licence established and it constrains reuse; **check it before commercial use or redistribution** |
-| `unknown` | no tool-level licence evidence; describing and using are unaffected; **never redistribute** the tool's code |
+| `unknown` | no licence for the tool was established; describing and using are unaffected; treat it as all rights reserved and **never redistribute** the tool's code |
 
-The search tools do not filter by tier. The router tells the agent to prefer `open`
-skills when no tier is requested, and to get confirmation of a permitted (academic or
-noncommercial) use before applying a `noncommercial` one; the `asb-metabolomics`
-meta-skill carries the same acknowledgement step. A technique pack's router carries the
-`noncommercial` confirmation inline but no `open`-first default
+The search tools do not filter or rank by tier; each skill hit prints its tier.
+The router asks the agent to get confirmation of a non-commercial purpose before
+applying a `noncommercial` skill
 ([LICENSE_TIERS.md](governance/LICENSE_TIERS.md)). Code is
 under [Apache-2.0](LICENSE), collection content under CC-BY-4.0; verbatim quotations
 (`evidence_spans`) are minimal and attributed, and a rights holder may request removal
@@ -331,10 +347,9 @@ with [MAINTAINERS.md](governance/MAINTAINERS.md) and [COI_POLICY.md](governance/
 
 ## Contributing
 
-- **A skill was wrong, stale or missing.** The `asb-contribute` skill, shipped with
-  the plugin, turns it into a redacted report you approve before anything is filed;
-  from a checkout, `scripts/make_improvement_report.py` prints an anonymised issue body,
-  and with `--print-url` a pre-filled issue URL.
+- **A skill was wrong, stale or missing.** From a checkout,
+  `scripts/make_improvement_report.py` prints an anonymised issue body, and with
+  `--print-url` a pre-filled issue URL.
 - **Propose or annotate a paper, a collection or a workflow:**
   [CONTRIBUTING.md](.github/CONTRIBUTING.md#propose-or-annotate-a-paper).
 - **Add papers to a collection.** See the contributor proposal rail and the

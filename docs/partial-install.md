@@ -179,8 +179,11 @@ remove with: asbb uninstall metabolomics-subset-349bfa1b --runtime agents
 Drop `--dry-run` to install. The installed unit holds the 10 leaves, the
 filtered `skills_index.json` and `kb_bundle.json`, `bin/search_skills.py`,
 `bin/perspicacite_kb_bind.py`, `commands/ground.md`, `GROUNDING.md` and the
-router, whose description reads "search this unit's 10 evidence-grounded
-skills". Run from the unit, `bin/search_skills.py` searches those 10 only.
+router, whose description read "search this unit's 10 evidence-grounded
+skills" when measured. `python3 "<unit>/bin/search_skills.py"`, with the unit's
+absolute path, searches those 10 only from any directory. Unlike this selection,
+a released collection ships no binder, `commands/` or `GROUNDING.md`: its only
+helper is `bin/search_skills.py`.
 
 ### From a file, under your own name
 

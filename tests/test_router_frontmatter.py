@@ -85,10 +85,11 @@ def test_written_router_frontmatter_parses_for_a_collector_description(
 
     assert frontmatter["name"] == "genomics-router"
     assert frontmatter["description"].startswith(
-        "Use when a task needs a skill from ASB Genomics: 3246 evidence-grounded"
+        "Genomics methods from the literature. Use when a genomics task needs"
     )
+    assert "3,246 evidence-grounded genomics skills" in frontmatter["description"]
     assert release_gate._frontmatter_error(text) is None
-    assert "# ASB Genomics: 3246 evidence-grounded skills" in text
+    assert "# ASB Genomics router" in text
 
 
 def test_gate_fails_an_unparsable_router_frontmatter(tmp_path: Path) -> None:

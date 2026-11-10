@@ -15,6 +15,19 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
 ## [Unreleased]
 
 ### Changed
+- Router generator (`scripts/router_shape.py`): the leaf router and the workflow
+  router, which now has a generator (`write_workflow_router`), give
+  `python3 "<skill-dir>/../../bin/search_skills.py"` commands that run from any
+  directory; the leaf router points to the workflow and tool searches, offers
+  `--technique` only when the index has tags, defines all four licence tiers
+  (`unknown` included) and opens its description with the domain.
+  `--routers-only --rewrite` renders both routers of a shaped unit. The released
+  collections are unchanged; their routers still print
+  `python bin/search_skills.py`, relative to the collection root.
+  `AGENTS.md`, `README.md`, `CLAUDE.md` and `docs/partial-install.md` now
+  describe the released layout: one advertised router, `bin/search_skills.py`,
+  leaves with `provenance.source_papers`, no binder or `commands/` inside a
+  collection, receipts under `receipts/<cut-id>/` in the domain repository.
 - Complete step 2 of the per-domain split: released content leaves this master,
   which retains the `asb_skill_collections` tooling package, scripts, tests,
   governance, docs-site, catalogue, release registry and validation workflows.
