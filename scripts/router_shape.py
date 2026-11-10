@@ -47,6 +47,7 @@ SELECTOR_BEGIN = b"# BEGIN VENDORED SELECTOR\n"
 SELECTOR_END = b"# END VENDORED SELECTOR\n"
 ROUTER_SLUG = "_router"
 MAX_CONTRACT_LEAVES = 20
+MAX_DESCRIBED_WORKFLOWS = 4
 TOOL_FIELDS = ("tools", "metadata.tools")
 SOURCE_FIELDS = ("derived_from", "provenance.source_papers")
 
@@ -453,14 +454,17 @@ def router_description(domain: str, count: int, contract: dict) -> str:
     listed = (
         ", ".join(served[:-1]) + f" and {served[-1]}" if len(served) > 1 else served[0]
     )
+    article = "an" if topic[:1].lower() in "aeiou" else "a"
     text = (
-        f"{domain} methods from the literature. Use when a {topic} task needs a "
+        f"{domain} methods from the literature. Use when {article} {topic} task needs a "
         f"published method, tool or analysis workflow: searches {listed} "
         f"distilled from method papers and their code, then reads the one that fits."
     )
+    # Name the workflows only while they all fit; a partial list would read as
+    # the scope of the collection.
     names = contract.get("workflow_names") or []
-    if workflows and names:
-        text += " Workflows: " + "; ".join(n.replace("-", " ") for n in names[:4]) + "."
+    if workflows and 0 < len(names) <= MAX_DESCRIBED_WORKFLOWS:
+        text += " Workflows: " + "; ".join(n.replace("-", " ") for n in names) + "."
     return text
 
 

@@ -215,3 +215,17 @@ def test_workflow_router_is_kept_unless_rewritten(tmp_path: Path) -> None:
     rows = json.loads((unit / "workflows" / "workflows_index.json").read_text())
     for row in rows:
         assert f"| `{row['slug']}` |" in text
+
+
+def test_description_lists_workflows_only_while_they_all_fit() -> None:
+    contract = {"search_workflows": True, "search_tools": False, "tools_count": 0}
+    few = router_shape.router_description(
+        "Agentic AI", 668, {**contract, "workflows_count": 2, "workflow_names": ["a-b", "c-d"]}
+    )
+    many = router_shape.router_description(
+        "Agentic AI", 668,
+        {**contract, "workflows_count": 5, "workflow_names": [f"w{i}" for i in range(5)]},
+    )
+    assert few.startswith("Agentic AI methods from the literature. Use when an agentic AI task")
+    assert few.endswith("Workflows: a b; c d.")
+    assert "Workflows:" not in many and "5 end-to-end workflows" in many
