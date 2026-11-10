@@ -19,11 +19,9 @@ entries point at the private domain repositories, so installation needs read
 access to them. Earlier CLI verification predates these
 sources. Routes and dates: [`docs/STATUS.md`](docs/STATUS.md).
 
-Three skills are advertised. Start at the `asb-metabolomics` meta-skill for the
-guide and licence-tier governance; it hands off to `skills/_router/SKILL.md`.
-The third, `asb-contribute`, turns a wrong, stale or missing skill into a
-redacted report approved before filing. The corpus ships as data and is read on
-demand.
+One skill is advertised, the router `metabolomics-router` at
+`skills/_router/SKILL.md`. The corpus ships beside it as data (`leaves/`,
+indexes, `tools/`, `workflows/`) and is read on demand.
 
 ## Use
 
@@ -32,12 +30,17 @@ Search, apply, ground. Full protocol in [`AGENTS.md`](AGENTS.md) and
 
 - Obtain leaves through `asbb fetch --collection metabolomics/v3`, a domain
   checkout or the [Zenodo archive](https://doi.org/10.5281/zenodo.24093587).
-- Search `<domain checkout>/collections/metabolomics/v3/skills_index.json` by
-  EDAM IRI, tool name or keyword, and use `tools_index.json` in the same
-  collection.
-- Ground a skill against its source with the bundled Perspicacité binder:
-  `python bin/perspicacite_kb_bind.py query --collection <domain checkout>/collections/metabolomics/v3 --skill <slug> --question "..."`.
-  The map is `kb_bundle.json`; tiers are `paper`, `si` and `repo`.
+- Search with the shipped script, from any directory:
+  `python3 "<collection root>/bin/search_skills.py" --query "<task>" -k 10`
+  (add `--target workflows` or `--target tools`). `<collection root>` is the
+  directory with `skills_index.json`, two directories above the router's
+  `SKILL.md`. The routers released on 2026-11-09 print
+  `python bin/search_skills.py`, which works only from the collection root
+  with a `python` executable.
+- Ground a skill against its source with this repository's binder:
+  `python3 scripts/perspicacite_kb_bind.py query --collection "<collection root>" --skill <slug> --question "..."`.
+  The map is `kb_bundle.json`; tiers are `paper`, `si` and `repo`. No released
+  collection ships the binder; selections built with `asbb install` carry a copy.
 
 [`collections.yaml`](collections.yaml) is the release registry. It pins each
 domain repository, commit and tree digest, and the Zenodo DOIs of every
