@@ -7,9 +7,11 @@
  * manifest's default_domains and is kept in the URL.
  *
  * No backend. No build step. lunr is served from docs-site/vendor/ (see search.html).
+ * Result links stay on this site: a skill, workflow or tool of a released
+ * collection opens the Browse page filtered to it, a paper opens paper.html.
+ * The SKILL.md files are in private domain repositories and are never linked.
  */
 
-const RAW_BASE = "https://raw.githubusercontent.com/HolobiomicsLab/asb-skill-collections/main";
 const INDEX_BASE = "./search_index/";
 const MANIFEST_URL = INDEX_BASE + "manifest.json";
 const PER_GROUP_LIMIT = 50;
@@ -233,20 +235,40 @@ function paperResultNode(paper, terms) {
   );
 }
 
+/**
+ * Browse-page link for a row of a released collection, filtered to that item;
+ * null for a staged collection, which the Browse page does not offer.
+ */
+function browseHref(row, tab, q) {
+  const status = ((DATA && DATA.collection_status) || {})[row.collection];
+  const m = String(row.collection || "").match(/^([^/]+)\/v(\d+)$/);
+  if (status !== "released" || !m) return null;
+  return `./collections.html?c=${encodeURIComponent(m[1])}&v=${m[2]}&tab=${tab}&q=${encodeURIComponent(q || "")}`;
+}
+
+function titleNode(href, text) {
+  return href
+    ? el("a", { href, class: "result-title" }, text)
+    : el("span", { class: "result-title" }, text);
+}
+
 function skillResultNode(skill, terms) {
-  // GitHub raw URL of the SKILL.md
-  const href = skill.md_path
-    ? `${RAW_BASE}/${skill.md_path}`
-    : `${RAW_BASE}/staged-collections/${skill.collection}/skills/${skill.name}/SKILL.md`;
+  // Staged rows have no Browse page; their source paper page still lists them.
+  const firstDoi = (skill.source_dois || [])[0];
+  const href = browseHref(skill, "skills", skill.name) || (firstDoi
+    ? `./paper.html?doi=${encodeURIComponent(firstDoi)}&collection=${encodeURIComponent(skill.collection || "")}`
+    : null);
   const snip = snippet(skill.description || skill.summary || skill.search_text || "", terms);
   return el("div", { class: "result-item" },
-    el("a", { href, target: "_blank", rel: "noopener", class: "result-title" }, skill.name),
+    titleNode(href, skill.name),
     el("div", { class: "result-meta" },
       el("span", { class: "badge badge-skill" }, "skill"),
       " ",
       collectionNode(skill.collection),
       skill.source_dois && skill.source_dois.length
-        ? el("span", {}, " · derived from ", el("code", {}, skill.source_dois[0]))
+        ? el("span", {}, " · derived from ", el("a", {
+            href: `./paper.html?doi=${encodeURIComponent(skill.source_dois[0])}&collection=${encodeURIComponent(skill.collection || "")}`,
+          }, el("code", {}, skill.source_dois[0])))
         : null,
     ),
     snip ? el("div", { class: "result-snippet", html: highlight(snip, terms) }) : null,
@@ -254,10 +276,10 @@ function skillResultNode(skill, terms) {
 }
 
 function workflowResultNode(wf, terms) {
-  const href = wf.md_path ? `${RAW_BASE}/${wf.md_path}` : "#";
+  const href = browseHref(wf, "workflows", wf.slug || wf.name);
   const snip = snippet(wf.description || wf.summary || wf.search_text || "", terms);
   return el("div", { class: "result-item" },
-    el("a", { href, target: "_blank", rel: "noopener", class: "result-title" }, wf.name || wf.slug),
+    titleNode(href, wf.name || wf.slug),
     el("div", { class: "result-meta" },
       el("span", { class: "badge" }, "workflow"),
       " ",
@@ -269,12 +291,10 @@ function workflowResultNode(wf, terms) {
 }
 
 function toolResultNode(tool, terms) {
-  const href = tool.yaml_path
-    ? `${RAW_BASE}/${tool.yaml_path}`
-    : `${RAW_BASE}/staged-collections/${tool.collection}/tools/${tool.slug}.yaml`;
+  const href = browseHref(tool, "tools", tool.slug);
   const snip = snippet(tool.evidence_text || tool.search_text || "", terms);
   return el("div", { class: "result-item" },
-    el("a", { href, target: "_blank", rel: "noopener", class: "result-title" }, tool.name || tool.slug),
+    titleNode(href, tool.name || tool.slug),
     el("div", { class: "result-meta" },
       el("span", { class: "badge badge-tool" }, "tool"),
       " ",
@@ -390,6 +410,7 @@ function domainChipLabel(slug) {
 
 function renderDomainChips() {
   const box = document.getElementById("domain-chips");
+  if (!box || !MANIFEST) return;  // only search.html carries the chips
   box.innerHTML = "";
   for (const slug of Object.keys(MANIFEST.domains).sort()) {
     const entry = MANIFEST.domains[slug];
@@ -482,7 +503,7 @@ async function loadSelection() {
   render(document.getElementById("search-input").value);
 }
 
-if (typeof document !== "undefined") (async function init() {
+if (typeof document !== "undefined" && document.getElementById("search-input")) (async function init() {
   const hintEl = document.getElementById("search-hint");
   hintEl.textContent = "Loading index…";
   if (typeof lunr !== "function") {

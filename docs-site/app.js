@@ -1,5 +1,5 @@
 // app.js — fetch catalogue.jsonld + career.jsonld from GitHub raw and render tables.
-// Paths are relative to the repo root on the main branch.
+// Both files are public, at the root of this repository on the main branch.
 const REPO = "HolobiomicsLab/asb-skill-collections";
 const BRANCH = "main";
 const RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}`;
@@ -67,7 +67,11 @@ async function renderCatalogue() {
         ? [c.released_at.substring(0, 10)]
         : ["not released"];
       return [
-        [el("a", { href: c["@id"] || "#", target: "_blank" }, c.title || c.slug)],
+        // The @id (a w3id IRI) resolves to a tree that left this repository; a
+        // released collection links to its Browse page, a staged one is plain text.
+        isReleased(c)
+          ? [el("a", { href: `./collections.html?c=${encodeURIComponent(c.slug)}&v=${encodeURIComponent(c.version)}` }, c.title || c.slug)]
+          : c.title || c.slug,
         c.version || "",
         [statusBadge(c)],
         String(c.skills_count || 0),
