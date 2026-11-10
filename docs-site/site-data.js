@@ -61,7 +61,36 @@ function domainRepoName(slug) {
 
 let _catalogue = null;
 let _manifest = null;
+let _topicLabels = null;
 const _domains = new Map();
+
+/**
+ * EDAM topic labels (edam_topic_labels.json, built by build_edam_topic_labels.py),
+ * as { "topic_3520": "Proteomics experiment", ... }. Loaded once per page; the
+ * 17 kB file is revalidated (no-cache) rather than keyed by a hash, since no
+ * manifest records one. Resolves to {} when the file cannot be read, so every
+ * caller falls back to the id.
+ */
+async function loadTopicLabels() {
+  if (!_topicLabels) {
+    _topicLabels = fetch("./edam_topic_labels.json", { cache: "no-cache" })
+      .then(r => (r.ok ? r.json() : {}))
+      .then(d => (d && d.labels) || {})
+      .catch(() => ({}));
+  }
+  return _topicLabels;
+}
+
+/** "http://edamontology.org/topic_3520" or "topic_3520" -> "topic_3520". */
+function topicId(iri) {
+  return String(iri || "").split("/").pop();
+}
+
+/** Label of a topic from a loaded label map, or its id when there is none. */
+function topicLabel(labels, iri) {
+  const id = topicId(iri);
+  return (labels && labels[id]) || id;
+}
 
 async function loadCatalogue() {
   if (!_catalogue) {

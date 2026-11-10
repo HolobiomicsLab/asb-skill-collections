@@ -6,22 +6,28 @@
 const MAX_RENDER = 60; // cap rendered cards; refine the filter to narrow
 const TABS = ["skills", "workflows", "tools"];
 
-const state = { manifest: null, entries: [], collection: null, tab: "skills", rows: null, loading: false, error: null };
+const state = { manifest: null, labels: {}, entries: [], collection: null, tab: "skills", rows: null, loading: false, error: null };
 
-function topicId(iri) {
-  return String(iri || "").split("/").pop();
+// Topic as shown: its EDAM label (topicId and topicLabel are in site-data.js).
+function topicName(iri) {
+  return topicLabel(state.labels, iri);
+}
+
+function shorten(text, n) {
+  return text.length > n ? text.slice(0, n - 1) + "…" : text;
 }
 
 // ---- summary card with a simple inline-SVG bar chart (basic graphics) ----
+// pairs: [label, count, tooltip]
 function barChart(pairs) {
   const max = Math.max(1, ...pairs.map(([, n]) => n));
-  const rowH = 22, w = 460, labelW = 150, barW = w - labelW - 50;
+  const rowH = 22, w = 520, labelW = 210, barW = w - labelW - 50;
   const svg = [`<svg viewBox="0 0 ${w} ${pairs.length * rowH + 8}" class="chart" role="img">`];
   pairs.forEach(([label, n], i) => {
     const y = i * rowH + 4;
     const len = Math.max(2, Math.round((n / max) * barW));
     svg.push(
-      `<text x="0" y="${y + 13}" class="chart-label">${siteEsc(label)}</text>`,
+      `<text x="0" y="${y + 13}" class="chart-label"><title>${siteEsc(pairs[i][2] || label)}</title>${siteEsc(shorten(label, 32))}</text>`,
       `<rect x="${labelW}" y="${y + 3}" width="${len}" height="14" rx="3" class="chart-bar"></rect>`,
       `<text x="${labelW + len + 6}" y="${y + 13}" class="chart-num">${n}</text>`
     );
@@ -75,7 +81,8 @@ function renderSummary() {
        <div id="summary-chart"></div>
      </div>`;
   if (rows) {
-    const counts = topicCounts(rows.skills).slice(0, 8).map(([t, k]) => [topicId(t), k]);
+    const counts = topicCounts(rows.skills).slice(0, 8)
+      .map(([t, k]) => [topicName(t), k, `${topicName(t)} (${topicId(t)})`]);
     if (counts.length) {
       document.getElementById("summary-chart").innerHTML =
         `<p class="muted chart-title">Skills by EDAM topic</p>` + barChart(counts);
@@ -88,7 +95,10 @@ function populateTopicFilter() {
   const want = sel.dataset.want || "";
   const counts = state.rows ? topicCounts(state.rows.skills) : [];
   sel.innerHTML = `<option value="">All EDAM topics</option>` +
-    counts.map(([t, k]) => `<option value="${siteEsc(t)}">${siteEsc(topicId(t))} (${k})</option>`).join("");
+    counts.map(([t, k]) => {
+      const name = topicName(t), id = topicId(t);
+      return `<option value="${siteEsc(t)}">${siteEsc(name === id ? id : `${name} (${id})`)}: ${k}</option>`;
+    }).join("");
   if (want && counts.some(([t]) => t === want)) sel.value = want;
   if (state.rows) delete sel.dataset.want;
 }
@@ -108,7 +118,7 @@ function doiLinks(dois) {
 
 function skillCard(r) {
   const topics = (r.edam_topics || []).map(t =>
-    `<a class="badge" href="${siteEsc(t)}" target="_blank" rel="noopener">${siteEsc(topicId(t))}</a>`).join("");
+    `<a class="badge" href="${siteEsc(t)}" title="${siteEsc(topicId(t))}" target="_blank" rel="noopener">${siteEsc(topicName(t))}</a>`).join("");
   const sources = (r.source_dois || []).length
     ? `<p class="muted">Source paper: ${doiLinks(r.source_dois)}</p>` : "";
   const negative = (r.when_to_use_negative || "").trim()
@@ -159,7 +169,8 @@ function toolCard(r) {
 function matches(r, q) {
   if (!q) return true;
   const hay = `${r.name || ""} ${r.slug || ""} ${r.description || ""} ${r.summary || ""} ` +
-    `${(r.source_dois || []).join(" ")} ${r.source_doi || ""} ${r.license_spdx || ""}`.toLowerCase();
+    `${(r.source_dois || []).join(" ")} ${r.source_doi || ""} ${r.license_spdx || ""} ` +
+    `${(r.edam_topics || []).map(topicName).join(" ")}`.toLowerCase();
   return q.toLowerCase().split(/\s+/).every(t => hay.includes(t));
 }
 
@@ -248,7 +259,8 @@ async function init() {
   const sel = document.getElementById("collection-select");
   let catalogue;
   try {
-    [catalogue, state.manifest] = await Promise.all([loadCatalogue(), loadManifest()]);
+    // loadTopicLabels never rejects: without the file, topics show their ids.
+    [catalogue, state.manifest, state.labels] = await Promise.all([loadCatalogue(), loadManifest(), loadTopicLabels()]);
   } catch (e) {
     document.getElementById("results").innerHTML = `<p class="error">Could not load the registry or the index: ${siteEsc(e.message)}.</p>`;
     return;

@@ -55,6 +55,22 @@ from the URL only for people with triage access to the repository.
 `contribute.html` scrubs file paths, emails, IPs, and secrets in the browser
 before building the issue body (same rules as the Python CLI).
 
+## EDAM topic labels
+
+Browse (chart, topic filter, skill cards) and the catalogue show an EDAM topic
+by its label, with the id in parentheses or as a tooltip. The labels come from
+`edam_topic_labels.json`: the EDAM version, the source and licence
+(CC-BY-SA-4.0) and an `id -> label` map of every topic term in
+`scripts/data/edam_labels.json`. Regenerate it with
+
+```bash
+python3 docs-site/build_edam_topic_labels.py
+```
+
+and check it with `--check`, which also fails when a topic of the search index
+has no label (`tests/test_docs_site.py` runs it). A page loads the file once and
+shows the id when a label is missing or the file cannot be read.
+
 ## Search index
 
 `search.html` performs client-side full-text search via

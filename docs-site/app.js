@@ -11,6 +11,17 @@ async function fetchJSON(path) {
   return resp.json();
 }
 
+// EDAM topic labels served next to the page (built by build_edam_topic_labels.py);
+// {} when the file cannot be read, so a topic shows its id.
+async function fetchTopicLabels() {
+  try {
+    const resp = await fetch("./edam_topic_labels.json", { cache: "no-cache" });
+    return resp.ok ? ((await resp.json()).labels || {}) : {};
+  } catch (e) {
+    return {};
+  }
+}
+
 function el(tag, attrs = {}, ...children) {
   const e = document.createElement(tag);
   for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
@@ -45,7 +56,7 @@ function statusBadge(c) {
 async function renderCatalogue() {
   const section = document.getElementById("catalogue");
   try {
-    const data = await fetchJSON("catalogue.jsonld");
+    const [data, labels] = await Promise.all([fetchJSON("catalogue.jsonld"), fetchTopicLabels()]);
     const cols = data.collections || [];
     if (cols.length === 0) {
       section.innerHTML += "<p class='loading'>No collections released yet.</p>";
@@ -57,7 +68,10 @@ async function renderCatalogue() {
       const doiLink = c.doi
         ? [el("a", { href: `https://doi.org/${c.doi}`, target: "_blank" }, c.doi)]
         : ["none"];
-      const chips = (c.domain_topics || []).map(t => el("span", { class: "badge" }, t.split("/").pop()));
+      const chips = (c.domain_topics || []).map(t => {
+        const id = t.split("/").pop();
+        return el("span", { class: "badge", title: id }, labels[id] || id);
+      });
       const topics = chips.length
         ? [el("details", {},
             el("summary", {}, `${chips.length} EDAM topics`),
