@@ -1842,6 +1842,7 @@ def _policy_snapshot() -> dict:
     policy = {
         "version": _GATE_POLICY_VERSION,
         "oa_tiers": sorted(_NORMALIZED_OA_TIERS),
+        "non_oa_tiers": sorted(_NON_OA_TIERS),
         "per_span_cap": _PER_SPAN_CAP,
         "cumulative_cap": _CUMULATIVE_CAP,
         "text_field_cap": _TEXT_FIELD_CAP,
@@ -1861,11 +1862,15 @@ def _policy_snapshot() -> dict:
         "not_peer_reviewed_doi_prefixes": list(_NOT_PEER_REVIEWED_DOI_PREFIXES),
         "max_leaves_per_evidence_span": _MAX_LEAVES_PER_SPAN,
     }
+    # The digest binds the values of the promotion constants, listed above, and
+    # not the module they were read from. A receipt written where the
+    # AgenticScienceBuilder package is importable must verify where it is not
+    # (hosted CI installs only this repository). The module name stays in the
+    # report as `promote_logic_source`, for information.
     policy["config_sha256"] = receipt.digest({
         **policy,
         "pii": PII_CONFIG,
         "capped_tiers": sorted(_CAPPED_VERBATIM_TIERS),
-        "promote_source": _PROMOTE_SOURCE,
     })
     sources = [Path(__file__), Path(receipt.__file__), Path(layout.__file__)]
     policy["implementation_sha256"] = receipt.digest([receipt.file_record(p, p.name) for p in sources])
