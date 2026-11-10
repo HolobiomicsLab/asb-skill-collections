@@ -79,7 +79,7 @@ e.g. `metabolomics-v1.0.0` -> `metabolomics-v1.0.1`. The patch release:
   contains other valid releases — push a new revision that omits the
   withdrawn content and update the dataset README to link the rollback
   issue.
-- Trigger `mirror-to-hf.yml` against the patched release tag.
+- Run `scripts/mirror_to_hf.py` against the patched release tag (it reads its settings from environment variables; see its header).
 
 ### 6. Mark the original tag as withdrawn
 

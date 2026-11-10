@@ -47,13 +47,13 @@ The report records redaction counts for transparency. Privacy stance:
 Maintainers triage `improvement` / `needs-triage` issues and shepherd a PR. A
 content change lands with a **review attestation** (`collections/<slug>/v<N>/reviews/
 <doi>.yaml`) — see `paper.html`'s verify flow. Conflict-of-interest is auto-checked
-(`verify-coi.yml`, `governance/COI_POLICY.md`): self-review is allowed with
+(`scripts/check_coi.py`, `governance/COI_POLICY.md`): self-review is allowed with
 disclosure + a second reviewer; `self_authored_reviews` and `external_reviews` are
 tracked separately and both public.
 
 ## 6. Credit (leaderboard + rank)
 
-On merge, `career-stats-regen.yml` runs `scripts/regen_career_stats.py` to rebuild
+After a merge, a maintainer runs `scripts/regen_career_stats.py` to rebuild
 `leaderboard/` from `contributors.jsonld` + the merged attestations:
 
 - `career.jsonld` — all-time, with a numeric **rank** (by total reviews),
@@ -62,15 +62,14 @@ On merge, `career-stats-regen.yml` runs `scripts/regen_career_stats.py` to rebui
 
 These render on the site's [contributor leaderboard](https://holobiomicslab.github.io/asb-skill-collections/).
 Tiers: reviewer → domain_contributor → curator → lead_curator
-(`tier-update.yml`, `governance/MAINTAINERS.md`).
+(`scripts/tier_update.py`, `governance/MAINTAINERS.md`).
 
 ## 7. Authorship on the next release
 
 When a new version is cut, `scripts/select_release_coauthors.py` turns the measured
 record into a **proposed** author list (transparent, declarative policy: ORCID
 required, tier gate, substantive `external_reviews`, optional recency window;
-ranked "recently and over time"). `release.yml` posts this proposal to the release
-job summary — **advisory only**. A maintainer reviews it and injects the agreed
+ranked "recently and over time"). The proposal is **advisory only**. A maintainer reviews it and injects the agreed
 authors via `select_release_coauthors.py --apply` (into `CITATION.cff` +
 `.zenodo.json`, deduped by ORCID) in a normal PR before tagging.
 

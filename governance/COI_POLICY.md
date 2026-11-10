@@ -6,16 +6,18 @@ Self-review of papers you co-authored is **allowed** with three safeguards.
 
 ## Safeguard 1 — Automatic COI detection
 
-`verify-coi.yml` runs on every PR that touches `collections/<slug>/v<N>/reviews/*.yaml`.
-It cross-checks the paper's author list (via OpenAlex) against the reviewer's ORCID.
-The action auto-populates three fields in the attestation:
+A maintainer runs `scripts/check_coi.py` on a PR that touches `collections/<slug>/v<N>/reviews/*.yaml`
+in the domain repository. (The `verify-coi.yml` workflow that once ran it on every such PR no longer
+exists.) It cross-checks the paper's author list (via OpenAlex) against the reviewer's ORCID.
+The script reports three fields for the attestation:
 
 - `is_coauthor: true|false`
 - `author_position: <integer | null>` (1 = first author)
 - `is_corresponding: true|false`
 
-CI **fails** if the action-detected `is_coauthor` value contradicts the manually-declared
-value in the attestation file.
+The detected `is_coauthor` value is compared with the manually-declared value in the
+attestation file by the maintainer who runs the script; no workflow of this repository
+fails a PR on a mismatch any more.
 
 ## Safeguard 2 — Mandatory disclosure
 
@@ -39,13 +41,13 @@ The co-reviewer must:
 - Have posted a sign-off comment on the PR
 
 **At v0, CI checks none of the three, and gate 13 is formally waived** — see
-`CONTENT_POLICY.md` §9 (LOCKED 2026-06-14) and §13. What `verify-coi.yml` actually does is
+`CONTENT_POLICY.md` §9 (LOCKED 2026-06-14) and §13. What the removed `verify-coi.yml` workflow did was
 narrower and worth stating exactly, because a reader who takes the previous paragraph at face
 value believes a check ran:
 
-- it compares the **declared** COI against the one detected from OpenAlex authorship, and fails on a
-  mismatch — this is a real check and it is the one with teeth;
-- it tests that a `co_reviewer` block is **present** (truthy), and looks at nothing inside it;
+- it compared the **declared** COI against the one detected from OpenAlex authorship, and failed on a
+  mismatch — this was a real check and it was the one with teeth;
+- it tested that a `co_reviewer` block is **present** (truthy), and looked at nothing inside it;
 - ORCID distinctness, the >=Reviewer tier lookup and the sign-off comment are **not implemented**.
   `sign_off_pr` appears three times in this repository, all in documentation and none in code.
 
@@ -63,7 +65,7 @@ would fail closed on every PR.
 ## Lead Curator non-self minimum
 
 Of a Lead Curator's 30 qualifying reviews, **at least 20 must be non-self-authored**
-(papers where `is_coauthor: false`). This is enforced by `tier-update.yml`.
+(papers where `is_coauthor: false`). This is enforced by `scripts/tier_update.py`, which a maintainer runs after a merge.
 
 ## Credit accounting
 
