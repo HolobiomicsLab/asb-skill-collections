@@ -82,6 +82,18 @@ def load_labels(path: Path) -> dict:
     return table
 
 
+def collection_label(path: Path) -> str:
+    """Name the collection without the machine it was read on.
+
+    A released tree is `collections/<domain>/<version>` in its repository; that
+    relative form is recorded. Any other directory is recorded by its name.
+    """
+    parts = path.resolve().parts
+    if len(parts) >= 3 and parts[-3] == "collections":
+        return "/".join(parts[-3:])
+    return parts[-1]
+
+
 def load_collection(path: Path) -> tuple[list[dict], dict, str]:
     """Read index rows, collection identity and the exact source digest."""
     index_path = path / "skills_index.json"
@@ -89,7 +101,7 @@ def load_collection(path: Path) -> tuple[list[dict], dict, str]:
     rows = json.loads(source)
     if not isinstance(rows, list):
         raise FacetError(f"expected a JSON list in {index_path}")
-    metadata = {"path": str(path.resolve()), "version": None}
+    metadata = {"path": collection_label(path), "version": None}
     metadata_path = path / "collection.yaml"
     if metadata_path.is_file():
         import yaml

@@ -47,7 +47,7 @@
       "bytes": 6651764,
       "collections": [
         {
-          "commit": "3f10bd43bbaa2fd978c554fa9623d7c378397cb0",
+          "commit": "561e41bd8a744cbb20db4f3625e0ed6152eb7178",
           "label": "epigenomics/v1",
           "status": "staged"
         },
@@ -65,8 +65,8 @@
       },
       "file": "epigenomics.json",
       "include_superseded": false,
-      "registry_digest": "9de7cce38acf8a842860785140996c6d16b732485172594d5ddb040c36f7464e",
-      "sha256": "86dc16ef668c982faa195805ac5f25ff9bd7dc39019de0d2cb7bdf0de39f16be"
+      "registry_digest": "d9d3e0123c3d3ceaa43a794a45ce0b61d8c028a7f7bf5d9443e986a800686c0f",
+      "sha256": "e1f76e1febbe2312b95c1abd5262653234bf283935edeaa9a8b6c7aa1dda736a"
     },
     "genomics": {
       "bytes": 8994205,
@@ -112,7 +112,7 @@
       "bytes": 34956008,
       "collections": [
         {
-          "commit": "7b906e42d8c684ba2c21e3d5db0bb5e7280a89bc",
+          "commit": "b0601f079bfa7df1b6fe3faa9c024f428787349e",
           "label": "metabolomics/v1",
           "status": "staged"
         },
@@ -130,8 +130,8 @@
       },
       "file": "metabolomics.json",
       "include_superseded": false,
-      "registry_digest": "6c0d3c41d7d50ba7c74f0c15378880332ce2e83c6509cf874d6ec49e7ce72ee1",
-      "sha256": "859611a88648bd9e4c9b44390a22afca62d4a6967e95f7f80bbacb87e84c943c"
+      "registry_digest": "9983747d0721dbd65d5e51bfb8ce48882dda699107c71e97068be299d1deaa67",
+      "sha256": "0ec53dc29110bddf700cb918367aedd0c25b2ccc207789a493736bdfa92a598e"
     },
     "metagenomics": {
       "bytes": 7679822,
@@ -197,7 +197,7 @@
       "bytes": 31806651,
       "collections": [
         {
-          "commit": "a08e5e959ba0c15c45136898795b469caf462f3d",
+          "commit": "20c78fb0bcea8519cfc60e29c8a251ce6c9a1684",
           "label": "transcriptomics/v1",
           "status": "staged"
         },
@@ -215,8 +215,8 @@
       },
       "file": "transcriptomics.json",
       "include_superseded": false,
-      "registry_digest": "aa3a2d21840690b51c183d2d95706cb2b5059b725a254bacecd4ed5a61a8e360",
-      "sha256": "469d15f92da8b1d83a2df158bb5872f6bb88eb95c413a3e0dc21007f54e040aa"
+      "registry_digest": "ec440b88020da534084ca2615e19342d5ffaf2a39c2b9fb5dd3b1963483e92e3",
+      "sha256": "59d47cd5e5233e3e22f508d83abb7a1a3e8394b005d47287820b721965ffe6e2"
     }
   },
   "schema_version": "1"
