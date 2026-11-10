@@ -249,7 +249,7 @@ v1 intention, not a v0 check (§9).
 | # | Gate | Owner | Criterion | Trigger | v0 Enforcement |
 |---|---|---|---|---|---|
 | **1** | **asb-schema published** | A+H | LinkML `asb-schema` repo public + registered | gate check: lookup on GitHub | warn-only (schema not published yet) |
-| **2** | **Paper access tier resolved** | A | Every `status:included` paper has `access.type` in the OA set `{open-access, open_access, oa, gold-oa, gold_oa, green-oa, green, diamond}` (post-normalization) | CI verify-paper.yml | hard-block non-OA / unknown |
+| **2** | **Paper access tier resolved** | A | Every `status:included` paper has `access.type` in the OA set `{open-access, open_access, oa, gold-oa, gold_oa, green-oa, green, diamond}` (post-normalization) | release gate (`release_gate.py`, run by `domain-gates.yml`) | hard-block non-OA / unknown |
 | **3** | **Indicium schema version pinned** | A | Collection YAML lists `schema_versions.indicium: <real-tag>` from indicium repo | gate check: git tag exists | warn-only (gate 3 not activated v0). **Unachievable as written:** the indicium repository has zero tags and no collection declares `schema_versions`. At v1 the pin is a commit SHA — §7.4 |
 | **4** | **Profile reproducibility** | A | Generation manifest includes `profile_hash`, `llm`, `seed` enabling exact rebuild | manifest validation | warn-only (gate 4 not activated v0) |
 | **5** | **Verbatim quotation caps** | A | Sum of `evidence_span` lengths across all skills/claims ≤ corpus-size-dependent cap (§5.3) | gate check: char count | hard-block (fail if exceeded) |
@@ -261,8 +261,8 @@ v1 intention, not a v0 check (§9).
 | **11** | **Leaderboard schema valid** | A | `benchmark/leaderboard.jsonld` validates against JSONLD context; CiTO link types recognized | gate check: JSONLD parser + CiTO vocab | warn-only (gate 11 not activated v0) |
 | **12** | **Contamination / held-out audit** | A | For open-tier releases: no held-out test splits mixed into public outputs; for closed-tier: held-out marker present (v1+ only; v0 open-only) | (v1) gate check: output file audit | **FORMALLY WAIVED for v0** — no contamination check is implemented and no held-out split is declared; v0 is open-tier only, so the criterion's closed-tier half does not apply (waiver logged in §9 + release notes) |
 | **13** | **Independent co-reviewer (gate §9 waiver)** | A+H | (v1) If `is_coauthor: true` on any collection attestation, a second verified reviewer (non-coauthor, ≥Reviewer tier) has signed off | CR-P0-02 attestation review | **FORMALLY WAIVED for v0** — self-merge permitted; no second reviewer required pre-tag (waiver logged in §9 + release notes) |
-| **14** | **≥20 external reviews (gate §9 waiver)** | A+H | (v1 TARGET) Lead Curator's external-review count (papers with `is_coauthor:false`) ≥ 20 | tier-update.yml CI + manual audit | **FORMALLY WAIVED for v0** — ≥20 external reviews is the v1 target, NOT enforced at v0 (waiver logged in §9 + release notes) |
-| **15** | **v0 OA-only access tier** | A | All included papers `access.type` in the OA set `{open-access, open_access, oa, gold-oa, gold_oa, green-oa, green, diamond}` (post-normalization); no closed/hybrid/unknown mixed in. Gate 15 asserts ONLY the paper-access (`require_open_access`) axis; it does NOT assert workflow openness (`benchmark_tier.openness`) | verify-paper.yml CI | hard-block v0 (non-OA auto-fail) |
+| **14** | **≥20 external reviews (gate §9 waiver)** | A+H | (v1 TARGET) Lead Curator's external-review count (papers with `is_coauthor:false`) ≥ 20 | `tier_update.py` (run by a maintainer) + manual audit | **FORMALLY WAIVED for v0** — ≥20 external reviews is the v1 target, NOT enforced at v0 (waiver logged in §9 + release notes) |
+| **15** | **v0 OA-only access tier** | A | All included papers `access.type` in the OA set `{open-access, open_access, oa, gold-oa, gold_oa, green-oa, green, diamond}` (post-normalization); no closed/hybrid/unknown mixed in. Gate 15 asserts ONLY the paper-access (`require_open_access`) axis; it does NOT assert workflow openness (`benchmark_tier.openness`) | release gate (`release_gate.py`, run by `domain-gates.yml`) | hard-block v0 (non-OA auto-fail) |
 
 ### 5.1 Verbatim Quotation Cap
 
@@ -737,7 +737,7 @@ If a soft gate fails and the Lead Maintainer decides override is justified:
 
 ### 8.4 Hard-Gate Violations: Immediate Takedown
 
-If a hard-gate violation is discovered **after release** (e.g., a non-OA paper slipped through verify-paper.yml, or a PII span made it into public artifacts):
+If a hard-gate violation is discovered **after release** (e.g., a non-OA paper slipped through the release gate, or a PII span made it into public artifacts):
 
 1. **Lead Maintainer declares a takedown** (issue, email to maintainers@...)
 2. **Within 48 hours:** Remove the artifact from GitHub, HF, and w3id.org
@@ -822,7 +822,7 @@ Starting with v1 (scheduled ~Q4 2026):
   declared benchmark split plus `benchmark_tier.openness` in the collection schema, populated. The
   audit itself is the small part
 - Gate 13 becomes a hard requirement (independent co-reviewer if `is_coauthor:true`); self-merge is disallowed once v1 governance is in force
-- Gate 14 becomes a hard requirement (≥20 external reviews, verified in `tier-update.yml`)
+- Gate 14 becomes a hard requirement (≥20 external reviews, verified by `scripts/tier_update.py`)
 - Single-maintainer exception is removed; minimum two curators per release
 
 ---

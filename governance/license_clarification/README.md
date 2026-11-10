@@ -35,7 +35,7 @@ The script is conservative by design:
 
 ```bash
 python3 -m scripts.license_clarification_issues \
-    --corpus collections/metabolomics/v2/corpus.yaml
+    --corpus <domain checkout>/collections/metabolomics/v2/corpus.yaml
 ```
 
 Prints a summary and writes the plan to `governance/license_clarification/wave.yaml`
@@ -47,7 +47,7 @@ File a small batch first to verify the template looks right:
 
 ```bash
 python3 -m scripts.license_clarification_issues \
-    --corpus collections/metabolomics/v2/corpus.yaml \
+    --corpus <domain checkout>/collections/metabolomics/v2/corpus.yaml \
     --create --limit 5
 ```
 
@@ -55,7 +55,7 @@ Once satisfied, remove `--limit` or increase it to file the full wave:
 
 ```bash
 python3 -m scripts.license_clarification_issues \
-    --corpus collections/metabolomics/v2/corpus.yaml \
+    --corpus <domain checkout>/collections/metabolomics/v2/corpus.yaml \
     --create --limit 50
 ```
 
