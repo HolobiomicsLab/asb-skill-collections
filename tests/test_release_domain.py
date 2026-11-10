@@ -23,6 +23,31 @@ PYTHON = Path(sys.executable)
 NOW = "2026-11-09T10:11:12Z"
 DOI = "10.5281/zenodo.1234567"
 CONCEPT_DOI = "10.5281/zenodo.1234566"
+MARKETPLACE = """{
+  "name": "asb-skills-fixture",
+  "description": "Fixture marketplace \\u2014 with an escaped dash and a raw one —.",
+  "plugins": [
+    {
+      "name": "fixture",
+      "source": "./collections/fixture/v1",
+      "version": "0.1.0",
+      "keywords": ["fixture"]
+    },
+    {
+      "name": "fixture-v0",
+      "version": "0.1.0",
+      "source": "./collections/fixture/v0"
+    },
+    {
+      "name": "fixture-pack",
+      "source": "./packs/fixture/pack",
+      "version":"0.1.0"
+    }
+  ]
+}
+"""
+PLUGIN = "collections/fixture/v1/.claude-plugin/plugin.json"
+MARKETPLACE_PATH = ".claude-plugin/marketplace.json"
 
 
 def run_git(repo: Path, *arguments: str) -> None:
@@ -97,6 +122,10 @@ def make_domain(root: Path) -> Path:
         "|---|---|---|---|---|---|\n"
         "| `collections/fixture/v1` | ASB Fixture Skill Collection v1 | 10 | 10 | PENDING | PENDING |\n"
     )
+    plugin = collection / ".claude-plugin" / "plugin.json"
+    plugin.write_text(plugin.read_text().replace('"version": "1.0.0"', '"version": "0.1.0"'))
+    (domain / ".claude-plugin").mkdir()
+    (domain / ".claude-plugin" / "marketplace.json").write_text(MARKETPLACE)
     receipts = domain / "receipts" / "fixture"
     receipts.mkdir(parents=True)
     (receipts / "source.json").write_text(json.dumps({
@@ -585,7 +614,7 @@ def test_land_dry_runs_then_executes_and_records_branch(release_fixture, tmp_pat
 PATCH_DOI = "10.5281/zenodo.1234999"
 SURFACES = (
     "collections/fixture/v1/CITATION.cff", "CITATION.cff", "README.md",
-    "collections/fixture/v1/USAGE.md",
+    "collections/fixture/v1/USAGE.md", PLUGIN, MARKETPLACE_PATH,
 )
 
 
@@ -601,7 +630,7 @@ def test_record_doi_skips_an_absent_usage_file(release_fixture) -> None:
     state = json.loads(release_fixture.state.read_text())
     outputs = state["stages"]["record-doi"]["outputs"]
     assert outputs["skipped_files"] == [str(release_fixture.repo / "collections/fixture/v1/USAGE.md")]
-    assert len(outputs["changed_files"]) == 3
+    assert len(outputs["changed_files"]) == 5
     for relative in SURFACES[:3]:
         assert DOI in (release_fixture.repo / relative).read_text()
     assert not (release_fixture.repo / "collections/fixture/v1/USAGE.md").exists()
@@ -844,3 +873,109 @@ def test_manifest_regen_requires_every_registry_domain_checkout(release_fixture,
     assert set(index["collection_commits"]) == {"fixture/v1", "other/v1"}
     document = yaml.safe_load(registry.read_text())
     assert set(document["domains"]) == {"other", "fixture"}
+
+
+def plugin_versions(repo: Path) -> tuple[str, dict]:
+    plugin = json.loads((repo / PLUGIN).read_text())["version"]
+    entries = json.loads((repo / MARKETPLACE_PATH).read_text())["plugins"]
+    return plugin, {entry["source"]: entry["version"] for entry in entries}
+
+
+def test_record_doi_first_release_sets_the_plugin_version(release_fixture) -> None:
+    marketplace = release_fixture.repo / MARKETPLACE_PATH
+    before = marketplace.read_bytes()
+    seed_state(release_fixture, {"deposit-draft": {"status": "waiting"}})
+    assert invoke(release_fixture, "record-doi", "--doi", DOI, "--released", "2026-11-09") == 0
+    plugin, entries = plugin_versions(release_fixture.repo)
+    assert plugin == "1.0.0"
+    assert entries == {"./collections/fixture/v1": "1.0.0", "./collections/fixture/v0": "0.1.0",
+                       "./packs/fixture/pack": "0.1.0"}
+    changed = [(old, new) for old, new in zip(before.splitlines(), marketplace.read_bytes().splitlines())
+               if old != new]
+    assert changed == [(b'      "version": "0.1.0",', b'      "version": "1.0.0",')]
+    assert len(before.splitlines()) == len(marketplace.read_bytes().splitlines())
+    outputs = json.loads(release_fixture.state.read_text())["stages"]["record-doi"]["outputs"]
+    assert (outputs["release_label"], outputs["plugin_version"]) == ("v1.0.0", "1.0.0")
+    assert {str(release_fixture.repo / PLUGIN), str(marketplace)} <= set(outputs["changed_files"])
+
+
+def test_record_doi_patch_release_sets_the_patch_plugin_version_only(release_fixture) -> None:
+    first_release(release_fixture)
+    collection = release_fixture.repo / "collections/fixture/v1"
+    metadata = json.loads((collection / ".zenodo.json").read_text())
+    metadata["version"] = "v1.0.1"
+    (collection / ".zenodo.json").write_text(json.dumps(metadata))
+    commit_all(release_fixture.repo, "patch release metadata")
+    marketplace = release_fixture.repo / MARKETPLACE_PATH
+    before = marketplace.read_text()
+    assert invoke(release_fixture, "record-doi", "--doi", PATCH_DOI, "--released", "2026-11-09") == 0
+    plugin, entries = plugin_versions(release_fixture.repo)
+    assert plugin == "1.0.1"
+    assert entries == {"./collections/fixture/v1": "1.0.1", "./collections/fixture/v0": "0.1.0",
+                       "./packs/fixture/pack": "0.1.0"}
+    assert marketplace.read_text() == before.replace('"version": "1.0.0"', '"version": "1.0.1"', 1)
+    outputs = json.loads(release_fixture.state.read_text())["stages"]["record-doi"]["outputs"]
+    assert outputs["plugin_version"] == "1.0.1"
+
+
+def test_record_doi_skips_absent_plugin_surfaces(release_fixture) -> None:
+    (release_fixture.repo / PLUGIN).unlink()
+    (release_fixture.repo / MARKETPLACE_PATH).unlink()
+    seed_state(release_fixture, {"deposit-draft": {"status": "waiting"}})
+    assert invoke(release_fixture, "record-doi", "--doi", DOI, "--released", "2026-11-09") == 0
+    outputs = json.loads(release_fixture.state.read_text())["stages"]["record-doi"]["outputs"]
+    assert outputs["skipped_files"] == [
+        str(release_fixture.repo / PLUGIN), str(release_fixture.repo / MARKETPLACE_PATH),
+    ]
+    assert len(outputs["changed_files"]) == 4
+    assert not (release_fixture.repo / PLUGIN).exists()
+    assert not (release_fixture.repo / MARKETPLACE_PATH).exists()
+
+
+@pytest.mark.parametrize("plugins", [
+    [{"name": "pack", "source": "./packs/fixture/pack", "version": "0.1.0"}],
+    [{"name": "a", "source": "./collections/fixture/v1", "version": "0.1.0"},
+     {"name": "b", "source": "./collections/fixture/v1", "version": "0.1.0"}],
+], ids=["no-entry", "two-entries"])
+def test_record_doi_refuses_a_marketplace_without_one_entry_and_writes_nothing(
+        release_fixture, capsys, plugins) -> None:
+    marketplace = release_fixture.repo / MARKETPLACE_PATH
+    marketplace.write_text(json.dumps({"name": "fixture", "plugins": plugins}, indent=2) + "\n")
+    before = snapshot(release_fixture.repo)
+    seed_state(release_fixture, {"deposit-draft": {"status": "waiting"}})
+    assert invoke(release_fixture, "record-doi", "--doi", DOI) == 1
+    assert snapshot(release_fixture.repo) == before
+    assert "plugins[] entries with source ./collections/fixture/v1" in capsys.readouterr().err
+    assert "doi" not in json.loads(release_fixture.state.read_text())
+
+
+@pytest.mark.parametrize("plugin", [
+    '{"name": "fixture"}\n', '{"name": "fixture", "version": 1}\n',
+], ids=["missing", "not-a-string"])
+def test_record_doi_refuses_a_plugin_json_without_a_string_version(release_fixture, capsys, plugin) -> None:
+    (release_fixture.repo / PLUGIN).write_text(plugin)
+    before = snapshot(release_fixture.repo)
+    seed_state(release_fixture, {"deposit-draft": {"status": "waiting"}})
+    assert invoke(release_fixture, "record-doi", "--doi", DOI) == 1
+    assert snapshot(release_fixture.repo) == before
+    assert "has no string version to set" in capsys.readouterr().err
+
+
+def test_record_doi_refuses_a_version_it_cannot_edit_in_place(release_fixture, capsys) -> None:
+    (release_fixture.repo / PLUGIN).write_text('{"name": "fixture", "version": "0.1\\u002e0"}\n')
+    before = snapshot(release_fixture.repo)
+    seed_state(release_fixture, {"deposit-draft": {"status": "waiting"}})
+    assert invoke(release_fixture, "record-doi", "--doi", DOI) == 1
+    assert snapshot(release_fixture.repo) == before
+    assert "cannot set the plugin version by one anchored edit" in capsys.readouterr().err
+
+
+def test_record_doi_plugin_version_rerun_is_a_no_op(release_fixture) -> None:
+    arguments = ("--doi", DOI, "--released", "2026-11-09")
+    seed_state(release_fixture, {"deposit-draft": {"status": "waiting"}})
+    assert invoke(release_fixture, "record-doi", *arguments) == 0
+    surfaces = snapshot(release_fixture.repo)
+    assert invoke(release_fixture, "record-doi", *arguments, "--force") == 0
+    assert snapshot(release_fixture.repo) == surfaces
+    outputs = json.loads(release_fixture.state.read_text())["stages"]["record-doi"]["outputs"]
+    assert outputs["changed_files"] == []

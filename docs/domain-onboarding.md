@@ -158,7 +158,11 @@ to `deposit-plan` and `deposit-draft`: the draft is a new record, and after the 
 `record-doi` reads the concept DOI that `manifest` then records. Before `record-doi`, the domain README
 needs a release row whose path cell is `` `collections/<domain>/v<N>` `` in the table headed
 `| Path | Title | Skills | Tools | Released | DOI |`; the stage refuses otherwise and writes nothing.
-`USAGE.md` is optional. Remove any untracked `gate_report.json` left in the collection by `gate`
+`USAGE.md` is optional. `record-doi` also sets the plugin version to the release label without its `v`
+(`1.0.0` for a first release) in the collection `.claude-plugin/plugin.json` and in the root
+`.claude-plugin/marketplace.json` entry whose `source` is the collection path. Either file may be absent;
+a marketplace without exactly one such entry, or a `plugin.json` without a string `version`, is refused
+and nothing is written. Remove any untracked `gate_report.json` left in the collection by `gate`
 before `receipt` and `manifest`; both stages refuse untracked files in the release path.
 
 ## 9. Maintain the domain
