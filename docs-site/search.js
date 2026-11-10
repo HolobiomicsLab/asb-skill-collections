@@ -1,20 +1,80 @@
 /* search.js — client-side full-text search powered by lunr.js
  *
- * Loads docs-site/search_index.json, builds three lunr indices (papers,
- * skills, tools), and renders grouped, debounced live results.
+ * Reads docs-site/search_index/manifest.json, loads the index file of each
+ * selected domain (search_index/<slug>.json) in parallel, merges them, builds
+ * the lunr indices (papers, skills, workflows, tools) and renders grouped,
+ * debounced live results. The selection starts from ?domains=a,b or the
+ * manifest's default_domains and is kept in the URL.
  *
  * No backend. No build step. lunr is served from docs-site/vendor/ (see search.html).
  */
 
 const RAW_BASE = "https://raw.githubusercontent.com/HolobiomicsLab/asb-skill-collections/main";
-const INDEX_URL = "./search_index.json";
+const INDEX_BASE = "./search_index/";
+const MANIFEST_URL = INDEX_BASE + "manifest.json";
 const PER_GROUP_LIMIT = 50;
 const DEBOUNCE_MS = 150;
 const SNIPPET_RADIUS = 60; // chars on either side of a match
 
-let DATA = null;        // { papers, skills, tools, ... }
+let DATA = null;        // merged payload of the loaded domains: { papers, skills, tools, ... }
 let IDX = null;         // { papers: lunr.Index, skills: lunr.Index, tools: lunr.Index }
 let DEBOUNCE_TIMER = null;
+let MANIFEST = null;    // search_index/manifest.json
+let SELECTED = [];      // selected domain slugs, sorted
+const DOMAIN_STATE = new Map();  // slug -> { status: "idle"|"loading"|"loaded"|"error", payload, error }
+
+/* ---- Pure helpers (exercised with node; no DOM) ------------------------- */
+
+/** Merge per-domain payloads into the single shape the rest of this file reads. */
+function mergeDomainPayloads(payloads) {
+  const merged = {
+    collections: [], collection_status: {}, collection_commits: {},
+    papers: [], skills: [], workflows: [], tools: [], domains: [],
+  };
+  const collections = new Set();
+  for (const p of payloads) {
+    if (!p) continue;
+    if (p.domain) merged.domains.push(p.domain);
+    for (const c of p.collections || []) collections.add(c);
+    Object.assign(merged.collection_status, p.collection_status || {});
+    Object.assign(merged.collection_commits, p.collection_commits || {});
+    for (const key of ["papers", "skills", "workflows", "tools"]) {
+      for (const row of p[key] || []) merged[key].push(row);
+    }
+  }
+  merged.collections = [...collections].sort();
+  return merged;
+}
+
+/**
+ * The initial selection: the ?domains= list when it names indexed domains,
+ * otherwise the manifest's default_domains. Returns { selected, unknown }.
+ */
+function initialSelection(domainsParam, available, defaults) {
+  const known = new Set(available);
+  if (domainsParam === null || domainsParam === undefined) {
+    return { selected: (defaults || []).filter((d) => known.has(d)).sort(), unknown: [] };
+  }
+  const asked = domainsParam.split(",").map((d) => d.trim()).filter(Boolean);
+  const unknown = asked.filter((d) => !known.has(d));
+  const selected = [...new Set(asked.filter((d) => known.has(d)))].sort();
+  if (asked.length && !selected.length) {
+    return { selected: (defaults || []).filter((d) => known.has(d)).sort(), unknown };
+  }
+  return { selected, unknown };
+}
+
+/** Human-readable size: 34990781 -> "35.0 MB". */
+function formatBytes(n) {
+  if (!Number.isFinite(n)) return "";
+  if (n >= 1e6) return `${(n / 1e6).toFixed(1)} MB`;
+  if (n >= 1e3) return `${Math.round(n / 1e3)} kB`;
+  return `${n} B`;
+}
+
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = { mergeDomainPayloads, initialSelection, formatBytes };
+}
 
 function el(tag, attrs = {}, ...children) {
   const node = document.createElement(tag);
@@ -253,6 +313,7 @@ function render(query) {
     return;
   }
   emptyEl.hidden = true;
+  if (!IDX) return;  // the selected domains are still loading; loadSelection renders again
 
   const terms = tokensFromQuery(query);
 
@@ -315,40 +376,144 @@ function onInput() {
   DEBOUNCE_TIMER = setTimeout(() => render(q), DEBOUNCE_MS);
 }
 
-(async function init() {
+/* ---- Domain selection ---------------------------------------------------- */
+
+function domainChipLabel(slug) {
+  const entry = MANIFEST.domains[slug] || {};
+  const counts = entry.counts || {};
+  const state = DOMAIN_STATE.get(slug) || { status: "idle" };
+  const status =
+    state.status === "loading" ? " · loading…" :
+    state.status === "error" ? " · failed to load" : "";
+  return `${slug} · ${formatBytes(entry.bytes)} · ${(counts.skills || 0).toLocaleString("en")} skills${status}`;
+}
+
+function renderDomainChips() {
+  const box = document.getElementById("domain-chips");
+  box.innerHTML = "";
+  for (const slug of Object.keys(MANIFEST.domains).sort()) {
+    const entry = MANIFEST.domains[slug];
+    const counts = entry.counts || {};
+    const pressed = SELECTED.includes(slug);
+    const state = (DOMAIN_STATE.get(slug) || {}).status;
+    const button = el("button", {
+      type: "button",
+      class: "tier-btn domain-chip" + (pressed ? " is-active" : "") + (state === "error" ? " is-failed" : ""),
+      "aria-pressed": pressed ? "true" : "false",
+      "data-domain": slug,
+      title: `${(counts.papers || 0).toLocaleString("en")} papers, ${(counts.skills || 0).toLocaleString("en")} skills, ` +
+        `${(counts.workflows || 0).toLocaleString("en")} workflows, ${(counts.tools || 0).toLocaleString("en")} tools ` +
+        `(${(entry.collections || []).map((c) => c.label).join(", ")}); ${formatBytes(entry.bytes)} to download`,
+      onclick: () => toggleDomain(slug),
+    }, domainChipLabel(slug));
+    box.appendChild(button);
+  }
+}
+
+function writeSelectionToURL() {
+  const url = new URL(window.location.href);
+  url.searchParams.set("domains", SELECTED.join(","));
+  window.history.replaceState(null, "", url.toString());
+}
+
+function toggleDomain(slug) {
+  SELECTED = SELECTED.includes(slug)
+    ? SELECTED.filter((d) => d !== slug)
+    : [...SELECTED, slug].sort();
+  // Free the memory of a deselected domain; a failed one is retried when selected again.
+  for (const [d, state] of DOMAIN_STATE) {
+    if (!SELECTED.includes(d) && state.status !== "loading") DOMAIN_STATE.delete(d);
+  }
+  writeSelectionToURL();
+  loadSelection();
+}
+
+async function fetchDomain(slug) {
+  const entry = MANIFEST.domains[slug];
+  // The sha256 in the query lets the browser cache a file until it changes.
+  const url = `${INDEX_BASE}${encodeURIComponent(entry.file)}?v=${encodeURIComponent((entry.sha256 || "").slice(0, 16))}`;
+  const r = await fetch(url);
+  if (!r.ok) throw new Error(`${r.status} ${entry.file}`);
+  return r.json();
+}
+
+async function loadSelection() {
+  const hintEl = document.getElementById("search-hint");
+  const pending = SELECTED.filter((slug) => {
+    const state = DOMAIN_STATE.get(slug);
+    return !state || state.status === "idle" || state.status === "error";
+  });
+  for (const slug of pending) DOMAIN_STATE.set(slug, { status: "loading" });
+  renderDomainChips();
+  if (pending.length) {
+    const size = pending.reduce((n, slug) => n + (MANIFEST.domains[slug].bytes || 0), 0);
+    hintEl.textContent = `Loading ${pending.join(", ")} (${formatBytes(size)})…`;
+  }
+  const results = await Promise.allSettled(pending.map((slug) => fetchDomain(slug)));
+  results.forEach((result, i) => {
+    const slug = pending[i];
+    if (!SELECTED.includes(slug)) { DOMAIN_STATE.delete(slug); return; }
+    DOMAIN_STATE.set(slug, result.status === "fulfilled"
+      ? { status: "loaded", payload: result.value }
+      : { status: "error", error: String(result.reason && result.reason.message || result.reason) });
+  });
+  // Another load still running for the selection finishes the job when it settles.
+  if (SELECTED.some((slug) => (DOMAIN_STATE.get(slug) || {}).status === "loading")) return;
+  renderDomainChips();
+  const loaded = SELECTED.filter((slug) => (DOMAIN_STATE.get(slug) || {}).status === "loaded");
+  const failed = SELECTED.filter((slug) => (DOMAIN_STATE.get(slug) || {}).status === "error");
+  DATA = mergeDomainPayloads(loaded.map((slug) => DOMAIN_STATE.get(slug).payload));
+  IDX = buildLunrIndices(DATA);
+  const failure = failed.length
+    ? " " + failed.map((slug) => `Could not load ${slug}: ${DOMAIN_STATE.get(slug).error}.`).join(" ")
+    : "";
+  if (!SELECTED.length) {
+    hintEl.textContent = "No domain selected: choose one or more above.";
+  } else {
+    const stagedCount = Object.values(DATA.collection_status || {}).filter(v => v === "staged").length;
+    hintEl.textContent =
+      `Searching ${DATA.papers.length} papers, ${DATA.skills.length} skills, ` +
+      `${(DATA.workflows || []).length} workflows, ${DATA.tools.length} tools ` +
+      `across ${(DATA.collections || []).length} collections in ${loaded.length} ` +
+      `domain${loaded.length === 1 ? "" : "s"}` +
+      (stagedCount ? ` (${stagedCount} staged, not part of a release).` : ".");
+  }
+  if (failure) hintEl.appendChild(el("span", { class: "error" }, failure));
+  render(document.getElementById("search-input").value);
+}
+
+if (typeof document !== "undefined") (async function init() {
   const hintEl = document.getElementById("search-hint");
   hintEl.textContent = "Loading index…";
-  try {
-    const r = await fetch(INDEX_URL, { cache: "no-store" });
-    if (!r.ok) throw new Error(`${r.status} ${INDEX_URL}`);
-    DATA = await r.json();
-  } catch (e) {
-    hintEl.innerHTML = `<span class="error">Could not load search index: ${escapeHTML(e.message)}.</span>`;
-    return;
-  }
   if (typeof lunr !== "function") {
     hintEl.innerHTML = `<span class="error">lunr.js failed to load.</span>`;
     return;
   }
-  IDX = buildLunrIndices(DATA);
-  const stagedCount = Object.values(DATA.collection_status || {}).filter(v => v === "staged").length;
-  hintEl.textContent =
-    `Searching ${DATA.papers.length} papers, ${DATA.skills.length} skills, ` +
-    `${(DATA.workflows || []).length} workflows, ${DATA.tools.length} tools ` +
-    `across ${(DATA.collections || []).length} collections` +
-    (stagedCount ? ` (${stagedCount} staged, not part of a release).` : ".");
+  try {
+    const r = await fetch(MANIFEST_URL, { cache: "no-store" });
+    if (!r.ok) throw new Error(`${r.status} ${MANIFEST_URL}`);
+    MANIFEST = await r.json();
+  } catch (e) {
+    hintEl.innerHTML = `<span class="error">Could not load the search index manifest: ${escapeHTML(e.message)}.</span>`;
+    return;
+  }
+  const params = new URLSearchParams(window.location.search);
+  const { selected, unknown } = initialSelection(
+    params.get("domains"), Object.keys(MANIFEST.domains || {}), MANIFEST.default_domains);
+  SELECTED = selected;
+  if (unknown.length) {
+    document.getElementById("domain-note").textContent =
+      `Not in the index: ${unknown.join(", ")}.`;
+  }
+  if (params.has("domains")) writeSelectionToURL();
 
   const input = document.getElementById("search-input");
   input.addEventListener("input", onInput);
   for (const id of ["filter-papers", "filter-skills", "filter-workflows", "filter-tools"]) {
     document.getElementById(id).addEventListener("change", () => render(input.value));
   }
-
-  // Honor ?q= deep link
-  const params = new URLSearchParams(window.location.search);
+  // Honor ?q= deep link; results appear once the selected domains are loaded.
   const q0 = params.get("q");
-  if (q0) {
-    input.value = q0;
-    render(q0);
-  }
+  if (q0) input.value = q0;
+  await loadSelection();
 })();
