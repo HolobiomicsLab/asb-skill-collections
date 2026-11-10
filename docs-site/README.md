@@ -16,7 +16,7 @@ fonts.
 | `paper.html` (+ `paper.js`) | Per-paper review: skills, tools, claims; verify/flag actions |
 | `contribute.html` (+ `contribute.js`) | Package an anonymized skill/workflow improvement → pre-filled GitHub issue (mirrors `scripts/make_improvement_report.py`) |
 | `propose.html` | Form to propose a new paper (submits via GitHub Issue URL params) |
-| `search.html` (+ `search.js`) | Full-text search across papers / skills / tools (lunr.js) |
+| `search.html` (+ `search.js`) | Full-text search across papers / skills / workflows / tools of the selected domains (lunr.js) |
 
 All write actions (verify, flag, propose, contribute) round-trip through GitHub
 Issues or Pull Requests via prefilled URL params, with no server.
@@ -32,77 +32,135 @@ before building the issue body (same rules as the Python CLI).
 
 `search.html` performs client-side full-text search via
 [lunr.js](https://lunrjs.com/) (2.3.9, vendored as `vendor/lunr-2.3.9.js`)
-against a pre-built index at `docs-site/search_index.json`. The index is
-checked into the repo so the site works offline / on Pages without any CI
-step.
+against a pre-built index in `docs-site/search_index/`: one `<slug>.json` per
+registry domain and a small `manifest.json`. The files are checked into the
+repository, so the site works on Pages without any CI step. The page reads
+the manifest, shows one chip per domain with its download size and skill
+count, and downloads only the selected domains, in parallel, before building
+the lunr indices in the browser. The first selection is `default_domains`
+from the manifest, or the domains named in `?domains=a,b`; the page keeps the
+current selection in that parameter.
 
-### Regenerating `search_index.json`
+One file per domain keeps every file under GitHub's 100 MB limit as domains
+are added, lets a registration rebuild only its own domain, and lets a reader
+download only what they search.
 
-After a domain promotion changes papers, SKILL.md frontmatter or tool YAMLs,
-make the relevant domain checkout available to the builder. The master checkout
-holds no content trees: the builder reads `collections.yaml` and the domain
-checkouts passed on its command line.
+### What a domain file holds
 
-```bash
-python3 docs-site/build_search_index.py --checkout metabolomics=<domain checkout> --checkout epigenomics=<domain checkout> --checkout transcriptomics=<domain checkout>
-```
+Each domain file indexes the latest published release of that domain plus its
+legacy trees; `--include-superseded` adds every release the registry lists.
+Trees under `staged-collections/` are not indexed: no registry row describes
+them, so nothing could verify them.
 
-The index covers the latest published release of each domain and the legacy
-trees; `--include-superseded` adds every release the registry lists. The
-payload records the manifest digest it was built from, and CI compares that
-digest with the committed `collections.yaml` (`--check-manifest`), since the
-domain repositories are private.
+### Regenerating a domain
 
-Requirements: Python 3.9+ and `PyYAML` (already pinned in `pyproject.toml`).
-The script walks the domain checkouts given on the command line. No network
-access is needed.
-
-Stdout prints a one-line summary like:
-
-```
-Indexed 5 papers, 106 skills, 38 tools across 1 collections. Wrote docs-site/search_index.json (327,303 bytes).
-```
-
-Commit the updated `search_index.json` alongside the content change.
-
-The build records no timestamp and walks every tree in sorted path order, so
-two builds of the same tree are byte-identical. The `search-index` job in
-`.github/workflows/validate.yml` relies on that: it rebuilds the index with
-`--output "$RUNNER_TEMP/search_index.json"` and fails when the result differs
-from the committed file. To check locally without touching the committed file:
+After a registration changes a domain, rebuild that domain from a checkout of
+its registered release. The master checkout holds no content trees: the
+builder reads `collections.yaml` and the domain checkouts passed on its
+command line.
 
 ```bash
-python docs-site/build_search_index.py --checkout metabolomics=<domain checkout> --output /tmp/search_index.json
-cmp /tmp/search_index.json docs-site/search_index.json
+python3 docs-site/build_search_index.py --checkout proteomics=<domain checkout>
 ```
+
+Before indexing a checkout, the builder verifies every release it indexes
+against the registry, as `scripts/check_collections_manifest.py --checkout`
+does: the tree digest of the working tree and the counts must match the
+registry row (a row without a tree digest is checked with git against its
+commit instead). A checkout of another commit, or with edited or untracked
+files in a release path, is refused.
+
+Domains without a `--checkout` keep their existing file when the manifest
+still records its sha256 and size and its `registry_digest` still matches the
+registry. If any such domain has no file yet, or its registry rows changed,
+the build is refused, names the domains that need a checkout, and writes
+nothing. No domain is ever dropped. A domain removed from the registry loses
+its file.
+
+`--default-domain SLUG` (repeatable) sets the domains the page loads first;
+without it the manifest keeps its current value (initially `metabolomics`).
+`--output-dir` writes elsewhere than `docs-site/search_index/`.
+
+The build records no timestamp, walks every tree in sorted path order and
+sorts JSON keys, so two builds of the same trees are byte-identical.
+
+Requirements: Python 3.9+ and `PyYAML`. No network access is needed. Commit
+the changed domain files together with `manifest.json`. `scripts/release_domain.py
+manifest --regen` runs the same build with the checkout of the domain being
+registered and any `--checkout` passed to it.
+
+### Checking the committed index
+
+The domain repositories are private, so CI cannot rebuild the index. The
+`search-index` job in `.github/workflows/validate.yml` runs
+
+```bash
+python docs-site/build_search_index.py --check-manifest docs-site/search_index
+```
+
+which reads no checkout. It fails when a registry domain has no entry, an
+entry names a domain that left the registry, a file is missing or differs in
+size or sha256 from the manifest, an unrecorded `.json` file sits in the
+directory, `default_domains` names an unindexed domain, or a domain's
+`registry_digest` no longer matches its rows in `collections.yaml`. It does
+not prove that a file was built from the registered trees; the builder's
+checkout verification does that at build time.
 
 ### Schema
 
-The index is a single JSON object with the shape:
+`manifest.json`:
 
 ```json
 {
-  "schema_version": "0.1",
-  "collections": ["metabolomics/v1", ...],
-  "collection_status": {"metabolomics/v1": "staged", "metabolomics/v2": "released", ...},
+  "schema_version": "1",
+  "default_domains": ["metabolomics"],
+  "domains": {
+    "metabolomics": {
+      "file": "metabolomics.json", "sha256": "...", "bytes": 34990781,
+      "include_superseded": false,
+      "registry_digest": "...",
+      "collections": [{"label": "metabolomics/v3", "status": "released", "commit": "..."}, ...],
+      "counts": {"papers": 575, "skills": 13315, "tools": 2281, "workflows": 20}
+    }, ...
+  }
+}
+```
+
+`registry_digest` is the sha256 of a canonical JSON serialisation of the
+domain slug, the `include_superseded` flag and, for each indexed release in
+version order, its `path`, `version`, `status`, `commit` and `tree_digest`.
+Other registry fields (DOIs, dates, counts, other domains) do not affect it.
+
+A domain file, `<slug>.json`:
+
+```json
+{
+  "schema_version": "0.2",
+  "domain": "metabolomics",
+  "collections": ["metabolomics/v1", "metabolomics/v3"],
+  "collection_status": {"metabolomics/v1": "staged", "metabolomics/v3": "released"},
+  "collection_commits": {"metabolomics/v1": "...", "metabolomics/v3": "..."},
   "papers": [{"doi": "...", "title": "...", "rationale": "...", "collection": "...",
               "status": "...", "access_type": "...", "derived_skills": N,
               "derived_tools": M, "search_text": "..."}, ...],
   "skills": [{"name": "...", "description": "...", "when_to_use_negative": "...",
               "edam_topics": [...], "collection": "...", "summary": "...",
               "source_dois": [...], "md_path": "...", "search_text": "..."}, ...],
+  "workflows": [{"slug": "...", "name": "...", "description": "...", "techniques": [...],
+                 "stage_count": N, "collection": "...", "summary": "...",
+                 "md_path": "...", "search_text": "..."}, ...],
   "tools":  [{"slug": "...", "name": "...", "source_paper_repos": [...],
               "license_spdx": "...", "evidence_text": "...", "collection": "...",
               "source_doi": "...", "yaml_path": "...", "search_text": "..."}, ...]
 }
 ```
 
-`collection_status` says which collections are released (served by the plugin
-marketplace) and which are staged, with the rule `scripts/regen_catalogue.py`
-applies to `catalogue.jsonld`; the search page labels results from staged
-collections. `search_text` is the concatenated searchable text; all other fields are for
-display. The lunr index itself is built client-side from this JSON on page
-load (a few hundred ms for the current corpus).
+`collection_status` marks the latest published release `released` and the
+legacy trees `staged` (in the repository, not part of a release); the search
+page labels results from staged collections. `search_text` is the
+concatenated searchable text; all other fields are for display. The page
+merges the selected domain files into one object of this shape (without
+`domain`) before building the lunr indices.
 
 ## Local preview
 
