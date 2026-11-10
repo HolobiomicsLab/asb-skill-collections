@@ -126,6 +126,17 @@ python scripts/check_collections_manifest.py --checkout <domain>=<domain-checkou
 
 Rerender released-stage CI and the released marketplace after this row lands in `collections.yaml`.
 
+The master marketplace `.claude-plugin/marketplace.json` pins each domain's latest published release to
+its registry commit. Compare the two with `python scripts/sync_marketplace.py --check`; CI runs it in the
+`plugin-manifest` job. A governed entry must carry `sha` equal to the registry `commit` and `version`
+equal to the tag without the `<domain>-v` prefix. Entries whose path is not a registry release path, such
+as technique packs, are reported and never judged. `--write` moves the `sha` and `version` of governed
+entries and adds an entry for a latest release that has none; a new entry needs its description from
+`--description <domain>=<text>` or from `--checkout <domain>=<domain-checkout>` (the `description` in the
+collection's `.claude-plugin/plugin.json`), and the script writes nothing when one is missing. Add
+`--require-all` to `--check` to fail while a latest release still has no entry. Review the marketplace
+change in the same pull request as the registry row.
+
 ## 8. Run the release stages
 
 The `asb-domain-release` skill owns the detailed release protocol and its human stops. The orchestrator
