@@ -57,8 +57,8 @@ rest were folded in or deferred:
 
 ## For maintainers
 
-Metabolomics v3 is released as `metabolomics-v3.0.0` (DOI
-`10.5281/zenodo.24054446`) in the private domain repository
+Released collections are listed in `collections.yaml`. Each lives in a private
+domain repository `asb-skills-<domain>`; for example, metabolomics v3 is in
 `asb-skills-metabolomics`. Domain content belongs in the corresponding
 `asb-skills-<domain>` checkout, while this repository holds tooling, governance
 and the registry.

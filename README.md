@@ -11,9 +11,9 @@
 <p align="center">Evidence-grounded skills and software-tool records for scientific AI agents,<br>distilled from published method papers and their code by the AgenticScienceBuilder pipeline.</p>
 
 <p align="center">
-  <a href="https://doi.org/10.5281/zenodo.24054446"><img src="https://img.shields.io/badge/release-metabolomics--v3.0.0-00284b" alt="release metabolomics-v3.0.0"></a> <a href="https://doi.org/10.5281/zenodo.24054446"><img src="https://img.shields.io/badge/skills-11%2C830-04919a" alt="11,830 skills"></a>
-  <a href="https://doi.org/10.5281/zenodo.24054446"><img src="https://img.shields.io/badge/tools-1%2C989-04919a" alt="1,989 tools"></a> <a href="https://doi.org/10.5281/zenodo.24054446"><img src="https://img.shields.io/badge/papers-477-04919a" alt="477 papers"></a>
-  <a href="https://doi.org/10.5281/zenodo.24054446"><img src="https://img.shields.io/badge/workflows-20-04919a" alt="20 workflows"></a> <a href="LICENSE"><img src="https://img.shields.io/badge/code-Apache--2.0-5d6a78" alt="code licence Apache-2.0"></a>
+  <a href="https://doi.org/10.5281/zenodo.24093587"><img src="https://img.shields.io/badge/release-metabolomics--v3.0.1-00284b" alt="release metabolomics-v3.0.1"></a> <a href="https://doi.org/10.5281/zenodo.24093587"><img src="https://img.shields.io/badge/skills-11%2C830-04919a" alt="11,830 skills"></a>
+  <a href="https://doi.org/10.5281/zenodo.24093587"><img src="https://img.shields.io/badge/tools-1%2C989-04919a" alt="1,989 tools"></a> <a href="https://doi.org/10.5281/zenodo.24093587"><img src="https://img.shields.io/badge/papers-477-04919a" alt="477 papers"></a>
+  <a href="https://doi.org/10.5281/zenodo.24093587"><img src="https://img.shields.io/badge/workflows-20-04919a" alt="20 workflows"></a> <a href="LICENSE"><img src="https://img.shields.io/badge/code-Apache--2.0-5d6a78" alt="code licence Apache-2.0"></a>
   <a href="LICENSING.md"><img src="https://img.shields.io/badge/content-CC--BY--4.0-5d6a78" alt="content licence CC-BY-4.0"></a> <a href="https://doi.org/10.5281/zenodo.20794026"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.20794026.svg" alt="Zenodo concept DOI 10.5281/zenodo.20794026"></a>
 </p>
 
@@ -30,21 +30,45 @@ Dagstuhl Seminar **Computational Metabolomics**
 ([26181](https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/26181),
 26 to 30 April 2026).
 
-## This release
+## Releases
 
-Release `metabolomics-v3.0.0`: **11,830 skills** across **1,989 tools**, distilled
+The registry [`collections.yaml`](collections.yaml) records the released
+collections of ten domains. Each release is deposited on Zenodo and pinned to its
+domain repository `asb-skills-<domain>`, commit and tree digest. The domain
+repositories are private; the Zenodo record of each release carries the full
+collection. This repository holds the tooling and the registry.
+
+| Domain | Release | Skills | Tools | Workflows | Papers | Version DOI |
+|---|---|---:|---:|---:|---:|---|
+| metabolomics | `metabolomics-v3.0.1` | 11,830 | 1,989 | 20 | 477 | [10.5281/zenodo.24093587](https://doi.org/10.5281/zenodo.24093587) |
+| agentic-ai | `agentic-ai-v1.0.0` | 668 | 215 | 2 | 29 | [10.5281/zenodo.24093110](https://doi.org/10.5281/zenodo.24093110) |
+| astronomy | `astronomy-v1.0.0` | 1,671 | 415 | 2 | 100 | [10.5281/zenodo.24093095](https://doi.org/10.5281/zenodo.24093095) |
+| epigenomics | `epigenomics-v2.0.0` | 2,295 | 532 | 2 | 92 | [10.5281/zenodo.24093107](https://doi.org/10.5281/zenodo.24093107) |
+| genomics | `genomics-v1.0.0` | 3,246 | 867 | 2 | 137 | [10.5281/zenodo.24093085](https://doi.org/10.5281/zenodo.24093085) |
+| metabarcoding | `metabarcoding-v1.0.0` | 803 | 203 | 2 | 29 | [10.5281/zenodo.24093089](https://doi.org/10.5281/zenodo.24093089) |
+| metagenomics | `metagenomics-v1.0.0` | 2,754 | 717 | 2 | 117 | [10.5281/zenodo.24093087](https://doi.org/10.5281/zenodo.24093087) |
+| multi-omics | `multi-omics-v1.0.0` | 787 | 211 | 2 | 29 | [10.5281/zenodo.24093092](https://doi.org/10.5281/zenodo.24093092) |
+| proteomics | `proteomics-v1.0.0` | 558 | 163 | 2 | 28 | [10.5281/zenodo.24093114](https://doi.org/10.5281/zenodo.24093114) |
+| transcriptomics | `transcriptomics-v2.0.0` | 11,256 | 2,086 | 2 | 450 | [10.5281/zenodo.24093100](https://doi.org/10.5281/zenodo.24093100) |
+
+The concept DOI of each domain is in [`collections.yaml`](collections.yaml). The
+rest of this file uses metabolomics v3 as its worked example; `asbb fetch` and
+`asbb install` take any registered collection, for example
+`--collection genomics/v1`.
+
+### Metabolomics v3
+
+Release `metabolomics-v3.0.1`: **11,830 skills** across **1,989 tools**, distilled
 from **477 published method papers (journal articles and preprints)**, plus **20
 composite workflow super-skills** that chain the atomic skills into end-to-end
 pipelines. The release is deposited as
-[10.5281/zenodo.24054446](https://doi.org/10.5281/zenodo.24054446). Coverage is mostly
+[10.5281/zenodo.24093587](https://doi.org/10.5281/zenodo.24093587). Coverage is mostly
 LC-MS/MS, with LC-MS, GC-MS, mass-spectrometry imaging, ion mobility and
 lipidomics, some NMR, and multi-omics, statistics and pathway tools.
 
-The collection was released from the domain repository `asb-skills-metabolomics`
-(private until its visibility is opened; the Zenodo record carries the full
-collection); this repository holds the tooling, the registry and [`collections.yaml`](collections.yaml).
-Its marketplace serves the v3 collection and the v2-derived technique packs from
-that domain repository.
+The collection is released from the private domain repository
+`asb-skills-metabolomics`. The marketplace of this repository serves the v3
+collection and the v2-derived technique packs from that domain repository.
 
 | Layer | Contents | State |
 |---|---|---|
@@ -69,8 +93,10 @@ that domain repository.
 /plugin install metabolomics-lc-ms@asb-skill-collections
 ```
 
-The marketplace entries point at `asb-skills-metabolomics`, so installation needs
-read access to that repository until it becomes public. Earlier transport
+The other released domains install the same way under their domain name, for
+example `/plugin install genomics@asb-skill-collections`. Each marketplace entry
+points at its private domain repository, so installation needs read access to
+that repository. Earlier transport
 measurements predate this source change and do not verify the new entries
 ([docs/STATUS.md](docs/STATUS.md)).
 
@@ -92,7 +118,7 @@ asbb install --repo <domain checkout> --skills <slug-a>,<slug-b> --collection me
 
 The human guide is `<domain checkout>/collections/metabolomics/v3/USAGE.md` in
 plain text. The complete release is also available from the
-[Zenodo archive](https://doi.org/10.5281/zenodo.24054446). Install routes,
+[Zenodo archive](https://doi.org/10.5281/zenodo.24093587). Install routes,
 measured v2 examples and refusals are in
 [docs/partial-install.md](docs/partial-install.md); the agent procedure is in
 [AGENTS.md](AGENTS.md).
@@ -220,8 +246,8 @@ embeddings, each build recorded in `build_manifest.json`.
 |---|---|---|
 | asb-skill-collections (this one) | `asb_skill_collections` tooling, `scripts/`, tests, governance, registry, catalogue and docs-site | public |
 | AgenticScienceBuilder | the pipeline and schema that generate the collections | private, to follow |
-| asb-skills-metabolomics | `<domain checkout>/collections/metabolomics/<version>/`, `<domain checkout>/packs/metabolomics/<technique>/`, `<domain checkout>/staged-collections/metabolomics/` and receipts; v3 deposited on Zenodo | private, to follow |
-| asb-skills-&lt;domain&gt; | one repository per other domain, with `<domain checkout>/collections/<domain>/<version>/`, `<domain checkout>/packs/<domain>/<technique>/`, `<domain checkout>/staged-collections/<domain>/` and receipts | private, to follow |
+| asb-skills-metabolomics | `<domain checkout>/collections/metabolomics/<version>/`, `<domain checkout>/packs/metabolomics/<technique>/`, `<domain checkout>/staged-collections/metabolomics/` and receipts; v3 deposited on Zenodo | private |
+| asb-skills-&lt;domain&gt; | one repository per other domain, with `<domain checkout>/collections/<domain>/<version>/`, `<domain checkout>/packs/<domain>/<technique>/`, `<domain checkout>/staged-collections/<domain>/` and receipts; each release deposited on Zenodo | private |
 | indicium | standard for a typed scientific claim bound to the evidence that grounds it | private, to follow |
 | indicium-adapters, indicium-adapters-&lt;domain&gt; | per-domain adapters that enrich indicium claims with ontology terms | private, to follow |
 | [Perspicacite-AI](https://github.com/HolobiomicsLab/Perspicacite-AI) | literature RAG engine used for grounding | public |
@@ -231,10 +257,11 @@ embeddings, each build recorded in `build_manifest.json`.
 repository, commit, collection path and tree digest. Domain and adapter
 repositories exist for metabolomics and nine further domains
 (agentic AI, astronomy, epigenomics, genomics, metabarcoding, metagenomics, multi-omics,
-proteomics, transcriptomics) and will be published with their releases. The
-metabolomics collection is released from its domain repository. The legacy
-epigenomics, transcriptomics and metabolomics v1 trees are recorded in the
-registry and are not part of this release.
+proteomics, transcriptomics). Each domain has a release recorded in the
+registry and deposited on Zenodo, and is released from its own domain
+repository; the domain repositories are private. The legacy epigenomics,
+transcriptomics and metabolomics v1 trees are recorded in the registry and are
+not part of any release.
 
 For a new domain, follow [Domain onboarding and release](docs/domain-onboarding.md).
 
@@ -243,12 +270,19 @@ For a new domain, follow [Domain onboarding and release](docs/domain-onboarding.
 Cite the collection and the original paper behind each skill you use
 (`attribution.original_doi` in its `SKILL.md`).
 
-- **Concept DOI**, for all versions: [10.5281/zenodo.20794026](https://doi.org/10.5281/zenodo.20794026).
-- **Version DOI**, v3 (9 November 2026): [10.5281/zenodo.24054446](https://doi.org/10.5281/zenodo.24054446);
-  the release is recorded in [`collections.yaml`](collections.yaml).
+- **Other domains.** The concept DOI of each domain and the version DOI of each
+  release are recorded in [`collections.yaml`](collections.yaml); the version
+  DOIs are also listed under [Releases](#releases). The entries below are those
+  of metabolomics.
+- **Concept DOI**, metabolomics, for all its versions: [10.5281/zenodo.20794026](https://doi.org/10.5281/zenodo.20794026).
+- **Version DOI**, v3, release `metabolomics-v3.0.1` (9 November 2026): [10.5281/zenodo.24093587](https://doi.org/10.5281/zenodo.24093587);
+  the release is recorded in [`collections.yaml`](collections.yaml). The
+  earlier v3 deposit, `metabolomics-v3.0.0` (9 November 2026), is
+  [10.5281/zenodo.24054446](https://doi.org/10.5281/zenodo.24054446); the
+  registry lists it as superseded in the v3 row.
 - **Previous version DOI**, v2 (22 June 2026):
   [10.5281/zenodo.20794027](https://doi.org/10.5281/zenodo.20794027). The
-  registry records the domain commit and tree digest for both versions.
+  registry records the domain commit and tree digest for each version.
 - **Version citation files.** The v2 and v3 `CITATION.cff` files are
   `<domain checkout>/collections/metabolomics/v2/CITATION.cff` and
   `<domain checkout>/collections/metabolomics/v3/CITATION.cff`.
@@ -293,9 +327,9 @@ with [MAINTAINERS.md](governance/MAINTAINERS.md) and [COI_POLICY.md](governance/
   [CONTRIBUTING.md](.github/CONTRIBUTING.md#propose-or-annotate-a-paper).
 - **Add papers to a collection.** See the contributor proposal rail and the
   maintainer build, view, cut and candidate rail in
-  [Adding papers to a collection](docs/adding-papers.md). Metabolomics v3 is
-  released as `metabolomics-v3.0.0` (DOI `10.5281/zenodo.24054446`) in the
-  private `asb-skills-metabolomics` repository. Domain content and candidates
+  [Adding papers to a collection](docs/adding-papers.md). Released collections
+  are listed in [`collections.yaml`](collections.yaml); each lives in a private
+  domain repository `asb-skills-<domain>`. Domain content and candidates
   belong in the corresponding `asb-skills-<domain>` checkout; this repository
   holds tooling, governance and the registry.
 - **Credit.** Merged contributions count on the contributor leaderboard and can lead

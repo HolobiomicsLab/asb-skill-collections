@@ -24,7 +24,7 @@ Issues or Pull Requests via prefilled URL params, with no server.
 `collections.html` reads each collection's machine indexes from the domain
 repository's raw files (`<domain checkout>/collections/<slug>/v<N>/skills_index.json`,
 `workflows/workflows_index.json` and `tools_index.json` in that collection).
-Private domain content is not publicly readable until its repository opens.
+The domain repositories are private, so these raw files are not publicly readable.
 `contribute.html` scrubs file paths, emails, IPs, and secrets in the browser
 before building the issue body (same rules as the Python CLI).
 

@@ -45,7 +45,7 @@ slug list or query. Use `asbb install` for a derived selection, or `asbb fetch`
 for leaf files without an installed router.
 
 The entries point at `asb-skills-metabolomics`, so installation needs read
-access to that domain repository until it becomes public. The full plugin
+access to that private domain repository. The full plugin
 serves v3; the eight packs are v2-derived.
 
 All figures on this page were measured on 2026-10-30 from a checkout of `main`

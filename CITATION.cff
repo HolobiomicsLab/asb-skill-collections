@@ -9,9 +9,9 @@ license:
 repository-code: https://github.com/HolobiomicsLab/asb-skill-collections
 url: https://github.com/HolobiomicsLab/asb-skill-collections
 abstract: 'Registry, release tooling and governance of the AgenticScienceBuilder (ASB) skill collections:
-  the release gate, the collectors, the catalogue and the community contribution loop. The released metabolomics
-  collection is served from this repository; further domains will be published in per-domain repositories
-  with their releases. Code under Apache-2.0; registry content under CC-BY-4.0 (LICENSING.md).'
+  the release gate, the collectors, the catalogue and the community contribution loop. The registry records
+  the released collections of ten domains; each is released from its own domain repository and deposited on
+  Zenodo. Code under Apache-2.0; registry content under CC-BY-4.0 (LICENSING.md).'
 keywords:
 - scientific agents
 - agent skills
