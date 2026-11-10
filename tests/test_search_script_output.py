@@ -108,3 +108,34 @@ def test_an_unknown_tool_filter_points_to_the_tool_search(unit: Path, tmp_path: 
     result = _search(unit, "--query", "align", "--tool", "NoSuchTool", cwd=tmp_path)
     assert result.returncode == 0
     assert '--target tools --query "NoSuchTool"' in result.stdout
+
+
+def test_keep_selector_refreshes_the_wrapper_and_keeps_the_ranking(unit: Path) -> None:
+    script = unit / "bin" / "search_skills.py"
+    shipped = b"SELECTOR_VERSION = \"0.0.1-shipped\"\n"
+    before, body = script.read_bytes().split(router_shape.SELECTOR_BEGIN)
+    after = body.split(router_shape.SELECTOR_END)[1]
+    script.write_bytes(b"# an older wrapper\n" + router_shape.SELECTOR_BEGIN + shipped
+                       + router_shape.SELECTOR_END + b"# older output code\n")
+
+    result = router_shape.refresh_scripts(unit, keep_selector=True)
+
+    text = script.read_bytes()
+    template = router_shape.SEARCH_SCRIPT.read_bytes()
+    assert result["updated"] == [str(script)]
+    assert router_shape.selector_block(text) == shipped
+    assert text.split(router_shape.SELECTOR_BEGIN)[0] == template.split(router_shape.SELECTOR_BEGIN)[0]
+    assert text.split(router_shape.SELECTOR_END)[1] == template.split(router_shape.SELECTOR_END)[1]
+    assert before and after
+    assert router_shape.refresh_scripts(unit, keep_selector=True)["updated"] == []
+
+
+def test_a_semantic_wrapper_without_a_selector_block_is_left_alone(unit: Path) -> None:
+    semantic = unit / "bin" / "semantic_search.py"
+    content = b"from search_skills import *\n"
+    semantic.write_bytes(content)
+
+    result = router_shape.refresh_scripts(unit)
+
+    assert semantic.read_bytes() == content
+    assert str(semantic) not in result["updated"]

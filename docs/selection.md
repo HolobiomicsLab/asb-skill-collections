@@ -10,7 +10,31 @@ carry selector 1.1.0. The released collections and packs in the domain
 repositories still embed 1.0.0 until a release decision regenerates their
 scripts with `scripts/router_shape.py --scripts-only`; during that skew the
 surfaces share their resolution, filter and explanation contracts but can return
-different scores and ranking. The worked examples below were executed against
+different scores and ranking. `--scripts-only --keep-selector` refreshes only the
+wrapper of `bin/search_skills.py` (what a search prints) around the selector a
+unit already ships; the patch releases of 2026-11-10 used it, so the released
+collections print the tier and DOI of each hit and still rank with 1.0.0.
+
+A known-item check on 2026-11-10 is the reason. For 300 sampled skills per
+collection, the query was the skill's own name with spaces, and a hit is a
+result with that name:
+
+| Collection | Skills | 1.0.0 hit@1 | 1.0.0 hit@5 | 1.1.0 hit@1 | 1.1.0 hit@5 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| metabolomics v3 | 11,830 | 0.983 | 0.997 | 0.670 | 0.843 |
+| genomics v1 | 3,246 | 0.997 | 1.000 | 0.773 | 0.907 |
+| proteomics v1 | 558 | 0.993 | 1.000 | 0.840 | 0.950 |
+
+With the first twelve words of the description as the query, hit@1 is 0.980,
+0.987 and 0.947 for 1.0.0 against 0.933, 0.950 and 0.920 for 1.1.0. Both
+queries are built from the indexed row, so they measure whether a skill asked
+for by its own words comes back, not relevance; the label sets of "What the
+default was measured on" were not rerun. In 1.1.0 a term found in a description
+(three points) outweighs the same term in a name (two points), so a skill whose
+name is the query can rank below skills that mention the phrase. Whether the
+package default should change is an open decision.
+
+The worked examples below were executed against
 the integration branch with 1.0.0; source revision `600f4a5dc` predates the
 selector fixes and is cited only as the revision the frozen labels were taken from.
 

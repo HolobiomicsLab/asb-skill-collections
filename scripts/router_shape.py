@@ -676,23 +676,44 @@ def embed_selector(script: bytes) -> bytes:
     return before + SELECTOR_BEGIN + SELECTOR_SOURCE.read_bytes() + SELECTOR_END + after
 
 
-def refresh_scripts(unit: Path) -> dict:
+def selector_block(script: bytes) -> bytes | None:
+    """The bytes between the selector markers of a script, or None without one block."""
+    if script.count(SELECTOR_BEGIN) != 1 or script.count(SELECTOR_END) != 1:
+        return None
+    return script.split(SELECTOR_BEGIN)[1].split(SELECTOR_END)[0]
+
+
+def refresh_scripts(unit: Path, keep_selector: bool = False) -> dict:
     """Regenerate standalone selectors without changing indexes or skill files.
 
     The collection router supplies the wrapper for technique packs. Existing
     semantic wrappers retain their embedding implementation; only their marked
-    keyword selector is regenerated.
+    keyword selector is regenerated, and a wrapper without a marked selector
+    (it imports the one of `search_skills.py`) is left as it is.
+
+    With ``keep_selector`` the wrapper of `bin/search_skills.py` is refreshed
+    around the selector block the unit already ships. A patch release uses it
+    to change what a search prints without changing how a released collection
+    ranks; no other script is touched.
     """
-    scripts = {unit / "bin" / "search_skills.py": SEARCH_SCRIPT.read_bytes()}
-    semantic = unit / "bin" / "semantic_search.py"
-    if semantic.is_file():
-        scripts[semantic] = semantic.read_bytes()
+    search = unit / "bin" / "search_skills.py"
+    template = SEARCH_SCRIPT.read_bytes()
+    if keep_selector:
+        shipped = selector_block(search.read_bytes()) if search.is_file() else None
+        if shipped is None:
+            raise ValueError(f"{search}: no shipped selector block to keep")
+        before, body = template.split(SELECTOR_BEGIN)
+        generated = {search: before + SELECTOR_BEGIN + shipped + SELECTOR_END + body.split(SELECTOR_END)[1]}
+    else:
+        generated = {search: embed_selector(template)}
+        semantic = unit / "bin" / "semantic_search.py"
+        if semantic.is_file() and selector_block(semantic.read_bytes()) is not None:
+            generated[semantic] = embed_selector(semantic.read_bytes())
     updated = []
-    for path, template in scripts.items():
-        generated = embed_selector(template)
-        if not path.is_file() or path.read_bytes() != generated:
+    for path, content in generated.items():
+        if not path.is_file() or path.read_bytes() != content:
             path.parent.mkdir(parents=True, exist_ok=True)
-            path.write_bytes(generated)
+            path.write_bytes(content)
             updated.append(str(path))
     return {"unit": str(unit), "updated": updated}
 
@@ -728,6 +749,9 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--keep", default="", help="comma-separated slugs to keep advertised")
     p.add_argument("--scripts-only", action="store_true",
                    help="refresh vendored selectors only; do not move leaves or rewrite indexes")
+    p.add_argument("--keep-selector", action="store_true",
+                   help="with --scripts-only: refresh the wrapper of bin/search_skills.py around the "
+                        "selector block the unit already ships (same ranking, new output)")
     p.add_argument("--routers-only", action="store_true",
                    help="render the routers of a shaped unit only; no leaf, index or script change")
     p.add_argument("--rewrite", action="store_true",
@@ -736,12 +760,14 @@ def main(argv: list[str] | None = None) -> int:
     args = p.parse_args(argv)
     if args.scripts_only and args.routers_only:
         p.error("--scripts-only and --routers-only are exclusive")
+    if args.keep_selector and not args.scripts_only:
+        p.error("--keep-selector needs --scripts-only")
     if not (args.scripts_only or args.routers_only) and not args.index:
         p.error("--index is required unless --scripts-only or --routers-only is used")
     keep = {s for s in args.keep.split(",") if s}
     for raw in args.units:
         if args.scripts_only:
-            print(refresh_scripts(Path(raw)))
+            print(refresh_scripts(Path(raw), keep_selector=args.keep_selector))
         elif args.routers_only:
             print(write_routers(Path(raw), rewrite=args.rewrite))
         else:

@@ -15,6 +15,12 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
 ## [Unreleased]
 
 ### Changed
+- `scripts/router_shape.py --scripts-only --keep-selector` refreshes the wrapper
+  of `bin/search_skills.py` around the selector a unit already ships, so a patch
+  release can change what a search prints without changing the ranking of a
+  released collection. A semantic wrapper without a marked selector block is
+  left as it is instead of stopping the refresh. `docs/selection.md` records the
+  known-item check that kept selector 1.0.0 in the released collections.
 - Router generator (`scripts/router_shape.py`): the leaf router and the workflow
   router, which now has a generator (`write_workflow_router`), give
   `python3 "${CLAUDE_SKILL_DIR}/../../bin/search_skills.py"` commands that run
