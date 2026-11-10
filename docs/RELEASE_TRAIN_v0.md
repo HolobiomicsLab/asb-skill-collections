@@ -1,6 +1,11 @@
 # Release Train: v0 Collections → Zenodo + HuggingFace
 
-**Version:** 0.1 · **Date:** 2026-06-14 · **Status:** active for ASB v0 releases
+**Version:** 0.1 · **Date:** 2026-06-14 · **Status:** historical
+
+> **Historical.** This runbook is superseded by [domain-onboarding.md](domain-onboarding.md) and
+> [RELEASE_DEPOSIT.md](RELEASE_DEPOSIT.md). The workflows it names (`release.yml`, `mirror-to-hf.yml`) no
+> longer exist: they were removed in step 2 (2026-11-08). A release is now run with
+> `scripts/release_domain.py`, and the tag, the Zenodo publication and the merges are the owner's acts.
 
 This runbook documents the complete **linear release pipeline** for ASB-Skill-Collections v0 releases. It is intended for the lead maintainer and release operators.
 

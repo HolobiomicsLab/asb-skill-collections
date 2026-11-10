@@ -9,8 +9,9 @@
 > kept current so it is not reconstructed from memory under time pressure.
 
 This is the **Python distribution** release (the `asbb` CLI + the `asb-mcp`
-server). It is separate from a *collection* release (`release.yml` → Zenodo /
-HuggingFace on `<slug>-v<N>` tags). The distribution name is
+server). It is separate from a *collection* release (`scripts/release_domain.py`
+and a Zenodo deposit, see [RELEASE_DEPOSIT.md](RELEASE_DEPOSIT.md); the tag
+`<slug>-v<N>` runs no workflow). The distribution name is
 **`asb-skill-collections`**; it installs the `asb_skill_collections` package and
 two console scripts (`asbb`, `asb-mcp`). (The repo's `scripts/` directory holds
 path-invoked CI/dev tools and is intentionally not part of the wheel.)
@@ -89,8 +90,8 @@ Publishing the GitHub Release fires `publish-pypi.yml` → real PyPI. Watch it:
 ```bash
 gh run watch
 ```
-> Note: `v0.2.0` is the **package** tag. It will NOT trigger the collection
-> release (`release.yml` only matches `<slug>-v<N>`, e.g. `metabolomics-v0.2.0`).
+> Note: `v0.2.0` is the **package** tag. A collection tag has the form
+> `<slug>-v<N>`, for example `metabolomics-v3.0.1`, and triggers no workflow.
 
 #### Which releases publish
 A published GitHub Release fires `publish-pypi.yml` whatever its tag. The

@@ -84,6 +84,11 @@ make the run incomplete and fail the job rather than reporting a clean sweep.
 
 ## Issue intake
 
+The intake workflow runs only in the private domain repository. A reader
+without access to it files a proposal as an issue on this public repository,
+and a maintainer stages it in the domain repository. The workflow acts only
+on issues of the domain repository that carry both `propose` and `paper-intake`.
+
 `scripts/templates/domain-intake.yml` runs in each `asb-skills-<domain>`
 repository on issue `opened`, `edited`, `reopened` and `labeled` events. Its
 job runs only when the issue carries both `propose` and `paper-intake`, so the
@@ -106,6 +111,10 @@ then applies the receipt's label additions and removals. On `blocked` and
 `duplicate` it comments and labels only, with `duplicate` added for the latter.
 The attached workflow does not pass `--dry-run`: it is the write path.
 
+The intake core exits 0 for staged, 1 for blocked and 2 for duplicate, and 64
+for a usage error; the workflow applies the receipt for 0, 1 and 2 and fails the
+job for any exit code above 2.
+
 The Action never closes the issue, merges a pull request, pushes `main`, builds
 a paper or marks a row `included`. Those remain curator actions. The bot commit
 identity comes from the `ASB_INTAKE_BOT_NAME` and `ASB_INTAKE_BOT_EMAIL`
@@ -126,9 +135,11 @@ python scripts/render_domain_ci.py --manifest collections.yaml \
   --out <domain checkout>/.github/workflows
 ```
 
-That writes `gates.yml`, `plugin-validate.yml` and `intake.yml`. Create the
-`propose`, `paper-intake`, `intake-staged`, `intake-blocked` and `duplicate`
-labels in the domain repository before enabling the job, set the
+That writes `gates.yml`, `plugin-validate.yml`, `intake.yml` and
+`retraction-watch.yml` (the candidate stage writes no `plugin-validate.yml`).
+Create the `propose`, `paper-intake`, `needs-triage`, `intake-staged`,
+`intake-blocked`, `duplicate` and `retraction-watch` labels in the domain
+repository before enabling the jobs, set the
 `CROSSREF_MAILTO`, `ASB_WATCH_EMAIL`, `ASB_INTAKE_BOT_NAME` and
 `ASB_INTAKE_BOT_EMAIL` repository variables, and confirm that Actions may
 create pull requests. Run one owner-approved live dry run first: disable the
