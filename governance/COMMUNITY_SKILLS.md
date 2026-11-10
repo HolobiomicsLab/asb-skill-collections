@@ -32,7 +32,8 @@ No contributor self-merges; CI checks structure; a maintainer judges fit.
 
 1. **Open submission.** Anyone may propose a skill. The contributor runs the
    `propose-skill` command
-   ([`collections/metabolomics/v2/commands/propose-skill.md`](../collections/metabolomics/v2/commands/propose-skill.md)),
+   (`collections/metabolomics/v2/commands/propose-skill.md` in the private repository
+   `asb-skills-metabolomics`; the v3 collection ships no `commands/` directory),
    which normalizes the local skill, matches it against the collection to suggest
    `related_skills` + `tools_used`, warns about near-duplicates, best-effort grounds
    it, tiers it `community` / `hold`, and **stages** files via
@@ -56,8 +57,8 @@ No contributor self-merges; CI checks structure; a maintainer judges fit.
      ledger (schema `asb-skill-proposals/1.0`), the skill analogue of the paper
      `wave-*.yaml` ledgers.
 
-3. **CI validation.** On the PR, `scripts/check_proposals.py` (wired into
-   `validate.yml` as the **Proposals gate**) holds every staged
+3. **CI validation.** On the PR, `scripts/check_proposals.py` (run by
+   `domain-gates.yml` as its **Proposals** step) holds every staged
    `proposals/skills/*/SKILL.md` to the same discipline a published skill must pass:
    - `metadata.provenance_tier == "community"` **and** a `related_skills` key is
      present (the community provenance invariant);

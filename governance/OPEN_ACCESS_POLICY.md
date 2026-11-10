@@ -46,8 +46,9 @@ For open-access papers (CC-BY, CC0, etc.), the license permits broader inclusion
 - **License declaration required** — SPDX identifier (CC-BY-4.0, CC-BY-NC-4.0, CC0-1.0, Apache-2.0, MIT, etc.)
 - **Verification** — `verified_via: unpaywall` + `verified_on: <ISO date>`. The corpus
   field is `verified_on`; `verified_at` appears nowhere in it. Both are entered by the
-  proposer: `verify-paper.yml` checks the declared tier but makes no network call and
-  writes nothing back (see the proposal workflow below).
+  proposer: the release gate (`scripts/release_gate.py`, run by `domain-gates.yml`) checks the
+  declared tier of included papers but makes no network call and writes nothing back (see the
+  proposal workflow below).
 - **Permitted inclusion** — full evidence spans, figure references, all structured extractions
 - **Redistribution** — under the source paper's license; consumers of ASB-Skill collections inherit those terms
 
@@ -86,7 +87,7 @@ The paper is published in a venue that retains traditional copyright but allows 
 
 ### Unknown (`type: unknown`)
 
-- Default state for newly-promoted papers awaiting `verify-paper.yml` CI assessment.
+- Default state for newly-promoted papers awaiting assessment by the release gate (`scripts/release_gate.py`).
 - **Block from inclusion** — corpus.yaml entries with `access.type: unknown` AND `status: accepted/included` are flagged by CI and require manual resolution before release.
 
 ### Software tools — repository-OA tier (`type: repo-oa` / `repo-permissive` / `repo-copyleft`)
@@ -158,9 +159,10 @@ users the upstream tool's terms.
 
 ## Retraction handling
 
-We monitor Crossref's retraction watch monthly: `corpus-freshness.yml` runs a scheduled
-sweep that re-queries Crossref for `update-to` relations and opens a labelled issue per
-affected collection. That half ships today.
+We monitor Crossref's retraction watch monthly: the `retraction-watch.yml` workflow of each domain
+repository (rendered from `scripts/templates/domain-retraction-watch.yml`, driver
+`scripts/check_retractions.py`) runs a scheduled sweep that re-queries Crossref for `update-to`
+relations and opens or comments on a labelled issue. That half ships today.
 
 **Propagation does not.** No script consumes `status: retracted`, `release_gate.py`
 contains no retraction check, and the `[RETRACTED SOURCE]` notice in step 2 below is
@@ -184,7 +186,8 @@ To add a paper to a collection's corpus:
 1. **Open an issue** using the `Propose paper` template at <`https://github.com/HolobiomicsLab/asb-skill-collections/issues/new?template=propose-paper.md`>. Include: DOI, title, intended collection, rationale (why this paper).
 2. **Discussion** happens on the issue. Anyone may comment with reasoning for or against inclusion.
 3. **PR adds the paper** to `corpus.yaml` with `status: proposed`, **with the access fields
-   filled in by the proposer**. `verify-paper.yml` CI then validates what the PR *declares*:
+   filled in by the proposer**. The release gate (`scripts/release_gate.py`, run by `domain-gates.yml`)
+   then validates what the PR *declares*, for papers marked included:
    it normalises `access.type` against the OA and non-OA tier sets and fails the PR on a
    non-OA, `unknown` or `preprint` tier. It installs only `pyyaml`, makes no network call and
    writes nothing back — **the access tier is attested by the proposer and checked for
@@ -195,7 +198,7 @@ To add a paper to a collection's corpus:
    `access.{type, license, verified_via, verified_on}` and checking retraction status from
    inside the PR gate are all reachable — the clients exist and are reusable, and a PR touches
    1–5 DOIs, so it would be 1–5 calls — but the read-only tier check stands on its own, and the
-   corpus-wide equivalent already runs monthly in `corpus-freshness.yml`, which is where a sweep
+   corpus-wide equivalent already runs monthly in each domain repository's `retraction-watch.yml`, which is where a sweep
    belongs. **The gap this leaves is freshness, not correctness:** `verified_on` is populated on
    685 of 685 rows and the dates are ~3 months old.
 
@@ -232,7 +235,7 @@ Once a paper is `included`, the skills and tools derived from it can be **review
 
 - Each curator review touches `collections/<slug>/v<N>/reviews/<paper-doi>.yaml`
 - The review attests that evidence_spans match the paper's text, parameter values are correct, EDAM annotations are appropriate, tools attributions are accurate
-- `verify-coi.yml` enforces non-coauthor sign-off when the reviewer's ORCID is on the paper (see [`COI_POLICY.md`](COI_POLICY.md))
+- `scripts/check_coi.py` detects when the reviewer's ORCID is on the paper, which requires a non-coauthor sign-off (see [`COI_POLICY.md`](COI_POLICY.md))
 - Reviewers earn tier credit (`Reviewer` / `Domain Contributor` / `Curator` / `Lead Curator`) per [`MAINTAINERS.md`](MAINTAINERS.md)
 
 The static page at <https://holobiomicslab.github.io/asb-skill-collections/paper.html?doi=...> shows all extracted content per paper with one-click "verify" / "flag" buttons that open prefilled PRs/Issues.
