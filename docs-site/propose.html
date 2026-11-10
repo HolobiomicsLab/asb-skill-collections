@@ -123,7 +123,7 @@
       new URLSearchParams({
         title: `Propose: ${(f.get("doi") || f.get("title") || "").trim()}`,
         body,
-        labels: "propose-paper,needs-triage",
+        labels: "propose,paper-intake,needs-triage",
       });
     window.open(url, "_blank");
     // Mark draft as submitted (kept for reference on next page load).
