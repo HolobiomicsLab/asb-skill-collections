@@ -1,10 +1,12 @@
-# AGENTS.md: install and use the ASB Metabolomics skills
+# AGENTS.md: install and use the ASB skill collections
 
-Instructions for coding and research agents to install and use the ASB
-Metabolomics Skill Collection. The public release is metabolomics v3: 11,830
-skills over 1,989 tools, released as `metabolomics-v3.0.0` in the private domain
-repository `asb-skills-metabolomics`. This master repository holds the tooling,
-governance, documentation and release registry, not the released content.
+Instructions for coding and research agents to install and use the ASB skill
+collections. The registry `collections.yaml` lists the released collections of
+ten domains; each is released from a private domain repository
+`asb-skills-<domain>`. The worked examples use metabolomics v3: 11,830 skills
+over 1,989 tools, released as `metabolomics-v3.0.1` in `asb-skills-metabolomics`.
+This master repository holds the tooling, governance, documentation and release
+registry, not the released content.
 
 > Full human guide: `<domain checkout>/collections/metabolomics/v3/USAGE.md`.
 > Verified install routes and their dates: [`docs/STATUS.md`](docs/STATUS.md).
@@ -33,8 +35,10 @@ governance, documentation and release registry, not the released content.
 /plugin install metabolomics@asb-skill-collections
 ```
 
-The marketplace entries point at `asb-skills-metabolomics`; installation needs
-read access to that private repository until its visibility is opened. Earlier
+Other released domains install the same way under their domain name, for
+example `/plugin install genomics@asb-skill-collections`. Each marketplace entry
+points at its private domain repository; installation needs read access to that
+repository. Earlier
 CLI measurements predate these sources and are not a verification of them.
 
 The entry point is `skills/_router/SKILL.md`. The corpus ships beside it as data
@@ -60,9 +64,12 @@ asbb install --repo <domain checkout> --skills <slug-a>,<slug-b> \
 
 ### Zenodo archive and direct consumption
 
-The complete v3 release is at
-[10.5281/zenodo.24054446](https://doi.org/10.5281/zenodo.24054446); v2 is at
-[10.5281/zenodo.20794027](https://doi.org/10.5281/zenodo.20794027).
+The complete metabolomics v3 release (`metabolomics-v3.0.1`) is at
+[10.5281/zenodo.24093587](https://doi.org/10.5281/zenodo.24093587); the earlier
+v3.0.0 deposit is
+[10.5281/zenodo.24054446](https://doi.org/10.5281/zenodo.24054446), and v2 is at
+[10.5281/zenodo.20794027](https://doi.org/10.5281/zenodo.20794027). The DOIs of
+the other domains are in `collections.yaml`.
 
 For Codex, GitHub Copilot or another agent, read the collection from a domain
 checkout or extracted archive. Start at
@@ -153,6 +160,7 @@ and routes tier logic. See
   `derived_from`, carries verbatim evidence lines and EDAM annotations, and
   passed the release gate recorded in
   `<domain checkout>/collections/metabolomics/v3/gate_report.json`.
-- [`collections.yaml`](collections.yaml) is the release registry. It currently
-  records metabolomics v2 and v3 in `asb-skills-metabolomics`; other domain
-  repositories are private and to follow.
+- [`collections.yaml`](collections.yaml) is the release registry. It records
+  the releases of ten domains, each in its private repository
+  `asb-skills-<domain>`, and the legacy v1 trees of metabolomics, epigenomics
+  and transcriptomics.
