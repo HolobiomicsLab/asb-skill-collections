@@ -192,3 +192,13 @@ jobs:
 
       - name: Validate the marketplace manifest
         run: claude plugin validate --strict .claude-plugin/marketplace.json
+
+      - name: Set up Python 3.12 for the registry check
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Check the marketplace pins against the registry
+        run: |
+          pip install pyyaml
+          python scripts/sync_marketplace.py --check
