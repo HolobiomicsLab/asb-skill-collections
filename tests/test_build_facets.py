@@ -255,3 +255,11 @@ def test_real_v3_acceptance_counts(tmp_path: Path) -> None:
     )
     assert proteomics["label"] == "Proteomics experiment"
     assert "Mass spectrometry" in proteomics["synonyms"]
+
+
+def test_index_records_no_local_path(tmp_path: Path) -> None:
+    released = tmp_path / "checkout/collections/metabolomics/v3"
+    assert build_facets.collection_label(released) == "collections/metabolomics/v3"
+    assert build_facets.collection_label(tmp_path / "candidate") == "candidate"
+    index = generate(FIXTURE, tmp_path / "facets")
+    assert not Path(index["collection"]["path"]).is_absolute()
