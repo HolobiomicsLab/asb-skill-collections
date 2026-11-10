@@ -89,3 +89,9 @@ def test_build_without_a_checkout_and_no_index_is_refused(fixture_checkout, tmp_
     assert gen.main(["--manifest", str(manifest), "--output-dir", str(output)]) == 1
     assert not output.exists()
 
+
+def test_committed_index_matches_the_registry():
+    """What CI runs: every registry domain has a current, unaltered file."""
+    gen = _generator()
+    assert gen.check_index(REPO / "collections.yaml", gen.INDEX_DIR) == []
+    assert not (REPO / "docs-site" / "search_index.json").exists(), "the monolithic index was replaced"
