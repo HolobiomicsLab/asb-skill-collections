@@ -1,18 +1,15 @@
 # Call for curators: the first ASB skill-collection releases
 
-Draft prepared 2026-09-19; status checked 2026-10-06; cut re-dated 2026-10-29. The
+Draft prepared 2026-09-19; release status updated 2026-11-10; cut re-dated 2026-10-29. The
 authorship cut for the first releases is **2026-12-15, 23:59 CET**. The public opening
 date and reviewer access must be confirmed before this call is circulated.
 
-Ten domain collections of agent skills are being prepared for release by the Holobiomics
-Lab (CNRS / Université Côte d'Azur): metabolomics (v3), epigenomics, transcriptomics,
-proteomics, genomics, metagenomics, metabarcoding, multi-omics, agentic AI and astronomy
-(v1). As of 2026-10-06, five private candidate collections have passed the blocking
-automated checks: astronomy, genomics, metabarcoding, metagenomics and multi-omics.
-They contain 9,261 skills and ten composed workflows. Genomics retains four
-non-blocking placeholder-subject warnings for review. Transcriptomics, epigenomics,
-agentic AI and proteomics remain stopped by a content-screening gate; the
-metabolomics v3 rebuild has not been completed.
+Ten domain collections of agent skills were released on 9 November 2026 by the Holobiomics
+Lab (CNRS / Université Côte d'Azur): metabolomics (v3.0.1), epigenomics and transcriptomics (v2),
+and proteomics, genomics, metagenomics, metabarcoding, multi-omics, agentic AI and astronomy
+(v1). The registry [`collections.yaml`](../collections.yaml) is the reference for each release, its
+counts and its DOI. Four domains (transcriptomics, epigenomics, agentic AI and proteomics) had been
+stopped by a content-screening gate on 2026-10-06; they are released.
 
 Skills are generated from available research-article packages, with source
 references and evidence records. Passing automated checks does not establish that
@@ -75,9 +72,9 @@ author; it grows only through the steps above. Opting out at any time:
 
 ## How to start
 
-1. Pick an available domain. During private review, obtain repository access from
-   the maintainers and use the exact candidate commit they provide. Public install
-   instructions will accompany a published candidate or release.
+1. Pick a released domain from the registry. The domain repositories are private:
+   obtain repository access from the maintainers, or read the Zenodo record of the
+   release. Install instructions are in the [README](../README.md#install).
 2. Use the skills on a real question; note what is wrong or missing.
 3. Review or correct (above), one pull request per skill or per fix.
 4. Register your ORCID in `contributors.jsonld` with the pull request.
@@ -89,6 +86,6 @@ author; it grows only through the steps above. Opting out at any time:
 | 2026-09-19 | draft call and publication metadata prepared |
 | 2026-10-06 | five candidates remain private; public call not yet confirmed |
 | 2026-10-29 | cut moved from 2026-10-31 to 2026-12-15 (owner decision; nobody had been invited by the first date) |
-| November 2026 | proposed first tags and Zenodo deposits, subject to release readiness and authorisation |
+| 2026-11-09 | first tags and Zenodo deposits of all ten collections (registry: `collections.yaml`) |
 | 2026-12-15 | authorship cut for the first releases; confirm that reviewers have sufficient access and time before announcing |
 | 2027 | proposed subsequent versions; schedule to be confirmed |

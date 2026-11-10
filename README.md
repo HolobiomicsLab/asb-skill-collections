@@ -11,9 +11,9 @@
 <p align="center">Evidence-grounded skills and software-tool records for scientific AI agents,<br>distilled from published method papers and their code by the AgenticScienceBuilder pipeline.</p>
 
 <p align="center">
-  <a href="https://doi.org/10.5281/zenodo.24093587"><img src="https://img.shields.io/badge/release-metabolomics--v3.0.1-00284b" alt="release metabolomics-v3.0.1"></a> <a href="https://doi.org/10.5281/zenodo.24093587"><img src="https://img.shields.io/badge/skills-11%2C830-04919a" alt="11,830 skills"></a>
-  <a href="https://doi.org/10.5281/zenodo.24093587"><img src="https://img.shields.io/badge/tools-1%2C989-04919a" alt="1,989 tools"></a> <a href="https://doi.org/10.5281/zenodo.24093587"><img src="https://img.shields.io/badge/papers-477-04919a" alt="477 papers"></a>
-  <a href="https://doi.org/10.5281/zenodo.24093587"><img src="https://img.shields.io/badge/workflows-20-04919a" alt="20 workflows"></a> <a href="LICENSE"><img src="https://img.shields.io/badge/code-Apache--2.0-5d6a78" alt="code licence Apache-2.0"></a>
+  <a href="https://doi.org/10.5281/zenodo.24093587"><img src="https://img.shields.io/badge/release-metabolomics--v3.0.1-00284b" alt="release metabolomics-v3.0.1 (metabolomics)"></a> <a href="https://doi.org/10.5281/zenodo.24093587"><img src="https://img.shields.io/badge/skills-11%2C830-04919a" alt="11,830 skills (metabolomics)"></a>
+  <a href="https://doi.org/10.5281/zenodo.24093587"><img src="https://img.shields.io/badge/tools-1%2C989-04919a" alt="1,989 tools (metabolomics)"></a> <a href="https://doi.org/10.5281/zenodo.24093587"><img src="https://img.shields.io/badge/papers-477-04919a" alt="477 papers (metabolomics)"></a>
+  <a href="https://doi.org/10.5281/zenodo.24093587"><img src="https://img.shields.io/badge/workflows-20-04919a" alt="20 workflows (metabolomics)"></a> <a href="LICENSE"><img src="https://img.shields.io/badge/code-Apache--2.0-5d6a78" alt="code licence Apache-2.0"></a>
   <a href="LICENSING.md"><img src="https://img.shields.io/badge/content-CC--BY--4.0-5d6a78" alt="content licence CC-BY-4.0"></a> <a href="https://doi.org/10.5281/zenodo.20794026"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.20794026.svg" alt="Zenodo concept DOI 10.5281/zenodo.20794026"></a>
 </p>
 
@@ -99,6 +99,18 @@ points at its private domain repository, so installation needs read access to
 that repository. Earlier transport
 measurements predate this source change and do not verify the new entries
 ([docs/STATUS.md](docs/STATUS.md)).
+
+**Codex CLI** reads the same marketplace file:
+
+```bash
+codex plugin marketplace add HolobiomicsLab/asb-skill-collections
+codex plugin add <domain>@asb-skill-collections
+```
+
+The access requirement is the same. Without access to the private domain
+repositories, neither route works: download the Zenodo record of the release
+(version DOIs in the [Releases](#releases) table) and read it as described in
+[AGENTS.md](AGENTS.md).
 
 **Chosen leaves without a checkout** (`asbb fetch`, Python 3.12 or later):
 
@@ -342,7 +354,7 @@ with [MAINTAINERS.md](governance/MAINTAINERS.md) and [COI_POLICY.md](governance/
 
 - Step 2 of the per-domain split is complete: this master is the registry and tooling repository; released content is in the domain repositories.
 - The managed-install and Claude Code measurements predate the new marketplace sources; see [docs/STATUS.md](docs/STATUS.md) for their scope and dates.
-- Pending or experimental: the other seven packs, the web UI, runtime adapters other than `agents`, the MCP server. Not yet published: PyPI, the documentation site, the HuggingFace mirror, the benchmark and the capsules.
+- Pending or experimental: the other seven packs, the web UI, runtime adapters other than `agents`, the MCP server. Not yet published: PyPI, the HuggingFace mirror, the benchmark and the capsules. The [documentation site](https://holobiomicslab.github.io/asb-skill-collections/) is live.
 - The `w3id.org/holobiomicslab/` and `w3id.org/asb` identifiers resolve. Dates, measurements and detail per surface: [docs/STATUS.md](docs/STATUS.md).
 
 ## Acknowledgements

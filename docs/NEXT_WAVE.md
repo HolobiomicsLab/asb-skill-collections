@@ -1,5 +1,9 @@
 # Next ASB generation wave (post-v0.2.0)
 
+> **Historical.** This backlog was written before the metabolomics v3 release (`metabolomics-v3.0.1`,
+> 2026-11-09). The `metabolomics-v0.2.0` release it mentions was never deposited, and "v2" below means the
+> earlier collection. Check each item against the current collection before acting on it.
+
 Tracks content and tasks deliberately deferred out of the **metabolomics-v0.2.0**
 release so it ships clean. Nothing here blocks v0.2.0; each item needs an **ASB
 generation run** (paper/repo → skills) or a small new mechanism, not a corpus

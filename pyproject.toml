@@ -14,7 +14,7 @@ authors = [
     { name = "AgenticScienceBuilder AI framework (from the scientific literature)" },
 ]
 requires-python = ">=3.12"
-keywords = ["scientific-agents", "agent-skills", "metabolomics", "EDAM", "MCP", "AgenticScienceBuilder", "asb"]
+keywords = ["scientific-agents", "agent-skills", "metabolomics", "genomics", "proteomics", "transcriptomics", "EDAM", "MCP", "AgenticScienceBuilder", "asb"]
 dependencies = [
     "pyyaml>=6.0",
     "jsonschema>=4.21",
