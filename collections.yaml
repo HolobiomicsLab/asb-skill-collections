@@ -43,9 +43,10 @@ domains:
         leaf_dir: skills
         path: collections/metabolomics/v1
         tag: null
-        commit: 7b906e42d8c684ba2c21e3d5db0bb5e7280a89bc
+        # Commit after the local build paths in benchmark/ and capsules/ became placeholders (2026-11-10).
+        commit: b0601f079bfa7df1b6fe3faa9c024f428787349e
         source_commit: f554641c24ea7c60bbaa5322ec8a56b1a6bd30db
-        tree_digest: sha256:d184671163264b897dd7e08755193cb757feccb34d78aa4103656807cc8ed194
+        tree_digest: sha256:e2faa68b8e476f726efc7ecdefddd861b1e857c725b2ce8b8e16942b2600e1a5
         version_doi: null
         released: 2026-06-15
         skills: 1485
@@ -73,9 +74,10 @@ domains:
         leaf_dir: skills
         path: collections/epigenomics/v1
         tag: null
-        commit: 3f10bd43bbaa2fd978c554fa9623d7c378397cb0
+        # Commit after the local build paths in benchmark/ and capsules/ became placeholders (2026-11-10).
+        commit: 561e41bd8a744cbb20db4f3625e0ed6152eb7178
         source_commit: f554641c24ea7c60bbaa5322ec8a56b1a6bd30db
-        tree_digest: sha256:be4869016eee7a6844df82b64aaab490f3f05f644893d9507fa35b68c1f1d86c
+        tree_digest: sha256:1d00ae5d3b6a864b8a4737d207e50c2760289f703a9b2797af728d7cdbd3318a
         version_doi: null
         released: 2026-06-15
         skills: 203
@@ -103,9 +105,10 @@ domains:
         leaf_dir: skills
         path: collections/transcriptomics/v1
         tag: null
-        commit: a08e5e959ba0c15c45136898795b469caf462f3d
+        # Commit after the local build paths in benchmark/ and capsules/ became placeholders (2026-11-10).
+        commit: 20c78fb0bcea8519cfc60e29c8a251ce6c9a1684
         source_commit: f554641c24ea7c60bbaa5322ec8a56b1a6bd30db
-        tree_digest: sha256:a1dc11fb6b29ab14ccc599fc4fdeb5c5f7539ae35bafc4d068355c32d4328e86
+        tree_digest: sha256:164e24f340a63f69be644a3b9c126d90d665a2b80099a75870efa47cf8c4899a
         version_doi: null
         released: 2026-06-15
         skills: 166
