@@ -122,7 +122,11 @@ python3 "<collection root>/bin/search_skills.py" --query "<the goal>" --target w
 python3 "<collection root>/bin/search_skills.py" --query "<tool or task>" --target tools -k 5
 ```
 
-Every hit prints the absolute `read:` path, a skill hit also its licence tier.
+Every hit prints the absolute `read:` path; a skill hit also its licence tier
+and first source DOI, a tool hit its tier and recorded licence. `--json` adds
+the scoring explanation. A search that matches nothing says what to try next.
+(The scripts released on 2026-11-09, selector 1.0.0, print the explanation as a
+JSON line under each hit and no DOI.)
 Narrow with `--tool <name>` or `--edam <iri-substring>`; `--technique <tag>`
 only matches where the index carries technique tags (95 of the metabolomics v3
 skills, none in the other nine collections). The routers released on 2026-11-09 write the

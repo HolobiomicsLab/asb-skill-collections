@@ -85,7 +85,7 @@ def test_written_router_frontmatter_parses_for_a_collector_description(
 
     assert frontmatter["name"] == "genomics-router"
     assert frontmatter["description"].startswith(
-        "Genomics methods from the literature. Use when a genomics task needs"
+        "Use for any genomics how-to question"
     )
     assert "3,246 evidence-grounded genomics skills" in frontmatter["description"]
     assert release_gate._frontmatter_error(text) is None

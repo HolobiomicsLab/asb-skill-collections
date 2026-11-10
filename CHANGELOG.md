@@ -17,10 +17,24 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
 ### Changed
 - Router generator (`scripts/router_shape.py`): the leaf router and the workflow
   router, which now has a generator (`write_workflow_router`), give
-  `python3 "<skill-dir>/../../bin/search_skills.py"` commands that run from any
-  directory; the leaf router points to the workflow and tool searches, offers
-  `--technique` only when the index has tags, defines all four licence tiers
-  (`unknown` included) and opens its description with the domain.
+  `python3 "${CLAUDE_SKILL_DIR}/../../bin/search_skills.py"` commands that run
+  from any directory. Claude Code fills in `${CLAUDE_SKILL_DIR}` with the
+  router's absolute directory, so the command runs as printed; the router tells
+  a host that leaves the variable to replace it. The leaf router points to the
+  workflow and tool searches, offers `--technique` only when the index has
+  tags, defines all four licence tiers (`unknown` included), asks for the
+  skill's DOI and tier in the answer, and opens its description with the
+  domain trigger ("Use for any <domain> how-to question ..., before answering
+  from memory"), without workflow slugs.
+- Search script template (`scripts/templates/search_skills.py`): a skill hit
+  prints its tier and first source DOI on its first line, a tool hit its tier
+  and recorded licence; the scoring explanation moves to `--json` only (the
+  text output of a ten-hit search halves). A search that matches nothing exits
+  0 and says what to try next. Refresh a released tree with
+  `python scripts/router_shape.py --scripts-only <collection>` followed by
+  `python scripts/router_shape.py --routers-only --rewrite <collection>`; this
+  changes `bin/search_skills.py` (selector 1.0.0 to 1.1.0),
+  `skills/_router/SKILL.md` and `workflows/_workflow_router/SKILL.md` only.
   `--routers-only --rewrite` renders both routers of a shaped unit. The released
   collections are unchanged; their routers still print
   `python bin/search_skills.py`, relative to the collection root.
