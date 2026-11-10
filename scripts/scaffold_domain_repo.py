@@ -211,7 +211,10 @@ def publication_file(options: Options, name: str) -> str:
 def issue_form(domain: str) -> str:
     """Fix the shared paper proposal form to one domain without changing labels."""
     text = (REPOSITORY / ".github/ISSUE_TEMPLATE/propose-paper.md").read_text(encoding="utf-8")
-    return text.replace("<!-- metabolomics (default), or another collection slug -->", f"<!-- {domain} -->")
+    fixed, count = re.subn(r"(?m)^(\*\*Target collection:\*\*) <!--.*-->$", rf"\1 <!-- {domain} -->", text)
+    if count != 1:
+        raise ValueError("propose-paper.md has no single 'Target collection' line to fix to the domain")
+    return fixed
 
 
 def licence_files(options: Options) -> tuple[str, str]:
