@@ -13,9 +13,10 @@ V2 = REPO / "tests" / "fixtures" / "router_collection"
 
 CURRENT_APPLY = """## 2. Apply
 
-Read the chosen `leaves/<slug>/SKILL.md`. Its frontmatter carries `tools` (what
-to install or invoke), `derived_from` (source paper DOIs) and `evidence_spans`
-(verbatim anchors from the paper or repo). Follow the body.
+Read the `read:` path of the chosen hit, `leaves/<slug>/SKILL.md`. Its
+frontmatter carries `tools` (what to install or invoke), `derived_from`
+(source paper DOIs) and `evidence_spans` (verbatim anchors from the paper or
+repo). Follow the body.
 """
 CURRENT_GROUNDING = """## 3. Ground (recommended)
 
@@ -23,8 +24,8 @@ Before trusting a parameter, threshold or default, verify it against the paper
 the skill was built from. `kb_bundle.json` maps each skill to its source KBs:
 
 ```bash
-python bin/perspicacite_kb_bind.py query --skill <slug> \\
-  --question "<what you need to verify>"
+python3 "<skill-dir>/../../bin/perspicacite_kb_bind.py" query --collection "<skill-dir>/../.." \\
+  --skill <slug> --question "<what you need to verify>"
 ```
 
 See `GROUNDING.md` for the backends and tiers.
@@ -85,7 +86,8 @@ def test_cut_contract_replaces_stale_sections_without_phantom_helpers(tmp_path):
         "---\nname: hand-written\ndescription: keep me\n---\n\n"
         "# Hand-written router\n\nKeep this introduction byte-for-byte.\n\n"
         f"{CURRENT_APPLY}\n{CURRENT_GROUNDING}\n"
-        "## Licence tiers\n\nKeep this ending byte-for-byte.\n"
+        "## Licence tiers\n\n`restricted` - no clear licence detected.\n\n"
+        "## Notes\n\nKeep this ending byte-for-byte.\n"
     )
     target = unit / "skills" / "_router" / "SKILL.md"
     target.parent.mkdir(parents=True)
@@ -97,7 +99,9 @@ def test_cut_contract_replaces_stale_sections_without_phantom_helpers(tmp_path):
         "---\nname: hand-written\ndescription: keep me\n---\n\n"
         "# Hand-written router\n\nKeep this introduction byte-for-byte.\n\n"
     )
-    assert rendered.endswith("## Licence tiers\n\nKeep this ending byte-for-byte.\n")
+    assert rendered.endswith(
+        router_shape.TIERS_SECTION + "\n\n## Notes\n\nKeep this ending byte-for-byte.\n"
+    )
     assert "`metadata.tools`" in rendered
     assert "`provenance.source_papers`" in rendered
     assert "verbatim evidence lines in the body" in rendered

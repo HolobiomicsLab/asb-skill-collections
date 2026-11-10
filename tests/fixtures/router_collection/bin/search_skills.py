@@ -501,7 +501,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--tool", help="exact tool name, e.g. SIRIUS")
     parser.add_argument("--edam", help="substring of an EDAM operation/topic IRI")
     parser.add_argument("--selector", choices=SELECTORS,
-                        help="scoring rule (or ASB_SELECTOR_RULE); router is deprecated for one release")
+                        help="scoring rule (default router; or ASB_SELECTOR_RULE)")
     parser.add_argument("--max-tools", type=int, help="maximum tools for skills; 0 disables the guard")
     parser.add_argument("-k", "--k", type=int, default=10, help="how many candidates to print")
     parser.add_argument("--json", action="store_true", help="print the shared result dictionaries")
