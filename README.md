@@ -96,8 +96,9 @@ collection and the v2-derived technique packs from that domain repository.
 The other released domains install the same way under their domain name, for
 example `/plugin install genomics@asb-skill-collections`. Each marketplace entry
 points at its private domain repository, so installation needs read access to
-that repository. Earlier transport
-measurements predate this source change and do not verify the new entries
+that repository. The nine domains released on 2026-11-09 were installed this
+way on 2026-11-10, with Claude Code and with Codex CLI; the `metabolomics`
+entry was last installed before its source moved to the domain repository
 ([docs/STATUS.md](docs/STATUS.md)).
 
 **Codex CLI** reads the same marketplace file:

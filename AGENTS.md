@@ -41,8 +41,10 @@ registry, not the released content.
 Other released domains install the same way under their domain name, for
 example `/plugin install genomics@asb-skill-collections`. Each marketplace entry
 points at its private domain repository; installation needs read access to that
-repository. Earlier
-CLI measurements predate these sources and are not a verification of them.
+repository. The nine
+domains released on 2026-11-09 were installed this way on 2026-11-10; the
+`metabolomics` entry was last installed before its source moved to the domain
+repository (routes and dates: [`docs/STATUS.md`](docs/STATUS.md)).
 
 Each collection advertises one skill, `<domain>-router`, at
 `skills/_router/SKILL.md`. The corpus ships beside it as data and is read on

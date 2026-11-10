@@ -16,8 +16,9 @@ governance and registry, not released content.
 Other released domains install the same way under their domain name, for
 example `/plugin install genomics@asb-skill-collections`. The marketplace
 entries point at the private domain repositories, so installation needs read
-access to them. Earlier CLI verification predates these
-sources. Routes and dates: [`docs/STATUS.md`](docs/STATUS.md).
+access to them. The nine domains released on 2026-11-09 were installed this way
+on 2026-11-10; the `metabolomics` entry was last installed before its source
+moved. Routes and dates: [`docs/STATUS.md`](docs/STATUS.md).
 
 One skill is advertised, the router `metabolomics-router` at
 `skills/_router/SKILL.md`. The corpus ships beside it as data (`leaves/`,
