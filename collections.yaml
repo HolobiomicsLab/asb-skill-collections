@@ -9,16 +9,22 @@ domains:
     releases:
       - version: 3
         path: collections/metabolomics/v3
-        tag: metabolomics-v3.0.0
-        commit: 788df247c887bea90670a4252ab94da36088d2be
+        tag: metabolomics-v3.0.1
+        commit: a415c366c03d7fb68eecafb2df611323910e9129
         source_commit: null
-        tree_digest: sha256:89b0cf5b5a666940503b2f248ff416834f6a52fd868aff83c336776d742f81b8
-        version_doi: 10.5281/zenodo.24054446
+        tree_digest: sha256:9dcc78258ad81ee4fe35c2950cbba079a06868e4389200497344fd24c5fe94fa
+        version_doi: 10.5281/zenodo.24093587
         released: 2026-11-09
         skills: 11830
         tools: 1989
         workflows: 20
         papers: 477
+        superseded:
+          - tag: metabolomics-v3.0.0
+            commit: 788df247c887bea90670a4252ab94da36088d2be
+            tree_digest: sha256:89b0cf5b5a666940503b2f248ff416834f6a52fd868aff83c336776d742f81b8
+            version_doi: 10.5281/zenodo.24054446
+            released: 2026-11-09
       - version: 2
         path: collections/metabolomics/v2
         # The only master tag in this checkout is metabolomics-v0.1.0; v2 has no tag.
@@ -48,8 +54,20 @@ domains:
         papers: 98
   epigenomics:
     repository: HolobiomicsLab/asb-skills-epigenomics
-    concept_doi: null
+    concept_doi: 10.5281/zenodo.24093106
     releases:
+      - version: 2
+        path: collections/epigenomics/v2
+        tag: epigenomics-v2.0.0
+        commit: 24c1d327df19b74925912d97819a4c8d898f69f2
+        source_commit: null
+        tree_digest: sha256:0f6d7b1185ac4449f9fd79032875bbe54510a765ab957fdfad83c2d209685cd4
+        version_doi: 10.5281/zenodo.24093107
+        released: 2026-11-09
+        skills: 2295
+        tools: 532
+        workflows: 2
+        papers: 92
       - version: 1
         status: legacy
         leaf_dir: skills
@@ -66,8 +84,20 @@ domains:
         papers: 11
   transcriptomics:
     repository: HolobiomicsLab/asb-skills-transcriptomics
-    concept_doi: null
+    concept_doi: 10.5281/zenodo.24093099
     releases:
+      - version: 2
+        path: collections/transcriptomics/v2
+        tag: transcriptomics-v2.0.0
+        commit: 7b5f08ff3304d478d5774ff0010a420181e136d4
+        source_commit: null
+        tree_digest: sha256:6eb8816789682cf586a59dd710cb4a18be1ddc43e52eae23aff337bff0338620
+        version_doi: 10.5281/zenodo.24093100
+        released: 2026-11-09
+        skills: 11256
+        tools: 2086
+        workflows: 2
+        papers: 450
       - version: 1
         status: legacy
         leaf_dir: skills
@@ -98,3 +128,99 @@ domains:
         tools: 163
         workflows: 2
         papers: 28
+  genomics:
+    repository: HolobiomicsLab/asb-skills-genomics
+    concept_doi: 10.5281/zenodo.24093084
+    releases:
+      - version: 1
+        path: collections/genomics/v1
+        tag: genomics-v1.0.0
+        commit: fed9b986afc4846deec3d97f330347801dff3c95
+        source_commit: null
+        tree_digest: sha256:7377425ee052006486c9c1d155a9cedcd1337a004570a0e0fda24b4cdb75ca3f
+        version_doi: 10.5281/zenodo.24093085
+        released: 2026-11-09
+        skills: 3246
+        tools: 867
+        workflows: 2
+        papers: 137
+  metagenomics:
+    repository: HolobiomicsLab/asb-skills-metagenomics
+    concept_doi: 10.5281/zenodo.24093086
+    releases:
+      - version: 1
+        path: collections/metagenomics/v1
+        tag: metagenomics-v1.0.0
+        commit: 6bb4c90ef1ff9b62ae6b5bdd9136d8a98503d810
+        source_commit: null
+        tree_digest: sha256:8dcd5573a3ed5935ae8024a5288761bb02aa1f39d609f02e603b46930f2d4878
+        version_doi: 10.5281/zenodo.24093087
+        released: 2026-11-09
+        skills: 2754
+        tools: 717
+        workflows: 2
+        papers: 117
+  metabarcoding:
+    repository: HolobiomicsLab/asb-skills-metabarcoding
+    concept_doi: 10.5281/zenodo.24093088
+    releases:
+      - version: 1
+        path: collections/metabarcoding/v1
+        tag: metabarcoding-v1.0.0
+        commit: cb8effa5f9e1a8e315fe5c81071b9e6ae63a7ec4
+        source_commit: null
+        tree_digest: sha256:25e880bde6c94116c8838c96f509fb38087ded635b9fee4ca1c70dd9c035cd61
+        version_doi: 10.5281/zenodo.24093089
+        released: 2026-11-09
+        skills: 803
+        tools: 203
+        workflows: 2
+        papers: 29
+  multi-omics:
+    repository: HolobiomicsLab/asb-skills-multi-omics
+    concept_doi: 10.5281/zenodo.24093090
+    releases:
+      - version: 1
+        path: collections/multi-omics/v1
+        tag: multi-omics-v1.0.0
+        commit: 75b57e9a34cf87a936958c395b2206d2e711a89f
+        source_commit: null
+        tree_digest: sha256:eb0ef100ee39ae76d5c6e3d1dcd6b836c462598e72f09ae450c911dc1b2f6c5f
+        version_doi: 10.5281/zenodo.24093092
+        released: 2026-11-09
+        skills: 787
+        tools: 211
+        workflows: 2
+        papers: 29
+  astronomy:
+    repository: HolobiomicsLab/asb-skills-astronomy
+    concept_doi: 10.5281/zenodo.24093094
+    releases:
+      - version: 1
+        path: collections/astronomy/v1
+        tag: astronomy-v1.0.0
+        commit: f4a72101448e3ef8cd4f910608ce2264467c0384
+        source_commit: null
+        tree_digest: sha256:fd4c66c569581fca269c79028db503056b61d3b72403f22169c320387876d710
+        version_doi: 10.5281/zenodo.24093095
+        released: 2026-11-09
+        skills: 1671
+        tools: 415
+        workflows: 2
+        papers: 100
+  agentic-ai:
+    repository: HolobiomicsLab/asb-skills-agentic-ai
+    concept_doi: 10.5281/zenodo.24093109
+    releases:
+      - version: 1
+        path: collections/agentic-ai/v1
+        tag: agentic-ai-v1.0.0
+        commit: 6ef594e43711dc4e4db58e12caf02eb0992dd6de
+        source_commit: null
+        tree_digest: sha256:f5246531fbea9cbba2bafe1d038d7a611eace64f4b4b3420cfa2973cd0ab2f66
+        version_doi: 10.5281/zenodo.24093110
+        released: 2026-11-09
+        skills: 668
+        tools: 215
+        workflows: 2
+        papers: 29

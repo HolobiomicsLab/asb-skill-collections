@@ -14,10 +14,10 @@
         "url": "HolobiomicsLab/asb-skills-metabolomics",
         "path": "collections/metabolomics/v3",
         "ref": "main",
-        "sha": "788df247c887bea90670a4252ab94da36088d2be"
+        "sha": "a415c366c03d7fb68eecafb2df611323910e9129"
       },
       "description": "ASB Metabolomics. Computational metabolomics (predominantly LC-MS/MS; also LC-MS, GC-MS, NMR, mass-spectrometry imaging, ion mobility, lipidomics, multi-omics): spectral library matching, molecular networking, formula/structure annotation (SIRIUS), preprocessing, normalization, and statistics: 11,830 evidence-grounded skills over 1,989 tools, each derived from a method paper (journal article or preprint) and its code. Router-shaped: three skills are advertised (the router, the asb-metabolomics licence gate and the asb-contribute contribution route), the corpus ships as data and is retrieved on demand, so installing costs negligible context. Includes a Perspicacité KB auto-grounding binder.",
-      "version": "3.0.0",
+      "version": "3.0.1",
       "author": {
         "name": "Holobiomics Lab",
         "url": "https://github.com/HolobiomicsLab"
