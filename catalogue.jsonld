@@ -41,7 +41,7 @@
   "@id": "https://w3id.org/holobiomicslab/asb-skill/registry",
   "name": "ASB Skill Collection Registry",
   "description": "Auto-generated registry of the ASB Skill Collections in the domain repositories. Each entry's status says whether it is released or staged.",
-  "generated_at": "2026-11-08T20:36:31Z",
+  "generated_at": "2026-11-10T08:02:40Z",
   "collections": [
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/epigenomics/v1",
@@ -468,6 +468,27 @@
         }
       ],
       "status": "released"
+    },
+    {
+      "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/proteomics/v1",
+      "title": "ASB Proteomics Skill Collection v1",
+      "version": "1",
+      "slug": "proteomics",
+      "skills_count": 558,
+      "tools_count": 163,
+      "leaf_dir": "leaves",
+      "status": "released",
+      "domain_topics": [],
+      "lead_curators": [
+        {
+          "family": "Nothias",
+          "given": "Louis-Félix",
+          "orcid": "0000-0001-6711-6719",
+          "affiliation": "Holobiomics Lab, Institut de Chimie de Nice (ICN), CNRS UMR 7272 / Université Côte d'Azur"
+        }
+      ],
+      "released_at": "2026-11-09T00:00:00Z",
+      "doi": "10.5281/zenodo.24093114"
     },
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/transcriptomics/v1",
