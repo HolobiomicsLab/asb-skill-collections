@@ -32,6 +32,13 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   release table read from `collections.yaml`, and pointers to the registry in
   place of single-release statements.
 
+- Align the contribution, release and intake documents with the ten-domain
+  layout: content paths are paths in the domain checkout, the removed tag and
+  mirror workflows are marked historical, the release order in
+  `docs/domain-onboarding.md` follows `scripts/release_domain.py`, and the
+  eight metabolomics pack entries of the marketplace are pinned at the v3.0.1
+  commit (the `packs/` tree is byte-identical to the v3.0.0 commit).
+
 ### Fixed
 - Bind `nhs_number` to its label like the other clinical identifiers, treat a
   bounded set of documented template e-mail local parts (`your@…`,
@@ -366,6 +373,78 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   not have caught the stale LC-MS count — the pack really did hold 2,616 leaves
   — but it is what keeps the six corrected sites honest now that the derivation
   gate makes the two numbers one number.
+
+## [agentic-ai-v1.0.0] - 2026-11-09
+
+Release of the agentic-ai collection (v1) from the private domain repository
+`asb-skills-agentic-ai`, deposited as
+[10.5281/zenodo.24093110](https://doi.org/10.5281/zenodo.24093110) (concept DOI
+10.5281/zenodo.24093109). 668 skills, 215 tools, 2 workflows
+and 29 papers. The registry row in `collections.yaml` pins the commit and tree digest.
+
+## [astronomy-v1.0.0] - 2026-11-09
+
+Release of the astronomy collection (v1) from the private domain repository
+`asb-skills-astronomy`, deposited as
+[10.5281/zenodo.24093095](https://doi.org/10.5281/zenodo.24093095) (concept DOI
+10.5281/zenodo.24093094). 1,671 skills, 415 tools, 2 workflows
+and 100 papers. The registry row in `collections.yaml` pins the commit and tree digest.
+
+## [epigenomics-v2.0.0] - 2026-11-09
+
+Release of the epigenomics collection (v2) from the private domain repository
+`asb-skills-epigenomics`, deposited as
+[10.5281/zenodo.24093107](https://doi.org/10.5281/zenodo.24093107) (concept DOI
+10.5281/zenodo.24093106). 2,295 skills, 532 tools, 2 workflows
+and 92 papers. The registry row in `collections.yaml` pins the commit and tree digest.
+
+## [genomics-v1.0.0] - 2026-11-09
+
+Release of the genomics collection (v1) from the private domain repository
+`asb-skills-genomics`, deposited as
+[10.5281/zenodo.24093085](https://doi.org/10.5281/zenodo.24093085) (concept DOI
+10.5281/zenodo.24093084). 3,246 skills, 867 tools, 2 workflows
+and 137 papers. The registry row in `collections.yaml` pins the commit and tree digest.
+
+## [metabarcoding-v1.0.0] - 2026-11-09
+
+Release of the metabarcoding collection (v1) from the private domain repository
+`asb-skills-metabarcoding`, deposited as
+[10.5281/zenodo.24093089](https://doi.org/10.5281/zenodo.24093089) (concept DOI
+10.5281/zenodo.24093088). 803 skills, 203 tools, 2 workflows
+and 29 papers. The registry row in `collections.yaml` pins the commit and tree digest.
+
+## [metagenomics-v1.0.0] - 2026-11-09
+
+Release of the metagenomics collection (v1) from the private domain repository
+`asb-skills-metagenomics`, deposited as
+[10.5281/zenodo.24093087](https://doi.org/10.5281/zenodo.24093087) (concept DOI
+10.5281/zenodo.24093086). 2,754 skills, 717 tools, 2 workflows
+and 117 papers. The registry row in `collections.yaml` pins the commit and tree digest.
+
+## [multi-omics-v1.0.0] - 2026-11-09
+
+Release of the multi-omics collection (v1) from the private domain repository
+`asb-skills-multi-omics`, deposited as
+[10.5281/zenodo.24093092](https://doi.org/10.5281/zenodo.24093092) (concept DOI
+10.5281/zenodo.24093090). 787 skills, 211 tools, 2 workflows
+and 29 papers. The registry row in `collections.yaml` pins the commit and tree digest.
+
+## [proteomics-v1.0.0] - 2026-11-09
+
+Release of the proteomics collection (v1) from the private domain repository
+`asb-skills-proteomics`, deposited as
+[10.5281/zenodo.24093114](https://doi.org/10.5281/zenodo.24093114) (concept DOI
+10.5281/zenodo.24093113). 558 skills, 163 tools, 2 workflows
+and 28 papers. The registry row in `collections.yaml` pins the commit and tree digest.
+
+## [transcriptomics-v2.0.0] - 2026-11-09
+
+Release of the transcriptomics collection (v2) from the private domain repository
+`asb-skills-transcriptomics`, deposited as
+[10.5281/zenodo.24093100](https://doi.org/10.5281/zenodo.24093100) (concept DOI
+10.5281/zenodo.24093099). 11,256 skills, 2,086 tools, 2 workflows
+and 450 papers. The registry row in `collections.yaml` pins the commit and tree digest.
 
 ## [metabolomics-v3.0.1] - 2026-11-09
 
