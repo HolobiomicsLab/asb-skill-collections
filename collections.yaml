@@ -82,3 +82,19 @@ domains:
         tools: 37
         workflows: 0
         papers: 10
+  proteomics:
+    repository: HolobiomicsLab/asb-skills-proteomics
+    concept_doi: 10.5281/zenodo.24093113
+    releases:
+      - version: 1
+        path: collections/proteomics/v1
+        tag: proteomics-v1.0.0
+        commit: a70f2d66513215e3884e5be8d374e2e9c767752a
+        source_commit: null
+        tree_digest: sha256:87f6e5f7c401c3ae5719f6d4848b48e7d8cf67c2cebe3efd821bb8c391254c0a
+        version_doi: 10.5281/zenodo.24093114
+        released: 2026-11-09
+        skills: 558
+        tools: 163
+        workflows: 2
+        papers: 28
