@@ -241,3 +241,30 @@ def test_sentence_naming_an_unlisted_sibling_collection_is_censused_there(tmp_pa
         ("tools", 3): pathlib.Path("collections/alpha/v1"),
         ("skills", 2): pathlib.Path("collections/alpha/v2"),
     }
+
+
+def test_badges_linking_an_unregistered_doi_fail_instead_of_auditing_nothing(tmp_path, capsys):
+    repo = _manifest_repository(tmp_path)
+    assert guard.unbound_badge_dois(repo) == []
+    assert guard.main(["--repo-root", str(repo)]) == 0
+    readme = repo / "README.md"
+    readme.write_text(
+        readme.read_text(encoding="utf-8").replace("zenodo.123456", "zenodo.999999"),
+        encoding="utf-8",
+    )
+    capsys.readouterr()
+    assert guard.unbound_badge_dois(repo) == ["10.5281/zenodo.999999"]
+    assert guard.main(["--repo-root", str(repo)]) == 1
+    assert "10.5281/zenodo.999999, which is not a version DOI" in capsys.readouterr().out
+
+
+def test_badges_are_not_judged_without_a_registry(tmp_path):
+    repo = _manifest_repository(tmp_path)
+    (repo / "collections.yaml").unlink()
+    assert guard.unbound_badge_dois(repo) == []
+
+
+def test_committed_readme_counts_are_audited_and_match_the_registry(capsys):
+    assert guard.unbound_badge_dois(REPO) == []
+    assert guard.main(["--repo-root", str(REPO)]) == 0
+    assert "PASS: 0 advertised" not in capsys.readouterr().out
