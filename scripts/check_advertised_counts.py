@@ -533,8 +533,8 @@ def _root_doc_unit(
     return released[0] if len(released) == 1 else None
 
 
-def _badge_units(text: str, units: list[Unit]) -> list[Unit]:
-    """Return manifest units whose version DOI links a count badge."""
+def _badge_links(text: str) -> list[str]:
+    """Return the link targets that wrap a count badge."""
     html_link = re.compile(
         r"<a\s+[^>]*href=[\"']([^\"']+)[\"'][^>]*>\s*<img[^>]*"
         r"badge/(?:skills|tools|workflows|papers)-",
@@ -545,11 +545,16 @@ def _badge_units(text: str, units: list[Unit]) -> list[Unit]:
         r"\(([^)]+)\)",
         re.IGNORECASE,
     )
-    badge_links = [
+    return [
         match.group(1)
         for pattern in (html_link, markdown_link)
         for match in pattern.finditer(text)
     ]
+
+
+def _badge_units(text: str, units: list[Unit]) -> list[Unit]:
+    """Return manifest units whose version DOI links a count badge."""
+    badge_links = _badge_links(text)
     return [
         unit
         for unit in units
@@ -1016,6 +1021,29 @@ def _deduplicate(claims: Iterable[CountClaim]) -> list[CountClaim]:
     )
 
 
+def unbound_badge_dois(repo_root: pathlib.Path) -> list[str]:
+    """Return Zenodo DOIs linked by README count badges that no registry row carries.
+
+    Such badges select no unit, so their counts would not be audited at all. A
+    repository whose registry records no version DOI is not judged.
+    """
+    repo = pathlib.Path(repo_root).resolve()
+    site = repo / "README.md"
+    if not site.is_file():
+        return []
+    registered = {
+        unit.version_doi for unit in _manifest_units(repo) if unit.version_doi
+    }
+    if not registered:
+        return []
+    linked = {
+        doi
+        for link in _badge_links(site.read_text(encoding="utf-8"))
+        for doi in re.findall(r"10\.5281/zenodo\.\d+", unquote(link))
+    }
+    return sorted(linked - registered)
+
+
 def audit_repository(
     repo_root: pathlib.Path,
 ) -> tuple[list[CountClaim], list[CountFailure]]:
@@ -1052,6 +1080,15 @@ def main(argv: list[str] | None = None) -> int:
     )
     args = parser.parse_args(argv)
     claims, failures = audit_repository(args.repo_root)
+    unbound = unbound_badge_dois(args.repo_root)
+    if unbound:
+        print(
+            "FAIL: README count badges link "
+            + ", ".join(unbound)
+            + ", which is not a version DOI of the registry; their counts are not audited"
+        )
+        if not failures:
+            return 1
     if failures:
         print(
             f"FAIL: {len(failures)} stale advertised count site(s) across {len(claims)} claims"
