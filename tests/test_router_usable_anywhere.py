@@ -150,7 +150,7 @@ def test_description_names_what_is_searched_without_workflow_slugs() -> None:
     text = router_shape.router_description("Agentic AI", 668, contract)
     assert text.startswith("Use for any agentic AI how-to question")
     assert "668 evidence-grounded agentic AI skills" in text
-    assert "2 end-to-end workflows and 1,200 tool records with licence tiers" in text
+    assert "2 end-to-end workflows and 1,200 tool records" in text
     assert "a b" not in text and "Workflows:" not in text
 
 

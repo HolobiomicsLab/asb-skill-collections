@@ -471,7 +471,7 @@ def router_description(domain: str, count: int, contract: dict) -> str:
     if workflows:
         served.append(f"{workflows} end-to-end workflow{'s' if workflows != 1 else ''}")
     if tools:
-        served.append(f"{tools:,} tool records with licence tiers")
+        served.append(f"{tools:,} tool records")
     listed = (
         ", ".join(served[:-1]) + f" and {served[-1]}" if len(served) > 1 else served[0]
     )
