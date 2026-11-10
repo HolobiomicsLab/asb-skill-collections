@@ -1,6 +1,6 @@
-"""The docs-site index is reproducible from explicit domain checkouts."""
+"""The docs-site index is reproducible from explicit domain checkouts, and the
+committed one matches the registry."""
 
-import hashlib
 import importlib.util
 import json
 import pathlib
@@ -8,6 +8,8 @@ import shutil
 
 import pytest
 import yaml
+
+from scripts.check_collections_manifest import checkout_counts, compute_tree_digest
 
 REPO = pathlib.Path(__file__).resolve().parent.parent
 GENERATOR = REPO / "docs-site" / "build_search_index.py"
@@ -35,7 +37,9 @@ def fixture_checkout(tmp_path):
                     "releases": [{
                         "version": 1,
                         "path": "collections/fixture/v1",
-                        "commit": "fixture-commit",
+                        "commit": "0" * 40,
+                        "tree_digest": compute_tree_digest(checkout, "collections/fixture/v1"),
+                        **checkout_counts(collection),
                     }]
                 }
             }
@@ -49,53 +53,39 @@ def _arguments(manifest, checkout, output):
     return [
         "--manifest", str(manifest),
         "--checkout", f"fixture={checkout}",
-        "--output", str(output),
+        "--output-dir", str(output),
     ]
 
 
 def test_two_builds_are_byte_identical_and_have_no_build_time(fixture_checkout, tmp_path):
     gen = _generator()
     manifest, checkout = fixture_checkout
-    first, second = tmp_path / "first.json", tmp_path / "second.json"
+    first, second = tmp_path / "first", tmp_path / "second"
     assert gen.main(_arguments(manifest, checkout, first)) == 0
     assert gen.main(_arguments(manifest, checkout, second)) == 0
-    assert first.read_bytes() == second.read_bytes()
-    payload = json.loads(first.read_text(encoding="utf-8"))
+    for name in ("fixture.json", "manifest.json"):
+        assert (first / name).read_bytes() == (second / name).read_bytes()
+    payload = json.loads((first / "fixture.json").read_text(encoding="utf-8"))
     assert "generated_at" not in payload
     assert payload["collections"] == ["fixture/v1"]
+    assert payload["skills"] and payload["workflows"]
 
 
-def test_output_leaves_the_committed_index_untouched(fixture_checkout, tmp_path):
+def test_output_dir_leaves_the_committed_index_untouched(fixture_checkout, tmp_path):
     gen = _generator()
     manifest, checkout = fixture_checkout
-    committed = tmp_path / "committed.json"
-    committed.write_text("sentinel", encoding="utf-8")
-    output = tmp_path / "elsewhere" / "search_index.json"
+    committed = gen.INDEX_DIR / "manifest.json"
+    before = committed.read_bytes() if committed.is_file() else None
+    output = tmp_path / "elsewhere" / "search_index"
     assert gen.main(_arguments(manifest, checkout, output)) == 0
-    assert output.is_file()
-    assert committed.read_text(encoding="utf-8") == "sentinel"
+    assert (output / "manifest.json").is_file()
+    assert (committed.read_bytes() if committed.is_file() else None) == before
 
 
-def test_check_manifest_accepts_matching_digest(fixture_checkout, tmp_path):
+def test_build_without_a_checkout_and_no_index_is_refused(fixture_checkout, tmp_path):
     gen = _generator()
     manifest, _ = fixture_checkout
-    index = tmp_path / "index.json"
-    digest = hashlib.sha256(manifest.read_bytes()).hexdigest()
-    index.write_text(json.dumps({"manifest_sha256": digest}), encoding="utf-8")
-    assert gen.main(["--manifest", str(manifest), "--check-manifest", str(index)]) == 0
-
-
-def test_check_manifest_rejects_a_different_digest(fixture_checkout, tmp_path):
-    gen = _generator()
-    manifest, _ = fixture_checkout
-    index = tmp_path / "index.json"
-    index.write_text(json.dumps({"manifest_sha256": "stale"}), encoding="utf-8")
-    assert gen.main(["--manifest", str(manifest), "--check-manifest", str(index)]) == 1
-
-
-def test_build_without_a_checkout_is_refused(fixture_checkout, tmp_path):
-    gen = _generator()
-    manifest, _ = fixture_checkout
-    output = tmp_path / "index.json"
-    assert gen.main(["--manifest", str(manifest), "--output", str(output)]) == 2
+    output = tmp_path / "index"
+    assert gen.main(["--manifest", str(manifest), "--output-dir", str(output)]) == 1
     assert not output.exists()
+
