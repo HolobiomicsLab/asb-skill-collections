@@ -8,23 +8,26 @@ over 1,989 tools, released as `metabolomics-v3.0.1` in `asb-skills-metabolomics`
 This master repository holds the tooling, governance, documentation and release
 registry, not the released content.
 
-> Full human guide: `<domain checkout>/collections/metabolomics/v3/USAGE.md`.
+> Human guide for metabolomics v3: `<domain checkout>/collections/metabolomics/v3/USAGE.md`
+> (the other nine collections ship no `USAGE.md`).
 > Verified install routes and their dates: [`docs/STATUS.md`](docs/STATUS.md).
 > Release source, commit, tree digest and DOI: [`collections.yaml`](collections.yaml).
 
 ## Requirements
 
-- **Browse, search and read skills:** plain Markdown and JSON in a domain
-  checkout, a fetched leaf directory or the Zenodo archive.
-- **Helper scripts:** Python 3.8 or later and PyYAML
+- **Browse, search and read skills:** plain Markdown and JSON in an installed
+  plugin, a domain checkout, a fetched leaf directory or the Zenodo archive.
+- **Search script** (`bin/search_skills.py`, shipped in every released
+  collection): Python 3.9 or later, standard library only, no network.
+- **Helper scripts of this repository:** Python 3.8 or later and PyYAML
   (`pip install -r scripts/requirements.txt` from this master checkout).
-- **Grounding binder** (`perspicacite_kb_bind.py`, bundled at `bin/` in every
-  plugin and pack): Python 3.8 or later, standard library only. The `kb`
-  backend needs Perspicacité at `PERSPICACITE_BASE` (default
-  `http://127.0.0.1:8000`). The `local` backend needs `git` and network.
-- **Running a skill's tool:** install what its frontmatter `tools:` lists. See
-  `<domain checkout>/collections/metabolomics/v3/USAGE.md`, section 0, and
-  `tools_index.json` in that collection.
+- **Grounding binder** (`scripts/perspicacite_kb_bind.py` in this repository;
+  none of the ten released collections ships it): Python 3.8 or later, standard
+  library only. The `kb` backend needs Perspicacité at `PERSPICACITE_BASE`
+  (default `http://127.0.0.1:8000`). The `local` backend needs `git` and network.
+- **Running a skill's tool:** install what its frontmatter `tools` lists. See
+  `tools_index.json` in the collection and, for metabolomics v3, section 0 of
+  its `USAGE.md`.
 
 ## Install
 
@@ -41,9 +44,24 @@ points at its private domain repository; installation needs read access to that
 repository. Earlier
 CLI measurements predate these sources and are not a verification of them.
 
-The entry point is `skills/_router/SKILL.md`. The corpus ships beside it as data
-under `leaves/<slug>/SKILL.md` and is read on demand, so installation costs
-negligible context.
+Each collection advertises one skill, `<domain>-router`, at
+`skills/_router/SKILL.md`. The corpus ships beside it as data and is read on
+demand, so installation costs negligible context: the skills under
+`leaves/<slug>/SKILL.md`, `skills_index.json`, `tools_index.json` with the tool
+records under `tools/`, the composite workflows under `workflows/` with
+`workflows/workflows_index.json` and a workflow router
+`workflows/_workflow_router/SKILL.md` (not advertised), `kb_bundle.json` and
+the search script `bin/search_skills.py`.
+
+### Codex: plugin marketplace
+
+```bash
+codex plugin marketplace add HolobiomicsLab/asb-skill-collections
+codex plugin add metabolomics@asb-skill-collections
+```
+
+The same marketplace serves Codex, under the same domain names and with the
+same read access to the private domain repository.
 
 ### Fetch chosen leaves with `asbb`
 
@@ -62,8 +80,11 @@ asbb install --repo <domain checkout> --skills <slug-a>,<slug-b> \
   --collection metabolomics/v3 --runtime agents
 ```
 
+A selection installed this way ships the grounding binder in its own `bin/`.
+
 ### Zenodo archive and direct consumption
 
+Readers without access to the domain repositories use the release archives.
 The complete metabolomics v3 release (`metabolomics-v3.0.1`) is at
 [10.5281/zenodo.24093587](https://doi.org/10.5281/zenodo.24093587); the earlier
 v3.0.0 deposit is
@@ -71,10 +92,10 @@ v3.0.0 deposit is
 [10.5281/zenodo.20794027](https://doi.org/10.5281/zenodo.20794027). The DOIs of
 the other domains are in `collections.yaml`.
 
-For Codex, GitHub Copilot or another agent, read the collection from a domain
-checkout or extracted archive. Start at
-`<domain checkout>/collections/metabolomics/v3/skills/_router/SKILL.md` and use
-the machine indexes below. No runtime or build step is needed to read them.
+For GitHub Copilot or another agent without a plugin host, read the collection
+from a domain checkout or an extracted archive. Start at
+`<collection root>/skills/_router/SKILL.md` and use the search script and the
+machine indexes below. No runtime or build step is needed.
 
 For a chat assistant through a web UI, upload the chosen collection's
 `skills_index.json`, `tools_index.json` and the few required leaf `SKILL.md`
@@ -83,64 +104,89 @@ whole collection. This route was not verified end to end.
 
 ## Use: search, apply, ground
 
-Run the search in the domain checkout or another unpacked collection. The
-examples below use the v3 collection at
-`<domain checkout>/collections/metabolomics/v3/`.
+`<collection root>` is the directory that holds `skills_index.json`: in a
+domain checkout `<domain checkout>/collections/metabolomics/v3`, in an installed
+plugin the directory two levels above the router's `SKILL.md`. Write it as an
+absolute path; the commands then run from any working directory.
 
-**1. Search** the indexes, most precise first:
+**1. Search** with the shipped script, then read the one file it names:
+
+```bash
+# one atomic skill
+python3 "<collection root>/bin/search_skills.py" --query "<the task>" -k 10
+# an end-to-end workflow for a whole analysis goal
+python3 "<collection root>/bin/search_skills.py" --query "<the goal>" --target workflows -k 3
+# a tool record
+python3 "<collection root>/bin/search_skills.py" --query "<tool or task>" --target tools -k 5
+```
+
+Every hit prints the absolute `read:` path, a skill hit also its licence tier.
+Narrow with `--tool <name>` or `--edam <iri-substring>`; `--technique <tag>`
+only matches where the index carries technique tags (95 of the metabolomics v3
+skills, none in the other nine collections). The routers released on 2026-11-09 write the
+command as `python bin/search_skills.py ...`, which fails without a `python`
+executable (a stock macOS has only `python3`) and from any directory but the
+collection root; run the absolute `python3` form above instead.
+
+The indexes can also be queried directly:
 
 - `skills_index.json`: `slug`, `name`, `description`, `edam_operation`,
-  `edam_topics`, `tools`, `dois`.
-- `tools_index.json`: `slug`, `name`, `edam_topics`, `dois`, `entry_kind`,
-  `license_tier`, `license_subject`, `repo_url`, `source_paper_repos`.
-  `entry_kind` is `software`, `vendor_product` or `artefact`. `repo_url` is the
-  tool repository where a licence was resolved there; `source_paper_repos` are
-  repositories of citing papers, not necessarily the tool's home.
+  `edam_topics`, `tools`, `dois`, `techniques`, `license_tier`,
+  `provenance_tier`.
+- `tools_index.json`: `slug`, `name`, `edam_topics`, `dois`, `license`,
+  `license_tier`, `license_detection`, `license_subject`, `repo_url`,
+  `techniques`, `used_by_skills`. `repo_url` is the tool repository where one
+  was resolved.
 
 ```bash
 # skills that use a given tool
 jq -r '.[] | select(.tools[]? | ascii_downcase | test("sirius")) | .slug' \
-  <domain checkout>/collections/metabolomics/v3/skills_index.json
+  <collection root>/skills_index.json
 # skills by EDAM topic (Metabolomics = topic_3172)
 jq '.[] | select(.edam_topics[]? | test("topic_3172")) | {slug,name}' \
-  <domain checkout>/collections/metabolomics/v3/skills_index.json
+  <collection root>/skills_index.json
 # keyword over name and description
 jq -r '.[] | select(.description | test("library match";"i")) | .slug' \
-  <domain checkout>/collections/metabolomics/v3/skills_index.json
+  <collection root>/skills_index.json
 ```
 
-**2. Apply:** read
-`<domain checkout>/collections/metabolomics/v3/leaves/<slug>/SKILL.md`. Its body
-is the procedure with verbatim evidence lines from the source. Its frontmatter
-lists `metadata.tools` and `derived_from` source DOIs. Use `tools_index.json`
-for canonical install URLs.
+**2. Apply:** read `<collection root>/leaves/<slug>/SKILL.md`. Its body is the
+procedure with verbatim evidence lines from the source. Its frontmatter carries
+`description` and `when_to_use_negative`, `tools` (each with its `role` and,
+where known, `repo`), `provenance.source_papers` (DOI and title of each source
+paper) and `metadata` (`tools`, `license_tier`, `repo_url`, `edam_operation`,
+`edam_topics`, `provenance_tier`). A workflow hit points to
+`workflows/<slug>/SKILL.md`: follow its stages in order, each naming its
+candidate leaf skills.
 
 **3. Ground, recommended:** verify a parameter, threshold or claim against the
 source paper or repository. The skill-to-source map, including `asb-paper-<doi>`
-KB slugs and `repo_urls`, is precomputed in `kb_bundle.json`. The binder is
-bundled in every plugin and pack at `bin/perspicacite_kb_bind.py`. Pass the
-domain collection path to `--collection` and run from the unit directory:
+KB slugs and `repo_urls`, is precomputed in `kb_bundle.json` in every released
+collection. Run the binder of this repository on the collection path. A
+selection installed with `asbb install` carries a copy in its `bin/`, and the
+deposit builder (`scripts/zenodo_deposit.py`) bundles one under `scripts/`
+beside the collection, with this file:
 
 ```bash
 # KB backend: Perspicacité at PERSPICACITE_BASE
-python bin/perspicacite_kb_bind.py prepare \
-  --collection <domain checkout>/collections/metabolomics/v3 --skill <slug>
-python bin/perspicacite_kb_bind.py query \
-  --collection <domain checkout>/collections/metabolomics/v3 --skill <slug> \
+python3 <master checkout>/scripts/perspicacite_kb_bind.py prepare \
+  --collection "<collection root>" --skill <slug>
+python3 <master checkout>/scripts/perspicacite_kb_bind.py query \
+  --collection "<collection root>" --skill <slug> \
   --question "What threshold does the method recommend?"
 
 # Serverless backend: clone source repositories and fetch an OA paper where possible
-python bin/perspicacite_kb_bind.py local \
-  --collection <domain checkout>/collections/metabolomics/v3 --skill <slug> --paper
+python3 <master checkout>/scripts/perspicacite_kb_bind.py local \
+  --collection "<collection root>" --skill <slug> --paper
 
 # Offline map only
-python bin/perspicacite_kb_bind.py resolve \
-  --collection <domain checkout>/collections/metabolomics/v3 --skill <slug>
+python3 <master checkout>/scripts/perspicacite_kb_bind.py resolve \
+  --collection "<collection root>" --skill <slug>
 ```
 
 Tiers (`--tier`) are `paper` (full text and supplementary information, default),
 `si` (supplementary information emphasised) and `repo` (read the tool source).
-In Claude Code, `/ground` does this on the skill in play.
+Without the binder, read the DOIs in the leaf's `provenance.source_papers`.
 
 **Recommended agent loop:** prefer `kb` when Perspicacité is available. Use
 `prepare` to warm it, then `query` before acting on a claim. When the server is
@@ -148,18 +194,23 @@ down, use `local` to clone and read the source directly.
 
 ## Licence tiers
 
-Every skill carries a `license_tier`: `open`, `noncommercial`, `restricted` or
-`unknown`, in `skills_index.json` and its `SKILL.md` frontmatter. The
-`asb-metabolomics` meta-skill enforces the noncommercial acknowledgement gate
-and routes tier logic. See
+Every skill carries a `license_tier` for the tool it relies on, in
+`skills_index.json` and in its frontmatter `metadata.license_tier`; the skill
+text itself is CC-BY-4.0. `open`: commercial use allowed. `noncommercial`:
+academic or non-commercial use only; confirm a non-commercial purpose before
+applying the skill. `restricted`: a licence was established and it constrains
+reuse (for example a vendor licence); check it before commercial use or
+redistribution. `unknown`: no licence for the tool was established; treat it as
+all rights reserved until checked. See
 [`governance/LICENSE_TIERS.md`](governance/LICENSE_TIERS.md) for the policy.
 
 ## Notes
 
-- Collection content is CC-BY-4.0. Every skill names its source DOI through
-  `derived_from`, carries verbatim evidence lines and EDAM annotations, and
-  passed the release gate recorded in
-  `<domain checkout>/collections/metabolomics/v3/gate_report.json`.
+- Collection content is CC-BY-4.0. Every skill names its source DOIs through
+  `provenance.source_papers`, carries verbatim evidence lines and EDAM
+  annotations, and passed the release gate. The gate report and the other
+  release receipts are in the domain repository under `receipts/<cut-id>/`,
+  not inside the collection.
 - [`collections.yaml`](collections.yaml) is the release registry. It records
   the releases of ten domains, each in its private repository
   `asb-skills-<domain>`, and the legacy v1 trees of metabolomics, epigenomics
