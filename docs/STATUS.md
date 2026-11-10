@@ -32,12 +32,12 @@ Two kinds of entry appear below.
 | Runtime adapters other than `agents` | experimental | not launched |
 | MCP server | pending current verification | pinned release audit; no date stated |
 | PyPI | not published, by design in v0 | n/a |
-| Documentation site (GitHub Pages) | not enabled | n/a |
+| Documentation site (GitHub Pages) | live: HTTP 200 for the site root and `search.html` on 2026-11-10; not enabled at the 2026-10-30 measurement | 2026-11-10 |
 | HuggingFace mirror and leaderboard | planned, not yet live | n/a |
 | Benchmark and capsules | to be released later | n/a |
 | `w3id.org/holobiomicslab/` IRIs | resolve | since 2026-09-14 |
 | `w3id.org/asb` and `w3id.org/asb/validation` | resolve | since 2026-10-29 |
-| Zenodo DOI | concept and version DOI resolve; deposit is `metabolomics-v0.1.0` | 2026-06-22 deposit |
+| Zenodo DOI | metabolomics concept DOI 10.5281/zenodo.20794026 with versions `metabolomics-v0.1.0` (2026-06-22, v2), `metabolomics-v3.0.0` (superseded) and `metabolomics-v3.0.1`; nine further domain records, each with its concept and version DOI in `collections.yaml` | 2026-06-22 deposit measured 2026-10-30; later records are registry rows of 2026-11-09 |
 | Metabolomics v3.0.0 Zenodo deposit | version DOI `10.5281/zenodo.24054446`; publication date 2026-11-09 | record supplied for the 2026-11-09 release |
 | Metabolomics v3.0.0 deposit files | `metabolomics-v3.zip`, 37,974,225 bytes, md5 `9fd503cd2361e924c29cf2ba4eedcf04`; `metabolomics-v3-leafemb.npz`, 148,632,620 bytes, md5 `0bc4a202fbe1fe92d8bfd4058a0d2baa` | release record |
 | Metabolomics v3.0.0 domain tag | `metabolomics-v3.0.0` at `788df247c887bea90670a4252ab94da36088d2be` in `HolobiomicsLab/asb-skills-metabolomics` | tagged domain checkout |
@@ -254,7 +254,8 @@ README (e80767838) linked a Contribute page at
 Measured 2026-10-30: Pages is not enabled on the repository
 (`gh api repos/HolobiomicsLab/asb-skill-collections/pages`: 404; `has_pages: false`).
 The Contribute page URL and the site root both returned 404. The site sources
-(`docs-site/`) and `.github/workflows/pages.yml` are in the repository. The working
+(`docs-site/`) and `.github/workflows/pages.yml` are in the repository. On 2026-11-10 an anonymous request to the site root and to `search.html` returned HTTP 200.
+The working
 route for an improvement report is `scripts/make_improvement_report.py` or the
 `asb-contribute` skill.
 

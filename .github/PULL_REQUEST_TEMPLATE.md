@@ -2,12 +2,15 @@
 
 <!-- One sentence: what does this PR add or change? -->
 
+Paths below are paths in the domain checkout (`asb-skills-<domain>`, private)
+unless they name a file of this tooling repository.
+
 ## Type of change
 
 - [ ] New collection (`staged-collections/<slug>/v<N>/`)
 - [ ] Review attestation (`collections/<slug>/v<N>/reviews/<doi>.yaml`)
 - [ ] Curator candidacy (`candidates/<handle>.yaml`)
-- [ ] Leaderboard result (`benchmark/leaderboard.jsonld`)
+- [ ] Leaderboard result (`collections/<slug>/v<N>/benchmark/leaderboard.jsonld`)
 - [ ] Governance / docs update
 - [ ] CI / tooling update
 
@@ -15,7 +18,7 @@
 
 ### For all PRs
 - [ ] CI is passing (or I have documented why a failure is expected / acceptable)
-- [ ] I have read CONTRIBUTING.md
+- [ ] I have read [.github/CONTRIBUTING.md](CONTRIBUTING.md)
 
 ### For review attestations
 - [ ] `attestation.yaml` validates against the template schema

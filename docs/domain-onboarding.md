@@ -109,9 +109,57 @@ git -C <corpus-checkout> merge-base --is-ancestor <full-corpus-commit> origin/ma
 A successful exit from the second command is the reachability test. Keep this private repository name
 out of public files and URLs.
 
-## 7. Register the release
+## 7. Run the release stages
 
-Use the release orchestrator's `manifest` stage after the DOI and tag facts exist. At the first release,
+The `asb-domain-release` skill owns the detailed release protocol and its human stops. The orchestrator
+stages are `gate`, `land`, `deposit-plan`, `deposit-draft`, `record-doi`, `receipt`, `manifest` and `tag`.
+Inspect each stage's inputs with `--help`; `--execute` is deliberate, and status is read with `status`.
+
+The order of a release is:
+
+1. `gate`, `land`, `deposit-plan` and `deposit-draft` in the domain checkout. The owner publishes the draft
+   on Zenodo, which mints the version DOI.
+2. `record-doi` and `receipt` on a DOI branch of the domain repository. The pull request that carries them is
+   merged in the domain repository; its merge commit is the release commit.
+3. `manifest` with that merge commit, in a pull request of this tooling repository (section 8). The registry
+   row names the tag. The owner merges it.
+4. `tag` creates and verifies the tag on the registered commit (section 8).
+
+The commands for steps 1 and 2 are below.
+
+```bash
+python scripts/release_domain.py gate --domain <domain> --version v1 \
+  --repo-root <domain-checkout> --state <release-state.json> --candidate <candidate-directory>
+python scripts/release_domain.py deposit-plan --domain <domain> --version v1 \
+  --repo-root <domain-checkout> --state <release-state.json> \
+  --record-id <record-id> --publication-date <YYYY-MM-DD>
+python scripts/release_domain.py deposit-draft --domain <domain> --version v1 \
+  --repo-root <domain-checkout> --state <release-state.json> \
+  --record-id <record-id> --publication-date <YYYY-MM-DD>
+python scripts/release_domain.py record-doi --domain <domain> --version v1 \
+  --repo-root <domain-checkout> --state <release-state.json> \
+  --doi 10.5281/zenodo.<version-id> --released <YYYY-MM-DD>
+python scripts/release_domain.py receipt --domain <domain> --version v1 \
+  --repo-root <domain-checkout> --state <release-state.json>
+python scripts/release_domain.py status --domain <domain> --version v1 \
+  --repo-root <domain-checkout> --state <release-state.json>
+```
+
+The first release of a domain creates its concept DOI. Pass `--first-release` (and no `--record-id`)
+to `deposit-plan` and `deposit-draft`: the draft is a new record, and after the owner publishes it,
+`record-doi` reads the concept DOI that `manifest` then records. Before `record-doi`, the domain README
+needs a release row whose path cell is `` `collections/<domain>/v<N>` `` in the table headed
+`| Path | Title | Skills | Tools | Released | DOI |`; the stage refuses otherwise and writes nothing.
+`USAGE.md` is optional. `record-doi` also sets the plugin version to the release label without its `v`
+(`1.0.0` for a first release) in the collection `.claude-plugin/plugin.json` and in the root
+`.claude-plugin/marketplace.json` entry whose `source` is the collection path. Either file may be absent;
+a marketplace without exactly one such entry, or a `plugin.json` without a string `version`, is refused
+and nothing is written. Remove any untracked `gate_report.json` left in the collection by `gate`
+before `receipt` and `manifest`; both stages refuse untracked files in the release path.
+
+## 8. Register the release and tag it
+
+Run the release orchestrator's `manifest` stage after the DOI pull request is merged in the domain repository. At the first release,
 pass the newly created domain concept DOI explicitly. The stage computes and validates the release row
 and tree digest; review the tooling pull request before merge.
 
@@ -119,9 +167,18 @@ and tree digest; review the tooling pull request before merge.
 python scripts/release_domain.py manifest --domain <domain> --version v1 \
   --repo-root <domain-checkout> --tooling-root <tooling-root> \
   --state <release-state.json> --concept-doi 10.5281/zenodo.<concept-id> \
-  --commit <full-domain-release-commit> --tag-name <domain>-v1.0.0 \
+  --commit <full-doi-merge-commit> --tag-name <domain>-v1.0.0 \
   --released <YYYY-MM-DD>
 python scripts/check_collections_manifest.py --checkout <domain>=<domain-checkout>
+```
+
+After the registry pull request is merged, the owner creates the tag on the registered commit. The `tag` stage
+prints the exact commands and, with `--verify`, checks that the remote tag points at that commit:
+
+```bash
+python scripts/release_domain.py tag --domain <domain> --version v1 \
+  --repo-root <domain-checkout> --state <release-state.json> \
+  --commit <full-doi-merge-commit> --tag-name <domain>-v1.0.0 [--verify]
 ```
 
 Rerender released-stage CI and the released marketplace after this row lands in `collections.yaml`.
@@ -139,49 +196,10 @@ domain already listed while other domains still wait for their entry. Add `--req
 to fail while a latest release still has no entry. Review the marketplace
 change in the same pull request as the registry row.
 
-## 8. Run the release stages
-
-The `asb-domain-release` skill owns the detailed release protocol and its human stops. The orchestrator
-stages are `gate`, `land`, `deposit-plan`, `deposit-draft`, `record-doi`, `receipt`, `manifest` and `tag`.
-Inspect each stage's inputs with `--help`; `--execute` is deliberate, and status is read with `status`.
-
-```bash
-python scripts/release_domain.py gate --domain <domain> --version v1 \
-  --repo-root <domain-checkout> --state <release-state.json> --candidate <candidate-directory>
-python scripts/release_domain.py deposit-plan --domain <domain> --version v1 \
-  --repo-root <domain-checkout> --state <release-state.json> \
-  --record-id <record-id> --publication-date <YYYY-MM-DD>
-python scripts/release_domain.py deposit-draft --domain <domain> --version v1 \
-  --repo-root <domain-checkout> --state <release-state.json> \
-  --record-id <record-id> --publication-date <YYYY-MM-DD>
-python scripts/release_domain.py record-doi --domain <domain> --version v1 \
-  --repo-root <domain-checkout> --state <release-state.json> \
-  --doi 10.5281/zenodo.<version-id> --released <YYYY-MM-DD>
-python scripts/release_domain.py receipt --domain <domain> --version v1 \
-  --repo-root <domain-checkout> --state <release-state.json>
-python scripts/release_domain.py tag --domain <domain> --version v1 \
-  --repo-root <domain-checkout> --state <release-state.json> \
-  --commit <full-doi-merge-commit> --tag-name <domain>-v1.0.0
-python scripts/release_domain.py status --domain <domain> --version v1 \
-  --repo-root <domain-checkout> --state <release-state.json>
-```
-
-The first release of a domain creates its concept DOI. Pass `--first-release` (and no `--record-id`)
-to `deposit-plan` and `deposit-draft`: the draft is a new record, and after the owner publishes it,
-`record-doi` reads the concept DOI that `manifest` then records. Before `record-doi`, the domain README
-needs a release row whose path cell is `` `collections/<domain>/v<N>` `` in the table headed
-`| Path | Title | Skills | Tools | Released | DOI |`; the stage refuses otherwise and writes nothing.
-`USAGE.md` is optional. `record-doi` also sets the plugin version to the release label without its `v`
-(`1.0.0` for a first release) in the collection `.claude-plugin/plugin.json` and in the root
-`.claude-plugin/marketplace.json` entry whose `source` is the collection path. Either file may be absent;
-a marketplace without exactly one such entry, or a `plugin.json` without a string `version`, is refused
-and nothing is written. Remove any untracked `gate_report.json` left in the collection by `gate`
-before `receipt` and `manifest`; both stages refuse untracked files in the release path.
-
 ## 9. Maintain the domain
 
-Set the repository variables documented in `docs/intake-issue.md` and the retraction-watch section of
-`docs/REGISTRY.md`. The monthly watch opens or comments on a labelled issue; it never removes content.
+Set the repository variables documented in `docs/intake-issue.md` and the "Retraction watch" and "Issue intake" sections of
+`.github/workflows/README.md`. The monthly watch opens or comments on a labelled issue; it never removes content.
 Paper intake stages a branch and pull request for curator review; it never merges or marks a row included.
 
 Apply reviewed EDAM vocabulary remaps, rebuild facets, and pack local record capsules when the corresponding

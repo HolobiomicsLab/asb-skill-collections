@@ -77,15 +77,16 @@ when the text cannot be edited that way.
 
 1. The Zenodo version is made with this tool and published by hand (procedure
    below).
-2. Its version DOI is recorded in a pull request.
-3. The release tag `<domain>-v<release version>` is pushed after that pull
-   request is merged.
+2. Its version DOI is recorded (`record-doi` and `receipt`) in a pull request
+   of the domain repository, which is merged.
+3. The registry row (`manifest`) is merged in a pull request of this repository,
+   with the merged DOI commit as the registered commit.
+4. The owner pushes the release tag `<domain>-v<release version>` on that
+   commit, and `tag --verify` checks it.
 
-The tag runs `.github/workflows/release.yml`. Its Zenodo step runs only when
-the repository variable `ZENODO_UPLOAD` is `true`, and the variable is unset by
-default, so the tag run makes no Zenodo request. Zenodo keeps one unpublished
-new version per record: a draft made by the workflow would collide with the
-draft made here. Use one deposit path per release.
+No workflow runs on the tag and none deposits to Zenodo: the deposit is made
+only with this tool. Zenodo keeps one unpublished new version per record, so use
+one deposit path per release.
 
 ## Prerequisites
 
@@ -101,9 +102,10 @@ The tokens are read from the environment only and are never printed. Create them
 in the Zenodo account settings (Applications, Personal access tokens). The
 sandbox is a separate service with separate accounts and records.
 
-For `metabolomics`, the template names record `20794027` (version
-`metabolomics-v0.1.0`) in an `isVersionOf` relation. The tool reads the record id
-from that relation. `--record-id` overrides it.
+The template names the record to version from in an `isVersionOf` relation, and
+the tool reads the record id from that relation; `--record-id` overrides it. Pass
+the latest published version record of the domain, which the registry row
+records as `version_doi`.
 
 ## Procedure
 
@@ -112,15 +114,15 @@ Run from the repository root, on the commit that carries the release.
 1. Build the archive and note the sha256.
 
    ```bash
-   python scripts/zenodo_deposit.py archive metabolomics v2
+   python scripts/zenodo_deposit.py archive metabolomics v3
    ```
 
-   Output: path (`dist/zenodo/metabolomics-v2.zip`), sha256, size, entry count.
+   Output: path (`dist/zenodo/metabolomics-v3.zip`), sha256, size, entry count.
 
 2. Print the plan. No network.
 
    ```bash
-   python scripts/zenodo_deposit.py plan metabolomics v2
+   python scripts/zenodo_deposit.py plan metabolomics v3
    ```
 
    Check the target host, the record id, the metadata and the file list. The
@@ -135,7 +137,7 @@ Run from the repository root, on the commit that carries the release.
 
    ```bash
    export ZENODO_SANDBOX_TOKEN=...
-   python scripts/zenodo_deposit.py draft metabolomics v2 --sandbox --record-id <sandbox record id>
+   python scripts/zenodo_deposit.py draft metabolomics v3 --sandbox --record-id <sandbox record id>
    ```
 
    Open the printed URL and check the title, creators, description, license,
@@ -145,7 +147,7 @@ Run from the repository root, on the commit that carries the release.
 
    ```bash
    export ZENODO_TOKEN=...
-   python scripts/zenodo_deposit.py draft metabolomics v2
+   python scripts/zenodo_deposit.py draft metabolomics v3
    ```
 
 The output gives the draft URL and the sha256 of each uploaded file. The archive
@@ -163,9 +165,8 @@ sha256 must equal the sha256 from step 1.
    in an environment where the AgenticScienceBuilder package is not importable
    (see the receipt job of `validate.yml`); otherwise that job fails.
 
-7. Once that pull request is merged, push the release tag on the merged
-   commit. With `ZENODO_UPLOAD` unset, `release.yml` runs the tests and the
-   strict release gate and makes no Zenodo request.
+7. Once that pull request is merged and the registry row is merged, the owner
+   pushes the release tag on the merged DOI commit (see "Order of a release").
 
 ### First release of a domain
 
@@ -242,7 +243,7 @@ plus three files bundled so the deposit runs grounding on its own:
 and the license texts at their repository paths: `LICENSING.md` (which license
 covers which layer), `LICENSE` (the Apache-2.0 text) and
 `governance/LICENSE_TIERS.md` (the per-skill license tiers). A missing license
-text stops the build. These are the files `release.yml` bundles.
+text stops the build. These are the files the archive step bundles.
 
 Extra files passed with repeatable `--extra-file` options on `plan` and `draft`
 are listed beside the archive with their size and sha256, then uploaded after
@@ -258,11 +259,7 @@ option, and a missing extra file stops `draft` before its first request.
   is not specified bit for bit, so a different zlib build can give a different
   sha256 for the same tree. Compare hashes from one machine.
 
-When its Zenodo step is on (`ZENODO_UPLOAD` is `true`), `release.yml` differs:
-it keeps dotfiles (so its archive carries `.claude-plugin/plugin.json`), uploads
-`.cache/leafemb_v<N>.npz` as a second file `<domain>-v<N>-leafemb.npz` when
-present, and publishes when the repository variable `ZENODO_PUBLISH` is `true`.
-This tool still keeps neither collection dotfiles nor collection caches in the
+This tool keeps neither collection dotfiles nor collection caches in the
 zip and never publishes; an external cache can be uploaded with `--extra-file`.
 
 ## Domain repositories
@@ -330,14 +327,4 @@ documentation and was not run for this repository. It does not fit a
 per-collection release: the metadata template and the files live under
 `<domain checkout>/collections/<domain>/<vN>/`, and the snapshot is the whole repository.
 
-The release workflow (`.github/workflows/release.yml`) makes the same kind of
-draft from CI only when the repository variable `ZENODO_UPLOAD` is `true` and
-`ZENODO_TOKEN` is set, and publishes it when `ZENODO_PUBLISH` is `true`.
-`ZENODO_UPLOAD` is unset by default. Before its first request the step stops
-when a license text is missing or when the creators of a checked-in
-`.zenodo.json` do not start with `scripts/release_creators.yaml`, by the rule
-of `plan` and `draft`. It then sends the template unchanged,
-including the `isVersionOf` relation
-that the API vocabulary does not list. That was not exercised against a live
-deposit here. Use the sandbox draft in step 3 to check it before relying on that
-path.
+No workflow of this repository makes a deposit; use the sandbox draft in step 3 to check a new record before relying on it.

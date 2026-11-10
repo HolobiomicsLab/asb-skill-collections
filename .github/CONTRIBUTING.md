@@ -4,23 +4,29 @@ We welcome community contributions of curated, evidence-grounded scientific skil
 tools, and benchmarks. All contributions are reviewed for scientific quality,
 evidence provenance, and FAIR metadata completeness.
 
+Released collections live in private domain repositories `asb-skills-<domain>`
+(registry: `collections.yaml`). This repository holds the tooling, governance and
+registry. Every `collections/…` and `staged-collections/…` path below is a path
+in the domain checkout. Proposals are filed as issues on this public repository,
+and a maintainer stages them in the domain repository.
+
 ## How to contribute a review
 
 1. **Prerequisites:** You must be listed in `contributors.jsonld` with at least
    Reviewer tier. If you are not yet listed, complete Step 0 below first.
 
-2. **Open a PR** adding your review attestation at
-   `collections/<slug>/v<N>/reviews/<paper-doi-slug>.yaml`.
+2. **Open a PR** in the domain repository adding your review attestation at
+   `<domain checkout>/collections/<slug>/v<N>/reviews/<paper-doi-slug>.yaml`.
    Use `templates/attestation.yaml.template` as your starting point.
 
-3. **CI runs automatically:**
-   - COI detection via `verify-coi.yml`
-   - Schema validation via `validate.yml`
-   - If `is_coauthor: true`, you must also add a `co_reviewer` block (see COI_POLICY.md)
+3. **Checks:** a maintainer runs the COI check (`scripts/check_coi.py`) and the
+   domain repository's content gates (`domain-gates.yml`, called from its
+   `gates.yml`). If `is_coauthor: true`, you must also add a `co_reviewer` block
+   (see `governance/COI_POLICY.md`).
 
 4. **A maintainer merges** your PR. You cannot self-merge.
 
-5. **Tier update happens automatically** via `tier-update.yml` on merge.
+5. **Tier update:** a maintainer runs `scripts/tier_update.py` after the merge.
 
 ## Step 0 — Become a verified contributor (Reviewer tier)
 
@@ -49,7 +55,7 @@ evidence provenance, and FAIR metadata completeness.
 
 1. Open a GitHub Issue using the "Propose collection" template.
 2. Include: domain name, short description, 3-5 seed papers (DOIs), proposed Lead Curator.
-3. After maintainer go-ahead, open a PR adding `staged-collections/<domain>/v1/`.
+3. After maintainer go-ahead, a PR adds `<domain checkout>/staged-collections/<domain>/v1/` in the domain repository.
 
 ## Propose or annotate a paper
 
@@ -69,14 +75,14 @@ what it is, a link (DOI, repo, or homepage), and a one-line rationale. A curator
 the automated curation pass) then resolves the rest: DOI on Crossref, access via
 Unpaywall, dedup against the collection's `corpus.yaml`, retraction check, category,
 and thematic fit. Triaged proposals are staged in
-`collections/<slug>/proposals/wave-*.yaml` (`status: hold`); at the next wave a
-maintainer moves accepted entries into `collections/<slug>/v<N>/corpus.yaml` with
+`<domain checkout>/collections/<slug>/proposals/wave-*.yaml` (`status: hold`); at the next wave a
+maintainer moves accepted entries into `<domain checkout>/collections/<slug>/v<N>/corpus.yaml` with
 `status: included`.
 
 ### 2. Suggest via a pull request (Enveda-style, low-friction)
 
 Prefer a PR? Add the paper directly to the target
-`collections/<slug>/v<N>/corpus.yaml` under `papers:`, using the
+`<domain checkout>/collections/<slug>/v<N>/corpus.yaml` under `papers:`, using the
 `asb-corpus/1.0` schema, with `status: hold` (pending curator review):
 
 ```yaml
@@ -88,12 +94,12 @@ Prefer a PR? Add the paper directly to the target
   status: hold                    # maintainer flips to "included" after review
   wave: <curation batch — maintainer-assigned>
   access:
-    type: gold-oa                 # CI (verify-paper.yml) verifies this
+    type: gold-oa                 # a maintainer verifies this
     is_oa: true
 ```
 
-On the PR, `verify-paper.yml` checks access/OA and `validate.yml` checks the
-schema. A maintainer reviews scientific fit against
+On the PR, the domain repository's content gates check the schema, and a
+maintainer checks access/OA. A maintainer reviews scientific fit against
 [`governance/SOURCES.md`](../governance/SOURCES.md) and merges, flipping
 `status` to `included`.
 
@@ -127,9 +133,8 @@ from a short **skeleton** by the ASB factory, not hand-written.
    there with `scripts/compose_workflows.py` — maintainer-only, because the semantic
    binding needs an `OPENAI_API_KEY` and the prebuilt embedding cache — and it must
    pass `validate_workflows.py` in *this* repo before promotion into the collection's
-   `workflows/`. The 21 workflows in `collections/metabolomics/v2/workflows/` were
-   produced this way; their skeletons are the 21 files under
-   `scripts/skeletons/metabolomics/`.
+   `workflows/`. The 20 workflows of the metabolomics v3 collection were
+   produced this way.
 
 ## Tier progression
 
@@ -149,4 +154,4 @@ are non-negotiable. Fabricated citations or identity fraud result in permanent b
 
 ## Questions
 
-Open a GitHub Discussion or email the lead maintainer listed in `MAINTAINERS.md`.
+Open a GitHub Discussion or email the lead maintainer listed in `governance/MAINTAINERS.md`.

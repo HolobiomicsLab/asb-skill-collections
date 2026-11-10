@@ -26,7 +26,7 @@ requests are not honored.
 ## Scope
 
 - **Collection(s) to remove from:** <!-- e.g. "metabolomics", or "all" -->
-- **Versions affected:** <!-- e.g. "metabolomics/v1", or "all versions" -->
+- **Versions affected:** <!-- e.g. "metabolomics/v3", or "all versions" -->
 
 ## Reason (optional but encouraged)
 

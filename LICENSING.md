@@ -17,23 +17,24 @@ and the collection metadata — i.e. the curated, evidence-grounded knowledge. E
 
 Collection content © 2026 Louis-Félix Nothias and the ASB skill collections contributors,
 licensed CC-BY-4.0. Cite the collection (`CITATION.cff`) and the source paper of each
-skill (`attribution.original_doi`). The creators of a version (`.zenodo.json`,
+skill (`provenance.source_papers`). The creators of a version (`.zenodo.json`,
 `CITATION.cff`) are the authorship record; this line is the copyright record.
 
 You are free to share and adapt this content for any purpose, including
 commercially, **provided you give appropriate credit** — cite the collection
 (see `CITATION.cff`) **and** the original source paper of each skill
-(`attribution.original_doi`).
+(`provenance.source_papers`).
 
 ## Verbatim quotations from scientific papers
 
-Short verbatim quotes from the source papers are included as `evidence_spans` in
-skill frontmatter solely for scientific attribution. They are reproduced under
+Short verbatim quotes from the source papers, or from their repository READMEs, are
+included in the `## Evidence` section of a skill when the quote could be anchored in
+the source, solely for scientific attribution. They are reproduced under
 **fair use / quotation right** (UK copyright §30; EU Copyright Directive
 Art. 5.3(d); US Copyright 17 U.S.C. §107):
 
 - Quotes are minimal (typically one sentence), non-substitutive.
-- Attribution is provided via DOI + author list in `derived_from` / `attribution`.
+- Attribution is provided via the DOI (and the title, where recorded) in `provenance.source_papers`.
 - No commercial use of the verbatim quotes themselves is intended.
 
 If a rights holder objects to a specific quote, please open an issue and it will

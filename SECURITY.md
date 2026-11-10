@@ -25,7 +25,7 @@ In scope:
 - the Python package `asb-skill-collections` (`asb_skill_collections/`): the
   `asbb` command and the `asb-mcp` server;
 - the scripts under `scripts/` and the workflows under `.github/workflows/`;
-- the helper scripts shipped inside a collection (`collections/<slug>/v<N>/bin/`);
+- the helper scripts shipped inside a collection (`<domain checkout>/collections/<slug>/v<N>/bin/`, in the private domain repository and in the Zenodo record);
 - collection content that causes harm when an agent follows it as written: an
   instruction to run a destructive or data-exfiltrating command, a credential,
   personal data, or a link to a compromised resource.

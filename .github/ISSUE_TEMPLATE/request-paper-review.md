@@ -22,6 +22,13 @@ labels: ["review-requested", "needs-triage"]
 - [ ] Metabolomics
 - [ ] Epigenomics
 - [ ] Transcriptomics
+- [ ] Proteomics
+- [ ] Genomics
+- [ ] Metagenomics
+- [ ] Metabarcoding
+- [ ] Multi-omics
+- [ ] Agentic AI
+- [ ] Astronomy
 - [ ] Other (please specify):
 
 **Open-access status (required):**
@@ -47,6 +54,13 @@ labels: ["review-requested", "needs-triage"]
 - [ ] Metabolomics (if chosen above)
 - [ ] Epigenomics (if chosen above)
 - [ ] Transcriptomics (if chosen above)
+- [ ] Proteomics (if chosen above)
+- [ ] Genomics (if chosen above)
+- [ ] Metagenomics (if chosen above)
+- [ ] Metabarcoding (if chosen above)
+- [ ] Multi-omics (if chosen above)
+- [ ] Agentic AI (if chosen above)
+- [ ] Astronomy (if chosen above)
 - [ ] I'm uncertain which collection this belongs to
 
 **If you are a potential reviewer, declare your interest here:**
