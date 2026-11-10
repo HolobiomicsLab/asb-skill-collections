@@ -47,31 +47,36 @@ SELECTOR_BEGIN = b"# BEGIN VENDORED SELECTOR\n"
 SELECTOR_END = b"# END VENDORED SELECTOR\n"
 ROUTER_SLUG = "_router"
 MAX_CONTRACT_LEAVES = 20
-MAX_DESCRIBED_WORKFLOWS = 4
 TOOL_FIELDS = ("tools", "metadata.tools")
 SOURCE_FIELDS = ("derived_from", "provenance.source_papers")
 
 # The commands are written from the skill's own directory, never from the plugin
-# root or the working directory: hosts hand the agent the directory of the
-# SKILL.md (Claude Code prints "Base directory for this skill"; Codex gives the
-# SKILL.md path), and an agent that `cd`s there before a root-relative command
-# fails. `python3` because a stock macOS has no `python`.
-SKILL_DIR = "<skill-dir>"
+# root or the working directory: an agent that `cd`s into the skill directory
+# before a root-relative command fails, and so does `python` on a stock macOS.
+# Claude Code replaces `${CLAUDE_SKILL_DIR}` in a skill body with that absolute
+# directory before the agent reads it, so the command is runnable as printed.
+# A host that does not (Codex reads the file as written) leaves the variable;
+# LOCATE_ROOT tells the agent to replace it, and never names the variable
+# itself, since Claude Code would substitute that mention too.
+SKILL_DIR = "${CLAUDE_SKILL_DIR}"
 ROOT_FROM_SKILL = f"{SKILL_DIR}/../.."
 PYTHON = "python3"
 SEARCH_COMMAND = f'{PYTHON} "{ROOT_FROM_SKILL}/bin/search_skills.py"'
 BINDER_COMMAND = f'{PYTHON} "{ROOT_FROM_SKILL}/bin/perspicacite_kb_bind.py"'
 WORKFLOW_ROUTER_SLUG = "_workflow_router"
 
-LOCATE_ROOT = f"""`{SKILL_DIR}` is the absolute directory that holds this file (Claude Code
-shows it as "Base directory for this skill"; Codex gives this file's path,
-without `/SKILL.md`). This file is `<root>/{{relative}}`, so the
-collection root is `{ROOT_FROM_SKILL}`. Substitute the path, then run as
-written from any working directory; do not `cd` first."""
+LOCATE_ROOT = """Run the commands as written, from any working directory; do not `cd`.
+If a command still shows a `${{...}}` variable instead of an absolute path, the
+host did not fill it in: replace the variable with the absolute directory of
+this file, `<collection root>/{relative}`."""
 
 PYTHON_NOTE = (
-    "The script needs Python 3.9 or later and the standard library only, no "
-    "network; where `python3` is missing, use `python` or `py -3`."
+    "Python 3.9 or later, standard library only, no network; where `python3` "
+    "is missing, use `python` or `py -3`."
+)
+
+CITE_IN_ANSWER = (
+    "In the answer, name the skill and give its source DOI and its licence tier."
 )
 
 APPLY_WITH_EVIDENCE = """## 2. Apply
@@ -79,24 +84,28 @@ APPLY_WITH_EVIDENCE = """## 2. Apply
 Read the `read:` path of the chosen hit, `leaves/<slug>/SKILL.md`. Its
 frontmatter carries {tool_keys} (what to install or invoke), {source_keys}
 (source paper DOIs) and `evidence_spans` (verbatim anchors from the paper or
-repo). Follow the body."""
+repo). Follow the body.
+{cite}"""
 
 APPLY_WITH_BODY_EVIDENCE = """## 2. Apply
 
 Read the `read:` path of the chosen hit, `leaves/<slug>/SKILL.md`. Its
 frontmatter carries {tool_keys} (what to install or invoke) and {source_keys}
 (source paper DOIs). Find verbatim evidence lines in the body, then follow the
-procedure."""
+procedure.
+{cite}"""
 
-GROUND_WITH_BINDER = f"""## 3. Ground (recommended)
+# Filled with .format(binder=..., root=..., guide=...): the command holds
+# `${CLAUDE_SKILL_DIR}`, whose braces must not be parsed as a format field.
+GROUND_WITH_BINDER = """## 3. Ground (recommended)
 
 Before trusting a parameter, threshold or default, verify it against the paper
 the skill was built from. `kb_bundle.json` maps each skill to its source KBs:
 
 ```bash
-{BINDER_COMMAND} query --collection "{ROOT_FROM_SKILL}" \\
+{binder} query --collection "{root}" \\
   --skill <slug> --question "<what you need to verify>"
-```{{guide}}"""
+```{guide}"""
 
 GROUND_FROM_DOIS = """## 3. Ground (recommended)
 
@@ -125,12 +134,11 @@ ROUTER_TEMPLATE = """---
 
 # {title} router
 
-Entry point for **{count:,} evidence-grounded skills**, each derived from a
+**{count:,} evidence-grounded skills**, each derived from a
 method paper (journal article or preprint) and its code{extras}.
-
-Only this router is advertised; the corpus ships beside it as data, the skills
-in `leaves/<slug>/SKILL.md`. **Do not list `leaves/` and do not read the
-indexes whole.** Search, then read the one file you need.
+They ship beside this router as data, in `leaves/<slug>/SKILL.md`. **Do not
+list `leaves/` and do not read the indexes whole.** Search, then read the one
+file you need.
 
 {search_section}
 
@@ -150,7 +158,7 @@ def search_section(contract: dict) -> str:
         lines += ["# an end-to-end workflow for a whole analysis goal",
                   f'{SEARCH_COMMAND} --query "<the user\'s goal>" --target workflows -k 3']
     if contract.get("tools_count") and contract.get("search_tools"):
-        lines += ["# a tool record (licence, repository)",
+        lines += ["# a tool record (licence tier, source DOIs)",
                   f'{SEARCH_COMMAND} --query "<a tool name or task>" --target tools -k 5']
     filters = ["`--tool <name>`", "`--edam <iri-substring>`"]
     if contract.get("has_techniques"):
@@ -159,9 +167,11 @@ def search_section(contract: dict) -> str:
     commands = "\n".join(lines)
     return (
         "## 1. Search\n\n"
-        + LOCATE_ROOT.format(relative=f"{layout.ADVERTISED_DIRNAME}/{ROUTER_SLUG}/SKILL.md")
+        + LOCATE_ROOT.format(relative=f"{layout.ADVERTISED_DIRNAME}/{ROUTER_SLUG}")
         + f"\n\n```bash\n{commands}\n```\n\n"
-        + f"{narrow} Each hit prints the absolute path to read.\n{PYTHON_NOTE}"
+        + "Each hit prints the absolute `read:` path; a skill hit also its licence "
+        + "tier and source DOI. "
+        + f"{narrow}\n{PYTHON_NOTE}"
     )
 
 
@@ -240,7 +250,9 @@ def unit_contract(unit: Path) -> dict:
     apply_template = APPLY_WITH_EVIDENCE if has_evidence_spans else APPLY_WITH_BODY_EVIDENCE
     guide = "\n\nSee `GROUNDING.md` for the backends and tiers." if has_guide else ""
     if has_binder:
-        grounding_section = GROUND_WITH_BINDER.format(guide=guide)
+        grounding_section = GROUND_WITH_BINDER.format(
+            binder=BINDER_COMMAND, root=ROOT_FROM_SKILL, guide=guide
+        )
     else:
         pointer = f", listed in its {source_keys} frontmatter" if source_keys else ""
         grounding_section = GROUND_FROM_DOIS.format(
@@ -258,7 +270,7 @@ def unit_contract(unit: Path) -> dict:
         "has_binder": has_binder,
         "has_guide": has_guide,
         "apply_section": apply_template.format(
-            tool_keys=tool_keys, source_keys=source_keys
+            tool_keys=tool_keys, source_keys=source_keys, cite=CITE_IN_ANSWER
         ),
         "grounding_section": grounding_section,
         **unit_inventory(unit),
@@ -442,9 +454,18 @@ def _lower_words(label: str) -> str:
 
 
 def router_description(domain: str, count: int, contract: dict) -> str:
-    """Front-load the domain and what the unit serves; hosts truncate the rest."""
+    """When to use the router first, then what it searches; hosts truncate the rest.
+
+    Codex cut a description near 169 characters and Claude Code shortens
+    descriptions when its skill listing exceeds its budget, so the first
+    sentence alone has to name the domain and the trigger. The trigger is a
+    plain question about how to do a task in the domain: live sessions with a
+    description that spoke of "a task that needs a skill" never loaded the
+    router for a question that did not mention skills.
+    """
     topic = _lower_words(domain)
-    served = [f"{count:,} evidence-grounded {topic} skills"]
+    served = [f"{count:,} evidence-grounded {topic} skills distilled from method papers "
+              "and their code"]
     workflows = contract.get("workflows_count") if contract.get("search_workflows") else 0
     tools = contract.get("tools_count") if contract.get("search_tools") else 0
     if workflows:
@@ -454,18 +475,11 @@ def router_description(domain: str, count: int, contract: dict) -> str:
     listed = (
         ", ".join(served[:-1]) + f" and {served[-1]}" if len(served) > 1 else served[0]
     )
-    article = "an" if topic[:1].lower() in "aeiou" else "a"
-    text = (
-        f"{domain} methods from the literature. Use when {article} {topic} task needs a "
-        f"published method, tool or analysis workflow: searches {listed} "
-        f"distilled from method papers and their code, then reads the one that fits."
+    return (
+        f"Use for any {topic} how-to question (which method, tool, parameters or "
+        f"pipeline to use), before answering from memory. Searches {listed}, "
+        "then reads the one that fits."
     )
-    # Name the workflows only while they all fit; a partial list would read as
-    # the scope of the collection.
-    names = contract.get("workflow_names") or []
-    if workflows and 0 < len(names) <= MAX_DESCRIBED_WORKFLOWS:
-        text += " Workflows: " + "; ".join(n.replace("-", " ") for n in names) + "."
-    return text
 
 
 def write_router(unit: Path, count: int, rewrite: bool = False) -> None:
@@ -640,7 +654,7 @@ def write_workflow_router(unit: Path, rewrite: bool = False) -> bool:
         title=f"ASB {domain}",
         name=name,
         locate=LOCATE_ROOT.format(
-            relative=f"{layout.WORKFLOW_DIRNAME}/{WORKFLOW_ROUTER_SLUG}/SKILL.md"
+            relative=f"{layout.WORKFLOW_DIRNAME}/{WORKFLOW_ROUTER_SLUG}"
         ),
         search=SEARCH_COMMAND,
         python_note=PYTHON_NOTE,

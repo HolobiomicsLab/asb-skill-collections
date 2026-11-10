@@ -17,6 +17,7 @@ Read the `read:` path of the chosen hit, `leaves/<slug>/SKILL.md`. Its
 frontmatter carries `tools` (what to install or invoke), `derived_from`
 (source paper DOIs) and `evidence_spans` (verbatim anchors from the paper or
 repo). Follow the body.
+In the answer, name the skill and give its source DOI and its licence tier.
 """
 CURRENT_GROUNDING = """## 3. Ground (recommended)
 
@@ -24,7 +25,7 @@ Before trusting a parameter, threshold or default, verify it against the paper
 the skill was built from. `kb_bundle.json` maps each skill to its source KBs:
 
 ```bash
-python3 "<skill-dir>/../../bin/perspicacite_kb_bind.py" query --collection "<skill-dir>/../.." \\
+python3 "${CLAUDE_SKILL_DIR}/../../bin/perspicacite_kb_bind.py" query --collection "${CLAUDE_SKILL_DIR}/../.." \\
   --skill <slug> --question "<what you need to verify>"
 ```
 

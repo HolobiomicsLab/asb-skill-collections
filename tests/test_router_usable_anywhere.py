@@ -5,8 +5,8 @@ root (Claude Code: "Base directory for this skill: <root>/skills/_router";
 Codex: the SKILL.md path), and a stock macOS has `python3` but no `python`.
 The routers released on 2026-11-09 wrote `python bin/search_skills.py`, which
 fails on both counts. These tests render the routers for two unit shapes and
-run the exact commands they print, with only `<skill-dir>` substituted, from
-an unrelated working directory.
+run the exact commands they print, with only `${CLAUDE_SKILL_DIR}` substituted
+the way Claude Code substitutes it, from an unrelated working directory.
 """
 
 from __future__ import annotations
@@ -129,12 +129,52 @@ def test_every_tier_is_defined_with_one_meaning(unit: Path) -> None:
     assert "no clear licence detected" not in tiers
 
 
-def test_description_names_the_domain_first(unit: Path) -> None:
+def _description(text: str) -> str:
+    return yaml.safe_load(text.split("---\n", 2)[1])["description"]
+
+
+def test_description_opens_with_a_plain_domain_trigger(unit: Path) -> None:
+    description = _description(_router(unit))
+    first = description.split(". ")[0]
+    assert first.startswith("Use for any fixture how-to question")
+    assert first.endswith("before answering from memory")
+    # Codex cut a description near 169 characters: the trigger must fit.
+    assert len(first) + 1 <= 160
+    assert "skill from" not in first
+    assert "\u2014" not in _router(unit) and "\u2014" not in _workflow_router(unit)
+
+
+def test_description_names_what_is_searched_without_workflow_slugs() -> None:
+    contract = {"search_workflows": True, "search_tools": True, "tools_count": 1200,
+                "workflows_count": 2, "workflow_names": ["a-b", "c-d"]}
+    text = router_shape.router_description("Agentic AI", 668, contract)
+    assert text.startswith("Use for any agentic AI how-to question")
+    assert "668 evidence-grounded agentic AI skills" in text
+    assert "2 end-to-end workflows and 1,200 tool records" in text
+    assert "a b" not in text and "Workflows:" not in text
+
+
+def test_claude_code_substitution_leaves_no_variable_and_names_no_variable(unit: Path) -> None:
+    """Claude Code replaces every `${CLAUDE_SKILL_DIR}`; the result must read whole."""
+    skill_dir = unit / "skills" / "_router"
+    substituted = _router(unit).replace(router_shape.SKILL_DIR, str(skill_dir))
+    assert "${" not in substituted.replace("${...}", "")
+    assert f'python3 "{skill_dir}/../../bin/search_skills.py"' in substituted
+
+
+def test_hosts_without_substitution_are_told_what_to_replace(unit: Path) -> None:
     text = _router(unit)
-    description = yaml.safe_load(text.split("---\n", 2)[1])["description"]
-    assert description.startswith("Fixture methods from the literature.")
-    assert "fixture task" in description[:169]
-    assert "\u2014" not in text and "\u2014" not in _workflow_router(unit)
+    assert router_shape.SKILL_DIR == "${CLAUDE_SKILL_DIR}"
+    section = text[text.index("## 1. Search"):text.index("```bash")]
+    assert router_shape.SKILL_DIR not in section
+    assert "`<collection root>/skills/_router`" in section
+    assert "do not `cd`" in section
+
+
+def test_router_asks_for_doi_and_tier_in_the_answer(unit: Path) -> None:
+    text = _router(unit)
+    apply = text[text.index("## 2. Apply"):text.index("## 3.")]
+    assert router_shape.CITE_IN_ANSWER in apply
 
 
 @pytest.mark.skipif(PYTHON3 is None, reason="no python3 on PATH")
@@ -215,17 +255,3 @@ def test_workflow_router_is_kept_unless_rewritten(tmp_path: Path) -> None:
     rows = json.loads((unit / "workflows" / "workflows_index.json").read_text())
     for row in rows:
         assert f"| `{row['slug']}` |" in text
-
-
-def test_description_lists_workflows_only_while_they_all_fit() -> None:
-    contract = {"search_workflows": True, "search_tools": False, "tools_count": 0}
-    few = router_shape.router_description(
-        "Agentic AI", 668, {**contract, "workflows_count": 2, "workflow_names": ["a-b", "c-d"]}
-    )
-    many = router_shape.router_description(
-        "Agentic AI", 668,
-        {**contract, "workflows_count": 5, "workflow_names": [f"w{i}" for i in range(5)]},
-    )
-    assert few.startswith("Agentic AI methods from the literature. Use when an agentic AI task")
-    assert few.endswith("Workflows: a b; c d.")
-    assert "Workflows:" not in many and "5 end-to-end workflows" in many

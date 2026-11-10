@@ -470,25 +470,57 @@ def read_dir(collection: Path, target: str) -> str:
     return str(base / ("leaves" if (base / "leaves").is_dir() else "skills"))
 
 
+def _dois(entry: dict) -> str:
+    """The first source DOI, with a count of the others."""
+    dois = [str(doi) for doi in entry.get("dois") or [] if doi]
+    if not dois:
+        return "-"
+    return dois[0] + (f" (+{len(dois) - 1} more)" if len(dois) > 1 else "")
+
+
 def format_hit(rank: int, entry: dict, leaf_dir: str, target: str = "skills") -> str:
-    """Render a candidate, its source path and the same typed JSON explanation."""
-    tools = ", ".join(entry_tools(entry)[:6])
+    """Render what an agent needs to choose and cite a candidate, and where to read it.
+
+    The scoring explanation stays in ``--json``; in text it doubled the output
+    without helping the choice.
+    """
     desc = " ".join(str(entry.get("description") or "").split())
-    stages = entry.get("stages") or []
-    scope = f"stages: {' -> '.join(str(stage) for stage in stages)}" if stages else (
-        f"tier: {entry.get('license_tier') or '-'}")
-    suffix = f"{entry['slug']}.yaml" if target == "tools" else f"{entry['slug']}/SKILL.md"
-    explanation_keys = ("selector", "collection", "target", "slug", "qualified_slug",
-                        "matched_fields", "score", "filters", "fallback")
-    explanation = {key: entry[key] for key in explanation_keys if key in entry}
-    return (
-        f"{rank}. {entry.get('slug')}\n"
-        f"   {desc}\n"
-        f"   tools: {tools or '-'} | techniques: "
-        f"{', '.join(entry.get('techniques') or []) or '-'} | {scope}\n"
-        f"   read: {leaf_dir}/{suffix}\n"
-        f"   explanation: {json.dumps(explanation, ensure_ascii=False, sort_keys=True)}"
-    )
+    tools = ", ".join(entry_tools(entry)[:6])
+    techniques = ", ".join(entry.get("techniques") or [])
+    tier = entry.get("license_tier") or "-"
+    if target == "tools":
+        licence = entry.get("license") or "none recorded"
+        used_by = len(entry.get("used_by_skills") or [])
+        lines = [f"{rank}. {entry.get('slug')} | tier: {tier} | licence: {licence}",
+                 f"   used by {used_by} skill{'s' if used_by != 1 else ''} | doi: {_dois(entry)}"]
+        suffix = f"{entry['slug']}.yaml"
+    elif target == "workflows":
+        stages = entry.get("stages") or []
+        lines = [f"{rank}. {entry.get('slug')}", f"   {desc}"]
+        if stages:
+            lines.append(f"   stages: {' -> '.join(str(stage) for stage in stages)}")
+        lines.append(f"   tools: {tools or '-'}")
+        suffix = f"{entry['slug']}/SKILL.md"
+    else:
+        lines = [f"{rank}. {entry.get('slug')} | tier: {tier} | doi: {_dois(entry)}",
+                 f"   {desc}",
+                 f"   tools: {tools or '-'}" + (f" | techniques: {techniques}" if techniques else "")]
+        suffix = f"{entry['slug']}/SKILL.md"
+    lines.append(f"   read: {leaf_dir}/{suffix}")
+    return "\n".join(lines)
+
+
+def no_match_hint(args: argparse.Namespace) -> str:
+    """Say what to try next when nothing matched."""
+    tips = ["use fewer, plainer words (a method, data type or tool name); terms match whole words"]
+    if args.tool:
+        tips.append(f"--tool needs a tool's exact name; look it up with "
+                    f"--target tools --query \"{args.tool}\"")
+    if args.technique or args.edam:
+        tips.append("drop --technique/--edam")
+    others = [name for name in ("skills", "workflows", "tools") if name != args.target]
+    tips.append("or search --target " + " / --target ".join(others))
+    return f"no {args.target} matched. Next: " + "; ".join(tips) + "."
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -509,7 +541,12 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main(argv: list[str] | None = None) -> int:
-    """Search a unit and print candidates; return 1 for no match, 2 for bad input."""
+    """Search a unit and print candidates; return 2 for bad input.
+
+    No match is a result, not a failure: it prints what to try next and exits 0.
+    An agent host reports a nonzero exit as a failed call, and a search chained
+    after one that did match would mark the whole call as failed.
+    """
     args = build_parser().parse_args(argv)
     collection = unit_root(args.collection)
     try:
@@ -531,8 +568,8 @@ def main(argv: list[str] | None = None) -> int:
         for rank, hit in enumerate(hits, 1):
             print(format_hit(rank, {**by_slug[hit["slug"]], **hit}, where, args.target))
     else:
-        print("no match — loosen the filters or reword --query")
-    return 0 if hits else 1
+        print(no_match_hint(args))
+    return 0
 
 
 def selftest() -> None:
@@ -550,7 +587,7 @@ def selftest() -> None:
     flows = [{"slug": "untargeted", "name": "Untargeted pipeline",
               "member_tools": ["MZmine", "SIRIUS"], "stages": ["preprocess", "annotate"]}]
     assert keyword_search(flows, "MZmine", target="workflows")[0]["slug"] == "untargeted"
-    assert "stages: preprocess -> annotate" in format_hit(1, flows[0], "workflows")
+    assert "stages: preprocess -> annotate" in format_hit(1, flows[0], "/w", "workflows")
     print("search_skills.py smoke check OK", file=sys.stderr)
 
 
