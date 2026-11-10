@@ -27,6 +27,8 @@ The collection's `USAGE.md` documents marketplace installation, search and groun
 
 Use [this repository's paper proposal form](<REPOSITORY_URL>/issues/new?template=propose-paper.md).
 A curator reviews the staged proposal; the intake workflow does not merge or release content.
+The form is open to people with access to this repository. Anyone else files the
+proposal as an issue on the public master repository, and a maintainer stages it here.
 
 ## Citation
 

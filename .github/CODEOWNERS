@@ -39,7 +39,6 @@ candidates/                             @lfnothias
 # ----------------------------------------------------------------------------
 # Release plumbing — Zenodo / HuggingFace / plugin manifest.
 # ----------------------------------------------------------------------------
-.zenodo.json                            @lfnothias
 .claude-plugin/                         @lfnothias
 catalogue.jsonld                        @lfnothias
 scripts/regen_catalogue.py              @lfnothias
@@ -49,8 +48,8 @@ scripts/regen_catalogue.py              @lfnothias
 # Lead Curator of a collection is co-owner of that collection's directory.
 # Update these lines as collections are added + Lead Curators confirmed.
 # ----------------------------------------------------------------------------
-collections/metabolomics/               @lfnothias
-staged-collections/metabolomics/        @lfnothias
+# Released content is held in the private domain repositories (asb-skills-<domain>),
+# each with its own CODEOWNERS; this repository holds no collection tree.
 
 # ----------------------------------------------------------------------------
 # Static docs site — content + UI.

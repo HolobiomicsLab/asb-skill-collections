@@ -15,7 +15,7 @@ labels: ["propose-superskill", "needs-triage"]
 
 - **Name:** <!-- e.g. untargeted-lcmsms-annotation -->
 - **One-line goal:** <!-- the end-to-end task it accomplishes -->
-- **Target collection / version:** <!-- e.g. metabolomics/v2, or "next" -->
+- **Target collection / version:** <!-- e.g. metabolomics/v3, or "next" -->
 - **Techniques / platforms:** <!-- e.g. LC-MS/MS, DDA; or NMR 1D/2D -->
 
 ## Stages (the skeleton outline)

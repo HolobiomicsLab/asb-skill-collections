@@ -9,14 +9,14 @@ assignees: "lfnothias"
 ## Leaderboard submission
 
 > **Next step after this issue:** Open a PR adding your result to
-> `collections/<slug>/v<N>/benchmark/leaderboard.jsonld`.
-> The `leaderboard-validate.yml` CI action will validate your entry.
+> `<domain checkout>/collections/<slug>/v<N>/benchmark/leaderboard.jsonld`.
+> A maintainer validates your entry with `scripts/validate_leaderboard.py`.
 
 ## System information
 
 **System name:** <!-- e.g., Claude-Opus-4-RAG, GPT-4o-Agent -->
 **System type:** <!-- agent | rag_system | hybrid -->
-**Collection + version:** <!-- e.g., metabolomics/v1 -->
+**Collection + version:** <!-- e.g., metabolomics/v3 -->
 **Submission date:** YYYY-MM-DD
 
 ## Reproducibility
