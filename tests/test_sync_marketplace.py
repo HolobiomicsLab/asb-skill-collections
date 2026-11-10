@@ -214,7 +214,7 @@ def test_noop_write_is_byte_identical_and_idempotent(files):
 
 
 def test_committed_files_agree():
-    assert sm.main(["--check"]) == 0
+    assert sm.main(["--check", "--require-all"]) == 0
 
 
 def test_committed_marketplace_round_trips_byte_identically():

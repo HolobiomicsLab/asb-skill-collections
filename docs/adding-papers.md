@@ -5,8 +5,8 @@ generation pipeline. A maintainer can build papers independently, then periodica
 make a new collection cut from all retained builds. A proposal is reviewed and held
 for that next cut. It is not inserted directly into a released collection.
 
-Metabolomics v3 is released as `metabolomics-v3.0.0`, with DOI
-`10.5281/zenodo.24054446`, in the private domain repository
+Released collections are listed in `collections.yaml`. Each lives in a private
+domain repository `asb-skills-<domain>`; for example, metabolomics v3 is in
 `asb-skills-metabolomics`. Each domain's content, proposals, candidates and
 landing belong in its `asb-skills-<domain>` checkout. This repository holds the
 tooling, governance and release registry. Run the `scripts/` commands below

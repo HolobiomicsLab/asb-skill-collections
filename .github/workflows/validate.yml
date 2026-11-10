@@ -201,4 +201,4 @@ jobs:
       - name: Check the marketplace pins against the registry
         run: |
           pip install pyyaml
-          python scripts/sync_marketplace.py --check
+          python scripts/sync_marketplace.py --check --require-all

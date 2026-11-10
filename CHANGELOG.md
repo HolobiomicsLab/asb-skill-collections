@@ -24,6 +24,13 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   at the same pinned commit. The master's former v2 copy had diverged from the
   domain v2 in description wording and `evidence_spans` fields in 5,858 leaves;
   the registry pins the domain copy.
+- Move the metabolomics v3 registry row and marketplace pin to
+  `metabolomics-v3.0.1` (10.5281/zenodo.24093587). The v3.0.0 deposit
+  (10.5281/zenodo.24054446) is listed under `superseded` in that row.
+- Describe the ten registered domains in `README.md`, `CLAUDE.md`,
+  `CITATION.cff`, `.github/copilot-instructions.md` and the maintainer docs: a
+  release table read from `collections.yaml`, and pointers to the registry in
+  place of single-release statements.
 
 ### Fixed
 - Bind `nhs_number` to its label like the other clinical identifiers, treat a
@@ -39,6 +46,12 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   unchanged: `c0107b2c545e`, `576c19e25af0`, `d7359e4dd5f0`, `b5a519a80508`).
 
 ### Added
+- Record the releases of agentic-ai, astronomy, genomics, metabarcoding,
+  metagenomics, multi-omics and proteomics (v1) and of epigenomics and
+  transcriptomics (v2) in `collections.yaml`, each with its domain concept DOI,
+  version DOI, commit and tree digest, and add a marketplace entry for each,
+  pinned to its registry commit. The epigenomics and transcriptomics v1 trees
+  stay as legacy rows.
 - Add an optional explicit build root to the cut collector and pass the candidate driver's build root through to it.
 - Add the deterministic S6 same-paper duplicate report and S4–S6 candidate assembly driver with pinned source, stage and output receipts.
 - Add the S8 local candidate landing command with verified-gate preconditions, candidate branches and non-release marketplace metadata.
@@ -353,6 +366,18 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   not have caught the stale LC-MS count — the pack really did hold 2,616 leaves
   — but it is what keeps the six corrected sites honest now that the derivation
   gate makes the two numbers one number.
+
+## [metabolomics-v3.0.1] - 2026-11-09
+
+Patch release of metabolomics v3, published from the domain repository
+`HolobiomicsLab/asb-skills-metabolomics` as
+[10.5281/zenodo.24093587](https://doi.org/10.5281/zenodo.24093587). It keeps the
+collection path `collections/metabolomics/v3` and replaces v3.0.0 as the v3 row
+of `collections.yaml`.
+
+It remaps EDAM operation and topic annotations (tier T2), adds EDAM topic facets
+and the technique tags CE-MS and direct infusion. The counts are unchanged:
+11,830 skills, 1,989 tools, 20 workflows, 477 papers.
 
 ## [metabolomics-v3.0.0] — 2026-11-09
 

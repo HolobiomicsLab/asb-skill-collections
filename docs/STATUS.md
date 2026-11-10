@@ -38,9 +38,12 @@ Two kinds of entry appear below.
 | `w3id.org/holobiomicslab/` IRIs | resolve | since 2026-09-14 |
 | `w3id.org/asb` and `w3id.org/asb/validation` | resolve | since 2026-10-29 |
 | Zenodo DOI | concept and version DOI resolve; deposit is `metabolomics-v0.1.0` | 2026-06-22 deposit |
-| Metabolomics v3 Zenodo deposit | version DOI `10.5281/zenodo.24054446`; publication date 2026-11-09 | record supplied for the 2026-11-09 release |
-| Metabolomics v3 deposit files | `metabolomics-v3.zip`, 37,974,225 bytes, md5 `9fd503cd2361e924c29cf2ba4eedcf04`; `metabolomics-v3-leafemb.npz`, 148,632,620 bytes, md5 `0bc4a202fbe1fe92d8bfd4058a0d2baa` | release record |
-| Metabolomics v3 domain tag | `metabolomics-v3.0.0` at `788df247c887bea90670a4252ab94da36088d2be` in `HolobiomicsLab/asb-skills-metabolomics` | tagged domain checkout |
+| Metabolomics v3.0.0 Zenodo deposit | version DOI `10.5281/zenodo.24054446`; publication date 2026-11-09 | record supplied for the 2026-11-09 release |
+| Metabolomics v3.0.0 deposit files | `metabolomics-v3.zip`, 37,974,225 bytes, md5 `9fd503cd2361e924c29cf2ba4eedcf04`; `metabolomics-v3-leafemb.npz`, 148,632,620 bytes, md5 `0bc4a202fbe1fe92d8bfd4058a0d2baa` | release record |
+| Metabolomics v3.0.0 domain tag | `metabolomics-v3.0.0` at `788df247c887bea90670a4252ab94da36088d2be` in `HolobiomicsLab/asb-skills-metabolomics` | tagged domain checkout |
+| Metabolomics v3.0.1 | version DOI `10.5281/zenodo.24093587`; tag `metabolomics-v3.0.1` in `HolobiomicsLab/asb-skills-metabolomics`; replaces v3.0.0 as the v3 row of `collections.yaml`, which lists v3.0.0 as superseded | registry row, 2026-11-09 |
+| Nine domain releases | agentic-ai, astronomy, genomics, metabarcoding, metagenomics, multi-omics and proteomics (v1); epigenomics and transcriptomics (v2); tags `<domain>-v<N>.0.0`; concept and version DOIs, commits and tree digests in `collections.yaml` | registry rows, 2026-11-09 |
+| Marketplace entries of the nine new domains | not exercised through Claude Code; the transport measurement of 2026-10-30 predates these sources | n/a |
 
 ## Verified release perimeter
 

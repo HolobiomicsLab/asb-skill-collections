@@ -1,9 +1,10 @@
-# GitHub Copilot — ASB Metabolomics skills
+# GitHub Copilot: ASB skill collections
 
-The public release is **metabolomics v3** (11,830 skills over 1,989 tools) in
-`HolobiomicsLab/asb-skills-metabolomics`; this repository's marketplace and the
-local paths below still serve v2 (5,859 skills over 909 tools), derived from
-published method papers (journal articles and preprints).
+The registry in `collections.yaml` lists the released collections of ten
+domains, each in a private domain repository `HolobiomicsLab/asb-skills-<domain>`
+and derived from published method papers (journal articles and preprints). The
+metabolomics release is **v3** (11,830 skills over 1,989 tools) in
+`HolobiomicsLab/asb-skills-metabolomics`.
 
 **Read [`AGENTS.md`](../AGENTS.md) for the full install + use protocol.** In short:
 
