@@ -1,0 +1,93 @@
+{
+  "default_domains": [
+    "metabolomics"
+  ],
+  "domains": {
+    "epigenomics": {
+      "bytes": 362780,
+      "collections": [
+        {
+          "commit": "3f10bd43bbaa2fd978c554fa9623d7c378397cb0",
+          "label": "epigenomics/v1",
+          "status": "staged"
+        }
+      ],
+      "counts": {
+        "papers": 11,
+        "skills": 203,
+        "tools": 68,
+        "workflows": 0
+      },
+      "file": "epigenomics.json",
+      "include_superseded": false,
+      "registry_digest": "8f1b8d180dccb4f0ddf95794122e5671d32f787fef7c022b83f225f8936b2da0",
+      "sha256": "522584f8dad884ac37367bbf85056ae319b44e440d6360f6f617b256a990588d"
+    },
+    "metabolomics": {
+      "bytes": 34990781,
+      "collections": [
+        {
+          "commit": "7b906e42d8c684ba2c21e3d5db0bb5e7280a89bc",
+          "label": "metabolomics/v1",
+          "status": "staged"
+        },
+        {
+          "commit": "788df247c887bea90670a4252ab94da36088d2be",
+          "label": "metabolomics/v3",
+          "status": "released"
+        }
+      ],
+      "counts": {
+        "papers": 575,
+        "skills": 13315,
+        "tools": 2281,
+        "workflows": 20
+      },
+      "file": "metabolomics.json",
+      "include_superseded": false,
+      "registry_digest": "8b3babc523f06b152a6bea2c87c03868c6f58f0fdcfda7f589e317f9459dd2a2",
+      "sha256": "36f1e71ea7fef912edc117bdd4d4a33b01f09f84b7d3da270f57f5b3413ba9ca"
+    },
+    "proteomics": {
+      "bytes": 1499496,
+      "collections": [
+        {
+          "commit": "a70f2d66513215e3884e5be8d374e2e9c767752a",
+          "label": "proteomics/v1",
+          "status": "released"
+        }
+      ],
+      "counts": {
+        "papers": 28,
+        "skills": 558,
+        "tools": 163,
+        "workflows": 2
+      },
+      "file": "proteomics.json",
+      "include_superseded": false,
+      "registry_digest": "f5f4a59bd791a68d75fa3ada17a09a690eb178c8636f7774229e915eb9c6e839",
+      "sha256": "3610e79e365d533f6149700d69e2ceae55d6fad6c55a024bb6069324d0c7cd23"
+    },
+    "transcriptomics": {
+      "bytes": 298156,
+      "collections": [
+        {
+          "commit": "a08e5e959ba0c15c45136898795b469caf462f3d",
+          "label": "transcriptomics/v1",
+          "status": "staged"
+        }
+      ],
+      "counts": {
+        "papers": 10,
+        "skills": 166,
+        "tools": 37,
+        "workflows": 0
+      },
+      "file": "transcriptomics.json",
+      "include_superseded": false,
+      "registry_digest": "df9489898d404298c2dbbea8631f45cbc13ec1a890d400912eda8b54c0d59f8f",
+      "sha256": "9aec525313663e2ee6680a94df7fe27b47409c1bb14f2e5056a6b4ebbc22ad4e"
+    }
+  },
+  "schema_version": "1"
+}

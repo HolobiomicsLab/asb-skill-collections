@@ -22,8 +22,11 @@ For an orchestrated release, the `manifest` stage of
 `collections.yaml`. It computes the tree digest and counts from the supplied
 domain checkout, records the version DOI and merged DOI commit, regenerates
 `catalogue.jsonld`, and runs `check_collections_manifest.py --checkout`. With
-`--regen` it also rebuilds `docs-site/search_index.json`; all resulting digests
-are recorded in the release state.
+`--regen` it also rebuilds the search index in `docs-site/search_index/` for
+the domains it has a checkout of (the releasing domain and any `--checkout`);
+the other domains keep their files while those still match the registry, and
+the stage refuses, restoring the registry and catalogue, when one does not.
+All resulting digests are recorded in the release state.
 
 ---
 
@@ -117,7 +120,7 @@ actual `plugins[].name` and `plugins[].source` fields):
 | `plugins[].released_at` | string (ISO 8601) | N | Release timestamp (UTC with Z suffix) |
 | `plugins[].lead_curator` | object | N | Lead curator contact info (name, ORCID, GitHub handle) |
 
-**Regeneration:** Marketplace.json is NOT automatically regenerated; it is **manually curated** alongside catalogue.jsonld. The `regen_catalogue.py` script handles catalogue.jsonld only. A maintainer updates marketplace.json when a collection is ready to be advertised for public install. Because each catalogue entry's `status` and the search index's `collection_status` follow marketplace.json, an edit to marketplace.json is followed in the same commit by `python scripts/regen_catalogue.py` and `python docs-site/build_search_index.py`; otherwise the consistency tests in `validate.yml` and `release.yml` fail.
+**Regeneration:** Marketplace.json is NOT automatically regenerated; it is **manually curated** alongside catalogue.jsonld. The `regen_catalogue.py` script handles catalogue.jsonld only. A maintainer updates marketplace.json when a collection is ready to be advertised for public install. Because each catalogue entry's `status` follows marketplace.json, an edit to marketplace.json is followed in the same commit by `python scripts/regen_catalogue.py`; otherwise the consistency tests in `validate.yml` and `release.yml` fail. The search index's `collection_status` follows `collections.yaml` instead (legacy rows are labelled staged), so a marketplace edit does not touch `docs-site/search_index/`.
 
 ### 1.3 Non-OA exclusion rule
 

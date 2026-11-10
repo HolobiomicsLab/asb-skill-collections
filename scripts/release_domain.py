@@ -1072,25 +1072,21 @@ def checkout_arguments(checkouts: dict[str, Path]) -> list[str]:
     return [item for slug, path in sorted(checkouts.items()) for item in ("--checkout", f"{slug}={path}")]
 
 
-def require_index_checkouts(context: ReleaseContext, checkouts: dict[str, Path]) -> None:
-    """Refuse a search-index rebuild that would silently drop domains without a checkout."""
-    path = context.args.tooling_root / "collections.yaml"
-    document = yaml.safe_load(path.read_text(encoding="utf-8")) if path.is_file() else {}
-    domains = set((document or {}).get("domains") or {}) | {context.args.domain}
-    missing = sorted(domains - set(checkouts))
-    if missing:
-        raise ReleaseError(
-            "--regen indexes every registry domain; pass --checkout <domain>=<path> for: "
-            + ", ".join(missing)
-        )
-
-
 def run_manifest(context: ReleaseContext) -> dict:
-    """Write the registry row, validate it, and optionally rebuild public indexes."""
+    """Write the registry row, validate it, and optionally rebuild public indexes.
+
+    With ``--regen`` the search index is rebuilt for the domains with a checkout
+    (this release's domain and any ``--checkout``); every other registry domain
+    keeps its index file only while that file still matches the registry. When
+    the index build refuses, the registry and catalogue are restored and the
+    stage fails.
+    """
     checkouts = domain_checkouts(context)
-    if context.args.regen:
-        require_index_checkouts(context, checkouts)
     row = manifest_row(context)
+    registry_path = context.args.tooling_root / "collections.yaml"
+    catalogue_path = context.args.tooling_root / "catalogue.jsonld"
+    originals = {item: item.read_bytes() if item.is_file() else None
+                 for item in (registry_path, catalogue_path)}
     path = update_manifest(context, row)
     forwarded = checkout_arguments(checkouts)
     catalogue = context.sibling("scripts/regen_catalogue.py", [
@@ -1100,9 +1096,14 @@ def run_manifest(context: ReleaseContext) -> dict:
     regenerated = []
     if context.args.regen:
         search = context.sibling("docs-site/build_search_index.py", ["--manifest", str(path), *forwarded])
-        require_success(search, "search index regeneration")
-        regenerated = [context.args.tooling_root / "docs-site/search_index.json"]
-    catalogue_path = context.args.tooling_root / "catalogue.jsonld"
+        if search.returncode:
+            for item, data in originals.items():
+                if data is None:
+                    item.unlink(missing_ok=True)
+                else:
+                    item.write_bytes(data)
+            require_success(search, "search index regeneration (registry and catalogue restored)")
+        regenerated = [context.args.tooling_root / "docs-site/search_index/manifest.json"]
     check = context.sibling("scripts/check_collections_manifest.py", [
         "--manifest", str(path), "--catalogue", str(catalogue_path), *forwarded,
     ])
@@ -1110,7 +1111,7 @@ def run_manifest(context: ReleaseContext) -> dict:
     outputs = {"manifest": path, "release": row, "catalogue": catalogue_path,
                "regenerated": regenerated}
     digests = {"collections_yaml": sha256(path), "catalogue_jsonld": sha256(catalogue_path)}
-    digests.update({item.name: sha256(item) for item in regenerated})
+    digests.update({f"search_index/{item.name}": sha256(item) for item in regenerated})
     return outputs, digests
 
 

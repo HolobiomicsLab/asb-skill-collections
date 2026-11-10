@@ -536,6 +536,13 @@ form .required { color: #a02b2b; font-weight: 700; }
   color: var(--fg-muted);
   font-style: italic;
 }
+/* Domain chips: one toggle button per index file (aria-pressed carries the state). */
+#domain-filter { margin: .9rem 0 0; }
+.domain-chips { display: inline-flex; flex-wrap: wrap; gap: .4rem; }
+.domain-chip { border-radius: var(--radius-chip); }
+.domain-chip:focus-visible { outline: 2px solid var(--cnrs-yellow); outline-offset: 2px; }
+.domain-chip.is-failed { border-color: #a02b2b; color: #a02b2b; }
+.domain-chip.is-active.is-failed { background: #a02b2b; color: var(--card); }
 
 .result-group { margin: 1.5rem 0; }
 .result-group h2 {

@@ -46,19 +46,31 @@ def test_indexer_status_follows_the_marketplace():
 
 
 def test_committed_search_index_labels_every_collection():
-    index = json.loads((SITE / "search_index.json").read_text(encoding="utf-8"))
-    manifest = yaml.safe_load((REPO / "collections.yaml").read_text(encoding="utf-8"))
-    releases = {
-        f"{slug}/v{release['version']}"
-        for slug, domain in manifest["domains"].items()
-        for release in domain["releases"]
-    }
-    status = index.get("collection_status")
-    assert isinstance(status, dict), "search_index.json has no collection_status: rebuild it"
-    assert set(status) == set(index["collections"])
-    for label, value in status.items():
-        assert value in {"released", "staged"}, label
-        assert label in releases, label
+    """Each domain file labels its collections, all of them registry releases of that domain."""
+    index_dir = SITE / "search_index"
+    manifest = json.loads((index_dir / "manifest.json").read_text(encoding="utf-8"))
+    registry = yaml.safe_load((REPO / "collections.yaml").read_text(encoding="utf-8"))
+    assert set(manifest["domains"]) == set(registry["domains"])
+    for slug, entry in manifest["domains"].items():
+        releases = {f"{slug}/v{release['version']}" for release in registry["domains"][slug]["releases"]}
+        index = json.loads((index_dir / entry["file"]).read_text(encoding="utf-8"))
+        assert index["domain"] == slug
+        status = index.get("collection_status")
+        assert isinstance(status, dict), f"{entry['file']} has no collection_status: rebuild it"
+        assert set(status) == set(index["collections"])
+        assert sorted(c["label"] for c in entry["collections"]) == sorted(index["collections"])
+        for label, value in status.items():
+            assert value in {"released", "staged"}, label
+            assert label in releases, label
+        for key in ("papers", "skills", "tools", "workflows"):
+            assert entry["counts"][key] == len(index[key]), (slug, key)
+
+
+def test_search_page_reads_the_per_domain_index():
+    script = (SITE / "search.js").read_text(encoding="utf-8")
+    assert '"./search_index/"' in script and '"manifest.json"' in script
+    assert "search_index.json" not in script
+    assert "search_index.json" not in (SITE / "search.html").read_text(encoding="utf-8")
 
 
 # --------------------------------------------------------------------------- #

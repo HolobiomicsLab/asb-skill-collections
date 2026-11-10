@@ -852,27 +852,38 @@ def make_other_domain(root: Path) -> tuple[Path, dict]:
     return other, {"repository": "Example/other", "concept_doi": "10.5281/zenodo.7777770", "releases": [row]}
 
 
-def test_manifest_regen_requires_every_registry_domain_checkout(release_fixture, tmp_path, capsys) -> None:
+def test_manifest_regen_needs_only_the_checkouts_of_stale_domains(release_fixture, tmp_path, capsys) -> None:
     other, entry = make_other_domain(tmp_path)
     registry = release_fixture.tooling / "collections.yaml"
     registry.write_text(yaml.safe_dump({"schema": "asb-collections-manifest/1", "domains": {"other": entry}},
                                        sort_keys=False))
-    before = registry.read_bytes()
+    catalogue = release_fixture.tooling / "catalogue.jsonld"
+    before, catalogue_before = registry.read_bytes(), catalogue.read_bytes()
+    index = release_fixture.tooling / "docs-site/search_index"
     seed_state(release_fixture, {"deposit-draft": {"status": "waiting"}})
     assert invoke(release_fixture, "record-doi", "--doi", DOI) == 0
     assert invoke(release_fixture, "receipt") == 0
     commit = commit_all(release_fixture.repo, "first release DOI")
     capsys.readouterr()
     arguments = ("--concept-doi", CONCEPT_DOI, "--commit", commit, "--regen")
+    # "other" has no index file yet and no checkout: the build refuses, nothing stays written.
     assert invoke(release_fixture, "manifest", *arguments) == 1
-    assert "pass --checkout <domain>=<path> for: other" in capsys.readouterr().err
+    err = capsys.readouterr().err
+    assert "other: no index file recorded in the manifest and no checkout" in err
+    assert "registry and catalogue restored" in err
     assert registry.read_bytes() == before
-    assert not (release_fixture.tooling / "docs-site/search_index.json").exists()
+    assert catalogue.read_bytes() == catalogue_before
+    assert not (index / "manifest.json").exists()
     assert invoke(release_fixture, "manifest", *arguments, "--checkout", f"other={other}") == 0
-    index = json.loads((release_fixture.tooling / "docs-site/search_index.json").read_text())
-    assert set(index["collection_commits"]) == {"fixture/v1", "other/v1"}
+    manifest = json.loads((index / "manifest.json").read_text())
+    assert set(manifest["domains"]) == {"fixture", "other"}
+    other_file = (index / "other.json").read_bytes()
     document = yaml.safe_load(registry.read_text())
     assert set(document["domains"]) == {"other", "fixture"}
+    # Re-registering this domain needs only its own checkout: "other" keeps its file.
+    assert invoke(release_fixture, "manifest", *arguments, "--force") == 0
+    assert (index / "other.json").read_bytes() == other_file
+    assert json.loads((index / "manifest.json").read_text())["domains"]["other"] == manifest["domains"]["other"]
 
 
 def plugin_versions(repo: Path) -> tuple[str, dict]:

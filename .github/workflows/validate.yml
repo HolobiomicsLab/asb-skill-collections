@@ -114,11 +114,14 @@ jobs:
       - name: Validate the registry manifest
         run: python scripts/check_collections_manifest.py
 
-  # -- docs-site/search_index.json is current ---------------------------------
-  # Private domain checkouts are unavailable here, so CI checks that the committed
-  # index records the current manifest digest. The domain pipeline rebuilds content.
+  # -- docs-site/search_index/ is current -------------------------------------
+  # Private domain checkouts are unavailable here, so CI reads none: every
+  # registry domain must have an index file whose sha256 and size match
+  # search_index/manifest.json and whose registry_digest matches that domain's
+  # rows in collections.yaml. A change to one domain leaves the others valid.
+  # The domain pipeline rebuilds a domain's file from its verified checkout.
   search-index:
-    name: "docs-site/search_index.json matches the collections"
+    name: "docs-site/search_index/ matches the registry"
     permissions:
       contents: read
     runs-on: ubuntu-latest
@@ -134,8 +137,8 @@ jobs:
       - name: Install dependencies
         run: pip install pyyaml
 
-      - name: Committed search index matches the registry manifest
-        run: python docs-site/build_search_index.py --check-manifest docs-site/search_index.json
+      - name: Committed per-domain search index matches the registry
+        run: python docs-site/build_search_index.py --check-manifest docs-site/search_index
 
   # -- CITATION.cff files are valid CFF 1.2.0 ---------------------------------
   # GitHub's "Cite this repository" and Zenodo read CITATION.cff, and an invalid
