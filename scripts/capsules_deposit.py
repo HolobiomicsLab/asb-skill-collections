@@ -143,6 +143,7 @@ def refresh_args(args, loaded: dict, manifest: dict, screen: dict, not_released:
         with_indicium=bool((manifest.get("inclusion_policy") or {}).get("with_indicium")),
         strict=bool(screen.get("strict")), not_released=not_released,
         pipeline_public=pipeline_public(manifest),
+        capsules_doi=args.capsules_doi,
     )
 
 
@@ -158,6 +159,17 @@ def released_split(manifest: dict, rows: list[dict], released: set[str]):
     not_released = sorted(set(manifest.get("not_released") or []) | dropped)
     kept_slugs = {entry["build_slug"] for entry in kept}
     return kept, [row for row in rows if row["build_slug"] in kept_slugs], not_released
+
+
+def require_current_rows(rows: list[dict]) -> None:
+    """Refuse legacy rows that cannot regenerate current descriptive records."""
+    required = {name.split(".", 1)[0] for name in pack_capsules.CAPSULE_FIELD_DEFINITIONS}
+    for index, row in enumerate(rows, 1):
+        missing = sorted(required - set(row))
+        if missing:
+            raise CapsulesError(
+                f"capsules.jsonl row {index} lacks current fields {', '.join(missing)}; run a full pack"
+            )
 
 
 def copy_verified(source: Path, target: Path, entry: dict) -> None:
@@ -183,7 +195,9 @@ def run_refresh(args) -> int:
     if problems:
         raise CapsulesError("; ".join(problems))
     loaded = pack_capsules.load_collection(args.collection)
-    kept, rows, not_released = released_split(manifest, read_rows(args.pack / "capsules.jsonl"),
+    rows = read_rows(args.pack / "capsules.jsonl")
+    require_current_rows(rows)
+    kept, rows, not_released = released_split(manifest, rows,
                                               pack_capsules.released_names(loaded["corpus"]))
     out.mkdir(parents=True, exist_ok=True)
     for entry in (entry for entry in kept if entry.get("sha256")):
@@ -443,7 +457,7 @@ def screen_failure_classes(manifest: dict) -> dict[str, int]:
     return dict(sorted(classes.items()))
 
 
-def make_record_readme(manifest: dict, counts: dict, archive: str) -> str:
+def make_record_readme(manifest: dict, counts: dict, archive: str, screen: dict) -> str:
     """Render the public README uploaded beside the archive."""
     failure_lines = "\n".join(
         f"- {count} build{'s' if count != 1 else ''}: {label}."
@@ -455,14 +469,18 @@ This record supplements the ASB {manifest['domain']} v{manifest['collection_vers
 
 ## Files on this record
 
-- `{archive}`: the archive of screened build zips and their local generation receipts.
+- `{archive}`: the archive, with one screened zip per build under `builds/`.
 - `README.md`: this record guide.
 - `MANIFEST.json`: every considered build, including screen failures, and the archive counts and checksums.
 - `capsules.jsonl`: one row per capsule held by the record.
 - `SCREEN.json`: content-screen counts and failures.
-- `benchmark-manifest.json`: the {counts['benchmark_capsules']} capsules with a complete operational evaluation.
+- `benchmark-manifest.json`: the {counts['benchmark_capsules']} capsules whose evaluation definition is structurally complete.
 
 Inside `{archive}`, each row of `capsules.jsonl` maps `build_slug` to `builds/<build_slug>.zip`. Open that nested zip and use the row's `capsule_id` to find the capsule under `capsules/<capsule_id>/`, including its evaluation, evidence, inputs, provenance and pruned RO-Crate.
+
+{pack_capsules.EVALUATION_LISTING_STATEMENT}
+
+Each capsule's `artifact_provenance.json` retains full-build artifact entries and marks each one with `{pack_capsules.ARTIFACT_MEMBERSHIP_FIELD}` to say whether that path is present in the shipped capsule.
 
 ## Contents and exclusions
 
@@ -479,13 +497,21 @@ Screen failure classes count builds and may overlap:
 
 The screen names private repository URLs without linking them and redacts email addresses and telephone numbers. It replaces build-machine paths and home directories with portable locators. It caps or drops quotations according to the source access class. See `SCREEN.json` for the measured counts and per-build failures.
 
-Generated metadata is licensed CC-BY-4.0. Source quotations retain their original rights status and are included only as bounded quotations; this record does not relicense them.
+## `SCREEN.json` counters
+
+{pack_capsules.render_screen_counters(screen)}
+
+{pack_capsules.render_field_dictionary()}
+
+## Licence layers
+
+Generated record metadata is licensed CC-BY-4.0. The `license` field of `capsules.jsonl` and the benchmark rows is the source paper's licence; quotations from that paper retain the paper's terms and are included only as bounded quotations. Tools retain their own licences, which this record does not alter.
 
 For a takedown request, use the public tooling issue tracker: {TAKEDOWN_URL}.
 
 ## Citation
 
-Cite this record by its DOI and cite the supplemented collection at https://doi.org/{manifest['collection_version_doi']}.
+Cite this record by its DOI as assigned on this Zenodo page, and cite the supplemented collection at https://doi.org/{manifest['collection_version_doi']}.
 """
 
 
@@ -518,7 +544,7 @@ def make_plan(args) -> dict:
     metadata = dict(pack["metadata"], publication_date=args.date)
     counts = plan_counts(pack["manifest"], pack["rows"], pack["benchmark"])
     archive = built.path.name if built else archive_name(pack["manifest"])
-    record_readme = make_record_readme(pack["manifest"], counts, archive)
+    record_readme = make_record_readme(pack["manifest"], counts, archive, pack["screen"])
     refusals += text_problems("upload/README.md", record_readme, pack["url_pattern"], True)
     return {
         "schema": PLAN_SCHEMA,
@@ -719,6 +745,7 @@ def _parser() -> argparse.ArgumentParser:
     for command in (refresh, plan):
         command.add_argument("--collection", type=Path, required=True, help="released collection root")
         command.add_argument("--date", required=True, type=_date)
+    refresh.add_argument("--capsules-doi", help="published capsules DOI for the regenerated dataset card")
     plan.add_argument("--tooling-root", type=Path, default=TOOLING_ROOT,
                       help="root holding collections.yaml and scripts/release_creators.yaml")
     create = commands.add_parser("create", help="create a first-release draft on Zenodo from a plan; never publishes")

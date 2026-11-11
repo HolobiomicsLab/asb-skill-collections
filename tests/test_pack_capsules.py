@@ -130,6 +130,74 @@ def test_with_indicium_is_explicitly_recorded(tmp_path):
         assert "indicium.jsonld" in zipped.namelist()
 
 
+def test_staging_marks_artifact_membership_from_final_capsule_contents(tmp_path):
+    source = tmp_path / "source"
+    shutil.copytree(FIXTURE / "view" / "build__coll_open", source)
+    capsule = sorted((source / "capsules").iterdir())[0]
+    provenance = capsule / "artifact_provenance.json"
+    provenance.write_text(json.dumps({
+        "task_id": "task_001",
+        "artifacts": [
+            {"path": "artifact_provenance.json", "kind": "self"},
+            {"path": "eval.json#checks", "kind": "evaluation"},
+            {"path": "task_card.json", "kind": "full_build"},
+        ],
+    }))
+
+    staged = tmp_path / "staged"
+    pack_capsules.stage_build(source, staged, with_indicium=False)
+
+    projected = json.loads(
+        (staged / "capsules" / capsule.name / "artifact_provenance.json").read_text()
+    )
+    assert projected["artifact_membership_note"] == pack_capsules.ARTIFACT_MEMBERSHIP_NOTE
+    assert projected["artifacts"] == [
+        {"path": "artifact_provenance.json", "kind": "self", "included_in_capsule": True},
+        {"path": "eval.json#checks", "kind": "evaluation", "included_in_capsule": True},
+        {"path": "task_card.json", "kind": "full_build", "included_in_capsule": False},
+    ]
+
+
+def test_staging_projects_nested_git_state_only(tmp_path):
+    source = tmp_path / "source"
+    shutil.copytree(FIXTURE / "view" / "build__coll_open", source)
+    manifest_path = source / "build_manifest.json"
+    manifest = json.loads(manifest_path.read_text())
+    manifest.update({
+        "branch": "scientific-branch",
+        "is_dirty": "scientific-value",
+        "git": {
+            "sha": "outer-commit",
+            "branch": "private-branch",
+            "is_dirty": True,
+            "remote_url": "private-repository",
+            "cwd_git": {
+                "sha": "nested-commit",
+                "branch": "private-worktree",
+                "is_dirty": False,
+            },
+            "sources": [
+                {"sha": "list-commit", "branch": "private-list", "is_dirty": True},
+                None,
+            ],
+        },
+    })
+    manifest_path.write_text(json.dumps(manifest))
+
+    staged = tmp_path / "staged"
+    pack_capsules.stage_build(source, staged, with_indicium=False)
+
+    projected = json.loads((staged / "build_manifest.json").read_text())
+    assert projected["branch"] == "scientific-branch"
+    assert projected["is_dirty"] == "scientific-value"
+    assert projected["git"] == {
+        "sha": "outer-commit",
+        "remote_url": "private-repository",
+        "cwd_git": {"sha": "nested-commit"},
+        "sources": [{"sha": "list-commit"}, None],
+    }
+
+
 def test_access_override_is_same_doi_and_does_not_echo_secrets(tmp_path):
     out = tmp_path / "override"
     records = tmp_path / "access.json"
