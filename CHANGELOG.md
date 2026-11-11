@@ -36,7 +36,12 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   `repository-licence-file`) and is unknown without one. A PyPI licence is replaced by a
   file of the same tier and withheld against a file of another tier. A Bioconductor or
   CRAN licence is kept and withheld only when the repository DESCRIPTION gives another
-  tier. A file that offers a choice of licences is read as an SPDX `OR`. When the record shows that the tool is the subject of its citing paper, a
+  tier. A file that offers a choice of licences is read as an SPDX `OR`. A permissive
+  licence file that adds terms of its own is not read as that licence, and a README
+  sentence that restricts use of the tool (academic use only, a licence needed for
+  industrial use) withholds a record that would otherwise be open. A replacement reads
+  only a repository named like the tool, and two GNU statements that differ only in
+  version give the unversioned family. When the record shows that the tool is the subject of its citing paper, a
   package must declare that paper's repository: an import name is not a distribution
   name (`import vega` is not PyPI's `vega`).
 - `enrich_tools_index.py --licence-only` writes the licence fields, `entry_kind`,

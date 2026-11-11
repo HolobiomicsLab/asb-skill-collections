@@ -161,6 +161,42 @@ repository Apache-2.0. Network for the pass: 1,807 raw GitHub requests (801 file
 1,006 not found, 7.6 MB), one GitLab request and 45 bio.tools requests, every answer
 cached, none refused.
 
+## Third pass: added terms, the README, and guards on a replacement
+
+A second audit of 126 resolutions found the identities right (125 same, one
+doubtful) and 119 licences exact. It found two tier errors. bmxp's licence file is
+headed "MIT License (Dual License)" and requires a separate commercial licence for
+redistribution. USAT's file is the LGPL-2.1 text, but its README says a licence is
+needed for industrial use. There were also two replacements read from the wrong
+repository (EpiNano's old location, and bootRanges' paper-scripts repository) and three
+where a GNU version was overstated (FastTree twice, SNFpy). Three checks were added
+(`governance/LICENSE_TIERS.md`):
+
+- a permissive licence file that adds terms outside its canonical wording is not
+  that licence;
+- a README sentence restricting use of the tool withholds an open record;
+- a replacement must read a repository named like the tool, and two GNU statements
+  that differ only in version give the unversioned family.
+
+On the ten collections, against the state at the start of the pass (which already
+held the reviewed entries for UCSC liftOver and BLAT), resolutions went from 1,496 to
+1,488 and citations covered from 47.3% to 47.2%. The effect of each check:
+
+- added terms withhold one record, bmxp on PyPI;
+- the README withholds four: USAT, PhasiHunter ("Free for academic use."),
+  biobloomtools ("This tool is free for academic use (GPL3 licence).") and PCGR. PCGR's
+  sentence is about one optional feature marked for research use only, so its
+  withholding is probably not needed;
+- the name guard withholds three: bootRanges, ChemSpectra (`chem-spectra-app`) and
+  memo-ms (`memo`). The last two are probably the tools' own repositories under
+  another name;
+- the family rule records `GPL` for FastTree in two collections and for RAMClustR.
+
+SNFpy keeps the repository's GPL-3.0 because the families differ, and EpiNano still
+passes because its old repository has the same name. The pass made 847 raw GitHub
+requests (736 found, 111 not found, 6.0 MB) and one GitLab request, all cached; none
+was refused.
+
 ## Limits
 
 - The domain signal was measured on 94 metabolomics matches. The filters added
@@ -178,3 +214,8 @@ cached, none refused.
 - The repository read of `derive_license_tiers.py` (`classify_license_text`,
   `r_license_aliases`) still maps bare `GPL` to GPL-3.0 for corpus papers' own
   repositories. The tool resolver no longer uses it.
+- A restriction stated only on a project website or in source file headers is not
+  seen, and a repository that moved keeps its old statement in the old copy.
+- The README patterns read sentences about use or licensing. A README that reports
+  another tool's restriction without saying so withholds the record, which is the
+  safe side.

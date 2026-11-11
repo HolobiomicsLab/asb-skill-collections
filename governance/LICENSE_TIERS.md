@@ -265,6 +265,48 @@ declared licence. A replaced record carries detection `repository-licence-file`,
 (`registry_license`, `registry_tier`, `registry_evidence`). MassCube is the measured
 PyPI contradiction: PyPI says CC-BY-NC-4.0, the repository Apache-2.0.
 
+Three further checks apply on top of the table.
+
+- **A permissive file that adds terms is not that licence.** For MIT, BSD, Apache-2.0,
+  the Unlicense and CC0, the classifier removes the licence's canonical wording (for
+  MIT the grant sentence, the notice condition and the warranty disclaimer; for BSD the
+  opening sentence, the standard clauses and the disclaimer; for Apache the licence
+  text to "END OF TERMS AND CONDITIONS", its appendix and the short notice; for the
+  Unlicense its whole text; for CC0 everything from its title on) and drops copyright
+  lines. If what remains speaks of a dual licence, non-commercial, academic, non-profit
+  or educational use, research purposes, industrial use, a commercial licence or
+  commercial use, the permission of the authors or "contact us", the file is not read
+  as the plain licence: it is `noncommercial` when it says in plain words that
+  commercial use is excluded or needs a separate licence (bmxp: "redistribution
+  requires obtaining a separate commercial license"), and unread otherwise. Such a
+  file withholds the record as `withheld-added-terms`, except that a third-party
+  registry's licence is replaced by a `noncommercial` reading. GNU and Creative
+  Commons texts are not checked, because their own wording uses these words.
+- **The README.** For a record that would be recorded `open`, the repository's README
+  (`README.md`, `README.rst`, `README`, `README.txt`) is read the same way. A sentence
+  that restricts use of the tool itself ("free for all academic and educational
+  purposes", "academic use only", "not for commercial use", "commercial use requires
+  a licence", "a license is needed", "for research purposes only", an industrial
+  licence) withholds the record for every source as `withheld-readme-restriction`,
+  with the sentence quoted (USAT: an LGPL-2.1 file, and a README that says a licence
+  is needed for industrial use). A sentence about a dependency or a third-party tool
+  is skipped when it says so, and "For research use only" next to a sentence on
+  diagnostic or clinical use is a regulatory disclaimer, not a licence term. A README
+  that mentions another tool's restriction without saying so still withholds the
+  record; unknown is the safe side.
+- **Guards on a replacement.** The repository read must be named like the matched
+  package or the record (`withheld-repository-name`: the bio.tools repository of
+  bootRanges, `bootRangespaper`, holds the paper's scripts). Two GNU statements of one
+  family that differ only in version give the unversioned family, `GPL`, `LGPL` or
+  `AGPL`, read as open, with both strings kept under `confirmation`
+  (`family-fallback`: FastTree, Bioconda GPL-2.0-or-later and a GPL version 3 text).
+  Different families (GPL against LGPL) keep the repository file's licence. A
+  replacement that makes the tier more restrictive is recorded from the repository.
+
+What none of this sees: a restriction stated only on a project website or in source
+file headers, and a repository that moved, whose old copy keeps its old statement
+(EpiNano's bio.tools repository is the old location and still passes the name guard).
+
 #### Reading the licence string
 
 `scripts/tool_licence_text.py` reads what the registry declares, with an explicit table
