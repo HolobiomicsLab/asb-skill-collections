@@ -14,7 +14,35 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
 
 ## [Unreleased]
 
+### Added
+- Tool licence resolution fit to ship (INT-ASB-050). `scripts/resolve_tool_licenses.py`
+  now judges every registry match per record, in its collection, from the record's own
+  evidence (`scripts/tool_identity.py`): a short or English-word name, a match outside the
+  life-science collections, and any match in CRAN, PyPI or bio.tools need corroboration
+  (the package's repository, a shared DOI, or `library(x)` / `import x` style use), and a
+  silent name match is no longer identity. Licence strings are read by
+  `scripts/tool_licence_text.py` with the R `DESCRIPTION` grammar and an explicit table,
+  never inventing a version and never reading a non-commercial licence as open.
+  `governance/tool_licences_reviewed.yaml` is a reviewed map that takes precedence over
+  every registry; `governance/tool_name_common_words.txt` lists the English words that are
+  also package names. Every resolved record carries `license_evidence`, the address its
+  licence was read from. `scripts/check_tool_licence_consistency.py` checks that one entity
+  carries one licence across collections. Rule and measured effect:
+  `docs/design/tool-licence-resolution-2026-11-11.md`.
+- `enrich_tools_index.py --licence-only` writes the licence fields, `entry_kind`,
+  `repo_url`, `source_paper_repos` and `license_evidence` and leaves the skill-tool links
+  byte-identical.
+
 ### Changed
+- `check_tools_index.py` reports resolved and unknown tool counts for each collection,
+  fails when a record claims a licence and `tool_licenses.json` is absent, when a registry
+  or reviewed tier names no `license_evidence`, and when the tier or address drifts from
+  the resolution.
+- `repo_url` of an unresolved tool is empty: the collector no longer copies the first
+  citing paper's repository into it (it stays in `source_repos`).
+- Registry matches that the previous resolver accepted on name alone, such as Bioconda's
+  genome mappability `umap` for the dimension-reduction method, Bioconductor's `BERT` for
+  the language model and Bioconda's `gambit` for the particle-physics code, are withheld.
 - Selector: the package default returns to `asb-keyword` 1.0.0, so
   `asb_skill_collections/asb_skill_index.py`, the script template and the
   released collections carry the same selector. Selector 1.1.0 lost against

@@ -124,6 +124,8 @@ which would claim a lookup is outstanding when none is possible.
 
 Artefacts stay in the catalogue because skills reference their slugs and removing a
 row would break that. Labelling them stops them counting as unresolved licence work.
+An entry of `governance/tool_licences_reviewed.yaml` sets `entry_kind` for the names it
+lists, and a reviewer's kind outranks the vocabulary.
 
 The distinction is what makes the `unknown` count mean something. Of 909 entries: 195
 `open`, 20 `restricted`, 1 `noncommercial`, and 693 `unknown` — of which 39 are
@@ -141,44 +143,124 @@ their own repositories: none of them may classify as anything but `software`, an
 ### Where a tool licence is allowed to come from
 
 `scripts/resolve_tool_licenses.py` writes `tool_licenses.json`, and that file is the
-only thing `enrich_tools_index.py` will tier a tool from. Two routes, both evidence
-about the tool itself:
+only thing `enrich_tools_index.py` will tier a tool from. Precision comes before
+coverage: a wrong licence shown as `open` is worse than `unknown`. Sources, in order
+of precedence, all evidence about the tool itself:
 
 | Route | Evidence | Network |
 |---|---|---|
-| `self_published` | The tool is the subject of a paper already in the corpus — matched on exact name equality, never substring — so that paper's repository is the tool's, and the licence already resolved from it is the tool's licence. | no |
-| `registry` | The tool's name matches a package in a curated life-science registry declared in `governance/tool_registries.yaml`. | yes, cached |
+| `reviewed` | `governance/tool_licences_reviewed.yaml`: a name checked by hand against the tool's own licence statement. A name listed there is never looked up anywhere else, so a reviewer's "leave unknown" holds. | no |
+| `self_published` | The tool is the subject of a paper already in the corpus, matched on exact name equality, never substring, so that paper's repository is the tool's. | no |
+| `registry` | A package of the same name in a registry declared in `governance/tool_registries.yaml`, accepted only when the record's own evidence supports the identity (below). | yes, cached |
 
-Only *curated life-science* registries are consulted, and that restriction is the
-design. An exact name match is not by itself evidence: CRAN carries `AER` (Applied
-Econometrics with R) and `arrow` (Apache Arrow), and PyPI carries a deprecated
-`sklearn` shim. Matching a metabolomics tool name against a general-purpose index
-reproduces the wrong-entity attribution of issue #42 one registry further down. A
-registry that indexes only life-science software carries the domain constraint
-structurally.
+The registries are Bioconductor and Bioconda (`scope: life_science`) and CRAN, PyPI and
+bio.tools (`scope: general`).
 
-That is necessary but still not sufficient, and the measurement says so: of 94
-registry matches reviewed on 2026-08-21, four were different projects sharing a short
-name — `bart`, `grid`, `meteor`, `mist` — plus `ggplot`, where the corpus means the R
-package and the registry has a Python re-implementation. They are recorded as
-reviewed exclusions with reasons in `governance/tool_registries.yaml` rather than
-guessed at by a detector, because no automatic signal separates them yet: requiring
-the tool's own evidence to attest the package rejects 52 of the 94, CAMERA, mzmine,
-rdkit, MSnbase and nextflow among them. Finding one is issue #43, and it is the
-precondition for consulting a general-purpose registry at all.
+#### A name match is not identity
 
-**Where the routes disagree, the registry wins on the licence string.** A package
-declares its own licence; a repository read infers one from whatever LICENSE file
-sits at the root. `sneumann/xcms` is the case: DESCRIPTION says `GPL (>= 2)`, GitHub
-reports NOASSERTION, and the LICENSE file classifies as LGPL-3.0 because it carries
-terms for a bundled component. The superseded reading is kept on the record. A
-disagreement in *tier*, though, is a contradiction rather than an override — the two
-sources would give a consumer materially different advice — so the tool resolves to
-`unknown` and the conflict is reported.
+An exact name match does not establish that a package is the tool a paper meant.
+Bioconda's `umap` is a genome mappability tool, not the dimension-reduction method;
+Bioconductor's `BERT` reduces batch effects and is not the language model; Bioconda's
+`gambit` types microbes and is not the particle-physics code; PyPI's `docker` is a
+Python SDK, and PyPI's `devtools` and `shiny` are not the R packages. Identity is
+therefore judged per record, in its collection (`scripts/tool_identity.py`), from the
+record's own evidence: its evidence spans, the version it quotes, the titles of the
+papers it was extracted from, its repositories and DOIs, and the names and
+descriptions of the skills that cite it. The same name can be two different tools in
+two collections, and the rule allows that.
 
-Every resolved entry records the `repo_url` it came from, so the claim can be
-disputed. `check_tools_index.py` fails if `tools_index.json` drifts from the
-resolution it was derived from, or if a tool carries a tier with no entry behind it.
+Evidence counts as **strong** when the package's repository or homepage is one the
+record names, when a DOI bio.tools lists for the tool is one of the record's, or when
+the record uses the name as a package of the registry's ecosystem (`library(x)`,
+`x::f`, `BiocManager::install("x")`, `R package x`; `import x`, `pip install x`,
+`Python package x`; `conda install x`). A match is accepted as follows:
+
+1. A Bioconductor data, annotation or workflow package is never the tool: it wraps a
+   dataset named like the tool (MSigDB).
+2. A contradiction refuses the match unless the package's repository or publication is
+   the record's: code evidence for another ecosystem (`library(x)` against a Python
+   package, `import x` against an R one, an R package against a Bioconda package of the
+   bare name, which Bioconda would have prefixed).
+3. A general registry needs strong evidence: CRAN and PyPI a shared repository or
+   code evidence, bio.tools a shared repository or publication. PyPI is asked only
+   about names with Python evidence, and bio.tools only about records that carry what
+   looks like the tool's own paper or repository.
+4. A curated registry in a collection outside `life_science_collections` (astronomy
+   and agentic-ai today, and any new domain until it is listed) needs strong evidence.
+5. In a life-science collection, a weak name (four characters or fewer, or a word of
+   `governance/tool_name_common_words.txt`) needs strong evidence, the measured domain
+   signal (docs/design/registry-match-corroboration-2026-11-07.md) with two shared words
+   that are specific (not generic life-science vocabulary, not common in the
+   collection's skills, not common in the registry's descriptions), or three specific
+   words shared by the citing skills and the package description.
+6. Any other name needs strong evidence, the domain signal with one specific shared
+   word, or two specific words shared by the citing skills and the package
+   description. Silence is not identity: `CoLoRMap` (long-read correction) and
+   Bioconda's `colormap` (matplotlib colours) share a normalised name and nothing
+   else.
+7. R code must spell the package with its case: `library(MeTEor)` does not load CRAN's
+   `meteor`.
+8. Two packages that declare the same repository are one tool, and a package that
+   declares the repository of a package accepted on strong evidence is accepted too;
+   the first declared registry then gives the licence and the others are kept as
+   `superseded`. Otherwise, when packages from several registries are accepted for
+   one record and declare different licences, the record stays `unknown` unless
+   exactly one of them rests on strong evidence (decision K3: a name present in two
+   ecosystems with different licences and nothing to tell them apart is not
+   resolved). A general registry's answer is also withheld when a same-name package
+   that was not contradicted declares another licence: bio.tools still lists bedtools
+   as GPL-2.0, the package has been MIT since 2.28.
+
+The measured effect of the rule on the ten released collections is in
+`docs/design/tool-licence-resolution-2026-11-11.md`. The reviewed exclusions of
+`tool_registries.yaml` remain as data.
+
+#### Reading the licence string
+
+`scripts/tool_licence_text.py` reads what the registry declares, with an explicit table
+and the R `DESCRIPTION` grammar (`GPL (>= 2)`, `GPL-2 | GPL-3`, `MIT + file LICENSE`,
+`file LICENSE`):
+
+- A version is never invented. `GPLv2+` is `GPL-2.0-or-later`; an explicit version
+  without "or later" is `-only`, as SPDX's own deprecated ids (`GPL-2.0`) mean.
+- An unversioned family (`GPL`, `LGPL`, `AGPL`, `BSD`) gets a tier only because every
+  member of the family is `open` in `license_tiers.yaml`, and the record then keeps the
+  source's words (`GPL`), not a guessed SPDX id. `Apache` and `Artistic` without a
+  version stay unread: their 1.x versions are not in the tier map.
+- `+ file LICENSE` is read as the template it is for MIT and the BSD licences, and as
+  the attribution terms the GNU licences permit; after any other licence the file may
+  restrict, so the string is unread. `file LICENSE` alone is unread.
+- Alternatives (`|`, `OR`) take the most permissive alternative that was read;
+  conjunctions (`AND`) need every part read and take the most restrictive.
+- Non-commercial and no-derivatives licences never land in `open`: a Creative Commons
+  licence is parsed by its clauses, and any other string that speaks of non-commercial
+  or academic use is unread.
+- An unread string is `unknown`, never the `restricted` fallback.
+
+The raw string stays in `tool_licenses.json` as `license_raw`.
+
+#### What a resolved record carries
+
+Every resolved record carries `license_detection` (`reviewed-map`, `bioconductor-package`,
+`bioconda-package`, `cran-package`, `pypi-package`, `biotools-entry`, or a repository
+detection for the introducing paper) and `license_evidence`, the address the licence
+was read from: the registry's package page or the reviewed entry's `evidence_url`. Both
+are written into `tools_index.json` and `tools/<slug>.yaml`. `repo_url` is the tool's own
+repository, from the reviewed map or the registry, and is empty on an unresolved tool;
+the repositories of the papers that cite a tool stay in `source_paper_repos` (decision
+K1).
+
+`check_tools_index.py` fails if `tools_index.json` drifts from the resolution it was
+derived from, if a tool carries a tier with no entry behind it, if `tool_licenses.json`
+is absent while a record claims a resolved licence, or if a registry or reviewed tier
+names no `license_evidence`; its line for each collection reports the resolved and
+unknown counts, so a collection that ends all `unknown` is visible. No gate makes a
+network call. `scripts/check_tool_licence_consistency.py` checks across collections that
+one entity (one `license_evidence` address) carries one licence.
+
+Licence enrichment runs with `enrich_tools_index.py --licence-only`, which leaves the
+skill-tool links (`used_by_skills`, `tools_used`) byte-identical (decision K2). The
+pipeline step is documented in `docs/domain-onboarding.md`.
 
 ## The source-reuse axis
 
