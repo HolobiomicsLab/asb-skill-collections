@@ -15,6 +15,30 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
 ## [Unreleased]
 
 ### Added
+- Four contribution routes at the point of use (INT-ASB-051, lot A): this skill is wrong
+  or could be better; a skill is missing: request it, or propose yours; a paper is not
+  referenced: propose it; something technical failed: report it. Each lands on the issue
+  tracker of this public registry, since the domain repositories are private. The issue
+  chooser gains `config.yml` (blank issues kept, links to the contribute and paper pages and
+  to the security policy) and puts the four routes first: `1-skill-feedback.md` and
+  `3-propose-paper.md` (renamed from `skill-feedback.md` and `propose-paper.md`), and two new
+  templates, `2-request-skill.md` and `4-technical-fault.md`. `scripts/skill_feedback.py`
+  holds one closed list of kinds (`defect`, `drift`, `enhancement`, `efficiency`, `gap`,
+  `composition`; the earlier site kinds are read as these) and one set of labels
+  (`usage-feedback`, `needs-triage`, `propose` for new work, `auto-report` when a script or a
+  form drafted it), used by `scripts/make_improvement_report.py`, the templates and the site,
+  and renders the paper and technical-fault routes. `scripts/router_shape.py` renders a
+  `## Report and contribute` section in the router and the workflow router of a generated
+  collection, with its collection and release labels, and can ship `bin/report_issue.py`,
+  a standard-library helper generated from `skill_feedback.py` and `pii_config.py`
+  (`--sync-report-helper`) that prints the redacted report and a bounded prefilled address
+  and never posts. `asbb report <route>` runs the same helper. An empty search names routes
+  2 and 3. The site's paper form writes the fields `scripts/intake_issue.py` reads and offers
+  only the released collections, with no default. `scripts/check_release_surface.py` and
+  `router_shape.py --check` reject a stale contribution section and accept a router without
+  one, so the ten released collections pass unchanged. `.github/CONTRIBUTING.md`, `README.md`,
+  `AGENTS.md`, `CLAUDE.md` and `docs/CONTRIBUTION_LOOP.md` name the four routes; texts that sent
+  the public to a domain repository or to Discussions are corrected.
 - Tool licence resolution fit to ship (INT-ASB-050). `scripts/resolve_tool_licenses.py`
   now judges every registry match per record, in its collection, from the record's own
   evidence (`scripts/tool_identity.py`): a short or English-word name, a match outside the

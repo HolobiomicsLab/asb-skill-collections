@@ -47,3 +47,22 @@ Search, apply, ground. Full protocol in [`AGENTS.md`](AGENTS.md) and
 [`collections.yaml`](collections.yaml) is the release registry. It pins each
 domain repository, commit and tree digest, and the Zenodo DOIs of every
 release. The domain repositories are private.
+
+## Report and contribute
+
+At each distinct problem, offer the user a report without being asked, once:
+a procedure failed or no longer matches the tool, the search found nothing
+usable, a method paper is missing from the search, the leaves had to be composed
+by hand, or a command of the collection failed. The four routes:
+
+1. this skill is wrong or could be better;
+2. a skill is missing: request it, or propose yours;
+3. a paper is not referenced: propose it;
+4. something technical failed: report it.
+
+Draft with `asbb report <skill|missing|paper|fault>` (or `bin/report_issue.py`
+where a collection ships it), show the exact title, labels and body, and post
+only on an explicit yes, with `gh issue create --repo HolobiomicsLab/asb-skill-collections`
+or the printed address. Never paste paths, credentials or sample names. Reports
+go to this public registry; the domain repositories are private and a
+maintainer carries reports into them. Detail in [`AGENTS.md`](AGENTS.md).

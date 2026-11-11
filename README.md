@@ -346,11 +346,34 @@ under [Apache-2.0](LICENSE), collection content under CC-BY-4.0; verbatim quotat
 ([LICENSING.md](LICENSING.md)). Other policies are in [governance/](governance), starting
 with [MAINTAINERS.md](governance/MAINTAINERS.md) and [COI_POLICY.md](governance/COI_POLICY.md).
 
+## Report, request, propose
+
+Met a problem while using a skill? Four routes, each an issue on the
+[tracker of this public repository](https://github.com/HolobiomicsLab/asb-skill-collections/issues):
+
+1. **this skill is wrong or could be better**:
+   [skill feedback](https://github.com/HolobiomicsLab/asb-skill-collections/issues/new?template=1-skill-feedback.md)
+   or the [contribute page](https://holobiomicslab.github.io/asb-skill-collections/contribute.html);
+2. **a skill is missing: request it, or propose yours**:
+   [request a skill](https://github.com/HolobiomicsLab/asb-skill-collections/issues/new?template=2-request-skill.md),
+   or [propose your skill](https://github.com/HolobiomicsLab/asb-skill-collections/issues/new?template=propose-skill.md)
+   ([how community skills are curated](governance/COMMUNITY_SKILLS.md));
+3. **a paper is not referenced: propose it**:
+   [propose a paper](https://github.com/HolobiomicsLab/asb-skill-collections/issues/new?template=3-propose-paper.md)
+   or the [paper form](https://holobiomicslab.github.io/asb-skill-collections/propose.html);
+4. **something technical failed: report it** (install, plugin, search, CLI, MCP
+   server, site, gates):
+   [technical fault](https://github.com/HolobiomicsLab/asb-skill-collections/issues/new?template=4-technical-fault.md).
+
+`asbb report <route>` drafts any of the four with the collection and the skill
+filled in, redacts paths and credentials, and prints the text and a prefilled
+address; it never posts. The domain repositories are private: contributions go
+through issues here, and a maintainer carries them into the domain repository.
+
 ## Contributing
 
-- **A skill was wrong, stale or missing.** From a checkout,
-  `scripts/make_improvement_report.py` prints an anonymised issue body, and with
-  `--print-url` a pre-filled issue URL.
+- **The four routes above** are described, with what happens next, in
+  [CONTRIBUTING.md](.github/CONTRIBUTING.md#four-routes).
 - **Propose or annotate a paper, a collection or a workflow:**
   [CONTRIBUTING.md](.github/CONTRIBUTING.md#propose-or-annotate-a-paper).
 - **Add papers to a collection.** See the contributor proposal rail and the

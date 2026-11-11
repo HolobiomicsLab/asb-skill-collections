@@ -221,3 +221,29 @@ all rights reserved until checked. See
   the releases of ten domains, each in its private repository
   `asb-skills-<domain>`, and the legacy v1 trees of metabolomics, epigenomics
   and transcriptomics.
+
+## Report and contribute
+
+Offer the user a report yourself, without being asked, at each distinct
+problem: a procedure failed or no longer matches the tool; the search returned
+nothing usable and the work was done unaided; the user names a method paper
+whose DOI the search does not find; the leaves existed but had to be composed by
+hand; a command of the collection itself failed. Name one of four routes:
+
+1. this skill is wrong or could be better;
+2. a skill is missing: request it, or propose yours;
+3. a paper is not referenced: propose it;
+4. something technical failed: report it.
+
+Offer once per problem and never again after a refusal. Draft the report, show
+the user its exact title, labels and body, and post only on an explicit yes.
+Never paste paths, credentials or sample names. Draft with
+`asbb report <skill|missing|paper|fault>`, with `bin/report_issue.py` where a
+collection ships it, or with `python3 scripts/skill_feedback.py` from this
+checkout; each redacts and prints a prefilled address, and none posts. With `gh`
+and the user's yes, file with
+`gh issue create --repo HolobiomicsLab/asb-skill-collections`; otherwise give the
+user the address. Every route lands on the public registry's issue tracker: the
+domain repositories are private, and a maintainer carries each report into them.
+Routes, templates and triage: [`.github/CONTRIBUTING.md`](.github/CONTRIBUTING.md)
+and [`docs/CONTRIBUTION_LOOP.md`](docs/CONTRIBUTION_LOOP.md).

@@ -22,8 +22,11 @@ checkout in every content path.
 
 ### Contributor rail: propose one paper
 
-Open a **Propose a paper, tool, or resource** issue on this public repository,
-or use `/propose-skill` in a checkout that provides that command. The domain
+Open an issue with the template **3. A paper is not referenced: propose it**
+(`3-propose-paper.md`) on this public repository, use the
+[paper form](https://holobiomicslab.github.io/asb-skill-collections/propose.html)
+of the site or `asbb report paper`, which write the same fields, or use
+`/propose-skill` in a checkout that provides that command. The domain
 repositories are private, so a maintainer stages the proposal in the domain
 repository. Give a DOI or public link, the target
 collection and one or two sentences on why it matters. A curator resolves the
@@ -178,7 +181,8 @@ versions require a future tooling change; do not encode one by hand.
 ## Automated staging
 
 A `propose` issue labelled `paper-intake` in a domain repository is processed by
-that repository's intake Action (it does not run on this public repository), which parses the issue, resolves the DOI and access route, checks
+that repository's intake Action (it does not run on this public repository; a
+maintainer copies a public proposal there or stages it by hand), which parses the issue, resolves the DOI and access route, checks
 duplicates against the collection corpus and the open wave and watch files, and
 stages one row with `status: hold` and `triage.decision: pending` on
 `bot/intake-paper-<issue>`. It opens one pull request, comments its findings on
