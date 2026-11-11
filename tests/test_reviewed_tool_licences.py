@@ -149,3 +149,22 @@ def test_names_match_after_normalisation():
     index = rv.index(doc(PLAIN))
     assert index["scikitlearn"]["entity"] == "scikit-learn"
     assert "sklearn" in index
+
+
+@pytest.mark.parametrize("name", ["SIRIUS", "Sirius", "SIRIUS4", "ZODIAC", "COSMIC"])
+def test_the_sirius_family_is_academic_use_only_in_a_mass_spectrometry_collection(name):
+    """The README reserves use to academic research; other users need a licence."""
+    entry = rv.index(rv.load())[rv.normalize(name)]
+    reading, reason = rv.apply(entry, ctx(collection="metabolomics"))
+    assert reason == "reviewed-context"
+    assert (reading["license_tier"], reading["license"]) == (
+        "noncommercial", "LicenseRef-SIRIUS-academic-use")
+
+
+def test_the_sirius_family_names_mean_something_else_elsewhere():
+    index = rv.index(rv.load())
+    # The Catalogue Of Somatic Mutations In Cancer, and a star.
+    assert rv.apply(index[rv.normalize("COSMIC")], ctx(collection="genomics"))[0] is None
+    assert rv.apply(index[rv.normalize("SIRIUS")], ctx(collection="astronomy"))[0] is None
+    assert rv.apply(index[rv.normalize("ZODIAC")], ctx(collection="agentic-ai"))[0] is None
+

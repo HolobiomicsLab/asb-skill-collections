@@ -57,7 +57,9 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   binary is closed-source or under further restrictions withholds (MZA), more wordings
   of academic-only use are read (CalibraCurve), and an R licence field that names
   `file LICENSE` withholds when the file limits the field of use (dsb). The reviewed map
-  adds CANOPUS and MSNovelist as SIRIUS web services, noncommercial.
+  adds CANOPUS and MSNovelist as SIRIUS web services, noncommercial. SIRIUS, ZODIAC and COSMIC are
+  recorded as academic use only in the mass spectrometry collections (AGPL-3.0 text, a licence
+  for other users), on the collection owner's reading.
 - `enrich_tools_index.py --licence-only` writes the licence fields, `entry_kind`,
   `repo_url`, `source_paper_repos` and `license_evidence` and leaves the skill-tool links
   byte-identical.
