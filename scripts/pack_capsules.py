@@ -396,7 +396,10 @@ def make_manifest(args, collection, builds, rows) -> dict:
             "pipeline_public": args.pipeline_public,
         },
         "build_count": len(builds),
+        "builds_packed": sum(bool(build.get("sha256")) for build in builds),
+        "builds_left_out": sum(not build.get("sha256") for build in builds),
         "capsule_count": len(rows),
+        "capsules_left_out": sum(len(build["capsule_ids"]) for build in builds if not build.get("sha256")),
         "total_bytes": sum(build["bytes"] for build in builds),
         "not_released_count": len(args.not_released),
         "not_released": args.not_released,
@@ -428,7 +431,10 @@ def make_zenodo(collection, template, args) -> dict:
         "and dropped for restricted or unresolved access. Rights holders may request takedown "
         "through the asb-skill-collections issue tracker."
     )
-    related = [{"relation": "isSupplementTo", "identifier": args.version_doi, "scheme": "doi"}]
+    related = [
+        {"relation": "isSupplementTo", "identifier": args.version_doi, "scheme": "doi"},
+        {"relation": "references", "identifier": TOOLING_URL, "scheme": "url"},
+    ]
     if args.pipeline_public:
         related.append({"relation": "isCompiledBy", "identifier": PIPELINE_URL, "scheme": "url"})
     return {
@@ -443,7 +449,6 @@ def make_zenodo(collection, template, args) -> dict:
         "subjects": template.get("subjects") or [],
         "communities": [{"identifier": "asb_skill_collections"}],
         "related_identifiers": related,
-        "references": TOOLING_URL,
         "version": f"{domain}-v{collection['version']}-capsules",
         "language": template.get("language", "eng"),
     }
@@ -485,7 +490,7 @@ configs:
 
 # ASB {domain} v{collection['version']} build capsules
 
-This local archive set contains {manifest['build_count']} per-build deterministic zips and {manifest['capsule_count']} capsule metadata rows. The metadata table is `{table}`. `benchmark-manifest.json` filters the complete operational evaluations without duplicating their payloads.
+This local archive set contains {manifest['builds_packed']} per-build deterministic zips and {manifest['capsule_count']} capsule metadata rows. The metadata table is `{table}`. `benchmark-manifest.json` filters the complete operational evaluations without duplicating their payloads.
 
 ## Layout
 
@@ -539,7 +544,9 @@ Local screened archive set generated on {manifest['generation_date']}. No deposi
 - `benchmark-manifest.json`: complete-evaluation subset.
 - `zenodo/metadata.json` and `hf/README.md`: local record descriptions.
 
-Builds: {manifest['build_count']}. Capsules: {manifest['capsule_count']}. Failures: {screen['totals'].get('failures', 0)}.
+Builds considered: {manifest['build_count']}. Builds packed: {manifest['builds_packed']}. Builds left out by the screen: {manifest['builds_left_out']}.
+
+Capsules packed: {manifest['capsule_count']}. Capsules left out with their builds: {manifest['capsules_left_out']}.
 
 Builds left out because their paper is not an included paper of the released corpus: {manifest['not_released_count']}. They are listed by slug under `not_released` in `MANIFEST.json`.
 """
@@ -558,6 +565,12 @@ def maybe_write_parquet(rows: list[dict], path: Path) -> bool:
     return True
 
 
+def packed_capsule_rows(builds: list[dict], rows: list[dict]) -> list[dict]:
+    """Return only capsule rows whose build has a zip in the record."""
+    packed_slugs = {build["build_slug"] for build in builds if build.get("sha256")}
+    return [row for row in rows if row["build_slug"] in packed_slugs]
+
+
 def write_records(args, loaded: dict, builds: list[dict], rows: list[dict]) -> None:
     """Write every descriptive file of a pack from its build entries and capsule rows.
 
@@ -567,6 +580,7 @@ def write_records(args, loaded: dict, builds: list[dict], rows: list[dict]) -> N
     strict, not_released, pipeline_public and the collection root.
     """
     collection = loaded["collection"]
+    rows = packed_capsule_rows(builds, rows)
     manifest = make_manifest(args, collection, builds, rows)
     screen = make_screen(builds, args.strict)
     write_json(args.out / "MANIFEST.json", manifest)
@@ -593,8 +607,12 @@ def make_benchmark(builds: list[dict], rows: list[dict], version_doi: str) -> di
     that file writes the same bytes.
     """
     benchmark_rows = [json.loads(json.dumps(row, sort_keys=True)) for row in rows if row["eval_state"] == "complete"]
-    benchmark_ids = {row["capsule_id"] for row in benchmark_rows}
-    benchmark_builds = [dict(build, capsule_ids=[value for value in build["capsule_ids"] if value in benchmark_ids]) for build in builds if any(value in benchmark_ids for value in build["capsule_ids"])]
+    benchmark_ids = {(row["build_slug"], row["capsule_id"]) for row in benchmark_rows}
+    benchmark_builds = [
+        dict(build, capsule_ids=[value for value in build["capsule_ids"] if (build["build_slug"], value) in benchmark_ids])
+        for build in builds
+        if build.get("sha256") and any((build["build_slug"], value) in benchmark_ids for value in build["capsule_ids"])
+    ]
     return {"schema": "asb-capsules-benchmark/1", "collection_version_doi": version_doi, "capsule_count": len(benchmark_rows), "capsules": benchmark_rows, "builds": benchmark_builds}
 
 
@@ -631,7 +649,10 @@ def run(args) -> int:
     if args.strict and failed:
         shutil.rmtree(args.out / "builds", ignore_errors=True)
     write_records(args, loaded, builds, rows)
-    print(json.dumps({"builds": len(builds), "capsules": len(rows), "not_released": len(args.not_released), "wall_seconds_by_build": timings}))
+    packed_rows = packed_capsule_rows(builds, rows)
+    left_out = sum(len(build["capsule_ids"]) for build in builds if not build.get("sha256"))
+    print(json.dumps({"builds": len(builds), "capsules": len(packed_rows), "capsules_left_out": left_out,
+                      "not_released": len(args.not_released), "wall_seconds_by_build": timings}))
     return int(args.strict and failed)
 
 

@@ -184,6 +184,13 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   commit (the `packs/` tree is byte-identical to the v3.0.0 commit).
 
 ### Fixed
+- Build-capsules records now describe only what they hold. `capsules.jsonl`, its optional
+  Parquet twin and `benchmark-manifest.json` exclude builds without a zip; the manifest and
+  deposit plan distinguish considered, packed and left-out builds and capsules; `plan`
+  refuses stale table rows; and its uploaded README describes the public record instead of
+  the local pack. Capsule metadata expresses the public tooling repository as a
+  `references` related identifier, and Zenodo metadata validation checks the list shapes
+  accepted by the deposit API.
 - The capsule screen (`scripts/capsule_screen.py`) rewrites and checks JSON, JSONL, JSON-LD
   and YAML documents on their decoded strings (values and mapping keys) and serializes them
   afterwards. Run on the serialized text, an email match took the `n` of a `\n` escape, a

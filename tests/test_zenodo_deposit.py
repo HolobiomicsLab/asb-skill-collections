@@ -295,6 +295,32 @@ def test_validate_metadata_accepts_the_template_once_lineage_is_dropped(repo):
     assert zenodo_deposit.validate_metadata(payload["metadata"]) == []
 
 
+def test_validate_metadata_rejects_references_string():
+    meta = {**ZENODO_JSON, "references": "Doe et al. (2026)",
+            "related_identifiers": []}
+    assert "references must be a list of strings" in zenodo_deposit.validate_metadata(meta)
+
+
+def test_validate_metadata_accepts_references_list():
+    meta = {**ZENODO_JSON, "references": ["Doe et al. (2026)"],
+            "related_identifiers": []}
+    assert zenodo_deposit.validate_metadata(meta) == []
+
+
+@pytest.mark.parametrize("key", ["references", "keywords"])
+def test_validate_metadata_rejects_non_string_list_entries(key):
+    meta = {**ZENODO_JSON, key: ["valid", {"not": "a string"}], "related_identifiers": []}
+    assert f"{key} must be a list of strings" in zenodo_deposit.validate_metadata(meta)
+
+
+@pytest.mark.parametrize("bad_value", [{"not": "a list"}, ["not an object"]])
+@pytest.mark.parametrize("key", ["subjects", "communities", "related_identifiers", "creators"])
+def test_validate_metadata_rejects_non_object_list_shapes(key, bad_value):
+    meta = {**ZENODO_JSON, "related_identifiers": []}
+    meta[key] = bad_value
+    assert f"{key} must be a list of objects" in zenodo_deposit.validate_metadata(meta)
+
+
 def test_plan_prints_metadata_and_files_without_any_request(repo, monkeypatch, capsys):
     def forbidden(*args, **kwargs):
         raise AssertionError("plan must not use the network")

@@ -141,7 +141,7 @@ def test_pack_names_the_private_pipeline_without_linking_it(packed):
     texts = [json.dumps(metadata), (packed / "hf" / "README.md").read_text(), (packed / "README.md").read_text()]
     assert all(PIPELINE_LINK not in text for text in texts)
     assert "AgenticScienceBuilder pipeline" in metadata["description"]
-    assert [item["relation"] for item in metadata["related_identifiers"]] == ["isSupplementTo"]
+    assert [item["relation"] for item in metadata["related_identifiers"]] == ["isSupplementTo", "references"]
 
 
 def test_pack_links_the_pipeline_only_when_declared_public(tmp_path):
@@ -281,6 +281,25 @@ def test_refresh_drops_builds_of_papers_no_longer_released(tmp_path):
     assert digests(refreshed) == digests(full)
 
 
+def test_refresh_drops_capsule_rows_of_builds_without_a_zip(tmp_path):
+    view = tmp_path / "view"
+    shutil.copytree(FIXTURE / "view", view, symlinks=True)
+    failed = view / "build__coll_open" / "capsules" / "10_1234_example_open__task_001" / "eval.json"
+    failed.write_text("bad")
+    old = pack(tmp_path / "old", view=view, strict=False)
+
+    assert refresh(old, FIXTURE / "collection", tmp_path / "refreshed") == 0
+
+    refreshed = tmp_path / "refreshed"
+    manifest = json.loads((refreshed / "MANIFEST.json").read_text())
+    rows = [json.loads(line) for line in (refreshed / "capsules.jsonl").read_text().splitlines()]
+    benchmark = json.loads((refreshed / "benchmark-manifest.json").read_text())
+    assert manifest["build_count"] == 4 and manifest["builds_packed"] == 3
+    assert manifest["capsule_count"] == 4 and manifest["capsules_left_out"] == 2
+    assert "open" not in {row["build_slug"] for row in rows}
+    assert "open" not in {row["build_slug"] for row in benchmark["capsules"]}
+
+
 def test_refresh_refuses_a_zip_whose_digest_differs(tmp_path, packed, capsys):
     target = packed / "builds" / "open.zip"
     data = bytearray(target.read_bytes())
@@ -357,7 +376,7 @@ def test_plan_lists_metadata_files_and_digests_without_any_request(tmp_path, pac
         assert item["sha256"] == hashlib.sha256(data).hexdigest()
         assert item["bytes"] == len(data)
     assert written["counts"] == {"builds_packed": 4, "builds_left_out": 0, "builds_not_released": 0,
-                                 "capsules": 6, "benchmark_capsules": 4}
+                                 "capsules": 6, "capsules_left_out": 0, "benchmark_capsules": 4}
     assert "refusals: none" in capsys.readouterr().out
     assert "/Users/" not in json.dumps(written) and str(tmp_path) not in json.dumps(written)
 
@@ -451,6 +470,33 @@ def test_plan_refuses_capsule_rows_of_a_build_the_manifest_does_not_list(tmp_pat
     with (packed / "capsules.jsonl").open("a") as stream:
         stream.write(json.dumps({"build_slug": "ghost", "capsule_id": "x", "eval_state": "partial"}) + "\n")
     assert "capsules.jsonl: rows of build ghost, which MANIFEST.json does not list" in refusals_of(tmp_path, packed)
+
+
+def test_plan_refuses_tables_that_name_a_build_without_a_zip(tmp_path, packed):
+    (packed / "builds" / "open.zip").unlink()
+    edit_json(packed / "MANIFEST.json", lambda manifest: next(
+        entry for entry in manifest["builds"] if entry["build_slug"] == "open").update(bytes=0, sha256=None))
+    refusals = refusals_of(tmp_path, packed)
+    assert "capsules.jsonl: rows of build open, which has no zip in the record" in refusals
+    assert "benchmark-manifest.json: rows of build open, which has no zip in the record" in refusals
+    assert "benchmark-manifest.json: build open has no zip in the record" in refusals
+
+
+def test_plan_writes_a_public_record_readme_from_the_plan_counts(tmp_path, packed):
+    status, written = plan(tmp_path, packed)
+    assert status == 0, written["refusals"]
+    readme = (tmp_path / "plan" / "upload" / "README.md").read_text()
+    archive = written["archive"]["name"]
+    assert f"`{archive}`: the archive" in readme
+    assert "Local screened archive set" not in readme
+    assert "No deposit, upload" not in readme
+    assert "`zenodo/metadata.json`" not in readme and "`hf/README.md`" not in readme
+    assert "`builds/<build_slug>.zip`" in readme and "`capsules/<capsule_id>/`" in readme
+    assert "Builds packed: 4." in readme and "Capsules packed: 6." in readme
+    assert "Benchmark capsules: 4." in readme and "Capsules left out with those builds: 0." in readme
+    assert "cite this record by its doi" in readme.lower()
+    assert capsules_deposit.TAKEDOWN_URL in readme
+    assert "/Users/" not in readme and "/Volumes/" not in readme
 
 
 def test_plan_refuses_a_pack_of_another_collection(tmp_path, packed):
@@ -569,6 +615,7 @@ def test_record_doi_writes_the_block_the_catalogue_and_the_readme_cell(tmp_path,
     assert block["supplements"] == ZENODO_DOI
     assert block["archive_sha256"] == written["archive"]["sha256"]
     assert block["builds_packed"] == 4 and block["capsules"] == 6 and block["benchmark_capsules"] == 4
+    assert set(block) == check_collections_manifest.CAPSULES_KEYS
     assert str(block["published"]) == LATER
     assert (tooling / "collections.yaml").read_text().startswith("# registry\n")
     catalogue = json.loads((tooling / "catalogue.jsonld").read_text())

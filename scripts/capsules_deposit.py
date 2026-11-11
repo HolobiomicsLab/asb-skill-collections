@@ -57,6 +57,7 @@ LOCAL_PATH_MARKERS = ("/Users/", "/Volumes/", "/private/")
 CHUNK_BYTES = 1024 * 1024
 FIRST_SHOWN = 3
 README_CAPSULES = re.compile(r" \(build capsules: \[[^\]]*\]\([^)]*\)\)$")
+TAKEDOWN_URL = "https://github.com/HolobiomicsLab/asb-skill-collections/issues"
 
 
 class CapsulesError(RuntimeError):
@@ -189,7 +190,10 @@ def run_refresh(args) -> int:
         copy_verified(args.pack / entry["zip_member"], out / entry["zip_member"], entry)
     screen = read_json(args.pack / "SCREEN.json")
     pack_capsules.write_records(refresh_args(args, loaded, manifest, screen, not_released), loaded, kept, rows)
-    print(json.dumps({"builds": len(kept), "capsules": len(rows), "not_released": len(not_released)}))
+    packed_rows = pack_capsules.packed_capsule_rows(kept, rows)
+    left_out = sum(len(build["capsule_ids"]) for build in kept if not build.get("sha256"))
+    print(json.dumps({"builds": len(kept), "capsules": len(packed_rows),
+                      "capsules_left_out": left_out, "not_released": len(not_released)}))
     return 0
 
 
@@ -312,6 +316,19 @@ def release_problems(manifest: dict, rows: list[dict], released: set[str]) -> li
     return problems
 
 
+def holdings_problems(manifest: dict, rows: list[dict], benchmark: dict) -> list[str]:
+    """Refuse table rows that point at a build zip the record does not hold."""
+    packed = {entry["build_slug"] for entry in zipped_entries(manifest)}
+    problems = []
+    for label, table_rows in (("capsules.jsonl", rows), ("benchmark-manifest.json", benchmark.get("capsules") or [])):
+        stale = sorted({row.get("build_slug") for row in table_rows if row.get("build_slug") not in packed})
+        problems += [f"{label}: rows of build {slug}, which has no zip in the record" for slug in stale]
+    stale_builds = sorted({entry.get("build_slug") for entry in benchmark.get("builds") or []
+                           if entry.get("build_slug") not in packed})
+    problems += [f"benchmark-manifest.json: build {slug} has no zip in the record" for slug in stale_builds]
+    return problems
+
+
 def doi_problems(manifest: dict, metadata: dict, current: str) -> list[str]:
     """Require the pack and its metadata to supplement the collection's current version DOI."""
     supplements = [related.get("identifier") for related in metadata.get("related_identifiers") or []
@@ -357,18 +374,22 @@ def pack_refusals(args, pack: dict, loaded: dict) -> list[str]:
     refusals = collection_problems(pack["manifest"], loaded["collection"])
     refusals += screen_problems(pack["manifest"], pack["screen"])
     refusals += release_problems(pack["manifest"], pack["rows"], released)
+    refusals += holdings_problems(pack["manifest"], pack["rows"], pack["benchmark"])
     refusals += doi_problems(pack["manifest"], pack["metadata"], current)
     refusals += metadata_problems(pack["metadata"], args.tooling_root)
     return refusals + descriptive_problems(args.pack, pack["url_pattern"])
 
 
-def upload_files(args, built: BuiltArchive | None) -> list[dict]:
+def upload_files(args, built: BuiltArchive | None, record_readme: str) -> list[dict]:
     """Copy the browsable files beside the archive and describe every upload."""
     upload = args.out / UPLOAD_DIR
     upload.mkdir(parents=True, exist_ok=True)
     paths = [built.path] if built else []
     for name in BROWSABLE_FILES:
-        shutil.copyfile(args.pack / name, upload / name)
+        if name == "README.md":
+            (upload / name).write_text(record_readme, encoding="utf-8")
+        else:
+            shutil.copyfile(args.pack / name, upload / name)
         paths.append(upload / name)
     files = []
     for path in paths:
@@ -379,14 +400,86 @@ def upload_files(args, built: BuiltArchive | None) -> list[dict]:
 
 def plan_counts(manifest: dict, rows: list[dict], benchmark: dict) -> dict:
     """Count what the record holds."""
-    zipped = len(zipped_entries(manifest))
+    packed_slugs = {entry["build_slug"] for entry in zipped_entries(manifest)}
+    packed_rows = [row for row in rows if row.get("build_slug") in packed_slugs]
+    left_out_rows = [row for row in rows if row.get("build_slug") not in packed_slugs]
+    benchmark_rows = [row for row in benchmark.get("capsules") or [] if row.get("build_slug") in packed_slugs]
     return {
-        "builds_packed": zipped,
-        "builds_left_out": len(manifest["builds"]) - zipped,
+        "builds_packed": len(packed_slugs),
+        "builds_left_out": len(manifest["builds"]) - len(packed_slugs),
         "builds_not_released": len(manifest.get("not_released") or []),
-        "capsules": len(rows),
-        "benchmark_capsules": benchmark.get("capsule_count", 0),
+        "capsules": len(packed_rows),
+        "capsules_left_out": manifest.get("capsules_left_out", len(left_out_rows)),
+        "benchmark_capsules": len(benchmark_rows),
     }
+
+
+def screen_failure_classes(manifest: dict) -> dict[str, int]:
+    """Count left-out builds by broad, reader-facing failure class."""
+    classes = {}
+    for build in manifest["builds"]:
+        if build.get("sha256"):
+            continue
+        labels = set()
+        if (build.get("screen", {}).get("counts") or {}).get("deny_hits"):
+            labels.add("deny-list hit")
+        for failure in build.get("screen", {}).get("failures") or []:
+            reason = failure.rsplit(": ", 1)[-1]
+            if reason.startswith("missing:"):
+                labels.add("missing required archive members")
+            elif "invalid_validation_or_eval" in reason:
+                labels.add("invalid evaluation or validation metadata")
+            elif reason != "deny_hits":
+                labels.add(reason.replace("_", " "))
+        for label in labels or {"other screen failure"}:
+            classes[label] = classes.get(label, 0) + 1
+    return dict(sorted(classes.items()))
+
+
+def make_record_readme(manifest: dict, counts: dict, archive: str) -> str:
+    """Render the public README uploaded beside the archive."""
+    failure_lines = "\n".join(
+        f"- {count} build{'s' if count != 1 else ''}: {label}."
+        for label, count in screen_failure_classes(manifest).items()
+    ) or "- None."
+    return f"""# ASB {manifest['domain']} v{manifest['collection_version']} build capsules
+
+This record supplements the ASB {manifest['domain']} v{manifest['collection_version']} collection at https://doi.org/{manifest['collection_version_doi']}.
+
+## Files on this record
+
+- `{archive}`: the archive of screened build zips and their local generation receipts.
+- `README.md`: this record guide.
+- `MANIFEST.json`: every considered build, including screen failures, and the archive counts and checksums.
+- `capsules.jsonl`: one row per capsule held by the record.
+- `SCREEN.json`: content-screen counts and failures.
+- `benchmark-manifest.json`: the {counts['benchmark_capsules']} capsules with a complete operational evaluation.
+
+Inside `{archive}`, each row of `capsules.jsonl` maps `build_slug` to `builds/<build_slug>.zip`. Open that nested zip and use the row's `capsule_id` to find the capsule under `capsules/<capsule_id>/`, including its evaluation, evidence, inputs, provenance and pruned RO-Crate.
+
+## Contents and exclusions
+
+- Builds packed: {counts['builds_packed']}.
+- Capsules packed: {counts['capsules']}.
+- Benchmark capsules: {counts['benchmark_capsules']}.
+- Builds left out by the screen: {counts['builds_left_out']}.
+- Capsules left out with those builds: {counts['capsules_left_out']}.
+- Builds not packed because their paper is not in the released corpus: {counts['builds_not_released']}.
+
+Screen failure classes count builds and may overlap:
+
+{failure_lines}
+
+The screen names private repository URLs without linking them and redacts emails and phone-shaped numbers. It replaces build-machine paths with portable locators. It caps or drops quotations according to the source access class. See `SCREEN.json` for the measured counts and per-build failures.
+
+Generated metadata is licensed CC-BY-4.0. Source quotations retain their original rights status and are included only as bounded quotations; this record does not relicense them.
+
+For a takedown request, use the public tooling issue tracker: {TAKEDOWN_URL}.
+
+## Citation
+
+Cite this record by its DOI and cite the supplemented collection at https://doi.org/{manifest['collection_version_doi']}.
+"""
 
 
 def load_pack(pack: Path, url_pattern: re.Pattern) -> dict:
@@ -416,6 +509,10 @@ def make_plan(args) -> dict:
         built = None
         refusals.append(f"archive: {error}")
     metadata = dict(pack["metadata"], publication_date=args.date)
+    counts = plan_counts(pack["manifest"], pack["rows"], pack["benchmark"])
+    archive = built.path.name if built else archive_name(pack["manifest"])
+    record_readme = make_record_readme(pack["manifest"], counts, archive)
+    refusals += text_problems("upload/README.md", record_readme, pack["url_pattern"], True)
     return {
         "schema": PLAN_SCHEMA,
         "domain": pack["manifest"]["domain"],
@@ -424,8 +521,8 @@ def make_plan(args) -> dict:
         "publication_date": args.date,
         "metadata": metadata,
         "archive": {"name": built.path.name, "bytes": built.size, "sha256": built.sha256, "members": built.members} if built else None,
-        "files": upload_files(args, built),
-        "counts": plan_counts(pack["manifest"], pack["rows"], pack["benchmark"]),
+        "files": upload_files(args, built, record_readme),
+        "counts": counts,
         "refusals": refusals + grouped_zip_problems(zip_findings),
     }
 

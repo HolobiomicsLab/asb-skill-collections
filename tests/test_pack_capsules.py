@@ -44,7 +44,10 @@ def test_packs_screened_archives_receipts_metadata_and_benchmark(tmp_path):
     benchmark = json.loads((out / "benchmark-manifest.json").read_text())
     assert manifest["schema"] == "asb-capsules-manifest/1"
     assert manifest["build_count"] == 4
+    assert manifest["builds_packed"] == 4
+    assert manifest["builds_left_out"] == 0
     assert manifest["capsule_count"] == 6
+    assert manifest["capsules_left_out"] == 0
     assert screen["schema"] == "asb-capsules-screen/1"
     assert screen["totals"]["spans_truncated"] >= 1
     assert screen["totals"]["spans_dropped"] >= 1
@@ -63,6 +66,10 @@ def test_packs_screened_archives_receipts_metadata_and_benchmark(tmp_path):
     metadata = json.loads((out / "zenodo" / "metadata.json").read_text())
     assert zenodo_deposit.validate_metadata(metadata) == []
     assert metadata["related_identifiers"][0]["identifier"] == "10.1234/example.collection"
+    assert metadata["related_identifiers"][1] == {
+        "relation": "references", "identifier": pack_capsules.TOOLING_URL, "scheme": "url",
+    }
+    assert "references" not in metadata
     serialized = json.dumps(metadata) + (out / "hf" / "README.md").read_text()
     assert "HolobiomicsLab/asb-skills-metabolomics" not in serialized
     assert "capsules.jsonl" in (out / "hf" / "README.md").read_text()
@@ -138,3 +145,30 @@ def test_non_strict_keeps_passing_archives_and_reports_failures(tmp_path):
     out = tmp_path / "advisory"
     assert pack_capsules.run(arguments(out, view=view, strict=False)) == 0
     assert json.loads((out / "SCREEN.json").read_text())["totals"]["failures"] > 0
+
+
+def test_failing_build_stays_in_receipt_but_not_record_tables_or_counts(tmp_path, monkeypatch):
+    view = tmp_path / "view"
+    shutil.copytree(FIXTURE / "view", view, symlinks=True)
+    failed = view / "build__coll_open" / "capsules" / "10_1234_example_open__task_001" / "eval.json"
+    failed.write_text("bad")
+    out = tmp_path / "advisory"
+    parquet_rows = []
+    monkeypatch.setattr(pack_capsules, "maybe_write_parquet",
+                        lambda rows, path: parquet_rows.extend(rows) or True)
+
+    assert pack_capsules.run(arguments(out, view=view, strict=False)) == 0
+
+    manifest = json.loads((out / "MANIFEST.json").read_text())
+    rows = [json.loads(line) for line in (out / "capsules.jsonl").read_text().splitlines()]
+    benchmark = json.loads((out / "benchmark-manifest.json").read_text())
+    assert manifest["build_count"] == manifest["builds_packed"] + manifest["builds_left_out"] == 4
+    assert manifest["capsule_count"] + manifest["capsules_left_out"] == 6
+    assert manifest["builds_packed"] == 3 and manifest["builds_left_out"] == 1
+    assert manifest["capsule_count"] == 4 and manifest["capsules_left_out"] == 2
+    assert any(build["build_slug"] == "open" and build["sha256"] is None for build in manifest["builds"])
+    assert {row["build_slug"] for row in rows} == {"closed", "open_capped", "preprint"}
+    assert {row["build_slug"] for row in parquet_rows} == {"closed", "open_capped", "preprint"}
+    assert "open" not in {row["build_slug"] for row in benchmark["capsules"]}
+    assert "open" not in {build["build_slug"] for build in benchmark["builds"]}
+    assert "Builds considered: 4. Builds packed: 3. Builds left out by the screen: 1." in (out / "README.md").read_text()
