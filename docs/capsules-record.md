@@ -52,8 +52,33 @@ are the pipeline and every `repository` of `collections.yaml`, read by
 `pack_capsules.private_repositories`, which the plan also uses. Emails and
 phone-shaped values then use the release-gate rules. Build-machine paths
 become build locators and RO-Crates use the canonical release pruning rule.
-The optional deny list runs last. A JSON document must still parse after
-these rewrites.
+The optional deny list runs last.
+
+In a JSON, JSONL, JSON-LD or YAML document these rewrites, and the residual
+check below, apply to the decoded strings (values and mapping keys), and the
+document is then serialized again, so a rewrite never runs through an escape
+or a line break of the serialization. A YAML document that nothing changed
+keeps its source text unless that text holds something to screen outside its
+values, a comment for example. Markdown, plain text, CSV and TSV members, and a
+document that does not parse (already a failure), are rewritten and checked as
+text. Deny-list patterns are counted on the final text of every member.
+
+A build-machine path is a root marker followed by at least one path character
+(anything but whitespace, quotes, `<>()[]{}` and a comma). `/Users/`,
+`/Volumes/` and `/var/folders/` count anywhere, so `/System/Volumes/Data/...`
+is rewritten. `/home/`, `/tmp/` and `/private/` are ordinary directory names and count
+only where an absolute path starts: not after a word character, `.`, `-`,
+`~`, `}`, `)`, `>` or `*`, so `test/tmp/` or `${HOME}/tmp/` is left alone. A
+drive letter counts when it is not part of a longer word or URI scheme and its
+separator is followed by a path character, so `C:\Users\...` is rewritten
+and a bare `D:/ ` is not. A `file://` URI is rewritten with its path; one that
+is followed by anything else is a residual. The rewrite and the residual check
+share this rule, so the check verifies that the rewrite was complete. The
+release gate of a capsule's RO-Crate (`crate_problems`) is wider: it also
+counts a root marker with nothing after it and any `file://`, and stays a
+separate check after the screen. A home directory quoted from a paper
+(`/home/<name>/...`) is rewritten like a build-machine path: the screen cannot
+tell an author's account from the build machine's.
 
 Residual sensitive content or a deny hit is a build failure. In advisory mode
 the failing build is omitted while receipts remain. `--strict` returns

@@ -186,3 +186,101 @@ def test_invalid_structured_text_is_a_failure():
     result = screen.screen_text("{bad", "ledger/bad.json", context(), screen.QuoteBudget())
     assert result.failures
     assert result.counts["failures"] == 1
+
+
+@pytest.mark.parametrize(("value", "expected"), [
+    ("line one\nperson@example.org", "line one\n[redacted-email]"),
+    ('run "/Users/example/outputs/demo/a.txt" now', 'run "urn:asb:build:demo/a.txt" now'),
+    ("/Users/example/outputs/demo/a.txt\nnext line", "urn:asb:build:demo/a.txt\nnext line"),
+    ("x?b:\"\":c", "x?b:\"\":c"),
+])
+def test_json_strings_are_screened_decoded_so_escapes_survive(value, expected):
+    result = screen.screen_text(json.dumps({"note": value}), "ledger/note.json", context(), screen.QuoteBudget())
+    assert json.loads(result.text) == {"note": expected}
+    assert not result.failures
+
+
+def test_escaped_slashes_in_json_source_are_decoded_before_the_path_rewrite():
+    source = '{"path": "\\/Users\\/example\\/outputs\\/demo\\/a.txt"}'
+    result = screen.screen_text(source, "ledger/path.json", context(), screen.QuoteBudget())
+    assert json.loads(result.text) == {"path": "urn:asb:build:demo/a.txt"}
+    assert result.counts["paths_rewritten"] == 1
+    assert not result.failures
+
+
+def test_json_lines_are_screened_per_decoded_value():
+    source = json.dumps({"a": "x\nperson@example.org"}) + "\n" + json.dumps({"b": "/tmp/abc123/file\nnext"}) + "\n"
+    result = screen.screen_text(source, "ledger/rows.jsonl", context(), screen.QuoteBudget())
+    rows = [json.loads(line) for line in result.text.splitlines()]
+    assert rows == [{"a": "x\n[redacted-email]"}, {"b": "urn:asb:build:file\nnext"}]
+    assert not result.failures
+
+
+@pytest.mark.parametrize("suffix", [".json", ".yaml"])
+def test_a_path_as_a_mapping_key_is_rewritten(suffix):
+    payload = {"/Users/example/outputs/demo/a.txt": 1}
+    text = json.dumps(payload) if suffix == ".json" else "/Users/example/outputs/demo/a.txt: 1\n"
+    result = screen.screen_text(text, f"ledger/keys{suffix}", context(), screen.QuoteBudget())
+    assert "urn:asb:build:demo/a.txt" in result.text
+    assert "/Users/" not in result.text
+    assert result.counts["paths_rewritten"] == 1
+    assert not result.failures
+
+
+def test_a_yaml_line_continuation_after_a_drive_shaped_token_is_kept():
+    text = 'note: "the correlation r:\\\n  0.9 was high"\n'
+    result = screen.screen_text(text, "workflow.yaml", context(), screen.QuoteBudget())
+    assert result.text == text
+    assert not result.failures
+
+
+def test_a_yaml_comment_with_a_path_is_not_kept_verbatim():
+    text = "# built in /Users/example/outputs/demo\nkey: value\n"
+    result = screen.screen_text(text, "workflow.yaml", context(), screen.QuoteBudget())
+    assert "/Users/" not in result.text
+    assert not result.failures
+
+
+@pytest.mark.parametrize("text", [
+    "Write log-files in the /tmp/ directory.",
+    "sort -T /tmp/<filename>.sorted input",
+    "run with --errors_dir test/tmp/ set",
+    "export TMPDIR=/scratch/tmp/run1",
+    "files under data/home/run1 and the /home/ directory",
+    'mydir="D:/ My Folder/data"',
+    "a Windows D:/ path",
+])
+def test_text_that_names_no_machine_path_is_left_alone(text):
+    for suffix in (".md", ".txt"):
+        result = screen.screen_text(text, f"evidence/prose{suffix}", context(), screen.QuoteBudget())
+        assert result.text == text
+        assert result.counts["paths_rewritten"] == 0
+        assert not result.failures
+    structured = screen.screen_text(json.dumps({"v": text}), "ledger/prose.json", context(), screen.QuoteBudget())
+    assert json.loads(structured.text) == {"v": text}
+    assert not structured.failures
+
+
+@pytest.mark.parametrize("path", [
+    "/Users/example/a/b",
+    "/private/tmp/x/y",
+    "/tmp/abc123/file",
+    "/home/example/run/out.txt",
+    "/home/$USER/run/out.txt",
+    "/var/folders/ab/cd/T/x",
+    "file:///Users/example/x",
+    r"C:\Users\n\file",
+    "/System/Volumes/Data/Users/n/x",
+])
+def test_machine_paths_are_rewritten_in_text_and_in_json(path):
+    for text, name in ((f"see {path} here", "evidence/p.txt"), (json.dumps({"v": f"see {path} here"}), "ledger/p.json")):
+        result = screen.screen_text(text, name, context(), screen.QuoteBudget())
+        assert "urn:asb:build:" in result.text
+        assert not screen.RESIDUAL_PATH_RE.search(result.text.replace("\\\\", "\\"))
+        assert result.counts["paths_rewritten"] == 1
+        assert not result.failures
+
+
+def test_the_residual_check_and_the_rewrite_share_one_rule():
+    for text in ("/tmp/x", "a /private/y", "=/tmp/z", "foo/tmp/z", "/tmp/ x", "D:/ x", "C:/x", "~/tmp/x"):
+        assert bool(screen.PATH_RE.search(text)) == bool(screen.RESIDUAL_PATH_RE.search(text)), text

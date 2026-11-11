@@ -24,10 +24,18 @@ PHONE_RE = re.compile(
     r"(?<!\w)(?:\+\d{1,3}[ .-]?)?(?:\(\d{2,4}\)[ .-]?)?"
     r"\d{2,4}[ .-]\d{3,4}[ .-]\d{3,4}(?:[ .-]\d{2,4})?(?!\w)"
 )
-PATH_RE = re.compile(
-    r"(?:file://)?(?:/(?:Users|Volumes|private|tmp|var/folders)/[^\s\"'<>()\[\]{},]+"
-    r"|(?<![A-Za-z0-9+.-])[A-Za-z]:[\\/][^\s\"'<>()\[\]{},]+)"
+# A machine path is a root marker followed by at least one path character. Users,
+# Volumes and var/folders are distinctive and count anywhere; home, tmp and private
+# are ordinary directory names and count only where an absolute path starts, not as
+# the continuation of a longer path ("test/tmp/", "/scratch/tmp/", "${HOME}/tmp/"). The
+# rewrite and the residual check share this rule, so the check verifies that the
+# rewrite was complete and does not fail on text the rewrite leaves alone.
+PATH_CHARACTER = r"""[^\s"'<>()\[\]{},]"""
+MACHINE_ROOT = (
+    r"(?:/(?:Users|Volumes|var/folders)/|(?<![\w.~}\)>*-])/(?:home|private|tmp)/"
+    r"|(?<![A-Za-z0-9+.-])[A-Za-z]:[\\/])"
 )
+PATH_RE = re.compile(rf"(?:file://)?{MACHINE_ROOT}{PATH_CHARACTER}+")
 SPACED_USER_PATH_RE = re.compile(
     r"(?:file://)?/Users/\s*<\s*user\s*name\s*>\s*/[^\s\"'<>()\[\]{},]+",
     re.IGNORECASE,
@@ -35,8 +43,7 @@ SPACED_USER_PATH_RE = re.compile(
 # A bare scheme in prose ("served from file:// needs a flag") names no path, so the
 # residual check only counts a file URI that is followed by something.
 RESIDUAL_PATH_RE = re.compile(
-    r"file://(?=[^\s\"'<>()\[\]{},.;:])|/(?:Users|Volumes|private|tmp|var/folders)/"
-    r"|(?<![A-Za-z0-9+.-])[A-Za-z]:[\\/]"
+    rf"file://(?=[^\s\"'<>()\[\]{{}},.;:])|{MACHINE_ROOT}(?={PATH_CHARACTER})"
 )
 # Characters a URL path can hold inside JSON, YAML or Markdown text; a
 # backslash is excluded so a JSON escape is never cut in half.
@@ -227,6 +234,14 @@ def _is_machine_path(value: str) -> bool:
     return len(prefix) == 1
 
 
+def screen_string(text: str, context: ScreenContext, counts: Counter) -> str:
+    """Apply the three text rewrites to one string in their required order."""
+    # Before PII: an SSH URL user part reads as an email.
+    text = rewrite_private_urls(text, context.private_repositories, counts)
+    text = redact_pii(text, context, counts)
+    return rewrite_paths(text, counts)
+
+
 def residual_findings(text: str, context: ScreenContext) -> Counter:
     """Count only sensitive residuals, never return their values."""
     findings = empty_counts()
@@ -254,38 +269,49 @@ def screen_text(
     budget: QuoteBudget,
     capsule_dir: Path | None = None,
 ) -> ScreenResult:
-    """Screen one staged text document in the required operation order."""
+    """Screen one staged text document in the required operation order.
+
+    A JSON, JSON Lines or YAML document is rewritten and checked on its decoded
+    strings (values and mapping keys), then serialized, so a rewrite never runs
+    through an escape or a line break of the serialization. Other text, and a
+    document that does not parse, is rewritten and checked as text. Deny-list
+    patterns are counted on the final text.
+    """
     counts = empty_counts()
     quotes = {"count": 0, "characters": 0, "longest": 0, "truncated": 0, "dropped": 0}
     suffix = Path(relative_path).suffix.lower()
     failures: list[str] = []
+    screened = None
     try:
         if suffix in {".json", ".jsonld"}:
             payload = json.loads(text)
             if Path(relative_path).name == "ro-crate-metadata.json" and capsule_dir is not None:
                 payload = prune_crate_document(payload, capsule_dir)
-            transformed = _screen_json(payload, relative_path, context, budget, counts, quotes, text)
-            text = json.dumps(transformed, ensure_ascii=False, indent=2) + "\n"
+            screened = [_screen_json(payload, relative_path, context, budget, counts, quotes, text)]
+            text = json.dumps(screened[0], ensure_ascii=False, indent=2) + "\n"
         elif suffix == ".jsonl":
-            text = _screen_json_lines(text, relative_path, context, budget, counts, quotes)
+            text, screened = _screen_json_lines(text, relative_path, context, budget, counts, quotes)
         elif suffix in {".yaml", ".yml"}:
             payload = yaml.safe_load(text)
-            transformed = _screen_json(payload, relative_path, context, budget, counts, quotes, text)
-            if transformed != payload:
-                text = yaml.safe_dump(transformed, allow_unicode=True, sort_keys=False)
+            screened = [_screen_json(payload, relative_path, context, budget, counts, quotes, text)]
+            # The source text is kept only when nothing changed and it holds nothing to
+            # screen outside its values, in a comment for example.
+            if screened[0] != payload or _has_findings(text, context):
+                text = yaml.safe_dump(screened[0], allow_unicode=True, sort_keys=False)
         elif suffix == ".md" and {"evidence", "ledger"}.intersection(Path(relative_path).parts):
             text = _screen_markdown(text, relative_path, context, budget, counts, quotes)
     except (ValueError, TypeError, yaml.YAMLError) as exc:
         failures.append(f"{relative_path}: parse_{type(exc).__name__}")
-    parsed = not failures
-    # Before PII: an SSH URL user part reads as an email.
-    text = rewrite_private_urls(text, context.private_repositories, counts)
-    text = redact_pii(text, context, counts)
-    text = rewrite_paths(text, counts)
-    if parsed:
+        screened = None
+    if screened is None:
+        text = screen_string(text, context, counts)
+        residual_text = text
+    else:
         failures += _still_parses(text, suffix, relative_path)
+        residual_text = "\n".join(_strings(screened))
     counts["deny_hits"] = count_deny_hits(text, context.deny_patterns)
-    residuals = residual_findings(text, context)
+    residuals = residual_findings(residual_text, context)
+    residuals["deny_hits"] = counts["deny_hits"]
     for key in ("emails_redacted", "phones_redacted", "paths_rewritten", "private_urls_rewritten", "deny_hits"):
         if residuals[key]:
             failures.append(f"{relative_path}: residual_{key}")
@@ -307,37 +333,61 @@ def _still_parses(text: str, suffix: str, relative_path: str) -> list[str]:
     return []
 
 
-def _screen_json_lines(text, relative_path, context, budget, counts, quotes) -> str:
-    lines = []
+def _has_findings(text: str, context: ScreenContext) -> bool:
+    findings = residual_findings(text, context)
+    return any(findings[key] for key in ("emails_redacted", "phones_redacted", "paths_rewritten", "private_urls_rewritten"))
+
+
+def _strings(value):
+    """Yield every string of a parsed document: mapping keys and values."""
+    if isinstance(value, dict):
+        for key, item in value.items():
+            if isinstance(key, str):
+                yield key
+            yield from _strings(item)
+    elif isinstance(value, list):
+        for item in value:
+            yield from _strings(item)
+    elif isinstance(value, str):
+        yield value
+
+
+def _screen_json_lines(text, relative_path, context, budget, counts, quotes) -> tuple[str, list]:
+    lines, screened = [], []
     for line_number, line in enumerate(text.splitlines(), 1):
         if not line.strip():
             continue
         payload = json.loads(line)
         location = f"{relative_path}:{line_number}"
-        transformed = _screen_json(payload, location, context, budget, counts, quotes, line)
-        lines.append(json.dumps(transformed, ensure_ascii=False))
-    return "\n".join(lines) + ("\n" if lines else "")
+        screened.append(_screen_json(payload, location, context, budget, counts, quotes, line))
+        lines.append(json.dumps(screened[-1], ensure_ascii=False))
+    return "\n".join(lines) + ("\n" if lines else ""), screened
 
 
 def _screen_json(value, location, context, budget, counts, quotes, source, pointer=""):
     if isinstance(value, dict):
         output = {}
         for key in sorted(value):
-            child_pointer = f"{pointer}/{_pointer_escape(key)}"
+            name = screen_string(key, context, counts) if isinstance(key, str) else key
+            child_pointer = f"{pointer}/{_pointer_escape(name)}"
             if key in QUOTE_KEYS and isinstance(value[key], str):
-                output[key], anchor = _screen_quote(
+                retained, anchor = _screen_quote(
                     value[key], location, child_pointer, context, budget, counts, quotes, source
                 )
+                output[name] = screen_string(retained, context, counts)
                 if anchor:
+                    anchor["doi"] = screen_string(anchor["doi"], context, counts)
                     output.setdefault("_screen_redactions", []).append(anchor)
             else:
-                output[key] = _screen_json(value[key], location, context, budget, counts, quotes, source, child_pointer)
+                output[name] = _screen_json(value[key], location, context, budget, counts, quotes, source, child_pointer)
         return output
     if isinstance(value, list):
         return [
             _screen_json(item, location, context, budget, counts, quotes, source, f"{pointer}/{index}")
             for index, item in enumerate(value)
         ]
+    if isinstance(value, str):
+        return screen_string(value, context, counts)
     return value
 
 

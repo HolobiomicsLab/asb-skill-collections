@@ -226,18 +226,16 @@ def test_a_private_url_left_after_the_screen_is_a_failure(tmp_path, monkeypatch)
     assert "build_manifest.json: residual_private_urls_rewritten" in failures
 
 
-def test_a_rewrite_that_breaks_json_is_a_failure():
+def test_a_rewrite_runs_on_decoded_values_so_it_cannot_break_json(monkeypatch):
     context = capsule_screen.context_for("10.1234/x", {"type": "gold", "license": "CC-BY-4.0"})
     context.private_repositories = ("HolobiomicsLab/AgenticScienceBuilder",)
     result = capsule_screen.screen_text('{"a": "x"}', "doc.json", context, capsule_screen.QuoteBudget())
     assert result.failures == []
-    original = capsule_screen.rewrite_private_urls
-    try:
-        capsule_screen.rewrite_private_urls = lambda text, repositories, counts: text[:-3]
-        broken = capsule_screen.screen_text('{"a": "x"}', "doc.json", context, capsule_screen.QuoteBudget())
-    finally:
-        capsule_screen.rewrite_private_urls = original
-    assert "doc.json: invalid_json_after_rewrite" in broken.failures
+    monkeypatch.setattr(capsule_screen, "rewrite_private_urls", lambda text, repositories, counts: text[:-3])
+    mangled = capsule_screen.screen_text('{"a\\"b": "x\\ny\\\\z"}', "doc.json", context, capsule_screen.QuoteBudget())
+    assert json.loads(mangled.text) == {"": "x\n"}
+    assert mangled.failures == []
+    assert capsule_screen._still_parses('{"a": "x', ".json", "doc.json") == ["doc.json: invalid_json_after_rewrite"]
 
 
 def test_the_screen_and_the_plan_read_one_list_of_private_repositories():

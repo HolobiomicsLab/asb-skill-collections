@@ -184,6 +184,20 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   commit (the `packs/` tree is byte-identical to the v3.0.0 commit).
 
 ### Fixed
+- The capsule screen (`scripts/capsule_screen.py`) rewrites and checks JSON, JSONL, JSON-LD
+  and YAML documents on their decoded strings (values and mapping keys) and serializes them
+  afterwards. Run on the serialized text, an email match took the `n` of a `\n` escape, a
+  path match took the backslash of a `\"` escape or ran through a `\n` into the next line,
+  and a drive pattern matched serialization artefacts such as a YAML line continuation after
+  `r:` or an escaped `b:\"`; builds were left out as `invalid_json_after_rewrite` or
+  `residual_paths_rewritten`. Markdown, plain text, CSV and TSV are still screened as text,
+  and deny-list patterns are still counted on the final text. A YAML document whose comments
+  hold something to screen is serialized rather than kept.
+- The path rewrite and the residual path check share one rule: a root marker followed by at
+  least one path character, with `/home/`, `/tmp/` and `/private/` counted only where an
+  absolute path starts. `/home/` is new in the rule: a home directory quoted from a paper was
+  shipped as written, and the RO-Crate gate, which counts it, left such a build out. The check no longer fails on text the rewrite leaves alone, such as a bare `/tmp/`
+  in prose, `/tmp/<placeholder>`, `test/tmp/` or a drive letter followed by a space.
 - Bind `nhs_number` to its label like the other clinical identifiers, treat a
   bounded set of documented template e-mail local parts (`your@…`,
   `firstname.lastname@…`) as notation, and add an exact, per-pattern allowlist
