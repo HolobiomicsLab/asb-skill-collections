@@ -82,7 +82,7 @@ def _check_resolution(where, block, tiers) -> list[str]:
         if reading["tier"] is not None and reading["tier"] != tier:
             out.append(f"{where}: license {licence!r} reads as {reading['tier']!r}, "
                        f"the entry says {tier!r}")
-        if tier == "open" and re.search(r"\bNC\b|non-?commercial|ND\b", str(licence), re.I):
+        if tier == "open" and re.search(r"\bNC\b|non-?commercial|\bND\b", str(licence), re.I):
             out.append(f"{where}: a non-commercial or no-derivatives licence cannot be open")
     elif tier == "open":
         out.append(f"{where}: tier open needs a licence")
