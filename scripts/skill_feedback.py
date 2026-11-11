@@ -30,22 +30,87 @@ if __package__ in (None, ""):
     _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
 
 import argparse
-import hashlib
 import json
-import re
 import sys
 
 from scripts.pii_config import PII_CONFIG, _is_notation_not_email
 
+# BEGIN SHARED REPORT LOGIC
+# Everything between these markers is copied verbatim, with scripts/pii_config.py,
+# into scripts/templates/report_issue.py, the standard-library helper a collection
+# ships in bin/. Keep it standard library only. Regenerate the copies with
+# `python scripts/router_shape.py --sync-report-helper`.
+import hashlib
+import re
+import urllib.parse
+
+# The public registry. The domain repositories are private, so every route lands
+# here and a maintainer carries the report into the domain repository.
+REGISTRY = "HolobiomicsLab/asb-skill-collections"
+ISSUES_URL = f"https://github.com/{REGISTRY}/issues"
+
+# The four routes, named in the same words wherever a skill is met.
+ROUTES: dict[str, str] = {
+    "skill": "this skill is wrong or could be better",
+    "missing": "a skill is missing: request it, or propose yours",
+    "paper": "a paper is not referenced: propose it",
+    "fault": "something technical failed: report it",
+}
+
+# The issue template of each route, in the order of the issue chooser.
+ROUTE_TEMPLATES: dict[str, str] = {
+    "skill": "1-skill-feedback.md",
+    "missing": "2-request-skill.md",
+    "paper": "3-propose-paper.md",
+    "fault": "4-technical-fault.md",
+}
+
 # What kind of friction this is. The kind decides where the report goes and what
-# a maintainer can do with it, so it is a closed vocabulary, not free text.
+# a maintainer can do with it, so it is a closed vocabulary, not free text. A
+# technical fault of the framework is not a skill kind: it is route `fault`.
 KINDS: dict[str, str] = {
     "defect": "an existing skill is wrong, stale, or does not work as written",
+    "drift": "the underlying tool changed and the skill no longer matches it",
+    "enhancement": "the skill works but could be better: a missing step, a better default, a clearer text",
+    "efficiency": "the skill works but costs far more than it needs to",
     "gap": "no skill covers the task; a new one is warranted",
     "composition": "the leaves exist but nothing composes them; a workflow is warranted",
-    "efficiency": "the skill works but costs far more than it needs to",
-    "drift": "the underlying tool changed and the skill no longer matches it",
 }
+
+# The kinds of each skill route. `gap` and `composition` ask for new work.
+ROUTE_KINDS: dict[str, tuple[str, ...]] = {
+    "skill": ("defect", "drift", "enhancement", "efficiency"),
+    "missing": ("gap", "composition"),
+}
+PROPOSE_KINDS = frozenset(ROUTE_KINDS["missing"])
+
+# Kinds used before the vocabulary was unified (the site form and
+# make_improvement_report.py), read as their current kind.
+LEGACY_KINDS: dict[str, str] = {
+    "correction": "defect",
+    "bug": "defect",
+    "tool-update": "drift",
+    "new-skill": "gap",
+    "other": "enhancement",
+}
+
+# The part of the framework a technical fault concerns (route `fault`).
+FAULT_COMPONENTS: dict[str, str] = {
+    "install": "installing a collection or the package",
+    "plugin": "the plugin or its marketplace entry",
+    "search": "the search script or the router",
+    "cli": "the asbb command line",
+    "mcp": "the MCP server",
+    "site": "the web site",
+    "gates": "the release gates and checks",
+    "other": "anything else",
+}
+
+PAPER_TYPES = ("paper", "tool", "data resource")
+
+# A prefilled address longer than this is not handed out: browsers and GitHub
+# truncate long addresses, and a cut body is worse than a pasted one.
+MAX_ADDRESS_LENGTH = 6000
 
 # Redaction beyond the release gate's clinical set. These are the categories that
 # leak from a *session transcript* rather than from published prose: the gate
@@ -249,12 +314,69 @@ def fingerprint(kind: str, target: str, symptom: str, collection: str = "") -> s
     return _fingerprint_redacted(kind, clean["target"], clean["symptom"])
 
 
-def labels_for(kind: str) -> list[str]:
-    """Labels a maintainer can filter on. `needs-triage` is always present."""
-    base = ["usage-feedback", "needs-triage"]
-    return base + {"gap": ["propose"], "composition": ["propose", "workflow"]}.get(
-        kind, []
-    )
+def normalise_kind(kind: str) -> str:
+    """Read a kind of the earlier vocabularies as its current kind."""
+    value = (kind or "").strip().lower()
+    return LEGACY_KINDS.get(value, value)
+
+
+def labels_for(kind: str, drafted: bool = False) -> list[str]:
+    """Labels a maintainer can filter on. `needs-triage` is always present.
+
+    `propose` marks a report that asks for new work; `auto-report` marks one a
+    form or a script drafted.
+    """
+    labels = ["usage-feedback", "needs-triage"]
+    if normalise_kind(kind) in PROPOSE_KINDS:
+        labels.append("propose")
+    if drafted:
+        labels.append("auto-report")
+    return labels
+
+
+def route_labels(route: str, kind: str = "", drafted: bool = True) -> list[str]:
+    """The labels of one route, the same in the templates, scripts and site."""
+    if route in ROUTE_KINDS:
+        return labels_for(kind or ROUTE_KINDS[route][0], drafted)
+    labels = {
+        "paper": ["propose", "paper-intake", "needs-triage"],
+        "fault": ["bug", "needs-triage"],
+    }.get(route)
+    if labels is None:
+        raise ValueError(f"unknown route {route!r}; expected one of {sorted(ROUTES)}")
+    return labels + (["auto-report"] if drafted else [])
+
+
+def _route_of(kind: str) -> str:
+    return "missing" if kind in PROPOSE_KINDS else "skill"
+
+
+def _payload(route: str, title: str, labels: list[str], body: list[str],
+             fid: str, stripped: list[str]) -> dict:
+    """The one mapping a caller shows the user and then files unchanged."""
+    payload = {
+        "title": title,
+        "labels": labels,
+        "body": "\n".join(body).rstrip() + "\n",
+    }
+    return {
+        **payload,
+        "payload": payload,
+        "preview": payload,
+        "route": route,
+        "template": ROUTE_TEMPLATES[route],
+        "fingerprint": fid,
+        "redacted": stripped,
+    }
+
+
+def _origin_lines(fields: dict, collection: str, release: str) -> list[str]:
+    line = []
+    if collection:
+        line.append(f"**Collection:** `{_one_line(fields['collection'])}`")
+    if release:
+        line.append(f"**Release:** `{_one_line(fields['release'])}`")
+    return ["  ·  ".join(line)] if line else []
 
 
 def render_issue(
@@ -264,12 +386,15 @@ def render_issue(
     expected: str = "",
     context: str = "",
     collection: str = "",
+    release: str = "",
 ) -> dict:
-    """Render the report a maintainer reads, with everything redacted.
+    """Render a skill report (routes `skill` and `missing`), everything redacted.
 
     Raises ValueError on an unknown `kind`: a report that cannot be routed is
     worse than no report, and silently relabelling it would hide the mistake.
+    Kinds of the earlier vocabularies are read as their current kind.
     """
+    kind = normalise_kind(kind)
     if kind not in KINDS:
         raise ValueError(f"unknown kind {kind!r}; expected one of {sorted(KINDS)}")
     if not (target or "").strip() or not (symptom or "").strip():
@@ -281,6 +406,7 @@ def render_issue(
         "expected": expected,
         "context": context,
         "collection": _collection_candidate(collection),
+        "release": release,
     }
     fields, stripped = _redact_report_fields(candidates)
     stripped = sorted(
@@ -291,39 +417,159 @@ def render_issue(
         }
     )
     fid = _fingerprint_redacted(kind, fields["target"], fields["symptom"])
+    route = _route_of(kind)
+    happened, expectation = (
+        ("What was tried", "What a skill should do")
+        if route == "missing"
+        else ("What happened", "What the skill led me to expect")
+    )
 
     body = [
-        f"**Kind:** `{kind}` — {KINDS[kind]}",
-        f"**Target:** `{_one_line(fields['target'])}`"
-        + (
-            f"  ·  **Collection:** `{_one_line(fields['collection'])}`"
-            if collection
-            else ""
-        ),
+        f"**Route:** {ROUTES[route]}",
+        f"**Kind:** `{kind}` ({KINDS[kind]})",
+        f"**Target:** `{_one_line(fields['target'])}`",
+        *_origin_lines(fields, collection, release),
         f"**Fingerprint:** `{fid}`  <!-- corroborate this issue rather than opening a new one -->",
         "",
-        "### What happened",
+        f"### {happened}",
         fields["symptom"].strip(),
     ]
     if fields["expected"].strip():
-        body += ["", "### What the skill led me to expect", fields["expected"].strip()]
+        body += ["", f"### {expectation}", fields["expected"].strip()]
     if fields["context"].strip():
         body += ["", "### Context", fields["context"].strip()]
     if stripped:
         body += ["", f"*Redacted before posting: {', '.join(stripped)}.*"]
 
-    payload = {
-        "title": f"{kind}: {_one_line(fields['target'])} — {_one_line(fields['symptom'])[:80]}",
-        "labels": labels_for(kind),
-        "body": "\n".join(body).rstrip() + "\n",
+    title = f"{kind}: {_one_line(fields['target'])}: {_one_line(fields['symptom'])[:80]}"
+    return _payload(route, title, labels_for(kind, drafted=True), body, fid, stripped)
+
+
+def render_fault(
+    component: str,
+    ran: str,
+    happened: str,
+    expected: str = "",
+    versions: str = "",
+    collection: str = "",
+    release: str = "",
+) -> dict:
+    """Render a technical fault of the framework (route `fault`), redacted."""
+    component = (component or "").strip().lower()
+    if component not in FAULT_COMPONENTS:
+        raise ValueError(
+            f"unknown component {component!r}; expected one of {sorted(FAULT_COMPONENTS)}"
+        )
+    if not (ran or "").strip() or not (happened or "").strip():
+        raise ValueError("a fault report needs what was run and what happened")
+    candidates = {
+        "ran": ran,
+        "happened": happened,
+        "expected": expected,
+        "versions": versions,
+        "collection": _collection_candidate(collection),
+        "release": release,
     }
-    return {
-        **payload,
-        "payload": payload,
-        "preview": payload,
-        "fingerprint": fid,
-        "redacted": stripped,
-    }
+    fields, stripped = _redact_report_fields(candidates)
+    stripped = sorted({*stripped, *_path_redactions(collection, candidates["collection"])})
+    fid = _fingerprint_redacted("fault", component, fields["happened"])
+    body = [
+        f"**Route:** {ROUTES['fault']}",
+        f"**Component:** `{component}` ({FAULT_COMPONENTS[component]})",
+        *_origin_lines(fields, collection, release),
+        f"**Fingerprint:** `{fid}`  <!-- corroborate this issue rather than opening a new one -->",
+        "",
+        "### What was run",
+        fields["ran"].strip(),
+        "",
+        "### What happened",
+        fields["happened"].strip(),
+    ]
+    if fields["expected"].strip():
+        body += ["", "### What was expected", fields["expected"].strip()]
+    if fields["versions"].strip():
+        body += ["", "### Versions", fields["versions"].strip()]
+    if stripped:
+        body += ["", f"*Redacted before posting: {', '.join(stripped)}.*"]
+    title = f"fault: {component}: {_one_line(fields['happened'])[:80]}"
+    return _payload("fault", title, route_labels("fault"), body, fid, stripped)
+
+
+def paper_body(fields: dict) -> str:
+    """The body of a paper proposal, in the fields `scripts/intake_issue.py` reads.
+
+    The site form (`docs-site/propose.js`) writes the same lines. Optional
+    fields are left out when empty.
+    """
+    lines = [
+        f"**What is it?** {_one_line(fields.get('what', ''))}",
+        "",
+        f"**Link:** {_one_line(fields.get('link', ''))}",
+        "",
+        f"**Type:** {_one_line(fields.get('type', ''))}",
+        "",
+        f"**Target collection:** {_one_line(fields.get('collection', ''))}",
+        "",
+        "**Why it matters (one or two sentences):**",
+        (fields.get("why") or "").strip(),
+    ]
+    for label, key in (("Target version:", "version"), ("Open access?", "open_access"),
+                       ("You:", "you"), ("Conflict of interest?", "coi")):
+        value = _one_line(fields.get(key, ""))
+        if value:
+            lines += ["", f"**{label}** {value}"]
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def render_paper(
+    what: str,
+    link: str,
+    paper_type: str,
+    collection: str,
+    why: str,
+    version: str = "",
+    open_access: str = "",
+    you: str = "",
+    coi: str = "",
+) -> dict:
+    """Render a paper proposal (route `paper`) that the intake parser reads.
+
+    `collection` is the domain of the target collection (`metabolomics`), or a
+    collection label (`metabolomics/v3`) whose domain is kept.
+    """
+    paper_type = (paper_type or "").strip().lower()
+    if paper_type not in PAPER_TYPES:
+        raise ValueError(f"unknown type {paper_type!r}; expected one of {list(PAPER_TYPES)}")
+    domain = _collection_candidate(collection).split("/", 1)[0].strip()
+    if not all((value or "").strip() for value in (what, link, domain, why)):
+        raise ValueError("a paper proposal needs what it is, a link, a target collection and why it matters")
+    candidates = {"what": what, "link": link, "type": paper_type, "collection": domain,
+                  "why": why, "version": version, "open_access": open_access,
+                  "you": you, "coi": coi}
+    fields, stripped = _redact_report_fields(candidates)
+    body = paper_body(fields)
+    if stripped:
+        body += f"\n*Redacted before posting: {', '.join(stripped)}.*\n"
+    fid = _fingerprint_redacted("paper", fields["collection"], fields["link"])
+    title = f"Propose: {_one_line(fields['what'])[:100]}"
+    return _payload("paper", title, route_labels("paper"), body.rstrip("\n").splitlines(),
+                    fid, stripped)
+
+
+def issue_address(report: dict, limit: int = MAX_ADDRESS_LENGTH) -> dict:
+    """The prefilled `issues/new` address of a report, bounded in length.
+
+    The route's template is named so that GitHub applies its labels even for a
+    reporter who may not set labels. When the body would make the address too
+    long, `address` is None: give the user `short_address` (title and template
+    only) and the body to paste.
+    """
+    params = {"template": report["template"], "title": report["title"],
+              "labels": ",".join(report["labels"])}
+    short = f"{ISSUES_URL}/new?" + urllib.parse.urlencode(params)
+    full = f"{ISSUES_URL}/new?" + urllib.parse.urlencode({**params, "body": report["body"]})
+    return {"address": full if len(full) <= limit else None, "short_address": short,
+            "limit": limit}
 
 
 def corroboration(fid: str, symptom: str, context: str = "") -> str:
@@ -339,6 +585,7 @@ def corroboration(fid: str, symptom: str, context: str = "") -> str:
     if fields["context"].strip():
         lines += ["", fields["context"].strip()]
     return "\n".join(lines).rstrip() + "\n"
+# END SHARED REPORT LOGIC
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -348,7 +595,7 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help="render the redacted payload without publishing (the helper's only mode)",
     )
-    parser.add_argument("--kind", required=True, choices=sorted(KINDS))
+    parser.add_argument("--kind", required=True, choices=sorted({*KINDS, *LEGACY_KINDS}))
     parser.add_argument(
         "--target", required=True, help="skill slug, or the capability that is missing"
     )
@@ -356,6 +603,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--expected", default="")
     parser.add_argument("--context", default="")
     parser.add_argument("--collection", default="")
+    parser.add_argument("--release", default="", help="release label, e.g. metabolomics-v3.0.2")
     args = parser.parse_args(argv)
     try:
         print(
@@ -367,6 +615,7 @@ def main(argv: list[str] | None = None) -> int:
                     args.expected,
                     args.context,
                     args.collection,
+                    args.release,
                 ),
                 indent=2,
             )

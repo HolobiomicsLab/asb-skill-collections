@@ -21,7 +21,7 @@ Usage
 -----
   python scripts/make_improvement_report.py \
       --collection metabolomics/v2 --skill feature-detection-xcms \
-      --kind correction \
+      --kind defect \
       --summary "Default ppm tolerance is too tight for Orbitrap data" \
       --detail "Steps 3-4 suggest 5 ppm; the source paper uses 10 ppm for ..." \
       [--diff path/to/change.patch] [--runtime claude-code] \
@@ -29,14 +29,34 @@ Usage
 """
 from __future__ import annotations
 
+# Invoked by path (`python scripts/x.py`), only `scripts/` lands on sys.path, so
+# the repo root has to be added before the sibling module can be imported.
+if __package__ in (None, ""):
+    import os.path as _p
+    import sys as _sys
+
+    _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
+
 import argparse
 import json
 import pathlib
 import re
 import sys
-import urllib.parse
 
-KINDS = ["correction", "enhancement", "new-skill", "bug", "tool-update", "other"]
+from scripts.skill_feedback import (
+    KINDS as _FEEDBACK_KINDS,
+    LEGACY_KINDS,
+    PROPOSE_KINDS,
+    REGISTRY,
+    ROUTE_TEMPLATES,
+    issue_address,
+    labels_for,
+    normalise_kind,
+)
+
+# One vocabulary with scripts/skill_feedback.py, the issue template and the site.
+# A technical fault of the framework is not a kind here: it is the `fault` route.
+KINDS = list(_FEEDBACK_KINDS)
 
 # (label, compiled pattern, replacement) — general shapes only, never specific tokens.
 # Quantifiers are bounded (RFC-realistic caps) so a long no-delimiter blob in a
@@ -126,30 +146,38 @@ def build_report(
     return "\n".join(lines), redacted
 
 
+def report_payload(skill: str, kind: str, body: str) -> dict:
+    """Title, labels and template of the report, as skill_feedback.py names them."""
+    kind = normalise_kind(kind)
+    route = "missing" if kind in PROPOSE_KINDS else "skill"
+    return {"title": f"{kind}: {skill}", "labels": labels_for(kind, drafted=True),
+            "body": body, "template": ROUTE_TEMPLATES[route]}
+
+
 def issue_url(repo: str, skill: str, kind: str, body: str) -> str:
-    title = f"[improvement] {skill}: {kind}"
-    params = {
-        "title": title,
-        "body": body,
-        "labels": "improvement,needs-triage,auto-report",
-    }
-    return f"https://github.com/{repo}/issues/new?" + urllib.parse.urlencode(params)
+    """The prefilled address; without the body when it would be too long."""
+    found = issue_address(report_payload(skill, kind, body))
+    address = found["address"] or found["short_address"]
+    if repo != REGISTRY:
+        address = address.replace(REGISTRY, repo, 1)
+    return address
 
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--collection", required=True, help="e.g. metabolomics/v2")
     ap.add_argument("--skill", required=True, help="skill or workflow slug")
-    ap.add_argument("--kind", default="correction", choices=KINDS)
+    ap.add_argument("--kind", default="defect", choices=KINDS + sorted(LEGACY_KINDS))
     ap.add_argument("--target", default="skills", choices=["skills", "workflows"])
     ap.add_argument("--summary", required=True)
     ap.add_argument("--detail", default="")
     ap.add_argument("--diff", default=None, help="patch text, or @path to read a file")
     ap.add_argument("--runtime", default=None, help="agent runtime label (claude-code, cursor, codex, …)")
-    ap.add_argument("--repo", default="HolobiomicsLab/asb-skill-collections")
+    ap.add_argument("--repo", default=REGISTRY)
     ap.add_argument("--out", default=None, help="write the Markdown body here")
     ap.add_argument("--print-url", action="store_true", help="print the pre-filled GitHub issue URL")
     a = ap.parse_args()
+    a.kind = normalise_kind(a.kind)
 
     diff = a.diff
     if diff and diff.startswith("@"):
@@ -167,8 +195,9 @@ def main() -> None:
 
     if a.print_url:
         url = issue_url(a.repo, a.skill, a.kind, body)
-        if len(url) > 8000:
-            print("WARNING: URL exceeds ~8k chars; attach the body manually.", file=sys.stderr)
+        if "body=" not in url:
+            print("WARNING: the report is too long for an address; paste the body "
+                  "into the issue that opens.", file=sys.stderr)
         print(url)
 
     print(json.dumps({"redacted": redacted}), file=sys.stderr)

@@ -5,6 +5,28 @@
 const REPO = "HolobiomicsLab/asb-skill-collections";
 const DRAFT_KEY = "asb-contribute-draft";
 
+// One vocabulary with scripts/skill_feedback.py and the issue templates
+// (tests/test_contribution_routes.py holds them equal). A technical fault of the
+// framework is not a kind: it is route 4, the technical-fault template.
+const KINDS = ["defect", "drift", "enhancement", "efficiency", "gap", "composition"];
+const PROPOSE_KINDS = ["gap", "composition"];
+const LEGACY_KINDS = { correction: "defect", bug: "defect", "tool-update": "drift", "new-skill": "gap", other: "enhancement" };
+const BASE_LABELS = ["usage-feedback", "needs-triage"];
+const DRAFTED_LABEL = "auto-report";
+const TEMPLATES = { skill: "1-skill-feedback.md", missing: "2-request-skill.md" };
+
+function normaliseKind(kind) {
+  const k = String(kind || "").trim().toLowerCase();
+  return LEGACY_KINDS[k] || (KINDS.includes(k) ? k : "defect");
+}
+
+function labelsFor(kind) {
+  const labels = [...BASE_LABELS];
+  if (PROPOSE_KINDS.includes(kind)) labels.push("propose");
+  labels.push(DRAFTED_LABEL);
+  return labels;
+}
+
 // Redaction rules — kept in lock-step with scripts/make_improvement_report.py.
 // Bounded quantifiers (no ReDoS on long pasted blobs); non-alnum lookbehind (not
 // \b) so ANTHROPIC_API_KEY / GITHUB_TOKEN etc. still match.
@@ -41,7 +63,7 @@ function gather() {
     collection: $("collection").value.trim(),
     target: $("target").value,
     item: $("item").value.trim(),
-    kind: $("kind").value,
+    kind: normaliseKind($("kind").value),
     summary: $("summary").value,
     detail: $("detail").value,
     diff: $("diff").value,
@@ -91,9 +113,10 @@ function refresh() {
 
 function issueURL(f, body) {
   const params = new URLSearchParams({
-    title: `[improvement] ${f.item || "?"}: ${f.kind}`,
+    template: TEMPLATES[PROPOSE_KINDS.includes(f.kind) ? "missing" : "skill"],
+    title: `${f.kind}: ${f.item || "?"}`,
+    labels: labelsFor(f.kind).join(","),
     body,
-    labels: "improvement,needs-triage,auto-report",
   });
   return `https://github.com/${REPO}/issues/new?${params.toString()}`;
 }
@@ -108,7 +131,7 @@ function init() {
   // prefill from query params (from a "Suggest improvement" link)
   const p = new URLSearchParams(location.search);
   for (const k of ["collection", "target", "item", "kind"]) {
-    if (p.get(k)) $(k).value = p.get(k);
+    if (p.get(k)) $(k).value = k === "kind" ? normaliseKind(p.get(k)) : p.get(k);
   }
 
   document.querySelectorAll("#form input, #form textarea, #form select")

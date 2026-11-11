@@ -10,8 +10,9 @@ function getParam(name) {
   return new URLSearchParams(window.location.search).get(name);
 }
 
-function makeIssueURL({ title, body, labels = [] }) {
+function makeIssueURL({ title, body, labels = [], template = "" }) {
   const params = new URLSearchParams();
+  if (template) params.set("template", template);
   params.set("title", title);
   params.set("body", body);
   if (labels.length) params.set("labels", labels.join(","));
@@ -129,6 +130,7 @@ function fail(message) {
       "## What should a reviewer check?", "", "<fill in>",
     ].join("\n");
     window.open(makeIssueURL({
+      template: "request-paper-review.md",
       title: `[REVIEW-REQUEST] ${paper.title || doi}`,
       body,
       labels: ["review-requested", "needs-triage"],
@@ -136,16 +138,20 @@ function fail(message) {
   });
   document.getElementById("btn-flag").addEventListener("click", () => {
     const body = [
+      "**Route:** this skill is wrong or could be better", "",
+      "**Kind:** `defect` (an existing skill is wrong, stale, or does not work as written)", "",
       `## Content derived from paper ${doi}`, "",
       `Collection: ${label}`, "",
       "**What is wrong:** <fill in>", "",
       "**Affected skills:** <list the ones concerned>", "", skillList, "",
       "**Suggested fix:** <if known>",
     ].join("\n");
+    // Route 1 in the vocabulary of scripts/skill_feedback.py: kind `defect`.
     window.open(makeIssueURL({
-      title: `wrong: content derived from ${doi}`,
+      template: "1-skill-feedback.md",
+      title: `defect: content derived from ${doi}`,
       body,
-      labels: ["usage-feedback", "needs-triage"],
+      labels: ["usage-feedback", "needs-triage", "auto-report"],
     }), "_blank", "noopener");
   });
   document.getElementById("actions").hidden = false;

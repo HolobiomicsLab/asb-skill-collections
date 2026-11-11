@@ -20,6 +20,22 @@
     contributions count toward the <a href="./">contributor leaderboard</a> and
     co-authorship on the next release DOI.
   </p>
+  <p>
+    Every report goes to the issue tracker of the public registry. The domain
+    repositories are private: a maintainer carries each report into the domain
+    repository. Four routes, in the same words everywhere:
+  </p>
+  <ol>
+    <li>this skill is wrong or could be better: this form, or the
+      <a href="https://github.com/HolobiomicsLab/asb-skill-collections/issues/new?template=1-skill-feedback.md">skill feedback issue</a>;</li>
+    <li>a skill is missing: request it with this form (kind <code>gap</code> or <code>composition</code>) or the
+      <a href="https://github.com/HolobiomicsLab/asb-skill-collections/issues/new?template=2-request-skill.md">request issue</a>,
+      or propose yours with the
+      <a href="https://github.com/HolobiomicsLab/asb-skill-collections/issues/new?template=propose-skill.md">skill proposal issue</a>;</li>
+    <li>a paper is not referenced: <a href="./propose.html">propose it</a>;</li>
+    <li>something technical failed (install, plugin, search, CLI, site, gates):
+      <a href="https://github.com/HolobiomicsLab/asb-skill-collections/issues/new?template=4-technical-fault.md">report it</a>.</li>
+  </ol>
   <nav>
     <a href="./">Catalogue</a>
     <a href="./collections.html">Browse</a>
@@ -50,12 +66,12 @@
     <div class="field">
       <label for="kind">Kind</label>
       <select id="kind">
-        <option value="correction">correction</option>
-        <option value="enhancement">enhancement</option>
-        <option value="bug">bug</option>
-        <option value="tool-update">tool-update</option>
-        <option value="new-skill">new-skill</option>
-        <option value="other">other</option>
+        <option value="defect">defect: the skill is wrong, stale, or does not work as written</option>
+        <option value="drift">drift: the tool changed and the skill no longer matches it</option>
+        <option value="enhancement">enhancement: it works but could be better</option>
+        <option value="efficiency">efficiency: it works but costs far more than it needs to</option>
+        <option value="gap">gap: no skill covers the task</option>
+        <option value="composition">composition: the skills exist but nothing composes them</option>
       </select>
     </div>
     <div class="field">

@@ -103,7 +103,7 @@ def test_every_kind_renders_and_carries_triage_labels(kind):
     assert sf.KINDS[kind] in issue["body"]
 
 
-@pytest.mark.parametrize("kind,expected", [("gap", "propose"), ("composition", "workflow")])
+@pytest.mark.parametrize("kind,expected", [("gap", "propose"), ("composition", "propose")])
 def test_a_report_that_asks_for_new_work_is_labelled_as_a_proposal(kind, expected):
     assert expected in sf.labels_for(kind)
 
