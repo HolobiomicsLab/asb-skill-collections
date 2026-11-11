@@ -38,7 +38,67 @@ PIPELINE_URL = f"https://github.com/HolobiomicsLab/{PIPELINE_NAME}"
 PRIVATE_CITATION_KEYS = ("url", "repository-code")
 REGISTRY = Path(__file__).resolve().parent.parent / "collections.yaml"
 TOOLING_URL = "https://github.com/HolobiomicsLab/asb-skill-collections"
-DOI_PLACEHOLDER = "ZENODO_DOI_RESERVED_AFTER_PUBLICATION"
+ARTIFACT_MEMBERSHIP_FIELD = "included_in_capsule"
+ARTIFACT_MEMBERSHIP_NOTE = (
+    f"`{ARTIFACT_MEMBERSHIP_FIELD}` marks paths present in this shipped capsule; "
+    "false entries name full-build files absent from this record."
+)
+VALIDATION_COUNT_KEYS = ("checked", "supported", "partial", "unsupported", "drift")
+VALIDATION_STATE_ORDER = {"present": 0, "clean": 1, "strict": 2}
+EVALUATION_LISTING_STATEMENT = (
+    "This listing identifies capsules whose evaluation definition is structurally complete; "
+    "it does not promise that they are runnable, their inputs are retrievable, or their checks are machine-scorable."
+)
+CAPSULE_FIELD_DEFINITIONS = {
+    "access_class": ("category", "Source-paper access class used by the quotation screen."),
+    "build_slug": ("identifier", "Build archive stem; its payload is builds/<build_slug>.zip."),
+    "capsule_id": ("identifier", "Capsule directory name inside the build archive."),
+    "claims": ("object", "Validation counts, separated by their source."),
+    "claims.declared_summary": ("object", "Counts declared by validation.json summary."),
+    "claims.declared_summary.checked": ("claims", "Claims the summary declares checked."),
+    "claims.declared_summary.drift": ("claims", "Claims the summary declares affected by drift."),
+    "claims.declared_summary.partial": ("claims", "Claims the summary declares partially supported."),
+    "claims.declared_summary.supported": ("claims", "Claims the summary declares supported."),
+    "claims.declared_summary.unsupported": ("claims", "Claims the summary declares unsupported."),
+    "claims.from_entries": ("object or null", "Counts derived from claims_checked; null when that list is absent."),
+    "claims.from_entries.checked": ("claims", "Claim entries checked, including unknown support values."),
+    "claims.from_entries.drift": ("claims", "Claim entries explicitly recording drift."),
+    "claims.from_entries.partial": ("claims", "Claim entries whose supported value is partial."),
+    "claims.from_entries.supported": ("claims", "Claim entries whose supported value is yes."),
+    "claims.from_entries.unknown": ("claims", "Claim entries with any other supported value."),
+    "claims.from_entries.unsupported": ("claims", "Claim entries whose supported value is no."),
+    "eval_checks": ("checks", "Number of checks in eval.json."),
+    "eval_checks_by_kind": ("mapping of kind to checks", "Checks grouped by their kind; unknown means no usable kind."),
+    "eval_input_assets": ("assets", "Input entries in eval.json."),
+    "eval_input_assets_with_download_hint": ("assets", "Input entries with a non-empty download_hint."),
+    "eval_input_assets_with_hash": ("assets", "Input entries with a non-empty sha256."),
+    "eval_state": ("state", "complete means structurally complete; partial lacks a required structural element; invalid is unreadable JSON."),
+    "eval_unresolved_references": ("references", "Entries in eval.json unresolved_references."),
+    "license": ("licence identifier or null", "Licence of the source paper, not of the tools or generated metadata."),
+    "paper_doi": ("DOI", "DOI of the source paper."),
+    "quotes_after_screen": ("object", "Text of the paper in this capsule after the screen, measured on the output."),
+    "quotes_after_screen.characters": ("characters", "Characters of paper text the capsule holds."),
+    "quotes_after_screen.count": ("fields", "Fields that hold paper text."),
+    "quotes_after_screen.dropped": ("fields", "Fields whose paper text was removed."),
+    "quotes_after_screen.longest": ("characters", "Longest field of paper text held."),
+    "quotes_after_screen.truncated": ("fields", "Fields whose paper text was shortened to the cap."),
+    "task_id": ("identifier or null", "Evaluation task identifier."),
+    "validation_state": ("state", "present has validation; clean has checked claims with no unsupported claim or drift; strict has only supported checked claims; invalid is unreadable or malformed."),
+    "validation_summary_consistent": ("boolean", "True means claims_checked and the declared summary agree, or claims_checked is absent; false means they disagree."),
+}
+BENCHMARK_FIELD_DEFINITIONS = CAPSULE_FIELD_DEFINITIONS
+SCREEN_COUNTER_DEFINITIONS = {
+    "crates_pruned": "RO-Crates reduced to members shipped in the capsule",
+    "deny_hits": "matches of content withheld by the maintainers; a build with one is left out",
+    "emails_redacted": "email addresses redacted",
+    "failures": "screen failures",
+    "paths_rewritten": "machine paths replaced with portable locators",
+    "phones_redacted": "telephone numbers redacted",
+    "private_urls_rewritten": "private repository URLs reduced to unlinked names",
+    "spans_dropped": "quotation spans dropped",
+    "spans_dropped_by_access_class": "quotation spans dropped because of source access class",
+    "spans_truncated": "quotation spans truncated",
+}
 
 
 def write_json(path: Path, value) -> None:
@@ -107,6 +167,51 @@ def copy_selected(source: Path, destination: Path, relative: str) -> bool:
     return True
 
 
+def project_build_manifest(manifest: dict) -> dict:
+    """Remove local-state fields recursively from the manifest's Git entry."""
+    def project(value):
+        if isinstance(value, dict):
+            return {
+                key: project(item)
+                for key, item in value.items()
+                if key not in {"branch", "is_dirty"}
+            }
+        if isinstance(value, list):
+            return [project(item) for item in value]
+        return value
+
+    projected = dict(manifest)
+    if "git" in projected:
+        projected["git"] = project(projected["git"])
+    return projected
+
+
+def mark_artifact_membership(capsule: Path) -> None:
+    """Mark each artifact path against the staged capsule's shipped files."""
+    path = capsule / "artifact_provenance.json"
+    if not path.is_file():
+        return
+    try:
+        manifest = read_json(path)
+    except (ValueError, TypeError):
+        return  # unreadable: the screen reports it
+    members = {
+        member.relative_to(capsule).as_posix()
+        for member in capsule.rglob("*")
+        if member.is_file()
+    }
+    artifacts = manifest.get("artifacts", []) if isinstance(manifest, dict) else None
+    if not isinstance(artifacts, list) or any(not isinstance(entry, dict) for entry in artifacts):
+        return  # another shape: left as written, nothing is claimed about it
+    for entry in artifacts:
+        target = entry.get("path")
+        entry[ARTIFACT_MEMBERSHIP_FIELD] = (
+            isinstance(target, str) and target.split("#", 1)[0] in members
+        )
+    manifest["artifact_membership_note"] = ARTIFACT_MEMBERSHIP_NOTE
+    write_json(path, manifest)
+
+
 def stage_build(source: Path, destination: Path, with_indicium: bool) -> tuple[list[str], list[Path]]:
     """Copy only G1 slim-plus members and return missing files and capsules."""
     missing = [name for name in BUILD_FILES if not copy_selected(source, destination, name)]
@@ -129,6 +234,10 @@ def stage_build(source: Path, destination: Path, with_indicium: bool) -> tuple[l
         for name in CAPSULE_FILES:
             if not copy_selected(capsule, target, name):
                 missing.append(f"capsules/{capsule.name}/{name}")
+        mark_artifact_membership(target)
+    manifest_path = destination / "build_manifest.json"
+    if manifest_path.is_file():
+        write_json(manifest_path, project_build_manifest(read_json(manifest_path)))
     return missing, capsules
 
 
@@ -228,9 +337,11 @@ def screen_build(root: Path, paper: dict, collection_meta: dict, options: dict) 
     context.deny_patterns = options["deny_patterns"]
     context.private_repositories = options["private_repositories"]
     budget = capsule_screen.QuoteBudget()
+    verified_budget = capsule_screen.QuoteBudget()
     counts = capsule_screen.empty_counts()
     failures = []
     quotes_by_capsule = {}
+    build_quotes = capsule_screen.empty_quotes()
     for path in sorted(member for member in root.rglob("*") if member.is_file()):
         relative = path.relative_to(root).as_posix()
         if path.suffix.lower() not in capsule_screen.TEXT_SUFFIXES:
@@ -246,46 +357,102 @@ def screen_build(root: Path, paper: dict, collection_meta: dict, options: dict) 
         path.write_text(result.text, encoding="utf-8")
         counts.update(result.counts)
         failures.extend(result.failures)
+        measured, problems = capsule_screen.verify_quote_policy(
+            path.read_text(encoding="utf-8"), relative, context, verified_budget
+        )
+        failures.extend(problem for problem in problems if problem not in failures)
+        measured.update({key: result.quotes[key] for key in ("truncated", "dropped")})
+        for key, value in measured.items():
+            build_quotes[key] = max(build_quotes[key], value) if key == "longest" else build_quotes[key] + value
         if "capsules" in path.relative_to(root).parts:
             capsule_id = path.relative_to(root).parts[1]
-            aggregate = quotes_by_capsule.setdefault(capsule_id, {"count": 0, "characters": 0, "longest": 0, "truncated": 0, "dropped": 0})
-            for key, value in result.quotes.items():
+            aggregate = quotes_by_capsule.setdefault(capsule_id, capsule_screen.empty_quotes())
+            for key, value in measured.items():
                 aggregate[key] = max(aggregate[key], value) if key == "longest" else aggregate[key] + value
     for crate in sorted(root.glob("capsules/*/ro-crate-metadata.json")):
         problems = crate_problems(crate.parent)
         failures.extend(f"{crate.relative_to(root).as_posix()}: {problem}" for problem in problems)
     counts["failures"] = len(failures)
     counts["spans_dropped_by_access_class"] = counts["spans_dropped"] if context.drop_quotes else 0
-    return {"counts": dict(sorted(counts.items())), "failures": failures, "quote_retention": context.retention}, quotes_by_capsule
+    return {"counts": dict(sorted(counts.items())), "failures": failures,
+            "quote_retention": context.retention, "quotes_after_screen": build_quotes}, quotes_by_capsule
 
 
-def validation_state(path: Path) -> tuple[str, dict]:
-    """Apply m30's explicit present, clean, and strict summary rules."""
+def validation_label(counts: dict) -> str:
+    """Apply the present, clean, and strict rules to one set of counts."""
+    state = "present"
+    if counts["checked"] > 0 and counts["unsupported"] == 0 and counts["drift"] == 0:
+        state = "clean"
+    if counts["checked"] > 0 and counts["supported"] == counts["checked"] \
+            and not any(counts[key] for key in ("partial", "unsupported", "drift")):
+        state = "strict"
+    return state
+
+
+def declared_validation_counts(summary: dict) -> dict:
+    """Normalize the five counts declared by validation.json summary."""
+    names = {"checked": "n_claims_checked", "supported": "n_supported", "partial": "n_partial",
+             "unsupported": "n_unsupported", "drift": "n_drift"}
+    return {name: int(summary.get(source, 0) or 0) for name, source in names.items()}
+
+
+def entry_validation_counts(entries: list) -> dict:
+    """Count support and explicit drift from claims_checked entries."""
+    counts = {key: 0 for key in (*VALIDATION_COUNT_KEYS, "unknown")}
+    counts["checked"] = len(entries)
+    for entry in entries:
+        support = entry.get("supported") if isinstance(entry, dict) else None
+        name = {"yes": "supported", "partial": "partial", "no": "unsupported"}.get(support, "unknown")
+        counts[name] += 1
+        counts["drift"] += int(isinstance(entry, dict) and entry.get("drift") is True)
+    return counts
+
+
+def validation_state(path: Path) -> tuple[str, dict, bool]:
+    """Derive validation state from entries and conservatively compare the summary."""
     try:
         payload = read_json(path)
-    except (ValueError, TypeError):
-        return "invalid", {}
-    summary = payload.get("summary") or {}
-    try:
-        values = {key: int(summary.get(key, 0) or 0) for key in ("n_claims_checked", "n_supported", "n_partial", "n_unsupported", "n_drift")}
-    except (TypeError, ValueError):
-        return "invalid", {}
-    state = "present"
-    if values["n_claims_checked"] > 0 and values["n_unsupported"] == 0 and values["n_drift"] == 0:
-        state = "clean"
-    if values["n_claims_checked"] > 0 and values["n_supported"] == values["n_claims_checked"] and not any(values[key] for key in ("n_partial", "n_unsupported", "n_drift")):
-        state = "strict"
-    return state, values
+        declared = declared_validation_counts(payload.get("summary") or {})
+    except (AttributeError, ValueError, TypeError):
+        return "invalid", {}, False
+    if "claims_checked" not in payload:
+        return validation_label(declared), {"from_entries": None, "declared_summary": declared}, True
+    if not isinstance(payload["claims_checked"], list):
+        return "invalid", {"from_entries": None, "declared_summary": declared}, False
+    entries = entry_validation_counts(payload["claims_checked"])
+    consistent = all(entries[key] == declared[key] for key in VALIDATION_COUNT_KEYS)
+    states = validation_label(entries), validation_label(declared)
+    state = min(states, key=VALIDATION_STATE_ORDER.get)
+    return state, {"from_entries": entries, "declared_summary": declared}, consistent
+
+
+def evaluation_details(payload: dict) -> dict:
+    """Count evaluation checks, unresolved references, and input readiness."""
+    checks = payload.get("checks") if isinstance(payload.get("checks"), list) else []
+    inputs = payload.get("inputs") if isinstance(payload.get("inputs"), list) else []
+    kinds = Counter(
+        check.get("kind") if isinstance(check, dict) and isinstance(check.get("kind"), str) else "unknown"
+        for check in checks
+    )
+    unresolved = payload.get("unresolved_references")
+    return {
+        "task_id": payload.get("task_id"), "checks": len(checks),
+        "checks_by_kind": dict(sorted(kinds.items())),
+        "unresolved_references": len(unresolved) if isinstance(unresolved, list) else 0,
+        "input_assets": len(inputs),
+        "input_assets_with_hash": sum(bool(item.get("sha256")) for item in inputs if isinstance(item, dict)),
+        "input_assets_with_download_hint": sum(bool(item.get("download_hint")) for item in inputs if isinstance(item, dict)),
+    }
 
 
 def eval_state(path: Path) -> tuple[str, dict]:
-    """Apply m30's complete operational definition rule."""
+    """Apply the existing structural-completeness rule and report readiness."""
     try:
         payload = read_json(path)
     except (ValueError, TypeError):
-        return "invalid", {"task_id": None, "checks": 0}
+        return "invalid", evaluation_details({})
     complete = EVAL_KEYS.issubset(payload) and isinstance(payload.get("checks"), list) and bool(payload["checks"]) and not payload.get("validation_errors")
-    return ("complete" if complete else "partial"), {"task_id": payload.get("task_id"), "checks": len(payload.get("checks") or [])}
+    return ("complete" if complete else "partial"), evaluation_details(payload)
 
 
 def read_json(path: Path) -> dict:
@@ -347,7 +514,9 @@ def capsule_rows(root, build_slug, paper, capsules, quotes) -> list[dict]:
     """Create one metadata-table row per staged capsule."""
     rows = []
     for capsule in capsules:
-        validation, claims = validation_state(root / "capsules" / capsule.name / "validation.json")
+        validation, claims, summary_consistent = validation_state(
+            root / "capsules" / capsule.name / "validation.json"
+        )
         evaluation, eval_details = eval_state(root / "capsules" / capsule.name / "eval.json")
         rows.append({
             "build_slug": build_slug,
@@ -358,7 +527,13 @@ def capsule_rows(root, build_slug, paper, capsules, quotes) -> list[dict]:
             "task_id": eval_details["task_id"],
             "eval_state": evaluation,
             "eval_checks": eval_details["checks"],
+            "eval_checks_by_kind": eval_details["checks_by_kind"],
+            "eval_unresolved_references": eval_details["unresolved_references"],
+            "eval_input_assets": eval_details["input_assets"],
+            "eval_input_assets_with_hash": eval_details["input_assets_with_hash"],
+            "eval_input_assets_with_download_hint": eval_details["input_assets_with_download_hint"],
             "validation_state": validation,
+            "validation_summary_consistent": summary_consistent,
             "claims": claims,
             "quotes_after_screen": quotes.get(capsule.name, {}),
         })
@@ -396,7 +571,10 @@ def make_manifest(args, collection, builds, rows) -> dict:
             "pipeline_public": args.pipeline_public,
         },
         "build_count": len(builds),
+        "builds_packed": sum(bool(build.get("sha256")) for build in builds),
+        "builds_left_out": sum(not build.get("sha256") for build in builds),
         "capsule_count": len(rows),
+        "capsules_left_out": sum(len(build["capsule_ids"]) for build in builds if not build.get("sha256")),
         "total_bytes": sum(build["bytes"] for build in builds),
         "not_released_count": len(args.not_released),
         "not_released": args.not_released,
@@ -428,7 +606,10 @@ def make_zenodo(collection, template, args) -> dict:
         "and dropped for restricted or unresolved access. Rights holders may request takedown "
         "through the asb-skill-collections issue tracker."
     )
-    related = [{"relation": "isSupplementTo", "identifier": args.version_doi, "scheme": "doi"}]
+    related = [
+        {"relation": "isSupplementTo", "identifier": args.version_doi, "scheme": "doi"},
+        {"relation": "references", "identifier": TOOLING_URL, "scheme": "url"},
+    ]
     if args.pipeline_public:
         related.append({"relation": "isCompiledBy", "identifier": PIPELINE_URL, "scheme": "url"})
     return {
@@ -443,7 +624,6 @@ def make_zenodo(collection, template, args) -> dict:
         "subjects": template.get("subjects") or [],
         "communities": [{"identifier": "asb_skill_collections"}],
         "related_identifiers": related,
-        "references": TOOLING_URL,
         "version": f"{domain}-v{collection['version']}-capsules",
         "language": template.get("language", "eng"),
     }
@@ -472,6 +652,12 @@ def make_hf_card(collection, citation, manifest, args) -> str:
     table = "capsules.parquet" if (args.out / "capsules.parquet").is_file() else "capsules.jsonl"
     public_citation = {key: value for key, value in citation.items() if key not in PRIVATE_CITATION_KEYS}
     pipeline = PIPELINE_URL if args.pipeline_public else f"{PIPELINE_NAME} (private repository)"
+    capsules_doi = normalize_doi(getattr(args, "capsules_doi", None))
+    capsules_record = (
+        f"Capsules record: https://doi.org/{capsules_doi}"
+        if capsules_doi else
+        "Capsules record: the Zenodo record for these capsules is listed on the collection's registry row."
+    )
     return f"""---
 license: cc-by-4.0
 task_categories: [question-answering]
@@ -485,21 +671,21 @@ configs:
 
 # ASB {domain} v{collection['version']} build capsules
 
-This local archive set contains {manifest['build_count']} per-build deterministic zips and {manifest['capsule_count']} capsule metadata rows. The metadata table is `{table}`. `benchmark-manifest.json` filters the complete operational evaluations without duplicating their payloads.
+This local archive set contains {manifest['builds_packed']} per-build deterministic zips and {manifest['capsule_count']} capsule metadata rows. The metadata table is `{table}`. {EVALUATION_LISTING_STATEMENT}
 
 ## Layout
 
 - `builds/<build-slug>.zip`: screened slim-plus ledgers, evaluations, evidence, inputs, provenance and pruned RO-Crates.
 - `MANIFEST.json`, `capsules.jsonl` and `SCREEN.json`: archive, capsule and screen receipts.
-- `benchmark-manifest.json`: the complete-evaluation subset.
+- `benchmark-manifest.json`: the structurally complete evaluation-definition subset.
 
 ## Records and licence
 
 Collection: https://doi.org/{args.version_doi}
 
-Capsules record: {DOI_PLACEHOLDER} (reserved only after publication).
+{capsules_record}
 
-Generated metadata is CC-BY-4.0. Source quotations remain subject to bounded quotation rights and access-class redaction. This card does not grant a licence to removed source text.
+Generated metadata is CC-BY-4.0. The `license` table field is the source paper's licence; source quotations retain that paper's terms and are included only as bounded quotations. Tools retain their own licences, which this record does not alter.
 
 Pipeline: {pipeline}
 
@@ -507,12 +693,36 @@ Tooling: {TOOLING_URL}
 
 ## Citation
 
+Cite the capsules record by its Zenodo DOI and the collection at https://doi.org/{args.version_doi}. If the capsules DOI is not shown above, obtain it from the collection's registry row.
+
 ```yaml
 {yaml.safe_dump(public_citation, sort_keys=False).strip()}
 ```
 
 Local generation only: no dataset repository is created or uploaded by the packer.
 """
+
+
+def render_field_dictionary() -> str:
+    """Render the shared row-field dictionary for both public tables."""
+    def table(definitions):
+        lines = ["| Field | Unit or values | Meaning |", "|---|---|---|"]
+        lines += [f"| `{name}` | {unit} | {meaning} |" for name, (unit, meaning) in definitions.items()]
+        return "\n".join(lines)
+
+    text = "## Table field dictionary\n\n### `capsules.jsonl` rows\n\n" + table(CAPSULE_FIELD_DEFINITIONS)
+    if BENCHMARK_FIELD_DEFINITIONS is CAPSULE_FIELD_DEFINITIONS:
+        return text + "\n\nThe capsule rows of `benchmark-manifest.json` carry the same fields."
+    return text + "\n\n### `benchmark-manifest.json` capsule rows\n\n" + table(BENCHMARK_FIELD_DEFINITIONS)
+
+
+def render_screen_counters(screen: dict) -> str:
+    """Render each SCREEN.json total on one reader-facing line."""
+    totals = screen.get("totals") or {}
+    return "\n".join(
+        f"- `{name}` ({value}): {SCREEN_COUNTER_DEFINITIONS.get(name, 'screen events')}."
+        for name, value in sorted(totals.items())
+    )
 
 
 def size_category(count: int) -> str:
@@ -536,12 +746,24 @@ Local screened archive set generated on {manifest['generation_date']}. No deposi
 - `MANIFEST.json`: build and archive receipt.
 - `capsules.jsonl`: one metadata row per capsule.
 - `SCREEN.json`: content-screen counts and failures.
-- `benchmark-manifest.json`: complete-evaluation subset.
+- `benchmark-manifest.json`: structurally complete evaluation-definition subset.
 - `zenodo/metadata.json` and `hf/README.md`: local record descriptions.
 
-Builds: {manifest['build_count']}. Capsules: {manifest['capsule_count']}. Failures: {screen['totals'].get('failures', 0)}.
+Builds considered: {manifest['build_count']}. Builds packed: {manifest['builds_packed']}. Builds left out by the screen: {manifest['builds_left_out']}.
+
+Capsules packed: {manifest['capsule_count']}. Capsules left out with their builds: {manifest['capsules_left_out']}.
 
 Builds left out because their paper is not an included paper of the released corpus: {manifest['not_released_count']}. They are listed by slug under `not_released` in `MANIFEST.json`.
+
+{EVALUATION_LISTING_STATEMENT}
+
+In each capsule's `artifact_provenance.json`, `{ARTIFACT_MEMBERSHIP_FIELD}` says whether the named full-build artifact is present in the shipped capsule.
+
+## `SCREEN.json` counters
+
+{render_screen_counters(screen)}
+
+{render_field_dictionary()}
 """
     (out / "README.md").write_text(text, encoding="utf-8")
 
@@ -558,6 +780,12 @@ def maybe_write_parquet(rows: list[dict], path: Path) -> bool:
     return True
 
 
+def packed_capsule_rows(builds: list[dict], rows: list[dict]) -> list[dict]:
+    """Return only capsule rows whose build has a zip in the record."""
+    packed_slugs = {build["build_slug"] for build in builds if build.get("sha256")}
+    return [row for row in rows if row["build_slug"] in packed_slugs]
+
+
 def write_records(args, loaded: dict, builds: list[dict], rows: list[dict]) -> None:
     """Write every descriptive file of a pack from its build entries and capsule rows.
 
@@ -567,6 +795,7 @@ def write_records(args, loaded: dict, builds: list[dict], rows: list[dict]) -> N
     strict, not_released, pipeline_public and the collection root.
     """
     collection = loaded["collection"]
+    rows = packed_capsule_rows(builds, rows)
     manifest = make_manifest(args, collection, builds, rows)
     screen = make_screen(builds, args.strict)
     write_json(args.out / "MANIFEST.json", manifest)
@@ -593,9 +822,26 @@ def make_benchmark(builds: list[dict], rows: list[dict], version_doi: str) -> di
     that file writes the same bytes.
     """
     benchmark_rows = [json.loads(json.dumps(row, sort_keys=True)) for row in rows if row["eval_state"] == "complete"]
-    benchmark_ids = {row["capsule_id"] for row in benchmark_rows}
-    benchmark_builds = [dict(build, capsule_ids=[value for value in build["capsule_ids"] if value in benchmark_ids]) for build in builds if any(value in benchmark_ids for value in build["capsule_ids"])]
-    return {"schema": "asb-capsules-benchmark/1", "collection_version_doi": version_doi, "capsule_count": len(benchmark_rows), "capsules": benchmark_rows, "builds": benchmark_builds}
+    benchmark_ids = {(row["build_slug"], row["capsule_id"]) for row in benchmark_rows}
+    benchmark_builds = [
+        dict(build, capsule_ids=[value for value in build["capsule_ids"] if (build["build_slug"], value) in benchmark_ids])
+        for build in builds
+        if build.get("sha256") and any((build["build_slug"], value) in benchmark_ids for value in build["capsule_ids"])
+    ]
+    totals = {
+        "checks_by_kind": dict(sorted(sum(
+            (Counter(row["eval_checks_by_kind"]) for row in benchmark_rows), Counter()
+        ).items())),
+        "unresolved_references": sum(row["eval_unresolved_references"] for row in benchmark_rows),
+        "input_assets": sum(row["eval_input_assets"] for row in benchmark_rows),
+        "input_assets_with_hash": sum(row["eval_input_assets_with_hash"] for row in benchmark_rows),
+        "input_assets_with_download_hint": sum(row["eval_input_assets_with_download_hint"] for row in benchmark_rows),
+    }
+    return {
+        "schema": "asb-capsules-benchmark/1", "collection_version_doi": version_doi,
+        "listing_statement": EVALUATION_LISTING_STATEMENT, "capsule_count": len(benchmark_rows),
+        "totals": totals, "capsules": benchmark_rows, "builds": benchmark_builds,
+    }
 
 
 def bind_collection(args) -> dict:
@@ -631,7 +877,10 @@ def run(args) -> int:
     if args.strict and failed:
         shutil.rmtree(args.out / "builds", ignore_errors=True)
     write_records(args, loaded, builds, rows)
-    print(json.dumps({"builds": len(builds), "capsules": len(rows), "not_released": len(args.not_released), "wall_seconds_by_build": timings}))
+    packed_rows = packed_capsule_rows(builds, rows)
+    left_out = sum(len(build["capsule_ids"]) for build in builds if not build.get("sha256"))
+    print(json.dumps({"builds": len(builds), "capsules": len(packed_rows), "capsules_left_out": left_out,
+                      "not_released": len(args.not_released), "wall_seconds_by_build": timings}))
     return int(args.strict and failed)
 
 
@@ -649,6 +898,7 @@ def parse_args(argv=None):
     parser.add_argument("--strict", action="store_true")
     parser.add_argument("--pipeline-public", action="store_true",
                         help=f"link the {PIPELINE_NAME} repository and keep its URLs; leave off while it is private")
+    parser.add_argument("--capsules-doi", help="published DOI of this capsules record for the dataset card")
     args = parser.parse_args(argv)
     args.view = args.view.resolve()
     args.collection = args.collection.resolve()

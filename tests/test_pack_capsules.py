@@ -44,7 +44,10 @@ def test_packs_screened_archives_receipts_metadata_and_benchmark(tmp_path):
     benchmark = json.loads((out / "benchmark-manifest.json").read_text())
     assert manifest["schema"] == "asb-capsules-manifest/1"
     assert manifest["build_count"] == 4
+    assert manifest["builds_packed"] == 4
+    assert manifest["builds_left_out"] == 0
     assert manifest["capsule_count"] == 6
+    assert manifest["capsules_left_out"] == 0
     assert screen["schema"] == "asb-capsules-screen/1"
     assert screen["totals"]["spans_truncated"] >= 1
     assert screen["totals"]["spans_dropped"] >= 1
@@ -63,6 +66,10 @@ def test_packs_screened_archives_receipts_metadata_and_benchmark(tmp_path):
     metadata = json.loads((out / "zenodo" / "metadata.json").read_text())
     assert zenodo_deposit.validate_metadata(metadata) == []
     assert metadata["related_identifiers"][0]["identifier"] == "10.1234/example.collection"
+    assert metadata["related_identifiers"][1] == {
+        "relation": "references", "identifier": pack_capsules.TOOLING_URL, "scheme": "url",
+    }
+    assert "references" not in metadata
     serialized = json.dumps(metadata) + (out / "hf" / "README.md").read_text()
     assert "HolobiomicsLab/asb-skills-metabolomics" not in serialized
     assert "capsules.jsonl" in (out / "hf" / "README.md").read_text()
@@ -82,7 +89,9 @@ def test_packs_screened_archives_receipts_metadata_and_benchmark(tmp_path):
     assert "info@lab.example.org" in all_text
     assert "/Users/" not in all_text
     assert "/Volumes/" not in all_text
-    assert "C:\\" not in all_text
+    assert "C:\\Users\\" not in all_text
+    # A drive path that leads to no home directory is the paper's text and is kept.
+    assert "C:\\outputs\\closed\\evaluation.txt" in all_text
 
 
 def test_second_run_is_byte_identical(tmp_path):
@@ -121,6 +130,74 @@ def test_with_indicium_is_explicitly_recorded(tmp_path):
         assert "indicium.jsonld" in zipped.namelist()
 
 
+def test_staging_marks_artifact_membership_from_final_capsule_contents(tmp_path):
+    source = tmp_path / "source"
+    shutil.copytree(FIXTURE / "view" / "build__coll_open", source)
+    capsule = sorted((source / "capsules").iterdir())[0]
+    provenance = capsule / "artifact_provenance.json"
+    provenance.write_text(json.dumps({
+        "task_id": "task_001",
+        "artifacts": [
+            {"path": "artifact_provenance.json", "kind": "self"},
+            {"path": "eval.json#checks", "kind": "evaluation"},
+            {"path": "task_card.json", "kind": "full_build"},
+        ],
+    }))
+
+    staged = tmp_path / "staged"
+    pack_capsules.stage_build(source, staged, with_indicium=False)
+
+    projected = json.loads(
+        (staged / "capsules" / capsule.name / "artifact_provenance.json").read_text()
+    )
+    assert projected["artifact_membership_note"] == pack_capsules.ARTIFACT_MEMBERSHIP_NOTE
+    assert projected["artifacts"] == [
+        {"path": "artifact_provenance.json", "kind": "self", "included_in_capsule": True},
+        {"path": "eval.json#checks", "kind": "evaluation", "included_in_capsule": True},
+        {"path": "task_card.json", "kind": "full_build", "included_in_capsule": False},
+    ]
+
+
+def test_staging_projects_nested_git_state_only(tmp_path):
+    source = tmp_path / "source"
+    shutil.copytree(FIXTURE / "view" / "build__coll_open", source)
+    manifest_path = source / "build_manifest.json"
+    manifest = json.loads(manifest_path.read_text())
+    manifest.update({
+        "branch": "scientific-branch",
+        "is_dirty": "scientific-value",
+        "git": {
+            "sha": "outer-commit",
+            "branch": "private-branch",
+            "is_dirty": True,
+            "remote_url": "private-repository",
+            "cwd_git": {
+                "sha": "nested-commit",
+                "branch": "private-worktree",
+                "is_dirty": False,
+            },
+            "sources": [
+                {"sha": "list-commit", "branch": "private-list", "is_dirty": True},
+                None,
+            ],
+        },
+    })
+    manifest_path.write_text(json.dumps(manifest))
+
+    staged = tmp_path / "staged"
+    pack_capsules.stage_build(source, staged, with_indicium=False)
+
+    projected = json.loads((staged / "build_manifest.json").read_text())
+    assert projected["branch"] == "scientific-branch"
+    assert projected["is_dirty"] == "scientific-value"
+    assert projected["git"] == {
+        "sha": "outer-commit",
+        "remote_url": "private-repository",
+        "cwd_git": {"sha": "nested-commit"},
+        "sources": [{"sha": "list-commit"}, None],
+    }
+
+
 def test_access_override_is_same_doi_and_does_not_echo_secrets(tmp_path):
     out = tmp_path / "override"
     records = tmp_path / "access.json"
@@ -138,3 +215,30 @@ def test_non_strict_keeps_passing_archives_and_reports_failures(tmp_path):
     out = tmp_path / "advisory"
     assert pack_capsules.run(arguments(out, view=view, strict=False)) == 0
     assert json.loads((out / "SCREEN.json").read_text())["totals"]["failures"] > 0
+
+
+def test_failing_build_stays_in_receipt_but_not_record_tables_or_counts(tmp_path, monkeypatch):
+    view = tmp_path / "view"
+    shutil.copytree(FIXTURE / "view", view, symlinks=True)
+    failed = view / "build__coll_open" / "capsules" / "10_1234_example_open__task_001" / "eval.json"
+    failed.write_text("bad")
+    out = tmp_path / "advisory"
+    parquet_rows = []
+    monkeypatch.setattr(pack_capsules, "maybe_write_parquet",
+                        lambda rows, path: parquet_rows.extend(rows) or True)
+
+    assert pack_capsules.run(arguments(out, view=view, strict=False)) == 0
+
+    manifest = json.loads((out / "MANIFEST.json").read_text())
+    rows = [json.loads(line) for line in (out / "capsules.jsonl").read_text().splitlines()]
+    benchmark = json.loads((out / "benchmark-manifest.json").read_text())
+    assert manifest["build_count"] == manifest["builds_packed"] + manifest["builds_left_out"] == 4
+    assert manifest["capsule_count"] + manifest["capsules_left_out"] == 6
+    assert manifest["builds_packed"] == 3 and manifest["builds_left_out"] == 1
+    assert manifest["capsule_count"] == 4 and manifest["capsules_left_out"] == 2
+    assert any(build["build_slug"] == "open" and build["sha256"] is None for build in manifest["builds"])
+    assert {row["build_slug"] for row in rows} == {"closed", "open_capped", "preprint"}
+    assert {row["build_slug"] for row in parquet_rows} == {"closed", "open_capped", "preprint"}
+    assert "open" not in {row["build_slug"] for row in benchmark["capsules"]}
+    assert "open" not in {build["build_slug"] for build in benchmark["builds"]}
+    assert "Builds considered: 4. Builds packed: 3. Builds left out by the screen: 1." in (out / "README.md").read_text()

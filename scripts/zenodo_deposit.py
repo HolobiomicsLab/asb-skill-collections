@@ -298,13 +298,28 @@ def validate_metadata(metadata: dict) -> list[str]:
     problems = [f"unknown metadata key: {key}" for key in sorted(set(metadata) - API_METADATA_KEYS)]
     problems += [f"missing required key: {key}" for key in REQUIRED_KEYS if not metadata.get(key)]
     problems += _vocabulary_problems(metadata)
-    for creator in metadata.get("creators") or []:
-        if not creator.get("name"):
+    string_lists = ("references", "keywords")
+    object_lists = ("subjects", "communities", "related_identifiers", "creators")
+    for key in string_lists:
+        if key in metadata and (not isinstance(metadata[key], list)
+                                or not all(isinstance(item, str) for item in metadata[key])):
+            problems.append(f"{key} must be a list of strings")
+    for key in object_lists:
+        if key in metadata and (not isinstance(metadata[key], list)
+                                or not all(isinstance(item, dict) for item in metadata[key])):
+            problems.append(f"{key} must be a list of objects")
+    creators = metadata.get("creators")
+    for creator in creators if isinstance(creators, list) else []:
+        if isinstance(creator, dict) and not creator.get("name"):
             problems.append("creators entry without a name")
-    for related in metadata.get("related_identifiers") or []:
-        relation = related.get("relation")
-        if relation not in API_RELATIONS:
-            problems.append(f"related_identifiers relation not accepted: {relation}")
+    related_identifiers = metadata.get("related_identifiers")
+    if isinstance(related_identifiers, list):
+        for related in related_identifiers:
+            if not isinstance(related, dict):
+                continue
+            relation = related.get("relation")
+            if relation not in API_RELATIONS:
+                problems.append(f"related_identifiers relation not accepted: {relation}")
     return problems
 
 
