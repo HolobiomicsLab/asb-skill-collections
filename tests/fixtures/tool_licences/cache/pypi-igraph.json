@@ -1,0 +1,13 @@
+{
+ "info": {
+  "name": "igraph",
+  "summary": "High performance graph data structures and algorithms",
+  "license": "GNU General Public License (GPL)",
+  "classifiers": [
+   "License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)"
+  ],
+  "project_urls": {
+   "Source": "https://github.com/igraph/python-igraph"
+  }
+ }
+}

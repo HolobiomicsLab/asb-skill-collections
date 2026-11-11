@@ -1,7 +1,9 @@
 """A tool's licence may only come from the tool. These tests hold that line.
 
-Everything here is offline: registry responses are pre-seeded into the cache
-directory the resolver memoises into, so no test reaches the network.
+Everything here is offline: recorded registry answers (trimmed copies of real
+Bioconda, Bioconductor, CRAN and bio.tools records, and PyPI answers reduced to
+the fields the resolver reads) sit in tests/fixtures/tool_licences/cache, which
+the resolver reads as its cache, so no test reaches the network.
 """
 import json
 import pathlib
@@ -12,36 +14,6 @@ import yaml
 
 sys.path.insert(0, str(pathlib.Path(__file__).parent.parent))
 from scripts import resolve_tool_licenses as r
-
-BIOC = {"id": "bioconductor", "detection": "bioconductor-package",
-        "index_url": "https://example.invalid/ls", "index_shape": "name_list",
-        "package_url": "https://example.invalid/packages/{name}",
-        "license_field": "License", "license_format": "r_description_field",
-        "repo_fields": ["URL", "RemoteUrl"]}
-
-CONDA = {"id": "bioconda", "detection": "bioconda-package",
-         "index_url": "https://example.invalid/channeldata.json",
-         "index_shape": "packages_map", "license_field": "license",
-         "license_format": "spdx_or_text", "repo_fields": ["dev_url", "home"]}
-
-
-@pytest.fixture
-def cache(tmp_path):
-    """A seeded cache: the resolver reads these instead of the network."""
-    d = tmp_path / "cache"
-    d.mkdir()
-    (d / "bioconductor-index.json").write_text(json.dumps(["xcms", "CAMERA", "mist"]))
-    (d / "bioconductor-xcms.json").write_text(json.dumps(
-        {"License": "GPL (>= 2) + file LICENSE", "URL": "https://github.com/sneumann/xcms"}))
-    (d / "bioconductor-camera.json").write_text(json.dumps(
-        {"License": "GPL (>= 2)", "RemoteUrl": "https://github.com/bioc/CAMERA"}))
-    (d / "bioconductor-mist.json").write_text(json.dumps({"License": "MIT + file LICENSE"}))
-    (d / "bioconda-index.json").write_text(json.dumps({"packages": {
-        "mzmine": {"license": "MIT", "dev_url": "https://github.com/mzmine/mzmine"},
-        "vague": {"license": "see the enclosed terms of use"},
-    }}))
-    return d
-
 
 def paper(name, licence, detection, repo="owner/repo"):
     entry = {"doi": "10.1/p", "name": name, "repo_url": repo, "access": {}}
@@ -97,44 +69,6 @@ def test_an_unresolved_paper_licence_yields_no_evidence():
 
 
 # --------------------------------------------------------------------------- #
-# Route B -- curated registries                                               #
-# --------------------------------------------------------------------------- #
-
-def test_a_registry_match_is_case_insensitive(cache):
-    """The catalogue records `XCMS`; Bioconductor names it `xcms`."""
-    indexes = {"bioconductor": r.registry_names(BIOC, cache)}
-    e = r.registry_evidence(tool("xcms", "XCMS"), [BIOC], indexes, cache)
-    assert e["license"] == "GPL-2.0-or-later"
-    assert e["repo_url"] == "https://github.com/sneumann/xcms"
-    assert e["license_detection"] == "bioconductor-package"
-
-
-def test_an_unreadable_registry_licence_resolves_to_nothing(cache):
-    """Rather than the `restricted` fallback: unread is not established."""
-    indexes = {"bioconda": r.registry_names(CONDA, cache)}
-    assert r.registry_evidence(tool("vague", "vague"), [CONDA], indexes, cache) is None
-
-
-def test_a_reviewed_exclusion_blocks_the_match(cache):
-    """A reviewed name collision stays unresolved, per governance data."""
-    indexes = {"bioconductor": r.registry_names(BIOC, cache)}
-    t = tool("mist", "MIST")
-    assert r.registry_evidence(t, [BIOC], indexes, cache) is not None
-    assert r.registry_evidence(t, [BIOC], indexes, cache,
-                               excluded={("mist", "bioconductor")}) is None
-
-
-def test_an_unknown_name_matches_nothing(cache):
-    indexes = {"bioconductor": r.registry_names(BIOC, cache)}
-    assert r.registry_evidence(tool("nosuchtool", "NoSuchTool"), [BIOC], indexes, cache) is None
-
-
-def test_an_unreachable_registry_yields_an_empty_index(tmp_path):
-    """A failed fetch must not look like an empty registry that resolved fine."""
-    assert r.registry_names(BIOC, tmp_path / "empty") == {}
-
-
-# --------------------------------------------------------------------------- #
 # Reconciliation                                                              #
 # --------------------------------------------------------------------------- #
 
@@ -170,33 +104,290 @@ def test_one_route_alone_is_used_as_is():
 
 
 # --------------------------------------------------------------------------- #
-# End to end                                                                  #
+# End to end, with recorded registry answers                                   #
 # --------------------------------------------------------------------------- #
 
-def test_resolve_writes_only_tool_backed_entries(tmp_path, cache):
-    d = tmp_path / "col"
-    d.mkdir()
-    (d / "tools_index.json").write_text(json.dumps([
-        tool("xcms", "XCMS", ["10.1/xcms"]),
-        tool("camera", "CAMERA", ["10.1/lipidin"]),
-        tool("nothing", "Nothing", ["10.1/lipidin"]),
-    ]))
-    (d / "corpus.yaml").write_text(yaml.safe_dump({"papers": [
-        {"doi": "10.1/xcms", "name": "XCMS", "repo_url": "sneumann/xcms",
-         "license_detection": "license-file", "access": {"license": "LGPL-3.0"}},
-        {"doi": "10.1/lipidin", "name": "LipidIN", "repo_url": "LinShuhaiLAB/LipidIN",
-         "license_detection": "github-api", "access": {"license": "Apache-2.0"}},
-    ]}))
-    summary = r.resolve(str(d), cache, registries=[BIOC, CONDA])
-    out = json.loads((d / "tool_licenses.json").read_text())
+FIXTURE_CACHE = pathlib.Path(__file__).parent / "fixtures" / "tool_licences" / "cache"
 
-    assert summary["conflicts"] == {}
-    # CAMERA is cited by an Apache-2.0 paper and is itself GPL. The registry wins,
-    # and the citing paper never contributes.
-    assert out["camera"]["license"] == "GPL-2.0-or-later"
-    assert out["xcms"]["license"] == "GPL-2.0-or-later"
-    # A tool with neither route resolves to nothing at all.
-    assert "nothing" not in out
+
+def _collection(tmp_path, records, domain="transcriptomics", skills=(), papers=()):
+    """A collection of tool records, each ``(slug, name, yaml_fields)``."""
+    d = tmp_path / domain
+    (d / "tools").mkdir(parents=True)
+    index = []
+    for slug, name, fields in records:
+        index.append({"slug": slug, "name": name, "dois": fields.pop("dois", ["10.1/x"]),
+                      "used_by_skills": fields.pop("used_by_skills", [])})
+        doc = {"name": name, "slug": slug, "version_used": None, "evidence_spans": [],
+               "derived_from": [], "source_repos": [], **fields}
+        (d / "tools" / f"{slug}.yaml").write_text(yaml.safe_dump(doc, sort_keys=False))
+    (d / "tools_index.json").write_text(json.dumps(index))
+    (d / "skills_index.json").write_text(json.dumps(list(skills)))
+    (d / "corpus.yaml").write_text(yaml.safe_dump({"papers": list(papers)}))
+    return d
+
+
+def _resolve(tmp_path, records, reviewed=None, **kw):
+    import shutil
+    cache = tmp_path / "cache"
+    if not cache.exists():
+        shutil.copytree(FIXTURE_CACHE, cache)
+    d = _collection(tmp_path, records, **kw)
+    summary = r.resolve(d, cache, offline=True,
+                        reviewed=reviewed if reviewed is not None else {"version": 1, "entries": []},
+                        report=tmp_path / "report.json")
+    out = json.loads((d / "tool_licenses.json").read_text())
+    report = {o["slug"]: o for o in json.loads((tmp_path / "report.json").read_text())}
+    return out, report, summary
+
+
+def test_resolve_writes_only_tool_backed_entries(tmp_path):
+    """CAMERA is cited by an Apache-2.0 paper; the citing paper never contributes."""
+    out, report, _ = _resolve(tmp_path, [
+        ("deseq2", "DESeq2", {"evidence_spans": ["library(DESeq2)"]}),
+        ("camera", "CAMERA", {"dois": ["10.1/lipidin"]}),
+        ("nothing", "Nothing", {}),
+    ], papers=[{"doi": "10.1/lipidin", "name": "LipidIN", "repo_url": "LinShuhaiLAB/LipidIN",
+                "license_detection": "github-api", "access": {"license": "Apache-2.0"}}])
+    assert out["deseq2"]["license"] == "LGPL-3.0-or-later"
+    assert out["deseq2"]["license_detection"] == "bioconductor-package"
+    assert out["deseq2"]["license_evidence"] == "https://bioconductor.org/packages/DESeq2"
+    assert out["deseq2"]["repo_url"] == "https://github.com/thelovelab/DESeq2"
+    assert "camera" not in out and "nothing" not in out
+    assert report["nothing"]["reason"] == "no-registry-match"
+
+
+def test_every_resolved_record_names_its_source_and_address(tmp_path):
+    out, _, _ = _resolve(tmp_path, [
+        ("deseq2", "DESeq2", {"evidence_spans": ["library(DESeq2)"]}),
+        ("devtools", "devtools", {"evidence_spans": ["devtools::install_github('x/y')"]}),
+    ])
+    for slug, ev in out.items():
+        assert ev["license_detection"] and ev["license_evidence"].startswith("https://"), slug
+        assert ev["license_raw"], slug
+
+
+# Trap 1: an exact name in a life-science registry is a different entity.
+
+def test_the_dimension_reduction_method_is_not_the_mappability_package(tmp_path):
+    out, report, _ = _resolve(tmp_path, [
+        ("umap", "UMAP", {"evidence_spans": ["cells were embedded with UMAP for visualisation"],
+                          "derived_from": [{"doi": "10.1/x", "title": "A single-cell atlas"}]}),
+    ])
+    assert "umap" not in out
+    assert report["umap"]["reason"].startswith("identity:")
+
+
+def test_the_language_model_is_not_the_bioconductor_package(tmp_path):
+    out, report, _ = _resolve(tmp_path, [
+        ("bert", "BERT", {"evidence_spans": ["we fine-tune BERT on the corpus"]}),
+    ], domain="agentic-ai")
+    assert "bert" not in out
+    assert report["bert"]["reason"] == "identity:outside-life-science-needs-corroboration"
+
+
+def test_the_particle_physics_tool_is_not_the_microbial_one(tmp_path):
+    out, report, _ = _resolve(tmp_path, [
+        ("gambit", "GAMBIT", {"evidence_spans": ["global fits with GAMBIT"]}),
+    ], domain="astronomy")
+    assert "gambit" not in out
+
+
+def test_an_english_word_name_needs_corroboration(tmp_path):
+    out, report, _ = _resolve(tmp_path, [
+        ("singularity", "Singularity", {"evidence_spans": ["run inside a Singularity image"]}),
+        ("cooler", "cooler", {"evidence_spans": ["matrices were stored with cooler"]}),
+    ], domain="epigenomics")
+    assert out == {}
+    assert report["cooler"]["reason"] == "identity:weak-name-needs-corroboration"
+
+
+def test_a_repository_named_by_the_record_corroborates_a_weak_name(tmp_path):
+    out, _, _ = _resolve(tmp_path, [
+        ("cooler", "cooler", {"source_repos": ["https://github.com/open2c/cooler"]}),
+    ], domain="epigenomics")
+    assert out["cooler"]["license"] == "BSD-3-Clause"
+    assert out["cooler"]["identity"]["corroboration"][0]["kind"] == "repository"
+
+
+def test_a_data_package_is_not_the_database_it_wraps(tmp_path):
+    out, report, _ = _resolve(tmp_path, [("msigdb", "MSigDB", {})])
+    assert "msigdb" not in out
+    assert report["msigdb"]["reason"] == "identity:data-package"
+
+
+def test_a_distinctive_name_needs_some_corroboration(tmp_path):
+    """`CoLoRMap` (long-read correction) and `colormap` (matplotlib) share a key."""
+    out, report, _ = _resolve(tmp_path, [
+        ("colormap", "CoLoRMap", {"evidence_spans": ["hybrid correction of PacBio reads"]}),
+    ], domain="genomics")
+    assert "colormap" not in out
+    assert report["colormap"]["reason"] == "identity:uncorroborated"
+
+
+def test_a_described_distinctive_name_resolves(tmp_path):
+    out, _, _ = _resolve(tmp_path, [
+        ("nextflow", "Nextflow", {"evidence_spans": [
+            "pipelines written in the Nextflow DSL for data-driven computational pipelines"]}),
+    ], domain="genomics")
+    assert out["nextflow"]["license"] == "Apache-2.0"
+
+
+def test_a_reviewed_exclusion_still_blocks_the_match(tmp_path):
+    out, report, _ = _resolve(tmp_path, [
+        ("ggplot", "ggplot", {"evidence_spans": ["an extremely un-pythonic package for ggplot2"]}),
+    ], domain="metabolomics")
+    assert "ggplot" not in out
+    assert report["ggplot"]["reason"] == "reviewed-exclusion"
+
+
+# Trap 4: general registries, and R and Python packages that share a name.
+
+def test_without_ecosystem_evidence_general_registries_are_not_used(tmp_path):
+    out, report, _ = _resolve(tmp_path, [
+        ("devtools", "devtools", {}), ("shiny", "Shiny", {}), ("igraph", "igraph", {}),
+    ])
+    assert out == {}
+    assert report["shiny"]["reason"] == "identity:general-registry-needs-corroboration"
+
+
+def test_r_evidence_picks_cran_never_pypi(tmp_path):
+    out, _, _ = _resolve(tmp_path, [
+        ("devtools", "devtools", {"evidence_spans": ["devtools::install_github('a/b')"]}),
+        ("shiny", "Shiny", {"evidence_spans": ["library(shiny)"]}),
+        ("tidyverse", "tidyverse", {"evidence_spans": ['install.packages("tidyverse")']}),
+        ("igraph", "igraph", {"evidence_spans": ["the R package igraph"]}),
+    ])
+    assert {slug: e["route"] for slug, e in out.items()} == {
+        "devtools": "registry:cran", "shiny": "registry:cran",
+        "tidyverse": "registry:cran", "igraph": "registry:cran"}
+    assert out["shiny"]["license"] == "MIT"
+    assert out["igraph"]["license"] == "GPL-2.0-or-later"
+
+
+def test_python_evidence_picks_pypi_never_cran(tmp_path):
+    out, _, _ = _resolve(tmp_path, [
+        ("igraph", "igraph", {"evidence_spans": ["import igraph as ig"]}),
+        ("scanpy", "Scanpy", {"evidence_spans": ["pip install scanpy"]}),
+    ])
+    assert out["igraph"]["route"] == "registry:pypi"
+    assert out["igraph"]["license"] == "GNU General Public License (GPL)"
+    assert out["scanpy"]["license"] == "BSD-3-Clause"
+
+
+def test_evidence_for_both_ecosystems_with_different_licences_stays_unknown(tmp_path):
+    out, report, _ = _resolve(tmp_path, [
+        ("igraph", "igraph", {"evidence_spans": ["import igraph", "library(igraph)"]}),
+    ])
+    assert "igraph" not in out
+    assert report["igraph"]["reason"].startswith("several-packages-differ")
+
+
+def test_docker_is_not_the_python_sdk(tmp_path):
+    out, report, _ = _resolve(tmp_path, [
+        ("docker", "Docker", {"evidence_spans": ["docker run -it image", "written in Python"]}),
+    ])
+    assert "docker" not in out
+
+
+def test_bio_tools_needs_a_shared_repository_or_publication(tmp_path):
+    out, _, _ = _resolve(tmp_path, [
+        ("dssp", "DSSP", {"source_repos": ["https://github.com/PDB-REDO/dssp"]}),
+    ], domain="proteomics")
+    assert out["dssp"]["route"] == "registry:biotools"
+    assert out["dssp"]["license"] == "BSD-2-Clause"
+    assert out["dssp"]["license_evidence"] == "https://bio.tools/dssp"
+
+
+def test_bio_tools_without_a_shared_repository_is_refused(tmp_path):
+    out, report, _ = _resolve(tmp_path, [
+        ("dssp", "DSSP", {"derived_from": [{"doi": "10.9/other", "title": "DSSP: a review"}]}),
+    ], domain="proteomics")
+    assert "dssp" not in out
+
+
+# Trap 2: licence strings.
+
+def test_a_non_commercial_licence_never_reads_as_open(tmp_path):
+    out, _, _ = _resolve(tmp_path, [
+        ("unitas", "unitas", {"evidence_spans": [
+            "annotation of small non-coding RNA sequence datasets with unitas"],
+            "source_repos": ["http://www.smallrnagroup.uni-mainz.de/software.html"]}),
+        ("annevo", "ANNEVO", {"source_repos": ["https://github.com/xjtu-omics/ANNEVO"]}),
+    ], domain="genomics")
+    assert out["unitas"]["license"] == "CC-BY-NC-2.0"
+    assert out["unitas"]["license_tier"] == "noncommercial"
+    assert "annevo" not in out
+
+
+def test_a_versioned_gpl_string_keeps_its_version(tmp_path):
+    out, _, _ = _resolve(tmp_path, [
+        ("epic", "epic", {"source_repos": ["http://github.com/endrebak/epic"]}),
+    ], domain="epigenomics")
+    assert out["epic"]["license"] == "GPL-3.0-only"
+    assert out["epic"]["license_raw"] == "GNU General Public License v3 (GPLv3)"
+
+
+# The reviewed map.
+
+REVIEWED = {"version": 1, "reviewed": "2026-11-11", "entries": [
+    {"names": ["scikit-learn", "sklearn"], "entity": "scikit-learn", "entry_kind": "software",
+     "category": "package", "license": "BSD-3-Clause", "license_tier": "open",
+     "repo_url": "https://github.com/scikit-learn/scikit-learn",
+     "evidence_url": "https://github.com/scikit-learn/scikit-learn/blob/main/COPYING",
+     "verified": "2026-11-11"},
+    {"names": ["UMAP"], "entity": None, "ambiguous": True, "verified": "2026-11-11", "contexts": [
+        {"when": "dimension reduction", "match": {"any_terms": ["single-cell", "embedding"],
+                                                   "none_terms": ["mappability"]},
+         "entity": "umap-learn", "entry_kind": "software", "license": "BSD-3-Clause",
+         "license_tier": "open", "repo_url": "https://github.com/lmcinnes/umap",
+         "evidence_url": "https://github.com/lmcinnes/umap/blob/master/LICENSE.txt"},
+        {"when": "mappability", "match": {"any_terms": ["mappability"]},
+         "entity": "Umap (Hoffman lab)", "leave_unknown": True}]},
+    {"names": ["Thermo Xcalibur"], "entity": "Xcalibur", "entry_kind": "vendor_product",
+     "license": None, "license_tier": "restricted",
+     "evidence_url": "https://www.thermofisher.com/", "verified": "2026-11-11"},
+]}
+
+
+def test_a_reviewed_entry_outranks_every_registry(tmp_path):
+    out, _, _ = _resolve(tmp_path, [
+        ("scikit-learn", "Scikit-learn", {}), ("sklearn", "sklearn", {}),
+    ], reviewed=REVIEWED)
+    for slug in ("scikit-learn", "sklearn"):
+        assert out[slug]["license"] == "BSD-3-Clause"
+        assert out[slug]["license_detection"] == "reviewed-map"
+        assert out[slug]["license_evidence"].endswith("/COPYING")
+        assert out[slug]["repo_url"] == "https://github.com/scikit-learn/scikit-learn"
+
+
+def test_an_ambiguous_reviewed_name_resolves_only_in_its_one_context(tmp_path):
+    out, report, _ = _resolve(tmp_path, [
+        ("umap", "UMAP", {"evidence_spans": ["a single-cell embedding with UMAP"]}),
+    ], reviewed=REVIEWED)
+    assert out["umap"]["license"] == "BSD-3-Clause"
+    assert report["umap"]["reason"] == "reviewed-context"
+
+
+def test_an_ambiguous_reviewed_name_in_the_other_context_stays_unknown(tmp_path):
+    """And no registry is consulted: the Bioconda `umap` must not come back."""
+    out, report, _ = _resolve(tmp_path, [
+        ("umap", "Umap", {"evidence_spans": ["mappability tracks from Umap"]}),
+    ], reviewed=REVIEWED, domain="genomics")
+    assert out == {}
+    assert report["umap"]["reason"] == "reviewed-context-leave-unknown"
+
+
+def test_an_ambiguous_reviewed_name_without_context_stays_unknown(tmp_path):
+    out, report, _ = _resolve(tmp_path, [("umap", "UMAP", {})], reviewed=REVIEWED)
+    assert out == {}
+    assert report["umap"]["reason"] == "reviewed-ambiguous-no-single-context"
+
+
+def test_a_reviewed_vendor_product_carries_its_kind(tmp_path):
+    out, _, _ = _resolve(tmp_path, [("xcalibur", "Thermo Xcalibur", {})], reviewed=REVIEWED)
+    assert out["xcalibur"]["license_tier"] == "restricted"
+    assert out["xcalibur"]["entry_kind"] == "vendor_product"
 
 
 def test_the_shipped_registry_config_is_well_formed():
@@ -204,15 +395,22 @@ def test_the_shipped_registry_config_is_well_formed():
     config = r.load_registry_config()
     assert config["registries"], "no registries declared"
     for reg in config["registries"]:
-        for field in ("id", "detection", "index_url", "index_shape",
-                      "license_field", "license_format", "repo_fields"):
+        for field in ("id", "scope", "detection", "index_shape", "license_field",
+                      "license_format", "repo_fields", "address"):
             assert reg.get(field), f"{reg.get('id')}: missing {field}"
-        if reg["index_shape"] == "name_list":
-            assert reg.get("package_url"), f"{reg['id']}: name_list needs package_url"
+        assert reg["scope"] in ("life_science", "general"), reg["id"]
+        if reg["index_shape"] == "per_name":
+            assert reg.get("package_url") and reg.get("ask_when"), reg["id"]
+        else:
+            assert reg.get("index_url"), reg["id"]
+    assert {"pypi", "cran", "biotools"} <= {reg["id"] for reg in config["registries"]
+                                           if reg["scope"] == "general"}
     ids = {reg["id"] for reg in config["registries"]}
     for excl in config.get("excluded_matches") or []:
         assert excl.get("tool") and excl.get("reason"), f"incomplete exclusion: {excl}"
         assert excl["registry"] in ids, f"{excl['tool']}: unknown registry {excl['registry']!r}"
+    assert "astronomy" not in config["life_science_collections"]
+    assert "agentic-ai" not in config["life_science_collections"]
 
 
 def test_every_registry_detection_counts_as_tool_evidence():
@@ -220,6 +418,20 @@ def test_every_registry_detection_counts_as_tool_evidence():
     from scripts.license_tier import TOOL_DETECTIONS
     for reg in r.load_registry_config()["registries"]:
         assert reg["detection"] in TOOL_DETECTIONS, reg["detection"]
+    assert r.DETECTION_REVIEWED in TOOL_DETECTIONS
+
+
+def test_a_refusing_registry_stops_the_run(tmp_path, monkeypatch):
+    """HTTP 403 or 429 must not be read as "no such package"."""
+    import urllib.error
+    from scripts import tool_registry_sources as T
+
+    def refuse(*_a, **_k):
+        raise urllib.error.HTTPError("https://pypi.org/x", 429, "Too Many Requests", {}, None)
+
+    monkeypatch.setattr(T.urllib.request, "urlopen", refuse)
+    with pytest.raises(T.RegistryRefused):
+        T.Fetcher(tmp_path).get("https://pypi.org/pypi/x/json", "pypi-x.json", 100)
 
 
 # --------------------------------------------------------------------------- #

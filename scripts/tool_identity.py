@@ -1,0 +1,379 @@
+"""Decide whether a registry package is the tool a record names.
+
+An exact name match is not identity. The same name denotes a dimension-reduction
+method and a genome mappability package, a language model and a Bioconductor
+package, a particle-physics code and a microbial one. Identity is therefore
+judged per record, in its collection, from the record's own evidence:
+
+- the record's evidence spans, the version it quotes, and the titles of the
+  papers it was extracted from (`local text`);
+- the repositories and DOIs it carries;
+- the names and descriptions of the skills that cite it (`skill text`).
+
+Three kinds of corroboration are read from that evidence (`corroboration`):
+
+- `repository`  a repository or homepage the package declares is one the record
+                names (its `source_repos`, or a URL in its spans);
+- `publication` a DOI the registry lists for the tool is one of the record's;
+- `code`        the record uses the name as a package of the registry's own
+                ecosystem: `library(x)`, `x::f`, `BiocManager::install("x")`,
+                `R package x` for R; `import x`, `pip install x`, `Python package x`
+                for Python; `conda install x` for conda.
+
+and two weaker signals:
+
+- `domain`      the vocabulary of the record's local text overlaps the package
+                description (binary cosine over identity-free tokens, at the
+                threshold measured in docs/design/registry-match-corroboration-2026-11-07.md);
+- the collection's domain: a curated life-science registry carries the domain
+  constraint only for a life-science collection.
+
+The rule, as `judge()` applies it, is stated in governance/LICENSE_TIERS.md.
+"""
+from __future__ import annotations
+
+import re
+from dataclasses import dataclass, field
+
+# Invoked by path (`python scripts/x.py`), only `scripts/` lands on sys.path, so
+# the repo root has to be added before the sibling package can be imported.
+if __package__ in (None, ""):
+    import os.path as _p
+    import sys as _sys
+
+    _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
+
+from scripts.corroborate_registry_match import STOPWORDS, domain_signal
+from scripts.tool_registry_sources import normalize
+
+# Selected on the labelled set of 94 Bioconductor and Bioconda matches; see
+# docs/design/registry-match-corroboration-2026-11-07.md. The `corroborated`
+# verdict had precision 1.0 on both splits at this threshold.
+DOMAIN_THRESHOLD = 0.021713
+
+# Names this short collide across registries too often for a name match plus
+# silence to count as identity: `bart`, `grid`, `mist` and `umap` are all four.
+SHORT_NAME_LENGTH = 4
+
+_CODE_HOSTS = ("github.com", "gitlab.com", "bitbucket.org", "codeberg.org", "sourceforge.net")
+# Hosts whose root or package pages say nothing about which project is meant.
+_GENERIC_HOSTS = ("bioconductor.org", "cran.r-project.org", "pypi.org", "anaconda.org",
+                  "bioconda.github.io", "doi.org", "dx.doi.org", "zenodo.org", "r-project.org",
+                  "python.org", "readthedocs.io", "github.io")
+_URL = re.compile(r"https?://[^\s)\]>'\"`,;]+", re.I)
+
+
+def repo_key(url) -> str | None:
+    """Comparable key for a repository or homepage URL, or None when it identifies nothing.
+
+    Code hosts compare on owner and repository; other hosts on host and path,
+    and a bare host is not a key (`https://www.bioconductor.org` names no tool).
+    """
+    text = str(url or "").strip().rstrip("/.")
+    text = re.sub(r"^git\+", "", text)
+    m = re.match(r"^(?:https?://)?(?:www\.)?([^/\s]+)(/[^?#\s]*)?", text, re.I)
+    if not m:
+        return None
+    host, path = m.group(1).lower(), (m.group(2) or "").rstrip("/")
+    if host in _CODE_HOSTS:
+        parts = [p for p in path.split("/") if p]
+        if len(parts) < 2:
+            return None
+        repo = re.sub(r"\.git$", "", parts[1].lower())
+        return f"{host}/{parts[0].lower()}/{repo}"
+    if any(host == g or host.endswith("." + g) for g in _GENERIC_HOSTS) or not path:
+        return None
+    return f"{host}{path.lower()}"
+
+
+def _name_pattern(names) -> str:
+    """Alternation of the names, bounded so `scan` does not match inside `scanpy`."""
+    escaped = sorted({re.sub(r"\\\s+|\\ ", r"[\\s_-]?", re.escape(str(n).strip()))
+                      for n in names if n and str(n).strip()}, key=len, reverse=True)
+    return r"(?<![\w.\-])(?:" + "|".join(escaped) + r")(?![\w\-])"
+
+
+def _ecosystem_patterns(names) -> dict[str, list[re.Pattern]]:
+    n = _name_pattern(names)
+    q = r"[\"'`*]*"
+    return {
+        "r": [
+            re.compile(rf"\b(?:library|require|requireNamespace|suppressPackageStartupMessages\(\s*library)\s*\(\s*{q}{n}{q}\s*[,)]", re.I),
+            re.compile(rf"\b(?:install\.packages|BiocManager::install|biocLite|remotes::install_cran|pak::pkg_install)\s*\([^)]*{q}{n}{q}", re.I),
+            re.compile(rf"{n}:::?[A-Za-z.]", re.I),
+            re.compile(rf"\bR[\s-]+(?:package|library)\s+(?:called\s+|named\s+)?{q}{n}", re.I),
+            re.compile(rf"{n}{q}\s+(?:R|Bioconductor|CRAN)[\s-]+(?:package|library)\b", re.I),
+            re.compile(rf"\b(?:Bioconductor|CRAN)\s+(?:package\s+)?{q}{n}", re.I),
+            re.compile(rf"{n}\s*\((?:an?\s+)?(?:R|Bioconductor)\s+package", re.I),
+            re.compile(rf"bioconductor\.org/packages/(?:(?:release|devel)/bioc/html/)?{n}", re.I),
+            re.compile(rf"cran\.r-project\.org/(?:web/)?package(?:s/|=){n}", re.I),
+        ],
+        "python": [
+            re.compile(rf"\bimport\s+{n}(?:\s+as\s+\w+)?\s*(?:$|[\n;,])", re.I | re.M),
+            re.compile(rf"\bfrom\s+{n}(?:\.\w+)*\s+import\b", re.I),
+            re.compile(rf"\bpip3?\s+install\s+(?:-{{1,2}}[\w-]+(?:[ =]\S+)?\s+)*{q}{n}", re.I),
+            re.compile(rf"\bPython\s+(?:package|library|module)\s+(?:called\s+|named\s+)?{q}{n}", re.I),
+            re.compile(rf"{n}{q}\s+(?:Python|PyPI)\s+(?:package|library|module)\b", re.I),
+            re.compile(rf"pypi\.org/project/{n}", re.I),
+            re.compile(rf"{n}\s*\((?:a\s+)?Python(?:\s+package)?\)", re.I),
+        ],
+        "conda": [
+            re.compile(rf"\b(?:conda|mamba|micromamba)\s+install\b[^\n]*?(?:bioconda::)?{n}", re.I),
+            re.compile(rf"\bbioconda::{n}", re.I),
+        ],
+    }
+
+
+@dataclass
+class RecordContext:
+    """What a single tool record says about itself, in its collection."""
+
+    collection: str
+    life_science: bool
+    names: list[str]
+    local_text: str
+    skill_text: str
+    repos: set[str] = field(default_factory=set)
+    dois: set[str] = field(default_factory=set)
+    # Share of the collection's skills whose text holds each word; see specific_overlap().
+    word_share: dict = field(default_factory=dict)
+
+    def all_text(self) -> str:
+        return self.local_text + "\n" + self.skill_text
+
+    def code_evidence(self, extra_names=()) -> dict[str, list[str]]:
+        """``{ecosystem: [snippets]}`` where the record uses the name as that ecosystem's package."""
+        names = [n for n in list(self.names) + list(extra_names) if n]
+        out: dict[str, list[str]] = {}
+        for ecosystem, patterns in _ecosystem_patterns(names).items():
+            for pattern in patterns:
+                for text in (self.local_text, self.skill_text):
+                    m = pattern.search(text)
+                    if m:
+                        start = max(0, m.start() - 40)
+                        out.setdefault(ecosystem, []).append(
+                            " ".join(text[start:m.end() + 40].split()))
+                        break
+                if ecosystem in out:
+                    break
+        return out
+
+
+_WORD = re.compile(r"[a-z][a-z0-9]+")
+
+
+def _stem(word: str) -> str:
+    """Plural and simple verb endings off, so `pipelines` meets `pipeline`."""
+    for suffix in ("ies", "es", "s"):
+        if word.endswith(suffix) and len(word) - len(suffix) >= 4:
+            return word[: -len(suffix)] + ("y" if suffix == "ies" else "")
+    return word
+
+
+def words(text: str) -> set[str]:
+    return {_stem(w) for w in _WORD.findall(str(text).lower())}
+
+
+def collection_word_share(skills) -> dict:
+    """``{word: share of skills whose name or description holds it}`` for one collection."""
+    counts: dict[str, int] = {}
+    for skill in skills:
+        for w in words(f"{skill.get('name') or ''} {skill.get('description') or ''}"):
+            counts[w] = counts.get(w, 0) + 1
+    n = max(1, len(skills))
+    return {w: c / n for w, c in counts.items()}
+
+
+def build_context(collection, life_science, record, tool_yaml, citing_skills,
+                  word_share=None) -> RecordContext:
+    """The record's own evidence, gathered from its index row, its yaml and its citing skills."""
+    tool_yaml = tool_yaml or {}
+    spans = [str(s) for s in tool_yaml.get("evidence_spans") or []]
+    titles = [str(d.get("title")) for d in tool_yaml.get("derived_from") or []
+              if isinstance(d, dict) and d.get("title")]
+    version = tool_yaml.get("version_used")
+    local = "\n".join(spans + titles + ([str(version)] if version else []))
+    skill_parts = []
+    for skill in citing_skills:
+        skill_parts.append(str(skill.get("name") or ""))
+        skill_parts.append(str(skill.get("description") or ""))
+    repos = {k for k in (repo_key(u) for u in tool_yaml.get("source_repos") or []) if k}
+    repos |= {k for k in (repo_key(u) for u in _URL.findall(local)) if k}
+    dois = {str(d).lower() for d in record.get("dois") or []}
+    dois |= {str(d.get("doi")).lower() for d in tool_yaml.get("derived_from") or []
+             if isinstance(d, dict) and d.get("doi")}
+    names = [n for n in (record.get("name"), record.get("slug")) if n]
+    return RecordContext(collection=collection, life_science=life_science, names=names,
+                         local_text=local, skill_text="\n".join(skill_parts),
+                         repos=repos, dois=dois, word_share=word_share or {})
+
+
+def name_is_weak(name, common_words) -> bool:
+    """True when the name alone cannot carry identity: very short, or an English word."""
+    key = normalize(name)
+    return len(key) <= SHORT_NAME_LENGTH or key in common_words
+
+
+# Words every life-science description uses. For a weak name, an overlap made
+# only of these says the package is about biology, not that it is this tool:
+# `EPIC` (immune deconvolution) and the Bioconda `epic` (a ChIP-seq peak caller)
+# share `seq` and nothing else.
+GENERIC_DOMAIN_TOKENS = frozenset("""
+    seq sequencing sequence sequences sequenced rna dna cell cells single gene genes genome
+    genomes genomic genomics read reads high different biological input output files file
+    python program programs fast accurate large efficient default generate end one level full
+    computational protein proteins sample samples biology bioinformatics tool toolkit
+    distinguish quality short long
+    """.split())
+MIN_SPECIFIC_OVERLAP = 2
+
+
+# A word held by this share of a collection's skills or more says what the
+# collection is about, not what one tool does (`metagenome` in metagenomics).
+COMMON_IN_COLLECTION = 0.02
+# Likewise for a word held by this share of the registry's package descriptions.
+COMMON_IN_REGISTRY = 0.01
+MIN_SKILL_OVERLAP = 2
+MIN_SKILL_OVERLAP_WEAK_NAME = 3
+
+
+def specific_overlap(ctx, registry_text, identity_values, registry_share=None) -> list[str]:
+    """Words shared by the citing skills and the package description that are specific.
+
+    Excluded: stopwords, identity words (a name cannot corroborate itself), the
+    generic life-science vocabulary, any word held by COMMON_IN_COLLECTION of the
+    collection's skills or more, and any word held by COMMON_IN_REGISTRY of the
+    registry's package descriptions or more.
+    """
+    registry_share = registry_share or {}
+    identity = set()
+    for value in identity_values:
+        identity |= words(value)
+        identity.add(normalize(value))
+    shared = words(ctx.skill_text) & words(registry_text)
+    return sorted(w for w in shared
+                  if w not in identity and w not in STOPWORDS and w not in GENERIC_DOMAIN_TOKENS
+                  and len(w) > 2 and ctx.word_share.get(w, 0.0) < COMMON_IN_COLLECTION
+                  and registry_share.get(w, 0.0) < COMMON_IN_REGISTRY)
+
+
+def domain_support(domain, ctx, registry_share, weak) -> bool:
+    """Whether the local-text domain signal is enough to carry the name.
+
+    The measured signal (cosine over the record's own text) is necessary. On top
+    of it, a weak name needs two shared words that are specific: not generic
+    life-science vocabulary, not common in the collection's skills, not common
+    in the registry's descriptions. A distinctive name needs two shared words,
+    or one specific word: `MetAlign` (mass spectra) and the Bioconda `metalign`
+    (metagenomes) share only `alignment`, which a tenth of Bioconda uses.
+    """
+    if domain["verdict"] != "corroborated":
+        return False
+    overlap = domain["overlap_tokens"]
+    specific = [t for t in overlap if t not in GENERIC_DOMAIN_TOKENS
+                and registry_share.get(_stem(t), 0.0) < COMMON_IN_REGISTRY
+                and ctx.word_share.get(_stem(t), 0.0) < COMMON_IN_COLLECTION]
+    if weak:
+        return len(specific) >= MIN_SPECIFIC_OVERLAP
+    return len(overlap) >= 2 or len(specific) >= 1
+
+
+@dataclass
+class Verdict:
+    accept: bool
+    reason: str
+    corroboration: list = field(default_factory=list)
+    contradiction: list = field(default_factory=list)
+
+
+def judge(registry, canonical, record, ctx: RecordContext, common_words) -> Verdict:
+    """Whether package ``canonical`` of ``registry`` is the tool ``ctx`` names.
+
+    The rule, in order:
+
+    1. A Bioconductor data package is never the tool (it names a dataset).
+    2. A contradiction always refuses unless the package's repository or
+       publication is the record's own: code evidence for another ecosystem
+       (`library(x)` against a Python package, `import x` against an R one, an
+       R package against a Bioconda package of the bare name, which Bioconda
+       would have prefixed), or, without strong evidence, a domain mismatch.
+    3. A general registry (CRAN, PyPI, bio.tools) needs strong evidence: the
+       repository, the publication or, for CRAN and PyPI, code evidence in the
+       registry's own ecosystem.
+    4. A curated life-science registry (Bioconductor, Bioconda) in a collection
+       outside the life sciences needs strong evidence too.
+    5. In a life-science collection, a weak name (four characters or fewer, or
+       an English word) needs strong evidence, a corroborated domain signal
+       with two specific shared words (domain_support()), or
+       MIN_SKILL_OVERLAP_WEAK_NAME specific words shared by the citing skills
+       and the package description (specific_overlap()).
+    6. Any other name needs strong evidence, a corroborated domain signal with
+       two shared words or one specific one, or MIN_SKILL_OVERLAP specific words
+       shared by the citing skills and the package description.
+    """
+    strong, contra = [], []
+    package_repos = {k for k in (repo_key(v) for v in registry.repo_values(record)) if k}
+    shared = sorted(package_repos & ctx.repos)
+    if shared:
+        strong.append({"kind": "repository", "value": shared[0]})
+    shared_dois = sorted(registry.dois(record) & ctx.dois)
+    if shared_dois:
+        strong.append({"kind": "publication", "value": shared_dois[0]})
+    code = ctx.code_evidence([canonical])
+    ecosystem = registry.ecosystem
+    if ecosystem in ("r", "python") and code.get(ecosystem):
+        strong.append({"kind": "code", "value": code[ecosystem][0]})
+    if ecosystem == "conda" and (code.get("conda") or code.get("python")):
+        found = code.get("conda") or code.get("python")
+        strong.append({"kind": "code", "value": found[0]})
+    decisive = any(s["kind"] in ("repository", "publication") for s in strong)
+
+    if registry.is_data_package(record):
+        return Verdict(False, "data-package", strong, [{"kind": "data-package"}])
+    if registry.restricts_use(record):
+        # The licence field is then not the whole story; leave it to a reviewer.
+        return Verdict(False, "registry-flags-restricted-use", strong, [])
+
+    other = {"r": "python", "python": "r"}.get(ecosystem)
+    if other and code.get(other) and not code.get(ecosystem):
+        contra.append({"kind": "ecosystem", "value": f"{other}: {code[other][0]}"})
+    if ecosystem == "conda" and code.get("r") and not (code.get("conda") or code.get("python")):
+        contra.append({"kind": "ecosystem", "value": f"r: {code['r'][0]}"})
+
+    domain = domain_signal(ctx.local_text, registry.text(record),
+                           list(ctx.names) + [canonical], DOMAIN_THRESHOLD)
+    domain_summary = {"kind": "domain", "value": domain["verdict"], "score": domain["score"],
+                      "overlap": domain["overlap_tokens"][:8]}
+    skill_words = specific_overlap(ctx, registry.text(record), list(ctx.names) + [canonical],
+                                   registry.word_share(words))
+    skill_summary = {"kind": "skill-domain", "value": "corroborated" if len(skill_words) >=
+                     MIN_SKILL_OVERLAP else "insufficient", "overlap": skill_words[:8]}
+
+    if contra and not decisive:
+        return Verdict(False, "contradicted", strong, contra)
+    if registry.scope == "general":
+        kinds = {s["kind"] for s in strong}
+        if registry.id == "biotools":
+            ok = bool(kinds & {"repository", "publication"})
+        else:
+            ok = bool(kinds & {"repository", "code"})
+        return Verdict(ok, "corroborated" if ok else "general-registry-needs-corroboration", strong, contra)
+    if not ctx.life_science:
+        return Verdict(bool(strong), "corroborated" if strong else "outside-life-science-needs-corroboration",
+                       strong, contra)
+    if strong:
+        return Verdict(True, "corroborated", strong, contra)
+    weak = any(name_is_weak(n, common_words) for n in [canonical] + list(ctx.names))
+    share = registry.word_share(words)
+    if weak:
+        if domain_support(domain, ctx, share, weak=True):
+            return Verdict(True, "domain-corroborated", [domain_summary], contra)
+        if len(skill_words) >= MIN_SKILL_OVERLAP_WEAK_NAME:
+            return Verdict(True, "skill-domain-corroborated", [skill_summary], contra)
+        return Verdict(False, "weak-name-needs-corroboration", strong,
+                       contra + [domain_summary, skill_summary])
+    if domain_support(domain, ctx, share, weak=False):
+        return Verdict(True, "domain-corroborated", [domain_summary], contra)
+    if skill_summary["value"] == "corroborated":
+        return Verdict(True, "skill-domain-corroborated", [skill_summary], contra)
+    return Verdict(False, "uncorroborated", strong, contra + [domain_summary, skill_summary])

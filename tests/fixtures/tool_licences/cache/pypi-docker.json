@@ -1,0 +1,14 @@
+{
+ "info": {
+  "name": "docker",
+  "summary": "A Python library for the Docker Engine API.",
+  "license": "Apache License 2.0",
+  "classifiers": [
+   "License :: OSI Approved :: Apache Software License"
+  ],
+  "home_page": "https://github.com/docker/docker-py",
+  "project_urls": {
+   "Source": "https://github.com/docker/docker-py"
+  }
+ }
+}

@@ -1,0 +1,114 @@
+# Tool licences checked by hand against the tool's own licence statement.
+# Human doc: LICENSE_TIERS.md § "Where a tool licence is allowed to come from".
+# Loader and validator: scripts/reviewed_tool_licences.py.
+#
+# This map takes precedence over every registry. A name listed here is never
+# looked up anywhere else, so a reviewer's decision, including "leave unknown",
+# cannot be overridden by a registry match. Names are matched after the
+# resolver's normalisation (lower case, letters and digits only), so `Scikit-learn`
+# and `scikit learn` are the same name; a normalised name may appear in one entry
+# only.
+#
+# Plain entry fields:
+#   names         names as they appear in tool records
+#   entity        what the name denotes
+#   entry_kind    software | vendor_product | artefact (LICENSE_TIERS.md)
+#   category      informational: language | runtime | package | application |
+#                 web_service | database | method | format
+#   license       SPDX expression, or null. When the licence reads as a tier
+#                 (scripts/tool_licence_text.py), license_tier must agree with it.
+#   license_tier  open | noncommercial | restricted | unknown
+#   repo_url      the tool's own repository
+#   homepage      the tool's own homepage
+#   evidence_url  where the licence statement was read; required unless the tier is unknown
+#   verified      date of the check, YYYY-MM-DD
+#   note          free text, or null
+#
+# An entry whose name denotes different things sets `ambiguous: true` and lists
+# `contexts`. The `when` sentence is for the reader and is never interpreted. A
+# context applies to a record only through its `match` keys, all of which must
+# hold:
+#   any_terms     at least one of these occurs in the record's evidence spans,
+#                 citing paper titles, or citing skills' names and descriptions
+#   none_terms    none of these occurs there
+#   ecosystems    the record uses the name as a package of one of these
+#                 ecosystems (r, python, conda), e.g. `library(x)`, `import x`
+#   collections   the record's collection is one of these
+# A record takes a context only when exactly one context matches it; otherwise
+# it stays unknown. A context without `match` keys never matches, so a context
+# written with a `when` sentence alone leaves every record unknown. A context
+# with `leave_unknown: true` records what the name means there without a licence.
+version: 1
+reviewed: '2026-11-11'
+entries:
+  - names: [scikit-learn, sklearn, Scikit-learn, scikit learn]
+    entity: scikit-learn
+    entry_kind: software
+    category: package
+    license: BSD-3-Clause
+    license_tier: open
+    repo_url: https://github.com/scikit-learn/scikit-learn
+    homepage: https://scikit-learn.org
+    evidence_url: https://github.com/scikit-learn/scikit-learn/blob/main/COPYING
+    verified: '2026-11-11'
+    note: null
+
+  - names: [NumPy, numpy]
+    entity: NumPy
+    entry_kind: software
+    category: package
+    license: BSD-3-Clause
+    license_tier: open
+    repo_url: https://github.com/numpy/numpy
+    homepage: https://numpy.org
+    evidence_url: https://github.com/numpy/numpy/blob/main/LICENSE.txt
+    verified: '2026-11-11'
+    note: null
+
+  - names: [pandas]
+    entity: pandas
+    entry_kind: software
+    category: package
+    license: BSD-3-Clause
+    license_tier: open
+    repo_url: https://github.com/pandas-dev/pandas
+    homepage: https://pandas.pydata.org
+    evidence_url: https://github.com/pandas-dev/pandas/blob/main/LICENSE
+    verified: '2026-11-11'
+    note: null
+
+  - names: [R]
+    entity: R, the language and environment for statistical computing
+    entry_kind: software
+    category: language
+    license: GPL-2.0-only OR GPL-3.0-only
+    license_tier: open
+    repo_url: https://svn.r-project.org/R/
+    homepage: https://www.r-project.org
+    evidence_url: https://www.r-project.org/Licenses/
+    verified: '2026-11-11'
+    note: R is distributed under the GNU GPL version 2 or version 3, at the user's choice.
+
+  - names: [UMAP, umap]
+    entity: null
+    ambiguous: true
+    contexts:
+      - when: dimension reduction, embedding, single-cell, Python or R analysis
+        match:
+          any_terms: [dimensionality reduction, dimension reduction, embedding, embeddings,
+                      single-cell, single cell, scRNA-seq, t-SNE, tSNE, manifold, visualization,
+                      visualisation, clustering]
+          none_terms: [mappability, Bismap]
+        entity: UMAP (umap-learn)
+        entry_kind: software
+        category: method
+        license: BSD-3-Clause
+        license_tier: open
+        repo_url: https://github.com/lmcinnes/umap
+        evidence_url: https://github.com/lmcinnes/umap/blob/master/LICENSE.txt
+      - when: genome mappability tracks (Umap and Bismap)
+        match:
+          any_terms: [mappability, Bismap]
+        entity: Umap (Hoffman lab)
+        leave_unknown: true
+    verified: '2026-11-11'
