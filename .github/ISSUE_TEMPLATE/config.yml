@@ -1,0 +1,14 @@
+# Issue chooser. The four contribution routes come first (templates 1 to 4,
+# ordered by file name); the domain repositories are private, so every route
+# lands on this public registry.
+blank_issues_enabled: true
+contact_links:
+  - name: Contribute from the web site
+    url: https://holobiomicslab.github.io/asb-skill-collections/contribute.html
+    about: Draft a redacted report on a skill, workflow or tool in your browser, then open it here.
+  - name: Propose a paper from the web site
+    url: https://holobiomicslab.github.io/asb-skill-collections/propose.html
+    about: Propose a paper for one of the released collections, in the fields the intake reads.
+  - name: Report a security vulnerability
+    url: https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/SECURITY.md
+    about: Do not open a public issue for a vulnerability; follow the security policy.

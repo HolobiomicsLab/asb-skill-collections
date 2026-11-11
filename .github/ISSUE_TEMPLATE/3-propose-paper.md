@@ -1,11 +1,12 @@
 ---
-name: Propose a paper, tool, or resource
-about: Suggest something for an ASB-Skill collection. Keep it short. A curator fills in the rest.
+name: "3. A paper is not referenced: propose it"
+about: Propose a paper, tool, or data resource for an ASB-Skill collection. Keep it short. A curator fills in the rest.
 title: "Propose: <name>"
 labels: ["propose", "paper-intake", "needs-triage"]
 ---
 
 <!--
+Route 3 of 4: a paper is not referenced: propose it.
 Keep this short. Just tell us WHAT, give a LINK, and one line on WHY.
 A curator (or our automated curation pass) resolves the DOI, open-access status,
 category, and fit, so you don't need to. See governance/SOURCES.md if you're
@@ -19,7 +20,7 @@ branch for curator review, comments its findings here and leaves the issue open.
 
 **Type:** <!-- paper / tool / data resource -->
 
-**Target collection:** <!-- the domain repository's collection slug, or a slug registered in collections.yaml -->
+**Target collection:** <!-- the domain of a released collection, as in collections.yaml: metabolomics, proteomics, genomics, ... -->
 
 **Why it matters (one or two sentences):**
 <!-- What does it do, and why is it worth grounding agent retrieval on? -->

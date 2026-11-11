@@ -1,44 +1,53 @@
 ---
-name: Report friction using a skill
-about: A skill was wrong, stale, missing, or wasteful in practice. Reports from real use are how the collection hardens.
-title: "<kind>: <skill or capability> — <what happened>"
+name: "1. A skill is wrong or could be better"
+about: A skill was wrong, stale, wasteful or improvable in practice. Reports from real use are how the collection hardens.
+title: "<kind>: <skill slug>: <what happened>"
 labels: ["usage-feedback", "needs-triage"]
 ---
 
 <!--
-The `asb-contribute` skill fills this in for you from the session where the
-problem happened, redacts paths and credentials, and shows you the result before
-anything is posted. Filling it in by hand is fine too.
+Route 1 of 4: this skill is wrong or could be better.
+A missing skill is route 2 (request-skill), a paper that is not referenced is
+route 3 (propose-paper), a technical fault of install, plugin, search, CLI, site
+or gates is route 4 (technical-fault).
+
+The router of each collection, `bin/report_issue.py` where a collection ships it,
+`asbb report` and `scripts/skill_feedback.py` fill this in for you, redact paths
+and credentials, and show you the result before anything is posted. Filling it
+in by hand is fine too.
 
 Before opening: search for the fingerprint below, or for the skill slug. If an
-issue already describes this, comment there instead — ten corroborations on one
+issue already describes this, comment there instead. Ten corroborations on one
 issue are worth more to a maintainer, and to you, than ten separate issues.
 -->
 
-**Kind:** <!-- defect | gap | composition | efficiency | drift -->
+**Route:** this skill is wrong or could be better
 
-- `defect` — an existing skill is wrong, stale, or does not work as written
-- `gap` — no skill covers the task; a new one is warranted
-- `composition` — the leaves exist but nothing composes them; a workflow is warranted
-- `efficiency` — the skill works but costs far more than it needs to
-- `drift` — the underlying tool changed and the skill no longer matches it
+**Kind:** <!-- defect | drift | enhancement | efficiency -->
 
-**Target:** <!-- the skill slug, or a short name for the capability that is missing -->
+- `defect`: an existing skill is wrong, stale, or does not work as written
+- `drift`: the underlying tool changed and the skill no longer matches it
+- `enhancement`: the skill works but could be better: a missing step, a better default, a clearer text
+- `efficiency`: the skill works but costs far more than it needs to
 
-**Fingerprint:** <!-- from `asb-contribute`; lets other reporters find this issue -->
+**Target:** <!-- the skill slug, as the search printed it -->
+
+**Collection:** <!-- e.g. metabolomics/v3 -->  ·  **Release:** <!-- e.g. metabolomics-v3.0.2 -->
+
+**Fingerprint:** <!-- from the helper; lets other reporters find this issue -->
 
 ### What happened
 
 <!-- What you ran, what the skill told you to do, and what actually occurred. -->
 
-### What the skill led you to expect
+### What the skill led me to expect
 
 <!-- Optional. Quote the line that misled you, if there was one. -->
 
 ### Context
 
 <!-- Tool and version, OS, anything that makes it reproducible. No sample data,
-no absolute paths, no credentials — see the note below. -->
+no absolute paths, no credentials. See the note below. -->
 
 ---
 
@@ -49,7 +58,8 @@ but it cannot recognise every sensitive sample name. You are the last check.
 <!--
 Why bother: this collection is grounded in the published literature and given
 away under CC-BY. It gets better only when people who use it say what broke.
-If you report a gap you can also propose the fix — see
-.github/ISSUE_TEMPLATE/propose-skill.md and governance/AUTHORSHIP.md, which
+A maintainer triages the report here and carries the fix into the private
+domain repository; the revised skill ships in a later release. If you can
+write the fix yourself, propose it (propose-skill.md); governance/AUTHORSHIP.md
 records authored skills as credit toward the reviewer tier.
 -->
