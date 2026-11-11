@@ -32,6 +32,21 @@ the other domains keep their files while those still match the registry, and
 the stage refuses, restoring the registry and catalogue, when one does not.
 All resulting digests are recorded in the release state.
 
+### Collection identifier landing pages
+
+Each collection identifier, such as
+`https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v3`, redirects
+to `collections/<domain>/v<N>/` in this public registry, where GitHub displays
+the generated `README.md`. That page summarizes the manifest row and points to
+the public archive without linking the private domain repository.
+
+`python scripts/render_collection_landings.py` generates one landing page per
+release row in `collections.yaml`, using marketplace entries only for install
+commands that target the same collection path. The manifest registration stage
+of `scripts/release_domain.py` regenerates the pages. CI runs
+`python scripts/render_collection_landings.py --check` so missing, stale, or
+unexpected landing pages cannot drift from the registry.
+
 ---
 
 ## 1. The Claude Code Plugin Marketplace (User Interface)

@@ -223,7 +223,7 @@ def test_fixture_lists_use_the_asbb_parser_and_unknown_slugs_are_refused(
         subset.check_slugs(["not-a-fixture-skill"], rows)
 
 
-@pytest.mark.skipif(not V3.is_dir(), reason="local v3 collection is unavailable")
+@pytest.mark.skipif(not (V3 / "skills_index.json").is_file(), reason="local v3 collection is unavailable")
 def test_every_real_facet_passes_the_asbb_slug_file_parser(tmp_path: Path) -> None:
     generate(V3, tmp_path / "facets", threshold=50)
     rows = json.loads((V3 / "skills_index.json").read_text())
@@ -233,7 +233,7 @@ def test_every_real_facet_passes_the_asbb_slug_file_parser(tmp_path: Path) -> No
         assert subset.check_slugs(slugs, rows) == slugs
 
 
-@pytest.mark.skipif(not V3.is_dir(), reason="local v3 collection is unavailable")
+@pytest.mark.skipif(not (V3 / "skills_index.json").is_file(), reason="local v3 collection is unavailable")
 def test_real_v3_acceptance_counts(tmp_path: Path) -> None:
     result = generate(V3, tmp_path / "facets", threshold=50)
 

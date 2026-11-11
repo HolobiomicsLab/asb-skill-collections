@@ -102,7 +102,7 @@ def test_body_mentions_do_not_tag_direct_infusion():
 def test_v2_held_out_metrics_match_investigation_exactly():
     collection = COLLECTIONS / "v2"
     evidence = INVESTIGATION / "techniques.json"
-    if not collection.is_dir() or not evidence.is_file():
+    if not (collection / "skills_index.json").is_file() or not evidence.is_file():
         pytest.skip("Released v2 collection or investigation measurements are unavailable")
     expected = json.loads(evidence.read_text())["held_out_metrics"]
     rows = load_rows(collection)
@@ -127,7 +127,7 @@ def test_v2_held_out_metrics_match_investigation_exactly():
 
 def test_v3_dry_run_reproduces_projected_counts(tmp_path):
     collection = COLLECTIONS / "v3"
-    if not collection.is_dir():
+    if not (collection / "skills_index.json").is_file():
         pytest.skip("Released v3 collection is unavailable")
     report = tmp_path / "report.json"
     result = run_cli("--collection", collection, "--rules", RULES_PATH, "--report", report)

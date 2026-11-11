@@ -15,6 +15,8 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
 ## [Unreleased]
 
 ### Added
+- Generate and validate a public landing page for every collection identifier,
+  including legacy majors whose released content now lives outside this registry.
 - Build-capsules deposit path, `scripts/capsules_deposit.py`: `refresh` rewrites the
   descriptive files of an existing pack against the collection as it is now and copies the
   build zips after checking their size and sha256; `archive` writes one deterministic zip per
