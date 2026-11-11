@@ -5,7 +5,7 @@ authorship cut for the first releases is **2026-12-15, 23:59 CET**. The public o
 date and reviewer access must be confirmed before this call is circulated.
 
 Ten domain collections of agent skills were released on 9 November 2026 by the Holobiomics
-Lab (CNRS / Université Côte d'Azur): metabolomics (v3.0.1), epigenomics and transcriptomics (v2),
+Lab (CNRS / Université Côte d'Azur): metabolomics (v3), epigenomics and transcriptomics (v2),
 and proteomics, genomics, metagenomics, metabarcoding, multi-omics, agentic AI and astronomy
 (v1). The registry [`collections.yaml`](../collections.yaml) is the reference for each release, its
 counts and its DOI. Four domains (transcriptomics, epigenomics, agentic AI and proteomics) had been

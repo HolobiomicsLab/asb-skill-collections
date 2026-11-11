@@ -2,7 +2,7 @@
 
 The registry `collections.yaml` lists the released collections of ten domains,
 each in a private domain repository `asb-skills-<domain>`. The examples below use
-metabolomics v3 (release `metabolomics-v3.0.1`, 11,830 skills over 1,989 tools)
+metabolomics v3 (release `metabolomics-v3.0.2`, 11,830 skills over 1,989 tools)
 in `asb-skills-metabolomics`. This master repository holds the tooling,
 governance and registry, not released content.
 
@@ -30,14 +30,15 @@ Search, apply, ground. Full protocol in [`AGENTS.md`](AGENTS.md) and
 `<domain checkout>/collections/metabolomics/v3/USAGE.md`.
 
 - Obtain leaves through `asbb fetch --collection metabolomics/v3`, a domain
-  checkout or the [Zenodo archive](https://doi.org/10.5281/zenodo.24093587).
+  checkout or the [Zenodo archive](https://doi.org/10.5281/zenodo.24122117).
 - Search with the shipped script, from any directory:
   `python3 "<collection root>/bin/search_skills.py" --query "<task>" -k 10`
   (add `--target workflows` or `--target tools`). `<collection root>` is the
   directory with `skills_index.json`, two directories above the router's
-  `SKILL.md`. The routers released on 2026-11-09 print
-  `python bin/search_skills.py`, which works only from the collection root
-  with a `python` executable.
+  `SKILL.md`. The routers of the patch releases of 2026-11-10 print this
+  command with the collection path filled in; those released on 2026-11-09
+  printed `python bin/search_skills.py`, which works only from the collection
+  root with a `python` executable.
 - Ground a skill against its source with this repository's binder:
   `python3 scripts/perspicacite_kb_bind.py query --collection "<collection root>" --skill <slug> --question "..."`.
   The map is `kb_bundle.json`; tiers are `paper`, `si` and `repo`. No released

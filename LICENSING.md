@@ -42,5 +42,7 @@ be removed promptly.
 
 ## Benchmark tasks and workflows (when released)
 
-Benchmark task descriptions, evaluation manifests, and workflows will be released
-under Apache-2.0. Raw paper content is not reproduced in benchmark files.
+Benchmark task descriptions and evaluation manifests will be released under
+Apache-2.0. Raw paper content is not reproduced in benchmark files. Released
+workflows are composite-workflow skills: each workflow `SKILL.md` carries
+`license: CC-BY-4.0`, under the collection content layer above.

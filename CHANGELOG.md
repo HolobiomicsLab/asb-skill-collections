@@ -414,6 +414,34 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   — but it is what keeps the six corrected sites honest now that the derivation
   gate makes the two numbers one number.
 
+## [Patch releases of the ten collections] - 2026-11-10
+
+Each released collection has a patch release: `v1.0.1` for agentic-ai, astronomy,
+genomics, metabarcoding, metagenomics, multi-omics and proteomics, `v2.0.1` for
+epigenomics and transcriptomics, `v3.0.2` for metabolomics. Each is a new version
+of the Zenodo record of its collection (the concept DOI is unchanged) and becomes
+the current row of `collections.yaml`; the replaced release is listed under
+`superseded` in that row.
+
+What changes in a collection: the leaf router and the workflow router give search
+commands that run from any directory and say when to use them, and
+`bin/search_skills.py` prints the licence tier and the source DOI of each hit.
+The ranking is the one each collection was released with (selector 1.0.0). Skill,
+tool, workflow and paper counts are unchanged.
+
+| Domain | Release | Version DOI |
+|---|---|---|
+| agentic-ai | `agentic-ai-v1.0.1` | [10.5281/zenodo.24122112](https://doi.org/10.5281/zenodo.24122112) |
+| astronomy | `astronomy-v1.0.1` | [10.5281/zenodo.24122111](https://doi.org/10.5281/zenodo.24122111) |
+| epigenomics | `epigenomics-v2.0.1` | [10.5281/zenodo.24122116](https://doi.org/10.5281/zenodo.24122116) |
+| genomics | `genomics-v1.0.1` | [10.5281/zenodo.24122105](https://doi.org/10.5281/zenodo.24122105) |
+| metabarcoding | `metabarcoding-v1.0.1` | [10.5281/zenodo.24122109](https://doi.org/10.5281/zenodo.24122109) |
+| metabolomics | `metabolomics-v3.0.2` | [10.5281/zenodo.24122117](https://doi.org/10.5281/zenodo.24122117) |
+| metagenomics | `metagenomics-v1.0.1` | [10.5281/zenodo.24122106](https://doi.org/10.5281/zenodo.24122106) |
+| multi-omics | `multi-omics-v1.0.1` | [10.5281/zenodo.24122110](https://doi.org/10.5281/zenodo.24122110) |
+| proteomics | `proteomics-v1.0.1` | [10.5281/zenodo.24122102](https://doi.org/10.5281/zenodo.24122102) |
+| transcriptomics | `transcriptomics-v2.0.1` | [10.5281/zenodo.24122113](https://doi.org/10.5281/zenodo.24122113) |
+
 ## [agentic-ai-v1.0.0] - 2026-11-09
 
 Release of the agentic-ai collection (v1) from the private domain repository
