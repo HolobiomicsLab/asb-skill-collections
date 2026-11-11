@@ -236,7 +236,7 @@ python scripts/check_retractions.py --collections <domain-checkout>/collections 
   --staged <domain-checkout>/staged-collections --report <retraction-report.json>
 python scripts/remap_edam.py --help
 python scripts/build_facets.py build --collection <domain-checkout>/collections/<domain>/v1 \
-  --out <facet-output.json> --dry-run
+  --out <facet-output-directory> --dry-run
 python scripts/pack_capsules.py --view <capsule-view.yaml> \
   --collection <domain-checkout>/collections/<domain>/v1 \
   --out <capsule-output-directory> --date <YYYY-MM-DD> --strict

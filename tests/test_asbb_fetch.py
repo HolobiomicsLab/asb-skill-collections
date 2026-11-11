@@ -37,7 +37,16 @@ class FakeHost:
         self.files = {fetch.commit_url(ref): commit.encode()}
         self.files[fetch.commit_url("main")] = commit.encode()
         self.files[f"{fetch.RAW_HOST}/{fetch.REPOSITORY}/{commit}/collections.yaml"] = (
-            b"schema: asb-collections-manifest/1\ndomains: {}\n"
+            (
+                "schema: asb-collections-manifest/1\n"
+                "domains:\n"
+                "  astronomy:\n"
+                f"    repository: {fetch.REPOSITORY}\n"
+                "    releases:\n"
+                "      - version: 3\n"
+                f"        path: collections/{COLLECTION}\n"
+                f"        commit: {commit}\n"
+            ).encode()
         )
         self.files[f"{base}/skills_index.json"] = json.dumps(index).encode()
         self.files.update({
@@ -126,7 +135,7 @@ def test_a_request_that_cannot_be_served_writes_nothing(tmp_path, request_, mess
 def test_a_failed_download_writes_nothing(tmp_path):
     dest = tmp_path / "out"
 
-    with pytest.raises(fetch.FetchError, match="HTTP 404"):
+    with pytest.raises(fetch.FetchError, match="404"):
         fetch.fetch(_request(*TIERS), dest, FakeHost(missing={"radio-interferometry"}))
 
     assert not dest.exists()

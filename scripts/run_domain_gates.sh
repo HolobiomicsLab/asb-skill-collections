@@ -1,8 +1,18 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+usage() {
+  echo "usage: $0 <tooling-root> <content-root> <collection_path> [receipts_path] [--strict]"
+  echo "Run the domain content gates offline; the release gate is advisory unless --strict is fifth."
+}
+
+if [ "$#" -eq 1 ] && { [ "$1" = "--help" ] || [ "$1" = "-h" ]; }; then
+  usage
+  exit 0
+fi
+
 if [ "$#" -lt 3 ] || [ "$#" -gt 5 ]; then
-  echo "usage: $0 <tooling-root> <content-root> <collection_path> [receipts_path] [--strict]" >&2
+  usage >&2
   exit 2
 fi
 

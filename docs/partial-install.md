@@ -284,8 +284,9 @@ asbb fetch nmr-peak-picking,gcms-spectral-deconvolution --collection metabolomic
 This resolves `metabolomics/v3` to `HolobiomicsLab/asb-skills-metabolomics` at
 the commit pinned by the master manifest. `--manifest-ref` selects another
 branch, tag or commit of the master manifest. An unlisted release, or a
-manifest that cannot be read, falls back to the master repository at `--ref`
-with one diagnostic on stderr and a `note` in the provenance.
+manifest that cannot be read, is refused with an actionable error; the master
+repository's `collections/<slug>/vN` entries are release landing pages, not
+downloadable collection trees.
 
 `--repository OWNER/NAME` bypasses the manifest entirely and reads that
 repository at `--ref` (default `main`), using the conventional

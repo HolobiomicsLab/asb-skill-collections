@@ -326,8 +326,9 @@ def _cmd_report(args) -> int:
     network and never posts.
     """
     from . import report_issue
+    report_args = ["--help"] if args.report_help else list(args.report_args)
     try:
-        return int(report_issue.main(list(args.report_args) or ["--help"], prog="asbb report"))
+        return int(report_issue.main(report_args or ["--help"], prog="asbb report"))
     except SystemExit as stop:  # argparse --help and usage errors
         return int(stop.code or 0)
 
@@ -346,7 +347,10 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--version", action="version", version=f"asbb {__version__}"
     )
-    sub = parser.add_subparsers(dest="command", metavar="{search,get,verify,doctor,install,uninstall,fetch}")
+    sub = parser.add_subparsers(
+        dest="command",
+        metavar="{search,get,verify,doctor,install,uninstall,fetch,report}",
+    )
 
     # asbb search <query> [--collection ...] [--target skills|workflows|tools]
     p_search = sub.add_parser("search", help="Keyword-search skills/workflows/tools (offline, no key).")
@@ -461,6 +465,7 @@ def build_parser() -> argparse.ArgumentParser:
         "report", add_help=False,
         help="Draft a redacted issue report for the public tracker; nothing is posted.",
         description="Routes: skill, missing, paper, fault. `asbb report <route> --help` lists the fields.")
+    p_report.add_argument("-h", "--help", action="store_true", dest="report_help")
     p_report.add_argument("report_args", nargs=argparse.REMAINDER)
     p_report.set_defaults(func=_cmd_report)
 

@@ -78,26 +78,29 @@ def test_manifest_selects_the_domain_repository_at_its_pinned_commit(tmp_path):
     }
 
 
-def test_an_unlisted_collection_falls_back_to_the_master(tmp_path, capsys):
+def test_an_unlisted_collection_never_uses_the_master_landing_directory(tmp_path):
     manifest = "schema: asb-collections-manifest/1\ndomains: {}\n"
     host = ManifestHost(manifest=manifest)
+    dest = tmp_path / "out"
 
-    provenance = fetch.fetch(request(), tmp_path / "out", host)
+    with pytest.raises(fetch.FetchError, match="not listed") as error:
+        fetch.fetch(request(), dest, host)
 
-    assert provenance["repository"] == fetch.REPOSITORY_URL
-    assert provenance["commit"] == COMMIT
-    assert "not listed" in provenance["note"]
-    assert "not listed" in capsys.readouterr().err
+    assert "--repository OWNER/NAME" in str(error.value)
+    assert host.seen == [fetch.commit_url("main"), host.manifest_url]
+    assert not dest.exists()
 
 
-def test_an_unreadable_manifest_falls_back_with_one_diagnostic(tmp_path, capsys):
+def test_an_unreadable_manifest_is_refused_with_an_override_hint(tmp_path):
     host = ManifestHost(manifest=None)
+    dest = tmp_path / "out"
 
-    provenance = fetch.fetch(request(), tmp_path / "out", host)
+    with pytest.raises(fetch.FetchError, match="cannot read collections manifest") as error:
+        fetch.fetch(request(), dest, host)
 
-    assert provenance["repository"] == fetch.REPOSITORY_URL
-    assert "could not be read" in provenance["note"]
-    assert len(capsys.readouterr().err.splitlines()) == 1
+    assert "--repository OWNER/NAME" in str(error.value)
+    assert host.seen == [fetch.commit_url("main"), host.manifest_url]
+    assert not dest.exists()
 
 
 def test_a_repository_override_does_not_read_the_manifest(tmp_path):

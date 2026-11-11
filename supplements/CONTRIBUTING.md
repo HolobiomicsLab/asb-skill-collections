@@ -4,10 +4,13 @@ ASB grounds skills/cards against a paper's text + its code repo, but the richest
 evidence often lives in **supplementary information** — methods PDFs, parameter
 tables, protocols, extended data — which is **not reliably collectable
 programmatically** (Unpaywall has no SI field; only PMC-OA papers expose SI in
-JATS). This directory lets experts/users deposit SI, keyed to a paper DOI, so
-ASB can ingest it. See [`SPEC.md`](SPEC.md) for the full design.
+JATS). This directory specifies an SI deposit keyed to a paper DOI for later ASB
+ingestion. See [`SPEC.md`](SPEC.md) for the full design.
 
-## How to deposit (PR-based)
+This directory currently contains example material only; it is not an operating
+public supplement intake.
+
+## Proposed PR-based deposit
 
 1. **Make a directory** named after the DOI slug — lowercase the DOI and replace
    every run of non-`[a-z0-9]` with `-`:
@@ -38,7 +41,8 @@ ASB can ingest it. See [`SPEC.md`](SPEC.md) for the full design.
        provenance: "publisher SI, not redistributable"
    ```
 
-3. **`file:` vs `url:` — the license gate** (`CONTENT_POLICY.md` §3/§4):
+3. **`file:` vs `url:`: the license gate**
+   ([`governance/CONTENT_POLICY.md`](../governance/CONTENT_POLICY.md) §3/§4):
    - A **`file:`** is committed to this public repo, i.e. *redistributed*, so its
      `license` MUST be OA/permissive: `cc-by`, `cc-by-sa`, `cc0`,
      `public-domain`. Non-OA files are **rejected**.
@@ -58,7 +62,7 @@ ASB can ingest it. See [`SPEC.md`](SPEC.md) for the full design.
 5. **Open a PR.** CI runs `validate_supplements.py` (schema + license gate +
    dead-link check). A maintainer reviews and merges.
 
-## What happens after merge
+## Proposed post-merge processing
 
 A maintainer (or a scheduled job) runs:
 
