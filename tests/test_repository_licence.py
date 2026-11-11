@@ -110,7 +110,7 @@ def ev(route, licence, tier, repo):
     return {"route": f"registry:{route}", "license": licence, "license_tier": tier,
             "license_raw": licence, "license_detection": f"{route}-package",
             "license_evidence": f"https://example.org/{route}", "repo_url": f"https://github.com/{repo}",
-            "matched": "x"}
+            "matched": repo.split("/")[-1]}
 
 
 def test_star_bioconda_gpl_is_replaced_by_the_repositorys_mit(tmp_path):
@@ -188,3 +188,82 @@ def test_bioconductor_withholds_only_on_a_tier_contradiction_with_description(tm
     g = _cache(tmp_path / "y", "o/s", {"DESCRIPTION": "Package: s\nLicense: GPL-3\n"})
     out, outcome = r.confirm(ev("cran", "MIT", "open", "o/s"), g)
     assert (outcome, out["license"]) == ("kept-registry-declares", "MIT")
+
+
+# --------------------------------------------------------------------------- #
+# Added terms, the README, and the guards on a replacement                    #
+# --------------------------------------------------------------------------- #
+
+def test_a_permissive_file_with_added_terms_is_not_that_licence():
+    """bmxp: "MIT License (Dual License)", a separate commercial licence for redistribution."""
+    assert rl.classify_file(text("mit_dual_added_terms.txt"))["tier"] == "noncommercial"
+    contact = rl.classify_file(text("mit_added_contact.txt"))
+    assert (contact["tier"], contact["reason"]) == (None, "permissive-with-added-terms")
+
+
+def test_added_terms_are_looked_for_outside_the_canonical_wording_only():
+    # The Unlicense itself says "commercial or non-commercial".
+    assert rl.classify_file(text("unlicense.txt"))["license"] == "Unlicense"
+    # A copyright holder's name is not a term.
+    holder = text("mit.txt").replace("[Example Author]", "Academic Medical Center")
+    assert rl.classify_file(holder)["license"] == "MIT"
+    # The GNU and Apache texts use these words in their own bodies.
+    assert rl.classify_file(text("apache2.txt"))["license"] == "Apache-2.0"
+    assert rl.classify_file(text("gpl3.txt"))["license"] == "GPL-3.0"
+
+
+def test_added_terms_withhold_an_author_written_licence(tmp_path):
+    f = _cache(tmp_path, "o/bmxp", {"LICENSE": "mit_dual_added_terms.txt"})
+    out, outcome = r.confirm(ev("pypi", "MIT", "open", "o/bmxp"), f)
+    assert out is None and outcome.startswith("withheld-added-terms:pypi=MIT")
+    (tmp_path / "b").mkdir()
+    g = _cache(tmp_path / "b", "o/bmxp", {"LICENSE": "mit_dual_added_terms.txt"})
+    out, outcome = r.confirm(ev("bioconda", "MIT", "open", "o/bmxp"), g)
+    assert (outcome, out["license_tier"]) == ("replaced", "noncommercial")
+    (tmp_path / "c").mkdir()
+    h = _cache(tmp_path / "c", "o/tool", {"LICENSE": "mit_added_contact.txt"})
+    out, outcome = r.confirm(ev("bioconda", "MIT", "open", "o/tool"), h)
+    assert out is None and outcome == "withheld-added-terms:bioconda=MIT|repository=unread"
+
+
+def test_a_readme_that_restricts_use_withholds_an_open_record(tmp_path):
+    """USAT: an LGPL-2.1 file, and a README "Free for all academic and educational purposes"."""
+    f = _cache(tmp_path, "o/USAT", {"LICENSE": "lgpl21.txt", "README.md": "README_restricted.md"})
+    out, outcome = r.confirm(ev("biotools", "LGPL-2.1-only", "open", "o/USAT"), f)
+    assert out is None
+    assert outcome == "withheld-readme-restriction:Free for all academic and educational purposes."
+
+
+def test_a_readme_about_a_dependencys_licence_does_not_withhold(tmp_path):
+    f = _cache(tmp_path, "o/tool", {"LICENSE": "mit.txt", "README.md": "README_dependency.md"})
+    out, outcome = r.confirm(ev("bioconda", "MIT", "open", "o/tool"), f)
+    assert outcome == "confirmed"
+    assert out["confirmation"]["readme"].endswith("/o/tool/HEAD/README.md")
+
+
+def test_a_readme_research_use_only_disclaimer_is_not_a_licence_term():
+    assert rl.readme_restriction("For research use only. Not for use in diagnostic procedures.") is None
+    assert rl.readme_restriction("This software is for academic use only.") is not None
+
+
+def test_a_replacement_reads_only_a_repository_named_like_the_tool(tmp_path):
+    """bootRanges: the bio.tools repository holds the paper's scripts, not the tool."""
+    f = _cache(tmp_path, "o/bootRangespaper", {"LICENSE": "mit.txt"})
+    record = dict(ev("biotools", "GPL-3.0-only", "open", "o/bootRangespaper"), matched="bootranges")
+    out, outcome = r.confirm(record, f, tool_name="bootRanges")
+    assert out is None and outcome == "withheld-repository-name:bootRangespaper"
+    (tmp_path / "m").mkdir()
+    g = _cache(tmp_path / "m", "o/EpiNano", {"LICENSE": "mit.txt"})
+    moved = dict(ev("biotools", "GPL-2.0-only", "open", "o/EpiNano"), matched="epinano")
+    out, outcome = r.confirm(moved, g, tool_name="EpiNano")
+    assert (outcome, out["license"]) == ("replaced", "MIT")  # a moved repository is not seen
+
+
+def test_gnu_statements_differing_only_in_version_give_the_family(tmp_path):
+    """FastTree: Bioconda GPL-2.0-or-later, a GPL version 3 text in the repository."""
+    f = _cache(tmp_path, "o/FastTree", {"LICENSE": "gpl3.txt"})
+    out, outcome = r.confirm(ev("bioconda", "GPL-2.0-or-later", "open", "o/FastTree"), f)
+    assert (outcome, out["license"], out["license_tier"]) == ("family-fallback", "GPL", "open")
+    assert (out["confirmation"]["registry_license"], out["confirmation"]["file_license"]) == (
+        "GPL-2.0-or-later", "GPL-3.0")
+    assert rl.gnu_family("LGPL-3.0-only", "GPL-3.0") is None

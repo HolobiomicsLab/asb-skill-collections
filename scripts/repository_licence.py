@@ -38,6 +38,7 @@ from scripts.tool_registry_sources import normalize
 DETECTION_REPOSITORY_FILE = "repository-licence-file"
 LICENCE_FILES = ("LICENSE", "LICENSE.txt", "LICENSE.md", "COPYING", "COPYING.txt",
                  "LICENCE", "LICENCE.txt")
+README_FILES = ("README.md", "README.rst", "README", "README.txt")
 MAX_FILE_BYTES = 400_000
 
 NONCOMMERCIAL_FILE = "LicenseRef-repository-noncommercial"
@@ -81,6 +82,81 @@ _NONCOMMERCIAL = re.compile(
     r"(?:academic|non-?commercial|research))*(?: research)? (?:use|purposes)(?: only)?"
     r"|non-?commercial (?:use|purposes) only|not for commercial use|commercial use is "
     r"(?:not permitted|prohibited|forbidden)|may not be used for (?:any )?commercial purposes")
+
+
+# A permissive licence file that adds terms of its own is not that licence (bmxp:
+# "MIT License (Dual License)", free for academic and non-profit use, a separate
+# commercial licence for redistribution). The added terms are looked for only
+# outside the licence's canonical wording, because the canonical texts of some
+# families use the same words (the Unlicense: "commercial or non-commercial").
+# The canonical spans below are removed from the normalised text; what remains is
+# the heading, the added clauses and any trailing notes. Copyright lines are
+# dropped first, so a holder named "Academic Medical Center" is not a term.
+_MIT_GRANT = re.compile(r"permission is hereby granted, free of charge, to any person obtaining a copy")
+_CANONICAL = {
+    "MIT": [r"permission is hereby granted, free of charge, to any person obtaining a copy of this "
+            r"software.{0,800}?subject to the following conditions:?",
+            r"the above copyright notice and this permission notice shall be included in all "
+            r"copies or substantial portions of the software\.?",
+            r"the software is provided \"?as is\"?,? without warranty of any kind.{0,1500}?"
+            r"(?:other dealings in the software|use or other dealings)\.?"],
+    "BSD": [r"redistribution and use in source and binary forms, with or without modification, "
+            r"are permitted provided that the following conditions are met:?",
+            r"redistributions of source code must retain [^.]*\.",
+            r"redistributions in binary form must reproduce [^.]*\.",
+            r"neither the name [^.]*\.",
+            r"the names? of [^.]{0,200}(?:may|must) not be used to endorse [^.]*\.",
+            r"this software is provided by .{0,300}?\"?as is\"?.{0,2000}?possibility of such damage\.?"],
+    "Apache": [r"apache license,? version 2\.0.{0,20000}?end of terms and conditions",
+               r"appendix: how to apply the apache license.{0,2000}?limitations under the license\.?",
+               r"licensed under the apache license,? version 2\.0.{0,1000}?limitations under the "
+               r"license\.?"],
+    "Unlicense": [r"this is free and unencumbered software released into the public domain"
+                  r".{0,4000}?(?:unlicense\.org/?>?|$)"],
+}
+_ADDED_TERMS = re.compile(
+    r"dual[- ]licen|non-?commercial|academic|non-?profit|commercial licen|commercial use|"
+    r"commercial purposes|research purposes|educational purposes|industrial|permission of|"
+    r"contact us")
+# Plain words that commercial use is excluded or needs a separate licence.
+_COMMERCIAL_EXCLUDED = re.compile(
+    r"separate commercial licen|commercial licen[cs]e (?:is |must be )?(?:required|needed|obtained)"
+    r"|(?:commercial (?:use|purposes|users?|redistribution)|redistribution)[^.]{0,80}"
+    r"(?:requires?|requiring|needs?|must obtain)[^.]{0,40}licen"
+    r"|commercial (?:use|purposes)[^.]{0,40}(?:not (?:permitted|allowed)|prohibited|excluded)")
+
+
+def _permissive_family(t: str, distinct: list[str]) -> str | None:
+    """The permissive family whose added terms must be checked, or None."""
+    if len(distinct) > 1:
+        return None
+    lic = distinct[0] if distinct else None
+    if lic == "MIT" or (lic is None and _MIT_GRANT.search(t)):
+        return "MIT"
+    if lic is None and _BSD.search(t):
+        return "BSD"
+    if lic and lic.startswith("BSD-"):
+        return "BSD"
+    if lic in ("Apache-2.0", "Unlicense", "CC0-1.0"):
+        return lic.split("-")[0]
+    return None
+
+
+def added_terms(text: str, family: str) -> str | None:
+    """The text outside a permissive licence's canonical wording, when it adds terms."""
+    kept = "\n".join(line for line in (text or "").splitlines()
+                     if not re.match(r"^\W*(?:copyright\b|\(c\)|\u00a9)", line.strip(), re.I))
+    t = _norm(kept)
+    if family == "CC0":
+        # A Creative Commons text uses these words itself; only a heading above it counts.
+        title = re.search(r"creative commons legal code|cc0 1\.0 universal", t)
+        outside = t[:title.start()] if title else ""
+    else:
+        outside = t
+        for pattern in _CANONICAL[family]:
+            outside = re.sub(pattern, " ", outside)
+    outside = " ".join(outside.split())
+    return outside if _ADDED_TERMS.search(outside) else None
 
 
 def classify_file(text: str) -> dict:
@@ -131,6 +207,14 @@ def classify_file(text: str) -> dict:
             ["SA"] if cc.group(2) == "-sharealike" else ["ND"] if cc.group(2) else [])
         found.append("-".join(parts) + "-" + cc.group(3))
     distinct = sorted(set(found))
+    family = _permissive_family(t, distinct)
+    if family:
+        extra = added_terms(text, family)
+        if extra:
+            if _COMMERCIAL_EXCLUDED.search(extra) or _NONCOMMERCIAL.search(extra):
+                return {"license": NONCOMMERCIAL_FILE, "tier": "noncommercial",
+                        "reason": "permissive-with-noncommercial-terms"}
+            return {"license": None, "tier": None, "reason": "permissive-with-added-terms"}
     if len(distinct) == 2 and _DUAL.search(t) and not any(
             d.startswith("CC-BY-NC") for d in distinct):
         # A file that offers a choice in plain words ("dual licensed under ... or ...").
@@ -214,6 +298,18 @@ def agrees(registry_licence, file_licence) -> bool:
     return False
 
 
+def gnu_family(registry_licence, file_licence) -> str | None:
+    """`GPL`, `LGPL` or `AGPL` when both are that GNU family and differ only in version."""
+    reg, rep = _keys(registry_licence), _keys(file_licence)
+    if len(reg) != 1 or len(rep) != 1:
+        return None
+    a, b = next(iter(reg)), next(iter(rep))
+    if a == b or a.startswith("family:") or b.startswith("family:"):
+        return None
+    fa, fb = a.split("-")[0], b.split("-")[0]
+    return fa if fa == fb and fa in ("GPL", "LGPL", "AGPL") else None
+
+
 # --------------------------------------------------------------------------- #
 # Fetching                                                                    #
 # --------------------------------------------------------------------------- #
@@ -233,6 +329,93 @@ def raw_urls(repo_url) -> list[tuple[str, str]]:
     return [(n, base + urllib.parse.quote(n)) for n in names]
 
 
+def _raw_base(repo_url) -> str | None:
+    urls = raw_urls(repo_url)
+    return urls[0][1].rsplit("/", 1)[0] + "/" if urls else None
+
+
+def _get_text(fetcher, url) -> str | None:
+    key = "repofile-" + re.sub(r"[^A-Za-z0-9.]+", "_", url.split("://", 1)[1])
+    data = fetcher.get(url, key, MAX_FILE_BYTES, paced=True)
+    return None if data is None else data.decode("utf-8", "replace")
+
+
+def repository_name(repo_url) -> str | None:
+    """The repository part of a GitHub or GitLab address."""
+    m = re.match(r"^(?:https?://)?(?:www\.)?(?:github\.com|gitlab\.com)/[^/\s]+/([^/\s#?]+?)"
+                 r"(?:\.git)?/?$", str(repo_url or "").strip())
+    return m.group(1) if m else None
+
+
+# --------------------------------------------------------------------------- #
+# The README                                                                  #
+# --------------------------------------------------------------------------- #
+
+# A sentence that restricts use of the tool itself. The patterns are about use or
+# licensing, never a bare "commercial": "free for academic and educational
+# purposes", "academic use only", "commercial use requires a licence", "a license
+# is needed", "for research purposes only", an industrial licence.
+_KIND = r"(?:academic|non-?commercial|research|educational|non-?profit|scientific)"
+_KINDS = _KIND + r"(?:(?:,| and| or| &|/) ?" + _KIND + r")*"
+_README_RESTRICTION = re.compile(
+    r"free (?:of charge )?for (?:all |any )?" + _KINDS + r" (?:use|users|purposes|institutions)"
+    r"|\b" + _KINDS + r" (?:use|purposes) only"
+    r"|(?:only|solely|exclusively) (?:for|to) " + _KINDS + r" (?:use|users|purposes)"
+    r"|not (?:be )?(?:for|used for|intended for) (?:any )?commercial (?:use|purposes)"
+    r"|commercial use is (?:not permitted|prohibited|forbidden|not allowed)"
+    r"|commercial (?:use|users?|purposes|applications?|entities|companies)[^.]{0,80}"
+    r"(?:requires?|need|must (?:obtain|contact|purchase)|contact us|licen[cs]e is)"
+    r"|(?:a|separate|commercial) licen[cs]e (?:is|must be|needs to be|has to be) "
+    r"(?:needed|required|obtained)"
+    r"|for research purposes only"
+    r"|industrial[^.]{0,100}licen[cs]e")
+# A sentence about something the tool depends on, not the tool. Such sentences are
+# skipped: "Note that NetMHCpan, a dependency, is free for academic use only".
+_ABOUT_ANOTHER = re.compile(
+    r"dependenc|third[- ]party|depends on|is required (?:to run|by)|"
+    r"you (?:will )?(?:also )?need to (?:download|install|obtain|register)|"
+    r"(?:must|should|needs? to) be (?:downloaded|installed|obtained) separately|"
+    r"(?:its|their) own licen|licen[cs]ed by (?:its|their)")
+
+
+def readme_sentences(text: str) -> list[str]:
+    """The README's sentences, with code blocks and markup removed."""
+    text = re.sub(r"```.*?```", " ", text or "", flags=re.S)
+    text = re.sub(r"<[^>]{1,200}>|\[!\[[^\]]*\]\([^)]*\)\]\([^)]*\)|!\[[^\]]*\]\([^)]*\)", " ", text)
+    text = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", text)
+    parts = re.split(r"(?<=[.!?])\s+|\n\s*\n|\n\s*(?:[-*+]|\d+[.)])\s+|\n\s*#+\s*", text)
+    return [" ".join(re.sub(r"[#*>`_|]+", " ", p).split()) for p in parts if p.strip()]
+
+
+def readme_restriction(text: str) -> str | None:
+    """The first README sentence that restricts use of the tool itself, or None."""
+    sentences = readme_sentences(text)
+    for i, sentence in enumerate(sentences):
+        low = sentence.lower().replace("\u2019", "'")
+        if not _README_RESTRICTION.search(low) or _ABOUT_ANOTHER.search(low):
+            continue
+        # "For research use only. Not for use in diagnostic procedures." is a
+        # regulatory disclaimer about clinical use, not a licence term.
+        near = " ".join(sentences[i:i + 2]).lower()
+        if re.search(r"research use only", low) and re.search(r"diagnos|clinical", near):
+            continue
+        return sentence[:300]
+    return None
+
+
+def repository_readme(repo_url, fetcher) -> dict | None:
+    """``{file, sentence}`` for the first README present, or None when there is none."""
+    base = _raw_base(repo_url)
+    if not base:
+        return None
+    for name in README_FILES:
+        url = base + urllib.parse.quote(name)
+        text = _get_text(fetcher, url)
+        if text is not None:
+            return {"file": url, "sentence": readme_restriction(text)}
+    return None
+
+
 def repository_statement(repo_url, fetcher, description_only=False) -> dict | None:
     """``{license, tier, reason, file}`` from the repository, or None when nothing was found.
 
@@ -246,9 +429,7 @@ def repository_statement(repo_url, fetcher, description_only=False) -> dict | No
         return None
 
     def get(url):
-        key = "repofile-" + re.sub(r"[^A-Za-z0-9.]+", "_", url.split("://", 1)[1])
-        data = fetcher.get(url, key, MAX_FILE_BYTES, paced=True)
-        return None if data is None else data.decode("utf-8", "replace")
+        return _get_text(fetcher, url)
 
     found = None
     for name, url in ([] if description_only else urls[:-1]):

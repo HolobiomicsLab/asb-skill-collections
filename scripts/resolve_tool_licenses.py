@@ -41,7 +41,8 @@ from scripts.license_tier import (UNESTABLISHED_DETECTIONS, load_map, tier_for_l
                                   tool_license, warn_legacy_tool_licenses)
 from scripts.tool_identity import build_context, collection_word_share, judge, repo_key
 from scripts.tool_licence_text import read_licence
-from scripts.repository_licence import (DETECTION_REPOSITORY_FILE, agrees, raw_urls,
+from scripts.repository_licence import (DETECTION_REPOSITORY_FILE, agrees, gnu_family, raw_urls,
+                                        repository_name, repository_readme,
                                         repository_statement)
 from scripts.tool_registry_sources import Fetcher, Registry, RegistryRefused, normalize
 
@@ -300,7 +301,27 @@ THIRD_PARTY = frozenset({"bioconda", "biotools"})
 R_DECLARED = frozenset({"bioconductor", "cran"})
 
 
-def confirm(evidence, fetcher) -> tuple[dict | None, str]:
+def confirm(evidence, fetcher, tool_name=None, readme=True) -> tuple[dict | None, str]:
+    """(evidence, outcome): the repository's licence file, then its README.
+
+    A record that would be recorded `open` is withheld when the repository's README
+    restricts use of the tool in plain words (USAT: an LGPL-2.1 file, and a README
+    that says "Free for all academic and educational purposes. A license is needed
+    ... for any industrial and any other purposes"): the tool's own statements then
+    contradict each other, as MassCube's do.
+    """
+    out, outcome = _confirm_file(evidence, fetcher, tool_name)
+    if not (readme and out and out.get("license_tier") == "open"):
+        return out, outcome
+    found = repository_readme(out.get("repo_url"), fetcher)
+    if found and found["sentence"]:
+        return None, f"withheld-readme-restriction:{found['sentence']}"
+    if found and out.get("confirmation") is not None:
+        out["confirmation"]["readme"] = found["file"]
+    return out, outcome
+
+
+def _confirm_file(evidence, fetcher, tool_name=None) -> tuple[dict | None, str]:
     """(evidence, outcome) after checking a registry licence against the repository.
 
     Who wrote the registry's licence field decides what the repository may change:
@@ -319,11 +340,24 @@ def confirm(evidence, fetcher) -> tuple[dict | None, str]:
       a tier contradiction with it withholds. A LICENSE file may carry terms for a
       bundled component (xcms) and never overrides the declaration.
 
+    A permissive licence file that adds terms of its own (bmxp: "MIT License (Dual
+    License)", a separate commercial licence for redistribution) withholds the
+    record for every source unless the file is read as `noncommercial` and the
+    registry was written by a third party (`withheld-added-terms`).
+
+    A replacement reads only a repository named like the package or the record
+    (`withheld-repository-name`), and two GNU statements of one family that differ
+    only in version give the unversioned family (`family-fallback`).
+
     `confirmed` means the file agrees in family and version.
     """
     registry = evidence["route"].split(":", 1)[1]
     statement = repository_statement(evidence.get("repo_url"), fetcher,
                                      description_only=registry in R_DECLARED)
+    if statement and statement["reason"].startswith("permissive-with") and not (
+            statement["tier"] and registry in THIRD_PARTY):
+        return None, (f"withheld-added-terms:{registry}={evidence['license']}"
+                      f"|repository={statement['license'] or 'unread'}")
     read = bool(statement and statement["tier"])
     if read and agrees(evidence["license"], statement["license"]):
         evidence["confirmation"] = {"status": "confirmed", "file": statement["file"],
@@ -342,7 +376,23 @@ def confirm(evidence, fetcher) -> tuple[dict | None, str]:
                               f"|repository={statement['license']}")
             evidence["confirmation"] = dict(differs, status="kept-registry-declares")
             return evidence, "kept-registry-declares"
+        # A replacement must read the tool's own repository: its name is the
+        # package's or the record's (bootRangespaper holds a paper's scripts, the
+        # tool is elsewhere). A repository that moved under the same name passes.
+        name = repository_name(evidence.get("repo_url"))
+        if normalize(name) not in {normalize(evidence.get("matched")), normalize(tool_name)} - {""}:
+            return None, f"withheld-repository-name:{name}"
         out = dict(evidence)
+        family = gnu_family(evidence["license"], statement["license"])
+        if family:
+            # Two GNU statements of one family that differ only in version (FastTree:
+            # a GPL-3 text, source headers "version 2 or later"): the family is what
+            # both support.
+            out.update(license=family, license_tier=read_licence(family)["tier"],
+                       license_raw=family, license_detection=DETECTION_REPOSITORY_FILE,
+                       license_evidence=statement["file"])
+            out["confirmation"] = dict(differs, status="family-fallback")
+            return out, "family-fallback"
         out.update(license=statement["license"], license_tier=statement["tier"],
                    license_raw=statement["license"],
                    license_detection=DETECTION_REPOSITORY_FILE,
@@ -468,7 +518,7 @@ def resolve(collection_dir, cache_dir, registries=None, *, domain=None, reviewed
                 outcome["confirmation_source"] = registry_ev["route"].split(":", 1)[1]
                 outcome["registry_reading"] = {k: registry_ev.get(k) for k in (
                     "matched", "license", "license_tier", "license_evidence", "repo_url")}
-                registry_ev, confirmation = confirm(registry_ev, fetcher)
+                registry_ev, confirmation = confirm(registry_ev, fetcher, tool.get("name"))
                 if registry_ev is None:
                     reason = confirmation
             evidence, conflict = reconcile(self_published_evidence(tool, papers), registry_ev,
