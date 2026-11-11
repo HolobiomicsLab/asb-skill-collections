@@ -380,6 +380,7 @@ def test_manifest_row_passes_the_real_checker_and_regen(release_fixture) -> None
     seed_state(release_fixture, stages, doi=DOI)
     commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=release_fixture.repo, text=True).strip()
     assert invoke(release_fixture, "manifest", "--concept-doi", CONCEPT_DOI, "--regen", "--commit", commit) == 0
+    assert (release_fixture.tooling / "collections/fixture/v1/README.md").is_file()
 
 
 def test_manifest_records_concept_doi_for_a_null_first_release_lineage(release_fixture) -> None:

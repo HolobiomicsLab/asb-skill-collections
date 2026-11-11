@@ -1111,10 +1111,23 @@ def run_manifest(context: ReleaseContext) -> dict:
         "--manifest", str(path), "--catalogue", str(catalogue_path), *forwarded,
     ])
     require_success(check, "collections manifest check")
+    landings = context.sibling("scripts/render_collection_landings.py", [
+        "--root", str(context.args.tooling_root), "--manifest", str(path),
+    ])
+    require_success(landings, "collection landing regeneration")
+    landing_paths = sorted(
+        context.args.tooling_root / release["path"] / "README.md"
+        for domain in yaml.safe_load(path.read_text(encoding="utf-8"))["domains"].values()
+        for release in domain.get("releases", [])
+    )
     outputs = {"manifest": path, "release": row, "catalogue": catalogue_path,
-               "regenerated": regenerated}
+               "landings": landing_paths, "regenerated": regenerated}
     digests = {"collections_yaml": sha256(path), "catalogue_jsonld": sha256(catalogue_path)}
     digests.update({f"search_index/{item.name}": sha256(item) for item in regenerated})
+    digests.update({
+        f"landing/{item.relative_to(context.args.tooling_root).as_posix()}": sha256(item)
+        for item in landing_paths
+    })
     return outputs, digests
 
 

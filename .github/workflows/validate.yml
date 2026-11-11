@@ -114,6 +114,9 @@ jobs:
       - name: Validate the registry manifest
         run: python scripts/check_collections_manifest.py
 
+      - name: Validate collection identifier landing pages
+        run: python scripts/render_collection_landings.py --check
+
   # -- docs-site/search_index/ is current -------------------------------------
   # Private domain checkouts are unavailable here, so CI reads none: every
   # registry domain must have an index file whose sha256 and size match

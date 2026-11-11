@@ -79,7 +79,7 @@ def test_version_was_bumped_for_the_pattern_change():
 
 def _corpus_spans():
     root = REPO_ROOT / "collections" / "metabolomics" / "v2"
-    if not root.is_dir():
+    if not (root / "skills_index.json").is_file():
         return None
     spans = []
     for md in _iter_skill_md(root):
