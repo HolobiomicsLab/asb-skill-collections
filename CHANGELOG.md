@@ -15,6 +15,13 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
 ## [Unreleased]
 
 ### Changed
+- Selector: the package default returns to `asb-keyword` 1.0.0, so
+  `asb_skill_collections/asb_skill_index.py`, the script template and the
+  released collections carry the same selector. Selector 1.1.0 lost against
+  1.0.0 on the 326 benchmark-card labels (expected Hit@1 lower by 0.036 to
+  0.080 in the four arms) and on known-item retrieval in eight collections
+  (name-query hit@1 0.643 to 0.857 against 0.940 to 0.997). The measurements,
+  and the variants that did not beat 1.0.0, are in `docs/selection.md`.
 - `scripts/router_shape.py --scripts-only --keep-selector` refreshes the wrapper
   of `bin/search_skills.py` around the selector a unit already ships, so a patch
   release can change what a search prints without changing the ranking of a
@@ -39,7 +46,7 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   0 and says what to try next. Refresh a released tree with
   `python scripts/router_shape.py --scripts-only <collection>` followed by
   `python scripts/router_shape.py --routers-only --rewrite <collection>`; this
-  changes `bin/search_skills.py` (selector 1.0.0 to 1.1.0),
+  changes `bin/search_skills.py` (its wrapper; the selector stays 1.0.0),
   `skills/_router/SKILL.md` and `workflows/_workflow_router/SKILL.md` only.
   `--routers-only --rewrite` renders both routers of a shaped unit. The released
   collections are unchanged; their routers still print

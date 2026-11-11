@@ -5,60 +5,36 @@ The checkout CLI (`asbb search`), MCP search tools, the collection router and
 `asb_skill_collections/asb_skill_index.py`; the standalone scripts carry the same
 module so an installed collection can search without importing the checkout.
 
-The package and the script template it vendors (`scripts/templates/search_skills.py`)
-carry selector 1.1.0. The released collections and packs in the domain
-repositories still embed 1.0.0 until a release decision regenerates their
-scripts with `scripts/router_shape.py --scripts-only`; during that skew the
-surfaces share their resolution, filter and explanation contracts but can return
-different scores and ranking. `--scripts-only --keep-selector` refreshes only the
+The package, the script template it vendors (`scripts/templates/search_skills.py`)
+and the scripts of the ten released collections all carry selector 1.0.0, and
+the vendored block of the template is byte-identical to the one the released
+collections ship. Selector 1.1.0 was the package default from 2026-11-08 to
+2026-11-11 and never shipped in a released collection; it lost on every
+measurement below and was withdrawn (see "Selector 1.1.0, measured and
+withdrawn" at the end). `--scripts-only --keep-selector` refreshes only the
 wrapper of `bin/search_skills.py` (what a search prints) around the selector a
 unit already ships; the patch releases of 2026-11-10 used it, so the released
-collections print the tier and DOI of each hit and still rank with 1.0.0.
+collections print the tier and DOI of each hit and rank with 1.0.0.
 
-A known-item check on 2026-11-10 is the reason. For 300 sampled skills per
-collection, the query was the skill's own name with spaces, and a hit is a
-result with that name:
-
-| Collection | Skills | 1.0.0 hit@1 | 1.0.0 hit@5 | 1.1.0 hit@1 | 1.1.0 hit@5 |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| metabolomics v3 | 11,830 | 0.983 | 0.997 | 0.670 | 0.843 |
-| genomics v1 | 3,246 | 0.997 | 1.000 | 0.773 | 0.907 |
-| proteomics v1 | 558 | 0.993 | 1.000 | 0.840 | 0.950 |
-
-With the first twelve words of the description as the query, hit@1 is 0.980,
-0.987 and 0.947 for 1.0.0 against 0.933, 0.950 and 0.920 for 1.1.0. Both
-queries are built from the indexed row, so they measure whether a skill asked
-for by its own words comes back, not relevance; the label sets of "What the
-default was measured on" were not rerun. In 1.1.0 a term found in a description
-(three points) outweighs the same term in a name (two points), so a skill whose
-name is the query can rank below skills that mention the phrase. Whether the
-package default should change is an open decision.
-
-The worked examples below were executed against
-the integration branch with 1.0.0; source revision `600f4a5dc` predates the
-selector fixes and is cited only as the revision the frozen labels were taken from.
+The worked examples below were executed against the integration branch with
+1.0.0; source revision `600f4a5dc` predates the selector fixes and is cited
+only as the revision the frozen labels were taken from.
 
 ## Ranking rule
 
-The default selector is `asb-keyword` version `1.1.0`, rule `router`. It:
+The default selector is `asb-keyword` version `1.0.0`, rule `router`. It:
 
 1. splits the query into lowercase ASCII alphanumeric terms;
 2. removes domain-neutral stopwords and terms shorter than two characters, and
    keeps each remaining term once;
-3. scores each matched term by field: three points in the trigger-bearing
-   `description`, two in `name`, one in `tools` or `member_tools`;
-4. subtracts six points from a description that names parsing, conversion,
-   import or export, request or submission construction, configuration or
-   parameter toggling, unless the query itself contains one of those plumbing
-   terms; and
-5. clamps a penalised row that matched at least one term to 0.5, below every
-   unpenalised match, so the de-rank cannot drop a legitimate match.
+3. scores one point per distinct term that reaches `name`, `description` or
+   `tools` (`member_tools` for a workflow); and
+4. adds two points when a query term is exactly the name of one of the row's
+   tools.
 
-A repeated query term is counted once. The score is a weighted count of
-distinct matched terms, not a frequency; it is a lexical ranking value, not a
-probability or a measure of scientific suitability. Version 1.0.0 scored one
-point per matched term in any of the three fields, added two points for an
-exact tool name, and had no de-rank.
+A repeated query term is counted once, so the score is a count of distinct
+matched terms, not a frequency. It is a lexical ranking value, not a
+probability or a measure of scientific suitability.
 
 ### Order, and what breaks a tie
 
@@ -405,3 +381,94 @@ candidates, and the slug order that resolves them is arbitrary.
 - The 326-label probe is conditional on the resolvable labels: seven gold slugs
   are absent from the corpus and empty the 10 excluded tasks, so the probe
   cannot say how either rule handles those generic task-level skills.
+
+## Selector 1.1.0, measured and withdrawn
+
+Selector 1.1.0 (2026-11-08) weighted a matched term three points in
+`description`, two in `name` and one in `tools`, dropped the exact-tool bonus,
+and subtracted six points (floor 0.5) from any row whose description names
+parsing, conversion, import or export, requests, configuration or parameter
+toggling, unless the query asked for one of those. It was justified by
+synthetic ranking tests, not by a label set; the two label sets above were not
+rerun for it at the time. It never shipped in a released collection. The
+measurements of 2026-11-11 below compare it with 1.0.0, and 1.0.0 is the
+default again.
+
+### Label sets
+
+The two label sets of "What the default was measured on", rerun for both
+versions against the metabolomics v2 indexes of the domain repository. The
+1.0.0 rows reproduce the tables above exactly. "Random" is the expected Hit@1
+when the rank-1 tie block is resolved at random, computed exactly per query;
+the difference column is the paired mean difference of that value from 1.0.0
+over the 326 queries, with a 2,000-resample bootstrap 95% interval.
+
+| Label set | 1.0.0 shipped | 1.0.0 random | 1.1.0 shipped | 1.1.0 random | 1.1.0 minus 1.0.0 (random) |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 22 frozen labels, workflows, P@1 | 22/22 | 22/22 | 22/22 | 22/22 | 0 |
+| 326 cards, canonical 5,859 rows, full title | 0.4724 | 0.4750 | 0.4080 | 0.4162 | -0.0588 [-0.1118, -0.0079] |
+| 326 cards, canonical, first 8 tokens | 0.3988 | 0.3977 | 0.3558 | 0.3616 | -0.0361 [-0.0852, +0.0139] |
+| 326 cards, installed 1,478 rows, full title | 0.6534 | 0.6460 | 0.5736 | 0.5716 | -0.0744 [-0.1266, -0.0230] |
+| 326 cards, installed, first 8 tokens | 0.5736 | 0.5757 | 0.5000 | 0.4961 | -0.0796 [-0.1310, -0.0315] |
+
+### Known-item retrieval
+
+For 300 skills sampled per collection (seed 20261111, all skills advertising at
+most 25 tools are eligible), two queries are built from the skill's own index
+row: its name with hyphens as spaces, and the first twelve words of its
+description after a leading "Use when". A hit is a result whose name equals the
+sampled skill's name, so a duplicate name counts. These queries measure whether
+a skill asked for in its own words comes back, not relevance to a user's need.
+
+| Collection | Skills | 1.0.0 name hit@1 | 1.0.0 name hit@5 | 1.0.0 description hit@1 | 1.1.0 name hit@1 | 1.1.0 name hit@5 | 1.1.0 description hit@1 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| metabolomics v3 | 11,830 | 0.980 | 0.997 | 0.957 | 0.643 | 0.870 | 0.903 |
+| genomics v1 | 3,246 | 0.983 | 1.000 | 0.967 | 0.757 | 0.917 | 0.940 |
+| proteomics v1 | 558 | 0.993 | 1.000 | 0.943 | 0.827 | 0.960 | 0.933 |
+| metagenomics v1 | 2,754 | 0.983 | 0.997 | 0.997 | 0.780 | 0.930 | 0.983 |
+| astronomy v1 | 1,671 | 0.997 | 1.000 | 0.957 | 0.827 | 0.970 | 0.943 |
+| agentic-ai v1 | 668 | 0.997 | 1.000 | 0.987 | 0.857 | 0.973 | 0.963 |
+| transcriptomics v2 | 11,256 | 0.940 | 0.990 | 0.960 | 0.713 | 0.870 | 0.937 |
+| epigenomics v2 | 2,295 | 0.980 | 1.000 | 0.977 | 0.770 | 0.927 | 0.963 |
+
+The first check, on 2026-11-10 with seed 20261110, gave the same picture on
+metabolomics v3, genomics v1 and proteomics v1 (name hit@1 0.983, 0.997 and
+0.993 for 1.0.0 against 0.670, 0.773 and 0.840 for 1.1.0).
+
+Most of the loss comes from the weights, not the de-rank. Of the 99 name
+queries 1.1.0 missed at rank 1 on the metabolomics v3 sample of seed 20261110,
+81 targets carried no plumbing term: a skill whose name is the query scores two
+points per term, and loses to skills whose descriptions mention the same terms
+at three points each. The other 18 targets were de-ranked to the 0.5 floor; 8.3%
+of metabolomics v3 descriptions, and 6.9% to 12.5% in genomics, proteomics and
+metabolomics v2, contain a plumbing term. Removing the de-rank alone
+(weights 2 and 3 kept) raised metabolomics v3 name hit@1 only from 0.670 to
+0.700 on that sample.
+
+### Variants tried, and why none replaces 1.0.0
+
+Eight variants were scored on the metabolomics v3 sample of seed 20261110 and on
+the label sets: the 1.1.0 weights without the de-rank, equal name and
+description weights with and without it, and five distinct-term counts like
+1.0.0 in which a term reached only through `tools` counts half a point or one,
+with or without the exact-tool bonus, and with the plumbing flag either as a
+quarter-point demotion or as a tie-break after the name keys. The three
+weighted field sums lost on both measures (name hit@1 0.700 to 0.910 against
+0.983 on that sample). The distinct-term counts stayed near 1.0.0: name hit@1
+0.970 to 1.000, and label-set differences from 1.0.0 between -0.034 and
++0.012, all with intervals that include zero. None improved
+on 1.0.0 beyond noise, and choosing the best of eight on the same 326 labels
+would be selection on noise. 1.0.0 also keeps the package byte-identical to
+the selector of the ten released collections. A future change needs a label
+set that was not used to choose it.
+
+### What this does not establish
+
+- The label sets are metabolomics only and are not independent user queries
+  (see "What these numbers do not establish" above).
+- The known-item queries are built from the indexed row; they test that a
+  skill can be found by its own words, not that the right skill is found for a
+  new request.
+- The 1.1.0 aims (tool metadata below role fields, file and request plumbing
+  below methods) remain untested on real requests; only the synthetic tests
+  of 2026-11-08 encoded them.

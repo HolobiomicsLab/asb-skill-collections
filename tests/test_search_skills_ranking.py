@@ -1,4 +1,9 @@
-"""Keyword fallback favours requested method roles over incidental plumbing."""
+"""Ranking contract of the default selector (asb-keyword 1.0.0, rule router).
+
+A skill asked for by its own name comes first, a named tool counts, and a
+plumbing description is neither removed nor pushed below other matches.
+Selector 1.1.0 broke the first and the last of these; see docs/selection.md.
+"""
 
 from __future__ import annotations
 
@@ -43,17 +48,64 @@ def ranking_rows() -> list[dict]:
     return rows
 
 
-def test_role_fields_outweigh_tool_only_plumbing(ranking_rows):
-    hits = index.keyword_search(
-        ranking_rows,
-        "ZODIAC candidate ranking",
-        k=5,
-    )
+def test_a_skill_named_by_the_query_outranks_skills_that_only_describe_it():
+    rows = [
+        {
+            "slug": "annotation-with-spectral-library-matching",
+            "name": "Annotation review",
+            "description": "Review annotations from spectral library matching results.",
+            "tools": [],
+        },
+        {
+            "slug": "spectral-library-matching",
+            "name": "Spectral library matching",
+            "description": "Compare experimental MS/MS spectra with reference records.",
+            "tools": [],
+        },
+    ]
 
-    assert hits[0]["slug"] == "formula-candidate-ranking"
+    hits = index.keyword_search(rows, "spectral library matching", k=2)
+
+    assert [hit["slug"] for hit in hits] == [
+        "spectral-library-matching",
+        "annotation-with-spectral-library-matching",
+    ]
+    assert hits[0]["score"] == hits[1]["score"] == 3.0
 
 
-def test_requested_plumbing_is_not_deboosted(ranking_rows):
+def test_a_plumbing_description_does_not_bury_a_skill_named_by_the_query():
+    rows = [
+        {
+            "slug": "retention-time-alignment",
+            "name": "Retention time alignment",
+            "description": "Load and handle retention time tables, then align runs.",
+            "tools": [],
+        },
+        {
+            "slug": "retention-time-drift-review",
+            "name": "Drift review",
+            "description": "Review retention time drift and alignment quality across runs.",
+            "tools": [],
+        },
+    ]
+
+    hits = index.keyword_search(rows, "retention time alignment", k=2)
+
+    assert hits[0]["slug"] == "retention-time-alignment"
+    assert hits[0]["score"] == 3.0
+
+
+def test_an_exact_tool_name_in_the_query_adds_two_points(ranking_rows):
+    hits = index.keyword_search(ranking_rows, "ZODIAC candidate ranking", k=5)
+
+    assert [hit["slug"] for hit in hits] == [
+        "zodiac-parameter-configuration",
+        "formula-candidate-ranking",
+    ]
+    assert [hit["score"] for hit in hits] == [3.0, 2.0]
+
+
+def test_requested_plumbing_ranks_first(ranking_rows):
     hits = index.keyword_search(
         ranking_rows,
         "export an MGF submission file for GNPS",
@@ -63,25 +115,7 @@ def test_requested_plumbing_is_not_deboosted(ranking_rows):
     assert hits[0]["slug"] == "gnps-submission-export"
 
 
-def test_plumbing_penalty_de_ranks_instead_of_removing_a_match():
-    row = {
-        "slug": "retention-request-export",
-        "name": "Retention request export",
-        "description": "Export retention results and handle the request.",
-        "tools": [],
-    }
-
-    hits = index.keyword_search([row], "retention", k=1)
-
-    assert [hit["slug"] for hit in hits] == [row["slug"]]
-    assert hits[0]["score"] == index.MATCHED_SCORE_FLOOR
-    assert hits[0]["matched_fields"] == {
-        "name": ["retention"],
-        "description": ["retention"],
-    }
-
-
-def test_plumbing_leaf_ranks_below_role_leaf_with_the_same_matched_terms():
+def test_equal_scores_prefer_the_name_the_query_covers_most():
     rows = [
         {
             "slug": "spectral-library-file-export",
@@ -103,5 +137,4 @@ def test_plumbing_leaf_ranks_below_role_leaf_with_the_same_matched_terms():
         "spectral-library-matching",
         "spectral-library-file-export",
     ]
-    assert hits[1]["score"] == 4.0
-    assert hits[1]["score"] < hits[0]["score"]
+    assert hits[0]["score"] == hits[1]["score"] == 2.0
