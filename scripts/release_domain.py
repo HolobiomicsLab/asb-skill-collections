@@ -223,7 +223,7 @@ def stage_inputs(context: ReleaseContext) -> dict:
         "land": {"candidate", "title", "plugin_name", "author_name", "author_email"},
         "deposit-plan": {"record_id", "publication_date", "sandbox", "extra_file", "first_release"},
         "deposit-draft": {"record_id", "publication_date", "sandbox", "extra_file", "first_release"},
-        "record-doi": {"doi", "released"}, "receipt": {"candidate"},
+        "record-doi": {"doi", "released", "tag_name"}, "receipt": {"candidate"},
         "manifest": {"commit", "source_commit", "tag_name", "released", "regen", "checkout"},
         "tag": {"commit", "tag_name", "verify"},
     }[context.args.stage]
@@ -498,25 +498,26 @@ def run_deposit_draft(context: ReleaseContext) -> dict:
     raise WaitingForOwner("draft ready", outputs, {"archive_sha256": archive.sha256})
 
 
-def release_label(context: ReleaseContext) -> str:
-    """Return the full release label, v<major>.<minor>.<patch>, of this collection.
-
-    The label is the collection's `.zenodo.json` `version`; its major must equal
-    `--version`. Without that field the label is `<version>.0.0`.
-    """
-    path = context.collection / ".zenodo.json"
-    version = None
-    if path.is_file():
-        version = json.loads(path.read_text(encoding="utf-8")).get("version")
-    if version in (None, ""):
-        return f"{context.args.version}.0.0"
-    match = LABEL_PATTERN.fullmatch(str(version))
-    if not match or f"v{match.group(1)}" != context.args.version:
+def validate_release_label(version: str, label: object, path: Path) -> str:
+    """Require a full semantic label whose major matches the collection path."""
+    match = LABEL_PATTERN.fullmatch(str(label))
+    if not match or f"v{match.group(1)}" != version:
         raise ReleaseError(
-            f".zenodo.json version {version!r} is not v<major>.<minor>.<patch> with major "
-            f"{context.args.version}: {path}"
+            f".zenodo.json version {label!r} is not v<major>.<minor>.<patch> with major "
+            f"{version}: {path}"
         )
-    return str(version)
+    return str(label)
+
+
+def release_label(context: ReleaseContext) -> str:
+    """Return the collection metadata's full v<major>.<minor>.<patch> label."""
+    path = context.collection / ".zenodo.json"
+    if not path.is_file():
+        return f"{context.args.version}.0.0"
+    label = json.loads(path.read_text(encoding="utf-8")).get("version")
+    if label in (None, ""):
+        return f"{context.args.version}.0.0"
+    return validate_release_label(context.args.version, label, path)
 
 
 def doi_label(version: str, label: str) -> str:
@@ -589,35 +590,184 @@ def root_citation_text(text: str, doi: str, released: str, name: str) -> str:
 
 
 README_HEADER = "| Path | Title | Skills | Tools | Released | DOI |"
+ZENODO_DOI_SEARCH = re.compile(r"10\.5281/zenodo\.\d+")
+MARKDOWN_HEADING = re.compile(r"^(#{1,6})\s+(.+?)\s*$")
+HISTORY_HEADING = re.compile(r"(?i)\b(?:history|changelog|earlier releases?|previous releases?)\b")
+STATUS_TAG = re.compile(r"(is released on `main` at tag `)[^`\n]+(`)")
+STATUS_VERSION_DOI = re.compile(
+    r"(archived on Zenodo under the version DOI \[)10\.5281/zenodo\.\d+"
+    r"(\]\(https://doi\.org/)10\.5281/zenodo\.\d+(\))"
+)
+TAGGED_RELEASE = re.compile(r"\bThe (v[1-9][0-9]*) release is tagged `[^`\n]+`")
+CURRENT_CITATION_DOI = re.compile(
+    r"(The collection's version DOI is \[)10\.5281/zenodo\.\d+"
+    r"(\]\(https://doi\.org/)10\.5281/zenodo\.\d+(\))"
+)
 
 
-def readme_text(text: str, path: Path, doi: str, released: str, release_path: str) -> str:
-    """Update the Released and DOI cells of the row whose first cell is the collection path.
+@dataclass(frozen=True)
+class SurfaceFinding:
+    """One current-release line that disagrees with the expected release."""
 
-    Other table rows that merely mention the path (a status table, say) are left alone.
-    """
-    lines = text.splitlines(keepends=True)
+    path: Path
+    line: int
+    fields: tuple[str, ...]
+
+    def message(self) -> str:
+        """Render a stable file-and-line refusal without repeating identifiers."""
+        names = ", ".join(self.fields)
+        return f"{self.path.name}:{self.line}: current-release {names} does not match"
+
+
+def markdown_cells(line: str) -> list[str]:
+    """Return stripped Markdown table cells, or an empty list for prose."""
+    if not line.lstrip().startswith("|"):
+        return []
+    return [cell.strip() for cell in line.strip().strip("|").split("|")]
+
+
+def readme_rows(text: str, path: Path, release_path: str) -> list[tuple[int, list[str]]]:
+    """Find the one release-table row whose path is the target collection."""
     rows = []
-    for index, line in enumerate(lines):
-        if not line.lstrip().startswith("|"):
-            continue
-        cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
-        if cells[0] == f"`{release_path}`":
-            rows.append((index, cells))
+    for line_number, line in enumerate(text.splitlines(), 1):
+        cells = markdown_cells(line)
+        if cells and cells[0] == f"`{release_path}`":
+            rows.append((line_number, cells))
     if len(rows) > 1:
         raise ReleaseError(f"README has {len(rows)} release-table rows for {release_path}: {path}")
-    for index, cells in rows:
-        if len(cells) < 6:
-            raise ReleaseError(f"README release row has fewer than six cells: {path}")
-        cells[-2] = released
-        cells[-1] = f"[{doi}](https://doi.org/{doi})"
-        ending = "\n" if lines[index].endswith("\n") else ""
-        lines[index] = "| " + " | ".join(cells) + " |" + ending
-        return "".join(lines)
-    raise ReleaseError(
-        f"README has no release-table row for {release_path}: {path}. Add a row whose path "
-        f"cell is `{release_path}` to the table headed `{README_HEADER}`, then rerun record-doi"
+    if not rows:
+        raise ReleaseError(
+            f"README has no release-table row for {release_path}: {path}. Add a row whose path "
+            f"cell is `{release_path}` to the table headed `{README_HEADER}`, then rerun record-doi"
+        )
+    if len(rows[0][1]) < 6:
+        raise ReleaseError(f"README release row has fewer than six cells: {path}")
+    return rows
+
+
+def readme_lines(text: str):
+    """Yield lines with whether their Markdown section explicitly records history."""
+    history_level = None
+    for line_number, line in enumerate(text.splitlines(), 1):
+        heading = MARKDOWN_HEADING.match(line)
+        if heading:
+            level = len(heading.group(1))
+            if history_level is not None and level <= history_level:
+                history_level = None
+            if HISTORY_HEADING.search(heading.group(2)):
+                history_level = level
+        yield line_number, line, history_level is not None
+
+
+def is_current_release_line(line: str) -> bool:
+    """Recognise prose that explicitly presents identifiers as current."""
+    lowered = line.lower()
+    cues = (
+        "current release", "latest release", "this version", "is released on `main`",
+        "release is tagged", "collection's version doi is",
+        "archived on zenodo under the version doi",
     )
+    return any(cue in lowered for cue in cues)
+
+
+def current_version_dois(line: str) -> set[str]:
+    """Extract only DOIs labelled as the current version, excluding concept DOIs."""
+    cells = markdown_cells(line)
+    if cells and cells[0].lower() == "doi" and "this version" in line.lower():
+        return set(ZENODO_DOI_SEARCH.findall(cells[1]))
+    lowered = line.lower()
+    start = lowered.find("version doi")
+    if start < 0 and ("current release" in lowered or "latest release" in lowered):
+        start = min(index for index in (lowered.find("current"), lowered.find("latest")) if index >= 0)
+    if start < 0:
+        return set()
+    segment = line[start:]
+    concept = segment.lower().find("concept doi")
+    return set(ZENODO_DOI_SEARCH.findall(segment[:concept] if concept >= 0 else segment))
+
+
+def add_finding(findings: dict, path: Path, line: int, *fields: str) -> None:
+    """Collect mismatched fields once per file and line."""
+    findings.setdefault((path, line), set()).update(fields)
+
+
+def readme_surface_findings(text: str, path: Path, domain: str, release_path: str,
+                            doi: str, released: str | None, tag: str) -> list[SurfaceFinding]:
+    """Find stale current-release statements while preserving explicit history.
+
+    The target collection row and non-history prose marked current, latest, this
+    version, released, tagged or version DOI are current-release surfaces. Other
+    collection rows and sections headed history, changelog, earlier releases or
+    previous releases are historical records and may retain older tags and DOIs.
+    """
+    findings: dict[tuple[Path, int], set[str]] = {}
+    row_number, cells = readme_rows(text, path, release_path)[0]
+    row_dois = set(ZENODO_DOI_SEARCH.findall(cells[-1]))
+    if row_dois != {doi}:
+        add_finding(findings, path, row_number, "version DOI")
+    if released and cells[-2] != released:
+        add_finding(findings, path, row_number, "release date")
+    tag_pattern = re.compile(rf"(?<![a-z0-9-]){re.escape(domain)}-v[0-9]+\.[0-9]+\.[0-9]+")
+    for line_number, line, is_history in readme_lines(text):
+        if is_history or not is_current_release_line(line):
+            continue
+        tags = set(tag_pattern.findall(line))
+        if ("tag" in line.lower() or "tagged" in line.lower()) and tags != {tag}:
+            add_finding(findings, path, line_number, "tag")
+        version_dois = current_version_dois(line)
+        requires_doi = any(cue in line.lower() for cue in (
+            "current release", "latest release", "this version",
+            "collection's version doi is", "archived on zenodo under the version doi",
+        ))
+        if version_dois and version_dois != {doi}:
+            add_finding(findings, path, line_number, "version DOI")
+        if requires_doi and "version doi" in line.lower() and not version_dois:
+            add_finding(findings, path, line_number, "version DOI")
+        cells = markdown_cells(line)
+        if cells and cells[0].lower() == "doi" and version_dois != {doi}:
+            add_finding(findings, path, line_number, "version DOI")
+    return [SurfaceFinding(item_path, line, tuple(sorted(fields)))
+            for (item_path, line), fields in sorted(findings.items(), key=lambda item: item[0][1])]
+
+
+def replace_current_readme_prose(text: str, version: str, tag: str, doi: str) -> str:
+    """Rewrite the two released README shapes without changing historical sections."""
+    lines = text.splitlines(keepends=True)
+    history = {line for line, _, is_history in readme_lines(text) if is_history}
+    for index, line in enumerate(lines):
+        if index + 1 in history:
+            continue
+        if f"Collection `{version}`" in line and STATUS_TAG.search(line):
+            line = STATUS_TAG.sub(lambda match: match.group(1) + tag + match.group(2), line)
+            line = STATUS_VERSION_DOI.sub(
+                lambda match: match.group(1) + doi + match.group(2) + doi + match.group(3), line)
+        tagged = TAGGED_RELEASE.search(line)
+        if tagged and tagged.group(1) == version:
+            line = TAGGED_RELEASE.sub(f"The {version} release is tagged `{tag}`", line)
+        cells = markdown_cells(line)
+        if cells and cells[0].lower() == "doi" and "this version" in line.lower():
+            line = ZENODO_DOI_SEARCH.sub(doi, line)
+        line = CURRENT_CITATION_DOI.sub(
+            lambda match: match.group(1) + doi + match.group(2) + doi + match.group(3), line)
+        lines[index] = line
+    return "".join(lines)
+
+
+def readme_text(text: str, path: Path, domain: str, version: str, tag: str, doi: str,
+                released: str, release_path: str) -> str:
+    """Update and validate every root README statement of the current release."""
+    lines = text.splitlines(keepends=True)
+    line_number, cells = readme_rows(text, path, release_path)[0]
+    index = line_number - 1
+    cells[-2] = released
+    cells[-1] = f"[{doi}](https://doi.org/{doi})"
+    ending = "\n" if lines[index].endswith("\n") else ""
+    lines[index] = "| " + " | ".join(cells) + " |" + ending
+    updated = replace_current_readme_prose("".join(lines), version, tag, doi)
+    findings = readme_surface_findings(updated, path, domain, release_path, doi, released, tag)
+    if findings:
+        raise ReleaseError("cannot rewrite " + "; ".join(finding.message() for finding in findings))
+    return updated
 
 
 USAGE_PARAGRAPH = re.compile(r"(?ms)^1\. \*\*The collection\*\*.*?(?=^2\. \*\*Every source paper|\Z)")
@@ -649,7 +799,8 @@ def usage_text(text: str, path: Path, doi: str, version: str) -> str:
 JSON_VERSION_VALUE = re.compile(r'"version"\s*:\s*"([^"\\]*)"')
 
 
-def json_version_text(text: str, path: Path, version: str, locate: Callable[[object], dict]) -> str:
+def json_version_text(text: str, path: Path, version: str, locate: Callable[[object], dict],
+                      purpose: str = "plugin version") -> str:
     """Set one `version` string of a JSON file by an anchored edit of its value.
 
     `locate` returns the object whose `version` changes. Each `"version": "..."`
@@ -676,7 +827,7 @@ def json_version_text(text: str, path: Path, version: str, locate: Callable[[obj
         except ValueError:
             continue
     if len(candidates) != 1:
-        raise ReleaseError(f"cannot set the plugin version by one anchored edit of its value: {path}")
+        raise ReleaseError(f"cannot set the {purpose} by one anchored edit of its value: {path}")
     return candidates[0]
 
 
@@ -687,6 +838,43 @@ def plugin_json_text(text: str, path: Path, version: str) -> str:
             raise ReleaseError(f"{path} is not a JSON object")
         return document
     return json_version_text(text, path, version, locate)
+
+
+def root_zenodo_text(text: str, path: Path, label: str) -> str:
+    """Set the root deposit metadata's top-level release label."""
+    def locate(document):
+        if not isinstance(document, dict):
+            raise ReleaseError(f"{path} is not a JSON object")
+        return document
+    finding = root_zenodo_finding(text, path, label)
+    try:
+        updated = json_version_text(text, path, label, locate, "root Zenodo version")
+    except ReleaseError as error:
+        if finding:
+            raise ReleaseError(
+                f"{path.name}:{finding.line}: cannot rewrite current-release version label"
+            ) from error
+        raise
+    remaining = root_zenodo_finding(updated, path, label)
+    if remaining:
+        raise ReleaseError(f"{path.name}:{remaining.line}: current-release version label does not match")
+    return updated
+
+
+def root_zenodo_finding(text: str, path: Path, label: str) -> SurfaceFinding | None:
+    """Locate a stale top-level version label in root Zenodo metadata."""
+    try:
+        document = json.loads(text)
+    except ValueError as error:
+        raise ReleaseError(f"{path} is not valid JSON: {error}") from error
+    current = document.get("version") if isinstance(document, dict) else None
+    if not isinstance(current, str):
+        raise ReleaseError(f"{path} has no string version to set")
+    if current == label:
+        return None
+    match = next((item for item in JSON_VERSION_VALUE.finditer(text) if item.group(1) == current), None)
+    line = text.count("\n", 0, match.start(1)) + 1 if match else 1
+    return SurfaceFinding(path, line, ("version label",))
 
 
 def marketplace_text(text: str, path: Path, version: str, release_path: str) -> str:
@@ -704,6 +892,47 @@ def marketplace_text(text: str, path: Path, version: str, release_path: str) -> 
             )
         return entries[0]
     return json_version_text(text, path, version, locate)
+
+
+def checked_release_label(args: argparse.Namespace) -> str:
+    """Resolve the expected label for the read-only root-surface check."""
+    collection_metadata = args.repo_root / "collections" / args.domain / args.version / ".zenodo.json"
+    if args.release_label:
+        return validate_release_label(args.version, args.release_label, collection_metadata)
+    if not collection_metadata.is_file():
+        return f"{args.version}.0.0"
+    document = json.loads(collection_metadata.read_text(encoding="utf-8"))
+    label = document.get("version") if isinstance(document, dict) else None
+    if label in (None, ""):
+        return f"{args.version}.0.0"
+    return validate_release_label(args.version, label, collection_metadata)
+
+
+def run_check_surfaces(args: argparse.Namespace) -> int:
+    """Check current root release statements without changing files or state."""
+    if not DOI_PATTERN.fullmatch(args.doi):
+        raise ReleaseError("--doi must be a Zenodo DOI with a numeric record id")
+    label = checked_release_label(args)
+    tag = args.tag_name or f"{args.domain}-{label}"
+    readme = args.repo_root / "README.md"
+    zenodo = args.repo_root / ".zenodo.json"
+    for path in (readme, zenodo):
+        if not path.is_file():
+            raise ReleaseError(f"current-release surface is missing: {path}")
+    findings = readme_surface_findings(
+        readme.read_text(encoding="utf-8"), readme, args.domain,
+        f"collections/{args.domain}/{args.version}", args.doi, args.released or None, tag,
+    )
+    zenodo_finding = root_zenodo_finding(zenodo.read_text(encoding="utf-8"), zenodo, label)
+    if zenodo_finding:
+        findings.append(zenodo_finding)
+    for finding in findings:
+        print(finding.message(), file=sys.stderr)
+    if findings:
+        print(f"check-surfaces: {len(findings)} stale current-release line(s)", file=sys.stderr)
+        return 1
+    print("check-surfaces: current-release surfaces match")
+    return 0
 
 
 def emit_hub_manifest(context: ReleaseContext) -> Path | None:
@@ -740,10 +969,10 @@ def run_record_doi(context: ReleaseContext) -> dict:
 
     Every new file content is computed first; files are written only when all
     surfaces accept the DOI, so a refusal leaves the checkout unchanged. The same
-    pass sets the plugin version (the release label without its `v`) in the
-    collection `plugin.json` and in the root marketplace entry of the release
-    path. USAGE.md, `plugin.json` and the marketplace are optional and reported
-    as skipped when absent.
+    pass sets the root deposit version and the plugin version (the release label
+    without its `v`) in the collection `plugin.json` and in the root marketplace
+    entry of the release path. USAGE.md, `plugin.json` and the marketplace are
+    optional and reported as skipped when absent.
     """
     args = context.args
     args.released = context.release_date()
@@ -754,6 +983,7 @@ def run_record_doi(context: ReleaseContext) -> dict:
         raise ReleaseError("--commit must name the full merged DOI pull request commit")
     collection = context.collection
     label = release_label(context)
+    tag = args.tag_name or f"{args.domain}-{label}"
     name = doi_label(args.version, label)
     plugin_version = label[1:]
     plugin = collection / ".claude-plugin" / "plugin.json"
@@ -765,7 +995,9 @@ def run_record_doi(context: ReleaseContext) -> dict:
         args.repo_root / "CITATION.cff": lambda text, path: root_citation_text(
             text, args.doi, args.released, name),
         args.repo_root / "README.md": lambda text, path: readme_text(
-            text, path, args.doi, args.released, context.release_path),
+            text, path, args.domain, args.version, tag, args.doi, args.released,
+            context.release_path),
+        args.repo_root / ".zenodo.json": lambda text, path: root_zenodo_text(text, path, label),
         collection / "USAGE.md": lambda text, path: usage_text(text, path, args.doi, args.version),
         plugin: lambda text, path: plugin_json_text(text, path, plugin_version),
         marketplace: lambda text, path: marketplace_text(
@@ -794,7 +1026,8 @@ def run_record_doi(context: ReleaseContext) -> dict:
     changed = [path for path, (before, after) in planned.items() if after != before]
     paths = list(planned) + ([hub_manifest] if hub_manifest else [])
     outputs = {"changed_files": changed, "skipped_files": skipped, "release_label": label,
-               "plugin_version": plugin_version, "hub_manifest": hub_manifest, "merge_commit": merge_commit}
+               "tag_name": tag, "plugin_version": plugin_version,
+               "hub_manifest": hub_manifest, "merge_commit": merge_commit}
     if concept:
         outputs.update(concept_doi=concept["conceptdoi"], conceptrecid=concept["conceptrecid"])
         print(
@@ -1275,6 +1508,16 @@ def parser() -> argparse.ArgumentParser:
         command.add_argument("--plugin-name", default="")
         command.add_argument("--author-name", default="")
         command.add_argument("--author-email", default="")
+    check = commands.add_parser(
+        "check-surfaces", help="check root current-release statements without writing",
+    )
+    check.add_argument("--domain", required=True)
+    check.add_argument("--version", required=True)
+    check.add_argument("--repo-root", type=Path, required=True)
+    check.add_argument("--doi", required=True)
+    check.add_argument("--released", default="")
+    check.add_argument("--release-label", default="")
+    check.add_argument("--tag-name", default="")
     return root
 
 
@@ -1284,21 +1527,24 @@ def validated_args(argv: list[str]) -> argparse.Namespace:
     if not DOMAIN_PATTERN.fullmatch(args.domain) or not VERSION_PATTERN.fullmatch(args.version):
         raise ReleaseError("domain or version is invalid")
     for name in ("repo_root", "tooling_root", "state"):
-        setattr(args, name, getattr(args, name).expanduser().resolve())
+        if hasattr(args, name):
+            setattr(args, name, getattr(args, name).expanduser().resolve())
     for name in ("hub_root", "candidate", "receipts"):
-        value = getattr(args, name)
+        value = getattr(args, name, None)
         if value is not None:
             setattr(args, name, value.expanduser().resolve())
-    args.extra_file = [str(Path(value).expanduser().resolve()) for value in args.extra_file]
+    args.extra_file = [str(Path(value).expanduser().resolve())
+                       for value in getattr(args, "extra_file", [])]
     checkouts = []
-    for value in args.checkout:
+    for value in getattr(args, "checkout", []):
         slug, separator, path = value.partition("=")
         if not separator or not DOMAIN_PATTERN.fullmatch(slug) or not path:
             raise ReleaseError(f"--checkout must be <domain>=<path>: {value!r}")
         checkouts.append((slug, Path(path).expanduser().resolve()))
     if len({slug for slug, _ in checkouts}) != len(checkouts):
         raise ReleaseError("each --checkout domain must be unique")
-    args.checkout = checkouts
+    if hasattr(args, "checkout"):
+        args.checkout = checkouts
     if args.released and not DATE_PATTERN.fullmatch(args.released):
         raise ReleaseError("--released must be YYYY-MM-DD")
     return args
@@ -1309,6 +1555,8 @@ def main(argv: list[str] | None = None, *, now=None, request=None, runner=None) 
     original_request = zenodo_deposit._request
     try:
         args = validated_args(argv)
+        if args.stage == "check-surfaces":
+            return run_check_surfaces(args)
         state = load_state(args.state, args)
         context = ReleaseContext(args, runner or SubprocessRunner(), request, now or utc_now, state, [])
         args.released = context.release_date()
@@ -1323,7 +1571,7 @@ def main(argv: list[str] | None = None, *, now=None, request=None, runner=None) 
         return execute_stage(context)
     except (ReleaseError, zenodo_deposit.ZenodoError, OSError, ValueError, KeyError, json.JSONDecodeError) as error:
         print(f"refused: {error}", file=sys.stderr)
-        if "context" in locals() and args.stage != "status":
+        if "context" in locals() and args.stage not in {"status", "check-surfaces"}:
             context.state["last_failure"] = {
                 "stage": args.stage, "at": context.now(), "reason": str(error), "commands": context.commands,
             }

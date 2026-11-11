@@ -90,6 +90,7 @@ def make_domain(root: Path) -> Path:
         leaf.write_text("---\n" + yaml.safe_dump(document, sort_keys=False) + "---\n# Fixture procedure\n")
     (domain / "LICENSE").write_text("Apache-2.0\n")
     (domain / "LICENSING.md").write_text("Collection content: CC-BY-4.0\n")
+    (domain / ".zenodo.json").write_text('{"version": "v1.0.0"}\n')
     (collection / ".zenodo.json").write_text(json.dumps({
         "title": "ASB Fixture Skill Collection v1",
         "upload_type": "dataset",
@@ -286,6 +287,7 @@ def test_record_doi_is_byte_stable_and_updates_all_release_surfaces(release_fixt
     snapshot = {path: path.read_bytes() for path in paths}
     assert all(DOI.encode() in content for content in snapshot.values())
     assert (release_fixture.repo / "collections/fixture/v1/.zenodo.json").read_bytes() == before
+    assert json.loads((release_fixture.repo / ".zenodo.json").read_text())["version"] == "v1.0.0"
     assert invoke(release_fixture, "record-doi", *arguments, "--force") == 0
     assert {path: path.read_bytes() for path in paths} == snapshot
 
@@ -614,7 +616,7 @@ def test_land_dry_runs_then_executes_and_records_branch(release_fixture, tmp_pat
 
 PATCH_DOI = "10.5281/zenodo.1234999"
 SURFACES = (
-    "collections/fixture/v1/CITATION.cff", "CITATION.cff", "README.md",
+    "collections/fixture/v1/CITATION.cff", "CITATION.cff", "README.md", ".zenodo.json",
     "collections/fixture/v1/USAGE.md", PLUGIN, MARKETPLACE_PATH,
 )
 
@@ -622,6 +624,116 @@ SURFACES = (
 def snapshot(repo: Path) -> dict:
     return {relative: (repo / relative).read_bytes() if (repo / relative).exists() else None
             for relative in SURFACES}
+
+
+OLD_DOI = "10.5281/zenodo.1111111"
+HISTORY_TABLE = (
+    "## Release history\n\n"
+    "| Release | Tag | Version DOI |\n"
+    "|---|---|---|\n"
+    f"| v1.0.0 | `fixture-v1.0.0` | [{OLD_DOI}](https://doi.org/{OLD_DOI}) |\n"
+)
+
+
+@pytest.fixture(params=["status", "compact"])
+def real_readme_shape(request) -> str:
+    """Return the two current-release README shapes with synthetic identifiers."""
+    table = (
+        "| Path | Title | Skills | Tools | Released | DOI |\n"
+        "|---|---|---|---|---|---|\n"
+        f"| `collections/fixture/v1` | Fixture v1 | 10 | 5 | 2026-11-01 | "
+        f"[{OLD_DOI}](https://doi.org/{OLD_DOI}) |\n"
+    )
+    if request.param == "compact":
+        current = (
+            "The v1 release is tagged `fixture-v1.0.0`. The concept DOI covers all versions.\n"
+            "Cite the collection's version DOI and the source DOI of every skill used.\n"
+        )
+        return f"# Fixture\n\n## Collections\n\n{table}\n{current}\n{HISTORY_TABLE}"
+    current = (
+        "## Status\n\n"
+        f"Collection `v1` is released on `main` at tag `fixture-v1.0.0` and archived on "
+        f"Zenodo under the version DOI [{OLD_DOI}](https://doi.org/{OLD_DOI}).\n\n"
+        "| Item | State |\n|---|---|\n"
+        f"| DOI | [{OLD_DOI}](https://doi.org/{OLD_DOI}) (this version). |\n\n"
+        "## Citation\n\n"
+        f"The collection's version DOI is [{OLD_DOI}](https://doi.org/{OLD_DOI}); "
+        "its concept DOI covers all versions.\n"
+    )
+    return f"# Fixture\n\n## Collections\n\n{table}\n{current}\n{HISTORY_TABLE}"
+
+
+def test_readme_real_shapes_update_history_and_are_idempotent(real_readme_shape) -> None:
+    path = Path("/tmp/README.md")
+    arguments = (
+        path, "fixture", "v1", "fixture-v1.0.1", DOI, "2026-11-09",
+        "collections/fixture/v1",
+    )
+    updated = release_domain.readme_text(real_readme_shape, *arguments)
+    assert "fixture-v1.0.1" in updated
+    assert f"| 2026-11-09 | [{DOI}](https://doi.org/{DOI}) |" in updated
+    assert HISTORY_TABLE in updated
+    assert release_domain.readme_text(updated, *arguments) == updated
+
+
+def test_record_doi_refuses_unknown_current_wording_and_writes_no_surface(
+        release_fixture, capsys) -> None:
+    collection_metadata = release_fixture.repo / "collections/fixture/v1/.zenodo.json"
+    metadata = json.loads(collection_metadata.read_text())
+    metadata["version"] = "v1.0.1"
+    collection_metadata.write_text(json.dumps(metadata))
+    readme = release_fixture.repo / "README.md"
+    readme.write_text(readme.read_text() + (
+        f"\n## Status\n\nCurrent release: tag `fixture-v1.0.0`; version DOI "
+        f"[{OLD_DOI}](https://doi.org/{OLD_DOI}).\n"
+    ))
+    before = snapshot(release_fixture.repo)
+    seed_state(release_fixture, {"deposit-draft": {"status": "waiting"}})
+    assert invoke(release_fixture, "record-doi", "--doi", DOI) == 1
+    assert snapshot(release_fixture.repo) == before
+    error = capsys.readouterr().err
+    assert "README.md:" in error
+    assert "current-release tag, version DOI does not match" in error
+
+
+def test_root_zenodo_refusal_names_file_and_line() -> None:
+    text = '{"version": "v1\\u002e0\\u002e0"}\n'
+    with pytest.raises(release_domain.ReleaseError, match=r"\.zenodo\.json:1:"):
+        release_domain.root_zenodo_text(text, Path("/tmp/.zenodo.json"), "v1.0.1")
+
+
+def test_scaffold_readme_without_current_prose_passes() -> None:
+    source = (
+        "# Fixture\n\n## Collections\n\n"
+        "| Path | Title | Skills | Tools | Released | DOI |\n"
+        "|---|---|---|---|---|---|\n"
+        "| `collections/fixture/v1` | Fixture v1 | 10 | 5 | pending | pending |\n\n"
+        "## Citation\n\nThe concept DOI is added after the first deposit.\n"
+    )
+    updated = release_domain.readme_text(
+        source, Path("/tmp/README.md"), "fixture", "v1", "fixture-v1.0.0", DOI,
+        "2026-11-09", "collections/fixture/v1",
+    )
+    assert release_domain.readme_surface_findings(
+        updated, Path("/tmp/README.md"), "fixture", "collections/fixture/v1", DOI,
+        "2026-11-09", "fixture-v1.0.0",
+    ) == []
+
+
+def test_check_surfaces_reports_stale_lines_without_writing(release_fixture, capsys) -> None:
+    arguments = [
+        "check-surfaces", "--domain", "fixture", "--version", "v1",
+        "--repo-root", str(release_fixture.repo), "--doi", DOI,
+        "--released", "2026-11-09", "--release-label", "v1.0.0",
+    ]
+    before = snapshot(release_fixture.repo)
+    assert release_domain.main(arguments, now=lambda: NOW) == 1
+    assert snapshot(release_fixture.repo) == before
+    assert "README.md:" in capsys.readouterr().err
+    seed_state(release_fixture, {"deposit-draft": {"status": "waiting"}})
+    assert invoke(release_fixture, "record-doi", "--doi", DOI, "--released", "2026-11-09") == 0
+    assert release_domain.main(arguments, now=lambda: NOW) == 0
+    assert "current-release surfaces match" in capsys.readouterr().out
 
 
 def test_record_doi_skips_an_absent_usage_file(release_fixture) -> None:
@@ -684,6 +796,7 @@ def test_patch_release_keeps_earlier_dois_and_traces_the_superseded_row(release_
 
     arguments = ("--doi", PATCH_DOI, "--released", "2026-11-09")
     assert invoke(release_fixture, "record-doi", *arguments) == 0
+    assert json.loads((release_fixture.repo / ".zenodo.json").read_text())["version"] == "v1.0.1"
     cff = yaml.safe_load((collection / "CITATION.cff").read_text())
     assert cff["doi"] == PATCH_DOI
     assert [(item["value"], item["description"]) for item in cff["identifiers"]] == [

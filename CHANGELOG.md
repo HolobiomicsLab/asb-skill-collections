@@ -106,6 +106,7 @@ This repository records two release surfaces, each noted per release:
   byte-identical.
 
 ### Changed
+- `release_domain.py record-doi` now keeps the root README's current tag, version DOI, release row and citation statement, plus the root `.zenodo.json` version, aligned with the release being recorded; it refuses unrecognised stale current-release wording with file and line evidence, and `check-surfaces` exposes the same validation without writing.
 - `scripts/pack_capsules.py` packs only builds of papers that the released corpus includes and
   lists the others under `not_released` in `MANIFEST.json`. It names the private
   AgenticScienceBuilder pipeline in the record description and links it only with
