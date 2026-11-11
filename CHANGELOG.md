@@ -15,6 +15,19 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
 ## [Unreleased]
 
 ### Added
+- Build-capsules deposit path, `scripts/capsules_deposit.py`: `refresh` rewrites the
+  descriptive files of an existing pack against the collection as it is now and copies the
+  build zips after checking their size and sha256; `archive` writes one deterministic zip per
+  record with the build zips stored unchanged, since Zenodo accepts at most 100 files per
+  record by default; `plan` checks the pack offline and writes `deposit-plan.json`, refusing a
+  screen failure or deny hit on a zipped build, a zip that disagrees with `MANIFEST.json`, a
+  build that is not an included paper of the collection, metadata the deposit API would reject,
+  creators that differ from the release list, a stale collection DOI, a private repository URL
+  and a local path; `create` makes a first-release draft from the owner's terminal and never
+  publishes; `record-doi` writes an optional `capsules` block on the released version's row of
+  `collections.yaml`, which `check_collections_manifest.py` validates, `regen_catalogue.py`
+  carries as `capsules_doi`, the documentation site and the README collections table show, and a
+  later patch release keeps. No capsules record is published.
 - Four contribution routes at the point of use (INT-ASB-051, lot A): this skill is wrong
   or could be better; a skill is missing: request it, or propose yours; a paper is not
   referenced: propose it; something technical failed: report it. Each lands on the issue
@@ -89,6 +102,10 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   byte-identical.
 
 ### Changed
+- `scripts/pack_capsules.py` packs only builds of papers that the released corpus includes and
+  lists the others under `not_released` in `MANIFEST.json`. It names the private
+  AgenticScienceBuilder pipeline in the record description and links it only with
+  `--pipeline-public`. Benchmark rows keep the sorted key order of `capsules.jsonl`.
 - `check_tools_index.py` reports resolved and unknown tool counts for each collection,
   fails when a record claims a licence and `tool_licenses.json` is absent, when a registry
   or reviewed tier names no `license_evidence`, and when the tier or address drifts from
