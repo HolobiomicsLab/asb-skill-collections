@@ -24,7 +24,7 @@ import pathlib
 import yaml
 
 _LICENSE_KEYS = ("entry_kind", "license_tier", "license", "license_detection",
-                 "license_subject", "repo_url")
+                 "license_subject", "license_evidence", "repo_url")
 
 # Retired keys, stripped on every pass. `canonical_url` was a copy of one arbitrary
 # member of `source_repos` -- a repository belonging to a paper that cites the tool,

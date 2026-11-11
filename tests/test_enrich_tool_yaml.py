@@ -25,7 +25,8 @@ def test_tier_map_extracts_license_fields():
     m = e.tier_map(tools_index)
     assert m["t_open"] == {"entry_kind": "software", "license_tier": "open",
                            "license": "MIT", "license_detection": "github-api",
-                           "license_subject": "tool", "repo_url": "owner/t-open"}
+                           "license_subject": "tool", "license_evidence": None,
+                           "repo_url": "owner/t-open"}
     assert m["t_nc"]["license_tier"] == "noncommercial"
     assert m["t_unknown"]["license"] is None
     assert m["t_unknown"]["license_subject"] is None
@@ -36,7 +37,7 @@ def test_tier_map_defaults_missing_fields():
     m = e.tier_map([{"slug": "t1", "license_tier": "open"}])
     assert m["t1"] == {"entry_kind": None, "license_tier": "open", "license": None,
                        "license_detection": None, "license_subject": None,
-                       "repo_url": None}
+                       "license_evidence": None, "repo_url": None}
 
 
 # ---------------------------------------------------------------------------

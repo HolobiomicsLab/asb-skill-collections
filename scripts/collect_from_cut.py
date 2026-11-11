@@ -856,7 +856,10 @@ def _prepare_tool(
         "license_tier": "unknown",
         "license": None,
         "license_detection": None,
-        "repo_url": repos[0] if repos else None,
+        # The tool's own repository is not known until scripts/resolve_tool_licenses.py
+        # establishes it; the first citing paper's repository is not it (decision K1).
+        # The citing repositories stay in source_repos.
+        "repo_url": None,
     }
 
 

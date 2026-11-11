@@ -195,3 +195,82 @@ def test_enrich_preserves_indent(tmp_path):
     e.enrich(str(d))
     assert '\n    {\n' in (d / "tools_index.json").read_text(), "tools_index should preserve 4-space indent"
     assert '\n  "skills"' in (d / "kb_bundle.json").read_text(), "kb_bundle should preserve 2-space indent"
+
+
+# --------------------------------------------------------------------------- #
+# --licence-only: decisions K1 and K2                                          #
+# --------------------------------------------------------------------------- #
+
+def _write_released_shape(tmp_path):
+    """A collection as released: name links built at bootstrap, no licence resolved."""
+    d = _write_collection(tmp_path, with_evidence=False)
+    tools = json.loads((d / "tools_index.json").read_text())
+    for t in tools:
+        t.pop("canonical_url", None)
+        # Links as bootstrap wrote them (by name), deliberately not the DOI links.
+        t["used_by_skills"] = ["s2"] if t["slug"] == "t_open" else []
+        t["repo_url"] = "https://github.com/some/citing-paper"
+    (d / "tools_index.json").write_text(json.dumps(tools, indent=1))
+    (d / "skills_index.json").write_text(json.dumps([
+        {"slug": "s1", "dois": ["10.1/open"], "tools_used": []},
+        {"slug": "s2", "dois": ["10.1/nc"], "tools_used": ["t_open"]},
+    ], indent=1))
+    (d / "kb_bundle.json").write_text(json.dumps({"skills": {
+        "s1": {"dois": ["10.1/open"], "tools_used": []},
+        "s2": {"dois": ["10.1/nc"], "tools_used": ["t_open"]}}}, indent=1))
+    (d / "tool_licenses.json").write_text(json.dumps({
+        "t_open": {"license": "GPL", "license_tier": "open", "license_raw": "GPL",
+                   "license_detection": "bioconductor-package",
+                   "license_evidence": "https://bioconductor.org/packages/ToolOpen",
+                   "repo_url": "https://github.com/x/tool-open", "route": "registry:bioconductor"},
+        "t_mix": {"license": None, "license_tier": "unknown", "license_detection": "reviewed-map",
+                  "entry_kind": "artefact", "route": "reviewed"}}))
+    return d
+
+
+def _links(d):
+    tools = json.loads((d / "tools_index.json").read_text())
+    return ({t["slug"]: t.get("used_by_skills") for t in tools},
+            (d / "skills_index.json").read_bytes(), (d / "kb_bundle.json").read_bytes())
+
+
+def test_licence_only_leaves_every_skill_tool_link_byte_identical(tmp_path):
+    """K2: a licence release must not change what a search returns."""
+    d = _write_released_shape(tmp_path)
+    before = _links(d)
+    e.enrich(str(d), licence_only=True)
+    assert _links(d) == before
+    # The default mode, by contrast, relinks by DOI: this is why the flag exists.
+    e.enrich(str(d))
+    assert _links(d) != before
+
+
+def test_licence_only_writes_licence_fields_and_the_tools_own_repository(tmp_path):
+    """K1: the tool's own repository when resolved, nothing otherwise."""
+    d = _write_released_shape(tmp_path)
+    e.enrich(str(d), licence_only=True)
+    tools = {t["slug"]: t for t in json.loads((d / "tools_index.json").read_text())}
+    t = tools["t_open"]
+    assert (t["license"], t["license_tier"], t["license_subject"]) == ("GPL", "open", "tool")
+    assert t["license_evidence"] == "https://bioconductor.org/packages/ToolOpen"
+    assert t["repo_url"] == "https://github.com/x/tool-open"
+    assert t["source_paper_repos"] == ["some/citing-paper"]
+    for slug in ("t_mix", "t_unmatched"):
+        assert tools[slug]["repo_url"] is None
+        assert tools[slug]["license_tier"] == "unknown"
+        assert tools[slug]["license_evidence"] is None
+    # A reviewer's entry_kind outranks the vocabulary classifier.
+    assert tools["t_mix"]["entry_kind"] == "artefact"
+
+
+def test_a_recorded_tier_is_used_for_a_family_licence():
+    """`GPL` read from a registry is open; re-deriving it from the string would say restricted."""
+    tier, lic, *_ = e.tool_license({"license": "GPL", "license_tier": "open",
+                                    "license_detection": "cran-package"})
+    assert (tier, lic) == ("open", "GPL")
+
+
+def test_a_recorded_tier_without_a_tool_detection_is_unknown():
+    tier, *_ = e.tool_license({"license": "MIT", "license_tier": "open",
+                               "license_detection": "crossref-paper"})
+    assert tier == "unknown"
