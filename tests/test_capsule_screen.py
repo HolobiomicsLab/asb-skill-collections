@@ -28,7 +28,7 @@ def test_open_quotes_under_a_non_permissive_licence_share_the_doi_budget_and_kee
 
 @pytest.mark.parametrize(
     ("access", "licence"),
-    [("gold", "CC-BY-4.0"), ("gold", "cc-by"), ("green", "cc-by-nc-nd"), ("gold", "cc0"), ("diamond", "public-domain")],
+    [("gold", "CC-BY-4.0"), ("gold", "cc-by"), ("green", "cc-by-sa"), ("gold", "cc0"), ("diamond", "public-domain")],
 )
 def test_open_permissive_sources_keep_the_full_attributed_text(access, licence):
     rule = context(access, licence)
@@ -126,7 +126,7 @@ def test_a_phone_number_with_a_cue_is_redacted(text, expected):
     "/tmp/outputs/demo/input.txt",
     "/var/folders/ab/outputs/demo/input.txt",
     "file:///Users/example/outputs/demo/input.txt",
-    r"C:\outputs\demo\input.txt",
+    r"C:\Users\example\outputs\demo\input.txt",
     "/Users/ < user name > /Optimus/bin/python",
 ])
 def test_every_absolute_path_form_becomes_a_build_locator(path):

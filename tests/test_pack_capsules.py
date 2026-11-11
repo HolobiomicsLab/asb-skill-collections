@@ -89,7 +89,9 @@ def test_packs_screened_archives_receipts_metadata_and_benchmark(tmp_path):
     assert "info@lab.example.org" in all_text
     assert "/Users/" not in all_text
     assert "/Volumes/" not in all_text
-    assert "C:\\" not in all_text
+    assert "C:\\Users\\" not in all_text
+    # A drive path that leads to no home directory is the paper's text and is kept.
+    assert "C:\\outputs\\closed\\evaluation.txt" in all_text
 
 
 def test_second_run_is_byte_identical(tmp_path):

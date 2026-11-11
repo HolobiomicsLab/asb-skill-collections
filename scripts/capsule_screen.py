@@ -19,6 +19,7 @@ QUOTE_KEYS = {"source_excerpt", "evidence_quote", "quote", "quoted_text", "verba
 TEXT_SUFFIXES = {".json", ".jsonl", ".jsonld", ".md", ".txt", ".yaml", ".yml", ".csv", ".tsv"}
 QUOTE_CAP = 300
 DOI_QUOTE_CAP = 1500
+REDACTED_QUOTE = "[redacted-quote]"
 EMAIL_RE = re.compile(PII_CONFIG["email_regex"], re.IGNORECASE)
 PHONE_RE = re.compile(
     r"(?<!\w)(?:\+\d{1,3}[ .-]?)?(?:\(\d{2,4}\)[ .-]?)?"
@@ -50,7 +51,9 @@ AREA_CODE_PHONE_RE = re.compile(rf"(?<!\w){AREA_CODE}[ .-]?\d{{3,4}}[ .-]\d{{3,4
 PATH_CHARACTER = r"""[^\s"'<>()\[\]{},]"""
 DISTINCTIVE_ROOT = r"/(?:Users|Volumes|var/folders|private/(?:tmp|var|etc))/"
 ORDINARY_ROOT = r"(?:(?<![\w.~}-])|(?<=(?<![\w-])-[A-Za-z]))/(?:home|root|tmp)/"
-DRIVE_ROOT = r"(?<![\w+.-])[A-Za-z]:[\\/]"
+# Drive letters are relevant only for home directories. In particular, a
+# variable followed by a LaTeX command is not a machine path.
+DRIVE_ROOT = r"(?<![\w+.-])[A-Za-z]:[\\/](?i:Users|Documents and Settings)[\\/]"
 MACHINE_ROOT = rf"(?:{DISTINCTIVE_ROOT}|{ORDINARY_ROOT}|{DRIVE_ROOT})"
 FILE_SCHEME = r"(?<![\w+.-])file:"
 PATH_RE = re.compile(rf"(?:{FILE_SCHEME}(?://)?)?{MACHINE_ROOT}{PATH_CHARACTER}+")
@@ -72,7 +75,24 @@ RESIDUAL_PATH_RE = re.compile(
 URL_TAIL = r"""[^\s"'<>()\[\]{},\\]*"""
 URL_TRAILING_PUNCTUATION = ".;:"
 OPEN_ACCESS = {"open", "open-access", "open_access", "oa", "gold", "gold-oa", "gold_oa", "green", "green-oa", "diamond"}
-PERMISSIVE_LICENSE_PREFIXES = ("cc-by", "cc0", "public-domain", "public_domain")
+
+
+def is_permissive_license(licence: str) -> bool:
+    """Keep only CC-BY, CC-BY-SA, CC0 and public-domain text without caps.
+
+    This is the default quotation policy, not a prefix match of the CC family:
+    NC and ND variants, including their combinations, do not qualify.
+    """
+    value = licence.strip().lower()
+    match = re.fullmatch(
+        r"https?://(?:www\.)?creativecommons\.org/"
+        r"(?:licenses/(by(?:-sa)?)/|publicdomain/(zero|mark)/)"
+        r"\d+(?:\.\d+)*/?(?:legalcode/?)?", value
+    )
+    if match:
+        return True
+    value = re.sub(r"[\s_]+", "-", value)
+    return bool(re.fullmatch(r"(?:cc-by(?:-sa)?|cc0)(?:-\d+(?:\.\d+)*)?|public-domain", value))
 
 
 def empty_counts() -> Counter:
@@ -88,6 +108,53 @@ def empty_counts() -> Counter:
         "deny_hits": 0,
         "failures": 0,
     })
+
+
+def empty_quotes() -> dict[str, int]:
+    """Return output measurements and transformation counts for source text."""
+    return {"count": 0, "characters": 0, "longest": 0, "truncated": 0, "dropped": 0}
+
+
+def _local_name(key) -> str:
+    """Resolve compact names and expanded JSON-LD property names alike."""
+    return re.split(r"[:/#]", key)[-1].lower() if isinstance(key, str) else ""
+
+
+def source_text_kind(relative_path: str, path: tuple = ()) -> str | None:
+    """Recognize paper text by its schema, shared by screening and verification.
+
+    Quote properties use their local name, including JSON-LD value objects and
+    lists. Retrieved text is the text of a passages_used or substring_hits
+    list item. Other text, value, claim, note, prompt and data-preview fields
+    are not quotations.
+    The evidence/source_snippets.md member carries plain snippet bodies after
+    its entry headings and Source/Reason metadata. Other evidence and ledger
+    Markdown carries source text only in blockquotes. A dataset preview's
+    fenced paper.md or article_fulltext.md payload is paper text; other
+    preview payloads are data.
+    """
+    if path:
+        if Path(relative_path).parts[-2:] == ("inputs", "dataset_preview.md") and path[0] == "preview":
+            return "paper_preview" if re.split(r"[\\/:]", path[-1])[-1] in {"paper.md", "article_fulltext.md"} else None
+        names = tuple(_local_name(key) if isinstance(key, str) else key for key in path)
+        field_path = names[:-1] if names[-1] == "@value" else names
+        while field_path and isinstance(field_path[-1], int):
+            field_path = field_path[:-1]
+        if field_path and field_path[-1] in QUOTE_KEYS:
+            return "quote"
+        if (len(field_path) >= 3 and field_path[-3] in {"passages_used", "substring_hits"}
+                and isinstance(field_path[-2], int) and field_path[-1] == "text"):
+            return "passage"
+        return None
+    member = Path(relative_path)
+    if member.suffix.lower() == ".md":
+        if member.parts[-2:] == ("evidence", "source_snippets.md"):
+            return "snippets"
+        if member.parts[-2:] == ("inputs", "dataset_preview.md"):
+            return "previews"
+        if {"evidence", "ledger"}.intersection(member.parts):
+            return "blockquotes"
+    return None
 
 
 @dataclass
@@ -137,7 +204,7 @@ class ScreenResult:
 def context_for(doi: str, access: dict[str, Any]) -> ScreenContext:
     """Map access metadata to the G2 text-retention decision.
 
-    Open-access sources under a permissive licence (the CC-BY family, CC0,
+    Open-access sources under a permissive licence (CC-BY, CC-BY-SA, CC0,
     public domain, or an explicit reuse grant) keep their attributed text in
     full. Open-access sources under any other licence string keep it under the
     caps. Restricted, unresolved and licence-less sources, and preprints without
@@ -147,7 +214,7 @@ def context_for(doi: str, access: dict[str, Any]) -> ScreenContext:
     licence = access.get("license") or access.get("licence")
     is_preprint = access_class == "preprint" or bool(access.get("preprint"))
     has_grant = bool(access.get("reuse_grant") or access.get("reuse_allowed"))
-    has_grant = has_grant or bool(licence and str(licence).lower().startswith(PERMISSIVE_LICENSE_PREFIXES))
+    has_grant = has_grant or bool(licence and is_permissive_license(str(licence)))
     drop = access_class not in OPEN_ACCESS or not licence or (is_preprint and not has_grant)
     cap = drop or not has_grant
     if is_preprint and not has_grant:
@@ -327,7 +394,8 @@ def screen_text(
     patterns are counted on the final text.
     """
     counts = empty_counts()
-    quotes = {"count": 0, "characters": 0, "longest": 0, "truncated": 0, "dropped": 0}
+    quotes = empty_quotes()
+    budget_before = budget.retained
     suffix = Path(relative_path).suffix.lower()
     failures: list[str] = []
     screened = None
@@ -347,7 +415,7 @@ def screen_text(
             # screen outside its values, in a comment for example.
             if screened[0] != payload or _has_findings(text, context):
                 text = yaml.safe_dump(screened[0], allow_unicode=True, sort_keys=False)
-        elif suffix == ".md" and {"evidence", "ledger"}.intersection(Path(relative_path).parts):
+        elif source_text_kind(relative_path):
             text = _screen_markdown(text, relative_path, context, budget, counts, quotes)
     except (ValueError, TypeError, AttributeError, RecursionError, yaml.YAMLError) as exc:
         failures.append(f"{relative_path}: parse_{type(exc).__name__}")
@@ -364,6 +432,13 @@ def screen_text(
     for key in ("emails_redacted", "phones_redacted", "paths_rewritten", "private_urls_rewritten", "deny_hits"):
         if residuals[key]:
             failures.append(f"{relative_path}: residual_{key}")
+    if not any(": parse_" in failure for failure in failures):
+        verified_budget = QuoteBudget(budget_before)
+        measured, problems = verify_quote_policy(text, relative_path, context, verified_budget)
+        quotes.update({key: measured[key] for key in ("count", "characters", "longest")})
+        failures.extend(problems)
+        if context.cap_quotes and not context.drop_quotes:
+            budget.retained = verified_budget.retained
     counts["failures"] = len(failures)
     return ScreenResult(text, counts, quotes, failures)
 
@@ -419,33 +494,40 @@ class RewrittenKeyCollision(ValueError):
     """Two mapping keys became the same key once screened; one value would be lost."""
 
 
-def _screen_json(value, location, context, budget, counts, quotes, source, pointer=""):
+def _screen_json(value, location, context, budget, counts, quotes, source, pointer="", path=(), anchors=None):
     if isinstance(value, dict):
         output = {}
+        # JSON-LD value objects permit only their defined @ properties. Put
+        # their anchors on the containing record, beside the quoted property.
+        value_object = "@value" in value
+        redactions = anchors if value_object and anchors is not None else []
         for key in sorted(value):
             name = screen_string(key, context, counts) if isinstance(key, str) else key
             if name in output:
                 raise RewrittenKeyCollision(pointer)
             child_pointer = f"{pointer}/{_pointer_escape(str(name))}"
-            if key in QUOTE_KEYS and isinstance(value[key], str):
-                retained, anchor = _screen_quote(
-                    value[key], location, child_pointer, context, budget, counts, quotes, source
-                )
-                output[name] = screen_string(retained, context, counts)
-                if anchor:
-                    anchor["doi"] = screen_string(anchor["doi"], context, counts)
-                    output.setdefault("_screen_redactions", []).append(anchor)
-            else:
-                output[name] = _screen_json(value[key], location, context, budget, counts, quotes, source, child_pointer)
+            output[name] = _screen_json(
+                value[key], location, context, budget, counts, quotes, source,
+                child_pointer, path + (key,), redactions,
+            )
+        if redactions and not value_object:
+            output.setdefault("_screen_redactions", []).extend(redactions)
         return output
     if isinstance(value, (list, tuple, set, frozenset)):
         # YAML pairs and sets load as tuples and sets; a set has no order of its own.
         items = sorted(value, key=repr) if isinstance(value, (set, frozenset)) else value
         return [
-            _screen_json(item, location, context, budget, counts, quotes, source, f"{pointer}/{index}")
+            _screen_json(item, location, context, budget, counts, quotes, source,
+                         f"{pointer}/{index}", path + (index,), anchors)
             for index, item in enumerate(items)
         ]
     if isinstance(value, str):
+        if source_text_kind(location, path):
+            retained, anchor = _screen_quote(value, location, pointer, context, budget, counts, quotes, source)
+            if anchor:
+                anchor["doi"] = screen_string(anchor["doi"], context, counts)
+                anchors.append(anchor)
+            return retained
         return screen_string(value, context, counts)
     return value
 
@@ -457,14 +539,18 @@ def _screen_quote(value, location, pointer, context, budget, counts, quotes, sou
         allowed = budget.allowance()
     else:
         allowed = len(value)
-    retained = value[:allowed]
+    candidate = value[:allowed]
+    # Rewrites can change the length, so both the budget and the receipt use
+    # the actual retained string. A replacement cannot extend a capped field.
+    rewritten = screen_string(candidate, context, counts)
+    retained = rewritten[:allowed] if context.cap_quotes else rewritten
     if context.cap_quotes and not context.drop_quotes:
         budget.retained += len(retained)
     quotes["count"] += 1
     quotes["characters"] += len(retained)
     quotes["longest"] = max(quotes["longest"], len(retained))
     anchor = None
-    if len(retained) < len(value):
+    if len(candidate) < len(value) or len(retained) < len(rewritten):
         reason = context.redacted_reason if context.drop_quotes else "quotation_cap"
         anchor = _redaction_anchor(value, location, pointer, context.doi, reason, source)
         if retained:
@@ -491,19 +577,147 @@ def _redaction_anchor(value, location, pointer, doi, reason, source) -> dict:
     }
 
 
+@dataclass
+class MarkdownQuote:
+    """One source-text body, with offsets into its Markdown member."""
+
+    start: int
+    end: int
+    value: str
+    pointer: str
+    blockquote: bool = False
+
+
+def _markdown_quotes(text: str, relative_path: str):
+    """Locate bodies without treating their scaffold or redactions as prose."""
+    kind = source_text_kind(relative_path)
+    if kind == "snippets":
+        entries = list(re.finditer(r"(?m)^##[ \t]+ev_\d+[ \t]*\r?$", text))
+        regions = [(match.end(), entries[index + 1].start() if index + 1 < len(entries) else len(text))
+                   for index, match in enumerate(entries)]
+        if not entries:
+            # An unstructured source-snippet member is still a source field.
+            regions = [(0, len(text))]
+        for index, (start, end) in enumerate(regions, 1):
+            # These two producer metadata lines precede each plain snippet.
+            prefix = re.match(r"(?:[ \t]*\r?\n|[ \t]*-[ \t]*(?:Source|Reason):[^\n]*(?:\n|$))*", text[start:end])
+            start += prefix.end()
+            while end > start and text[end - 1].isspace():
+                end -= 1
+            value = re.sub(r"<!-- asb-redaction [^\n]* -->", "", text[start:end]).strip()
+            yield MarkdownQuote(start, end, "" if value == REDACTED_QUOTE else value, f"snippet_{index}")
+    elif kind == "previews":
+        sections = []
+        for section in re.finditer(r"(?m)^###[ \t]+`([^`\n]+)`[ \t]*$", text):
+            before = text[:section.start()].rstrip()
+            previous_line = before.rsplit("\n", 1)[-1] if before else ""
+            follows_wrapper = not before or bool(re.fullmatch(r"[ \t]*(?:`{3,}|~{3,})[ \t]*", previous_line))
+            opens_wrapper = re.match(r"\s*\n[ \t]*(?:`{3,}|~{3,})[ \t]*\n", text[section.end():])
+            if follows_wrapper and opens_wrapper:
+                sections.append(section)
+        for index, section in enumerate(sections, 1):
+            if not source_text_kind(relative_path, ("preview", section.group(1))):
+                continue
+            end = sections[index].start() if index < len(sections) else len(text)
+            opening = re.search(r"(?m)^[ \t]*(`{3,}|~{3,})[^\n]*\n", text[section.end():end])
+            if opening is None:
+                start = section.end()
+            else:
+                start = section.end() + opening.end()
+                fence = opening.group(1)
+                # The preview renderer embeds Markdown without escaping its
+                # internal fences. Only the final fence closes the wrapper.
+                closings = list(re.finditer(rf"(?m)^[ \t]*{re.escape(fence[0])}{{{len(fence)},}}[ \t]*$", text[start:end]))
+                if closings:
+                    end = start + closings[-1].start()
+            while start < end and text[start].isspace():
+                start += 1
+            while end > start and text[end - 1].isspace():
+                end -= 1
+            value = re.sub(r"<!-- asb-redaction [^\n]* -->", "", text[start:end]).strip()
+            yield MarkdownQuote(start, end, "" if value == REDACTED_QUOTE else value, f"paper_preview_{index}")
+    elif kind == "blockquotes":
+        for index, match in enumerate(re.finditer(r"(?m)^(?:[ \t]*>[^\n]*(?:\n|$))+", text), 1):
+            end = match.end() - int(match.group().endswith("\n"))
+            value = "\n".join(re.sub(r"^[ \t]*>[ \t]?", "", line) for line in text[match.start():end].splitlines())
+            yield MarkdownQuote(match.start(), end, "" if value == REDACTED_QUOTE else value,
+                                f"blockquote_{index}", True)
+
+
 def _screen_markdown(text, location, context, budget, counts, quotes) -> str:
-    blocks = re.split(r"((?:^|\n)(?:[ \t]*>.*(?:\n|$))+)", text)
-    for index in range(1, len(blocks), 2):
-        block = blocks[index]
-        lines = block.strip("\n").splitlines()
-        value = "\n".join(re.sub(r"^\s*>\s?", "", line) for line in lines)
-        pointer = f"blockquote_{index // 2 + 1}"
-        retained, anchor = _screen_quote(value, location, pointer, context, budget, counts, quotes, text)
-        replacement = "> " + retained.replace("\n", "\n> ") if retained else "> [redacted-quote]"
-        if anchor:
-            replacement += "\n<!-- asb-redaction " + json.dumps(anchor, sort_keys=True) + " -->"
-        blocks[index] = replacement + ("\n" if block.endswith("\n") else "")
-    return "".join(blocks)
+    parts, previous = [], 0
+    for span in _markdown_quotes(text, location):
+        parts.append(text[previous:span.start])
+        retained, anchor = _screen_quote(span.value, location, span.pointer, context, budget, counts, quotes, text)
+        if retained == span.value and anchor is None:
+            parts.append(text[span.start:span.end])
+        else:
+            replacement = retained or REDACTED_QUOTE
+            if span.blockquote:
+                replacement = "> " + replacement.replace("\n", "\n> ")
+            if anchor:
+                anchor["line"] = text.count("\n", 0, span.start) + 1
+                anchor["offsets"] = {"start": span.start, "end": span.end}
+                replacement += "\n<!-- asb-redaction " + json.dumps(anchor, sort_keys=True) + " -->"
+            parts.append(replacement)
+        previous = span.end
+    parts.append(text[previous:])
+    return "".join(parts)
+
+
+def _structured_quotes(value, relative_path, path=()):
+    if isinstance(value, dict):
+        for key, item in value.items():
+            yield from _structured_quotes(item, relative_path, path + (key,))
+    elif isinstance(value, (list, tuple, set, frozenset)):
+        for index, item in enumerate(value):
+            yield from _structured_quotes(item, relative_path, path + (index,))
+    elif isinstance(value, str) and source_text_kind(relative_path, path):
+        yield value
+
+
+def source_text_values(text: str, relative_path: str):
+    """Read recognised source fields from a serialized member without changing it."""
+    suffix = Path(relative_path).suffix.lower()
+    if suffix in {".json", ".jsonld"}:
+        yield from _structured_quotes(json.loads(text), relative_path)
+    elif suffix == ".jsonl":
+        for line in text.splitlines():
+            if line.strip():
+                yield from _structured_quotes(json.loads(line), relative_path)
+    elif suffix in {".yaml", ".yml"}:
+        yield from _structured_quotes(yaml.safe_load(text), relative_path)
+    else:
+        for span in _markdown_quotes(text, relative_path):
+            yield span.value
+
+
+def verify_quote_policy(text: str, relative_path: str, context: ScreenContext, budget: QuoteBudget) -> tuple[dict, list[str]]:
+    """Count what the output holds and reject residual text or an exceeded cap.
+
+    This pass reads the serialized output independently of the transformation
+    counters. The packer supplies one verification budget across all members.
+    Empty fields and Markdown redaction markers contribute no source text.
+    """
+    quotes, failures = empty_quotes(), []
+    try:
+        for value in source_text_values(text, relative_path):
+            if value:
+                quotes["count"] += 1
+                quotes["characters"] += len(value)
+                quotes["longest"] = max(quotes["longest"], len(value))
+    except (ValueError, TypeError, AttributeError, RecursionError, yaml.YAMLError) as exc:
+        failures.append(f"{relative_path}: quote_inventory_{type(exc).__name__}")
+        return quotes, failures
+    if context.drop_quotes and quotes["characters"]:
+        failures.append(f"{relative_path}: residual_source_text")
+    elif context.cap_quotes and not context.drop_quotes:
+        budget.retained += quotes["characters"]
+        if quotes["longest"] > QUOTE_CAP:
+            failures.append(f"{relative_path}: quotation_field_cap_exceeded")
+        if budget.retained > DOI_QUOTE_CAP:
+            failures.append(f"{relative_path}: quotation_doi_cap_exceeded")
+    return quotes, failures
 
 
 def _pointer_escape(value: str) -> str:

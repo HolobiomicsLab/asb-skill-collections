@@ -43,13 +43,55 @@ importable code never reads the clock.
 Every staged JSON, JSONL, JSON-LD, Markdown, YAML and plain-text member is
 screened before zipping. Quoted text follows one of three regimes, recorded
 per build as `quote_retention` in `MANIFEST.json` and `SCREEN.json`. Open
-sources under a permissive licence (the CC-BY family, CC0, public domain, or
-an explicit reuse grant) keep their attributed text in full (`full`). Open
-sources under any other licence string keep structured quote fields and
-evidence blockquotes under 300 characters per field and 1,500 retained
+sources under CC-BY or CC-BY-SA of any version, CC0, public domain, or an
+explicit reuse grant keep their attributed text in full (`full`). The named
+function `capsule_screen.is_permissive_license` defines this default. CC
+licences containing NC or ND, including their combinations, do not qualify;
+the owner can revise that default in this one function. Open sources under
+any other licence string keep recognised source fields under 300 characters
+per field and 1,500 retained
 characters per DOI (`capped`). Restricted, unresolved, licence-less, and
 ungranted-preprint sources drop quote text and retain a DOI, location,
-offsets, original length, digest and reason (`dropped`). A GitHub URL of a
+offsets, original length, digest and reason (`dropped`).
+
+`capsule_screen.source_text_kind` is the recognition rule used by both the
+screen and its output check. Structured properties resolve to their local
+name without case distinctions, so `asbval:evidence_quote` and an expanded JSON-LD property name follow
+the same rule as `evidence_quote`. The quote properties are `source_excerpt`,
+`evidence_quote`, `quote`, `quoted_text`, `verbatim` and `snippet`, including
+lists and JSON-LD `@value` objects. Retrieved source passages are the `text`
+fields of `passages_used[]` and `substring_hits[]`. A bare `text` or `value`
+elsewhere is not enough: generated claims, validator notes, summaries,
+prompts and evaluation strategies keep their text. A claim's
+`substring_in_paper` flag validates its source excerpt, not the generated
+claim text, so it does not widen this rule.
+
+In `evidence/source_snippets.md`, each `## ev_<number>` entry's plain body is
+a source field. Its heading and `Source`/`Reason` metadata stay present. An
+unstructured source-snippet member is treated as one field. Other evidence
+and ledger Markdown uses blockquotes. In `inputs/dataset_preview.md`, the
+fenced payloads labelled `paper.md` or `article_fulltext.md` are source fields;
+internal Markdown fences do not end a preview wrapper. Other dataset and
+repository previews remain. Designated evidence fields
+follow the policy even when a trace flag does not establish an exact match.
+Removed structured fields remain empty; removed Markdown bodies keep a
+`[redacted-quote]` marker. Each shortened or removed field has an anchor in
+`_screen_redactions`, or an `asb-redaction` Markdown comment, with the original
+length and SHA-256 digest. Metadata and document structure remain available.
+
+One budget is shared by all recognised fields and members of the build's
+DOI, in sorted member and mapping-key order and list order. Full retention
+still applies the privacy rewrites below. For capped fields, replacements
+cannot extend the retained string beyond its allowance, and only the final
+retained characters consume the budget. The packer independently reads the
+serialized output and records `quotes_after_screen` per build and capsule.
+`count` counts non-empty source fields; `characters` and `longest` measure
+their final text. Empty fields, markers and anchors contribute no source
+characters; `truncated` and `dropped` count transformations. Non-empty source
+text in a dropped build, a field over 300 characters in a capped build, or a
+capped build over 1,500 characters fails the build and prevents its archive.
+
+A GitHub URL of a
 private repository (web, raw or SSH form, with or without `.git` and a trailing
 path) then becomes the bare `owner/name`, counted as `private_urls_rewritten`;
 other fields, such as a commit hash, are untouched. The private repositories
@@ -81,15 +123,18 @@ are distinctive and count anywhere, so `/System/Volumes/Data/...` is rewritten.
 `/home/`, `/root/` and `/tmp/` are ordinary directory names and count only
 where an absolute path starts: not after a word character, `.`, `-`, `~` or
 `}`, so `test/tmp/` or `${HOME}/tmp/` is left alone, but after a one-letter
-option, so `-I/home/...` is rewritten. A drive letter counts when it is not
-part of a longer word or URI scheme. A `file:` URI with one or three slashes is
+option, so `-I/home/...` is rewritten. A drive letter counts only before a
+home directory (`C:\Users\<name>\...`, `C:/Users/...`, or
+`C:\Documents and Settings\<name>\...`), outside a longer word or URI scheme.
+Other drive-shaped text, including LaTeX such as `X:\mathbb` and `x:\quad`,
+is kept. Rewrite and residual checks share `MACHINE_ROOT`. A `file:` URI with one or three slashes is
 rewritten with its path. A home directory quoted from a paper
 (`/home/<name>/...`) is rewritten like a build-machine path: the screen cannot
 tell an author's account from the build machine's.
 
 The residual path check is wider than the rewrite, so what the rewrite cannot
 handle leaves the build out instead of passing. Any root marker counts, unless
-the mention ends there (`in the /tmp/ directory`, `D:/ `) or a placeholder
+the mention ends there (`in the /tmp/ directory`) or a placeholder
 follows (`/tmp/<name>`); a `file:` URI counts when something follows it. A
 root marker followed by a quote, a bracket or a comma, or an email redacted
 inside a path, is therefore a failure. The release gate of a capsule's RO-Crate

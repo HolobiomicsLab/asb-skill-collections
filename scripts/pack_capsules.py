@@ -228,9 +228,11 @@ def screen_build(root: Path, paper: dict, collection_meta: dict, options: dict) 
     context.deny_patterns = options["deny_patterns"]
     context.private_repositories = options["private_repositories"]
     budget = capsule_screen.QuoteBudget()
+    verified_budget = capsule_screen.QuoteBudget()
     counts = capsule_screen.empty_counts()
     failures = []
     quotes_by_capsule = {}
+    build_quotes = capsule_screen.empty_quotes()
     for path in sorted(member for member in root.rglob("*") if member.is_file()):
         relative = path.relative_to(root).as_posix()
         if path.suffix.lower() not in capsule_screen.TEXT_SUFFIXES:
@@ -246,17 +248,25 @@ def screen_build(root: Path, paper: dict, collection_meta: dict, options: dict) 
         path.write_text(result.text, encoding="utf-8")
         counts.update(result.counts)
         failures.extend(result.failures)
+        measured, problems = capsule_screen.verify_quote_policy(
+            path.read_text(encoding="utf-8"), relative, context, verified_budget
+        )
+        failures.extend(problem for problem in problems if problem not in failures)
+        measured.update({key: result.quotes[key] for key in ("truncated", "dropped")})
+        for key, value in measured.items():
+            build_quotes[key] = max(build_quotes[key], value) if key == "longest" else build_quotes[key] + value
         if "capsules" in path.relative_to(root).parts:
             capsule_id = path.relative_to(root).parts[1]
-            aggregate = quotes_by_capsule.setdefault(capsule_id, {"count": 0, "characters": 0, "longest": 0, "truncated": 0, "dropped": 0})
-            for key, value in result.quotes.items():
+            aggregate = quotes_by_capsule.setdefault(capsule_id, capsule_screen.empty_quotes())
+            for key, value in measured.items():
                 aggregate[key] = max(aggregate[key], value) if key == "longest" else aggregate[key] + value
     for crate in sorted(root.glob("capsules/*/ro-crate-metadata.json")):
         problems = crate_problems(crate.parent)
         failures.extend(f"{crate.relative_to(root).as_posix()}: {problem}" for problem in problems)
     counts["failures"] = len(failures)
     counts["spans_dropped_by_access_class"] = counts["spans_dropped"] if context.drop_quotes else 0
-    return {"counts": dict(sorted(counts.items())), "failures": failures, "quote_retention": context.retention}, quotes_by_capsule
+    return {"counts": dict(sorted(counts.items())), "failures": failures,
+            "quote_retention": context.retention, "quotes_after_screen": build_quotes}, quotes_by_capsule
 
 
 def validation_state(path: Path) -> tuple[str, dict]:
