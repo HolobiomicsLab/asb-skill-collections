@@ -433,6 +433,9 @@ FAILURE_CLASSES = (
     ("missing:", "a capsule lacks a required member, such as its ledger"),
     ("invalid_validation_or_eval", "invalid evaluation or validation metadata"),
     ("residual_deny_hits", "content withheld by the maintainers"),
+    ("residual_source_text", "text of the paper the screen could not remove"),
+    ("quotation_", "quoted text of the paper over its cap"),
+    ("quote_inventory_", "a document whose quoted text could not be counted"),
     ("residual_paths_rewritten", "a machine path the screen could not rewrite"),
     ("absolute filesystem path", "a machine path the screen could not rewrite"),
     ("residual_private_urls_rewritten", "a private repository address the screen could not rewrite"),
@@ -495,7 +498,7 @@ Screen failure classes count builds and may overlap:
 
 {failure_lines}
 
-The screen names private repository URLs without linking them and redacts email addresses and telephone numbers. It replaces build-machine paths and home directories with portable locators. It caps or drops quotations according to the source access class. See `SCREEN.json` for the measured counts and per-build failures.
+The screen names private repository URLs without linking them and redacts email addresses and telephone numbers. It replaces build-machine paths and home directories with portable locators. It keeps, caps or removes the text quoted from each paper according to the paper's access class and licence, and leaves an anchor (length and digest) where text was removed. See `SCREEN.json` for the measured counts and per-build failures.
 
 ## `SCREEN.json` counters
 

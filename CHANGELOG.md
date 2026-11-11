@@ -184,6 +184,26 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   commit (the `packs/` tree is byte-identical to the v3.0.0 commit).
 
 ### Fixed
+- The capsule screen applies the quotation policy to every field that carries text of the
+  paper, recognised by its place in the document: quote properties by local name (so
+  `asbval:evidence_quote` counts), the items of `passages_used` and `substring_hits`, plain
+  evidence snippets, and the paper payload of a dataset preview. Before, six key names and
+  Markdown block quotes were covered, and the passages retrieved from papers that are not
+  open shipped in the local packs. Text is kept, capped under one budget per DOI across the
+  members of a build, or removed with an anchor; a second pass reads the output and leaves out
+  a build that holds text it should not. Full retention is for CC-BY, CC-BY-SA, CC0 and public
+  domain; the NC and ND variants of Creative Commons are capped (a prefix test gave them
+  full retention). A drive letter counts as a path only before a home directory, which stops
+  the rewrite of mathematics such as `X:\mathbb`.
+- Capsule tables and guides say what the files hold. The validation label is derived from the
+  claim entries and lowered when the summary of `validation.json` disagrees, which the row
+  states. The evaluation listing is described as structurally complete definitions, not as
+  runnable benchmarks, and carries checks by kind, unresolved references and input assets
+  with a hash or a download hint. Each entry of `artifact_provenance.json` says whether its
+  file ships. `build_manifest.json` drops the branch name and dirty flag of its Git entries.
+  The record README and the pack README gain a field dictionary generated from one table,
+  the screen counters, the licence layers and the citation; the dataset card has no
+  placeholder and takes `--capsules-doi`.
 - Build-capsules records now describe only what they hold. `capsules.jsonl`, its optional
   Parquet twin and `benchmark-manifest.json` exclude builds without a zip; the manifest and
   deposit plan distinguish considered, packed and left-out builds and capsules; `plan`
@@ -210,7 +230,7 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   path starts (`test/tmp/` is left alone, `-I/home/...` is rewritten), and `/home/` and
   `/root/` are new in the rule. The residual check stays wider than the rewrite, so a root
   marker the rewrite cannot handle leaves the build out, but it no longer fails on a mention
-  that ends at the marker (`in the /tmp/ directory`, `D:/ `) or on a placeholder
+  that ends at the marker (`in the /tmp/ directory`) or on a placeholder
   (`/tmp/<name>`). YAML sets, ordered pairs and binary values are screened or checked, and two
   keys that become the same key once screened fail the document.
 - Bind `nhs_number` to its label like the other clinical identifiers, treat a

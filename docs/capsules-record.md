@@ -171,7 +171,7 @@ AgenticScienceBuilder, is private: it is
 named in the description and not linked, and the screen rewrites its URLs.
 `--pipeline-public`, once that repository is public, adds the `isCompiledBy`
 link and the URL in `hf/README.md`, keeps its URLs in the builds, and is
-recorded as `inclusion_policy.pipeline_public` in `MANIFEST.json`. A capsules DOI placeholder remains until the owner publishes the record.
+recorded as `inclusion_policy.pipeline_public` in `MANIFEST.json`. The dataset card names the capsules DOI only when it is given (`--capsules-doi`); without it the card points to the collection's registry row.
 No existing collection record is modified.
 
 Only builds of papers that the released `corpus.yaml` lists as `included` are
