@@ -205,11 +205,14 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   before it). The earlier rule redacted any three digit groups separated by a space, a dot
   or a hyphen, which replaced masses, axis ticks and parts of identifiers in the packs;
   right after a label, groupings the earlier shape missed (`04 92 07 61 00`) are now covered.
-- The path rewrite and the residual path check share one rule: a root marker followed by at
-  least one path character, with `/home/`, `/tmp/` and `/private/` counted only where an
-  absolute path starts. `/home/` is new in the rule: a home directory quoted from a paper was
-  shipped as written, and the RO-Crate gate, which counts it, left such a build out. The check no longer fails on text the rewrite leaves alone, such as a bare `/tmp/`
-  in prose, `/tmp/<placeholder>`, `test/tmp/` or a drive letter followed by a space.
+- The path rule of the capsule screen is stated once. A machine path is a root marker
+  followed by path characters; `/home/`, `/root/` and `/tmp/` count only where an absolute
+  path starts (`test/tmp/` is left alone, `-I/home/...` is rewritten), and `/home/` and
+  `/root/` are new in the rule. The residual check stays wider than the rewrite, so a root
+  marker the rewrite cannot handle leaves the build out, but it no longer fails on a mention
+  that ends at the marker (`in the /tmp/ directory`, `D:/ `) or on a placeholder
+  (`/tmp/<name>`). YAML sets, ordered pairs and binary values are screened or checked, and two
+  keys that become the same key once screened fail the document.
 - Bind `nhs_number` to its label like the other clinical identifiers, treat a
   bounded set of documented template e-mail local parts (`your@…`,
   `firstname.lastname@…`) as notation, and add an exact, per-pattern allowlist

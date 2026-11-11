@@ -414,24 +414,31 @@ def plan_counts(manifest: dict, rows: list[dict], benchmark: dict) -> dict:
     }
 
 
+# Screen failure strings, by the marker they carry, in the words of a reader of the record.
+FAILURE_CLASSES = (
+    ("missing:", "a capsule lacks a required member, such as its ledger"),
+    ("invalid_validation_or_eval", "invalid evaluation or validation metadata"),
+    ("residual_deny_hits", "content withheld by the maintainers"),
+    ("residual_paths_rewritten", "a machine path the screen could not rewrite"),
+    ("absolute filesystem path", "a machine path the screen could not rewrite"),
+    ("residual_private_urls_rewritten", "a private repository address the screen could not rewrite"),
+    ("residual_emails_redacted", "an email address the screen could not redact"),
+    ("residual_phones_redacted", "a telephone number the screen could not redact"),
+    ("invalid_json_after_rewrite", "a document the screen could not rewrite safely"),
+    ("parse_", "a document the screen could not rewrite safely"),
+)
+OTHER_FAILURE = "another screen failure"
+
+
 def screen_failure_classes(manifest: dict) -> dict[str, int]:
-    """Count left-out builds by broad, reader-facing failure class."""
+    """Count left-out builds by reader-facing failure class; a build can count in several."""
     classes = {}
     for build in manifest["builds"]:
         if build.get("sha256"):
             continue
-        labels = set()
-        if (build.get("screen", {}).get("counts") or {}).get("deny_hits"):
-            labels.add("deny-list hit")
-        for failure in build.get("screen", {}).get("failures") or []:
-            reason = failure.rsplit(": ", 1)[-1]
-            if reason.startswith("missing:"):
-                labels.add("missing required archive members")
-            elif "invalid_validation_or_eval" in reason:
-                labels.add("invalid evaluation or validation metadata")
-            elif reason != "deny_hits":
-                labels.add(reason.replace("_", " "))
-        for label in labels or {"other screen failure"}:
+        failures = build.get("screen", {}).get("failures") or []
+        labels = {next((label for marker, label in FAILURE_CLASSES if marker in failure), OTHER_FAILURE) for failure in failures}
+        for label in labels or {OTHER_FAILURE}:
             classes[label] = classes.get(label, 0) + 1
     return dict(sorted(classes.items()))
 
@@ -470,7 +477,7 @@ Screen failure classes count builds and may overlap:
 
 {failure_lines}
 
-The screen names private repository URLs without linking them and redacts emails and phone-shaped numbers. It replaces build-machine paths with portable locators. It caps or drops quotations according to the source access class. See `SCREEN.json` for the measured counts and per-build failures.
+The screen names private repository URLs without linking them and redacts email addresses and telephone numbers. It replaces build-machine paths and home directories with portable locators. It caps or drops quotations according to the source access class. See `SCREEN.json` for the measured counts and per-build failures.
 
 Generated metadata is licensed CC-BY-4.0. Source quotations retain their original rights status and are included only as bounded quotations; this record does not relicense them.
 

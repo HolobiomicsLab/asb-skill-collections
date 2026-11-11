@@ -678,3 +678,22 @@ def test_a_patch_release_keeps_the_capsules_block():
     assert moved["superseded"][0]["version_doi"] == ZENODO_DOI
     assert check_collections_manifest.validate_capsules("synthetic/v1", moved) == []
     assert release_domain.replace_release(existing, dict(row, tag="synthetic-v1.0.0"))["capsules"] == block()
+
+
+def test_the_record_readme_names_failure_classes_in_reader_words():
+    def left_out(*failures):
+        return {"sha256": None, "screen": {"failures": list(failures)}}
+    manifest = {"builds": [
+        {"sha256": "abc", "screen": {"failures": []}},
+        left_out("missing:capsules/c1/ledger", "missing:capsules/c2/ledger"),
+        left_out("workflow.yaml: residual_paths_rewritten", "capsules/c1/ro-crate-metadata.json: carries 2 absolute filesystem path(s)"),
+        left_out("evidence/a.md: residual_deny_hits"),
+        left_out("ledger/x.json: parse_RewrittenKeyCollision", "something new"),
+    ]}
+    assert capsules_deposit.screen_failure_classes(manifest) == {
+        "a capsule lacks a required member, such as its ledger": 1,
+        "a document the screen could not rewrite safely": 1,
+        "a machine path the screen could not rewrite": 1,
+        "another screen failure": 1,
+        "content withheld by the maintainers": 1,
+    }

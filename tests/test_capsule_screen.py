@@ -1,3 +1,4 @@
+import base64
 import json
 import pytest
 
@@ -317,6 +318,82 @@ def test_machine_paths_are_rewritten_in_text_and_in_json(path):
         assert not result.failures
 
 
-def test_the_residual_check_and_the_rewrite_share_one_rule():
-    for text in ("/tmp/x", "a /private/y", "=/tmp/z", "foo/tmp/z", "/tmp/ x", "D:/ x", "C:/x", "~/tmp/x"):
-        assert bool(screen.PATH_RE.search(text)) == bool(screen.RESIDUAL_PATH_RE.search(text)), text
+@pytest.mark.parametrize("text", [
+    "/tmp/,secret",
+    'cp /tmp/"private file"/x out',
+    "/Users/[example]/secret",
+    "/Users/person@example.org/out.txt",
+])
+def test_a_root_marker_the_rewrite_cannot_handle_leaves_the_build_out(text):
+    for value, name in ((text, "evidence/p.txt"), (json.dumps({"v": text}), "ledger/p.json")):
+        result = screen.screen_text(value, name, context(), screen.QuoteBudget())
+        assert f"{name}: residual_paths_rewritten" in result.failures
+
+
+@pytest.mark.parametrize(("text", "rewrites"), [
+    ("The path is **/tmp/abc123/note.txt**.", 1),
+    ("<b>/tmp/abc123/note.txt</b>", 1),
+    ("cc -I/home/example/include -L/tmp/abc123/lib", 2),
+    ("open file:/tmp/abc123/note.txt now", 1),
+    ("read /private/var/folders/ab/cd/T/note.txt", 1),
+    ("read /root/run/note.txt", 1),
+    ("read $(pwd)/tmp/abc123/note.txt", 1),
+])
+def test_a_machine_path_next_to_markup_or_an_option_is_rewritten(text, rewrites):
+    for value, name in ((text, "evidence/p.md"), (json.dumps({"v": text}), "ledger/p.json")):
+        result = screen.screen_text(value, name, context(), screen.QuoteBudget())
+        assert result.counts["paths_rewritten"] == rewrites
+        assert "abc123" not in result.text and "example" not in result.text and "/root/" not in result.text
+        assert not result.failures
+
+
+@pytest.mark.parametrize("text", [
+    "profile://tmp is a scheme of its own",
+    "data_C:/x is one word",
+])
+def test_a_scheme_or_drive_inside_a_longer_word_is_not_a_path(text):
+    result = screen.screen_text(text, "evidence/p.txt", context(), screen.QuoteBudget())
+    assert result.text == text
+    assert not result.failures
+
+
+def test_yaml_sets_and_pairs_are_screened_and_written_in_a_stable_order():
+    text = (
+        "paths: !!set\n  ? /Users/example/run/b.txt\n  ? zeta\n  ? alpha\n"
+        "ordered: !!omap\n  - first: /Users/example/run/a.txt\n"
+        "pairs: !!pairs\n  - contact: person@example.org\n"
+    )
+    result = screen.screen_text(text, "workflow.yaml", context(), screen.QuoteBudget())
+    assert "/Users/" not in result.text and "person@example.org" not in result.text
+    assert result.counts["paths_rewritten"] == 2
+    assert result.counts["emails_redacted"] == 1
+    assert not result.failures
+    # A set is written as a list, in the order of its source values.
+    assert screen.yaml.safe_load(result.text)["paths"] == ["urn:asb:build:b.txt", "alpha", "zeta"]
+
+
+def test_a_yaml_binary_value_that_hides_a_path_leaves_the_build_out():
+    blob = base64.b64encode(b"see /Users/example/run/a.txt").decode()
+    result = screen.screen_text(f"blob: !!binary {blob}\n", "workflow.yaml", context(), screen.QuoteBudget())
+    assert "workflow.yaml: residual_paths_rewritten" in result.failures
+
+
+def test_two_keys_that_screen_to_the_same_key_fail_instead_of_losing_a_value():
+    source = json.dumps({"a@example.org": 1, "b@example.org": 2})
+    result = screen.screen_text(source, "ledger/x.json", context(), screen.QuoteBudget())
+    assert "ledger/x.json: parse_RewrittenKeyCollision" in result.failures
+
+
+@pytest.mark.parametrize(("text", "failure"), [
+    ("1: one\n2: two\n", None),
+    ("a: &a\n  b: *a\n", "workflow.yaml: parse_RecursionError"),
+])
+def test_unusual_yaml_is_screened_or_failed_never_raised(text, failure):
+    result = screen.screen_text(text, "workflow.yaml", context(), screen.QuoteBudget())
+    assert result.failures == ([failure] if failure else [])
+
+
+def test_a_document_with_its_own_redaction_field_of_the_wrong_type_fails_instead_of_raising():
+    source = json.dumps({"_screen_redactions": "text", "quote": "source words"})
+    result = screen.screen_text(source, "evidence/claim.json", context("closed", "publisher"), screen.QuoteBudget())
+    assert "evidence/claim.json: parse_AttributeError" in result.failures

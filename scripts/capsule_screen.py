@@ -42,26 +42,30 @@ PHONE_DIGITS = range(7, 16)
 AREA_CODE = r"\((?!(?:19|20)\d\d\))\d{3,5}\)"
 AREA_CODE_RE = re.compile(AREA_CODE)
 AREA_CODE_PHONE_RE = re.compile(rf"(?<!\w){AREA_CODE}[ .-]?\d{{3,4}}[ .-]\d{{3,4}}(?!\w)")
-# A machine path is a root marker followed by at least one path character. Users,
-# Volumes and var/folders are distinctive and count anywhere; home, tmp and private
-# are ordinary directory names and count only where an absolute path starts, not as
-# the continuation of a longer path ("test/tmp/", "/scratch/tmp/", "${HOME}/tmp/"). The
-# rewrite and the residual check share this rule, so the check verifies that the
-# rewrite was complete and does not fail on text the rewrite leaves alone.
+# A machine path is a root marker followed by path characters. Users, Volumes,
+# var/folders and the macOS /private tree are distinctive and count anywhere. home,
+# root and tmp are ordinary directory names and count only where an absolute path
+# starts: not as the continuation of a longer path ("test/tmp/", "~/tmp/",
+# "${HOME}/tmp/"), but after a one-letter option ("-I/home/...").
 PATH_CHARACTER = r"""[^\s"'<>()\[\]{},]"""
-MACHINE_ROOT = (
-    r"(?:/(?:Users|Volumes|var/folders)/|(?<![\w.~}\)>*-])/(?:home|private|tmp)/"
-    r"|(?<![A-Za-z0-9+.-])[A-Za-z]:[\\/])"
-)
-PATH_RE = re.compile(rf"(?:file://)?{MACHINE_ROOT}{PATH_CHARACTER}+")
+DISTINCTIVE_ROOT = r"/(?:Users|Volumes|var/folders|private/(?:tmp|var|etc))/"
+ORDINARY_ROOT = r"(?:(?<![\w.~}-])|(?<=(?<![\w-])-[A-Za-z]))/(?:home|root|tmp)/"
+DRIVE_ROOT = r"(?<![\w+.-])[A-Za-z]:[\\/]"
+MACHINE_ROOT = rf"(?:{DISTINCTIVE_ROOT}|{ORDINARY_ROOT}|{DRIVE_ROOT})"
+FILE_SCHEME = r"(?<![\w+.-])file:"
+PATH_RE = re.compile(rf"(?:{FILE_SCHEME}(?://)?)?{MACHINE_ROOT}{PATH_CHARACTER}+")
 SPACED_USER_PATH_RE = re.compile(
     r"(?:file://)?/Users/\s*<\s*user\s*name\s*>\s*/[^\s\"'<>()\[\]{},]+",
     re.IGNORECASE,
 )
-# A bare scheme in prose ("served from file:// needs a flag") names no path, so the
-# residual check only counts a file URI that is followed by something.
+# The residual check is wider than the rewrite, so what the rewrite cannot handle
+# leaves the build out instead of passing: any root marker counts unless the mention
+# ends there ("in the /tmp/ directory", "D:/ ") or a placeholder follows
+# ("/tmp/<name>"). A bare scheme in prose ("served from file:// needs a flag") names
+# no path either, so a file URI counts only when something follows it.
+MENTION_END = r"""[)\]}"'`.,;:!?*]*(?:\s|\Z)"""
 RESIDUAL_PATH_RE = re.compile(
-    rf"file://(?=[^\s\"'<>()\[\]{{}},.;:])|{MACHINE_ROOT}(?={PATH_CHARACTER})"
+    rf"{FILE_SCHEME}(?://|/(?!/))(?=[^\s\"'<>()\[\]{{}},.;:])|{MACHINE_ROOT}(?!{MENTION_END})(?!<)"
 )
 # Characters a URL path can hold inside JSON, YAML or Markdown text; a
 # backslash is excluded so a JSON escape is never cut in half.
@@ -345,7 +349,7 @@ def screen_text(
                 text = yaml.safe_dump(screened[0], allow_unicode=True, sort_keys=False)
         elif suffix == ".md" and {"evidence", "ledger"}.intersection(Path(relative_path).parts):
             text = _screen_markdown(text, relative_path, context, budget, counts, quotes)
-    except (ValueError, TypeError, yaml.YAMLError) as exc:
+    except (ValueError, TypeError, AttributeError, RecursionError, yaml.YAMLError) as exc:
         failures.append(f"{relative_path}: parse_{type(exc).__name__}")
         screened = None
     if screened is None:
@@ -390,9 +394,11 @@ def _strings(value):
             if isinstance(key, str):
                 yield key
             yield from _strings(item)
-    elif isinstance(value, list):
+    elif isinstance(value, (list, tuple, set, frozenset)):
         for item in value:
             yield from _strings(item)
+    elif isinstance(value, bytes):
+        yield value.decode("latin-1")
     elif isinstance(value, str):
         yield value
 
@@ -409,12 +415,18 @@ def _screen_json_lines(text, relative_path, context, budget, counts, quotes) -> 
     return "\n".join(lines) + ("\n" if lines else ""), screened
 
 
+class RewrittenKeyCollision(ValueError):
+    """Two mapping keys became the same key once screened; one value would be lost."""
+
+
 def _screen_json(value, location, context, budget, counts, quotes, source, pointer=""):
     if isinstance(value, dict):
         output = {}
         for key in sorted(value):
             name = screen_string(key, context, counts) if isinstance(key, str) else key
-            child_pointer = f"{pointer}/{_pointer_escape(name)}"
+            if name in output:
+                raise RewrittenKeyCollision(pointer)
+            child_pointer = f"{pointer}/{_pointer_escape(str(name))}"
             if key in QUOTE_KEYS and isinstance(value[key], str):
                 retained, anchor = _screen_quote(
                     value[key], location, child_pointer, context, budget, counts, quotes, source
@@ -426,10 +438,12 @@ def _screen_json(value, location, context, budget, counts, quotes, source, point
             else:
                 output[name] = _screen_json(value[key], location, context, budget, counts, quotes, source, child_pointer)
         return output
-    if isinstance(value, list):
+    if isinstance(value, (list, tuple, set, frozenset)):
+        # YAML pairs and sets load as tuples and sets; a set has no order of its own.
+        items = sorted(value, key=repr) if isinstance(value, (set, frozenset)) else value
         return [
             _screen_json(item, location, context, budget, counts, quotes, source, f"{pointer}/{index}")
-            for index, item in enumerate(value)
+            for index, item in enumerate(items)
         ]
     if isinstance(value, str):
         return screen_string(value, context, counts)
