@@ -306,6 +306,47 @@ def test_bio_tools_without_a_shared_repository_is_refused(tmp_path):
     assert "dssp" not in out
 
 
+def test_a_registry_and_a_same_name_package_that_disagree_leave_the_record_unknown(tmp_path):
+    """bio.tools still says GPL-2.0 for bedtools; the Bioconda package has been MIT since 2.28."""
+    out, report, _ = _resolve(tmp_path, [
+        ("bedtools", "bedtools", {"source_repos": ["https://github.com/arq5x/bedtools2"],
+                                  "derived_from": [{"doi": "10.1/x", "title": "bedtools: x"}]}),
+    ], domain="transcriptomics")
+    assert out == {}
+    assert report["bedtools"]["reason"].startswith("registries-disagree")
+
+
+def test_one_repository_in_two_registries_is_one_tool(tmp_path):
+    """A package declaring the repository an accepted entry declares is the same tool."""
+    import copy
+    from scripts import resolve_tool_licenses as R
+
+    class Reg:
+        def __init__(self, rid, scope, repo):
+            self.id, self.scope, self.repo = rid, scope, repo
+            self.spec = {"detection": f"{rid}-package"}
+
+        def repo_values(self, record):
+            return [self.repo]
+
+        def address(self, name, record):
+            return f"https://example.org/{self.id}/{name}"
+
+    from scripts.tool_identity import Verdict
+    a = {"registry": "bioconda", "registry_obj": Reg("bioconda", "life_science", "https://github.com/o/t"),
+         "canonical": "t", "record": {}, "verdict": Verdict(False, "uncorroborated"),
+         "reading": {"license": "MIT", "tier": "open", "raw": "MIT"}}
+    b = {"registry": "biotools", "registry_obj": Reg("biotools", "general", "https://github.com/o/t.git"),
+         "canonical": "t", "record": {},
+         "verdict": Verdict(True, "corroborated", [{"kind": "repository", "value": "github.com/o/t"}]),
+         "reading": {"license": "GPL-2.0-only", "tier": "open", "raw": "GPL-2.0"}}
+    cands = [a, b]
+    R._share_identity(cands)
+    evidence, reason = R.choose(cands)
+    assert reason == "resolved" and evidence["license"] == "MIT"
+    assert evidence["superseded"][0]["license"] == "GPL-2.0-only"
+
+
 # Trap 2: licence strings.
 
 def test_a_non_commercial_licence_never_reads_as_open(tmp_path):

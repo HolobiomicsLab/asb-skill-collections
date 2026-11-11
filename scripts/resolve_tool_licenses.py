@@ -174,7 +174,7 @@ def _introducing_hint(record, ctx, tool_yaml) -> bool:
             return True
     for item in (tool_yaml or {}).get("derived_from") or []:
         title = str((item or {}).get("title") or "")
-        head = re.split(r"[:–—]|\s-\s|,", title, maxsplit=1)[0]
+        head = re.split(r"[:\u2013\u2014]|\s-\s|,", title, maxsplit=1)[0]
         if normalize(head) == key:
             return True
     return False
@@ -210,7 +210,39 @@ def registry_candidates(record, ctx, tool_yaml, registries, common_words, exclud
             reading = _read_registry_licence(registry, pkg)
             out.append({"registry": registry.id, "registry_obj": registry, "canonical": canonical,
                         "record": pkg, "verdict": verdict, "reading": reading})
+    _share_identity(out)
     return out
+
+
+def _repo_keys(c) -> set:
+    return {k for k in (repo_key(v) for v in c["registry_obj"].repo_values(c["record"])) if k}
+
+
+def _share_identity(candidates) -> None:
+    """Accept a package that declares the same repository as one already accepted on
+    strong evidence: two registries listing one repository describe one tool.
+
+    bio.tools may establish bedtools from a shared repository while the Bioconda
+    package of the same repository has no corroboration of its own; the Bioconda
+    record then declares the licence the package ships under now.
+    """
+    anchors = [c for c in candidates if c.get("verdict") and c["verdict"].accept
+               and any(k["kind"] in ("repository", "publication", "code")
+                       for k in c["verdict"].corroboration)]
+    for c in candidates:
+        if not c.get("verdict") or c["verdict"].accept or c["verdict"].contradiction and any(
+                k["kind"] in ("ecosystem", "data-package") for k in c["verdict"].contradiction):
+            continue
+        if c["verdict"].reason in ("data-package", "registry-flags-restricted-use"):
+            continue
+        for anchor in anchors:
+            shared = sorted(_repo_keys(c) & _repo_keys(anchor))
+            if shared:
+                c["verdict"].accept = True
+                c["verdict"].reason = "corroborated"
+                c["verdict"].corroboration = [{"kind": "repository", "value": shared[0],
+                                               "via": anchor["registry"]}]
+                break
 
 
 def _evidence_from_candidate(c) -> dict:
@@ -237,15 +269,40 @@ def choose(candidates) -> tuple[dict | None, str]:
     readable = [c for c in accepted if c["reading"]["tier"]]
     if not readable:
         return None, "licence-unread:" + str(accepted[0]["reading"]["reason"])
-    if len(readable) > 1:
+    if len(readable) > 1 and len({c["reading"]["license"] for c in readable}) > 1:
+        keys = [_repo_keys(c) for c in readable]
+        same_entity = all(keys[0] & k for k in keys[1:])
         decisive = [c for c in readable if c["verdict"].corroboration
                     and c["verdict"].reason == "corroborated"]
+        if same_entity:
+            # One tool in several registries: the first declared registry wins,
+            # the others are kept for the reviewer.
+            evidence = _evidence_from_candidate(readable[0])
+            evidence["superseded"] = [{"route": f"registry:{c['registry']}",
+                                       "license": c["reading"]["license"],
+                                       "license_evidence": c["registry_obj"].address(
+                                           c["canonical"], c["record"])}
+                                      for c in readable[1:]]
+            return evidence, "resolved"
         if len(decisive) == 1:
             readable = decisive
-        elif len({c["reading"]["license"] for c in readable}) > 1:
+        else:
             return None, "several-packages-differ:" + ",".join(
                 f"{c['registry']}={c['reading']['license']}" for c in readable)
-    return _evidence_from_candidate(readable[0]), "resolved"
+    chosen = readable[0]
+    if chosen["registry_obj"].scope == "general":
+        # A same-name package that was not contradicted but declares another licence
+        # makes the record unknown: bio.tools still lists bedtools as GPL-2.0 while
+        # the Bioconda package has been MIT since 2.28, and neither can be preferred
+        # without evidence that the package is the tool.
+        others = [c for c in judged if c is not chosen and c["reading"]["tier"]
+                  and c["reading"]["license"] != chosen["reading"]["license"]
+                  and not any(k["kind"] in ("ecosystem", "data-package")
+                              for k in c["verdict"].contradiction)]
+        if others:
+            return None, "registries-disagree:" + ",".join(
+                f"{c['registry']}={c['reading']['license']}" for c in [chosen] + others)
+    return _evidence_from_candidate(chosen), "resolved"
 
 
 def reconcile(self_published, registry, _map=None) -> tuple:

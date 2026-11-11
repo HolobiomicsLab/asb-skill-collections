@@ -102,3 +102,19 @@ def test_a_requirements_install_does_not_name_pip_as_a_package():
                            local_text="pip install -e . pip install -r requirements.txt",
                            skill_text="")
     assert ctx.code_evidence() == {}
+
+
+def test_r_code_must_spell_the_package_with_its_case():
+    ctx = ti.RecordContext(collection="metabolomics", life_science=True, names=["MeTEor"],
+                           local_text="library(MeTEor)", skill_text="")
+    assert ctx.code_evidence(only="meteor") == {}
+    assert "r" in ctx.code_evidence(only="MeTEor")
+
+
+def test_a_package_name_with_its_own_capitals_must_appear_as_written():
+    ctx = ti.RecordContext(collection="genomics", life_science=True, names=["acorn"],
+                           local_text="you can install the R package acorn", skill_text="")
+    assert ctx.code_evidence(only="acoRn") == {}
+    lower = ti.RecordContext(collection="genomics", life_science=True, names=["Splatter"],
+                             local_text="generated with the R package Splatter", skill_text="")
+    assert "r" in lower.code_evidence(only="splatter")

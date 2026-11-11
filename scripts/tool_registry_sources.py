@@ -283,8 +283,10 @@ class Registry:
         for record in records:
             for w in tokenize(self.text(record)):
                 counts[w] = counts.get(w, 0) + 1
-        n = max(1, len(records))
-        self._word_share = {w: c / n for w, c in counts.items()}
+        # Shares exclude one package, the candidate itself: a word the identity rule
+        # asks about always occurs in the candidate's own description.
+        n = max(1, len(records) - 1)
+        self._word_share = {w: (c - 1) / n for w, c in counts.items()}
         return self._word_share
 
     def bulk_size(self) -> int | None:

@@ -89,6 +89,7 @@ def test_unrecognised_non_commercial_prose_is_unread_not_open(raw):
     ("GPL-3 | file LICENSE", "r_description_field", "GPL-3.0-only OR LicenseRef-file-LICENSE"),
     ("perl_5", "spdx_or_text", "Artistic-1.0-Perl OR GPL-1.0-or-later"),
     ("(MIT OR Apache-2.0)", "spdx_or_text", "MIT OR Apache-2.0"),
+    ("Mozilla Public License 2.0 (MPL 2.0)", "spdx_or_text", "MPL-2.0"),
     ("GPL-3.0-or-later AND LGPL-3.0-or-later", "spdx_or_text",
      "GPL-3.0-or-later AND LGPL-3.0-or-later"),
 ])

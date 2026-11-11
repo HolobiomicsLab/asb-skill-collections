@@ -209,6 +209,13 @@ def read_atom(text: str) -> str | None:
     cc = _cc_reading(s)
     if cc:
         return cc
+    # A trailing parenthetical that repeats the licence, as trove classifiers and
+    # recipe authors write it: "Mozilla Public License 2.0 (MPL 2.0)".
+    paren = re.match(r"^(.*?)\s*\(([^()]*)\)$", s)
+    if paren and not _R_QUALIFIER.search(s) and not re.match(r"^(a?l?gpl)", s):
+        outer, inner = read_atom(paren.group(1)), read_atom(paren.group(2))
+        if outer and outer == inner:
+            return outer
     deprecated = re.match(r"^(a?l?gpl)-(\d\.\d)(\+)?$", s)
     if deprecated:
         family, version, plus = deprecated.groups()

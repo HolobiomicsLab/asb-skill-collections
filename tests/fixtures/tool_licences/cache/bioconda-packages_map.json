@@ -77,6 +77,11 @@
    "home": "https://github.com/xjtu-omics/ANNEVO",
    "dev_url": "https://github.com/xjtu-omics/ANNEVO",
    "summary": "Deep learning-based ab initio gene annotation from genome sequence."
+  },
+  "bedtools": {
+   "license": "MIT",
+   "home": "http://bedtools.readthedocs.org/",
+   "summary": "A powerful toolset for genome arithmetic"
   }
  }
 }

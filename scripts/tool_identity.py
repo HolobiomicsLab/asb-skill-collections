@@ -93,20 +93,27 @@ def _name_pattern(names) -> str:
     return r"(?<![\w.\-])(?:" + "|".join(escaped) + r")(?![\w\-])"
 
 
-def _ecosystem_patterns(names) -> dict[str, list[re.Pattern]]:
+def _ecosystem_patterns(names, r_case_sensitive=False) -> dict[str, list[re.Pattern]]:
     n = _name_pattern(names)
     q = r"[\"'`*]*"
+    # R package names are case-sensitive: `library(MeTEor)` does not load CRAN's
+    # `meteor`. When the caller asks for it, R code must spell the package exactly.
+    rc = 0 if r_case_sensitive else re.I
+    # Prose may capitalise a lower-case package name ("the R package Splatter"),
+    # but a name with its own capitals must appear as written: CRAN's `acoRn` is
+    # not the `acorn` a genomics paper installs from GitHub.
+    rp = rc if any(str(name)[1:] != str(name)[1:].lower() for name in names) else re.I
     return {
         "r": [
-            re.compile(rf"\b(?:library|require|requireNamespace|suppressPackageStartupMessages\(\s*library)\s*\(\s*{q}{n}{q}\s*[,)]", re.I),
-            re.compile(rf"\b(?:install\.packages|BiocManager::install|biocLite|remotes::install_cran|pak::pkg_install)\s*\([^)]*{q}{n}{q}", re.I),
-            re.compile(rf"{n}:::?[A-Za-z.][\w.]*\s*\(", re.I),
-            re.compile(rf"\bR[\s-]+(?:package|library)\s+(?:called\s+|named\s+)?{q}{n}", re.I),
-            re.compile(rf"{n}{q}\s+(?:R|Bioconductor|CRAN)[\s-]+(?:package|library)\b", re.I),
-            re.compile(rf"\b(?:Bioconductor|CRAN)\s+(?:package\s+)?{q}{n}", re.I),
-            re.compile(rf"{n}\s*\((?:an?\s+)?(?:R|Bioconductor)\s+package", re.I),
-            re.compile(rf"bioconductor\.org/packages/(?:(?:release|devel)/bioc/html/)?{n}", re.I),
-            re.compile(rf"cran\.r-project\.org/(?:web/)?package(?:s/|=){n}", re.I),
+            re.compile(rf"\b(?:library|require|requireNamespace|suppressPackageStartupMessages\(\s*library)\s*\(\s*{q}{n}{q}\s*[,)]", rc),
+            re.compile(rf"\b(?:install\.packages|BiocManager::install|biocLite|remotes::install_cran|pak::pkg_install)\s*\([^)]*{q}{n}{q}", rc),
+            re.compile(rf"{n}:::?[A-Za-z.][\w.]*\s*\(", rc),
+            re.compile(rf"\bR[\s-]+(?:package|library)\s+(?:called\s+|named\s+)?{q}{n}", rp),
+            re.compile(rf"{n}{q}\s+(?:R|Bioconductor|CRAN)[\s-]+(?:package|library)\b", rp),
+            re.compile(rf"\b(?:Bioconductor|CRAN)\s+(?:package\s+)?{q}{n}", rp),
+            re.compile(rf"{n}\s*\((?:an?\s+)?(?:R|Bioconductor)\s+package", rp),
+            re.compile(rf"bioconductor\.org/packages/(?:(?:release|devel)/bioc/html/)?{n}", rc),
+            re.compile(rf"cran\.r-project\.org/(?:web/)?package(?:s/|=){n}", rc),
         ],
         "python": [
             re.compile(rf"\bimport\s+{n}(?:\s+as\s+\w+)?\s*(?:$|[\n;,])", re.I | re.M),
@@ -144,15 +151,20 @@ class RecordContext:
     def all_text(self) -> str:
         return self.local_text + "\n" + self.skill_text
 
-    def code_evidence(self, extra_names=()) -> dict[str, list[str]]:
-        """``{ecosystem: [snippets]}`` where the record uses the name as that ecosystem's package."""
+    def code_evidence(self, extra_names=(), only=None) -> dict[str, list[str]]:
+        """``{ecosystem: [snippets]}`` where the record uses the name as that ecosystem's package.
+
+        With ``only``, the record must use exactly that package name, and R code
+        must spell it with its case.
+        """
         # A name holding `::` is a namespace path (Perl's `Getopt::Long`), not a
         # package name; matched as one it reads as R code (`x::f`).
-        names = [n for n in list(self.names) + list(extra_names) if n and "::" not in str(n)]
+        names = [only] if only else list(self.names) + list(extra_names)
+        names = [n for n in names if n and "::" not in str(n)]
         if not names:
             return {}
         out: dict[str, list[str]] = {}
-        for ecosystem, patterns in _ecosystem_patterns(names).items():
+        for ecosystem, patterns in _ecosystem_patterns(names, bool(only)).items():
             for pattern in patterns:
                 for text in (self.local_text, self.skill_text):
                     m = pattern.search(text)
@@ -270,9 +282,10 @@ def domain_support(domain, ctx, registry_share, weak) -> bool:
     The measured signal (cosine over the record's own text) is necessary. On top
     of it, a weak name needs two shared words that are specific: not generic
     life-science vocabulary, not common in the collection's skills, not common
-    in the registry's descriptions. A distinctive name needs two shared words,
-    or one specific word: `MetAlign` (mass spectra) and the Bioconda `metalign`
-    (metagenomes) share only `alignment`, which a tenth of Bioconda uses.
+    in the registry's descriptions. A distinctive name needs one specific word:
+    `MetAlign` (mass spectra) and the Bioconda `metalign` (metagenomes) share only
+    `alignment`, which many Bioconda packages use, and the metabolomics `metid`
+    shares only `lc` and `ms` with Bioconductor's `MetID`.
     """
     if domain["verdict"] != "corroborated":
         return False
@@ -282,7 +295,7 @@ def domain_support(domain, ctx, registry_share, weak) -> bool:
                 and ctx.word_share.get(_stem(t), 0.0) < COMMON_IN_COLLECTION]
     if weak:
         return len(specific) >= MIN_SPECIFIC_OVERLAP
-    return len(overlap) >= 2 or len(specific) >= 1
+    return len(specific) >= 1
 
 
 @dataclass
@@ -315,8 +328,8 @@ def judge(registry, canonical, record, ctx: RecordContext, common_words) -> Verd
        MIN_SKILL_OVERLAP_WEAK_NAME specific words shared by the citing skills
        and the package description (specific_overlap()).
     6. Any other name needs strong evidence, a corroborated domain signal with
-       two shared words or one specific one, or MIN_SKILL_OVERLAP specific words
-       shared by the citing skills and the package description.
+       one specific shared word, or MIN_SKILL_OVERLAP specific words shared by
+       the citing skills and the package description.
     """
     strong, contra = [], []
     package_repos = {k for k in (repo_key(v) for v in registry.repo_values(record)) if k}
@@ -328,8 +341,9 @@ def judge(registry, canonical, record, ctx: RecordContext, common_words) -> Verd
         strong.append({"kind": "publication", "value": shared_dois[0]})
     code = ctx.code_evidence([canonical])
     ecosystem = registry.ecosystem
-    if ecosystem in ("r", "python") and code.get(ecosystem):
-        strong.append({"kind": "code", "value": code[ecosystem][0]})
+    exact = ctx.code_evidence(only=canonical) if ecosystem == "r" else code
+    if ecosystem in ("r", "python") and exact.get(ecosystem):
+        strong.append({"kind": "code", "value": exact[ecosystem][0]})
     if ecosystem == "conda" and (code.get("conda") or code.get("python")):
         found = code.get("conda") or code.get("python")
         strong.append({"kind": "code", "value": found[0]})
