@@ -1,0 +1,47 @@
+[
+ {
+  "Package": "devtools",
+  "License": "MIT + file LICENSE",
+  "License_restricts_use": null,
+  "BugReports": "https://github.com/r-lib/devtools/issues",
+  "Description": "Collection of package development tools.",
+  "Title": "Tools to Make Developing R Packages Easier",
+  "URL": "https://devtools.r-lib.org/, https://github.com/r-lib/devtools"
+ },
+ {
+  "Package": "shiny",
+  "License": "MIT + file LICENSE",
+  "License_restricts_use": null,
+  "BugReports": "https://github.com/rstudio/shiny/issues",
+  "Description": "Makes it incredibly easy to build interactive web\n    applications with R. Automatic \"reactive\" binding between inputs and\n    outputs and extensive prebuilt widgets make it possible to build\n    beautiful, responsive, and powerful applications with minimal effort.",
+  "Title": "Web Application Framework for R",
+  "URL": "https://shiny.posit.co/, https://github.com/rstudio/shiny"
+ },
+ {
+  "Package": "tidyverse",
+  "License": "MIT + file LICENSE",
+  "License_restricts_use": null,
+  "BugReports": "https://github.com/tidyverse/tidyverse/issues",
+  "Description": "The 'tidyverse' is a set of packages that work in harmony\n    because they share common data representations and 'API' design. This\n    package is designed to make it easy to install and load multiple\n    'tidyverse' packages in a single step. Learn more about the\n    'tidyverse' at <https://www.tidyverse.org>.",
+  "Title": "Easily Install and Load the 'Tidyverse'",
+  "URL": "https://tidyverse.tidyverse.org,\nhttps://github.com/tidyverse/tidyverse"
+ },
+ {
+  "Package": "igraph",
+  "License": "GPL (>= 2)",
+  "License_restricts_use": null,
+  "BugReports": "https://github.com/igraph/rigraph/issues",
+  "Description": "Routines for simple graphs and network analysis. It can\n    handle large graphs very well and provides functions for generating\n    random and regular graphs, graph visualization, centrality methods and\n    much more.",
+  "Title": "Network Analysis and Visualization",
+  "URL": "https://r.igraph.org/, https://igraph.org/,\nhttps://igraph.discourse.group/"
+ },
+ {
+  "Package": "ggplot2",
+  "License": "MIT + file LICENSE",
+  "License_restricts_use": null,
+  "BugReports": "https://github.com/tidyverse/ggplot2/issues",
+  "Description": "A system for 'declaratively' creating graphics, based on \"The\n    Grammar of Graphics\". You provide the data, tell 'ggplot2' how to map\n    variables to aesthetics, what graphical primitives to use, and it\n    takes care of the details.",
+  "Title": "Create Elegant Data Visualisations Using the Grammar of Graphics",
+  "URL": "https://ggplot2.tidyverse.org,\nhttps://github.com/tidyverse/ggplot2"
+ }
+]

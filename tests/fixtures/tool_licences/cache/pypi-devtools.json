@@ -1,0 +1,13 @@
+{
+ "info": {
+  "name": "devtools",
+  "summary": "Python's missing debug print command, and more.",
+  "license": "MIT",
+  "classifiers": [
+   "License :: OSI Approved :: MIT License"
+  ],
+  "project_urls": {
+   "Source": "https://github.com/samuelcolvin/python-devtools"
+  }
+ }
+}

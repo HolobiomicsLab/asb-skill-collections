@@ -63,6 +63,32 @@ python scripts/land_candidate.py --candidate <candidate-directory> \
 The title must equal `collection.yaml:title`. Inspect the branch and receipts before opening a
 candidate pull request.
 
+### Resolve the tool licences
+
+The collector and `bootstrap_indexes.py` write every tool record as `license_tier: unknown` with
+no `repo_url`. Resolve them in the candidate collection before the gates, then commit the four
+outputs on the candidate branch:
+
+```bash
+python scripts/resolve_tool_licenses.py --collection <domain-checkout>/collections/<domain>/v1 \
+  --cache <tooling-root>/.cache/tool-registries --report <candidate-receipts>/tool_licences_report.json
+python scripts/enrich_tools_index.py --collection <domain-checkout>/collections/<domain>/v1 --licence-only
+python scripts/enrich_tool_yaml.py --collection <domain-checkout>/collections/<domain>/v1
+python scripts/check_tools_index.py <domain-checkout>/collections/<domain>/v1
+```
+
+The resolver reads the registries in `governance/tool_registries.yaml`, the licence files of the
+repositories their packages declare (network, cached) and the reviewed map
+`governance/tool_licences_reviewed.yaml`, and writes `tool_licenses.json`, which
+ships with the collection. `--licence-only` changes the licence fields, `entry_kind`, `repo_url`,
+`source_paper_repos` and `license_evidence` and leaves every skill-tool link as bootstrap wrote
+it. A domain that is not in `life_science_collections` of `tool_registries.yaml` gets only
+strongly corroborated registry matches; add it there only if a curated life-science registry
+is a fair index for its tools. `check_tools_index.py` prints the resolved and unknown counts on
+its line for every collection, and fails if a record claims a licence that `tool_licenses.json`
+does not hold. For a set of collections, `scripts/check_tool_licence_consistency.py` checks that
+an entity carries the same licence everywhere.
+
 ## 4. Run gates locally and in CI
 
 Run the complete local rehearsal with strict content checks, strict EDAM vocabulary resolution and

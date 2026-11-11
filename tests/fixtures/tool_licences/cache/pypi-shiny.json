@@ -1,0 +1,13 @@
+{
+ "info": {
+  "name": "shiny",
+  "summary": "A web development framework for Python.",
+  "license": "MIT",
+  "classifiers": [
+   "License :: OSI Approved :: MIT License"
+  ],
+  "project_urls": {
+   "Source": "https://github.com/posit-dev/py-shiny"
+  }
+ }
+}

@@ -1,0 +1,45 @@
+[
+ {
+  "Package": "BERT",
+  "Title": "High Performance Data Integration for Large-Scale Analyses of\nIncomplete Omic Profiles Using Batch-Effect Reduction Trees\n(BERT)",
+  "Description": "Provides efficient batch-effect adjustment of data with\nmissing values. BERT orders all batch effect correction to a\ntree of pairwise computations. BERT allows parallelization over\nsub-trees.",
+  "License": "GPL-3",
+  "URL": "https://github.com/HSU-HPC/BERT/",
+  "BugReports": "https://github.com/HSU-HPC/BERT/issues",
+  "biocViews": "BatchEffect, Preprocessing, ExperimentalDesign,\nQualityControl"
+ },
+ {
+  "Package": "msigdb",
+  "Title": "An ExperimentHub Package for the Molecular Signatures Database\n(MSigDB)",
+  "Description": "This package provides the Molecular Signatures Database\n(MSigDB) in a R accessible objects. Signatures are stored in\nGeneSet class objects form the GSEABase package and the entire\ndatabase is stored in a GeneSetCollection object. These data\nare then hosted on the ExperimentHub. Data used in this package\nwas obtained from the MSigDB of the Broad Institute. Metadata\nfor each gene set is stored along with the gene set in the\nGeneSet class object.",
+  "License": "CC BY 4.0",
+  "URL": "https://davislaboratory.github.io/msigdb",
+  "BugReports": "https://github.com/DavisLaboratory/msigdb/issues",
+  "biocViews": "ExperimentHub, Homo_sapiens_Data, Mus_musculus_Data"
+ },
+ {
+  "Package": "DESeq2",
+  "Title": "Differential gene expression analysis based on the negative\nbinomial distribution",
+  "Description": "Estimate variance-mean dependence in count data from\nhigh-throughput sequencing assays and test for differential\nexpression based on a model using the negative binomial\ndistribution.",
+  "License": "LGPL (>= 3)",
+  "URL": "https://github.com/thelovelab/DESeq2",
+  "biocViews": "Sequencing, RNASeq, ChIPSeq, GeneExpression, Transcription,\nNormalization, DifferentialExpression, Bayesian, Regression,\nPrincipalComponent, Clustering, ImmunoOncology"
+ },
+ {
+  "Package": "limma",
+  "Title": "Linear Models for Microarray and Omics Data",
+  "Description": "Data analysis, linear models and differential expression\nfor omics data.",
+  "License": "GPL (>=2)",
+  "URL": "https://bioinf.wehi.edu.au/limma/",
+  "biocViews": "ExonArray, GeneExpression, Transcription,\nAlternativeSplicing, DifferentialExpression,\nDifferentialSplicing, GeneSetEnrichment, DataImport, Bayesian,\nClustering, Regression, TimeCourse, Microarray, MicroRNAArray,\nmRNAMicroarray, OneChannel, ProprietaryPlatforms, TwoChannel,\nSequencing, RNASeq, BatchEffect, MultipleComparison,\nNormalization, Preprocessing, QualityControl,\nBiomedicalInformatics, CellBiology, Cheminformatics,\nEpigenetics, FunctionalGenomics, Genetics, ImmunoOncology,\nMetabolomics, Proteomics, SystemsBiology, Transcriptomics"
+ },
+ {
+  "Package": "xcms",
+  "Title": "LC-MS and GC-MS Data Analysis",
+  "Description": "Framework for processing and visualization of\nchromatographically separated and single-spectra mass spectral\ndata. Imports from AIA/ANDI NetCDF, mzXML, mzData and mzML\nfiles. Preprocesses data for high-throughput, untargeted\nanalyte profiling.",
+  "License": "GPL (>= 2) + file LICENSE",
+  "URL": "https://github.com/sneumann/xcms",
+  "BugReports": "https://github.com/sneumann/xcms/issues/new",
+  "biocViews": "ImmunoOncology, MassSpectrometry, Metabolomics"
+ }
+]

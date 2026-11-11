@@ -1,0 +1,28 @@
+{
+ "count": 1,
+ "list": [
+  {
+   "name": "DSSP",
+   "biotoolsID": "dssp",
+   "homepage": "http://swift.cmbi.ru.nl/gv/dssp/",
+   "license": "BSD-2-Clause",
+   "description": "DSSP secondary structure database . It produces secondary structure assignments (and much more) for all protein entries in the Protein Data Bank (PDB).",
+   "link": [
+    {
+     "url": "https://github.com/PDB-REDO/dssp",
+     "type": [
+      "Repository"
+     ]
+    }
+   ],
+   "publication": [
+    {
+     "doi": "10.1093/nar/gku1028"
+    },
+    {
+     "doi": "10.1002/bip.360221211"
+    }
+   ]
+  }
+ ]
+}

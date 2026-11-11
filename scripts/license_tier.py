@@ -46,6 +46,14 @@ DETECTION_VENDOR_PRODUCT = "vendor-product"
 # read infers from whatever LICENSE file happens to sit at the root.
 TOOL_DETECTIONS = frozenset({"github-api", "license-file", "r-description", "readme-llm",
                              "bioconductor-package", "bioconda-package",
+                             # General registries and the reviewed map, read by
+                             # scripts/resolve_tool_licenses.py only after the
+                             # record's own evidence corroborates the match.
+                             "cran-package", "pypi-package", "biotools-entry",
+                             "reviewed-map",
+                             # The tool repository's own licence file, read when it
+                             # disagrees with a registry (scripts/repository_licence.py).
+                             "repository-licence-file",
                              # An instrument or a proprietary application, identified
                              # from the vendor vocabulary in
                              # governance/tool_entry_kinds.yaml. There is no SPDX id

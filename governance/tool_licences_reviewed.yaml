@@ -1,0 +1,2042 @@
+# Tool licences checked by hand against the tool's own licence statement.
+# Human doc: LICENSE_TIERS.md § "Where a tool licence is allowed to come from".
+# Loader and validator: scripts/reviewed_tool_licences.py.
+#
+# This map takes precedence over every registry. A name listed here is never
+# looked up anywhere else, so a reviewer's decision, including "leave unknown",
+# cannot be overridden by a registry match. Names are matched after the
+# resolver's normalisation (lower case, letters and digits only), so `Scikit-learn`
+# and `scikit learn` are the same name; a normalised name may appear in one entry
+# only.
+#
+# Plain entry fields:
+#   names         names as they appear in tool records
+#   entity        what the name denotes
+#   entry_kind    software | vendor_product | artefact (LICENSE_TIERS.md)
+#   category      informational: language | runtime | package | application |
+#                 web_service | database | method | format
+#   license       SPDX expression, or null. When the licence reads as a tier
+#                 (scripts/tool_licence_text.py), license_tier must agree with it.
+#   license_tier  open | noncommercial | restricted | unknown
+#   repo_url      the tool's own repository
+#   homepage      the tool's own homepage
+#   evidence_url  where the licence statement was read; required unless the tier is unknown
+#   verified      date of the check, YYYY-MM-DD
+#   note          free text, or null
+#
+# An entry whose name denotes different things sets `ambiguous: true` and lists
+# `contexts`. The `when` sentence is for the reader and is never interpreted. A
+# context applies to a record only through its `match` keys, all of which must
+# hold:
+#   any_terms     at least one of these occurs in the record's evidence spans,
+#                 citing paper titles, or citing skills' names and descriptions
+#   none_terms    none of these occurs there
+#   ecosystems    the record uses the name as a package of one of these
+#                 ecosystems (r, python, conda), e.g. `library(x)`, `import x`
+#   collections   the record's collection is one of these
+# A record takes a context only when exactly one context matches it; otherwise
+# it stays unknown. A context without `match` keys never matches, so a context
+# written with a `when` sentence alone leaves every record unknown. A context
+# with `leave_unknown: true` records what the name means there without a licence.
+version: 1
+reviewed: '2026-11-11'
+entries:
+- names:
+  - R
+  entity: R (GNU R, reference implementation)
+  entry_kind: software
+  category: language
+  license: GPL-2.0-only OR GPL-3.0-only
+  license_tier: open
+  repo_url: null
+  homepage: https://www.r-project.org
+  evidence_url: https://www.r-project.org/Licenses/
+  verified: '2026-11-11'
+  note: 'Licence of the GNU R distribution: ''R as a package is licensed under GPL-2 | GPL-3''. Packages run in
+    R carry their own licences.'
+- names:
+  - stats
+  entity: stats (R base package)
+  entry_kind: software
+  category: package
+  license: GPL-2.0-only OR GPL-3.0-only
+  license_tier: open
+  repo_url: null
+  homepage: https://www.r-project.org
+  evidence_url: https://www.r-project.org/Licenses/
+  verified: '2026-11-11'
+  note: Package shipped with GNU R; licence is that of R as stated on the R licences page. In the records it appears
+    as an R package dependency ('stats (Imports)').
+- names:
+  - Python
+  - Python 3
+  - Python3
+  - python3
+  - Python 3.8
+  - Python 3.6
+  - Python (>= 3.6)
+  entity: Python (CPython reference implementation)
+  entry_kind: software
+  category: language
+  license: PSF-2.0
+  license_tier: open
+  repo_url: https://github.com/python/cpython
+  homepage: https://www.python.org
+  evidence_url: https://raw.githubusercontent.com/python/cpython/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: Licence of CPython read from the current default branch (PSF License Version 2; documentation examples also
+    under 0BSD). Python 3.6 and 3.8 are older releases of the same implementation, their own licence files were
+    not read separately.
+- names:
+  - Python 2.7
+  entity: Python 2.7 (CPython 2.7)
+  entry_kind: software
+  category: language
+  license: PSF-2.0
+  license_tier: open
+  repo_url: https://github.com/python/cpython
+  homepage: https://www.python.org/download/releases/2.7/
+  evidence_url: https://docs.python.org/2.7/license.html
+  verified: '2026-11-11'
+  note: Licence from the Python 2.7.18 documentation page ('PSF LICENSE AGREEMENT FOR PYTHON 2.7.18'). SPDX id chosen
+    as PSF-2.0; Python-2.0 is the other candidate, tier is unaffected.
+- names:
+  - Seurat
+  entity: Seurat
+  entry_kind: software
+  category: package
+  license: MIT
+  license_tier: open
+  repo_url: https://github.com/satijalab/seurat
+  homepage: https://satijalab.org/seurat/
+  evidence_url: https://raw.githubusercontent.com/satijalab/seurat/HEAD/DESCRIPTION
+  verified: '2026-11-11'
+  note: 'DESCRIPTION on the default branch: ''MIT + file LICENSE''. Current development version; records may refer
+    to older Seurat releases (version_used not given), whose licence files were not read.'
+- names:
+  - scikit-learn
+  - SciKitLearn
+  - sklearn
+  - Scikit-learn
+  - scikit learn
+  entity: scikit-learn
+  entry_kind: software
+  category: package
+  license: BSD-3-Clause
+  license_tier: open
+  repo_url: https://github.com/scikit-learn/scikit-learn
+  homepage: https://scikit-learn.org
+  evidence_url: https://raw.githubusercontent.com/scikit-learn/scikit-learn/HEAD/COPYING
+  verified: '2026-11-11'
+  note: null
+- names:
+  - PyTorch
+  entity: PyTorch
+  entry_kind: software
+  category: package
+  license: BSD-3-Clause
+  license_tier: open
+  repo_url: https://github.com/pytorch/pytorch
+  homepage: https://pytorch.org
+  evidence_url: https://raw.githubusercontent.com/pytorch/pytorch/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: LICENSE is a BSD-style text with several copyright holders (PyTorch/Facebook, Idiap, NEC, NYU and others)
+    and a NOTICE file; SPDX BSD-3-Clause as used by the project.
+- names:
+  - numpy
+  - NumPy
+  entity: NumPy
+  entry_kind: software
+  category: package
+  license: BSD-3-Clause
+  license_tier: open
+  repo_url: https://github.com/numpy/numpy
+  homepage: https://numpy.org
+  evidence_url: https://raw.githubusercontent.com/numpy/numpy/HEAD/LICENSE.txt
+  verified: '2026-11-11'
+  note: LICENSE.txt is BSD-3-Clause; the file also lists licences of bundled third-party code.
+- names:
+  - minimap2
+  - Minimap2
+  entity: minimap2
+  entry_kind: software
+  category: package
+  license: MIT
+  license_tier: open
+  repo_url: https://github.com/lh3/minimap2
+  homepage: https://github.com/lh3/minimap2
+  evidence_url: https://raw.githubusercontent.com/lh3/minimap2/HEAD/LICENSE.txt
+  verified: '2026-11-11'
+  note: null
+- names:
+  - Scanpy
+  - SCANPY
+  - scanpy
+  entity: Scanpy
+  entry_kind: software
+  category: package
+  license: BSD-3-Clause
+  license_tier: open
+  repo_url: https://github.com/scverse/scanpy
+  homepage: https://scanpy.readthedocs.io
+  evidence_url: https://raw.githubusercontent.com/scverse/scanpy/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: null
+- names:
+  - ggplot2
+  entity: ggplot2
+  entry_kind: software
+  category: package
+  license: MIT
+  license_tier: open
+  repo_url: https://github.com/tidyverse/ggplot2
+  homepage: https://ggplot2.tidyverse.org
+  evidence_url: https://raw.githubusercontent.com/tidyverse/ggplot2/HEAD/DESCRIPTION
+  verified: '2026-11-11'
+  note: 'DESCRIPTION: ''MIT + file LICENSE''.'
+- names:
+  - pandas
+  - Pandas
+  entity: pandas
+  entry_kind: software
+  category: package
+  license: BSD-3-Clause
+  license_tier: open
+  repo_url: https://github.com/pandas-dev/pandas
+  homepage: https://pandas.pydata.org
+  evidence_url: https://raw.githubusercontent.com/pandas-dev/pandas/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: null
+- names:
+  - Docker
+  - docker
+  entity: Docker Engine (moby)
+  entry_kind: software
+  category: application
+  license: Apache-2.0
+  license_tier: open
+  repo_url: https://github.com/moby/moby
+  homepage: https://www.docker.com
+  evidence_url: https://raw.githubusercontent.com/moby/moby/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: 'Licence of the open-source engine repository (moby/moby). The bare name ''Docker'' may also be read as
+    Docker Desktop, which has separate terms: the Docker subscription agreement (fetched, evidence/Docker-Desktop__1.txt)
+    limits standalone Docker Desktop without a paid subscription to non-commercial open source projects or commercial
+    undertakings with fewer than 250 employees and less than US $10,000,000 annual revenue. The records only show
+    ''docker pull/run/build'' usage, which fits the engine, but do not exclude Desktop.'
+- names:
+  - devtools
+  entity: devtools
+  entry_kind: software
+  category: package
+  license: MIT
+  license_tier: open
+  repo_url: https://github.com/r-lib/devtools
+  homepage: https://devtools.r-lib.org
+  evidence_url: https://raw.githubusercontent.com/r-lib/devtools/HEAD/DESCRIPTION
+  verified: '2026-11-11'
+  note: 'DESCRIPTION: ''MIT + file LICENSE''.'
+- names:
+  - SciPy
+  - scipy
+  entity: SciPy
+  entry_kind: software
+  category: package
+  license: BSD-3-Clause
+  license_tier: open
+  repo_url: https://github.com/scipy/scipy
+  homepage: https://scipy.org
+  evidence_url: https://raw.githubusercontent.com/scipy/scipy/HEAD/LICENSE.txt
+  verified: '2026-11-11'
+  note: LICENSE.txt is BSD-3-Clause and also lists licences of bundled third-party code.
+- names:
+  - RDKit
+  entity: RDKit
+  entry_kind: software
+  category: package
+  license: BSD-3-Clause
+  license_tier: open
+  repo_url: https://github.com/rdkit/rdkit
+  homepage: https://www.rdkit.org
+  evidence_url: https://raw.githubusercontent.com/rdkit/rdkit/HEAD/license.txt
+  verified: '2026-11-11'
+  note: null
+- names:
+  - Snakemake
+  entity: Snakemake
+  entry_kind: software
+  category: application
+  license: MIT
+  license_tier: open
+  repo_url: https://github.com/snakemake/snakemake
+  homepage: https://snakemake.github.io
+  evidence_url: https://raw.githubusercontent.com/snakemake/snakemake/HEAD/LICENSE.md
+  verified: '2026-11-11'
+  note: null
+- names:
+  - conda
+  - Conda
+  entity: conda
+  entry_kind: software
+  category: application
+  license: BSD-3-Clause
+  license_tier: open
+  repo_url: https://github.com/conda/conda
+  homepage: https://docs.conda.io
+  evidence_url: https://raw.githubusercontent.com/conda/conda/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: Licence of the conda tool itself. The Anaconda Distribution and Anaconda's repositories have separate terms
+    of service (see the Anaconda entry).
+- names:
+  - dplyr
+  entity: dplyr
+  entry_kind: software
+  category: package
+  license: MIT
+  license_tier: open
+  repo_url: https://github.com/tidyverse/dplyr
+  homepage: https://dplyr.tidyverse.org
+  evidence_url: https://raw.githubusercontent.com/tidyverse/dplyr/HEAD/DESCRIPTION
+  verified: '2026-11-11'
+  note: 'DESCRIPTION: ''MIT + file LICENSE''.'
+- names:
+  - pip
+  entity: pip
+  entry_kind: software
+  category: application
+  license: MIT
+  license_tier: open
+  repo_url: https://github.com/pypa/pip
+  homepage: https://pip.pypa.io
+  evidence_url: https://raw.githubusercontent.com/pypa/pip/HEAD/LICENSE.txt
+  verified: '2026-11-11'
+  note: null
+- names:
+  - Tensorflow
+  - TensorFlow
+  entity: TensorFlow
+  entry_kind: software
+  category: package
+  license: Apache-2.0
+  license_tier: open
+  repo_url: https://github.com/tensorflow/tensorflow
+  homepage: https://www.tensorflow.org
+  evidence_url: https://raw.githubusercontent.com/tensorflow/tensorflow/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: null
+- names:
+  - GNPS
+  entity: GNPS (Global Natural Products Social Molecular Networking platform)
+  entry_kind: software
+  category: web_service
+  license: null
+  license_tier: unknown
+  repo_url: null
+  homepage: https://gnps.ucsd.edu
+  evidence_url: null
+  verified: '2026-11-11'
+  note: Web platform and knowledge base. The pages fetched (platform splash page, documentation site) state no licence
+    or terms of use; the terms page guessed at gnps-terms.jsp returned 404. The software behind GNPS workflows and
+    the licence of individual public datasets were not reviewed. Left unknown. The bio.tools value measured earlier
+    is 'Other', not a licence.
+- names:
+  - xcms
+  - XCMS
+  entity: xcms
+  entry_kind: software
+  category: package
+  license: GPL-2.0-or-later
+  license_tier: open
+  repo_url: https://github.com/sneumann/xcms
+  homepage: https://bioconductor.org/packages/xcms
+  evidence_url: https://bioconductor.org/packages/release/bioc/html/xcms.html
+  verified: '2026-11-11'
+  note: 'Bioconductor page and DESCRIPTION: ''GPL (>= 2) + file LICENSE''.'
+- names:
+  - matplotlib
+  - Matplotlib
+  entity: matplotlib
+  entry_kind: software
+  category: package
+  license: LicenseRef-Matplotlib
+  license_tier: open
+  repo_url: https://github.com/matplotlib/matplotlib
+  homepage: https://matplotlib.org
+  evidence_url: https://raw.githubusercontent.com/matplotlib/matplotlib/HEAD/LICENSE/LICENSE
+  verified: '2026-11-11'
+  note: 'Custom PSF-based ''matplotlib licence agreement'' (LICENSE/LICENSE): royalty-free right to use, prepare
+    derivative works and distribute, no commercial restriction. Not an SPDX-listed identifier, so license is null;
+    tier open is read from the text. Disagreement: bio.tools value measured earlier is MIT. The licence field is
+    a reference to the project''s own text, which is not on the SPDX list; it grants a royalty-free licence to use,
+    modify and distribute.'
+- names:
+  - nextflow
+  - Nextflow
+  entity: Nextflow
+  entry_kind: software
+  category: application
+  license: Apache-2.0
+  license_tier: open
+  repo_url: https://github.com/nextflow-io/nextflow
+  homepage: https://www.nextflow.io
+  evidence_url: https://raw.githubusercontent.com/nextflow-io/nextflow/HEAD/COPYING
+  verified: '2026-11-11'
+  note: null
+- names:
+  - Samtools
+  - SAMtools
+  - samtools
+  entity: Samtools
+  entry_kind: software
+  category: package
+  license: MIT
+  license_tier: open
+  repo_url: https://github.com/samtools/samtools
+  homepage: https://www.htslib.org
+  evidence_url: https://raw.githubusercontent.com/samtools/samtools/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: LICENSE is titled 'MIT/Expat License'.
+- names:
+  - Java
+  entity: Java
+  entry_kind: software
+  category: language
+  license: null
+  license_tier: unknown
+  repo_url: null
+  homepage: null
+  evidence_url: null
+  verified: '2026-11-11'
+  note: The name does not determine a distribution (OpenJDK builds, Oracle JDK, other vendors carry different licences)
+    and no distribution is named in the records that was checked. No licence recorded.
+- names:
+  - matchms
+  entity: matchms
+  entry_kind: software
+  category: package
+  license: Apache-2.0
+  license_tier: open
+  repo_url: https://github.com/matchms/matchms
+  homepage: https://matchms.readthedocs.io
+  evidence_url: https://raw.githubusercontent.com/matchms/matchms/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: null
+- names:
+  - bedtools
+  - Bedtools
+  entity: bedtools
+  entry_kind: software
+  category: package
+  license: MIT
+  license_tier: open
+  repo_url: https://github.com/arq5x/bedtools2
+  homepage: https://bedtools.readthedocs.io
+  evidence_url: https://raw.githubusercontent.com/arq5x/bedtools2/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: 'LICENSE on the default branch is the MIT License (Copyright 2009-2019 Aaron Quinlan). Disagreement: the
+    bio.tools value measured earlier is GPL-2.0; the bioconda registry value (MIT) agrees with the repository.'
+- names:
+  - scVI
+  entity: scVI (scvi-tools)
+  entry_kind: software
+  category: package
+  license: BSD-3-Clause
+  license_tier: open
+  repo_url: https://github.com/scverse/scvi-tools
+  homepage: https://scvi-tools.org
+  evidence_url: https://raw.githubusercontent.com/scverse/scvi-tools/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: 'Records name scVI, the model implemented in scvi-tools; licence of scvi-tools read. Disagreement: the bioconda
+    registry value (MIT) and the PyPI value measured earlier (''MIT license'', unverified identity) differ from
+    the scvi-tools repository (BSD-3-Clause), probably because the name matched the older scVI package; that package
+    was not read.'
+- names:
+  - igraph
+  entity: igraph
+  entry_kind: software
+  category: package
+  license: GPL-2.0-or-later
+  license_tier: open
+  repo_url: https://github.com/igraph/igraph
+  homepage: https://igraph.org
+  evidence_url: https://cran.r-project.org/web/packages/igraph/index.html
+  verified: '2026-11-11'
+  note: 'Statement read on the CRAN page of the R package igraph: ''GPL (>= 2)''. The C core repository carries
+    the GPL-2 text in COPYING (igraph#1). Python and R interfaces are separate distributions; only the R package
+    statement is a version-bearing one here.'
+- names:
+  - anndata
+  - AnnData
+  entity: AnnData
+  entry_kind: software
+  category: package
+  license: BSD-3-Clause
+  license_tier: open
+  repo_url: https://github.com/scverse/anndata
+  homepage: https://anndata.readthedocs.io
+  evidence_url: https://raw.githubusercontent.com/scverse/anndata/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: null
+- names:
+  - STAR
+  entity: STAR (RNA-seq aligner)
+  entry_kind: software
+  category: package
+  license: MIT
+  license_tier: open
+  repo_url: https://github.com/alexdobin/STAR
+  homepage: https://github.com/alexdobin/STAR
+  evidence_url: https://raw.githubusercontent.com/alexdobin/STAR/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: 'Disagreement: the bioconda registry value measured earlier is GPL-3.0-or-later; the repository LICENSE
+    on the default branch is MIT (Copyright 2019 Alexander Dobin). The bio.tools value measured earlier is also
+    GPL-3.0. The tool''s own statement is kept. Older STAR releases may have been GPL-licensed; not read.'
+- names:
+  - h5py
+  entity: h5py
+  entry_kind: software
+  category: package
+  license: BSD-3-Clause
+  license_tier: open
+  repo_url: https://github.com/h5py/h5py
+  homepage: https://www.h5py.org
+  evidence_url: https://raw.githubusercontent.com/h5py/h5py/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: null
+- names:
+  - Shiny
+  - shiny
+  entity: Shiny (R package)
+  entry_kind: software
+  category: package
+  license: MIT
+  license_tier: open
+  repo_url: https://github.com/rstudio/shiny
+  homepage: https://shiny.posit.co
+  evidence_url: https://cran.r-project.org/web/packages/shiny/index.html
+  verified: '2026-11-11'
+  note: 'DESCRIPTION and CRAN page: ''MIT + file LICENSE''. Shiny Server and Posit Connect are other products and
+    were not read.'
+- names:
+  - DESeq2
+  - DEseq2
+  entity: DESeq2
+  entry_kind: software
+  category: package
+  license: LGPL-3.0-or-later
+  license_tier: open
+  repo_url: null
+  homepage: https://bioconductor.org/packages/DESeq2
+  evidence_url: https://bioconductor.org/packages/release/bioc/html/DESeq2.html
+  verified: '2026-11-11'
+  note: 'Bioconductor page: ''LGPL (>= 3)''.'
+- names:
+  - tidyverse
+  - Tidyverse
+  entity: tidyverse
+  entry_kind: software
+  category: package
+  license: MIT
+  license_tier: open
+  repo_url: https://github.com/tidyverse/tidyverse
+  homepage: https://www.tidyverse.org
+  evidence_url: https://raw.githubusercontent.com/tidyverse/tidyverse/HEAD/DESCRIPTION
+  verified: '2026-11-11'
+  note: 'The tidyverse meta-package: ''MIT + file LICENSE''; the packages it loads have their own licences.'
+- names:
+  - BWA
+  - bwa
+  - BWA-MEM
+  - bwa mem
+  - BWA-mem
+  - BWA mem
+  entity: BWA (BWA-MEM)
+  entry_kind: software
+  category: package
+  license: GPL-3.0
+  license_tier: open
+  repo_url: https://github.com/lh3/bwa
+  homepage: https://github.com/lh3/bwa
+  evidence_url: https://raw.githubusercontent.com/lh3/bwa/HEAD/README.md
+  verified: '2026-11-11'
+  note: 'README: ''BWA is released under GPLv3''; COPYING is the GPL-3 text, ''or later'' not stated. Disagreements:
+    the bio.tools value measured earlier is MIT (not supported by the repository); the bioconda value GPL-3.0-or-later
+    differs only in the version suffix.'
+- names:
+  - pysam
+  entity: pysam
+  entry_kind: software
+  category: package
+  license: MIT
+  license_tier: open
+  repo_url: https://github.com/pysam-developers/pysam
+  homepage: https://pysam.readthedocs.io
+  evidence_url: https://raw.githubusercontent.com/pysam-developers/pysam/HEAD/COPYING
+  verified: '2026-11-11'
+  note: null
+- names:
+  - MS-DIAL
+  - MSDIAL
+  entity: MS-DIAL
+  entry_kind: software
+  category: application
+  license: null
+  license_tier: unknown
+  repo_url: https://github.com/systemsomicslab/MsdialWorkbench
+  homepage: https://systemsomicslab.github.io/compms/msdial/main.html
+  evidence_url: null
+  verified: '2026-11-11'
+  note: The repository carries an LGPL text and its README names CC-BY 4.0; the two statements do not name one licence,
+    and the vendor reader libraries have separate terms that were not read. Left unknown.
+- names:
+  - keras
+  - Keras
+  entity: Keras
+  entry_kind: software
+  category: package
+  license: Apache-2.0
+  license_tier: open
+  repo_url: https://github.com/keras-team/keras
+  homepage: https://keras.io
+  evidence_url: https://raw.githubusercontent.com/keras-team/keras/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: null
+- names:
+  - Bioconductor
+  - BioConductor
+  entity: Bioconductor (project and package repository)
+  entry_kind: artefact
+  category: package
+  license: null
+  license_tier: unknown
+  repo_url: null
+  homepage: https://www.bioconductor.org
+  evidence_url: null
+  verified: '2026-11-11'
+  note: 'A repository of several thousand packages, each with its own licence (for example Biobase and SummarizedExperiment:
+    Artistic-2.0; limma: GPL (>= 2); DESeq2: LGPL (>= 3), as read in this review). No single licence applies to
+    the name.'
+- names:
+  - Harmony
+  entity: Harmony (single-cell batch integration)
+  entry_kind: software
+  category: package
+  license: GPL-3.0-only
+  license_tier: open
+  repo_url: https://github.com/immunogenomics/harmony
+  homepage: https://github.com/immunogenomics/harmony
+  evidence_url: https://raw.githubusercontent.com/immunogenomics/harmony/HEAD/DESCRIPTION
+  verified: '2026-11-11'
+  note: 'R package DESCRIPTION: ''License: GPL-3''. The Python port harmonypy (slowkow/harmonypy) carries a GPL-3
+    text (evidence/harmonypy__1.txt). Records cite Harmony in transcriptomics and epigenomics as the Korsunsky et
+    al. method.'
+- names:
+  - OpenMS
+  entity: OpenMS
+  entry_kind: software
+  category: package
+  license: BSD-3-Clause
+  license_tier: open
+  repo_url: https://github.com/OpenMS/OpenMS
+  homepage: https://www.openms.de
+  evidence_url: https://raw.githubusercontent.com/OpenMS/OpenMS/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: 'LICENSE: ''released under a three-clause BSD license''.'
+- names:
+  - MZmine 2
+  - MZmine2
+  entity: MZmine 2
+  entry_kind: software
+  category: application
+  license: GPL-2.0
+  license_tier: open
+  repo_url: https://github.com/mzmine/mzmine2
+  homepage: http://mzmine.github.io
+  evidence_url: https://raw.githubusercontent.com/mzmine/mzmine2/HEAD/LICENSE.txt
+  verified: '2026-11-11'
+  note: LICENSE.txt of the mzmine2 repository is the GPL-2 text; version-or-later not stated in that file. MZmine
+    3 is a separate repository and was not read.
+- names:
+  - limma
+  entity: limma
+  entry_kind: software
+  category: package
+  license: GPL-2.0-or-later
+  license_tier: open
+  repo_url: null
+  homepage: https://bioconductor.org/packages/limma
+  evidence_url: https://bioconductor.org/packages/release/bioc/html/limma.html
+  verified: '2026-11-11'
+  note: 'Bioconductor page: ''GPL (>=2)''.'
+- names:
+  - C
+  - C++
+  entity: C and C++ (programming languages)
+  entry_kind: software
+  category: language
+  license: null
+  license_tier: unknown
+  repo_url: null
+  homepage: null
+  evidence_url: null
+  verified: '2026-11-11'
+  note: Two language names that normalise to the same key. They are standards, not products, and the name does not
+    determine a compiler; no licence recorded. In the proteomics records the name 'C' denotes C++ code.
+- names:
+  - edgeR
+  entity: edgeR
+  entry_kind: software
+  category: package
+  license: GPL-2.0-or-later
+  license_tier: open
+  repo_url: null
+  homepage: https://bioconductor.org/packages/edgeR
+  evidence_url: https://bioconductor.org/packages/release/bioc/html/edgeR.html
+  verified: '2026-11-11'
+  note: 'Bioconductor page: ''GPL (>=2)''.'
+- names:
+  - QIIME 2
+  - QIIME2
+  - Qiime 2
+  - Qiime2
+  entity: QIIME 2
+  entry_kind: software
+  category: application
+  license: BSD-3-Clause
+  license_tier: open
+  repo_url: https://github.com/qiime2/qiime2
+  homepage: https://qiime2.org
+  evidence_url: https://raw.githubusercontent.com/qiime2/qiime2/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: Licence of the qiime2 framework repository; QIIME 2 plugins are separate projects with their own licences.
+- names:
+  - SPAdes
+  entity: SPAdes
+  entry_kind: software
+  category: package
+  license: GPL-2.0-only
+  license_tier: open
+  repo_url: https://github.com/ablab/spades
+  homepage: https://github.com/ablab/spades
+  evidence_url: https://raw.githubusercontent.com/ablab/spades/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: 'LICENSE: ''GNU General Public License, Version 2'' (no ''or later'').'
+- names:
+  - MATLAB
+  - Matlab
+  entity: MATLAB
+  entry_kind: vendor_product
+  category: application
+  license: null
+  license_tier: unknown
+  repo_url: null
+  homepage: https://www.mathworks.com/products/matlab.html
+  evidence_url: null
+  verified: '2026-11-11'
+  note: Proprietary MathWorks product. Tier follows LICENSE_TIERS.md for vendor products; the MathWorks licensing
+    pages returned HTTP 403 to anonymous requests and were not retried, so no licence text was read. Less sure than
+    the other entries. No licence text could be read; the entry kind marks it as a vendor product, which the enrichment
+    step records as restricted.
+- names:
+  - remotes
+  entity: remotes
+  entry_kind: software
+  category: package
+  license: MIT
+  license_tier: open
+  repo_url: https://github.com/r-lib/remotes
+  homepage: https://remotes.r-lib.org
+  evidence_url: https://raw.githubusercontent.com/r-lib/remotes/HEAD/DESCRIPTION
+  verified: '2026-11-11'
+  note: 'DESCRIPTION: ''MIT + file LICENSE''.'
+- names:
+  - BLAST
+  - BLAST+
+  entity: NCBI BLAST+
+  entry_kind: software
+  category: application
+  license: NCBI-PD
+  license_tier: open
+  repo_url: https://github.com/ncbi/ncbi-cxx-toolkit-public
+  homepage: https://blast.ncbi.nlm.nih.gov
+  evidence_url: https://raw.githubusercontent.com/ncbi/ncbi-cxx-toolkit-public/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: 'NCBI C++ Toolkit LICENSE (which contains BLAST+): public domain notice, a ''United States Government Work''
+    with no restriction on use; some bundled third-party files have exceptions listed in the same file. Public domain
+    is not an SPDX licence, so license is null; tier open is read from the text.'
+- names:
+  - mclust
+  entity: mclust
+  entry_kind: software
+  category: package
+  license: GPL-2.0-or-later
+  license_tier: open
+  repo_url: null
+  homepage: https://mclust-org.github.io/mclust/
+  evidence_url: https://cran.r-project.org/web/packages/mclust/index.html
+  verified: '2026-11-11'
+  note: 'CRAN page: ''GPL (>= 2)''.'
+- names:
+  - DADA2
+  - dada2
+  entity: DADA2
+  entry_kind: software
+  category: package
+  license: LGPL
+  license_tier: open
+  repo_url: https://github.com/benjjneb/dada2
+  homepage: https://benjjneb.github.io/dada2/
+  evidence_url: https://raw.githubusercontent.com/benjjneb/dada2/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: 'The repository LICENSE file is the LGPL-3 text but DESCRIPTION says ''License: LGPL-2'' (evidence/DADA2__2.txt):
+    two different LGPL versions, so no single SPDX id is recorded. Either is permissive for commercial use. The
+    licence is recorded without a version because the LICENSE file and the DESCRIPTION file name different versions.'
+- names:
+  - Cytoscape
+  entity: Cytoscape
+  entry_kind: software
+  category: application
+  license: LGPL-2.1
+  license_tier: open
+  repo_url: https://github.com/cytoscape/cytoscape-impl
+  homepage: https://cytoscape.org
+  evidence_url: https://cytoscape.org/download.html
+  verified: '2026-11-11'
+  note: 'cytoscape.org download page: ''released under the terms of the LGPL'', licence agreement is LGPL version
+    2.1, with an added note on extending abstract classes; the repository page shows ''LGPL-2.1 license''. ''-only''
+    is not stated; id chosen from ''version 2.1''.'
+- names:
+  - Jupyter
+  - Jupyter notebook
+  - Jupyter Notebook
+  entity: Project Jupyter (Jupyter Notebook)
+  entry_kind: software
+  category: application
+  license: BSD-3-Clause
+  license_tier: open
+  repo_url: https://github.com/jupyter/notebook
+  homepage: https://jupyter.org
+  evidence_url: https://raw.githubusercontent.com/jupyter/notebook/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: Licence of jupyter/notebook; JupyterLab (jupyterlab/jupyterlab) is also BSD-3-Clause (evidence/JupyterLab__1.txt).
+- names:
+  - Scanorama
+  entity: Scanorama
+  entry_kind: software
+  category: package
+  license: MIT
+  license_tier: open
+  repo_url: https://github.com/brianhie/scanorama
+  homepage: https://github.com/brianhie/scanorama
+  evidence_url: https://raw.githubusercontent.com/brianhie/scanorama/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: null
+- names:
+  - MAGIC
+  entity: MAGIC (Markov Affinity-based Graph Imputation of Cells)
+  entry_kind: software
+  category: package
+  license: GPL-2.0
+  license_tier: open
+  repo_url: https://github.com/KrishnaswamyLab/MAGIC
+  homepage: https://github.com/KrishnaswamyLab/MAGIC
+  evidence_url: https://raw.githubusercontent.com/KrishnaswamyLab/MAGIC/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: LICENSE is the GPL-2 text with the standard 'any later version' sample notice. Records in transcriptomics
+    and metabolomics describe the single-cell imputation method.
+- names:
+  - Perl
+  entity: Perl (Perl 5 reference implementation)
+  entry_kind: software
+  category: language
+  license: GPL-1.0-or-later OR Artistic-1.0-Perl
+  license_tier: open
+  repo_url: https://github.com/Perl/perl5
+  homepage: https://www.perl.org
+  evidence_url: https://dev.perl.org/licenses/
+  verified: '2026-11-11'
+  note: 'dev.perl.org: Perl 5 is distributed under either the GPL (version 1 or later) or the ''Artistic License'';
+    the repository file ''Artistic'' is the original Artistic License.'
+- names:
+  - antiSMASH
+  entity: antiSMASH
+  entry_kind: software
+  category: application
+  license: AGPL-3.0
+  license_tier: open
+  repo_url: https://github.com/antismash/antismash
+  homepage: https://antismash.secondarymetabolites.org
+  evidence_url: https://raw.githubusercontent.com/antismash/antismash/HEAD/LICENSE.txt
+  verified: '2026-11-11'
+  note: 'LICENSE.txt is the AGPL-3 text. Disagreement on the version suffix only: bioconda value measured earlier
+    is AGPL-3.0-or-later. The antiSMASH web server''s terms were not read.'
+- names:
+  - Bowtie2
+  - Bowtie 2
+  - bowtie2
+  entity: Bowtie 2
+  entry_kind: software
+  category: package
+  license: GPL-3.0
+  license_tier: open
+  repo_url: https://github.com/BenLangmead/bowtie2
+  homepage: https://bowtie-bio.sourceforge.net/bowtie2
+  evidence_url: https://raw.githubusercontent.com/BenLangmead/bowtie2/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: LICENSE is the GPL-3 text. Bioconda value measured earlier is GPL-3.0-or-later; tier is the same.
+- names:
+  - data.table
+  entity: data.table
+  entry_kind: software
+  category: package
+  license: MPL-2.0
+  license_tier: open
+  repo_url: https://github.com/Rdatatable/data.table
+  homepage: https://r-datatable.com
+  evidence_url: https://cran.r-project.org/web/packages/data.table/index.html
+  verified: '2026-11-11'
+  note: 'CRAN page and DESCRIPTION: ''MPL-2.0 | file LICENSE''.'
+- names:
+  - Anaconda
+  - anaconda
+  entity: Anaconda (Anaconda Distribution)
+  entry_kind: vendor_product
+  category: application
+  license: null
+  license_tier: restricted
+  repo_url: null
+  homepage: https://www.anaconda.com
+  evidence_url: https://www.anaconda.com/legal/terms/terms-of-service
+  verified: '2026-11-11'
+  note: 'Anaconda Terms of Service: the platform is free for individuals'' personal non-commercial use, eligible
+    academic and non-profit/research organisations, and for-profit organisations with 200 or fewer employees and
+    contractors; a paid plan is required for larger for-profit organisations. Conditional, hence restricted (proprietary
+    terms), not open. The records say ''install Anaconda'' for conda environments; users of Miniforge/conda-forge
+    are not covered by this entry.'
+- names:
+  - Rcpp
+  entity: Rcpp
+  entry_kind: software
+  category: package
+  license: GPL-2.0-or-later
+  license_tier: open
+  repo_url: null
+  homepage: https://www.rcpp.org
+  evidence_url: https://cran.r-project.org/web/packages/Rcpp/index.html
+  verified: '2026-11-11'
+  note: 'CRAN page: ''GPL (>= 2)''.'
+- names:
+  - FastQC
+  - FASTQC
+  entity: FastQC
+  entry_kind: software
+  category: application
+  license: GPL-3.0
+  license_tier: open
+  repo_url: https://github.com/s-andrews/FastQC
+  homepage: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+  evidence_url: https://raw.githubusercontent.com/s-andrews/FastQC/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: LICENSE is the GPL-3 text; 'or later' not stated in that file.
+- names:
+  - Kraken2
+  - Kraken 2
+  entity: Kraken 2
+  entry_kind: software
+  category: package
+  license: MIT
+  license_tier: open
+  repo_url: https://github.com/DerrickWood/kraken2
+  homepage: https://ccb.jhu.edu/software/kraken2/
+  evidence_url: https://raw.githubusercontent.com/DerrickWood/kraken2/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: 'Disagreement: the bioconda registry value measured earlier is GPL-3.0-or-later; the repository LICENSE
+    on the default branch is MIT (Copyright 2017-2023 Derrick Wood). The tool''s own statement is kept.'
+- names:
+  - SC3
+  entity: SC3
+  entry_kind: software
+  category: package
+  license: GPL-3.0-only
+  license_tier: open
+  repo_url: null
+  homepage: https://bioconductor.org/packages/SC3
+  evidence_url: https://bioconductor.org/packages/release/bioc/html/SC3.html
+  verified: '2026-11-11'
+  note: 'Bioconductor page: ''GPL-3''.'
+- names:
+  - caret
+  entity: caret
+  entry_kind: software
+  category: package
+  license: GPL-2.0-or-later
+  license_tier: open
+  repo_url: null
+  homepage: https://topepo.github.io/caret/
+  evidence_url: https://cran.r-project.org/web/packages/caret/index.html
+  verified: '2026-11-11'
+  note: 'CRAN page: ''GPL (>= 2)'' (expanded ''GPL-2 | GPL-3'').'
+- names:
+  - XGBoost
+  - xgboost
+  entity: XGBoost
+  entry_kind: software
+  category: package
+  license: Apache-2.0
+  license_tier: open
+  repo_url: https://github.com/dmlc/xgboost
+  homepage: https://xgboost.ai
+  evidence_url: https://raw.githubusercontent.com/dmlc/xgboost/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: null
+- names:
+  - PubChem
+  entity: PubChem
+  entry_kind: software
+  category: database
+  license: null
+  license_tier: unknown
+  repo_url: null
+  homepage: https://pubchem.ncbi.nlm.nih.gov
+  evidence_url: https://www.ncbi.nlm.nih.gov/home/about/policies/
+  verified: '2026-11-11'
+  note: 'Database, not software. NCBI policy page: NCBI places no restriction on use or distribution of the data,
+    but submitters may claim patent, copyright or other rights in portions of the data, and the data contain items
+    with third-party copyright. The page does not give a database-level licence, so no tier is asserted. The PubChem
+    data-use pages are JavaScript pages and could not be read.'
+- names:
+  - KEGG
+  entity: KEGG
+  entry_kind: software
+  category: database
+  license: null
+  license_tier: noncommercial
+  repo_url: null
+  homepage: https://www.kegg.jp
+  evidence_url: https://www.kegg.jp/kegg/legal.html
+  verified: '2026-11-11'
+  note: 'Database. KEGG copyright page (updated 1 Oct 2024): academic users may freely use the website; non-academic
+    use requires a commercial licence from Pathway Solutions. Terms of the database, not a software licence.'
+- names:
+  - VSEARCH
+  entity: VSEARCH
+  entry_kind: software
+  category: package
+  license: GPL-3.0-or-later OR BSD-2-Clause
+  license_tier: open
+  repo_url: https://github.com/torognes/vsearch
+  homepage: https://github.com/torognes/vsearch
+  evidence_url: https://raw.githubusercontent.com/torognes/vsearch/HEAD/LICENSE.txt
+  verified: '2026-11-11'
+  note: 'LICENSE.txt: ''dual-licensed ... under the GNU GPL version 3 or the BSD 2-Clause License''.'
+- names:
+  - ProteoWizard
+  - msconvert
+  - MSConvert
+  entity: ProteoWizard (including msconvert)
+  entry_kind: software
+  category: application
+  license: Apache-2.0
+  license_tier: open
+  repo_url: https://github.com/ProteoWizard/pwiz
+  homepage: https://proteowizard.sourceforge.io
+  evidence_url: https://raw.githubusercontent.com/ProteoWizard/pwiz/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: Repository LICENSE is Apache-2.0. The pwiz licences page lists separate vendor-library licences (Agilent,
+    Bruker, Sciex, Shimadzu, Thermo, Waters) that apply when binaries read vendor raw files; the page is JavaScript-rendered
+    and those terms were not read, so commercial use of msconvert on vendor formats may carry extra conditions.
+    Less sure than the core licence.
+- names:
+  - Jax
+  - JAX
+  entity: JAX
+  entry_kind: software
+  category: package
+  license: Apache-2.0
+  license_tier: open
+  repo_url: https://github.com/jax-ml/jax
+  homepage: https://jax.readthedocs.io
+  evidence_url: https://raw.githubusercontent.com/jax-ml/jax/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: null
+- names:
+  - ClassyFire
+  entity: ClassyFire (web server)
+  entry_kind: software
+  category: web_service
+  license: null
+  license_tier: noncommercial
+  repo_url: null
+  homepage: http://classyfire.wishartlab.com
+  evidence_url: http://classyfire.wishartlab.com/
+  verified: '2026-11-11'
+  note: 'Terms of the web server and its data, not a software licence: ''Use and re-distribution of the data, in
+    whole or in part, for commercial purposes requires explicit permission of the authors'' (classyfire.wishartlab.com).
+    Records cite the ClassyFire ontology/classification of compounds. The R client classyfireR (aberHRML) is a different
+    software and was not resolved.'
+- names:
+  - Trimmomatic
+  entity: Trimmomatic
+  entry_kind: software
+  category: application
+  license: GPL-3.0
+  license_tier: open
+  repo_url: https://github.com/usadellab/Trimmomatic
+  homepage: http://www.usadellab.org/cms/?page=trimmomatic
+  evidence_url: https://raw.githubusercontent.com/usadellab/Trimmomatic/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: 'LICENSE: GPL-3 text. The file states that the licence does not apply to the Illumina adapter sequences
+    shipped with the software, which remain copyrighted by Illumina and are used ''by permission''.'
+- names:
+  - CellChat
+  entity: CellChat
+  entry_kind: software
+  category: package
+  license: GPL-3.0-only
+  license_tier: open
+  repo_url: https://github.com/jinworks/CellChat
+  homepage: https://github.com/jinworks/CellChat
+  evidence_url: https://raw.githubusercontent.com/jinworks/CellChat/HEAD/DESCRIPTION
+  verified: '2026-11-11'
+  note: 'DESCRIPTION: ''License: GPL-3''.'
+- names:
+  - HDF5
+  entity: HDF5 (HDF Group library)
+  entry_kind: software
+  category: package
+  license: BSD-3-Clause
+  license_tier: open
+  repo_url: https://github.com/HDFGroup/hdf5
+  homepage: https://www.hdfgroup.org/solutions/hdf5/
+  evidence_url: https://raw.githubusercontent.com/HDFGroup/hdf5/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: 'LICENSE: ''covered by the 3-clause BSD License ... permitted for any purpose (including commercial purposes)''.
+    The same name also denotes the file format, which is not a licensed product.'
+- names:
+  - scImpute
+  entity: scImpute
+  entry_kind: software
+  category: package
+  license: GPL
+  license_tier: open
+  repo_url: https://github.com/Vivianstats/scImpute
+  homepage: https://github.com/Vivianstats/scImpute
+  evidence_url: https://raw.githubusercontent.com/Vivianstats/scImpute/HEAD/DESCRIPTION
+  verified: '2026-11-11'
+  note: 'DESCRIPTION: ''License: GPL'' without a version, so no SPDX id is recorded; GPL is permissive for use.
+    The DESCRIPTION file says GPL without a version.'
+- names:
+  - Dorado
+  entity: Dorado (Oxford Nanopore basecaller)
+  entry_kind: software
+  category: application
+  license: null
+  license_tier: noncommercial
+  repo_url: https://github.com/nanoporetech/dorado
+  homepage: https://github.com/nanoporetech/dorado
+  evidence_url: https://raw.githubusercontent.com/nanoporetech/dorado/HEAD/LICENCE.txt
+  verified: '2026-11-11'
+  note: LICENCE.txt is the 'Oxford Nanopore Technologies PLC. Public License Version 1.0', an MPL-2.0-derived text
+    whose copyright grant is solely for 'Research Purposes' (internal research, not directed towards commercial
+    advantage); section 2.3(b) grants no licence for other use. Not an SPDX-listed licence.
+- names:
+  - BiocManager
+  entity: BiocManager
+  entry_kind: software
+  category: package
+  license: Artistic-2.0
+  license_tier: open
+  repo_url: https://github.com/Bioconductor/BiocManager
+  homepage: https://bioconductor.github.io/BiocManager/
+  evidence_url: https://cran.r-project.org/web/packages/BiocManager/index.html
+  verified: '2026-11-11'
+  note: 'CRAN page: ''License: Artistic-2.0''.'
+- names:
+  - BiG-SCAPE
+  - BigScape
+  entity: BiG-SCAPE
+  entry_kind: software
+  category: application
+  license: AGPL-3.0
+  license_tier: open
+  repo_url: https://github.com/medema-group/BiG-SCAPE
+  homepage: https://bigscape-corason.secondarymetabolites.org
+  evidence_url: https://raw.githubusercontent.com/medema-group/BiG-SCAPE/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: LICENSE is the AGPL-3 text. Bioconda value measured earlier is AGPL-3.0-or-later; tier is the same.
+- names:
+  - scmap
+  - scMap
+  entity: scmap
+  entry_kind: software
+  category: package
+  license: GPL-3.0-only
+  license_tier: open
+  repo_url: null
+  homepage: https://bioconductor.org/packages/scmap
+  evidence_url: https://bioconductor.org/packages/release/bioc/html/scmap.html
+  verified: '2026-11-11'
+  note: 'Bioconductor page: ''GPL-3''.'
+- names:
+  - HISAT2
+  entity: HISAT2
+  entry_kind: software
+  category: package
+  license: GPL-3.0
+  license_tier: open
+  repo_url: https://github.com/DaehwanKimLab/hisat2
+  homepage: https://daehwankimlab.github.io/hisat2/
+  evidence_url: https://raw.githubusercontent.com/DaehwanKimLab/hisat2/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: LICENSE is the GPL-3 text. Bioconda value measured earlier is GPL-3.0-or-later; tier is the same.
+- names:
+  - Galaxy
+  entity: Galaxy (Galaxy Project platform)
+  entry_kind: software
+  category: application
+  license: MIT
+  license_tier: open
+  repo_url: https://github.com/galaxyproject/galaxy
+  homepage: https://galaxyproject.org
+  evidence_url: https://raw.githubusercontent.com/galaxyproject/galaxy/HEAD/LICENSE.txt
+  verified: '2026-11-11'
+  note: 'LICENSE.txt: ''Galaxy is provided from 2026-02-25 onwards entirely under the MIT License'' (earlier versions
+    were under another licence, not read here). Public Galaxy servers (for example usegalaxy.*) have their own terms
+    of use, which were not read.'
+- names:
+  - Skyline
+  entity: Skyline
+  entry_kind: software
+  category: application
+  license: Apache-2.0
+  license_tier: open
+  repo_url: https://github.com/ProteoWizard/pwiz
+  homepage: https://skyline.ms
+  evidence_url: https://raw.githubusercontent.com/ProteoWizard/pwiz/HEAD/pwiz_tools/Skyline/README.md
+  verified: '2026-11-11'
+  note: 'README of pwiz_tools/Skyline in the ProteoWizard repository: ''Core code and libraries are under the Apache
+    open source license; the vendor libraries fall under various vendor-specific licenses''. The skyline.ms licence
+    page was not retrievable. Vendor libraries are not covered by Apache-2.0. Less sure than the core claim.'
+- names:
+  - SingleR
+  entity: SingleR
+  entry_kind: software
+  category: package
+  license: GPL-3.0-only
+  license_tier: open
+  repo_url: null
+  homepage: https://bioconductor.org/packages/SingleR
+  evidence_url: https://bioconductor.org/packages/release/bioc/html/SingleR.html
+  verified: '2026-11-11'
+  note: 'Bioconductor page: ''GPL-3''.'
+- names:
+  - RStudio
+  entity: RStudio (RStudio IDE)
+  entry_kind: software
+  category: application
+  license: AGPL-3.0
+  license_tier: open
+  repo_url: https://github.com/rstudio/rstudio
+  homepage: https://posit.co/products/open-source/rstudio/
+  evidence_url: https://raw.githubusercontent.com/rstudio/rstudio/HEAD/COPYING
+  verified: '2026-11-11'
+  note: 'COPYING: ''Unless you have received this program directly from Posit Software pursuant to the terms of
+    a commercial license agreement ... RStudio is licensed to you under the AGPLv3''. Posit''s commercial products
+    (Workbench etc.) are separate.'
+- names:
+  - Splatter
+  entity: Splatter
+  entry_kind: software
+  category: package
+  license: GPL-3.0-only
+  license_tier: open
+  repo_url: null
+  homepage: https://bioconductor.org/packages/splatter
+  evidence_url: https://bioconductor.org/packages/release/bioc/html/splatter.html
+  verified: '2026-11-11'
+  note: 'Bioconductor page: ''GPL-3 + file LICENSE''.'
+- names:
+  - PostgreSQL
+  entity: PostgreSQL
+  entry_kind: software
+  category: application
+  license: PostgreSQL
+  license_tier: open
+  repo_url: null
+  homepage: https://www.postgresql.org
+  evidence_url: https://www.postgresql.org/about/licence/
+  verified: '2026-11-11'
+  note: 'Licence page: ''released under the PostgreSQL License, a liberal Open Source license, similar to the BSD
+    or MIT licenses''.'
+- names:
+  - DCA
+  entity: DCA (Deep Count Autoencoder)
+  entry_kind: software
+  category: package
+  license: Apache-2.0
+  license_tier: open
+  repo_url: https://github.com/theislab/dca
+  homepage: https://github.com/theislab/dca
+  evidence_url: https://raw.githubusercontent.com/theislab/dca/HEAD/LICENSE.txt
+  verified: '2026-11-11'
+  note: null
+- names:
+  - CSI:FingerID
+  entity: CSI:FingerID (SIRIUS web service)
+  entry_kind: software
+  category: web_service
+  license: null
+  license_tier: noncommercial
+  repo_url: https://github.com/sirius-ms/sirius
+  homepage: https://bio.informatik.uni-jena.de/software/sirius/
+  evidence_url: https://bio.informatik.uni-jena.de/terms-of-service-fsu-csi
+  verified: '2026-11-11'
+  note: 'Terms of the web service, not the SIRIUS software licence. The Jena terms of use (updated 5 Jul 2021) define
+    academic use as non-profit teaching and research and exclude for-profit use, consultancy and collaborative projects
+    funded by non-academic institutions; the SIRIUS README says the web services (CSI:FingerID, CANOPUS, MSNovelist)
+    are ''for academic research and education use only'' and that Bright Giant GmbH licenses non-academic users
+    (evidence/SIRIUS-README__1.txt). The SIRIUS software repository shows an AGPL v3 badge and AGPL text, while
+    the same README says ''(Re-)distribution of the methods ... for commercial purposes is prohibited'': an unresolved
+    inconsistency inside the README, not recorded as a licence.'
+- names:
+  - CANOPUS
+  entity: CANOPUS (SIRIUS web service)
+  entry_kind: software
+  category: web_service
+  license: null
+  license_tier: noncommercial
+  repo_url: https://github.com/sirius-ms/sirius
+  homepage: https://bio.informatik.uni-jena.de/software/sirius/
+  evidence_url: https://bio.informatik.uni-jena.de/terms-of-service-fsu-csi
+  verified: '2026-11-11'
+  note: 'Compound class prediction served by the SIRIUS web services, under the same terms as CSI:FingerID. The SIRIUS
+    README says the web services (CSI:FingerID, CANOPUS, MSNovelist) are ''for academic research and education use
+    only''. The bio.tools entry `canopus` names kaibioinfo/canopus_treemap, a notebook helper for CANOPUS output
+    (MIT), which is not the tool.'
+- names:
+  - MSNovelist
+  entity: MSNovelist (SIRIUS web service)
+  entry_kind: software
+  category: web_service
+  license: null
+  license_tier: noncommercial
+  repo_url: https://github.com/sirius-ms/sirius
+  homepage: https://bio.informatik.uni-jena.de/software/sirius/
+  evidence_url: https://bio.informatik.uni-jena.de/terms-of-service-fsu-csi
+  verified: '2026-11-11'
+  note: 'De novo structure generation served by the SIRIUS web services, under the same terms as CSI:FingerID. The
+    research repository meowcat/MSNovelist (AGPL-3.0) directs users to SIRIUS; the usable tool is the web service.'
+- names:
+  - Julia
+  entity: Julia
+  entry_kind: software
+  category: language
+  license: MIT
+  license_tier: open
+  repo_url: https://github.com/JuliaLang/julia
+  homepage: https://julialang.org
+  evidence_url: https://raw.githubusercontent.com/JuliaLang/julia/HEAD/LICENSE.md
+  verified: '2026-11-11'
+  note: LICENSE.md of the JuliaLang/julia repository (reference implementation). Bundled third-party libraries have
+    their own licences.
+- names:
+  - QUAST
+  - Quast
+  entity: QUAST
+  entry_kind: software
+  category: application
+  license: GPL-2.0-only
+  license_tier: open
+  repo_url: https://github.com/ablab/quast
+  homepage: https://github.com/ablab/quast
+  evidence_url: https://raw.githubusercontent.com/ablab/quast/HEAD/LICENSE.txt
+  verified: '2026-11-11'
+  note: 'LICENSE: ''GNU General Public License, Version 2'' (no ''or later'').'
+- names:
+  - Slingshot
+  entity: Slingshot
+  entry_kind: software
+  category: package
+  license: Artistic-2.0
+  license_tier: open
+  repo_url: null
+  homepage: https://bioconductor.org/packages/slingshot
+  evidence_url: https://bioconductor.org/packages/release/bioc/html/slingshot.html
+  verified: '2026-11-11'
+  note: 'Bioconductor page: ''Artistic-2.0''.'
+- names:
+  - SingleCellExperiment
+  entity: SingleCellExperiment
+  entry_kind: software
+  category: package
+  license: GPL-3.0-only
+  license_tier: open
+  repo_url: null
+  homepage: https://bioconductor.org/packages/SingleCellExperiment
+  evidence_url: https://bioconductor.org/packages/release/bioc/html/SingleCellExperiment.html
+  verified: '2026-11-11'
+  note: 'Bioconductor page: ''GPL-3''.'
+- names:
+  - SAVER
+  entity: SAVER
+  entry_kind: software
+  category: package
+  license: MIT
+  license_tier: open
+  repo_url: https://github.com/mohuangx/SAVER
+  homepage: https://github.com/mohuangx/SAVER
+  evidence_url: https://raw.githubusercontent.com/mohuangx/SAVER/HEAD/DESCRIPTION
+  verified: '2026-11-11'
+  note: The repository DESCRIPTION says MIT; the older CRAN release says GPL-2. Both are open.
+- names:
+  - Prodigal
+  entity: Prodigal
+  entry_kind: software
+  category: application
+  license: GPL-3.0
+  license_tier: open
+  repo_url: https://github.com/hyattpd/Prodigal
+  homepage: https://github.com/hyattpd/Prodigal
+  evidence_url: https://raw.githubusercontent.com/hyattpd/Prodigal/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: LICENSE is the GPL-3 text; 'or later' not stated in that file. Bioconda value measured earlier is GPL-3.0-or-later.
+- names:
+  - Matrix
+  entity: Matrix (R package)
+  entry_kind: software
+  category: package
+  license: GPL-2.0-or-later
+  license_tier: open
+  repo_url: null
+  homepage: https://Matrix.R-forge.R-project.org
+  evidence_url: https://cran.r-project.org/web/packages/Matrix/index.html
+  verified: '2026-11-11'
+  note: 'CRAN page: ''GPL (>= 2) | file LICENCE''. The same name appears as ''Matrix (Imports)'' in the genomics
+    records, i.e. the R package.'
+- names:
+  - MACS2
+  entity: MACS (MACS2 / MACS3)
+  entry_kind: software
+  category: package
+  license: BSD-3-Clause
+  license_tier: open
+  repo_url: https://github.com/macs3-project/MACS
+  homepage: https://github.com/macs3-project/MACS
+  evidence_url: https://raw.githubusercontent.com/taoliu/MACS/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: The repository (taoliu/MACS, now macs3-project/MACS) is MACS3 and its default-branch LICENSE is BSD-3-Clause.
+    The LICENSE of the MACS2 releases themselves was not read (the PyPI page for MACS2 could not be read), so the
+    value is that of the current project. Less sure than other entries.
+- names:
+  - fastp
+  - Fastp
+  entity: fastp
+  entry_kind: software
+  category: package
+  license: MIT
+  license_tier: open
+  repo_url: https://github.com/OpenGene/fastp
+  homepage: https://github.com/OpenGene/fastp
+  evidence_url: https://raw.githubusercontent.com/OpenGene/fastp/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: null
+- names:
+  - vegan
+  entity: vegan
+  entry_kind: software
+  category: package
+  license: GPL-2.0-only
+  license_tier: open
+  repo_url: null
+  homepage: https://vegandevs.github.io/vegan/
+  evidence_url: https://cran.r-project.org/web/packages/vegan/index.html
+  verified: '2026-11-11'
+  note: 'CRAN page: ''GPL-2''.'
+- names:
+  - Guppy
+  - guppy
+  entity: Guppy (Oxford Nanopore basecaller)
+  entry_kind: vendor_product
+  category: application
+  license: null
+  license_tier: unknown
+  repo_url: null
+  homepage: https://nanoporetech.com/software/other/guppy
+  evidence_url: null
+  verified: '2026-11-11'
+  note: Proprietary ONT basecaller distributed to customers. Tier follows LICENSE_TIERS.md for vendor products;
+    the ONT software licences page that was fetched does not mention Guppy and the licence text sits behind the
+    community login, so no licence text was read. Less sure than other entries. No licence text could be read; the
+    entry kind marks it as a vendor product, which the enrichment step records as restricted.
+- names:
+  - pROC
+  entity: pROC
+  entry_kind: software
+  category: package
+  license: GPL-3.0-or-later
+  license_tier: open
+  repo_url: null
+  homepage: https://xrobin.github.io/pROC/
+  evidence_url: https://cran.r-project.org/web/packages/pROC/index.html
+  verified: '2026-11-11'
+  note: 'CRAN page: ''GPL (>= 3)''.'
+- names:
+  - CFM-ID
+  entity: CFM-ID
+  entry_kind: software
+  category: application
+  license: null
+  license_tier: unknown
+  repo_url: null
+  homepage: https://cfmid.wishartlab.com
+  evidence_url: null
+  verified: '2026-11-11'
+  note: 'No licence statement obtained. The SourceForge project page (the project''s own distribution point) shows
+    none in the retrieved text; the GitLab repository answered HTTP 403 (host not retried) and the CFM-ID 4 web
+    server did not respond. Earlier bioconda value measured: LGPL-2.1-only, not confirmed against the tool''s own
+    statement, therefore not recorded.'
+- names:
+  - rmarkdown
+  - Rmarkdown
+  - R Markdown
+  entity: rmarkdown
+  entry_kind: software
+  category: package
+  license: MIT
+  license_tier: open
+  repo_url: https://github.com/rstudio/rmarkdown
+  homepage: https://rmarkdown.rstudio.com
+  evidence_url: https://raw.githubusercontent.com/rstudio/rmarkdown/HEAD/DESCRIPTION
+  verified: '2026-11-11'
+  note: 'DESCRIPTION: ''MIT + file LICENSE''.'
+- names:
+  - Singularity
+  entity: Singularity (SingularityCE / Apptainer)
+  entry_kind: software
+  category: application
+  license: BSD-3-Clause AND BSD-3-Clause-LBNL
+  license_tier: open
+  repo_url: https://github.com/sylabs/singularity
+  homepage: https://sylabs.io/singularity/
+  evidence_url: https://raw.githubusercontent.com/sylabs/singularity/HEAD/LICENSE.md
+  verified: '2026-11-11'
+  note: 'LICENSE.md of SingularityCE: BSD 3-Clause plus the LBNL licence; the Apptainer LICENSE.md (the same project
+    continued under another name) has the same two licences (evidence/Singularity__2.txt). Which of the two projects
+    a record means is not determined; the licences coincide.'
+- names:
+  - Biobase
+  entity: Biobase
+  entry_kind: software
+  category: package
+  license: Artistic-2.0
+  license_tier: open
+  repo_url: null
+  homepage: https://bioconductor.org/packages/Biobase
+  evidence_url: https://bioconductor.org/packages/release/bioc/html/Biobase.html
+  verified: '2026-11-11'
+  note: 'Bioconductor page: ''Artistic-2.0''.'
+- names:
+  - knitr
+  entity: knitr
+  entry_kind: software
+  category: package
+  license: GPL-2.0-only OR GPL-3.0-only
+  license_tier: open
+  repo_url: https://github.com/yihui/knitr
+  homepage: https://yihui.org/knitr/
+  evidence_url: https://cran.r-project.org/web/packages/knitr/index.html
+  verified: '2026-11-11'
+  note: 'DESCRIPTION says ''License: GPL'' without a version; the CRAN page expands it to ''GPL-2 | GPL-3''. The
+    id recorded is the CRAN expansion.'
+- names:
+  - Tombo
+  - tombo
+  entity: Tombo (ont-tombo)
+  entry_kind: software
+  category: package
+  license: MPL-2.0
+  license_tier: open
+  repo_url: https://github.com/nanoporetech/tombo
+  homepage: https://nanoporetech.github.io/tombo/
+  evidence_url: https://raw.githubusercontent.com/nanoporetech/tombo/HEAD/LICENSE.md
+  verified: '2026-11-11'
+  note: 'LICENSE.md: Mozilla Public License 2.0, with a header note that some of the code may derive from third-party
+    work. Unlike Dorado, this repository is not under the ONT research-purposes licence.'
+- names:
+  - BBMap
+  - bbmap
+  entity: BBMap (BBTools)
+  entry_kind: software
+  category: application
+  license: BSD-3-Clause-LBNL
+  license_tier: open
+  repo_url: null
+  homepage: https://bbmap.org
+  evidence_url: https://raw.githubusercontent.com/BioInfoTools/BBMap/HEAD/license.txt
+  verified: '2026-11-11'
+  note: 'license.txt: BBTools copyright of the Regents of the University of California through Lawrence Berkeley
+    National Laboratory, a modified BSD text with a no-obligation-for-Enhancements paragraph, which is the text
+    of SPDX BSD-3-Clause-LBNL. The licence text was read in a copy of the distribution''s license.txt; the project
+    publishes its releases outside GitHub, so no repository is recorded.'
+- names:
+  - MetFrag
+  entity: MetFrag
+  entry_kind: software
+  category: application
+  license: LGPL-2.1-or-later
+  license_tier: open
+  repo_url: https://github.com/ipb-halle/MetFragRelaunched
+  homepage: https://ipb-halle.github.io/MetFrag/
+  evidence_url: https://ipb-halle.github.io/MetFrag/
+  verified: '2026-11-11'
+  note: 'Project page: ''MetFrag is published under a GNU Lesser General Public License version 2.1 or later''.
+    The repository page did not expose a licence in the retrieved text. Disagreement: the bioconda registry value
+    measured earlier is LGPL-3.0; the project page says 2.1 or later. The tool''s own statement is kept.'
+- names:
+  - SummarizedExperiment
+  entity: SummarizedExperiment
+  entry_kind: software
+  category: package
+  license: Artistic-2.0
+  license_tier: open
+  repo_url: null
+  homepage: https://bioconductor.org/packages/SummarizedExperiment
+  evidence_url: https://bioconductor.org/packages/release/bioc/html/SummarizedExperiment.html
+  verified: '2026-11-11'
+  note: 'Bioconductor page: ''Artistic-2.0''.'
+- names:
+  - Cell Ranger
+  - CellRanger
+  entity: Cell Ranger (10x Genomics)
+  entry_kind: vendor_product
+  category: application
+  license: null
+  license_tier: restricted
+  repo_url: https://github.com/10XGenomics/cellranger
+  homepage: https://www.10xgenomics.com/support/software/cell-ranger
+  evidence_url: https://raw.githubusercontent.com/10XGenomics/cellranger/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: 'The repository LICENSE is an MIT-style text with extra conditions: rights may be exercised only in connection
+    with a 10x Genomics product (or data generated using one), no redistribution or sublicensing, and derivative
+    works carry the same restrictions. Not an SPDX licence. Applies to the current text; records cite Cell Ranger
+    versions 2.0.0 to 6.0.1, whose own terms were not read.'
+- names:
+  - LIGER
+  entity: LIGER (rliger)
+  entry_kind: software
+  category: package
+  license: GPL-3.0-only
+  license_tier: open
+  repo_url: https://github.com/welch-lab/liger
+  homepage: https://github.com/welch-lab/liger
+  evidence_url: https://raw.githubusercontent.com/welch-lab/liger/HEAD/DESCRIPTION
+  verified: '2026-11-11'
+  note: 'DESCRIPTION of the current rliger package: ''License: GPL-3''. Older LIGER releases not read.'
+- names:
+  - Bowtie
+  - bowtie
+  entity: Bowtie (Bowtie 1)
+  entry_kind: software
+  category: package
+  license: Artistic-2.0
+  license_tier: open
+  repo_url: https://github.com/BenLangmead/bowtie
+  homepage: https://bowtie-bio.sourceforge.net/
+  evidence_url: https://raw.githubusercontent.com/BenLangmead/bowtie/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: LICENSE of the bowtie repository is the Artistic License 2.0 text; no other licence statement was read (the
+    README fetch returned 404). Bioconda value of Bowtie 1 not compared.
+- names:
+  - CAMERA
+  entity: CAMERA
+  entry_kind: software
+  category: package
+  license: GPL-2.0-or-later
+  license_tier: open
+  repo_url: null
+  homepage: https://bioconductor.org/packages/CAMERA
+  evidence_url: https://bioconductor.org/packages/release/bioc/html/CAMERA.html
+  verified: '2026-11-11'
+  note: 'Bioconductor page: ''GPL (>= 2)''.'
+- names:
+  - TSCAN
+  entity: TSCAN
+  entry_kind: software
+  category: package
+  license: GPL-2.0-or-later
+  license_tier: open
+  repo_url: null
+  homepage: https://bioconductor.org/packages/TSCAN
+  evidence_url: https://bioconductor.org/packages/release/bioc/html/TSCAN.html
+  verified: '2026-11-11'
+  note: 'Bioconductor page: ''GPL(>=2)''.'
+- names:
+  - CUDA
+  entity: CUDA Toolkit (NVIDIA)
+  entry_kind: vendor_product
+  category: application
+  license: null
+  license_tier: restricted
+  repo_url: null
+  homepage: https://developer.nvidia.com/cuda-toolkit
+  evidence_url: https://docs.nvidia.com/cuda/eula/index.html
+  verified: '2026-11-11'
+  note: 'Proprietary NVIDIA licence: ''License Agreement for NVIDIA Software Development Kits'' with the CUDA Toolkit
+    supplement. Commercial use is possible under the EULA, which also restricts redistribution and reverse engineering;
+    tier restricted means ''governed by an agreement''.'
+- names:
+  - scran
+  entity: scran
+  entry_kind: software
+  category: package
+  license: GPL-3.0-only
+  license_tier: open
+  repo_url: null
+  homepage: https://bioconductor.org/packages/scran
+  evidence_url: https://bioconductor.org/packages/release/bioc/html/scran.html
+  verified: '2026-11-11'
+  note: 'Bioconductor page: ''GPL-3''.'
+- names:
+  - Monocle 3
+  - Monocle3
+  entity: Monocle 3
+  entry_kind: software
+  category: package
+  license: MIT
+  license_tier: open
+  repo_url: https://github.com/cole-trapnell-lab/monocle3
+  homepage: https://cole-trapnell-lab.github.io/monocle3/
+  evidence_url: https://raw.githubusercontent.com/cole-trapnell-lab/monocle3/HEAD/DESCRIPTION
+  verified: '2026-11-11'
+  note: 'DESCRIPTION: ''MIT + file LICENSE''.'
+- names:
+  - IDSL.IPA
+  entity: IDSL.IPA
+  entry_kind: software
+  category: package
+  license: MIT
+  license_tier: open
+  repo_url: https://github.com/idslme/IDSL.IPA
+  homepage: https://github.com/idslme/IDSL.IPA
+  evidence_url: https://cran.r-project.org/web/packages/IDSL.IPA/index.html
+  verified: '2026-11-11'
+  note: 'CRAN page: ''MIT + file LICENSE''.'
+- names:
+  - networkx
+  - NetworkX
+  entity: NetworkX
+  entry_kind: software
+  category: package
+  license: BSD-3-Clause
+  license_tier: open
+  repo_url: https://github.com/networkx/networkx
+  homepage: https://networkx.org
+  evidence_url: https://raw.githubusercontent.com/networkx/networkx/HEAD/LICENSE.txt
+  verified: '2026-11-11'
+  note: null
+- names:
+  - Git
+  - git
+  entity: Git
+  entry_kind: software
+  category: application
+  license: GPL-2.0-only
+  license_tier: open
+  repo_url: https://github.com/git/git
+  homepage: https://git-scm.com
+  evidence_url: https://raw.githubusercontent.com/git/git/HEAD/COPYING
+  verified: '2026-11-11'
+  note: 'COPYING: ''the only valid version of the GPL as far as this project is concerned is this particular version
+    (v2)''.'
+- names:
+  - CHETAH
+  entity: CHETAH
+  entry_kind: software
+  category: package
+  license: AGPL-3.0
+  license_tier: open
+  repo_url: https://github.com/jdekanter/CHETAH
+  homepage: https://bioconductor.org/packages/CHETAH
+  evidence_url: https://raw.githubusercontent.com/jdekanter/CHETAH/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: 'LICENSE of the jdekanter/CHETAH repository is the AGPL-3 text; the Bioconductor page states ''License:
+    file LICENSE''.'
+- names:
+  - AUCell
+  entity: AUCell
+  entry_kind: software
+  category: package
+  license: GPL-3.0-only
+  license_tier: open
+  repo_url: null
+  homepage: https://bioconductor.org/packages/AUCell
+  evidence_url: https://bioconductor.org/packages/release/bioc/html/AUCell.html
+  verified: '2026-11-11'
+  note: 'Bioconductor page: ''GPL-3''.'
+- names:
+  - ZinBWaVE
+  - ZINB-WaVE
+  - zinbwave
+  entity: ZINB-WaVE (zinbwave)
+  entry_kind: software
+  category: package
+  license: Artistic-2.0
+  license_tier: open
+  repo_url: null
+  homepage: https://bioconductor.org/packages/zinbwave
+  evidence_url: https://bioconductor.org/packages/release/bioc/html/zinbwave.html
+  verified: '2026-11-11'
+  note: 'Bioconductor page: ''Artistic-2.0''.'
+- names:
+  - MAFFT
+  entity: MAFFT
+  entry_kind: software
+  category: application
+  license: BSD
+  license_tier: open
+  repo_url: null
+  homepage: https://mafft.cbrc.jp/alignment/software/
+  evidence_url: https://mafft.cbrc.jp/alignment/software/
+  verified: '2026-11-11'
+  note: 'Download page: ''mafft-*-without-extensions-src.tgz: BSD; mafft-*-win*.zip: GPL''; packages that include
+    code of the Vienna RNA package, MXSCARNA and ProbConsRNA carry those components'' own licence notices. The BSD
+    variant is not named, so no SPDX id; BSD is permissive for commercial use. The with-extensions and Windows builds
+    are under different terms. The project page says BSD without naming the variant.'
+- names:
+  - ThermoRawFileParser
+  entity: ThermoRawFileParser
+  entry_kind: software
+  category: application
+  license: Apache-2.0
+  license_tier: open
+  repo_url: https://github.com/compomics/ThermoRawFileParser
+  homepage: https://github.com/compomics/ThermoRawFileParser
+  evidence_url: https://raw.githubusercontent.com/compomics/ThermoRawFileParser/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: Repository LICENSE is Apache-2.0. The tool uses Thermo's RawFileReader libraries, whose licence is separate
+    and was not read.
+- names:
+  - irlba
+  entity: irlba
+  entry_kind: software
+  category: package
+  license: GPL-3.0-only
+  license_tier: open
+  repo_url: null
+  homepage: https://bwlewis.github.io/irlba/
+  evidence_url: https://cran.r-project.org/web/packages/irlba/index.html
+  verified: '2026-11-11'
+  note: 'CRAN page: ''GPL-3''.'
+- names:
+  - Biopython
+  - biopython
+  entity: Biopython
+  entry_kind: software
+  category: package
+  license: LicenseRef-Biopython-License-Agreement
+  license_tier: open
+  repo_url: https://github.com/biopython/biopython
+  homepage: https://biopython.org
+  evidence_url: https://raw.githubusercontent.com/biopython/biopython/HEAD/LICENSE.rst
+  verified: '2026-11-11'
+  note: 'LICENSE.rst: ''Biopython License Agreement'' (permission to use, copy, modify and distribute ''for any
+    purpose and without fee''), with some files dual-licensed under that agreement or BSD-3-Clause. The agreement
+    text is not an SPDX id. The licence field is a reference to the project''s own text, which is not on the SPDX
+    list; it permits use, modification and distribution for any purpose without fee.'
+- names:
+  - HMMER
+  - hmmer
+  entity: HMMER
+  entry_kind: software
+  category: package
+  license: BSD-3-Clause
+  license_tier: open
+  repo_url: https://github.com/EddyRivasLab/hmmer
+  homepage: http://hmmer.org
+  evidence_url: https://raw.githubusercontent.com/EddyRivasLab/hmmer/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: null
+- names:
+  - ART
+  entity: ART (read simulator)
+  entry_kind: software
+  category: application
+  license: null
+  license_tier: unknown
+  repo_url: null
+  homepage: https://www.niehs.nih.gov/research/resources/software/biostatistics/art
+  evidence_url: null
+  verified: '2026-11-11'
+  note: Next-generation sequencing read simulator (NIEHS). The two NIEHS pages fetched did not contain a licence
+    statement, so none is recorded.
+- names:
+  - Apache Spark
+  entity: Apache Spark
+  entry_kind: software
+  category: application
+  license: Apache-2.0
+  license_tier: open
+  repo_url: https://github.com/apache/spark
+  homepage: https://spark.apache.org
+  evidence_url: https://raw.githubusercontent.com/apache/spark/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: null
+- names:
+  - Sniffles2
+  entity: Sniffles2
+  entry_kind: software
+  category: package
+  license: MIT
+  license_tier: open
+  repo_url: https://github.com/fritzsedlazeck/Sniffles
+  homepage: https://github.com/fritzsedlazeck/Sniffles
+  evidence_url: https://raw.githubusercontent.com/fritzsedlazeck/Sniffles/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: null
+- names:
+  - cutadapt
+  - Cutadapt
+  entity: cutadapt
+  entry_kind: software
+  category: package
+  license: MIT
+  license_tier: open
+  repo_url: https://github.com/marcelm/cutadapt
+  homepage: https://cutadapt.readthedocs.io
+  evidence_url: https://raw.githubusercontent.com/marcelm/cutadapt/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: null
+- names:
+  - MSnbase
+  entity: MSnbase
+  entry_kind: software
+  category: package
+  license: Artistic-2.0
+  license_tier: open
+  repo_url: https://github.com/lgatto/MSnbase
+  homepage: https://bioconductor.org/packages/MSnbase
+  evidence_url: https://raw.githubusercontent.com/lgatto/MSnbase/HEAD/DESCRIPTION
+  verified: '2026-11-11'
+  note: 'DESCRIPTION and Bioconductor page: ''Artistic-2.0''.'
+- names:
+  - glmnet
+  entity: glmnet
+  entry_kind: software
+  category: package
+  license: GPL-2.0-only
+  license_tier: open
+  repo_url: null
+  homepage: https://glmnet.stanford.edu
+  evidence_url: https://cran.r-project.org/web/packages/glmnet/index.html
+  verified: '2026-11-11'
+  note: 'CRAN page: ''GPL-2''.'
+- names:
+  - MS2DeepScore
+  entity: MS2DeepScore
+  entry_kind: software
+  category: package
+  license: Apache-2.0
+  license_tier: open
+  repo_url: https://github.com/matchms/ms2deepscore
+  homepage: https://github.com/matchms/ms2deepscore
+  evidence_url: https://raw.githubusercontent.com/matchms/ms2deepscore/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: null
+- names:
+  - deblur
+  - Deblur
+  entity: Deblur
+  entry_kind: software
+  category: package
+  license: BSD-3-Clause
+  license_tier: open
+  repo_url: https://github.com/biocore/deblur
+  homepage: https://github.com/biocore/deblur
+  evidence_url: https://raw.githubusercontent.com/biocore/deblur/HEAD/LICENSE
+  verified: '2026-11-11'
+  note: null
+- names:
+  - UMAP
+  - Umap
+  - umap
+  entity: null
+  ambiguous: true
+  contexts:
+  - when: dimension reduction with the Python package umap-learn; the metabolomics record carries version 0.5.1,
+      a umap-learn version
+    entity: UMAP (umap-learn)
+    entry_kind: software
+    category: package
+    license: BSD-3-Clause
+    license_tier: open
+    repo_url: https://github.com/lmcinnes/umap
+    evidence_url: https://raw.githubusercontent.com/lmcinnes/umap/HEAD/LICENSE.txt
+    match:
+      collections:
+      - metabolomics
+  - when: dimension reduction with the R package umap; the transcriptomics record carries library(umap) and version
+      0.2.10
+    entity: umap (R package by T. Konopka)
+    entry_kind: software
+    category: package
+    license: MIT
+    license_tier: open
+    repo_url: null
+    evidence_url: https://cran.r-project.org/web/packages/umap/index.html
+    match:
+      collections:
+      - transcriptomics
+  - when: Genome mappability tracks (Umap and Bismap; genomics evidence 'UCSC mappability tracks ... Umap Multitrack')
+    entity: Umap and Bismap
+    leave_unknown: true
+    note: The Umap/Bismap page was fetched (evidence/Umap-mappability__1.txt) and describes the software as free
+      but contains no licence statement; not resolved. One citation only.
+    match:
+      collections:
+      - genomics
+  verified: '2026-11-11'
+  note: In the other collections the records give no evidence of which implementation is meant (umap-learn, the
+    R package umap, uwot), so they stay unknown.
+- names:
+  - METASPACE
+  entity: METASPACE (annotation platform for imaging mass spectrometry)
+  entry_kind: software
+  category: web_service
+  license: null
+  license_tier: unknown
+  repo_url: https://github.com/metaspace2020/metaspace
+  homepage: https://metaspace2020.org
+  evidence_url: null
+  verified: '2026-11-11'
+  note: The records cite the hosted platform, whose pages state no terms of use. The engine's source code is published
+    under Apache-2.0 in the repository above.
+- names:
+  - liftOver
+  - LiftOver
+  - UCSC liftOver
+  entity: UCSC liftOver
+  entry_kind: software
+  category: application
+  license: null
+  license_tier: noncommercial
+  repo_url: https://github.com/ucscGenomeBrowser/kent
+  homepage: https://genome.ucsc.edu
+  evidence_url: https://genome.ucsc.edu/license/
+  verified: '2026-11-11'
+  note: The UCSC licence page says the Genome Browser utilities may be used and redistributed freely, also commercially,
+    except BLAT and liftOver, whose source directories carry non-commercial licences. A package of the same name
+    in a registry may be an independent reimplementation with another licence; the records cite the UCSC tool.
+- names:
+  - BLAT
+  entity: BLAT (UCSC, Jim Kent)
+  entry_kind: software
+  category: application
+  license: null
+  license_tier: noncommercial
+  repo_url: https://github.com/ucscGenomeBrowser/kent
+  homepage: https://genome.ucsc.edu
+  evidence_url: https://genome.ucsc.edu/license/
+  verified: '2026-11-11'
+  note: The UCSC licence page says the Genome Browser utilities may be used and redistributed freely, also commercially,
+    except BLAT and liftOver, whose source directories carry non-commercial licences. A package of the same name
+    in a registry may be an independent reimplementation with another licence; the records cite the UCSC tool.

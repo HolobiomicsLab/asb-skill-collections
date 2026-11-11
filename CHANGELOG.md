@@ -14,7 +14,64 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
 
 ## [Unreleased]
 
+### Added
+- Tool licence resolution fit to ship (INT-ASB-050). `scripts/resolve_tool_licenses.py`
+  now judges every registry match per record, in its collection, from the record's own
+  evidence (`scripts/tool_identity.py`): a short or English-word name, a match outside the
+  life-science collections, and any match in CRAN, PyPI or bio.tools need corroboration
+  (the package's repository, a shared DOI, or `library(x)` / `import x` style use), and a
+  silent name match is no longer identity. Licence strings are read by
+  `scripts/tool_licence_text.py` with the R `DESCRIPTION` grammar and an explicit table,
+  never inventing a version and never reading a non-commercial licence as open.
+  `governance/tool_licences_reviewed.yaml` is a reviewed map that takes precedence over
+  every registry; `governance/tool_name_common_words.txt` lists the English words that are
+  also package names. Every resolved record carries `license_evidence`, the address its
+  licence was read from. `scripts/check_tool_licence_consistency.py` checks that one entity
+  carries one licence across collections. Rule and measured effect:
+  `docs/design/tool-licence-resolution-2026-11-11.md`.
+- Every registry resolution is checked against the licence file of the repository the
+  package declares (`scripts/repository_licence.py`, raw content from GitHub or GitLab,
+  never an API), with what the file may change set by who wrote the registry entry.
+  A Bioconda or bio.tools licence is replaced by the file (detection
+  `repository-licence-file`) and is unknown without one. A PyPI licence is replaced by a
+  file of the same tier and withheld against a file of another tier. A Bioconductor or
+  CRAN licence is kept and withheld only when the repository DESCRIPTION gives another
+  tier. A file that offers a choice of licences is read as an SPDX `OR`. A permissive
+  licence file that adds terms of its own is not read as that licence, and a README
+  sentence that restricts use of the tool (academic use only, a licence needed for
+  industrial use) withholds a record that would otherwise be open. A replacement reads
+  only a repository named like the tool, and two GNU statements that differ only in
+  version give the unversioned family, as does a third party's version that the
+  repository does not state. A package whose registry description restricts use
+  (KEGGREST, academic use only) is not matched. The tier map reads a bare `GPL`, `LGPL`
+  or `AGPL` as open. When the record shows that the tool is the subject of its citing paper, a
+  package must declare that paper's repository: an import name is not a distribution
+  name (`import vega` is not PyPI's `vega`).
+- Identity and README checks from the fourth audit and the census. Code corroborates a
+  package only when it names the package as the registry spells it, and a package that
+  adds a separator the record's name lacks (`py-graphviz` against `pygraphviz`) needs
+  the repository or the publication. An R package without R code is contradicted when
+  the record uses the name as a Python module (MuData). A Bioconductor package that
+  declares no repository passes the subject-of-paper rule only when the paper's
+  repository holds that R package (MetNet). A README sentence that the tool's code or
+  binary is closed-source or under further restrictions withholds (MZA), more wordings
+  of academic-only use are read (CalibraCurve), and an R licence field that names
+  `file LICENSE` withholds when the file limits the field of use (dsb). The reviewed map
+  adds CANOPUS and MSNovelist as SIRIUS web services, noncommercial.
+- `enrich_tools_index.py --licence-only` writes the licence fields, `entry_kind`,
+  `repo_url`, `source_paper_repos` and `license_evidence` and leaves the skill-tool links
+  byte-identical.
+
 ### Changed
+- `check_tools_index.py` reports resolved and unknown tool counts for each collection,
+  fails when a record claims a licence and `tool_licenses.json` is absent, when a registry
+  or reviewed tier names no `license_evidence`, and when the tier or address drifts from
+  the resolution.
+- `repo_url` of an unresolved tool is empty: the collector no longer copies the first
+  citing paper's repository into it (it stays in `source_repos`).
+- Registry matches that the previous resolver accepted on name alone, such as Bioconda's
+  genome mappability `umap` for the dimension-reduction method, Bioconductor's `BERT` for
+  the language model and Bioconda's `gambit` for the particle-physics code, are withheld.
 - Selector: the package default returns to `asb-keyword` 1.0.0, so
   `asb_skill_collections/asb_skill_index.py`, the script template and the
   released collections carry the same selector. Selector 1.1.0 lost against

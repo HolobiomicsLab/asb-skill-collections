@@ -39,3 +39,9 @@ def test_github_legacy_spdx_ids_map_open():
     assert lt.tier_for_license("AFL-3.0") == "open"
     assert lt.tier_for_license("Artistic-2.0") == "open"
     assert lt.tier_for_license("BSD-3-Clause-Clear") == "open"
+
+
+def test_bare_gnu_family_names_map_open():
+    # The resolver records the family alone when two statements differ only in version.
+    for name in ("GPL", "LGPL", "AGPL", "BSD"):
+        assert lt.tier_for_license(name) == "open"

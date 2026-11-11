@@ -1,0 +1,24 @@
+{
+ "info": {
+  "name": "simile",
+  "summary": "Package for interfacing with Simile AI agents for simulation",
+  "license": "MIT",
+  "license_expression": null,
+  "home_page": null,
+  "project_urls": {
+   "Homepage": "https://github.com/simile-team/simile-sdk"
+  },
+  "classifiers": [
+   "Development Status :: 3 - Alpha",
+   "Intended Audience :: Developers",
+   "Operating System :: OS Independent",
+   "Programming Language :: Python :: 3",
+   "Programming Language :: Python :: 3.10",
+   "Programming Language :: Python :: 3.11",
+   "Programming Language :: Python :: 3.12",
+   "Programming Language :: Python :: 3.8",
+   "Programming Language :: Python :: 3.9",
+   "Topic :: Software Development :: Libraries :: Python Modules"
+  ]
+ }
+}

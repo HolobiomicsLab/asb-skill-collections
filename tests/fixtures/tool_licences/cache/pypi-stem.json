@@ -1,0 +1,19 @@
+{
+ "info": {
+  "name": "stem",
+  "summary": "Stem is a Python controller library that allows applications to interact with Tor (https://www.torproject.org/).",
+  "license": "LGPLv3",
+  "license_expression": null,
+  "home_page": "https://stem.torproject.org/",
+  "project_urls": {
+   "Homepage": "https://stem.torproject.org/"
+  },
+  "classifiers": [
+   "Development Status :: 5 - Production/Stable",
+   "Intended Audience :: Developers",
+   "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+   "Topic :: Security",
+   "Topic :: Software Development :: Libraries :: Python Modules"
+  ]
+ }
+}

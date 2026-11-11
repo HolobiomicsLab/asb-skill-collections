@@ -1,0 +1,12 @@
+{
+ "info": {
+  "name": "scanpy",
+  "summary": "Single-Cell Analysis in Python.",
+  "license_expression": "BSD-3-Clause",
+  "license": null,
+  "classifiers": [],
+  "project_urls": {
+   "Source": "https://github.com/scverse/scanpy"
+  }
+ }
+}

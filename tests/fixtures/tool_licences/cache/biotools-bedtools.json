@@ -1,0 +1,18 @@
+{
+ "count": 1,
+ "list": [
+  {
+   "name": "BEDTools",
+   "biotoolsID": "bedtools",
+   "homepage": "https://github.com/arq5x/bedtools2",
+   "license": "GPL-2.0",
+   "description": "BEDTools is an extensive suite of utilities for comparing genomic features in BED format.",
+   "link": [],
+   "publication": [
+    {
+     "doi": "10.1093/bioinformatics/btq033"
+    }
+   ]
+  }
+ ]
+}
