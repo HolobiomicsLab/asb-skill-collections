@@ -34,6 +34,7 @@ _VALID = set(load_map()["tiers"])
 
 # Held a citing paper's repository under a name claiming it was the tool's. See #42.
 _RETIRED_TOOL_KEYS = ("canonical_url",)
+USAGE = "usage: check_tools_index.py <collection_dir> [<collection_dir> ...]"
 
 # Detections written by scripts/resolve_tool_licenses.py from a registry or the
 # reviewed map. A tier resting on one of them must name where it was read.
@@ -223,8 +224,12 @@ def check_collection(collection_dir) -> list[str]:
 
 def main(argv=None) -> int:
     argv = argv if argv is not None else sys.argv[1:]
+    if argv in (["-h"], ["--help"]):
+        print(USAGE)
+        print("Check tool and skill indexes for licence and reference consistency.")
+        return 0
     if not argv:
-        print("usage: check_tools_index <collection_dir> [...]", file=sys.stderr)
+        print(USAGE, file=sys.stderr)
         return 2
     failed = False
     for col in argv:

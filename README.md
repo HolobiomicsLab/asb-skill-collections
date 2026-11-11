@@ -75,11 +75,11 @@ collection and the v2-derived technique packs from that domain repository.
 | ASB-Skills | evidence-grounded procedural skills | released |
 | ASB-Workflows | composite end-to-end pipeline super-skills | released |
 | ASB-Tools | deduplicated software-tool records with EDAM terms and DOIs | released |
-| ASB-Benchmark | per-paper tasks and claim-retrieval test sets | later |
+| ASB-Evaluation definitions | definitions for per-paper tasks and claim-retrieval tests | not published; definitions only, with no validated benchmark, reference results or agent-performance leaderboard |
 | ASB-Capsules | raw per-paper pipeline outputs, for full traceability | later |
 
 <p align="center">
-  <img src="assets/asb-overview.png" alt="ASB pipeline: research papers, ASB, a domain benchmark of skills, tools and data, agents evaluated on it, and community validation, with a feedback loop defined by the domain community" width="640">
+  <img src="assets/asb-overview.png" alt="ASB pipeline from research papers to skills, tools and planned evaluation definitions, with a feedback loop defined by the domain community" width="640">
 </p>
 
 ## Install
@@ -112,6 +112,16 @@ The access requirement is the same. Without access to the private domain
 repositories, neither route works: download the Zenodo record of the release
 (version DOIs in the [Releases](#releases) table) and read it as described in
 [AGENTS.md](AGENTS.md).
+
+**Install `asbb` from this public registry checkout** (it is not published on
+PyPI):
+
+```bash
+git clone https://github.com/HolobiomicsLab/asb-skill-collections.git
+cd asb-skill-collections
+uv venv -p 3.12 --allow-existing && source .venv/bin/activate
+uv pip install -e .
+```
 
 **Chosen leaves without a checkout** (`asbb fetch`, Python 3.12 or later):
 
@@ -176,14 +186,13 @@ or a fetch.
 
 ## Use: search, apply, ground
 
-**Search** a domain checkout offline, with no API key and the tooling installed:
+**Search** a domain checkout offline, with no API key and the tooling installed
+from the registry checkout as above. Pass the domain checkout explicitly:
 
 ```bash
-uv venv -p 3.12 --allow-existing && source .venv/bin/activate
-uv pip install -e .            # in a python3.12 -m venv environment: python -m pip install -e .
-asbb search "untargeted LC-MS/MS annotation" --collection metabolomics --target workflows
-asbb get untargeted-lcmsms-annotation --collection metabolomics/v2 --target workflows
-asbb search --list-collections
+asbb search "untargeted LC-MS/MS annotation" --repo <domain checkout> --collection metabolomics --target workflows
+asbb get untargeted-lcmsms-annotation --repo <domain checkout> --collection metabolomics/v2 --target workflows
+asbb search --repo <domain checkout> --list-collections
 ```
 
 Without installing, `python3 -m asb_skill_collections.asbb_cli` runs the same
@@ -275,11 +284,13 @@ embeddings, each build recorded in `build_manifest.json`.
 | Repository | Role | Access |
 |---|---|---|
 | asb-skill-collections (this one) | `asb_skill_collections` tooling, `scripts/`, tests, governance, registry, catalogue and docs-site | public |
-| AgenticScienceBuilder | the pipeline and schema that generate the collections | private, to follow |
-| asb-skills-metabolomics | `<domain checkout>/collections/metabolomics/<version>/`, `<domain checkout>/packs/metabolomics/<technique>/`, `<domain checkout>/staged-collections/metabolomics/` and receipts; v3 deposited on Zenodo | private |
-| asb-skills-&lt;domain&gt; | one repository per other domain, with `<domain checkout>/collections/<domain>/<version>/`, `<domain checkout>/packs/<domain>/<technique>/`, `<domain checkout>/staged-collections/<domain>/` and receipts; each release deposited on Zenodo | private |
-| indicium | standard for a typed scientific claim bound to the evidence that grounds it | private, to follow |
-| indicium-adapters, indicium-adapters-&lt;domain&gt; | per-domain adapters that enrich indicium claims with ontology terms | private, to follow |
+| `AgenticScienceBuilder` | the pipeline that generates the collections | private |
+| `asb-skills-metabolomics` | `<domain checkout>/collections/metabolomics/<version>/`, `<domain checkout>/packs/metabolomics/<technique>/`, `<domain checkout>/staged-collections/metabolomics/` and receipts; v3 deposited on Zenodo | private |
+| `asb-skills-<domain>` | one repository per other domain, with `<domain checkout>/collections/<domain>/<version>/`, `<domain checkout>/packs/<domain>/<technique>/`, `<domain checkout>/staged-collections/<domain>/` and receipts; each release deposited on Zenodo | private |
+| `indicium` | public standard for a typed scientific claim bound to its evidence; PyPI package `indicium-standard` 2.0.0 | public |
+| `indicium-adapters` | public core API for domain adapters; PyPI package 0.6.0 | public |
+| `indicium-adapters-<domain>` | per-domain adapters that enrich indicium claims with ontology terms | private |
+| `asb-schema` | public schemas for ASB task cards, capsules and collections; PyPI package 0.4.0 | public |
 | [Perspicacite-AI](https://github.com/HolobiomicsLab/Perspicacite-AI) | literature RAG engine used for grounding | public |
 | [Mimosa-AI](https://github.com/HolobiomicsLab/Mimosa-AI) | multi-agent framework for autonomous scientific research | public |
 
@@ -393,7 +404,7 @@ through issues here, and a maintainer carries them into the domain repository.
 
 - Step 2 of the per-domain split is complete: this master is the registry and tooling repository; released content is in the domain repositories.
 - The managed-install and Claude Code measurements predate the new marketplace sources; see [docs/STATUS.md](docs/STATUS.md) for their scope and dates.
-- Pending or experimental: the other seven packs, the web UI, runtime adapters other than `agents`, the MCP server. Not yet published: PyPI, the HuggingFace mirror, the benchmark and the capsules. The [documentation site](https://holobiomicslab.github.io/asb-skill-collections/) is live.
+- Pending or experimental: the other seven packs, the web UI, runtime adapters other than `agents`, the MCP server. Not yet published: PyPI, the dataset mirror or a capsule record. The evaluation material is definitions only: no validated benchmark, reference results or agent-performance leaderboard exists. The [documentation site](https://holobiomicslab.github.io/asb-skill-collections/) is live.
 - The `w3id.org/holobiomicslab/` and `w3id.org/asb` identifiers resolve. Dates, measurements and detail per surface: [docs/STATUS.md](docs/STATUS.md).
 
 ## Acknowledgements

@@ -118,6 +118,13 @@ def test_main_exits_zero_on_clean(tmp_path):
     assert c.main([str(d)]) == 0
 
 
+def test_help_exits_zero_and_names_the_inputs(capsys):
+    assert c.main(["--help"]) == 0
+    help_text = capsys.readouterr().out
+    assert "usage:" in help_text
+    assert "collection_dir" in help_text
+
+
 # ---------------------------------------------------------------------------
 # Per-tool YAML <-> tools_index license_tier cross-check
 # ---------------------------------------------------------------------------

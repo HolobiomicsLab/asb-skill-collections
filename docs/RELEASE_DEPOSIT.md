@@ -109,12 +109,14 @@ records as `version_doi`.
 
 ## Procedure
 
-Run from the repository root, on the commit that carries the release.
+Run the script from this tooling repository root. The domain checkout passed to
+`--repo-root` must be on the commit that carries the release.
 
 1. Build the archive and note the sha256.
 
    ```bash
-   python scripts/zenodo_deposit.py archive metabolomics v3
+   python scripts/zenodo_deposit.py archive metabolomics v3 \
+     --repo-root <domain checkout> --tooling-root <this checkout>
    ```
 
    Output: path (`dist/zenodo/metabolomics-v3.zip`), sha256, size, entry count.
@@ -122,7 +124,8 @@ Run from the repository root, on the commit that carries the release.
 2. Print the plan. No network.
 
    ```bash
-   python scripts/zenodo_deposit.py plan metabolomics v3
+   python scripts/zenodo_deposit.py plan metabolomics v3 \
+     --repo-root <domain checkout> --tooling-root <this checkout>
    ```
 
    Check the target host, the record id, the metadata and the file list. The
@@ -137,7 +140,9 @@ Run from the repository root, on the commit that carries the release.
 
    ```bash
    export ZENODO_SANDBOX_TOKEN=...
-   python scripts/zenodo_deposit.py draft metabolomics v3 --sandbox --record-id <sandbox record id>
+   python scripts/zenodo_deposit.py draft metabolomics v3 \
+     --repo-root <domain checkout> --tooling-root <this checkout> \
+     --sandbox --record-id <sandbox record id>
    ```
 
    Open the printed URL and check the title, creators, description, license,
@@ -147,7 +152,8 @@ Run from the repository root, on the commit that carries the release.
 
    ```bash
    export ZENODO_TOKEN=...
-   python scripts/zenodo_deposit.py draft metabolomics v3
+   python scripts/zenodo_deposit.py draft metabolomics v3 \
+     --repo-root <domain checkout> --tooling-root <this checkout>
    ```
 
 The output gives the draft URL and the sha256 of each uploaded file. The archive
@@ -157,16 +163,36 @@ sha256 must equal the sha256 from step 1.
    field, and click Publish. This mints the version DOI and cannot be undone.
    The concept DOI stays the same.
 
-6. Record the new version DOI in the `doi:` field of
-   `<domain checkout>/collections/<domain>/<vN>/CITATION.cff` and in the collection entry of
-   `catalogue.jsonld`, in a pull request. `CITATION.cff` is bound by the
-   collection's gate receipt, so regenerate the receipt in the same pull
-   request with `python scripts/release_gate.py <domain checkout>/collections/<domain>/<vN> --strict`,
-   in an environment where the AgenticScienceBuilder package is not importable
-   (see the receipt job of `validate.yml`); otherwise that job fails.
+6. In the domain checkout, use `record-doi` and `receipt` to record the version
+   DOI and regenerate its bound receipt. Merge that pull request before changing
+   the registry:
 
-7. Once that pull request is merged and the registry row is merged, the owner
-   pushes the release tag on the merged DOI commit (see "Order of a release").
+   ```bash
+   python scripts/release_domain.py record-doi --domain <domain> --version <vN> \
+     --repo-root <domain checkout> --tooling-root <this checkout> \
+     --state <path to release_state.json> --doi <version DOI> \
+     --released <YYYY-MM-DD>
+   python scripts/release_domain.py receipt --domain <domain> --version <vN> \
+     --repo-root <domain checkout> --tooling-root <this checkout> \
+     --state <path to release_state.json>
+   ```
+
+   `record-doi` owns the collection and root citation and release metadata in
+   the domain repository. It does not edit this repository's catalogue.
+
+7. In this tooling checkout, run `manifest` with the merged DOI commit. It owns
+   the `collections.yaml` and `catalogue.jsonld` update, which is reviewed and
+   merged here:
+
+   ```bash
+   python scripts/release_domain.py manifest --domain <domain> --version <vN> \
+     --repo-root <domain checkout> --tooling-root <this checkout> \
+     --state <path to release_state.json> --commit <merged DOI commit> \
+     --tag-name <domain>-v<major>.<minor>.<patch> --released <YYYY-MM-DD>
+   ```
+
+8. Once the registry pull request is merged, the owner pushes the release tag
+   on the merged DOI commit (see "Order of a release").
 
 ### First release of a domain
 

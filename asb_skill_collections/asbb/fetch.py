@@ -1,9 +1,10 @@
 """Download chosen skills from their published repository, without a checkout.
 
 The master manifest maps a released collection to its repository and pinned
-commit. Unlisted releases and explicit repository overrides use the requested
-ref instead. Files land under ``<dest>/<slug>/`` beside a ``PROVENANCE.json``
-recording the resolved source and each file's URL and SHA-256.
+commit. Unlisted releases are refused; an explicit repository override uses
+the requested ref instead. Files land under ``<dest>/<slug>/`` beside a
+``PROVENANCE.json`` recording the resolved source and each file's URL and
+SHA-256.
 
 Every network read goes through :func:`_request`. Tests pass a transport in its
 place, so nothing else in this module touches the network.
@@ -15,7 +16,6 @@ import hashlib
 import json
 import os
 import re
-import sys
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -150,16 +150,6 @@ def leaf_path(collection: str, slug: str) -> str:
     return f"collections/{collection}/{LEAF_DIRNAME}/{slug}/SKILL.md"
 
 
-def _master_source(request: FetchRequest, transport, note=None, commit=None):
-    commit = commit or resolve_commit(request.ref, transport)
-    return CollectionSource(REPOSITORY, commit, f"collections/{request.collection}", note=note)
-
-
-def _fallback_source(request: FetchRequest, transport, note: str, commit=None):
-    print(f"note: {note}", file=sys.stderr)
-    return _master_source(request, transport, note, commit)
-
-
 def _validate_repository(repository: str) -> None:
     if not REPOSITORY_PATTERN.fullmatch(repository) or ".." in repository:
         raise FetchError(f"not a GitHub repository as OWNER/NAME: {repository!r}")
@@ -213,20 +203,21 @@ def _resolve_source(request: FetchRequest, transport) -> CollectionSource:
         )
     manifest_commit = resolve_commit(request.manifest_ref, transport)
     manifest_url = raw_url(manifest_commit, MANIFEST_PATH)
+    import yaml
     try:
-        import yaml
         manifest = yaml.safe_load(_get(transport, manifest_url))
-        release = _manifest_release(manifest, request.collection)
-        if release is None:
-            note = (
-                f"{request.collection} is not listed in the manifest; "
-                f"using {REPOSITORY} at {request.ref}"
-            )
-            return _fallback_source(request, transport, note, manifest_commit)
-        return _domain_source(release, request, manifest_commit)
-    except (FetchError, OSError, TypeError, ValueError, yaml.YAMLError):
-        note = f"manifest could not be read; using {REPOSITORY} at {request.ref}"
-        return _fallback_source(request, transport, note, manifest_commit)
+    except (FetchError, OSError, TypeError, ValueError, yaml.YAMLError) as exc:
+        raise FetchError(
+            f"cannot read collections manifest at {manifest_url}: {exc}; "
+            "pass --repository OWNER/NAME to read an explicit repository"
+        ) from exc
+    release = _manifest_release(manifest, request.collection)
+    if release is None:
+        raise FetchError(
+            f"{request.collection} is not listed in the collections manifest; "
+            "pass --repository OWNER/NAME to read an explicit repository"
+        )
+    return _domain_source(release, request, manifest_commit)
 
 
 def _check_request(request: FetchRequest) -> None:

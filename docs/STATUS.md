@@ -1,15 +1,36 @@
 # Release status
 
-What has been verified for each distribution surface of `asb-skill-collections`,
-when, and what was measured on 2026-10-30.
+Current release state is stated first. The later sections preserve dated
+measurements as historical evidence rather than presenting them as current
+verification.
 
 Step 2 of the per-domain split was completed on 2026-11-08: this master is the
-registry and tooling repository; released content is in the domain repositories.
-The measurements below predate the new marketplace sources and do not verify an
-install through them. `collections.yaml` pins repository, commit and tree digest
-for each release.
+registry and tooling repository; released content is in the private domain
+repositories. `collections.yaml` pins repository, commit and tree digest for
+each published release.
 
-Two kinds of entry appear below.
+## Current state on 2026-11-11
+
+- Ten collections are published: `v1.0.1` for seven v1 domains, `v2.0.1` for
+  epigenomics and transcriptomics, and `v3.0.2` for metabolomics. Their version
+  DOIs, commits and tree digests are in `collections.yaml`.
+- A further content release is merged on each private content repository's head
+  but is not published or registered. It is not part of the archive, marketplace
+  pin or published inventory described here.
+- The nine initial domain releases were installed at CLI level on 2026-11-10.
+  On 2026-11-11, with the content heads ahead of the registry, a marketplace
+  install of proteomics with Claude Code and with the Codex CLI gave the
+  registered commit of `v1.0.1` in both: the pinned commit of a marketplace
+  entry prevails over its branch. The other nine entries were not reinstalled.
+- The most recent recorded external Pages check returned HTTP 200 on 2026-11-10.
+  No new live Pages check was made for this revision.
+- No validated benchmark, reference results, agent-performance leaderboard,
+  capsule record or dataset mirror is published.
+- Each collection identifier lands on a generated page under
+  `collections/<domain>/v<N>/`. On 2026-11-11 the fourteen identifiers of
+  `collections.yaml` answered HTTP 200 on these pages.
+
+Two kinds of historical entry appear below.
 
 - **README (e80767838)** quotes, verbatim, the statement the README carried on
   `main` at `e80767838` before its restructure on 2026-10-30. Nothing here is
@@ -19,24 +40,24 @@ Two kinds of entry appear below.
   `e80767838`, with the command used. A measurement of reachability or of a
   dry run is not an end-to-end verification and is not presented as one.
 
-## Summary
+## Dated evidence summary
 
-| Surface | State | Last verified (as the README at `e80767838` states it, or measured 2026-10-30) |
+| Surface | State at the recorded date | Evidence date or source |
 |---|---|---|
 | Managed install of the full `metabolomics` domain (`--runtime agents`) | verified | 2026-09-13, `int/collections-release-2026-09-13` at `777671bc3` |
 | Claude Code, local-checkout marketplace | verified | Claude Code 2.1.241; no date stated |
 | Checkout CLI (`asbb search`, `get`, `--list-collections`) | verified | 2026-09-13, shared-selector behaviour at `777671bc3` |
 | Claude Code, public GitHub marketplace transport | verified at CLI level, in-session load not exercised | measured 2026-10-30, Claude Code 2.1.304, `main` at `e80767838`; 358 MB on disk |
 | Per-technique packs | `metabolomics-lc-ms` verified at CLI level, in-session load not exercised; the other seven experimental, not installed | measured 2026-10-30, Claude Code 2.1.304 and `--runtime agents`; 29 MB |
-| Marketplace install of the nine domains released on 2026-11-09 (sources in the private domain repositories) | verified at CLI level with repository access; in a session the router was exercised on collections loaded with `--plugin-dir`, not on a marketplace install | measured 2026-11-10: Claude Code 2.1.319 (`claude plugin install <domain>@asb-skill-collections`, nine exit 0, installed commit equal to the registry commit) and Codex CLI 0.154.0 (`codex plugin add <domain>@asb-skill-collections`, nine exit 0); the `metabolomics` entry at `metabolomics-v3.0.1` was not re-installed |
+| Marketplace install of the nine initial domains released on 2026-11-09 | verified at CLI level with repository access; in a session the router was exercised on collections loaded with `--plugin-dir`, not on a marketplace install; these checks predate the current patch versions | measured 2026-11-10: Claude Code 2.1.319 (`claude plugin install <domain>@asb-skill-collections`, nine exit 0, installed commit equal to the then-current registry commit) and Codex CLI 0.154.0 (`codex plugin add <domain>@asb-skill-collections`, nine exit 0); the `metabolomics` entry at `metabolomics-v3.0.1` was not re-installed |
 | Web UI uploads | experimental, not verified end to end | not exercised |
 | Runtime adapters other than `agents` | experimental | not launched |
 | MCP server | pending current verification | pinned release audit; no date stated |
 | PyPI | not published, by design in v0 | n/a |
-| Documentation site (GitHub Pages) | live: HTTP 200 for the site root and `search.html` on 2026-11-10; not enabled at the 2026-10-30 measurement | 2026-11-10 |
+| Documentation site (GitHub Pages) | HTTP 200 for the site root and `search.html`; not enabled at the earlier measurement | recorded external check, 2026-11-10 |
 | HuggingFace mirror and leaderboard | planned, not yet live | n/a |
-| Benchmark and capsules | to be released later; the capsules deposit path (`scripts/capsules_deposit.py`: refresh, archive, plan, draft, record) exists and was rehearsed offline, no record published | rehearsal 2026-11-11 |
-| `w3id.org/holobiomicslab/` IRIs | resolve | since 2026-09-14 |
+| Benchmark and capsules | no validated benchmark or capsule record published; the capsules deposit path (`scripts/capsules_deposit.py`: `refresh`, `archive`, `plan`, `create`, `record-doi`) exists and was rehearsed offline | rehearsal 2026-11-11 |
+| `w3id.org/holobiomicslab/` IRIs | resolve; the fourteen collection identifiers land on the generated pages under `collections/<domain>/v<N>/` | collection identifiers measured 2026-11-11; earlier checks below |
 | `w3id.org/asb` and `w3id.org/asb/validation` | resolve | since 2026-10-29 |
 | Zenodo DOI | metabolomics concept DOI 10.5281/zenodo.20794026 with versions `metabolomics-v0.1.0` (2026-06-22, v2), `metabolomics-v3.0.0` and `metabolomics-v3.0.1` (both superseded) and `metabolomics-v3.0.2`; nine further domain records, each with its concept and version DOI in `collections.yaml` | 2026-06-22 deposit measured 2026-10-30; later records are registry rows of 2026-11-09 |
 | Metabolomics v3.0.0 Zenodo deposit | version DOI `10.5281/zenodo.24054446`; publication date 2026-11-09 | record supplied for the 2026-11-09 release |
@@ -45,7 +66,6 @@ Two kinds of entry appear below.
 | Metabolomics v3.0.1 | version DOI `10.5281/zenodo.24093587`; tag `metabolomics-v3.0.1` in `HolobiomicsLab/asb-skills-metabolomics`; replaces v3.0.0 as the v3 row of `collections.yaml`, which lists v3.0.0 as superseded | registry row, 2026-11-09 |
 | Patch releases of 2026-11-10 | the ten collections, as `<domain>-v1.0.1` (agentic-ai, astronomy, genomics, metabarcoding, metagenomics, multi-omics, proteomics), `<domain>-v2.0.1` (epigenomics, transcriptomics) and `metabolomics-v3.0.2` (version DOI `10.5281/zenodo.24122117`); each is a new version of the Zenodo record of its collection and the current row of `collections.yaml`, which lists the replaced release as superseded; content change: the two routers and the output of `bin/search_skills.py`, ranking unchanged | registry rows, 2026-11-11 |
 | Nine domain releases | agentic-ai, astronomy, genomics, metabarcoding, metagenomics, multi-omics and proteomics (v1); epigenomics and transcriptomics (v2); tags `<domain>-v<N>.0.0`; concept and version DOIs, commits and tree digests in `collections.yaml` | registry rows, 2026-11-09 |
-| Marketplace entries of the nine new domains | not exercised through Claude Code; the transport measurement of 2026-10-30 predates these sources | n/a |
 
 ## Verified release perimeter
 
@@ -251,7 +271,11 @@ Measured 2026-10-30: `https://pypi.org/pypi/asb-skill-collections/json` returned
 
 ## Documentation site (GitHub Pages)
 
-README (e80767838) linked a Contribute page at
+Current repository state: `docs-site/` and the Pages workflow remain present.
+The most recent recorded external check was on 2026-11-10; no new live check
+was made for this revision.
+
+The archived README at `e80767838` linked a Contribute page at
 `https://holobiomicslab.github.io/asb-skill-collections/contribute.html`.
 
 Measured 2026-10-30: Pages is not enabled on the repository
@@ -291,6 +315,18 @@ Measured 2026-11-11: no capsules record exists. The deposit path,
 repositories to their bare names. The path is described in [`capsules-record.md`](capsules-record.md).
 
 ## w3id identifiers
+
+Current repository state: every collection identifier has a generated landing
+page at `collections/<domain>/v<N>/README.md`. The page reports the registry row
+and public archive without linking the private content repository. The redirect
+rule at w3id.org is unchanged: it always pointed at this path, which held nothing
+between the move of the content to the domain repositories and the addition of
+these pages. Measured 2026-11-11: the fourteen collection identifiers of
+`collections.yaml` answer HTTP 200 on their page.
+
+The following quotation and table are archived evidence. In particular, the
+collection target measured on 2026-10-30 predates the generated landing pages
+and is not the current repository target.
 
 README (e80767838):
 
