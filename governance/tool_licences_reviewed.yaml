@@ -1282,6 +1282,7 @@ entries:
   note: null
 - names:
   - CSI:FingerID
+  - CSI:FingerID 1.2.0
   entity: CSI:FingerID (SIRIUS web service)
   entry_kind: software
   category: web_service
@@ -1326,6 +1327,89 @@ entries:
   verified: '2026-11-11'
   note: 'De novo structure generation served by the SIRIUS web services, under the same terms as CSI:FingerID. The
     research repository meowcat/MSNovelist (AGPL-3.0) directs users to SIRIUS; the usable tool is the web service.'
+- names:
+  - SIRIUS
+  - SIRIUS 4
+  - SIRIUS v6.1.0
+  - Sirius/CSI:Finger ID
+  entity: null
+  ambiguous: true
+  contexts:
+  - when: the mass spectrometry software SIRIUS of the Boecker group, in a mass spectrometry collection
+    entity: SIRIUS
+    entry_kind: software
+    category: application
+    license: LicenseRef-SIRIUS-academic-use
+    license_tier: noncommercial
+    repo_url: https://github.com/sirius-ms/sirius
+    evidence_url: https://raw.githubusercontent.com/sirius-ms/sirius/HEAD/README.md
+    match:
+      collections:
+      - metabolomics
+      - proteomics
+      - multi-omics
+  - when: a record of an astronomy collection, where the name is the star or another software
+    entity: SIRIUS (another meaning)
+    leave_unknown: true
+    match:
+      collections:
+      - astronomy
+  verified: '2026-11-11'
+  note: 'The repository carries the AGPL-3.0 text and badge, and its README reserves use to academic research and education: ''(Re-)distribution of the methods, in whole or in part, for commercial purposes is prohibited'' and ''For non-academic users, the Bright Giant GmbH provides licenses''. Recorded as academic use only (AGPL-3.0 with a licence for other users) on the collection owner''s reading of 2026-11-11.'
+- names:
+  - ZODIAC
+  entity: null
+  ambiguous: true
+  contexts:
+  - when: molecular formula ranking by Gibbs sampling, part of SIRIUS, in a mass spectrometry collection
+    entity: ZODIAC (SIRIUS)
+    entry_kind: software
+    category: application
+    license: LicenseRef-SIRIUS-academic-use
+    license_tier: noncommercial
+    repo_url: https://github.com/sirius-ms/sirius
+    evidence_url: https://raw.githubusercontent.com/sirius-ms/sirius/HEAD/README.md
+    match:
+      collections:
+      - metabolomics
+      - proteomics
+      - multi-omics
+  - when: a record of an astronomy collection, where the name is the zodiacal light or another software
+    entity: ZODIAC (another meaning)
+    leave_unknown: true
+    match:
+      collections:
+      - astronomy
+  verified: '2026-11-11'
+  note: 'Part of SIRIUS (the README lists it among the integrated tools). The repository carries the AGPL-3.0 text and badge, and its README reserves use to academic research and education: ''(Re-)distribution of the methods, in whole or in part, for commercial purposes is prohibited'' and ''For non-academic users, the Bright Giant GmbH provides licenses''. Recorded as academic use only (AGPL-3.0 with a licence for other users) on the collection owner''s reading of 2026-11-11.'
+- names:
+  - COSMIC
+  entity: null
+  ambiguous: true
+  contexts:
+  - when: the confidence score for CSI:FingerID annotations, part of SIRIUS, in a mass spectrometry collection
+    entity: COSMIC (SIRIUS)
+    entry_kind: software
+    category: application
+    license: LicenseRef-SIRIUS-academic-use
+    license_tier: noncommercial
+    repo_url: https://github.com/sirius-ms/sirius
+    evidence_url: https://raw.githubusercontent.com/sirius-ms/sirius/HEAD/README.md
+    match:
+      collections:
+      - metabolomics
+      - proteomics
+      - multi-omics
+  - when: the Catalogue Of Somatic Mutations In Cancer, in a genomics, transcriptomics or epigenomics collection
+    entity: COSMIC (another meaning)
+    leave_unknown: true
+    match:
+      collections:
+      - genomics
+      - transcriptomics
+      - epigenomics
+  verified: '2026-11-11'
+  note: 'Part of SIRIUS (the README lists it with CSI:FingerID). The repository carries the AGPL-3.0 text and badge, and its README reserves use to academic research and education: ''(Re-)distribution of the methods, in whole or in part, for commercial purposes is prohibited'' and ''For non-academic users, the Bright Giant GmbH provides licenses''. Recorded as academic use only (AGPL-3.0 with a licence for other users) on the collection owner''s reading of 2026-11-11.'
 - names:
   - Julia
   entity: Julia
