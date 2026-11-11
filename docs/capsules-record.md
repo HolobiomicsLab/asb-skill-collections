@@ -31,12 +31,22 @@ importable code never reads the clock.
   builds and therefore in the record; `capsules_left_out` is the capsules of
   builds the screen left out. `not_released_count` is separate because those
   builds were excluded before screening.
-- `capsules.jsonl`: one row per capsule in a packed build. A Parquet copy with
-  the same rows is optional only when `pyarrow` is already installed.
+- `capsules.jsonl`: one row per capsule in a packed build. Its `license` is the
+  source paper's licence. A Parquet copy with the same rows is optional only
+  when `pyarrow` is already installed.
 - `SCREEN.json`: `asb-capsules-screen/1`, with totals and per-build failures.
-- `benchmark-manifest.json`: the complete operational-evaluation subset of
-  packed builds, without a second payload copy.
+- `benchmark-manifest.json`: capsules whose evaluation definition is
+  structurally complete, without a second payload copy. It does not promise
+  that they are runnable, their inputs are retrievable, or their checks are
+  machine-scorable; its rows and totals expose those readiness measures.
 - `zenodo/metadata.json` and `hf/README.md`: local record descriptions.
+
+The generated README field dictionary defines every capsule and benchmark row
+field, validation state, evaluation state and screen counter. Validation counts
+derived from `claims_checked` are kept separate from counts declared by the
+validation summary; disagreement is visible and lowers the state. Generated
+record metadata is CC-BY-4.0, paper quotations retain that paper's terms, and
+tools retain their own licences.
 
 ## Screen order
 
@@ -129,6 +139,13 @@ slug is listed under `not_released` in `MANIFEST.json`, with
 `scripts/capsules_deposit.py` takes a pack to a Zenodo record. Every step but
 `create` is offline.
 
+At full-pack time, the public projection removes `branch` and `is_dirty` from
+every Git entry of `build_manifest.json`, including nested entries, while
+keeping commits and all other fields. Each capsule's
+`artifact_provenance.json` retains every full-build artifact entry and marks
+whether its path is present in the shipped capsule. These projections do not
+rewrite the private source build.
+
 1. Pack, as above. A full pack of a large domain takes hours.
 2. Refresh, when the collection has moved since the pack (a patch release
    changes the version DOI and label):
@@ -145,7 +162,12 @@ slug is listed under `not_released` in `MANIFEST.json`, with
    corpus are dropped and listed under `not_released`. The source pack is never
    written. The screen is not rerun: a change of the collection's roles,
    access records or private repositories needs a full pack, and the pack's
-   recorded `pipeline_public` is kept.
+   recorded `pipeline_public` is kept. Refresh refuses legacy capsule rows that
+   lack the validation-consistency and evaluation-readiness fields, because it
+   does not reopen the copied zips; run a full pack first. Pass
+   `--capsules-doi <DOI>` after publication to place the capsules DOI in the
+   regenerated HuggingFace card. Without it, the card directs readers to the
+   collection registry row and contains no placeholder.
 3. Plan:
 
    ```sh
