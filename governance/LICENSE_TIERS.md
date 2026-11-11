@@ -183,7 +183,10 @@ the record uses the name as a package of the registry's ecosystem (`library(x)`,
    that paper; otherwise the match is contradicted. Bioconductor is the one exception:
    its names are unique and curated and its packages move between accounts
    (GuangchuangYu/clusterProfiler became YuLab-SMU/clusterProfiler), so a repository of
-   the same name, or none declared, is not a contradiction there. An import name is not a
+   the same name, or none declared, is not a contradiction there, provided the paper's
+   repository is that R package: its `DESCRIPTION`, read as raw content, must say
+   `Package: <name>`. MetNet's paper is a Java tool (simeoni-biolab/MetNet), not
+   Bioconductor's `MetNet`. An import name is not a
    distribution name: `import vega` in the VEGA paper is not PyPI's `vega`, a Jupyter
    widget, and `from STEM.model import *` is not PyPI's `stem`, a Tor controller.
 2. A contradiction refuses the match unless the package's repository or publication is
@@ -208,8 +211,23 @@ the record uses the name as a package of the registry's ecosystem (`library(x)`,
    Bioconda's `colormap` (matplotlib colours) share a normalised name and nothing
    else.
 7. R code must spell the package with its case: `library(MeTEor)` does not load CRAN's
-   `meteor`.
-8. Two packages that declare the same repository are one tool, and a package that
+   `meteor`. Code corroborates a package only when it names the package as the registry
+   spells it, up to interchangeable separators (`memory_profiler` is PyPI's
+   `memory-profiler`); `conda install pygraphviz` does not corroborate Bioconda's
+   `py-graphviz`.
+8. The registry's name must be one of the record's names up to case and separators,
+   or the record's name with its separators dropped (`IQ-TREE` is `iqtree`, `Diffu
+   Stats` is `diffuStats`). A package that adds a separator the record's name lacks
+   (`py-graphviz` against `pygraphviz`, the wrapper of another project) is reached only
+   by normalisation and needs the repository or the publication.
+9. An R package (Bioconductor, CRAN) without R code naming it is contradicted when the
+   record uses the name as a Python module in a way the import patterns do not see: a
+   documentation role naming one of its classes (`{class}`~mudata.MuData``), a
+   `name.py` file, `python -m name`. MuData is scverse's Python `mudata`, not the
+   Bioconductor package of the same name. The reverse needs no rule: PyPI is accepted
+   only on a shared repository or Python code, and R code against a Python package is
+   already a contradiction (rule 2).
+10. Two packages that declare the same repository are one tool, and a package that
    declares the repository of a package accepted on strong evidence is accepted too;
    the first declared registry then gives the licence and the others are kept as
    `superseded`. Otherwise, when packages from several registries are accepted for
@@ -319,6 +337,44 @@ A tool's tier is the licence of its code. The terms of a database or an online s
 that the tool queries are not part of it unless the tool's own description states
 them: an open client of a service reserved for academic use is recorded `open` when
 nothing in its registry entry, licence file or README says so.
+
+The same holds for a dependency with its own restrictive licence: the dependency has
+its own record, and the tool keeps its tier. PredPSI-SVR is GPL-3.0 although it needs
+ANNOVAR and SPIDEX; SMETANA and CarveMe are Apache-2.0 although they call CPLEX or
+Gurobi. A README sentence that says a dependency, a third-party tool or an optional
+component has its own terms is therefore skipped. What withholds is a sentence about
+the tool itself: MZA's README says that its software binary is closed-source and that
+the libraries it is built on "place further restrictions on its use and
+redistribution", so the binary users run is not under the BSD licence of its example
+scripts. The README check reads a sentence that the tool's code or binary is
+closed-source or proprietary, or carries further restrictions on its use, as such a
+statement even when a dependency is the cause, unless the sentence calls the component
+optional or compares the tool with other software.
+
+Two more readings complete the README and licence-file checks:
+
+- README wordings of restricted use include "intended exclusively for academic research
+  and training purposes" (CalibraCurve), "intended only for academic use", "restricted
+  to academic institutions" and "for academic research only". Training and teaching
+  count only after another kind of use: "only for training" names a model's training
+  step.
+- An R licence field that names `file LICENSE` makes the file part of the authors'
+  declaration. A sentence in it that limits the use of the software itself withholds
+  the record as `withheld-field-of-use`: dsb's alternative terms say "THE SOFTWARE
+  SHALL NOT BE USED IN THE TREATMENT OR DIAGNOSIS OF HUMAN SUBJECTS". A second licence
+  for a bundled component (xcms) holds no such sentence and does not override the
+  declaration.
+
+Not seen, and documented as limits: a third-party registry may name a repository that
+is not the tool's, and a confirmation reads it (CANOPUS: bio.tools named
+kaibioinfo/canopus_treemap, a notebook helper; the tool is a SIRIUS web service, now in
+the reviewed map). Applying the repository-name guard to every third-party
+confirmation was measured and not adopted (design note, fifth pass). A version drift
+also passes: `Usearch` cited at version 11 is matched to Bioconda `usearch` with the
+usearch12 repository. Matches judged doubtful by the audits, all with the same tier:
+Scoary (the Scoary2 paper matched to the original Scoary), spacexr (the Bioconductor fork
+ggrajeda/spacexr against dmcable/spacexr), NanoPipe (the nanopipe2 repository for the
+web server).
 
 #### Reading the licence string
 

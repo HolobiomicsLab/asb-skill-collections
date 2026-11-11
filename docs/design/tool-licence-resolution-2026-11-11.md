@@ -225,6 +225,75 @@ A tier is the licence of the tool's code. The terms of a service or a database t
 the tool queries are seen only when the tool's own registry entry, licence file or
 README states them.
 
+## Fifth pass: spelling, the other ecosystem, closed binaries and field-of-use terms
+
+The fourth audit (120 open registry resolutions) and a census of the 351 resolutions no
+auditor had read found three wrong tools (pygraphviz, MetNet, CANOPUS), one doubtful
+cross-ecosystem namesake (MuData), and four tier errors (MZA, CANOPUS, dsb,
+CalibraCurve). Each became a general rule, except CANOPUS:
+
+- **Spelling and code.** pygraphviz reached Bioconda's `py-graphviz` (xflr6/graphviz)
+  through the normalised lookup, and `conda install pygraphviz` corroborated it
+  because the code patterns searched for the record's names as well as the package's.
+  Code now corroborates only the package as the registry spells it (separators
+  interchangeable), and a package that adds a separator the record's name lacks needs
+  the repository or the publication. Dropping the record's own separators stays
+  allowed (`IQ-TREE` is `iqtree`, `Diffu Stats` is `diffuStats`). A first, symmetric
+  form of the rule withheld IQ-TREE, Diffu Stats, ExpHunter Suite and
+  memory_profiler, all right; the asymmetric form withholds pygraphviz alone.
+- **The other ecosystem.** Bioconductor's `MuData` was accepted on the domain signal
+  (the words multimodal, muon, omics); the record cites the Python `mudata` through a
+  documentation role, `{class}`~mudata.MuData``, which the import patterns do not see.
+  An R package without R code is now contradicted by such Python usage (a role naming
+  a class, `name.py`, `python -m name`). Of the 67 R-registry resolutions resting on
+  the domain or skill signal alone, it withholds MuData only. A rule that asks PyPI
+  whether a namesake exists would cost 63 requests for those 67 records; it was not
+  adopted, because PyPI holds many unrelated namesakes and would withhold right
+  answers.
+- **The subject-of-paper exception.** MetNet passed because Bioconductor's `MetNet`
+  declares no repository, which the exception allowed. A package that declares none
+  now passes only when the paper's repository holds that R package (`Package: <name>`
+  in a DESCRIPTION at its root or in a directory named after the package). A
+  same-name repository under another account still passes without a read. The rule
+  withholds MetNet and PAIRADISE; PAIRADISE is probably a right answer lost, because
+  xinglab/pairadise serves no DESCRIPTION at either place.
+- **Closed binaries.** MZA's README addendum says that the software binary is
+  closed-source and that the libraries it depends on "place further restrictions on
+  its use and redistribution". The README check skipped such sentences as being about a
+  dependency. A sentence that the tool's code or binary is closed-source or
+  proprietary, or carries further restrictions on its use, now withholds even when a
+  dependency is the cause, unless it calls the component optional or compares the tool
+  with other software. Over the 737 READMEs read, it adds MZA alone. PredPSI-SVR,
+  SMETANA, CarveMe, decoupleR, OptiType and ClusterR keep their tiers.
+- **More wordings.** CalibraCurve's "intended exclusively for academic research and
+  training purposes" is now read, with "intended only for", "restricted to academic"
+  and "for academic research only". "Only for training" alone is not (RODAN: a model's
+  training step).
+- **Field-of-use terms.** dsb declares `CC0 | file LICENSE`, and the file says the
+  software shall not be used in the treatment or diagnosis of human subjects. An R
+  licence field that names `file LICENSE` now has its file read for such a term. In a GNU
+  or Apache text only an explicit field-of-use sentence counts: IPO's GPL-2.0 file
+  speaks of "noncommercial distribution" in section 3c and stays open.
+
+CANOPUS is a one-record case: bio.tools names kaibioinfo/canopus_treemap, a notebook
+helper, while the tool is a SIRIUS web service. It is in the reviewed map now, with
+MSNovelist, beside CSI:FingerID. Applying the repository-name guard to every
+third-party confirmation was measured. Strict equality would withhold 25 records, of
+which a reading of the names and READMEs finds one wrong (CANOPUS) and about twenty
+right (IQ-TREE on iqtree3, MACS3 on MACS, LIANA on liana-py, tiny-count on tinyRNA,
+magic-impute on MAGIC, the nf-core pipelines). A containment form keeps CANOPUS,
+because `canopus` is inside `canopus_treemap`. Neither was adopted.
+
+Against the state at the start of the pass (head af2f0e0cd), resolutions went from
+1,487 to 1,480 and citations covered from 47.2% to 47.0%:
+
+- Bioconductor 149 to 145, Bioconda 291 to 290, CRAN 127 to 126, bio.tools 250 to 247;
+- reviewed 607 to 609;
+- tiers: open 1,442, restricted 16, noncommercial 22.
+
+The pass made 86 raw GitHub requests (76 found, 10 not found, 0.3 MB), all cached; none
+was refused.
+
 ## Limits
 
 - The domain signal was measured on 94 metabolomics matches. The filters added
@@ -247,3 +316,10 @@ README states them.
 - The README patterns read sentences about use or licensing. A README that reports
   another tool's restriction without saying so withholds the record, which is the
   safe side.
+- A third-party registry may name a repository that is not the tool's, and a
+  confirmation then reads it (CANOPUS before its reviewed entry). Version drift passes:
+  `Usearch` cited at version 11 is matched to Bioconda `usearch` with the usearch12
+  repository. Doubtful matches with the same tier: Scoary (the Scoary2 paper matched
+  to the original Scoary), spacexr (the Bioconductor fork against dmcable/spacexr),
+  NanoPipe (the nanopipe2 repository for the web server), and Diffu Stats matched to
+  diffuStats.

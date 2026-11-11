@@ -47,6 +47,17 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   or `AGPL` as open. When the record shows that the tool is the subject of its citing paper, a
   package must declare that paper's repository: an import name is not a distribution
   name (`import vega` is not PyPI's `vega`).
+- Identity and README checks from the fourth audit and the census. Code corroborates a
+  package only when it names the package as the registry spells it, and a package that
+  adds a separator the record's name lacks (`py-graphviz` against `pygraphviz`) needs
+  the repository or the publication. An R package without R code is contradicted when
+  the record uses the name as a Python module (MuData). A Bioconductor package that
+  declares no repository passes the subject-of-paper rule only when the paper's
+  repository holds that R package (MetNet). A README sentence that the tool's code or
+  binary is closed-source or under further restrictions withholds (MZA), more wordings
+  of academic-only use are read (CalibraCurve), and an R licence field that names
+  `file LICENSE` withholds when the file limits the field of use (dsb). The reviewed map
+  adds CANOPUS and MSNovelist as SIRIUS web services, noncommercial.
 - `enrich_tools_index.py --licence-only` writes the licence fields, `entry_kind`,
   `repo_url`, `source_paper_repos` and `license_evidence` and leaves the skill-tool links
   byte-identical.
