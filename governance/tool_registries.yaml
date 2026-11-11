@@ -23,6 +23,18 @@ version: 2
 #
 # `ask_when` limits per-name registries to names the resolver could use an
 # answer for, so a name without Python evidence is never sent to PyPI.
+#
+# Who writes the licence field matters. Bioconductor, CRAN and PyPI metadata come
+# from the package authors; a Bioconda recipe and a bio.tools entry are written by
+# someone else and are often out of date (bio.tools: bedtools GPL-2.0, MUON
+# GPL-3.0; Bioconda: STAR and Kraken2 GPL-3.0-or-later; each repository says
+# otherwise). Every resolution is checked against the licence file of the
+# repository the package declares (scripts/repository_licence.py, raw content,
+# never an API). For Bioconda and bio.tools the file wins, and without one the
+# record is unknown. For PyPI a file of the same tier replaces the licence and a
+# file of another tier withholds the record. For Bioconductor and CRAN only the
+# repository DESCRIPTION is read, the registry licence is kept, and only a tier
+# contradiction withholds. Table in governance/LICENSE_TIERS.md.
 registries:
   - id: bioconductor
     scope: life_science

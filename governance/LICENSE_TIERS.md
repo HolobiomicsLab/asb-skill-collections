@@ -176,7 +176,16 @@ the record uses the name as a package of the registry's ecosystem (`library(x)`,
 `Python package x`; `conda install x`). A match is accepted as follows:
 
 1. A Bioconductor data, annotation or workflow package is never the tool: it wraps a
-   dataset named like the tool (MSigDB).
+   dataset named like the tool (MSigDB). When the record shows that the tool is the
+   subject of its citing paper (a repository among its `source_repos` named after the
+   tool, or a paper title opening with the tool as its subject: `X: ...`, `X is ...`,
+   `X enables ...`), a package is the tool only if it declares that repository or lists
+   that paper; otherwise the match is contradicted. Bioconductor is the one exception:
+   its names are unique and curated and its packages move between accounts
+   (GuangchuangYu/clusterProfiler became YuLab-SMU/clusterProfiler), so a repository of
+   the same name, or none declared, is not a contradiction there. An import name is not a
+   distribution name: `import vega` in the VEGA paper is not PyPI's `vega`, a Jupyter
+   widget, and `from STEM.model import *` is not PyPI's `stem`, a Tor controller.
 2. A contradiction refuses the match unless the package's repository or publication is
    the record's: code evidence for another ecosystem (`library(x)` against a Python
    package, `import x` against an R one, an R package against a Bioconda package of the
@@ -215,6 +224,47 @@ The measured effect of the rule on the ten released collections is in
 `docs/design/tool-licence-resolution-2026-11-11.md`. The reviewed exclusions of
 `tool_registries.yaml` remain as data.
 
+#### Confirming the licence against the repository
+
+Bioconductor, CRAN and PyPI metadata are written by the package authors. A Bioconda
+recipe and a bio.tools entry are written by someone else, and their licence strings
+are often not the tool's: bio.tools lists MUON as GPL-3.0 and bedtools as GPL-2.0, and
+Bioconda lists STAR and Kraken2 as GPL-3.0-or-later, while each repository carries a
+different licence file. Every registry resolution whose package declares a repository
+on GitHub or GitLab is therefore checked against that repository's own licence file
+(`scripts/repository_licence.py`), read anonymously as raw content, never through an
+API: `LICENSE`, `LICENSE.txt`, `LICENSE.md`, `COPYING`, `COPYING.txt`, `LICENCE`,
+`LICENCE.txt`, then the `License:` field of `DESCRIPTION`.
+
+The file classifier recognises a licence only from its canonical title or grant
+wording: MIT, BSD-2-Clause and BSD-3-Clause by their clauses, Apache-2.0, MPL-2.0,
+GPL, LGPL and AGPL with the version in the title, Artistic-2.0, CC0, the Unlicense,
+the Creative Commons licences by their clauses, and a custom text as `noncommercial`
+only when it says in plain words that use is non-commercial or academic only. A file
+that holds two licences (a bundled component's terms appended) is unread. A licence
+text cannot say whether a GNU licence is "only" or "or later", so the reading is the
+version without a suffix (`GPL-3.0`, as the reviewed map writes it) unless the file
+also holds the "or (at your option) any later version" notice.
+
+A file that offers a choice in plain words ("dual licensed under GPL-3.0 or BSD-3-Clause",
+Jellyfish) is read as an SPDX `OR` expression, as is a file that says so on an
+`SPDX-License-Identifier` line.
+
+Who wrote the registry's licence field decides what the repository may change:
+
+| Registry | Repository agrees | Repository differs, same tier | Repository differs in tier | Nothing readable |
+|---|---|---|---|---|
+| Bioconda, bio.tools (third party) | registry licence, `confirmed` | the file's licence, `replaced` | the file's licence, `replaced` | `unknown`, withheld as `withheld-unconfirmed:<why>` |
+| PyPI (the authors) | registry licence, `confirmed` | the file's licence, `replaced` | `unknown`, withheld as `withheld-contradiction:pypi=<a>\|repository=<b>` | registry licence, `kept-unconfirmed` |
+| Bioconductor, CRAN (the authors' DESCRIPTION) | registry licence, `confirmed` | registry licence, `kept-registry-declares` | `unknown`, withheld as `withheld-contradiction` | registry licence, `kept-unconfirmed` |
+
+For Bioconductor and CRAN only the repository's `DESCRIPTION` is read. A `LICENSE`
+file there may carry the terms of a bundled component (xcms) and never overrides the
+declared licence. A replaced record carries detection `repository-licence-file`,
+`license_evidence` the file read, and the registry's reading under `confirmation`
+(`registry_license`, `registry_tier`, `registry_evidence`). MassCube is the measured
+PyPI contradiction: PyPI says CC-BY-NC-4.0, the repository Apache-2.0.
+
 #### Reading the licence string
 
 `scripts/tool_licence_text.py` reads what the registry declares, with an explicit table
@@ -242,8 +292,8 @@ The raw string stays in `tool_licenses.json` as `license_raw`.
 #### What a resolved record carries
 
 Every resolved record carries `license_detection` (`reviewed-map`, `bioconductor-package`,
-`bioconda-package`, `cran-package`, `pypi-package`, `biotools-entry`, or a repository
-detection for the introducing paper) and `license_evidence`, the address the licence
+`bioconda-package`, `cran-package`, `pypi-package`, `biotools-entry`,
+`repository-licence-file`, or a repository detection for the introducing paper) and `license_evidence`, the address the licence
 was read from: the registry's package page or the reviewed entry's `evidence_url`. Both
 are written into `tools_index.json` and `tools/<slug>.yaml`. `repo_url` is the tool's own
 repository, from the reviewed map or the registry, and is empty on an unresolved tool;

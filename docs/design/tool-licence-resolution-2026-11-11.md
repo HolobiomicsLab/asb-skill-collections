@@ -124,6 +124,43 @@ list, 2.4 MB), one to CRAN (`packages.rds`, 12.8 MB), the Bioconda `channeldata.
 same day, 144 PyPI requests (124 answers, 20 not found, 23.0 MB) and 1,502 bio.tools
 requests (56.5 MB), every answer cached. No request was refused.
 
+## Second pass: the subject of the paper, and the repository's own licence
+
+A hand check of the resolved records found two further errors.
+
+An import name is not a distribution name. The VEGA paper's `import vega` resolved to
+PyPI's `vega` (a Jupyter widget) and STEM's `from STEM.model import *` to PyPI's `stem`
+(a Tor controller). When a record shows that the tool is the subject of its citing
+paper (a source repository named after the tool, or a title opening with it), a
+package is now accepted only if it declares that repository or lists that paper.
+Bioconductor is exempt when the repository has the same name or none is declared,
+because its packages move between accounts. Against the run with the lead's reviewed
+map of 143 entries, the rule withholds 16 earlier resolutions: PyPI 11 (VEGA, STEM,
+SIMILE, candl, gallifrey, GWpy, ctmm, gssnng, MaCroDNA, SenePy, DeepRTAlign), Bioconda 3
+(fpa, VirSorter, Leafcutter) and CRAN 2 (LUCIDus, Mpath). GWpy is probably a false refusal:
+its paper cites GitHub and PyPI declares GitLab under the same owner and name.
+
+A registry licence string is often not the tool's. Every registry resolution with a
+GitHub or GitLab repository is now checked against that repository's licence file,
+with what the file may change set by who wrote the registry entry (table in
+`governance/LICENSE_TIERS.md`). On the ten collections (registry snapshots and raw
+files of 11 November 2026):
+
+| Source | Confirmed | Replaced | Withheld, contradiction | Kept without confirmation | Withheld, unconfirmed |
+|---|---:|---:|---:|---:|---:|
+| Bioconductor | 110 | 0 | 0 | 40 | 0 |
+| CRAN | 93 | 0 | 0 | 34 | 0 |
+| PyPI | 52 | 3 | 1 | 10 | 0 |
+| Bioconda | 286 | 7 | 0 | 0 | 75 |
+| bio.tools | 239 | 16 | 0 | 0 | 47 |
+
+Resolutions went from 1,633 to 1,492 and skill citations covered from 49.4% to 47.3%.
+Three replacements change the tier from `open` to `noncommercial` (medaka, MINI-EX,
+REDItools); the other 23 stay `open`. MassCube is withheld because PyPI says CC-BY-NC-4.0 and the
+repository Apache-2.0. Network for the pass: 1,807 raw GitHub requests (801 files,
+1,006 not found, 7.6 MB), one GitLab request and 45 bio.tools requests, every answer
+cached, none refused.
+
 ## Limits
 
 - The domain signal was measured on 94 metabolomics matches. The filters added

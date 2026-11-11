@@ -77,8 +77,9 @@ python scripts/enrich_tool_yaml.py --collection <domain-checkout>/collections/<d
 python scripts/check_tools_index.py <domain-checkout>/collections/<domain>/v1
 ```
 
-The resolver reads the registries in `governance/tool_registries.yaml` (network, cached) and the
-reviewed map `governance/tool_licences_reviewed.yaml`, and writes `tool_licenses.json`, which
+The resolver reads the registries in `governance/tool_registries.yaml`, the licence files of the
+repositories their packages declare (network, cached) and the reviewed map
+`governance/tool_licences_reviewed.yaml`, and writes `tool_licenses.json`, which
 ships with the collection. `--licence-only` changes the licence fields, `entry_kind`, `repo_url`,
 `source_paper_repos` and `license_evidence` and leaves every skill-tool link as bootstrap wrote
 it. A domain that is not in `life_science_collections` of `tool_registries.yaml` gets only

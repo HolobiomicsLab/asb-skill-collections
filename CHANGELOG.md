@@ -29,6 +29,16 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   licence was read from. `scripts/check_tool_licence_consistency.py` checks that one entity
   carries one licence across collections. Rule and measured effect:
   `docs/design/tool-licence-resolution-2026-11-11.md`.
+- Every registry resolution is checked against the licence file of the repository the
+  package declares (`scripts/repository_licence.py`, raw content from GitHub or GitLab,
+  never an API), with what the file may change set by who wrote the registry entry.
+  A Bioconda or bio.tools licence is replaced by the file (detection
+  `repository-licence-file`) and is unknown without one. A PyPI licence is replaced by a
+  file of the same tier and withheld against a file of another tier. A Bioconductor or
+  CRAN licence is kept and withheld only when the repository DESCRIPTION gives another
+  tier. A file that offers a choice of licences is read as an SPDX `OR`. When the record shows that the tool is the subject of its citing paper, a
+  package must declare that paper's repository: an import name is not a distribution
+  name (`import vega` is not PyPI's `vega`).
 - `enrich_tools_index.py --licence-only` writes the licence fields, `entry_kind`,
   `repo_url`, `source_paper_repos` and `license_evidence` and leaves the skill-tool links
   byte-identical.
