@@ -31,14 +31,35 @@
   <main>
     <div id="draft-banner" class="draft-banner" hidden></div>
     <form id="propose-form">
-      <label>DOI <span class="required">*</span>
+      <label>What is it? (paper title, or tool name) <span class="required">*</span>
+        <input type="text" name="title" placeholder="Spec2Vec, spectral similarity scoring" required>
+      </label>
+      <label>Link (DOI, repository or homepage) <span class="required">*</span>
         <input type="text" name="doi" placeholder="10.1186/s13321-024-00878-1" required>
       </label>
-      <label>Title <span class="required">*</span>
-        <input type="text" name="title" placeholder="Full paper title" required>
+      <label>Type <span class="required">*</span>
+        <select name="type" required>
+          <option value="paper">paper</option>
+          <option value="tool">tool</option>
+          <option value="data resource">data resource</option>
+        </select>
       </label>
       <label>Target collection <span class="required">*</span>
-        <input type="text" name="collection" value="metabolomics" required>
+        <!-- The released collections of collections.yaml; tests/test_contribution_routes.py
+             holds this list equal to the released domains of the public index. -->
+        <select name="collection" required>
+          <option value="" selected disabled>Choose a released collection</option>
+          <option value="agentic-ai">agentic-ai (v1)</option>
+          <option value="astronomy">astronomy (v1)</option>
+          <option value="epigenomics">epigenomics (v2)</option>
+          <option value="genomics">genomics (v1)</option>
+          <option value="metabarcoding">metabarcoding (v1)</option>
+          <option value="metabolomics">metabolomics (v3)</option>
+          <option value="metagenomics">metagenomics (v1)</option>
+          <option value="multi-omics">multi-omics (v1)</option>
+          <option value="proteomics">proteomics (v1)</option>
+          <option value="transcriptomics">transcriptomics (v2)</option>
+        </select>
       </label>
       <label>Target version
         <input type="text" name="version" placeholder="next (or v2, v3…)" value="next">
@@ -51,8 +72,8 @@
           <option value="closed">Closed (paywalled, no open abstract)</option>
         </select>
       </label>
-      <label>Rationale (3–6 sentences) <span class="required">*</span>
-        <textarea name="rationale" rows="6" placeholder="Why this paper? What method/tool/skill does it introduce? Why retrieval-key for this domain?" required></textarea>
+      <label>Why it matters (one or two sentences) <span class="required">*</span>
+        <textarea name="rationale" rows="4" placeholder="What method or tool does it introduce, and why is it worth grounding agent retrieval on?" required></textarea>
       </label>
       <fieldset>
         <legend>Your information</legend>
@@ -77,8 +98,11 @@
     </form>
 
     <p class="hint">
-      Submitting opens a pre-filled GitHub Issue (you'll be redirected to GitHub to sign in if needed).
-      The lab maintainers + Lead Curator for the target collection review proposals.
+      Submitting opens a pre-filled GitHub Issue on the public registry (you'll be redirected to GitHub to sign in if needed).
+      The domain repositories are private: a maintainer carries an accepted proposal into the domain repository,
+      and the lab maintainers and the Lead Curator of the target collection review it.
+      This is route 3 of the four contribution routes; a wrong or missing skill, or a technical fault,
+      goes through the <a href="./contribute.html">contribute page</a>.
       See <a href="https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/governance/OPEN_ACCESS_POLICY.md">OPEN_ACCESS_POLICY.md</a>
       for what we accept and how access tiers are handled.
     </p>
@@ -88,44 +112,12 @@
     <p>Holobiomics Lab · CNRS / Université Côte d'Azur</p>
   </footer>
 
+  <script src="propose.js"></script>
   <script>
-  const REPO = "HolobiomicsLab/asb-skill-collections";
   document.getElementById("propose-form").addEventListener("submit", (e) => {
     e.preventDefault();
-    const f = new FormData(e.target);
-    const cois = [];
-    if (f.get("coi_author")) cois.push("Author of this paper");
-    if (f.get("coi_inst")) cois.push("Same institution as lead author");
-    if (f.get("coi_fund")) cois.push("Direct funding ties");
-    const body = [
-      "## Paper",
-      `- **DOI:** ${f.get("doi") || "—"}`,
-      `- **Title:** ${f.get("title") || "—"}`,
-      "",
-      "## Target collection",
-      `- **Collection:** ${f.get("collection") || "—"}`,
-      `- **Version target:** ${f.get("version") || "next"}`,
-      "",
-      "## Access tier (self-reported, CI will verify)",
-      `- ${f.get("access") || "dont-know"}`,
-      "",
-      "## Rationale",
-      f.get("rationale") || "",
-      "",
-      "## Proposer",
-      `- **GitHub:** ${f.get("gh") ? "@" + f.get("gh") : "—"}`,
-      `- **ORCID:** ${f.get("orcid") || "—"}`,
-      "",
-      "## Conflicts of interest",
-      cois.length ? cois.map(c => `- ${c}`).join("\n") : "- None disclosed",
-    ].join("\n");
-    const url = `https://github.com/${REPO}/issues/new?` +
-      new URLSearchParams({
-        title: `Propose: ${(f.get("doi") || f.get("title") || "").trim()}`,
-        body,
-        labels: "propose,paper-intake,needs-triage",
-      });
-    window.open(url, "_blank");
+    const url = proposalIssueURL(proposalFields(new FormData(e.target)));
+    window.open(url, "_blank", "noopener");
     // Mark draft as submitted (kept for reference on next page load).
     try {
       const snapshot = (window.serializeForm || (() => ({})))(e.target);
