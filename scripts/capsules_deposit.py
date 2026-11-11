@@ -508,7 +508,7 @@ The screen names private repository URLs without linking them and redacts email 
 
 ## Licence layers
 
-Generated record metadata is licensed CC-BY-4.0. The `license` field of `capsules.jsonl` and the benchmark rows is the source paper's licence; quotations from that paper retain the paper's terms and are included only as bounded quotations. Tools retain their own licences, which this record does not alter.
+Generated record metadata is licensed CC-BY-4.0. The `license` field of `capsules.jsonl` and the benchmark rows is the source paper's licence; text quoted from that paper stays under the paper's own terms, which this record does not change. It is kept in full when the paper's licence allows sharing it verbatim with attribution (Creative Commons licences, CC0, public domain), and shortened or removed otherwise. Under a NonCommercial licence that text may not be used commercially; under a NoDerivatives licence it may not be shared in adapted form. Tools retain their own licences, which this record does not alter.
 
 For a takedown request, use the public tooling issue tracker: {TAKEDOWN_URL}.
 

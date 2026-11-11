@@ -53,12 +53,16 @@ tools retain their own licences.
 Every staged JSON, JSONL, JSON-LD, Markdown, YAML and plain-text member is
 screened before zipping. Quoted text follows one of three regimes, recorded
 per build as `quote_retention` in `MANIFEST.json` and `SCREEN.json`. Open
-sources under CC-BY or CC-BY-SA of any version, CC0, public domain, or an
-explicit reuse grant keep their attributed text in full (`full`). The named
-function `capsule_screen.is_permissive_license` defines this default. CC
-licences containing NC or ND, including their combinations, do not qualify;
-the owner can revise that default in this one function. Open sources under
-any other licence string keep recognised source fields under 300 characters
+sources under a Creative Commons licence of any version (BY, BY-SA, BY-NC,
+BY-ND and their combinations), CC0, public domain, or an explicit reuse grant
+keep their attributed text in full (`full`): each of these licences allows
+sharing the text verbatim with attribution. The text stays under the paper's
+licence, NonCommercial and NoDerivatives terms included, which the record
+README states; the `license` field of each row lets a reader select by licence.
+The named function `capsule_screen.allows_verbatim_sharing` holds this rule
+(owner's decision of 11 November 2026; the release gate of the skill
+collections is stricter and caps NC and ND text). Open sources under any other
+licence string keep recognised source fields under 300 characters
 per field and 1,500 retained
 characters per DOI (`capped`). Restricted, unresolved, licence-less, and
 ungranted-preprint sources drop quote text and retain a DOI, location,

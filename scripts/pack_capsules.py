@@ -602,8 +602,9 @@ def make_zenodo(collection, template, args) -> dict:
     description = (
         f"Screened slim-plus build capsules supplementing ASB {domain} v{collection['version']}. "
         f"The builds were produced by the {PIPELINE_NAME} pipeline. "
-        "Generated metadata is CC-BY-4.0. Source quotations are bounded by field and DOI, "
-        "and dropped for restricted or unresolved access. Rights holders may request takedown "
+        "Generated metadata is CC-BY-4.0. Text quoted from each paper stays under that paper's licence: "
+        "kept for Creative Commons, CC0 and public-domain papers, capped by field and DOI or removed "
+        "otherwise. Rights holders may request takedown "
         "through the asb-skill-collections issue tracker."
     )
     related = [
@@ -685,7 +686,7 @@ Collection: https://doi.org/{args.version_doi}
 
 {capsules_record}
 
-Generated metadata is CC-BY-4.0. The `license` table field is the source paper's licence; source quotations retain that paper's terms and are included only as bounded quotations. Tools retain their own licences, which this record does not alter.
+Generated metadata is CC-BY-4.0. The `license` table field is the source paper's licence; text quoted from that paper stays under the paper's own terms, NonCommercial and NoDerivatives terms included; it is kept in full for Creative Commons, CC0 and public-domain papers, and shortened or removed otherwise. Tools retain their own licences, which this record does not alter.
 
 Pipeline: {pipeline}
 

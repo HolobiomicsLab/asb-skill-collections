@@ -12,7 +12,7 @@ from scripts import pack_capsules
 def context(retention):
     access = {
         "dropped": {"type": "closed", "license": "publisher"},
-        "capped": {"type": "gold", "license": "CC-BY-NC-ND-4.0"},
+        "capped": {"type": "gold", "license": "other-oa"},
         "full": {"type": "gold", "license": "CC-BY-SA-4.0"},
     }
     return screen.context_for("10.1234/synthetic", access[retention])
@@ -160,7 +160,7 @@ def test_one_doi_budget_is_shared_by_every_member_and_source_representation(tmp_
         target = tmp_path / relative
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(text)
-    paper = {"doi": "10.1234/synthetic", "access": {"type": "gold", "license": "CC-BY-NC-4.0"}}
+    paper = {"doi": "10.1234/synthetic", "access": {"type": "gold", "license": "other-oa"}}
     receipt, capsules = pack_capsules.screen_build(tmp_path, paper, {}, {"deny_patterns": (), "private_repositories": ()})
     assert receipt["failures"] == []
     assert receipt["quotes_after_screen"] == {"count": 5, "characters": 1500, "longest": 300, "truncated": 5, "dropped": 1}
@@ -222,18 +222,21 @@ def test_post_screen_verification_checks_the_individual_field_cap():
     "CC0", "CC0-1.0", "public-domain", "public_domain",
     "https://creativecommons.org/licenses/by/4.0/", "https://creativecommons.org/licenses/by-sa/3.0/",
     "https://creativecommons.org/publicdomain/zero/1.0/",
+    "cc-by-nc", "CC-BY-NC-4.0", "cc-by-nd", "CC-BY-ND-4.0", "cc-by-nc-nd", "CC-BY-NC-ND-4.0",
+    "cc-by-nc-sa", "CC-BY-NC-SA-3.0",
+    "https://creativecommons.org/licenses/by-nc/4.0/",
+    "https://creativecommons.org/licenses/by-nd/4.0/",
+    "http://creativecommons.org/licenses/by-nc-nd/4.0/legalcode",
 ])
-def test_explicit_permissive_licence_classes(licence):
+def test_licences_that_allow_verbatim_sharing_keep_the_text_in_full(licence):
     assert screen.context_for("10.1234/synthetic", {"type": "gold", "license": licence}).retention == "full"
 
 
 @pytest.mark.parametrize("licence", [
-    "cc-by-nc", "CC-BY-NC-4.0", "cc-by-nd", "CC-BY-ND-4.0", "cc-by-nc-nd", "CC-BY-NC-ND-4.0",
-    "cc-by-nc-sa", "CC-BY-NC-SA-3.0", "cc-by-unrecognised", "publisher", "other-oa",
-    "https://creativecommons.org/licenses/by-nc/4.0/",
-    "https://creativecommons.org/licenses/by-nd/4.0/",
+    "cc-by-unrecognised", "cc-by-nd-nc", "cc-by-sa-nd", "publisher", "other-oa", "implied-oa",
+    "https://creativecommons.org/licenses/by-x/4.0/",
 ])
-def test_nonpermissive_open_licences_are_capped(licence):
+def test_other_open_licences_are_capped(licence):
     assert screen.context_for("10.1234/synthetic", {"type": "gold", "license": licence}).retention == "capped"
 
 
