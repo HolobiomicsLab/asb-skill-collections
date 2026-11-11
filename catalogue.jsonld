@@ -41,7 +41,7 @@
   "@id": "https://w3id.org/holobiomicslab/asb-skill/registry",
   "name": "ASB Skill Collection Registry",
   "description": "Auto-generated registry of the ASB Skill Collections in the domain repositories. Each entry's status says whether it is released or staged.",
-  "generated_at": "2026-11-10T10:56:54Z",
+  "generated_at": "2026-11-11T00:44:45Z",
   "collections": [
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/agentic-ai/v1",
@@ -61,8 +61,8 @@
           "affiliation": "Holobiomics Lab, Institut de Chimie de Nice (ICN), CNRS UMR 7272 / Université Côte d'Azur"
         }
       ],
-      "released_at": "2026-11-09T00:00:00Z",
-      "doi": "10.5281/zenodo.24093110"
+      "released_at": "2026-11-10T00:00:00Z",
+      "doi": "10.5281/zenodo.24122112"
     },
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/astronomy/v1",
@@ -82,8 +82,8 @@
           "affiliation": "Holobiomics Lab, Institut de Chimie de Nice (ICN), CNRS UMR 7272 / Université Côte d'Azur"
         }
       ],
-      "released_at": "2026-11-09T00:00:00Z",
-      "doi": "10.5281/zenodo.24093095"
+      "released_at": "2026-11-10T00:00:00Z",
+      "doi": "10.5281/zenodo.24122111"
     },
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/epigenomics/v1",
@@ -169,8 +169,8 @@
           "affiliation": "Holobiomics Lab, Institut de Chimie de Nice (ICN), CNRS UMR 7272 / Université Côte d'Azur"
         }
       ],
-      "released_at": "2026-11-09T00:00:00Z",
-      "doi": "10.5281/zenodo.24093107"
+      "released_at": "2026-11-10T00:00:00Z",
+      "doi": "10.5281/zenodo.24122116"
     },
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/genomics/v1",
@@ -190,8 +190,8 @@
           "affiliation": "Holobiomics Lab, Institut de Chimie de Nice (ICN), CNRS UMR 7272 / Université Côte d'Azur"
         }
       ],
-      "released_at": "2026-11-09T00:00:00Z",
-      "doi": "10.5281/zenodo.24093085"
+      "released_at": "2026-11-10T00:00:00Z",
+      "doi": "10.5281/zenodo.24122105"
     },
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/metabarcoding/v1",
@@ -211,8 +211,8 @@
           "affiliation": "Holobiomics Lab, Institut de Chimie de Nice (ICN), CNRS UMR 7272 / Université Côte d'Azur"
         }
       ],
-      "released_at": "2026-11-09T00:00:00Z",
-      "doi": "10.5281/zenodo.24093089"
+      "released_at": "2026-11-10T00:00:00Z",
+      "doi": "10.5281/zenodo.24122109"
     },
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v1",
@@ -562,8 +562,8 @@
       "tools_count": 1989,
       "leaf_dir": "leaves",
       "domain_topics": [],
-      "doi": "10.5281/zenodo.24093587",
-      "released_at": "2026-11-09T00:00:00Z",
+      "doi": "10.5281/zenodo.24122117",
+      "released_at": "2026-11-10T00:00:00Z",
       "lead_curators": [
         {
           "family": "Nothias",
@@ -592,8 +592,8 @@
           "affiliation": "Holobiomics Lab, Institut de Chimie de Nice (ICN), CNRS UMR 7272 / Université Côte d'Azur"
         }
       ],
-      "released_at": "2026-11-09T00:00:00Z",
-      "doi": "10.5281/zenodo.24093087"
+      "released_at": "2026-11-10T00:00:00Z",
+      "doi": "10.5281/zenodo.24122106"
     },
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/multi-omics/v1",
@@ -613,8 +613,8 @@
           "affiliation": "Holobiomics Lab, Institut de Chimie de Nice (ICN), CNRS UMR 7272 / Université Côte d'Azur"
         }
       ],
-      "released_at": "2026-11-09T00:00:00Z",
-      "doi": "10.5281/zenodo.24093092"
+      "released_at": "2026-11-10T00:00:00Z",
+      "doi": "10.5281/zenodo.24122110"
     },
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/proteomics/v1",
@@ -634,8 +634,8 @@
           "affiliation": "Holobiomics Lab, Institut de Chimie de Nice (ICN), CNRS UMR 7272 / Université Côte d'Azur"
         }
       ],
-      "released_at": "2026-11-09T00:00:00Z",
-      "doi": "10.5281/zenodo.24093114"
+      "released_at": "2026-11-10T00:00:00Z",
+      "doi": "10.5281/zenodo.24122102"
     },
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/transcriptomics/v1",
@@ -732,8 +732,8 @@
           "affiliation": "Holobiomics Lab, Institut de Chimie de Nice (ICN), CNRS UMR 7272 / Université Côte d'Azur"
         }
       ],
-      "released_at": "2026-11-09T00:00:00Z",
-      "doi": "10.5281/zenodo.24093100"
+      "released_at": "2026-11-10T00:00:00Z",
+      "doi": "10.5281/zenodo.24122113"
     }
   ]
 }
