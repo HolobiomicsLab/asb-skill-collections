@@ -491,7 +491,16 @@ def no_match_hint(args: argparse.Namespace) -> str:
         tips.append("drop --technique/--edam")
     others = [name for name in ("skills", "workflows", "tools") if name != args.target]
     tips.append("or search --target " + " / --target ".join(others))
-    return f"no {args.target} matched. Next: " + "; ".join(tips) + "."
+    return f"no {args.target} matched. Next: " + "; ".join(tips) + ".\n" + contribution_hint()
+
+
+def contribution_hint() -> str:
+    """One line naming routes 2 and 3, offered once the search has come up empty."""
+    helper = Path(__file__).resolve().parent / "report_issue.py"
+    how = (f'python3 "{helper}" missing --help (or: paper --help)' if helper.is_file()
+           else "https://github.com/HolobiomicsLab/asb-skill-collections/issues")
+    return ("If no skill covers this, offer the user to report it (ask first, post only on a yes): "
+            f"a skill is missing: request it, or propose yours; a paper is not referenced: propose it. {how}")
 
 
 def build_parser() -> argparse.ArgumentParser:

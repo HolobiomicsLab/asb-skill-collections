@@ -16,7 +16,7 @@ fonts.
 | `paper.html` (+ `site-data.js`, `paper.js`) | `search_index/manifest.json`, `search_index/<domain>.json`, `catalogue.jsonld` (raw) | One paper and the skills that cite it; request-review and flag buttons |
 | `search.html` (+ `search.js`) | `search_index/manifest.json`, `search_index/<domain>.json` | Full-text search across papers, skills, workflows and tools of the selected domains (lunr.js) |
 | `contribute.html` (+ `contribute.js`) | nothing | Anonymized skill, workflow or tool improvement report as a pre-filled GitHub issue (mirrors `scripts/make_improvement_report.py`) |
-| `propose.html` | nothing | Form to propose a paper, submitted as a pre-filled GitHub issue |
+| `propose.html` (+ `propose.js`) | nothing | Form to propose a paper for one of the released collections, submitted as a pre-filled GitHub issue in the fields of the intake parser |
 
 The collection trees (each `SKILL.md`, tool record, `corpus.yaml` and machine
 index) are in the private domain repositories `HolobiomicsLab/asb-skills-<domain>`
@@ -46,12 +46,15 @@ their source paper page, and links rows of released collections to Browse
 filtered to that item.
 
 All write actions (request a review, flag, propose, contribute) open a
-pre-filled issue on this public repository through URL parameters, with the
-labels of the matching issue template: `propose,paper-intake,needs-triage`
-(`propose-paper.md`), `review-requested,needs-triage` (`request-paper-review.md`)
-and `usage-feedback,needs-triage` (`skill-feedback.md`). The contribute form
-keeps the labels of `scripts/make_improvement_report.py`. GitHub applies labels
-from the URL only for people with triage access to the repository.
+pre-filled issue on this public repository through URL parameters. Each names
+its issue template (`template=`) and the labels of the vocabulary of
+`scripts/skill_feedback.py`: `propose,paper-intake,needs-triage,auto-report`
+(`3-propose-paper.md`), `review-requested,needs-triage` (`request-paper-review.md`)
+and `usage-feedback,needs-triage,auto-report`, with `propose` for kind `gap` or
+`composition` (`1-skill-feedback.md`, `2-request-skill.md`). GitHub applies
+labels from the URL only for people with triage access to the repository; the
+template's own labels are meant to cover the others (not verified against
+GitHub). The paper form writes the fields that `scripts/intake_issue.py` reads.
 `contribute.html` scrubs file paths, emails, IPs, and secrets in the browser
 before building the issue body (same rules as the Python CLI).
 

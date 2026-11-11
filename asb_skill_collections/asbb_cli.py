@@ -13,6 +13,10 @@ Subcommands:
                                 via --dest).
   fetch                       : download chosen skills from the published
                                 repository into a directory; no checkout.
+  report                      : draft a redacted report for the public
+                                registry (skill, missing, paper, fault); it
+                                prints the text and a prefilled address and
+                                never posts.
 
 For Claude Code the canonical install path remains the plugin marketplace::
 
@@ -314,6 +318,20 @@ def _cmd_uninstall(args) -> int:
     return 0
 
 
+def _cmd_report(args) -> int:
+    """`asbb report` — the four contribution routes, through the shipped helper.
+
+    `report_issue.py` is the generated helper a collection ships in `bin/`
+    (byte-identical to scripts/templates/report_issue.py); it never calls the
+    network and never posts.
+    """
+    from . import report_issue
+    try:
+        return int(report_issue.main(list(args.report_args) or ["--help"], prog="asbb report"))
+    except SystemExit as stop:  # argparse --help and usage errors
+        return int(stop.code or 0)
+
+
 def build_parser() -> argparse.ArgumentParser:
     from .asbb.fetch import DEFAULT_REF
     parser = argparse.ArgumentParser(
@@ -437,6 +455,14 @@ def build_parser() -> argparse.ArgumentParser:
     p_fetch.add_argument("--manifest-ref", default=DEFAULT_REF,
                          help="Ref of the master collections manifest (default main).")
     p_fetch.set_defaults(func=_cmd_fetch)
+
+    # asbb report <route> ...: the report helper a collection ships in bin/.
+    p_report = sub.add_parser(
+        "report", add_help=False,
+        help="Draft a redacted issue report for the public tracker; nothing is posted.",
+        description="Routes: skill, missing, paper, fault. `asbb report <route> --help` lists the fields.")
+    p_report.add_argument("report_args", nargs=argparse.REMAINDER)
+    p_report.set_defaults(func=_cmd_report)
 
     return parser
 

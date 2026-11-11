@@ -258,9 +258,11 @@ Measured 2026-10-30: Pages is not enabled on the repository
 (`gh api repos/HolobiomicsLab/asb-skill-collections/pages`: 404; `has_pages: false`).
 The Contribute page URL and the site root both returned 404. The site sources
 (`docs-site/`) and `.github/workflows/pages.yml` are in the repository. On 2026-11-10 an anonymous request to the site root and to `search.html` returned HTTP 200.
-The working
-route for an improvement report is `scripts/make_improvement_report.py` or the
-`asb-contribute` skill.
+The contribute
+page and the paper form are therefore reachable. Reports are drafted with the
+site, `asbb report`, `scripts/skill_feedback.py` or
+`scripts/make_improvement_report.py`; the `asb-contribute` skill ships only
+with metabolomics v2.
 
 ## HuggingFace mirror and leaderboard
 

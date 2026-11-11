@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Reject retracted phrases and foreign release identifiers in a candidate."""
+"""Reject retracted phrases and foreign release identifiers in a candidate.
+
+It also rejects a router whose report-and-contribute section is present but
+stale. A router released without that section is accepted.
+"""
 
 from __future__ import annotations
 
@@ -17,6 +21,7 @@ if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from scripts.domain_rules import domain_rules_path
+from scripts.router_shape import CONTRIBUTION_HEADING, router_contribution_findings
 
 
 DEFAULT_RULES = Path(__file__).with_name("release_surface_rules.yaml")
@@ -357,6 +362,8 @@ def _check(candidate: Path, rules_path: Path) -> tuple[list[Finding], int, int]:
             ) from exc
         findings.extend(_phrase_findings(text, relative, phrases))
         findings.extend(_identifier_findings(text, relative, path.name, identifiers))
+    for router in router_contribution_findings(candidate):
+        findings.append(Finding(router, 1, "stale-contribution-section", CONTRIBUTION_HEADING, 0))
     findings.sort(
         key=lambda finding: (
             finding.relative_path,

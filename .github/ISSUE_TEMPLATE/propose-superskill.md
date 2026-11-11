@@ -9,7 +9,7 @@ labels: ["propose-superskill", "needs-triage"]
 > **existing leaf skills** for an end-to-end task (e.g. `mzML → annotation`). It is
 > generated from a short **skeleton** (stages + goals + preferred leaf skills) by
 > the ASB factory, not hand-written. It reuses leaves; it does not add new ones.
-> To add a *new tool/paper*, file a [Propose a paper](./propose-paper.md) instead.
+> To add a *new tool/paper*, file a [Propose a paper](./3-propose-paper.md) instead.
 
 ## Super-skill
 

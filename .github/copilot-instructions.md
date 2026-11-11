@@ -10,10 +10,10 @@ metabolomics release is **v3** (11,830 skills over 1,989 tools) in
 is a checkout of the private domain repository (or the extracted Zenodo record of a release). In short:
 
 - **Skills** are plain Markdown at `<domain checkout>/collections/metabolomics/v3/leaves/<slug>/SKILL.md`
-  (only `skills/_router`, the `asb-metabolomics` licence gate and the
-  `asb-contribute` contribution route sit under `skills/`, because a plugin host
-  advertises everything there into the session prompt)
-  (YAML frontmatter + body). The entry point is `skills/_router/SKILL.md`.
+  (YAML frontmatter + body). Only the router `skills/_router/SKILL.md` sits under
+  `skills/`, because a plugin host advertises everything there into the session
+  prompt; it is the entry point. (The `asb-metabolomics` licence gate and the
+  `asb-contribute` contribution skill ship only with metabolomics v2.)
 - **To find a skill**, search the indexes at `<domain checkout>/collections/metabolomics/v3/`:
   `skills_index.json` (by EDAM IRI, tool name, or keyword over name/description)
   and `tools_index.json`. Prefer EDAM/tool matches over keyword.
@@ -26,3 +26,10 @@ is a checkout of the private domain repository (or the extracted Zenodo record o
 When suggesting analysis code, prefer the tools and procedures these skills
 describe, and cite the skill's `derived_from` DOI. Released domains are the ones
 registered in `collections.yaml`.
+
+When a skill is wrong, missing, a paper is not referenced, or something
+technical failed, offer the user a report once per problem, show the exact
+text, and file it only on an explicit yes, as an issue on the public registry
+(`asbb report <skill|missing|paper|fault>` drafts it). The four routes and the
+rules are in [`AGENTS.md`](../AGENTS.md#report-and-contribute); the domain
+repositories are private, so no report goes there.
