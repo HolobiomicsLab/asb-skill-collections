@@ -232,9 +232,9 @@ The release gate is the checkpoint between private Tier 2 and public Tier 3. Eve
 
 ### Gate Procedure
 
-**Entry:** Capsule paths + corpus metadata, run on local ASB checkout
-**Exit:** `gate_report.json` (PASS|WARN|FAIL) + artifacts for promotion to `staged-collections/`
-**Enforcement:** Advisory on PRs to `staged-collections/`; **hard-blocking** on promotion to `collections/` and on the release tag
+**Entry:** One collection directory in a domain checkout, with its corpus metadata (`corpus.yaml`)
+**Exit:** `gate_report.json` (PASS|WARN|FAIL), committed as the receipt under `receipts/<cut-id>/` in the domain repository
+**Enforcement:** **hard-blocking** (strict mode) in the domain repository's `gates.yml` on every pull request and push to `main` (§7.1), when a candidate collection is landed (§7.2), and at the `gate` stage of a release (§7.3)
 
 ### Gate Checklist (15 gates)
 
@@ -499,111 +499,150 @@ and `pii_dual_use` is PASS with zero findings across all four collections.
 
 ## 7. Enforcement Points & Gate Workflow
 
-### 7.1 Advisory Gate: Pull Requests to `staged-collections/`
+### 7.1 Pull-Request Checks
 
-**Trigger:** Any PR that adds or modifies files in `staged-collections/`.
+**Corrected 2026-11-11.** This section used to describe an advisory gate on pull
+requests to a `staged-collections/` directory of this repository. This repository
+holds no collection tree and no `staged-collections/` directory. Released content
+lives in the private domain repositories `asb-skills-<domain>`, and the content
+checks run there.
 
-**Workflow (corrected 2026-09-13).** ~~`.github/workflows/validate.yml` runs
-`asbb registry verify` (gates 1,2,5,6,8,10) and `release_gate.py --advisory`
-(gates 3,4,7,11-14 suppress hard-blocks; all output as PR comments).~~
-Neither command runs in that workflow. What `validate.yml` actually runs, on every
-PR to `main` and every push to `main` — not on a `staged-collections/` path filter —
-is: the test suite; `scripts.skill_index`; `marketplace.json` validation;
-`scripts.lint_skill_descriptions`; a sampled `derived_from` DOI resolution; EDAM IRI
-resolution; RO-Crate validation (blocking since 2026-09-14 — every released capsule
-ships an `ro-crate-metadata.json`, its build's crate pruned to what the capsule holds,
-and the step fails the job on any crate that does not describe exactly that as
-RO-Crate 1.1, or when it finds no released capsule; no manifest declares
-`ro_crate_path`, since the crates are per capsule); the indicium
-round-trip (inert — the CLI is not on PyPI, so it emits a `::warning::` and never
-blocks); LinkML schema validation (blocking once resolvable, since 2026-09-14 — every
-`collection.yaml` is validated closed against `SkillCollection` in
-`asb_skill_collection.yaml` from `asb-schema>=0.3.0`, and any manifest that does not
-validate fails the job; until that package is installable, and it is not yet on PyPI,
-the step emits a `::warning::` saying it did not run and exits 0); the pack-derivation gate
-(`scripts.build_packs --check`); the advertised-count gate
-(`scripts.check_advertised_counts`); and the license-tier, provenance-tier and
-tool-catalogue gates — the first two over `collections/metabolomics/v2` and every
-pack, the third over the collection.
+**In this repository.** The `Validate` workflow (`.github/workflows/validate.yml`)
+runs on every pull request to `main` and on every push to `main`. It runs:
 
-Three separate errors are corrected here.
+- the test suite (`python -m pytest tests/`);
+- `scripts/check_collections_manifest.py`, which checks the release registry
+  `collections.yaml` against `catalogue.jsonld`;
+- a check that the committed per-domain search index in `docs-site/search_index/`
+  matches the registry;
+- validation of the root `CITATION.cff` with `cffconvert`;
+- `claude plugin validate --strict` on `.claude-plugin/marketplace.json`;
+- `scripts/sync_marketplace.py --check --require-all`, which checks the marketplace
+  pins against the registry.
 
-1. **`asbb registry verify` is not a command — and since 2026-09-14 neither is
-   `asbb registry`.** Until then `asbb registry` accepted only `list` and `validate`
-   (`verify` was an `invalid choice`), and both were Phase-1.7 stubs that printed a
-   placeholder and — since 2026-09-13 — exited 1 rather than 0, so that a caller could
-   not read "consistent" out of a command that looked at nothing. Fixing the verb
-   would not have enforced anything either. On 2026-09-14 the owner removed the
-   advertised surface rather than leave a documented command that answers nothing:
-   `asbb registry <anything>` is now an argparse `invalid choice` on the top-level
-   parser and exits 2. `docs/REGISTRY.md` §4.1 records what the two subcommands
-   claimed and which script does each job.
-2. **`release_gate.py` is not wired into this workflow at all** — in advisory mode or
-   any other. The gate runs at promotion (§7.2) and at release, never on a
-   `staged-collections/` PR.
-3. **The gate numbers in that list are not this document's gate numbers.** They are
-   `validate.yml`'s own header numbering, which follows Release Design Doc v2 §14.
-   The two schemes collide rather than agree: in that header gate 6 is *EDAM IRI
-   resolution* and gate 10 is *plugin manifest validation*, where §5 above numbers
-   gate 6 the *similarity check* and gate 10 *registry consistency*. Read any gate
-   number in a workflow file against that workflow's own header, never against §5.
+It does not run `release_gate.py` or any content gate, because this repository has no
+collection content to check.
 
-**What actually reconciles the registry** is the release gate, not a registry
-subcommand: `check_catalogue_membership` (each `collection.yaml`'s advertised members
-against `catalogue.jsonld` and the files on disk), `check_layout` (each skill
-directory's permitted file set and byte budget, and `skills_index.json` against the
-leaf directories), and `check_unit_closure` (each pack index against its leaves, and
-every declared helper against its declaring unit). All three run only where
-`release_gate.py` runs.
+**In a domain repository.** Each domain repository carries a `gates.yml` workflow,
+rendered by `scripts/render_domain_ci.py` from `scripts/templates/domain-ci.yml`. It
+runs on every pull request to `main` and on every push to `main`, and calls this
+repository's reusable workflow `.github/workflows/domain-gates.yml` at a pinned full
+commit SHA. That workflow runs the content checks (`scripts/domain_content_gates.py`
+and the check scripts listed in `.github/workflows/README.md`), then
+`scripts/release_gate.py` in strict mode, and, when a receipt directory is
+configured, re-verifies the committed `gate_report.json` with `--verify`. Any failing
+step fails the job.
 
-**Result:** there is no advisory PR comment today, because no advisory run is wired.
-Merge is **NOT blocked** by a release-gate finding for the trivial reason that the
-release gate is not consulted. Curator review of a staged PR is unassisted.
+**While GitHub Actions is unavailable on the private domain repositories**, a
+maintainer runs the same checks locally, with `scripts/run_domain_gates.sh` and the
+commands in `docs/domain-onboarding.md` section 4, and records the results in the
+pull-request body.
 
-**Wiring it is drafted and held for v1.** A `--advisory` run over a workflows-only
-tree such as `staged-collections/metabolomics` exits 1 today: five collection-scoped
-checks (`access_tier_oa`, `strip_verbatim_similarity`, `pii_dual_use`,
-`provenance_doi_license`, `gate_input_files`) have no subject in a tree with no
-`collection.yaml`, no `corpus.yaml` and no leaf skills, and `CheckResult.finish()`
-cannot distinguish *the subject is missing* from *there is no subject of this kind
-here* — both give `checked == 0` and report `uncheckable`, and
-`blocking_fail = overall == UNCHECKABLE` is deliberately unconditioned on `--strict`
-(pinned by `tests/test_release_gate_receipt.py::test_advisory_empty_target_also_blocks`).
-So the exit code is correct and the classification is the gap. A patch adding a
-`not_applicable` verdict for workflows-only targets, plus the `validate.yml` steps to
-post one PR comment, was drafted and measured on 2026-09-13: it matches exactly one
-directory in the repository, leaves all four shipped collections byte-identical in
-their gate summaries (only `policy.implementation_sha256` moves, because the gate
-file itself is hashed), and keeps the suite at 1618 passed / 3 skipped. It is held
-out of the v0 release train because it changes the gate for no v0 benefit; it lands
-with the v1 wiring.
+**No workflow posts gate results as a pull-request comment.** A maintainer reads the
+job output, or the local results in the pull-request body.
 
-**No override needed:** Curator can merge a PR with WARNs at any time (this is a staging area).
+**Gate numbers in workflow files are not this document's gate numbers.** A workflow
+header may follow its own numbering (Release Design Doc v2 §14). Read any gate number
+in a workflow file against that workflow's own header, never against §5.
 
-### 7.2 Hard-Block Gate: Promotion from Staged → Collections
+**Registry subcommands.** `asbb registry` was removed on 2026-09-14; before that its
+`list` and `validate` subcommands were stubs, and `asbb registry verify` never
+existed. `docs/REGISTRY.md` §4.1 records what they claimed and which script does each
+job. Registry consistency (gate 10) is checked by the release gate:
+`check_catalogue_membership` (each `collection.yaml`'s advertised members against
+`catalogue.jsonld` and the files on disk), `check_layout` (each skill directory's
+permitted file set and byte budget, and `skills_index.json` against the leaf
+directories) and `check_unit_closure` (each pack index against its leaves, and every
+declared helper against its declaring unit). In this repository, `Validate` checks the
+registry, the catalogue and the marketplace pins as listed above.
 
-**Trigger:** Curator opens a promotion PR (`promote-collection.yml`) moving a collection from `staged-collections/` to `collections/`.
+### 7.2 Hard-Block Gate: Landing a Candidate Collection
 
-**Workflow:** `.github/workflows/promote-collection.yml` runs:
-- `release_gate.py` with `--strict` flag (all gates 1,2,5,6,8,10,12,15 hard-block on FAIL)
-- COI verification (if collection includes attestations)
-- Leaderboard consistency check
+**Corrected 2026-11-11.** This section used to describe a promotion pull request run
+by a `promote-collection.yml` workflow that moved a collection from
+`staged-collections/` to `collections/` in this repository. Neither the workflow nor
+those directories exist here.
 
-**Result:** All FAIL gates must be resolved before merge. WARNs are listed but do not block; curator signs off.
+**Trigger:** A maintainer lands a candidate collection in a domain repository.
 
-**Override:** Lead Maintainer may set `coi_override: true` in the attestation or `degraded_release: true` in the promotion PR description, **except for hard gates (2,5,6,8,10,12,15) which are never overridable** (see §8).
+**Procedure:**
 
-### 7.3 Hard-Block Gate: Release Tag
+1. A maintainer assembles the candidate with `scripts/assemble_candidate.py`, which
+   also runs the candidate checks of `scripts/run_candidate_gates.py` and keeps their
+   receipts.
+2. A maintainer lands it with `scripts/land_candidate.py` (or the `land` stage of
+   `scripts/release_domain.py`). Landing commits the collection and its receipts on a
+   local `candidate/<cut-id>` branch of the domain checkout. It does not push or
+   merge.
+3. A maintainer opens a pull request in the domain repository. The domain
+   repository's `gates.yml` runs the content checks and the strict release gate on
+   it (§7.1), or a maintainer runs them locally and records the results in the
+   pull-request body.
+4. The strict release gate (`scripts/release_gate.py --strict`) writes
+   `gate_report.json`, which is committed as the receipt under `receipts/<cut-id>/`
+   in the domain repository.
 
-**Trigger:** A maintainer creates a release tag `<slug>-v<N>` and pushes it.
+**Result:** The hard gates of §5 (`hard_gate_ids` in every gate report: 2, 5, 6, 8,
+10, 15) fail the strict gate. A hard-gate FAIL stops the candidate: it is not merged,
+deposited, tagged or registered (`docs/domain-onboarding.md` section 5). WARNs are
+listed but do not block; the curator signs off.
 
-**Workflow:** `.github/workflows/release.yml` runs:
-- Full `release_gate.py --strict` (hard-block on gates 2,5,6,8,10,15 — see the §5 checklist)
-- Zenodo deposition + DOI mint
-- HF mirror trigger (`mirror-to-hf.yml`)
-- Catalogue regeneration + w3id IRI assertion
+**COI and leaderboard checks.** No workflow runs a COI check at landing. A maintainer
+runs `scripts/check_coi.py` on review attestations (`COI_POLICY.md`, Safeguard 1). No
+landing or release step runs a leaderboard consistency check;
+`scripts/validate_leaderboard.py` exists, and no workflow or release stage calls it.
 
-**Result:** If any hard gate fails, the action aborts; tag is not pushed; Zenodo deposition is reverted (fail-soft).
+**Override:** The Lead Maintainer may override a soft gate as §8.3 describes. The
+hard gates of §8.2 are never overridable. No script reads the `coi_override` or
+`degraded_release` markers of §8.3: an override is a written record, not a switch.
+
+### 7.3 Hard-Block Gate: Release
+
+**Corrected 2026-11-11.** This section used to describe a `release.yml` workflow that
+ran on a pushed tag, minted the DOI and triggered a `mirror-to-hf.yml` mirror. Both
+workflows were removed on 2026-11-08 (`docs/REGISTRY.md`). No workflow runs on a
+release tag, and none deposits to Zenodo.
+
+**Trigger:** A maintainer runs the stages of `scripts/release_domain.py` for one
+domain release. `docs/RELEASE_DEPOSIT.md` ("Orchestrated release") and
+`docs/domain-onboarding.md` section 7 give the commands.
+
+**Procedure:**
+
+1. `gate` runs `scripts/release_gate.py --strict` and
+   `scripts/check_release_surface.py` on the collection, and records the verdict and
+   the receipt digest. A failure refuses the stage.
+2. `deposit-plan` prepares the archive and the Zenodo metadata offline
+   (`scripts/zenodo_deposit.py`).
+3. `deposit-draft` creates a Zenodo draft, or reuses the pending one. The tooling
+   never calls Zenodo's publish action and has no flag that does.
+4. The owner (the Lead Maintainer, §8.1) reviews the draft in the Zenodo web
+   interface and publishes it. Nothing publishes automatically. Publishing mints the
+   version DOI, and for a first release the concept DOI.
+5. `record-doi` writes the version DOI into the domain repository's citation files,
+   README and plugin version. `receipt` regenerates the strict receipt under
+   `receipts/<cut-id>/`. Both land through a pull request of the domain repository;
+   its merge commit is the release commit.
+6. `manifest` registers the release in this repository's `collections.yaml`, with
+   the merged DOI commit and its tree digest, regenerates `catalogue.jsonld` and runs
+   `scripts/check_collections_manifest.py`. The change lands through a pull request of
+   this repository, on which `Validate` runs (§7.1), including
+   `scripts/sync_marketplace.py --check`.
+7. `tag` prints the commands that create the tag `<domain>-<label>` on the DOI merge
+   commit and push it. The owner runs them, and `tag --verify` checks that the remote
+   tag points at that commit. Tags never move.
+
+**Patch release.** A patch release keeps the collection version and takes a new
+label, for example `v1.0.1`. It is a new Zenodo version of the same record, under
+the same concept DOI. The registry row of that collection version takes the new tag,
+commit, digest, DOI and date, and lists the values it replaces under `superseded` in
+`collections.yaml`.
+
+**Result:** If a hard gate fails, the `gate` stage refuses and nothing is deposited.
+Because a deposit stays a draft until the owner publishes it, a release stopped later
+leaves at most an unpublished draft, which is discarded in the Zenodo web interface.
+No release stage mirrors to HuggingFace: `scripts/mirror_to_hf.py` exists and is not
+called by `scripts/release_domain.py`.
 
 ### 7.4 DOI Topology (locked decision, 2026-06-14)
 
@@ -619,8 +658,8 @@ The following ride as **FILES inside that single deposition** — they do NOT re
 **indicium has its own, separate concept-DOI** (minted from the indicium repository's own releases). Do not create per-file or per-export DOIs (no DOI matrix explosion).
 
 **Struck 2026-09-13: the `indicium_version.txt` pin file and the `asb_ontology.ttl` snapshot.**
-Both were listed here from the start, neither ever existed, and `release.yml`'s Zenodo step has no
-stage that would attach them. They are struck rather than built, because **the deposition contains
+Both were listed here from the start, neither ever existed, and `release.yml`'s Zenodo step (removed
+on 2026-11-08, §7.3) had no stage that would attach them. They are struck rather than built, because **the deposition contains
 nothing that conforms to that ontology.** A v0 collection is 5,917 Markdown files, 934 YAML, 8 JSON
 and a `CITATION.cff`: **zero JSON-LD documents, zero claim records, zero indicium exports.** The
 `asb:` term base that `asb_spine.ttl` declares (`https://w3id.org/asb#`) appears nowhere in a shipped
@@ -894,19 +933,55 @@ If an error is discovered in a published artifact (Zenodo, HF, GitHub):
 
 ## 12. Implementation Checklist
 
-These items are required for v0 release:
+These items were listed as required for the v0 release. **Restated 2026-11-11:** each
+item now says whether it is done, with the file that shows it, or that it is not
+implemented. "Not checkable here" means the evidence lives outside this repository.
 
-- [ ] TODO: Confirm real ORCID for lead maintainer (replace `0000-0001-6711-6719` above in header)
-- [ ] TODO: Corpus paper lists locked (metabolomics, epigenomics, transcriptomics) with spot-check OA verification ≥10% per domain
-- [ ] TODO: PII red-team fixture (`tests/fixtures/pii_dual_use_red_team.jsonl`) committed; gate test ≥95% recall passing
-- [ ] TODO: `release_gate.py` wired with gates 1,2,5,6,8,10,12,15 hard-blocking (gate test coverage + PR comments)
-- [ ] TODO: `.github/workflows/promote-collection.yml` deployed (staged→collections gating)
-- [ ] TODO: `.github/workflows/verify-paper.yml` deployed (gate 15, access-tier enforcement)
-- [ ] TODO: `asb` CLI integration (`asbb doctor`, `asbb verify`) tested end-to-end. ~~`asbb registry verify`~~ — that verb never existed and `asbb registry` was removed on 2026-09-14 (`docs/REGISTRY.md` §4.1); registry consistency is gate 10 above, carried by `release_gate.py`, not by the CLI
-- [ ] TODO: First collection (metabolomics) promoted to `collections/` and passes full CI
-- [ ] TODO: `CHANGELOG.md` / release notes updated with this policy
-- [ ] TODO: Contributor allowlist (author/affiliation emails) seeded in PII config
-- [ ] TODO: Lead maintainer ORCID added to `MAINTAINERS.md`, `marketplace.json`, Zenodo depositor profile
+- [x] **Lead maintainer ORCID.** `0000-0001-6711-6719` is the ORCID in this policy's
+  header, `MAINTAINERS.md`, `CITATION.cff`, `.claude-plugin/marketplace.json` and
+  `scripts/release_creators.yaml` (the creators list, an owner decision of
+  2026-09-19, that `scripts/zenodo_deposit.py` requires each Zenodo template to
+  match).
+- [ ] **Corpus paper lists locked, with an OA spot check of at least 10% per domain.**
+  Not checkable here: the corpus lists live in a private corpus repository, and this
+  repository keeps no record of a per-domain manual spot check. The strict release
+  gate checks the access tier of every included paper (gates 2 and 15).
+- [ ] **PII red-team fixture committed; gate test at 95% recall or more.** Partly
+  done. The fixture `tests/fixtures/pii_dual_use_red_team.jsonl` is committed and
+  `tests/test_pii_dual_use_gate.py` measures recall on it. The 95% threshold is not
+  enforced: `tests/fixtures/pii_recall_target.json` sets `hard_fail_recall_target` to
+  `null` because two sources state different targets, so the test reports recall and
+  does not assert it.
+- [ ] **`release_gate.py` wired with gates 1, 2, 5, 6, 8, 10, 12, 15 hard-blocking,
+  with gate tests and PR comments.** Partly done. The strict gate runs in
+  `.github/workflows/domain-gates.yml` (§7.1) and at the `gate` stage of
+  `scripts/release_domain.py` (§7.3), and its tests are `tests/test_release_gate_*.py`.
+  It hard-blocks on gates 2, 5, 6, 8, 10 and 15 (`hard_gate_ids`); gate 1 is
+  warn-only and gate 12 is waived (§9). No workflow posts PR comments.
+- [ ] **`.github/workflows/promote-collection.yml` deployed.** Not implemented. A
+  candidate collection is landed through a pull request of its domain repository
+  instead (§7.2).
+- [ ] **`.github/workflows/verify-paper.yml` deployed (gate 15).** Not implemented.
+  Gate 15 is checked by `scripts/release_gate.py`, which runs in
+  `.github/workflows/domain-gates.yml` and at the `gate` stage of a release.
+- [ ] **`asbb` CLI integration (`asbb doctor`, `asbb verify`) tested end to end.** Not
+  implemented. `asbb --help` marks both as not implemented
+  (`tests/test_asbb_cli.py::test_help_marks_verify_and_doctor_as_not_implemented`).
+  ~~`asbb registry verify`~~ never existed and `asbb registry` was removed on
+  2026-09-14 (`docs/REGISTRY.md` §4.1); registry consistency is gate 10, carried by
+  `release_gate.py`, not by the CLI.
+- [x] **First collection (metabolomics) released.** `collections.yaml` registers
+  `metabolomics-v3.0.1`, and `scripts/check_collections_manifest.py` checks that row in
+  `Validate`. The domain repository's CI record is not checkable here.
+- [ ] **`CHANGELOG.md` / release notes updated with this policy.** Partly done.
+  `CHANGELOG.md` records earlier corrections to this policy. The release notes of the
+  domain releases live in the domain repositories and are not checkable here.
+- [x] **Contributor allowlist seeded in the PII config.** `scripts/pii_config.py`
+  defines `email_allowlist_exact` (one entry) and `email_allowlist_role_regex`.
+- [ ] **Lead maintainer ORCID in `MAINTAINERS.md`, `marketplace.json` and the Zenodo
+  depositor profile.** Partly done: present in `MAINTAINERS.md` and
+  `.claude-plugin/marketplace.json`. The Zenodo depositor profile is not checkable
+  here.
 
 ---
 
@@ -923,6 +998,14 @@ These items are required for v0 release:
 ### Soft-Gate Overrides (None Recorded Yet)
 
 (This section fills with overrides as they are approved; none for v0 release so far.)
+
+### Amendments
+
+- **2026-11-11.** §5 "Gate Procedure", §7.1, §7.2, §7.3 and §12 restated to describe the
+  process that ran for the November 2026 releases: content gates in each domain
+  repository's `gates.yml`, candidate landing by pull request in the domain repository,
+  and releases driven by `scripts/release_domain.py` with a Zenodo draft that the owner
+  publishes by hand. No gate, role or override rule changed.
 
 ---
 

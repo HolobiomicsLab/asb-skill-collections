@@ -46,8 +46,8 @@ The report records redaction counts for transparency. Privacy stance:
 
 Maintainers triage `improvement` / `needs-triage` issues and shepherd a PR. A
 content change lands with a **review attestation** (`collections/<slug>/v<N>/reviews/
-<doi>.yaml`) — see `paper.html`'s verify flow. Conflict-of-interest is auto-checked
-(`scripts/check_coi.py`, `governance/COI_POLICY.md`): self-review is allowed with
+<doi>.yaml`) — see `paper.html`'s verify flow. Conflict-of-interest is checked by
+a maintainer who runs `scripts/check_coi.py` (`governance/COI_POLICY.md`): self-review is allowed with
 disclosure + a second reviewer; `self_authored_reviews` and `external_reviews` are
 tracked separately and both public.
 
