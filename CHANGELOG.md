@@ -41,7 +41,10 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   sentence that restricts use of the tool (academic use only, a licence needed for
   industrial use) withholds a record that would otherwise be open. A replacement reads
   only a repository named like the tool, and two GNU statements that differ only in
-  version give the unversioned family. When the record shows that the tool is the subject of its citing paper, a
+  version give the unversioned family, as does a third party's version that the
+  repository does not state. A package whose registry description restricts use
+  (KEGGREST, academic use only) is not matched. The tier map reads a bare `GPL`, `LGPL`
+  or `AGPL` as open. When the record shows that the tool is the subject of its citing paper, a
   package must declare that paper's repository: an import name is not a distribution
   name (`import vega` is not PyPI's `vega`).
 - `enrich_tools_index.py --licence-only` writes the licence fields, `entry_kind`,

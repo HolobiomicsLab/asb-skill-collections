@@ -44,6 +44,7 @@ if __package__ in (None, ""):
     _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
 
 from scripts.corroborate_registry_match import STOPWORDS, domain_signal
+from scripts.repository_licence import readme_restriction
 from scripts.tool_registry_sources import normalize
 
 # Selected on the labelled set of 94 Bioconductor and Bioconda matches; see
@@ -401,6 +402,11 @@ def judge(registry, canonical, record, ctx: RecordContext, common_words) -> Verd
     if registry.restricts_use(record):
         # The licence field is then not the whole story; leave it to a reviewer.
         return Verdict(False, "registry-flags-restricted-use", strong, [])
+    if readme_restriction(registry.text(record)):
+        # The package's own description limits who may use it (KEGGREST: an
+        # Artistic-2.0 client, "Only for academic use by academic users", because
+        # the service it calls is). The licence field is then not the whole story.
+        return Verdict(False, "registry-text-restricts-use", strong, [])
 
     # The paper that cites the tool is about it, so the tool is that paper's code.
     # A package is then the tool only if it declares that repository (or lists that

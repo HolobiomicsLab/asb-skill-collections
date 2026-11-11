@@ -298,6 +298,15 @@ def agrees(registry_licence, file_licence) -> bool:
     return False
 
 
+def unversioned_family(file_licence) -> str | None:
+    """`GPL`, `LGPL`, `AGPL` or `BSD` when the repository names the family alone."""
+    keys = _keys(file_licence)
+    if len(keys) != 1:
+        return None
+    key = next(iter(keys))
+    return key.split(":", 1)[1] if key.startswith("family:") else None
+
+
 def gnu_family(registry_licence, file_licence) -> str | None:
     """`GPL`, `LGPL` or `AGPL` when both are that GNU family and differ only in version."""
     reg, rep = _keys(registry_licence), _keys(file_licence)

@@ -197,6 +197,34 @@ passes because its old repository has the same name. The pass made 847 raw GitHu
 requests (736 found, 111 not found, 6.0 MB) and one GitLab request, all cached; none
 was refused.
 
+## Fourth pass: the registry's own description, and a version nobody states
+
+A third audit read 120 resolutions recorded as open, none audited before, with the
+tier as its focus. No tool was wrong: 117 identities were judged the same from the
+excerpt shown to the auditors and three doubtful, and the resolver's recorded
+evidence settles the three (the citing repository is the package's for Argo and
+mrgsolve, `library(cluster)` for cluster). Licences: 115 exact, four in the same
+tier, one tier error. KEGGREST is an Artistic-2.0 package whose Bioconductor
+description says "Only for academic use by academic users belonging to academic
+institutions", because the service it calls is reserved for them. Two checks were
+added:
+
+- a package whose description in its registry restricts use, in the words the README
+  check looks for, is not matched (`registry-text-restricts-use`);
+- when the repository names a family alone and the version comes from a third-party
+  registry, the family is recorded (`family-fallback`).
+
+On the ten collections resolutions went from 1,488 to 1,487 and citations covered
+from 47.2% to 47.2% (62,802 of 133,072). KEGGREST is unknown; pimento, histoneHMM and
+rMSIKeyIon record `GPL` in place of a bio.tools GPL-3.0. The tier map
+(`governance/license_tiers.yaml`) now reads a bare `GPL`, `LGPL` or `AGPL` as open, as
+it did `BSD`, so a tier re-derived from the recorded string agrees with the recorded
+tier. One bio.tools request was made.
+
+A tier is the licence of the tool's code. The terms of a service or a database that
+the tool queries are seen only when the tool's own registry entry, licence file or
+README states them.
+
 ## Limits
 
 - The domain signal was measured on 94 metabolomics matches. The filters added

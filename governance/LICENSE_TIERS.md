@@ -302,10 +302,23 @@ Three further checks apply on top of the table.
   (`family-fallback`: FastTree, Bioconda GPL-2.0-or-later and a GPL version 3 text).
   Different families (GPL against LGPL) keep the repository file's licence. A
   replacement that makes the tier more restrictive is recorded from the repository.
+  When the repository names the family alone (`License: GPL`) and the version comes
+  from a third-party registry, the family is recorded too (rMSIKeyIon: bio.tools
+  GPL-3.0, a DESCRIPTION that says GPL).
+- **The registry's own description.** A package whose description in its registry
+  restricts use in the same plain words is not matched at all
+  (`registry-text-restricts-use`: KEGGREST, an Artistic-2.0 client whose description
+  says "Only for academic use by academic users belonging to academic institutions",
+  because the service it calls is).
 
 What none of this sees: a restriction stated only on a project website or in source
 file headers, and a repository that moved, whose old copy keeps its old statement
 (EpiNano's bio.tools repository is the old location and still passes the name guard).
+
+A tool's tier is the licence of its code. The terms of a database or an online service
+that the tool queries are not part of it unless the tool's own description states
+them: an open client of a service reserved for academic use is recorded `open` when
+nothing in its registry entry, licence file or README says so.
 
 #### Reading the licence string
 

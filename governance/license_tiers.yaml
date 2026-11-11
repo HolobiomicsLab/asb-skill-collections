@@ -30,6 +30,12 @@ spdx:
   LGPL-2.1-or-later: open
   LGPL-2.0-only: open
   LGPL-2.0-or-later: open
+  # A GNU family named without a version, as `BSD` above: every version of the
+  # family allows any use. The tool-licence resolver records the bare family when
+  # two statements of one tool disagree only on the version.
+  GPL: open
+  LGPL: open
+  AGPL: open
   AFL-3.0: open
   Artistic-2.0: open
   CC-BY-SA-4.0: open

@@ -43,7 +43,7 @@ from scripts.tool_identity import build_context, collection_word_share, judge, r
 from scripts.tool_licence_text import read_licence
 from scripts.repository_licence import (DETECTION_REPOSITORY_FILE, agrees, gnu_family, raw_urls,
                                         repository_name, repository_readme,
-                                        repository_statement)
+                                        repository_statement, unversioned_family)
 from scripts.tool_registry_sources import Fetcher, Registry, RegistryRefused, normalize
 
 _GOVERNANCE = pathlib.Path(__file__).resolve().parent.parent / "governance"
@@ -360,6 +360,22 @@ def _confirm_file(evidence, fetcher, tool_name=None) -> tuple[dict | None, str]:
                       f"|repository={statement['license'] or 'unread'}")
     read = bool(statement and statement["tier"])
     if read and agrees(evidence["license"], statement["license"]):
+        family = unversioned_family(statement["license"])
+        if (family and registry in THIRD_PARTY
+                and unversioned_family(evidence["license"]) != family):
+            # The repository names the family alone (rMSIKeyIon: `License: GPL`) and
+            # the version comes from a third party: the family is what the tool's
+            # own statement supports.
+            out = dict(evidence)
+            out.update(license=family, license_tier=read_licence(family)["tier"],
+                       license_raw=statement["license"],
+                       license_detection=DETECTION_REPOSITORY_FILE,
+                       license_evidence=statement["file"])
+            out["confirmation"] = {"status": "family-fallback", "file": statement["file"],
+                                   "file_license": statement["license"],
+                                   "registry_license": evidence["license"],
+                                   "registry_evidence": evidence.get("license_evidence")}
+            return out, "family-fallback"
         evidence["confirmation"] = {"status": "confirmed", "file": statement["file"],
                                     "file_license": statement["license"]}
         return evidence, "confirmed"

@@ -267,3 +267,18 @@ def test_gnu_statements_differing_only_in_version_give_the_family(tmp_path):
     assert (out["confirmation"]["registry_license"], out["confirmation"]["file_license"]) == (
         "GPL-2.0-or-later", "GPL-3.0")
     assert rl.gnu_family("LGPL-3.0-only", "GPL-3.0") is None
+
+
+def test_a_third_party_version_the_repository_does_not_state_gives_the_family(tmp_path):
+    """rMSIKeyIon: bio.tools GPL-3.0, the repository's DESCRIPTION says `License: GPL`."""
+    f = _cache(tmp_path, "o/rMSIKeyIon", {"DESCRIPTION": "Package: rMSIKeyIon\nLicense: GPL\n"})
+    out, outcome = r.confirm(ev("biotools", "GPL-3.0-only", "open", "o/rMSIKeyIon"), f)
+    assert (outcome, out["license"], out["license_tier"]) == ("family-fallback", "GPL", "open")
+    assert out["confirmation"]["registry_license"] == "GPL-3.0-only"
+    assert out["license_detection"] == "repository-licence-file"
+
+    (tmp_path / "v").mkdir()
+    g = _cache(tmp_path / "v", "o/versioned", {"LICENSE": "gpl3.txt"})
+    out, outcome = r.confirm(ev("biotools", "GPL-3.0-only", "open", "o/versioned"), g)
+    assert (outcome, out["license"]) == ("confirmed", "GPL-3.0-only")
+

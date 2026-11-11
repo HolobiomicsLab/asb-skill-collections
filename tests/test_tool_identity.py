@@ -164,3 +164,19 @@ def test_a_bioconductor_package_that_moved_account_is_still_the_tool():
     other = ti.judge(_Reg("https://github.com/someone/otherpkg"), "clusterProfiler", {},
                      _subject_ctx(), frozenset())
     assert not other.accept and other.contradiction[0]["kind"] == "subject-repository"
+
+
+class _RestrictedText(_Reg):
+    def text(self, record):
+        return ("Client-side REST access to KEGG. A package that provides a client interface to the "
+                "KEGG REST API. Only for academic use by academic users belonging to academic "
+                "institutions (see <https://www.kegg.jp/kegg/rest/>).")
+
+
+def test_a_registry_description_that_restricts_use_leaves_the_record_unknown():
+    """KEGGREST: an Artistic-2.0 package whose own description says academic use only."""
+    ctx = ti.RecordContext(collection="metabolomics", life_science=True, names=["KEGGREST"],
+                           local_text="library(KEGGREST)", skill_text="")
+    verdict = ti.judge(_RestrictedText(None), "KEGGREST", {}, ctx, frozenset())
+    assert not verdict.accept and verdict.reason == "registry-text-restricts-use"
+
