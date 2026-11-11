@@ -100,7 +100,7 @@ def _ecosystem_patterns(names) -> dict[str, list[re.Pattern]]:
         "r": [
             re.compile(rf"\b(?:library|require|requireNamespace|suppressPackageStartupMessages\(\s*library)\s*\(\s*{q}{n}{q}\s*[,)]", re.I),
             re.compile(rf"\b(?:install\.packages|BiocManager::install|biocLite|remotes::install_cran|pak::pkg_install)\s*\([^)]*{q}{n}{q}", re.I),
-            re.compile(rf"{n}:::?[A-Za-z.]", re.I),
+            re.compile(rf"{n}:::?[A-Za-z.][\w.]*\s*\(", re.I),
             re.compile(rf"\bR[\s-]+(?:package|library)\s+(?:called\s+|named\s+)?{q}{n}", re.I),
             re.compile(rf"{n}{q}\s+(?:R|Bioconductor|CRAN)[\s-]+(?:package|library)\b", re.I),
             re.compile(rf"\b(?:Bioconductor|CRAN)\s+(?:package\s+)?{q}{n}", re.I),
@@ -111,7 +111,10 @@ def _ecosystem_patterns(names) -> dict[str, list[re.Pattern]]:
         "python": [
             re.compile(rf"\bimport\s+{n}(?:\s+as\s+\w+)?\s*(?:$|[\n;,])", re.I | re.M),
             re.compile(rf"\bfrom\s+{n}(?:\.\w+)*\s+import\b", re.I),
-            re.compile(rf"\bpip3?\s+install\s+(?:-{{1,2}}[\w-]+(?:[ =]\S+)?\s+)*{q}{n}", re.I),
+            # Only flags that take no value may sit between `install` and the name:
+            # in `pip install -r requirements.txt` nothing after `-r` is a package.
+            re.compile(rf"\bpip3?\s+install\s+(?:(?:-U|--upgrade|--user|-q|--quiet|--pre|"
+                       rf"--no-cache-dir|--no-deps)\s+)*{q}{n}", re.I),
             re.compile(rf"\bPython\s+(?:package|library|module)\s+(?:called\s+|named\s+)?{q}{n}", re.I),
             re.compile(rf"{n}{q}\s+(?:Python|PyPI)\s+(?:package|library|module)\b", re.I),
             re.compile(rf"pypi\.org/project/{n}", re.I),
@@ -143,7 +146,11 @@ class RecordContext:
 
     def code_evidence(self, extra_names=()) -> dict[str, list[str]]:
         """``{ecosystem: [snippets]}`` where the record uses the name as that ecosystem's package."""
-        names = [n for n in list(self.names) + list(extra_names) if n]
+        # A name holding `::` is a namespace path (Perl's `Getopt::Long`), not a
+        # package name; matched as one it reads as R code (`x::f`).
+        names = [n for n in list(self.names) + list(extra_names) if n and "::" not in str(n)]
+        if not names:
+            return {}
         out: dict[str, list[str]] = {}
         for ecosystem, patterns in _ecosystem_patterns(names).items():
             for pattern in patterns:

@@ -89,3 +89,16 @@ def test_the_rds_reader_reads_a_character_matrix():
     data = _rds(["Package", "License"], [["igraph", "GPL (>= 2)"], ["shiny", "MIT + file LICENSE"]])
     assert read_rds_matrix(data) == [{"Package": "igraph", "License": "GPL (>= 2)"},
                                      {"Package": "shiny", "License": "MIT + file LICENSE"}]
+
+
+def test_a_perl_module_path_is_not_r_code():
+    ctx = ti.RecordContext(collection="genomics", life_science=True, names=["Getopt::Long"],
+                           local_text="use Getopt::Long; GetOptions(...)", skill_text="")
+    assert ctx.code_evidence(["GetoptLong"]) == {}
+
+
+def test_a_requirements_install_does_not_name_pip_as_a_package():
+    ctx = ti.RecordContext(collection="astronomy", life_science=False, names=["pip"],
+                           local_text="pip install -e . pip install -r requirements.txt",
+                           skill_text="")
+    assert ctx.code_evidence() == {}
