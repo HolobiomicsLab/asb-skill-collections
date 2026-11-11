@@ -364,12 +364,17 @@ def repository_name(repo_url) -> str | None:
 # licensing, never a bare "commercial": "free for academic and educational
 # purposes", "academic use only", "commercial use requires a licence", "a license
 # is needed", "for research purposes only", an industrial licence.
-_KIND = r"(?:academic|non-?commercial|research|educational|non-?profit|scientific)"
-_KINDS = _KIND + r"(?:(?:,| and| or| &|/) ?" + _KIND + r")*"
+_KIND = r"(?:academic|non-?commercial|research|educational|education|non-?profit|scientific)"
+# Kinds joined by a conjunction or written together ("academic research and
+# training"). Training and teaching count only after another kind: "only for
+# training" in a README about a neural network names a model's training step.
+_KINDS = _KIND + r"(?:(?:(?:,| and| or| &|/) ?| )(?:" + _KIND[3:-1] + r"|training|teaching))*"
 _README_RESTRICTION = re.compile(
     r"free (?:of charge )?for (?:all |any )?" + _KINDS + r" (?:use|users|purposes|institutions)"
     r"|\b" + _KINDS + r" (?:use|purposes) only"
-    r"|(?:only|solely|exclusively) (?:for|to) " + _KINDS + r" (?:use|users|purposes)"
+    r"|(?:only|solely|exclusively) (?:for|to) " + _KINDS + r"(?: (?:use|users|purposes))?"
+    r"|restricted to " + _KINDS + r"(?: (?:use|users|purposes|institutions))?"
+    r"|\bfor " + _KINDS + r" only\b"
     r"|not (?:be )?(?:for|used for|intended for) (?:any )?commercial (?:use|purposes)"
     r"|commercial use is (?:not permitted|prohibited|forbidden|not allowed)"
     r"|commercial (?:use|users?|purposes|applications?|entities|companies)[^.]{0,80}"
@@ -387,6 +392,59 @@ _ABOUT_ANOTHER = re.compile(
     r"(?:its|their) own licen|licen[cs]ed by (?:its|their)")
 
 
+# A sentence that says the tool itself, or its binary, is closed or carries further
+# restrictions. It withholds even when the cause is a dependency (MZA: "the software
+# binary depends on other software libraries which place further restrictions on
+# its use and redistribution"); only a sentence that calls the dependency optional
+# is skipped.
+_TOOL_RESTRICTED = re.compile(
+    r"closed[- ]source (?:code|binar)"
+    r"|(?:this|the|its|our) (?:software|tool|program|binar(?:y|ies)|package|code|executable)s? "
+    r"(?:is|are) (?:proprietary|closed[- ]source)"
+    r"|under a proprietary licen"
+    r"|(?:further|additional) restrictions on (?:its|their|the) (?:use|redistribution)"
+    r"|agree to comply with the (?:restrictions|licen[cs]e agreements)")
+# The same words in a comparison describe other software ("an open alternative to
+# closed-source software").
+_COMPARISON = re.compile(r"alternative to|replacement for|unlike|instead of|compared (?:to|with)"
+                         r"|replac(?:e|es|ing) ")
+
+
+# A licence term that limits the field of use of the software itself: dsb's
+# alternative terms, "THE SOFTWARE SHALL NOT BE USED IN THE TREATMENT OR DIAGNOSIS
+# OF HUMAN SUBJECTS". A second licence for a bundled component (xcms) holds no
+# such sentence and is not read as one.
+_FIELD_OF_USE = re.compile(
+    r"shall not be used (?:in|for)\b"
+    r"|(?:must|may|shall|can) not be used (?:in|for) (?:the )?(?:treatment|diagnos|clinical|"
+    r"medical|commercial|patient)")
+
+
+def field_of_use(text: str) -> str | None:
+    """The first sentence of a licence file that limits the use of the software itself.
+
+    A GNU or Apache text speaks of non-commercial distribution in its own terms
+    (GPL-2.0, section 3c), so in such a file only an explicit field-of-use sentence
+    counts.
+    """
+    standard = bool(_GNU_HEADING.search(text or "") or _APACHE.search(_norm(text or "")))
+    for sentence in readme_sentences(text):
+        low = sentence.lower()
+        if _FIELD_OF_USE.search(low) or not standard and (_NONCOMMERCIAL.search(low) or (
+                _README_RESTRICTION.search(low) and not _ABOUT_ANOTHER.search(low))):
+            return sentence[:300]
+    return None
+
+
+def repository_licence_text(repo_url, fetcher) -> dict | None:
+    """``{file, text}`` for the first licence file the repository serves, or None."""
+    for name, url in raw_urls(repo_url)[:-1]:
+        text = _get_text(fetcher, url)
+        if text is not None:
+            return {"file": url, "text": text}
+    return None
+
+
 def readme_sentences(text: str) -> list[str]:
     """The README's sentences, with code blocks and markup removed."""
     text = re.sub(r"```.*?```", " ", text or "", flags=re.S)
@@ -401,6 +459,9 @@ def readme_restriction(text: str) -> str | None:
     sentences = readme_sentences(text)
     for i, sentence in enumerate(sentences):
         low = sentence.lower().replace("\u2019", "'")
+        if _TOOL_RESTRICTED.search(low) and not _COMPARISON.search(low) and not re.search(
+                r"\boptional", low):
+            return sentence[:300]
         if not _README_RESTRICTION.search(low) or _ABOUT_ANOTHER.search(low):
             continue
         # "For research use only. Not for use in diagnostic procedures." is a

@@ -39,9 +39,11 @@ if __package__ in (None, ""):
 from scripts import reviewed_tool_licences as reviewed_map
 from scripts.license_tier import (UNESTABLISHED_DETECTIONS, load_map, tier_for_license,
                                   tool_license, warn_legacy_tool_licenses)
-from scripts.tool_identity import build_context, collection_word_share, judge, repo_key
+from scripts.tool_identity import (build_context, collection_word_share, judge, repo_key,
+                                   subject_exception_repos)
 from scripts.tool_licence_text import read_licence
 from scripts.repository_licence import (DETECTION_REPOSITORY_FILE, agrees, gnu_family, raw_urls,
+                                        field_of_use, repository_licence_text,
                                         repository_name, repository_readme,
                                         repository_statement, unversioned_family)
 from scripts.tool_registry_sources import Fetcher, Registry, RegistryRefused, normalize
@@ -199,11 +201,48 @@ def registry_candidates(record, ctx, tool_yaml, registries, common_words, exclud
                 allow = False
         for canonical, pkg in registry.lookup(names, allow_request=allow):
             verdict = judge(registry, canonical, pkg, ctx, common_words)
+            if verdict.accept:
+                check_subject_exception(registry, canonical, pkg, ctx, verdict)
             reading = _read_registry_licence(registry, pkg)
             out.append({"registry": registry.id, "registry_obj": registry, "canonical": canonical,
                         "record": pkg, "verdict": verdict, "reading": reading})
     _share_identity(out)
     return out
+
+
+def check_subject_exception(registry, canonical, pkg, ctx, verdict) -> None:
+    """Refuse a Bioconductor package let through by name when the paper's code is not it.
+
+    The paper's repository must hold an R package of that name: its DESCRIPTION,
+    read anonymously as raw content, says `Package: <name>`. One request per
+    repository, cached.
+    """
+    repos = subject_exception_repos(registry, pkg, ctx)
+    if not repos or getattr(registry, "fetcher", None) is None:
+        return
+    for key in repos:
+        for name, url in raw_urls("https://" + key):
+            if name != "DESCRIPTION":
+                continue
+            # The package may sit at the root or in a directory named after it.
+            base = url[: -len("DESCRIPTION")]
+            candidates = list(dict.fromkeys((url, f"{base}{canonical}/DESCRIPTION",
+                                             f"{base}{canonical.lower()}/DESCRIPTION")))
+            for i, candidate in enumerate(candidates):
+                # The index keeps two spellings apart on a case-insensitive file system.
+                key = "repofile-" + re.sub(r"[^A-Za-z0-9.]+", "_", candidate.split("://", 1)[1])
+                text = registry.fetcher.get(candidate, key + (f"-{i}" if i == 2 else ""),
+                                            400_000, paced=True)
+                m = re.search(r"^Package:\s*(\S+)", (text or b"").decode("utf-8", "replace"),
+                              re.M)
+                if m and m.group(1) == canonical:
+                    return
+    verdict.accept = False
+    verdict.reason = "contradicted"
+    verdict.contradiction = list(verdict.contradiction) + [{
+        "kind": "subject-repository",
+        "value": f"record is the subject of its paper ({', '.join(repos)}), which holds no R "
+                 f"package {canonical!r}"}]
 
 
 def _repo_keys(c) -> set:
@@ -310,6 +349,15 @@ def confirm(evidence, fetcher, tool_name=None, readme=True) -> tuple[dict | None
     ... for any industrial and any other purposes"): the tool's own statements then
     contradict each other, as MassCube's do.
     """
+    registry = evidence["route"].split(":", 1)[1]
+    if registry in R_DECLARED and re.search(r"file\s+LICEN[CS]E", str(evidence.get("license_raw")), re.I):
+        # The licence field names a file, so the file is part of the authors'
+        # declaration: a term in it that limits use of the software (dsb: "shall not
+        # be used in the treatment or diagnosis of human subjects") withholds.
+        found = repository_licence_text(evidence.get("repo_url"), fetcher)
+        sentence = field_of_use(found["text"]) if found else None
+        if sentence:
+            return None, f"withheld-field-of-use:{sentence}"
     out, outcome = _confirm_file(evidence, fetcher, tool_name)
     if not (readme and out and out.get("license_tier") == "open"):
         return out, outcome

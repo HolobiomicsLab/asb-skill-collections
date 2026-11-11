@@ -180,3 +180,63 @@ def test_a_registry_description_that_restricts_use_leaves_the_record_unknown():
     verdict = ti.judge(_RestrictedText(None), "KEGGREST", {}, ctx, frozenset())
     assert not verdict.accept and verdict.reason == "registry-text-restricts-use"
 
+
+
+# --------------------------------------------------------------------------- #
+# Fifth pass: spelling, exact code, a namesake in the other ecosystem          #
+# --------------------------------------------------------------------------- #
+
+class _Conda(_Reg):
+    id, scope, ecosystem = "bioconda", "life_science", "conda"
+
+    def text(self, record):
+        return "Simple Python interface for Graphviz layouts of network graphs"
+
+
+def test_a_package_that_adds_a_separator_is_another_string():
+    assert ti.spelled_alike("iqtree", ["IQ-TREE"])
+    assert ti.spelled_alike("diffuStats", ["Diffu Stats"])
+    assert ti.spelled_alike("trim-galore", ["Trim Galore"])
+    assert not ti.spelled_alike("py-graphviz", ["pygraphviz"])
+
+
+def test_code_corroborates_only_the_package_as_the_registry_spells_it():
+    """pygraphviz: `conda install pygraphviz` is not Bioconda's `py-graphviz` (xflr6/graphviz)."""
+    ctx = ti.RecordContext(collection="transcriptomics", life_science=True,
+                           names=["pygraphviz", "pygraphviz"],
+                           local_text="network drawn with pygraphviz layouts\nconda install pygraphviz",
+                           skill_text="")
+    verdict = ti.judge(_Conda("https://github.com/xflr6/graphviz"), "py-graphviz", {}, ctx, frozenset())
+    assert not verdict.accept and verdict.reason == "name-differs-needs-repository"
+    shared = ti.RecordContext(collection="transcriptomics", life_science=True, names=["pygraphviz"],
+                              local_text="conda install pygraphviz", skill_text="",
+                              repos={"github.com/xflr6/graphviz"})
+    assert ti.judge(_Conda("https://github.com/xflr6/graphviz"), "py-graphviz", {}, shared,
+                    frozenset()).accept
+
+
+def test_separators_are_interchangeable_in_code():
+    ctx = ti.RecordContext(collection="transcriptomics", life_science=True, names=["memory_profiler"],
+                           local_text="pip install memory_profiler", skill_text="")
+    assert ctx.code_evidence(only="memory-profiler").get("python")
+
+
+def test_an_r_package_is_contradicted_by_python_usage_of_its_name():
+    """MuData: scverse's Python `mudata`, cited through a documentation role, is not Bioconductor's."""
+    ctx = ti.RecordContext(collection="multi-omics", life_science=True, names=["MuData", "mudata"],
+                           local_text="The {class}`~mudata.MuData` container", skill_text="")
+    verdict = ti.judge(_Reg(None), "MuData", {}, ctx, frozenset())
+    assert not verdict.accept and verdict.contradiction[0]["kind"] == "ecosystem"
+    r_code = ti.RecordContext(collection="multi-omics", life_science=True, names=["MuData"],
+                              local_text="library(MuData)\nThe {class}`~mudata.MuData` container",
+                              skill_text="")
+    assert ti.judge(_Reg(None), "MuData", {}, r_code, frozenset()).accept
+
+
+def test_the_bioconductor_subject_exception_names_the_repositories_to_check():
+    assert ti.subject_exception_repos(_Reg(None), {}, _subject_ctx()) == [
+        "github.com/guangchuangyu/clusterprofiler"]
+    assert ti.subject_exception_repos(_Reg("https://github.com/YuLab-SMU/clusterProfiler"), {},
+                                      _subject_ctx()) == []
+    assert ti.subject_exception_repos(_Reg("https://github.com/someone/otherpkg"), {},
+                                      _subject_ctx()) is None

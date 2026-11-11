@@ -282,3 +282,110 @@ def test_a_third_party_version_the_repository_does_not_state_gives_the_family(tm
     out, outcome = r.confirm(ev("biotools", "GPL-3.0-only", "open", "o/versioned"), g)
     assert (outcome, out["license"]) == ("confirmed", "GPL-3.0-only")
 
+
+
+# --------------------------------------------------------------------------- #
+# Fifth pass                                                                  #
+# --------------------------------------------------------------------------- #
+
+def test_a_readme_saying_the_binary_is_closed_withholds_even_through_a_dependency(tmp_path):
+    """MZA: the binary is closed-source and its libraries add restrictions on its use."""
+    sentence = rl.readme_restriction(text("README_mza.md"))
+    assert sentence and "closed-source code" in sentence
+    f = _cache(tmp_path, "o/mza", {"LICENSE": "bsd2.txt", "README.md": "README_mza.md"})
+    out, outcome = r.confirm(ev("biotools", "BSD-2-Clause", "open", "o/mza"), f)
+    assert out is None and outcome.startswith("withheld-readme-restriction:")
+
+
+def test_an_optional_or_third_party_dependency_with_its_own_terms_does_not_withhold():
+    """A tool's tier is its own code's licence: PredPSI-SVR needs ANNOVAR, SMETANA a solver."""
+    assert rl.readme_restriction(text("README_optional_solver.md")) is None
+    assert rl.readme_restriction("An open alternative to closed-source software.") is None
+
+
+@pytest.mark.parametrize("sentence", [
+    "All software provided by the group is intended exclusively for academic research and training purposes.",
+    "This software is intended only for academic use.",
+    "Use is restricted to academic institutions.",
+    "Free, for academic research only.",
+])
+def test_readme_wordings_that_restrict_use(sentence):
+    assert rl.readme_restriction(sentence) == sentence
+
+
+@pytest.mark.parametrize("sentence", [
+    "pytorch-ranger (only for training)",
+    "Widely used in academic research and industry.",
+    "Supports research and teaching in many labs.",
+])
+def test_readme_wordings_that_do_not(sentence):
+    assert rl.readme_restriction(sentence) is None
+
+
+def test_calibracurve_terms_of_use_withhold():
+    assert "exclusively for academic research" in rl.readme_restriction(text("README_calibracurve.md"))
+
+
+def test_a_field_of_use_term_in_an_r_licence_file_withholds(tmp_path):
+    """dsb: `CC0 | file LICENSE`, and the file says the software shall not be used in diagnosis."""
+    f = _cache(tmp_path, "o/dsb", {"LICENSE": "dsb_license.txt"})
+    record = dict(ev("cran", "CC0-1.0", "open", "o/dsb"), license_raw="CC0 | file LICENSE")
+    out, outcome = r.confirm(record, f)
+    assert out is None and outcome.startswith("withheld-field-of-use:")
+
+
+def test_a_bundled_component_licence_file_is_not_a_field_of_use_term(tmp_path):
+    """xcms: `GPL (>= 2) + file LICENSE`; the file carries a component's LGPL text."""
+    f = _cache(tmp_path, "sneumann/xcms", {"LICENSE": "lgpl21.txt", "DESCRIPTION": "DESCRIPTION"})
+    record = dict(ev("bioconductor", "GPL-2.0-or-later", "open", "sneumann/xcms"),
+                  license_raw="GPL (>= 2) + file LICENSE")
+    out, outcome = r.confirm(record, f)
+    assert (outcome, out["license"]) == ("confirmed", "GPL-2.0-or-later")
+
+
+class _Bioc:
+    id = "bioconductor"
+
+    def __init__(self, fetcher):
+        self.fetcher = fetcher
+
+    def repo_values(self, record):
+        return []
+
+    def dois(self, record):
+        return set()
+
+
+def _verdict():
+    from scripts.tool_identity import Verdict
+    return Verdict(True, "skill-domain-corroborated", [], [])
+
+
+def _metnet_ctx():
+    from scripts.tool_identity import RecordContext
+    own = {"github.com/simeoni-biolab/metnet"}
+    return RecordContext(collection="metabolomics", life_science=True, names=["MetNet"],
+                         local_text="", skill_text="", repos=own, subject_repos=own)
+
+
+def test_the_bioconductor_exception_needs_the_papers_repository_to_be_that_r_package(tmp_path):
+    """MetNet: the paper's repository is a Java tool; Bioconductor's MetNet is another tool."""
+    java = _cache(tmp_path, "simeoni-biolab/metnet", {"README.md": "# MetNet\nA Java tool."})
+    verdict = _verdict()
+    r.check_subject_exception(_Bioc(java), "MetNet", {}, _metnet_ctx(), verdict)
+    assert not verdict.accept and verdict.contradiction[-1]["kind"] == "subject-repository"
+    (tmp_path / "r").mkdir()
+    rpkg = _cache(tmp_path / "r", "simeoni-biolab/metnet", {"DESCRIPTION": "Package: MetNet\nLicense: GPL-3\n"})
+    verdict = _verdict()
+    r.check_subject_exception(_Bioc(rpkg), "MetNet", {}, _metnet_ctx(), verdict)
+    assert verdict.accept
+
+
+def test_a_gnu_text_is_not_a_field_of_use_term():
+    """IPO: `GPL (>= 2) + file LICENSE`; GPL-2.0 section 3c speaks of noncommercial distribution."""
+    gpl2 = ("GNU GENERAL PUBLIC LICENSE\nVersion 2, June 1991\n\nc) Accompany it with the information "
+            "you received as to the offer to distribute corresponding source code. (This alternative "
+            "is allowed only for noncommercial distribution and only if you received the program in "
+            "object code or executable form with such an offer, in accord with Subsection b above.)\n")
+    assert rl.field_of_use(gpl2) is None
+    assert rl.field_of_use(text("dsb_license.txt")).startswith("THE SOFTWARE SHALL NOT BE USED")

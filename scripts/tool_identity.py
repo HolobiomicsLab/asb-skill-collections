@@ -89,7 +89,10 @@ def repo_key(url) -> str | None:
 
 def _name_pattern(names) -> str:
     """Alternation of the names, bounded so `scan` does not match inside `scanpy`."""
-    escaped = sorted({re.sub(r"\\\s+|\\ ", r"[\\s_-]?", re.escape(str(n).strip()))
+    # Separators are interchangeable (`memory_profiler` is PyPI's `memory-profiler`),
+    # but a separator is never invented or dropped: `py-graphviz` is not `pygraphviz`.
+    escaped = sorted({re.sub(r"\\\s+|\\ ", r"[\\s_-]?",
+                             re.sub(r"\\[-.]|_", "[-_.]", re.escape(str(n).strip())))
                       for n in names if n and str(n).strip()}, key=len, reverse=True)
     return r"(?<![\w.\-])(?:" + "|".join(escaped) + r")(?![\w\-])"
 
@@ -133,6 +136,41 @@ def _ecosystem_patterns(names, r_case_sensitive=False) -> dict[str, list[re.Patt
             re.compile(rf"\bbioconda::{n}", re.I),
         ],
     }
+
+
+def spelled_alike(canonical, names) -> bool:
+    """Whether the package name is one of the record's names up to case and separators.
+
+    `Trim Galore` is `trim-galore` and `scikit_learn` is `scikit-learn`; `pygraphviz`
+    is not `py-graphviz`, which the normalised lookup reaches only by removing a
+    hyphen from the package's own name.
+    """
+    def key(s):
+        return re.sub(r"[\s_.\-]+", "-", str(s or "").strip().lower()).strip("-")
+    package = key(canonical)
+    for n in names:
+        if not n:
+            continue
+        # Equal up to case and separators, or the record's name with its separators
+        # dropped (`IQ-TREE` is Bioconda's `iqtree`, `Diffu Stats` Bioconductor's
+        # `diffuStats`). A package that adds a separator the name lacks is another
+        # string (`py-graphviz` against `pygraphviz`).
+        if package == key(n) or package == key(n).replace("-", ""):
+            return True
+    return False
+
+
+def python_usage(ctx, name) -> str | None:
+    """A snippet where the record uses ``name`` as a Python module, beyond imports."""
+    n = _name_pattern([name])
+    for pattern in (rf"[`:]~?{n}\.[A-Za-z_]\w*`",
+                    rf"(?<![\w.\-]){n}\.py\b",
+                    rf"\bpython3?\s+-m\s+{n}"):
+        for text in (ctx.local_text, ctx.skill_text):
+            m = re.search(pattern, text, re.I)
+            if m:
+                return " ".join(text[max(0, m.start() - 40):m.end() + 40].split())
+    return None
 
 
 @dataclass
@@ -350,6 +388,31 @@ class Verdict:
     contradiction: list = field(default_factory=list)
 
 
+def subject_exception_repos(registry, record, ctx: RecordContext) -> list[str] | None:
+    """Whether a Bioconductor package is let through by name, and what to check.
+
+    Bioconductor names are unique and curated, and its packages move between
+    accounts (GuangchuangYu/clusterProfiler is now YuLab-SMU/clusterProfiler), so
+    when the record is the subject of its paper, a repository of the same name is
+    not a contradiction there ([]: nothing to check). A package that declares no
+    repository is let through only if the paper's repository is that R package:
+    the caller reads its DESCRIPTION (resolve_tool_licenses.check_subject_exception)
+    and gets the repositories to read. MetNet, a Java tool whose paper's repository
+    is simeoni-biolab/MetNet, is not Bioconductor's `MetNet`, which declares none.
+    Returns None when the exception does not apply.
+    """
+    if registry.id != "bioconductor" or not ctx.is_subject:
+        return None
+    package_repos = {k for k in (repo_key(v) for v in registry.repo_values(record)) if k}
+    own = ctx.subject_repos or ctx.repos
+    if package_repos & own or registry.dois(record) & ctx.dois:
+        return None
+    if not package_repos:
+        return sorted(own)
+    names = {k.rsplit("/", 1)[-1] for k in own}
+    return [] if any(k.rsplit("/", 1)[-1] in names for k in package_repos) else None
+
+
 def judge(registry, canonical, record, ctx: RecordContext, common_words) -> Verdict:
     """Whether package ``canonical`` of ``registry`` is the tool ``ctx`` names.
 
@@ -389,11 +452,13 @@ def judge(registry, canonical, record, ctx: RecordContext, common_words) -> Verd
         strong.append({"kind": "publication", "value": shared_dois[0]})
     code = ctx.code_evidence([canonical])
     ecosystem = registry.ecosystem
-    exact = ctx.code_evidence(only=canonical) if ecosystem == "r" else code
+    # Code corroborates a package only when it names that package as the registry
+    # spells it: `conda install pygraphviz` is not Bioconda's `py-graphviz`.
+    exact = ctx.code_evidence(only=canonical)
     if ecosystem in ("r", "python") and exact.get(ecosystem):
         strong.append({"kind": "code", "value": exact[ecosystem][0]})
-    if ecosystem == "conda" and (code.get("conda") or code.get("python")):
-        found = code.get("conda") or code.get("python")
+    if ecosystem == "conda" and (exact.get("conda") or exact.get("python")):
+        found = exact.get("conda") or exact.get("python")
         strong.append({"kind": "code", "value": found[0]})
     decisive = any(s["kind"] in ("repository", "publication") for s in strong)
 
@@ -408,20 +473,21 @@ def judge(registry, canonical, record, ctx: RecordContext, common_words) -> Verd
         # the service it calls is). The licence field is then not the whole story.
         return Verdict(False, "registry-text-restricts-use", strong, [])
 
+    # The registry matched only after punctuation was removed from a different
+    # string (`pygraphviz` and Bioconda's `py-graphviz`, the wrapper of another
+    # project): only the repository or the publication can say it is the tool.
+    if not spelled_alike(canonical, ctx.names) and not decisive:
+        return Verdict(False, "name-differs-needs-repository", strong, [{
+            "kind": "spelling", "value": f"package {canonical!r}; record {', '.join(ctx.names)}"}])
+
     # The paper that cites the tool is about it, so the tool is that paper's code.
     # A package is then the tool only if it declares that repository (or lists that
     # paper): an import name is not a distribution name. `import vega` in the VEGA
     # paper is not PyPI's `vega`, the Jupyter widget of vega/ipyvega.
     if ctx.is_subject:
-        own = ctx.subject_repos or ctx.repos
-        same = bool(package_repos & own) or bool(shared_dois)
-        if registry.id == "bioconductor" and not same:
-            # Bioconductor names are unique and curated, and its packages move
-            # between accounts (GuangchuangYu/clusterProfiler is now
-            # YuLab-SMU/clusterProfiler). The same repository name, or no declared
-            # repository at all, is not a contradiction there.
-            names = {k.rsplit("/", 1)[-1] for k in own}
-            same = not package_repos or any(k.rsplit("/", 1)[-1] in names for k in package_repos)
+        same = bool(package_repos & (ctx.subject_repos or ctx.repos)) or bool(shared_dois)
+        if not same and subject_exception_repos(registry, record, ctx) is not None:
+            same = True
         if not same:
             return Verdict(False, "contradicted", strong, [{
                 "kind": "subject-repository",
@@ -432,6 +498,15 @@ def judge(registry, canonical, record, ctx: RecordContext, common_words) -> Verd
     other = {"r": "python", "python": "r"}.get(ecosystem)
     if other and code.get(other) and not code.get(ecosystem):
         contra.append({"kind": "ecosystem", "value": f"{other}: {code[other][0]}"})
+    elif ecosystem == "r" and not exact.get("r"):
+        # A name present in both ecosystems (MuData: scverse's Python `mudata`, and
+        # a Bioconductor package of the same name). An R package without R code is
+        # contradicted when the record uses the name as a Python module in a way
+        # the import patterns do not see: a documentation role naming one of its
+        # classes ({class}`~mudata.MuData`), a `name.py` file, `python -m name`.
+        usage = python_usage(ctx, canonical)
+        if usage:
+            contra.append({"kind": "ecosystem", "value": f"python: {usage}"})
     if ecosystem == "conda" and code.get("r") and not (code.get("conda") or code.get("python")):
         contra.append({"kind": "ecosystem", "value": f"r: {code['r'][0]}"})
 
