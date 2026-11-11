@@ -121,7 +121,7 @@ def test_registry_is_neither_advertised_nor_accepted(capsys):
     advertised = capsys.readouterr().out
     assert "registry" not in advertised
     # the removal is confined to `registry`: every other surface still shows.
-    for kept in ("search", "get", "verify", "doctor", "install", "uninstall"):
+    for kept in ("search", "get", "verify", "doctor", "install", "uninstall", "report"):
         assert kept in advertised, kept
 
     with pytest.raises(SystemExit) as refused:
@@ -159,6 +159,16 @@ def test_help_marks_verify_and_doctor_as_not_implemented(capsys, monkeypatch):
 
     for stub in ("verify", "doctor"):
         assert main([stub]) == 1
+
+
+def test_report_parent_help_lists_every_route(capsys):
+    """The contribution entry point exposes its four routes without an error."""
+    from asb_skill_collections.asbb_cli import main
+
+    assert main(["report", "--help"]) == 0
+    help_text = capsys.readouterr().out
+    for route in ("skill", "missing", "paper", "fault"):
+        assert route in help_text
 
 
 def test_mcp_server_requires_extra():

@@ -16,7 +16,7 @@
         "ref": "main",
         "sha": "2e18fc03570be2538c86ea953cc15522cf6c726f"
       },
-      "description": "ASB Metabolomics. Computational metabolomics (predominantly LC-MS/MS; also LC-MS, GC-MS, NMR, mass-spectrometry imaging, ion mobility, lipidomics, multi-omics): spectral library matching, molecular networking, formula/structure annotation (SIRIUS), preprocessing, normalization, and statistics: 11,830 evidence-grounded skills over 1,989 tools, each derived from a method paper (journal article or preprint) and its code. Router-shaped: three skills are advertised (the router, the asb-metabolomics licence gate and the asb-contribute contribution route), the corpus ships as data and is retrieved on demand, so installing costs negligible context. Includes a Perspicacité KB auto-grounding binder.",
+      "description": "ASB Metabolomics. Computational metabolomics (predominantly LC-MS/MS; also LC-MS, GC-MS, NMR, mass-spectrometry imaging, ion mobility, lipidomics, multi-omics): spectral library matching, molecular networking, formula/structure annotation (SIRIUS), preprocessing, normalization, and statistics: 11,830 evidence-grounded skills over 1,989 tools, each derived from a method paper (journal article or preprint) and its code. Router-shaped: one skill is advertised (the router); the corpus ships as data and is retrieved on demand, so installing costs negligible context. It carries the grounding map `kb_bundle.json`, but not the Perspicacité grounding binder.",
       "version": "3.0.2",
       "author": {
         "name": "Holobiomics Lab",

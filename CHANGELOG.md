@@ -4,13 +4,14 @@ All notable changes to this repository are recorded here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org/).
 
-This repo ships **two** things on **two** tag schemes, both noted per release:
+This repository records two release surfaces, each noted per release:
 - the **Python distribution** `asb-skill-collections` (the `asbb` CLI + `asb-mcp`
   server) — tagged `vX.Y.Z`, installed from a checkout in v0 and published to
   PyPI from v1 (design decision 5: the CLI without the corpus it reads is not a
   working install);
-- the **skill collections** (e.g. metabolomics) — tagged `<slug>-v<N>`, deposited
-  to Zenodo / HuggingFace.
+- the **skill collections** (for example metabolomics), tagged
+  `<domain>-v<major>.<minor>.<patch>` and archived on Zenodo. A model-hub mirror
+  is planned but is not published.
 
 ## [Unreleased]
 
@@ -155,9 +156,10 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   `python scripts/router_shape.py --routers-only --rewrite <collection>`; this
   changes `bin/search_skills.py` (its wrapper; the selector stays 1.0.0),
   `skills/_router/SKILL.md` and `workflows/_workflow_router/SKILL.md` only.
-  `--routers-only --rewrite` renders both routers of a shaped unit. The released
-  collections are unchanged; their routers still print
-  `python bin/search_skills.py`, relative to the collection root.
+  `--routers-only --rewrite` renders both routers of a shaped unit. The initial
+  releases of 2026-11-09 still printed `python bin/search_skills.py`, relative
+  to the collection root; the patch releases recorded below later shipped the
+  two revised routers and search-output changes.
   `AGENTS.md`, `README.md`, `CLAUDE.md` and `docs/partial-install.md` now
   describe the released layout: one advertised router, `bin/search_skills.py`,
   leaves with `provenance.source_papers`, no binder or `commands/` inside a
@@ -187,6 +189,12 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   commit (the `packs/` tree is byte-identical to the v3.0.0 commit).
 
 ### Fixed
+- Correct the public release and maintenance documentation after the
+  split-repository transition: direct deposit commands include their required
+  checkout, DOI and manifest ownership is explicit, current and dated status
+  evidence are separated, contribution helpers are version-scoped, capsule
+  packing uses advisory then strict passes, and dormant benchmark and supplement
+  surfaces no longer claim operating publication or intake routes.
 - Build capsules keep the quoted text of papers under any Creative Commons licence in full,
   NC and ND variants included (`capsule_screen.allows_verbatim_sharing`): these licences
   allow verbatim sharing with attribution. The text stays under the paper's licence, which

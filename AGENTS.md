@@ -238,9 +238,10 @@ hand; a command of the collection itself failed. Name one of four routes:
 Offer once per problem and never again after a refusal. Draft the report, show
 the user its exact title, labels and body, and post only on an explicit yes.
 Never paste paths, credentials or sample names. Draft with
-`asbb report <skill|missing|paper|fault>`, with `bin/report_issue.py` where a
-collection ships it, or with `python3 scripts/skill_feedback.py` from this
-checkout; each redacts and prints a prefilled address, and none posts. With `gh`
+`asbb report <skill|missing|paper|fault>`, or with `bin/report_issue.py` where a
+collection ships it. For routes 1 and 2 only,
+`python3 scripts/skill_feedback.py` from this checkout is also a fallback. Each
+helper redacts and prints a prefilled address, and none posts. With `gh`
 and the user's yes, file with
 `gh issue create --repo HolobiomicsLab/asb-skill-collections`; otherwise give the
 user the address. Every route lands on the public registry's issue tracker: the

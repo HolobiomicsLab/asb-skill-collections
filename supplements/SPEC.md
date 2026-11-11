@@ -11,11 +11,14 @@ methods PDFs, parameter tables (xlsx/csv), protocols, extended data — and SI i
 - Everything else (paywalled SI, SI as separate files, publisher-specific layouts)
   has no automated path.
 
-**Solution.** A community deposition layer: experts/users contribute SI — either by
+**Proposed solution.** A community deposition layer: experts/users contribute SI, either by
 **depositing an OA file** or by **providing a download link** — keyed to the paper
 DOI. ASB ingests it into that paper's KB so it grounds the generated skills/cards.
 This doubles as the expert-contribution path in the ASBB plan (§9.7 expert review):
 the people who review tasks are exactly who can supply the SI that grounds them.
+
+Only example material exists in this directory today; this specification does
+not describe an operating public intake.
 
 ## Layout
 
@@ -46,7 +49,7 @@ entries:
     sha256: <optional, for deposited files>
 ```
 
-## License gate (CONTENT_POLICY.md §3/§4)
+## License gate ([`governance/CONTENT_POLICY.md`](../governance/CONTENT_POLICY.md) §3/§4)
 
 - **Deposited `file:`** is REDISTRIBUTED in this public repo → it MUST be
   OA/permissive (`cc-by`, `cc0`, `cc-by-sa`, `public-domain`). Non-OA files are
@@ -64,9 +67,10 @@ resolves each entry (local file or `url` fetch), extracts text (PDF via parser;
 csv/xlsx/txt directly), and ingests it into the paper's KB as labeled documents.
 Re-runnable; keyed by sha256/url so it doesn't double-ingest.
 
-## Contribution flow
+## Proposed contribution flow
 
-PR-based: a contributor adds `supplements/<doi>/manifest.yaml` (+ OA files), CI
+The intended flow is PR-based: a contributor adds
+`supplements/<doi>/manifest.yaml` (+ OA files), CI
 (`.github/workflows/verify-supplements.yml`) runs `scripts/validate_supplements.py`
 (schema + license gate hard-fail; dead-link probe advisory), a maintainer merges.
 See `CONTRIBUTING.md`.

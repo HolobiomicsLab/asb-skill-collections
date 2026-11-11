@@ -1,54 +1,18 @@
 ---
-name: Submit agent or RAG system result
-about: Add a result to the benchmark leaderboard
-title: "[LEADERBOARD] <system-name> on <collection>/<version>"
-labels: ["leaderboard-submission", "needs-validation"]
-assignees: "lfnothias"
+name: Agent or RAG result submission (not open)
+about: This submission route is not open because no validated benchmark is published
+title: "[RESULT SUBMISSION NOT OPEN] <system-name>"
+labels: []
+assignees: ""
 ---
 
-## Leaderboard submission
+## Result submission is not open
 
-> **Next step after this issue:** Open a PR adding your result to
-> `<domain checkout>/collections/<slug>/v<N>/benchmark/leaderboard.jsonld`.
-> A maintainer validates your entry with `scripts/validate_leaderboard.py`.
+ASB currently publishes skill and tool collections, not a validated benchmark,
+reference results, or an agent-performance leaderboard. Build-capsule metadata
+may include evaluation definitions, but no capsule record or dataset mirror is
+published. Do not open a pull request or submit scores through this template.
 
-## System information
-
-**System name:** <!-- e.g., Claude-Opus-4-RAG, GPT-4o-Agent -->
-**System type:** <!-- agent | rag_system | hybrid -->
-**Collection + version:** <!-- e.g., metabolomics/v3 -->
-**Submission date:** YYYY-MM-DD
-
-## Reproducibility
-
-**Agent container image (if agent):**
-<!-- Docker image hash or `ghcr.io/...@sha256:...` -->
-
-**Commit SHA:**
-<!-- SHA of the code used to run the evaluation -->
-
-**Cost and latency stats:**
-- Total API cost (USD):
-- Average latency per task (seconds):
-- Median latency per task (seconds):
-
-## Results (summary)
-
-**For agent tasks (benchmark/tasks/):**
-- Tasks attempted:
-- Tasks solved (tier: full):
-- Tasks partially solved (tier: structural_only):
-- Overall score (eval.json pass rate):
-
-**For RAG/claim retrieval (benchmark/claims/):**
-- MRR (per-paper):
-- Recall@5 (per-paper):
-- MRR (cross-paper):
-- Claim conformance (%):
-
-## Reproducibility declaration
-
-- [ ] My results are reproducible from the container image + commit SHA above
-- [ ] I did not have access to the held-out test set (if any)
-- [ ] I am not a maintainer of this collection (or I declare the conflict)
-- [ ] I accept that my results may be re-scored by maintainers using the held-out set
+This template remains as a notice because dormant generated materials still
+link to it. It can be reopened only after a benchmark, validation procedure and
+public submission route are published.

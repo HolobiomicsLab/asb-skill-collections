@@ -4,11 +4,25 @@
 into a deterministic, local archive set. It performs no network operation,
 deposit, upload, or collection-record change.
 
+First run an advisory pass so failures remain available for diagnosis:
+
 ```sh
 python scripts/pack_capsules.py \
   --view <paper-view-or-builds-root> \
   --collection <released-collection-root> \
-  --out <local-output-directory> \
+  --out <advisory-output-directory> \
+  --date YYYY-MM-DD \
+  --access-records <same-doi-access.json>
+```
+
+Review its receipts, resolve every failure, then make the release candidate with
+a strict pass into a fresh output directory:
+
+```sh
+python scripts/pack_capsules.py \
+  --view <paper-view-or-builds-root> \
+  --collection <released-collection-root> \
+  --out <strict-output-directory> \
   --date YYYY-MM-DD \
   --access-records <same-doi-access.json> \
   --strict
@@ -195,7 +209,9 @@ keeping commits and all other fields. Each capsule's
 whether its path is present in the shipped capsule. These projections do not
 rewrite the private source build.
 
-1. Pack, as above. A full pack of a large domain takes hours.
+1. Pack with the advisory pass and then the strict pass above. Only a successful
+   strict output proceeds to deposit planning. A full pack of a large domain
+   takes hours.
 2. Refresh, when the collection has moved since the pack (a patch release
    changes the version DOI and label):
 

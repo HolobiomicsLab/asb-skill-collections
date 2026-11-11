@@ -230,6 +230,17 @@ def test_local_rehearsal_runs_on_the_router_fixture(tmp_path: Path) -> None:
     assert "11 passed, 0 failed" in result.stdout
 
 
+def test_local_rehearsal_help_is_successful_and_truthful() -> None:
+    """The onboarding discovery command is not mistaken for a gate failure."""
+    result = subprocess.run(
+        ["bash", str(REPO / "scripts" / "run_domain_gates.sh"), "--help"],
+        capture_output=True, text=True, check=False,
+    )
+    assert result.returncode == 0
+    assert "<tooling-root> <content-root> <collection_path>" in result.stdout
+    assert "--strict" in result.stdout and "advisory" in result.stdout
+
+
 def test_receipt_verification_is_read_only(tmp_path: Path) -> None:
     """A supplied external receipt verifies after the advisory content gate."""
     subprocess.run(
